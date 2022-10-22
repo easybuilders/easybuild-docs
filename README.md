@@ -1,0 +1,2 @@
+# easybuild-docs
+EasyBuild documentation
