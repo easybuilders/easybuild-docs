@@ -1,0 +1,22 @@
+# Welcome to the EasyBuild documentation!
+
+!!! warning
+    This is the new EasyBuild documentation,
+    made with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material)
+    and written in [MarkDown](https://daringfireball.net/projects/markdown).
+
+    We intend to replace the <https://docs.easybuild.io>,
+    which is made with [Sphinx](https://www.sphinx-doc.org)
+    and written in [reStructuredText](https://en.wikipedia.org/wiki/ReStructuredText)
+    with this documentation soon...
+
+    **
+    If you want to help with porting the EasyBuild documentation to MarkDown, you can!  
+    Please see <https://github.com/easybuilders/easybuild-docs>.
+    **
+
+## Getting started
+
+- [What is EasyBuild?](what_is_easybuild.md)
+- [EasyBuild terminology](easybuild_terminology.md)
+- [Installing](installing_easybuild.md) and [configuring](configuring_easybuild.md) EasyBuild
