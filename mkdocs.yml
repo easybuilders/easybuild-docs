@@ -1,0 +1,382 @@
+site_name: EasyBuild - building software with ease 
+site_url: https://docs.easybuild.io
+extra:
+  analytics:
+    provider: google
+    property: G-BLVCH6991S
+theme:
+  name: material
+  logo: img/easybuild_logo.png
+  features:
+    - instant
+  palette:
+    scheme: easybuild
+extra_css:
+  - stylesheets/extra.css
+repo_name: EasyBuild @ GitHub
+repo_url: https://github.com/easybuilders/easybuild-docs
+edit_uri: easybuild-docs/edit/main/docs
+
+nav:
+  - Home: index.md
+  - What is EasyBuild?: what_is_easybuild.md
+  - Terminology: easybuild_terminology.md
+  - Installation: installing_easybuild.md
+  - Configuration: configuring_easybuild.md
+
+plugins:
+  # show revision date at bottom of each page
+  - git-revision-date-localized
+  # necessary for search to work
+  - search
+  # redirects for original EasyBuild documentation to avoid broken URLs
+  - redirects:
+      redirect_maps:
+        # en/latest/Archived-easyconfigs.html: ???
+        # en/latest/Backup_modules.html: ???
+        # en/latest/Changelog.html: ???
+        # en/latest/Code_style.html: ???
+        # en/latest/Common-toolchains.html: ???
+        en/latest/Concepts_and_Terminology.html: easybuild_terminology.md
+        en/latest/Configuration.html: configuring_easybuild.md
+        # en/latest/Configuration_Legacy.html: ???
+        # en/latest/Containers.html: ???
+        # en/latest/Contributing.html: ???
+        # en/latest/Controlling_compiler_optimization_flags.html: ???
+        # en/latest/Cray-support.html: ???
+        # en/latest/Deprecated-easyconfigs.html: ???
+        # en/latest/Deprecated-functionality.html: ???
+        # en/latest/Detecting_loaded_modules.html: ???
+        # en/latest/EasyBuild4-overview-of-changes.html: ???
+        # en/latest/EasyBuild4-overview-relocated-functions-constants.html: ???
+        # en/latest/Easyconfig-files-local-variables.html: ???
+        # en/latest/Easyconfigs_index.html: ???
+        # en/latest/Easystack-files.html: ???
+        # en/latest/Experimental_features.html: ???
+        # en/latest/Extended_dry_run.html: ???
+        # en/latest/Extended_dry_run_examples.html: ???
+        # en/latest/Hooks.html: ???
+        # en/latest/Implementing-easyblocks.html: ???
+        # en/latest/Including_additional_Python_modules.html: ???
+        en/latest/Installation.html: installing_easybuild.md
+        # en/latest/Installation_Alternative.html: ???
+        # en/latest/Installing-Lmod-without-root-permissions.html: ???
+        # en/latest/Installing-environment-modules-without-root-permissions.html: ???
+        # en/latest/Installing_extensions_in_parallel.html: ???
+        # en/latest/Integration_with_GitHub.html: ???
+        en/latest/Introduction.html: what_is_easybuild.md
+        # en/latest/Locks.html: ???
+        # en/latest/Logfiles.html: ???
+        # en/latest/Maintainers.html: ???
+        # en/latest/Manipulating_dependencies.html: ???
+        # en/latest/Packaging_support.html: ???
+        # en/latest/Partial_installations.html: ???
+        # en/latest/Progress_bars.html: ???
+        # en/latest/Python-2-3-compatibility.html: ???
+        # en/latest/RPATH-support.html: ???
+        # en/latest/Release_notes.html: ???
+        # en/latest/Removed-functionality.html: ???
+        # en/latest/Submitting_jobs.html: ???
+        # en/latest/System_toolchain.html: ???
+        # en/latest/Tracing_progress.html: ???
+        # en/latest/Typical_workflow_example_with_WRF.html: ???
+        # en/latest/Unit-tests.html: ???
+        # en/latest/Useful-scripts.html: ???
+        # en/latest/Useful_links.html: ???
+        # en/latest/Using_external_modules.html: ???
+        # en/latest/Using_the_EasyBuild_command_line.html: ???
+        # en/latest/Wrapping_dependencies.html: ???
+        # en/latest/Writing_easyconfig_files.html: ???
+        # en/latest/Writing_yeb_easyconfig_files.html: ???
+        # en/latest/api/easybuild.base.exceptions.html: ???
+        # en/latest/api/easybuild.base.fancylogger.html: ???
+        # en/latest/api/easybuild.base.frozendict.html: ???
+        # en/latest/api/easybuild.base.generaloption.html: ???
+        # en/latest/api/easybuild.base.optcomplete.html: ???
+        # en/latest/api/easybuild.base.rest.html: ???
+        # en/latest/api/easybuild.base.html: ???
+        # en/latest/api/easybuild.base.testing.html: ???
+        # en/latest/api/easybuild.base.wrapper.html: ???
+        # en/latest/api/easybuild.framework.easyblock.html: ???
+        # en/latest/api/easybuild.framework.easyconfig.constants.html: ???
+        # en/latest/api/easybuild.framework.easyconfig.default.html: ???
+        # en/latest/api/easybuild.framework.easyconfig.easyconfig.html: ???
+        # en/latest/api/easybuild.framework.easyconfig.format.convert.html: ???
+        # en/latest/api/easybuild.framework.easyconfig.format.format.html: ???
+        # en/latest/api/easybuild.framework.easyconfig.format.one.html: ???
+        # en/latest/api/easybuild.framework.easyconfig.format.pyheaderconfigobj.html: ???
+        # en/latest/api/easybuild.framework.easyconfig.format.html: ???
+        # en/latest/api/easybuild.framework.easyconfig.format.two.html: ???
+        # en/latest/api/easybuild.framework.easyconfig.format.version.html: ???
+        # en/latest/api/easybuild.framework.easyconfig.format.yeb.html: ???
+        # en/latest/api/easybuild.framework.easyconfig.licenses.html: ???
+        # en/latest/api/easybuild.framework.easyconfig.parser.html: ???
+        # en/latest/api/easybuild.framework.easyconfig.html: ???
+        # en/latest/api/easybuild.framework.easyconfig.style.html: ???
+        # en/latest/api/easybuild.framework.easyconfig.templates.html: ???
+        # en/latest/api/easybuild.framework.easyconfig.tools.html: ???
+        # en/latest/api/easybuild.framework.easyconfig.tweak.html: ???
+        # en/latest/api/easybuild.framework.easyconfig.types.html: ???
+        # en/latest/api/easybuild.framework.extension.html: ???
+        # en/latest/api/easybuild.framework.extensioneasyblock.html: ???
+        # en/latest/api/easybuild.framework.html: ???
+        # en/latest/api/easybuild.main.html: ???
+        # en/latest/api/easybuild.html: ???
+        # en/latest/api/easybuild.toolchains.cgmpich.html: ???
+        # en/latest/api/easybuild.toolchains.cgmpolf.html: ???
+        # en/latest/api/easybuild.toolchains.cgmvapich2.html: ???
+        # en/latest/api/easybuild.toolchains.cgmvolf.html: ???
+        # en/latest/api/easybuild.toolchains.cgompi.html: ???
+        # en/latest/api/easybuild.toolchains.cgoolf.html: ???
+        # en/latest/api/easybuild.toolchains.clanggcc.html: ???
+        # en/latest/api/easybuild.toolchains.compiler.clang.html: ???
+        # en/latest/api/easybuild.toolchains.compiler.craype.html: ???
+        # en/latest/api/easybuild.toolchains.compiler.cuda.html: ???
+        # en/latest/api/easybuild.toolchains.compiler.dummycompiler.html: ???
+        # en/latest/api/easybuild.toolchains.compiler.gcc.html: ???
+        # en/latest/api/easybuild.toolchains.compiler.ibmxl.html: ???
+        # en/latest/api/easybuild.toolchains.compiler.inteliccifort.html: ???
+        # en/latest/api/easybuild.toolchains.compiler.pgi.html: ???
+        # en/latest/api/easybuild.toolchains.compiler.html: ???
+        # en/latest/api/easybuild.toolchains.compiler.systemcompiler.html: ???
+        # en/latest/api/easybuild.toolchains.craycce.html: ???
+        # en/latest/api/easybuild.toolchains.craygnu.html: ???
+        # en/latest/api/easybuild.toolchains.crayintel.html: ???
+        # en/latest/api/easybuild.toolchains.craypgi.html: ???
+        # en/latest/api/easybuild.toolchains.dummy.html: ???
+        # en/latest/api/easybuild.toolchains.fft.crayfftw.html: ???
+        # en/latest/api/easybuild.toolchains.fft.fftw.html: ???
+        # en/latest/api/easybuild.toolchains.fft.intelfftw.html: ???
+        # en/latest/api/easybuild.toolchains.fft.html: ???
+        # en/latest/api/easybuild.toolchains.foss.html: ???
+        # en/latest/api/easybuild.toolchains.fosscuda.html: ???
+        # en/latest/api/easybuild.toolchains.gcc.html: ???
+        # en/latest/api/easybuild.toolchains.gcccore.html: ???
+        # en/latest/api/easybuild.toolchains.gcccuda.html: ???
+        # en/latest/api/easybuild.toolchains.gimkl.html: ???
+        # en/latest/api/easybuild.toolchains.gimpi.html: ???
+        # en/latest/api/easybuild.toolchains.gimpic.html: ???
+        # en/latest/api/easybuild.toolchains.giolf.html: ???
+        # en/latest/api/easybuild.toolchains.giolfc.html: ???
+        # en/latest/api/easybuild.toolchains.gmacml.html: ???
+        # en/latest/api/easybuild.toolchains.gmkl.html: ???
+        # en/latest/api/easybuild.toolchains.gmklc.html: ???
+        # en/latest/api/easybuild.toolchains.gmpich.html: ???
+        # en/latest/api/easybuild.toolchains.gmpich2.html: ???
+        # en/latest/api/easybuild.toolchains.gmpolf.html: ???
+        # en/latest/api/easybuild.toolchains.gmvapich2.html: ???
+        # en/latest/api/easybuild.toolchains.gmvolf.html: ???
+        # en/latest/api/easybuild.toolchains.gnu.html: ???
+        # en/latest/api/easybuild.toolchains.goalf.html: ???
+        # en/latest/api/easybuild.toolchains.goblf.html: ???
+        # en/latest/api/easybuild.toolchains.golf.html: ???
+        # en/latest/api/easybuild.toolchains.golfc.html: ???
+        # en/latest/api/easybuild.toolchains.gomkl.html: ???
+        # en/latest/api/easybuild.toolchains.gomklc.html: ???
+        # en/latest/api/easybuild.toolchains.gompi.html: ???
+        # en/latest/api/easybuild.toolchains.gompic.html: ???
+        # en/latest/api/easybuild.toolchains.goolf.html: ???
+        # en/latest/api/easybuild.toolchains.goolfc.html: ???
+        # en/latest/api/easybuild.toolchains.gpsmpi.html: ???
+        # en/latest/api/easybuild.toolchains.gpsolf.html: ???
+        # en/latest/api/easybuild.toolchains.gqacml.html: ???
+        # en/latest/api/easybuild.toolchains.gsmpi.html: ???
+        # en/latest/api/easybuild.toolchains.gsolf.html: ???
+        # en/latest/api/easybuild.toolchains.iccifort.html: ???
+        # en/latest/api/easybuild.toolchains.iccifortcuda.html: ???
+        # en/latest/api/easybuild.toolchains.ictce.html: ???
+        # en/latest/api/easybuild.toolchains.iimkl.html: ???
+        # en/latest/api/easybuild.toolchains.iimklc.html: ???
+        # en/latest/api/easybuild.toolchains.iimpi.html: ???
+        # en/latest/api/easybuild.toolchains.iimpic.html: ???
+        # en/latest/api/easybuild.toolchains.iiqmpi.html: ???
+        # en/latest/api/easybuild.toolchains.impich.html: ???
+        # en/latest/api/easybuild.toolchains.impmkl.html: ???
+        # en/latest/api/easybuild.toolchains.intel-para.html: ???
+        # en/latest/api/easybuild.toolchains.intel.html: ???
+        # en/latest/api/easybuild.toolchains.intelcuda.html: ???
+        # en/latest/api/easybuild.toolchains.iomkl.html: ???
+        # en/latest/api/easybuild.toolchains.iomklc.html: ???
+        # en/latest/api/easybuild.toolchains.iompi.html: ???
+        # en/latest/api/easybuild.toolchains.iompic.html: ???
+        # en/latest/api/easybuild.toolchains.ipsmpi.html: ???
+        # en/latest/api/easybuild.toolchains.iqacml.html: ???
+        # en/latest/api/easybuild.toolchains.ismkl.html: ???
+        # en/latest/api/easybuild.toolchains.linalg.acml.html: ???
+        # en/latest/api/easybuild.toolchains.linalg.atlas.html: ???
+        # en/latest/api/easybuild.toolchains.linalg.blacs.html: ???
+        # en/latest/api/easybuild.toolchains.linalg.blis.html: ???
+        # en/latest/api/easybuild.toolchains.linalg.flame.html: ???
+        # en/latest/api/easybuild.toolchains.linalg.gotoblas.html: ???
+        # en/latest/api/easybuild.toolchains.linalg.intelmkl.html: ???
+        # en/latest/api/easybuild.toolchains.linalg.lapack.html: ???
+        # en/latest/api/easybuild.toolchains.linalg.libsci.html: ???
+        # en/latest/api/easybuild.toolchains.linalg.openblas.html: ???
+        # en/latest/api/easybuild.toolchains.linalg.html: ???
+        # en/latest/api/easybuild.toolchains.linalg.scalapack.html: ???
+        # en/latest/api/easybuild.toolchains.mpi.craympich.html: ???
+        # en/latest/api/easybuild.toolchains.mpi.intelmpi.html: ???
+        # en/latest/api/easybuild.toolchains.mpi.mpich.html: ???
+        # en/latest/api/easybuild.toolchains.mpi.mpich2.html: ???
+        # en/latest/api/easybuild.toolchains.mpi.mvapich2.html: ???
+        # en/latest/api/easybuild.toolchains.mpi.openmpi.html: ???
+        # en/latest/api/easybuild.toolchains.mpi.psmpi.html: ???
+        # en/latest/api/easybuild.toolchains.mpi.qlogicmpi.html: ???
+        # en/latest/api/easybuild.toolchains.mpi.html: ???
+        # en/latest/api/easybuild.toolchains.mpi.spectrummpi.html: ???
+        # en/latest/api/easybuild.toolchains.pgi.html: ???
+        # en/latest/api/easybuild.toolchains.pmkl.html: ???
+        # en/latest/api/easybuild.toolchains.pomkl.html: ???
+        # en/latest/api/easybuild.toolchains.pompi.html: ???
+        # en/latest/api/easybuild.toolchains.html: ???
+        # en/latest/api/easybuild.toolchains.system.html: ???
+        # en/latest/api/easybuild.toolchains.xlcxlf.html: ???
+        # en/latest/api/easybuild.toolchains.xlmpich.html: ???
+        # en/latest/api/easybuild.toolchains.xlmpich2.html: ???
+        # en/latest/api/easybuild.toolchains.xlmvapich2.html: ???
+        # en/latest/api/easybuild.toolchains.xlompi.html: ???
+        # en/latest/api/easybuild.tools.asyncprocess.html: ???
+        # en/latest/api/easybuild.tools.build_details.html: ???
+        # en/latest/api/easybuild.tools.build_log.html: ???
+        # en/latest/api/easybuild.tools.config.html: ???
+        # en/latest/api/easybuild.tools.configobj.html: ???
+        # en/latest/api/easybuild.tools.containers.base.html: ???
+        # en/latest/api/easybuild.tools.containers.common.html: ???
+        # en/latest/api/easybuild.tools.containers.docker.html: ???
+        # en/latest/api/easybuild.tools.containers.html: ???
+        # en/latest/api/easybuild.tools.containers.singularity.html: ???
+        # en/latest/api/easybuild.tools.containers.utils.html: ???
+        # en/latest/api/easybuild.tools.convert.html: ???
+        # en/latest/api/easybuild.tools.deprecated.html: ???
+        # en/latest/api/easybuild.tools.docs.html: ???
+        # en/latest/api/easybuild.tools.environment.html: ???
+        # en/latest/api/easybuild.tools.filetools.html: ???
+        # en/latest/api/easybuild.tools.github.html: ???
+        # en/latest/api/easybuild.tools.hooks.html: ???
+        # en/latest/api/easybuild.tools.include.html: ???
+        # en/latest/api/easybuild.tools.jenkins.html: ???
+        # en/latest/api/easybuild.tools.job.backend.html: ???
+        # en/latest/api/easybuild.tools.job.gc3pie.html: ???
+        # en/latest/api/easybuild.tools.job.pbs_python.html: ???
+        # en/latest/api/easybuild.tools.job.html: ???
+        # en/latest/api/easybuild.tools.job.slurm.html: ???
+        # en/latest/api/easybuild.tools.module_generator.html: ???
+        # en/latest/api/easybuild.tools.module_naming_scheme.categorized_hmns.html: ???
+        # en/latest/api/easybuild.tools.module_naming_scheme.categorized_mns.html: ???
+        # en/latest/api/easybuild.tools.module_naming_scheme.easybuild_mns.html: ???
+        # en/latest/api/easybuild.tools.module_naming_scheme.hierarchical_mns.html: ???
+        # en/latest/api/easybuild.tools.module_naming_scheme.migrate_from_eb_to_hmns.html: ???
+        # en/latest/api/easybuild.tools.module_naming_scheme.mns.html: ???
+        # en/latest/api/easybuild.tools.module_naming_scheme.html: ???
+        # en/latest/api/easybuild.tools.module_naming_scheme.toolchain.html: ???
+        # en/latest/api/easybuild.tools.module_naming_scheme.utilities.html: ???
+        # en/latest/api/easybuild.tools.modules.html: ???
+        # en/latest/api/easybuild.tools.multidiff.html: ???
+        # en/latest/api/easybuild.tools.options.html: ???
+        # en/latest/api/easybuild.tools.ordereddict.html: ???
+        # en/latest/api/easybuild.tools.package.package_naming_scheme.easybuild_pns.html: ???
+        # en/latest/api/easybuild.tools.package.package_naming_scheme.pns.html: ???
+        # en/latest/api/easybuild.tools.package.package_naming_scheme.html: ???
+        # en/latest/api/easybuild.tools.package.html: ???
+        # en/latest/api/easybuild.tools.package.utilities.html: ???
+        # en/latest/api/easybuild.tools.parallelbuild.html: ???
+        # en/latest/api/easybuild.tools.py2vs3.py2.html: ???
+        # en/latest/api/easybuild.tools.py2vs3.py3.html: ???
+        # en/latest/api/easybuild.tools.py2vs3.html: ???
+        # en/latest/api/easybuild.tools.repository.filerepo.html: ???
+        # en/latest/api/easybuild.tools.repository.gitrepo.html: ???
+        # en/latest/api/easybuild.tools.repository.hgrepo.html: ???
+        # en/latest/api/easybuild.tools.repository.repository.html: ???
+        # en/latest/api/easybuild.tools.repository.html: ???
+        # en/latest/api/easybuild.tools.repository.svnrepo.html: ???
+        # en/latest/api/easybuild.tools.robot.html: ???
+        # en/latest/api/easybuild.tools.html: ???
+        # en/latest/api/easybuild.tools.run.html: ???
+        # en/latest/api/easybuild.tools.systemtools.html: ???
+        # en/latest/api/easybuild.tools.testing.html: ???
+        # en/latest/api/easybuild.tools.toolchain.compiler.html: ???
+        # en/latest/api/easybuild.tools.toolchain.constants.html: ???
+        # en/latest/api/easybuild.tools.toolchain.fft.html: ???
+        # en/latest/api/easybuild.tools.toolchain.linalg.html: ???
+        # en/latest/api/easybuild.tools.toolchain.mpi.html: ???
+        # en/latest/api/easybuild.tools.toolchain.options.html: ???
+        # en/latest/api/easybuild.tools.toolchain.html: ???
+        # en/latest/api/easybuild.tools.toolchain.toolchain.html: ???
+        # en/latest/api/easybuild.tools.toolchain.toolchainvariables.html: ???
+        # en/latest/api/easybuild.tools.toolchain.utilities.html: ???
+        # en/latest/api/easybuild.tools.toolchain.variables.html: ???
+        # en/latest/api/easybuild.tools.utilities.html: ???
+        # en/latest/api/easybuild.tools.variables.html: ???
+        # en/latest/api/easybuild.tools.version.html: ???
+        # en/latest/api/framework.easyblock.html: ???
+        # en/latest/api/framework.easyconfig.constants.html: ???
+        # en/latest/api/framework.easyconfig.default.html: ???
+        # en/latest/api/framework.easyconfig.easyconfig.html: ???
+        # en/latest/api/framework.easyconfig.format.convert.html: ???
+        # en/latest/api/framework.easyconfig.format.format.html: ???
+        # en/latest/api/framework.easyconfig.format.one.html: ???
+        # en/latest/api/framework.easyconfig.format.pyheaderconfigobj.html: ???
+        # en/latest/api/framework.easyconfig.format.html: ???
+        # en/latest/api/framework.easyconfig.format.two.html: ???
+        # en/latest/api/framework.easyconfig.format.version.html: ???
+        # en/latest/api/framework.easyconfig.format.yeb.html: ???
+        # en/latest/api/framework.easyconfig.licenses.html: ???
+        # en/latest/api/framework.easyconfig.parser.html: ???
+        # en/latest/api/framework.easyconfig.html: ???
+        # en/latest/api/framework.easyconfig.style.html: ???
+        # en/latest/api/framework.easyconfig.templates.html: ???
+        # en/latest/api/framework.easyconfig.tools.html: ???
+        # en/latest/api/framework.easyconfig.tweak.html: ???
+        # en/latest/api/framework.easyconfig.types.html: ???
+        # en/latest/api/framework.easystack.html: ???
+        # en/latest/api/framework.extension.html: ???
+        # en/latest/api/framework.extensioneasyblock.html: ???
+        # en/latest/api/framework.html: ???
+        # en/latest/api/index.html: ???
+        # en/latest/api/modules.html: ???
+        # en/latest/demos/bootstrapping.html: ???
+        # en/latest/demos/configuring.html: ???
+        # en/latest/demos/index.html: ???
+        # en/latest/demos/review_pr.html: ???
+        # en/latest/eb_a.html: ???
+        # en/latest/eb_a_e_EB_WRF.html: ???
+        # en/latest/eb_help.html: ???
+        # en/latest/eb_list_easyblocks.html: ???
+        # en/latest/eb_list_toolchains.html: ???
+        en/latest/index.html: index.md
+        # en/latest/version-specific/Supported_software.html: ???
+        # en/latest/version-specific/config_file_constants.html: ???
+        # en/latest/version-specific/easyblocks.html: ???
+        # en/latest/version-specific/easyconfig_constants.html: ???
+        # en/latest/version-specific/easyconfig_license_constants.html: ???
+        # en/latest/version-specific/easyconfig_parameters.html: ???
+        # en/latest/version-specific/easyconfig_templates.html: ???
+        # en/latest/version-specific/generic_easyblocks.html: ???
+        # en/latest/version-specific/help.html: ???
+        # en/latest/version-specific/index.html: ???
+        # en/latest/version-specific/toolchain_opts.html: ???
+        # en/latest/version-specific/toolchains.html: ???
+
+markdown_extensions:
+  # notes, warnings, hints, ...
+  - admonition
+  # code blocks with syntax highlighting, graphs
+  - pymdownx.superfences
+  # clickable details
+  - pymdownx.details
+  # tabbed contents
+  - pymdownx.tabbed
+  - toc:
+      permalink: true
+extra:
+  # add links in bottom right
+  social:
+      #- type: github
+      #icon: octicons/logo-github
+      #link: https://github.com/easybuilders
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/easy_build
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/c/easybuilders
+    - icon: fontawesome/solid/book
+      link: https://docs.easybuild.io
