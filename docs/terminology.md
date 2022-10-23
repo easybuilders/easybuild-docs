@@ -9,6 +9,6 @@
     **
 
     - source: [`docs/Concepts_and_Terminology.rst` in `easybuilders/easybuild` repo](https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Concepts_and_Terminology.rst)
-    - target: [`docs/easybuild_terminology.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/easybuild_terminology.md)
+    - target: [`docs/terminology.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/terminology.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.

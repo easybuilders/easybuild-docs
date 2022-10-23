@@ -9,6 +9,6 @@
     **
 
     - source: [`docs/Configuration.rst` in `easybuilders/easybuild` repo](https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Configuration.rst)
-    - target: [`docs/configuring_easybuild.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/configuring_easybuild.md)
+    - target: [`docs/configuration.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/configuration.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.

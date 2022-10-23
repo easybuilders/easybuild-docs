@@ -19,10 +19,10 @@ edit_uri: easybuild-docs/edit/main/docs
 
 nav:
   - Home: index.md
-  - What is EasyBuild?: what_is_easybuild.md
-  - Terminology: easybuild_terminology.md
-  - Installation: installing_easybuild.md
-  - Configuration: configuring_easybuild.md
+  - What is EasyBuild?: what-is-easybuild.md
+  - Terminology: terminology.md
+  - Installation: installation.md
+  - Configuration: configuration.md
 
 plugins:
   # show revision date at bottom of each page
@@ -37,8 +37,8 @@ plugins:
         # en/latest/Changelog.html: ???
         # en/latest/Code_style.html: ???
         # en/latest/Common-toolchains.html: ???
-        en/latest/Concepts_and_Terminology.html: easybuild_terminology.md
-        en/latest/Configuration.html: configuring_easybuild.md
+        en/latest/Concepts_and_Terminology.html: terminology.md
+        en/latest/Configuration.html: configuration.md
         # en/latest/Configuration_Legacy.html: ???
         # en/latest/Containers.html: ???
         # en/latest/Contributing.html: ???
@@ -58,13 +58,13 @@ plugins:
         # en/latest/Hooks.html: ???
         # en/latest/Implementing-easyblocks.html: ???
         # en/latest/Including_additional_Python_modules.html: ???
-        en/latest/Installation.html: installing_easybuild.md
+        en/latest/Installation.html: installation.md
         # en/latest/Installation_Alternative.html: ???
         # en/latest/Installing-Lmod-without-root-permissions.html: ???
         # en/latest/Installing-environment-modules-without-root-permissions.html: ???
         # en/latest/Installing_extensions_in_parallel.html: ???
         # en/latest/Integration_with_GitHub.html: ???
-        en/latest/Introduction.html: what_is_easybuild.md
+        en/latest/Introduction.html: what-is-easybuild.md
         # en/latest/Locks.html: ???
         # en/latest/Logfiles.html: ???
         # en/latest/Maintainers.html: ???

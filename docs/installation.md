@@ -9,6 +9,6 @@
     **
 
     - source: [`docs/Concepts_and_Terminology.rst` in `easybuilders/easybuild` repo](https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Installation.rst)
-    - target: [`docs/installing_easybuild.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/installing_easybuild.md)
+    - target: [`docs/installation.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/installation.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.

@@ -17,6 +17,6 @@
 
 ## Getting started
 
-- [What is EasyBuild?](what_is_easybuild.md)
-- [EasyBuild terminology](easybuild_terminology.md)
-- [Installing](installing_easybuild.md) and [configuring](configuring_easybuild.md) EasyBuild
+- [What is EasyBuild?](what-is-easybuild.md)
+- [EasyBuild terminology](terminology.md)
+- [Installing](installation.md) and [configuring](configuration.md) EasyBuild
