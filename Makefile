@@ -1,6 +1,6 @@
 all: build
 
-build:
+build: docs mkdocs.yml
 	mkdocs build
 
 deploy:
