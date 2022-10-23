@@ -17,6 +17,7 @@ jobs:
       uses: codespell-project/actions-codespell@master
       with:
         check_filenames: true
+        ignore_words_list: atleast,ninjs,simpy,proovread,namd,precice
 
     - name: install mkdocs
       run: |
