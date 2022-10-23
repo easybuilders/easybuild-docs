@@ -1,0 +1,1397 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.easybuild.io/writing-easyconfig-files/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+    
+    
+      
+        <title>Writing easyconfig files - EasyBuild - building software with ease</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="easybuild" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#writing-easyconfig-files" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="EasyBuild - building software with ease" class="md-header__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
+      
+  <img src="../img/easybuild_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EasyBuild - building software with ease
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Writing easyconfig files
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/easybuilders/easybuild-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EasyBuild @ GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
+      
+  <img src="../img/easybuild_logo.png" alt="logo">
+
+    </a>
+    EasyBuild - building software with ease
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/easybuilders/easybuild-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EasyBuild @ GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what-is-easybuild/" class="md-nav__link">
+        What is EasyBuild?
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terminology/" class="md-nav__link">
+        Terminology
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-easybuild/" class="md-nav__link">
+        Using EasyBuild
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-notes/" class="md-nav__link">
+        Release notes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-help/" class="md-nav__link">
+        Getting help
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/writing-easyconfig-files.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="writing-easyconfig-files">Writing easyconfig files<a class="headerlink" href="#writing-easyconfig-files" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/Writing_easyconfig_files.html">https://docs.easybuild.io/en/latest/Writing_easyconfig_files.html</a>.</p>
+<p><strong>
+It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
+and you can help with that!
+</strong></p>
+<ul>
+<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Writing_easyconfig_files.rst"><code>docs/Writing_easyconfig_files.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
+<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/writing-easyconfig-files.md"><code>docs/writing-easyconfig-files.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
+</ul>
+<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
+</div>
+<div class="highlight"><pre><span></span><code>.. _writing_easyconfig_files:
+
+Writing easyconfig files: the basics
+====================================
+
+This page explains all the basic information about how to write easyconfig files.
+
+For software builds that follow established build patterns, an easyconfig is all that you need to create in order to
+build and install the software and the corresponding module file.
+
+Luckily, the majority of software delivery mechanisms are being designed around
+either autotools or CMake or, perhaps, some simple file extraction/copy pattern.
+In that case, a *generic easyblock* can be leveraged; see :ref:`generic_easyblocks`.
+
+Yet, in case the software build calls for more elaborate steps
+(scientific software never fails to surprise us in this regard),
+a software-specific easyblock may be required; see :ref:`implementing_easyblocks`.
+
+.. contents::
+    :depth: 3
+    :backlinks: none
+
+.. _what_is_an_easyconfig:
+
+What is an easyconfig (file)?
+-----------------------------
+
+An easyconfig file serves as a `build specification` for EasyBuild.
+
+It consists of a plain text file (in Python syntax) with mostly `key-value` assignment to define **easyconfig parameters**.
+
+Easyconfigs typically follow a (fixed) strict naming scheme, i.e.  ``&lt;name&gt;-&lt;version&gt;[-&lt;toolchain&gt;][&lt;versionsuffix&gt;].eb``.
+
+The ``-&lt;toolchain&gt;`` label (which includes the toolchain name and version) is omitted when a :ref:`system_toolchain` is used.
+The ``&lt;versionsuffix&gt;`` label is omitted when the version suffix is empty.
+
+.. note:: the filename of an easyconfig is only important w.r.t. dependency resolution (``--robot``), see :ref:`use_robot`.
+
+Example:
+
+.. code:: python
+
+  # easyconfig file for GCC v4.8.3
+  name = &#39;GCC&#39;
+  version = &#39;4.8.3&#39;
+  ...
+
+.. tip:: Comments can be included in easyconfig files using the hash (``#``) character (just like in Python code).
+
+Available easyconfig parameters
+-------------------------------
+
+About 50 different (generic) easyconfig parameters are supported currently.
+An overview of all available easyconfig parameters is available via the ``-a`` command line option.
+
+By default, the parameters specific to generic (default) easyblock ``ConfigureMake`` are included;
+using ``--easyblock``/``-e`` parameters that are specific to a particular easyblock can be consulted.
+
+See :ref:`easyconfig_params` for more details.
+
+Example::
+
+ $ eb -a -e Binary
+ Available easyconfig parameters (* indicates specific for the Binary EasyBlock)
+ MANDATORY
+ ---------
+ [..]
+ name:           Name of software (default: None)
+ [...]
+ EASYBLOCK-SPECIFIC
+ ------------------
+ install_cmd(*):     Install command to be used. (default: None)
+ [...]
+
+Mandatory easyconfig parameters
+-------------------------------
+
+A handful of easyconfig parameters are `mandatory`:
+
+* **name, version**: specify what software (version) to build
+* **homepage, description**: metadata (used for module help)
+* **toolchain**: specifies name and version of compiler toolchain to use
+
+  * format: dictionary with name/version keys, e.g., ``{&#39;name&#39;: &#39;foo&#39;, &#39;version&#39;: &#39;1.2.3&#39;}``
+  * a list of supported toolchains can be found :ref:`here &lt;vsd_list_toolchains&gt;`
+
+Remarks:
+
+* some others are planned to be required in the future
+
+  * `docurls, software license, software license urls`
+
+Example:
+
+.. code:: python
+
+  name = &#39;HPL&#39;
+  version = &#39;2.0&#39;
+
+  homepage = &#39;http://www.netlib.org/benchmark/hpl/&#39;
+  description = &quot;High Performance Computing Linpack Benchmark&quot;
+
+  toolchain = {&#39;name&#39;: &#39;goolf&#39;, &#39;version&#39;: &#39;1.4.10&#39;}
+  [...]
+
+Common easyconfig parameters
+----------------------------
+
+This section includes an overview of some commonly used (optional) easyconfig parameters.
+
+.. _common_easyconfig_param_sources:
+
+Source files, patches and checksums
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* **sources**: list of source files (filenames only)
+* **source urls**: list of URLs where sources can be downloaded
+* **patches**: list of patch files to be applied (``.patch`` extension)
+* **checksums**: list of checksums for source and patch files
+
+Remarks:
+
+* sources are downloaded (best effort), unless already available
+* proxy settings are taken into account, since the `urllib2 Python package &lt;https://docs.python.org/2/library/urllib2.html&gt;`_
+  is used for downloading (since EasyBuild v2.0)
+* patches need to be EasyBuild-compatible
+
+  * unified diff format (``diff -ruN``)
+  * patched locations relative to unpacked sources
+
+* see :ref:`common_easyconfig_param_sources_patches` for more information on ``patches``
+* see :ref:`common_easyconfig_param_sources_checksums` for more information on ``checksums``
+* ``sources`` is usually specified as a list of strings representing filenames for source files,
+  but other formats are supported too, see :ref:`common_easyconfig_param_sources_alt`
+
+Example:
+
+.. code:: python
+
+  name = &#39;HPL&#39;
+  version = &#39;2.2&#39;
+
+  [...]
+
+  source_urls = [&#39;http://www.netlib.org/benchmark/hpl&#39;]
+  sources = [&#39;hpl-%(version)s.tar.gz&#39;]
+
+  # fix Make dependencies, so parallel build also works
+  patches = [&#39;HPL_parallel-make.patch&#39;]
+
+  checksums = [&#39;ac7534163a09e21a5fa763e4e16dfc119bc84043f6e6a807aba666518f8df440&#39;]
+
+  [...]
+
+.. note:: Rather than hardcoding the version (and name) in the list of sources,
+  a string template `%(version)s` can be used, see also :ref:`easyconfig_param_templates`.
+
+.. _common_easyconfig_param_sources_patches:
+
+Patches
+^^^^^^^
+
+Patches can be provided via the ``patches`` easyconfig parameter (list). A patch can be defined as:
+
+* a ``string``,
+* a ``tuple`` of 2 elements, or
+* a ``dict``
+
+The most straight-forward use-case is ``string``, which contains the name of the patch file
+(and must have ``.patch`` extension).
+
+A ``tuple`` adds the possibility to specify where patch should be applied.
+This is mostly needed if a patch file adds new files or it is generally not possible to determine
+the starting directory.  
+The first element is the patch file and the second is
+either the patch level (as an integer) which is used in the patch command (``patch -p&lt;n&gt;``)
+or a directory relative to the unpacked source dir.
+
+.. note:: ``tuple`` also has a special use case if the patch file has any other extension than ``.patch``.
+          In this case, the first tuple argument is a file which should be copied to the unpacked source
+          dir and the second tuple argument is the target path, where the files should be copied to
+          (relative to the unpacked source dir). See below for an example of this use case.
+
+A ``dict`` adds the ability to pass the ``patch`` command additional arguments. For example, the
+``--binary`` flag is needed to patch files with CRLF endings.
+The ``dict`` has a required ``filename`` key, with ``level`` and ``opts`` being optional ones.
+
+.. note:: Specifying only ``filename`` in ``dict`` is the same as using a plain ``string`` definition.
+          Specifying ``filename`` and ``level`` is same as using a ``tuple`` definition.
+
+Example:
+
+.. code:: python
+
+    patches = [
+      # a simple patch file
+      &#39;name-versions-fix.patch&#39;,
+
+      # when creating only new files by patch file, you need to specify the level:
+      (&#39;name-versions-fix.patch&#39;, 1),
+
+      # apply the patch in a (sub-)subdirectory inside the source tree
+      (&#39;name-versions-fix.patch&#39;, &#39;src/subfolder&#39;),
+
+      # copy file to target_path folder
+      (&#39;Makefile&#39;, &#39;target_path&#39;),
+
+      # specify patch file and optionally level and opts for patch command
+      {&#39;filename&#39;: &#39;name-versions-fix.patch&#39;, &#39;level&#39;: 1, &#39;opts&#39;: &#39;-l&#39;}
+    ]
+
+.. _common_easyconfig_param_sources_checksums:
+
+Checksums
+^^^^^^^^^
+
+Checksums for source files and patches can be provided via the ``checksums`` easyconfig parameter.
+
+EasyBuild does not enforce checksums to be available for all source files and patches.
+Provided checksums will be &#39;consumed&#39; first for the specified sources (in order), and subsequently also for patches.
+
+Nevertheless, providing checksums for *all* source files and patches is highly recommended.
+
+If checksums are provided, the checksum of the corresponding source files and patches is verified to match.
+
+
+The ``checksums`` easyconfig parameter is usually defined as a list of strings.
+
+Until EasyBuild v3.3.0, only MD5 checksums could be provided through a list of strings.
+Since EasyBuild v3.3.0, the checksum type is determined by looking at the length of the string:
+
+* 32-character strings are considered to be MD5 checksums (``md5``)
+* 64-character strings are considered to be SHA256 checksums (``sha256``)
+* (other lengths will result in an error message)
+
+The intention is to move towards making ``sha256`` the recommended and default checksum type.
+
+Other checksum types are also supported: ``adler32``, ``crc32``, ``sha1``, ``sha512``, ``size`` (filesize in bytes).
+To provide checksum values of a specific type, elements of the ``checksums`` list can also be 2-element tuples
+of the form ``(&#39;&lt;checksum type&gt;&#39;, &#39;&lt;checksum value&gt;&#39;)``. For example:
+
+.. code:: python
+
+  checksums = [(&#39;sha512&#39;, &#39;f962008105639f58e9a4455c8057933ab0a5e2f43db8340ae1e1afe6dc2d24105bfca3b2e1f79cb242495ca4eb363c9820d8cea6084df9d62c4c3e5211d99266&#39;)]
+
+.. _inject_checksums:
+
+Adding or replacing checksums using ``--inject-checksums``
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Using the ``--inject-checksums`` command line option, you can let EasyBuild add or update checksums
+in one or more easyconfig files (which is significantly more convenient than doing it manually).
+
+With ``--inject-checksums``, checksums are injected for all sources and patches (if any),
+as well as for all sources &amp; patches of every extension listed in ``exts_list`` (if any, see :ref:`module_extensions`).
+
+If the sources (&amp; patches) are not available yet, EasyBuild will try to download them first; i.e.,
+the ``fetch`` step is run prior to computing &amp; injecting the checksums.
+
+A backup is created of every easyconfig file that is touched by ``--inject-checksums``,
+to avoid accidental loss of information. Backups are given an additional extension of the
+form ``.bak_&lt;year&gt;&lt;month&gt;&lt;day&gt;&lt;hour&gt;&lt;min&gt;&lt;sec&gt;``.
+
+.. note::
+
+    To clean up backup easyconfig files, you can use this one-liner::
+
+        find . -name &#39;*.eb.bak_*&#39; | xargs rm -v
+
+    The ``-v`` option makes ``rm`` print the path of files that are being removed.
+
+    **Do use this with care; just run** ``find . -name &#39;*.eb.bak_*&#39;`` **first in case of doubt!**
+
+Multilple easyconfigs can be specified when using ``--inject-checksums``, they will be processed in sequence.
+In addition, you can also combine ``--inject-checksums`` with ``--robot``, see :ref:`inject_checksums_robot_synergy`.
+
+.. _inject_checksums_adding:
+
+Adding checksums when none are specified yet
+********************************************
+
+If the easyconfig file does not specify any checksums yet, they are simply injected after the
+``sources`` (or ``patches``, if present) specification when ``--inject-checksums`` is used.
+
+For example::
+
+    $ eb bzip2-1.0.6.eb --inject-checksums
+    == temporary log file in case of crash /tmp/eb-Vm6w3e/easybuild-cAVQl6.log
+    == injecting sha256 checksums in /example/bzip2-1.0.6.eb
+    == fetching sources &amp; patches for bzip2-1.0.6.eb...
+    == backup of easyconfig file saved to /example/bzip2-1.0.6.eb.bak_20170824200906...
+    == injecting sha256 checksums for sources &amp; patches in bzip2-1.0.6.eb...
+    == * bzip2-1.0.6.tar.gz: a2848f34fcd5d6cf47def00461fcb528a0484d8edef8208d6d2e2909dc61d9cd
+    == Temporary log file(s) /tmp/eb-Vm6w3e/easybuild-cAVQl6.log* have been removed.
+    == Temporary directory /tmp/eb-Vm6w3e has been removed.
+
+The backup easyconfig file can be used to double-check the difference between the original easyconfig file
+and the one produced by ``--inject-checksums``::
+
+    $ diff -u /example/bzip2-1.0.6.eb.bak_20170824200906 /example/bzip2-1.0.6.eb
+    diff --git a//example/bzip2-1.0.6.eb.bak_20170824200906 b/example/bzip2-1.0.6.eb
+    index 46b2debed..2eb73f15a 100644
+    --- a/example/bzip2-1.0.6.eb.bak_20170824200906
+    +++ b/example/bzip2-1.0.6.eb
+    @@ -9,8 +9,9 @@ compressors), whilst being around twice as fast at compression and six times fas
+     toolchain = SYSTEM
+     toolchainopts = {&#39;pic&#39;: True}
+
+    -sources = [SOURCE_TAR_GZ]
+     source_urls = [&#39;http://www.bzip.org/%(version)s/&#39;]
+    +sources = [SOURCE_TAR_GZ]
+    +checksums = [&#39;a2848f34fcd5d6cf47def00461fcb528a0484d8edef8208d6d2e2909dc61d9cd&#39;]
+
+     buildopts = &quot;CC=gcc CFLAGS=&#39;-Wall -Winline -O3 -fPIC -g $(BIGFILES)&#39;&quot;
+
+.. note:: Along with injecting checksums, EasyBuild will also reorder the ``source_urls``, ``sources``
+          and ``patches`` specifications, in that order and if they are present, and include the ``checksums``
+          specification afterwards. This is done to facilitate working towards a uniform style in easyconfig files,
+          which also applies to the order of specified easyconfig parameters.
+
+.. _inject_checksums_replacing:
+
+Replacing existing checksums
+****************************
+
+When one or more checksums are already specified, EasyBuild requires the use of ``--force`` together
+with ``--inject-checksums`` to replace those checksums. A clear warning will be printed to notify
+that existing checksums will be replaced.
+
+For example::
+
+    $ eb bzip2-1.0.6.eb --inject-checksums
+    == temporary log file in case of crash /tmp/eb-WhSwVH/easybuild-HCODnl.log
+    == injecting sha256 checksums in /example/bzip2-1.0.6.eb
+    == fetching sources &amp; patches for bzip2-1.0.6.eb...
+    ERROR: Found existing checksums, use --force to overwrite them
+
+.. code:: bash
+
+    $ eb bzip2-1.0.6.eb --inject-checksums --force
+    == temporary log file in case of crash /tmp/eb-dS2QLa/easybuild-JGxOzC.log
+    == injecting sha256 checksums in /example/bzip2-1.0.6.eb
+    == fetching sources &amp; patches for bzip2-1.0.6.eb...
+
+    WARNING: Found existing checksums in bzip2-1.0.6.eb, overwriting them (due to use of --force)...
+
+    == backup of easyconfig file saved to /example/bzip2-1.0.6.eb.bak_20170824203850...
+    == injecting sha256 checksums for sources &amp; patches in bzip2-1.0.6.eb...
+    ...
+
+.. note::
+    Any existing checksums are *blindly* replaced when ``--inject-checksums --force`` is used:
+    the existing checksums are *not verified* to be correct as during normal use of EasyBuild
+    (since that would kind of defeat the purpose of ``--inject-checksums``).
+
+    In addition, it also doesn&#39;t matter whether or not checksums are available for all sources &amp; patches:
+    with ``--inject-checksums``, checksums will be added for *all* sources and patches,
+    including for extensions listed in ``exts_list`` (if any).
+
+.. _inject_checksums_robot_synergy:
+
+Synergy between ``--inject-checksums`` and ``--robot``
+******************************************************
+
+When ``--inject-checksums`` is combined with ``--robot``, checksums are injected for *each* easyconfig file
+in the dependency graph for which no module is available yet.
+
+For example, to inject checksums in *every* easyconfig file required to build HPL 2.2 with the ``foss/2017a`` toolchain::
+
+    $ MODULEPATH= eb HPL-2.2-foss-2017a.eb --installpath /tmp/$USER/sandbox --inject-checksums --robot
+    == temporary log file in case of crash /tmp/eb-8HpJc3/easybuild-H35khM.log
+    == resolving dependencies ...
+    ...
+    == injecting sha256 checksums in /example/GCCcore-6.3.0.eb
+    ...
+    == injecting sha256 checksums in /example/OpenMPI-2.0.2-GCC-6.3.0-2.27.eb
+    ...
+    == injecting sha256 checksums in /example/FFTW-3.3.6-gompi-2017a.eb
+    ...
+    == injecting sha256 checksums in /example/HPL-2.2-foss-2017a.eb
+    ...
+
+.. note:: We are clearing ``$MODULEPATH`` and specifying a custom (empty) location to ``--installpath`` to
+          avoid that EasyBuild skips any easyconfig because a corresponding module is already available.
+
+.. _inject_checksums_type:
+
+Type of checksum to inject
+**************************
+
+By default, ``--inject-checksums`` will compute &amp; inject ``SHA256`` checksums, but a different checksum type
+can be specified as an argument (e.g., ``--inject-checksums md5``).
+
+.. note:: Because of the optional argument that can be passed to ``--inject-checksums``,
+          you should not specify an easyconfig file name directly after the ``--inject-checksums``,
+          since it will be assumed to specify a checksum type, which will result in an error message like::
+
+            $ eb --inject-checksums bzip2-1.0.6.eb
+            Usage: eb [options] easyconfig [...]
+
+            eb: error: option --inject-checksums: invalid choice: &#39;bzip2-1.0.6.eb&#39; (choose from &#39;adler32&#39;, &#39;crc32&#39;, &#39;md5&#39;, &#39;sha1&#39;, &#39;sha256&#39;, &#39;sha512&#39;, &#39;size&#39;)
+
+
+.. _common_easyconfig_param_sources_alt:
+
+Alternative formats for ``sources``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In some cases, it can be required to provide additional information next to the name of a source file,
+e.g., a custom extraction command (because the one derived from the file extension is not correct),
+or an altername filename that should be used to download the source file.
+
+This can be specified using a Python dictionary value in the ``sources`` easyconfig parameter.
+
+Since EasyBuild v3.3.0, three keys are supported:
+
+* ``filename`` (*mandatory*): filename of source file
+* ``download_filename``: filename that should be used when downloading this source file; the downloaded file will be
+  saved using the ``filename`` value
+* ``extract_cmd``: custom extraction command for this source file
+* ``source_urls``: source URLs to consider for downloading this source file
+* ``git_config``: see :ref:`common_easyconfig_param_sources_git_config`
+
+For example:
+
+.. code:: python
+
+  sources = [{
+      &#39;source_urls&#39;: [&#39;https://example.com&#39;],
+      &#39;filename&#39;: &#39;example-%(version)s.gz&#39;,
+      &#39;download_filename&#39;: &#39;example.gz&#39;,  # provided source tarball is not versioned...
+      &#39;extract_cmd&#39;: &quot;tar xfvz %s&quot;,  # source file is actually a gzipped tarball (filename should be .tar.gz)
+  }]
+
+.. note:: Custom extraction commands can also be specified as a 2-element tuple, but this format has been deprecated
+          in favor of the Python dictionary format described above; see also :ref:`depr_sources_2_element_tuple`.
+
+Using ``download_instructions`` for user-side part of installation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In some cases, getting some of the files required for an installation cannot be automated. Reasons for this include:
+
+* there is a manual stage to combine multiple downloaded files into the required installation file
+* the file requires a login to download
+
+You can use the ``download_instructions`` parameter to specify steps for the user to do.
+This parameter takes string value and prints it whenever build fails because any file needed was not found.
+If ``download_instructions`` is not specified, Easybuild prints the default message stating the paths that were tested.
+
+.. code:: python
+
+    download_instructions = &quot;&quot;&quot;
+      Step 1: Go to example.com and download example.jar.
+      Step 2: Install example.jar (ensure Java is installed).
+      Step 3: Go to the installation directory and create Tarball of its contents (tar -czvf example.tar.gz *).
+      Step 4: Move created Tarball into the same directory, where your easyconfig is located and run build again.
+    &quot;&quot;&quot;
+
+.. _common_easyconfig_param_sources_git_config:
+
+Downloading from a Git repository
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Since EasyBuild v3.7.0, support for downloading directly from a Git repository is available.
+
+When ``git_config`` is provided for a particular source file (see :ref:`common_easyconfig_param_sources_alt`),
+EasyBuild will create a source tarball after downloading the specified Git repository.
+
+The value for ``git_config`` is a Python dictionary, where the following keys are *mandatory*:
+
+* ``url``: the URL where the Git repository is located
+* ``repo_name``: the name of the Git repository
+
+The value for ``filename`` in the source specification *must* end in ``.tar.gz`` (because a gzipped tarball
+will be created from the cloned repository).
+
+In addition, either of the following keys *must* also be defined:
+
+* ``tag``: the specific tag to download
+* ``commit``: the specific commit ID to download
+
+If a recursive checkout should be made of the repository, the ``recursive`` key can be set to ``True``.
+
+To also retain the ``.git`` directory (which holds the Git metadata for the repository),
+you can set the ``keep_git_dir`` to ``True`` (supported since EasyBuild v4.2.0).
+
+A different name for the top-level directory can be specified via ``clone_into``;
+by default the name of the repository is used.
+
+Examples:
+
+  * creating a source tarball named ``example-main.tar.gz`` of the ``main`` branch of a (fictional)
+    ``test`` repository from ``https://agitserver.org/example``, and use ``example-test`` as top-level directory name:
+
+    .. code::
+
+      sources = [{
+          &#39;filename&#39;: &#39;example-main.tar.gz&#39;,
+          &#39;git_config&#39;: {
+              &#39;url&#39;: &#39;https://agitserver.org/example&#39;,
+              &#39;repo_name&#39;: &#39;test&#39;,
+              &#39;tag&#39;: &#39;main&#39;,
+              &#39;clone_into&#39;: &#39;example-test&#39;,
+          },
+      }]
+
+  * creating a source tarball named ``example-20180920.tar.gz`` of the recursive checkout of commit ``abcdef12``
+    of the ``test`` repository from ``https://agitserver.org/example``:
+
+    .. code::
+
+      sources = [{
+          &#39;filename&#39;: &#39;example-20180920.tar.gz&#39;,
+          &#39;git_config&#39;: {
+              &#39;url&#39;: &#39;https://agitserver.org/example&#39;,
+              &#39;repo_name&#39;: &#39;test&#39;,
+              &#39;commit&#39;: &#39;abcdef12&#39;,
+              &#39;recursive&#39;: True,
+              &#39;keep_git_dir&#39;: True,
+          },
+      }]
+
+
+.. note:: Because the source tarball is created locally (by running ``tar cfvz`` on the directory containing
+          the cloned repository), the (SHA256) checksum is not guaranteed to be the same across different systems.
+
+          Whenever you have the option to download a source tarball (or equivalent) directly (for example from GitHub,
+          which also allows downloading a tarball of a specific commit), we strongly recommend you to do so,
+          ``git_config`` is intended for other Git repos.
+
+
+.. _dependency_specs:
+
+Dependencies
+~~~~~~~~~~~~
+
+* **dependencies**: build/runtime dependencies
+* **builddependencies**: build-only dependencies (not in module)
+* **hiddendependencies**: dependencies via hidden modules (see also :ref:`hide_deps`)
+* **osdependencies**: system dependencies (package names)
+
+Remarks:
+
+* modules must exist for all (non-system) dependencies
+* (non-system) dependencies can be resolved via ``--robot``
+* format: ``(&lt;name&gt;, &lt;version&gt;[, &lt;versionsuffix&gt;[, &lt;toolchain&gt;]])``
+
+Example:
+
+.. code:: python
+
+  name = &#39;GTI&#39;
+  ...
+  toolchain = {&#39;name&#39;: &#39;goolf&#39;, &#39;version&#39;: &#39;1.5.14&#39;}
+  dependencies = [(&#39;PnMPI&#39;, &#39;1.2.0&#39;)]
+  builddependencies = [(&#39;CMake&#39;, &#39;2.8.12&#39;, &#39;&#39;, (&#39;GCC&#39;, &#39;4.8.2&#39;))]
+
+For each of the specified (build) dependencies, the corresponding module will be loaded in the build environment
+defined by EasyBuild. For the *runtime* dependencies, ``module load`` statements will be included in the generated
+module file.
+
+.. note:: By default, EasyBuild will try to resolve dependencies using the same toolchain as specified for the
+  software being installed. As of v3.0, if no easyconfig exists to resolve a dependency using the default
+  toolchain EasyBuild will search for the dependency using a compatible subtoolchain.
+
+  A different toolchain can be specified on a per-dependency level (cfr. the ``CMake`` build dependency in the
+  example above).
+
+  Alternatively, you can instruct EasyBuild to use the most minimal (sub)toolchain when resolving dependencies,
+  see :ref:`minimal_toolchains`.
+
+Loading of modules for dependencies with a ``system`` toolchain
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When a :ref:`system_toolchain` is used, the modules for each of the (build) dependencies are *always*
+loaded, regardless of the toolchain version (as opposed the behaviour with the ``dummy`` toolchain in EasyBuild
+versions prior to v4.0, see :ref:`system_toolchain_motivation_deprecating_dummy`).
+
+Specifying dependencies using ``system`` toolchain
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To make EasyBuild resolve a dependency using the ``system`` toolchain, simply use the ``SYSTEM`` template constant as
+the 4th value in the tuple representing the dependency specification.
+
+For example, to specify PnMPI version 1.2.0 built with the ``system`` toolchain as a (runtime) dependency::
+
+  dependencies = [(&#39;PnMPI&#39;, &#39;1.2.0&#39;, &#39;&#39;, SYSTEM)]
+
+
+Using external modules as dependencies
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Since EasyBuild v2.1, specifying modules that are not provided via EasyBuild as dependencies is also supported.
+See :ref:`using_external_modules` for more information.
+
+
+Extensions
+~~~~~~~~~~
+
+Besides dependencies, which are found outside the software being built but are part of the site&#39;s EasyBuild installation,
+it is also possible to incorporate extensions to the software within the build.  This is done via the ``exts_list`` array.
+
+Each entry in ``exts_list`` is a three-component tuple, with the name and
+version number, and a dictionary of configuration options for the entry:
+
+.. code:: python
+
+  exts_list = [
+      (&#39;name&#39;, &#39;version&#39;, { &#39;option&#39;:&#39;value&#39;, &#39;option&#39;:&#39;value&#39; })
+  ]
+
+The latter may contain essentially any of the full easyconfig parameters, including ``buildopts``, ``installopts``, etc.
+Among those options, the following exceptions and special cases should be noted:
+
+* **nosource**: If set ``True``, no download will be done
+* **source_tmpl**: Template string for the file to be downloaded
+  * default is ``&#39;%(name)s-%(version)s.tar.gz&#39;``
+  * ``%(name)s`` and ``%(version)s`` come from the ``exts_list`` entry (above)
+* **sources**: Dictionary specifying details of where to download the extension
+  * equivalent to a single entry from the easyconfig ``sources`` list
+  * preferred to use of ``source_tmpl``
+* **start_dir**: If not set, will be derived; the easyconfig value will not be used
+
+.. code:: python
+
+  exts_list = [
+      (&#39;llvmlite&#39;, &#39;0.26.0&#39;, {
+          &#39;source_urls&#39;: [&#39;https://pypi.python.org/packages/source/l/llvmlite/&#39;],
+          &#39;patches&#39;: [&#39;llvmlite-0.26.0_fix-ffi-Makefile.patch&#39;],
+          &#39;checksums&#39;: [
+              &#39;13e84fe6ebb0667233074b429fd44955f309dead3161ec89d9169145dbad2ebf&#39;,    # llvmlite-0.26.0.tar.gz
+              &#39;40e6fe6de48709b45daebf8082f65ac26f73a4afdf58fc1e8099b97c575fecae&#39;,    # llvmlite-0.26.0_fix-ffi-Makefile.patch
+          ],
+      }),
+      (&#39;singledispatch&#39;, &#39;3.4.0.3&#39;, {
+          &#39;source_urls&#39;: [&#39;https://pypi.python.org/packages/source/s/singledispatch/&#39;],
+          &#39;checksums&#39;: [&#39;5b06af87df13818d14f08a028e42f566640aef80805c3b50c5056b086e3c2b9c&#39;],
+      }),
+      (name, version, {
+          &#39;source_urls&#39;: [&#39;https://pypi.python.org/packages/source/n/numba/&#39;],
+          &#39;checksums&#39;: [&#39;c62121b2d384d8b4d244ef26c1cf8bb5cb819278a80b893bf41918ad6d391258&#39;],
+      }),
+  ]
+
+That third instance uses the ``name`` and ``version`` variables defined in the easyconfig file.  Since EasyBuild
+v4.2.2, a single-entry ``sources`` dictionary (see :ref:`_common_easyconfig_param_sources_alt`) may be included in an
+``exts_list`` entry.  For example, to download Git sources from a private repository and convert them to a tar-ball for
+installation:
+
+.. code:: python
+
+  exts_defaultclass = &#39;PythonPackage&#39;
+  exts_list = [
+      (&#39;pyCAP&#39;, &#39;0.1&#39;, {
+          &#39;sources&#39;: {
+              &#39;filename&#39;: &#39;%(name)s-%(version)s.tar.gz&#39;,
+              &#39;git_config&#39;: {
+                  &#39;url&#39;: &#39;ssh://nero.stanford.edu/data/git/Analysis&#39;,
+                  &#39;repo_name&#39;: &#39;pyCAP&#39;,
+                  &#39;tag&#39;: &#39;%(version)s&#39;,
+              }
+          }
+      }),
+  ]
+
+Here, the template strings ``%(name)s`` and ``%(version)s`` will be substituted from the
+``exts_list`` entry elements (&quot;pyCAP&quot; and &quot;0.1&quot;, respectively), not from the easyconfig values.
+
+
+.. _configure_build_install_command_options:
+
+Configure/build/install command options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* **configopts**: options for configure command
+* **preconfigopts**: options used as prefix for configure command
+
+In analogy to `configure`, also `build` and `install` commands are tuneable:
+
+* **buildopts, prebuildopts**: options for build command
+* **installopts, preinstallopts**: options for install command
+
+Example:
+
+.. code:: python
+
+    easyblock = &#39;ConfigureMake&#39;
+    ...
+    # configure with: ./autogen.sh &amp;&amp; ./configure CC=&quot;$CC&quot; CFLAGS=&quot;$CFLAGS&quot;
+    preconfigopts = &quot;./autogen.sh &amp;&amp; &quot;
+    buildopts = &#39;CC=&quot;$CC&quot; CFLAGS=&quot;$CFLAGS&quot;&#39;
+    # install with: make install PREFIX=&lt;installation prefix&gt;
+    installopts = &#39;PREFIX=%(installdir)s&#39;
+
+.. note:: For more details w.r.t. use of string templates like ``%(installdir)s``, see :ref:`easyconfig_param_templates`.
+
+
+.. _configure_build_install_command_options_iterate:
+
+List of configure/build/install options
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In some cases, the *configure-build-install* cycle must be executed multiple times during a single installation,
+using different options for one or more steps.
+
+EasyBuild supports specifying a *list* of strings, each of which specifying a particular set of options to use.
+
+For example, to perform the installation procedure with three different sets of configuration options:
+
+.. code:: python
+
+    configopts = [
+        &quot;--common-opt --one --one-more&quot;,
+        &quot;--common-opt --two&quot;,
+        &quot;--common-opt --three&quot;,
+    ]
+
+This way, EasyBuild will perform the *configure-build-install* cycle **three** times:
+
+* configure using ``--common-opt --one --one-more``, build and install
+* configure using ``--common-opt --two``, build and install on top of the existing installation
+* configure using ``--common-opt --three``, build and install once more on top of what is installed already
+
+During this process, the environment is reset and the build directory is cleaned up after each cycle,
+while the installation directory is left untouched (in order to not destroy the result of earlier cycles).
+
+If several ``(pre){config|build|install}opts`` parameters are defined as being a list of strings, the number of
+items in the lists must be the same. Any of these parameters defined as a single string value are just reused
+for each of the cycles performed. For example:
+
+.. code:: python
+
+    easyblock = &#39;ConfigureMake&#39;
+    configopts = [&#39;--one&#39;, &#39;--two&#39;, &#39;--three&#39;]
+    buildopts = &#39;lib&#39;
+    preinstallopts = [&#39;TYPE=one&#39;, &#39;TYPE=two&#39;, &#39;TYPE=three&#39;]
+
+would result in:
+
+* ``./configure --prefix=... --one; make lib; TYPE=one make install``
+* ``./configure --prefix=... --two; make lib; TYPE=two make install``
+* ``./configure --prefix=... --three; make lib; TYPE=three make install``
+
+
+An example use case of this is building FFTW with different precisions, see the
+`FFTW easyconfig files &lt;https://github.com/easybuilders/easybuild-easyconfigs/tree/main/easybuild/easyconfigs/f/FFTW&gt;`_.
+
+Sanity check
+~~~~~~~~~~~~
+
+Custom paths and commands to be used in the sanity check step can be specified using the respective parameters.
+These are used to make sure that an installation didn&#39;t (partly) fail unnoticed.
+
+* **sanity_check_paths**: files/directories that must get installed
+* **sanity_check_commands**: (simple) commands that must work when the installed module is loaded
+
+Remarks:
+
+* format: Python dictionary with (`only`) ``files``/``dirs`` keys
+* values must be lists of (tuples of) strings, one of both **must** be non-empty
+
+  * paths are `relative` to installation directory
+  * for a path specified as a tuple, only one of the specified paths must be available
+
+* default values:
+
+  * paths: non-empty ``bin`` and ``lib`` or ``lib64`` directories
+  * commands: none
+
+Example:
+
+.. code:: python
+
+  sanity_check_paths = {
+      &#39;files&#39;: [&quot;bin/xhpl&quot;],
+      &#39;dirs&#39;: [],
+  }
+
+.. _writing_easyconfigs_easyblock_spec:
+
+Easyblock specification
+~~~~~~~~~~~~~~~~~~~~~~~
+
+To make EasyBuild use a specific (usually generic) easyblock the **easyblock** parameter can be used.
+
+By default, EasyBuild will assume that the easyblock to use can be derived from the software name.
+For example: for ``GCC``, EasyBuild will look for an easyblock class named ``EB_GCC`` in the Python module
+``easybuild.easyblocks.gcc``.
+
+A list of available easyblocks is available via ``--list-easyblocks`` (see also :ref:`list_easyblocks`);
+generic easyblocks are the ones for which the name does *not* start with ``EB_``.
+
+Example:
+
+.. code:: python
+
+    easyblock = &#39;CMakeMake&#39;
+    name = &#39;GTI&#39;
+    version = &#39;1.2.0&#39;
+    ...
+
+.. tip::
+  It is highly recommended to use existing (generic) easyblocks, where applicable.
+  This avoids the need for creating (and maintaining) new easyblocks.
+  Typically, generic easyblocks support several custom easyconfig parameters which allow to steer
+  their behavior (see also :ref:`avail_easyconfig_params`).
+
+Example:
+
+.. code:: python
+
+  easyblock = &#39;Binary&#39;
+  [...]
+  install_cmd = &quot;./install.bin&quot;
+  [...]
+
+
+Module class
+~~~~~~~~~~~~
+
+The category to which the software belongs to can be specified using the **moduleclass** easyconfig parameter.
+By default, the ``base`` module class is used (which should be replaced with a more appropriate category).
+
+EasyBuild enforces that only known module classes can be specified (to avoid misclassification due to typos).
+
+The default list of module classes is available via ``--show-default-moduleclasses``;
+additional module classes can be defined via the ``--moduleclasses`` configure option.
+
+Example:
+
+.. code:: python
+
+    name = &#39;GCC&#39;
+    [...]
+    moduleclass = &#39;compiler&#39;
+
+.. note:: By default, EasyBuild will create a symlink to the generated module file in a module class-specific path.
+  This behavior is configurable through the module naming scheme being used.
+
+.. tip:: The module class may play a significant role in other aspects. For example, the alternative (hierarchical)
+  module naming scheme ``HierarchicalMNS`` heavily relies on the ``moduleclass`` parameter for discriminating compilers
+  and MPI libraries.
+
+Tweaking existing easyconfig files
+----------------------------------
+
+The ability to modify easyconfig files on the fly with EasyBuild,
+provides a very powerful and flexible feature to describe builds,
+without having to manually create all the input files.
+
+Tweaking existing easyconfigs can be done using the ``--try-*`` command lines options.
+See :ref:`tweaking_easyconfigs_using_try` for more details.
+
+Example:
+
+* GCC version update::
+
+   eb GCC-4.9.0.eb --try-software-version=4.9.1
+
+* install WRF + its dozen dependencies with a different toolchain (!)::
+
+   eb WRF-3.5.1-ictce-5.3.0-dmpar.eb --try-toolchain=intel,2014b -r
+
+.. _easyconfig_param_templates:
+
+Dynamic values for easyconfig parameters
+----------------------------------------
+
+String templates are completed using the value of particular easyconfig parameters, typically ``name`` and/or ``version``.
+These help to avoid hardcoding values in multiple locations.
+
+A list of available string templates can be obtained using ``--avail-easyconfig-templates``.
+
+Additionally, constants that can be used in easyconfig files are available via ``--avail-easyconfig-constants``.
+
+Example:
+
+.. code:: python
+
+  name = &#39;GCC&#39;
+  version = &#39;4.8.3&#39;
+  ...
+  source_urls = [
+      # http://ftpmirror.gnu.org/gcc/gcc-4.8.3
+      &#39;http://ftpmirror.gnu.org/%(namelower)s/%(namelower)s-%(version)s&#39;,
+  ]
+  sources = [SOURCELOWER_TAR_GZ]  # gcc-4.8.3.tar.gz
+  ...
+
+.. note:: Proper use of string templates is important, in particular to avoid hardcoding the software version
+  in multiple locations of an easyconfig file; this is critical to make ``--try-software-version`` behave
+  as expected (see also :ref:`tweaking_easyconfigs_using_try`).
+
+
+Version-specific documentation relevant to easyconfigs
+------------------------------------------------------
+
+* :ref:`Available config file constants &lt;avail_cfgfile_constants&gt;`
+* :ref:`Available easyconfig parameters &lt;vsd_avail_easyconfig_params&gt;`
+* :ref:`Constants available for easyconfig files &lt;avail_easyconfig_constants&gt;`
+* :ref:`License constants available for easyconfig files &lt;avail_easyconfig_licenses&gt;`
+* :ref:`List of available easyblocks &lt;vsd_list_easyblocks&gt;`
+* :ref:`List of available toolchain options &lt;avail_toolchain_opts&gt;`
+* :ref:`List of known toolchains &lt;vsd_list_toolchains&gt;`
+* :ref:`List of supported software &lt;list_software&gt;`
+* :ref:`Overview of generic easyblocks &lt;generic_easyblocks&gt;`
+* :ref:`Templates available for easyconfig files &lt;avail_easyconfig_templates&gt;`
+
+
+Contributing easyconfigs
+------------------------
+
+**Contribute your working easyconfig files!**
+
+Share your expertise with the community, avoid duplicate work, especially if:
+
+* the software package is not supported yet
+* an existing easyconfig needs (non-trivial) changes for a different version/toolchain
+* it is a frequently used software package (compilers, MPI, etc.)
+
+See :ref:`contributing` for more information.
+</code></pre></div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/easy_build" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/c/easybuilders" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://docs.easybuild.io" target="_blank" rel="noopener" title="docs.easybuild.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M96 0C43 0 0 43 0 96v320c0 53 43 96 96 96h320c17.7 0 32-14.3 32-32s-14.3-32-32-32v-64c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H96zm0 384h256v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      
+    
+  </body>
+</html>

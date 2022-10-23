@@ -1,0 +1,1140 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.easybuild.io/removed-functionality/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+    
+    
+      
+        <title>Removed functionality - EasyBuild - building software with ease</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="easybuild" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#removed-functionality" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="EasyBuild - building software with ease" class="md-header__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
+      
+  <img src="../img/easybuild_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EasyBuild - building software with ease
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Removed functionality
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/easybuilders/easybuild-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EasyBuild @ GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
+      
+  <img src="../img/easybuild_logo.png" alt="logo">
+
+    </a>
+    EasyBuild - building software with ease
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/easybuilders/easybuild-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EasyBuild @ GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what-is-easybuild/" class="md-nav__link">
+        What is EasyBuild?
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terminology/" class="md-nav__link">
+        Terminology
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-easybuild/" class="md-nav__link">
+        Using EasyBuild
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-notes/" class="md-nav__link">
+        Release notes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-help/" class="md-nav__link">
+        Getting help
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/removed-functionality.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="removed-functionality">Removed functionality<a class="headerlink" href="#removed-functionality" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/Removed-functionality.html">https://docs.easybuild.io/en/latest/Removed-functionality.html</a>.</p>
+<p><strong>
+It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
+and you can help with that!
+</strong></p>
+<ul>
+<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Removed-functionality.rst"><code>docs/Removed-functionality.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
+<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/removed-functionality.md"><code>docs/removed-functionality.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
+</ul>
+<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
+</div>
+<div class="highlight"><pre><span></span><code>.. _removed_functionality:
+
+Removed functionality
+=====================
+
+Some of the functionality that was available in previous EasyBuild versions is now *removed*,
+after it was deprecated first in an earlier EasyBuild version (see :ref:`deprecation_policy`).
+
+.. _overview_removed_40:
+
+Overview of removed functionality since EasyBuild v4.0
+-------------------------------------------------------
+
+In EasyBuild v4.0, some intrusive changes were made that break backward compatibility with earlier versions.
+
+.. note:: In addition, please take into account the additional changes in EasyBuild v4.0,
+          which are documented :ref:`here &lt;eb4_changes_overview&gt;`.
+
+For authors of easyconfig files:
+
+* :ref:`depr_fftw_use_fma4`
+* :ref:`depr_sources_2_element_tuple`
+* :ref:`depr_pythonpackage_use_easy_install_setup_py_develop`
+
+For developers of easyblocks:
+
+* :ref:`depr_copytree_function`
+* :ref:`depr_adjust_permissions_skip_symlinks`
+
+For EasyBuild framework developers:
+
+* :ref:`depr_get_easyblock_class_default_fallback`
+* :ref:`depr_toolchain_add_dependencies`
+
+.. _depr_fftw_use_fma4:
+
+``use_fma`` custom easyconfig parameter for FFTW
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v3.2.0 (May 5th 2017)
+* *removed in:* EasyBuild v4.0
+* *alternatives*: **use** ``use_fma4`` **easyconfig parameter instead**
+
+The ``use_fma`` easyconfig parameter is no longer supported,
+and was replaced by the equivalent easyconfig parameter ``use_fma4``.
+
+``use_fma`` was introduced in EasyBuild v3.1.0 allow configuring FFTW with ``--enable-avx-128-fma``.
+Since it is only supported on systems with AMD processors that have the ``FMA4`` feature, it was replaced by
+the more fittingly named ``use_fma4`` parameter in EasyBuild v3.2.0.
+
+
+.. _depr_sources_2_element_tuple:
+
+Specifying source files as 2-element tuples to provide a custom extraction command
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v3.3.0 (June 22nd 2017)
+* *removed in:* EasyBuild v4.0
+* *alternatives*: **use** ``extract_cmd`` **key in Python dictionary format instead**
+
+Specyfing a custom extraction command for a particular source file by using a 2-element tuple in ``sources``
+is no longer supported.
+
+Instead, a Python dictionary containing the ``filename`` and ``extract_cmd`` keys should be used instead,
+see :ref:`common_easyconfig_param_sources_alt`.
+
+So, this:
+
+.. code:: python
+
+    # source file is actually a gzipped tarball (filename should be .tar.gz)
+    # DEPRECATED FORMAT, don&#39;t use this anymore!
+    sources = [(&#39;example.gz&#39;, &quot;tar xfvz %s&quot;)]
+
+should be replaced with:
+
+.. code:: python
+
+  sources = [{
+    &#39;filename&#39;: &#39;example-%(version)s.gz&#39;,
+    &#39;extract_cmd&#39;: &quot;tar xfvz %s&quot;,  # source file is actually a gzipped tarball (filename should be .tar.gz)
+  }]
+
+
+.. _depr_pythonpackage_use_easy_install_setup_py_develop:
+
+``use_easy_install`` and ``use_setup_py_develop`` custom easyconfig parameters for ``PythonPackage`` easyblock
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v3.5.1 (Jan 17th 2018)
+* *removed in:* EasyBuild v4.0
+* *alternatives*: **use** ``install_target`` **easyconfig parameter instead**
+
+The custom easyconfig parameters ``use_easy_install`` and ``use_setup_py_develop`` for the ``PythonPackage``
+easyblock are no longer supported. They are obsolete since the ``install_target`` custom easyconfig parameter was
+added in https://github.com/easybuilders/easybuild-easyblocks/pull/1341.
+
+Rather than using ``use_easy_install = True``, you should now use ``install_target = &#39;easy_install&#39;`` instead.
+
+Rather than using ``use_setup_py_develop = True``, you should now use ``install_target = &#39;develop&#39;`` instead.
+
+
+.. _depr_copytree_function:
+
+``copytree`` function
+~~~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v3.2.0 (May 5th 2017)
+* *removed in:* EasyBuild v4.0
+* *alternatives*: **use** ``copy_dir`` **instead**
+
+The ``copytree`` function, which was a copy of the ``shutil.copytree`` function (introduced when Python 2.4 was still
+supported) is no longer supported.
+It has been replaced by the superior ``copy_dir`` function in the ``easybuild.tools.filetools`` module.
+
+``copy_dir`` graciously handles any exceptions that occur, and is aware of the EasyBuild *dry run* mode.
+
+.. _depr_adjust_permissions_skip_symlinks:
+
+``skip_symlinks`` named argument for ``adjust_permissions``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v3.8.0 (Nov 2018)
+* *removed in:* EasyBuild v4.0
+* *alternatives*: *(none required)*
+
+The ``skip_symlinks`` argument for the ``adjust_permissions`` function is no longer supported
+since ``adjust_permissions`` has been changed to *always* skip symbolic links (this was already the default behaviour);
+see also https://github.com/easybuilders/easybuild-framework/pull/2644 .
+
+
+.. _depr_get_easyblock_class_default_fallback:
+
+``default_fallback`` named argument for ``get_easyblock_class``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v3.2.0 (May 5th 2017)
+* *removed in:* EasyBuild v4.0
+* *alternatives*: **use** ``error_on_missing_easyblock`` **named parameter instead**
+
+The ``get_easyblock_class`` implementation was cleaned up to remove the support for falling back to the
+generic ``ConfigureMake`` easyblock in EasyBuild v3.2.0 (see https://github.com/easybuilders/easybuild-framework/pull/2178),
+following the disabling of the :ref:`depr_ConfigureMake_fallback_eb1` in EasyBuild v2.0.
+
+The ``default_fallback`` named argument for ``get_easyblock_class`` was replaced by ``error_on_missing_easyblock``,
+to retain support for ignoring a missing matching easyblock rather than raising an error.
+
+
+.. _depr_toolchain_add_dependencies:
+
+``add_dependencies`` method in ``Toolchain`` class
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v3.8.0
+* *removed in:* EasyBuild v4.0
+* *alternatives*: **pass list of dependencies to** ``deps`` **named argument of** ``prepare`` **method instead**
+
+The ``add_dependencies`` method in the ``Toolchain`` class is no longer supported, to provide more flexibility in the
+EasyBuild framework w.r.t. handling of dependencies (see https://github.com/easybuilders/easybuild-framework/pull/2674).
+
+Instead, the list of dependencies should be passed to the ``Toolchain.prepare`` method, via the ``deps`` named argument.
+
+
+.. _overview_removed_30:
+
+Overview of removed functionality since EasyBuild v3.0
+-------------------------------------------------------
+
+In EasyBuild v3.0, some intrusive changes were made that break backward compatibility with earlier versions.
+
+For EasyBuild users &amp; authors of easyconfig files:
+
+* :ref:`archived_easyconfigs`
+
+For developers of easyblocks:
+
+* :ref:`depr_error_reporting`
+* :ref:`depr_lapack_get_blas_lib`
+* :ref:`depr_get_netcdf_module_set_cmds`
+
+For EasyBuild framework developers:
+
+* :ref:`depr_error_reporting`
+
+.. _depr_error_reporting:
+
+``error`` and ``exception`` log methods no longer raise an exception
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v2.1.0 (April&#39;15)
+* *removed in:* EasyBuild v3.0
+* *alternative(s)*: **use** ``raise EasyBuildError(...)`` **instead**
+
+The ``error()`` and ``exception()`` log methods defined by EasyBuild (in the ``easybuild.tools.build_log`` module)
+did not match the semantics of the `standard Python log methods
+&lt;https://docs.python.org/2/library/logging.html#logging.Logger.error&gt;`_, in the sense that they used to also raise an
+exception next to logging messages.
+
+This caused problems when 3rd party libraries (e.g., `gc3pie &lt;https://pypi.python.org/pypi/gc3pie&gt;`_) were being
+used by EasyBuild, since they may be using these log methods without expecting an exception being raised.
+
+The custom definitions for the ``error()`` and ``exception()`` log methods was removed in EasyBuild v3.0.
+
+Hence, these log methods should no longer be used to report errors since they will not raise an exception anymore once.
+Note that this applies both to the EasyBuild framework and to (custom) easyblocks.
+
+To report errors, an ``EasyBuildError`` should be raised instead. For example:
+
+.. code::
+
+    # make sure config.sh script is there
+    if not os.path.exists(os.path.join(self.builddir, &#39;config.sh&#39;)):
+        raise EasyBuildError(&quot;config.sh script is missing in %s&quot;, self.builddir)
+
+.. _depr_lapack_get_blas_lib:
+
+``get_blas_lib`` function provided by ``LAPACK`` easyblock has been removed
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v1.3.0 (April&#39;13); see https://github.com/easybuilders/easybuild-easyblocks/pull/150
+* *removed in:* EasyBuild v3.0
+* *alternative(s)*: **leverage modules from** ``easybuild.toolchain.linalg``
+
+The ``get_blas_lib`` function provided by the ``LAPACK`` easyblock was removed,
+mainly because it included a hardcoded list of BLAS libraries.
+
+It was replaced by &#39;inlining&#39; similar code into the easyblocks that rely on it
+(e.g. ScaLAPACK, cfr. https://github.com/easybuilders/easybuild-easyblocks/pull/1014),
+which only refers to the BLAS libraries that are relevant in that context.
+
+
+.. _depr_get_netcdf_module_set_cmds:
+
+``get_netcdf_module_set_cmds`` function provided by ``netCDF`` easyblock was removed
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* *deprecated since:* EasyBuild v2.1.0 (April&#39;15); see https://github.com/easybuilders/easybuild-easyblocks/pull/590
+* *removed in:* EasyBuild v3.0
+* *alternative(s)*: **rely on** ``set_netcdf_env_vars`` **and use** ``self.module_generator.set_environment``
+
+The ``get_netcdf_module_set_cmds`` function provided by the ``netCDF`` easyblock was removed, because it
+returned ``setenv`` statements to be included in module files that are only compatible with module files in Tcl syntax;
+i.e. it did not take into account the ``--module-syntax`` configuration option.
+
+The use of ``get_netcdf_module_set_cmds`` should be replaced by using ``set_netcdf_env_vars``
+to define the ``NETCDF*`` environment variables, in combination with ``self.module_generator.set_environment``
+to obtain ``setenv`` statements that are compatible with the module syntax (``Tcl`` or ``Lua``) being used.
+
+See for example the changes made to the ``WRF`` and ``WPS``
+easyblocks in https://github.com/easybuilders/easybuild-easyblocks/commit/7a05cbd823769e343b951002b4735dc7632e19c0.
+
+.. _overview_removed_20:
+
+Overview of removed functionality since EasyBuild v2.0
+-------------------------------------------------------
+
+In EasyBuild v2.0, some intrusive changes were made that break backward compatibility with earlier versions.
+
+For EasyBuild users:
+
+* :ref:`depr_python_version_compatibility`
+* :ref:`depr_easybuild_configuration_eb1`
+* :ref:`depr_softroot_version_env_vars_eb1`
+
+For authors of easyconfig files:
+
+* :ref:`depr_ConfigureMake_fallback_eb1`
+* :ref:`depr_easyconfig_parameters_eb1`
+* :ref:`depr_mrbayes_beagle_eb1`
+
+For developers of easyblocks:
+
+* :ref:`depr_easyblocks_API_eb1`
+* :ref:`depr_renamed_relocated_functions_eb1`
+* :ref:`depr_changes_generic_easyblocks_eb1`
+
+For EasyBuild framework developers:
+
+* :ref:`depr_easybuild_tools_modules_eb1`
+
+.. note::
+    A script ``fix-broken-easyconfigs.py`` is provided to fix easyconfig files that were broken by the
+    backward-incompatible changes documented at :ref:`depr_ConfigureMake_fallback_eb1` and
+    :ref:`depr_easyconfig_parameters_eb1`. See :ref:`fix_broken_easyconfigs_script` for more information.
+
+.. _depr_python_version_compatibility:
+
+Python version compatibility
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Compatibility with Python 2.6 is removed.**
+
+* *deprecated since:* EasyBuild v4.1.0 (Nov&#39;19)
+* *removed in:* EasyBuild v4.4.0
+* *alternative(s)*: **upgrade to Python v2.7.x or v3.5+**
+
+Support for running EasyBuild on top of Python 2.6 was removed in EasyBuild version 4.4.0.
+
+You should upgrade to a newer version of Python (see also :ref:`py2_py3_compatibility`).
+
+**Compatibility with Python 2.4 is removed.**
+
+* *deprecated since:* EasyBuild v1.14.0 (July&#39;14)
+* *removed in:* EasyBuild v2.0
+* *alternative(s)*: **upgrade to Python v2.6.x or v2.7.x**
+
+Ever since EasyBuild v1.0, the codebase has been Python 2.4 compatible. One reason for this is that EasyBuild was
+being used on a daily basis on Scientific Linux 5, in which the Python 2.4.x is the system default.
+
+Starting with EasyBuild v2.0 support for Python 2.4 is removed, and only ensure compatibility with Python 2.6.x or a
+more recent Python 2.x.
+
+This will enable us to gradually also make the codebase compatible with Python 3.x, which is difficult to do without
+removing support for Python 2.4.
+
+.. _depr_easybuild_configuration_eb1:
+
+EasyBuild configuration
+~~~~~~~~~~~~~~~~~~~~~~~
+
+**Old-style EasyBuild configuration is removed.**
+
+* *deprecated since:* EasyBuild v1.3.0 (Apr&#39;13)
+* *removed in*: EasyBuild v2.0
+* *alternatives:* **new-style configuration** (see :ref:`configuring_easybuild`)
+
+Early versions of EasyBuild v1.x provided support for configuring EasyBuild via a *Python module* that was automagically
+executed when available.
+
+Since EasyBuild v1.3 a safer and more consistent way of configuring EasyBuild is supported, which aligns the EasyBuild
+command line options, ``$EASYBUILD_X`` environment variables and key-value style configuration files.
+
+More information about the new(er) and recommended configuration style is available :ref:`here &lt;configuring_easybuild&gt;`.
+
+For detailed information with respect to porting from the old to the new configuration style, see
+:ref:`configuring_easybuild_legacy`.
+
+Location of default configuration file
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**The default configuration file location** ``$HOME/.easybuild/config.cfg`` **is no longer considered.**
+
+* *deprecated since:* EasyBuild v1.11.0 (Feb&#39;14)
+* *removed in*: EasyBuild v2.0
+* *alternatives:* ``$XDG_CONFIG_HOME/easybuild/config.cfg`` (equivalent to ``$HOME/.config/easybuild/config.cfg``)
+
+The default path for the new-style configuration path is ``$XDG_CONFIG_HOME/easybuild/config.cfg`` (or
+``$HOME/.config/easybuild/config.cfg`` if ``$XDG_CONFIG_HOME`` is not set), see :ref:`list_of_configuration_files`.
+
+The previous default path ``$HOME/.easybuild/config.cfg`` that was in place since EasyBuild v1.3.0 is no longer
+considered.
+
+.. _depr_ConfigureMake_fallback_eb1:
+
+Automagic fallback to ``ConfigureMake``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**The automagic fallback to the** ``ConfigureMake`` **easyblock is removed.**
+
+* *deprecated since:* EasyBuild v1.16.0 (Dec&#39;14)
+* *removed in:* EasyBuild v2.0
+* *alternative(s)*: specify ``easyblock = &#39;ConfigureMake&#39;`` in easyconfig file
+
+If the ``easyblock`` easyconfig was not specified, EasyBuild tries to find a matching easyblock based on the software
+name. In EasyBuild v1.x, the generic ``ConfigureMake`` easyblock was used if no matching easyblock could be found.
+
+This behavior is now removed; instead, easyconfigs that require using the ``ConfigureMake`` easyblock *must* include
+the following::
+
+  easyblock = &#39;ConfigureMake&#39;
+
+.. _depr_easyconfig_parameters_eb1:
+
+Easyconfig parameters
+~~~~~~~~~~~~~~~~~~~~~
+
+Some easyconfig parameters are removed.
+
+.. note::
+  A script is available to fix easyconfig files that are broken because they still rely on this functionality,
+  see :ref:`fix_broken_easyconfigs_script`.
+
+.. _depr_premakeopts_makeopts_eb1:
+
+Options for build command
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**The** ``premakeopts`` **and** ``makeopts`` **easyconfig parameters are removed.**
+
+* *deprecated since:* EasyBuild v1.13.0 (May&#39;14)
+* *removed in:* EasyBuild v2.0
+* *alternative(s)*: use ``prebuildopts``/``buildopts`` instead
+
+For consistency in terminology, the ``premakeopts`` and ``makeopts`` generic easyconfig parameters are removed,
+in favor of their alternative parameters, ``prebuildopts`` and ``buildopts``, resp.
+
+(see also :ref:`configure_build_install_command_options`)
+
+.. note:: Since EasyBuild v1.13.0, ``buildopts`` is automatically defined with the value of ``makeopts``, unless
+  ``buildopts`` was specified by itself. When both values are specified, ``buildopts`` takes precedence of ``makeopts``
+  (analogous for ``prebuildopts``/``premakeopts``).
+
+.. _depr_shared_lib_ext_eb1:
+
+Shared library extension
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+**The** ``shared_lib_ext`` **&#39;constant&#39; in easyconfigs is no longer defined.**
+
+* *deprecated since:* EasyBuild v1.5.0 (June&#39;13)
+* *removed in:* EasyBuild v2.0
+* *alternative(s)*: use ``SHLIB_EXT`` instead
+
+The ``shared_lib_ext`` &quot;magic&quot; variable representing the extension for shared libraries (``.so`` on Linux,
+``.dylib`` on OS X) is no longer defined; the easyconfig constant ``SHLIB_EXT`` should be using instead.
+
+.. _depr_license_eb1:
+
+Software license
+^^^^^^^^^^^^^^^^
+
+**The** ``license`` **easyconfig parameter is removed.**
+
+* *deprecated since:* EasyBuild v1.11.0 (Feb&#39;14)
+* *removed in:* EasyBuild v2.0
+* *alternative(s)*: use ``license_file`` or ``software_license`` instead
+
+The ``license`` easyconfig parameter, which was specific to the ``IntelBase`` generic easyblock and thus relevant
+for Intel tools, is removed. The generic ``license_file`` easyconfig parameter should be used instead, to specify
+the location of the license file (or server).
+
+This change was made to avoid confusion with the ``software_license`` generic easyconfig parameter, which can be used
+to specify the license under which the software was released (e.g., GPLv2, BSD, etc.). Here, the specified value *must*
+be a known license type (see ``eb --avail-easyconfig-licenses``).
+
+.. note:: The `software_license` easyconfig parameter will become **mandatory** at some point.
+
+.. _depr_mrbayes_beagle_eb1:
+
+``BEAGLE`` dependency in ``MrBayes`` easyblock replaced by ``beagle-lib``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**The** ``MrBayes`` **easyblock no longer considers** ``BEAGLE`` **as a valid dependency.**
+
+* *deprecated since:* EasyBuild v1.6.0 (Jul&#39;14)
+* *removed in:* EasyBuild v2.0
+* *alternative(s)*: use ``beagle-lib`` instead
+
+Due to a misnomer in the easyconfig files for ``beagle-lib`` (formerly named ``BEAGLE``), the custom easyblock for
+``MrBayes`` now no longer considers ``BEAGLE`` as a dependency.
+
+The library required by ``MrBayes`` must now be provided as a dependency named ``beagle-lib``.
+
+
+EasyBuild API changes
+~~~~~~~~~~~~~~~~~~~~~
+
+Some changes in the EasyBuild API were made, which potentiallty affects easyblocks and the EasyBuild framework itself.
+
+.. _depr_easyblocks_API_eb1:
+
+Easyblocks API (``EasyBlock`` class from ``easybuild.framework.easyblock``)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The API for easyblocks was modified slightly, to correct for a couple of historic mistakes.
+
+Return type of ``extra_options`` method
++++++++++++++++++++++++++++++++++++++++
+
+**The list-of-tuples return type of the** ``extra_options`` **method must now be a** ``dict`` **instead.**
+
+* *deprecated since:* EasyBuild v1.12.0 (Apr&#39;14)
+* *removed in:* EasyBuild v2.0
+* *alternative(s)*: ensure/assume ``dict`` return type
+
+The return type of the ``extra_options`` static method in the ``EasyBlock`` class has been changed to a *dictionary*
+(``dict``), rather than a list of key-value tuples.
+
+Custom easyconfig parameters should be added via a *dict*-typed value to the ``extra_options`` function of parent
+easyblock.
+
+For example (taken from the generic easyblock ``Binary``)::
+
+      @staticmethod
+      def extra_options(extra_vars=None):
+          &quot;&quot;&quot;Extra easyconfig parameters specific to Binary easyblock.&quot;&quot;&quot;
+          extra_vars = EasyBlock.extra_options(extra_vars)
+          extra_vars.update({
+              &#39;install_cmd&#39;: [None, &quot;Install command to be used.&quot;, CUSTOM],
+          })
+          return extra_vars
+
+Extension filter template
++++++++++++++++++++++++++
+
+**The** ``name`` **and** ``version`` **templates in** ``exts_filter`` **are removed.**
+
+* *deprecated since:* EasyBuild v1.2.0 (Feb&#39;13)
+* *removed in:* EasyBuild v2.0
+* *alternative(s)*: use ``ext_name`` and ``ext_version`` instead
+
+Only the ``ext_name``, ``ext_version`` and ``src`` template strings can be used in the ``exts_filter`` extension filter
+easyconfig parameter; the ``name`` and ``version`` template strings are removed.
+
+For example (default extension filter for Python packages)::
+
+  exts_filter = (&quot;python -c &#39;import %(ext_name)s&#39;&quot;, &quot;&quot;)
+
+Module path of default class for extensions
++++++++++++++++++++++++++++++++++++++++++++
+
+**Specifying the module path in** ``exts_defaultclass`` **is no longer possible.**
+
+* *deprecated since:* EasyBuild v0.5 (Apr&#39;12)
+* *removed in:* EasyBuild v2.0
+* *alternative(s)*: *(none required, module path is derived from specified class name)*
+
+Explicitly specifying the module path for the default class to use for extensions (via ``exts_defaultclass``) is
+no longer possible. Only the class name should be specified, the corresponding module path is derived from it.
+
+Module path for easyblocks
+++++++++++++++++++++++++++
+
+**Deriving the module path for easyblocks from the software name is removed.**
+
+* *deprecated since:* EasyBuild v1.4.0 (May&#39;13)
+* *removed in:* EasyBuild v2.0
+* *alternative(s)*: use easyblock class name according to encoding scheme (e.g., ``EB_Foo``)
+
+Determining the *location* of Python modules representing easyblocks based on the software name (``name``) is removed.
+
+EasyBuild *must* be able to determine the easyblock module path solely based on the name of the easyblock Python class.
+
+Easyblocks with a class name that is already honoring the encoding scheme implemented by the ``encode_class_name``
+function will not be affected.
+
+.. _depr_easybuild_tools_modules_eb1:
+
+``easybuild.tools.modules`` Python module
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**The API of the** ``easybuild.tools.modules`` **module has been updated, certain aspects of the old API are removed.**
+
+* *deprecated since:* EasyBuild v1.8.0 (Oct&#39;13) &amp; v1.15.0 (Sept&#39;15)
+* *removed in:* EasyBuild v2.0
+* *alternative(s)*: use equivalents available in new API (see below)
+
+The API of the ``easybuild.tools.modules`` Python module has been changed extensively when implementing support for
+alternative module naming schemes:
+
+* the ``modules`` class variable and the ``add_module``/``remove_module`` methods are removed; modules should be
+  (un)loaded using the ``load`` and ``unload`` methods instead
+* the ``mod_paths`` and ``modulePath`` named arguments for the ``run_module`` method are removed; the class instance
+  should be created with a specific list of module paths instead
+* the ``Modules`` class to obtain a class instance representing a modules tool interface is removed;
+  the ``modules_tool`` function should be used instead
+
+Additionally, the ``exists`` method which only takes a single module name is removed; it is replaced by
+the ``exist`` method, which takes a list of module names *(since EasyBuild v1.15.0 (Sept&#39;15))*.
+
+**Easyblocks should not be using** ``easybuild.tools.modules`` **directly, and hence should be unaffected.**
+
+.. _depr_softroot_version_env_vars_eb1:
+
+``$SOFTX`` environment variables in generated module files
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+``$SOFTX`` **environment variables set by module files generated with EasyBuild v0.x will no longer be taken into
+account.**
+
+* *deprecated since:* EasyBuild v1.3.0 (Apr&#39;13)
+* *removed in:* EasyBuild v2.0
+* *alternative(s)*: reinstall (ancient) module files which are only defining the ``$SOFTX`` environment variables
+
+The ``get_software_root`` and ``get_software_version`` functions will only take ``$EBROOTFOO`` and ``$EBVERSIONFOO``
+environment variables into account, as opposed to also considering the ``$SOFTROOTFOO`` and ``$SOFTVERSIONFOO``
+environment variables (which were set in modules generated by EasyBuild v0.x).
+Likewise, adhering to the ``$SOFTDEVELFOO`` environment variables is removed.
+
+*This is only relevant to early adopters who are still using module files generated by EasyBuild v0.x.*
+
+.. _depr_renamed_relocated_functions_eb1:
+
+Renamed/relocated functions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Some functions/methods have been renamed or relocated, their equivalents under a previous location/name are removed.**
+
+* *deprecated since:* *(depends on function/method, see below)*
+* *removed in:* EasyBuild v2.0
+* *alternative(s)*: use new location/name
+
+A number of functions and methods that are part of the EasyBuild framework API have been renamed, mainly for consistency
+reasons.
+
+* the ``moduleGenerator`` handle to the ``ModuleGenerator`` object instance has been renamed to ``module_generator``;
+  hence, easyblock should be using ``self.module_generator`` rather than ``self.moduleGenerator`` *(since EasyBuild v1.16.0 (Dec&#39;14))*
+* ``source_paths()`` (in ``easybuild.tools.config``) replaces the removed ``source_path()`` *(since EasyBuild v1.8.0 (Oct&#39;13))*
+* ``get_avail_core_count()`` (in ``easybuild.tools.systemtools``) replaces the removed ``get_core_count()``
+  *(since EasyBuild v1.9.0 (Nov&#39;13))*
+* ``get_os_type()`` (in ``easybuild.tools.systemtools``) replaces the removed ``get_kernel_name``
+  *(since EasyBuild v1.3.0 (Apr&#39;13))*
+* the ``det_full_ec_version`` function available from ``easybuild.tools.module_generator`` replaces the removed
+  ``det_installversion`` function that was available from ``easybuild.framework.easyconfig.*`` *(since EasyBuild v1.8.0
+  (Oct&#39;13))*
+
+Some functions have moved to a different location:
+
+* the ``read_environment`` function is now provided by the ``easybuild.tools.environment`` module, rather than by
+  ``easybuild.tools.config`` or ``easybuild.tools.utilities`` *(since EasyBuild v1.7.0 (Sept&#39;13))*
+* the ``modify_env`` function is now provided by the ``easybuild.tools.environment`` module, rather than by
+  ``easybuild.tools.filetools`` *(since EasyBuild v1.7.0 (Sep&#39;13))*
+* the ``run_cmd``, ``run_cmd_qa`` and ``parse_log_for_error`` functions are now provided by the ``easybuild.tools.run`` module,
+  rather than by ``easybuild.tools.filetools`` *(since EasyBuild v1.11.0 (Feb&#39;14))*
+
+The ``get_log`` function provided by the ``easybuild.tools.build_log`` module has been removed entirely,
+no alternatives are provided (since none are needed). *(since EasyBuild v1.3.0 (Apr&#39;13))*
+
+.. _depr_changes_generic_easyblocks_eb1:
+
+Changes in (generic) easyblocks
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+``srcdir`` replaces ``builddir`` as named argument in ``CMakeMake.configure_step``
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**The named argument** ``builddir`` **in the** ``configure_step`` **method of the generic** ``CMakeMake`` **easyblock
+was replaced by** ``srcdir`` **.**
+
+* *deprecated since:* EasyBuild v1.4.0 (May&#39;13)
+* *removed in:* EasyBuild v2.0
+* *alternative(s)*: equivalent ``srcdir`` named argument
+
+Since the ``builddir`` named argument in the ``configure_step`` method of the generic ``CMakeMake`` easyblock was a
+misnomer (it specifies the location of the *source* directory that should be provided to ``cmake``), it was replaced
+with an equivalent named argument ``srcdir``.
+
+``VersionIndependentPythonPackage`` replaces ``VersionIndependendPythonPackage``
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**The generic easyblock** ``VersionIndependendPythonPackage`` **was replaced with the equivalent generic easyblock**
+``VersionIndependentPythonPackage`` **.**
+
+* *deprecated since:* EasyBuild v1.11.0 (Feb&#39;14)
+* *removed in:* EasyBuild v2.0
+* *alternative(s)*: ``VersionIndependentPythonPackage``
+
+Because of to a typo in the name, the ``VersionIndependendPythonPackage`` generic easyblock was replaced by the
+equivalent ``VersionIndependentPythonPackage`` generic easyblock.
+
+``get_sitearch_suffix`` function in ``Perl`` easyblock is removed
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+**The** ``get_sitearch_suffix`` **function in the** ``Perl`` **easyblock was replaced in favor of the more generic**
+``get_site_suffix`` **function.**
+
+* *deprecated since:* EasyBuild v1.7.0 (Sept&#39;13)
+* *removed in:* EasyBuild v2.0
+* *alternative(s)*: ``get_site_suffix(&#39;sitearch&#39;)``
+
+The ``get_sitearch_suffix`` function provided by the ``Perl`` easyblock, which can be (and is) imported in/used by other
+easyblocks, has been replaced by the more generic ``get_site_suffix`` function.
+
+To obtain the same functionality as was provided by ``get_sitearch_suffix``, use ``get_site_suffix(&#39;sitearch&#39;)`` instead.
+</code></pre></div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/easy_build" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/c/easybuilders" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://docs.easybuild.io" target="_blank" rel="noopener" title="docs.easybuild.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M96 0C43 0 0 43 0 96v320c0 53 43 96 96 96h320c17.7 0 32-14.3 32-32s-14.3-32-32-32v-64c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H96zm0 384h256v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      
+    
+  </body>
+</html>

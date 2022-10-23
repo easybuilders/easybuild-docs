@@ -1,0 +1,795 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.easybuild.io/hooks/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+    
+    
+      
+        <title>Hooks - EasyBuild - building software with ease</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="easybuild" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hooks" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="EasyBuild - building software with ease" class="md-header__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
+      
+  <img src="../img/easybuild_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EasyBuild - building software with ease
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hooks
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/easybuilders/easybuild-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EasyBuild @ GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
+      
+  <img src="../img/easybuild_logo.png" alt="logo">
+
+    </a>
+    EasyBuild - building software with ease
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/easybuilders/easybuild-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EasyBuild @ GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what-is-easybuild/" class="md-nav__link">
+        What is EasyBuild?
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terminology/" class="md-nav__link">
+        Terminology
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-easybuild/" class="md-nav__link">
+        Using EasyBuild
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-notes/" class="md-nav__link">
+        Release notes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-help/" class="md-nav__link">
+        Getting help
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/hooks.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="hooks">Hooks<a class="headerlink" href="#hooks" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/Hooks.html">https://docs.easybuild.io/en/latest/Hooks.html</a>.</p>
+<p><strong>
+It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
+and you can help with that!
+</strong></p>
+<ul>
+<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Hooks.rst"><code>docs/Hooks.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
+<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/hooks.md"><code>docs/hooks.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
+</ul>
+<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
+</div>
+<div class="highlight"><pre><span></span><code>.. _hooks:
+
+Hooks
+=====
+
+Since v3.5.0, EasyBuild supports *hooks* that can be used
+to customise the behaviour of EasyBuild according to site policies if needed,
+without having to change the EasyBuild framework or the existing easyblocks.
+
+.. contents::
+    :depth: 3
+    :backlinks: none
+
+.. _hooks_what:
+
+What are hooks?
+---------------
+
+*Hooks* are user-defined functions that are called by the EasyBuild framework at specific times during
+the installation procedure. They can be leveraged to alter or augment the installation procedure.
+
+This is usually done to conform with site-specific policies that are difficult to enforce otherwise,
+but it can also be (ab)used to fix specific problems or inject self-implemented enhancements
+(before you flesh them out in a proper contribution, for example).
+
+Both the ``EasyBlock`` instance and the parsed easyconfig file that are being used
+are fully accessible (and modifiable) from within hook implementations. Hence, this mechanism
+provides a lot of flexibility to change the EasyBuild functionality should you require it,
+without having to modify the codebase of EasyBuild itself.
+
+
+.. _hooks_configuration:
+
+Configuring EasyBuild to use your hook implementations
+------------------------------------------------------
+
+To instruct EasyBuild to use your hook implementations,
+you only need to specify the location of the Python module (``*.py``) that implements them.
+
+This is done via the ``--hooks`` configuration option
+(or equivalently via the ``$EASYBUILD_HOOKS`` environment variable, or via ``hooks = ...``
+in an EasyBuild configuration file, see also :ref:`configuring_easybuild`).
+
+For example::
+
+    eb --hooks=$HOME/my_eb_hooks.py ...
+
+or::
+
+    export EASYBUILD_HOOKS=$HOME/my_eb_hooks.py
+    eb ...
+
+
+.. _hooks_available:
+
+Available hooks
+---------------
+
+Currently (since EasyBuild v3.7.0), three types of hooks are supported:
+
+* ``start_hook`` and ``end_hook``, which are triggered *once* before starting software installations,
+  and *once* right after completing all installations, respectively
+* ``parse_hook``, which is triggered when an easyconfig file is being parsed
+* ``module_write_hook``, which is triggered right before a module file is written.
+  This includes the temporary module file used when installing extensions and during the sanity check,
+  as well as the devel module.
+* &quot;*step*&quot; hooks that are triggered before and after every step of each installation procedure that is performed,
+  also aptly named &#39;``pre``&#39;- and &#39;``post``&#39;-hooks
+
+The list of currently available hooks in order of execution,
+which can also be consulted using ``eb --avail-hooks``, is:
+
+    * ``start_hook`` *(only called once in an EasyBuild session)*
+    * ``parse_hook`` *(available since EasyBuild v3.7.0)*
+    * ``pre_fetch_hook``, ``post_fetch_hook``
+    * ``pre_ready_hook``, ``post_ready_hook``
+    * ``pre_source_hook``, ``post_source_hook``
+    * ``pre_patch_hook``, ``post_patch_hook``
+    * ``pre_prepare_hook``, ``post_prepare_hook``
+    * ``pre_configure_hook``, ``post_configure_hook``
+    * ``pre_build_hook``, ``post_build_hook``
+    * ``pre_test_hook``, ``post_test_hook``
+    * ``pre_install_hook``, ``post_install_hook``
+    * ``pre_extensions_hook``, ``post_extensions_hook``
+    * ``pre_postproc_hook``, ``post_postproc_hook``
+    * ``pre_sanitycheck_hook``, ``post_sanitycheck_hook``
+    * ``pre_cleanup_hook``, ``post_cleanup_hook``
+    * ``pre_module_hook``, ``post_module_hook``
+    * ``pre_permissions_hook``, ``post_permissions_hook``
+    * ``pre_package_hook``, ``post_package_hook``
+    * ``pre_testcases_hook``, ``post_testcases_hook``
+    * ``end_hook`` *(only called once in an EasyBuild session)*
+    * ``module_write_hook`` *(called multiple times per installation, available since EasyBuild v4.4.1)*
+
+All functions implemented in the provided Python module for which the name ends with ``_hook`` are considered.
+
+If any ``*_hook`` functions are encountered that do not match any of the available hooks, an error is reported.
+EasyBuild will try to provide suggestions for available hooks that closely match the encountered unknown hook.
+
+For example::
+
+    $ eb --hooks wrong_hooks.py example.eb
+    == temporary log file in case of crash /tmp/eb-nMawy1/easybuild-Gu2ZP6.log
+    ERROR: Found one or more unknown hooks:
+    * stat_hook (did you mean &#39;start_hook&#39;?)
+    * this_is_not_a_hook
+    * install_hook (did you mean &#39;pre_install_hook&#39;, or &#39;post_install_hook&#39;?)
+
+    Run &#39;eb --avail-hooks&#39; to get an overview of known hooks
+
+.. _hooks_implementation:
+
+Implementing hooks
+------------------
+
+To implement hooks, simply define one or more functions in a Python module (``*.py``),
+each named after an available hook.
+
+Do take into account the following:
+
+* for ``start_hook`` and ``end_hook``, no arguments are provided
+
+* for ``parse_hook``, one argument is provided: the ``EasyConfig`` instance
+  that corresponds to the easyconfig file being parsed (usually referred to as ``ec``)
+
+* for ``module_write_hook``, 3 arguments are provided:
+   * the ``EasyBlock`` instance used to perform the installation (usually referred to as ``self``)
+   * the filepath of the module that will be written
+   * the module text as a string
+  The return value of this hook, when set, will replace the original text that is then written to the module file.
+
+* for the step hooks, one argument is provided:
+  the ``EasyBlock`` instance used to perform the installation (usually referred to as ``self``)
+
+* the parsed easyconfig file can be accessed in the step hooks via the ``EasyBlock`` instance,
+  i.e., via ``self.cfg``
+
+It is recommended to anticipate possible changes in the provided (named) arguments,
+using the ``*args`` and ``**kwargs`` mechanism commonly used in Python. This
+avoids that your hook implementations may break when updating to future EasyBuild versions. For example::
+
+  # example pre-configure hook that anticipates changes in provided arguments
+  def pre_configure_hook(self, *args, **kwargs):
+      ...
+
+In hooks you have access to the full functionality provided by the EasyBuild framework,
+so do ``import`` from ``easybuild.tools.*`` (or other ``easybuild.*`` namespaces) to leverage
+those functions.
+
+.. _hooks_parse_hook:
+
+Parse hook specifics
+++++++++++++++++++++
+
+``parse_hook`` is triggered right *after* reading the easyconfig file,
+before further parsing of some easyconfig parameters (like ``*dependencies``) into
+custom data structures is done.
+
+This is important since it allows to dynamically modify easyconfig files
+while they are still &quot;raw&quot;, i.e. when the easyconfig parameter values are
+still basic Python data structures like lists, dictionaries, etc.
+that are easy to manipulate (see also :ref:`hooks_caveats_manipulating`).
+
+In ``parse_hook`` easyconfig parameters can be accessed and/or modified in a straightforward way,
+see :ref:`hooks_examples_inject_patch`.
+
+
+.. _hooks_caveats:
+
+Caveats
+-------
+
+Due to internal details of the EasyBuild framework, you may run into some surprises when
+implementing hooks.
+Here are some things to take into account:
+
+.. _hooks_caveats_template_values:
+
+Resolving of template values
+++++++++++++++++++++++++++++
+
+In all *step* hooks, template values in easyconfig parameters will be resolved whenever they are accessed.
+
+That is, if the ``%(version)`` template is used in for example the ``sources`` easyconfig parameter,
+it will be replaced with the actual value of the ``version`` easyconfig parameter whenever the
+``sources`` value is used.
+This can be avoided by temporarily disabling templating by wrapping the code in ``with self.cfg.disable_templating:``.
+
+There is one notable exception to this:
+Templates in easyconfig parameters are *not* resolved in ``parse_hook``,
+because templating has been disabled explicitly before ``parse_hook`` is called;
+this helps significantly to simplify manipulating of easyconfig parameter values
+(see also :ref:`hooks_caveats_manipulating`).
+
+
+.. _hooks_caveats_manipulating:
+
+Manipulating easyconfig parameters
+++++++++++++++++++++++++++++++++++
+
+You may run into surprises when trying to manipulate easyconfig parameters, for various reasons.
+
+First of all, the original easyconfig parameters may already be processed in another data structure
+which does not resemble the original format in which the parameter was defined in the easyconfig file.
+
+Moreover, this processing could be done either &quot;in place&quot; by replacing the original easyconfig parameter value,
+or in a separate variable, which effectively means that any changes to the original easyconfig parameter value
+are simply ignored.
+
+In addition, because of how the templating mechanism for easyconfig parameter works,
+changes to easyconfig parameters with non-string values (i.e. lists, dictionaries, etc.) will go up
+in smoke if not done correctly.
+
+More specifically, the following approach will *not* work in any of the (step) hooks, except for ``parse_hook``:
+
+.. code:: python
+
+    def pre_fetch_hook(self):
+        &quot;Example of pre-fetch hook to manipulate list of patches.&quot;
+        # this does NOT have the intended affect in any pre- or post-step hook
+        self.cfg[&#39;patches&#39;].append(&#39;example.patch&#39;)
+
+The problem here is that the value obtained via ``self.cfg[&#39;patches&#39;]`` is not a reference
+to the actual easyconfig parameter value but a reference to a temporary copy thereof;
+hence any updates on the copy are effectively lost immediately.
+
+To achieve the intended effect, you can either:
+
+* temporarily disable the templating mechanism:
+
+  .. code:: python
+
+    def pre_fetch_hook(self):
+        &quot;Example of pre-fetch hook to manipulate list of patches.&quot;
+        # temporarily disable templating, so changes to &#39;patches&#39; easyconfig parameter are picked up
+        with self.cfg.disable_templating:
+            # add patch
+            self.cfg[&#39;patches&#39;].append(&#39;example.patch&#39;)
+        # templating state restored
+
+* or replace the original value entirely:
+
+  .. code:: python
+
+    def pre_fetch_hook(self):
+        &quot;Example of pre-fetch hook to manipulate list of patches.&quot;
+        self.cfg[&#39;patches&#39;] = self.cfg[&#39;patches&#39;] + [&#39;example.patch&#39;]
+
+
+A better approach for manipulating easyconfig parameters is to use the ``parse_hook`` that
+was introduced in EasyBuild v3.7.0 (see :ref:`hooks_parse_hook`),
+where these kind of surprises will not occur (because templating is automatically disabled
+before ``parse_hook`` is called and restored immediately afterwards).
+See also :ref:`hooks_examples_inject_patch`.
+
+.. _hooks_caveats_archived_easyconfig:
+
+Archived easyconfig file vs hooks
++++++++++++++++++++++++++++++++++
+
+EasyBuild archives the easyconfig file that was used for a particular installation:
+A copy is stored both in the ``easybuild`` subdirectory of the software installation
+directory and in the easyconfigs repository (see :ref:`easyconfigs_repo`).
+
+If any changes were made to the easyconfig file via hooks, these changes will *not* be
+reflected in these copies.
+The assumption here is that the hooks will also be in place for future (re-)installations.
+
+EasyBuild does however store an additional copy of the easyconfig file which includes
+any modifications that were done dynamically, for example by hooks.
+If subtoolchains were used to resolve dependencies, they will also be hardwired in this copy.
+
+This &quot;*reproducible easyconfig*&quot; is stored in the ``easybuild/reprod`` subdirectory
+of the software installation directory.
+
+
+.. _hooks_examples:
+
+Examples of hook implementations
+--------------------------------
+
+.. _hooks_examples_openmpi_configopts:
+
+Example hook to replace ``--with-verbs`` with ``--without-verbs`` in OpenMPI configure options
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. code:: python
+
+    def pre_configure_hook(self, *args, **kwargs):
+        &quot;&quot;&quot;Example pre-configure hook to replace --with-verbs with --without -verbs for OpenMPI.&quot;&quot;&quot;
+        if self.name == &#39;OpenMPI&#39; and &#39;--with-verbs&#39; in self.cfg[&#39;configopts&#39;]:
+            self.log.info(&quot;[pre-configure hook] Replacing --with-verbs with --without-verbs&quot;)
+            self.cfg[&#39;configopts&#39;] = self.cfg[&#39;configopts&#39;].replace(&#39;--with-verbs&#39;, &#39;--without-verbs&#39;)
+
+.. _hooks_examples_inject_patch:
+
+Example hook to inject a custom patch file
+++++++++++++++++++++++++++++++++++++++++++
+
+.. code:: python
+
+    def parse_hook(ec, *args, **kwargs):
+        &quot;&quot;&quot;Example parse hook to inject a patch file for a fictive software package named &#39;Example&#39;.&quot;&quot;&quot;
+        if ec.name == &#39;Example&#39;:
+            patch_file = &#39;example.patch&#39;
+            ec.log.info(&quot;[parse hook] Injecting additional patch file &#39;%s&#39;&quot;, patch_file)
+            ec[&#39;patches&#39;].append(patch_file)
+
+Example hook to replace PYTHONPATH by EBPYTHONPREFIXES in (Lua) modules
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. code:: python
+
+    def module_write_hook(self, filepath, module_txt, *args, **kwargs):
+        # note: if `self.mod_filepath == filepath` =&gt; final module file
+        if &#39;Python&#39; in (dep[&#39;name&#39;] for dep in self.cfg.dependencies()):
+            search = r&#39;prepend_path\(&quot;PYTHONPATH&quot;, pathJoin\(root, &quot;lib/python\d.\d/site-packages&quot;\)\)&#39;
+            replace = &#39;prepend_path(&quot;EBPYTHONPREFIXES&quot;, root)&#39;
+            return re.sub(search, replace, module_txt)
+</code></pre></div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/easy_build" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/c/easybuilders" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://docs.easybuild.io" target="_blank" rel="noopener" title="docs.easybuild.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M96 0C43 0 0 43 0 96v320c0 53 43 96 96 96h320c17.7 0 32-14.3 32-32s-14.3-32-32-32v-64c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H96zm0 384h256v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1065 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.easybuild.io/writing-yeb-easyconfig-files/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+    
+    
+      
+        <title>Writing easyconfig files in YAML syntax (.yeb format) - EasyBuild - building software with ease</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="easybuild" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#writing-easyconfig-files-in-yaml-syntax-yeb-format" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="EasyBuild - building software with ease" class="md-header__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
+      
+  <img src="../img/easybuild_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EasyBuild - building software with ease
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Writing easyconfig files in YAML syntax (.yeb format)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/easybuilders/easybuild-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EasyBuild @ GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
+      
+  <img src="../img/easybuild_logo.png" alt="logo">
+
+    </a>
+    EasyBuild - building software with ease
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/easybuilders/easybuild-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EasyBuild @ GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what-is-easybuild/" class="md-nav__link">
+        What is EasyBuild?
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terminology/" class="md-nav__link">
+        Terminology
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-easybuild/" class="md-nav__link">
+        Using EasyBuild
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-notes/" class="md-nav__link">
+        Release notes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-help/" class="md-nav__link">
+        Getting help
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/writing-yeb-easyconfig-files.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="writing-easyconfig-files-in-yaml-syntax-yeb-format">Writing easyconfig files in YAML syntax (.yeb format)<a class="headerlink" href="#writing-easyconfig-files-in-yaml-syntax-yeb-format" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/Writing_yeb_easyconfig_files.html">https://docs.easybuild.io/en/latest/Writing_yeb_easyconfig_files.html</a>.</p>
+<p><strong>
+It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
+and you can help with that!
+</strong></p>
+<ul>
+<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Writing_yeb_easyconfig_files.rst"><code>docs/Writing_yeb_easyconfig_files.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
+<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/writing-yeb-easyconfig-files.md"><code>docs/writing-yeb-easyconfig-files.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
+</ul>
+<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
+</div>
+<div class="highlight"><pre><span></span><code>.. _easyconfig_yeb_format:
+
+Writing easyconfig files in YAML syntax (``.yeb`` format) **[IN DEVELOPMENT]**
+==============================================================================
+
+.. note::
+    Because support for easyconfig files in YAML syntax (a.k.a. ``.yeb`` files) is still *in development*,
+    using them currently requires enabling the use of experimental features (``--experimental``),
+    see also :ref:`experimental_features` .
+
+    An up-to-date overview of current progress on support for ``.yeb`` easyconfigs is available at
+    https://github.com/easybuilders/easybuild-framework/issues/1407.
+
+Useful links:
+
+* YAML syntax specification: http://www.yaml.org/spec/1.2/spec.html
+
+.. contents::
+    :depth: 3
+    :backlinks: none
+
+.. _easyconfig_yeb_format_requirements:
+
+Requirements
+------------
+
+To use ``.yeb`` easyconfigs, you need to have:
+
+* an EasyBuild (development) version which is aware of the ``.yeb`` format (i.e., version 2.3.0dev or higher)
+* `PyYAML &lt;https://pypi.python.org/pypi/PyYAML&gt;`_ installed and available in your Python search path
+  (via ``$PYTHONPATH`` for example), such that ``import yaml`` works
+
+.. _easyconfig_yeb_format_syntax:
+
+Syntax
+------
+
+.. _easyconfig_yeb_format_syntax_YAML_header:
+
+YAML header (optional)
+~~~~~~~~~~~~~~~~~~~~~~
+
+Easyconfig files in YAML syntax can start with a standard YAML header.
+
+It consists of two lines:
+
+* a line with a &#39;``%YAML``&#39; *directive* which also indicates the YAML version being used
+  (the latest YAML version is 1.2, and dates from 2009);
+* followed by a *document marker* line &#39;``---``&#39; (which is used to separate directives from content)
+
+For example::
+
+    %YAML 1.2
+    ---
+
+This header is optional, but we recommend including it; one advantage is that editor will use proper syntax
+highlighting for YAML when the ``%YAML`` directory is included.
+
+.. _easyconfig_yeb_format_syntax_comments:
+
+Comments
+~~~~~~~~
+
+Comments can be included anywhere, and are prefixed with a hash character ``#``::
+
+    # this is a comment
+
+
+.. _easyconfig_yeb_format_syntax_internal_variables:
+
+Internal variables
+~~~~~~~~~~~~~~~~~~
+
+To define and use temporary/internal variables in easyconfig files, which can be useful to avoid hardcoding (partial)
+easyconfig parameter values, the YAML anchor/alias functionality can be used
+(see also http://www.yaml.org/spec/1.2/spec.html#id2765878).
+
+A value can be marked for future reference via an *anchor*, using the ampersand character &#39;``&amp;``&#39;.
+Referring to it later is done using an asterisk character &#39;``*``&#39;.
+
+Typically, internal variables are defined at the top of the ``.yeb`` easyconfig file using a list named
+``_internal_variables_``, but this is just a matter of style; anchors can be defined throughout the entire file if
+desired.
+
+For example, referring to the Python version being used in both the ``versionsuffix`` and list of dependencies can
+be done as follows::
+
+    _internal_variables_:
+        - &amp;pyver 2.7.10
+
+    versionsuffix: !join [-Python-, *pyver]
+    dependencies:
+        - [Python, *pyver]
+
+In this example, the ``!join`` is used to concatenate two string values,
+see also :ref:`easyconfig_yeb_format_syntax_string_concatenation`.
+
+A more elaborate example of this is the :ref:`easyconfig_yeb_format_examples_goolf1410` example easyconfig.
+
+
+.. _easyconfig_yeb_format_syntax_string_concatenation:
+
+Concatenating strings and/or variables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The standard YAML format does not support the notion of string concatenation.
+
+Since concatenating string values is a common pattern in easyconfig files, the EasyBuild framework
+defines the ``!join`` operator to support this.
+
+For example, defining a ``versionsuffix`` that contains the Python version being used (which may be referred to
+elsewhere too) can be done as follows::
+
+    _internal_variables_:
+        - &amp;pyver 2.7.10
+
+    versionsuffix: !join [-Python-, *pyver]
+
+
+.. _easyconfig_yeb_format_syntax_escaping:
+
+Escaping string values with single or double quotes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Strings in YAML can be unquoted. However, when they contain special characters they need to be escaped by either single-
+or double-quoting the string.
+
+Special characters that require single quotes are: `:` `{` `}` `[` `]` `,` `&amp;` `*` `#` `?` `|` `-` `&lt;` `&gt;` `=` `!` `%` `@` and `\``.
+When using single-quoted strings, any single quote inside the string must be doubled to escape it.
+
+If the string contains control characters such as `\n`, it must be escaped with double quotes. 
+
+
+.. _easyconfig_yeb_format_syntax_easyconfig_parameters:
+
+Easyconfig parameter values
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To define an easyconfig parameter, simply use ``&lt;key&gt;: &lt;value&gt;`` (i.e., use a colon ``:`` as a separator).
+
+In YAML terminology, an easyconfig file is expressed as a *mapping*, with easyconfig parameters as keys.
+
+Three types of values (*nodes*) are supported: *scalars* (strings, integers), *sequences* (lists) and *mappings*
+(dictionaries).
+
+.. _easyconfig_yeb_format_syntax_scalars:
+
+Scalar values
+#############
+
+Using scalar values is straight-forward, no special syntax is required.
+
+For string values, no quotes must be used (in general).
+However, quotes are sometimes required to escape characters that have special meaning in YAML (like &#39;``:``&#39;).
+(Also see: :ref:`easyconfig_yeb_format_syntax_escaping`)
+It&#39;s worth noting that there&#39;s a subtle difference between using single and double quotes, see
+`Flow Scalar Styles &lt;http://www.yaml.org/spec/1.2/spec.html#id2786942&gt;`_.
+
+Examples::
+
+    name: gzip
+    version: 1.6
+
+    # single quotes are required for string values representing URLs, to escape the &#39;:&#39;
+    homepage: &#39;http://www.gnu.org/software/gzip/&#39;
+
+    parallel: 1
+
+Multiline strings can be expressed using indentation::
+
+    description:
+        gzip is a popular data compression program
+        as a replacement for compress
+
+.. _easyconfig_yeb_format_syntax_sequences:
+
+Sequences
+#########
+
+Sequence values (a.k.a. lists) can be expressed in different ways, depending on their size.
+
+If there are a limited number of (short) entries the value can be expressed on a single line,
+using square brackets &#39;``[``&#39; &#39;``]``&#39; and with comma &#39;``,``&#39; as separator.
+
+Example::
+
+    # quotes are required to escape the &#39;:&#39;
+    source_urls: [&#39;http://ftpmirror.gnu.org/gzip/&#39;, &#39;ftp://ftp.gnu.org/gnu/gzip/&#39;]
+
+Alternatively indentation can be used for scope, with each entry on its own line,
+indicated with a dash and a space ``- ``.
+
+Example::
+
+    # no quotes required here, since there&#39;s no ambiguity w.r.t. &#39;:&#39;
+    source_urls:
+        - http://ftpmirror.gnu.org/gzip/
+        - http://ftp.gnu.org/gnu/gzip/
+        - ftp://ftp.gnu.org/gnu/gzip/
+
+.. _easyconfig_yeb_format_syntax_mappings:
+
+Mappings
+########
+
+Mapping values (a.k.a. dictionaries) are expressed using a colon &#39;``:``&#39; and space as key-value separator,
+a comma &#39;``,``&#39; to key-value pairs, and curly braces &#39;``{``&#39; &#39;``}``&#39; to mark the start/end.
+
+For example::
+
+    toolchain: {name: intel, version: 2015b}
+
+.. _easyconfig_yeb_format_syntax_nesting:
+
+Nesting
+#######
+
+Different types of values can be nested.
+
+For example, sequence values can be used in a mapping::
+
+    sanity_check_paths: {
+        files: [bin/gunzip, bin/gzip, bin/uncompress],
+        dirs: [],
+    }
+
+And sequences of sequences are also supported::
+
+    osdependencies
+        - zlib
+        - [openssl-devel, libssl-dev, libopenssl-devel]
+
+
+.. _easyconfig_yeb_format_syntax_template_values_constants:
+
+Templates values and constants
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Template values can be specified as a part of string values, using ``%(template_name)``.
+
+Template constants are injected by the easyconfig ``.yeb`` parser as *node anchors*,
+and can be referred to with an *alias node*, i.e. using an asterisk ``*``.
+
+For example::
+
+    source_urls: [*GNU_SOURCE]
+    sources: [&#39;%(name)s-%(version)s.tar.gz&#39;]  # equivalent with [*SOURCE_TAR_GZ]
+
+See also :ref:`easyconfig_param_templates`.
+
+.. _easyconfig_yeb_format_syntax_dependencies:
+
+Dependencies
+~~~~~~~~~~~~
+
+We updated the way dependencies are specified to match with the new toolchain format (:ref:`easyconfig_yeb_format_new`)
+The format is a bit more verbose than before, but easier to read. Each dependency is a list entry, indicated by a dash
+and space (`- `). Each entry can specify a ``name: version`` key-value pair, and a ``versionsuffix`` and ``toolchain``.
+Only the ``name: version`` pair is required.
+
+Dependencies can also be external modules. In this case, the dependency has to be specified with a ``name`` and the marker 
+``external_module: True``. The boolean value is not case-sensitive.
+
+
+A straightforward example::
+
+    dependencies:
+        - libreadline: 6.3
+        - Tcl: 8.6.4
+        - name: fftw/3.3.4.4
+          external_module: True
+
+    builddependencies:
+        # empty versionsuffix, different toolchain (GCC/4.9.2)
+        - CMake: 3.2.2
+          toolchain: GCC, 4.9.2
+
+A more complicated example from a toolchain easyconfig, where also the ``!join`` operator
+(see :ref:`easyconfig_yeb_format_syntax_string_concatenation`) and internal variables
+(see :ref:`easyconfig_yeb_format_syntax_internal_variables`) are used::
+
+    _internal_variables_:
+        - &amp;comp_name GCC
+        - &amp;comp_version 4.7.2
+        - &amp;comp [*comp_name, *comp_version]
+
+        - &amp;blaslib OpenBLAS
+        - &amp;blasver 0.2.6
+        - &amp;blas !join [*blaslib, -, *blasver]
+        - &amp;blas_suff -LAPACK-3.4.2
+
+        - &amp;comp_mpi_tc [gompi, 1.4.10]
+
+    dependencies:
+        - *comp_name: *comp_version
+        - OpenMPI: 1.6.4
+          toolchain: *comp
+        - *blaslib: *blasver
+          versionsuffix: *blas_suff
+          toolchain: *comp_mpi_tc
+        - FFTW: 3.3.3
+          toolchain: *comp_mpi_tc
+        - ScaLAPACK: 2.0.2
+          versionsuffix: !join [-, *blas, *blas_suff]
+          toolchain: *comp_mpi_tc
+
+For the full version of this easyconfig file, see the example ``.yeb`` easyconfig
+:ref:`easyconfig_yeb_format_examples_goolf1410`.
+
+.. _easyconfig_yeb_format_new:
+
+OS dependencies and sanity check paths
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To specify parameters that used to contain tuples such as ``osdependencies`` and ``sanity_check_paths``, simply use
+lists (sequences) instead of tuples.
+
+For example::
+
+    # note: this is eb syntax, will not work in .yeb files
+    osdependencies = [(&#39;openssl-devel&#39;, &#39;libssl-dev&#39;, &#39;libopenssl-devel&#39;)]
+
+Becomes::
+
+    osdependencies: [[openssl-devel, libssl-dev, libopenssl-devel]] 
+
+And::
+
+    # note: this is eb syntax, will not work in .yeb files
+    sanity_check_paths = {
+        &#39;files&#39;: [&#39;fileA&#39;, (&#39;fileB&#39;, &#39;fileC&#39;)],
+        &#39;dirs&#39; : [&#39;dirA&#39;, &#39;dirB&#39;],
+    }
+
+Becomes::
+
+    sanity_check_paths: {
+        files: [fileA, [fileB, fileC]],
+        dirs: [dirA, dirB]
+    }
+
+Shorthands for common easyconfig parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Toolchain format
+################
+
+The easyconfig parameter ``toolchain`` in .eb files is defined as a dictionary ``{&#39;name&#39;:&#39;foo&#39;, &#39;version&#39;:&#39;bar&#39;}``. In
+the .yeb format, this can be done much easier by just using ``name, version``. E.g::
+
+    # note: this is eb syntax, will not work in yeb files
+    toolchain = {&#39;name&#39;:&#39;intel&#39;, &#39;version&#39;:&#39;2015b&#39;}
+
+becomes::
+
+    toolchain: intel, 2015b
+
+.. _easyconfig_yeb_format_examples:
+
+Examples
+--------
+
+.. _easyconfig_yeb_format_examples_gzip16_GCC492:
+
+gzip-1.6-GCC-4.9.2.yeb
+~~~~~~~~~~~~~~~~~~~~~~
+
+Example easyconfig for gzip v1.6 using the ``GCC/4.9.2`` toolchain.
+
+.. code::
+
+    %YAML 1.2
+    ---
+    easyblock: ConfigureMake
+
+    name: gzip
+    version: 1.6
+
+    homepage: &#39;http://www.gnu.org/software/gzip/&#39;
+    description:
+        gzip is a popular data compression program
+        as a replacement for compress
+
+    toolchain: GCC, 4.9.2
+
+    # http://ftp.gnu.org/gnu/gzip/gzip-1.6.tar.gz
+    source_urls: [*GNU_SOURCE]
+    sources: [%(name)s-%(version)s.tar.gz]
+
+    # make sure the gzip, gunzip and compress binaries are available after installation
+    sanity_check_paths: {
+        files: [bin/gunzip, bin/gzip, bin/uncompress],
+        dirs: [],
+    }
+
+    moduleclass: tools
+
+.. _easyconfig_yeb_format_examples_goolf1410:
+
+goolf-1.4.10.yeb
+~~~~~~~~~~~~~~~~
+
+Easyconfig file in YAML syntax for the goolf v1.4.10 toolchain.
+
+.. code::
+
+    _internal_variables_:
+        - &amp;version 1.4.10
+
+        - &amp;comp_name GCC
+        - &amp;comp_version 4.7.2
+        - &amp;comp [*comp_name, *comp_version]
+
+        - &amp;blaslib OpenBLAS
+        - &amp;blasver 0.2.6
+        - &amp;blas !join [*blaslib, -, *blasver]
+        - &amp;blas_suff -LAPACK-3.4.2
+
+        - &amp;comp_mpi_tc [gompi, *version]
+
+
+    easyblock: Toolchain
+
+    name: goolf
+    version: *version
+
+    homepage: (none)
+    description: |
+        GNU Compiler Collection (GCC) based compiler toolchain, including
+        OpenMPI for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.
+
+    toolchain: {name: system, version: system}
+
+    # compiler toolchain dependencies
+    # we need GCC and OpenMPI as explicit dependencies instead of gompi toolchain
+    # because of toolchain preparation functions
+        dependencies:
+            - *comp_name: *comp_version
+            - OpenMPI: 1.6.4
+              toolchain: *comp
+            - *blaslib: *blasver
+              versionsuffix: *blas_suff
+              toolchain: *comp_mpi_tc
+            - FFTW: 3.3.3
+              toolchain: *comp_mpi_tc
+            - ScaLAPACK: 2.0.2
+              versionsuffix: !join [-, *blas, *blas_suff]
+              toolchain: *comp_mpi_tc
+
+    moduleclass: toolchain
+
+
+
+Python-2.7.10-intel-2015b.yeb
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code::
+
+    _internal_variables_:
+        - &amp;numpyversion 1.9.2
+        - &amp;scipyversion 0.15.1
+
+    easyblock: ConfigureMake
+
+    name: Python
+    version: 2.7.10
+
+    homepage: http://python.org/
+    description: |
+        Python is a programming language that lets you work more quickly and integrate your systems
+        more effectively.
+
+    toolchain: intel, 2015b
+    toolchainopts: {pic: True, opt: True, optarch: True}
+
+    source_urls: [&#39;http://www.python.org/ftp/python/%(version)s/&#39;]
+    sources: [*SOURCE_TGZ]
+
+    # python needs bzip2 to build the bz2 package
+    dependencies: [
+        - bzip2: 1.0.6
+        - zlib: 1.2.8
+        - libreadline: 6.3
+        - ncurses: 5.9
+        - SQLite: 3.8.10.2
+        - Tk: 8.4.6
+          versionsuffix: -no-X11
+      # - OpenSSL: 1.0.1m
+      #   OS dependency should be preferred if the os version is more recent then this version, its
+      #   nice to have an up to date openssl for security reasons
+    ]
+
+    osdependencies: [[openssl-devel, libssl-dev, libopenssl-devel]]
+
+    # order is important!
+    # package versions updated May 28th 2015
+    exts_list: [
+        [setuptools, &#39;16.0&#39;, {
+            source_urls: [&quot;https://pypi.python.org/packages/source/s/setuptools/&quot;],
+        }],
+        [pip, 7.0.1, {
+            source_urls: [&quot;https://pypi.python.org/packages/source/p/pip/&quot;],
+        }],
+        [nose, 1.3.6, {
+            source_urls: [&quot;https://pypi.python.org/packages/source/n/nose/&quot;],
+        }],
+        [numpy, *numpyversion, {
+            source_urls: [
+                [!join [&quot;http://sourceforge.net/projects/numpy/files/NumPy/&quot;, *numpyversion], download]
+            ],
+            patches: [
+                numpy-1.8.0-mkl.patch, # % numpyversion,
+            ],
+        }],
+        [scipy, *scipyversion, {
+            source_urls: [
+                [!join [&quot;http://sourceforge.net/projects/scipy/files/scipy/&quot;, *scipyversion], download]],
+        }],
+        [blist, 1.3.6, {
+            source_urls: [&quot;https://pypi.python.org/packages/source/b/blist/&quot;],
+        }],
+        [mpi4py, 1.3.1, {
+            source_urls: [&quot;http://bitbucket.org/mpi4py/mpi4py/downloads/&quot;],
+        }],
+        [paycheck, 1.0.2, {
+            source_urls: [&quot;https://pypi.python.org/packages/source/p/paycheck/&quot;],
+        }],
+        [argparse, 1.3.0, {
+            source_urls: [&quot;https://pypi.python.org/packages/source/a/argparse/&quot;],
+        }],
+        [pbr, 1.0.1, {
+            source_urls: [&quot;https://pypi.python.org/packages/source/p/pbr/&quot;],
+        }],
+        [lockfile, 0.10.2, {
+            source_urls: [&quot;https://pypi.python.org/packages/source/l/lockfile/&quot;],
+        }],
+        [Cython, &#39;0.22&#39;, {
+            source_urls: [&quot;http://www.cython.org/release/&quot;],
+        }],
+        [six, 1.9.0, {
+            source_urls: [&quot;https://pypi.python.org/packages/source/s/six/&quot;],
+        }],
+        [dateutil, 2.4.2, {
+            source_tmpl: python-%(name)s-%(version)s.tar.gz,
+            source_urls: [&quot;https://pypi.python.org/packages/source/p/python-dateutil/&quot;],
+        }],
+        [deap, 1.0.2, {
+            # escaped with quotes because yaml values can&#39;t start with %
+            source_tmpl: &quot;%(name)s-%(version)s.post2.tar.gz&quot;,
+            source_urls: [&quot;https://pypi.python.org/packages/source/d/deap/&quot;],
+        }],
+        [decorator, 3.4.2, {
+            source_urls: [&quot;https://pypi.python.org/packages/source/d/decorator/&quot;],
+        }],
+        [arff, 2.0.2, {
+            source_tmpl: liac-%(name)s-%(version)s.zip,
+            source_urls: [&quot;https://pypi.python.org/packages/source/l/liac-arff/&quot;],
+        }],
+        [pycrypto, 2.6.1, {
+            modulename: Crypto,
+            source_urls: [&quot;http://ftp.dlitz.net/pub/dlitz/crypto/pycrypto/&quot;],
+        }],
+        [ecdsa, &#39;0.13&#39;, {
+            source_urls: [&quot;https://pypi.python.org/packages/source/e/ecdsa/&quot;],
+        }],
+        [paramiko, 1.15.2, {
+            source_urls: [&quot;https://pypi.python.org/packages/source/p/paramiko/&quot;],
+        }],
+        [pyparsing, 2.0.3, {
+            source_urls: [&quot;https://pypi.python.org/packages/source/p/pyparsing/&quot;],
+        }],
+        [netifaces, 0.10.4, {
+            source_urls: [&quot;https://pypi.python.org/packages/source/n/netifaces&quot;],
+        }],
+        [netaddr, 0.7.14, {
+            source_urls: [&quot;https://pypi.python.org/packages/source/n/netaddr&quot;],
+        }],
+        [mock, 1.0.1, {
+            source_urls: [&quot;https://pypi.python.org/packages/source/m/mock&quot;],
+        }],
+        [pytz, &#39;2015.4&#39;, {
+            source_urls: [&quot;https://pypi.python.org/packages/source/p/pytz&quot;],
+        }],
+        [pandas, 0.16.1, {
+            source_urls: [&quot;https://pypi.python.org/packages/source/p/pandas&quot;],
+        }],
+    ]
+
+    moduleclass: lang
+</code></pre></div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/easy_build" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/c/easybuilders" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://docs.easybuild.io" target="_blank" rel="noopener" title="docs.easybuild.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M96 0C43 0 0 43 0 96v320c0 53 43 96 96 96h320c17.7 0 32-14.3 32-32s-14.3-32-32-32v-64c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H96zm0 384h256v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      
+    
+  </body>
+</html>

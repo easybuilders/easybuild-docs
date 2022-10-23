@@ -1,0 +1,1759 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.easybuild.io/extended-dry-run/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+    
+    
+      
+        <title>Extended dry run - EasyBuild - building software with ease</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="easybuild" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#extended-dry-run" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="EasyBuild - building software with ease" class="md-header__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
+      
+  <img src="../img/easybuild_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EasyBuild - building software with ease
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Extended dry run
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/easybuilders/easybuild-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EasyBuild @ GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
+      
+  <img src="../img/easybuild_logo.png" alt="logo">
+
+    </a>
+    EasyBuild - building software with ease
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/easybuilders/easybuild-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EasyBuild @ GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what-is-easybuild/" class="md-nav__link">
+        What is EasyBuild?
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terminology/" class="md-nav__link">
+        Terminology
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-easybuild/" class="md-nav__link">
+        Using EasyBuild
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-notes/" class="md-nav__link">
+        Release notes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-help/" class="md-nav__link">
+        Getting help
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/extended-dry-run.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="extended-dry-run">Extended dry run<a class="headerlink" href="#extended-dry-run" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/Extended_dry_run.html">https://docs.easybuild.io/en/latest/Extended_dry_run.html</a>.</p>
+<p><strong>
+It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
+and you can help with that!
+</strong></p>
+<ul>
+<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Extended_dry_run.rst"><code>docs/Extended_dry_run.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
+<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/extended-dry-run.md"><code>docs/extended-dry-run.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
+</ul>
+<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
+</div>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This section will soon replace <a href="https://docs.easybuild.io/en/latest/Extended_dry_run_examples.html">https://docs.easybuild.io/en/latest/Extended_dry_run_examples.html</a>.</p>
+<p><strong>
+It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
+and you can help with that!
+</strong></p>
+<ul>
+<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Extended_dry_run_examples.rst"><code>docs/Extended_dry_run_examples.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
+<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/extended-dry-run.md#examples"><code>examples</code> section of <code>docs/extended-dry-run.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
+</ul>
+<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
+</div>
+<p><div class="highlight"><pre><span></span><code>.. _extended_dry_run_examples:
+
+Extended dry run: examples
+==========================
+
+Output examples for ``eb --extended-dry-run``/``eb -x``, see also :ref:`extended_dry_run`.
+
+.. contents::
+    :depth: 2
+    :backlinks: none
+
+.. _extended_dry_run_examples_make382_GCC482:
+
+make v3.82 with GCC/4.8.2
+-------------------------
+
+.. code::
+
+    $ eb make-3.82-GCC-4.8.2.eb -x
+    == temporary log file in case of crash /tmp/eb-ksVC07/easybuild-MmAugb.log
+
+    == processing EasyBuild easyconfig /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/m/make/make-3.82-GCC-4.8.2.eb
+
+    Important note: the actual build &amp; install procedure that will be performed may diverge
+    (slightly) from what is outlined below, due to conditions in the easyblock which are
+    incorrectly handled in a dry run.
+    Any errors that may occur are ignored and reported as warnings, on a per-step basis.
+    Please be aware of this, and only use the information below for quick debugging purposes.
+
+    *** DRY RUN using &#39;ConfigureMake&#39; easyblock (easybuild.easyblocks.generic.configuremake @ /home/example/eb/easybuild-easyblocks/easybuild/easyblocks/generic/configuremake.pyc) ***
+
+    == building and installing make/3.82-GCC-4.8.2...
+    fetching files... [DRY RUN]
+
+    [fetch_step method]
+    Available download URLs for sources/patches:
+      * http://ftpmirror.gnu.org/make/$source
+
+    List of sources:
+      * make-3.82.tar.bz2 will be downloaded to /home/example/eb/sources/m/make/make-3.82.tar.bz2
+
+    List of patches:
+    (none)
+
+    creating build dir, resetting environment... [DRY RUN]
+
+    [check_readiness_step method]
+
+    [make_builddir method]
+
+    [reset_changes method]
+
+    [handle_iterate_opts method]
+
+    unpacking... [DRY RUN]
+
+    [checksum_step method]
+    * expected checksum for make-3.82.tar.bz2: (none)
+
+    [extract_step method]
+      running command &quot;tar xjf /home/example/eb/sources/m/make/make-3.82.tar.bz2&quot;
+      (in /home/example/eb/build/make/3.82/GCC-4.8.2)
+
+    patching... [DRY RUN]
+
+    [patch_step method]
+
+    preparing... [DRY RUN]
+
+    [prepare_step method]
+    Defining build environment, based on toolchain (options) and specified dependencies...
+
+    Loading toolchain module...
+
+    module load GCC/4.8.2
+
+    Loading modules for dependencies...
+
+
+    Full list of loaded modules:
+      1) GCC/4.8.2
+
+    Defining build environment...
+
+      export CC=&quot;gcc&quot;
+      export CFLAGS=&quot;-O2&quot;
+      export CXX=&quot;g++&quot;
+      export CXXFLAGS=&quot;-O2&quot;
+      export F77=&quot;gfortran&quot;
+      export F90=&quot;gfortran&quot;
+      export F90FLAGS=&quot;-O2&quot;
+      export FFLAGS=&quot;-O2&quot;
+      export FLIBS=&quot;-lgfortran&quot;
+      export LDFLAGS=&quot;-L/home/example/eb/software/GCC/4.8.2/lib&quot;
+      export LIBS=&quot;-lm -lpthread&quot;
+      export OPTFLAGS=&quot;-O2&quot;
+      export PRECFLAGS=&quot;&quot;
+
+    configuring... [DRY RUN]
+
+    [configure_step method]
+      running command &quot; ./configure --prefix=/home/example/eb/software/make/3.82-GCC-4.8.2 &quot;
+      (in /home/example/eb/build/make/3.82/GCC-4.8.2/make-3.82)
+
+    building... [DRY RUN]
+
+    [build_step method]
+      running command &quot; make -j 4 &quot;
+      (in /home/example/eb/build/make/3.82/GCC-4.8.2/make-3.82)
+
+    testing... [DRY RUN]
+
+    [test_step method]
+
+    installing... [DRY RUN]
+
+    [stage_install_step method]
+
+    [make_installdir method]
+
+    [install_step method]
+      running command &quot; make install &quot;
+      (in /home/example/eb/build/make/3.82/GCC-4.8.2/make-3.82)
+
+    taking care of extensions... [DRY RUN]
+
+    [extensions_step method]
+
+    postprocessing... [DRY RUN]
+
+    [post_install_step method]
+
+    sanity checking... [DRY RUN]
+
+    [sanity_check_step method]
+    Sanity check paths - file [&#39;files&#39;]
+      * bin/make
+    Sanity check paths - (non-empty) directory [&#39;dirs&#39;]
+      (none)
+    Sanity check commands
+      (none)
+
+    cleaning up... [DRY RUN]
+
+    [cleanup_step method]
+
+    creating module... [DRY RUN]
+
+    [make_module_step method]
+    Generating module file /home/example/eb/modules/all/make/3.82-GCC-4.8.2, with contents:
+
+        #%Module
+        proc ModulesHelp { } {
+            puts stderr { make-3.82: GNU version of make utility - Homepage: http://www.gnu.org/software/make/make.html
+            }
+        }
+
+        module-whatis {Description: make-3.82: GNU version of make utility - Homepage: http://www.gnu.org/software/make/make.html}
+
+        set root /home/example/eb/software/make/3.82-GCC-4.8.2
+
+        conflict make
+
+        if { ![ is-loaded GCC/4.8.2 ] } {
+            module load GCC/4.8.2
+        }
+
+        setenv  EBROOTMAKE      &quot;$root&quot;
+        setenv  EBVERSIONMAKE       &quot;3.82&quot;
+        setenv  EBDEVELMAKE     &quot;$root/easybuild/make-3.82-GCC-4.8.2-easybuild-devel&quot;
+
+        # Built with EasyBuild version 2.4.0
+
+
+    permissions... [DRY RUN]
+
+    [permissions_step method]
+
+    packaging... [DRY RUN]
+
+    [package_step method]
+
+    == COMPLETED: Installation ended successfully
+
+    Important note: the actual build &amp; install procedure that will be performed may diverge
+    (slightly) from what is outlined above, due to conditions in the easyblock which are
+    incorrectly handled in a dry run.
+    Any errors that may occur are ignored and reported as warnings, on a per-step basis.
+    Please be aware of this, and only use the information above for quick debugging purposes.
+
+    (no ignored errors during dry run)
+
+    == Build succeeded for 1 out of 1
+    == Temporary log file(s) /tmp/eb-ksVC07/easybuild-MmAugb.log* have been removed.
+    == Temporary directory /tmp/eb-ksVC07 has been removed.
+
+
+.. _extended_dry_run_examples_WRF361_intel2015a:
+
+WRF v3.6.1 with intel/2015a
+---------------------------
+
+.. code::
+
+    $ eb WRF-3.6.1-intel-2015a-dmpar.eb -x
+    == temporary log file in case of crash /tmp/eb-Dh1wOp/easybuild-0bu9u9.log
+
+    == processing EasyBuild easyconfig /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1-intel-2015a-dmpar.eb
+
+    Important note: the actual build &amp; install procedure that will be performed may diverge
+    (slightly) from what is outlined below, due to conditions in the easyblock which are
+    incorrectly handled in a dry run.
+    Any errors that may occur are ignored and reported as warnings, on a per-step basis.
+    Please be aware of this, and only use the information below for quick debugging purposes.
+
+    *** DRY RUN using &#39;EB_WRF&#39; easyblock (easybuild.easyblocks.wrf @ /home/example/eb/easybuild-easyblocks/easybuild/easyblocks/w/wrf.py) ***
+
+    == building and installing WRF/3.6.1-intel-2015a-dmpar...
+    fetching files... [DRY RUN]
+
+    [fetch_step method]
+    Available download URLs for sources/patches:
+      * http://www2.mmm.ucar.edu/wrf/src//$source
+      * http://www.mmm.ucar.edu/wrf/src//$source
+
+    List of sources:
+      * WRFV3.6.1.TAR.gz will be downloaded to /home/example/eb/sources/w/WRF/WRFV3.6.1.TAR.gz
+
+    List of patches:
+      * WRF_parallel_build_fix.patch found at /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_parallel_build_fix.patch
+      * WRF-3.6.1_netCDF-Fortran_separate_path.patch found at /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_netCDF-Fortran_separate_path.patch
+      * WRF-3.6.1_known_problems.patch found at /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_known_problems.patch
+      * WRF_tests_limit-runtimes.patch found at /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_tests_limit-runtimes.patch
+
+    creating build dir, resetting environment... [DRY RUN]
+
+    [check_readiness_step method]
+
+    [make_builddir method]
+
+    [reset_changes method]
+
+    [handle_iterate_opts method]
+
+    unpacking... [DRY RUN]
+
+    [checksum_step method]
+    * expected checksum for WRFV3.6.1.TAR.gz: (none)
+    * expected checksum for WRF_parallel_build_fix.patch: (none)
+    * expected checksum for WRF-3.6.1_netCDF-Fortran_separate_path.patch: (none)
+    * expected checksum for WRF-3.6.1_known_problems.patch: (none)
+    * expected checksum for WRF_tests_limit-runtimes.patch: (none)
+
+    [extract_step method]
+      running command &quot;tar xzf /home/example/eb/sources/w/WRF/WRFV3.6.1.TAR.gz&quot;
+      (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar)
+
+    patching... [DRY RUN]
+
+    [patch_step method]
+    * applying patch file WRF_parallel_build_fix.patch
+      running command &quot;patch -b -p&lt;derived&gt; -i /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_parallel_build_fix.patch&quot;
+      (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar)
+    * applying patch file WRF-3.6.1_netCDF-Fortran_separate_path.patch
+      running command &quot;patch -b -p&lt;derived&gt; -i /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_netCDF-Fortran_separate_path.patch&quot;
+      (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar)
+    * applying patch file WRF-3.6.1_known_problems.patch
+      running command &quot;patch -b -p&lt;derived&gt; -i /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_known_problems.patch&quot;
+      (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar)
+    * applying patch file WRF_tests_limit-runtimes.patch
+      running command &quot;patch -b -p&lt;derived&gt; -i /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_tests_limit-runtimes.patch&quot;
+      (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar)
+
+    preparing... [DRY RUN]
+
+    [prepare_step method]
+    Defining build environment, based on toolchain (options) and specified dependencies...
+
+    Loading toolchain module...
+
+    module load icc/2015.1.133-GCC-4.9.2 [SIMULATED]
+    module load ifort/2015.1.133-GCC-4.9.2 [SIMULATED]
+    module load impi/5.0.2.044-iccifort-2015.1.133-GCC-4.9.2 [SIMULATED]
+    module load imkl/11.2.1.133-iimpi-7.2.3-GCC-4.9.2 [SIMULATED]
+    module load intel/2015a [SIMULATED]
+
+    Loading modules for dependencies...
+
+    module load JasPer/1.900.1-intel-2015a [SIMULATED]
+    module load netCDF/4.3.2-intel-2015a [SIMULATED]
+    module load netCDF-Fortran/4.4.0-intel-2015a [SIMULATED]
+    module load tcsh/6.18.01-intel-2015a [SIMULATED]
+
+    Full list of loaded modules:
+      (none)
+
+
+    !!!
+    !!! WARNING: Not all FFTW interface libraries [&#39;fftw3xc_intel&#39;, &#39;mkl_intel_lp64&#39;, &#39;mkl_sequential&#39;, &#39;mkl_core&#39;] are found in [&#39;$EBROOTIMKL/mkl/lib/intel64&#39;, &#39;$EBROOTIMKL/compiler/lib/intel64&#39;], can&#39;t set $FFT_LIB.
+    !!!
+
+    Defining build environment...
+
+      export BLACS_INC_DIR=&quot;&quot;
+      export BLACS_LIB_DIR=&quot;&quot;
+      export BLACS_MT_STATIC_LIBS=&quot;libmkl_blacs_intelmpi_lp64.a&quot;
+      export BLACS_STATIC_LIBS=&quot;libmkl_blacs_intelmpi_lp64.a&quot;
+      export BLAS_INC_DIR=&quot;&quot;
+      export BLAS_LAPACK_INC_DIR=&quot;&quot;
+      export BLAS_LAPACK_LIB_DIR=&quot;&quot;
+      export BLAS_LAPACK_MT_STATIC_LIBS=&quot;libmkl_intel_lp64.a,libmkl_intel_thread.a,libmkl_core.a,libiomp5.a,libpthread.a&quot;
+      export BLAS_LAPACK_STATIC_LIBS=&quot;libmkl_intel_lp64.a,libmkl_sequential.a,libmkl_core.a&quot;
+      export BLAS_LIB_DIR=&quot;&quot;
+      export BLAS_MT_STATIC_LIBS=&quot;libmkl_intel_lp64.a,libmkl_intel_thread.a,libmkl_core.a,libiomp5.a,libpthread.a&quot;
+      export BLAS_STATIC_LIBS=&quot;libmkl_intel_lp64.a,libmkl_sequential.a,libmkl_core.a&quot;
+      export CC=&quot;icc&quot;
+      export CFLAGS=&quot;-O2 -ftz -fp-speculation=safe -fp-model source&quot;
+      export CPPFLAGS=&quot;&quot;
+      export CXX=&quot;icpc&quot;
+      export CXXFLAGS=&quot;-O2 -ftz -fp-speculation=safe -fp-model source&quot;
+      export F77=&quot;ifort&quot;
+      export F90=&quot;ifort&quot;
+      export F90FLAGS=&quot;-O2 -ftz -fp-speculation=safe -fp-model source&quot;
+      export FFLAGS=&quot;-O2 -ftz -fp-speculation=safe -fp-model source&quot;
+      export FFTW_INC_DIR=&quot;&quot;
+      export FFTW_LIB_DIR=&quot;&quot;
+      export FFTW_STATIC_LIBS=&quot;&quot;
+      export FFT_INC_DIR=&quot;&quot;
+      export FFT_LIB_DIR=&quot;&quot;
+      export FFT_STATIC_LIBS=&quot;&quot;
+      export I_MPI_CC=&quot;icc&quot;
+      export I_MPI_CXX=&quot;icpc&quot;
+      export I_MPI_F77=&quot;ifort&quot;
+      export I_MPI_F90=&quot;ifort&quot;
+      export LAPACK_INC_DIR=&quot;&quot;
+      export LAPACK_LIB_DIR=&quot;&quot;
+      export LAPACK_MT_STATIC_LIBS=&quot;libmkl_intel_lp64.a,libmkl_intel_thread.a,libmkl_core.a,libiomp5.a,libpthread.a&quot;
+      export LAPACK_STATIC_LIBS=&quot;libmkl_intel_lp64.a,libmkl_sequential.a,libmkl_core.a&quot;
+      export LDFLAGS=&quot;&quot;
+      export LIBBLACS=&quot;-Wl,-Bstatic -Wl,--start-group -lmkl_blacs_intelmpi_lp64 -Wl,--end-group -Wl,-Bdynamic&quot;
+      export LIBBLACS_MT=&quot;-Wl,-Bstatic -Wl,--start-group -lmkl_blacs_intelmpi_lp64 -Wl,--end-group -Wl,-Bdynamic&quot;
+      export LIBBLAS=&quot;-Wl,-Bstatic -Wl,--start-group -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -Wl,--end-group -Wl,-Bdynamic&quot;
+      export LIBBLAS_MT=&quot;-Wl,-Bstatic -Wl,--start-group -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -Wl,--end-group -Wl,-Bdynamic -liomp5 -lpthread&quot;
+      export LIBFFT=&quot;&quot;
+      export LIBLAPACK=&quot;-Wl,-Bstatic -Wl,--start-group -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -Wl,--end-group -Wl,-Bdynamic&quot;
+      export LIBLAPACK_MT=&quot;-Wl,-Bstatic -Wl,--start-group -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -Wl,--end-group -Wl,-Bdynamic -liomp5 -lpthread&quot;
+      export LIBLAPACK_MT_ONLY=&quot;-Wl,-Bstatic -Wl,--start-group -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -Wl,--end-group -Wl,-Bdynamic -liomp5 -lpthread&quot;
+      export LIBLAPACK_ONLY=&quot;-Wl,-Bstatic -Wl,--start-group -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -Wl,--end-group -Wl,-Bdynamic&quot;
+      export LIBS=&quot;-liomp5 -lpthread&quot;
+      export LIBSCALAPACK=&quot;-Wl,-Bstatic -Wl,--start-group -lmkl_scalapack_lp64 -lmkl_blacs_intelmpi_lp64 -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -Wl,--end-group -Wl,-Bdynamic&quot;
+      export LIBSCALAPACK_MT=&quot;-Wl,-Bstatic -Wl,--start-group -lmkl_scalapack_lp64 -lmkl_blacs_intelmpi_lp64 -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -Wl,--end-group -Wl,-Bdynamic -liomp5 -lpthread&quot;
+      export LIBSCALAPACK_MT_ONLY=&quot;-Wl,-Bstatic -Wl,--start-group -lmkl_scalapack_lp64 -Wl,--end-group -Wl,-Bdynamic -liomp5 -lpthread&quot;
+      export LIBSCALAPACK_ONLY=&quot;-Wl,-Bstatic -Wl,--start-group -lmkl_scalapack_lp64 -Wl,--end-group -Wl,-Bdynamic&quot;
+      export MPICC=&quot;mpicc&quot;
+      export MPICH_CC=&quot;icc&quot;
+      export MPICH_CXX=&quot;icpc&quot;
+      export MPICH_F77=&quot;ifort&quot;
+      export MPICH_F90=&quot;ifort&quot;
+      export MPICXX=&quot;mpicxx&quot;
+      export MPIF77=&quot;mpif77&quot;
+      export MPIF90=&quot;mpif90&quot;
+      export MPI_INC_DIR=&quot;&quot;
+      export MPI_LIB_DIR=&quot;&quot;
+      export MPI_LIB_SHARED=&quot;&quot;
+      export MPI_LIB_STATIC=&quot;&quot;
+      export OPTFLAGS=&quot;-O2&quot;
+      export PRECFLAGS=&quot;-ftz -fp-speculation=safe -fp-model source&quot;
+      export SCALAPACK_INC_DIR=&quot;&quot;
+      export SCALAPACK_LIB_DIR=&quot;&quot;
+      export SCALAPACK_MT_STATIC_LIBS=&quot;libmkl_scalapack_lp64.a,libmkl_blacs_intelmpi_lp64.a,libmkl_intel_lp64.a,libmkl_intel_thread.a,libmkl_core.a,libiomp5.a,libpthread.a&quot;
+      export SCALAPACK_STATIC_LIBS=&quot;libmkl_scalapack_lp64.a,libmkl_blacs_intelmpi_lp64.a,libmkl_intel_lp64.a,libmkl_sequential.a,libmkl_core.a&quot;
+
+    configuring... [DRY RUN]
+
+    [configure_step method]
+      export NETCDF=&quot;$EBROOTNETCDF&quot;
+      export NETCDFF=&quot;$EBROOTNETCDFMINFORTRAN&quot;
+      export JASPERINC=&quot;$EBROOTJASPER/include&quot;
+      export JASPERLIB=&quot;$EBROOTJASPER/lib&quot;
+      export WRFIO_NCD_LARGE_FILE_SUPPORT=&quot;1&quot;
+    Perl script patched: arch/Config_new.pl
+      running interactive command &quot;./configure&quot;
+      (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar/WRF-3.6.1)
+    applying regex substitutions to file configure.wrf
+      * regex pattern &#39;^(DM_FC\s*=\s*).*$&#39;, replacement string &#39;\1 mpif90&#39;
+      * regex pattern &#39;^(DM_CC\s*=\s*).*$&#39;, replacement string &#39;\1 mpicc -DMPI2_SUPPORT&#39;
+      * regex pattern &#39;^(SFC\s*=\s*).*$&#39;, replacement string &#39;\1 ifort&#39;
+      * regex pattern &#39;^(SCC\s*=\s*).*$&#39;, replacement string &#39;\1 icc&#39;
+      * regex pattern &#39;^(CCOMP\s*=\s*).*$&#39;, replacement string &#39;\1 icc&#39;
+    applying regex substitutions to file configure.wrf
+      * regex pattern &#39;^(FCOPTIM.*)(\s-O3)(\s.*)$&#39;, replacement string &#39;\1 -O2 -ftz -fp-speculation=safe -fp-model source \3&#39;
+      * regex pattern &#39;^(CFLAGS_LOCAL.*)(\s-O3)(\s.*)$&#39;, replacement string &#39;\1 -O2 -ftz -fp-speculation=safe -fp-model source \3&#39;
+
+    building... [DRY RUN]
+
+    [build_step method]
+      running command &quot;tcsh ./compile -j 4 wrf&quot;
+      (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar/WRF-3.6.1)
+      running command &quot;tcsh ./compile -j 4 em_real&quot;
+      (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar/WRF-3.6.1)
+      running command &quot;tcsh ./compile -j 4 em_b_wave&quot;
+      (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar/WRF-3.6.1)
+
+    testing... [DRY RUN]
+
+    [test_step method]
+      export I_MPI_MPD_TMPDIR=&quot;/tmp/eb-Dh1wOp&quot;
+      export PBS_ENVIRONMENT=&quot;PBS_BATCH_MPI&quot;
+      export I_MPI_PROCESS_MANAGER=&quot;mpd&quot;
+    file written: /tmp/eb-Dh1wOp/mpi_cmd_for-nzyh5V/mpdboot
+    file written: /tmp/eb-Dh1wOp/mpi_cmd_for-nzyh5V/nodes
+      export I_MPI_MPD_TMPDIR=&quot;/tmp/eb-Dh1wOp&quot;
+      export PBS_ENVIRONMENT=&quot;PBS_BATCH_MPI&quot;
+      export I_MPI_PROCESS_MANAGER=&quot;mpd&quot;
+    file written: /tmp/eb-Dh1wOp/mpi_cmd_for-hIOEd_/mpdboot
+    file written: /tmp/eb-Dh1wOp/mpi_cmd_for-hIOEd_/nodes
+
+    installing... [DRY RUN]
+
+    [stage_install_step method]
+
+    [make_installdir method]
+
+    [install_step method]
+
+    taking care of extensions... [DRY RUN]
+
+    [extensions_step method]
+
+    postprocessing... [DRY RUN]
+
+    [post_install_step method]
+
+    sanity checking... [DRY RUN]
+
+    [sanity_check_step method]
+    Sanity check paths - file [&#39;files&#39;]
+      * WRFV3/main/ideal.exe
+      * WRFV3/main/libwrflib.a
+      * WRFV3/main/ndown.exe
+      * WRFV3/main/nup.exe
+      * WRFV3/main/real.exe
+      * WRFV3/main/tc.exe
+      * WRFV3/main/wrf.exe
+    Sanity check paths - (non-empty) directory [&#39;dirs&#39;]
+      * WRFV3/main
+      * WRFV3/run
+    Sanity check commands
+      (none)
+
+    cleaning up... [DRY RUN]
+
+    [cleanup_step method]
+
+    creating module... [DRY RUN]
+
+    [make_module_step method]
+    Generating module file /home/example/eb/modules/all/WRF/3.6.1-intel-2015a-dmpar, with contents:
+
+        #%Module
+        proc ModulesHelp { } {
+            puts stderr { The Weather Research and Forecasting (WRF) Model is a next-generation mesoscale
+         numerical weather prediction system designed to serve both operational forecasting and atmospheric
+         research needs. - Homepage: http://www.wrf-model.org
+            }
+        }
+
+        module-whatis {Description: The Weather Research and Forecasting (WRF) Model is a next-generation mesoscale
+         numerical weather prediction system designed to serve both operational forecasting and atmospheric
+         research needs. - Homepage: http://www.wrf-model.org}
+
+        set root /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar
+
+        conflict WRF
+
+        if { ![ is-loaded intel/2015a ] } {
+            module load intel/2015a
+        }
+
+        if { ![ is-loaded JasPer/1.900.1-intel-2015a ] } {
+            module load JasPer/1.900.1-intel-2015a
+        }
+
+        if { ![ is-loaded netCDF/4.3.2-intel-2015a ] } {
+            module load netCDF/4.3.2-intel-2015a
+        }
+
+        if { ![ is-loaded netCDF-Fortran/4.4.0-intel-2015a ] } {
+            module load netCDF-Fortran/4.4.0-intel-2015a
+        }
+
+        setenv  EBROOTWRF       &quot;$root&quot;
+        setenv  EBVERSIONWRF        &quot;3.6.1&quot;
+        setenv  EBDEVELWRF      &quot;$root/easybuild/WRF-3.6.1-intel-2015a-dmpar-easybuild-devel&quot;
+
+        setenv  NETCDF      &quot;$EBROOTNETCDF&quot;
+        setenv  NETCDFF     &quot;$EBROOTNETCDFMINFORTRAN&quot;
+        # Built with EasyBuild version 2.4.0
+
+
+    permissions... [DRY RUN]
+
+    [permissions_step method]
+
+    packaging... [DRY RUN]
+
+    [package_step method]
+
+    == COMPLETED: Installation ended successfully
+
+    Important note: the actual build &amp; install procedure that will be performed may diverge
+    (slightly) from what is outlined above, due to conditions in the easyblock which are
+    incorrectly handled in a dry run.
+    Any errors that may occur are ignored and reported as warnings, on a per-step basis.
+    Please be aware of this, and only use the information above for quick debugging purposes.
+
+    (no ignored errors during dry run)
+
+    == Build succeeded for 1 out of 1
+    == Temporary log file(s) /tmp/eb-Dh1wOp/easybuild-0bu9u9.log* have been removed.
+    == Temporary directory /tmp/eb-Dh1wOp has been removed.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>.. _extended_dry_run:
+
+Extended dry run
+================
+
+Using ``--extended-dry-run`` or ``-x`` (supported since EasyBuild v2.4.0, see release notes for
+:ref:`release_notes_eb240`), a detailed overview of the build and install procedure that EasyBuild is going to execute
+can be obtained almost instantly.
+
+All time-consuming operations, including executing commands to configure/build/install the software,
+are only *reported* rather than being actually performed.
+
+Example output is available at :ref:`extended_dry_run_examples`.
+
+.. contents::
+    :depth: 3
+    :backlinks: none
+
+.. _extended_dry_run_notes:
+
+Important notes
+---------------
+
+There are a couple of things you should be aware of when using ``--extended-dry-run`` and interpreting the output it
+produces.
+
+.. _extended_dry_run_notes_differences:
+
+Build/install procedure reported by dry run may be (slightly) different
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The actual build and install procedure may (slightly) differ from the one reported by ``--extended-dry-run``,
+due to conditional checks in the easyblock being used.
+
+For example, expressions that are conditional on the presence of certain files or directories in the build directory
+will always be false, since the build directory is never actually populated.
+
+.. _extended_dry_run_notes_ignored_errors:
+
+Errors are ignored (by default) during dry run
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Any errors that occur are ignored, and are reported with a clear warning message.
+This is done because it is possible that these errors occur because of the dry run mechanism.
+
+For example, the install step could assume that certain files created by a previous step will be present, but they
+will not be there since the commands that are supposed to produce them were not actually performed in dry run mode.
+
+Errors are ignored *on a per-step basis*. When an error is ignored in a particular step, that step is aborted,
+which may result in partial dry run output for that particular step. Subsequent steps will still be run (in dry run
+mode), however.
+
+Since it&#39;s possible that these errors occur due to a bug in the easyblock being used, it&#39;s important to pay
+attention to these ignored errors.
+
+Ignored errors are reported as follows, for example::
+
+    == testing... [DRY RUN]
+
+    [test_step method]
+    !!!
+    !!! WARNING: ignoring error &quot;[Errno 2] No such file or directory: &#39;test&#39;&quot;
+    !!!
+
+At the end of dry run output, anonother warning message is shown if any ignored errors occurred::
+
+    == COMPLETED: Installation ended successfully
+
+    !!!
+    !!! WARNING: One or more errors were ignored, see warnings above
+    !!!
+
+.. _extended_dry_run_notes_ignored_errors_disabling:
+
+Disabling ignoring errors during dry run
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Ignoring errors that occur during a dry run is enabled by default; it can be disabled using the configuration option
+that is available for it, i.e. by:
+
+* the ``--disable-extended-dry-run-ignore-errors`` command line option
+* by defining the ``$EASYBUILD_DISABLE_EXTENDED_DRY_RUN_IGNORE_ERRORS`` environment variable
+* or by defining ``disable-extended-dry-run-ignore-errors`` in an EasyBuild configuration file
+
+(see also :ref:`configuring_easybuild`)
+
+.. _extended_dry_run_overview:
+
+Overview of dry run mechanism
+-----------------------------
+
+During an extended dry run, several operations are not performed, or are only simulated.
+
+The sections below give a detailed overview of the dry run mechanism.
+
+.. _extended_dry_run_overview_build_install_dirs:
+
+Temporary directories as build/install directories
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To make very sure that EasyBuild does not touch any files or directories during the dry run, the build and
+(software/module) install directories are replaced by subdirectories of the temporary directory used by that
+particular EasyBuild session.
+
+In the background, the values for ``self.builddir``, ``self.installdir`` and ``self.installdir_mod`` are changed
+in the ``EasyBlock`` instance(s) being used; this also affects the use of the ``%(builddir)s`` and ``$(installdir)s``
+values in easyconfig files.
+
+Although the build and install directories are effectively temporary directories during a dry run (under a prefix like
+``/tmp/eb-aD_yNu/__ROOT__``), this is not visible in the dry run output: the &#39;fake&#39; build and install directories are
+replaced by the corresponding original value in the dry run output. For example::
+
+    [extract_step method]
+      running command &quot;tar xzf /home/example/easybuild/sources/b/bzip2/bzip2-1.0.6.tar.gz&quot;
+      (in /tmp/example/eb_build/bzip2/1.0.6/GCC-4.9.2)
+
+.. _extended_dry_run_overview_build_dir_guess:
+
+Note on build directory in dry run mode
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The build (sub)directory used during an actual (non-dry run) EasyBuild session may be different than the one mentioned
+in the dry run output.
+
+This is because during a dry run, EasyBuild will *guess* the name of the subdirectory that is created by unpacking the
+first source file in the build directory as being ``&lt;name&gt;-&lt;version&gt;``.
+Although this is a common pattern, it is not always 100% correct.
+
+For example, you may see this in the dry run output for WRF (for which a build-in-installdir procedure is used)::
+
+    [build_step method]
+      running command &quot;tcsh ./compile -j 4 wrf&quot;
+      (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar/WRF-3.6.1)
+
+
+The actual build (and install) subdirectory is slightly different while not in dry run mode however, i.e.:
+``/home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar/WRFV3``.
+
+
+.. _extended_dry_run_overview_downloading:
+
+No downloading of missing source files/patches
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Required files (source files/patches) are not downloaded during a dry run if they are not available yet.
+
+The dry run output will specify whether files are found (and if so, at which path) or not; the exact output
+for files that were not found depends on whether or not source URLs are available.
+
+For example: if the required source file for ``bzip2`` is not available yet, it is indicated where EasyBuild
+will try to download it to::
+
+    [fetch_step method]
+    Available download URLs for sources/patches:
+      * http://www.bzip.org/1.0.6/$source
+
+    List of sources:
+      * bzip2-1.0.6.tar.gz downloaded to /home/example/easybuild/sources/b/bzip2/bzip2-1.0.6.tar.gz
+
+    List of patches:
+    (none)
+
+If the source file is already available in the source path that EasyBuild was configured with, it is indicated as such::
+
+    List of sources:
+      * bzip2-1.0.6.tar.gz found at /home/example/easybuild/sources/b/bzip2/bzip2-1.0.6.tar.gz
+
+In case no source URLs are available and required files are missing, they are simply marked as such::
+
+    Available download URLs for sources/patches:
+    (none)
+
+    List of sources:
+      * bzip2-1.0.6.tar.bz2 (MISSING)
+
+However, since the dry run mechanism never actually uses the source files/patches, this does not affect the
+remainder of the output of ``--extended-dry-run``/``-x``.
+
+
+.. _extended_dry_run_overview_checksum_verification:
+
+Checksum verification is skipped
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Computing checksums of sources files/patches, and verifying them against specified checksums (if available) is
+*skipped* during a dry run, because it is considered potentially too time-consuming.
+In addition, source files/patches may not be available anyway.
+
+If checksums are available they are only reported, for example (for GCC v4.9.3)::
+
+    [checksum_step method]
+    * expected checksum for gcc-4.9.3.tar.bz2: 6f831b4d251872736e8e9cc09746f327
+    * expected checksum for gmp-6.0.0a.tar.bz2: b7ff2d88cae7f8085bd5006096eed470
+    * expected checksum for mpfr-3.1.2.tar.gz: 181aa7bb0e452c409f2788a4a7f38476
+    * expected checksum for mpc-1.0.2.tar.gz: 68fadff3358fb3e7976c7a398a0af4c3
+    * expected checksum for mpfr-3.1.2-allpatches-20141204.patch: 58aec98d15982f9744a043d2f1c5af82
+
+.. _extended_dry_run_overview_unpacking_sources:
+
+Source files are not unpacked
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Source files are *not* unpacked, since this may require too much time (in case of large source files).
+Additionally, source files may not be available anyway.
+
+This has a number of implications:
+
+* files or directories that may be expected to be there are not, which may lead to (ignored) errors
+  if the used easyblock does not take this into account (see also :ref:`extended_dry_run_notes_ignored_errors`)
+* the build directory in which commands are executed may be incorrect in the dry run output
+  (see also :ref:`extended_dry_run_overview_build_dir_guess`)
+
+The extraction command is mentioned in the dry run output however, for example::
+
+    [extract_step method]
+      running command &quot;tar xjf bzip2-1.0.6.tar.bz2&quot;
+      (in /tmp/example/eb_build/bzip2/1.0.6/GCC-4.9.2)
+
+.. _extended_dry_run_overview_patching:
+
+Patch files are not applied, no runtime patching
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Since source files are not unpacked, patch files can not applied either.
+
+The dry run output does provide an overview of patch files, together with where they are found
+and how they are applied::
+
+    [patch_step method]
+    * applying patch file WRF_parallel_build_fix.patch
+      running command &quot;patch -b -p&lt;derived&gt; -i /home/example/easybuild/sources/w/WRF/WRF_parallel_build_fix.patch&quot;
+      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+    * applying patch file WRF-3.6.1_known_problems.patch
+      running command &quot;patch -b -p&lt;derived&gt; -i /home/example/easybuild/sources/w/WRF/WRF-3.6.1_known_problems.patch&quot;
+      (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+
+Likewise, runtime patching performed by the easyblock itself can not work either. If the ``apply_regex_substitutions``
+function (available from ``easybuild.tools.filetools``) is used, a clear overview is included in the dry run output
+(see also :ref:`extended_dry_run_guidelines_easyblocks_framework_functions_runtime_patching`).
+
+For example, in the ``configure`` step of the WRF easyblock when using the Intel compilers, this yields::
+
+    [configure_step method]
+    ...
+    applying regex substitutions to file configure.wrf
+      * regex pattern &#39;^(DM_FC\s*=\s*).*$&#39;, replacement string &#39;\1 mpif90&#39;
+      * regex pattern &#39;^(DM_CC\s*=\s*).*$&#39;, replacement string &#39;\1 mpicc -DMPI2_SUPPORT&#39;
+
+If the ``apply_regex_substitutions`` function provided for runtime patching is not used (and ``fileinput`` is used
+directly, for example), runtime patching performed by the easyblock will most likely result in an error, leading to
+the step in which it is being performed being aborted (see :ref:`extended_dry_run_notes_ignored_errors`).
+
+.. _extended_dry_run_overview_module_load:
+
+Module ``load`` statements are executed or simulated
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``module load`` statements are either effectively executed or simulated, dependending on whether the corresponding
+module files are available or not.
+
+.. _extended_dry_run_overview_module_load_available:
+
+Available modules are loaded
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+``module load`` statements are fairly light-weight, so they are effectively executed if the module being loaded is
+available.
+
+The dry run output includes an overview of the modules being loaded. In addition an overview of
+all loaded modules, including the ones that were loaded indirectly, is shown.
+
+For example::
+
+    [prepare_step method]
+    Defining build environment, based on toolchain (options) and specified dependencies...
+
+    Loading toolchain module...
+
+    module load GCC/4.9.2
+
+    Loading modules for dependencies...
+
+    module load M4/1.4.17-GCC-4.9.2
+
+    Full list of loaded modules:
+      1) GCC/4.8.2
+      2) M4/1.4.17-GCC-4.9.2
+
+.. _extended_dry_run_overview_module_load_simulated:
+
+Loading of non-available modules is simulated
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If the module file required to execute a particular ``module load`` statement is not available, the dry run mechanism
+will *simulate* the loading of the module.
+
+The ``module load`` statements that were simulated rather than actually performed are clearly indicated using
+``[SIMULATED]`` in the dry run output, for example::
+
+    [prepare_step method]
+    Defining build environment, based on toolchain (options) and specified dependencies...
+
+    Loading toolchain module...
+
+    module load intel/2015a
+
+    Loading modules for dependencies...
+
+    module load JasPer/1.900.1-intel-2015a
+    module load netCDF/4.3.2-intel-2015a [SIMULATED]
+    module load netCDF-Fortran/4.4.0-intel-2015a [SIMULATED]
+    module load tcsh/6.18.01-intel-2015a
+
+Only modules that were effectively loaded will appear in the full list of modules being printed; modules for which
+the load was simulated will not be included.
+
+.. _extended_dry_run_overview_module_load_simulated_deps:
+
+Simulated loading of non-available *dependency* modules
+#######################################################
+
+For dependencies, simulating a ``module load`` statement basically (only) entails defining the ``$EBROOT*`` and
+``$EBVERSION*`` environment variables (the full variable names are determined by the software name), which are picked
+up by resp. the ``get_software_root`` and ``get_software_version`` functions often used in easyblocks.
+
+The ``$EBVERSION*`` environment variable is defined with the actual software version of the dependency.
+
+For the ``$EBROOT*`` environment variable, the name of the environment variable itself prefixed with a &#39;``$``&#39;
+is used as a dummy value, rather than using an fake installation software prefix.
+For example, when simulating the load statement for a ``GCC`` module, the environment variable ``$EBROOTGCC`` is
+defined as the string value ``&#39;$EBROOTGCC&#39;`` (literally).
+
+This results in sensible output when this value is picked up via ``get_software_root`` by the easyblock.
+
+For example, for netCDF used as a dependency for WRF the following is included in the module file contents included in
+the dry run output::
+
+        setenv  NETCDF      &quot;$EBROOTNETCDF&quot;
+        setenv  NETCDFF     &quot;$EBROOTNETCDFMINFORTRAN&quot;
+
+.. _extended_dry_run_overview_module_load_simulated_toolchain:
+
+Simulated loading of non-available *toolchain* module
+#####################################################
+
+When the module that corresponds to the toolchain being used is not available, the dry run mechanism will also simulate
+the ``module load`` statements for the individual toolchain components, to ensure that version checks on the toolchain
+components can work as expected.
+
+For example, if the toolchain module ``intel/2015a`` is not available, the loading of the ``icc``, ``ifort``, ``impi``
+and ``imkl`` modules that would be loaded by the ``intel`` module is also simulated::
+
+    [prepare_step method]
+    Defining build environment, based on toolchain (options) and specified dependencies...
+
+    Loading toolchain module...
+
+    module load icc/2015.1.133-GCC-4.9.2 [SIMULATED]
+    module load ifort/2015.1.133-GCC-4.9.2 [SIMULATED]
+    module load impi/5.0.2.044-iccifort-2015.1.133-GCC-4.9.2 [SIMULATED]
+    module load imkl/11.2.1.133-iimpi-7.2.3-GCC-4.9.2 [SIMULATED]
+    module load intel/2015a [SIMULATED]
+
+
+.. _extended_dry_run_build_environment:
+
+Build environment is reported
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The build environment that is set up based on the toolchain (and toolchain options) being used, and the dependencies
+being loaded is reported as a part of the dry run output.
+
+For example, when ``GCC`` is used as a toolchain something like this will be included in the ``prepare_step`` part
+of the dry run output::
+
+    Defining build environment...
+
+      export CC=&quot;gcc&quot;
+      export CFLAGS=&quot;-O2&quot;
+      export CXX=&quot;g++&quot;
+      export CXXFLAGS=&quot;-O2&quot;
+      export F77=&quot;gfortran&quot;
+      export F90=&quot;gfortran&quot;
+      export F90FLAGS=&quot;-O2&quot;
+      export FFLAGS=&quot;-O2&quot;
+      export FLIBS=&quot;-lgfortran&quot;
+      export LDFLAGS=&quot;-L/home/example/eb/software/GCC/4.8.2/lib&quot;
+      export LIBS=&quot;-lm -lpthread&quot;
+      export OPTFLAGS=&quot;-O2&quot;
+      export PRECFLAGS=&quot;&quot;
+
+This is particularly useful as an overview of which environment variables that are defined by the toolchain mechanism,
+and to assess the effect of changing toolchain options.
+
+The output is deliberately formatted such that is can be easily copy-pasted, which can be useful to mimic the
+environment in which EasyBuild will perform the build and install procedure.
+
+.. _extended_dry_run_overview_run_cmd:
+
+Shell commands are not executed
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Any shell commands that are executed via the ``run_cmd`` and ``run_cmd_qa`` functions that are provided by the
+EasyBuild framework via the ``easybuild.tools.run`` are *not* executed, only reported
+(see also :ref:`extended_dry_run_guidelines_easyblocks_framework_functions_run_cmd`).
+
+This typically includes the commands that are defined in the easyblock to be run as a part of the
+configure/build/install steps.
+
+For example::
+
+    configuring... [DRY RUN]
+
+    [configure_step method]
+      running command &quot; ./configure --prefix=/home/example/eb/software/make/3.82-GCC-4.8.2 &quot;
+      (in /home/example/eb/build/make/3.82/GCC-4.8.2/make-3.82)
+
+    building... [DRY RUN]
+
+    [build_step method]
+      running command &quot; make -j 4 &quot;
+      (in /home/example/eb/build/make/3.82/GCC-4.8.2/make-3.82)
+
+    ...
+
+    installing... [DRY RUN]
+
+    [stage_install_step method]
+
+    [make_installdir method]
+
+    [install_step method]
+      running command &quot; make install &quot;
+      (in /home/example/eb/build/make/3.82/GCC-4.8.2/make-3.82)
+
+There are a couple of minor exceptions though. Some (light-weight) commands are always run by the EasyBuild framework,
+even in dry run mode, and an easyblock can specify that particular commands *must* always be run
+(see also :ref:`extended_dry_run_guidelines_easyblocks_framework_functions_run_cmd`).
+
+.. _extended_dry_run_overview_sanity_check:
+
+Sanity check paths/commands are not checked
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Since nothing is actually being installed during a dry run, the sanity check paths/commands can not be checked.
+
+Instead, the dry run mechanism will produce a clear overview of which paths are expected to be found in the
+installation directory, and which commands are expected to work (if any).
+
+For example::
+
+    sanity checking... [DRY RUN]
+
+    [sanity_check_step method]
+    Sanity check paths - file [&#39;files&#39;]
+      * WRFV3/main/ideal.exe
+      * WRFV3/main/libwrflib.a
+      * WRFV3/main/ndown.exe
+      * WRFV3/main/nup.exe
+      * WRFV3/main/real.exe
+      * WRFV3/main/tc.exe
+      * WRFV3/main/wrf.exe
+    Sanity check paths - (non-empty) directory [&#39;dirs&#39;]
+      * WRFV3/main
+      * WRFV3/run
+    Sanity check commands
+      (none)
+
+.. _extended_dry_run_overview_no_downloading:
+
+Module file is incomplete and only printed
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+During a dry run, the contents of the module file that would be installed is still generated, but only printed; it
+is not actually written to file.
+
+More importantly however, the module file being reported is bound to be **incomplete**, since the module generator
+only includes certain statements conditionally, for example only if the files/directories to which they relate
+actually exist. This typically affects ``prepend-path`` statements, e.g. for ``$PATH``, ``$LD_LIBRARY_PATH``,
+etc.
+
+For example, the reported module file for make v3.82 built with ``GCC/4.8.2`` may look something like::
+
+    creating module... [DRY RUN]
+
+    [make_module_step method]
+    Generating module file /home/example/eb/modules/all/make/3.82-GCC-4.8.2, with contents:
+
+        #%Module
+        proc ModulesHelp { } {
+            puts stderr { make-3.82: GNU version of make utility - Homepage: http://www.gnu.org/software/make/make.html
+            }
+        }
+
+        module-whatis {Description: make-3.82: GNU version of make utility - Homepage: http://www.gnu.org/software/make/make.html}
+
+        set root /home/example/eb/software/make/3.82-GCC-4.8.2
+
+        conflict make
+
+        if { ![ is-loaded GCC/4.8.2 ] } {
+            module load GCC/4.8.2
+        }
+
+        setenv  EBROOTMAKE      &quot;$root&quot;
+        setenv  EBVERSIONMAKE       &quot;3.82&quot;
+        setenv  EBDEVELMAKE     &quot;$root/easybuild/make-3.82-GCC-4.8.2-easybuild-devel&quot;
+
+        # Built with EasyBuild version 2.4.0
+
+Note that there is no ``prepend-path PATH`` statement for the ``bin`` subdirectory, for example.
+
+
+.. _extended_dry_run_guidelines_easyblocks:
+
+Guidelines for easyblocks
+-------------------------
+
+To ensure useful output under ``--extended-dry-run``, easyblocks should be implemented keeping in mind that some
+operations are possible not performed, to avoid generating errors in dry run mode.
+
+Although errors are just ignored by the dry run mechanism on a per-step basis, they may hide subsequent operations and
+useful information for the remainder of the step (see also :ref:`extended_dry_run_notes_ignored_errors`).
+
+.. _extended_dry_run_guidelines_easyblocks_detect_dry_run:
+
+Detecting dry run mode and enhancing the dry run output
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To detect whether an easyblock is being used in dry run mode, it suffices to check the ``self.dry_run`` class variable.
+
+Additional messages can be included in the dry run output using the ``self.dry_run_msg`` method.
+
+For example::
+
+    class Example(EasyBlock):
+
+        def configure_step(self):
+
+            if self.dry_run:
+                self.dry_run_msg(&quot;Dry run mode detected, not reading template configuration files&quot;)
+                ...
+
+.. _extended_dry_run_guidelines_files_dirs_checks:
+
+Check whether files/directories exist before accessing them
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Rather than assuming that particular files or directories will be there, easyblocks should take into that they may
+not be, for example because EasyBuild is being run in dry run mode.
+
+For example, instead of simply assuming that a directory named &#39;``test``&#39; will be there, the existence should be
+checked first. If not, an appropriate error should be produced, but only when the easyblock is *not* being used in
+dry run mode.
+
+**Bad** example::
+
+    # *BAD* example: maybe the &#39;test&#39; directory is not there (e.g., because we&#39;re in dry run mode)!
+    try:
+        testcases = os.listdir(&#39;test&#39;)
+    except OSError as err:
+        raise EasyBuildError(&quot;Unexpected error when determining list of test cases: %s&quot;, err)
+
+Good example::
+
+    # make sure the &#39;test&#39; directory is there before trying to access it
+    if os.path.exists(&#39;test&#39;):
+        try:
+            testcases = os.listdir(&#39;test&#39;)
+        except OSError as err:
+            raise EasyBuildError(&quot;Unexpected error when determining list of test cases: %s&quot;, err)
+
+    # only raise an error if we&#39;re not in dry run mode
+    elif not self.dry_run:
+        raise EasyBuildError(&quot;Test directory not found, failed to determine list of test cases&quot;)
+
+Easyblocks that do not take this into account are likely to result in ignored errors during a dry run (see also
+:ref:`extended_dry_run_notes_ignored_errors`). For example, for the bad example shown above::
+
+    !!!
+    !!! WARNING: ignoring error &quot;Unexpected error when determining list of test cases: [Errno 2] No such file or directory: &#39;test&#39;&quot;
+    !!!
+
+.. _extended_dry_run_guidelines_easyblocks_framework_functions:
+
+Use functions provided by the EasyBuild framework
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The EasyBuild framework provides a bunch of functions that are &quot;*dry run-aware*&quot;, and which can significantly help
+in keeping easyblocks free from conditional statements checking ``self.dry_run``:
+
+* :ref:`extended_dry_run_guidelines_easyblocks_framework_functions_setvar`
+* :ref:`extended_dry_run_guidelines_easyblocks_framework_functions_write_file`
+* :ref:`extended_dry_run_guidelines_easyblocks_framework_functions_runtime_patching`
+* :ref:`extended_dry_run_guidelines_easyblocks_framework_functions_run_cmd`
+
+.. _extended_dry_run_guidelines_easyblocks_framework_functions_setvar:
+
+Defining environment variables: ``setvar``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For defining environment variables, the ``setvar`` function available in the ``easybuild.tools.environment`` module
+should be used.
+
+For example, from the WRF easyblock::
+
+    jasper = get_software_root(&#39;JasPer&#39;)
+    if jasper:
+        env.setvar(&#39;JASPERINC&#39;, os.path.join(jasper, &#39;include&#39;))
+
+When triggered in dry run mode, this will result in a clear dry run message like::
+
+      export JASPERINC=&quot;$EBROOTJASPER/include&quot;
+
+The actual output depends on whether or not the required module for ``JasPer`` is available
+(see :ref:`extended_dry_run_overview_module_load_simulated_deps`).
+
+Silently defining environment variables
+#######################################
+
+The ``setvar`` function also supports defining environment variables *silently*, i.e. without producing a
+corresponding dry run message, via the named argument ``verbose``.
+
+This is used in a couple of places in the EasyBuild framework, to avoid some environment variables being defined
+cluttering the dry run output without added value. It can be used for similar reasons in easyblocks.
+
+For example, the ``PythonPackage`` uses it in the *install* step, to modify ``$PYTHONPATH`` as required by the
+``python setup.py install`` procedure (which is considered not relevant to include in the dry run output, since
+it&#39;s a technicality)::
+
+    env.setvar(&#39;PYTHONPATH&#39;, new_pythonpath, verbose=False)
+
+
+.. _extended_dry_run_guidelines_easyblocks_framework_functions_write_file:
+
+Writing or appending to files: ``write_file``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For writing and appending to files, the EasyBuild framework provides the ``write_file`` function (available from
+the ``easybuild.tools.filetools`` module).
+
+Using it is straightforward, for example::
+
+    write_file(&#39;example.txt&#39;, &quot;Contents for the example file&quot;)
+
+To append to an existing file, ``write_file`` support a named argument ``append``.
+
+When used in dry run mode, ``write_file`` does not actually (attempt to) write to the file; instead, it just produces
+an appropriate dry run message and returns.
+
+For example::
+
+    file written: /tmp/eb-ksVC07/tmp.conf
+
+.. _extended_dry_run_guidelines_easyblocks_framework_functions_runtime_patching:
+
+Runtime patching of files: ``apply_regex_substitutions``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To make runtime patching of files in easyblocks easier, and to do it with taking the possibility of being in dry run
+module into account, the EasyBuild framework provides the ``apply_regex_substitutions`` function (available from the
+``easybuild.tools.filetools`` module, since EasyBuild v2.4.0).
+
+This function takes two arguments: a path to the file that should be patched, and a list of tuples specifying the regular
+expression pattern to match on, and the string value that should be used as replacement text.
+
+For example (simple fictional example)::
+
+    # replace value for C++ compiler
+    apply_regex_substitutions(&#39;config.mk&#39;, [(&#39;^(CPLUSPLUS\s*=).*&#39;, &#39;\1 %s&#39; % os.environ[&#39;CXX&#39;])])
+
+When used in dry run mode, it will produce a message like::
+
+    applying regex substitutions to file config.mk
+      * regex pattern &#39;^(CPLUSPLUS\s*=\s).*&#39;, replacement string &#39;\1 g++&#39;
+
+.. _extended_dry_run_guidelines_easyblocks_framework_functions_run_cmd:
+
+Executing commands: ``run_cmd`` and ``run_cmd_qa``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To execute shell commands, the ``run_cmd`` and ``run_cmd_qa`` functions are provided by the EasyBuild framework in the
+``easybuild.tools.run`` module, with the latter providing support for running interactive commands.
+
+In their simplest form, they simply take the command to execute as a string. For example::
+
+      run_cmd(&quot;tcsh ./compile -j %s wrf&quot; % self.cfg[&#39;parallel&#39;])
+
+In dry run mode, these functions just produce a dry run message, rather than actually executing the specified command.
+For example::
+
+      running command &quot;tcsh ./compile -j 4 wrf&quot;
+      (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar/WRF-3.6.1)
+
+Take into account that the directory included in the message may not be 100% accurate,
+see :ref:`extended_dry_run_overview_build_dir_guess`.
+
+Silently executing commands
+###########################
+
+The ``verbose`` named argument supported by the ``run_cmd`` function allows to execute a particular command silently,
+i.e. without producing a dry run message.
+
+For example::
+
+    # only run for debugging purposes
+    run_cmd(&quot;ulimit -v&quot;, verbose=False)
+
+Forced execution of particular commands
+#######################################
+
+Sometimes, it can be required that specific (light-weight) commands are *always* executed, because they have
+side-effects that are assumed to have taken place later in the easyblock.
+
+For this, the ``run_cmd`` function support another named argument, i.e. ``force_in_dry_run``.
+When set to ``True``, the specified command will always be executed, even when in dry run mode.
+
+This is mainly intended for use in the EasyBuild framework itself, where commands that verify certain things must
+be executed, but it can also be useful for easyblocks (if used correctly).
+
+For example::
+
+    out, exit_code = run_cmd(&quot;type module&quot;, simple=False, force_in_dry_run=True)
+
+
+Example output
+--------------
+
+Output examples for ``eb --extended-dry-run``/``eb -x``:
+
+* :ref:`extended_dry_run_examples_make382_GCC482`
+* :ref:`extended_dry_run_examples_WRF361_intel2015a`
+</code></pre></div></p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/easy_build" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/c/easybuilders" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://docs.easybuild.io" target="_blank" rel="noopener" title="docs.easybuild.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M96 0C43 0 0 43 0 96v320c0 53 43 96 96 96h320c17.7 0 32-14.3 32-32s-14.3-32-32-32v-64c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H96zm0 384h256v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      
+    
+  </body>
+</html>

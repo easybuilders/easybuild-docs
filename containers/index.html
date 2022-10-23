@@ -1,0 +1,1170 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.easybuild.io/containers/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+    
+    
+      
+        <title>Generating container recipes & images - EasyBuild - building software with ease</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="easybuild" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#generating-container-recipes-images" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="EasyBuild - building software with ease" class="md-header__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
+      
+  <img src="../img/easybuild_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EasyBuild - building software with ease
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Generating container recipes & images
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/easybuilders/easybuild-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EasyBuild @ GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
+      
+  <img src="../img/easybuild_logo.png" alt="logo">
+
+    </a>
+    EasyBuild - building software with ease
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/easybuilders/easybuild-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EasyBuild @ GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what-is-easybuild/" class="md-nav__link">
+        What is EasyBuild?
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terminology/" class="md-nav__link">
+        Terminology
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-easybuild/" class="md-nav__link">
+        Using EasyBuild
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-notes/" class="md-nav__link">
+        Release notes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-help/" class="md-nav__link">
+        Getting help
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/containers.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="generating-container-recipes-images">Generating container recipes &amp; images<a class="headerlink" href="#generating-container-recipes-images" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/Containers.html">https://docs.easybuild.io/en/latest/Containers.html</a>.</p>
+<p><strong>
+It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
+and you can help with that!
+</strong></p>
+<ul>
+<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Containers.rst"><code>docs/Containers.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
+<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/containers.md"><code>docs/containers.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
+</ul>
+<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
+</div>
+<div class="highlight"><pre><span></span><code>.. _containers:
+
+Generating container recipes &amp; images
+=====================================
+
+EasyBuild has support for generating Singularity and Docker *container recipes*
+which will use EasyBuild to build and install a specified software stack.
+In addition, EasyBuild can (optionally) leverage the build tool provided by the
+container software of choice to create *container images*.
+
+.. note:: The features documented here have been available since EasyBuild v3.6.0 but are still *experimental*,
+          which implies they are subject to change in upcoming versions of EasyBuild.
+
+          **You will need to enable the** ``--experimental`` **configuration option in order to use them.**
+
+          See :ref:`experimental_features` for more information.
+
+Initially (since EasyBuild v3.6.0), only Singularity (https://www.sylabs.io/singularity) was supported.
+Since EasyBuild v3.6.2, generating (recipes for) Docker (https://www.docker.com/) containers is also supported.
+
+In EasyBuild v3.9.2 the support for generating Singularity container recipes/images was enhanced significantly.
+
+.. contents::
+    :depth: 3
+    :backlinks: none
+
+.. _containers_req:
+
+Requirements
+------------
+
+* Docker, or Singularity version 2.4 (or more recent, incl. version 3.x)
+* ``sudo`` permissions *(only required to actually build container images, see* :ref:`containers_usage_build_image` *)*
+
+
+.. _containers_usage:
+
+Usage
+-----
+
+.. _containers_usage_containerize:
+
+Generating container recipes (``--containerize`` / ``-C``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To generate container recipes, use ``eb --containerize``, or ``eb -C`` for short.
+
+The resulting container recipe will, in turn, leverage EasyBuild to build and install the software
+that corresponds to the easyconfig files that are specified as arguments to the ``eb`` command
+(and all required dependencies, if needed).
+
+.. note:: EasyBuild will refuse to overwrite existing container recipes.
+
+          To re-generate an already existing recipe file, use the ``--force`` command line option.
+
+
+.. _containers_usage_template_recipe:
+
+Container template recipe (``--container-template-recipe``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Via the ``--container-template-recipe`` configuration option, you can specify a specific container template recipe
+that EasyBuild should use to generate container recipes.
+
+This gives you control over a variety of aspects, including:
+
+* the operating system (version) used in the container image
+* the location where EasyBuild installs software within the container
+* how EasyBuild is configured when installing software in the container
+* etc.
+
+When generating container recipes, EasyBuild will replace the following template values:
+
+* ``%(bootstrap)s``: bootstrap agent to use
+
+  * see also https://www.sylabs.io/guides/latest/user-guide/definition_files.html#header
+
+* ``%(bootstrap_config)s``: configuration for the bootstrap agent
+
+  * this is expected to include lines that specify ``From:``, ``MirrorURL:``, etc.
+  * for more information, see :ref:`containers_usage_config`
+
+* ``%(easyconfigs)s``: (list of) easyconfig file name(s)/path(s) to pass to ``eb`` command
+* ``%(eb_args)s``: additional arguments for &#39;eb&#39; command
+* ``%(include)s``: list of additional OS packages to include
+
+  * see also :ref:`container_bootstrap_agent_linux_distro_include`
+
+* ``%(install_eb)s``: list of commands to install EasyBuild
+* ``%(install_os_deps)s``: list of commands to install required OS packages (for example ``yum install -y openssl``)
+
+  * incl. ``osdependencies`` specified in easyconfig files
+
+* ``%(mirrorurl)``: URI to use to download OS
+
+  * see also :ref:`container_bootstrap_agent_linux_distro_mirrorurl`
+
+* ``%(modname)s``: module name(s) to load in environment
+* ``%(osversion)``: OS version to use
+
+  * see also :ref:`container_bootstrap_agent_linux_distro_osversion`
+
+* ``%(post_commands)s``: additional commands for the ``post`` section of the (Singularity) container recipe
+
+
+.. _containers_usage_config:
+
+Container configuration (``--container-config``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Using ``--container-config``, values for specific template values can be specified.
+
+Values can be specified as a comma-separated list of ``&lt;key&gt;=&lt;value&gt;`` pairs;
+for example: ``--container-config bootstrap=localimage,from:example.sif``.
+
+Currently supported keywords include:
+
+* ``bootstrap``: bootstrap agent to use
+
+  * two types of values are supported:
+
+    * :ref:`container_bootstrap_agent_image_based`
+    * :ref:`container_bootstrap_agent_linux_distro`
+
+* ``eb_args``: additional arguments for &#39;eb&#39; command
+* ``from``: argument to pass to bootstrap agent
+
+  * *required/only valid with* ``docker``, ``library``, ``localimage`` *and* ``shub`` *bootstrap agents*
+
+  * for more details, see :ref:`container_bootstrap_agent_image_based`
+
+* ``include``: list of additional OS packages to include
+
+  * see also :ref:`container_bootstrap_agent_linux_distro_include`
+
+* ``install_eb``: commands to install EasyBuild
+* ``mirrorurl``: URI to use to download OS
+
+  * see also :ref:`container_bootstrap_agent_linux_distro_mirrorurl`
+
+* ``osversion``: OS version to use
+
+  * see also :ref:`container_bootstrap_agent_linux_distro_osversion`
+
+* ``post_commands``: additional commands for ``post`` section of (Singularity) container recipe
+
+For more details on the last three, see :ref:`container_bootstrap_agent_linux_distro`.
+
+.. note:: Specifying any unknown keywords will results in an error.
+
+
+.. _container_bootstrap_agent_image_based:
+
+Image-based bootstrap agents (``docker``, ``library``, ``localimage``, ``shub``)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+These bootstrap agents involve using an existing container image as a base.
+
+Supported values include:
+
+* ``docker``: base container image hosted on Docker Hub (https://hub.docker.com/)
+* ``library``: base container image hosted on Sylabs Container Library (https://cloud.sylabs.io/)
+* ``localimage``: local base container image file
+* ``shub``: base container image hosted on Singularity Hub (https://singularity-hub.org/)
+
+**The** ``from`` **keyword must also be specified when using one of these bootstrap agents.**
+
+The ``localimage`` bootstrap agents corresponds to using a local container image file as a base,
+where it&#39;s path is specified using the ``from`` keyword.
+For example: &quot;``bootstrap=localimage,from=/home/example/base.sif``&quot;.
+
+Each of the other image-based bootstrap agents imply that the container image to use as a base
+is downloaded from the corresponding registry, ad specified through the ``from`` keyword, with a specific format:
+
+  * for ``docker`` bootstrap agent: ``&lt;registry&gt;/&lt;namespace&gt;/&lt;container&gt;:&lt;tag&gt;@&lt;digest&gt;``
+  * for ``library`` bootstrap agent: ``&lt;entity&gt;/&lt;collection&gt;/&lt;container&gt;:&lt;tag&gt;``
+  * for ``shub`` bootstrap agent: ``&lt;registry&gt;/&lt;username&gt;/&lt;container-name&gt;:&lt;tag&gt;@digest``
+
+For more details, see https://www.sylabs.io/guides/latest/user-guide/appendix.html#build-modules.
+
+
+.. _containers_usage_container_base_image_requirements:
+
+Requirements for base container image
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+There are a couple of specific requirements for the base container image:
+
+* all dependencies of EasyBuild must be installed, including:
+
+  * Python 2.6 or 2.7
+  * Lmod
+  * standard tools &amp; utilities like ``make``, ``patch``, ``tar``, etc.
+  * OS packages for system libraries like OpenSSL
+
+See also :ref:`requirements`.
+
+Each generated container recipe will include commands to create the ``easybuild`` user if it doesn&#39;t exist yet,
+as well as commands to create the ``/app`` and ``/scratch`` directories and give the ``easybuild`` user
+write permissions to those locations.
+
+.. note:: The generated container recipe currently hardcodes some of this.
+          We intend to make this more configurable in a future version of EasyBuild.
+
+
+.. _container_bootstrap_agent_linux_distro:
+
+Linux distro bootstrap agents (``arch``, ``busybox``, ``debootstrap``, ``yum``, ``zypper``)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Dedicated bootstrap agents are supported for different flavors of Linux distributions, including:
+
+* ``arch``: Arch Linux
+* ``busybox``: BusyBox Linux
+* ``debootstrap``: apt-based systems like Ubuntu/Debian
+* ``yum``: yum-based systems like CentOS
+* ``zypper``: zypper-based systems like openSUSE
+
+When one of these bootstrap agents is used, additional keywords can be specified:
+
+* :ref:`container_bootstrap_agent_linux_distro_include`
+* :ref:`container_bootstrap_agent_linux_distro_mirrorurl`
+* :ref:`container_bootstrap_agent_linux_distro_osversion`
+
+.. _container_bootstrap_agent_linux_distro_include:
+
+``include`` keyword: OS packages to include
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Via the ``include`` keywords, a list of packages can be specified that should be include on top of the base OS installation.
+
+For some bootstrap agents, a default value is used if no value is specified:
+
+* for the ``yum`` bootstrap agent: ``yum``
+* for the ``zypper`` bootstrap agent: ``zypper``
+
+See also https://www.sylabs.io/guides/latest/user-guide/appendix.html#yum-bootstrap-agent and
+https://www.sylabs.io/guides/latest/user-guide/appendix.html#zypper-bootstrap-agent.
+
+
+.. _container_bootstrap_agent_linux_distro_mirrorurl:
+
+``mirrorurl`` keyword: mirror URL to use to download OS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For most of the Linux distro bootstrap agents (all except ``arch``), Singularity requires that a mirror URL
+is specified that will be used when downloading the corresponding OS.
+
+You can specify a value using the ``mirrorurl`` keyword. For example: &quot;``bootstrap=yum,mirrorurl=https://example.com``&quot;.
+
+EasyBuild will use a default value for ``mirrorurl`` if no other value is specified:
+
+* ``busybox``: ``https://www.busybox.net/downloads/binaries/%{OSVERSION}/busybox-x86_64``
+* ``debootstrap``: ``http://us.archive.ubuntu.com/ubuntu/``
+* ``yum``: ``http://mirror.centos.org/centos-%{OSVERSION}/%{OSVERSION}/os/x86_64/``
+* ``zypper``:: ``http://download.opensuse.org/distribution/leap/%{OSVERSION}/repo/oss/``
+
+
+.. _container_bootstrap_agent_linux_distro_osversion:
+
+``osversion`` keyword: OS version to use
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Using the ``osversion`` keyword you can specify which OS version should be installed.
+
+Note that is this only required/used if value for the ``mirrorurl`` value contains ``%{OSVERSION}s``.
+
+For example: &quot;``bootstrap=yum,osversion=7``&quot;.
+
+
+.. _containers_usage_build_image:
+
+Building container images (``--container-build-image``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To instruct EasyBuild to also build a container image from the generated container recipe, use ``--container-build-image``
+(in combination with ``-C`` or ``--containerize``).
+
+EasyBuild will leverage functionality provided by the container software of choice
+(see :ref:`containers_cfg_image_type`) to build the container image.
+
+For example, in the case of Singularity, EasyBuild will run ``sudo /path/to/singularity build`` on the generated container recipe.
+
+.. note:: In order to leverage the image building functionality of the container software, admin privileges are
+          typically required. Therefore, EasyBuild will run the command to build the container image with ``sudo``.
+          You may need to enter your password to let the command execute.
+
+          EasyBuild will only run the actual container image build command with ``sudo``.
+          It will not use elevated privileges for anything else.
+
+          In case of doubt, you can use ``--extended-dry-run`` or ``-x`` do perform a dry run, so you can evaluate
+          which commands will be executed (see also :ref:`extended_dry_run`).
+
+          If you&#39;re not comfortable with this, you can just let EasyBuild generate the container recipe,
+          and then use that to build the actual container images yourself, either locally or through
+          Singularity Hub (https://singularity-hub.org).
+
+The container image will be placed in the location specified by the ``--containerpath`` configuration option
+(see :ref:`containers_cfg_path`), next to the generated container recipe that was used to build the image.
+
+.. note::
+    When building container images, make sure to use a file system location with sufficient available storage space.
+    Singularity may pull metadata during the build, and each image can range from several hundred MBs to GBs,
+    depending on software stack you are including in the container image.
+
+.. note:: EasyBuild will refuse to overwrite existing container images.
+
+          To re-generate an already existing image file, use the ``--force`` command line option.
+
+
+.. _containers_usage_example:
+
+Example usage
+~~~~~~~~~~~~~
+
+In this example, we will use a pre-built base container image located at ``example.sif``
+(see also :ref:`container_bootstrap_agent_image_based`).
+
+To let EasyBuild generate a container recipe for GCC 6.4.0 + binutils 2.28::
+
+    eb GCC-6.4.0-2.28.eb --containerize --container-config bootstrap=localimage,from=example.sif --experimental
+
+With other configuration options left to default (see output of ``eb --show-config``),
+this will result in a Singularity container recipe using ``example.sif`` as base image,
+which will be stored in ``$HOME/.local/easybuild/containers``::
+
+    $ eb GCC-6.4.0-2.28.eb --containerize --container-config bootstrap=localimage,from=example.sif --experimental
+    == temporary log file in case of crash /tmp/eb-dLZTNF/easybuild-LPLeG0.log
+    == Singularity definition file created at /home/example/.local/easybuild/containers/Singularity.GCC-6.4.0-2.28
+    == Temporary log file(s) /tmp/eb-dLZTNF/easybuild-LPLeG0.log* have been removed.
+    == Temporary directory /tmp/eb-dLZTNF has been removed.
+
+Docker supports a limited set of the container options. Example of commands that can be used to generate
+Docker containers are::
+
+    eb  --containerize --container-type=docker --experimental --container-config=ubuntu:20.04 zlib-1.2.11.eb
+    eb  --containerize --container-type=docker --experimental --container-config=centos:7 zlib-1.2.11.eb
+
+.. _containers_example_recipe:
+
+Example of a generated container recipe
++++++++++++++++++++++++++++++++++++++++
+
+Below is an example of container recipe for that was generated by EasyBuild, using the following command::
+
+    eb Python-3.6.4-foss-2018a.eb -C --container-config bootstrap=yum,osversion=7 --experimental
+
+.. code::
+
+    Bootstrap: yum
+    OSVersion: 7
+    MirrorURL: http://mirror.centos.org/centos-%{OSVERSION}/%{OSVERSION}/os/x86_64/
+    Include: yum
+
+    %post
+    yum install --quiet --assumeyes epel-release
+    yum install --quiet --assumeyes python setuptools Lmod
+    yum install --quiet --assumeyes python-pip
+    yum install --quiet --assumeyes bzip2 gzip tar zip unzip xz
+    yum install --quiet --assumeyes curl wget
+    yum install --quiet --assumeyes patch make
+    yum install --quiet --assumeyes file git which
+    yum install --quiet --assumeyes gcc-c++
+    yum install --quiet --assumeyes perl-Data-Dumper
+    yum install --quiet --assumeyes perl-Thread-Queue
+    yum --skip-broken --quiet --assumeyes install libibverbs-dev libibverbs-devel rdma-core-devel
+    yum --skip-broken --quiet --assumeyes install openssl-devel libssl-dev libopenssl-devel
+
+    # install EasyBuild using pip
+    pip install -U setuptools
+    pip install &#39;vsc-install&lt;0.11.4&#39; &#39;vsc-base&lt;2.9.0&#39;
+    pip install easybuild
+
+    # create &#39;easybuild&#39; user (if missing)
+    id easybuild || useradd easybuild
+
+    # create /app software installation prefix + /scratch sandbox directory
+    if [ ! -d /app ]; then mkdir -p /app; chown easybuild:easybuild -R /app; fi
+    if [ ! -d /scratch ]; then mkdir -p /scratch; chown easybuild:easybuild -R /scratch; fi
+
+    # install Lmod RC file
+    cat &gt; /etc/lmodrc.lua &lt;&lt; EOF
+    scDescriptT = {
+      {
+        [&quot;dir&quot;]       = &quot;/app/lmodcache&quot;,
+        [&quot;timestamp&quot;] = &quot;/app/lmodcache/timestamp&quot;,
+      },
+    }
+    EOF
+
+    # change to &#39;easybuild&#39; user
+    su - easybuild
+
+    # verbose commands, exit on first error
+    set -ve
+
+    # configure EasyBuild
+
+    # use /scratch as general prefix, used for sources, build directories, etc.
+    export EASYBUILD_PREFIX=/scratch
+
+    # also use /scratch for temporary directories
+    export EASYBUILD_TMPDIR=/scratch/tmp
+
+    # download sources to /scratch/sources, but also consider files located in /tmp/easybuild/sources;
+    # that way, source files that can not be downloaded can be seeded in
+    export EASYBUILD_SOURCEPATH=/scratch/sources:/tmp/easybuild/sources
+
+    # install software &amp; modules into /app
+    export EASYBUILD_INSTALLPATH=/app
+
+    # use EasyBuild to install specified software
+    eb Python-3.6.4-foss-2018a.eb --robot
+
+    # update Lmod cache
+    mkdir -p /app/lmodcache
+    $LMOD_DIR/update_lmod_system_cache_files -d /app/lmodcache -t /app/lmodcache/timestamp /app/modules/all
+
+    # exit from &#39;easybuild&#39; user
+    exit
+
+    # cleanup, everything in /scratch is assumed to be temporary
+    rm -rf /scratch/*
+
+    %runscript
+    eval &quot;$@&quot;
+
+    %environment
+    # make sure that &#39;module&#39; and &#39;ml&#39; commands are defined
+    source /etc/profile
+    # increase threshold time for Lmod to write cache in $HOME (which we don&#39;t want to do)
+    export LMOD_SHORT_TIME=86400
+    # purge any modules that may be loaded outside container
+    module --force purge
+    # avoid picking up modules from outside of container
+    module unuse $MODULEPATH
+    # pick up modules installed in /app
+    module use /app/modules/all
+    # load module(s) corresponding to installed software
+    module load Python/3.6.4-foss-2018a
+
+    %labels
+
+
+The generated container recipe includes a bunch of ``yum install`` commands to install additional required/useful OS packages,
+``pip install`` commands to install EasyBuild (if it&#39;s not installed yet), commands to create the ``easybuild`` user
+and provide write access to the ``/app`` and ``/scratch`` directories, and to configure Lmod and update the Lmod cache
+after software was installed with EasyBuild.
+
+In addition, the generated module files will follow the default module naming scheme (``EasyBuildMNS``).
+The modules that correspond to the easyconfig files that were specified on the command line will be loaded
+automatically, see the statements in the ``%environment`` section of the generated container recipe.
+
+
+.. _containers_example_build_image:
+
+Example of building container image
++++++++++++++++++++++++++++++++++++
+
+You can instruct EasyBuild to also build the container image by also using ``--container-build-image``.
+
+Note that you will need to enter your ``sudo`` password (unless you recently executed a ``sudo`` command
+in the same shell session)::
+
+    $ eb GCC-6.4.0-2.28.eb --containerize --container-config bootstrap=localimage,from=/tmp/example.sif --container-build-image --experimental
+    == temporary log file in case of crash /tmp/eb-aYXYC8/easybuild-8uXhvu.log
+    == Singularity tool found at /usr/bin/singularity
+    == Singularity version &#39;2.4.6&#39; is 2.4 or higher ... OK
+    == Singularity definition file created at /home/example/.local/easybuild/containers/Singularity.GCC-6.4.0-2.28
+    == Running &#39;sudo /usr/bin/singularity build  /home/example/.local/easybuild/containers/GCC-6.4.0-2.28.sif /home/example/.local/easybuild/containers/Singularity.GCC-6.4.0-2.28&#39;, you may need to enter your &#39;sudo&#39; password...
+    == (streaming) output for command &#39;sudo /usr/bin/singularity build  /home/example/.local/easybuild/containers/GCC-6.4.0-2.28.sif /home/example/.local/easybuild/containers/Singularity.GCC-6.4.0-2.28&#39;:
+    Using container recipe deffile: /home/example/.local/easybuild/containers/Singularity.GCC-6.4.0-2.28
+    Sanitizing environment
+    Adding base Singularity environment to container
+    ...
+    == temporary log file in case of crash /scratch/tmp/eb-WnmCI_/easybuild-GcKyY9.log
+    == resolving dependencies ...
+    ...
+    == building and installing GCCcore/6.4.0...
+    ...
+    == building and installing binutils/2.28-GCCcore-6.4.0...
+    ...
+    == building and installing GCC/6.4.0-2.28...
+    ...
+    == COMPLETED: Installation ended successfully
+    == Results of the build can be found in the log file(s) /app/software/GCC/6.4.0-2.28/easybuild/easybuild-GCC-6.4.0-20180424.084946.log
+    == Build succeeded for 15 out of 15
+    ...
+    Building Singularity image...
+    Singularity container built: /home/example/.local/easybuild/containers/GCC-6.4.0-2.28.sif
+    Cleaning up...
+    == Singularity image created at /home/example/.local/easybuild/containers/GCC-6.4.0-2.28.sif
+    == Temporary log file(s) /tmp/eb-aYXYC8/easybuild-8uXhvu.log* have been removed.
+    == Temporary directory /tmp/eb-aYXYC8 has been removed.
+
+
+The inspect the container image, you can use ``singularity shell`` to start a shell session *in* the container::
+
+    $ singularity shell --shell &quot;/bin/bash --norc&quot; $HOME/.local/easybuild/containers/GCC-6.4.0-2.28.sif
+
+    Singularity GCC-6.4.0-2.28.sif:~&gt; module list
+
+    Currently Loaded Modules:
+      1) GCCcore/6.4.0   2) binutils/2.28-GCCcore-6.4.0   3) GCC/6.4.0-2.28
+
+    Singularity GCC-6.4.0-2.28.sif:~&gt; which gcc
+    /app/software/GCCcore/6.4.0/bin/gcc
+
+    Singularity GCC-6.4.0-2.28.sif:~&gt; gcc --version
+    gcc (GCC) 6.4.0
+    ...
+
+
+.. note:: We are passing ``--shell &quot;/bin/bash --norc`` to ``singularity shell`` to avoid that the ``.bashrc`` login
+          script that may be present in your home directory is sourced, since that may include statements that are
+          not relevant in the container environment.
+
+
+Or, you can use ``singularity exec`` to execute a command in the container.
+
+Compare the output of running ``which gcc`` and ``gcc --version`` locally::
+
+    $ which gcc
+    /usr/bin/gcc
+    $ gcc --version
+    gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-16)
+    ...
+
+and the output when running the same commands in the container::
+
+    $ singularity exec GCC-6.4.0-2.28.sif which gcc
+    /app/software/GCCcore/6.4.0/bin/gcc
+
+    $ singularity exec GCC-6.4.0-2.28.sif gcc --version
+    gcc (GCC) 6.4.0
+    ...
+
+
+Configuration
+-------------
+
+.. note:: You can specify each of these configuration options either as options to the ``eb`` command,
+          via the equivalent ``$EASYBUILD_CONTAINER*`` environment variable, or via an EasyBuild configuration file;
+          see :ref:`configuration_types`.
+
+.. _containers_cfg_path:
+
+Location for generated container recipes &amp; images (``--containerpath``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To control the location where EasyBuild will put generated container recipes &amp; images, use the ``--containerpath``
+configuration setting. Next to providing this as an option to the ``eb`` command, you can also define
+the ``$EASYBUILD_CONTAINERPATH`` environment variable or specify ``containerpath`` in an EasyBuild configuration file.
+
+The default value for this location is ``$HOME/.local/easybuild/containers``, unless the ``--prefix`` configuration
+setting was provided, in which case it becomes ``&lt;prefix&gt;/containers`` (see :ref:`prefix`).
+
+Use ``eb --show-full-config | grep containerpath`` to determine the currently active setting.
+
+
+.. _containers_cfg_image_format:
+
+Container image format (``--container-image-format``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note:: This is only relevant when creating Singularity container images;
+          the value for ``--container-image-format`` is ignored when creating Docker container images.
+
+The format for container images that EasyBuild is produces via the functionality provided by the container software
+can be controlled via the ``--container-image-format`` configuration setting.
+
+For Singularity containers (see :ref:`containers_cfg_type`), three image formats are supported:
+
+* ``squashfs`` *(default when using Singularity 2.x)*: compressed images using ``squashfs`` read-only file system
+* ``sif`` *(default when using Singularity 3.x)*: compressed read-only Singularity Image File (SIF)
+* ``ext3``: writable image file using ``ext3`` file system *(only supported with Singularity 2.x)*
+* ``sandbox``: container image in a regular directory
+
+See also https://www.sylabs.io/guides/latest/user-guide/build_a_container.html .
+
+
+.. _containers_cfg_image_name:
+
+Name for container recipe &amp; image (``--container-image-name``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+By default, EasyBuild will use the name of the first easyconfig file (without the ``.eb`` suffix) as a name
+for both the container recipe and image.
+
+You can specify an altername name using the ``--container-image-name`` configuration setting.
+
+The filename of generated container recipe will be ``Singularity.&lt;name&gt;``.
+
+The filename of the container image will be ``&lt;name&gt;&lt;extension&gt;``,
+where the value for ``&lt;extension&gt;`` depends on the image format (see :ref:`containers_cfg_image_format`):
+
+* &#39;``.simg``&#39; for ``squashfs`` Singularity container images *(only with Singularity 2.x)*
+* &#39;``.img``&#39; for ``ext3`` Singularity container images *(only with Singularity 2.x)*
+* &#39;``.sif``&#39; for Singularity container images in Singularity Image Format (SIF) *(only with Singularity 3.x)*
+* *empty* for ``sandbox`` Singularity container images (in which case the container image is actually a directory rather than a file)
+* *empty* for Docker container images
+
+
+.. _containers_tmpdir:
+
+Temporary directory for creating container images (``--container-tmpdir``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The container software that EasyBuild leverages to build container images may be using
+a temporary directory in a location that doesn&#39;t have sufficient free space.
+
+You can instruct EasyBuild to pass an alternate location via the ``--container-tmpdir`` configuration setting.
+
+For Singularity, the default is to use ``/tmp``, see https://www.sylabs.io/guides/latest/user-guide/build_env.html#temporary-folders.
+If ``--container-tmpdir`` is specified, the ``$SINGULARITY_TMPDIR`` environment variable will be defined accordingly
+to let Singularity use that location instead.
+
+
+.. _containers_cfg_type:
+
+Type of container recipe/image to generate (``--container-type``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+With the ``--container-type`` configuration option, you can specify what type of container recipe/image EasyBuild
+should generated. Possible values are:
+
+* ``docker``: Docker (https://docs.docker.com/) container recipe &amp; images (supported since EasyBuild v3.6.2)
+* ``singularity`` *(default)*: Singularity (https://www.sylabs.io/singularity) container recipes &amp; images
+
+
+.. _containers_stacking:
+
+&#39;Stacking&#39; container images
+---------------------------
+
+To avoid long build times and excessive large container images, you can construct your target container image
+step-by-step, by first building a base container image for the compiler toolchain you want to use,
+and then using it to build a container images for a particular (set of) software package(s).
+
+For example, to build a container image for Python 3.6.4 built with the ``foss/2018a`` toolchain::
+
+    $ cd /tmp
+
+    # use current directory as location for generated container recipes &amp; images
+    $ export EASYBUILD_CONTAINERPATH=$PWD
+
+    # build base container image for OpenMPI + GCC parts of foss/2018a toolchain, on top of CentOS 7.4 base image
+    $ eb -C --container-build-image OpenMPI-2.1.2-GCC-6.4.0-2.28.eb --container-config bootstrap=yum,osversion=7 --experimental
+    ...
+    == Singularity image created at /tmp/OpenMPI-2.1.2-GCC-6.4.0-2.28.sif
+    ...
+
+    $ ls -lh OpenMPI-2.1.2-GCC-6.4.0-2.28.sif
+    -rwxr-xr-x 1 root root 590M Apr 24 11:43 OpenMPI-2.1.2-GCC-6.4.0-2.28.sif
+
+    # build another container image for the for the full foss/2018a toolchain, using the OpenMPI + GCC container as a base
+    $ eb -C --container-build-image foss-2018a.eb --container-config bootstrap=localimage,from=OpenMPI-2.1.2-GCC-6.4.0-2.28.sif --experimental
+    ...
+    == Singularity image created at /tmp/foss-2018a.sif
+    ...
+
+    $ ls -lh foss-2018a.sif
+    -rwxr-xr-x 1 root root 614M Apr 24 13:11 foss-2018a.sif
+
+    # build container image for Python 3.6.4 with foss/2018a toolchain by leveraging base container image foss-2018a.sif
+    $ eb -C --container-build-image Python-3.6.4-foss-2018a.eb --container-config bootstrap=localimage,from=foss-2018a.sif --experimental
+    ...
+    == Singularity image created at /tmp/Python-3.6.4-foss-2018a.sif
+    ...
+
+    $ ls -lh Python-3.6.4-foss-2018a.sif
+    -rwxr-xr-x 1 root root 759M Apr 24 14:01 Python-3.6.4-foss-2018a.sif
+
+    $ singularity exec Python-3.6.4-foss-2018a.sif which python
+    /app/software/Python/3.6.4-foss-2018a/bin/python
+
+    $ singularity exec Python-3.6.4-foss-2018a.sif python -V
+    vsc40023 belongs to gsingularity
+    Python 3.6.4
+
+
+.. _containers_stacking:
+
+Seeding in source files for container build process
+---------------------------------------------------
+
+In some cases, you may need to &quot;seed in&quot; manually downloaded source files into the container build environment,
+because the sources can not be downloaded automatically.
+
+As shown in :ref:`containers_example_recipe`, the container recipe generated by EasyBuild
+includes ``/tmp/easybuild/sources/`` as a fallback directory in the list of locations considered by EasyBuild
+when looking for sources/patches (see also :ref:`sourcepath`).
+
+That way, you can copy source files that should be available when building the container image into ``/tmp/easybuild/sources/``.
+</code></pre></div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/easy_build" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/c/easybuilders" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://docs.easybuild.io" target="_blank" rel="noopener" title="docs.easybuild.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M96 0C43 0 0 43 0 96v320c0 53 43 96 96 96h320c17.7 0 32-14.3 32-32s-14.3-32-32-32v-64c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H96zm0 384h256v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      
+    
+  </body>
+</html>
