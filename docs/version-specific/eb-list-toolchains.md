@@ -1,0 +1,14 @@
+# Output of `eb --list-toolchains`
+
+!!! warning
+    This page will soon replace <https://docs.easybuild.io/en/latest/eb_list_toolchains.html>.
+
+    **
+    It still needs to be ported from *reStructuredText* (.rst) to *MarkDown* (.md),  
+    and you can help with that!
+    **
+
+    - source: [`docs/eb_list_toolchains.rst` in `easybuilders/easybuild` repo](https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/eb_list_toolchains.rst)
+    - target: [`docs/version-specific/eb-list-toolchains.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/version-specific/eb-list-toolchains.md)
+
+    See <https://github.com/easybuilders/easybuild-docs> for more information.

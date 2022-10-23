@@ -23,6 +23,32 @@ nav:
   - Terminology: terminology.md
   - Installation: installation.md
   - Configuration: configuration.md
+  - Using EasyBuild: using-easybuild.md
+  - Release notes: release-notes.md
+  - API: api/index.md
+  - Getting help: getting-help.md
+
+markdown_extensions:
+  # notes, warnings, hints, ...
+  - admonition
+  # code blocks with syntax highlighting, graphs
+  - pymdownx.superfences
+  # clickable details
+  - pymdownx.details
+  # tabbed contents
+  - pymdownx.tabbed
+  - toc:
+      permalink: true
+
+extra:
+  # add links in bottom right
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/easy_build
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/c/easybuilders
+    - icon: fontawesome/solid/book
+      link: https://docs.easybuild.io
 
 plugins:
   # show revision date at bottom of each page
@@ -32,62 +58,84 @@ plugins:
   # redirects for original EasyBuild documentation to avoid broken URLs
   - redirects:
       redirect_maps:
-        # en/latest/Archived-easyconfigs.html: ???
-        # en/latest/Backup_modules.html: ???
-        # en/latest/Changelog.html: ???
-        # en/latest/Code_style.html: ???
-        # en/latest/Common-toolchains.html: ???
+        en/latest/Archived-easyconfigs.html: archived-easyconfigs.md
+        en/latest/Backup_modules.html: backup-modules.md
+        en/latest/Changelog.html: changelog-docs.md
+        en/latest/Code_style.html: code-style.md
+        en/latest/Common-toolchains.html: common-toolchains.md
         en/latest/Concepts_and_Terminology.html: terminology.md
         en/latest/Configuration.html: configuration.md
-        # en/latest/Configuration_Legacy.html: ???
-        # en/latest/Containers.html: ???
-        # en/latest/Contributing.html: ???
-        # en/latest/Controlling_compiler_optimization_flags.html: ???
-        # en/latest/Cray-support.html: ???
-        # en/latest/Deprecated-easyconfigs.html: ???
-        # en/latest/Deprecated-functionality.html: ???
-        # en/latest/Detecting_loaded_modules.html: ???
-        # en/latest/EasyBuild4-overview-of-changes.html: ???
-        # en/latest/EasyBuild4-overview-relocated-functions-constants.html: ???
-        # en/latest/Easyconfig-files-local-variables.html: ???
-        # en/latest/Easyconfigs_index.html: ???
-        # en/latest/Easystack-files.html: ???
-        # en/latest/Experimental_features.html: ???
-        # en/latest/Extended_dry_run.html: ???
-        # en/latest/Extended_dry_run_examples.html: ???
-        # en/latest/Hooks.html: ???
-        # en/latest/Implementing-easyblocks.html: ???
-        # en/latest/Including_additional_Python_modules.html: ???
+        en/latest/Configuration_Legacy.html: legacy/configuration.md
+        en/latest/Containers.html: containers.md
+        en/latest/Contributing.html: contributing.md
+        en/latest/Controlling_compiler_optimization_flags.html: controlling-compiler-optimization-flags.md
+        en/latest/Cray-support.html: cray-support.md
+        en/latest/Deprecated-easyconfigs.html: deprecated-easyconfigs.md
+        en/latest/Deprecated-functionality.html: deprecated-functionality.md
+        en/latest/Detecting_loaded_modules.html: detecting-loaded-modules.md
+        en/latest/EasyBuild4-overview-of-changes.html: easybuild-v4/overview-of-changes.md
+        en/latest/EasyBuild4-overview-relocated-functions-constants.html: easybuild-v4/overview-relocated-functions-constants.md
+        en/latest/Easyconfig-files-local-variables.html: easyconfig-files-local-variables.md
+        en/latest/Easyconfigs_index.html: easyconfigs-search-index.md
+        en/latest/Easystack-files.html: easystack-files.md
+        en/latest/Experimental_features.html: experimental-features.md
+        en/latest/Extended_dry_run.html: extended-dry-run.md#examples
+        en/latest/Extended_dry_run_examples.html: extended-dry-run.md#examples
+        en/latest/Hooks.html: hooks.md
+        en/latest/Implementing-easyblocks.html: implementing-easyblocks.md
+        en/latest/Including_additional_Python_modules.html: including-additional-python-modules.md
         en/latest/Installation.html: installation.md
-        # en/latest/Installation_Alternative.html: ???
-        # en/latest/Installing-Lmod-without-root-permissions.html: ???
-        # en/latest/Installing-environment-modules-without-root-permissions.html: ???
-        # en/latest/Installing_extensions_in_parallel.html: ???
-        # en/latest/Integration_with_GitHub.html: ???
+        en/latest/Installation_Alternative.html: installation-alternative.md
+        en/latest/Installing-Lmod-without-root-permissions.html: installing-lmod-without-root-permissions.md
+        en/latest/Installing-environment-modules-without-root-permissions.html: installing-environment-modules-without-root-permissions.md
+        en/latest/Installing_extensions_in_parallel.html: installing-extensions-in-parallel.md
+        en/latest/Integration_with_GitHub.html: integration-with-github.md
         en/latest/Introduction.html: what-is-easybuild.md
-        # en/latest/Locks.html: ???
-        # en/latest/Logfiles.html: ???
-        # en/latest/Maintainers.html: ???
-        # en/latest/Manipulating_dependencies.html: ???
-        # en/latest/Packaging_support.html: ???
-        # en/latest/Partial_installations.html: ???
-        # en/latest/Progress_bars.html: ???
-        # en/latest/Python-2-3-compatibility.html: ???
-        # en/latest/RPATH-support.html: ???
-        # en/latest/Release_notes.html: ???
-        # en/latest/Removed-functionality.html: ???
-        # en/latest/Submitting_jobs.html: ???
-        # en/latest/System_toolchain.html: ???
-        # en/latest/Tracing_progress.html: ???
-        # en/latest/Typical_workflow_example_with_WRF.html: ???
-        # en/latest/Unit-tests.html: ???
-        # en/latest/Useful-scripts.html: ???
-        # en/latest/Useful_links.html: ???
-        # en/latest/Using_external_modules.html: ???
-        # en/latest/Using_the_EasyBuild_command_line.html: ???
-        # en/latest/Wrapping_dependencies.html: ???
-        # en/latest/Writing_easyconfig_files.html: ???
-        # en/latest/Writing_yeb_easyconfig_files.html: ???
+        en/latest/Locks.html: locks.md
+        en/latest/Logfiles.html: log-files.md
+        en/latest/Maintainers.html: maintainers.md
+        en/latest/Manipulating_dependencies.html: manipulating-dependencies.md
+        en/latest/Packaging_support.html: packaging-support.md
+        en/latest/Partial_installations.html: partial-installations.md
+        en/latest/Progress_bars.html: progress-bars.md
+        en/latest/Python-2-3-compatibility.html: python-2-3-compatibility.md
+        en/latest/RPATH-support.html: rpath-support.md
+        en/latest/Release_notes.html: release-notes.md
+        en/latest/Removed-functionality.html: removed-functionality.md
+        en/latest/Submitting_jobs.html: submitting-jobs.md
+        en/latest/System_toolchain.html: system-toolchain.md
+        en/latest/Tracing_progress.html: tracing-progress.md
+        en/latest/Typical_workflow_example_with_WRF.html: typical-workflow-example-with-wrf.md
+        en/latest/Unit-tests.html: unit-tests.md
+        en/latest/Useful-scripts.html: useful-scripts.md
+        en/latest/Useful_links.html: useful-links.md
+        en/latest/Using_external_modules.html: using-external-modules.md
+        en/latest/Using_the_EasyBuild_command_line.html: using-easybuild.md
+        en/latest/Wrapping_dependencies.html: wrapping-dependencies.md
+        en/latest/Writing_easyconfig_files.html: writing-easyconfig-files.md
+        en/latest/Writing_yeb_easyconfig_files.html: writing-yeb-easyconfig-files.md
+        en/latest/demos/bootstrapping.html: demos/bootstrapping.md
+        en/latest/demos/configuring.html: demos/configuring.md
+        en/latest/demos/index.html: demos/index.md
+        en/latest/demos/review_pr.html: demos/review-pr.md
+        en/latest/eb_a.html: using-easybuild.md#all-available-easyconfig-parameters
+        en/latest/eb_a_e_EB_WRF.html: version-specific/eb-a-wrf.md
+        en/latest/eb_help.html: version-specific/eb-help.md
+        en/latest/eb_list_easyblocks.html: version-specific/eb-list-easyblocks.md
+        en/latest/eb_list_toolchains.html: version-specific/eb-list-toolchains.md
+        en/latest/index.html: index.md
+        en/latest/version-specific/Supported_software.html: version-specific/supported-software.md
+        en/latest/version-specific/config_file_constants.html: version-specific/config-file-constants.md
+        en/latest/version-specific/easyblocks.html: version-specific/easyblocks.md
+        en/latest/version-specific/easyconfig_constants.html: version-specific/easyconfig-constants.md
+        en/latest/version-specific/easyconfig_license_constants.html: version-specific/easyconfig-license-constants.md
+        en/latest/version-specific/easyconfig_parameters.html: version-specific/easyconfig-parameters.md
+        en/latest/version-specific/easyconfig_templates.html: version-specific/easyconfig-templates.md
+        en/latest/version-specific/generic_easyblocks.html: version-specific/generic-easyblocks.md
+        en/latest/version-specific/help.html: version-specific/eb-help.md
+        en/latest/version-specific/index.html: version-specific/index.md
+        en/latest/version-specific/toolchain_opts.html: version-specific/toolchain-opts.md
+        en/latest/version-specific/toolchains.html: version-specific/toolchain.md
         # en/latest/api/easybuild.base.exceptions.html: ???
         # en/latest/api/easybuild.base.fancylogger.html: ???
         # en/latest/api/easybuild.base.frozendict.html: ???
@@ -334,49 +382,3 @@ plugins:
         # en/latest/api/framework.html: ???
         # en/latest/api/index.html: ???
         # en/latest/api/modules.html: ???
-        # en/latest/demos/bootstrapping.html: ???
-        # en/latest/demos/configuring.html: ???
-        # en/latest/demos/index.html: ???
-        # en/latest/demos/review_pr.html: ???
-        # en/latest/eb_a.html: ???
-        # en/latest/eb_a_e_EB_WRF.html: ???
-        # en/latest/eb_help.html: ???
-        # en/latest/eb_list_easyblocks.html: ???
-        # en/latest/eb_list_toolchains.html: ???
-        en/latest/index.html: index.md
-        # en/latest/version-specific/Supported_software.html: ???
-        # en/latest/version-specific/config_file_constants.html: ???
-        # en/latest/version-specific/easyblocks.html: ???
-        # en/latest/version-specific/easyconfig_constants.html: ???
-        # en/latest/version-specific/easyconfig_license_constants.html: ???
-        # en/latest/version-specific/easyconfig_parameters.html: ???
-        # en/latest/version-specific/easyconfig_templates.html: ???
-        # en/latest/version-specific/generic_easyblocks.html: ???
-        # en/latest/version-specific/help.html: ???
-        # en/latest/version-specific/index.html: ???
-        # en/latest/version-specific/toolchain_opts.html: ???
-        # en/latest/version-specific/toolchains.html: ???
-
-markdown_extensions:
-  # notes, warnings, hints, ...
-  - admonition
-  # code blocks with syntax highlighting, graphs
-  - pymdownx.superfences
-  # clickable details
-  - pymdownx.details
-  # tabbed contents
-  - pymdownx.tabbed
-  - toc:
-      permalink: true
-extra:
-  # add links in bottom right
-  social:
-      #- type: github
-      #icon: octicons/logo-github
-      #link: https://github.com/easybuilders
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/easy_build
-    - icon: fontawesome/brands/youtube
-      link: https://www.youtube.com/c/easybuilders
-    - icon: fontawesome/solid/book
-      link: https://docs.easybuild.io
