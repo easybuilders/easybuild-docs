@@ -386,128 +386,128 @@ and you can help with that!
 </ul>
 <p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
 </div>
-<div class="highlight"><pre><span></span><code>.. _configuring_easybuild_legacy:
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_configuring_easybuild_legacy:</span>
 
-Configuration Legacy
-====================
+<span class="gh">Configuration Legacy</span>
+<span class="gh">====================</span>
 
-.. XXX - UPDATE BY VERSION
+<span class="cp">.. XXX - UPDATE BY VERSION</span>
 
-Legacy configuration is currently **deprecated!**
+Legacy configuration is currently <span class="gs">**deprecated!**</span>
 
 If you are a new user of EasyBuild you can safely ignore everything below this line,
-refer instead to :doc:`Configuration`.
+refer instead to <span class="na">:doc:</span><span class="nv">`Configuration`</span>.
 
 --------
 
 
-Porting from legacy configuration style
----------------------------------------
+<span class="gh">Porting from legacy configuration style</span>
+<span class="gh">---------------------------------------</span>
 
 In EasyBuild v1.x, a couple of configuration options, other than the standard ones aligned with variables,
-are available that follow the **legacy configuration style**, including:
+are available that follow the <span class="gs">**legacy configuration style**</span>, including:
 
--  the ``-C`` and ``--config`` command line arguments ( **use** ``--configfiles`` **instead** )
--  the ``$EASYBUILDCONFIG`` environment variable ( **use** ``$EASYBUILD_CONFIGFILES`` **instead** )
--  the default path ``$HOME/.easybuild/config.py`` ( **new-style default path is** ``$XDG_CONFIG_HOME/easybuild/config.cfg``)
--  the legacy fallback path ``&lt;installpath&gt;/easybuild/easybuild_config.py`` ( **only default/fallback path is** ``$XDG_CONFIG_HOME/easybuild/config.cfg``)
+<span class="m">-</span>  the <span class="s">``-C``</span> and <span class="s">``--config``</span> command line arguments ( <span class="gs">**use**</span> <span class="s">``--configfiles``</span> <span class="gs">**instead**</span> )
+<span class="m">-</span>  the <span class="s">``$EASYBUILDCONFIG``</span> environment variable ( <span class="gs">**use**</span> <span class="s">``$EASYBUILD_CONFIGFILES``</span> <span class="gs">**instead**</span> )
+<span class="m">-</span>  the default path <span class="s">``$HOME/.easybuild/config.py``</span> ( <span class="gs">**new-style default path is**</span> <span class="s">``$XDG_CONFIG_HOME/easybuild/config.cfg``</span>)
+<span class="m">-</span>  the legacy fallback path <span class="s">``&lt;installpath&gt;/easybuild/easybuild_config.py``</span> ( <span class="gs">**only default/fallback path is**</span> <span class="s">``$XDG_CONFIG_HOME/easybuild/config.cfg``</span>)
 
 Likewise, the following legacy environment variables allowed to override selected configuration settings:
 
--  ``$EASYBUILDBUILDPATH``: build path to be used by EasyBuild ( **use** ``$EASYBUILD_BUILDPATH`` **instead** )
--  ``$EASYBUILDINSTALLPATH``: install path to be used by EasyBuild ( **use** ``$EASYBUILD_INSTALLPATH`` **instead** )
--  ``$EASYBUILDSOURCEPATH``: source path to be used by EasyBuild ( **use** ``$EASYBUILD_SOURCEPATH`` **instead** )
--  ``$EASYBUILDPREFIX``: build/install/source path prefix to be used ( **use** ``$EASYBUILD_PREFIX`` **instead** )
+<span class="m">-</span>  <span class="s">``$EASYBUILDBUILDPATH``</span>: build path to be used by EasyBuild ( <span class="gs">**use**</span> <span class="s">``$EASYBUILD_BUILDPATH``</span> <span class="gs">**instead**</span> )
+<span class="m">-</span>  <span class="s">``$EASYBUILDINSTALLPATH``</span>: install path to be used by EasyBuild ( <span class="gs">**use**</span> <span class="s">``$EASYBUILD_INSTALLPATH``</span> <span class="gs">**instead**</span> )
+<span class="m">-</span>  <span class="s">``$EASYBUILDSOURCEPATH``</span>: source path to be used by EasyBuild ( <span class="gs">**use**</span> <span class="s">``$EASYBUILD_SOURCEPATH``</span> <span class="gs">**instead**</span> )
+<span class="m">-</span>  <span class="s">``$EASYBUILDPREFIX``</span>: build/install/source path prefix to be used ( <span class="gs">**use**</span> <span class="s">``$EASYBUILD_PREFIX``</span> <span class="gs">**instead**</span> )
 
-We *strongly* advise to switch to the new way of configuring EasyBuild as soon as possible,
+We <span class="ge">*strongly*</span> advise to switch to the new way of configuring EasyBuild as soon as possible,
 since the legacy configuration style will no longer be supported in EasyBuild v2.x.
 
 
-How EasyBuild used to be configured in the early days
------------------------------------------------------
+<span class="gh">How EasyBuild used to be configured in the early days</span>
+<span class="gh">-----------------------------------------------------</span>
 
-Configuring `EasyBuild` is done by providing a configuration file.
+Configuring <span class="nv">`EasyBuild`</span> is done by providing a configuration file.
 
 EasyBuild expects the configuration file to contain valid Python code,
-because it executes its contents (using ``exec``).
+because it executes its contents (using <span class="s">``exec``</span>).
 The rationale is that this approach provides a lot of flexibility for
 configuring EasyBuild.
 
 EasyBuild will use the file that is provided by the path/filename in the
 following order of preference:
 
--  path/filename specified on the EasyBuild command line (using ``--config``),
--  path/filename obtained from the environment variable ``EASYBUILDCONFIG`` (if it is defined)
--  ``$HOME/.easybuild/config.py`` (as of EasyBuild v1.1)
--  the (default) configuration file at
-   ``&lt;path where EasyBuild was installed&gt;/easybuild/easybuild_config.py``
+<span class="m">-</span>  path/filename specified on the EasyBuild command line (using <span class="s">``--config``</span>),
+<span class="m">-</span>  path/filename obtained from the environment variable <span class="s">``EASYBUILDCONFIG``</span> (if it is defined)
+<span class="m">-</span>  <span class="s">``$HOME/.easybuild/config.py``</span> (as of EasyBuild v1.1)
+<span class="m">-</span>  the (default) configuration file at
+   <span class="s">``&lt;path where EasyBuild was installed&gt;/easybuild/easybuild_config.py``</span>
 
-Configuration variables
-~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Configuration variables</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 The configuration file must define the following five variables:
-``build_path``, ``install_path``, ``source_path``, ``repository``, and ``log_format``.
+<span class="s">``build_path``</span>, <span class="s">``install_path``</span>, <span class="s">``source_path``</span>, <span class="s">``repository``</span>, and <span class="s">``log_format``</span>.
 If one of them is not defined, EasyBuild will complain and exit.
 
-Build path (required)
-^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Build path (required)</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^</span>
 
-The ``build_path`` variable specifies the directory in which EasyBuild
+The <span class="s">``build_path``</span> variable specifies the directory in which EasyBuild
 builds its software packages.
 
 Each software package is (by default) built in a subdirectory of the
-``build_path`` under ``&lt;name&gt;/&lt;version&gt;/&lt;toolchain&gt;&lt;versionsuffix&gt;``.
+<span class="s">``build_path``</span> under <span class="s">``&lt;name&gt;/&lt;version&gt;/&lt;toolchain&gt;&lt;versionsuffix&gt;``</span>.
 
 Note that the build directories are emptied by EasyBuild when the
 installation is completed (by default).
 
-Install path (required)
-^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Install path (required)</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-The ``install_path`` variable specifies the directory in which EasyBuild
+The <span class="s">``install_path``</span> variable specifies the directory in which EasyBuild
 installs software packages and the corresponding module files.
 
-The packages themselves are installed under ``install_path/software``
+The packages themselves are installed under <span class="s">``install_path/software``</span>
 in their own subdirectory aptly named
-``&lt;name&gt;/&lt;version&gt;-&lt;toolchain&gt;&lt;versionsuffix&gt;``
+<span class="s">``&lt;name&gt;/&lt;version&gt;-&lt;toolchain&gt;&lt;versionsuffix&gt;``</span>
 (by default), where name is the package name. The corresponding module
-files are installed under ``install_path/modules``.
+files are installed under <span class="s">``install_path/modules``</span>.
 
-**Setting $MODULEPATH**
+<span class="gs">**Setting $MODULEPATH**</span>
 
-After the configuration, you need to make sure that ``$MODULEPATH``
-environment variable is extended with the ``modules/all`` subdirectory
-of the ``install_path``, i.e.:
+After the configuration, you need to make sure that <span class="s">``$MODULEPATH``</span>
+environment variable is extended with the <span class="s">``modules/all``</span> subdirectory
+of the <span class="s">``install_path``</span>, i.e.:
 
-.. code:: bash
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">bash</span>
 
-    export MODULEPATH=&lt;install_path&gt;/modules/all:$MODULEPATH
+    <span class="nb">export</span> <span class="nv">MODULEPATH</span><span class="o">=</span>&lt;install_path&gt;/modules/all:<span class="nv">$MODULEPATH</span>
 
 It is probably a good idea to add this to your (favourite) shell .rc
-file, e.g., ``.bashrc``, and/or the ``.profile`` login scripts, so you do not need to adjust the ``$MODULEPATH`` variable every time
+file, e.g., <span class="s">``.bashrc``</span>, and/or the <span class="s">``.profile``</span> login scripts, so you do not need to adjust the <span class="s">``$MODULEPATH``</span> variable every time
 you start a new session.
 
-Source path (required)
-^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Source path (required)</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^</span>
 
-The ``source_path`` variable specifies the directory in which EasyBuild
+The <span class="s">``source_path``</span> variable specifies the directory in which EasyBuild
 looks for software source and install files.
 
 Similarly to the configuration file lookup, EasyBuild looks for the
-installation files as given by the ``sources`` variable in the .eb easyconfig file, in the following order of preference:
+installation files as given by the <span class="s">``sources``</span> variable in the .eb easyconfig file, in the following order of preference:
 
--  ``&lt;source_path&gt;/&lt;name&gt;``: a subdirectory determined by the name of the software package
--  ``&lt;source_path&gt;/&lt;letter&gt;/&lt;name&gt;``: in the style of the
-   ``easyblocks``/``easyconfigs`` directories:
+<span class="m">-</span>  <span class="s">``&lt;source_path&gt;/&lt;name&gt;``</span>: a subdirectory determined by the name of the software package
+<span class="m">-</span>  <span class="s">``&lt;source_path&gt;/&lt;letter&gt;/&lt;name&gt;``</span>: in the style of the
+   <span class="s">``easyblocks``</span>/<span class="s">``easyconfigs``</span> directories:
    in a subdirectory determined by the first letter (in lower case) of
-   the software package and by its full ``name``
--  ``&lt;source_path&gt;``: directly in the source path
+   the software package and by its full <span class="s">``name``</span>
+<span class="m">-</span>  <span class="s">``&lt;source_path&gt;``</span>: directly in the source path
 
 Note that these locations are also used when EasyBuild looks for patch
-files in addition to the various ``easybuild/easyconfigs`` directories that are listed in the ``$PYTHONPATH``.
+files in addition to the various <span class="s">``easybuild/easyconfigs``</span> directories that are listed in the <span class="s">``$PYTHONPATH``</span>.
 
 
-.. _configparser: http://docs.python.org/2/library/configparser.html
+<span class="p">..</span> <span class="nt">_configparser:</span> http://docs.python.org/2/library/configparser.html
 </code></pre></div>
 
   <hr>
@@ -515,7 +515,7 @@ files in addition to the various ``easybuild/easyconfigs`` directories that are 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
       
     
   </small>
