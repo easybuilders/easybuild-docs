@@ -12,7 +12,8 @@
     - target: [`docs/easybuild-v4/overview-of-changes.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/easybuild-v4/overview-of-changes.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _eb4_changes_overview:
 
 Overview of changes in EasyBuild version 4.0
