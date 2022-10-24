@@ -386,154 +386,154 @@ and you can help with that!
 </ul>
 <p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
 </div>
-<div class="highlight"><pre><span></span><code>.. _system_toolchain:
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_system_toolchain:</span>
 
-System toolchain
-================
+<span class="gh">System toolchain</span>
+<span class="gh">================</span>
 
-In EasyBuild v4.0, the infamous ``dummy`` toolchain has been deprecated, and replaced with the ``system`` toolchain.
+In EasyBuild v4.0, the infamous <span class="s">``dummy``</span> toolchain has been deprecated, and replaced with the <span class="s">``system``</span> toolchain.
 
 This page provides more information about this change, and how to deal with the transition.
 
-.. note:: To ease the transition from ``dummy`` to ``system``, EasyBuild v3.9.4 already supports using the ``system``
-          toolchain as an alias for the ``dummy`` toolchain.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> To ease the transition from <span class="s">``dummy``</span> to <span class="s">``system``</span>, EasyBuild v3.9.4 already supports using the <span class="s">``system``</span>
+          toolchain as an alias for the <span class="s">``dummy``</span> toolchain.
 
-.. contents::
-    :depth: 1
-    :backlinks: none
-    :local:
+<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
+    <span class="nc">:depth:</span> 1
+    <span class="nc">:backlinks:</span> none
+    <span class="nc">:local:</span>
 
 
-.. _system_toolchain_semantics:
+<span class="p">..</span> <span class="nt">_system_toolchain_semantics:</span>
 
-Use case for the ``system`` toolchain
--------------------------------------
+<span class="gh">Use case for the ``system`` toolchain</span>
+<span class="gh">-------------------------------------</span>
 
-The :ref:`system_toolchain` is intended for the same use case as the ``dummy`` toolchain was: it should (only) be used
+The <span class="na">:ref:</span><span class="nv">`system_toolchain`</span> is intended for the same use case as the <span class="s">``dummy``</span> toolchain was: it should (only) be used
 for software installations where the compiler &amp; libraries provided by the operating system are assumed to
 be sufficient.
 
 This includes installing binary software (for which no compiler is used at all), installations that boil down to
 only unpacking a source tarball, and building and installing a (base) toolchain compiler like GCC(core).
 
-For all intents and purposes, the ``system`` **toolchain can be considered as a drop-in replacement for
-the (deprecated)** ``dummy`` **toolchain** (see also :ref:`system_toolchain_impact_deprecated_dummy`).
+For all intents and purposes, the <span class="s">``system``</span> **toolchain can be considered as a drop-in replacement for
+the (deprecated)<span class="gs">** ``dummy`` **</span>toolchain** (see also <span class="na">:ref:</span><span class="nv">`system_toolchain_impact_deprecated_dummy`</span>).
 
-.. _system_toolchain_usage:
+<span class="p">..</span> <span class="nt">_system_toolchain_usage:</span>
 
-Using the ``system`` compiler
------------------------------
+<span class="gh">Using the ``system`` compiler</span>
+<span class="gh">-----------------------------</span>
 
-To use the ``system`` toolchain in an easyconfig file, simply use ``&#39;system&#39;`` as toolchain name:
+To use the <span class="s">``system``</span> toolchain in an easyconfig file, simply use <span class="s">``&#39;system&#39;``</span> as toolchain name:
 
-.. code:: python
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
 
-  toolchain = {&#39;name&#39;: &#39;system&#39;, &#39;version&#39;: &#39;&#39;}
+  <span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;system&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">}</span>
 
-.. note:: The toolchain version you specify is totally irrelevant when using the ``system`` compiler,
-          it could be ``&#39;system&#39;``, ``&#39;&#39;`` or any other (string) value.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> The toolchain version you specify is totally irrelevant when using the <span class="s">``system``</span> compiler,
+          it could be <span class="s">``&#39;system&#39;``</span>, <span class="s">``&#39;&#39;``</span> or any other (string) value.
 
-          EasyBuild does not interpret the version of the ``system`` toolchain in any way
-          (as opposed to the ``dummy`` toolchain in EasyBuild versions prior to version 4.0,
-          see :ref:`system_toolchain_motivation_deprecating_dummy_version_and_deps`).
+          EasyBuild does not interpret the version of the <span class="s">``system``</span> toolchain in any way
+          (as opposed to the <span class="s">``dummy``</span> toolchain in EasyBuild versions prior to version 4.0,
+          see <span class="na">:ref:</span><span class="nv">`system_toolchain_motivation_deprecating_dummy_version_and_deps`</span>).
 
 
-.. _system_toolchain_SYSTEM_constant:
+<span class="p">..</span> <span class="nt">_system_toolchain_SYSTEM_constant:</span>
 
-``SYSTEM`` constant
--------------------
+<span class="gh">``SYSTEM`` constant</span>
+<span class="gh">-------------------</span>
 
-For convenience, a ``SYSTEM`` constant is available to easily specify the use of the ``system`` toolchain
+For convenience, a <span class="s">``SYSTEM``</span> constant is available to easily specify the use of the <span class="s">``system``</span> toolchain
 (and to make it stand out against using a regular toolchain):
 
-.. code:: python
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
 
-  toolchain = SYSTEM
+  <span class="n">toolchain</span> <span class="o">=</span> <span class="n">SYSTEM</span>
 
-*We strongly recommend using the* ``SYSTEM`` *constant to specify the use of the* ``system`` *toolchain.*
+<span class="ge">*We strongly recommend using the*</span> <span class="s">``SYSTEM``</span> <span class="ge">*constant to specify the use of the*</span> <span class="s">``system``</span> <span class="ge">*toolchain.*</span>
 
-.. _system_toolchain_impact_deprecated_dummy:
+<span class="p">..</span> <span class="nt">_system_toolchain_impact_deprecated_dummy:</span>
 
-Impact of deprecating ``dummy`` toolchain
------------------------------------------
+<span class="gh">Impact of deprecating ``dummy`` toolchain</span>
+<span class="gh">-----------------------------------------</span>
 
-The only impact of deprecating the ``dummy`` toolchain is that a warning will be printed whenever an easyconfig file
-that still uses the ``dummy`` toolchain is parsed::
+The only impact of deprecating the <span class="s">``dummy``</span> toolchain is that a warning will be printed whenever an easyconfig file
+that still uses the <span class="s">``dummy``</span> toolchain is parsed<span class="se">::</span>
 
-  WARNING: Deprecated functionality, will no longer work in v5.0:
-  Use of &#39;dummy&#39; toolchain is deprecated, use &#39;system&#39; toolchain instead;
-  see http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html for more information
+<span class="s">  WARNING: Deprecated functionality, will no longer work in v5.0:</span>
+<span class="s">  Use of &#39;dummy&#39; toolchain is deprecated, use &#39;system&#39; toolchain instead;</span>
+<span class="s">  see http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html for more information</span>
 
 
-Other than this warning, **there is no impact on the EasyBuild functionality whatsoever**.
+Other than this warning, <span class="gs">**there is no impact on the EasyBuild functionality whatsoever**</span>.
 
-Use of the ``dummy`` toolchain has been deprecated, but is still supported in EasyBuild v4.x; it is simply
-an alias for the ``system`` toolchain which replaces it.
+Use of the <span class="s">``dummy``</span> toolchain has been deprecated, but is still supported in EasyBuild v4.x; it is simply
+an alias for the <span class="s">``system``</span> toolchain which replaces it.
 
-Hence, software installations for easyconfig files that are still using the ``dummy`` toolchain will proceed as before,
+Hence, software installations for easyconfig files that are still using the <span class="s">``dummy``</span> toolchain will proceed as before,
 and the contents of the easyconfig files will be interpreted exactly as before, with one exception:
-the (build) dependencies specified in the easyconfig files will *always* be loaded in the build environment,
-*regardless* of the toolchain version (see also :ref:`system_toolchain_motivation_deprecating_dummy_version_and_deps`).
+the (build) dependencies specified in the easyconfig files will <span class="ge">*always*</span> be loaded in the build environment,
+<span class="ge">*regardless*</span> of the toolchain version (see also <span class="na">:ref:</span><span class="nv">`system_toolchain_motivation_deprecating_dummy_version_and_deps`</span>).
 
-Since the ``dummy`` toolchain has been deprecated, so has the ``--add-dummy-to-minimal-toolchains`` configuration option.
-It has been replaced with the ``--add-system-to-minimal-toolchains`` configuration option (see also :ref:`minimal_toolchains_system`).
+Since the <span class="s">``dummy``</span> toolchain has been deprecated, so has the <span class="s">``--add-dummy-to-minimal-toolchains``</span> configuration option.
+It has been replaced with the <span class="s">``--add-system-to-minimal-toolchains``</span> configuration option (see also <span class="na">:ref:</span><span class="nv">`minimal_toolchains_system`</span>).
 
 
-.. _system_toolchain_updating_dummy:
+<span class="p">..</span> <span class="nt">_system_toolchain_updating_dummy:</span>
 
-Updating easyconfig files that use the ``dummy`` toolchain
---------------------------------------------------------
+<span class="gh">Updating easyconfig files that use the ``dummy`` toolchain</span>
+<span class="gh">--------------------------------------------------------</span>
 
-To update easyconfig files that still use the ``dummy`` toolchain, you should simply change the definition
-of the ``toolchain`` parameter to use ``&#39;system&#39;`` as a toolchain name (see also :ref:`system_toolchain_usage`).
+To update easyconfig files that still use the <span class="s">``dummy``</span> toolchain, you should simply change the definition
+of the <span class="s">``toolchain``</span> parameter to use <span class="s">``&#39;system&#39;``</span> as a toolchain name (see also <span class="na">:ref:</span><span class="nv">`system_toolchain_usage`</span>).
 
-We recommend using the ``SYSTEM`` constant for this, see :ref:`system_toolchain_SYSTEM_constant`.
+We recommend using the <span class="s">``SYSTEM``</span> constant for this, see <span class="na">:ref:</span><span class="nv">`system_toolchain_SYSTEM_constant`</span>.
 
-To automatically update easyconfig files still using the ``dummy`` toolchain, you can also use
-``eb --fix-deprecated-easyconfigs``. Do take into account that this option could also result in
+To automatically update easyconfig files still using the <span class="s">``dummy``</span> toolchain, you can also use
+<span class="s">``eb --fix-deprecated-easyconfigs``</span>. Do take into account that this option could also result in
 additional changes being made to the easyconfig files,
-see :ref:`easyconfig_files_local_variables_fix_deprecated_easyconfigs`.
+see <span class="na">:ref:</span><span class="nv">`easyconfig_files_local_variables_fix_deprecated_easyconfigs`</span>.
 
 
-.. _system_toolchain_motivation_deprecating_dummy:
+<span class="p">..</span> <span class="nt">_system_toolchain_motivation_deprecating_dummy:</span>
 
-Motivation for deprecating the ``dummy`` toolchain
---------------------------------------------------
+<span class="gh">Motivation for deprecating the ``dummy`` toolchain</span>
+<span class="gh">--------------------------------------------------</span>
 
-Deprecating the ``dummy`` toolchain was done for a number of reasons:
+Deprecating the <span class="s">``dummy``</span> toolchain was done for a number of reasons:
 
-* :ref:`system_toolchain_motivation_deprecating_dummy_name`
-* :ref:`system_toolchain_motivation_deprecating_dummy_version_and_deps`
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`system_toolchain_motivation_deprecating_dummy_name`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`system_toolchain_motivation_deprecating_dummy_version_and_deps`</span>
 
-.. _system_toolchain_motivation_deprecating_dummy_name:
+<span class="p">..</span> <span class="nt">_system_toolchain_motivation_deprecating_dummy_name:</span>
 
-``dummy`` toolchain name
-~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">``dummy`` toolchain name</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-The ``dummy`` name may be rather confusing, especially if you are new to EasyBuild.
-Just based on the name, it is unclear how the ``dummy`` toolchain is different from a regular toolchain.
+The <span class="s">``dummy``</span> name may be rather confusing, especially if you are new to EasyBuild.
+Just based on the name, it is unclear how the <span class="s">``dummy``</span> toolchain is different from a regular toolchain.
 
-Hopefully, the name of the ``system`` toolchain does speak more for itself: when using it, you are relying on the
+Hopefully, the name of the <span class="s">``system``</span> toolchain does speak more for itself: when using it, you are relying on the
 compiler &amp; libraries provided by the operating system (as opposed to compilers &amp; libraries that are a part of a regular toolchain).
 
-.. _system_toolchain_motivation_deprecating_dummy_version_and_deps:
+<span class="p">..</span> <span class="nt">_system_toolchain_motivation_deprecating_dummy_version_and_deps:</span>
 
-Impact of version of ``dummy`` toolchain w.r.t. dependencies
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Impact of version of ``dummy`` toolchain w.r.t. dependencies</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-The *version* that was being used for a ``dummy`` toolchain was interpreted by EasyBuild in a rather surprising way.
+The <span class="ge">*version*</span> that was being used for a <span class="s">``dummy``</span> toolchain was interpreted by EasyBuild in a rather surprising way.
 
-If ``&#39;dummy&#39;`` was specified as a toolchain version, then the (build) dependencies that were specified in the
-easyconfig file were *not* loaded in the build environment. ``module load`` statements for the (non-build)
-dependencies *were* included in the generated module file, however...
+If <span class="s">``&#39;dummy&#39;``</span> was specified as a toolchain version, then the (build) dependencies that were specified in the
+easyconfig file were <span class="ge">*not*</span> loaded in the build environment. <span class="s">``module load``</span> statements for the (non-build)
+dependencies <span class="ge">*were*</span> included in the generated module file, however...
 
-Using any version other than ``&#39;dummy&#39;`` resulted in the usual behaviour of loading the dependencies in the build
+Using any version other than <span class="s">``&#39;dummy&#39;``</span> resulted in the usual behaviour of loading the dependencies in the build
 environment.
 
 Why this mechanism was in place has been lost to the sands of time...
 
 This often led to outright confusing installation problems, and hence it was the main motivator for deprecating the
-``dummy`` toolchain. Rather than just changing the semantics of the ``dummy`` toolchain, we saw this as an opportunity
+<span class="s">``dummy``</span> toolchain. Rather than just changing the semantics of the <span class="s">``dummy``</span> toolchain, we saw this as an opportunity
 to also fix the name.
 </code></pre></div>
 
@@ -542,7 +542,7 @@ to also fix the name.
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
       
     
   </small>

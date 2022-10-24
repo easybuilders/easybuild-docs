@@ -386,145 +386,145 @@ and you can help with that!
 </ul>
 <p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
 </div>
-<div class="highlight"><pre><span></span><code>.. _manipulating_dependencies:
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_manipulating_dependencies:</span>
 
-Manipulating dependencies
-=========================
+<span class="gh">Manipulating dependencies</span>
+<span class="gh">=========================</span>
 
 A couple of different ways are available to manipulate the list of dependencies that are specified for the software
 packages being installed.
 
-.. contents::
-    :depth: 3
-    :backlinks: none
+<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
+    <span class="nc">:depth:</span> 3
+    <span class="nc">:backlinks:</span> none
 
-.. _filter_deps:
+<span class="p">..</span> <span class="nt">_filter_deps:</span>
 
-Filtering out dependencies using ``--filter-deps``
---------------------------------------------------
+<span class="gh">Filtering out dependencies using ``--filter-deps``</span>
+<span class="gh">--------------------------------------------------</span>
 
-To avoid that certain dependencies are being installed, a list of software names can be specified to ``--filter-deps``.
+To avoid that certain dependencies are being installed, a list of software names can be specified to <span class="s">``--filter-deps``</span>.
 Any time a dependency with a name from this list is specified, it will be simply filtered out by EasyBuild, and
 thus disregarded when resolving dependencies, loading modules for the dependencies in the build environment, and
-including &#39;``module load``&#39; statements in the generated module files.
+including &#39;<span class="s">``module load``</span>&#39; statements in the generated module files.
 
 This can be useful when particular tools and libraries are already provided by OS packages (or in some other way),
 and should not be reinstalled as modules by EasyBuild.
 
 For example:
 
-* overview of dependencies of HDF5::
+<span class="m">*</span> overview of dependencies of HDF5::
 
     $ eb HDF5-1.8.13-intel-2015a.eb -D
-     ...
-     * [ ] $CFGS/i/intel/intel-2015a.eb (module: intel/2015a)
-     * [ ] $CFGS/z/zlib/zlib-1.2.8-intel-2015a.eb (module: zlib/1.2.8-intel-2015a)   
-     * [ ] $CFGS/s/Szip/Szip-2.1-intel-2015a.eb (module: Szip/2.1-intel-2015a)
-     * [ ] $CFGS/h/HDF5/HDF5-1.8.13-intel-2015a.eb (module: HDF5/1.8.13-intel-2015a)
+<span class="cp">     ...</span>
+<span class="cp">     * [ ] $CFGS/i/intel/intel-2015a.eb (module: intel/2015a)</span>
+<span class="cp">     * [ ] $CFGS/z/zlib/zlib-1.2.8-intel-2015a.eb (module: zlib/1.2.8-intel-2015a)   </span>
+<span class="cp">     * [ ] $CFGS/s/Szip/Szip-2.1-intel-2015a.eb (module: Szip/2.1-intel-2015a)</span>
+<span class="cp">     * [ ] $CFGS/h/HDF5/HDF5-1.8.13-intel-2015a.eb (module: HDF5/1.8.13-intel-2015a)</span>
 
-* overview of dependencies of HDF5, with zlib and Szip excluded::
+<span class="m">*</span> overview of dependencies of HDF5, with zlib and Szip excluded::
 
     $ eb HDF5-1.8.13-intel-2015a.eb --filter-deps=zlib,Szip -D 
-     ... 
-     * [ ] $CFGS/i/intel/intel-2015a.eb (module: intel/2015a)
-     * [ ] $CFGS/h/HDF5/HDF5-1.8.13-intel-2015a.eb (module: HDF5/1.8.13-intel-2015a)
+<span class="cp">     ... </span>
+<span class="cp">     * [ ] $CFGS/i/intel/intel-2015a.eb (module: intel/2015a)</span>
+<span class="cp">     * [ ] $CFGS/h/HDF5/HDF5-1.8.13-intel-2015a.eb (module: HDF5/1.8.13-intel-2015a)</span>
 
 
-.. _filter_deps_by_version:
+<span class="p">..</span> <span class="nt">_filter_deps_by_version:</span>
 
-Filtering dependencies based on version
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Filtering dependencies based on version</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 Since EasyBuild v3.8.0, filtering dependencies based on their version is also supported.
 
-For each entry in ``--filter-deps``, the expected format is either:
+For each entry in <span class="s">``--filter-deps``</span>, the expected format is either:
 
-* ``&lt;name&gt;``: a software name without any version specification, to indicate that this dependency
-  should *always* be filtered out (regardless of its version)
+<span class="m">*</span> <span class="s">``&lt;name&gt;``</span>: a software name without any version specification, to indicate that this dependency
+  should <span class="ge">*always*</span> be filtered out (regardless of its version)
 
-  * examples: ``X11``, ``zlib``
+  <span class="m">*</span> examples: <span class="s">``X11``</span>, <span class="s">``zlib``</span>
 
-* ``&lt;name&gt;=&lt;version&gt;``: a software name and version, to indicate that a *particular version* of this dependency
+<span class="m">*</span> <span class="s">``&lt;name&gt;=&lt;version&gt;``</span>: a software name and version, to indicate that a <span class="ge">*particular version*</span> of this dependency
   should be filtered out
 
-  * examples: ``zlib=1.2.8``, ``ncurses=5.9``
+  <span class="m">*</span> examples: <span class="s">``zlib=1.2.8``</span>, <span class="s">``ncurses=5.9``</span>
 
-* ``&lt;name&gt;=&lt;lower_limit&gt;:&lt;upper_limit&gt;``: a software name and a version range, to indicate that any version
-  of this dependency that falls *within the specified range* should be filtered out
+<span class="m">*</span> <span class="s">``&lt;name&gt;=&lt;lower_limit&gt;:&lt;upper_limit&gt;``</span>: a software name and a version range, to indicate that any version
+  of this dependency that falls <span class="ge">*within the specified range*</span> should be filtered out
 
-When a version range is specified, a lower limit and/or upper limit *can* be specified (separated by ``:``).
-In other words, the version range can be open ended. The ``:`` separator is strictly required.
+When a version range is specified, a lower limit and/or upper limit <span class="ge">*can*</span> be specified (separated by <span class="s">``:``</span>).
+In other words, the version range can be open ended. The <span class="s">``:``</span> separator is strictly required.
 
-For both limits, you *must* indicate whether it is either:
+For both limits, you <span class="ge">*must*</span> indicate whether it is either:
 
-* *inclusive*, by using ``[`` for the lower limit, and ``]`` for the upper limit
-* *exclusive*, by using ``]`` for the lower limit, and ``[`` for the upper limit
+<span class="m">*</span> <span class="ge">*inclusive*</span>, by using <span class="s">``[``</span> for the lower limit, and <span class="s">``]``</span> for the upper limit
+<span class="m">*</span> <span class="ge">*exclusive*</span>, by using <span class="s">``]``</span> for the lower limit, and <span class="s">``[``</span> for the upper limit
 
 Examples:
 
-* to filter out ``zlib`` version ``1.2`` up until ``1.2.99`` (incl.), use: ``zlib=[1.2:1.2.99]``
+<span class="m">*</span> to filter out <span class="s">``zlib``</span> version <span class="s">``1.2``</span> up until <span class="s">``1.2.99``</span> (incl.), use: <span class="s">``zlib=[1.2:1.2.99]``</span>
 
-* to filter out ``ncurses`` version 5.0 or newer, use: ``ncurses=[5.0:``
+<span class="m">*</span> to filter out <span class="s">``ncurses``</span> version 5.0 or newer, use: <span class="s">``ncurses=[5.0:``</span>
 
-* to filter out any version of ``CMake`` that is older than ``4.0``, use: ``CMake=:4.0[``
+<span class="m">*</span> to filter out any version of <span class="s">``CMake``</span> that is older than <span class="s">``4.0``</span>, use: <span class="s">``CMake=:4.0[``</span>
 
 
-.. _hide_deps:
+<span class="p">..</span> <span class="nt">_hide_deps:</span>
 
-Installing dependencies as hidden modules using ``--hide-deps``
----------------------------------------------------------------
+<span class="gh">Installing dependencies as hidden modules using ``--hide-deps``</span>
+<span class="gh">---------------------------------------------------------------</span>
 
 Selected software packages can be marked to be installed as hidden modules (i.e., modules that are not visible via
-&#39;``module avail``&#39;, but can be loaded) whenever they are included as a dependency, via the ``--hide-deps``
+&#39;<span class="s">``module avail``</span>&#39;, but can be loaded) whenever they are included as a dependency, via the <span class="s">``--hide-deps``</span>
 configuration option.
 
-For example (note the preceding &#39;``.``&#39; in the last part of the module names for zlib and Szip)::
+For example (note the preceding &#39;<span class="s">``.``</span>&#39; in the last part of the module names for zlib and Szip)<span class="se">::</span>
 
- $ eb HDF5-1.8.13-intel-2015a.eb --hide-deps=zlib,Szip -D
-  ...
-  * [ ] $CFGS/i/intel/intel-2015a.eb (module: intel/2015a)
-  * [ ] $CFGS/z/zlib/zlib-1.2.8-intel-2015a.eb (module: zlib/.1.2.8-intel-2015a)
-  * [ ] $CFGS/s/Szip/Szip-2.1-intel-2015a.eb (module: Szip/.2.1-intel-2015a)
-  * [ ] $CFGS/h/HDF5/HDF5-1.8.13-intel-2015a.eb (module: HDF5/1.8.13-intel-2015a)
-
-
-.. note::
-  Using Lmod (version &gt;= 5.7.5), hidden modules can be made visible in the output of &#39;``module avail``&#39; using the
-  ``--show-hidden`` option.
-
-  For example::
-
-   $ module avail bzip2
-
-   Use &quot;module spider&quot; to find all possible modules.
-   Use &quot;module keyword key1 key2 ...&quot; to search for all possible modules matching any of the &quot;keys&quot;.
-
-   $ module --show-hidden avail bzip2
-   ----- /home/example/.local/easybuild/modules/all -----
-   bzip2/.1.0.6
-
-   Use &quot;module spider&quot; to find all possible modules.
-   Use &quot;module keyword key1 key2 ...&quot; to search for all possible modules matching any of the &quot;keys&quot;.
+<span class="s"> $ eb HDF5-1.8.13-intel-2015a.eb --hide-deps=zlib,Szip -D</span>
+<span class="s">  ...</span>
+<span class="s">  * [ ] $CFGS/i/intel/intel-2015a.eb (module: intel/2015a)</span>
+<span class="s">  * [ ] $CFGS/z/zlib/zlib-1.2.8-intel-2015a.eb (module: zlib/.1.2.8-intel-2015a)</span>
+<span class="s">  * [ ] $CFGS/s/Szip/Szip-2.1-intel-2015a.eb (module: Szip/.2.1-intel-2015a)</span>
+<span class="s">  * [ ] $CFGS/h/HDF5/HDF5-1.8.13-intel-2015a.eb (module: HDF5/1.8.13-intel-2015a)</span>
 
 
-.. _minimal_toolchains:
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
+  Using Lmod (version &gt;= 5.7.5), hidden modules can be made visible in the output of &#39;<span class="s">``module avail``</span>&#39; using the
+  <span class="s">``--show-hidden``</span> option.
 
-Using minimal toolchains for dependencies
------------------------------------------
+  For example<span class="se">::</span>
+
+<span class="s">   $ module avail bzip2</span>
+
+<span class="s">   Use &quot;module spider&quot; to find all possible modules.</span>
+<span class="s">   Use &quot;module keyword key1 key2 ...&quot; to search for all possible modules matching any of the &quot;keys&quot;.</span>
+
+<span class="s">   $ module --show-hidden avail bzip2</span>
+<span class="s">   ----- /home/example/.local/easybuild/modules/all -----</span>
+<span class="s">   bzip2/.1.0.6</span>
+
+<span class="s">   Use &quot;module spider&quot; to find all possible modules.</span>
+<span class="s">   Use &quot;module keyword key1 key2 ...&quot; to search for all possible modules matching any of the &quot;keys&quot;.</span>
+
+
+<span class="p">..</span> <span class="nt">_minimal_toolchains:</span>
+
+<span class="gh">Using minimal toolchains for dependencies</span>
+<span class="gh">-----------------------------------------</span>
 
 By default, EasyBuild will try to resolve dependencies using the same toolchain as the one that is used for the
 software being installed, unless a specific toolchain is specified for the dependency itself
-(see :ref:`dependency_specs`).
+(see <span class="na">:ref:</span><span class="nv">`dependency_specs`</span>).
 
-Using the ``--minimal-toolchains`` configuration option, you can instruct EasyBuild to consider subtoolchains
+Using the <span class="s">``--minimal-toolchains``</span> configuration option, you can instruct EasyBuild to consider subtoolchains
 for dependencies in the reverse order (from the bottom of the toolchain hierarchy to the top). This can be useful to
 refrain from having to frequently hardcode specific toolchains in order to avoid having the same dependency version
 installed with multiple toolchains that are compatible with each other. Although hardcoding the toolchain for
-dependencies will work fine, it severely limits the power of other EasyBuild features, like ``--try-toolchain`` for
+dependencies will work fine, it severely limits the power of other EasyBuild features, like <span class="s">``--try-toolchain``</span> for
 example.
 
 When instructed to use minimal toolchains, EasyBuild will check whether an easyconfig file is available (in the robot
-search path, see :ref:`robot_search_path`) for that dependency using the different subtoolchains of the toolchain
+search path, see <span class="na">:ref:</span><span class="nv">`robot_search_path`</span>) for that dependency using the different subtoolchains of the toolchain
 specified for the &#39;parent&#39; software. Subtoolchains are considered &#39;bottom-up&#39;, i.e. starting with the most minimal
 subtoolchain (typically a compiler-only toolchain), and then climbing up towards the toolchain that is specified for
 the software being installed.
@@ -534,63 +534,63 @@ when instructed to use minimal toolchains. Also note that as of v3.0, if no easy
 using the default toolchain EasyBuild will search for the dependency using a compatible subtoolchain (the
 difference being that the search order is from the top of the toolchain hierarchy to the bottom).
 
-.. _minimal_toolchains_system:
+<span class="p">..</span> <span class="nt">_minimal_toolchains_system:</span>
 
-Considering ``system`` as minimal toolchain
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Considering ``system`` as minimal toolchain</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-The :ref:`system_toolchain` is only considered as the most minimal subtoolchain if the
-``--add-system-to-minimal-toolchains`` configuration option is enabled.
-By default, this configuration option is *disabled*.
+The <span class="na">:ref:</span><span class="nv">`system_toolchain`</span> is only considered as the most minimal subtoolchain if the
+<span class="s">``--add-system-to-minimal-toolchains``</span> configuration option is enabled.
+By default, this configuration option is <span class="ge">*disabled*</span>.
 
-.. _minimal_toolchains_existing_modules:
+<span class="p">..</span> <span class="nt">_minimal_toolchains_existing_modules:</span>
 
-Taking existing modules into account
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Taking existing modules into account</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 You can instruct EasyBuild to take existing modules into account when determining which subtoolchain should be used
-for each of the dependencies, using the ``--use-existing-modules`` configuration option.
+for each of the dependencies, using the <span class="s">``--use-existing-modules``</span> configuration option.
 
 By default existing modules are ignored, meaning that the EasyBuild dependency resolution mechanism will pick a
-minimal toolchain for each dependency solely based on the available easyconfig files (if the ``--minimal-toolchains``
+minimal toolchain for each dependency solely based on the available easyconfig files (if the <span class="s">``--minimal-toolchains``</span>
 configuration option is enabled, that is).
 
-With ``--use-existing-modules`` enabled, EasyBuild will first check whether modules exist for the dependencies that were
+With <span class="s">``--use-existing-modules``</span> enabled, EasyBuild will first check whether modules exist for the dependencies that were
 built with the toolchain or any of the subtoolchains (searching top-down). If so, the toolchain of the first encountered
 existing module will determine the toolchain being selected. If not, the toolchain to use will be determined based on the
 available easyconfig files.
 
-.. _minimal_toolchains_example:
+<span class="p">..</span> <span class="nt">_minimal_toolchains_example:</span>
 
-Example
-~~~~~~~
+<span class="gh">Example</span>
+<span class="gh">~~~~~~~</span>
 
-Consider the following (partial) easyconfig file for Python v2.7.9 with the ``foss/2015b`` toolchain::
+Consider the following (partial) easyconfig file for Python v2.7.9 with the <span class="s">``foss/2015b``</span> toolchain<span class="se">::</span>
 
-    name = &#39;Python&#39;
-    version = &#39;2.7.9&#39;
+<span class="s">    name = &#39;Python&#39;</span>
+<span class="s">    version = &#39;2.7.9&#39;</span>
 
-    toolchain = {&#39;name&#39;: &#39;foss&#39;, &#39;version&#39;: &#39;2015b&#39;}
+<span class="s">    toolchain = {&#39;name&#39;: &#39;foss&#39;, &#39;version&#39;: &#39;2015b&#39;}</span>
 
-    dependencies = [
-        (&#39;zlib&#39;, &#39;1.2.8&#39;),
-    ]
+<span class="s">    dependencies = [</span>
+<span class="s">        (&#39;zlib&#39;, &#39;1.2.8&#39;),</span>
+<span class="s">    ]</span>
 
-When the ``--minimal-toolchains`` configuration option is enabled, EasyBuild will also consider the subtoolchains
-``GCC/4.9.3`` and ``gompi/2015b`` of the ``foss/2015b`` toolchain (in that order) as potential minimal toolchains
+When the <span class="s">``--minimal-toolchains``</span> configuration option is enabled, EasyBuild will also consider the subtoolchains
+<span class="s">``GCC/4.9.3``</span> and <span class="s">``gompi/2015b``</span> of the <span class="s">``foss/2015b``</span> toolchain (in that order) as potential minimal toolchains
 when determining the toolchain to use for dependencies.
 
 So, for the zlib v1.2.8 dependency included in the example above, the following scenarios are possible:
 
-* without the use of ``--minimal-toolchains``, the default behaviour of EasyBuild is to first consider the
-  ``foss/2015b`` toolchain for zlib v1.2.8, if no such easyconfig file is found, it will continue searching using the
-  ``gompi/2015b`` toolchain, and finally the ``GCC/4.9.3`` toolchain
-* if (only) ``--minimal-toolchains`` is enabled, EasyBuild will search for an easyconfig file for
-  zlib v1.2.8 using the ``GCC/4.9.3`` toolchain; if no such easyconfig file is found, it will continue searching
-  using the ``gompi/2015b`` toolchain, and finally the ``foss/2015b`` toolchain
-* if ``--add-system-to-minimal-toolchains`` is also enabled, EasyBuild will try locating an easyconfig file for
-  zlib v1.2.8 that uses the ``system`` toolchain prior to considering the ``GCC/4.9.3`` toolchain
-* additionally, with ``--use-existing-modules`` enabled, EasyBuild will first check whether a ``zlib`` module for
+<span class="m">*</span> without the use of <span class="s">``--minimal-toolchains``</span>, the default behaviour of EasyBuild is to first consider the
+  <span class="s">``foss/2015b``</span> toolchain for zlib v1.2.8, if no such easyconfig file is found, it will continue searching using the
+  <span class="s">``gompi/2015b``</span> toolchain, and finally the <span class="s">``GCC/4.9.3``</span> toolchain
+<span class="m">*</span> if (only) <span class="s">``--minimal-toolchains``</span> is enabled, EasyBuild will search for an easyconfig file for
+  zlib v1.2.8 using the <span class="s">``GCC/4.9.3``</span> toolchain; if no such easyconfig file is found, it will continue searching
+  using the <span class="s">``gompi/2015b``</span> toolchain, and finally the <span class="s">``foss/2015b``</span> toolchain
+<span class="m">*</span> if <span class="s">``--add-system-to-minimal-toolchains``</span> is also enabled, EasyBuild will try locating an easyconfig file for
+  zlib v1.2.8 that uses the <span class="s">``system``</span> toolchain prior to considering the <span class="s">``GCC/4.9.3``</span> toolchain
+<span class="m">*</span> additionally, with <span class="s">``--use-existing-modules``</span> enabled, EasyBuild will first check whether a <span class="s">``zlib``</span> module for
   version 1.2.8 built with the (sub)toolchains being considered exists; if not, it will search for an easyconfig file
   for zlib as outlined above
 </code></pre></div>
@@ -600,7 +600,7 @@ So, for the zlib v1.2.8 dependency included in the example above, the following 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
       
     
   </small>

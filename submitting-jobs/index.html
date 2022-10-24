@@ -386,319 +386,319 @@ and you can help with that!
 </ul>
 <p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
 </div>
-<div class="highlight"><pre><span></span><code>.. _submitting_jobs:
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_submitting_jobs:</span>
 
-Submitting jobs using ``--job``
-===============================
+<span class="gh">Submitting jobs using ``--job``</span>
+<span class="gh">===============================</span>
 
 Topics:
 
-* :ref:`submitting_jobs_quick_intro`
-* :ref:`submitting_jobs_configuration`
-* :ref:`submitting_jobs_usage`
-* :ref:`submitting_jobs_examples`
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`submitting_jobs_quick_intro`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`submitting_jobs_configuration`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`submitting_jobs_usage`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`submitting_jobs_examples`</span>
 
 
-.. _submitting_jobs_quick_intro:
+<span class="p">..</span> <span class="nt">_submitting_jobs_quick_intro:</span>
 
-Quick introduction to ``--job``
--------------------------------
+<span class="gh">Quick introduction to ``--job``</span>
+<span class="gh">-------------------------------</span>
 
-Using the ``--job`` command line option, you can instruct EasyBuild to submit jobs for the installations that should
+Using the <span class="s">``--job``</span> command line option, you can instruct EasyBuild to submit jobs for the installations that should
 be performed, rather than performing the installations locally on the system you are on.
 
-If dependency resolution is enabled using ``--robot`` (see also :ref:`use_robot`), EasyBuild will submit separate
+If dependency resolution is enabled using <span class="s">``--robot``</span> (see also <span class="na">:ref:</span><span class="nv">`use_robot`</span>), EasyBuild will submit separate
 jobs and set dependencies between them to ensure they are run in the order dictated by the software dependency graph(s).
 
 
-.. _submitting_jobs_configuration:
+<span class="p">..</span> <span class="nt">_submitting_jobs_configuration:</span>
 
-Configuring ``--job``
----------------------
+<span class="gh">Configuring ``--job``</span>
+<span class="gh">---------------------</span>
 
-Selecting the job backend (``--job-backend``)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Selecting the job backend (``--job-backend``)</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-The job backend to be used can be specified using the ``--job-backend`` EasyBuild configuration option.
+The job backend to be used can be specified using the <span class="s">``--job-backend``</span> EasyBuild configuration option.
 
 Since EasyBuild 3.8.0, three backends are supported:
 
-* ``GC3Pie`` *(default)* (supported since EasyBuild 2.2.0)
+<span class="m">*</span> <span class="s">``GC3Pie``</span> <span class="ge">*(default)*</span> (supported since EasyBuild 2.2.0)
 
-  * ``GC3Pie`` version 2.5.0 (or more recent) required (https://gc3pie.readthedocs.org)
-  * works with different resource managers and job schedulers, including TORQUE/PBS, Slurm, etc.
-  * **note**: requires that a GC3Pie configuration file is provided, see :ref:`submitting_jobs_cfg_job_backend_config`
+  <span class="m">*</span> <span class="s">``GC3Pie``</span> version 2.5.0 (or more recent) required (https://gc3pie.readthedocs.org)
+  <span class="m">*</span> works with different resource managers and job schedulers, including TORQUE/PBS, Slurm, etc.
+  <span class="m">*</span> <span class="gs">**note**</span>: requires that a GC3Pie configuration file is provided, see <span class="na">:ref:</span><span class="nv">`submitting_jobs_cfg_job_backend_config`</span>
 
-* ``PbsPython``
+<span class="m">*</span> <span class="s">``PbsPython``</span>
 
-  * ``pbs_python`` version 4.1.0 (or more recent) required (see https://oss.trac.surfsara.nl/pbs_python)
-  * **note**: requires TORQUE resource manager (see http://www.adaptivecomputing.com/products/open-source/torque/)
+  <span class="m">*</span> <span class="s">``pbs_python``</span> version 4.1.0 (or more recent) required (see https://oss.trac.surfsara.nl/pbs_python)
+  <span class="m">*</span> <span class="gs">**note**</span>: requires TORQUE resource manager (see http://www.adaptivecomputing.com/products/open-source/torque/)
 
-* ``Slurm`` (supported since EasyBuild 3.8.0)
+<span class="m">*</span> <span class="s">``Slurm``</span> (supported since EasyBuild 3.8.0)
 
-  * requires Slurm version 17.0 (or more recent), see https://slurm.schedmd.com/
-
-
-.. _submitting_jobs_cfg_job_backend_config:
-
-Configuring the job backend (``--job-backend-config``)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To configure the job backend, the path to a configuration file must be specified via ``--job-backend-config``.
-
-* for ``PbsPython`` backend: *(irrelevant, no configuration file required)*
-* for ``GC3Pie`` backend: see https://gc3pie.readthedocs.org/en/latest/users/configuration.html
-
-  * example configuration files are available at :ref:`submitting_jobs_examples_gc3pie_cfg`
-
-* for ``Slurm`` backend: *(irrelevant, no configuration file required)*
+  <span class="m">*</span> requires Slurm version 17.0 (or more recent), see https://slurm.schedmd.com/
 
 
+<span class="p">..</span> <span class="nt">_submitting_jobs_cfg_job_backend_config:</span>
 
-.. _submitting_jobs_cfg_job_cores:
+<span class="gh">Configuring the job backend (``--job-backend-config``)</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-Number of requested cores per job (``--job-cores``)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+To configure the job backend, the path to a configuration file must be specified via <span class="s">``--job-backend-config``</span>.
 
-The number of cores that should be requested for each job that is submitted can be specified using ``--job-cores``
-(default: *not specified*).
+<span class="m">*</span> for <span class="s">``PbsPython``</span> backend: <span class="ge">*(irrelevant, no configuration file required)*</span>
+<span class="m">*</span> for <span class="s">``GC3Pie``</span> backend: see https://gc3pie.readthedocs.org/en/latest/users/configuration.html
 
-The mechanism for determining the number of cores to request in case ``--job-cores`` was *not* specified depends on
+  <span class="m">*</span> example configuration files are available at <span class="na">:ref:</span><span class="nv">`submitting_jobs_examples_gc3pie_cfg`</span>
+
+<span class="m">*</span> for <span class="s">``Slurm``</span> backend: <span class="ge">*(irrelevant, no configuration file required)*</span>
+
+
+
+<span class="p">..</span> <span class="nt">_submitting_jobs_cfg_job_cores:</span>
+
+<span class="gh">Number of requested cores per job (``--job-cores``)</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+
+The number of cores that should be requested for each job that is submitted can be specified using <span class="s">``--job-cores``</span>
+(default: <span class="ge">*not specified*</span>).
+
+The mechanism for determining the number of cores to request in case <span class="s">``--job-cores``</span> was <span class="ge">*not*</span> specified depends on
 which job backend is being used:
 
-* if the ``PbsPython`` job backend is used, the (most common) number of available cores per workernode in the
+<span class="m">*</span> if the <span class="s">``PbsPython``</span> job backend is used, the (most common) number of available cores per workernode in the
   target resource is determined; this usually results in jobs requesting full workernodes (at least in terms of cores)
   by default
-* if the ``GC3Pie`` or ``Slurm`` job backend is used, the requested number of cores is left unspecified,
+<span class="m">*</span> if the <span class="s">``GC3Pie``</span> or <span class="s">``Slurm``</span> job backend is used, the requested number of cores is left unspecified,
   which results in falling back to the default mechanism used by GC3Pie/Slurm to pick a number of cores;
   most likely, this results in single-core jobs to be submitted by default
 
 
-.. _submitting_jobs_job_dependency_type:
+<span class="p">..</span> <span class="nt">_submitting_jobs_job_dependency_type:</span>
 
-Job dependency type (``-job-deps-type``)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Job dependency type (``-job-deps-type``)</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 The type of dependency that is set by EasyBuild when submitting a job that depends on one or more other jobs
-can be specified via the ``--job-deps-type`` configuration setting:
+can be specified via the <span class="s">``--job-deps-type``</span> configuration setting:
 
-* with ``--job-deps-type=abort_on_error``, job dependencies will be set such that a job that depends on other jobs
-  will be *aborted* if one of those jobs completes with an error
+<span class="m">*</span> with <span class="s">``--job-deps-type=abort_on_error``</span>, job dependencies will be set such that a job that depends on other jobs
+  will be <span class="ge">*aborted*</span> if one of those jobs completes with an error
 
-  * for both ``PbsPython`` and ``Slurm``, this is equivalent with setting job dependencies using ``afterok``
+  <span class="m">*</span> for both <span class="s">``PbsPython``</span> and <span class="s">``Slurm``</span>, this is equivalent with setting job dependencies using <span class="s">``afterok``</span>
 
-* with ``--job-deps-type=always_run``, job dependencies will be set such that a job that depends on other jobs are
-  *always run*, regardless of whether or not those jobs completed successfully
+<span class="m">*</span> with <span class="s">``--job-deps-type=always_run``</span>, job dependencies will be set such that a job that depends on other jobs are
+  <span class="ge">*always run*</span>, regardless of whether or not those jobs completed successfully
 
-  * for both ``PbsPython`` and ``Slurm``, this is equivalent with setting job dependencies using ``afterany``
+  <span class="m">*</span> for both <span class="s">``PbsPython``</span> and <span class="s">``Slurm``</span>, this is equivalent with setting job dependencies using <span class="s">``afterany``</span>
 
-The default value for ``-job-deps-type`` depends on the job backend being used
-(see :ref:`submitting_jobs_cfg_job_backend_config`):
+The default value for <span class="s">``-job-deps-type``</span> depends on the job backend being used
+(see <span class="na">:ref:</span><span class="nv">`submitting_jobs_cfg_job_backend_config`</span>):
 
-* for the ``GC3Pie`` and ``Slurm`` backends, ``--job-deps-type=abort_on_error`` is the default;
-* for the ``PbsPython`` backend, ``--job-deps-type=always_run`` is the default (because of historical reasons,
+<span class="m">*</span> for the <span class="s">``GC3Pie``</span> and <span class="s">``Slurm``</span> backends, <span class="s">``--job-deps-type=abort_on_error``</span> is the default;
+<span class="m">*</span> for the <span class="s">``PbsPython``</span> backend, <span class="s">``--job-deps-type=always_run``</span> is the default (because of historical reasons,
   and for the sake of backward compatibility)
 
 
-.. _submitting_jobs_cfg_job_max_walltime:
+<span class="p">..</span> <span class="nt">_submitting_jobs_cfg_job_max_walltime:</span>
 
-Maximum walltime of jobs (``--job-max-walltime``)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Maximum walltime of jobs (``--job-max-walltime``)</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-An integer value specifying the maximum walltime for jobs (in hours) can be specified via ``--job-max-walltime``
+An integer value specifying the maximum walltime for jobs (in hours) can be specified via <span class="s">``--job-max-walltime``</span>
 (default: 24).
 
-For easyconfigs for which a reference required walltime is available via the ``build_stats`` parameter in a matching
-easyconfig file from the easyconfig repository (see :ref:`easyconfigs_repo`), EasyBuild will set the walltime of the
+For easyconfigs for which a reference required walltime is available via the <span class="s">``build_stats``</span> parameter in a matching
+easyconfig file from the easyconfig repository (see <span class="na">:ref:</span><span class="nv">`easyconfigs_repo`</span>), EasyBuild will set the walltime of the
 corresponding job to twice that value (unless the resulting value is higher than the maximum walltime for jobs).
 
 If no such reference walltime is available, the maximum walltime is used.
 
 
-.. _submitting_jobs_cfg_job_output_dir:
+<span class="p">..</span> <span class="nt">_submitting_jobs_cfg_job_output_dir:</span>
 
-Job output directory (``--job-output-dir``)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Job output directory (``--job-output-dir``)</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-The directory where job log files should be placed can be specified via ``--job-output-dir``
+The directory where job log files should be placed can be specified via <span class="s">``--job-output-dir``</span>
 (default: current directory).
 
 
-.. _submitting_jobs_cfg_job_polling_interval:
+<span class="p">..</span> <span class="nt">_submitting_jobs_cfg_job_polling_interval:</span>
 
-Job polling interval (``--job-polling-interval``)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Job polling interval (``--job-polling-interval``)</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-The frequency with which the status of submitted jobs should be checked can be specified via ``--job-polling-interval``,
+The frequency with which the status of submitted jobs should be checked can be specified via <span class="s">``--job-polling-interval``</span>,
 using a floating-point value representing the number of seconds between two checks (default: 30 seconds).
 
-.. note:: This setting is currently only relevant to GC3Pie; see also :ref:`submitting_jobs_usage_gc3pie`.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> This setting is currently only relevant to GC3Pie; see also <span class="na">:ref:</span><span class="nv">`submitting_jobs_usage_gc3pie`</span>.
 
 
-.. _submitting_jobs_cfg_job_target_resource:
+<span class="p">..</span> <span class="nt">_submitting_jobs_cfg_job_target_resource:</span>
 
-Target resource for job backend (``--job-target-resource``)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Target resource for job backend (``--job-target-resource``)</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-The target resource that should be used by the job backend can be specified using ``--job-target-resource``.
+The target resource that should be used by the job backend can be specified using <span class="s">``--job-target-resource``</span>.
 
-* for ``PbsPython`` backend: hostname of TORQUE PBS server to submit jobs to (default: ``$PBS_DEFAULT``)
-* for ``GC3Pie`` backend: name of resource to submit jobs to (default: none, which implies weighted round-robin
+<span class="m">*</span> for <span class="s">``PbsPython``</span> backend: hostname of TORQUE PBS server to submit jobs to (default: <span class="s">``$PBS_DEFAULT``</span>)
+<span class="m">*</span> for <span class="s">``GC3Pie``</span> backend: name of resource to submit jobs to (default: none, which implies weighted round-robin
   submission across all available resources)
-* for ``Slurm`` backend: *(not used)*
+<span class="m">*</span> for <span class="s">``Slurm``</span> backend: <span class="ge">*(not used)*</span>
 
 
-.. _submitting_jobs_usage:
+<span class="p">..</span> <span class="nt">_submitting_jobs_usage:</span>
 
-Usage of ``--job``
-------------------
+<span class="gh">Usage of ``--job``</span>
+<span class="gh">------------------</span>
 
-To make EasyBuild submit jobs to the job backend rather than performing the installations directly, the ``--job``
+To make EasyBuild submit jobs to the job backend rather than performing the installations directly, the <span class="s">``--job``</span>
 command line option can be used.
 
 This following assumes that the required configuration settings w.r.t. the job backend to use are in place, see
-:ref:`submitting_jobs_configuration`.
+<span class="na">:ref:</span><span class="nv">`submitting_jobs_configuration`</span>.
 
 
-.. _submitting_jobs_usage_pbs_python:
+<span class="p">..</span> <span class="nt">_submitting_jobs_usage_pbs_python:</span>
 
-Submitting jobs to a ``PbsPython`` or ``Slurm`` backend
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Submitting jobs to a ``PbsPython`` or ``Slurm`` backend</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-When using the ``PbsPython`` or ``Slurm`` backend, EasyBuild will submit separate jobs for each installation
+When using the <span class="s">``PbsPython``</span> or <span class="s">``Slurm``</span> backend, EasyBuild will submit separate jobs for each installation
 to be performed, and then exit reporting a list of submitted jobs.
 
 To ensure that the installations are performed in the order dictated by the software dependency graph, dependencies
-between installations are specified via *job dependencies* (see also :ref:`submitting_jobs_job_dependency_type`).
+between installations are specified via <span class="ge">*job dependencies*</span> (see also <span class="na">:ref:</span><span class="nv">`submitting_jobs_job_dependency_type`</span>).
 
-See also :ref:`submitting_jobs_examples_pbs_python_backend`.
+See also <span class="na">:ref:</span><span class="nv">`submitting_jobs_examples_pbs_python_backend`</span>.
 
-.. note:: Submitted jobs will be put on hold until all jobs have been submitted. This is required to ensure that the
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Submitted jobs will be put on hold until all jobs have been submitted. This is required to ensure that the
           dependencies between jobs can be specified correctly; if a job would run to completion before other jobs that
           depend on it were submitted, the submission process may fail.
 
 
-.. _submitting_jobs_usage_gc3pie:
+<span class="p">..</span> <span class="nt">_submitting_jobs_usage_gc3pie:</span>
 
-Submitting jobs to a ``GC3Pie`` backend
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Submitting jobs to a ``GC3Pie`` backend</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-When using the ``GC3Pie`` backend, EasyBuild will create separate tasks for each installation to be performed and
+When using the <span class="s">``GC3Pie``</span> backend, EasyBuild will create separate tasks for each installation to be performed and
 supply them to GC3Pie, which will then take over and pass the installations through as jobs to the available
-resource(s) (see also :ref:`submitting_jobs_cfg_job_backend_config`).
+resource(s) (see also <span class="na">:ref:</span><span class="nv">`submitting_jobs_cfg_job_backend_config`</span>).
 
 To ensure that the installations are performed in the order dictated by the software dependency graph, dependencies
 between installations are specified to GC3Pie as inter-task dependencies. GC3Pie will then gradually feed the
 installations to its available resources as their dependencies have been satisfied.
 
-Any log messages produced by GC3Pie are included in the EasyBuild log file, and are tagged with ``gc3pie``.
+Any log messages produced by GC3Pie are included in the EasyBuild log file, and are tagged with <span class="s">``gc3pie``</span>.
 
-See also :ref:`submitting_jobs_examples_gc3pie_backend`.
+See also <span class="na">:ref:</span><span class="nv">`submitting_jobs_examples_gc3pie_backend`</span>.
 
-.. note:: The ``eb`` process will not exit until the full set of tasks that GC3Pie was provided with has been processed.
-          An overall progress report will be printed regularly (see also :ref:`submitting_jobs_cfg_job_polling_interval`).
-          As such, it is advised to run the ``eb`` process in a screen/tmux session when using the GC3Pie backend for
-          ``--job``.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> The <span class="s">``eb``</span> process will not exit until the full set of tasks that GC3Pie was provided with has been processed.
+          An overall progress report will be printed regularly (see also <span class="na">:ref:</span><span class="nv">`submitting_jobs_cfg_job_polling_interval`</span>).
+          As such, it is advised to run the <span class="s">``eb``</span> process in a screen/tmux session when using the GC3Pie backend for
+          <span class="s">``--job``</span>.
 
 
-.. _submitting_jobs_examples:
+<span class="p">..</span> <span class="nt">_submitting_jobs_examples:</span>
 
-Examples
---------
+<span class="gh">Examples</span>
+<span class="gh">--------</span>
 
-.. _submitting_jobs_examples_gc3pie_cfg:
+<span class="p">..</span> <span class="nt">_submitting_jobs_examples_gc3pie_cfg:</span>
 
-Example configurations for GC3Pie job backend
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Example configurations for GC3Pie job backend</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-When using GC3Pie as a job backend, a configuration file must be provided via ``--job-backend-config``.
+When using GC3Pie as a job backend, a configuration file must be provided via <span class="s">``--job-backend-config``</span>.
 This section includes a couple of examples of GC3Pie configuration files (see also
 https://gc3pie.readthedocs.org/en/latest/users/configuration.html).
 
-Example GC3Pie configuration for local system
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Example GC3Pie configuration for local system</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-.. code:: ini
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">ini</span>
 
-  [resource/localhost]
-  enabled = yes
-  type = shellcmd
-  frontend = localhost
-  transport = local
-  max_memory_per_core = 10GiB
-  max_walltime = 100 hours
-  # max # jobs ~= max_cores / max_cores_per_job
-  max_cores_per_job = 1
-  max_cores = 4
-  architecture = x86_64
-  auth = none
-  override = no
-  resourcedir = /tmp/gc3pie
-
-
-Example GC3Pie configuration for TORQUE/PBS
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. code:: ini
-
-  [resource/pbs]
-  enabled = yes
-  type = pbs
-
-  # use settings below when running GC3Pie on the cluster front-end node
-  frontend = localhost
-  transport = local
-  auth = none
-
-  max_walltime = 2 days
-  # max # jobs ~= max_cores / max_cores_per_job
-  max_cores_per_job = 16
-  max_cores = 1024
-  max_memory_per_core = 2 GiB
-  architecture = x86_64
-
-  # to add non-std options or use TORQUE/PBS tools located outside of
-  # the default PATH, use the following:
-  #qsub = /usr/local/bin/qsub -q my-special-queue
+  <span class="k">[resource/localhost]</span><span class="w"></span>
+  <span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span><span class="w"></span>
+  <span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">shellcmd</span><span class="w"></span>
+  <span class="na">frontend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">localhost</span><span class="w"></span>
+  <span class="na">transport</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">local</span><span class="w"></span>
+  <span class="na">max_memory_per_core</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">10GiB</span><span class="w"></span>
+  <span class="na">max_walltime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">100 hours</span><span class="w"></span>
+  <span class="c1"># max # jobs ~= max_cores / max_cores_per_job</span><span class="w"></span>
+  <span class="na">max_cores_per_job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span><span class="w"></span>
+  <span class="na">max_cores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">4</span><span class="w"></span>
+  <span class="na">architecture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">x86_64</span><span class="w"></span>
+  <span class="na">auth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">none</span><span class="w"></span>
+  <span class="na">override</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">no</span><span class="w"></span>
+  <span class="na">resourcedir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/tmp/gc3pie</span><span class="w"></span>
 
 
-Example GC3Pie configuration for SLURM
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Example GC3Pie configuration for TORQUE/PBS</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-.. code:: ini
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">ini</span>
 
-  [resource/slurm]
-  enabled = yes
-  type = slurm
+  <span class="k">[resource/pbs]</span><span class="w"></span>
+  <span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span><span class="w"></span>
+  <span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">pbs</span><span class="w"></span>
 
-  # use settings below when running GC3Pie on the cluster front-end node
-  frontend = localhost
-  transport = local
-  auth = none
+  <span class="c1"># use settings below when running GC3Pie on the cluster front-end node</span><span class="w"></span>
+  <span class="na">frontend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">localhost</span><span class="w"></span>
+  <span class="na">transport</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">local</span><span class="w"></span>
+  <span class="na">auth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">none</span><span class="w"></span>
 
-  max_walltime = 2 days
-  # max # jobs ~= max_cores / max_cores_per_job
-  max_cores_per_job = 16
-  max_cores = 1024
-  max_memory_per_core = 2 GiB
-  architecture = x86_64
+  <span class="na">max_walltime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2 days</span><span class="w"></span>
+  <span class="c1"># max # jobs ~= max_cores / max_cores_per_job</span><span class="w"></span>
+  <span class="na">max_cores_per_job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">16</span><span class="w"></span>
+  <span class="na">max_cores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1024</span><span class="w"></span>
+  <span class="na">max_memory_per_core</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2 GiB</span><span class="w"></span>
+  <span class="na">architecture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">x86_64</span><span class="w"></span>
 
-  # to add non-std options or use SLURM tools located outside of
-  # the default PATH, use the following:
-  #sbatch = /usr/bin/sbatch --mail-type=ALL
+  <span class="c1"># to add non-std options or use TORQUE/PBS tools located outside of</span><span class="w"></span>
+  <span class="c1"># the default PATH, use the following:</span><span class="w"></span>
+  <span class="c1">#qsub = /usr/local/bin/qsub -q my-special-queue</span><span class="w"></span>
 
 
-.. _submitting_jobs_examples_gc3pie_backend:
+<span class="gh">Example GC3Pie configuration for SLURM</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-Example: submitting installations to SLURM via GC3Pie
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">ini</span>
 
-When submitting jobs to the ``GC3Pie`` job backend, the ``eb`` process will not exit until all tasks have been
-completed. A job overview will be printed every N seconds (see :ref:`submitting_jobs_cfg_job_polling_interval`).
+  <span class="k">[resource/slurm]</span><span class="w"></span>
+  <span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span><span class="w"></span>
+  <span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">slurm</span><span class="w"></span>
+
+  <span class="c1"># use settings below when running GC3Pie on the cluster front-end node</span><span class="w"></span>
+  <span class="na">frontend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">localhost</span><span class="w"></span>
+  <span class="na">transport</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">local</span><span class="w"></span>
+  <span class="na">auth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">none</span><span class="w"></span>
+
+  <span class="na">max_walltime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2 days</span><span class="w"></span>
+  <span class="c1"># max # jobs ~= max_cores / max_cores_per_job</span><span class="w"></span>
+  <span class="na">max_cores_per_job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">16</span><span class="w"></span>
+  <span class="na">max_cores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1024</span><span class="w"></span>
+  <span class="na">max_memory_per_core</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2 GiB</span><span class="w"></span>
+  <span class="na">architecture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">x86_64</span><span class="w"></span>
+
+  <span class="c1"># to add non-std options or use SLURM tools located outside of</span><span class="w"></span>
+  <span class="c1"># the default PATH, use the following:</span><span class="w"></span>
+  <span class="c1">#sbatch = /usr/bin/sbatch --mail-type=ALL</span><span class="w"></span>
+
+
+<span class="p">..</span> <span class="nt">_submitting_jobs_examples_gc3pie_backend:</span>
+
+<span class="gh">Example: submitting installations to SLURM via GC3Pie</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+
+When submitting jobs to the <span class="s">``GC3Pie``</span> job backend, the <span class="s">``eb``</span> process will not exit until all tasks have been
+completed. A job overview will be printed every N seconds (see <span class="na">:ref:</span><span class="nv">`submitting_jobs_cfg_job_polling_interval`</span>).
 
 Jobs are only submitted to the resource manager (SLURM, in this case) when all task dependencies have been resolved.
 
-.. code::
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span>
 
   $ export EASYBUILD_JOB_BACKEND=GC3Pie
   $ export EASYBUILD_JOB_BACKEND_CONFIG=$PWD/gc3pie.cfg
@@ -708,72 +708,72 @@ Jobs are only submitted to the resource manager (SLURM, in this case) when all t
   == GC3Pie job overview: 2 submitted (total: 9)
   == GC3Pie job overview: 2 running (total: 9)
   == GC3Pie job overview: 2 running (total: 9)
-  ...
-  == GC3Pie job overview: 4 terminated, 4 ok, 1 submitted (total: 9)
-  == GC3Pie job overview: 4 terminated, 4 ok, 1 running (total: 9)
-  ...
-  == GC3Pie job overview: 8 terminated, 8 ok, 1 running (total: 9)
-  == GC3Pie job overview: 9 terminated, 9 ok (total: 9)
-  == GC3Pie job overview: 9 terminated, 9 ok (total: 9)
-  == Done processing jobs
-  == GC3Pie job overview: 9 terminated, 9 ok (total: 9)
-  == Submitted parallel build jobs, exiting now
-  == temporary log file(s) /tmp/eb-ivAiwD/easybuild-PCgmCB.log* have been removed.
-  == temporary directory /tmp/eb-ivAiwD has been removed.
+<span class="cp">  ...</span>
+<span class="cp">  == GC3Pie job overview: 4 terminated, 4 ok, 1 submitted (total: 9)</span>
+<span class="cp">  == GC3Pie job overview: 4 terminated, 4 ok, 1 running (total: 9)</span>
+<span class="cp">  ...</span>
+<span class="cp">  == GC3Pie job overview: 8 terminated, 8 ok, 1 running (total: 9)</span>
+<span class="cp">  == GC3Pie job overview: 9 terminated, 9 ok (total: 9)</span>
+<span class="cp">  == GC3Pie job overview: 9 terminated, 9 ok (total: 9)</span>
+<span class="cp">  == Done processing jobs</span>
+<span class="cp">  == GC3Pie job overview: 9 terminated, 9 ok (total: 9)</span>
+<span class="cp">  == Submitted parallel build jobs, exiting now</span>
+<span class="cp">  == temporary log file(s) /tmp/eb-ivAiwD/easybuild-PCgmCB.log* have been removed.</span>
+<span class="cp">  == temporary directory /tmp/eb-ivAiwD has been removed.</span>
 
 Checking which jobs have been submitted to SLURM at regular intervals reveals that indeed only tasks for which all
-dependencies have been processed are actually submitted as jobs::
+dependencies have been processed are actually submitted as jobs<span class="se">::</span>
 
-  $ squeue -u $USER
-  JOBID       USER       ACCOUNT           NAME     REASON   START_TIME     END_TIME  TIME_LEFT NODES CPUS   PRIORITY
-  6161545     easybuild  example      GCC-4.9.2       None 2015-07-01T1 2015-07-01T2    9:58:55     1 16       1242
-  6161546     easybuild  example      GCC-4.6.0       None 2015-07-01T1 2015-07-01T2    9:58:55     1 16       1242
+<span class="s">  $ squeue -u $USER</span>
+<span class="s">  JOBID       USER       ACCOUNT           NAME     REASON   START_TIME     END_TIME  TIME_LEFT NODES CPUS   PRIORITY</span>
+<span class="s">  6161545     easybuild  example      GCC-4.9.2       None 2015-07-01T1 2015-07-01T2    9:58:55     1 16       1242</span>
+<span class="s">  6161546     easybuild  example      GCC-4.6.0       None 2015-07-01T1 2015-07-01T2    9:58:55     1 16       1242</span>
 
-  $ squeue -u $USER
-  JOBID       USER       ACCOUNT           NAME     REASON   START_TIME     END_TIME  TIME_LEFT NODES CPUS   PRIORITY
-  6174527     easybuild  example Automake-1.15-  Resources          N/A          N/A   10:00:00     1 16       1120
+<span class="s">  $ squeue -u $USER</span>
+<span class="s">  JOBID       USER       ACCOUNT           NAME     REASON   START_TIME     END_TIME  TIME_LEFT NODES CPUS   PRIORITY</span>
+<span class="s">  6174527     easybuild  example Automake-1.15-  Resources          N/A          N/A   10:00:00     1 16       1120</span>
 
-  $ squeue -u $USER
-  JOBID       USER       ACCOUNT           NAME     REASON   START_TIME     END_TIME  TIME_LEFT NODES CPUS   PRIORITY
-  6174533     easybuild  example OpenMPI-1.8.4-       None 2015-07-03T0 2015-07-03T1    9:55:59     1 16       1119
+<span class="s">  $ squeue -u $USER</span>
+<span class="s">  JOBID       USER       ACCOUNT           NAME     REASON   START_TIME     END_TIME  TIME_LEFT NODES CPUS   PRIORITY</span>
+<span class="s">  6174533     easybuild  example OpenMPI-1.8.4-       None 2015-07-03T0 2015-07-03T1    9:55:59     1 16       1119</span>
 
 
-.. _submitting_jobs_examples_pbs_python_backend:
+<span class="p">..</span> <span class="nt">_submitting_jobs_examples_pbs_python_backend:</span>
 
-Example: submitting installations to TORQUE via pbs_python
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Example: submitting installations to TORQUE via pbs_python</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-Using the ``PbsPython`` job backend, ``eb`` submits jobs directly to TORQUE for processing, and exits as soon as all
-jobs have been submitted::
+Using the <span class="s">``PbsPython``</span> job backend, <span class="s">``eb``</span> submits jobs directly to TORQUE for processing, and exits as soon as all
+jobs have been submitted<span class="se">::</span>
 
-  $ eb GCC-4.6.0.eb OpenMPI-1.8.4-GCC-4.9.2.eb --robot --job
-  == temporary log file in case of crash /tmp/eb-OMNQAV/easybuild-9fTuJA.log
-  == resolving dependencies ...
-  == List of submitted jobs (9): GCC-4.6.0 (GCC/4.6.0): 508023.example.pbs; GCC-4.9.2 (GCC/4.9.2): 508024.example.pbs;
-  libtool-2.4.2-GCC-4.9.2 (libtool/2.4.2-GCC-4.9.2): 508025.example.pbs; M4-1.4.17-GCC-4.9.2 (M4/1.4.17-GCC-4.9.2): 50
-  8026.example.pbs; Autoconf-2.69-GCC-4.9.2 (Autoconf/2.69-GCC-4.9.2): 508027.example.pbs; Automake-1.15-GCC-4.9.2 (Au
-  tomake/1.15-GCC-4.9.2): 508028.example.pbs; numactl-2.0.10-GCC-4.9.2 (numactl/2.0.10-GCC-4.9.2): 508029.example.pbs;
-  hwloc-1.10.0-GCC-4.9.2 (hwloc/1.10.0-GCC-4.9.2): 508030.example.pbs; OpenMPI-1.8.4-GCC-4.9.2 (OpenMPI/1.8.4-GCC-4.9.
-  2): 508031.example.pbs
-  == Submitted parallel build jobs, exiting now
-  == temporary log file(s) /tmp/eb-OMNQAV/easybuild-9fTuJA.log* have been removed.
-  == temporary directory /tmp/eb-OMNQAV has been removed.
+<span class="s">  $ eb GCC-4.6.0.eb OpenMPI-1.8.4-GCC-4.9.2.eb --robot --job</span>
+<span class="s">  == temporary log file in case of crash /tmp/eb-OMNQAV/easybuild-9fTuJA.log</span>
+<span class="s">  == resolving dependencies ...</span>
+<span class="s">  == List of submitted jobs (9): GCC-4.6.0 (GCC/4.6.0): 508023.example.pbs; GCC-4.9.2 (GCC/4.9.2): 508024.example.pbs;</span>
+<span class="s">  libtool-2.4.2-GCC-4.9.2 (libtool/2.4.2-GCC-4.9.2): 508025.example.pbs; M4-1.4.17-GCC-4.9.2 (M4/1.4.17-GCC-4.9.2): 50</span>
+<span class="s">  8026.example.pbs; Autoconf-2.69-GCC-4.9.2 (Autoconf/2.69-GCC-4.9.2): 508027.example.pbs; Automake-1.15-GCC-4.9.2 (Au</span>
+<span class="s">  tomake/1.15-GCC-4.9.2): 508028.example.pbs; numactl-2.0.10-GCC-4.9.2 (numactl/2.0.10-GCC-4.9.2): 508029.example.pbs;</span>
+<span class="s">  hwloc-1.10.0-GCC-4.9.2 (hwloc/1.10.0-GCC-4.9.2): 508030.example.pbs; OpenMPI-1.8.4-GCC-4.9.2 (OpenMPI/1.8.4-GCC-4.9.</span>
+<span class="s">  2): 508031.example.pbs</span>
+<span class="s">  == Submitted parallel build jobs, exiting now</span>
+<span class="s">  == temporary log file(s) /tmp/eb-OMNQAV/easybuild-9fTuJA.log* have been removed.</span>
+<span class="s">  == temporary directory /tmp/eb-OMNQAV has been removed.</span>
 
-  $ qstat -a
+<span class="s">  $ qstat -a</span>
 
-  example.pbs:
-                                                                                Req&#39;d    Req&#39;d       Elap
-  Job ID              Username    Queue    Jobname          SessID  NDS   TSK   Memory   Time    S   Time
-  ------------------- ----------- -------- ---------------- ------ ----- ------ ------ --------- - ---------
-  508023.example.pbs  easybuild   batch    GCC-4.6.0           --      1     16    --   24:00:00 R  00:02:16 
-  508024.example.pbs  easybuild   batch    GCC-4.9.2           --      1     16    --   24:00:00 Q       -- 
-  508025.example.pbs  easybuild   batch    libtool-2.4.2-GC    --      1     16    --   24:00:00 H       -- 
-  508026.example.pbs  easybuild   batch    M4-1.4.17-GCC-4.    --      1     16    --   24:00:00 H       -- 
-  508027.example.pbs  easybuild   batch    Autoconf-2.69-GC    --      1     16    --   24:00:00 H       -- 
-  508028.example.pbs  easybuild   batch    Automake-1.15-GC    --      1     16    --   24:00:00 H       -- 
-  508029.example.pbs  easybuild   batch    numactl-2.0.10-G    --      1     16    --   24:00:00 H       -- 
-  508030.example.pbs  easybuild   batch    hwloc-1.10.0-GCC    --      1     16    --   24:00:00 H       -- 
-  508031.example.pbs  easybuild   batch    OpenMPI-1.8.4-GC    --      1     16    --   24:00:00 H       -- 
+<span class="s">  example.pbs:</span>
+<span class="s">                                                                                Req&#39;d    Req&#39;d       Elap</span>
+<span class="s">  Job ID              Username    Queue    Jobname          SessID  NDS   TSK   Memory   Time    S   Time</span>
+<span class="s">  ------------------- ----------- -------- ---------------- ------ ----- ------ ------ --------- - ---------</span>
+<span class="s">  508023.example.pbs  easybuild   batch    GCC-4.6.0           --      1     16    --   24:00:00 R  00:02:16 </span>
+<span class="s">  508024.example.pbs  easybuild   batch    GCC-4.9.2           --      1     16    --   24:00:00 Q       -- </span>
+<span class="s">  508025.example.pbs  easybuild   batch    libtool-2.4.2-GC    --      1     16    --   24:00:00 H       -- </span>
+<span class="s">  508026.example.pbs  easybuild   batch    M4-1.4.17-GCC-4.    --      1     16    --   24:00:00 H       -- </span>
+<span class="s">  508027.example.pbs  easybuild   batch    Autoconf-2.69-GC    --      1     16    --   24:00:00 H       -- </span>
+<span class="s">  508028.example.pbs  easybuild   batch    Automake-1.15-GC    --      1     16    --   24:00:00 H       -- </span>
+<span class="s">  508029.example.pbs  easybuild   batch    numactl-2.0.10-G    --      1     16    --   24:00:00 H       -- </span>
+<span class="s">  508030.example.pbs  easybuild   batch    hwloc-1.10.0-GCC    --      1     16    --   24:00:00 H       -- </span>
+<span class="s">  508031.example.pbs  easybuild   batch    OpenMPI-1.8.4-GC    --      1     16    --   24:00:00 H       -- </span>
 
 
 Holds are put in place to ensure that the jobs run in the order dictated by the dependency graph(s).
@@ -794,15 +794,15 @@ These holds are released by the TORQUE server as soon as they jobs on which they
   508030.example.pbs  easybuild   batch    hwloc-1.10.0-GCC    --      1     16    --   24:00:00 H       -- 
   508031.example.pbs  easybuild   batch    OpenMPI-1.8.4-GC    --      1     16    --   24:00:00 H       -- 
 
-  ...
+<span class="cp">  ...</span>
 
-  $ qstat -a
+<span class="cp">  $ qstat -a</span>
 
-  example.pbs:
-                                                                                Req&#39;d    Req&#39;d       Elap
-  Job ID              Username    Queue    Jobname          SessID  NDS   TSK   Memory   Time    S   Time
-  ------------------- ----------- -------- ---------------- ------ ----- ------ ------ --------- - ---------
-  508031.example.pbs  easybuild   batch    OpenMPI-1.8.4-GC    --      1     16    --   24:00:00 R  00:03:46
+<span class="cp">  example.pbs:</span>
+<span class="cp">                                                                                Req&#39;d    Req&#39;d       Elap</span>
+<span class="cp">  Job ID              Username    Queue    Jobname          SessID  NDS   TSK   Memory   Time    S   Time</span>
+<span class="cp">  ------------------- ----------- -------- ---------------- ------ ----- ------ ------ --------- - ---------</span>
+<span class="cp">  508031.example.pbs  easybuild   batch    OpenMPI-1.8.4-GC    --      1     16    --   24:00:00 R  00:03:46</span>
 </code></pre></div>
 
   <hr>
@@ -810,7 +810,7 @@ These holds are released by the TORQUE server as soon as they jobs on which they
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
       
     
   </small>

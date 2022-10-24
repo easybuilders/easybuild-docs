@@ -443,647 +443,647 @@ and you can help with that!
 </ul>
 <p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
 </div>
-<div class="highlight"><pre><span></span><code>.. _using_the_easybuild_command_line:
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_using_the_easybuild_command_line:</span>
 
-Using the EasyBuild command line
-================================
+<span class="gh">Using the EasyBuild command line</span>
+<span class="gh">================================</span>
 
 Basic usage of EasyBuild is described in the following sections, covering the most important range of topics if you are new to EasyBuild.
 
-``eb`` is EasyBuild’s main command line tool, to interact with the EasyBuild framework
+<span class="s">``eb``</span> is EasyBuild’s main command line tool, to interact with the EasyBuild framework
 and hereby the most common command line options are being documented.
 
-.. _specifying_easyconfigs:
+<span class="p">..</span> <span class="nt">_specifying_easyconfigs:</span>
 
-Specifying builds
------------------
+<span class="gh">Specifying builds</span>
+<span class="gh">-----------------</span>
 
 To instruct EasyBuild which software packages it should build/install and which build parameters it should use,
-one or more *easyconfig files* (see :ref:`easyconfig_files`) must be specified.
+one or more <span class="ge">*easyconfig files*</span> (see <span class="na">:ref:</span><span class="nv">`easyconfig_files`</span>) must be specified.
 
 This can be done in a number of ways:
 
-* :ref:`specifying_easyconfigs_single`
-* :ref:`specifying_easyconfigs_command_line`
-* :ref:`specifying_easyconfigs_set_of_easyconfigs`
-* using ``eb --from-pr`` (see :ref:`github_from_pr`)
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`specifying_easyconfigs_single`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`specifying_easyconfigs_command_line`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`specifying_easyconfigs_set_of_easyconfigs`</span>
+<span class="m">*</span> using <span class="s">``eb --from-pr``</span> (see <span class="na">:ref:</span><span class="nv">`github_from_pr`</span>)
 
-Whenever EasyBuild searches for *explicitly specified* easyconfig files, it considers a couple of locations, i.e. (in order of preference):
+Whenever EasyBuild searches for <span class="ge">*explicitly specified*</span> easyconfig files, it considers a couple of locations, i.e. (in order of preference):
 
-(i)   the local working directory
-(ii)  the robot search path (see :ref:`robot_search_path`)
-(iii) the path to easyconfig files that are part of the active EasyBuild installation
+<span class="m">(i)</span>   the local working directory
+<span class="m">(ii)</span>  the robot search path (see <span class="na">:ref:</span><span class="nv">`robot_search_path`</span>)
+<span class="m">(iii)</span> the path to easyconfig files that are part of the active EasyBuild installation
       (which is included in the default robot search path)
 
 These locations are only considered for easyconfig files that are specified only by filename or using a relative path,
-*not* for easyconfig files that are specified via an absolute path. The dependencies are resolved using the robot search path (see :ref:`robot_search_path`).
+<span class="ge">*not*</span> for easyconfig files that are specified via an absolute path. The dependencies are resolved using the robot search path (see <span class="na">:ref:</span><span class="nv">`robot_search_path`</span>).
 
-.. note::
-  For easyconfig files specified on the ``eb`` command line, the *full* robot search path is only considered since
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
+  For easyconfig files specified on the <span class="s">``eb``</span> command line, the <span class="ge">*full*</span> robot search path is only considered since
   EasyBuild v2.0.0. Earlier versions only considered the local working directory and the easyconfig files that are
-  part of the active EasyBuild installation for *explicitly specified* easyconfig files.
+  part of the active EasyBuild installation for <span class="ge">*explicitly specified*</span> easyconfig files.
 
-.. _specifying_easyconfigs_single:
+<span class="p">..</span> <span class="nt">_specifying_easyconfigs_single:</span>
 
-By providing a single easyconfig file
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">By providing a single easyconfig file</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-The most basic usage is to simply provide the name of an easyconfig file to the ``eb`` command.
+The most basic usage is to simply provide the name of an easyconfig file to the <span class="s">``eb``</span> command.
 EasyBuild will (try and) locate the easyconfig file, and perform the installation as specified by that easyconfig file.
 
-For example, to build and install ``HPL`` using the ``goolf`` toolchain::
+For example, to build and install <span class="s">``HPL``</span> using the <span class="s">``goolf``</span> toolchain<span class="se">::</span>
 
-  $ eb HPL-2.0-goolf-1.4.10.eb --robot
-  [...]
-  == building and installing GCC/4.7.2...
-  [...]
-  == building and installing goolf/1.4.10...
-  [...]
-  == building and installing HPL/2.0-goolf-1.4.10...
-  == fetching files...
-  == creating build dir, resetting environment...
-  == unpacking...
-  == patching...
-  == preparing...
-  == configuring...
-  == building...
-  == testing...
-  == installing...
-  == taking care of extensions...
-  == packaging...
-  == postprocessing...
-  == sanity checking...
-  == cleaning up...
-  == creating module...
-  == COMPLETED: Installation ended successfully
-  == Results of the build can be found in the log file /home/example/.local/easybuild/software/HPL/2.0-goolf-1.4.10/easybuild/easybuild-HPL-2.0-20141031.223237.log
-  == Build succeeded for 9 out of 9
-  == temporary log file /tmp/easybuild-UOEWix/easybuild-NiswcV.log has been removed.
-  == temporary directory /tmp/easybuild-UOEWix has been removed.
+<span class="s">  $ eb HPL-2.0-goolf-1.4.10.eb --robot</span>
+<span class="s">  [...]</span>
+<span class="s">  == building and installing GCC/4.7.2...</span>
+<span class="s">  [...]</span>
+<span class="s">  == building and installing goolf/1.4.10...</span>
+<span class="s">  [...]</span>
+<span class="s">  == building and installing HPL/2.0-goolf-1.4.10...</span>
+<span class="s">  == fetching files...</span>
+<span class="s">  == creating build dir, resetting environment...</span>
+<span class="s">  == unpacking...</span>
+<span class="s">  == patching...</span>
+<span class="s">  == preparing...</span>
+<span class="s">  == configuring...</span>
+<span class="s">  == building...</span>
+<span class="s">  == testing...</span>
+<span class="s">  == installing...</span>
+<span class="s">  == taking care of extensions...</span>
+<span class="s">  == packaging...</span>
+<span class="s">  == postprocessing...</span>
+<span class="s">  == sanity checking...</span>
+<span class="s">  == cleaning up...</span>
+<span class="s">  == creating module...</span>
+<span class="s">  == COMPLETED: Installation ended successfully</span>
+<span class="s">  == Results of the build can be found in the log file /home/example/.local/easybuild/software/HPL/2.0-goolf-1.4.10/easybuild/easybuild-HPL-2.0-20141031.223237.log</span>
+<span class="s">  == Build succeeded for 9 out of 9</span>
+<span class="s">  == temporary log file /tmp/easybuild-UOEWix/easybuild-NiswcV.log has been removed.</span>
+<span class="s">  == temporary directory /tmp/easybuild-UOEWix has been removed.</span>
 
-Then, we can actually load the freshly installed HPL module::
+Then, we can actually load the freshly installed HPL module<span class="se">::</span>
 
-  $ module load HPL/2.0-goolf-1.4.10
-  $ which xhpl
-  /home/example/.local/easybuild/software/HPL/2.0-goolf-1.4.10/bin/xhpl
+<span class="s">  $ module load HPL/2.0-goolf-1.4.10</span>
+<span class="s">  $ which xhpl</span>
+<span class="s">  /home/example/.local/easybuild/software/HPL/2.0-goolf-1.4.10/bin/xhpl</span>
 
-All easyconfig file names&#39; suffixes are ``.eb`` and follow format::
+All easyconfig file names&#39; suffixes are <span class="s">``.eb``</span> and follow format<span class="se">::</span>
 
-   ``&lt;name&gt;-&lt;version&gt;-&lt;toolchain&gt;-&lt;versionsuffix&gt;``
+<span class="s">   ``&lt;name&gt;-&lt;version&gt;-&lt;toolchain&gt;-&lt;versionsuffix&gt;``</span>
 
-This is a crucial design aspect, since the dependency resolution mechanism (see :ref:`use_robot`) relies upon this convention.
+This is a crucial design aspect, since the dependency resolution mechanism (see <span class="na">:ref:</span><span class="nv">`use_robot`</span>) relies upon this convention.
 
-.. tip:: You may wish to modify the installation prefix (e.g., using ``--prefix`` or by defining ``$EASYBUILD_PREFIX``),
-  in order to redefine the build/install/source path prefix to be used; default value is: ``$HOME/.local/easybuild``.
+<span class="p">..</span> <span class="ow">tip</span><span class="p">::</span> You may wish to modify the installation prefix (e.g., using <span class="s">``--prefix``</span> or by defining <span class="s">``$EASYBUILD_PREFIX``</span>),
+  in order to redefine the build/install/source path prefix to be used; default value is: <span class="s">``$HOME/.local/easybuild``</span>.
 
 
-.. _specifying_easyconfigs_command_line:
+<span class="p">..</span> <span class="nt">_specifying_easyconfigs_command_line:</span>
 
-Via command line options
-~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Via command line options</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 An alternative approach is to only use command line options to specify which software to build.
-Refer to the ``Software search and build options`` section in the ``eb --help`` output for an overview
-of the available command line options for this purpose (cfr. :ref:`basic_usage_help`).
+Refer to the <span class="s">``Software search and build options``</span> section in the <span class="s">``eb --help``</span> output for an overview
+of the available command line options for this purpose (cfr. <span class="na">:ref:</span><span class="nv">`basic_usage_help`</span>).
 
 Here is how to build and install last version of HPCG (that EasyBuild is aware of)
-using the ``goolf/1.4.10`` toolchain::
+using the <span class="s">``goolf/1.4.10``</span> toolchain<span class="se">::</span>
 
-  $ eb --software-name=HPCG --toolchain=goolf,1.4.10
-  [...]
-  == building and installing HPCG/2.1-goolf-1.4.10...
-  [...]
-  == COMPLETED: Installation ended successfully
-  [...]
+<span class="s">  $ eb --software-name=HPCG --toolchain=goolf,1.4.10</span>
+<span class="s">  [...]</span>
+<span class="s">  == building and installing HPCG/2.1-goolf-1.4.10...</span>
+<span class="s">  [...]</span>
+<span class="s">  == COMPLETED: Installation ended successfully</span>
+<span class="s">  [...]</span>
 
-At this point, a module ``HPCG/2.1-goolf-1.4.10`` should have been installed.
+At this point, a module <span class="s">``HPCG/2.1-goolf-1.4.10``</span> should have been installed.
 
 
-.. _specifying_easyconfigs_set_of_easyconfigs:
+<span class="p">..</span> <span class="nt">_specifying_easyconfigs_set_of_easyconfigs:</span>
 
-By providing a set of easyconfig files
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">By providing a set of easyconfig files</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 Multiple easyconfig files can be provided as well, either directly or by specifying a directory that contains easyconfig files.
 
 For example, to build and install both HPCG and GCC with a single command, simply list the easyconfigs for both on the
-``eb`` command line (note that HPCG is not being reinstalled, since a matching module is already available)::
+<span class="s">``eb``</span> command line (note that HPCG is not being reinstalled, since a matching module is already available)<span class="se">::</span>
 
-  $ eb HPCG-2.1-goolf-1.4.10.eb GCC-4.8.3.eb
-  [...]
-  == HPCG/2.1-goolf-1.4.10 is already installed (module found), skipping
-  [...]
-  == building and installing GCC/4.8.3...
-  [...]
-  == Build succeeded for 1 out of 1
-  [...]
+<span class="s">  $ eb HPCG-2.1-goolf-1.4.10.eb GCC-4.8.3.eb</span>
+<span class="s">  [...]</span>
+<span class="s">  == HPCG/2.1-goolf-1.4.10 is already installed (module found), skipping</span>
+<span class="s">  [...]</span>
+<span class="s">  == building and installing GCC/4.8.3...</span>
+<span class="s">  [...]</span>
+<span class="s">  == Build succeeded for 1 out of 1</span>
+<span class="s">  [...]</span>
 
 
 When one or more directories are provided, EasyBuild will (recursively) traverse them
 to find easyconfig files. For example:
 
-::
+<span class="se">::</span>
 
-  $ find set_of_easyconfigs/ -type f
-  set_of_easyconfigs/GCC-4.8.3.eb
-  set_of_easyconfigs/foo.txt
-  set_of_easyconfigs/tools/HPCG-2.1-goolf-1.4.10.eb
+<span class="s">  $ find set_of_easyconfigs/ -type f</span>
+<span class="s">  set_of_easyconfigs/GCC-4.8.3.eb</span>
+<span class="s">  set_of_easyconfigs/foo.txt</span>
+<span class="s">  set_of_easyconfigs/tools/HPCG-2.1-goolf-1.4.10.eb</span>
 
-::
+<span class="se">::</span>
 
-  $ eb set_of_easyconfigs/
-  == temporary log file in case of crash /tmp/easybuild-1yxCvv/easybuild-NeNmZr.log
-  == HPCG/2.1-goolf-1.4.10 is already installed (module found), skipping
-  == GCC/4.8.3 is already installed (module found), skipping
-  == No easyconfigs left to be built.
-  == Build succeeded for 0 out of 0
-  == temporary log file /tmp/easybuild-1yxCvv/easybuild-NeNmZr.log has been removed.
-  == temporary directory /tmp/easybuild-1yxCvv has been removed.
+<span class="s">  $ eb set_of_easyconfigs/</span>
+<span class="s">  == temporary log file in case of crash /tmp/easybuild-1yxCvv/easybuild-NeNmZr.log</span>
+<span class="s">  == HPCG/2.1-goolf-1.4.10 is already installed (module found), skipping</span>
+<span class="s">  == GCC/4.8.3 is already installed (module found), skipping</span>
+<span class="s">  == No easyconfigs left to be built.</span>
+<span class="s">  == Build succeeded for 0 out of 0</span>
+<span class="s">  == temporary log file /tmp/easybuild-1yxCvv/easybuild-NeNmZr.log has been removed.</span>
+<span class="s">  == temporary directory /tmp/easybuild-1yxCvv has been removed.</span>
 
-.. note:: EasyBuild will only pick up the files which end with ``.eb`` ; anything else will be ignored.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> EasyBuild will only pick up the files which end with <span class="s">``.eb``</span> ; anything else will be ignored.
 
-.. tip:: Calling EasyBuild is designed as an `idempotent` operation;
+<span class="p">..</span> <span class="ow">tip</span><span class="p">::</span> Calling EasyBuild is designed as an <span class="nv">`idempotent`</span> operation;
   if a module is available that matches with an provided easyconfig file, the installation will simply be skipped.
 
 
-Commonly used command line options
-----------------------------------
+<span class="gh">Commonly used command line options</span>
+<span class="gh">----------------------------------</span>
 
-Command line help, ``--help`` / ``-H``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Command line help, ``--help`` / ``-H``</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-Detailed information about the usage of the eb command is available via the ``--help``, ``-H``, ``-h`` help options.
+Detailed information about the usage of the eb command is available via the <span class="s">``--help``</span>, <span class="s">``-H``</span>, <span class="s">``-h``</span> help options.
 
-Refer to page :ref:`basic_usage_help` for more detailed information.
+Refer to page <span class="na">:ref:</span><span class="nv">`basic_usage_help`</span> for more detailed information.
 
-.. note:: ``--help`` / ``-H`` spit out the long help info (i.e. including long option names), ``-h`` only includes short option names.
-.. tip:: This is the best way to query for certain information, esp. recent features, since this is in sync with the actual EasyBuild version being used.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> <span class="s">``--help``</span> / <span class="s">``-H``</span> spit out the long help info (i.e. including long option names), <span class="s">``-h``</span> only includes short option names.
+<span class="p">..</span> <span class="ow">tip</span><span class="p">::</span> This is the best way to query for certain information, esp. recent features, since this is in sync with the actual EasyBuild version being used.
 
-Report version, ``--version``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Report version, ``--version``</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-You can query which EasyBuild version you are using with ``--version``::
+You can query which EasyBuild version you are using with <span class="s">``--version``</span><span class="se">::</span>
 
-  $ eb --version
-  This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host example.local.
+<span class="s">  $ eb --version</span>
+<span class="s">  This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host example.local.</span>
 
-.. tip:: Asking EasyBuild to print own its version is a quick way to ensure that ``$PYTHONPATH``
+<span class="p">..</span> <span class="ow">tip</span><span class="p">::</span> Asking EasyBuild to print own its version is a quick way to ensure that <span class="s">``$PYTHONPATH``</span>
   is set up correctly, so that the entire EasyBuild installation (framework and easyblocks) is available.
 
-.. _list_toolchains:
+<span class="p">..</span> <span class="nt">_list_toolchains:</span>
 
-List of known toolchains, ``--list-toolchains``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">List of known toolchains, ``--list-toolchains``</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-For an overview of known toolchains, use ``eb --list-toolchains``.
+For an overview of known toolchains, use <span class="s">``eb --list-toolchains``</span>.
 
 Toolchains have brief mnemonic names, for example:
 
-* ``goolf`` stands for ``GCC, OpenMPI, OpenBLAS/LAPACK, FFTW and ScaLAPACK``
-* ``iimpi`` stands for ``icc/ifort, impi``
-* ``cgmvolf`` stands for ``Clang/GCC, MVAPICH2, OpenBLAS/LAPACK, FFTW``
+<span class="m">*</span> <span class="s">``goolf``</span> stands for <span class="s">``GCC, OpenMPI, OpenBLAS/LAPACK, FFTW and ScaLAPACK``</span>
+<span class="m">*</span> <span class="s">``iimpi``</span> stands for <span class="s">``icc/ifort, impi``</span>
+<span class="m">*</span> <span class="s">``cgmvolf``</span> stands for <span class="s">``Clang/GCC, MVAPICH2, OpenBLAS/LAPACK, FFTW``</span>
 
-The complete table of available toolchains is available at :ref:`toolchains_table`.
+The complete table of available toolchains is available at <span class="na">:ref:</span><span class="nv">`toolchains_table`</span>.
 
-.. _list_easyblocks:
+<span class="p">..</span> <span class="nt">_list_easyblocks:</span>
 
-List of available easyblocks, ``--list-easyblocks``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">List of available easyblocks, ``--list-easyblocks``</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-You can obtain a list of available :ref:`easyblocks` via ``--list-easyblocks``.
+You can obtain a list of available <span class="na">:ref:</span><span class="nv">`easyblocks`</span> via <span class="s">``--list-easyblocks``</span>.
 
-The ``--list-easyblocks`` command line option prints the easyblocks in a hierarchical way,
-showing the inheritance patterns, with the &quot;base&quot; easyblock class ``EasyBlock`` on top.
+The <span class="s">``--list-easyblocks``</span> command line option prints the easyblocks in a hierarchical way,
+showing the inheritance patterns, with the &quot;base&quot; easyblock class <span class="s">``EasyBlock``</span> on top.
 
-Software-specific easyblocks have a name that starts with ``EB_``; the ones that do not are generic easyblocks.
-(cfr. :ref:`easyblocks` for the distinction between both types of easyblocks).
+Software-specific easyblocks have a name that starts with <span class="s">``EB_``</span>; the ones that do not are generic easyblocks.
+(cfr. <span class="na">:ref:</span><span class="nv">`easyblocks`</span> for the distinction between both types of easyblocks).
 
-For example, a list of easyblocks can be obtained with::
+For example, a list of easyblocks can be obtained with<span class="se">::</span>
 
-  $ eb --list-easyblocks
+<span class="s">  $ eb --list-easyblocks</span>
 
 To see more details about the available easyblocks, i.e., in which Python module the class is defined, and where it is
-located, use ``--list-easyblocks=detailed``.
+located, use <span class="s">``--list-easyblocks=detailed``</span>.
 
-Refer to page :ref:`basic_usage_easyblocks` for more information.
+Refer to page <span class="na">:ref:</span><span class="nv">`basic_usage_easyblocks`</span> for more information.
 
-.. _avail_easyconfig_params:
+<span class="p">..</span> <span class="nt">_avail_easyconfig_params:</span>
 
-All available easyconfig parameters, ``--avail-easyconfig-params`` / ``-a``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">All available easyconfig parameters, ``--avail-easyconfig-params`` / ``-a``</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 EasyBuild provides a significant amount of easyconfig parameters.
 An overview of all available easyconfig parameters can be obtained via
-``eb --avail-easyconfig-params``, or ``eb -a`` for short.
+<span class="s">``eb --avail-easyconfig-params``</span>, or <span class="s">``eb -a``</span> for short.
 
-Refer to page :ref:`easyconfig_params` for more information, the possible parameters are a very rich set.
+Refer to page <span class="na">:ref:</span><span class="nv">`easyconfig_params`</span> for more information, the possible parameters are a very rich set.
 
-Combine -a with ``--easyblock/-e`` to include parameters that are specific to a particular easyblock. For example::
+Combine -a with <span class="s">``--easyblock/-e``</span> to include parameters that are specific to a particular easyblock. For example<span class="se">::</span>
 
-  $ eb -a -e EB_WRF
+<span class="s">  $ eb -a -e EB_WRF</span>
 
-If you want to see the full output of running this command, look at :doc:`eb_a_e_EB_WRF`.
+If you want to see the full output of running this command, look at <span class="na">:doc:</span><span class="nv">`eb_a_e_EB_WRF`</span>.
 
-Enable debug logging, ``--debug`` / ``-d``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Enable debug logging, ``--debug`` / ``-d``</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-Use ``eb --debug/-d`` to enable debug logging, to include all details of how EasyBuild performed a build in the log file::
+Use <span class="s">``eb --debug/-d``</span> to enable debug logging, to include all details of how EasyBuild performed a build in the log file<span class="se">::</span>
 
-  $ eb HPCG-2.1-goolf-1.4.10.eb -d
+<span class="s">  $ eb HPCG-2.1-goolf-1.4.10.eb -d</span>
 
-.. tip:: You may enable this by default via adding ``debug = True`` in your EasyBuild configuration file
+<span class="p">..</span> <span class="ow">tip</span><span class="p">::</span> You may enable this by default via adding <span class="s">``debug = True``</span> in your EasyBuild configuration file
 
-.. note:: Debug log files are significantly larger than non-debug logs, so be aware.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Debug log files are significantly larger than non-debug logs, so be aware.
 
-.. _rebuild_option:
+<span class="p">..</span> <span class="nt">_rebuild_option:</span>
 
-Rebuild installation, ``--rebuild``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Rebuild installation, ``--rebuild``</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-Use ``eb --rebuild`` to rebuild a given easyconfig/module.
+Use <span class="s">``eb --rebuild``</span> to rebuild a given easyconfig/module.
 
-.. warning:: Use with care, since the reinstallation of existing modules will be done without requesting confirmation first!
+<span class="p">..</span> <span class="ow">warning</span><span class="p">::</span> Use with care, since the reinstallation of existing modules will be done without requesting confirmation first!
 
-.. tip:: Combine ``--rebuild`` with ``--dry-run`` to get a good view on which installations will be rebuilt.
-   (cfr. :ref:`get_an_overview`)
+<span class="p">..</span> <span class="ow">tip</span><span class="p">::</span> Combine <span class="s">``--rebuild``</span> with <span class="s">``--dry-run``</span> to get a good view on which installations will be rebuilt.
+   (cfr. <span class="na">:ref:</span><span class="nv">`get_an_overview`</span>)
 
-.. note:: To create a backup of existing modules that are regenerated when ``--rebuild`` is used,
-          use ``--backup-modules`` (see also :ref:`backup_modules`).
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> To create a backup of existing modules that are regenerated when <span class="s">``--rebuild``</span> is used,
+          use <span class="s">``--backup-modules``</span> (see also <span class="na">:ref:</span><span class="nv">`backup_modules`</span>).
 
-.. _force_option:
+<span class="p">..</span> <span class="nt">_force_option:</span>
 
-Forced reinstallation, ``--force`` / ``-f``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Forced reinstallation, ``--force`` / ``-f``</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-Use ``eb --force``/``-f`` to force the reinstallation of a given easyconfig/module.
-The behavior of ``--force`` is the same as ``--rebuild`` and ``--ignore-osdeps``.
+Use <span class="s">``eb --force``</span>/<span class="s">``-f``</span> to force the reinstallation of a given easyconfig/module.
+The behavior of <span class="s">``--force``</span> is the same as <span class="s">``--rebuild``</span> and <span class="s">``--ignore-osdeps``</span>.
 
-.. warning:: Use with care, since the reinstallation of existing modules will be done without requesting confirmation first!
+<span class="p">..</span> <span class="ow">warning</span><span class="p">::</span> Use with care, since the reinstallation of existing modules will be done without requesting confirmation first!
 
-.. tip:: Combine ``--force`` with ``--dry-run`` to get a good view on which installations will be forced.
-   (cfr. :ref:`get_an_overview`)
+<span class="p">..</span> <span class="ow">tip</span><span class="p">::</span> Combine <span class="s">``--force``</span> with <span class="s">``--dry-run``</span> to get a good view on which installations will be forced.
+   (cfr. <span class="na">:ref:</span><span class="nv">`get_an_overview`</span>)
 
-.. note:: To create a backup of existing modules that are regenerated when ``--force`` is used,
-          use ``--backup-modules`` (see also :ref:`backup_modules`).
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> To create a backup of existing modules that are regenerated when <span class="s">``--force``</span> is used,
+          use <span class="s">``--backup-modules``</span> (see also <span class="na">:ref:</span><span class="nv">`backup_modules`</span>).
 
-.. _searching_for_easyconfigs:
+<span class="p">..</span> <span class="nt">_searching_for_easyconfigs:</span>
 
-Searching for easyconfigs, ``--search`` / ``-S``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Searching for easyconfigs, ``--search`` / ``-S``</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-Searching for available easyconfig files can be done using the ``--search`` (long output) and ``-S`` (short output)
+Searching for available easyconfig files can be done using the <span class="s">``--search``</span> (long output) and <span class="s">``-S``</span> (short output)
 command line options. All easyconfig files available in the robot search path are considered
-(see :ref:`robot_search_path`), and searching is done `case-insensitive`.
+(see <span class="na">:ref:</span><span class="nv">`robot_search_path`</span>), and searching is done <span class="nv">`case-insensitive`</span>.
 
-For example, to see which easyconfig files are available for the software package named `Mesquite`::
+For example, to see which easyconfig files are available for the software package named <span class="nv">`Mesquite`</span><span class="se">::</span>
 
-  $ eb --search mesquite
-  == temporary log file in case of crash /tmp/eb-_TYdTf/easybuild-iRJ2vb.log
-  == Searching (case-insensitive) for &#39;mesquite&#39; in /home/example/easybuild-easyconfigs/easybuild/easyconfigs
-   * /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/m/Mesquite/Mesquite-2.3.0-goolf-1.4.10.eb
-   * /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/m/Mesquite/Mesquite-2.3.0-ictce-4.1.13.eb
-   * /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/m/Mesquite/Mesquite-2.3.0-ictce-5.3.0.eb
-  == temporary log file(s) /tmp/eb-_TYdTf/easybuild-iRJ2vb.log* have been removed.
-  == temporary directory /tmp/eb-_TYdTf has been removed.
+<span class="s">  $ eb --search mesquite</span>
+<span class="s">  == temporary log file in case of crash /tmp/eb-_TYdTf/easybuild-iRJ2vb.log</span>
+<span class="s">  == Searching (case-insensitive) for &#39;mesquite&#39; in /home/example/easybuild-easyconfigs/easybuild/easyconfigs</span>
+<span class="s">   * /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/m/Mesquite/Mesquite-2.3.0-goolf-1.4.10.eb</span>
+<span class="s">   * /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/m/Mesquite/Mesquite-2.3.0-ictce-4.1.13.eb</span>
+<span class="s">   * /Users/kehoste/work/easybuild-easyconfigs/easybuild/easyconfigs/m/Mesquite/Mesquite-2.3.0-ictce-5.3.0.eb</span>
+<span class="s">  == temporary log file(s) /tmp/eb-_TYdTf/easybuild-iRJ2vb.log* have been removed.</span>
+<span class="s">  == temporary directory /tmp/eb-_TYdTf has been removed.</span>
 
-The same query with ``-S`` is more readable, when there is a joint path that can be collapsed to a variable like ``$CFGS1``::
+The same query with <span class="s">``-S``</span> is more readable, when there is a joint path that can be collapsed to a variable like <span class="s">``$CFGS1``</span><span class="se">::</span>
 
-  $ eb -S mesquite
-  == temporary log file in case of crash /tmp/eb-5diJjn/easybuild-nUXlkj.log
-  == Searching (case-insensitive) for &#39;mesquite&#39; in /home/example/easybuild-easyconfigs/easybuild/easyconfigs
-  CFGS1=/home/example/easybuild-easyconfigs/easybuild/easyconfigs/m/Mesquite
-   * $CFGS1/Mesquite-2.3.0-goolf-1.4.10.eb
-   * $CFGS1/Mesquite-2.3.0-ictce-4.1.13.eb
-   * $CFGS1/Mesquite-2.3.0-ictce-5.3.0.eb
-  == temporary log file(s) /tmp/eb-5diJjn/easybuild-nUXlkj.log* have been removed.
-  == temporary directory /tmp/eb-5diJjn has been removed.
+<span class="s">  $ eb -S mesquite</span>
+<span class="s">  == temporary log file in case of crash /tmp/eb-5diJjn/easybuild-nUXlkj.log</span>
+<span class="s">  == Searching (case-insensitive) for &#39;mesquite&#39; in /home/example/easybuild-easyconfigs/easybuild/easyconfigs</span>
+<span class="s">  CFGS1=/home/example/easybuild-easyconfigs/easybuild/easyconfigs/m/Mesquite</span>
+<span class="s">   * $CFGS1/Mesquite-2.3.0-goolf-1.4.10.eb</span>
+<span class="s">   * $CFGS1/Mesquite-2.3.0-ictce-4.1.13.eb</span>
+<span class="s">   * $CFGS1/Mesquite-2.3.0-ictce-5.3.0.eb</span>
+<span class="s">  == temporary log file(s) /tmp/eb-5diJjn/easybuild-nUXlkj.log* have been removed.</span>
+<span class="s">  == temporary directory /tmp/eb-5diJjn has been removed.</span>
 
 For more specific searching, a regular expression pattern can be supplied (since EasyBuild v2.1.1).
 
 For example, to search which easyconfig files are available for GCC v4.6.x, without listing easyconfig files that use
-GCC v4.6.x as a toolchain::
+GCC v4.6.x as a toolchain<span class="se">::</span>
 
-  $ eb -S ^GCC-4.6
-  == temporary log file in case of crash /tmp/eb-PpwTwm/easybuild-b8yrOG.log
-  == Searching (case-insensitive) for &#39;^GCC-4.6&#39; in /home/example/easybuild-easyconfigs/easybuild/easyconfigs
-  CFGS1=/home/example/easybuild-easyconfigs/easybuild/easyconfigs/g/GCC
-   * $CFGS1/GCC-4.6.3-CLooG-PPL.eb
-   * $CFGS1/GCC-4.6.3.eb
-   * $CFGS1/GCC-4.6.4.eb
-  == temporary log file(s) /tmp/eb-PpwTwm/easybuild-b8yrOG.log* have been removed.
-  == temporary directory /tmp/eb-PpwTwm has been removed.
+<span class="s">  $ eb -S ^GCC-4.6</span>
+<span class="s">  == temporary log file in case of crash /tmp/eb-PpwTwm/easybuild-b8yrOG.log</span>
+<span class="s">  == Searching (case-insensitive) for &#39;^GCC-4.6&#39; in /home/example/easybuild-easyconfigs/easybuild/easyconfigs</span>
+<span class="s">  CFGS1=/home/example/easybuild-easyconfigs/easybuild/easyconfigs/g/GCC</span>
+<span class="s">   * $CFGS1/GCC-4.6.3-CLooG-PPL.eb</span>
+<span class="s">   * $CFGS1/GCC-4.6.3.eb</span>
+<span class="s">   * $CFGS1/GCC-4.6.4.eb</span>
+<span class="s">  == temporary log file(s) /tmp/eb-PpwTwm/easybuild-b8yrOG.log* have been removed.</span>
+<span class="s">  == temporary directory /tmp/eb-PpwTwm has been removed.</span>
 
-Or, to find all easyconfig files for Python versions 2.7.8 and 2.7.9 that use the ``intel`` toolchain::
+Or, to find all easyconfig files for Python versions 2.7.8 and 2.7.9 that use the <span class="s">``intel``</span> toolchain<span class="se">::</span>
 
-  $ eb -S &#39;^Python-2.7.[89].*intel&#39;
-  == temporary log file in case of crash /tmp/eb-Dv5LEJ/easybuild-xpGGSF.log
-  == Searching (case-insensitive) for &#39;^Python-2.7.[89].*intel&#39; in /home/example/easybuild-easyconfigs/easybuild/easyconfigs
-  CFGS1=/home/example/easybuild-easyconfigs/easybuild/easyconfigs/p/Python
-   * $CFGS1/Python-2.7.8-intel-2014.06.eb
-   * $CFGS1/Python-2.7.8-intel-2014b.eb
-   * $CFGS1/Python-2.7.8-intel-2015a.eb
-   * $CFGS1/Python-2.7.9-intel-2015a-bare.eb
-   * $CFGS1/Python-2.7.9-intel-2015a.eb
-  == temporary log file(s) /tmp/eb-Dv5LEJ/easybuild-xpGGSF.log* have been removed.
-  == temporary directory /tmp/eb-Dv5LEJ has been removed.
+<span class="s">  $ eb -S &#39;^Python-2.7.[89].*intel&#39;</span>
+<span class="s">  == temporary log file in case of crash /tmp/eb-Dv5LEJ/easybuild-xpGGSF.log</span>
+<span class="s">  == Searching (case-insensitive) for &#39;^Python-2.7.[89].*intel&#39; in /home/example/easybuild-easyconfigs/easybuild/easyconfigs</span>
+<span class="s">  CFGS1=/home/example/easybuild-easyconfigs/easybuild/easyconfigs/p/Python</span>
+<span class="s">   * $CFGS1/Python-2.7.8-intel-2014.06.eb</span>
+<span class="s">   * $CFGS1/Python-2.7.8-intel-2014b.eb</span>
+<span class="s">   * $CFGS1/Python-2.7.8-intel-2015a.eb</span>
+<span class="s">   * $CFGS1/Python-2.7.9-intel-2015a-bare.eb</span>
+<span class="s">   * $CFGS1/Python-2.7.9-intel-2015a.eb</span>
+<span class="s">  == temporary log file(s) /tmp/eb-Dv5LEJ/easybuild-xpGGSF.log* have been removed.</span>
+<span class="s">  == temporary directory /tmp/eb-Dv5LEJ has been removed.</span>
 
-.. note:: Prior to EasyBuild v2.1.1, the full path to easyconfig files was considered when matching the search pattern.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Prior to EasyBuild v2.1.1, the full path to easyconfig files was considered when matching the search pattern.
           Starting with EasyBuild v2.1.1, only the filename of the easyconfig file itself is taken into account.
 
-.. _use_robot:
+<span class="p">..</span> <span class="nt">_use_robot:</span>
 
-Enabling dependency resolution, ``--robot`` / ``-r`` and ``--robot-paths``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Enabling dependency resolution, ``--robot`` / ``-r`` and ``--robot-paths``</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 EasyBuild supports installing an entire software stack, including the required toolchain
-if needed, with a single ``eb`` invocation.
+if needed, with a single <span class="s">``eb``</span> invocation.
 
-To enable dependency resolution, use the ``--robot`` command line option (or ``-r`` for short)::
+To enable dependency resolution, use the <span class="s">``--robot``</span> command line option (or <span class="s">``-r``</span> for short)<span class="se">::</span>
 
-  $ eb mpiBLAST-1.6.0-goolf-1.4.10.eb --robot
-  [...]
-  == building and installing GCC/4.7.2...
-  [...]
-  == building and installing hwloc/1.6.2-GCC-4.7.2...
-  [...]
-  == building and installing OpenMPI/1.6.4-GCC-4.7.2...
-  [...]
-  == building and installing gompi/1.4.10...
-  [...]
-  == building and installing OpenBLAS/0.2.6-gompi-1.4.10-LAPACK-3.4.2...
-  [...]
-  == building and installing FFTW/3.3.3-gompi-1.4.10...
-  [...]
-  == building and installing ScaLAPACK/2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2...
-  [...]
-  == building and installing goolf/1.4.10...
-  [...]
-  == building and installing mpiBLAST/1.6.0-goolf-1.4.10...
-  [...]
-  == Build succeeded for 9 out of 9
+<span class="s">  $ eb mpiBLAST-1.6.0-goolf-1.4.10.eb --robot</span>
+<span class="s">  [...]</span>
+<span class="s">  == building and installing GCC/4.7.2...</span>
+<span class="s">  [...]</span>
+<span class="s">  == building and installing hwloc/1.6.2-GCC-4.7.2...</span>
+<span class="s">  [...]</span>
+<span class="s">  == building and installing OpenMPI/1.6.4-GCC-4.7.2...</span>
+<span class="s">  [...]</span>
+<span class="s">  == building and installing gompi/1.4.10...</span>
+<span class="s">  [...]</span>
+<span class="s">  == building and installing OpenBLAS/0.2.6-gompi-1.4.10-LAPACK-3.4.2...</span>
+<span class="s">  [...]</span>
+<span class="s">  == building and installing FFTW/3.3.3-gompi-1.4.10...</span>
+<span class="s">  [...]</span>
+<span class="s">  == building and installing ScaLAPACK/2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2...</span>
+<span class="s">  [...]</span>
+<span class="s">  == building and installing goolf/1.4.10...</span>
+<span class="s">  [...]</span>
+<span class="s">  == building and installing mpiBLAST/1.6.0-goolf-1.4.10...</span>
+<span class="s">  [...]</span>
+<span class="s">  == Build succeeded for 9 out of 9</span>
 
 The dependency resolution mechanism will construct a full dependency graph for the software package(s)
 being installed, after which a list of dependencies is composed for which no module is available yet.
 Each of the retained dependencies will then be built and installed, in the required order as indicated
 by the dependency graph.
 
-.. tip:: Using ``--robot`` is particularly useful for software packages that have an extensive list of dependencies,
+<span class="p">..</span> <span class="ow">tip</span><span class="p">::</span> Using <span class="s">``--robot``</span> is particularly useful for software packages that have an extensive list of dependencies,
   or when reinstalling software using a different compiler toolchain
-  (you can use the ``--try-toolchain`` command line option in combination with ``--robot``).
+  (you can use the <span class="s">``--try-toolchain``</span> command line option in combination with <span class="s">``--robot``</span>).
 
-.. note:: Unless dependency resolution is enabled, EasyBuid requires that modules are available for every dependency.
-  If ``--robot`` is not used and one or more modules are missing, ``eb`` will exit with an error stating that a module
-  for a particular dependency could not be found. For example::
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Unless dependency resolution is enabled, EasyBuid requires that modules are available for every dependency.
+  If <span class="s">``--robot``</span> is not used and one or more modules are missing, <span class="s">``eb``</span> will exit with an error stating that a module
+  for a particular dependency could not be found. For example<span class="se">::</span>
 
-    add_dependencies: no module &#39;GCC/4.7.2&#39; found for dependency {...}
+<span class="s">    add_dependencies: no module &#39;GCC/4.7.2&#39; found for dependency {...}</span>
 
-.. _robot_search_path:
+<span class="p">..</span> <span class="nt">_robot_search_path:</span>
 
-Searching for easyconfigs: the robot search path
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Searching for easyconfigs: the robot search path</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
 For each dependency that does not have a matching module installed yet, EasyBuild requires a corresponding easyconfig
-file. If no such easyconfig file was specified on the ``eb`` command line, the dependency resolution mechanism will try
-to locate one in the `robot search path`.
+file. If no such easyconfig file was specified on the <span class="s">``eb``</span> command line, the dependency resolution mechanism will try
+to locate one in the <span class="nv">`robot search path`</span>.
 
-Searching for easyconfigs is done based on filename (see also :ref:`what_is_an_easyconfig`), with filenames being derived
+Searching for easyconfigs is done based on filename (see also <span class="na">:ref:</span><span class="nv">`what_is_an_easyconfig`</span>), with filenames being derived
 from the dependency specification (i.e. software name/version, toolchain and version suffix). For each entry in the robot
 search path, a couple of different filepaths are considered, mostly determined by the software name.
 
-For example, when looking for an easyconfig for ``OpenMPI`` version ``1.6.4`` and version suffix ``-test`` with toolchain
-``GCC/4.7.2``, the following filepaths are considered (relative to each entry in the robot search path):
+For example, when looking for an easyconfig for <span class="s">``OpenMPI``</span> version <span class="s">``1.6.4``</span> and version suffix <span class="s">``-test``</span> with toolchain
+<span class="s">``GCC/4.7.2``</span>, the following filepaths are considered (relative to each entry in the robot search path):
 
-* ``OpenMPI/1.6.4-GCC-4.7.2-test.eb``
-* ``OpenMPI/OpenMPI-1.6.4-GCC-4.7.2-test.eb``
-* ``o/OpenMPI/OpenMPI-1.6.4-GCC-4.7.2-test.eb``
-* ``OpenMPI-1.6.4-GCC-4.7.2-test.eb``
+<span class="m">*</span> <span class="s">``OpenMPI/1.6.4-GCC-4.7.2-test.eb``</span>
+<span class="m">*</span> <span class="s">``OpenMPI/OpenMPI-1.6.4-GCC-4.7.2-test.eb``</span>
+<span class="m">*</span> <span class="s">``o/OpenMPI/OpenMPI-1.6.4-GCC-4.7.2-test.eb``</span>
+<span class="m">*</span> <span class="s">``OpenMPI-1.6.4-GCC-4.7.2-test.eb``</span>
 
-.. note:: Sometimes easyconfig files are needed even when the modules for the dependencies are already available,
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Sometimes easyconfig files are needed even when the modules for the dependencies are already available,
  i.e., whenever the information provided by the dependency specification (software name/version, toolchain and version
- suffix) is not sufficient. This is the case when using ``--dry-run`` to construct the complete dependency graph, or
- when the active module naming scheme requires some additional information (e.g., the ``moduleclass``).
+ suffix) is not sufficient. This is the case when using <span class="s">``--dry-run``</span> to construct the complete dependency graph, or
+ when the active module naming scheme requires some additional information (e.g., the <span class="s">``moduleclass``</span>).
 
-.. note:: If EasyBuild is unable to locate required easyconfigs, an appropriate error message will be shown. For example::
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> If EasyBuild is unable to locate required easyconfigs, an appropriate error message will be shown. For example::
 
     Irresolvable dependencies encountered: GCC/4.7.2
 
- or::
+ or<span class="se">::</span>
 
-    Failed to find easyconfig file &#39;GCC-4.7.2.eb&#39; when determining module name for: {...}
+<span class="s">    Failed to find easyconfig file &#39;GCC-4.7.2.eb&#39; when determining module name for: {...}</span>
 
-Default robot search path
-+++++++++++++++++++++++++
+<span class="gh">Default robot search path</span>
+<span class="gh">+++++++++++++++++++++++++</span>
 
 By default, EasyBuild will only include the collection of easyconfig files that is part of the EasyBuild installation
-in the robot search path. More specifically, only directories listed in the `Python search path` (partially specified
-by the ``$PYTHONPATH`` environment variable) that contain a subdirectory named ``easybuild/easyconfigs`` are considered
+in the robot search path. More specifically, only directories listed in the <span class="nv">`Python search path`</span> (partially specified
+by the <span class="s">``$PYTHONPATH``</span> environment variable) that contain a subdirectory named <span class="s">``easybuild/easyconfigs``</span> are considered
 part of the robot search path (in the order they are encountered).
 
-.. _controlling_robot_search_path:
+<span class="p">..</span> <span class="nt">_controlling_robot_search_path:</span>
 
-Controlling the robot search path
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Controlling the robot search path</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-To control the robot search path, you can specify a (colon-separated list of) path(s) to ``--robot``/``-r`` and/or
-``--robot-paths`` (or, equivalently, ``$EASYBUILD_ROBOT`` and/or ``$EASYBUILD_ROBOT_PATHS``)::
+To control the robot search path, you can specify a (colon-separated list of) path(s) to <span class="s">``--robot``</span>/<span class="s">``-r``</span> and/or
+<span class="s">``--robot-paths``</span> (or, equivalently, <span class="s">``$EASYBUILD_ROBOT``</span> and/or <span class="s">``$EASYBUILD_ROBOT_PATHS``</span>)<span class="se">::</span>
 
-  eb --robot=$PWD:$HOME ...
+<span class="s">  eb --robot=$PWD:$HOME ...</span>
 
 These two configuration options each serve a particular purpose, and together define the robot search path:
 
-* ``--robot``, ``-r``:
+<span class="m">*</span> <span class="s">``--robot``</span>, <span class="s">``-r``</span>:
 
-  * intended to be used (only) as a command line option to ``eb`` (although it can also be defined through another
+  <span class="m">*</span> intended to be used (only) as a command line option to <span class="s">``eb``</span> (although it can also be defined through another
     configuration type)
-  * enables the dependency resolution mechanism (disabled by default)
-  * optionally a list of paths can be specified, which is included *first* in the robot search path
-  * by default, the corresponding list of paths is *empty*
+  <span class="m">*</span> enables the dependency resolution mechanism (disabled by default)
+  <span class="m">*</span> optionally a list of paths can be specified, which is included <span class="ge">*first*</span> in the robot search path
+  <span class="m">*</span> by default, the corresponding list of paths is <span class="ge">*empty*</span>
 
-* ``--robot-paths``:
+<span class="m">*</span> <span class="s">``--robot-paths``</span>:
 
-  * intended to be defined in an EasyBuild configuration file, or via ``$EASYBUILD_ROBOT_PATHS``
-  * does *not* enable the dependency resolution mechanism
-  * the specified list of paths is included *last* in the robot search path
-  * by default, only the path to the easyconfig files that are part of the EasyBuild installation is listed
-  * **note**: setting this configuration option implies redefining the default robot search path, unless a
-    prepending/appending list of paths is specified, see :ref:`robot_search_path_prepend_append`
+  <span class="m">*</span> intended to be defined in an EasyBuild configuration file, or via <span class="s">``$EASYBUILD_ROBOT_PATHS``</span>
+  <span class="m">*</span> does <span class="ge">*not*</span> enable the dependency resolution mechanism
+  <span class="m">*</span> the specified list of paths is included <span class="ge">*last*</span> in the robot search path
+  <span class="m">*</span> by default, only the path to the easyconfig files that are part of the EasyBuild installation is listed
+  <span class="m">*</span> <span class="gs">**note**</span>: setting this configuration option implies redefining the default robot search path, unless a
+    prepending/appending list of paths is specified, see <span class="na">:ref:</span><span class="nv">`robot_search_path_prepend_append`</span>
 
-For both options, the list of paths should be specified as a colon-separated (``:``) list.
+For both options, the list of paths should be specified as a colon-separated (<span class="s">``:``</span>) list.
 
-By combining ``--robot`` and ``--robot-paths`` using the different configuration types (see also
-:ref:`configuration_types`), you have full control over the robot search path: which paths are included,
+By combining <span class="s">``--robot``</span> and <span class="s">``--robot-paths``</span> using the different configuration types (see also
+<span class="na">:ref:</span><span class="nv">`configuration_types`</span>), you have full control over the robot search path: which paths are included,
 the order of those paths, whether or not the easyconfig files that are part of the EasyBuild installation should be
 considered, etc.
 
-A constant named ``DEFAULT_ROBOT_PATHS`` is available that can be used (only) in EasyBuild configuration files to refer
+A constant named <span class="s">``DEFAULT_ROBOT_PATHS``</span> is available that can be used (only) in EasyBuild configuration files to refer
 to the default robot search path, i.e. the path to the easyconfigs that are part of the EasyBuild installation.
 For more information on using constants in EasyBuild configuration files, see
-:ref:`configuration_file_templates_constants`.
+<span class="na">:ref:</span><span class="nv">`configuration_file_templates_constants`</span>.
 
-.. tip::
-  Only use ``--robot`` to enable the dependency resolution mechanism; define ``robot-paths`` in your EasyBuild
-  configuration file or via ``$EASYBUILD_ROBOT_PATHS`` to specify which sets of easyconfig files EasyBuild
-  should consider, and in which order. By means of exception, a path can be specified to ``--robot`` to give a specific
+<span class="p">..</span> <span class="ow">tip</span><span class="p">::</span>
+  Only use <span class="s">``--robot``</span> to enable the dependency resolution mechanism; define <span class="s">``robot-paths``</span> in your EasyBuild
+  configuration file or via <span class="s">``$EASYBUILD_ROBOT_PATHS``</span> to specify which sets of easyconfig files EasyBuild
+  should consider, and in which order. By means of exception, a path can be specified to <span class="s">``--robot``</span> to give a specific
   set of easyconfig files precedence over others, for example when testing modified easyconfig files.
 
-.. note:: The paths specified on the configuration type with the highest order of preference *replace* any paths
-  specified otherwise, i.e. values are not retained across configuration types. That is: ``--robot`` *overrides*
-  the value in ``$EASYBUILD_ROBOT``, ``$EASYBUILD_ROBOT_PATHS`` *overrides* the ``robot-paths`` specification in an
-  EasyBuild configuration file, etc. Of course, the value specified for ``--robot`` does not directly affect the value
-  specified for ``--robot-paths``, on any configuration level, and vice versa. For more information on the relation
-  between the different configuration types, see :ref:`configuration_types`.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> The paths specified on the configuration type with the highest order of preference <span class="ge">*replace*</span> any paths
+  specified otherwise, i.e. values are not retained across configuration types. That is: <span class="s">``--robot``</span> <span class="ge">*overrides*</span>
+  the value in <span class="s">``$EASYBUILD_ROBOT``</span>, <span class="s">``$EASYBUILD_ROBOT_PATHS``</span> <span class="ge">*overrides*</span> the <span class="s">``robot-paths``</span> specification in an
+  EasyBuild configuration file, etc. Of course, the value specified for <span class="s">``--robot``</span> does not directly affect the value
+  specified for <span class="s">``--robot-paths``</span>, on any configuration level, and vice versa. For more information on the relation
+  between the different configuration types, see <span class="na">:ref:</span><span class="nv">`configuration_types`</span>.
 
-.. _robot_search_path_prepend_append:
+<span class="p">..</span> <span class="nt">_robot_search_path_prepend_append:</span>
 
-Prepending and/or appending to the default robot search path
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+<span class="gh">Prepending and/or appending to the default robot search path</span>
+<span class="gh">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span>
 
-Prepending or appending to the default robot search path is supported via the ``--robot-paths`` configuration option.
+Prepending or appending to the default robot search path is supported via the <span class="s">``--robot-paths``</span> configuration option.
 
-To *prepend* one or more paths, a list of paths followed by a &#39;``:``&#39; should be specified.
+To <span class="ge">*prepend*</span> one or more paths, a list of paths followed by a &#39;<span class="s">``:``</span>&#39; should be specified.
 
-Analogously, to *append* one or more paths, a list of paths preceded by a &#39;``:``&#39; should be specified.
+Analogously, to <span class="ge">*append*</span> one or more paths, a list of paths preceded by a &#39;<span class="s">``:``</span>&#39; should be specified.
 
 For example:
 
-* ``export EASYBUILD_ROBOT_PATHS=/tmp/$USER:`` specifies to prepend ``/tmp/$USER`` to the robot search path
-* ``--robot-paths :$HOME/eb:$HOME/test`` specifies to append ``$HOME/eb`` and ``$HOME/test`` to the robot search path (in that order)
-* ``--robot-paths=/tmp/$USER::$HOME/test`` specifies to prepend ``/tmp/$USER`` *and* append ``$HOME/test`` to the robot search path
+<span class="m">*</span> <span class="s">``export EASYBUILD_ROBOT_PATHS=/tmp/$USER:``</span> specifies to prepend <span class="s">``/tmp/$USER``</span> to the robot search path
+<span class="m">*</span> <span class="s">``--robot-paths :$HOME/eb:$HOME/test``</span> specifies to append <span class="s">``$HOME/eb``</span> and <span class="s">``$HOME/test``</span> to the robot search path (in that order)
+<span class="m">*</span> <span class="s">``--robot-paths=/tmp/$USER::$HOME/test``</span> specifies to prepend <span class="s">``/tmp/$USER``</span> <span class="ge">*and*</span> append <span class="s">``$HOME/test``</span> to the robot search path
 
-Example use case
-++++++++++++++++
+<span class="gh">Example use case</span>
+<span class="gh">++++++++++++++++</span>
 
 For example, say we want to configure EasyBuild to behave as follows w.r.t. the robot search path:
 
-* (always) prefer easyconfig files in the archive/repository over the ones that are included in the EasyBuild installation (i)
-* consider easyconfig files located in the current directory or home directory first (in that order), before any others (ii)
+<span class="m">*</span> (always) prefer easyconfig files in the archive/repository over the ones that are included in the EasyBuild installation (i)
+<span class="m">*</span> consider easyconfig files located in the current directory or home directory first (in that order), before any others (ii)
 
 Matching setup:
 
-* satisfy (i) using ``robot-paths`` in one of the active EasyBuild configuration files (see also
-  :ref:`list_of_configuration_files`)::
+<span class="m">*</span> satisfy (i) using <span class="s">``robot-paths``</span> in one of the active EasyBuild configuration files (see also
+  <span class="na">:ref:</span><span class="nv">`list_of_configuration_files`</span>)<span class="se">::</span>
 
-    [basic]
-    repositorypath = /home/example/easybuild/easyconfigs_archive
-    robot-paths = %(repositorypath)s:%(DEFAULT_ROBOT_PATHS)s
+<span class="s">    [basic]</span>
+<span class="s">    repositorypath = /home/example/easybuild/easyconfigs_archive</span>
+<span class="s">    robot-paths = %(repositorypath)s:%(DEFAULT_ROBOT_PATHS)s</span>
 
-* satisfy (ii) via ``--robot`` on the ``eb`` command line::
+<span class="m">*</span> satisfy (ii) via <span class="s">``--robot``</span> on the <span class="s">``eb``</span> command line::
 
     eb mpiBLAST-1.6.0-goolf-1.4.10.eb --robot $PWD:$HOME
 
 
-.. _get_an_overview:
+<span class="p">..</span> <span class="nt">_get_an_overview:</span>
 
-Getting an overview of planned installations ``--dry-run`` / ``-D``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Getting an overview of planned installations ``--dry-run`` / ``-D``</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-You can do a &quot;dry-run&quot; overview by supplying ``-D/--dry-run`` (typically combined with ``--robot``, in the form of ``-Dr``)::
+You can do a &quot;dry-run&quot; overview by supplying <span class="s">``-D/--dry-run``</span> (typically combined with <span class="s">``--robot``</span>, in the form of <span class="s">``-Dr``</span>)<span class="se">::</span>
 
-  $ eb mpiBLAST-1.6.0-goolf-1.4.10.eb -Dr
-  == temporary log file in case of crash /tmp/easybuild-vyNQhw/easybuild-pO8EJv.log
-  Dry run: printing build status of easyconfigs and dependencies
-  CFGS=/home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs
-   * [x] $CFGS/g/GCC/GCC-4.7.2.eb (module: GCC/4.7.2)
-   * [x] $CFGS/h/hwloc/hwloc-1.6.2-GCC-4.7.2.eb (module: hwloc/1.6.2-GCC-4.7.2)
-   * [x] $CFGS/o/OpenMPI/OpenMPI-1.6.4-GCC-4.7.2.eb (module: OpenMPI/1.6.4-GCC-4.7.2)
-   * [x] $CFGS/g/gompi/gompi-1.4.10.eb (module: gompi/1.4.10)
-   * [ ] $CFGS/o/OpenBLAS/OpenBLAS-0.2.6-gompi-1.4.10-LAPACK-3.4.2.eb (module: OpenBLAS/0.2.6-gompi-1.4.10-LAPACK-3.4.2)
-   * [ ] $CFGS/f/FFTW/FFTW-3.3.3-gompi-1.4.10.eb (module: FFTW/3.3.3-gompi-1.4.10)
-   * [ ] $CFGS/s/ScaLAPACK/ScaLAPACK-2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2.eb (module: ScaLAPACK/2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2)
-   * [ ] $CFGS/g/goolf/goolf-1.4.10.eb (module: goolf/1.4.10)
-   * [ ] $CFGS/m/mpiBLAST/mpiBLAST-1.6.0-goolf-1.4.10.eb (module: mpiBLAST/1.6.0-goolf-1.4.10)
-  == temporary log file /tmp/easybuild-vyNQhw/easybuild-pO8EJv.log has been removed.
-  == temporary directory /tmp/easybuild-vyNQhw has been removed.
+<span class="s">  $ eb mpiBLAST-1.6.0-goolf-1.4.10.eb -Dr</span>
+<span class="s">  == temporary log file in case of crash /tmp/easybuild-vyNQhw/easybuild-pO8EJv.log</span>
+<span class="s">  Dry run: printing build status of easyconfigs and dependencies</span>
+<span class="s">  CFGS=/home/example/.local/easybuild/software/EasyBuild/1.15.2/lib/python2.7/site-packages/easybuild_easyconfigs-1.15.2.0-py2.7.egg/easybuild/easyconfigs</span>
+<span class="s">   * [x] $CFGS/g/GCC/GCC-4.7.2.eb (module: GCC/4.7.2)</span>
+<span class="s">   * [x] $CFGS/h/hwloc/hwloc-1.6.2-GCC-4.7.2.eb (module: hwloc/1.6.2-GCC-4.7.2)</span>
+<span class="s">   * [x] $CFGS/o/OpenMPI/OpenMPI-1.6.4-GCC-4.7.2.eb (module: OpenMPI/1.6.4-GCC-4.7.2)</span>
+<span class="s">   * [x] $CFGS/g/gompi/gompi-1.4.10.eb (module: gompi/1.4.10)</span>
+<span class="s">   * [ ] $CFGS/o/OpenBLAS/OpenBLAS-0.2.6-gompi-1.4.10-LAPACK-3.4.2.eb (module: OpenBLAS/0.2.6-gompi-1.4.10-LAPACK-3.4.2)</span>
+<span class="s">   * [ ] $CFGS/f/FFTW/FFTW-3.3.3-gompi-1.4.10.eb (module: FFTW/3.3.3-gompi-1.4.10)</span>
+<span class="s">   * [ ] $CFGS/s/ScaLAPACK/ScaLAPACK-2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2.eb (module: ScaLAPACK/2.0.2-gompi-1.4.10-OpenBLAS-0.2.6-LAPACK-3.4.2)</span>
+<span class="s">   * [ ] $CFGS/g/goolf/goolf-1.4.10.eb (module: goolf/1.4.10)</span>
+<span class="s">   * [ ] $CFGS/m/mpiBLAST/mpiBLAST-1.6.0-goolf-1.4.10.eb (module: mpiBLAST/1.6.0-goolf-1.4.10)</span>
+<span class="s">  == temporary log file /tmp/easybuild-vyNQhw/easybuild-pO8EJv.log has been removed.</span>
+<span class="s">  == temporary directory /tmp/easybuild-vyNQhw has been removed.</span>
 
 Note how the different status symbols denote distinct handling states by EasyBuild:
 
-* ``[ ]`` The build is not available, EasyBuild will deliver it
-* ``[x]`` The build is available, EasyBuild will skip building this module
-* ``[F]`` The build is available, however EasyBuild has been asked to force a rebuild via ``--force`` and will do so
-* ``[R]`` The build is available, and the application will be rebuilt as request via ``--rebuild``
+<span class="m">*</span> <span class="s">``[ ]``</span> The build is not available, EasyBuild will deliver it
+<span class="m">*</span> <span class="s">``[x]``</span> The build is available, EasyBuild will skip building this module
+<span class="m">*</span> <span class="s">``[F]``</span> The build is available, however EasyBuild has been asked to force a rebuild via <span class="s">``--force``</span> and will do so
+<span class="m">*</span> <span class="s">``[R]``</span> The build is available, and the application will be rebuilt as request via <span class="s">``--rebuild``</span>
 
 
-.. note:: Since EasyBuild v2.4.0, a detailed overview of the build and install procedure that EasyBuild
- will be execute can be obtained using ``--extended-dry-run`` or ``-x``, see :ref:`extended_dry_run`.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Since EasyBuild v2.4.0, a detailed overview of the build and install procedure that EasyBuild
+ will be execute can be obtained using <span class="s">``--extended-dry-run``</span> or <span class="s">``-x``</span>, see <span class="na">:ref:</span><span class="nv">`extended_dry_run`</span>.
 
-.. _eb_missing:
+<span class="p">..</span> <span class="nt">_eb_missing:</span>
 
-Getting an overview of missing installations ``--missing-modules`` / ``-M``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Getting an overview of missing installations ``--missing-modules`` / ``-M``</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 Since EasyBuild v3.9.1, you can obtain a list of missing installations (i.e. easyconfigs for which
-no corresponding environment module file is available yet) using ``eb --missing-modules`` (or ``-eb -M`` for short)::
+no corresponding environment module file is available yet) using <span class="s">``eb --missing-modules``</span> (or <span class="s">``-eb -M``</span> for short)<span class="se">::</span>
 
-    $ eb TensorFlow-1.13.1-foss-2019a-Python-3.7.2.eb --missing-modules
-    == temporary log file in case of crash /tmp/eb-bjCz9b/easybuild-CSAvhK.log
+<span class="s">    $ eb TensorFlow-1.13.1-foss-2019a-Python-3.7.2.eb --missing-modules</span>
+<span class="s">    == temporary log file in case of crash /tmp/eb-bjCz9b/easybuild-CSAvhK.log</span>
 
-    2 out of 54 required modules missing:
+<span class="s">    2 out of 54 required modules missing:</span>
 
-    * Bazel/0.20.0-GCCcore-8.2.0 (Bazel-0.20.0-GCCcore-8.2.0.eb)
-    * TensorFlow/1.13.1-foss-2019a-Python-3.7.2 (TensorFlow-1.13.1-foss-2019a-Python-3.7.2.eb)
+<span class="s">    * Bazel/0.20.0-GCCcore-8.2.0 (Bazel-0.20.0-GCCcore-8.2.0.eb)</span>
+<span class="s">    * TensorFlow/1.13.1-foss-2019a-Python-3.7.2 (TensorFlow-1.13.1-foss-2019a-Python-3.7.2.eb)</span>
 
-    == Temporary log file(s) /tmp/eb-bjCz9b/easybuild-CSAvhK.log* have been removed.
-    == Temporary directory /tmp/eb-bjCz9b has been removed.
+<span class="s">    == Temporary log file(s) /tmp/eb-bjCz9b/easybuild-CSAvhK.log* have been removed.</span>
+<span class="s">    == Temporary directory /tmp/eb-bjCz9b has been removed.</span>
 
 Note that dependency resolution is enabled automatically
-(i.e., ``--robot`` is implied when using ``--missing-modules`` or ``-M``).
+(i.e., <span class="s">``--robot``</span> is implied when using <span class="s">``--missing-modules``</span> or <span class="s">``-M``</span>).
 
-.. _tweaking_easyconfigs_using_try:
+<span class="p">..</span> <span class="nt">_tweaking_easyconfigs_using_try:</span>
 
-Tweaking existing easyconfig files, using ``--try-*``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Tweaking existing easyconfig files, using ``--try-*``</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-Making minor changes to existing easyconfig files can be done straight from the ``eb`` command line.
+Making minor changes to existing easyconfig files can be done straight from the <span class="s">``eb``</span> command line.
 This way, having to manually copying and editing easyconfig files can be avoided.
 
-Tweaking existing easyconfig files can be done using the ``--try-*`` command line options.
+Tweaking existing easyconfig files can be done using the <span class="s">``--try-*``</span> command line options.
 For each of the software build options that can be used as an alternative to specifying easyconfig file names,
-a matching ``--try-X`` command line options is available:
+a matching <span class="s">``--try-X``</span> command line options is available:
 
-* ``--try-toolchain`` to try using the toolchain with the given name and version
+<span class="m">*</span> <span class="s">``--try-toolchain``</span> to try using the toolchain with the given name and version
 
-  * format: ``--try-toolchain=&lt;name&gt;,&lt;version&gt;``
-  * ``--try-toolchain-name`` to try using the latest toolchain version of a toolchain
-  * ``--try-toolchain-version`` to try using a different toolchain version
+  <span class="m">*</span> format: <span class="s">``--try-toolchain=&lt;name&gt;,&lt;version&gt;``</span>
+  <span class="m">*</span> <span class="s">``--try-toolchain-name``</span> to try using the latest toolchain version of a toolchain
+  <span class="m">*</span> <span class="s">``--try-toolchain-version``</span> to try using a different toolchain version
 
-* ``--try-software-version`` to try building a different software version
-* ``--try-amend`` to try tweaking a different easyconfig parameter
+<span class="m">*</span> <span class="s">``--try-software-version``</span> to try building a different software version
+<span class="m">*</span> <span class="s">``--try-amend``</span> to try tweaking a different easyconfig parameter
 
-  * format: ``--try-amend=&lt;param&gt;=&lt;value&gt;``
-  * only supports string and list-of-strings value types
+  <span class="m">*</span> format: <span class="s">``--try-amend=&lt;param&gt;=&lt;value&gt;``</span>
+  <span class="m">*</span> only supports string and list-of-strings value types
 
-For example, to build and install WRF and its dependencies with a different toolchain version::
+For example, to build and install WRF and its dependencies with a different toolchain version<span class="se">::</span>
 
-    $ eb WRF-3.5.1-goolf-1.4.10-dmpar.eb --try-toolchain-version=1.5.14 -Dr
-    == temporary log file in case of crash /tmp/easybuild-Y9WApt/easybuild-VmPiOH.log
-    Dry run: printing build status of easyconfigs and dependencies
-     * [x] /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/g/GCC/GCC-4.8.2.eb (module: GCC/4.8.2)
-     * [x] /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/h/hwloc/hwloc-1.8.1-GCC-4.8.2.eb (module: hwloc/1.8.1-GCC-4.8.2)
-     * [x] /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/o/OpenMPI/OpenMPI-1.6.5-GCC-4.8.2.eb (module: OpenMPI/1.6.5-GCC-4.8.2)
-     * [x] /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/g/gompi/gompi-1.5.14.eb (module: gompi/1.5.14)
-     * [x] /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/o/OpenBLAS/OpenBLAS-0.2.8-gompi-1.5.14-LAPACK-3.5.0.eb (module: OpenBLAS/0.2.8-gompi-1.5.14-LAPACK-3.5.0)
-     * [x] /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/f/FFTW/FFTW-3.3.4-gompi-1.5.14.eb (module: FFTW/3.3.4-gompi-1.5.14)
-     * [x] /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/s/ScaLAPACK/ScaLAPACK-2.0.2-gompi-1.5.14-OpenBLAS-0.2.8-LAPACK-3.5.0.eb (module: ScaLAPACK/2.0.2-gompi-1.5.14-OpenBLAS-0.2.8-LAPACK-3.5.0)
-     * [x] /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/g/goolf/goolf-1.5.14.eb (module: goolf/1.5.14)
-     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/zlib-1.2.7-goolf-1.5.14.eb (module: zlib/1.2.7-goolf-1.5.14)
-     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/Szip-2.1-goolf-1.5.14.eb (module: Szip/2.1-goolf-1.5.14)
-     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/ncurses-5.9-goolf-1.5.14.eb (module: ncurses/5.9-goolf-1.5.14)
-     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/flex-2.5.37-goolf-1.5.14.eb (module: flex/2.5.37-goolf-1.5.14)
-     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/M4-1.4.16-goolf-1.5.14.eb (module: M4/1.4.16-goolf-1.5.14)
-     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/JasPer-1.900.1-goolf-1.5.14.eb (module: JasPer/1.900.1-goolf-1.5.14)
-     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/HDF5-1.8.10-patch1-goolf-1.5.14.eb (module: HDF5/1.8.10-patch1-goolf-1.5.14)
-     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/tcsh-6.18.01-goolf-1.5.14.eb (module: tcsh/6.18.01-goolf-1.5.14)
-     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/Bison-2.7-goolf-1.5.14.eb (module: Bison/2.7-goolf-1.5.14)
-     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/Doxygen-1.8.3.1-goolf-1.5.14.eb (module: Doxygen/1.8.3.1-goolf-1.5.14)
-     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/netCDF-4.2.1.1-goolf-1.5.14.eb (module: netCDF/4.2.1.1-goolf-1.5.14)
-     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/netCDF-Fortran-4.2-goolf-1.5.14.eb (module: netCDF-Fortran/4.2-goolf-1.5.14)
-     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/WRF-3.5.1-goolf-1.5.14-dmpar.eb (module: WRF/3.5.1-goolf-1.5.14-dmpar)
-    == temporary log file /tmp/easybuild-Y9WApt/easybuild-VmPiOH.log has been removed.
-    == temporary directory /tmp/easybuild-Y9WApt has been removed.
+<span class="s">    $ eb WRF-3.5.1-goolf-1.4.10-dmpar.eb --try-toolchain-version=1.5.14 -Dr</span>
+<span class="s">    == temporary log file in case of crash /tmp/easybuild-Y9WApt/easybuild-VmPiOH.log</span>
+<span class="s">    Dry run: printing build status of easyconfigs and dependencies</span>
+<span class="s">     * [x] /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/g/GCC/GCC-4.8.2.eb (module: GCC/4.8.2)</span>
+<span class="s">     * [x] /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/h/hwloc/hwloc-1.8.1-GCC-4.8.2.eb (module: hwloc/1.8.1-GCC-4.8.2)</span>
+<span class="s">     * [x] /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/o/OpenMPI/OpenMPI-1.6.5-GCC-4.8.2.eb (module: OpenMPI/1.6.5-GCC-4.8.2)</span>
+<span class="s">     * [x] /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/g/gompi/gompi-1.5.14.eb (module: gompi/1.5.14)</span>
+<span class="s">     * [x] /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/o/OpenBLAS/OpenBLAS-0.2.8-gompi-1.5.14-LAPACK-3.5.0.eb (module: OpenBLAS/0.2.8-gompi-1.5.14-LAPACK-3.5.0)</span>
+<span class="s">     * [x] /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/f/FFTW/FFTW-3.3.4-gompi-1.5.14.eb (module: FFTW/3.3.4-gompi-1.5.14)</span>
+<span class="s">     * [x] /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/s/ScaLAPACK/ScaLAPACK-2.0.2-gompi-1.5.14-OpenBLAS-0.2.8-LAPACK-3.5.0.eb (module: ScaLAPACK/2.0.2-gompi-1.5.14-OpenBLAS-0.2.8-LAPACK-3.5.0)</span>
+<span class="s">     * [x] /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs/g/goolf/goolf-1.5.14.eb (module: goolf/1.5.14)</span>
+<span class="s">     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/zlib-1.2.7-goolf-1.5.14.eb (module: zlib/1.2.7-goolf-1.5.14)</span>
+<span class="s">     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/Szip-2.1-goolf-1.5.14.eb (module: Szip/2.1-goolf-1.5.14)</span>
+<span class="s">     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/ncurses-5.9-goolf-1.5.14.eb (module: ncurses/5.9-goolf-1.5.14)</span>
+<span class="s">     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/flex-2.5.37-goolf-1.5.14.eb (module: flex/2.5.37-goolf-1.5.14)</span>
+<span class="s">     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/M4-1.4.16-goolf-1.5.14.eb (module: M4/1.4.16-goolf-1.5.14)</span>
+<span class="s">     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/JasPer-1.900.1-goolf-1.5.14.eb (module: JasPer/1.900.1-goolf-1.5.14)</span>
+<span class="s">     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/HDF5-1.8.10-patch1-goolf-1.5.14.eb (module: HDF5/1.8.10-patch1-goolf-1.5.14)</span>
+<span class="s">     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/tcsh-6.18.01-goolf-1.5.14.eb (module: tcsh/6.18.01-goolf-1.5.14)</span>
+<span class="s">     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/Bison-2.7-goolf-1.5.14.eb (module: Bison/2.7-goolf-1.5.14)</span>
+<span class="s">     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/Doxygen-1.8.3.1-goolf-1.5.14.eb (module: Doxygen/1.8.3.1-goolf-1.5.14)</span>
+<span class="s">     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/netCDF-4.2.1.1-goolf-1.5.14.eb (module: netCDF/4.2.1.1-goolf-1.5.14)</span>
+<span class="s">     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/netCDF-Fortran-4.2-goolf-1.5.14.eb (module: netCDF-Fortran/4.2-goolf-1.5.14)</span>
+<span class="s">     * [ ] /tmp/easybuild-Y9WApt/tweaked_easyconfigs/WRF-3.5.1-goolf-1.5.14-dmpar.eb (module: WRF/3.5.1-goolf-1.5.14-dmpar)</span>
+<span class="s">    == temporary log file /tmp/easybuild-Y9WApt/easybuild-VmPiOH.log has been removed.</span>
+<span class="s">    == temporary directory /tmp/easybuild-Y9WApt has been removed.</span>
 
-.. note:: The ``--try-*`` command line options behave as expected when combined with ``--robot``. For example: a modified toolchain specified via ``--try-toolchain`` only trickles down until the toolchain level (not deeper). This makes for a particularly powerful combo for rebuilding entire software stacks using a different toolchain.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> The <span class="s">``--try-*``</span> command line options behave as expected when combined with <span class="s">``--robot``</span>. For example: a modified toolchain specified via <span class="s">``--try-toolchain``</span> only trickles down until the toolchain level (not deeper). This makes for a particularly powerful combo for rebuilding entire software stacks using a different toolchain.
 
-.. note:: Modifying the software version does **not** trickle down the entire software stack, even when combined with ``--robot``, since a software version is tied to a particular software package.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Modifying the software version does <span class="gs">**not**</span> trickle down the entire software stack, even when combined with <span class="s">``--robot``</span>, since a software version is tied to a particular software package.
 </code></pre></div>
 
   <hr>
@@ -1091,7 +1091,7 @@ For example, to build and install WRF and its dependencies with a different tool
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
       
     
   </small>

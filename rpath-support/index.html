@@ -386,160 +386,160 @@ and you can help with that!
 </ul>
 <p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
 </div>
-<div class="highlight"><pre><span></span><code>.. _rpath_support:
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_rpath_support:</span>
 
-Support for RPATH
-=================
+<span class="gh">Support for RPATH</span>
+<span class="gh">=================</span>
 
 Since EasyBuild v3.5.2, (stable) support is available for using RPATH.
 
-.. contents::
-    :depth: 3
-    :backlinks: none
+<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
+    <span class="nc">:depth:</span> 3
+    <span class="nc">:backlinks:</span> none
 
 
-.. _rpath_support_what:
+<span class="p">..</span> <span class="nt">_rpath_support_what:</span>
 
-What is RPATH?
---------------
+<span class="gh">What is RPATH?</span>
+<span class="gh">--------------</span>
 
 RPATH is a mechanism to include a list of directories in a binary where required shared libraries may be available.
-These locations are considered by the dynamic loader (``ld*.so``) to locate the libraries that are required by a particular binary.
+These locations are considered by the dynamic loader (<span class="s">``ld*.so``</span>) to locate the libraries that are required by a particular binary.
 
-Hence, instructing the dynamic linker (``ld``) to include RPATH entries in a binary is an alternative to specifying library locations
-through ``$LD_LIBRARY_PATH``.
+Hence, instructing the dynamic linker (<span class="s">``ld``</span>) to include RPATH entries in a binary is an alternative to specifying library locations
+through <span class="s">``$LD_LIBRARY_PATH``</span>.
 
 For more information on RPATH, see https://linux.die.net/man/8/ld-linux
 
 
-.. _rpath_support_why:
+<span class="p">..</span> <span class="nt">_rpath_support_why:</span>
 
-Why RPATH?
-----------
+<span class="gh">Why RPATH?</span>
+<span class="gh">----------</span>
 
 Using RPATH can be interesting for a number of reasons:
 
-* it can help to avoid a (too) large environment, since:
+<span class="m">*</span> it can help to avoid a (too) large environment, since:
 
-  * ``$LD_LIBRARY_PATH`` does not need to be set anymore for all dependencies providing libraries
-  * it leads to fewer runtime dependencies (and hence fewer modules need to be loaded)
+  <span class="m">*</span> <span class="s">``$LD_LIBRARY_PATH``</span> does not need to be set anymore for all dependencies providing libraries
+  <span class="m">*</span> it leads to fewer runtime dependencies (and hence fewer modules need to be loaded)
 
-* binaries can be used without problems w.r.t. resolving required libraries in other environments
+<span class="m">*</span> binaries can be used without problems w.r.t. resolving required libraries in other environments
 
-* it may result in better startup performance, since ``$LD_LIBRARY_PATH`` does not have to be iterated over
+<span class="m">*</span> it may result in better startup performance, since <span class="s">``$LD_LIBRARY_PATH``</span> does not have to be iterated over
 
 A minor downside is that it becomes less trivial to move installations of dependencies to a different location
 (which is something that you should not do without good reason anyway).
 
 
-.. _rpath_support_enable:
+<span class="p">..</span> <span class="nt">_rpath_support_enable:</span>
 
-Enabling RPATH linking
-----------------------
+<span class="gh">Enabling RPATH linking</span>
+<span class="gh">----------------------</span>
 
-To instruct EasyBuild to enable RPATH linking, use the ``--rpath`` configuration option.
+To instruct EasyBuild to enable RPATH linking, use the <span class="s">``--rpath``</span> configuration option.
 
 
-.. _rpath_support_implementation:
+<span class="p">..</span> <span class="nt">_rpath_support_implementation:</span>
 
-Implementation
---------------
+<span class="gh">Implementation</span>
+<span class="gh">--------------</span>
 
-When EasyBuild is configured to use RPATH, wrapper scripts are put in place for the dynamic linker commands (``ld``, ``ld.gold``),
-as well as for every compiler command that is part of the toolchain being used. This is done during the ``prepare`` step.
+When EasyBuild is configured to use RPATH, wrapper scripts are put in place for the dynamic linker commands (<span class="s">``ld``</span>, <span class="s">``ld.gold``</span>),
+as well as for every compiler command that is part of the toolchain being used. This is done during the <span class="s">``prepare``</span> step.
 
 The wrapper scripts will analyze and rewrite the list of arguments supplied to the command they are wrapping as needed, i.e.:
 
-* inject an ``-rpath`` argument for every ``-L`` argument that specifies a library directory (with some exceptions, see also :ref:`rpath_support_filtered_paths`)
-* filter out arguments that affect RPATH (e.g., ``--enable-new-dtags``)
-* ensure that the library subdirectories (``lib``, ``/lib64``) of the installation directory also have an RPATH entry
-* include additional  arguments related to RPATH (e.g. ``--disable-new-dtags``)
+<span class="m">*</span> inject an <span class="s">``-rpath``</span> argument for every <span class="s">``-L``</span> argument that specifies a library directory (with some exceptions, see also <span class="na">:ref:</span><span class="nv">`rpath_support_filtered_paths`</span>)
+<span class="m">*</span> filter out arguments that affect RPATH (e.g., <span class="s">``--enable-new-dtags``</span>)
+<span class="m">*</span> ensure that the library subdirectories (<span class="s">``lib``</span>, <span class="s">``/lib64``</span>) of the installation directory also have an RPATH entry
+<span class="m">*</span> include additional  arguments related to RPATH (e.g. <span class="s">``--disable-new-dtags``</span>)
 
-As such, ``ps`` may show something like::
+As such, <span class="s">``ps``</span> may show something like<span class="se">::</span>
 
-  \_ /bin/bash /tmp/eb-M3393U/tmpRVJqwr/rpath_wrappers/gcc -O2 example.c -L/example -lexample
-  |  \_ /example/software/GCCcore/4.9.3/bin/gcc -Wl,-rpath=$ORIGIN/../lib -Wl,-rpath=$ORIGIN/../lib64 -Wl,--disable-new-dtags -Wl,-rpath=/example -O2 example.c -L/example -lexample
+<span class="s">  \_ /bin/bash /tmp/eb-M3393U/tmpRVJqwr/rpath_wrappers/gcc -O2 example.c -L/example -lexample</span>
+<span class="s">  |  \_ /example/software/GCCcore/4.9.3/bin/gcc -Wl,-rpath=$ORIGIN/../lib -Wl,-rpath=$ORIGIN/../lib64 -Wl,--disable-new-dtags -Wl,-rpath=/example -O2 example.c -L/example -lexample</span>
 
-Here, ``/tmp/eb-M3393U/tmpRVJqwr/rpath_wrappers/gcc`` is the wrapper script for ``gcc``,
-which tweaks the list of command line arguments for ``gcc``
-before calling out to the real ``gcc`` command (i.e., ``/example/software/GCCcore/4.9.3/bin/gcc`` in this example).
+Here, <span class="s">``/tmp/eb-M3393U/tmpRVJqwr/rpath_wrappers/gcc``</span> is the wrapper script for <span class="s">``gcc``</span>,
+which tweaks the list of command line arguments for <span class="s">``gcc``</span>
+before calling out to the real <span class="s">``gcc``</span> command (i.e., <span class="s">``/example/software/GCCcore/4.9.3/bin/gcc``</span> in this example).
 
-.. _rpath_support_impl_logs:
+<span class="p">..</span> <span class="nt">_rpath_support_impl_logs:</span>
 
-RPATH wrapper script log files
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">RPATH wrapper script log files</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-When EasyBuild is used in debug mode (``--debug``), the RPATH wrapper script will generate log files in
-the temporary directory used by EasyBuild, for debugging purposes::
+When EasyBuild is used in debug mode (<span class="s">``--debug``</span>), the RPATH wrapper script will generate log files in
+the temporary directory used by EasyBuild, for debugging purposes<span class="se">::</span>
 
-  $ ls -l /tmp/eb-_hoff5/rpath_wrapper*log | sed &#39;s/vsc40023/example/g&#39;
-  -rw-rw-r-- 1 example example  739692 Nov 16 15:50 /tmp/eb-_hoff5/rpath_wrapper_gcc.log
-  -rw-rw-r-- 1 example example   27814 Nov 16 15:50 /tmp/eb-_hoff5/rpath_wrapper_g++.log
-  -rw-rw-r-- 1 example example 1589626 Nov 16 15:50 /tmp/eb-_hoff5/rpath_wrapper_ld.gold.log
-  -rw-rw-r-- 1 example example    8870 Nov 16 15:50 /tmp/eb-_hoff5/rpath_wrapper_ld.log
+<span class="s">  $ ls -l /tmp/eb-_hoff5/rpath_wrapper*log | sed &#39;s/vsc40023/example/g&#39;</span>
+<span class="s">  -rw-rw-r-- 1 example example  739692 Nov 16 15:50 /tmp/eb-_hoff5/rpath_wrapper_gcc.log</span>
+<span class="s">  -rw-rw-r-- 1 example example   27814 Nov 16 15:50 /tmp/eb-_hoff5/rpath_wrapper_g++.log</span>
+<span class="s">  -rw-rw-r-- 1 example example 1589626 Nov 16 15:50 /tmp/eb-_hoff5/rpath_wrapper_ld.gold.log</span>
+<span class="s">  -rw-rw-r-- 1 example example    8870 Nov 16 15:50 /tmp/eb-_hoff5/rpath_wrapper_ld.log</span>
 
 These log files include details on every captured compiler/linker command, i.e. the original list of arguments,
-the tweaked list of arguments that includes the injected ``-rpath`` arguments, etc., and may be helpful to debug the RPATH support.
+the tweaked list of arguments that includes the injected <span class="s">``-rpath``</span> arguments, etc., and may be helpful to debug the RPATH support.
 
-.. _rpath_support_impl_overhead:
+<span class="p">..</span> <span class="nt">_rpath_support_impl_overhead:</span>
 
-Overhead of RPATH wrapper scripts
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Overhead of RPATH wrapper scripts</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 Wrapping each compiler and linker command being executed comes at a cost,
-especially since the wrapper (shell) script calls out to a Python script (``rpath_args.py``) to do the heavy lifting.
+especially since the wrapper (shell) script calls out to a Python script (<span class="s">``rpath_args.py``</span>) to do the heavy lifting.
 
 Some early benchmarking has shown that this overhead is quite limited however,
 with observed slowdowns of the build and installation procedure of 10-15%.
 
 
-.. _rpath_support_filtered_paths:
+<span class="p">..</span> <span class="nt">_rpath_support_filtered_paths:</span>
 
-Filtering RPATH entries via ``--rpath-filter``
-----------------------------------------------
+<span class="gh">Filtering RPATH entries via ``--rpath-filter``</span>
+<span class="gh">----------------------------------------------</span>
 
 To avoid that the wrapper scripts inject RPATH entries for particular locations,
-EasyBuild can be configured with an RPATH filter via ``--rpath-filter``.
+EasyBuild can be configured with an RPATH filter via <span class="s">``--rpath-filter``</span>.
 
 The specified value should be a comma-separated list of (Python) regular expressions for paths.
-Only paths that *match* either of the specified patterns will be filtered out.
+Only paths that <span class="ge">*match*</span> either of the specified patterns will be filtered out.
 
-For example, to filter out locations in either ``/opt/lib`` or ``/apps/lib``, use::
+For example, to filter out locations in either <span class="s">``/opt/lib``</span> or <span class="s">``/apps/lib``</span>, use<span class="se">::</span>
 
-  eb --rpath-filter=&#39;/opt/lib.*,/apps/lib.*&#39;
+<span class="s">  eb --rpath-filter=&#39;/opt/lib.*,/apps/lib.*&#39;</span>
 
 By default, no RPATH entries will be injected for system locations
-that start with either ``/lib`` (incl. ``/lib64``) or ``/usr``
-(which is equivalent with ``--rpath-filter=&#39;/lib.*,/usr.*&#39;``).
+that start with either <span class="s">``/lib``</span> (incl. <span class="s">``/lib64``</span>) or <span class="s">``/usr``</span>
+(which is equivalent with <span class="s">``--rpath-filter=&#39;/lib.*,/usr.*&#39;``</span>).
 
-.. note:: If you are specifying ``--rpath--filter``, the default filter is *overwritten*,
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> If you are specifying <span class="s">``--rpath--filter``</span>, the default filter is <span class="ge">*overwritten*</span>,
           so if you want to retain the filtering for system locations you should also
-          include ``/lib.*`` and ``/usr.*``.
+          include <span class="s">``/lib.*``</span> and <span class="s">``/usr.*``</span>.
 
-          For example, to also filter out paths starting with ``/example``::
+          For example, to also filter out paths starting with <span class="s">``/example``</span><span class="se">::</span>
 
-            eb --rpath-filter=&#39;/lib.*,/usr.*,/example.*&#39;
+<span class="s">            eb --rpath-filter=&#39;/lib.*,/usr.*,/example.*&#39;</span>
 
 
-.. _rpath_support_LD_LIBRARY_PATH:
+<span class="p">..</span> <span class="nt">_rpath_support_LD_LIBRARY_PATH:</span>
 
-Relation to ``$LD_LIBRARY_PATH``
---------------------------------
+<span class="gh">Relation to ``$LD_LIBRARY_PATH``</span>
+<span class="gh">--------------------------------</span>
 
-As mentioned above (:ref:`rpath_support_why`), using RPATH avoids the need to update ``$LD_LIBRARY_PATH`` for every dependency.
+As mentioned above (<span class="na">:ref:</span><span class="nv">`rpath_support_why`</span>), using RPATH avoids the need to update <span class="s">``$LD_LIBRARY_PATH``</span> for every dependency.
 
 However, there is a chicken-or-egg situation: even though a particular dependency itself can be built and installed using RPATH,
-it does not mean that software packages that require it *have* to built with RPATH...
+it does not mean that software packages that require it <span class="ge">*have*</span> to built with RPATH...
 
-Hence, EasyBuild does not automatically exclude ``$LD_LIBRARY_PATH`` update statements from the generated module files.
-You need to configure EasyBuild to do so, using the ``---filter-env-vars`` configuration option.
+Hence, EasyBuild does not automatically exclude <span class="s">``$LD_LIBRARY_PATH``</span> update statements from the generated module files.
+You need to configure EasyBuild to do so, using the <span class="s">``---filter-env-vars``</span> configuration option.
 
-For example::
+For example<span class="se">::</span>
 
-  eb --rpath --filter-env-vars=LD_LIBRARY_PATH example.eb
+<span class="s">  eb --rpath --filter-env-vars=LD_LIBRARY_PATH example.eb</span>
 
-To consistently configure EasyBuild to both use RPATH and not include ``$LD_LIBRARY_PATH`` update statements in generated
-module files, you can use either environment variables or a configuration file; see :ref:`configuring_easybuild`.
+To consistently configure EasyBuild to both use RPATH and not include <span class="s">``$LD_LIBRARY_PATH``</span> update statements in generated
+module files, you can use either environment variables or a configuration file; see <span class="na">:ref:</span><span class="nv">`configuring_easybuild`</span>.
 </code></pre></div>
 
   <hr>
@@ -547,7 +547,7 @@ module files, you can use either environment variables or a configuration file; 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
       
     
   </small>

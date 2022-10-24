@@ -386,110 +386,110 @@ and you can help with that!
 </ul>
 <p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
 </div>
-<div class="highlight"><pre><span></span><code>.. _installing_env_mod_c:
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_installing_env_mod_c:</span>
 
-Installing environment modules without root permissions
-=======================================================
+<span class="gh">Installing environment modules without root permissions</span>
+<span class="gh">=======================================================</span>
 
 This short guide will explain how to install the standard environment modules Tcl/C
 software package without root permissions on a Linux or Mac OS X system,
 together with Tcl on which it depends.
 
-Tcl
-~~~
+<span class="gh">Tcl</span>
+<span class="gh">~~~</span>
 
-#. Go to `&lt;http://www.tcl.tk&gt;`_ and download the latest Tcl sources.
+<span class="m">#.</span> Go to <span class="s">`&lt;http://www.tcl.tk&gt;`_</span> and download the latest Tcl sources.
    At the time of writing, the latest available Tcl version was 8.5.15,
    which can be downloaded from
-   `here &lt;http://prdownloads.sourceforge.net/tcl/tcl8.5.15-src.tar.gz&gt;`_.
+   <span class="s">`here </span><span class="si">&lt;http://prdownloads.sourceforge.net/tcl/tcl8.5.15-src.tar.gz&gt;</span><span class="s">`_</span>.
    The remainder of these commands will assume Tcl v8.5.15 is being
    installed, you may need to adjust them accordingly.
-   **Note**: Stick to Tcl v8.5.x, don’t consider using the more recent
+   <span class="gs">**Note**</span>: Stick to Tcl v8.5.x, don’t consider using the more recent
    v8.6.x or higher, since the environment modules package is not
    compatible with those Tcl versions.
 
-#. Unpack the Tcl source tarball:
+<span class="m">#.</span> Unpack the Tcl source tarball:
 
-   .. code:: bash
+<span class="p">   ..</span> <span class="ow">code</span><span class="p">::</span> bash
 
        tar xfvz tcl8.5.15-src.tar.gz
 
-#. Pick a location where you will install Tcl. It should be a directory
+<span class="m">#.</span> Pick a location where you will install Tcl. It should be a directory
    you have write permissions on.
-   My suggestion would be to use something like ``$HOME/.local/Tcl``.
+   My suggestion would be to use something like <span class="s">``$HOME/.local/Tcl``</span>.
 
-#. Go to the ``unix`` subdirectory of the unpacked Tcl directory, and
-   run the ``configure`` script using the ``--prefix`` option:
+<span class="m">#.</span> Go to the <span class="s">``unix``</span> subdirectory of the unpacked Tcl directory, and
+   run the <span class="s">``configure``</span> script using the <span class="s">``--prefix``</span> option:
 
-   .. code:: bash
+<span class="p">   ..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">bash</span>
 
-       cd tcl8.5.15/unix
-       ./configure --prefix=$HOME/.local/Tcl
+       <span class="nb">cd</span> tcl8.5.15/unix
+       ./configure --prefix<span class="o">=</span><span class="nv">$HOME</span>/.local/Tcl
 
    If you’re building Tcl and environment modules on Mac, you should run
-   ``configure`` in the ``tcl8.5.15/macosx`` directory instead.
+   <span class="s">``configure``</span> in the <span class="s">``tcl8.5.15/macosx``</span> directory instead.
 
-#. Next, build Tcl using the ``make`` command. If the system you are
+<span class="m">#.</span> Next, build Tcl using the <span class="s">``make``</span> command. If the system you are
    building on has multiple cores, running make in parallel will speed
-   up the build. Just use the ``-j`` option, and pass it a degree of
+   up the build. Just use the <span class="s">``-j``</span> option, and pass it a degree of
    parallelism (just use the number of cores your system has available),
    e.g.:
 
-   ::
+   <span class="se">::</span>
 
-       make -j 4
+<span class="s">       make -j 4</span>
 
-#. The final step consists of installing Tcl to the directory specified
+<span class="m">#.</span> The final step consists of installing Tcl to the directory specified
    in step 4. To do this, simply run:
 
-   .. code:: bash
+<span class="p">   ..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">bash</span>
 
        make install
 
 
-**All done!** Now you are ready to build the environment modules package, which requires Tcl.
+<span class="gs">**All done!**</span> Now you are ready to build the environment modules package, which requires Tcl.
 
-Environment Modules
-~~~~~~~~~~~~~~~~~~~
+<span class="gh">Environment Modules</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~</span>
 
-#. Download the latest source tarball for the environment modules tools
+<span class="m">#.</span> Download the latest source tarball for the environment modules tools
    from http://modules.sourceforge.net/. At the time of writing,
    the latest available version is 3.2.10 which can be downloaded
-   `from here &lt;http://prdownloads.sourceforge.net/modules/modules-3.2.10.tar.gz&gt;`_.
+   <span class="s">`from here </span><span class="si">&lt;http://prdownloads.sourceforge.net/modules/modules-3.2.10.tar.gz&gt;</span><span class="s">`_</span>.
 
-#. Unpack the downloaded source tarball:
+<span class="m">#.</span> Unpack the downloaded source tarball:
 
-   .. code:: bash
+<span class="p">   ..</span> <span class="ow">code</span><span class="p">::</span> bash
 
        tar xfvz modules-3.2.10.tar.gz
 
-#. Configure the build, again use ``--prefix`` to specify where to
+<span class="m">#.</span> Configure the build, again use <span class="s">``--prefix``</span> to specify where to
    install the environment modules tool in the end. If you needed to
    install Tcl by hand as outlined in the previous section, you’ll also
-   need to specify where it was installed using the ``--with-tcl`` option:
+   need to specify where it was installed using the <span class="s">``--with-tcl``</span> option:
 
-   .. code:: bash
+<span class="p">   ..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">bash</span>
 
-       cd modules-3.2.10
-       ./configure --prefix=$HOME/.local/environment-modules --with-tcl=$HOME/.local/Tcl/lib
+       <span class="nb">cd</span> modules-3.2.10
+       ./configure --prefix<span class="o">=</span><span class="nv">$HOME</span>/.local/environment-modules --with-tcl<span class="o">=</span><span class="nv">$HOME</span>/.local/Tcl/lib
 
-#. Build with ``make``, consider parallel build if your system is recent
+<span class="m">#.</span> Build with <span class="s">``make``</span>, consider parallel build if your system is recent
    enough:
 
-   .. code:: bash
+<span class="p">   ..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">bash</span>
 
-       make -j 4
+       make -j <span class="m">4</span>
 
-#. Install:
+<span class="m">#.</span> Install:
 
-   .. code:: bash
+<span class="p">   ..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">bash</span>
 
        make install
 
 Alright, now just one more thing...
 
-Set up your environment
-~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Set up your environment</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 Because you’ve installed environment modules and Tcl in a non-default
 location, you need to make sure your environment is setup up correctly
@@ -497,14 +497,14 @@ to use them.
 
 To make a long story short, these are the commands you need to execute:
 
-.. code:: bash
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">bash</span>
 
-    export PATH=$HOME/.local/environment-modules/Modules/3.2.10/bin:$PATH
-    export LD_LIBRARY_PATH=$HOME/.local/Tcl/lib:$LD_LIBRARY_PATH
-    # adjust line below if you&#39;re using a shell other than bash, check with &#39;echo $SHELL&#39;
-    source $HOME/.local/environment-modules/Modules/3.2.10/init/bash
+    <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$HOME</span>/.local/environment-modules/Modules/3.2.10/bin:<span class="nv">$PATH</span>
+    <span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$HOME</span>/.local/Tcl/lib:<span class="nv">$LD_LIBRARY_PATH</span>
+    <span class="c1"># adjust line below if you&#39;re using a shell other than bash, check with &#39;echo $SHELL&#39;</span>
+    <span class="nb">source</span> <span class="nv">$HOME</span>/.local/environment-modules/Modules/3.2.10/init/bash
 
-.. tip:: Add these three lines in your ``.bashrc`` file, that way they’ll be executed every time you log in.
+<span class="p">..</span> <span class="ow">tip</span><span class="p">::</span> Add these three lines in your <span class="s">``.bashrc``</span> file, that way they’ll be executed every time you log in.
 </code></pre></div>
 
   <hr>
@@ -512,7 +512,7 @@ To make a long story short, these are the commands you need to execute:
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
       
     
   </small>

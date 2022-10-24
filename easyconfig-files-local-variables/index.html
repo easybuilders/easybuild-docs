@@ -386,28 +386,28 @@ and you can help with that!
 </ul>
 <p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
 </div>
-<div class="highlight"><pre><span></span><code>.. _easyconfig_files_local_variables:
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_easyconfig_files_local_variables:</span>
 
-Local variables in easyconfig files
-===================================
+<span class="gh">Local variables in easyconfig files</span>
+<span class="gh">===================================</span>
 
-This page discusses the use of *local variables in easyconfig files*.
+This page discusses the use of <span class="ge">*local variables in easyconfig files*</span>.
 
-For more general information on writing easyconfig files, please see :ref:`writing_easyconfig_files`.
+For more general information on writing easyconfig files, please see <span class="na">:ref:</span><span class="nv">`writing_easyconfig_files`</span>.
 
-.. contents::
-    :depth: 3
-    :backlinks: none
+<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
+    <span class="nc">:depth:</span> 3
+    <span class="nc">:backlinks:</span> none
 
-.. _easyconfig_files_local_variables_motivation:
+<span class="p">..</span> <span class="nt">_easyconfig_files_local_variables_motivation:</span>
 
-Motivation &amp; context
---------------------
+<span class="gh">Motivation &amp; context</span>
+<span class="gh">--------------------</span>
 
-When composing easyconfig files, it can sometimes make sense to use one or more *local variables*
+When composing easyconfig files, it can sometimes make sense to use one or more <span class="ge">*local variables*</span>
 to define easyconfig parameters in a cleaner way, for example to avoid copy-pasting values that are used
 multiple times, or to avoid too long lines (longer than the maximum width of 120 characters as specified in
-:ref:`code style`). A local variable within the context of easyconfig files is any variable that does not
+<span class="na">:ref:</span><span class="nv">`code style`</span>). A local variable within the context of easyconfig files is any variable that does not
 correspond to a known easyconfig parameter (either general of easyblock-specific).
 
 One thing that is easily overlooked is the importance of how these local variables are named:
@@ -416,137 +416,137 @@ that may get introduced in future EasyBuild versions. If that would happen, the 
 will change which may either result in a broken installation or perhaps a different installation than was intended
 (which could be worse than a broken one).
 
-Avoiding that names of local variables are *close* to the name of (future) easyconfig parameters is also important,
+Avoiding that names of local variables are <span class="ge">*close*</span> to the name of (future) easyconfig parameters is also important,
 because of the &quot;typo detection&quot; feature that EasyBuild has: if the name of a local variable is too close to a
-known easyconfig parameter, EasyBuild will assume you have made a mistake, and will report a typo error, for example::
+known easyconfig parameter, EasyBuild will assume you have made a mistake, and will report a typo error, for example<span class="se">::</span>
 
-  ERROR: Failed to process easyconfig example.eb:
-  You may have some typos in your easyconfig file: configopt -&gt; configopts
+<span class="s">  ERROR: Failed to process easyconfig example.eb:</span>
+<span class="s">  You may have some typos in your easyconfig file: configopt -&gt; configopts</span>
 
 
-.. _easyconfig_files_local_variables_easybuild4:
+<span class="p">..</span> <span class="nt">_easyconfig_files_local_variables_easybuild4:</span>
 
-Changes in EasyBuild v4.0 w.r.t. local variables in easyconfig files
---------------------------------------------------------------------
+<span class="gh">Changes in EasyBuild v4.0 w.r.t. local variables in easyconfig files</span>
+<span class="gh">--------------------------------------------------------------------</span>
 
 Some changes were made in EasyBuild v4.0 to discourage the use of poorly named local variables:
 
-* a :ref:`easyconfig_files_local_variables_naming_scheme` was defined;
+<span class="m">*</span> a <span class="na">:ref:</span><span class="nv">`easyconfig_files_local_variables_naming_scheme`</span> was defined;
 
-* a mechanism was implemented to detect the use of local variables in easyconfig files, which will print
-  a :ref:`easyconfig_files_local_variables_naming_warning`
+<span class="m">*</span> a mechanism was implemented to detect the use of local variables in easyconfig files, which will print
+  a <span class="na">:ref:</span><span class="nv">`easyconfig_files_local_variables_naming_warning`</span>
 
-* EasyBuild can be configured to report an error for local variables that do not follow the recommended naming scheme;
-  see :ref:`easyconfig_files_local_variables_strict_naming`
+<span class="m">*</span> EasyBuild can be configured to report an error for local variables that do not follow the recommended naming scheme;
+  see <span class="na">:ref:</span><span class="nv">`easyconfig_files_local_variables_strict_naming`</span>
 
-* using ``eb --fix-deprecated-easyconfigs``, the names of local variables can be changed automatically to match
-  the recommended naming scheme; see :ref:`easyconfig_files_local_variables_fix_deprecated_easyconfigs`
+<span class="m">*</span> using <span class="s">``eb --fix-deprecated-easyconfigs``</span>, the names of local variables can be changed automatically to match
+  the recommended naming scheme; see <span class="na">:ref:</span><span class="nv">`easyconfig_files_local_variables_fix_deprecated_easyconfigs`</span>
 
 
 
-.. _easyconfig_files_local_variables_naming_scheme:
+<span class="p">..</span> <span class="nt">_easyconfig_files_local_variables_naming_scheme:</span>
 
-Recommended naming scheme for local variables in easyconfig files
------------------------------------------------------------------
+<span class="gh">Recommended naming scheme for local variables in easyconfig files</span>
+<span class="gh">-----------------------------------------------------------------</span>
 
 To ensure that local variables used in easyconfig files do not clash with easyconfig parameters that get added in
 future EasyBuild versions, we have defined a recommended naming scheme for local variables.
 
 Names of local variables should either:
 
-* **start with** ``local_``, to make it explicit that it is a *local* variable (examples: ``local_example``, ``local_var``)
+<span class="m">*</span> <span class="gs">**start with**</span> <span class="s">``local_``</span>, to make it explicit that it is a <span class="ge">*local*</span> variable (examples: <span class="s">``local_example``</span>, <span class="s">``local_var``</span>)
 
-* **consist of a single letter** (examples: ``f``, ``l``, ``x``);
-  this is typically only done within the context of a `list comprehension &lt;https://docs.python.org/2/tutorial/datastructures.html#list-comprehensions&gt;`_
+<span class="m">*</span> <span class="gs">**consist of a single letter**</span> (examples: <span class="s">``f``</span>, <span class="s">``l``</span>, <span class="s">``x``</span>);
+  this is typically only done within the context of a <span class="s">`list comprehension </span><span class="si">&lt;https://docs.python.org/2/tutorial/datastructures.html#list-comprehensions&gt;</span><span class="s">`_</span>
 
-* **start with a single underscore** (``_``), which matches the common convention in Python code that these variables are only for &quot;internal use&quot; (examples: ``_example``, ``_local_var``)
+<span class="m">*</span> <span class="gs">**start with a single underscore**</span> (<span class="s">``_``</span>), which matches the common convention in Python code that these variables are only for &quot;internal use&quot; (examples: <span class="s">``_example``</span>, <span class="s">``_local_var``</span>)
 
 
-.. note:: A check was added in EasyBuild v4.0 to ensure that the names of known easyconfig parameters
- do *not* conform to any of these rules, to ensure that local variables can always be discriminated from
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> A check was added in EasyBuild v4.0 to ensure that the names of known easyconfig parameters
+ do <span class="ge">*not*</span> conform to any of these rules, to ensure that local variables can always be discriminated from
  known easyconfig parameters.
 
 
-.. _easyconfig_files_local_variables_naming_warning:
+<span class="p">..</span> <span class="nt">_easyconfig_files_local_variables_naming_warning:</span>
 
-Warning for local variables that do not follow the recommended naming scheme
-----------------------------------------------------------------------------
+<span class="gh">Warning for local variables that do not follow the recommended naming scheme</span>
+<span class="gh">----------------------------------------------------------------------------</span>
 
 By default, EasyBuild will produce a clear warning when one or more local variables are used that do not conform
-to the :ref:`recommended naming scheme easyconfig_files_local_variables_naming_scheme`.
+to the <span class="na">:ref:</span><span class="nv">`recommended naming scheme easyconfig_files_local_variables_naming_scheme`</span>.
 
-For example, when using an easyconfig file that includes a local variable named ``var``::
+For example, when using an easyconfig file that includes a local variable named <span class="s">``var``</span><span class="se">::</span>
 
-  $ eb example.eb
-  ...
-  WARNING: Use of 1 unknown easyconfig parameters detected in example.eb: var
-  If these are just local variables please rename them to start with &#39;local_&#39;, or try using --fix-deprecated-easyconfigs to do this automatically.
+<span class="s">  $ eb example.eb</span>
+<span class="s">  ...</span>
+<span class="s">  WARNING: Use of 1 unknown easyconfig parameters detected in example.eb: var</span>
+<span class="s">  If these are just local variables please rename them to start with &#39;local_&#39;, or try using --fix-deprecated-easyconfigs to do this automatically.</span>
 
 To get rid of this warning, you can either:
 
-* rename the local variable, either manually to something like ``local_var`` or using ``eb --fix-deprecated-easyconfigs example.eb``
-  (see also :ref:`easyconfig_files_local_variables_fix_deprecated_easyconfigs`)
+<span class="m">*</span> rename the local variable, either manually to something like <span class="s">``local_var``</span> or using <span class="s">``eb --fix-deprecated-easyconfigs example.eb``</span>
+  (see also <span class="na">:ref:</span><span class="nv">`easyconfig_files_local_variables_fix_deprecated_easyconfigs`</span>)
 
-* configure EasyBuild to only log the warning (not print it), via ``--local-var-naming-check=log``
-  (see also :ref:`easyconfig_files_local_variables_check_mode`; note that silencing
-  the printed warning is **not recommended**, see the motivation in :ref:`motivation above easyconfig_files_local_variables_motivation`
+<span class="m">*</span> configure EasyBuild to only log the warning (not print it), via <span class="s">``--local-var-naming-check=log``</span>
+  (see also <span class="na">:ref:</span><span class="nv">`easyconfig_files_local_variables_check_mode`</span>; note that silencing
+  the printed warning is <span class="gs">**not recommended**</span>, see the motivation in <span class="na">:ref:</span><span class="nv">`motivation above easyconfig_files_local_variables_motivation`</span>
 
 
-.. _easyconfig_files_local_variables_check_mode:
+<span class="p">..</span> <span class="nt">_easyconfig_files_local_variables_check_mode:</span>
 
-Specifying what should be done when non-confirming local variables are found via ``--local-var-naming-check``
--------------------------------------------------------------------------------------------------------------
+<span class="gh">Specifying what should be done when non-confirming local variables are found via ``--local-var-naming-check``</span>
+<span class="gh">-------------------------------------------------------------------------------------------------------------</span>
 
-Using the ``--local-var-naming-check`` configuration option, you can specify what should be done when one or more
+Using the <span class="s">``--local-var-naming-check``</span> configuration option, you can specify what should be done when one or more
 local variables are found that do not follow the
-:ref:`recommended naming scheme easyconfig_files_local_variables_naming_scheme`:
+<span class="na">:ref:</span><span class="nv">`recommended naming scheme easyconfig_files_local_variables_naming_scheme`</span>:
 
-* ``--local-var-naming-check=error``: **fail with an error** if any easyconfig file that was parsed includes
+<span class="m">*</span> <span class="s">``--local-var-naming-check=error``</span>: <span class="gs">**fail with an error**</span> if any easyconfig file that was parsed includes
   local variables that do not follow the recommended naming scheme;
-* ``--local-var-naming-check=log``: only *log* a warning (but do not print it) if any easyconfig file that was
+<span class="m">*</span> <span class="s">``--local-var-naming-check=log``</span>: only <span class="ge">*log*</span> a warning (but do not print it) if any easyconfig file that was
   parsed includes local variables that do not follow the recommended naming scheme;
-* ``--local-var-naming-check=warn`` *[default]*: *print* a warning if any easyconfig file that was parsed includes
+<span class="m">*</span> <span class="s">``--local-var-naming-check=warn``</span> <span class="ge">*[default]*</span>: <span class="ge">*print*</span> a warning if any easyconfig file that was parsed includes
   local variables that do not follow the recommended naming scheme;
 
 The default is set such that non-confirming local variables are only reported through a printed warning,
 but do not result in cancelling the installation (since they&#39;re usually not actually problematic).
 
 
-.. _easyconfig_files_local_variables_fix_deprecated_easyconfigs:
+<span class="p">..</span> <span class="nt">_easyconfig_files_local_variables_fix_deprecated_easyconfigs:</span>
 
-Renaming local variables to match the recommended naming scheme using ``eb --fix-deprecated-easyconfigs``
----------------------------------------------------------------------------------------------------------
+<span class="gh">Renaming local variables to match the recommended naming scheme using ``eb --fix-deprecated-easyconfigs``</span>
+<span class="gh">---------------------------------------------------------------------------------------------------------</span>
 
 To fix one or more easyconfig files that includes local variables that do not follow the
-:ref:`recommended naming scheme easyconfig_files_local_variables_naming_scheme`, ``eb --fix-deprecated-easyconfigs``
+<span class="na">:ref:</span><span class="nv">`recommended naming scheme easyconfig_files_local_variables_naming_scheme`</span>, <span class="s">``eb --fix-deprecated-easyconfigs``</span>
 can be used.
 
-For example::
+For example<span class="se">::</span>
 
-   eb --fix-deprecated-easyconfigs bzip2.eb zlib.eb
-   == temporary log file in case of crash /tmp/eb-Z7r_KJ/easybuild-dHtPY4.log
+<span class="s">   eb --fix-deprecated-easyconfigs bzip2.eb zlib.eb</span>
+<span class="s">   == temporary log file in case of crash /tmp/eb-Z7r_KJ/easybuild-dHtPY4.log</span>
 
-   * [1/2] fixing /tmp/example/bzip2.eb... FIXED!
-     (changes made in place, original copied to /tmp/example/bzip2.eb.orig_20190815180106_53972)
+<span class="s">   * [1/2] fixing /tmp/example/bzip2.eb... FIXED!</span>
+<span class="s">     (changes made in place, original copied to /tmp/example/bzip2.eb.orig_20190815180106_53972)</span>
 
-   * [2/2] fixing /tmp/example/zlib.eb... FIXED!
-     (changes made in place, original copied to /tmp/example/zlib.eb.orig_20190815180106_53972)
+<span class="s">   * [2/2] fixing /tmp/example/zlib.eb... FIXED!</span>
+<span class="s">     (changes made in place, original copied to /tmp/example/zlib.eb.orig_20190815180106_53972)</span>
 
-   All done! Fixed 2 easyconfigs (out of 2 found).
+<span class="s">   All done! Fixed 2 easyconfigs (out of 2 found).</span>
 
-   == Temporary log file(s) /tmp/eb-Z7r_KJ/easybuild-dHtPY4.log* have been removed.
-   == Temporary directory /tmp/eb-Z7r_KJ has been removed.
+<span class="s">   == Temporary log file(s) /tmp/eb-Z7r_KJ/easybuild-dHtPY4.log* have been removed.</span>
+<span class="s">   == Temporary directory /tmp/eb-Z7r_KJ has been removed.</span>
 
 There are a couple of caveats here though...
 
-While ``--fix-deprecated-easyconfigs`` can be very useful, it&#39;s certainly not perfect since all it does is simple
-search and replace of the names of non-conforming local variables (as whole words) to prefix them with ``local_``.
+While <span class="s">``--fix-deprecated-easyconfigs``</span> can be very useful, it&#39;s certainly not perfect since all it does is simple
+search and replace of the names of non-conforming local variables (as whole words) to prefix them with <span class="s">``local_``</span>.
 
-This means that it may make some unintended changes, so make sure to **always double check which changes were made!**
+This means that it may make some unintended changes, so make sure to <span class="gs">**always double check which changes were made!**</span>
 
-In addition, it sometimes make more sense to simply *eliminate* the local variable rather than renaming it, for
+In addition, it sometimes make more sense to simply <span class="ge">*eliminate*</span> the local variable rather than renaming it, for
 example when it wasn&#39;t really needed at all: maybe it was only actually used once, or maybe using a template like
-``%(pyver)s`` or ``(pyshortver)s`` (see also :ref:`avail_easyconfig_templates`) renders it obsolete.
+<span class="s">``%(pyver)s``</span> or <span class="s">``(pyshortver)s``</span> (see also <span class="na">:ref:</span><span class="nv">`avail_easyconfig_templates`</span>) renders it obsolete.
 </code></pre></div>
 
   <hr>
@@ -554,7 +554,7 @@ example when it wasn&#39;t really needed at all: maybe it was only actually used
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
       
     
   </small>

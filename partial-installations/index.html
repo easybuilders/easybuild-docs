@@ -386,211 +386,211 @@ and you can help with that!
 </ul>
 <p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
 </div>
-<div class="highlight"><pre><span></span><code>.. _partial_installations:
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_partial_installations:</span>
 
-Partial installations
-=====================
+<span class="gh">Partial installations</span>
+<span class="gh">=====================</span>
 
 Several ways of performing partial installations are supported. These may be useful when debugging a particular issue
 with the installation procedure being performed by EasyBuild, updating existing software installations or module files,
 or after changing the EasyBuild configuration (e.g., switching to module files in Lua syntax or a different module
 naming scheme).
 
-.. contents::
-    :depth: 3
-    :backlinks: none
+<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
+    <span class="nc">:depth:</span> 3
+    <span class="nc">:backlinks:</span> none
 
-.. _partial_installation_stop:
+<span class="p">..</span> <span class="nt">_partial_installation_stop:</span>
 
-Stopping the installation procedure *after* a step using ``-s``/``--stop``
---------------------------------------------------------------------------
+<span class="gh">Stopping the installation procedure *after* a step using ``-s``/``--stop``</span>
+<span class="gh">--------------------------------------------------------------------------</span>
 
-To stop the installation procedure *after* a specific step in the installation procedure, the ``-s``/``--stop``
+To stop the installation procedure <span class="ge">*after*</span> a specific step in the installation procedure, the <span class="s">``-s``</span>/<span class="s">``--stop``</span>
 command line option can be used; the name of the step must be supplied as an argument.
 
-The following step names are recognized (listed in execution order): ``fetch``, ``ready``, ``source``, ``patch``,
-``prepare``, ``configure``, ``build``, ``test``, ``install``, ``extensions``, ``package``, ``postproc``,
-``sanitycheck``, ``cleanup``, ``module``, ``testcases``.
+The following step names are recognized (listed in execution order): <span class="s">``fetch``</span>, <span class="s">``ready``</span>, <span class="s">``source``</span>, <span class="s">``patch``</span>,
+<span class="s">``prepare``</span>, <span class="s">``configure``</span>, <span class="s">``build``</span>, <span class="s">``test``</span>, <span class="s">``install``</span>, <span class="s">``extensions``</span>, <span class="s">``package``</span>, <span class="s">``postproc``</span>,
+<span class="s">``sanitycheck``</span>, <span class="s">``cleanup``</span>, <span class="s">``module``</span>, <span class="s">``testcases``</span>.
 
-Example usage::
+Example usage<span class="se">::</span>
 
- $ eb GCC-4.9.2.eb --stop configure
- == temporary log file in case of crash /tmp/eb-X2Z0b7/easybuild-mGxmNb.log
- == processing EasyBuild easyconfig /home/example/GCC-4.9.2.eb
- == building and installing GCC/4.9.2...
- == fetching files...
- == creating build dir, resetting environment...
- == unpacking...
- == patching...
- == preparing...
- == configuring...
- == COMPLETED: Installation STOPPED successfully
- == Results of the build can be found in the log file /dev/shm/example/GCC/4.9.2/dummy-dummy/easybuild/easybuild-GCC-4.9.2-20150430.091644.log
- == Build succeeded for 1 out of 1
- == temporary log file(s) /tmp/eb-X2Z0b7/easybuild-mGxmNb.log* have been removed.
- == temporary directory /tmp/eb-X2Z0b7 has been removed.
+<span class="s"> $ eb GCC-4.9.2.eb --stop configure</span>
+<span class="s"> == temporary log file in case of crash /tmp/eb-X2Z0b7/easybuild-mGxmNb.log</span>
+<span class="s"> == processing EasyBuild easyconfig /home/example/GCC-4.9.2.eb</span>
+<span class="s"> == building and installing GCC/4.9.2...</span>
+<span class="s"> == fetching files...</span>
+<span class="s"> == creating build dir, resetting environment...</span>
+<span class="s"> == unpacking...</span>
+<span class="s"> == patching...</span>
+<span class="s"> == preparing...</span>
+<span class="s"> == configuring...</span>
+<span class="s"> == COMPLETED: Installation STOPPED successfully</span>
+<span class="s"> == Results of the build can be found in the log file /dev/shm/example/GCC/4.9.2/dummy-dummy/easybuild/easybuild-GCC-4.9.2-20150430.091644.log</span>
+<span class="s"> == Build succeeded for 1 out of 1</span>
+<span class="s"> == temporary log file(s) /tmp/eb-X2Z0b7/easybuild-mGxmNb.log* have been removed.</span>
+<span class="s"> == temporary directory /tmp/eb-X2Z0b7 has been removed.</span>
 
 
-.. _partial_installation_fetch:
+<span class="p">..</span> <span class="nt">_partial_installation_fetch:</span>
 
-Fetching sources with ``--fetch``
----------------------------------
+<span class="gh">Fetching sources with ``--fetch``</span>
+<span class="gh">---------------------------------</span>
 
 It may be useful to be able to batch-download sources on a machine where no modules tool is installed. The
-``--fetch`` option, which is equivalent with ``--stop fetch --ignore-osdeps``, addresses this requirement.
+<span class="s">``--fetch``</span> option, which is equivalent with <span class="s">``--stop fetch --ignore-osdeps``</span>, addresses this requirement.
 
-Example usage::
+Example usage<span class="se">::</span>
 
- $ eb GCCcore-6.2.0.eb --fetch
- == temporary log file in case of crash /tmp/eb-1ZZX2b/easybuild-NSmm5P.log
- == processing EasyBuild easyconfig /home/example/GCCcore-6.2.0.eb
- == building and installing GCCcore/6.2.0...
- == fetching files...
- == COMPLETED: Installation STOPPED successfully
- == Results of the build can be found in the log file(s) /dev/shm/example/GCC/4.9.2/dummy-dummy/easybuild/easybuild-GCCcore-6.2.0-20180330.170523.log
- == Build succeeded for 1 out of 1
- == Temporary log file(s) /tmp/eb-1ZZX2b/easybuild-NSmm5P.log* have been removed.
- == Temporary directory /tmp/eb-1ZZX2b has been removed.
+<span class="s"> $ eb GCCcore-6.2.0.eb --fetch</span>
+<span class="s"> == temporary log file in case of crash /tmp/eb-1ZZX2b/easybuild-NSmm5P.log</span>
+<span class="s"> == processing EasyBuild easyconfig /home/example/GCCcore-6.2.0.eb</span>
+<span class="s"> == building and installing GCCcore/6.2.0...</span>
+<span class="s"> == fetching files...</span>
+<span class="s"> == COMPLETED: Installation STOPPED successfully</span>
+<span class="s"> == Results of the build can be found in the log file(s) /dev/shm/example/GCC/4.9.2/dummy-dummy/easybuild/easybuild-GCCcore-6.2.0-20180330.170523.log</span>
+<span class="s"> == Build succeeded for 1 out of 1</span>
+<span class="s"> == Temporary log file(s) /tmp/eb-1ZZX2b/easybuild-NSmm5P.log* have been removed.</span>
+<span class="s"> == Temporary directory /tmp/eb-1ZZX2b has been removed.</span>
 
-.. note::
-  ``--fetch`` can be used in conjunction with the ``--robot`` and ``--robot-path`` options to download sources of
-  the whole dependency tree of an easyconfig (see :ref:`use_robot`).
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
+  <span class="s">``--fetch``</span> can be used in conjunction with the <span class="s">``--robot``</span> and <span class="s">``--robot-path``</span> options to download sources of
+  the whole dependency tree of an easyconfig (see <span class="na">:ref:</span><span class="nv">`use_robot`</span>).
 
-.. note::
-  Sources will be downloaded in the default location (see :ref:`sourcepath`),
-  unless EasyBuild is configured via the ``--sourcepath`` option.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
+  Sources will be downloaded in the default location (see <span class="na">:ref:</span><span class="nv">`sourcepath`</span>),
+  unless EasyBuild is configured via the <span class="s">``--sourcepath``</span> option.
 
 
-.. _partial_installation_skip:
+<span class="p">..</span> <span class="nt">_partial_installation_skip:</span>
 
-Installing additional extensions using ``-k``/``-skip``
--------------------------------------------------------
+<span class="gh">Installing additional extensions using ``-k``/``-skip``</span>
+<span class="gh">-------------------------------------------------------</span>
 
-For software applications that may include :ref:`extensions`, it is often required to install one or more additional
+For software applications that may include <span class="na">:ref:</span><span class="nv">`extensions`</span>, it is often required to install one or more additional
 extensions without having to reinstall the software package (and all extensions) from scratch.
-For this purpose, the ``-k``/``--skip`` command line option is available.
+For this purpose, the <span class="s">``-k``</span>/<span class="s">``--skip``</span> command line option is available.
 
 To actually skip an existing software installation and all installed extensions, a corresponding module must be
 available already; if not, the installation procedure will be performed from scratch.
-To trigger the installation of missing extensions, ``--rebuild`` ( or ``--force``, see :ref:`_force_option`) must be used as well; without it, the installation
+To trigger the installation of missing extensions, <span class="s">``--rebuild``</span> ( or <span class="s">``--force``</span>, see <span class="na">:ref:</span><span class="nv">`_force_option`</span>) must be used as well; without it, the installation
 procedure will be skipped as a whole (since the module is already available).
 
-When ``--skip`` is combined with ``--rebuild``, EasyBuild will:
+When <span class="s">``--skip``</span> is combined with <span class="s">``--rebuild``</span>, EasyBuild will:
 
-i) ensure that all (extension) sources are available (and try to fetch them if needed);
-ii) prepare the build environment;
-iii) check which extensions have not been installed yet;
-iv) install the missing extensions;
-v) run the sanity check (which includes checking that all extensions are available)
-vi) regenerate the module file (since it contains a list of installed extensions)
+<span class="m">i)</span> ensure that all (extension) sources are available (and try to fetch them if needed);
+<span class="m">ii)</span> prepare the build environment;
+<span class="m">iii)</span> check which extensions have not been installed yet;
+<span class="m">iv)</span> install the missing extensions;
+<span class="m">v)</span> run the sanity check (which includes checking that all extensions are available)
+<span class="m">vi)</span> regenerate the module file (since it contains a list of installed extensions)
 
-Example usage::
+Example usage<span class="se">::</span>
 
- $ eb Python-2.7.9-intel-2015a.eb --skip
- ...
- == Python/2.7.9-intel-2015a is already installed (module found), skipping
- == No easyconfigs left to be built.
- == Build succeeded for 0 out of 0
+<span class="s"> $ eb Python-2.7.9-intel-2015a.eb --skip</span>
+<span class="s"> ...</span>
+<span class="s"> == Python/2.7.9-intel-2015a is already installed (module found), skipping</span>
+<span class="s"> == No easyconfigs left to be built.</span>
+<span class="s"> == Build succeeded for 0 out of 0</span>
 
-.. code::
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span>
 
  $ eb Python-2.7.9-intel-2015a.eb --skip --rebuild
- ...
- == building and installing Python/2.7.9-intel-2015a...
- ...
- == configuring [skipped]
- == building [skipped]
- == testing [skipped]
- == installing [skipped]
- == taking care of extensions...
- ...
- == sanity checking...
- == cleaning up...
- == creating module...
- == COMPLETED: Installation ended successfully
+<span class="cp"> ...</span>
+<span class="cp"> == building and installing Python/2.7.9-intel-2015a...</span>
+<span class="cp"> ...</span>
+<span class="cp"> == configuring [skipped]</span>
+<span class="cp"> == building [skipped]</span>
+<span class="cp"> == testing [skipped]</span>
+<span class="cp"> == installing [skipped]</span>
+<span class="cp"> == taking care of extensions...</span>
+<span class="cp"> ...</span>
+<span class="cp"> == sanity checking...</span>
+<span class="cp"> == cleaning up...</span>
+<span class="cp"> == creating module...</span>
+<span class="cp"> == COMPLETED: Installation ended successfully</span>
 
-.. note::
-  Upgrading of extensions to a newer version does not work (yet) using ``--skip``, because the way in which extensions
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
+  Upgrading of extensions to a newer version does not work (yet) using <span class="s">``--skip``</span>, because the way in which extensions
   are checked for availability, i.e. the extensions filter, is (usually) version-agnogstic.
 
-.. note::
-  The &#39;``skipsteps``&#39; easyconfig parameter has a different purpose, i.e. to specify which installation steps should
-  *always* be skipped when the installation of a particular software package is performed, no matter whether the
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
+  The &#39;<span class="s">``skipsteps``</span>&#39; easyconfig parameter has a different purpose, i.e. to specify which installation steps should
+  <span class="ge">*always*</span> be skipped when the installation of a particular software package is performed, no matter whether the
   software or corresponding module is already available or not.
 
-.. note:: When ``--skip`` is used, a backup is created for all existing module files that are regenerated.
-          To disable backing up of module files, use ``--disable-backup-modules`` (see also :ref:`backup_modules`).
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> When <span class="s">``--skip``</span> is used, a backup is created for all existing module files that are regenerated.
+          To disable backing up of module files, use <span class="s">``--disable-backup-modules``</span> (see also <span class="na">:ref:</span><span class="nv">`backup_modules`</span>).
 
-.. _module_only:
+<span class="p">..</span> <span class="nt">_module_only:</span>
 
-Only (re)generating (additional) module files using ``--module-only``
----------------------------------------------------------------------
+<span class="gh">Only (re)generating (additional) module files using ``--module-only``</span>
+<span class="gh">---------------------------------------------------------------------</span>
 
 Since EasyBuild v2.1, it is possible to only (re)generate the module file that matches the specifications in the
-easyconfig file, using ``--module-only``. Depending on the use case, additional options should be supplied.
+easyconfig file, using <span class="s">``--module-only``</span>. Depending on the use case, additional options should be supplied.
 
-Usually ``--rebuild`` is also required, either to ignore the existing module file (if the module is available under the
+Usually <span class="s">``--rebuild``</span> is also required, either to ignore the existing module file (if the module is available under the
 same name as the one being (re)generated), or to skip the sanity check that verifies the software installation (if no
 software installation is available).
 
-Combining ``--module-only`` with ``--installpath-modules`` is also a common use case, to generate the module file in
-a (test) location other than the software installation prefix (see :ref:`installpath`).
+Combining <span class="s">``--module-only``</span> with <span class="s">``--installpath-modules``</span> is also a common use case, to generate the module file in
+a (test) location other than the software installation prefix (see <span class="na">:ref:</span><span class="nv">`installpath`</span>).
 
-.. note:: Although ``--module-only`` was already supported in EasyBuild v2.1.0, we strongly recommend to use EasyBuild
-          v2.1.1 or a more recent version, because of some critical bug fixes with respect to ``--module-only``
-          (see :ref:`release_notes_eb211`).
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Although <span class="s">``--module-only``</span> was already supported in EasyBuild v2.1.0, we strongly recommend to use EasyBuild
+          v2.1.1 or a more recent version, because of some critical bug fixes with respect to <span class="s">``--module-only``</span>
+          (see <span class="na">:ref:</span><span class="nv">`release_notes_eb211`</span>).
 
 Use cases:
 
-* :ref:`module_only_only_regenerate`
-* :ref:`module_only_additional`
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`module_only_only_regenerate`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`module_only_additional`</span>
 
-.. note:: When ``--module-only`` is used, a backup is created for all existing module files that are regenerated.
-          To disable backing up of module files, use ``--disable-backup-modules`` (see also :ref:`backup_modules`).
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> When <span class="s">``--module-only``</span> is used, a backup is created for all existing module files that are regenerated.
+          To disable backing up of module files, use <span class="s">``--disable-backup-modules``</span> (see also <span class="na">:ref:</span><span class="nv">`backup_modules`</span>).
 
-.. _module_only_only_regenerate:
+<span class="p">..</span> <span class="nt">_module_only_only_regenerate:</span>
 
-Only (re)generating (existing) module file
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Only (re)generating (existing) module file</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 To only generate a module file (i.e., skip actually building and installing the software), or to regenerate an
-existing module file, ``--module-only`` can be used.
+existing module file, <span class="s">``--module-only``</span> can be used.
 
-In the former case, enabling ``--rebuild`` is required because the sanity check step that verifies whether the
+In the former case, enabling <span class="s">``--rebuild``</span> is required because the sanity check step that verifies whether the
 installation produced the expected files and/or directories is not skipped unless forced.
-In the latter case, ``--rebuild`` must be used to make EasyBuild ignore that the module is already available
+In the latter case, <span class="s">``--rebuild``</span> must be used to make EasyBuild ignore that the module is already available
 according to the modules tool.
 
 Example usage:
 
-* only generate module file::
+<span class="m">*</span> only generate module file::
 
    $ module avail GCC
    ---------------------------- /home/example/.local/modules/all ----------------------------
    GCC/4.8.2
 
    $ eb GCC-5.1.0.eb --module-only --rebuild
-   ...
-   == building and installing GCC/5.1.0...
-   == fetching files [skipped]
-   ...
-   == configuring [skipped]
-   == building [skipped]
-   == testing [skipped]
-   == installing [skipped]
-   ...
-   == sanity checking [skipped]
-   == cleaning up [skipped]
-   == creating module...
-   == COMPLETED: Installation ended successfully
-   ...
+<span class="cp">   ...</span>
+<span class="cp">   == building and installing GCC/5.1.0...</span>
+<span class="cp">   == fetching files [skipped]</span>
+<span class="cp">   ...</span>
+<span class="cp">   == configuring [skipped]</span>
+<span class="cp">   == building [skipped]</span>
+<span class="cp">   == testing [skipped]</span>
+<span class="cp">   == installing [skipped]</span>
+<span class="cp">   ...</span>
+<span class="cp">   == sanity checking [skipped]</span>
+<span class="cp">   == cleaning up [skipped]</span>
+<span class="cp">   == creating module...</span>
+<span class="cp">   == COMPLETED: Installation ended successfully</span>
+<span class="cp">   ...</span>
 
-   $ module avail GCC
+<span class="cp">   $ module avail GCC</span>
 
-   ---------------------------- /home/example/.local/modules/all ----------------------------
-   GCC/4.8.2     GCC/5.1.0
+<span class="cp">   ---------------------------- /home/example/.local/modules/all ----------------------------</span>
+<span class="cp">   GCC/4.8.2     GCC/5.1.0</span>
 
-* regenerate existing module file::
+<span class="m">*</span> regenerate existing module file::
 
    $ module avail GCC/4.8.2
 
@@ -601,83 +601,83 @@ Example usage:
    -rw-rw-r-- 1 example example 1002 Jan 11 17:19 /home/example/.local/modules/all/GCC/4.8.2
 
    $ eb GCC-4.8.2.eb --module-only --rebuild
-   ...
-   == building and installing GCC/4.8.2...
-   ...
-   == sanity checking [skipped]
-   == creating module...
-   == COMPLETED: Installation ended successfully
-   ...
+<span class="cp">   ...</span>
+<span class="cp">   == building and installing GCC/4.8.2...</span>
+<span class="cp">   ...</span>
+<span class="cp">   == sanity checking [skipped]</span>
+<span class="cp">   == creating module...</span>
+<span class="cp">   == COMPLETED: Installation ended successfully</span>
+<span class="cp">   ...</span>
 
-   $ ls -l /home/example/.local/modules/all/GCC/4.8.2
-   -rw-rw-r-- 1 example example 1064 Apr 30 10:54 /home/example/.local/modules/all/GCC/4.8.2
+<span class="cp">   $ ls -l /home/example/.local/modules/all/GCC/4.8.2</span>
+<span class="cp">   -rw-rw-r-- 1 example example 1064 Apr 30 10:54 /home/example/.local/modules/all/GCC/4.8.2</span>
 
-.. _module_only_additional:
+<span class="p">..</span> <span class="nt">_module_only_additional:</span>
 
-Generating additional module files
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Generating additional module files</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 Generating an additional module file, next to the one(s) already available, is also supported. This can achieved by
-combining ``--module-only`` with additional configuration options that apply to the module generation.
+combining <span class="s">``--module-only``</span> with additional configuration options that apply to the module generation.
 
 Examples:
 
-* to generate a module file in Lua syntax, next to an already existing module file in Tcl syntax,
-  ``--module-only --module-syntax=Lua`` can be used::
+<span class="m">*</span> to generate a module file in Lua syntax, next to an already existing module file in Tcl syntax,
+  <span class="s">``--module-only --module-syntax=Lua``</span> can be used<span class="se">::</span>
 
-    $ module avail GCC/4.8.2
+<span class="s">    $ module avail GCC/4.8.2</span>
 
-    ---------------------------- /home/example/.local/modules/all ----------------------------
-    GCC/4.8.2
+<span class="s">    ---------------------------- /home/example/.local/modules/all ----------------------------</span>
+<span class="s">    GCC/4.8.2</span>
 
-    $ ls -l /home/example/.local/modules/all/GCC/4.8.2*
-    -rw-rw-r-- 1 example example 1064 Apr 30 10:54 /home/example/.local/modules/all/GCC/4.8.2
+<span class="s">    $ ls -l /home/example/.local/modules/all/GCC/4.8.2*</span>
+<span class="s">    -rw-rw-r-- 1 example example 1064 Apr 30 10:54 /home/example/.local/modules/all/GCC/4.8.2</span>
 
-    $ eb GCC-4.8.2.eb --modules-tool=Lmod --module-only --module-syntax=Lua --rebuild
-    ...
-    == building and installing GCC/4.8.2...
-    ...
-    == sanity checking [skipped]
-    == creating module...
-    == COMPLETED: Installation ended successfully
-    ...
+<span class="s">    $ eb GCC-4.8.2.eb --modules-tool=Lmod --module-only --module-syntax=Lua --rebuild</span>
+<span class="s">    ...</span>
+<span class="s">    == building and installing GCC/4.8.2...</span>
+<span class="s">    ...</span>
+<span class="s">    == sanity checking [skipped]</span>
+<span class="s">    == creating module...</span>
+<span class="s">    == COMPLETED: Installation ended successfully</span>
+<span class="s">    ...</span>
 
-    $ ls -l /home/example/.local/modules/all/GCC/4.8.2*
-    -rw-rw-r-- 1 example example 1064 Apr 30 10:54 /home/example/.local/modules/all/GCC/4.8.2
-    -rw-rw-r-- 1 example example 1249 Apr 30 11:56 /home/example/.local/modules/all/GCC/4.8.2.lua
+<span class="s">    $ ls -l /home/example/.local/modules/all/GCC/4.8.2*</span>
+<span class="s">    -rw-rw-r-- 1 example example 1064 Apr 30 10:54 /home/example/.local/modules/all/GCC/4.8.2</span>
+<span class="s">    -rw-rw-r-- 1 example example 1249 Apr 30 11:56 /home/example/.local/modules/all/GCC/4.8.2.lua</span>
 
-  .. note::
+<span class="p">  ..</span> <span class="ow">note</span><span class="p">::</span>
       Since only Lmod can consume module files in Lua syntax, it must be used as a modules tool;
-      see also :ref:`module_syntax`.
+      see also <span class="na">:ref:</span><span class="nv">`module_syntax`</span>.
 
       Only changing the syntax of the module file does not affect the module name, so Lmod will
-      report the module as being available. Hence, ``--rebuild`` must be used here as well.
+      report the module as being available. Hence, <span class="s">``--rebuild``</span> must be used here as well.
 
-* to generate a module file using a different naming scheme, ``--module-only`` can be combined with
-  ``--module-naming-scheme``::
+<span class="m">*</span> to generate a module file using a different naming scheme, <span class="s">``--module-only``</span> can be combined with
+  <span class="s">``--module-naming-scheme``</span><span class="se">::</span>
 
-     $ eb --installpath-modules=$HOME/test/modules --module-only --module-naming-scheme=HierarchicalMNS --rebuild
-     ...
-     == building and installing Core/GCC/4.8.2...
-     ...
-     == sanity checking [skipped]
-     == creating module...
-     == COMPLETED: Installation ended successfully
+<span class="s">     $ eb --installpath-modules=$HOME/test/modules --module-only --module-naming-scheme=HierarchicalMNS --rebuild</span>
+<span class="s">     ...</span>
+<span class="s">     == building and installing Core/GCC/4.8.2...</span>
+<span class="s">     ...</span>
+<span class="s">     == sanity checking [skipped]</span>
+<span class="s">     == creating module...</span>
+<span class="s">     == COMPLETED: Installation ended successfully</span>
 
-     $ module unuse $HOME/.local/modules/all
-     $ module use $HOME/test/modules/all
-     $ module avail
+<span class="s">     $ module unuse $HOME/.local/modules/all</span>
+<span class="s">     $ module use $HOME/test/modules/all</span>
+<span class="s">     $ module avail</span>
 
-     ---------------------------- /home/example/test/modules/all ----------------------------
-     Core/GCC/4.8.2
+<span class="s">     ---------------------------- /home/example/test/modules/all ----------------------------</span>
+<span class="s">     Core/GCC/4.8.2</span>
 
-  .. note:: Modules that are generated used different module naming schemes should *never* be mixed, hence the use
-            of ``--installpath-modules``, see also :ref:`installpath_direct_options`.
+<span class="p">  ..</span> <span class="ow">note</span><span class="p">::</span> Modules that are generated used different module naming schemes should <span class="ge">*never*</span> be mixed, hence the use
+            of <span class="s">``--installpath-modules``</span>, see also <span class="na">:ref:</span><span class="nv">`installpath_direct_options`</span>.
 
-  .. note:: The modules files generated using the specified module naming scheme will most likely **not** be tied to
+<span class="p">  ..</span> <span class="ow">note</span><span class="p">::</span> The modules files generated using the specified module naming scheme will most likely <span class="gs">**not**</span> be tied to
             an existing software installation in this case (unless the software installation was already there somehow),
             since the name of the subdirectory of the software installation prefix is also governed by the active
-            module naming scheme. This is also why ``--rebuild`` must be used in the example above (to skip the sanity
+            module naming scheme. This is also why <span class="s">``--rebuild``</span> must be used in the example above (to skip the sanity
             check that verifies the software installation).
 
             Thus, this is only useful to assess how the module tree would look like under a particular module naming
@@ -688,10 +688,10 @@ Examples:
             naming schemes, by providing the name of the software installation subdirectory using one scheme, and the
             module names (and other metadata for module files) with the other.
 
-            An example of such a module naming scheme is ``MigrateFromEBToHMNS``, which allows to generate module files
-            using the hierarchical module naming scheme implemented by ``HierarchicalMNS`` for the software installed
-            in subdirectories following the default EasyBuild module naming scheme ``EasyBuildMNS``.
-            The ``MigrateFromEBToHMNS`` module naming scheme is available since EasyBuild v2.2.0.
+            An example of such a module naming scheme is <span class="s">``MigrateFromEBToHMNS``</span>, which allows to generate module files
+            using the hierarchical module naming scheme implemented by <span class="s">``HierarchicalMNS``</span> for the software installed
+            in subdirectories following the default EasyBuild module naming scheme <span class="s">``EasyBuildMNS``</span>.
+            The <span class="s">``MigrateFromEBToHMNS``</span> module naming scheme is available since EasyBuild v2.2.0.
 </code></pre></div>
 
   <hr>
@@ -699,7 +699,7 @@ Examples:
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
       
     
   </small>

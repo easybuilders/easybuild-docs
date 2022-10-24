@@ -386,167 +386,167 @@ and you can help with that!
 </ul>
 <p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
 </div>
-<div class="highlight"><pre><span></span><code>.. _cray_support:
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_cray_support:</span>
 
-EasyBuild on Cray
-=================
+<span class="gh">EasyBuild on Cray</span>
+<span class="gh">=================</span>
 
 As of EasyBuild v2.7.0, the support for using EasyBuild on Cray systems is considered stable.
-Tt enables building/installing software using the ``PrgEnv`` modules provided by Cray.
+Tt enables building/installing software using the <span class="s">``PrgEnv``</span> modules provided by Cray.
 This page provides an overview of the current status.
 
 For more information about this, contact:
 
-* Guilherme Peretti-Pezzi (CSCS, Switzerland, peretti@cscs.ch)
-* Kenneth Hoste (HPC-UGent, Belgium; kenneth.hoste@ugent.be)
-* Petar Forai (IMBA/IMP, Austria; petar.forai@imp.ac.at).
+<span class="m">*</span> Guilherme Peretti-Pezzi (CSCS, Switzerland, peretti@cscs.ch)
+<span class="m">*</span> Kenneth Hoste (HPC-UGent, Belgium; kenneth.hoste@ugent.be)
+<span class="m">*</span> Petar Forai (IMBA/IMP, Austria; petar.forai@imp.ac.at).
 
 Thanks to:
 
-* Olli-Pekka Letho (CSC.fi)
-* Tim Robinson and Guilherme Peretti-Pezzi (CSCS.ch)
-* Eric Bavier (Cray)
-* Brett Bode (NCSA)
+<span class="m">*</span> Olli-Pekka Letho (CSC.fi)
+<span class="m">*</span> Tim Robinson and Guilherme Peretti-Pezzi (CSCS.ch)
+<span class="m">*</span> Eric Bavier (Cray)
+<span class="m">*</span> Brett Bode (NCSA)
 
 for providing us access to Cray systems, for their support and for testing and contributing to this work.
 
-Test systems
-------------
+<span class="gh">Test systems</span>
+<span class="gh">------------</span>
 
-* Piz Daint &amp; Piz Dora @ CSCS.ch (http://www.cscs.ch/computers/piz_daint_piz_dora/index.html)
-* Santis &amp; Brisi (TDS) @ CSCS.ch
-* Sisu @ CSC.fi (https://research.csc.fi/sisu-supercomputer)
-* Swan (TDS) @ Cray
-* Blue Waters @ NCSA
+<span class="m">*</span> Piz Daint &amp; Piz Dora @ CSCS.ch (http://www.cscs.ch/computers/piz_daint_piz_dora/index.html)
+<span class="m">*</span> Santis &amp; Brisi (TDS) @ CSCS.ch
+<span class="m">*</span> Sisu @ CSC.fi (https://research.csc.fi/sisu-supercomputer)
+<span class="m">*</span> Swan (TDS) @ Cray
+<span class="m">*</span> Blue Waters @ NCSA
 
-EasyBuild toolchains
---------------------
+<span class="gh">EasyBuild toolchains</span>
+<span class="gh">--------------------</span>
 
-* ``CrayCCE``: ``PrgEnv-cray`` with pinned versions of ``cce``, ``cray-libsci`` and ``cray-mpich``
-* ``CrayGNU``: ``PrgEnv-gnu`` with pinned versions of ``gcc``, ``cray-libsci`` and ``cray-mpich``
-* ``CrayIntel``: ``PrgEnv-intel`` with pinned versions of ``intel``, ``cray-libsci`` and ``cray-mpich``
-* ``CrayPGI``: ``PrgEnv-pgi`` with pinned versions of ``pgi`` and ``cray-mpich``
+<span class="m">*</span> <span class="s">``CrayCCE``</span>: <span class="s">``PrgEnv-cray``</span> with pinned versions of <span class="s">``cce``</span>, <span class="s">``cray-libsci``</span> and <span class="s">``cray-mpich``</span>
+<span class="m">*</span> <span class="s">``CrayGNU``</span>: <span class="s">``PrgEnv-gnu``</span> with pinned versions of <span class="s">``gcc``</span>, <span class="s">``cray-libsci``</span> and <span class="s">``cray-mpich``</span>
+<span class="m">*</span> <span class="s">``CrayIntel``</span>: <span class="s">``PrgEnv-intel``</span> with pinned versions of <span class="s">``intel``</span>, <span class="s">``cray-libsci``</span> and <span class="s">``cray-mpich``</span>
+<span class="m">*</span> <span class="s">``CrayPGI``</span>: <span class="s">``PrgEnv-pgi``</span> with pinned versions of <span class="s">``pgi``</span> and <span class="s">``cray-mpich``</span>
 
 versions:
 
-* ``Cray{CCE,GNU,Intel}/2015.06`` (requires Cray PE June/2015)
-* ``Cray{CCE,GNU,Intel}/2015.11`` (requires Cray PE November/2015)
-* ``CrayGNU/2016.03`` (requires Cray PE March/2016)
-* ``Cray{GNU,PGI}/2016.04`` (requires Cray PE April/2016)
-* ``Cray{GNU,Intel}/2016.06`` (requires Cray PE June/2016)
+<span class="m">*</span> <span class="s">``Cray{CCE,GNU,Intel}/2015.06``</span> (requires Cray PE June/2015)
+<span class="m">*</span> <span class="s">``Cray{CCE,GNU,Intel}/2015.11``</span> (requires Cray PE November/2015)
+<span class="m">*</span> <span class="s">``CrayGNU/2016.03``</span> (requires Cray PE March/2016)
+<span class="m">*</span> <span class="s">``Cray{GNU,PGI}/2016.04``</span> (requires Cray PE April/2016)
+<span class="m">*</span> <span class="s">``Cray{GNU,Intel}/2016.06``</span> (requires Cray PE June/2016)
 
-What works already?
--------------------
+<span class="gh">What works already?</span>
+<span class="gh">-------------------</span>
 (see below for more information)
 
-*  **HPL** (LINPACK) benchmark version 2.1
+<span class="m">*</span>  <span class="gs">**HPL**</span> (LINPACK) benchmark version 2.1
 
-Major scientific software applications
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Major scientific software applications</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-* **CP2K** 2.6.0
-* **GROMACS** 4.6.7
-* **Python** 2.7.9 + numpy 1.9.2 + scipy 0.15.1
-* **WRF** 3.6.1 (pending on Sisu)
+<span class="m">*</span> <span class="gs">**CP2K**</span> 2.6.0
+<span class="m">*</span> <span class="gs">**GROMACS**</span> 4.6.7
+<span class="m">*</span> <span class="gs">**Python**</span> 2.7.9 + numpy 1.9.2 + scipy 0.15.1
+<span class="m">*</span> <span class="gs">**WRF**</span> 3.6.1 (pending on Sisu)
 
 An up-to-date list of software applications built on Cray systems at CSCS can be found https://github.com/eth-cscs/production/,
 see https://github.com/eth-cscs/production/tree/master/jenkins-builds .
 
-Required EasyBuild configuration
---------------------------------
+<span class="gh">Required EasyBuild configuration</span>
+<span class="gh">--------------------------------</span>
 
 
-Modules tool 
-~~~~~~~~~~~~
-* Sisu: self-installed Lmod 5.8
-* Piz Daint, Dora, Swan, Santis, Brisi: system-provided environment modules 3.2.10 
+<span class="gh">Modules tool </span>
+<span class="gh">~~~~~~~~~~~~</span>
+<span class="m">*</span> Sisu: self-installed Lmod 5.8
+<span class="m">*</span> Piz Daint, Dora, Swan, Santis, Brisi: system-provided environment modules 3.2.10 
 
-Example for environment modules 3.2.10::
+Example for environment modules 3.2.10<span class="se">::</span>
 
- source /opt/modules/3.2.10.3/init/bash
- export PATH=/opt/modules/3.2.10.3/bin/:$PATH
- export EASYBUILD_MODULES_TOOL=EnvironmentModulesC
- export EASYBUILD_MODULE_SYNTAX=Tcl
+<span class="s"> source /opt/modules/3.2.10.3/init/bash</span>
+<span class="s"> export PATH=/opt/modules/3.2.10.3/bin/:$PATH</span>
+<span class="s"> export EASYBUILD_MODULES_TOOL=EnvironmentModulesC</span>
+<span class="s"> export EASYBUILD_MODULE_SYNTAX=Tcl</span>
 
-Architecture 
-~~~~~~~~~~~~
+<span class="gh">Architecture </span>
+<span class="gh">~~~~~~~~~~~~</span>
 
-* the ``craype-&lt;target&gt;`` module to load must be specified using ``--optarch``
+<span class="m">*</span> the <span class="s">``craype-&lt;target&gt;``</span> module to load must be specified using <span class="s">``--optarch``</span>
 
-  * e.g., ``--optarch=sandybridge`` results in ``craype-sandybridge`` being loaded in the build environment used by EasyBuild 
+  <span class="m">*</span> e.g., <span class="s">``--optarch=sandybridge``</span> results in <span class="s">``craype-sandybridge``</span> being loaded in the build environment used by EasyBuild 
 
-You can also export this option as a shell variable. Example for ``sandybridge``::
+You can also export this option as a shell variable. Example for <span class="s">``sandybridge``</span><span class="se">::</span>
 
- $ export EASYBUILD_OPTARCH=sandybridge
+<span class="s"> $ export EASYBUILD_OPTARCH=sandybridge</span>
 
-Metadata for Cray-provided modules
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Metadata for Cray-provided modules</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-* Easybuild provides a sample metadata file in order to use modules provided by Cray:
+<span class="m">*</span> Easybuild provides a sample metadata file in order to use modules provided by Cray:
 
-::
+<span class="se">::</span>
 
- easybuild-framework/etc/cray_external_modules_metadata.cfg
+<span class="s"> easybuild-framework/etc/cray_external_modules_metadata.cfg</span>
 
 
 This file is loaded by default and contains enough information to build the easyconfig files shipped with EasyBuild.
 
-If you need to use a customized file, it can be specified using ``--external-modules-metadata``.
-For more details see :ref:`using_external_modules_metadata`.
+If you need to use a customized file, it can be specified using <span class="s">``--external-modules-metadata``</span>.
+For more details see <span class="na">:ref:</span><span class="nv">`using_external_modules_metadata`</span>.
 
-Major supported/tested applications
------------------------------------
+<span class="gh">Major supported/tested applications</span>
+<span class="gh">-----------------------------------</span>
 
 (in alphabetical order)
 
-CP2K
-~~~~
+<span class="gh">CP2K</span>
+<span class="gh">~~~~</span>
 
-* http://www.cp2k.org
-* version(s): 2.6.0
+<span class="m">*</span> http://www.cp2k.org
+<span class="m">*</span> version(s): 2.6.0
 
-::
+<span class="se">::</span>
 
- $ eb CP2K-2.6.0-CrayGNU-2015.06.eb -dr 
+<span class="s"> $ eb CP2K-2.6.0-CrayGNU-2015.06.eb -dr </span>
 
-GROMACS
-~~~~~~~
+<span class="gh">GROMACS</span>
+<span class="gh">~~~~~~~</span>
 
-* http://www.gromacs.org
-* version(s): 4.6.7
+<span class="m">*</span> http://www.gromacs.org
+<span class="m">*</span> version(s): 4.6.7
 
-::
+<span class="se">::</span>
 
- eb GROMACS-4.6.7-CrayGNU-2015.06-mpi.eb -dr 
+<span class="s"> eb GROMACS-4.6.7-CrayGNU-2015.06-mpi.eb -dr </span>
 
-HPL
-~~~
+<span class="gh">HPL</span>
+<span class="gh">~~~</span>
 
-* http://www.netlib.org/benchmark/hpl
-* version(s): 2.1
+<span class="m">*</span> http://www.netlib.org/benchmark/hpl
+<span class="m">*</span> version(s): 2.1
 
-::
+<span class="se">::</span>
 
- eb HPL-2.1-CrayCCE-2015.06.eb -dr
- eb HPL-2.1-CrayGNU-2015.06.eb -dr 
- eb HPL-2.1-CrayIntel-2015.06.eb -dr 
+<span class="s"> eb HPL-2.1-CrayCCE-2015.06.eb -dr</span>
+<span class="s"> eb HPL-2.1-CrayGNU-2015.06.eb -dr </span>
+<span class="s"> eb HPL-2.1-CrayIntel-2015.06.eb -dr </span>
 
-Python + numpy/scipy
-~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Python + numpy/scipy</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~</span>
 
-* http://python.org, http://www.numpy.org, http://www.scipy.org
-* version(s): Python 2.7.9, numpy 1.9.2, scipy 0.15.1
+<span class="m">*</span> http://python.org, http://www.numpy.org, http://www.scipy.org
+<span class="m">*</span> version(s): Python 2.7.9, numpy 1.9.2, scipy 0.15.1
 
-::
+<span class="se">::</span>
 
- eb Python-2.7.9-CrayGNU-2015.06.eb -dr 
- # includes a few python packages (such as mpi4py, numpy and scipy)
+<span class="s"> eb Python-2.7.9-CrayGNU-2015.06.eb -dr </span>
+<span class="s"> # includes a few python packages (such as mpi4py, numpy and scipy)</span>
 
-WRF
-~~~
+<span class="gh">WRF</span>
+<span class="gh">~~~</span>
 
-* http://www.wrf-model.org
-* version(s): 3.6.1
+<span class="m">*</span> http://www.wrf-model.org
+<span class="m">*</span> version(s): 3.6.1
 
 ::
 
@@ -558,7 +558,7 @@ WRF
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
       
     
   </small>

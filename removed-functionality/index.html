@@ -386,230 +386,230 @@ and you can help with that!
 </ul>
 <p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
 </div>
-<div class="highlight"><pre><span></span><code>.. _removed_functionality:
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_removed_functionality:</span>
 
-Removed functionality
-=====================
+<span class="gh">Removed functionality</span>
+<span class="gh">=====================</span>
 
-Some of the functionality that was available in previous EasyBuild versions is now *removed*,
-after it was deprecated first in an earlier EasyBuild version (see :ref:`deprecation_policy`).
+Some of the functionality that was available in previous EasyBuild versions is now <span class="ge">*removed*</span>,
+after it was deprecated first in an earlier EasyBuild version (see <span class="na">:ref:</span><span class="nv">`deprecation_policy`</span>).
 
-.. _overview_removed_40:
+<span class="p">..</span> <span class="nt">_overview_removed_40:</span>
 
-Overview of removed functionality since EasyBuild v4.0
--------------------------------------------------------
+<span class="gh">Overview of removed functionality since EasyBuild v4.0</span>
+<span class="gh">-------------------------------------------------------</span>
 
 In EasyBuild v4.0, some intrusive changes were made that break backward compatibility with earlier versions.
 
-.. note:: In addition, please take into account the additional changes in EasyBuild v4.0,
-          which are documented :ref:`here &lt;eb4_changes_overview&gt;`.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> In addition, please take into account the additional changes in EasyBuild v4.0,
+          which are documented <span class="na">:ref:</span><span class="nv">`here &lt;eb4_changes_overview&gt;`</span>.
 
 For authors of easyconfig files:
 
-* :ref:`depr_fftw_use_fma4`
-* :ref:`depr_sources_2_element_tuple`
-* :ref:`depr_pythonpackage_use_easy_install_setup_py_develop`
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`depr_fftw_use_fma4`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`depr_sources_2_element_tuple`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`depr_pythonpackage_use_easy_install_setup_py_develop`</span>
 
 For developers of easyblocks:
 
-* :ref:`depr_copytree_function`
-* :ref:`depr_adjust_permissions_skip_symlinks`
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`depr_copytree_function`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`depr_adjust_permissions_skip_symlinks`</span>
 
 For EasyBuild framework developers:
 
-* :ref:`depr_get_easyblock_class_default_fallback`
-* :ref:`depr_toolchain_add_dependencies`
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`depr_get_easyblock_class_default_fallback`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`depr_toolchain_add_dependencies`</span>
 
-.. _depr_fftw_use_fma4:
+<span class="p">..</span> <span class="nt">_depr_fftw_use_fma4:</span>
 
-``use_fma`` custom easyconfig parameter for FFTW
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">``use_fma`` custom easyconfig parameter for FFTW</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-* *deprecated since:* EasyBuild v3.2.0 (May 5th 2017)
-* *removed in:* EasyBuild v4.0
-* *alternatives*: **use** ``use_fma4`` **easyconfig parameter instead**
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v3.2.0 (May 5th 2017)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v4.0
+<span class="m">*</span> <span class="ge">*alternatives*</span>: <span class="gs">**use**</span> <span class="s">``use_fma4``</span> <span class="gs">**easyconfig parameter instead**</span>
 
-The ``use_fma`` easyconfig parameter is no longer supported,
-and was replaced by the equivalent easyconfig parameter ``use_fma4``.
+The <span class="s">``use_fma``</span> easyconfig parameter is no longer supported,
+and was replaced by the equivalent easyconfig parameter <span class="s">``use_fma4``</span>.
 
-``use_fma`` was introduced in EasyBuild v3.1.0 allow configuring FFTW with ``--enable-avx-128-fma``.
-Since it is only supported on systems with AMD processors that have the ``FMA4`` feature, it was replaced by
-the more fittingly named ``use_fma4`` parameter in EasyBuild v3.2.0.
+<span class="s">``use_fma``</span> was introduced in EasyBuild v3.1.0 allow configuring FFTW with <span class="s">``--enable-avx-128-fma``</span>.
+Since it is only supported on systems with AMD processors that have the <span class="s">``FMA4``</span> feature, it was replaced by
+the more fittingly named <span class="s">``use_fma4``</span> parameter in EasyBuild v3.2.0.
 
 
-.. _depr_sources_2_element_tuple:
+<span class="p">..</span> <span class="nt">_depr_sources_2_element_tuple:</span>
 
-Specifying source files as 2-element tuples to provide a custom extraction command
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Specifying source files as 2-element tuples to provide a custom extraction command</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-* *deprecated since:* EasyBuild v3.3.0 (June 22nd 2017)
-* *removed in:* EasyBuild v4.0
-* *alternatives*: **use** ``extract_cmd`` **key in Python dictionary format instead**
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v3.3.0 (June 22nd 2017)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v4.0
+<span class="m">*</span> <span class="ge">*alternatives*</span>: <span class="gs">**use**</span> <span class="s">``extract_cmd``</span> <span class="gs">**key in Python dictionary format instead**</span>
 
-Specyfing a custom extraction command for a particular source file by using a 2-element tuple in ``sources``
+Specyfing a custom extraction command for a particular source file by using a 2-element tuple in <span class="s">``sources``</span>
 is no longer supported.
 
-Instead, a Python dictionary containing the ``filename`` and ``extract_cmd`` keys should be used instead,
-see :ref:`common_easyconfig_param_sources_alt`.
+Instead, a Python dictionary containing the <span class="s">``filename``</span> and <span class="s">``extract_cmd``</span> keys should be used instead,
+see <span class="na">:ref:</span><span class="nv">`common_easyconfig_param_sources_alt`</span>.
 
 So, this:
 
-.. code:: python
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
 
-    # source file is actually a gzipped tarball (filename should be .tar.gz)
-    # DEPRECATED FORMAT, don&#39;t use this anymore!
-    sources = [(&#39;example.gz&#39;, &quot;tar xfvz %s&quot;)]
+    <span class="c1"># source file is actually a gzipped tarball (filename should be .tar.gz)</span>
+    <span class="c1"># DEPRECATED FORMAT, don&#39;t use this anymore!</span>
+    <span class="n">sources</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;example.gz&#39;</span><span class="p">,</span> <span class="s2">&quot;tar xfvz </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">)]</span>
 
 should be replaced with:
 
-.. code:: python
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
 
-  sources = [{
-    &#39;filename&#39;: &#39;example-%(version)s.gz&#39;,
-    &#39;extract_cmd&#39;: &quot;tar xfvz %s&quot;,  # source file is actually a gzipped tarball (filename should be .tar.gz)
-  }]
+  <span class="n">sources</span> <span class="o">=</span> <span class="p">[{</span>
+    <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;example-</span><span class="si">%(version)s</span><span class="s1">.gz&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;extract_cmd&#39;</span><span class="p">:</span> <span class="s2">&quot;tar xfvz </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>  <span class="c1"># source file is actually a gzipped tarball (filename should be .tar.gz)</span>
+  <span class="p">}]</span>
 
 
-.. _depr_pythonpackage_use_easy_install_setup_py_develop:
+<span class="p">..</span> <span class="nt">_depr_pythonpackage_use_easy_install_setup_py_develop:</span>
 
-``use_easy_install`` and ``use_setup_py_develop`` custom easyconfig parameters for ``PythonPackage`` easyblock
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">``use_easy_install`` and ``use_setup_py_develop`` custom easyconfig parameters for ``PythonPackage`` easyblock</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-* *deprecated since:* EasyBuild v3.5.1 (Jan 17th 2018)
-* *removed in:* EasyBuild v4.0
-* *alternatives*: **use** ``install_target`` **easyconfig parameter instead**
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v3.5.1 (Jan 17th 2018)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v4.0
+<span class="m">*</span> <span class="ge">*alternatives*</span>: <span class="gs">**use**</span> <span class="s">``install_target``</span> <span class="gs">**easyconfig parameter instead**</span>
 
-The custom easyconfig parameters ``use_easy_install`` and ``use_setup_py_develop`` for the ``PythonPackage``
-easyblock are no longer supported. They are obsolete since the ``install_target`` custom easyconfig parameter was
+The custom easyconfig parameters <span class="s">``use_easy_install``</span> and <span class="s">``use_setup_py_develop``</span> for the <span class="s">``PythonPackage``</span>
+easyblock are no longer supported. They are obsolete since the <span class="s">``install_target``</span> custom easyconfig parameter was
 added in https://github.com/easybuilders/easybuild-easyblocks/pull/1341.
 
-Rather than using ``use_easy_install = True``, you should now use ``install_target = &#39;easy_install&#39;`` instead.
+Rather than using <span class="s">``use_easy_install = True``</span>, you should now use <span class="s">``install_target = &#39;easy_install&#39;``</span> instead.
 
-Rather than using ``use_setup_py_develop = True``, you should now use ``install_target = &#39;develop&#39;`` instead.
+Rather than using <span class="s">``use_setup_py_develop = True``</span>, you should now use <span class="s">``install_target = &#39;develop&#39;``</span> instead.
 
 
-.. _depr_copytree_function:
+<span class="p">..</span> <span class="nt">_depr_copytree_function:</span>
 
-``copytree`` function
-~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">``copytree`` function</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~</span>
 
-* *deprecated since:* EasyBuild v3.2.0 (May 5th 2017)
-* *removed in:* EasyBuild v4.0
-* *alternatives*: **use** ``copy_dir`` **instead**
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v3.2.0 (May 5th 2017)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v4.0
+<span class="m">*</span> <span class="ge">*alternatives*</span>: <span class="gs">**use**</span> <span class="s">``copy_dir``</span> <span class="gs">**instead**</span>
 
-The ``copytree`` function, which was a copy of the ``shutil.copytree`` function (introduced when Python 2.4 was still
+The <span class="s">``copytree``</span> function, which was a copy of the <span class="s">``shutil.copytree``</span> function (introduced when Python 2.4 was still
 supported) is no longer supported.
-It has been replaced by the superior ``copy_dir`` function in the ``easybuild.tools.filetools`` module.
+It has been replaced by the superior <span class="s">``copy_dir``</span> function in the <span class="s">``easybuild.tools.filetools``</span> module.
 
-``copy_dir`` graciously handles any exceptions that occur, and is aware of the EasyBuild *dry run* mode.
+<span class="s">``copy_dir``</span> graciously handles any exceptions that occur, and is aware of the EasyBuild <span class="ge">*dry run*</span> mode.
 
-.. _depr_adjust_permissions_skip_symlinks:
+<span class="p">..</span> <span class="nt">_depr_adjust_permissions_skip_symlinks:</span>
 
-``skip_symlinks`` named argument for ``adjust_permissions``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">``skip_symlinks`` named argument for ``adjust_permissions``</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-* *deprecated since:* EasyBuild v3.8.0 (Nov 2018)
-* *removed in:* EasyBuild v4.0
-* *alternatives*: *(none required)*
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v3.8.0 (Nov 2018)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v4.0
+<span class="m">*</span> <span class="ge">*alternatives*</span>: <span class="ge">*(none required)*</span>
 
-The ``skip_symlinks`` argument for the ``adjust_permissions`` function is no longer supported
-since ``adjust_permissions`` has been changed to *always* skip symbolic links (this was already the default behaviour);
+The <span class="s">``skip_symlinks``</span> argument for the <span class="s">``adjust_permissions``</span> function is no longer supported
+since <span class="s">``adjust_permissions``</span> has been changed to <span class="ge">*always*</span> skip symbolic links (this was already the default behaviour);
 see also https://github.com/easybuilders/easybuild-framework/pull/2644 .
 
 
-.. _depr_get_easyblock_class_default_fallback:
+<span class="p">..</span> <span class="nt">_depr_get_easyblock_class_default_fallback:</span>
 
-``default_fallback`` named argument for ``get_easyblock_class``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">``default_fallback`` named argument for ``get_easyblock_class``</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-* *deprecated since:* EasyBuild v3.2.0 (May 5th 2017)
-* *removed in:* EasyBuild v4.0
-* *alternatives*: **use** ``error_on_missing_easyblock`` **named parameter instead**
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v3.2.0 (May 5th 2017)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v4.0
+<span class="m">*</span> <span class="ge">*alternatives*</span>: <span class="gs">**use**</span> <span class="s">``error_on_missing_easyblock``</span> <span class="gs">**named parameter instead**</span>
 
-The ``get_easyblock_class`` implementation was cleaned up to remove the support for falling back to the
-generic ``ConfigureMake`` easyblock in EasyBuild v3.2.0 (see https://github.com/easybuilders/easybuild-framework/pull/2178),
-following the disabling of the :ref:`depr_ConfigureMake_fallback_eb1` in EasyBuild v2.0.
+The <span class="s">``get_easyblock_class``</span> implementation was cleaned up to remove the support for falling back to the
+generic <span class="s">``ConfigureMake``</span> easyblock in EasyBuild v3.2.0 (see https://github.com/easybuilders/easybuild-framework/pull/2178),
+following the disabling of the <span class="na">:ref:</span><span class="nv">`depr_ConfigureMake_fallback_eb1`</span> in EasyBuild v2.0.
 
-The ``default_fallback`` named argument for ``get_easyblock_class`` was replaced by ``error_on_missing_easyblock``,
+The <span class="s">``default_fallback``</span> named argument for <span class="s">``get_easyblock_class``</span> was replaced by <span class="s">``error_on_missing_easyblock``</span>,
 to retain support for ignoring a missing matching easyblock rather than raising an error.
 
 
-.. _depr_toolchain_add_dependencies:
+<span class="p">..</span> <span class="nt">_depr_toolchain_add_dependencies:</span>
 
-``add_dependencies`` method in ``Toolchain`` class
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">``add_dependencies`` method in ``Toolchain`` class</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-* *deprecated since:* EasyBuild v3.8.0
-* *removed in:* EasyBuild v4.0
-* *alternatives*: **pass list of dependencies to** ``deps`` **named argument of** ``prepare`` **method instead**
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v3.8.0
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v4.0
+<span class="m">*</span> <span class="ge">*alternatives*</span>: <span class="gs">**pass list of dependencies to**</span> <span class="s">``deps``</span> <span class="gs">**named argument of**</span> <span class="s">``prepare``</span> <span class="gs">**method instead**</span>
 
-The ``add_dependencies`` method in the ``Toolchain`` class is no longer supported, to provide more flexibility in the
+The <span class="s">``add_dependencies``</span> method in the <span class="s">``Toolchain``</span> class is no longer supported, to provide more flexibility in the
 EasyBuild framework w.r.t. handling of dependencies (see https://github.com/easybuilders/easybuild-framework/pull/2674).
 
-Instead, the list of dependencies should be passed to the ``Toolchain.prepare`` method, via the ``deps`` named argument.
+Instead, the list of dependencies should be passed to the <span class="s">``Toolchain.prepare``</span> method, via the <span class="s">``deps``</span> named argument.
 
 
-.. _overview_removed_30:
+<span class="p">..</span> <span class="nt">_overview_removed_30:</span>
 
-Overview of removed functionality since EasyBuild v3.0
--------------------------------------------------------
+<span class="gh">Overview of removed functionality since EasyBuild v3.0</span>
+<span class="gh">-------------------------------------------------------</span>
 
 In EasyBuild v3.0, some intrusive changes were made that break backward compatibility with earlier versions.
 
 For EasyBuild users &amp; authors of easyconfig files:
 
-* :ref:`archived_easyconfigs`
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`archived_easyconfigs`</span>
 
 For developers of easyblocks:
 
-* :ref:`depr_error_reporting`
-* :ref:`depr_lapack_get_blas_lib`
-* :ref:`depr_get_netcdf_module_set_cmds`
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`depr_error_reporting`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`depr_lapack_get_blas_lib`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`depr_get_netcdf_module_set_cmds`</span>
 
 For EasyBuild framework developers:
 
-* :ref:`depr_error_reporting`
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`depr_error_reporting`</span>
 
-.. _depr_error_reporting:
+<span class="p">..</span> <span class="nt">_depr_error_reporting:</span>
 
-``error`` and ``exception`` log methods no longer raise an exception
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">``error`` and ``exception`` log methods no longer raise an exception</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-* *deprecated since:* EasyBuild v2.1.0 (April&#39;15)
-* *removed in:* EasyBuild v3.0
-* *alternative(s)*: **use** ``raise EasyBuildError(...)`` **instead**
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v2.1.0 (April&#39;15)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v3.0
+<span class="m">*</span> <span class="ge">*alternative(s)*</span>: <span class="gs">**use**</span> <span class="s">``raise EasyBuildError(...)``</span> <span class="gs">**instead**</span>
 
-The ``error()`` and ``exception()`` log methods defined by EasyBuild (in the ``easybuild.tools.build_log`` module)
+The <span class="s">``error()``</span> and <span class="s">``exception()``</span> log methods defined by EasyBuild (in the <span class="s">``easybuild.tools.build_log``</span> module)
 did not match the semantics of the `standard Python log methods
-&lt;https://docs.python.org/2/library/logging.html#logging.Logger.error&gt;`_, in the sense that they used to also raise an
+<span class="nt">&lt;https://docs.python.org/2/library/logging.html#logging.Logger.error&gt;</span>`_, in the sense that they used to also raise an
 exception next to logging messages.
 
-This caused problems when 3rd party libraries (e.g., `gc3pie &lt;https://pypi.python.org/pypi/gc3pie&gt;`_) were being
+This caused problems when 3rd party libraries (e.g., <span class="s">`gc3pie </span><span class="si">&lt;https://pypi.python.org/pypi/gc3pie&gt;</span><span class="s">`_</span>) were being
 used by EasyBuild, since they may be using these log methods without expecting an exception being raised.
 
-The custom definitions for the ``error()`` and ``exception()`` log methods was removed in EasyBuild v3.0.
+The custom definitions for the <span class="s">``error()``</span> and <span class="s">``exception()``</span> log methods was removed in EasyBuild v3.0.
 
 Hence, these log methods should no longer be used to report errors since they will not raise an exception anymore once.
 Note that this applies both to the EasyBuild framework and to (custom) easyblocks.
 
-To report errors, an ``EasyBuildError`` should be raised instead. For example:
+To report errors, an <span class="s">``EasyBuildError``</span> should be raised instead. For example:
 
-.. code::
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span>
 
     # make sure config.sh script is there
     if not os.path.exists(os.path.join(self.builddir, &#39;config.sh&#39;)):
         raise EasyBuildError(&quot;config.sh script is missing in %s&quot;, self.builddir)
 
-.. _depr_lapack_get_blas_lib:
+<span class="p">..</span> <span class="nt">_depr_lapack_get_blas_lib:</span>
 
-``get_blas_lib`` function provided by ``LAPACK`` easyblock has been removed
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">``get_blas_lib`` function provided by ``LAPACK`` easyblock has been removed</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-* *deprecated since:* EasyBuild v1.3.0 (April&#39;13); see https://github.com/easybuilders/easybuild-easyblocks/pull/150
-* *removed in:* EasyBuild v3.0
-* *alternative(s)*: **leverage modules from** ``easybuild.toolchain.linalg``
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v1.3.0 (April&#39;13); see https://github.com/easybuilders/easybuild-easyblocks/pull/150
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v3.0
+<span class="m">*</span> <span class="ge">*alternative(s)*</span>: <span class="gs">**leverage modules from**</span> <span class="s">``easybuild.toolchain.linalg``</span>
 
-The ``get_blas_lib`` function provided by the ``LAPACK`` easyblock was removed,
+The <span class="s">``get_blas_lib``</span> function provided by the <span class="s">``LAPACK``</span> easyblock was removed,
 mainly because it included a hardcoded list of BLAS libraries.
 
 It was replaced by &#39;inlining&#39; similar code into the easyblocks that rely on it
@@ -617,80 +617,80 @@ It was replaced by &#39;inlining&#39; similar code into the easyblocks that rely
 which only refers to the BLAS libraries that are relevant in that context.
 
 
-.. _depr_get_netcdf_module_set_cmds:
+<span class="p">..</span> <span class="nt">_depr_get_netcdf_module_set_cmds:</span>
 
-``get_netcdf_module_set_cmds`` function provided by ``netCDF`` easyblock was removed
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">``get_netcdf_module_set_cmds`` function provided by ``netCDF`` easyblock was removed</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-* *deprecated since:* EasyBuild v2.1.0 (April&#39;15); see https://github.com/easybuilders/easybuild-easyblocks/pull/590
-* *removed in:* EasyBuild v3.0
-* *alternative(s)*: **rely on** ``set_netcdf_env_vars`` **and use** ``self.module_generator.set_environment``
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v2.1.0 (April&#39;15); see https://github.com/easybuilders/easybuild-easyblocks/pull/590
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v3.0
+<span class="m">*</span> <span class="ge">*alternative(s)*</span>: <span class="gs">**rely on**</span> <span class="s">``set_netcdf_env_vars``</span> <span class="gs">**and use**</span> <span class="s">``self.module_generator.set_environment``</span>
 
-The ``get_netcdf_module_set_cmds`` function provided by the ``netCDF`` easyblock was removed, because it
-returned ``setenv`` statements to be included in module files that are only compatible with module files in Tcl syntax;
-i.e. it did not take into account the ``--module-syntax`` configuration option.
+The <span class="s">``get_netcdf_module_set_cmds``</span> function provided by the <span class="s">``netCDF``</span> easyblock was removed, because it
+returned <span class="s">``setenv``</span> statements to be included in module files that are only compatible with module files in Tcl syntax;
+i.e. it did not take into account the <span class="s">``--module-syntax``</span> configuration option.
 
-The use of ``get_netcdf_module_set_cmds`` should be replaced by using ``set_netcdf_env_vars``
-to define the ``NETCDF*`` environment variables, in combination with ``self.module_generator.set_environment``
-to obtain ``setenv`` statements that are compatible with the module syntax (``Tcl`` or ``Lua``) being used.
+The use of <span class="s">``get_netcdf_module_set_cmds``</span> should be replaced by using <span class="s">``set_netcdf_env_vars``</span>
+to define the <span class="s">``NETCDF*``</span> environment variables, in combination with <span class="s">``self.module_generator.set_environment``</span>
+to obtain <span class="s">``setenv``</span> statements that are compatible with the module syntax (<span class="s">``Tcl``</span> or <span class="s">``Lua``</span>) being used.
 
-See for example the changes made to the ``WRF`` and ``WPS``
+See for example the changes made to the <span class="s">``WRF``</span> and <span class="s">``WPS``</span>
 easyblocks in https://github.com/easybuilders/easybuild-easyblocks/commit/7a05cbd823769e343b951002b4735dc7632e19c0.
 
-.. _overview_removed_20:
+<span class="p">..</span> <span class="nt">_overview_removed_20:</span>
 
-Overview of removed functionality since EasyBuild v2.0
--------------------------------------------------------
+<span class="gh">Overview of removed functionality since EasyBuild v2.0</span>
+<span class="gh">-------------------------------------------------------</span>
 
 In EasyBuild v2.0, some intrusive changes were made that break backward compatibility with earlier versions.
 
 For EasyBuild users:
 
-* :ref:`depr_python_version_compatibility`
-* :ref:`depr_easybuild_configuration_eb1`
-* :ref:`depr_softroot_version_env_vars_eb1`
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`depr_python_version_compatibility`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`depr_easybuild_configuration_eb1`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`depr_softroot_version_env_vars_eb1`</span>
 
 For authors of easyconfig files:
 
-* :ref:`depr_ConfigureMake_fallback_eb1`
-* :ref:`depr_easyconfig_parameters_eb1`
-* :ref:`depr_mrbayes_beagle_eb1`
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`depr_ConfigureMake_fallback_eb1`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`depr_easyconfig_parameters_eb1`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`depr_mrbayes_beagle_eb1`</span>
 
 For developers of easyblocks:
 
-* :ref:`depr_easyblocks_API_eb1`
-* :ref:`depr_renamed_relocated_functions_eb1`
-* :ref:`depr_changes_generic_easyblocks_eb1`
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`depr_easyblocks_API_eb1`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`depr_renamed_relocated_functions_eb1`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`depr_changes_generic_easyblocks_eb1`</span>
 
 For EasyBuild framework developers:
 
-* :ref:`depr_easybuild_tools_modules_eb1`
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`depr_easybuild_tools_modules_eb1`</span>
 
-.. note::
-    A script ``fix-broken-easyconfigs.py`` is provided to fix easyconfig files that were broken by the
-    backward-incompatible changes documented at :ref:`depr_ConfigureMake_fallback_eb1` and
-    :ref:`depr_easyconfig_parameters_eb1`. See :ref:`fix_broken_easyconfigs_script` for more information.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
+    A script <span class="s">``fix-broken-easyconfigs.py``</span> is provided to fix easyconfig files that were broken by the
+    backward-incompatible changes documented at <span class="na">:ref:</span><span class="nv">`depr_ConfigureMake_fallback_eb1`</span> and
+    <span class="na">:ref:</span><span class="nv">`depr_easyconfig_parameters_eb1`</span>. See <span class="na">:ref:</span><span class="nv">`fix_broken_easyconfigs_script`</span> for more information.
 
-.. _depr_python_version_compatibility:
+<span class="p">..</span> <span class="nt">_depr_python_version_compatibility:</span>
 
-Python version compatibility
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Python version compatibility</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-**Compatibility with Python 2.6 is removed.**
+<span class="gs">**Compatibility with Python 2.6 is removed.**</span>
 
-* *deprecated since:* EasyBuild v4.1.0 (Nov&#39;19)
-* *removed in:* EasyBuild v4.4.0
-* *alternative(s)*: **upgrade to Python v2.7.x or v3.5+**
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v4.1.0 (Nov&#39;19)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v4.4.0
+<span class="m">*</span> <span class="ge">*alternative(s)*</span>: <span class="gs">**upgrade to Python v2.7.x or v3.5+**</span>
 
 Support for running EasyBuild on top of Python 2.6 was removed in EasyBuild version 4.4.0.
 
-You should upgrade to a newer version of Python (see also :ref:`py2_py3_compatibility`).
+You should upgrade to a newer version of Python (see also <span class="na">:ref:</span><span class="nv">`py2_py3_compatibility`</span>).
 
-**Compatibility with Python 2.4 is removed.**
+<span class="gs">**Compatibility with Python 2.4 is removed.**</span>
 
-* *deprecated since:* EasyBuild v1.14.0 (July&#39;14)
-* *removed in:* EasyBuild v2.0
-* *alternative(s)*: **upgrade to Python v2.6.x or v2.7.x**
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v1.14.0 (July&#39;14)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v2.0
+<span class="m">*</span> <span class="ge">*alternative(s)*</span>: <span class="gs">**upgrade to Python v2.6.x or v2.7.x**</span>
 
 Ever since EasyBuild v1.0, the codebase has been Python 2.4 compatible. One reason for this is that EasyBuild was
 being used on a daily basis on Scientific Linux 5, in which the Python 2.4.x is the system default.
@@ -701,355 +701,355 @@ more recent Python 2.x.
 This will enable us to gradually also make the codebase compatible with Python 3.x, which is difficult to do without
 removing support for Python 2.4.
 
-.. _depr_easybuild_configuration_eb1:
+<span class="p">..</span> <span class="nt">_depr_easybuild_configuration_eb1:</span>
 
-EasyBuild configuration
-~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">EasyBuild configuration</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-**Old-style EasyBuild configuration is removed.**
+<span class="gs">**Old-style EasyBuild configuration is removed.**</span>
 
-* *deprecated since:* EasyBuild v1.3.0 (Apr&#39;13)
-* *removed in*: EasyBuild v2.0
-* *alternatives:* **new-style configuration** (see :ref:`configuring_easybuild`)
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v1.3.0 (Apr&#39;13)
+<span class="m">*</span> <span class="ge">*removed in*</span>: EasyBuild v2.0
+<span class="m">*</span> <span class="ge">*alternatives:*</span> <span class="gs">**new-style configuration**</span> (see <span class="na">:ref:</span><span class="nv">`configuring_easybuild`</span>)
 
-Early versions of EasyBuild v1.x provided support for configuring EasyBuild via a *Python module* that was automagically
+Early versions of EasyBuild v1.x provided support for configuring EasyBuild via a <span class="ge">*Python module*</span> that was automagically
 executed when available.
 
 Since EasyBuild v1.3 a safer and more consistent way of configuring EasyBuild is supported, which aligns the EasyBuild
-command line options, ``$EASYBUILD_X`` environment variables and key-value style configuration files.
+command line options, <span class="s">``$EASYBUILD_X``</span> environment variables and key-value style configuration files.
 
-More information about the new(er) and recommended configuration style is available :ref:`here &lt;configuring_easybuild&gt;`.
+More information about the new(er) and recommended configuration style is available <span class="na">:ref:</span><span class="nv">`here &lt;configuring_easybuild&gt;`</span>.
 
 For detailed information with respect to porting from the old to the new configuration style, see
-:ref:`configuring_easybuild_legacy`.
+<span class="na">:ref:</span><span class="nv">`configuring_easybuild_legacy`</span>.
 
-Location of default configuration file
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Location of default configuration file</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-**The default configuration file location** ``$HOME/.easybuild/config.cfg`` **is no longer considered.**
+<span class="gs">**The default configuration file location**</span> <span class="s">``$HOME/.easybuild/config.cfg``</span> <span class="gs">**is no longer considered.**</span>
 
-* *deprecated since:* EasyBuild v1.11.0 (Feb&#39;14)
-* *removed in*: EasyBuild v2.0
-* *alternatives:* ``$XDG_CONFIG_HOME/easybuild/config.cfg`` (equivalent to ``$HOME/.config/easybuild/config.cfg``)
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v1.11.0 (Feb&#39;14)
+<span class="m">*</span> <span class="ge">*removed in*</span>: EasyBuild v2.0
+<span class="m">*</span> <span class="ge">*alternatives:*</span> <span class="s">``$XDG_CONFIG_HOME/easybuild/config.cfg``</span> (equivalent to <span class="s">``$HOME/.config/easybuild/config.cfg``</span>)
 
-The default path for the new-style configuration path is ``$XDG_CONFIG_HOME/easybuild/config.cfg`` (or
-``$HOME/.config/easybuild/config.cfg`` if ``$XDG_CONFIG_HOME`` is not set), see :ref:`list_of_configuration_files`.
+The default path for the new-style configuration path is <span class="s">``$XDG_CONFIG_HOME/easybuild/config.cfg``</span> (or
+<span class="s">``$HOME/.config/easybuild/config.cfg``</span> if <span class="s">``$XDG_CONFIG_HOME``</span> is not set), see <span class="na">:ref:</span><span class="nv">`list_of_configuration_files`</span>.
 
-The previous default path ``$HOME/.easybuild/config.cfg`` that was in place since EasyBuild v1.3.0 is no longer
+The previous default path <span class="s">``$HOME/.easybuild/config.cfg``</span> that was in place since EasyBuild v1.3.0 is no longer
 considered.
 
-.. _depr_ConfigureMake_fallback_eb1:
+<span class="p">..</span> <span class="nt">_depr_ConfigureMake_fallback_eb1:</span>
 
-Automagic fallback to ``ConfigureMake``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Automagic fallback to ``ConfigureMake``</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-**The automagic fallback to the** ``ConfigureMake`` **easyblock is removed.**
+<span class="gs">**The automagic fallback to the**</span> <span class="s">``ConfigureMake``</span> <span class="gs">**easyblock is removed.**</span>
 
-* *deprecated since:* EasyBuild v1.16.0 (Dec&#39;14)
-* *removed in:* EasyBuild v2.0
-* *alternative(s)*: specify ``easyblock = &#39;ConfigureMake&#39;`` in easyconfig file
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v1.16.0 (Dec&#39;14)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v2.0
+<span class="m">*</span> <span class="ge">*alternative(s)*</span>: specify <span class="s">``easyblock = &#39;ConfigureMake&#39;``</span> in easyconfig file
 
-If the ``easyblock`` easyconfig was not specified, EasyBuild tries to find a matching easyblock based on the software
-name. In EasyBuild v1.x, the generic ``ConfigureMake`` easyblock was used if no matching easyblock could be found.
+If the <span class="s">``easyblock``</span> easyconfig was not specified, EasyBuild tries to find a matching easyblock based on the software
+name. In EasyBuild v1.x, the generic <span class="s">``ConfigureMake``</span> easyblock was used if no matching easyblock could be found.
 
-This behavior is now removed; instead, easyconfigs that require using the ``ConfigureMake`` easyblock *must* include
-the following::
+This behavior is now removed; instead, easyconfigs that require using the <span class="s">``ConfigureMake``</span> easyblock <span class="ge">*must*</span> include
+the following<span class="se">::</span>
 
-  easyblock = &#39;ConfigureMake&#39;
+<span class="s">  easyblock = &#39;ConfigureMake&#39;</span>
 
-.. _depr_easyconfig_parameters_eb1:
+<span class="p">..</span> <span class="nt">_depr_easyconfig_parameters_eb1:</span>
 
-Easyconfig parameters
-~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Easyconfig parameters</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~</span>
 
 Some easyconfig parameters are removed.
 
-.. note::
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
   A script is available to fix easyconfig files that are broken because they still rely on this functionality,
-  see :ref:`fix_broken_easyconfigs_script`.
+  see <span class="na">:ref:</span><span class="nv">`fix_broken_easyconfigs_script`</span>.
 
-.. _depr_premakeopts_makeopts_eb1:
+<span class="p">..</span> <span class="nt">_depr_premakeopts_makeopts_eb1:</span>
 
-Options for build command
-^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Options for build command</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-**The** ``premakeopts`` **and** ``makeopts`` **easyconfig parameters are removed.**
+<span class="gs">**The**</span> <span class="s">``premakeopts``</span> <span class="gs">**and**</span> <span class="s">``makeopts``</span> <span class="gs">**easyconfig parameters are removed.**</span>
 
-* *deprecated since:* EasyBuild v1.13.0 (May&#39;14)
-* *removed in:* EasyBuild v2.0
-* *alternative(s)*: use ``prebuildopts``/``buildopts`` instead
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v1.13.0 (May&#39;14)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v2.0
+<span class="m">*</span> <span class="ge">*alternative(s)*</span>: use <span class="s">``prebuildopts``</span>/<span class="s">``buildopts``</span> instead
 
-For consistency in terminology, the ``premakeopts`` and ``makeopts`` generic easyconfig parameters are removed,
-in favor of their alternative parameters, ``prebuildopts`` and ``buildopts``, resp.
+For consistency in terminology, the <span class="s">``premakeopts``</span> and <span class="s">``makeopts``</span> generic easyconfig parameters are removed,
+in favor of their alternative parameters, <span class="s">``prebuildopts``</span> and <span class="s">``buildopts``</span>, resp.
 
-(see also :ref:`configure_build_install_command_options`)
+(see also <span class="na">:ref:</span><span class="nv">`configure_build_install_command_options`</span>)
 
-.. note:: Since EasyBuild v1.13.0, ``buildopts`` is automatically defined with the value of ``makeopts``, unless
-  ``buildopts`` was specified by itself. When both values are specified, ``buildopts`` takes precedence of ``makeopts``
-  (analogous for ``prebuildopts``/``premakeopts``).
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Since EasyBuild v1.13.0, <span class="s">``buildopts``</span> is automatically defined with the value of <span class="s">``makeopts``</span>, unless
+  <span class="s">``buildopts``</span> was specified by itself. When both values are specified, <span class="s">``buildopts``</span> takes precedence of <span class="s">``makeopts``</span>
+  (analogous for <span class="s">``prebuildopts``</span>/<span class="s">``premakeopts``</span>).
 
-.. _depr_shared_lib_ext_eb1:
+<span class="p">..</span> <span class="nt">_depr_shared_lib_ext_eb1:</span>
 
-Shared library extension
-^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Shared library extension</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-**The** ``shared_lib_ext`` **&#39;constant&#39; in easyconfigs is no longer defined.**
+<span class="gs">**The**</span> <span class="s">``shared_lib_ext``</span> <span class="gs">**&#39;constant&#39; in easyconfigs is no longer defined.**</span>
 
-* *deprecated since:* EasyBuild v1.5.0 (June&#39;13)
-* *removed in:* EasyBuild v2.0
-* *alternative(s)*: use ``SHLIB_EXT`` instead
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v1.5.0 (June&#39;13)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v2.0
+<span class="m">*</span> <span class="ge">*alternative(s)*</span>: use <span class="s">``SHLIB_EXT``</span> instead
 
-The ``shared_lib_ext`` &quot;magic&quot; variable representing the extension for shared libraries (``.so`` on Linux,
-``.dylib`` on OS X) is no longer defined; the easyconfig constant ``SHLIB_EXT`` should be using instead.
+The <span class="s">``shared_lib_ext``</span> &quot;magic&quot; variable representing the extension for shared libraries (<span class="s">``.so``</span> on Linux,
+<span class="s">``.dylib``</span> on OS X) is no longer defined; the easyconfig constant <span class="s">``SHLIB_EXT``</span> should be using instead.
 
-.. _depr_license_eb1:
+<span class="p">..</span> <span class="nt">_depr_license_eb1:</span>
 
-Software license
-^^^^^^^^^^^^^^^^
+<span class="gh">Software license</span>
+<span class="gh">^^^^^^^^^^^^^^^^</span>
 
-**The** ``license`` **easyconfig parameter is removed.**
+<span class="gs">**The**</span> <span class="s">``license``</span> <span class="gs">**easyconfig parameter is removed.**</span>
 
-* *deprecated since:* EasyBuild v1.11.0 (Feb&#39;14)
-* *removed in:* EasyBuild v2.0
-* *alternative(s)*: use ``license_file`` or ``software_license`` instead
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v1.11.0 (Feb&#39;14)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v2.0
+<span class="m">*</span> <span class="ge">*alternative(s)*</span>: use <span class="s">``license_file``</span> or <span class="s">``software_license``</span> instead
 
-The ``license`` easyconfig parameter, which was specific to the ``IntelBase`` generic easyblock and thus relevant
-for Intel tools, is removed. The generic ``license_file`` easyconfig parameter should be used instead, to specify
+The <span class="s">``license``</span> easyconfig parameter, which was specific to the <span class="s">``IntelBase``</span> generic easyblock and thus relevant
+for Intel tools, is removed. The generic <span class="s">``license_file``</span> easyconfig parameter should be used instead, to specify
 the location of the license file (or server).
 
-This change was made to avoid confusion with the ``software_license`` generic easyconfig parameter, which can be used
-to specify the license under which the software was released (e.g., GPLv2, BSD, etc.). Here, the specified value *must*
-be a known license type (see ``eb --avail-easyconfig-licenses``).
+This change was made to avoid confusion with the <span class="s">``software_license``</span> generic easyconfig parameter, which can be used
+to specify the license under which the software was released (e.g., GPLv2, BSD, etc.). Here, the specified value <span class="ge">*must*</span>
+be a known license type (see <span class="s">``eb --avail-easyconfig-licenses``</span>).
 
-.. note:: The `software_license` easyconfig parameter will become **mandatory** at some point.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> The <span class="nv">`software_license`</span> easyconfig parameter will become <span class="gs">**mandatory**</span> at some point.
 
-.. _depr_mrbayes_beagle_eb1:
+<span class="p">..</span> <span class="nt">_depr_mrbayes_beagle_eb1:</span>
 
-``BEAGLE`` dependency in ``MrBayes`` easyblock replaced by ``beagle-lib``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">``BEAGLE`` dependency in ``MrBayes`` easyblock replaced by ``beagle-lib``</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-**The** ``MrBayes`` **easyblock no longer considers** ``BEAGLE`` **as a valid dependency.**
+<span class="gs">**The**</span> <span class="s">``MrBayes``</span> <span class="gs">**easyblock no longer considers**</span> <span class="s">``BEAGLE``</span> <span class="gs">**as a valid dependency.**</span>
 
-* *deprecated since:* EasyBuild v1.6.0 (Jul&#39;14)
-* *removed in:* EasyBuild v2.0
-* *alternative(s)*: use ``beagle-lib`` instead
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v1.6.0 (Jul&#39;14)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v2.0
+<span class="m">*</span> <span class="ge">*alternative(s)*</span>: use <span class="s">``beagle-lib``</span> instead
 
-Due to a misnomer in the easyconfig files for ``beagle-lib`` (formerly named ``BEAGLE``), the custom easyblock for
-``MrBayes`` now no longer considers ``BEAGLE`` as a dependency.
+Due to a misnomer in the easyconfig files for <span class="s">``beagle-lib``</span> (formerly named <span class="s">``BEAGLE``</span>), the custom easyblock for
+<span class="s">``MrBayes``</span> now no longer considers <span class="s">``BEAGLE``</span> as a dependency.
 
-The library required by ``MrBayes`` must now be provided as a dependency named ``beagle-lib``.
+The library required by <span class="s">``MrBayes``</span> must now be provided as a dependency named <span class="s">``beagle-lib``</span>.
 
 
-EasyBuild API changes
-~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">EasyBuild API changes</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~</span>
 
 Some changes in the EasyBuild API were made, which potentiallty affects easyblocks and the EasyBuild framework itself.
 
-.. _depr_easyblocks_API_eb1:
+<span class="p">..</span> <span class="nt">_depr_easyblocks_API_eb1:</span>
 
-Easyblocks API (``EasyBlock`` class from ``easybuild.framework.easyblock``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Easyblocks API (``EasyBlock`` class from ``easybuild.framework.easyblock``)</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
 The API for easyblocks was modified slightly, to correct for a couple of historic mistakes.
 
-Return type of ``extra_options`` method
-+++++++++++++++++++++++++++++++++++++++
+<span class="gh">Return type of ``extra_options`` method</span>
+<span class="gh">+++++++++++++++++++++++++++++++++++++++</span>
 
-**The list-of-tuples return type of the** ``extra_options`` **method must now be a** ``dict`` **instead.**
+<span class="gs">**The list-of-tuples return type of the**</span> <span class="s">``extra_options``</span> <span class="gs">**method must now be a**</span> <span class="s">``dict``</span> <span class="gs">**instead.**</span>
 
-* *deprecated since:* EasyBuild v1.12.0 (Apr&#39;14)
-* *removed in:* EasyBuild v2.0
-* *alternative(s)*: ensure/assume ``dict`` return type
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v1.12.0 (Apr&#39;14)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v2.0
+<span class="m">*</span> <span class="ge">*alternative(s)*</span>: ensure/assume <span class="s">``dict``</span> return type
 
-The return type of the ``extra_options`` static method in the ``EasyBlock`` class has been changed to a *dictionary*
-(``dict``), rather than a list of key-value tuples.
+The return type of the <span class="s">``extra_options``</span> static method in the <span class="s">``EasyBlock``</span> class has been changed to a <span class="ge">*dictionary*</span>
+(<span class="s">``dict``</span>), rather than a list of key-value tuples.
 
-Custom easyconfig parameters should be added via a *dict*-typed value to the ``extra_options`` function of parent
+Custom easyconfig parameters should be added via a <span class="ge">*dict*</span>-typed value to the <span class="s">``extra_options``</span> function of parent
 easyblock.
 
-For example (taken from the generic easyblock ``Binary``)::
+For example (taken from the generic easyblock <span class="s">``Binary``</span>)<span class="se">::</span>
 
-      @staticmethod
-      def extra_options(extra_vars=None):
-          &quot;&quot;&quot;Extra easyconfig parameters specific to Binary easyblock.&quot;&quot;&quot;
-          extra_vars = EasyBlock.extra_options(extra_vars)
-          extra_vars.update({
-              &#39;install_cmd&#39;: [None, &quot;Install command to be used.&quot;, CUSTOM],
-          })
-          return extra_vars
+<span class="s">      @staticmethod</span>
+<span class="s">      def extra_options(extra_vars=None):</span>
+<span class="s">          &quot;&quot;&quot;Extra easyconfig parameters specific to Binary easyblock.&quot;&quot;&quot;</span>
+<span class="s">          extra_vars = EasyBlock.extra_options(extra_vars)</span>
+<span class="s">          extra_vars.update({</span>
+<span class="s">              &#39;install_cmd&#39;: [None, &quot;Install command to be used.&quot;, CUSTOM],</span>
+<span class="s">          })</span>
+<span class="s">          return extra_vars</span>
 
-Extension filter template
-+++++++++++++++++++++++++
+<span class="gh">Extension filter template</span>
+<span class="gh">+++++++++++++++++++++++++</span>
 
-**The** ``name`` **and** ``version`` **templates in** ``exts_filter`` **are removed.**
+<span class="gs">**The**</span> <span class="s">``name``</span> <span class="gs">**and**</span> <span class="s">``version``</span> <span class="gs">**templates in**</span> <span class="s">``exts_filter``</span> <span class="gs">**are removed.**</span>
 
-* *deprecated since:* EasyBuild v1.2.0 (Feb&#39;13)
-* *removed in:* EasyBuild v2.0
-* *alternative(s)*: use ``ext_name`` and ``ext_version`` instead
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v1.2.0 (Feb&#39;13)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v2.0
+<span class="m">*</span> <span class="ge">*alternative(s)*</span>: use <span class="s">``ext_name``</span> and <span class="s">``ext_version``</span> instead
 
-Only the ``ext_name``, ``ext_version`` and ``src`` template strings can be used in the ``exts_filter`` extension filter
-easyconfig parameter; the ``name`` and ``version`` template strings are removed.
+Only the <span class="s">``ext_name``</span>, <span class="s">``ext_version``</span> and <span class="s">``src``</span> template strings can be used in the <span class="s">``exts_filter``</span> extension filter
+easyconfig parameter; the <span class="s">``name``</span> and <span class="s">``version``</span> template strings are removed.
 
-For example (default extension filter for Python packages)::
+For example (default extension filter for Python packages)<span class="se">::</span>
 
-  exts_filter = (&quot;python -c &#39;import %(ext_name)s&#39;&quot;, &quot;&quot;)
+<span class="s">  exts_filter = (&quot;python -c &#39;import %(ext_name)s&#39;&quot;, &quot;&quot;)</span>
 
-Module path of default class for extensions
-+++++++++++++++++++++++++++++++++++++++++++
+<span class="gh">Module path of default class for extensions</span>
+<span class="gh">+++++++++++++++++++++++++++++++++++++++++++</span>
 
-**Specifying the module path in** ``exts_defaultclass`` **is no longer possible.**
+<span class="gs">**Specifying the module path in**</span> <span class="s">``exts_defaultclass``</span> <span class="gs">**is no longer possible.**</span>
 
-* *deprecated since:* EasyBuild v0.5 (Apr&#39;12)
-* *removed in:* EasyBuild v2.0
-* *alternative(s)*: *(none required, module path is derived from specified class name)*
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v0.5 (Apr&#39;12)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v2.0
+<span class="m">*</span> <span class="ge">*alternative(s)*</span>: <span class="ge">*(none required, module path is derived from specified class name)*</span>
 
-Explicitly specifying the module path for the default class to use for extensions (via ``exts_defaultclass``) is
+Explicitly specifying the module path for the default class to use for extensions (via <span class="s">``exts_defaultclass``</span>) is
 no longer possible. Only the class name should be specified, the corresponding module path is derived from it.
 
-Module path for easyblocks
-++++++++++++++++++++++++++
+<span class="gh">Module path for easyblocks</span>
+<span class="gh">++++++++++++++++++++++++++</span>
 
-**Deriving the module path for easyblocks from the software name is removed.**
+<span class="gs">**Deriving the module path for easyblocks from the software name is removed.**</span>
 
-* *deprecated since:* EasyBuild v1.4.0 (May&#39;13)
-* *removed in:* EasyBuild v2.0
-* *alternative(s)*: use easyblock class name according to encoding scheme (e.g., ``EB_Foo``)
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v1.4.0 (May&#39;13)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v2.0
+<span class="m">*</span> <span class="ge">*alternative(s)*</span>: use easyblock class name according to encoding scheme (e.g., <span class="s">``EB_Foo``</span>)
 
-Determining the *location* of Python modules representing easyblocks based on the software name (``name``) is removed.
+Determining the <span class="ge">*location*</span> of Python modules representing easyblocks based on the software name (<span class="s">``name``</span>) is removed.
 
-EasyBuild *must* be able to determine the easyblock module path solely based on the name of the easyblock Python class.
+EasyBuild <span class="ge">*must*</span> be able to determine the easyblock module path solely based on the name of the easyblock Python class.
 
-Easyblocks with a class name that is already honoring the encoding scheme implemented by the ``encode_class_name``
+Easyblocks with a class name that is already honoring the encoding scheme implemented by the <span class="s">``encode_class_name``</span>
 function will not be affected.
 
-.. _depr_easybuild_tools_modules_eb1:
+<span class="p">..</span> <span class="nt">_depr_easybuild_tools_modules_eb1:</span>
 
-``easybuild.tools.modules`` Python module
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">``easybuild.tools.modules`` Python module</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-**The API of the** ``easybuild.tools.modules`` **module has been updated, certain aspects of the old API are removed.**
+<span class="gs">**The API of the**</span> <span class="s">``easybuild.tools.modules``</span> <span class="gs">**module has been updated, certain aspects of the old API are removed.**</span>
 
-* *deprecated since:* EasyBuild v1.8.0 (Oct&#39;13) &amp; v1.15.0 (Sept&#39;15)
-* *removed in:* EasyBuild v2.0
-* *alternative(s)*: use equivalents available in new API (see below)
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v1.8.0 (Oct&#39;13) &amp; v1.15.0 (Sept&#39;15)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v2.0
+<span class="m">*</span> <span class="ge">*alternative(s)*</span>: use equivalents available in new API (see below)
 
-The API of the ``easybuild.tools.modules`` Python module has been changed extensively when implementing support for
+The API of the <span class="s">``easybuild.tools.modules``</span> Python module has been changed extensively when implementing support for
 alternative module naming schemes:
 
-* the ``modules`` class variable and the ``add_module``/``remove_module`` methods are removed; modules should be
-  (un)loaded using the ``load`` and ``unload`` methods instead
-* the ``mod_paths`` and ``modulePath`` named arguments for the ``run_module`` method are removed; the class instance
+<span class="m">*</span> the <span class="s">``modules``</span> class variable and the <span class="s">``add_module``</span>/<span class="s">``remove_module``</span> methods are removed; modules should be
+  (un)loaded using the <span class="s">``load``</span> and <span class="s">``unload``</span> methods instead
+<span class="m">*</span> the <span class="s">``mod_paths``</span> and <span class="s">``modulePath``</span> named arguments for the <span class="s">``run_module``</span> method are removed; the class instance
   should be created with a specific list of module paths instead
-* the ``Modules`` class to obtain a class instance representing a modules tool interface is removed;
-  the ``modules_tool`` function should be used instead
+<span class="m">*</span> the <span class="s">``Modules``</span> class to obtain a class instance representing a modules tool interface is removed;
+  the <span class="s">``modules_tool``</span> function should be used instead
 
-Additionally, the ``exists`` method which only takes a single module name is removed; it is replaced by
-the ``exist`` method, which takes a list of module names *(since EasyBuild v1.15.0 (Sept&#39;15))*.
+Additionally, the <span class="s">``exists``</span> method which only takes a single module name is removed; it is replaced by
+the <span class="s">``exist``</span> method, which takes a list of module names <span class="ge">*(since EasyBuild v1.15.0 (Sept&#39;15))*</span>.
 
-**Easyblocks should not be using** ``easybuild.tools.modules`` **directly, and hence should be unaffected.**
+<span class="gs">**Easyblocks should not be using**</span> <span class="s">``easybuild.tools.modules``</span> <span class="gs">**directly, and hence should be unaffected.**</span>
 
-.. _depr_softroot_version_env_vars_eb1:
+<span class="p">..</span> <span class="nt">_depr_softroot_version_env_vars_eb1:</span>
 
-``$SOFTX`` environment variables in generated module files
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">``$SOFTX`` environment variables in generated module files</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-``$SOFTX`` **environment variables set by module files generated with EasyBuild v0.x will no longer be taken into
+<span class="s">``$SOFTX``</span> **environment variables set by module files generated with EasyBuild v0.x will no longer be taken into
 account.**
 
-* *deprecated since:* EasyBuild v1.3.0 (Apr&#39;13)
-* *removed in:* EasyBuild v2.0
-* *alternative(s)*: reinstall (ancient) module files which are only defining the ``$SOFTX`` environment variables
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v1.3.0 (Apr&#39;13)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v2.0
+<span class="m">*</span> <span class="ge">*alternative(s)*</span>: reinstall (ancient) module files which are only defining the <span class="s">``$SOFTX``</span> environment variables
 
-The ``get_software_root`` and ``get_software_version`` functions will only take ``$EBROOTFOO`` and ``$EBVERSIONFOO``
-environment variables into account, as opposed to also considering the ``$SOFTROOTFOO`` and ``$SOFTVERSIONFOO``
+The <span class="s">``get_software_root``</span> and <span class="s">``get_software_version``</span> functions will only take <span class="s">``$EBROOTFOO``</span> and <span class="s">``$EBVERSIONFOO``</span>
+environment variables into account, as opposed to also considering the <span class="s">``$SOFTROOTFOO``</span> and <span class="s">``$SOFTVERSIONFOO``</span>
 environment variables (which were set in modules generated by EasyBuild v0.x).
-Likewise, adhering to the ``$SOFTDEVELFOO`` environment variables is removed.
+Likewise, adhering to the <span class="s">``$SOFTDEVELFOO``</span> environment variables is removed.
 
-*This is only relevant to early adopters who are still using module files generated by EasyBuild v0.x.*
+<span class="ge">*This is only relevant to early adopters who are still using module files generated by EasyBuild v0.x.*</span>
 
-.. _depr_renamed_relocated_functions_eb1:
+<span class="p">..</span> <span class="nt">_depr_renamed_relocated_functions_eb1:</span>
 
-Renamed/relocated functions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Renamed/relocated functions</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-**Some functions/methods have been renamed or relocated, their equivalents under a previous location/name are removed.**
+<span class="gs">**Some functions/methods have been renamed or relocated, their equivalents under a previous location/name are removed.**</span>
 
-* *deprecated since:* *(depends on function/method, see below)*
-* *removed in:* EasyBuild v2.0
-* *alternative(s)*: use new location/name
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> <span class="ge">*(depends on function/method, see below)*</span>
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v2.0
+<span class="m">*</span> <span class="ge">*alternative(s)*</span>: use new location/name
 
 A number of functions and methods that are part of the EasyBuild framework API have been renamed, mainly for consistency
 reasons.
 
-* the ``moduleGenerator`` handle to the ``ModuleGenerator`` object instance has been renamed to ``module_generator``;
-  hence, easyblock should be using ``self.module_generator`` rather than ``self.moduleGenerator`` *(since EasyBuild v1.16.0 (Dec&#39;14))*
-* ``source_paths()`` (in ``easybuild.tools.config``) replaces the removed ``source_path()`` *(since EasyBuild v1.8.0 (Oct&#39;13))*
-* ``get_avail_core_count()`` (in ``easybuild.tools.systemtools``) replaces the removed ``get_core_count()``
-  *(since EasyBuild v1.9.0 (Nov&#39;13))*
-* ``get_os_type()`` (in ``easybuild.tools.systemtools``) replaces the removed ``get_kernel_name``
-  *(since EasyBuild v1.3.0 (Apr&#39;13))*
-* the ``det_full_ec_version`` function available from ``easybuild.tools.module_generator`` replaces the removed
-  ``det_installversion`` function that was available from ``easybuild.framework.easyconfig.*`` *(since EasyBuild v1.8.0
+<span class="m">*</span> the <span class="s">``moduleGenerator``</span> handle to the <span class="s">``ModuleGenerator``</span> object instance has been renamed to <span class="s">``module_generator``</span>;
+  hence, easyblock should be using <span class="s">``self.module_generator``</span> rather than <span class="s">``self.moduleGenerator``</span> <span class="ge">*(since EasyBuild v1.16.0 (Dec&#39;14))*</span>
+<span class="m">*</span> <span class="s">``source_paths()``</span> (in <span class="s">``easybuild.tools.config``</span>) replaces the removed <span class="s">``source_path()``</span> <span class="ge">*(since EasyBuild v1.8.0 (Oct&#39;13))*</span>
+<span class="m">*</span> <span class="s">``get_avail_core_count()``</span> (in <span class="s">``easybuild.tools.systemtools``</span>) replaces the removed <span class="s">``get_core_count()``</span>
+  <span class="ge">*(since EasyBuild v1.9.0 (Nov&#39;13))*</span>
+<span class="m">*</span> <span class="s">``get_os_type()``</span> (in <span class="s">``easybuild.tools.systemtools``</span>) replaces the removed <span class="s">``get_kernel_name``</span>
+  <span class="ge">*(since EasyBuild v1.3.0 (Apr&#39;13))*</span>
+<span class="m">*</span> the <span class="s">``det_full_ec_version``</span> function available from <span class="s">``easybuild.tools.module_generator``</span> replaces the removed
+  <span class="s">``det_installversion``</span> function that was available from <span class="s">``easybuild.framework.easyconfig.*``</span> *(since EasyBuild v1.8.0
   (Oct&#39;13))*
 
 Some functions have moved to a different location:
 
-* the ``read_environment`` function is now provided by the ``easybuild.tools.environment`` module, rather than by
-  ``easybuild.tools.config`` or ``easybuild.tools.utilities`` *(since EasyBuild v1.7.0 (Sept&#39;13))*
-* the ``modify_env`` function is now provided by the ``easybuild.tools.environment`` module, rather than by
-  ``easybuild.tools.filetools`` *(since EasyBuild v1.7.0 (Sep&#39;13))*
-* the ``run_cmd``, ``run_cmd_qa`` and ``parse_log_for_error`` functions are now provided by the ``easybuild.tools.run`` module,
-  rather than by ``easybuild.tools.filetools`` *(since EasyBuild v1.11.0 (Feb&#39;14))*
+<span class="m">*</span> the <span class="s">``read_environment``</span> function is now provided by the <span class="s">``easybuild.tools.environment``</span> module, rather than by
+  <span class="s">``easybuild.tools.config``</span> or <span class="s">``easybuild.tools.utilities``</span> <span class="ge">*(since EasyBuild v1.7.0 (Sept&#39;13))*</span>
+<span class="m">*</span> the <span class="s">``modify_env``</span> function is now provided by the <span class="s">``easybuild.tools.environment``</span> module, rather than by
+  <span class="s">``easybuild.tools.filetools``</span> <span class="ge">*(since EasyBuild v1.7.0 (Sep&#39;13))*</span>
+<span class="m">*</span> the <span class="s">``run_cmd``</span>, <span class="s">``run_cmd_qa``</span> and <span class="s">``parse_log_for_error``</span> functions are now provided by the <span class="s">``easybuild.tools.run``</span> module,
+  rather than by <span class="s">``easybuild.tools.filetools``</span> <span class="ge">*(since EasyBuild v1.11.0 (Feb&#39;14))*</span>
 
-The ``get_log`` function provided by the ``easybuild.tools.build_log`` module has been removed entirely,
-no alternatives are provided (since none are needed). *(since EasyBuild v1.3.0 (Apr&#39;13))*
+The <span class="s">``get_log``</span> function provided by the <span class="s">``easybuild.tools.build_log``</span> module has been removed entirely,
+no alternatives are provided (since none are needed). <span class="ge">*(since EasyBuild v1.3.0 (Apr&#39;13))*</span>
 
-.. _depr_changes_generic_easyblocks_eb1:
+<span class="p">..</span> <span class="nt">_depr_changes_generic_easyblocks_eb1:</span>
 
-Changes in (generic) easyblocks
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Changes in (generic) easyblocks</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-``srcdir`` replaces ``builddir`` as named argument in ``CMakeMake.configure_step``
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+<span class="gh">``srcdir`` replaces ``builddir`` as named argument in ``CMakeMake.configure_step``</span>
+<span class="gh">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span>
 
-**The named argument** ``builddir`` **in the** ``configure_step`` **method of the generic** ``CMakeMake`` **easyblock
-was replaced by** ``srcdir`` **.**
+<span class="gs">**The named argument**</span> <span class="s">``builddir``</span> <span class="gs">**in the**</span> <span class="s">``configure_step``</span> <span class="gs">**method of the generic**</span> <span class="s">``CMakeMake``</span> **easyblock
+was replaced by<span class="gs">** ``srcdir`` **</span>.**
 
-* *deprecated since:* EasyBuild v1.4.0 (May&#39;13)
-* *removed in:* EasyBuild v2.0
-* *alternative(s)*: equivalent ``srcdir`` named argument
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v1.4.0 (May&#39;13)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v2.0
+<span class="m">*</span> <span class="ge">*alternative(s)*</span>: equivalent <span class="s">``srcdir``</span> named argument
 
-Since the ``builddir`` named argument in the ``configure_step`` method of the generic ``CMakeMake`` easyblock was a
-misnomer (it specifies the location of the *source* directory that should be provided to ``cmake``), it was replaced
-with an equivalent named argument ``srcdir``.
+Since the <span class="s">``builddir``</span> named argument in the <span class="s">``configure_step``</span> method of the generic <span class="s">``CMakeMake``</span> easyblock was a
+misnomer (it specifies the location of the <span class="ge">*source*</span> directory that should be provided to <span class="s">``cmake``</span>), it was replaced
+with an equivalent named argument <span class="s">``srcdir``</span>.
 
-``VersionIndependentPythonPackage`` replaces ``VersionIndependendPythonPackage``
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+<span class="gh">``VersionIndependentPythonPackage`` replaces ``VersionIndependendPythonPackage``</span>
+<span class="gh">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span>
 
-**The generic easyblock** ``VersionIndependendPythonPackage`` **was replaced with the equivalent generic easyblock**
-``VersionIndependentPythonPackage`` **.**
+<span class="gs">**The generic easyblock**</span> <span class="s">``VersionIndependendPythonPackage``</span> <span class="gs">**was replaced with the equivalent generic easyblock**</span>
+<span class="s">``VersionIndependentPythonPackage``</span> <span class="gs">**.**</span>
 
-* *deprecated since:* EasyBuild v1.11.0 (Feb&#39;14)
-* *removed in:* EasyBuild v2.0
-* *alternative(s)*: ``VersionIndependentPythonPackage``
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v1.11.0 (Feb&#39;14)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v2.0
+<span class="m">*</span> <span class="ge">*alternative(s)*</span>: <span class="s">``VersionIndependentPythonPackage``</span>
 
-Because of to a typo in the name, the ``VersionIndependendPythonPackage`` generic easyblock was replaced by the
-equivalent ``VersionIndependentPythonPackage`` generic easyblock.
+Because of to a typo in the name, the <span class="s">``VersionIndependendPythonPackage``</span> generic easyblock was replaced by the
+equivalent <span class="s">``VersionIndependentPythonPackage``</span> generic easyblock.
 
-``get_sitearch_suffix`` function in ``Perl`` easyblock is removed
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+<span class="gh">``get_sitearch_suffix`` function in ``Perl`` easyblock is removed</span>
+<span class="gh">+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span>
 
-**The** ``get_sitearch_suffix`` **function in the** ``Perl`` **easyblock was replaced in favor of the more generic**
-``get_site_suffix`` **function.**
+<span class="gs">**The**</span> <span class="s">``get_sitearch_suffix``</span> <span class="gs">**function in the**</span> <span class="s">``Perl``</span> <span class="gs">**easyblock was replaced in favor of the more generic**</span>
+<span class="s">``get_site_suffix``</span> <span class="gs">**function.**</span>
 
-* *deprecated since:* EasyBuild v1.7.0 (Sept&#39;13)
-* *removed in:* EasyBuild v2.0
-* *alternative(s)*: ``get_site_suffix(&#39;sitearch&#39;)``
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v1.7.0 (Sept&#39;13)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v2.0
+<span class="m">*</span> <span class="ge">*alternative(s)*</span>: <span class="s">``get_site_suffix(&#39;sitearch&#39;)``</span>
 
-The ``get_sitearch_suffix`` function provided by the ``Perl`` easyblock, which can be (and is) imported in/used by other
-easyblocks, has been replaced by the more generic ``get_site_suffix`` function.
+The <span class="s">``get_sitearch_suffix``</span> function provided by the <span class="s">``Perl``</span> easyblock, which can be (and is) imported in/used by other
+easyblocks, has been replaced by the more generic <span class="s">``get_site_suffix``</span> function.
 
-To obtain the same functionality as was provided by ``get_sitearch_suffix``, use ``get_site_suffix(&#39;sitearch&#39;)`` instead.
+To obtain the same functionality as was provided by <span class="s">``get_sitearch_suffix``</span>, use <span class="s">``get_site_suffix(&#39;sitearch&#39;)``</span> instead.
 </code></pre></div>
 
   <hr>
@@ -1057,7 +1057,7 @@ To obtain the same functionality as was provided by ``get_sitearch_suffix``, use
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
       
     
   </small>

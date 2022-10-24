@@ -386,184 +386,184 @@ and you can help with that!
 </ul>
 <p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
 </div>
-<div class="highlight"><pre><span></span><code>.. _packaging_support:
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_packaging_support:</span>
 
-Packaging support
-=================
+<span class="gh">Packaging support</span>
+<span class="gh">=================</span>
 
-.. contents::
-    :depth: 2
-    :backlinks: none
+<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
+    <span class="nc">:depth:</span> 2
+    <span class="nc">:backlinks:</span> none
 
-.. note::
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
   Packaging support was added as an experimental feature in EasyBuild v2.2.0
-  (cfr. :ref:`experimental_features`). Since EasyBuild v2.5.0, it is considered stable.
+  (cfr. <span class="na">:ref:</span><span class="nv">`experimental_features`</span>). Since EasyBuild v2.5.0, it is considered stable.
 
 
-.. _packaging_prereq:
+<span class="p">..</span> <span class="nt">_packaging_prereq:</span>
 
-Prerequisites
--------------
+<span class="gh">Prerequisites</span>
+<span class="gh">-------------</span>
 
-EasyBuild leverages `FPM &lt;https://github.com/jordansissel/fpm&gt;`_ to create binary packages (RPMs, Debian files, etc.).
+EasyBuild leverages <span class="s">`FPM </span><span class="si">&lt;https://github.com/jordansissel/fpm&gt;</span><span class="s">`_</span> to create binary packages (RPMs, Debian files, etc.).
 
 Hence, FPM must be available in some way or another. One way is via EasyBuild, for example by installing a module
 for FPM using one of the available easyconfig files.
 
-EasyBuild will also take care of installing Ruby for you (which is required for FPM itself)::
+EasyBuild will also take care of installing Ruby for you (which is required for FPM itself)<span class="se">::</span>
 
-    $ export EASYBUILD_PREFIX=/home/example
+<span class="s">    $ export EASYBUILD_PREFIX=/home/example</span>
 
-    $ eb FPM-1.3.3-Ruby-2.1.6.eb --robot
-    [...]
-    == building and installing Ruby/2.1.6...
-    [...]
-    == COMPLETED: Installation ended successfully
-    [...]
-    == building and installing FPM/1.3.3-Ruby-2.1.6...
-    [...]
-    == COMPLETED: Installation ended successfully
-    == Results of the build can be found in the log file /home/example/software/FPM/1.3.3-Ruby-2.1.6/easybuild/easybuild-FPM-1.3.3-20150524.181859.log
-    == Build succeeded for 2 out of 2
+<span class="s">    $ eb FPM-1.3.3-Ruby-2.1.6.eb --robot</span>
+<span class="s">    [...]</span>
+<span class="s">    == building and installing Ruby/2.1.6...</span>
+<span class="s">    [...]</span>
+<span class="s">    == COMPLETED: Installation ended successfully</span>
+<span class="s">    [...]</span>
+<span class="s">    == building and installing FPM/1.3.3-Ruby-2.1.6...</span>
+<span class="s">    [...]</span>
+<span class="s">    == COMPLETED: Installation ended successfully</span>
+<span class="s">    == Results of the build can be found in the log file /home/example/software/FPM/1.3.3-Ruby-2.1.6/easybuild/easybuild-FPM-1.3.3-20150524.181859.log</span>
+<span class="s">    == Build succeeded for 2 out of 2</span>
 
-    $ module load FPM/1.3.3-Ruby-2.1.6
+<span class="s">    $ module load FPM/1.3.3-Ruby-2.1.6</span>
 
-    $ fpm --version
-    1.3.3
+<span class="s">    $ fpm --version</span>
+<span class="s">    1.3.3</span>
 
 
-.. _packaging_config:
+<span class="p">..</span> <span class="nt">_packaging_config:</span>
 
-Configuration options
----------------------
+<span class="gh">Configuration options</span>
+<span class="gh">---------------------</span>
 
 Several configuration options related to packaging support are available.
 
-* ``--package``:
+<span class="m">*</span> <span class="s">``--package``</span>:
 
-  * enables packaging; other options will be void unless this option is enabled
+  <span class="m">*</span> enables packaging; other options will be void unless this option is enabled
 
-* ``--package-tool=&lt;tool&gt;``:
+<span class="m">*</span> <span class="s">``--package-tool=&lt;tool&gt;``</span>:
 
-  * specifies which tool you wish to package with; for now, only ``fpm`` is supported (and is set as default)
+  <span class="m">*</span> specifies which tool you wish to package with; for now, only <span class="s">``fpm``</span> is supported (and is set as default)
 
-* ``--package-type=&lt;type&gt;``:
+<span class="m">*</span> <span class="s">``--package-type=&lt;type&gt;``</span>:
 
-  * specifies which type of package you wish to build, which is passed through to ``fpm`` (as target type);
-    examples include: ``rpm`` (default), ``deb``, ... (see https://github.com/jordansissel/fpm/wiki#overview)
+  <span class="m">*</span> specifies which type of package you wish to build, which is passed through to <span class="s">``fpm``</span> (as target type);
+    examples include: <span class="s">``rpm``</span> (default), <span class="s">``deb``</span>, ... (see https://github.com/jordansissel/fpm/wiki#overview)
 
-* ``--package-naming-scheme=&lt;PNS&gt;``:
+<span class="m">*</span> <span class="s">``--package-naming-scheme=&lt;PNS&gt;``</span>:
 
-  * specifies which package naming scheme to use; default: ``EasyBuildPNS``
+  <span class="m">*</span> specifies which package naming scheme to use; default: <span class="s">``EasyBuildPNS``</span>
 
-* ``--packagepath``:
+<span class="m">*</span> <span class="s">``--packagepath``</span>:
 
-  * specifies destination path of packages being built
+  <span class="m">*</span> specifies destination path of packages being built
 
-* ``--package-release``:
+<span class="m">*</span> <span class="s">``--package-release``</span>:
 
-  * specifies the package release (default: ``1``); typically, this should be an integer value
+  <span class="m">*</span> specifies the package release (default: <span class="s">``1``</span>); typically, this should be an integer value
 
 
-.. note:: Changing the package naming scheme should be done with caution. For example, RPM will only allow one package
-          of a particular *name* to be installed, so if you wish multiple versions of a package to be installed
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Changing the package naming scheme should be done with caution. For example, RPM will only allow one package
+          of a particular <span class="ge">*name*</span> to be installed, so if you wish multiple versions of a package to be installed
           at the same time you need to ensure variables like the software version are included in the package name.
 
 
-.. _packaging_usage:
+<span class="p">..</span> <span class="nt">_packaging_usage:</span>
 
-Usage
------
+<span class="gh">Usage</span>
+<span class="gh">-----</span>
 
-To make EasyBuild generate packages, just use ``--package``.
-By default, this will make EasyBuild leverage FPM to create RPMs::
+To make EasyBuild generate packages, just use <span class="s">``--package``</span>.
+By default, this will make EasyBuild leverage FPM to create RPMs<span class="se">::</span>
 
-    $ export EASYBUILD_PREFIX=/home/example
-    $ eb --package Perl-5.20.1-GCC-4.9.2-bare.eb --robot
-    [...]
-    == building and installing Perl/5.20.1-GCC-4.9.2-bare...
-    == fetching files...
-    == creating build dir, resetting environment...
-    == unpacking...
-    == patching...
-    == preparing...
-    == configuring...
-    == building...
-    == testing...
-    == installing...
-    == taking care of extensions...
-    == postprocessing...
-    == sanity checking...
-    == cleaning up...
-    == creating module...
-    == packaging...
-    == COMPLETED: Installation ended successfully
-    == Results of the build can be found in the log file /home/example/software/Perl/5.20.1-GCC-4.9.2-bare/easybuild/easybuild-Perl-5.20.1-20150527.023522.log
-    == Build succeeded for 1 out of 1
+<span class="s">    $ export EASYBUILD_PREFIX=/home/example</span>
+<span class="s">    $ eb --package Perl-5.20.1-GCC-4.9.2-bare.eb --robot</span>
+<span class="s">    [...]</span>
+<span class="s">    == building and installing Perl/5.20.1-GCC-4.9.2-bare...</span>
+<span class="s">    == fetching files...</span>
+<span class="s">    == creating build dir, resetting environment...</span>
+<span class="s">    == unpacking...</span>
+<span class="s">    == patching...</span>
+<span class="s">    == preparing...</span>
+<span class="s">    == configuring...</span>
+<span class="s">    == building...</span>
+<span class="s">    == testing...</span>
+<span class="s">    == installing...</span>
+<span class="s">    == taking care of extensions...</span>
+<span class="s">    == postprocessing...</span>
+<span class="s">    == sanity checking...</span>
+<span class="s">    == cleaning up...</span>
+<span class="s">    == creating module...</span>
+<span class="s">    == packaging...</span>
+<span class="s">    == COMPLETED: Installation ended successfully</span>
+<span class="s">    == Results of the build can be found in the log file /home/example/software/Perl/5.20.1-GCC-4.9.2-bare/easybuild/easybuild-Perl-5.20.1-20150527.023522.log</span>
+<span class="s">    == Build succeeded for 1 out of 1</span>
 
 
-Packages will be located in the directory indicated by the ``--packagepath`` configuration option; by default, this
-corresponds to ``$prefix/packages``.
+Packages will be located in the directory indicated by the <span class="s">``--packagepath``</span> configuration option; by default, this
+corresponds to <span class="s">``$prefix/packages``</span>.
 
-By defauilt, the package will have the following properties::
+By defauilt, the package will have the following properties<span class="se">::</span>
 
-    $ rpm -qip --requires --provides /home/example/packages/Perl-5.20.1-GCC-4.9.2-bare.eb2.2.0-1.x86_64.rpm
-    Name        : Perl-5.20.1-GCC-4.9.2-bare
-    Version     : eb2.2.0
-    Release     : 1
-    Architecture: x86_64
-    Install Date: (not installed)
-    Group       : default
-    Size        : 64539427
-    License     : unknown
-    Signature   : (none)
-    Source RPM  : Perl-5.20.1-GCC-4.9.2-bare.eb2.2.0-1.x86_64.src.rpm
-    Build Date  : Tue 07 Jul 2015 11:27:54 PM EDT
-    Build Host  : 59e46bbf1cd0
-    Relocations : /
-    Packager    : &lt;easybuild@59e46bbf1cd0&gt;
-    Vendor      : easybuild@59e46bbf1cd0
-    URL         : http://example.com/no-uri-given
-    Summary     : no description given
-    Description :
-    no description given
-    GCC-4.9.2-dummy-dummy
-    rpmlib(PartialHardlinkSets) &lt;= 4.0.4-1
-    rpmlib(PayloadFilesHavePrefix) &lt;= 4.0-1
-    rpmlib(CompressedFileNames) &lt;= 3.0.4-1
-    Perl-5.20.1-GCC-4.9.2-bare
-    Perl-5.20.1-GCC-4.9.2-bare = eb2.2.0-1
-    Perl-5.20.1-GCC-4.9.2-bare(x86-64) = eb2.2.0-1
+<span class="s">    $ rpm -qip --requires --provides /home/example/packages/Perl-5.20.1-GCC-4.9.2-bare.eb2.2.0-1.x86_64.rpm</span>
+<span class="s">    Name        : Perl-5.20.1-GCC-4.9.2-bare</span>
+<span class="s">    Version     : eb2.2.0</span>
+<span class="s">    Release     : 1</span>
+<span class="s">    Architecture: x86_64</span>
+<span class="s">    Install Date: (not installed)</span>
+<span class="s">    Group       : default</span>
+<span class="s">    Size        : 64539427</span>
+<span class="s">    License     : unknown</span>
+<span class="s">    Signature   : (none)</span>
+<span class="s">    Source RPM  : Perl-5.20.1-GCC-4.9.2-bare.eb2.2.0-1.x86_64.src.rpm</span>
+<span class="s">    Build Date  : Tue 07 Jul 2015 11:27:54 PM EDT</span>
+<span class="s">    Build Host  : 59e46bbf1cd0</span>
+<span class="s">    Relocations : /</span>
+<span class="s">    Packager    : &lt;easybuild@59e46bbf1cd0&gt;</span>
+<span class="s">    Vendor      : easybuild@59e46bbf1cd0</span>
+<span class="s">    URL         : http://example.com/no-uri-given</span>
+<span class="s">    Summary     : no description given</span>
+<span class="s">    Description :</span>
+<span class="s">    no description given</span>
+<span class="s">    GCC-4.9.2-dummy-dummy</span>
+<span class="s">    rpmlib(PartialHardlinkSets) &lt;= 4.0.4-1</span>
+<span class="s">    rpmlib(PayloadFilesHavePrefix) &lt;= 4.0-1</span>
+<span class="s">    rpmlib(CompressedFileNames) &lt;= 3.0.4-1</span>
+<span class="s">    Perl-5.20.1-GCC-4.9.2-bare</span>
+<span class="s">    Perl-5.20.1-GCC-4.9.2-bare = eb2.2.0-1</span>
+<span class="s">    Perl-5.20.1-GCC-4.9.2-bare(x86-64) = eb2.2.0-1</span>
 
-.. _packaging_skip:
+<span class="p">..</span> <span class="nt">_packaging_skip:</span>
 
-Packaging existing installations
---------------------------------
+<span class="gh">Packaging existing installations</span>
+<span class="gh">--------------------------------</span>
 
-To create packages for existing software installations (performed using EasyBuild), combine ``--package`` with
-``--skip --rebuild``::
+To create packages for existing software installations (performed using EasyBuild), combine <span class="s">``--package``</span> with
+<span class="s">``--skip --rebuild``</span><span class="se">::</span>
 
-    $ eb --package Perl-5.20.1-GCC-4.9.2-bare.eb --skip --rebuild
-    [...]
-    == building and installing Perl/5.20.1-GCC-4.9.2-bare...
-    == fetching files...
-    == creating build dir, resetting environment...
-    == unpacking [skipped]
-    == patching [skipped]
-    == preparing...
-    == configuring [skipped]
-    == building [skipped]
-    == testing [skipped]
-    == installing [skipped]
-    == taking care of extensions...
-    == postprocessing [skipped]
-    == sanity checking...
-    == cleaning up...
-    == creating module...
-    == packaging...
-    == COMPLETED: Installation ended successfully
-    == Results of the build can be found in the log file /home/example/software/Perl/5.20.1-GCC-4.9.2-bare/easybuild/easybuild-Perl-5.20.1-20150527.041734.log
-    == Build succeeded for 1 out of 1
+<span class="s">    $ eb --package Perl-5.20.1-GCC-4.9.2-bare.eb --skip --rebuild</span>
+<span class="s">    [...]</span>
+<span class="s">    == building and installing Perl/5.20.1-GCC-4.9.2-bare...</span>
+<span class="s">    == fetching files...</span>
+<span class="s">    == creating build dir, resetting environment...</span>
+<span class="s">    == unpacking [skipped]</span>
+<span class="s">    == patching [skipped]</span>
+<span class="s">    == preparing...</span>
+<span class="s">    == configuring [skipped]</span>
+<span class="s">    == building [skipped]</span>
+<span class="s">    == testing [skipped]</span>
+<span class="s">    == installing [skipped]</span>
+<span class="s">    == taking care of extensions...</span>
+<span class="s">    == postprocessing [skipped]</span>
+<span class="s">    == sanity checking...</span>
+<span class="s">    == cleaning up...</span>
+<span class="s">    == creating module...</span>
+<span class="s">    == packaging...</span>
+<span class="s">    == COMPLETED: Installation ended successfully</span>
+<span class="s">    == Results of the build can be found in the log file /home/example/software/Perl/5.20.1-GCC-4.9.2-bare/easybuild/easybuild-Perl-5.20.1-20150527.041734.log</span>
+<span class="s">    == Build succeeded for 1 out of 1</span>
 </code></pre></div>
 
   <hr>
@@ -571,7 +571,7 @@ To create packages for existing software installations (performed using EasyBuil
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
       
     
   </small>

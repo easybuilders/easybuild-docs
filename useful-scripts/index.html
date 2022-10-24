@@ -386,110 +386,110 @@ and you can help with that!
 </ul>
 <p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
 </div>
-<div class="highlight"><pre><span></span><code>.. _useful_scripts:
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_useful_scripts:</span>
 
-Useful scripts
-==============
+<span class="gh">Useful scripts</span>
+<span class="gh">==============</span>
 
 A couple of useful stand-alone scripts are provided along with the EasyBuild framework.
 
-The latest stable version of these scripts is available in the ``easybuild-framework`` GitHub repository at
+The latest stable version of these scripts is available in the <span class="s">``easybuild-framework``</span> GitHub repository at
 https://github.com/easybuilders/easybuild-framework/tree/main/easybuild/scripts.
 
 This documentation provides some information on how to use these scripts.
 
-.. _fix_broken_easyconfigs_script:
+<span class="p">..</span> <span class="nt">_fix_broken_easyconfigs_script:</span>
 
-``fix_broken_easyconfigs.py``
------------------------------
+<span class="gh">``fix_broken_easyconfigs.py``</span>
+<span class="gh">-----------------------------</span>
 
-*download from:* https://github.com/easybuilders/easybuild-framework/blob/main/easybuild/scripts/fix_broken_easyconfigs.py
+<span class="ge">*download from:*</span> https://github.com/easybuilders/easybuild-framework/blob/main/easybuild/scripts/fix_broken_easyconfigs.py
 
 To fix easyconfig files that are broken due to relying on functionality that is no longer supported in EasyBuild v2.x,
-the ``fix_broken_easyconfigs.py`` script can be used.
+the <span class="s">``fix_broken_easyconfigs.py``</span> script can be used.
 
 This script rewrites easyconfig files that are broken because they still:
 
-* rely on the automagic fallback to the generic ``ConfigureMake`` easyblock (see :ref:`depr_ConfigureMake_fallback_eb1`)
-* define the ``premakeopts`` and/or ``makeopts`` eaysconfig parameters (see :ref:`depr_premakeopts_makeopts_eb1`)
-* use the ``shared_lib_ext`` &#39;constant&#39; (see :ref:`depr_shared_lib_ext_eb1`)
-* incorrectly use the ``license`` easyconfig parameter (see :ref:`depr_license_eb1`)
+<span class="m">*</span> rely on the automagic fallback to the generic <span class="s">``ConfigureMake``</span> easyblock (see <span class="na">:ref:</span><span class="nv">`depr_ConfigureMake_fallback_eb1`</span>)
+<span class="m">*</span> define the <span class="s">``premakeopts``</span> and/or <span class="s">``makeopts``</span> eaysconfig parameters (see <span class="na">:ref:</span><span class="nv">`depr_premakeopts_makeopts_eb1`</span>)
+<span class="m">*</span> use the <span class="s">``shared_lib_ext``</span> &#39;constant&#39; (see <span class="na">:ref:</span><span class="nv">`depr_shared_lib_ext_eb1`</span>)
+<span class="m">*</span> incorrectly use the <span class="s">``license``</span> easyconfig parameter (see <span class="na">:ref:</span><span class="nv">`depr_license_eb1`</span>)
 
-The script accepts a list of easyconfig files or directories containing easyconfig files (``.eb``) as arguments,
+The script accepts a list of easyconfig files or directories containing easyconfig files (<span class="s">``.eb``</span>) as arguments,
 and will consider all easyconfig files it can find.
 
 Only easyconfig files that are considered broken (according to one or more of the aspects listed above) are patched;
 other easyconfigs will be left untouched.
 
-To determine whether ``easyblock = &#39;ConfigureMake&#39;`` should be added in an easyconfig file that does
-not include any ``easyblock`` specification yet, the easyblocks available in the active Python search path (i.e.,
-the ones listed in the output of ``eb --list-easyblocks``, see also :ref:`list_easyblocks`) are taken into account.
+To determine whether <span class="s">``easyblock = &#39;ConfigureMake&#39;``</span> should be added in an easyconfig file that does
+not include any <span class="s">``easyblock``</span> specification yet, the easyblocks available in the active Python search path (i.e.,
+the ones listed in the output of <span class="s">``eb --list-easyblocks``</span>, see also <span class="na">:ref:</span><span class="nv">`list_easyblocks`</span>) are taken into account.
 
 A backup copy is created for each easyconfig file that is being patched.
 
-Example usage::
+Example usage<span class="se">::</span>
 
-    $ python easybuild/scripts/fix_broken_easyconfigs.py broken.eb myeasyconfigs GCC-4.9.2.eb
-    == 2015-03-05 17:02:22,438 fix_broken_easyconfigs.FIX_BROKEN_EASYCONFIGS INFO Processing 3 easyconfigs
-    == 2015-03-05 17:02:22,454 fix_broken_easyconfigs.FIX_BROKEN_EASYCONFIGS INFO Backed up broken.eb to broken.eb.bk
-    == 2015-03-05 17:02:22,454 fix_broken_easyconfigs.FIX_BROKEN_EASYCONFIGS INFO broken.eb: fixed
-    == 2015-03-05 17:02:22,458 fix_broken_easyconfigs.FIX_BROKEN_EASYCONFIGS INFO /home/example/myeasyconfigs/HPL-2.1-intel-2015a.eb: nothing to fix
-    == 2015-03-05 17:02:22,461 fix_broken_easyconfigs.FIX_BROKEN_EASYCONFIGS INFO GCC-4.9.2.eb: nothing to fix
+<span class="s">    $ python easybuild/scripts/fix_broken_easyconfigs.py broken.eb myeasyconfigs GCC-4.9.2.eb</span>
+<span class="s">    == 2015-03-05 17:02:22,438 fix_broken_easyconfigs.FIX_BROKEN_EASYCONFIGS INFO Processing 3 easyconfigs</span>
+<span class="s">    == 2015-03-05 17:02:22,454 fix_broken_easyconfigs.FIX_BROKEN_EASYCONFIGS INFO Backed up broken.eb to broken.eb.bk</span>
+<span class="s">    == 2015-03-05 17:02:22,454 fix_broken_easyconfigs.FIX_BROKEN_EASYCONFIGS INFO broken.eb: fixed</span>
+<span class="s">    == 2015-03-05 17:02:22,458 fix_broken_easyconfigs.FIX_BROKEN_EASYCONFIGS INFO /home/example/myeasyconfigs/HPL-2.1-intel-2015a.eb: nothing to fix</span>
+<span class="s">    == 2015-03-05 17:02:22,461 fix_broken_easyconfigs.FIX_BROKEN_EASYCONFIGS INFO GCC-4.9.2.eb: nothing to fix</span>
 
-This results in ``broken.eb`` being rewritten/fixed, after creating a backup copy ``broken.eb.bk``::
+This results in <span class="s">``broken.eb``</span> being rewritten/fixed, after creating a backup copy <span class="s">``broken.eb.bk``</span><span class="se">::</span>
 
-    $ diff -u broken.eb.bk broken.eb
-    --- broken.eb.bk    2015-02-25 14:45:52.000000000 +0100
-    +++ broken.eb   2015-03-05 16:51:44.000000000 +0100
-    @@ -1,4 +1,6 @@
-     # licenseheader
-    +easyblock = &#39;ConfigureMake&#39;
-    +
-     name = &#39;foo&#39;
-     version = &#39;1.2.3&#39;
+<span class="s">    $ diff -u broken.eb.bk broken.eb</span>
+<span class="s">    --- broken.eb.bk    2015-02-25 14:45:52.000000000 +0100</span>
+<span class="s">    +++ broken.eb   2015-03-05 16:51:44.000000000 +0100</span>
+<span class="s">    @@ -1,4 +1,6 @@</span>
+<span class="s">     # licenseheader</span>
+<span class="s">    +easyblock = &#39;ConfigureMake&#39;</span>
+<span class="s">    +</span>
+<span class="s">     name = &#39;foo&#39;</span>
+<span class="s">     version = &#39;1.2.3&#39;</span>
 
-    @@ -7,7 +9,7 @@
+<span class="s">    @@ -7,7 +9,7 @@</span>
 
-     toolchain = {&#39;name&#39;: &#39;bar&#39;, &#39;version&#39;: &#39;3.2.1&#39;}
+<span class="s">     toolchain = {&#39;name&#39;: &#39;bar&#39;, &#39;version&#39;: &#39;3.2.1&#39;}</span>
 
-    -premakeopts = &#39;FOO=libfoo.%s&#39; % shared_lib_ext
-    -makeopts = &#39;CC=gcc&#39;
-    +prebuildopts = &#39;FOO=libfoo.%s&#39; % SHLIB_EXT
-    +buildopts = &#39;CC=gcc&#39;
+<span class="s">    -premakeopts = &#39;FOO=libfoo.%s&#39; % shared_lib_ext</span>
+<span class="s">    -makeopts = &#39;CC=gcc&#39;</span>
+<span class="s">    +prebuildopts = &#39;FOO=libfoo.%s&#39; % SHLIB_EXT</span>
+<span class="s">    +buildopts = &#39;CC=gcc&#39;</span>
 
-    -license = &#39;foo.lic&#39;
-    +license_file = &#39;foo.lic&#39;
+<span class="s">    -license = &#39;foo.lic&#39;</span>
+<span class="s">    +license_file = &#39;foo.lic&#39;</span>
 
-.. _install_EasyBuild_develop_script:
+<span class="p">..</span> <span class="nt">_install_EasyBuild_develop_script:</span>
 
-``install-EasyBuild-develop.sh``
---------------------------------
+<span class="gh">``install-EasyBuild-develop.sh``</span>
+<span class="gh">--------------------------------</span>
 
-*download from:* https://github.com/easybuilders/easybuild-framework/blob/main/easybuild/scripts/install-EasyBuild-develop.sh
+<span class="ge">*download from:*</span> https://github.com/easybuilders/easybuild-framework/blob/main/easybuild/scripts/install-EasyBuild-develop.sh
 
 A script to set up an EasyBuild development environment.
-For more information, see :ref:`install_latest_develop_using_script`.
+For more information, see <span class="na">:ref:</span><span class="nv">`install_latest_develop_using_script`</span>.
 
-.. _clean_gists_script:
+<span class="p">..</span> <span class="nt">_clean_gists_script:</span>
 
-``clean_gists.py``
---------------------------------
+<span class="gh">``clean_gists.py``</span>
+<span class="gh">--------------------------------</span>
 
-*download from:* https://github.com/easybuilders/easybuild-framework/blob/main/easybuild/scripts/clean_gists.py
+<span class="ge">*download from:*</span> https://github.com/easybuilders/easybuild-framework/blob/main/easybuild/scripts/clean_gists.py
 
-When using ``--from-pr`` in combination with ``-upload-test-report`` (see
+When using <span class="s">``--from-pr``</span> in combination with <span class="s">``-upload-test-report``</span> (see
 https://github.com/easybuilders/easybuild/wiki/Review-process-for-contributions#automated-testing-of-easyconfigs-pull-requests),
 you can end up with a bunch of gists in your GitHub account containing test reports, that may no longer be relevant.
 
-To help with that the ``clean_gists.py`` script is available, to clean up gists containing test reports:
+To help with that the <span class="s">``clean_gists.py``</span> script is available, to clean up gists containing test reports:
 
-* ``clean_gists.py -p``: delete all gists from closed pull requests (default action if no other action is specified)
-* ``clean_gists.py -a``: delete all gists generated by Easybuild
-* ``clean_gists.py -o``: delete all gists without a matching pull request (created by using ``-upload-test-report`` without ``--from-pr``)
+<span class="m">*</span> <span class="s">``clean_gists.py -p``</span>: delete all gists from closed pull requests (default action if no other action is specified)
+<span class="m">*</span> <span class="s">``clean_gists.py -a``</span>: delete all gists generated by Easybuild
+<span class="m">*</span> <span class="s">``clean_gists.py -o``</span>: delete all gists without a matching pull request (created by using <span class="s">``-upload-test-report``</span> without <span class="s">``--from-pr``</span>)
 
-By default, the script will use the same GitHub account that Easybuild uses (see ``--github-user``); to specify a different GitHub account, use ``-g``.
+By default, the script will use the same GitHub account that Easybuild uses (see <span class="s">``--github-user``</span>); to specify a different GitHub account, use <span class="s">``-g``</span>.
 
-The script expects that a valid GitHub token for the used GitHub account username is available, see :ref:`github_token`.
+The script expects that a valid GitHub token for the used GitHub account username is available, see <span class="na">:ref:</span><span class="nv">`github_token`</span>.
 </code></pre></div>
 
   <hr>
@@ -497,7 +497,7 @@ The script expects that a valid GitHub token for the used GitHub account usernam
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
       
     
   </small>

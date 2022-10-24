@@ -396,561 +396,561 @@ and you can help with that!
 </ul>
 <p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
 </div>
-<div class="highlight"><pre><span></span><code>.. _configuring_easybuild:
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_configuring_easybuild:</span>
 
-Configuring EasyBuild
-=====================
+<span class="gh">Configuring EasyBuild</span>
+<span class="gh">=====================</span>
 
 This page discusses the recommended style of configuring
 EasyBuild, which is supported since EasyBuild v1.3.0.
 
-A demo on configuring EasyBuild is available :ref:`here &lt;demo_configuring&gt;`.
+A demo on configuring EasyBuild is available <span class="na">:ref:</span><span class="nv">`here &lt;demo_configuring&gt;`</span>.
 
-.. contents::
-    :depth: 3
-    :backlinks: none
+<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
+    <span class="nc">:depth:</span> 3
+    <span class="nc">:backlinks:</span> none
 
-.. _configuration_types:
+<span class="p">..</span> <span class="nt">_configuration_types:</span>
 
-Supported configuration types
------------------------------
+<span class="gh">Supported configuration types</span>
+<span class="gh">-----------------------------</span>
 
 Configuring EasyBuild can be done by:
 
-* using ``eb`` with **command line arguments**
-* setting **environment variables** (``$EASYBUILD_...``)
-* providing one or more **configuration files**
+<span class="m">*</span> using <span class="s">``eb``</span> with <span class="gs">**command line arguments**</span>
+<span class="m">*</span> setting <span class="gs">**environment variables**</span> (<span class="s">``$EASYBUILD_...``</span>)
+<span class="m">*</span> providing one or more <span class="gs">**configuration files**</span>
 
 Of course, combining any of these types of configuration works too (and
 is even fairly common).
 
 The order of preference for the different configuration types is as listed above, that is:
 
-* environment variables override the corresponding entries in the configuration file
-* command line arguments in turn override the corresponding environment variables *and* matching entries in the
+<span class="m">*</span> environment variables override the corresponding entries in the configuration file
+<span class="m">*</span> command line arguments in turn override the corresponding environment variables <span class="ge">*and*</span> matching entries in the
   configuration file
 
 
-.. _configuration_consistency:
+<span class="p">..</span> <span class="nt">_configuration_consistency:</span>
 
-Consistency across supported configuration types
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Consistency across supported configuration types</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 Note that the various available configuration options are handled
-**consistently** across the supported configuration types.
+<span class="gs">**consistently**</span> across the supported configuration types.
 
 For example: to configure EasyBuild to use Lmod as modules tool, the following alternatives are available:
 
-* configuration file entry (key-value assignment):
+<span class="m">*</span> configuration file entry (key-value assignment):
 
-  .. code:: ini
+<span class="p">  ..</span> <span class="ow">code</span><span class="p">::</span> ini
 
    [config]
    modules-tool = Lmod
 
-* environment variable (upper case, ``EASYBUILD_`` prefix, ``-``&#39;s becomes ``_``&#39;s):
+<span class="m">*</span> environment variable (upper case, <span class="s">``EASYBUILD_``</span> prefix, <span class="s">``-``</span>&#39;s becomes <span class="s">``_``</span>&#39;s):
 
-  .. code::
+<span class="p">  ..</span> <span class="ow">code</span><span class="p">::</span>
 
    $ export EASYBUILD_MODULES_TOOL=Lmod
 
-* command line argument (long options preceded by ``--`` and (optionally) using ``=``):
+<span class="m">*</span> command line argument (long options preceded by <span class="s">``--``</span> and (optionally) using <span class="s">``=``</span>):
 
-  .. code::
+<span class="p">  ..</span> <span class="ow">code</span><span class="p">::</span>
 
    $ eb --modules-tool=Lmod
 
   or
 
-  .. code::
+<span class="p">  ..</span> <span class="ow">code</span><span class="p">::</span>
 
    $ eb --modules-tool Lmod
 
 For more details w.r.t. each of the supported configuration types, see below.
 
 
-.. _configuration_file:
+<span class="p">..</span> <span class="nt">_configuration_file:</span>
 
-Configuration file(s)
-~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Configuration file(s)</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~</span>
 
-.. _list_of_configuration_files:
+<span class="p">..</span> <span class="nt">_list_of_configuration_files:</span>
 
-List of used configuration files
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">List of used configuration files</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
 The list of configuration files that will be used by EasyBuild is determined in the following order of preference:
 
-* the path(s) specified via the **command line argument** ``--configfiles``
-* the path(s) specified via the ``$EASYBUILD_CONFIGFILES`` **environment variable**
-* the **default paths** for EasyBuild configuration files
+<span class="m">*</span> the path(s) specified via the <span class="gs">**command line argument**</span> <span class="s">``--configfiles``</span>
+<span class="m">*</span> the path(s) specified via the <span class="s">``$EASYBUILD_CONFIGFILES``</span> <span class="gs">**environment variable**</span>
+<span class="m">*</span> the <span class="gs">**default paths**</span> for EasyBuild configuration files
 
-.. _default_configuration_files:
+<span class="p">..</span> <span class="nt">_default_configuration_files:</span>
 
-Default configuration files
-+++++++++++++++++++++++++++
+<span class="gh">Default configuration files</span>
+<span class="gh">+++++++++++++++++++++++++++</span>
 
 By default, EasyBuild will use existing configuration files at the following paths:
 
-* ``$dir/easybuild.d/*.cfg``, for each directory ``$dir`` listed in ``$XDG_CONFIG_DIRS`` (where ``$XDG_CONFIG_DIRS``
-  defaults to ``/etc``)
-* ``$XDG_CONFIG_HOME/easybuild/config.cfg`` (where ``$XDG_CONFIG_HOME`` defaults to ``$HOME/.config``)
+<span class="m">*</span> <span class="s">``$dir/easybuild.d/*.cfg``</span>, for each directory <span class="s">``$dir``</span> listed in <span class="s">``$XDG_CONFIG_DIRS``</span> (where <span class="s">``$XDG_CONFIG_DIRS``</span>
+  defaults to <span class="s">``/etc``</span>)
+<span class="m">*</span> <span class="s">``$XDG_CONFIG_HOME/easybuild/config.cfg``</span> (where <span class="s">``$XDG_CONFIG_HOME``</span> defaults to <span class="s">``$HOME/.config``</span>)
 
-Hence, if ``$XDG_CONFIG_HOME`` and ``$XDG_CONFIG_DIRS`` are not defined, EasyBuild will only consider default
-configuration files at ``/etc/easybuild.d/*.cfg`` and ``$HOME/.config/easybuild/config.cfg``.
+Hence, if <span class="s">``$XDG_CONFIG_HOME``</span> and <span class="s">``$XDG_CONFIG_DIRS``</span> are not defined, EasyBuild will only consider default
+configuration files at <span class="s">``/etc/easybuild.d/*.cfg``</span> and <span class="s">``$HOME/.config/easybuild/config.cfg``</span>.
 
-The configuration file located in ``$XDG_CONFIG_HOME`` will be listed *after* the ones obtained via ``$XDG_CONFIG_DIRS``,
+The configuration file located in <span class="s">``$XDG_CONFIG_HOME``</span> will be listed <span class="ge">*after*</span> the ones obtained via <span class="s">``$XDG_CONFIG_DIRS``</span>,
 such that user-defined configuration settings have preference over system defaults.
 
-A detailed overview of the list of default configuration files is available via ``eb --show-default-configfiles``
-(available since EasyBuild v2.1.0). For example::
+A detailed overview of the list of default configuration files is available via <span class="s">``eb --show-default-configfiles``</span>
+(available since EasyBuild v2.1.0). For example<span class="se">::</span>
 
- $ XDG_CONFIG_DIRS=/tmp/etc:/tmp/moreetc eb --show-default-configfiles
- Default list of configuration files:
+<span class="s"> $ XDG_CONFIG_DIRS=/tmp/etc:/tmp/moreetc eb --show-default-configfiles</span>
+<span class="s"> Default list of configuration files:</span>
 
- [with $XDG_CONFIG_HOME: (not set), $XDG_CONFIG_DIRS: /tmp/etc:/tmp/moreetc]
+<span class="s"> [with $XDG_CONFIG_HOME: (not set), $XDG_CONFIG_DIRS: /tmp/etc:/tmp/moreetc]</span>
 
- * user-level: ${XDG_CONFIG_HOME:-$HOME/.config}/easybuild/config.cfg
-   -&gt; /home/example/.config/easybuild/config.cfg =&gt; found
- * system-level: ${XDG_CONFIG_DIRS:-/etc}/easybuild.d/*.cfg
-   -&gt; {/tmp/etc, /tmp/moreetc}/easybuild.d/*.cfg =&gt; /tmp/etc/easybuild.d/config.cfg, /tmp/moreetc/easybuild.d/bar.cfg, /tmp/moreetc/easybuild.d/foo.cfg
+<span class="s"> * user-level: ${XDG_CONFIG_HOME:-$HOME/.config}/easybuild/config.cfg</span>
+<span class="s">   -&gt; /home/example/.config/easybuild/config.cfg =&gt; found</span>
+<span class="s"> * system-level: ${XDG_CONFIG_DIRS:-/etc}/easybuild.d/*.cfg</span>
+<span class="s">   -&gt; {/tmp/etc, /tmp/moreetc}/easybuild.d/*.cfg =&gt; /tmp/etc/easybuild.d/config.cfg, /tmp/moreetc/easybuild.d/bar.cfg, /tmp/moreetc/easybuild.d/foo.cfg</span>
 
- Default list of existing configuration files (4): /tmp/etc/easybuild.d/config.cfg, /tmp/moreetc/easybuild.d/bar.cfg, /tmp/moreetc/easybuild.d/foo.cfg, /home/example/.config/easybuild/config.cfg
+<span class="s"> Default list of existing configuration files (4): /tmp/etc/easybuild.d/config.cfg, /tmp/moreetc/easybuild.d/bar.cfg, /tmp/moreetc/easybuild.d/foo.cfg, /home/example/.config/easybuild/config.cfg</span>
 
-Multiple configuration files
-++++++++++++++++++++++++++++
+<span class="gh">Multiple configuration files</span>
+<span class="gh">++++++++++++++++++++++++++++</span>
 
 If multiple configuration files are listed via a mechanism listed above, the settings in the last
 configuration file have preference over the others.
 
 Each available configuration file will be used, and the configuration settings specified in these files
 will be retained according to the order of preference as indicated above: settings in configuration files specified via
-``--configfiles`` override those in configuration files specified via ``$EASYBUILD_CONFIGFILES``, which in turns override
+<span class="s">``--configfiles``</span> override those in configuration files specified via <span class="s">``$EASYBUILD_CONFIGFILES``</span>, which in turns override
 settings in default configuration files.
 
-Ignored configuration files
-+++++++++++++++++++++++++++
+<span class="gh">Ignored configuration files</span>
+<span class="gh">+++++++++++++++++++++++++++</span>
 
-On top of this, the ``--ignoreconfigfiles`` configuration option allows to specify configuration files that should be
-*ignored* by EasyBuild (regardless of whether they are specified via any of the options above).
+On top of this, the <span class="s">``--ignoreconfigfiles``</span> configuration option allows to specify configuration files that should be
+<span class="ge">*ignored*</span> by EasyBuild (regardless of whether they are specified via any of the options above).
 
 
-Configuration file format
-^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Configuration file format</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
 The EasyBuild configuration file follows the default Python
-configuration format as parsed by the ``configparser`` module
-(see `http://docs.python.org/2/library/configparser.html`_).
+configuration format as parsed by the <span class="s">``configparser``</span> module
+(see <span class="s">`http://docs.python.org/2/library/configparser.html`_</span>).
 
 Configuration files are organized in sections, the section name for a
-particular configuration setting is indicated in the output of ``eb --help``.
-Some examples sections are: ``MAIN``, ``basic``, ``config``,
-``informative``, ``override``, ``regtest``, ``software``, ``unittest``, etc.
+particular configuration setting is indicated in the output of <span class="s">``eb --help``</span>.
+Some examples sections are: <span class="s">``MAIN``</span>, <span class="s">``basic``</span>, <span class="s">``config``</span>,
+<span class="s">``informative``</span>, <span class="s">``override``</span>, <span class="s">``regtest``</span>, <span class="s">``software``</span>, <span class="s">``unittest``</span>, etc.
 
 Sections are indicated by specifying the section name in square brackets
-on a dedicated line, e.g., ``[basic]``.
+on a dedicated line, e.g., <span class="s">``[basic]``</span>.
 
-Configuration settings are specified in a ``key = value`` or
-``key: value`` format, **without using quotes for string-like values**.
-For boolean configuration settings, values that evaluated to ``True``
-(e.g., ``true``, ``1``, …) are all equivalent to enabling the setting.
+Configuration settings are specified in a <span class="s">``key = value``</span> or
+<span class="s">``key: value``</span> format, <span class="gs">**without using quotes for string-like values**</span>.
+For boolean configuration settings, values that evaluated to <span class="s">``True``</span>
+(e.g., <span class="s">``true``</span>, <span class="s">``1``</span>, …) are all equivalent to enabling the setting.
 
-Comment lines start with a hash character ``#`` (just like in Python code).
+Comment lines start with a hash character <span class="s">``#``</span> (just like in Python code).
 
 An example configuration file that should make everything clear is shown below.
 
-.. code:: python
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
 
-    [basic]
-    # always enable logging to stdout
-    logtostdout = true
-    [config]
-    # use Lmod as modules tool
-    modules-tool: Lmod
-    # use different default installation path
-    prefix=/home/you/work/easybuild/
+    <span class="p">[</span><span class="n">basic</span><span class="p">]</span>
+    <span class="c1"># always enable logging to stdout</span>
+    <span class="n">logtostdout</span> <span class="o">=</span> <span class="n">true</span>
+    <span class="p">[</span><span class="n">config</span><span class="p">]</span>
+    <span class="c1"># use Lmod as modules tool</span>
+    <span class="n">modules</span><span class="o">-</span><span class="n">tool</span><span class="p">:</span> <span class="n">Lmod</span>
+    <span class="c1"># use different default installation path</span>
+    <span class="n">prefix</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">you</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">easybuild</span><span class="o">/</span>
 
-.. _configuration_file_templates_constants:
+<span class="p">..</span> <span class="nt">_configuration_file_templates_constants:</span>
 
-Templates and constants supported in configuration files
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Templates and constants supported in configuration files</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-Two types of template values ``%(...)s`` are supported in configuration files:
+Two types of template values <span class="s">``%(...)s``</span> are supported in configuration files:
 
-* for configuration options defined in the configuration file (and only those)
+<span class="m">*</span> for configuration options defined in the configuration file (and only those)
 
-  * *syntax:* ``%(opt)s``, i.e., using the (lowercase) name of the configuration option
+  <span class="m">*</span> <span class="ge">*syntax:*</span> <span class="s">``%(opt)s``</span>, i.e., using the (lowercase) name of the configuration option
 
-* for the default value of selected configuration options (see ``eb --avail-cfgfile-constants``)
+<span class="m">*</span> for the default value of selected configuration options (see <span class="s">``eb --avail-cfgfile-constants``</span>)
 
-  * *syntax:* ``%(DEFAULT_OPT)s``, i.e., using the uppercase name of the configuration option and prefixed with ``DEFAULT_``
+  <span class="m">*</span> <span class="ge">*syntax:*</span> <span class="s">``%(DEFAULT_OPT)s``</span>, i.e., using the uppercase name of the configuration option and prefixed with <span class="s">``DEFAULT_``</span>
 
 
-.. note::
-  These template values are only supported in configuration files, *not* in environment variable values or 
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
+  These template values are only supported in configuration files, <span class="ge">*not*</span> in environment variable values or 
   command line option values.
 
-.. note::
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
   Using an unknown template value, i.e. either one for a configuration option that was not defined in the
   configuration file, or a non-existing one for a particular default value, will result in an error like:
-  ``ConfigParser.InterpolationMissingOptionError: Bad value substitution``.
+  <span class="s">``ConfigParser.InterpolationMissingOptionError: Bad value substitution``</span>.
 
-Example
-+++++++
+<span class="gh">Example</span>
+<span class="gh">+++++++</span>
 
 To include both the (custom) location for the easyconfigs archive repository and the default list of robot search
 paths in the active robot search path, the following configuration file entry can be used, featuring the template
-for the ``repositorypath`` configuration option and the provided ``DEFAULT_ROBOT_PATHS`` constant::
+for the <span class="s">``repositorypath``</span> configuration option and the provided <span class="s">``DEFAULT_ROBOT_PATHS``</span> constant<span class="se">::</span>
 
-    [basic]
-    repositorypath = /home/example/easybuild/easyconfigs_archive
-    robot-paths = %(repositorypath)s:%(DEFAULT_ROBOT_PATHS)s
+<span class="s">    [basic]</span>
+<span class="s">    repositorypath = /home/example/easybuild/easyconfigs_archive</span>
+<span class="s">    robot-paths = %(repositorypath)s:%(DEFAULT_ROBOT_PATHS)s</span>
 
-See also :ref:`controlling_robot_search_path`.
+See also <span class="na">:ref:</span><span class="nv">`controlling_robot_search_path`</span>.
 
-Generating a template configuration file
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Generating a template configuration file</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-Since EasyBuild v1.10, a command line option ``--confighelp`` is
+Since EasyBuild v1.10, a command line option <span class="s">``--confighelp``</span> is
 available that prints out the help text as an annotated configuration
 file. This can be used as an empty template configuration file:
 
-.. code:: shell-session
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">shell-session</span>
 
-    $ mkdir -p $HOME/.config/easybuild
-    $ eb --confighelp &gt; $HOME/.config/easybuild/config.cfg
+    <span class="gp">$ </span>mkdir -p <span class="nv">$HOME</span>/.config/easybuild
+    <span class="gp">$ </span>eb --confighelp &gt; <span class="nv">$HOME</span>/.config/easybuild/config.cfg
 
-.. code:: shell-session
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">shell-session</span>
 
-    $ head $HOME/.easybuild/config.cfg
-    [MAIN]
-    # Enable debug log mode (def False)
-    #debug=
-    # Enable info log mode (def False)
-    #info=
-    # Enable info quiet/warning mode (def False)
-    #quiet=
+    <span class="gp">$ </span>head <span class="nv">$HOME</span>/.easybuild/config.cfg
+    <span class="go">[MAIN]</span>
+    <span class="gp"># </span>Enable debug log mode <span class="o">(</span>def False<span class="o">)</span>
+    <span class="gp">#</span><span class="nv">debug</span><span class="o">=</span>
+    <span class="gp"># </span>Enable info log mode <span class="o">(</span>def False<span class="o">)</span>
+    <span class="gp">#</span><span class="nv">info</span><span class="o">=</span>
+    <span class="gp"># </span>Enable info quiet/warning mode <span class="o">(</span>def False<span class="o">)</span>
+    <span class="gp">#</span><span class="nv">quiet</span><span class="o">=</span>
 
-    [basic]
-    # Print build overview incl. dependencies (full paths) (def False)
+    <span class="go">[basic]</span>
+    <span class="gp"># </span>Print build overview incl. dependencies <span class="o">(</span>full paths<span class="o">)</span> <span class="o">(</span>def False<span class="o">)</span>
 
-.. _configuration_env_vars:
+<span class="p">..</span> <span class="nt">_configuration_env_vars:</span>
 
-Environment variables
-~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Environment variables</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~</span>
 
-All configuration settings listed as long options in ``eb --help`` can
-also be specified via ``EASYBUILD_``-prefixed environment variables.
+All configuration settings listed as long options in <span class="s">``eb --help``</span> can
+also be specified via <span class="s">``EASYBUILD_``</span>-prefixed environment variables.
 
 Configuration settings specified this way always override the
 corresponding setting specified in a configuration file.
 
 For example, to enable debug logging using an environment variable:
 
-.. code:: shell-session
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">shell-session</span>
 
-    $ export EASYBUILD_DEBUG=1
+    <span class="gp">$ </span><span class="nb">export</span> <span class="nv">EASYBUILD_DEBUG</span><span class="o">=</span><span class="m">1</span>
 
 More examples of using environment variables to configure EasyBuild are
 shown in the sections below.
 
-.. tip:: Any configuration option of EasyBuild which can be tuned by command line
+<span class="p">..</span> <span class="ow">tip</span><span class="p">::</span> Any configuration option of EasyBuild which can be tuned by command line
   or via the configuration file, can also be tuned via a corresponding environment variable.
 
-.. note:: If any ``$EASYBUILD``-prefixed environment variables are defined that do not correspond to a known
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> If any <span class="s">``$EASYBUILD``</span>-prefixed environment variables are defined that do not correspond to a known
   configuration option, EasyBuild will report an error message and exit.
 
-.. _configuration_cmdline:
+<span class="p">..</span> <span class="nt">_configuration_cmdline:</span>
 
-Command line arguments
-~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Command line arguments</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~</span>
 
-The configuration type with the highest precedence are the ``eb``
+The configuration type with the highest precedence are the <span class="s">``eb``</span>
 command line arguments, which override settings specified through environment variables or in configuration files.
 
 For some configuration options, both short and long command line
-arguments are available (see ``eb --help``); the long options indicate
+arguments are available (see <span class="s">``eb --help``</span>); the long options indicate
 how the configuration setting should be specified in a configuration file
-or via an environment variable (``$EASYBUILD_&lt;LONGOPTION&gt;``).
+or via an environment variable (<span class="s">``$EASYBUILD_&lt;LONGOPTION&gt;``</span>).
 
-For boolean configuration settings, both the ``--&lt;option&gt;`` and
-``--disable-&lt;option&gt;`` variants are always available.
+For boolean configuration settings, both the <span class="s">``--&lt;option&gt;``</span> and
+<span class="s">``--disable-&lt;option&gt;``</span> variants are always available.
 
 Examples (more below):
 
-* enable debug logging (long option) and logging to stdout (short option)
+<span class="m">*</span> enable debug logging (long option) and logging to stdout (short option)
 
-.. code:: shell-session
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">shell-session</span>
 
-    $ eb --debug -l ...
+    <span class="gp">$ </span>eb --debug -l ...
 
-* use ``/dev/shm`` as build path, install to temporary install path, disable debug logging
+<span class="m">*</span> use <span class="s">``/dev/shm``</span> as build path, install to temporary install path, disable debug logging
 
-.. code:: shell-session
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">shell-session</span>
 
-    $ eb --buildpath=/dev/shm --installpath=/tmp/$USER --disable-debug ...
+    <span class="gp">$ </span>eb --buildpath<span class="o">=</span>/dev/shm --installpath<span class="o">=</span>/tmp/<span class="nv">$USER</span> --disable-debug ...
 
-.. _configuration_show_config:
+<span class="p">..</span> <span class="nt">_configuration_show_config:</span>
 
-Overview of current configuration (``--show-config``, ``--show-full-config``)
------------------------------------------------------------------------------
+<span class="gh">Overview of current configuration (``--show-config``, ``--show-full-config``)</span>
+<span class="gh">-----------------------------------------------------------------------------</span>
 
 To get an overview of the current EasyBuild configuration across all configuration types,
-you can use ``eb --show-config``.
+you can use <span class="s">``eb --show-config``</span>.
 
 The output will specify:
 
-* any configuration setting for which the current value is different from the default value 
-* a couple of selected important configuration settings (even if they are still set to the default value), i.e.:
+<span class="m">*</span> any configuration setting for which the current value is different from the default value 
+<span class="m">*</span> a couple of selected important configuration settings (even if they are still set to the default value), i.e.:
 
-  * build path (see :ref:`buildpath`)
-  * install path (see :ref:`installpath`)
-  * path to easyconfigs repository (see :ref:`easyconfigs_repo`)
-  * the robot search path (see :ref:`robot_search_path`)
-  * source path (see :ref:`sourcepath`)
+  <span class="m">*</span> build path (see <span class="na">:ref:</span><span class="nv">`buildpath`</span>)
+  <span class="m">*</span> install path (see <span class="na">:ref:</span><span class="nv">`installpath`</span>)
+  <span class="m">*</span> path to easyconfigs repository (see <span class="na">:ref:</span><span class="nv">`easyconfigs_repo`</span>)
+  <span class="m">*</span> the robot search path (see <span class="na">:ref:</span><span class="nv">`robot_search_path`</span>)
+  <span class="m">*</span> source path (see <span class="na">:ref:</span><span class="nv">`sourcepath`</span>)
 
-* through which configuration type each setting was defined
+<span class="m">*</span> through which configuration type each setting was defined
 
-  * i.e., default value, configuration file, environment variable or command line argument
+  <span class="m">*</span> i.e., default value, configuration file, environment variable or command line argument
 
-Example output::
+Example output<span class="se">::</span>
 
-    $ cat $HOME/.config/easybuild/config.cfg
-    [config]
-    buildpath = /tmp/eb-build
+<span class="s">    $ cat $HOME/.config/easybuild/config.cfg</span>
+<span class="s">    [config]</span>
+<span class="s">    buildpath = /tmp/eb-build</span>
 
-    $ export EASYBUILD_MODULES_TOOL=Lmod
-    $ export EASYBUILD_OPTARCH=&#39;&#39;
+<span class="s">    $ export EASYBUILD_MODULES_TOOL=Lmod</span>
+<span class="s">    $ export EASYBUILD_OPTARCH=&#39;&#39;</span>
 
-    $ eb --show-config --installpath=$HOME/apps --job-cores=4
-    #
-    # Current EasyBuild configuration
-    # (C: command line argument, D: default value, E: environment variable, F: configuration file)
-    #
-    buildpath      (F) = /tmp/eb-build
-    installpath    (C) = /Users/example/apps
-    job-cores      (C) = 4
-    modules-tool   (E) = Lmod
-    optarch        (E) = &#39;&#39;
-    repositorypath (D) = /Users/example/.local/easybuild/ebfiles_repo
-    robot-paths    (D) = /Users/example/easybuild-easyconfigs/easybuild/easyconfigs
-    sourcepath     (D) = /Users/example/.local/easybuild/sources
+<span class="s">    $ eb --show-config --installpath=$HOME/apps --job-cores=4</span>
+<span class="s">    #</span>
+<span class="s">    # Current EasyBuild configuration</span>
+<span class="s">    # (C: command line argument, D: default value, E: environment variable, F: configuration file)</span>
+<span class="s">    #</span>
+<span class="s">    buildpath      (F) = /tmp/eb-build</span>
+<span class="s">    installpath    (C) = /Users/example/apps</span>
+<span class="s">    job-cores      (C) = 4</span>
+<span class="s">    modules-tool   (E) = Lmod</span>
+<span class="s">    optarch        (E) = &#39;&#39;</span>
+<span class="s">    repositorypath (D) = /Users/example/.local/easybuild/ebfiles_repo</span>
+<span class="s">    robot-paths    (D) = /Users/example/easybuild-easyconfigs/easybuild/easyconfigs</span>
+<span class="s">    sourcepath     (D) = /Users/example/.local/easybuild/sources</span>
 
-For a full overview of the current configuration, including *all* configuration settings,
-see ``eb --show-full-config``.
+For a full overview of the current configuration, including <span class="ge">*all*</span> configuration settings,
+see <span class="s">``eb --show-full-config``</span>.
 
-.. _configuration_available_settings:
+<span class="p">..</span> <span class="nt">_configuration_available_settings:</span>
 
-Available configuration settings
---------------------------------
+<span class="gh">Available configuration settings</span>
+<span class="gh">--------------------------------</span>
 
 To obtain a full and up-to-date list of available configuration
-settings, see ``eb --help``. We refrain from listing all available configuration settings here, to avoid outdated documentation.
+settings, see <span class="s">``eb --help``</span>. We refrain from listing all available configuration settings here, to avoid outdated documentation.
 
 A couple of selected configuration settings are discussed below,
 in particular the mandatory settings.
 
-.. _configuration_mandatory_settings:
+<span class="p">..</span> <span class="nt">_configuration_mandatory_settings:</span>
 
-Mandatory configuration settings
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Mandatory configuration settings</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-A handful of configuration settings are **mandatory**, and should be
+A handful of configuration settings are <span class="gs">**mandatory**</span>, and should be
 provided using one of the supported configuration types.
 
 The following configuration settings are currently mandatory
 (more details in the sections below):
 
-* :ref:`sourcepath`
-* :ref:`buildpath`
-* :ref:`installpath`
-* :ref:`easyconfigs_repo`
-* :ref:`logfile_format`
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`sourcepath`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`buildpath`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`installpath`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`easyconfigs_repo`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`logfile_format`</span>
 
 If any of these configuration settings is not provided in one way or another, EasyBuild will complain and exit.
 
-In practice, all of these have reasonable defaults (see ``eb --help`` for the default settings).
+In practice, all of these have reasonable defaults (see <span class="s">``eb --help``</span> for the default settings).
 
-.. note:: The mandatory path-related options can be tweaked collectively via ``--prefix``, see :ref:`prefix` for more
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> The mandatory path-related options can be tweaked collectively via <span class="s">``--prefix``</span>, see <span class="na">:ref:</span><span class="nv">`prefix`</span> for more
           information.
 
-.. _sourcepath:
+<span class="p">..</span> <span class="nt">_sourcepath:</span>
 
-Source path (``--sourcepath``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Source path (``--sourcepath``)</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-*default*: ``$HOME/.local/easybuild/sources/`` (determined via :ref:`prefix`)
+<span class="ge">*default*</span>: <span class="s">``$HOME/.local/easybuild/sources/``</span> (determined via <span class="na">:ref:</span><span class="nv">`prefix`</span>)
 
-The ``sourcepath`` configuration setting specifies the parent path of
+The <span class="s">``sourcepath``</span> configuration setting specifies the parent path of
 the directory in which EasyBuild looks for software source and install files.
 
-Looking for the files specified via the ``sources`` parameter in the .eb
+Looking for the files specified via the <span class="s">``sources``</span> parameter in the .eb
 easyconfig file is done in the following order of preference:
 
-* ``&lt;sourcepath&gt;/&lt;name&gt;``: a subdirectory determined by the name of the software package
-* ``&lt;sourcepath&gt;/&lt;letter&gt;/&lt;name&gt;``:  in the style of the ``easyblocks``/``easyconfigs`` directories: in a
-  subdirectory determined by the first letter (in lower case) of the software package and by its full ``name``
-* ``&lt;sourcepath&gt;``: directly in the source path
+<span class="m">*</span> <span class="s">``&lt;sourcepath&gt;/&lt;name&gt;``</span>: a subdirectory determined by the name of the software package
+<span class="m">*</span> <span class="s">``&lt;sourcepath&gt;/&lt;letter&gt;/&lt;name&gt;``</span>:  in the style of the <span class="s">``easyblocks``</span>/<span class="s">``easyconfigs``</span> directories: in a
+  subdirectory determined by the first letter (in lower case) of the software package and by its full <span class="s">``name``</span>
+<span class="m">*</span> <span class="s">``&lt;sourcepath&gt;``</span>: directly in the source path
 
 Note that these locations are also used when EasyBuild looks for patch
-files in addition to the various ``easybuild/easyconfigs`` directories that are listed in the $PYTHONPATH.
+files in addition to the various <span class="s">``easybuild/easyconfigs``</span> directories that are listed in the $PYTHONPATH.
 
-You can specify multiple paths, separated with ``:``, in which EasyBuild will look for sources, but only the first one
-will be used for downloading, so one needs to make sure at least the first path is writable by the user invoking ``eb``.
+You can specify multiple paths, separated with <span class="s">``:``</span>, in which EasyBuild will look for sources, but only the first one
+will be used for downloading, so one needs to make sure at least the first path is writable by the user invoking <span class="s">``eb``</span>.
 
-.. _buildpath:
+<span class="p">..</span> <span class="nt">_buildpath:</span>
 
-Build path (``--buildpath``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Build path (``--buildpath``)</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-*default*: ``$HOME/.local/easybuild/build/`` (determined via :ref:`prefix`)
+<span class="ge">*default*</span>: <span class="s">``$HOME/.local/easybuild/build/``</span> (determined via <span class="na">:ref:</span><span class="nv">`prefix`</span>)
 
-The ``buildpath`` configuration setting specifies the parent path of the
+The <span class="s">``buildpath``</span> configuration setting specifies the parent path of the
 (temporary) directories in which EasyBuild builds its software packages.
 
 Each software package is (by default) built in a subdirectory of the
-specified ``buildpath`` under
-``&lt;name&gt;/&lt;version&gt;/&lt;toolchain&gt;&lt;versionsuffix&gt;``.
+specified <span class="s">``buildpath``</span> under
+<span class="s">``&lt;name&gt;/&lt;version&gt;/&lt;toolchain&gt;&lt;versionsuffix&gt;``</span>.
 
 Note that the build directories are emptied and removed by EasyBuild
 when the installation is completed (by default).
 
-.. tip::
-  Using ``/dev/shm`` as build path can significantly speed up builds,
+<span class="p">..</span> <span class="ow">tip</span><span class="p">::</span>
+  Using <span class="s">``/dev/shm``</span> as build path can significantly speed up builds,
   if it is available and provides a sufficient amount of space. Setting up
-  the variable ``EASYBUILD_BUILDPATH`` in your shell startup files makes this default.
-  However be aware that, fi., two parallel GCC builds may fill up ``/dev/shm`` !
+  the variable <span class="s">``EASYBUILD_BUILDPATH``</span> in your shell startup files makes this default.
+  However be aware that, fi., two parallel GCC builds may fill up <span class="s">``/dev/shm``</span> !
 
-.. _installpath:
+<span class="p">..</span> <span class="nt">_installpath:</span>
 
-Software and modules install path (``--installpath``, ``--installpath-software``, ``--installpath-modules``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Software and modules install path (``--installpath``, ``--installpath-software``, ``--installpath-modules``)</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
 defaults:
 
-* *software install path:* ``$HOME/.local/easybuild/software``  (determined via :ref:`prefix` and ``--subdir-software``)
-* *modules install path:* ``$HOME/.local/easybuild/modules/all``  (determined via :ref:`prefix`,
-  ``--subdir-modules`` and ``--suffix-modules-path``)
+<span class="m">*</span> <span class="ge">*software install path:*</span> <span class="s">``$HOME/.local/easybuild/software``</span>  (determined via <span class="na">:ref:</span><span class="nv">`prefix`</span> and <span class="s">``--subdir-software``</span>)
+<span class="m">*</span> <span class="ge">*modules install path:*</span> <span class="s">``$HOME/.local/easybuild/modules/all``</span>  (determined via <span class="na">:ref:</span><span class="nv">`prefix`</span>,
+  <span class="s">``--subdir-modules``</span> and <span class="s">``--suffix-modules-path``</span>)
 
 There are several ways in which the software and modules install path used by EasyBuild can be configured:
 
-* using the direct configuration options ``--installpath-software`` and ``--installpath-modules`` (see below)
-* via the parent install path configuration option ``--installpath`` (see below)
-* via the overall prefix path configuration option ``--prefix`` (see :ref:`prefix`)
+<span class="m">*</span> using the direct configuration options <span class="s">``--installpath-software``</span> and <span class="s">``--installpath-modules``</span> (see below)
+<span class="m">*</span> via the parent install path configuration option <span class="s">``--installpath``</span> (see below)
+<span class="m">*</span> via the overall prefix path configuration option <span class="s">``--prefix``</span> (see <span class="na">:ref:</span><span class="nv">`prefix`</span>)
 
-.. _installpath_direct_options:
+<span class="p">..</span> <span class="nt">_installpath_direct_options:</span>
 
-Direct options: ``--installpath-software`` and ``--installpath-modules``
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+<span class="gh">Direct options: ``--installpath-software`` and ``--installpath-modules``</span>
+<span class="gh">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span>
 
-*default*: *(no default specified)*
+<span class="ge">*default*</span>: <span class="ge">*(no default specified)*</span>
 
-The ``--installpath-software`` and ``--installpath-modules`` configuration options (available since EasyBuild v2.1.0)
+The <span class="s">``--installpath-software``</span> and <span class="s">``--installpath-modules``</span> configuration options (available since EasyBuild v2.1.0)
 allow to directly specify the software and modules install paths, respectively.
 
 These configuration options have precedence over all of the other configuration options that relate to specifying the
 install path for software and/or modules (see below).
 
-.. _parent_installpath:
+<span class="p">..</span> <span class="nt">_parent_installpath:</span>
 
-Parent install path: ``--installpath``
-++++++++++++++++++++++++++++++++++++++
+<span class="gh">Parent install path: ``--installpath``</span>
+<span class="gh">++++++++++++++++++++++++++++++++++++++</span>
 
-*default*: *(no default specified)*
+<span class="ge">*default*</span>: <span class="ge">*(no default specified)*</span>
 
-The ``--installpath`` configuration option specifies the *parent* path of
+The <span class="s">``--installpath``</span> configuration option specifies the <span class="ge">*parent*</span> path of
 the directories in which EasyBuild should install software packages and the
 corresponding module files.
 
-The install path for software and modules specifically is determined by combining ``--installpath`` with
-``--subdir-software``, and combining ``--installpath`` with ``--subdir-modules`` and ``--suffix-modules-path``,
+The install path for software and modules specifically is determined by combining <span class="s">``--installpath``</span> with
+<span class="s">``--subdir-software``</span>, and combining <span class="s">``--installpath``</span> with <span class="s">``--subdir-modules``</span> and <span class="s">``--suffix-modules-path``</span>,
 respectively.
 
-For more information on these companion configuration options, see :ref:`installpath_subdirs`.
+For more information on these companion configuration options, see <span class="na">:ref:</span><span class="nv">`installpath_subdirs`</span>.
 
-Full install path for software and module file
-++++++++++++++++++++++++++++++++++++++++++++++
+<span class="gh">Full install path for software and module file</span>
+<span class="gh">++++++++++++++++++++++++++++++++++++++++++++++</span>
 
 The full software and module install paths for a particular software package are determined by the active
 module naming scheme along with the general software and modules install paths specified by the EasyBuild configuration.
 
 Both the software itself and the corresponding module file will be installed in a subdirectory of the corresponding
 install path named according to the active module naming scheme (default format:
-``&lt;name&gt;/&lt;version&gt;-&lt;toolchain&gt;&lt;versionsuffix&gt;``).
+<span class="s">``&lt;name&gt;/&lt;version&gt;-&lt;toolchain&gt;&lt;versionsuffix&gt;``</span>).
 Additionally, symlinks to the actual module file are installed in a subdirectory of the modules install path
-named according to the value of the ``moduleclass`` easyconfig parameter.
+named according to the value of the <span class="s">``moduleclass``</span> easyconfig parameter.
 
-For more information on the module naming scheme used by EasyBuild, see :ref:`module_naming_scheme`.
+For more information on the module naming scheme used by EasyBuild, see <span class="na">:ref:</span><span class="nv">`module_naming_scheme`</span>.
 
-Updating ``$MODULEPATH``
-++++++++++++++++++++++++
+<span class="gh">Updating ``$MODULEPATH``</span>
+<span class="gh">++++++++++++++++++++++++</span>
 
-To make the modules generated by EasyBuild available, the ``$MODULEPATH`` environment variable must be updated
+To make the modules generated by EasyBuild available, the <span class="s">``$MODULEPATH``</span> environment variable must be updated
 to include the modules install path.
 
-The recommended way to do this is to use the ``module use`` command.
+The recommended way to do this is to use the <span class="s">``module use``</span> command.
 For example:
 
-.. code:: shell-session
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">shell-session</span>
 
-    $ eb --installpath=$HOME/easybuild
-    $ module use $HOME/easybuild/modules/all
+    <span class="gp">$ </span>eb --installpath<span class="o">=</span><span class="nv">$HOME</span>/easybuild
+    <span class="gp">$ </span>module use <span class="nv">$HOME</span>/easybuild/modules/all
 
 It is probably a good idea to add this to your (favourite) shell
-``.rc`` file, e.g., ``~/.bashrc``, and/or the ``~/.profile`` login scripts,
-so you do not need to adjust ``$MODULEPATH`` every time you start a new session.
+<span class="s">``.rc``</span> file, e.g., <span class="s">``~/.bashrc``</span>, and/or the <span class="s">``~/.profile``</span> login scripts,
+so you do not need to adjust <span class="s">``$MODULEPATH``</span> every time you start a new session.
 
-.. note:: Updating ``$MODULEPATH`` is not required for EasyBuild itself, since ``eb`` updates ``$MODULEPATH`` itself at
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Updating <span class="s">``$MODULEPATH``</span> is not required for EasyBuild itself, since <span class="s">``eb``</span> updates <span class="s">``$MODULEPATH``</span> itself at
           runtime according to the modules install path it is configured with.
 
-.. _easyconfigs_repo:
+<span class="p">..</span> <span class="nt">_easyconfigs_repo:</span>
 
-Easyconfigs repository (``--repository``, ``--repositorypath``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Easyconfigs repository (``--repository``, ``--repositorypath``)</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-*default*: ``FileRepository`` at ``$HOME/.local/easybuild/ebfiles_repo``
-(determined via :ref:`prefix`)
+<span class="ge">*default*</span>: <span class="s">``FileRepository``</span> at <span class="s">``$HOME/.local/easybuild/ebfiles_repo``</span>
+(determined via <span class="na">:ref:</span><span class="nv">`prefix`</span>)
 
-EasyBuild has support for archiving (tested) ``.eb`` easyconfig files.
+EasyBuild has support for archiving (tested) <span class="s">``.eb``</span> easyconfig files.
 After successfully installing a software package using EasyBuild, the
-corresponding ``.eb`` file is uploaded to a repository defined by the
-``repository`` and ``repositorypath`` configuration settings.
+corresponding <span class="s">``.eb``</span> file is uploaded to a repository defined by the
+<span class="s">``repository``</span> and <span class="s">``repositorypath``</span> configuration settings.
 
 Currently, EasyBuild supports the following repository types (see also
-``eb --avail-repositories``):
+<span class="s">``eb --avail-repositories``</span>):
 
-* ``FileRepository(&#39;path&#39;, &#39;subdir&#39;)``: a plain flat file repository;
-  ``path`` is the path where files will be stored, ``subdir`` is an
-  *optional* subdirectory of that path where the files should be stored
-* ``GitRepository(&#39;path&#39;, &#39;subdir/in/repo&#39;``: a *non-empty* **bare**
-  git repository (created with ``git init --bare`` or ``git clone --bare``);
-  ``path`` is the path to the git repository (can also be a URL);
-  ``subdir/in/repo`` is optional, and specifies a subdirectory of the
+<span class="m">*</span> <span class="s">``FileRepository(&#39;path&#39;, &#39;subdir&#39;)``</span>: a plain flat file repository;
+  <span class="s">``path``</span> is the path where files will be stored, <span class="s">``subdir``</span> is an
+  <span class="ge">*optional*</span> subdirectory of that path where the files should be stored
+<span class="m">*</span> <span class="s">``GitRepository(&#39;path&#39;, &#39;subdir/in/repo&#39;``</span>: a <span class="ge">*non-empty*</span> <span class="gs">**bare**</span>
+  git repository (created with <span class="s">``git init --bare``</span> or <span class="s">``git clone --bare``</span>);
+  <span class="s">``path``</span> is the path to the git repository (can also be a URL);
+  <span class="s">``subdir/in/repo``</span> is optional, and specifies a subdirectory of the
   repository where files should be stored in
-* ``SvnRepository(&#39;path&#39;, &#39;subdir/in/repo&#39;)``: an SVN repository;
-  ``path`` contains the subversion repository location (directory or
+<span class="m">*</span> <span class="s">``SvnRepository(&#39;path&#39;, &#39;subdir/in/repo&#39;)``</span>: an SVN repository;
+  <span class="s">``path``</span> contains the subversion repository location (directory or
   URL), the optional second value specifies a subdirectory in the repository
 
-You need to set the ``repository`` setting inside a configuration file like this:
+You need to set the <span class="s">``repository``</span> setting inside a configuration file like this:
 
-.. code:: python
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
 
-    [config]
-    repository = FileRepository
-    repositorypath = &lt;path&gt;
+    <span class="p">[</span><span class="n">config</span><span class="p">]</span>
+    <span class="n">repository</span> <span class="o">=</span> <span class="n">FileRepository</span>
+    <span class="n">repositorypath</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span>
 
 Or, optionally an extra argument representing a subdirectory can be specified, e.g.:
 
-.. code:: shell-session
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">shell-session</span>
 
-    $ export EASYBUILD_REPOSITORY=GitRepository
-    $ export EASYBUILD_REPOSITORYPATH=&lt;path&gt;,&lt;subdir&gt;
+    <span class="gp">$ </span><span class="nb">export</span> <span class="nv">EASYBUILD_REPOSITORY</span><span class="o">=</span>GitRepository
+    <span class="gp">$ </span><span class="nb">export</span> <span class="nv">EASYBUILD_REPOSITORYPATH</span><span class="o">=</span>&lt;path&gt;,&lt;subdir&gt;
 
 You do not have to worry about importing these classes,
 EasyBuild will make them available to the configuration file.
 
-Using ``git`` requires the ``GitPython`` Python modules, using ``svn``
-requires the ``pysvn`` Python module (see :ref:`dependencies`).
+Using <span class="s">``git``</span> requires the <span class="s">``GitPython``</span> Python modules, using <span class="s">``svn``</span>
+requires the <span class="s">``pysvn``</span> Python module (see <span class="na">:ref:</span><span class="nv">`dependencies`</span>).
 
 If access to the easyconfigs repository fails for some reason
 (e.g., no network or a missing required Python module), EasyBuild will
@@ -958,175 +958,175 @@ issue a warning. The software package will still be installed, but the
 (successful) easyconfig will not be automatically added to the archive
 (i.e., it is not considered a fatal error).
 
-.. _logfile_format:
+<span class="p">..</span> <span class="nt">_logfile_format:</span>
 
-Logfile format (``--logfile-format``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Logfile format (``--logfile-format``)</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-*default*:
-``easybuild, easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log``
+<span class="ge">*default*</span>:
+<span class="s">``easybuild, easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log``</span>
 
-The `logfile format` configuration setting contains a tuple
+The <span class="nv">`logfile format`</span> configuration setting contains a tuple
 specifying a log directory name and a template log file name.
 In both of these values, using the following string templates
 is supported:
 
-* ``%(name)s``: the name of the software package to install
-* ``%(version)s``: the version of the software package to install
-* ``%(date)s``: the date on which the installation was performed (in ``YYYYMMDD`` format, e.g. ``20120324``)
-* ``%(time)s``: the time at which the installation was started (in ``HHMMSS`` format, e.g. ``214359``)
+<span class="m">*</span> <span class="s">``%(name)s``</span>: the name of the software package to install
+<span class="m">*</span> <span class="s">``%(version)s``</span>: the version of the software package to install
+<span class="m">*</span> <span class="s">``%(date)s``</span>: the date on which the installation was performed (in <span class="s">``YYYYMMDD``</span> format, e.g. <span class="s">``20120324``</span>)
+<span class="m">*</span> <span class="s">``%(time)s``</span>: the time at which the installation was started (in <span class="s">``HHMMSS``</span> format, e.g. <span class="s">``214359``</span>)
 
-.. note:: Because templating is supported in configuration files themselves (see
-          :ref:`configuration_file_templates_constants`), the &#39;``%``&#39; character in these template values must be escaped
-          when used in a configuration file (and only then), e.g., &#39;``%%(name)s``&#39;. Without escaping, an error like
-          ``InterpolationMissingOptionError: Bad value substitution`` will be thrown by ``ConfigParser``.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Because templating is supported in configuration files themselves (see
+          <span class="na">:ref:</span><span class="nv">`configuration_file_templates_constants`</span>), the &#39;<span class="s">``%``</span>&#39; character in these template values must be escaped
+          when used in a configuration file (and only then), e.g., &#39;<span class="s">``%%(name)s``</span>&#39;. Without escaping, an error like
+          <span class="s">``InterpolationMissingOptionError: Bad value substitution``</span> will be thrown by <span class="s">``ConfigParser``</span>.
 
 For example, configuring EasyBuild to generate a log file mentioning only the software name in a directory named
-``easybuild`` can be done via the ``--logfile-format`` command line option::
+<span class="s">``easybuild``</span> can be done via the <span class="s">``--logfile-format``</span> command line option<span class="se">::</span>
 
-    eb --logfile-format=&quot;easybuild,easybuild-%(name)s.log&quot; ...
+<span class="s">    eb --logfile-format=&quot;easybuild,easybuild-%(name)s.log&quot; ...</span>
 
-or the ``$EASYBUILD_LOGFILE_FORMAT`` environment variable::
+or the <span class="s">``$EASYBUILD_LOGFILE_FORMAT``</span> environment variable<span class="se">::</span>
 
-    export EASYBUILD_LOGFILE_FORMAT=&quot;easybuild,easybuild-%(name)s.log&quot;
+<span class="s">    export EASYBUILD_LOGFILE_FORMAT=&quot;easybuild,easybuild-%(name)s.log&quot;</span>
 
-or by including the following in an EasyBuild configuration file (note the use of &#39;``%%``&#39; to escape the ``name``
-template value here)::
+or by including the following in an EasyBuild configuration file (note the use of &#39;<span class="s">``%%``</span>&#39; to escape the <span class="s">``name``</span>
+template value here)<span class="se">::</span>
 
-    logfile-format = easybuild,easybuild-%%(name)s.log
+<span class="s">    logfile-format = easybuild,easybuild-%%(name)s.log</span>
 
-.. _configuration_optional_settings:
+<span class="p">..</span> <span class="nt">_configuration_optional_settings:</span>
 
-Optional configuration settings
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Optional configuration settings</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 The subsections below discuss a couple of commonly used optional configuration settings.
 
-.. _prefix:
+<span class="p">..</span> <span class="nt">_prefix:</span>
 
-Overall prefix path (``--prefix``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Overall prefix path (``--prefix``)</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-*default:* ``$HOME/.local/easybuild``
+<span class="ge">*default:*</span> <span class="s">``$HOME/.local/easybuild``</span>
 
-The overall prefix path used by EasyBuild can be specified using the ``--prefix`` configuration option.
+The overall prefix path used by EasyBuild can be specified using the <span class="s">``--prefix``</span> configuration option.
 
 This affects the default value of several configuration options:
 
-* source path (see :ref:`sourcepath`)
-* build path (see :ref:`buildpath`)
-* software and modules install path (see :ref:`installpath`)
-* easyconfigs repository path (see :ref:`easyconfigs_repo`)
-* package path (see :ref:`packaging_config`)
-* container path (see :ref:`containers_cfg_path`)
+<span class="m">*</span> source path (see <span class="na">:ref:</span><span class="nv">`sourcepath`</span>)
+<span class="m">*</span> build path (see <span class="na">:ref:</span><span class="nv">`buildpath`</span>)
+<span class="m">*</span> software and modules install path (see <span class="na">:ref:</span><span class="nv">`installpath`</span>)
+<span class="m">*</span> easyconfigs repository path (see <span class="na">:ref:</span><span class="nv">`easyconfigs_repo`</span>)
+<span class="m">*</span> package path (see <span class="na">:ref:</span><span class="nv">`packaging_config`</span>)
+<span class="m">*</span> container path (see <span class="na">:ref:</span><span class="nv">`containers_cfg_path`</span>)
 
-.. _installpath_subdirs:
+<span class="p">..</span> <span class="nt">_installpath_subdirs:</span>
 
-Software and modules install path subdirectories (``--subdir-software``, ``--subdir-modules``, ``--suffix-modules-path``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Software and modules install path subdirectories (``--subdir-software``, ``--subdir-modules``, ``--suffix-modules-path``)</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-*defaults*:
+<span class="ge">*defaults*</span>:
 
-* *software install path subdirectory* (``--subdir-software``): ``software``
-* *modules install path subdirectory* (``--subdir-modules``): ``modules``
-* *modules install path suffix* (``--suffix-modules-path``): ``all``
+<span class="m">*</span> <span class="ge">*software install path subdirectory*</span> (<span class="s">``--subdir-software``</span>): <span class="s">``software``</span>
+<span class="m">*</span> <span class="ge">*modules install path subdirectory*</span> (<span class="s">``--subdir-modules``</span>): <span class="s">``modules``</span>
+<span class="m">*</span> <span class="ge">*modules install path suffix*</span> (<span class="s">``--suffix-modules-path``</span>): <span class="s">``all``</span>
 
-The subdirectories for the software and modules install paths (relative to ``--installpath``, see :ref:`installpath`)
+The subdirectories for the software and modules install paths (relative to <span class="s">``--installpath``</span>, see <span class="na">:ref:</span><span class="nv">`installpath`</span>)
 can be specified using the corresponding dedicated configuration options (available since EasyBuild v1.14.0).
 
 For example:
 
-.. code:: shell-session
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">shell-session</span>
 
-    $ export EASYBUILD_SUBDIR_SOFTWARE=installs
-    $ eb --installpath=$HOME/easybuild --subdir-modules=module_files ...
+    <span class="gp">$ </span><span class="nb">export</span> <span class="nv">EASYBUILD_SUBDIR_SOFTWARE</span><span class="o">=</span>installs
+    <span class="gp">$ </span>eb --installpath<span class="o">=</span><span class="nv">$HOME</span>/easybuild --subdir-modules<span class="o">=</span>module_files ...
 
-.. _modules_tool:
+<span class="p">..</span> <span class="nt">_modules_tool:</span>
 
-Modules tool (``--modules-tool``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Modules tool (``--modules-tool``)</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-*default*: ``Lmod``
+<span class="ge">*default*</span>: <span class="s">``Lmod``</span>
 
 Specifying the modules tool that should be used by EasyBuild can be
-done using the ``modules-tool`` configuration setting.
-A list of supported modules tools can be obtained using ``eb --avail-modules-tools``.
+done using the <span class="s">``modules-tool``</span> configuration setting.
+A list of supported modules tools can be obtained using <span class="s">``eb --avail-modules-tools``</span>.
 
 Currently, the following modules tools are supported:
 
-* ``Lmod`` *(default)*: Lmod, an modern alternative to environment modules, written in Lua (``lmod``)
-* ``EnvironmentModules``: modern Tcl-only version of environment modules (4.x) (``modulecmd.tcl``)
-* ``EnvironmentModulesC``: Tcl/C version of environment modules, usually version 3.2.10 (``modulecmd``)
-* ``EnvironmentModulesTcl``: (ancient) Tcl-only version of environment modules (``modulecmd.tcl``)
+<span class="m">*</span> <span class="s">``Lmod``</span> <span class="ge">*(default)*</span>: Lmod, an modern alternative to environment modules, written in Lua (<span class="s">``lmod``</span>)
+<span class="m">*</span> <span class="s">``EnvironmentModules``</span>: modern Tcl-only version of environment modules (4.x) (<span class="s">``modulecmd.tcl``</span>)
+<span class="m">*</span> <span class="s">``EnvironmentModulesC``</span>: Tcl/C version of environment modules, usually version 3.2.10 (<span class="s">``modulecmd``</span>)
+<span class="m">*</span> <span class="s">``EnvironmentModulesTcl``</span>: (ancient) Tcl-only version of environment modules (<span class="s">``modulecmd.tcl``</span>)
 
 You can determine which modules tool you are using by checking the
-output of ``type -f module`` (in a ``bash`` shell), or ``alias module`` (in a ``tcsh`` shell).
+output of <span class="s">``type -f module``</span> (in a <span class="s">``bash``</span> shell), or <span class="s">``alias module``</span> (in a <span class="s">``tcsh``</span> shell).
 
-The actual module command (i.e., ``modulecmd``, ``modulecmd.tcl``,
-``lmod``, ...) must be available via ``$PATH`` (which is not standard), except when using Lmod
-(in that case the ``lmod`` binary can also be located via ``$LMOD_CMD``).
+The actual module command (i.e., <span class="s">``modulecmd``</span>, <span class="s">``modulecmd.tcl``</span>,
+<span class="s">``lmod``</span>, ...) must be available via <span class="s">``$PATH``</span> (which is not standard), except when using Lmod
+(in that case the <span class="s">``lmod``</span> binary can also be located via <span class="s">``$LMOD_CMD``</span>).
 
-For example, to indicate that EasyBuild should be using ``Lmod`` as modules tool:
+For example, to indicate that EasyBuild should be using <span class="s">``Lmod``</span> as modules tool:
 
-.. code:: shell-session
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">shell-session</span>
 
-    $ eb --modules-tool=Lmod ...
+    <span class="gp">$ </span>eb --modules-tool<span class="o">=</span>Lmod ...
 
-.. _module_naming_scheme:
+<span class="p">..</span> <span class="nt">_module_naming_scheme:</span>
 
-Active module naming scheme (``--module-naming-scheme``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Active module naming scheme (``--module-naming-scheme``)</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-*default*: ``EasyBuildModuleNamingScheme``
+<span class="ge">*default*</span>: <span class="s">``EasyBuildModuleNamingScheme``</span>
 
 The module naming scheme that should be used by EasyBuild can be
-specified using the ``module-naming-scheme`` configuration setting.
+specified using the <span class="s">``module-naming-scheme``</span> configuration setting.
 
-.. code:: shell-session
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">shell-session</span>
 
-    $ eb --module-naming-scheme=HierarchicalMNS ...
+    <span class="gp">$ </span>eb --module-naming-scheme<span class="o">=</span>HierarchicalMNS ...
 
 For more details, see the dedicated page: https://github.com/easybuilders/easybuild/wiki/Using-a-custom-module-naming-scheme .
 
-.. _`http://docs.python.org/2/library/configparser.html`: http://docs.python.org/2/library/configparser.html
+<span class="p">..</span> <span class="nt">_`http:</span>//docs.python.org/2/library/configparser.html`: http://docs.python.org/2/library/configparser.html
 
-.. _module_syntax:
+<span class="p">..</span> <span class="nt">_module_syntax:</span>
 
-Module files syntax (``--module-syntax``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Module files syntax (``--module-syntax``)</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-*default*: ``Lua``
+<span class="ge">*default*</span>: <span class="s">``Lua``</span>
 
-*supported since*: EasyBuild v2.1
+<span class="ge">*supported since*</span>: EasyBuild v2.1
 
-The syntax to use for generated module files can be specified using the ``--module-syntax`` configuration setting.
+The syntax to use for generated module files can be specified using the <span class="s">``--module-syntax``</span> configuration setting.
 
 Possible values are:
 
-* ``Lua``: generate module files in Lua syntax
+<span class="m">*</span> <span class="s">``Lua``</span>: generate module files in Lua syntax
 
-  * this requires the use of Lmod as a modules tool to consume the module files (see :ref:`modules_tool`)
-  * module file names will have the ``.lua`` extension
+  <span class="m">*</span> this requires the use of Lmod as a modules tool to consume the module files (see <span class="na">:ref:</span><span class="nv">`modules_tool`</span>)
+  <span class="m">*</span> module file names will have the <span class="s">``.lua``</span> extension
 
-* ``Tcl``: generate module files in Tcl syntax
+<span class="m">*</span> <span class="s">``Tcl``</span>: generate module files in Tcl syntax
 
-  * Tcl module files can be consumed by all supported modules tools
-  * module files will contain a header string ``#%Module`` indicating that they are composed in Tcl syntax
+  <span class="m">*</span> Tcl module files can be consumed by all supported modules tools
+  <span class="m">*</span> module files will contain a header string <span class="s">``#%Module``</span> indicating that they are composed in Tcl syntax
 
-.. note::
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
   Lmod is able to deal with having module files in place in both Tcl and Lua syntax. When a module file in Lua
-  syntax (i.e., with a ``.lua`` file name extension) is available, a Tcl module file with the same name will be
+  syntax (i.e., with a <span class="s">``.lua``</span> file name extension) is available, a Tcl module file with the same name will be
   ignored. The Tcl-based environment modules tool will simply ignore module files in Lua syntax, since they do not
   contain the header string that is included in Tcl module files.
 
-.. note::
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
   Using module files in Lua syntax has the advantage that Lmod does not need to translate from Lua to Tcl internally
   when processing the module files, which benefits responsiveness of Lmod when used interactively by users. In terms
-  of Lmod-specific aspects of module files, the syntax of the module file does *not* matter; Lmod-specific statements
+  of Lmod-specific aspects of module files, the syntax of the module file does <span class="ge">*not*</span> matter; Lmod-specific statements
   supported by EasyBuild can be included in Tcl module files as well, by guarding them by a condition that only
   evaluates positively when Lmod is consuming the module file, i.e.
-  &#39;``if { [ string match &quot;*tcl2lua.tcl&quot; $env(_) ] } { ... }``&#39;. Only conditional load statements like
-  &#39;``load(atleast(&quot;gcc&quot;,&quot;4.8&quot;))``&#39; can only be used in Lua module files.
+  &#39;<span class="s">``if { [ string match &quot;*tcl2lua.tcl&quot; $env(_) ] } { ... }``</span>&#39;. Only conditional load statements like
+  &#39;<span class="s">``load(atleast(&quot;gcc&quot;,&quot;4.8&quot;))``</span>&#39; can only be used in Lua module files.
 </code></pre></div>
 
   <hr>
@@ -1134,7 +1134,7 @@ Possible values are:
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
       
     
   </small>

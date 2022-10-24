@@ -386,49 +386,49 @@ and you can help with that!
 </ul>
 <p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
 </div>
-<div class="highlight"><pre><span></span><code>.. _wrapping_dependencies:
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_wrapping_dependencies:</span>
 
-Wrapping dependencies
-=====================
+<span class="gh">Wrapping dependencies</span>
+<span class="gh">=====================</span>
 
-Since EasyBuild v3.7.0 a special-purpose generic easyblock named ``ModuleRC`` is available,
-which can be used to generate a (software-specific) ``.modulerc`` file
+Since EasyBuild v3.7.0 a special-purpose generic easyblock named <span class="s">``ModuleRC``</span> is available,
+which can be used to generate a (software-specific) <span class="s">``.modulerc``</span> file
 (as opposed to generating an actual module file).
 
-.. note:: For compatibility with the different modules tools supported by EasyBuild (see :ref:`modules_tool`),
-          the ``.modulerc`` file is always generated in Tcl syntax (for now), regardless of the module syntax
-          that is used for module files. Only Lmod 7.8 (or later) supports ``.modulerc.lua`` files
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> For compatibility with the different modules tools supported by EasyBuild (see <span class="na">:ref:</span><span class="nv">`modules_tool`</span>),
+          the <span class="s">``.modulerc``</span> file is always generated in Tcl syntax (for now), regardless of the module syntax
+          that is used for module files. Only Lmod 7.8 (or later) supports <span class="s">``.modulerc.lua``</span> files
           in Lua syntax.
 
-The ``ModuleRC`` easyblock supports including ``module-version`` in the generated ``.modulerc`` file,
-which defines a so-called *&quot;symbolic version&quot;*.
+The <span class="s">``ModuleRC``</span> easyblock supports including <span class="s">``module-version``</span> in the generated <span class="s">``.modulerc``</span> file,
+which defines a so-called <span class="ge">*&quot;symbolic version&quot;*</span>.
 
-This can be used to install a *&quot;wrapper&quot;* for a particular module, which can be useful in the context
+This can be used to install a <span class="ge">*&quot;wrapper&quot;*</span> for a particular module, which can be useful in the context
 of dependencies. For example, it can be used to avoid depending on a specific version of
-a particular software package by specifying the dependency only on the ``&lt;major&gt;.&lt;minor&gt;`` version instead
+a particular software package by specifying the dependency only on the <span class="s">``&lt;major&gt;.&lt;minor&gt;``</span> version instead
 (i.e., without including the &quot;subminor&quot; version, which usually corresponds to a bugfix release).
 
-One particular example where this is employed is for ``Java``. Since the ``2018b`` generation of
-the :ref:`common_toolchains`, we use a wrapper for ``Java`` (e.g., ``Java/1.8``), rather than
-depending on a specific version (e.g., ``Java/1.8.0_181``):
+One particular example where this is employed is for <span class="s">``Java``</span>. Since the <span class="s">``2018b``</span> generation of
+the <span class="na">:ref:</span><span class="nv">`common_toolchains`</span>, we use a wrapper for <span class="s">``Java``</span> (e.g., <span class="s">``Java/1.8``</span>), rather than
+depending on a specific version (e.g., <span class="s">``Java/1.8.0_181``</span>):
 
-.. code::
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span>
 
   # specify dependency on Java/1.8 &quot;wrapper&quot;, rather than a specific Java version
   dependencies = [(&#39;Java&#39;, &#39;1.8&#39;, &#39;&#39;, SYSTEM)]
 
 This has a couple of advantages:
 
-* it helps with avoiding version conflicts on the ``Java`` dependency used by two (or more) otherwise independent
+<span class="m">*</span> it helps with avoiding version conflicts on the <span class="s">``Java``</span> dependency used by two (or more) otherwise independent
   module files;
 
-* it allows to perform an in-place update of the ``Java`` wrapper to a more recent ``Java`` (bugfix) release
-  in the blink of an eye, since it only involves re-generating a ``.modulerc`` file (as opposed to performing
+<span class="m">*</span> it allows to perform an in-place update of the <span class="s">``Java``</span> wrapper to a more recent <span class="s">``Java``</span> (bugfix) release
+  in the blink of an eye, since it only involves re-generating a <span class="s">``.modulerc``</span> file (as opposed to performing
   actual installation and generating a module file); in addition, it doesn&#39;t require updating/re-generating existing
-  module files that depend on the ``Java`` wrapper (since the version of the wrapper does not change)
+  module files that depend on the <span class="s">``Java``</span> wrapper (since the version of the wrapper does not change)
 
-Since ``ModuleRC`` is a generic easyblock , it can also be employed to install module &quot;wrappers&quot; for dependencies
-other than ``Java``.
+Since <span class="s">``ModuleRC``</span> is a generic easyblock , it can also be employed to install module &quot;wrappers&quot; for dependencies
+other than <span class="s">``Java``</span>.
 </code></pre></div>
 
   <hr>
@@ -436,7 +436,7 @@ other than ``Java``.
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
       
     
   </small>

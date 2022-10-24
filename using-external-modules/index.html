@@ -386,165 +386,165 @@ and you can help with that!
 </ul>
 <p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
 </div>
-<div class="highlight"><pre><span></span><code>.. _using_external_modules:
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_using_external_modules:</span>
 
-Using external modules
-======================
+<span class="gh">Using external modules</span>
+<span class="gh">======================</span>
 
 Since EasyBuild v2.1, support for using modules that were not installed via EasyBuild is available.
-We refer to such modules as *external modules*.
+We refer to such modules as <span class="ge">*external modules*</span>.
 
 This can be useful to reuse vendor-supplied modules, for example on Cray systems.
 
-.. contents::
-    :depth: 3
-    :backlinks: none
+<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
+    <span class="nc">:depth:</span> 3
+    <span class="nc">:backlinks:</span> none
 
 
-Using external modules as dependencies
----------------------------------------
+<span class="gh">Using external modules as dependencies</span>
+<span class="gh">---------------------------------------</span>
 
-External modules can be used as dependencies, by including the module name in the ``dependencies`` list (see
-:ref:`dependency_specs`), along with the ``EXTERNAL_MODULE`` constant marker.
+External modules can be used as dependencies, by including the module name in the <span class="s">``dependencies``</span> list (see
+<span class="na">:ref:</span><span class="nv">`dependency_specs`</span>), along with the <span class="s">``EXTERNAL_MODULE``</span> constant marker.
 
-For example, to specify the readily available module ``fftw/3.3.4.2`` as a dependency::
+For example, to specify the readily available module <span class="s">``fftw/3.3.4.2``</span> as a dependency<span class="se">::</span>
 
-  dependencies = [(&#39;fftw/3.3.4.2&#39;, EXTERNAL_MODULE)]
+<span class="s">  dependencies = [(&#39;fftw/3.3.4.2&#39;, EXTERNAL_MODULE)]</span>
 
 For such dependencies, EasyBuild will:
 
-* load the module before initiating the software build and install procedure
-* include a &#39;``module load``&#39; statement in the generated module file (for non-build dependencies)
+<span class="m">*</span> load the module before initiating the software build and install procedure
+<span class="m">*</span> include a &#39;<span class="s">``module load``</span>&#39; statement in the generated module file (for non-build dependencies)
 
 If the specified module is not available, EasyBuild will exit with an error message stating that the dependency can
-not be resolved because the module could not be found. It will *not* search for a matching easyconfig file in order to
+not be resolved because the module could not be found. It will <span class="ge">*not*</span> search for a matching easyconfig file in order to
 try and install the module to resolve the dependency.
 
-.. _using_external_modules_metadata:
+<span class="p">..</span> <span class="nt">_using_external_modules_metadata:</span>
 
-Metadata for external modules
------------------------------
+<span class="gh">Metadata for external modules</span>
+<span class="gh">-----------------------------</span>
 
 Since very little information is available for external modules based on the dependency specification alone (i.e., only
 the module name), metadata can be supplied to EasyBuild for external modules.
 
-Using the ``--external-modules-metadata`` configuration option, the location of one or more files can be specified that
+Using the <span class="s">``--external-modules-metadata``</span> configuration option, the location of one or more files can be specified that
 provide such metadata. The files are expected to be in INI format, with a section per module name and key-value
 assignments denoting the metadata specific to that module.
 
-Format::
+Format<span class="se">::</span>
 
-  [modulename]
-  key1 = value1
-  key2 = value2, value3
+<span class="s">  [modulename]</span>
+<span class="s">  key1 = value1</span>
+<span class="s">  key2 = value2, value3</span>
 
-Default
-~~~~~~~
+<span class="gh">Default</span>
+<span class="gh">~~~~~~~</span>
 
 Up until EasyBuild v2.6.0, no metadata for external modules was available by default.
 
 Since EasyBuild v2.7.0, a file providing metadata for Cray-provided modules on Cray systems is included,
-and is active by default (i.e., unless other files are specified via ``--external-modules-metadata``);
+and is active by default (i.e., unless other files are specified via <span class="s">``--external-modules-metadata``</span>);
 see https://github.com/easybuilders/easybuild-framework/blob/main/etc/cray_external_modules_metadata.cfg.
 
-Using wildcards
-~~~~~~~~~~~~~~~
+<span class="gh">Using wildcards</span>
+<span class="gh">~~~~~~~~~~~~~~~</span>
 
-Since EasyBuild v4.1.0, you can use so-called *glob patterns* to specify a list of paths
-to ``--external-modules-metadata``, using wildcard characters like ``*`` and ``?``.
+Since EasyBuild v4.1.0, you can use so-called <span class="ge">*glob patterns*</span> to specify a list of paths
+to <span class="s">``--external-modules-metadata``</span>, using wildcard characters like <span class="s">``*``</span> and <span class="s">``?``</span>.
 
-For example, to specify that the metadata for external modules in all ``*.cfg`` files in the directory ``/example``
-should be taken into account, you can use::
+For example, to specify that the metadata for external modules in all <span class="s">``*.cfg``</span> files in the directory <span class="s">``/example``</span>
+should be taken into account, you can use<span class="se">::</span>
 
-  export EASYBUILD_EXTERNAL_MODULES_METADATA=&#39;/example/*.cfg&#39;
+<span class="s">  export EASYBUILD_EXTERNAL_MODULES_METADATA=&#39;/example/*.cfg&#39;</span>
 
-Example
-~~~~~~~
+<span class="gh">Example</span>
+<span class="gh">~~~~~~~</span>
 
-For example, the following file provides metadata for a handful of modules that may be provided on Cray systems::
+For example, the following file provides metadata for a handful of modules that may be provided on Cray systems<span class="se">::</span>
 
-  [cray-hdf5/1.8.13]
-  name = HDF5
-  version = 1.8.13
-  prefix = HDF5_DIR
+<span class="s">  [cray-hdf5/1.8.13]</span>
+<span class="s">  name = HDF5</span>
+<span class="s">  version = 1.8.13</span>
+<span class="s">  prefix = HDF5_DIR</span>
 
-  [cray-hdf5-parallel/1.8.13]
-  name = HDF5
-  version = 1.8.13
-  prefix = /opt/cray/hdf5-parallel/1.8.13/GNU/49
+<span class="s">  [cray-hdf5-parallel/1.8.13]</span>
+<span class="s">  name = HDF5</span>
+<span class="s">  version = 1.8.13</span>
+<span class="s">  prefix = /opt/cray/hdf5-parallel/1.8.13/GNU/49</span>
 
-  [cray-netcdf/4.3.2]
-  name = netCDF, netCDF-Fortran
-  version = 4.3.2, 4.3.2
-  prefix = NETCDF_DIR
+<span class="s">  [cray-netcdf/4.3.2]</span>
+<span class="s">  name = netCDF, netCDF-Fortran</span>
+<span class="s">  version = 4.3.2, 4.3.2</span>
+<span class="s">  prefix = NETCDF_DIR</span>
 
-  [fftw/3.3.4.5]
-  name = FFTW
-  version = 3.3.4.5
-  prefix = FFTW_INC/..
+<span class="s">  [fftw/3.3.4.5]</span>
+<span class="s">  name = FFTW</span>
+<span class="s">  version = 3.3.4.5</span>
+<span class="s">  prefix = FFTW_INC/..</span>
 
-Supported metadata values
-~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Supported metadata values</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 The following keys are supported:
 
-* ``name``: specifies the software name(s) that is (are) provided by the module
-* ``version``: specifies the software version(s) that is (are) provided by the module
-* ``prefix``: specifies the installation prefix of the software that is provided by the module
+<span class="m">*</span> <span class="s">``name``</span>: specifies the software name(s) that is (are) provided by the module
+<span class="m">*</span> <span class="s">``version``</span>: specifies the software version(s) that is (are) provided by the module
+<span class="m">*</span> <span class="s">``prefix``</span>: specifies the installation prefix of the software that is provided by the module
 
-For ``prefix``, a couple of different options are available, i.e.:
+For <span class="s">``prefix``</span>, a couple of different options are available, i.e.:
 
-* specifying an absolute path (cfr. ``cray-hdf5-parallel/1.8.13`` in the example above)
-* specifying the environment variable that is defined by the module and provides the installation prefix
-  (cfr. ``cray-netcdf/4.3.2`` in the example above)
+<span class="m">*</span> specifying an absolute path (cfr. <span class="s">``cray-hdf5-parallel/1.8.13``</span> in the example above)
+<span class="m">*</span> specifying the environment variable that is defined by the module and provides the installation prefix
+  (cfr. <span class="s">``cray-netcdf/4.3.2``</span> in the example above)
 
-  * this can be optionally combined with a relative path that serves as a &#39;correction&#39;
-    (cfr. ``fftw/3.3.4.5`` in the example above) *[supported since EasyBuild v2.7.0]*
+  <span class="m">*</span> this can be optionally combined with a relative path that serves as a &#39;correction&#39;
+    (cfr. <span class="s">``fftw/3.3.4.5``</span> in the example above) <span class="ge">*[supported since EasyBuild v2.7.0]*</span>
 
 Any other keys are simply ignored.
 
-.. note::
-  When both ``name`` and ``version`` are specified, they must provide an *equal number of values*
-  (see for example the ``cray-netcdf`` example above).
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
+  When both <span class="s">``name``</span> and <span class="s">``version``</span> are specified, they must provide an <span class="ge">*equal number of values*</span>
+  (see for example the <span class="s">``cray-netcdf``</span> example above).
 
-Handling of provided metadata
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Handling of provided metadata</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 Using the provided metadata, EasyBuild will define environment variables that are also defined by modules that are
 generated by EasyBuild itself, if an external module for which metadata is available is loaded as a dependency.
 
 In particular, for each software name that is specified:
 
-* the corresponding environment variable ``$EBROOT&lt;NAME&gt;`` is defined to the specified ``prefix`` value (if any)
-* the corresponding environment variable ``$EBVERSION&lt;NAME&gt;`` is defined to the corresponding ``version`` value (if any)
+<span class="m">*</span> the corresponding environment variable <span class="s">``$EBROOT&lt;NAME&gt;``</span> is defined to the specified <span class="s">``prefix``</span> value (if any)
+<span class="m">*</span> the corresponding environment variable <span class="s">``$EBVERSION&lt;NAME&gt;``</span> is defined to the corresponding <span class="s">``version``</span> value (if any)
 
 For example, for the external modules for which metadata is provided in the example above, the following
 environment variables are set in the build environment when the module is used as a dependency:
 
-* for ``cray-hdf5/1.8.1.13``:
+<span class="m">*</span> for <span class="s">``cray-hdf5/1.8.1.13``</span>:
 
-  * ``$EBROOTHDF5`` = ``$HDF5_DIR``
-  * ``$EBVERSIONHDF5`` = ``1.8.13``
+  <span class="m">*</span> <span class="s">``$EBROOTHDF5``</span> = <span class="s">``$HDF5_DIR``</span>
+  <span class="m">*</span> <span class="s">``$EBVERSIONHDF5``</span> = <span class="s">``1.8.13``</span>
 
-* for ``cray-hdf5-parallel/1.8.13``:
+<span class="m">*</span> for <span class="s">``cray-hdf5-parallel/1.8.13``</span>:
 
-  * ``$EBROOTHDF5`` = ``/opt/cray/hdf5-parallel/1.8.13/GNU/49``
-  * ``$EBVERSIONHDF5`` = ``1.8.13``
+  <span class="m">*</span> <span class="s">``$EBROOTHDF5``</span> = <span class="s">``/opt/cray/hdf5-parallel/1.8.13/GNU/49``</span>
+  <span class="m">*</span> <span class="s">``$EBVERSIONHDF5``</span> = <span class="s">``1.8.13``</span>
 
-* for ``cray-netcdf/4.3.2``:
+<span class="m">*</span> for <span class="s">``cray-netcdf/4.3.2``</span>:
 
-  * ``$EBROOTNETCDF`` = ``$NETCDF_DIR``
-  * ``$EBROOTNETCDFMINFORTRAN`` = ``$NETCDF_DIR``
-  * ``$EBVERSIONNETCDF`` = ``4.3.2``
-  * ``$EBVERSIONNETCDFMINFORTRAN`` = ``4.3.2``
+  <span class="m">*</span> <span class="s">``$EBROOTNETCDF``</span> = <span class="s">``$NETCDF_DIR``</span>
+  <span class="m">*</span> <span class="s">``$EBROOTNETCDFMINFORTRAN``</span> = <span class="s">``$NETCDF_DIR``</span>
+  <span class="m">*</span> <span class="s">``$EBVERSIONNETCDF``</span> = <span class="s">``4.3.2``</span>
+  <span class="m">*</span> <span class="s">``$EBVERSIONNETCDFMINFORTRAN``</span> = <span class="s">``4.3.2``</span>
 
-* for ``fftw/3.3.4.5``:
+<span class="m">*</span> for <span class="s">``fftw/3.3.4.5``</span>:
 
-  * ``$EBROOTFFTW`` = ``$FFTW_INC/../``
-  * ``$EBVERSIONFFTW`` = ``3.3.4.5``
+  <span class="m">*</span> <span class="s">``$EBROOTFFTW``</span> = <span class="s">``$FFTW_INC/../``</span>
+  <span class="m">*</span> <span class="s">``$EBVERSIONFFTW``</span> = <span class="s">``3.3.4.5``</span>
 
-The ``get_software_root`` and ``get_software_version`` functions that are commonly used occasionally in easyblocks
-pick up the ``$EBROOT*`` and ``$EBVERSION*`` environment variables, respectively.
+The <span class="s">``get_software_root``</span> and <span class="s">``get_software_version``</span> functions that are commonly used occasionally in easyblocks
+pick up the <span class="s">``$EBROOT*``</span> and <span class="s">``$EBVERSION*``</span> environment variables, respectively.
 </code></pre></div>
 
   <hr>
@@ -552,7 +552,7 @@ pick up the ``$EBROOT*`` and ``$EBVERSION*`` environment variables, respectively
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
       
     
   </small>

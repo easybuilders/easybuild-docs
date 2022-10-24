@@ -396,562 +396,562 @@ and you can help with that!
 </ul>
 <p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
 </div>
-<div class="highlight"><pre><span></span><code>.. _installation:
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_installation:</span>
 
-Installing EasyBuild
-====================
+<span class="gh">Installing EasyBuild</span>
+<span class="gh">====================</span>
 
 EasyBuild is Python software, so there are a couple of ways to install it.
 
-We recommend installing EasyBuild using ``pip``. This method is described at :ref:`pip`.
+We recommend installing EasyBuild using <span class="s">``pip``</span>. This method is described at <span class="na">:ref:</span><span class="nv">`pip`</span>.
 
 It is also possible to install EasyBuild as a module. To do this, 
-use the 3-step procedure outlined at :ref:`eb_as_module`.
+use the 3-step procedure outlined at <span class="na">:ref:</span><span class="nv">`eb_as_module`</span>.
 
-Do take into account the required and optional dependencies (see :ref:`requirements` and :ref:`dependencies`).
+Do take into account the required and optional dependencies (see <span class="na">:ref:</span><span class="nv">`requirements`</span> and <span class="na">:ref:</span><span class="nv">`dependencies`</span>).
 
-Notes on other ways of installing EasyBuild are available under section :ref:`alt_inst_methods`.
+Notes on other ways of installing EasyBuild are available under section <span class="na">:ref:</span><span class="nv">`alt_inst_methods`</span>.
 
-.. contents::
-    :depth: 3
-    :backlinks: none
+<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
+    <span class="nc">:depth:</span> 3
+    <span class="nc">:backlinks:</span> none
 
 --------------
 
-.. _requirements:
+<span class="p">..</span> <span class="nt">_requirements:</span>
 
-Requirements
-------------
+<span class="gh">Requirements</span>
+<span class="gh">------------</span>
 
 The only strict requirements are:
 
-* a **GNU/Linux distribution** as operating system
+<span class="m">*</span> a <span class="gs">**GNU/Linux distribution**</span> as operating system
 
-* **Python**:
+<span class="m">*</span> <span class="gs">**Python**</span>:
 
-  * Python 2.7, or Python 3.x (&gt;= 3.5). Since Python 2 is end-of-life (https://www.python.org/doc/sunset-python-2/) we recommend
+  <span class="m">*</span> Python 2.7, or Python 3.x (&gt;= 3.5). Since Python 2 is end-of-life (https://www.python.org/doc/sunset-python-2/) we recommend
     using Python 3 if it is available
 
-  * **note**: only EasyBuild v4.0 (or newer) is compatible with Python 3, earlier EasyBuild releases require Python 2
+  <span class="m">*</span> <span class="gs">**note**</span>: only EasyBuild v4.0 (or newer) is compatible with Python 3, earlier EasyBuild releases require Python 2
 
-  * no Python packages other than the ones included in the Python standard library are strictly required
+  <span class="m">*</span> no Python packages other than the ones included in the Python standard library are strictly required
 
-    * **note**: only EasyBuild versions prior to v4.0 require ``vsc-base`` (&amp; ``vsc-install``),
-      see also :ref:`required_python_packages_eb3`
+    <span class="m">*</span> <span class="gs">**note**</span>: only EasyBuild versions prior to v4.0 require <span class="s">``vsc-base``</span> (&amp; <span class="s">``vsc-install``</span>),
+      see also <span class="na">:ref:</span><span class="nv">`required_python_packages_eb3`</span>
 
-  * for some specific features, additional Python packages are needed though, see :ref:`optional_python_packages`
+  <span class="m">*</span> for some specific features, additional Python packages are needed though, see <span class="na">:ref:</span><span class="nv">`optional_python_packages`</span>
 
-* a **modules tool**: Tcl(/C) environment modules or Lmod
+<span class="m">*</span> a <span class="gs">**modules tool**</span>: Tcl(/C) environment modules or Lmod
 
-  * the actual module command/script (``modulecmd``, ``modulecmd.tcl`` or ``lmod``) *must* be available via ``$PATH``
-  * see :ref:`required_modules_tool` for more details
+  <span class="m">*</span> the actual module command/script (<span class="s">``modulecmd``</span>, <span class="s">``modulecmd.tcl``</span> or <span class="s">``lmod``</span>) <span class="ge">*must*</span> be available via <span class="s">``$PATH``</span>
+  <span class="m">*</span> see <span class="na">:ref:</span><span class="nv">`required_modules_tool`</span> for more details
 
-For more information on (optional) dependencies, see :ref:`dependencies`.
+For more information on (optional) dependencies, see <span class="na">:ref:</span><span class="nv">`dependencies`</span>.
 
-.. _pip:
+<span class="p">..</span> <span class="nt">_pip:</span>
 
-Using pip to Install EasyBuild
------------------------
+<span class="gh">Using pip to Install EasyBuild</span>
+<span class="gh">-----------------------</span>
 
 Since EasyBuild is released as a Python package on PyPI (https://pypi.org/project/easybuild)
-you can install it using ``pip``, the most commonly used tool for installing Python packages.
+you can install it using <span class="s">``pip``</span>, the most commonly used tool for installing Python packages.
 
-Install EasyBuild with::
+Install EasyBuild with<span class="se">::</span>
 
-  pip install easybuild
+<span class="s">  pip install easybuild</span>
 
-You may need to tweak this command a bit, depending on your setup, see :ref:`more_pip`.
+You may need to tweak this command a bit, depending on your setup, see <span class="na">:ref:</span><span class="nv">`more_pip`</span>.
 
-.. note::
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
   There are various other ways of installing Python packages, which we won&#39;t cover here.
-  If you are familiar with other tools like ``virtualenv`` or ``pipenv``, feel free to use those
+  If you are familiar with other tools like <span class="s">``virtualenv``</span> or <span class="s">``pipenv``</span>, feel free to use those
   instead to install EasyBuild.
 
-Sanity check
-~~~~~~~~~~~~
+<span class="gh">Sanity check</span>
+<span class="gh">~~~~~~~~~~~~</span>
 
-Compare the version of ``eb``, the main EasyBuild command, with the version of the EasyBuild module that was installed.
-For example::
+Compare the version of <span class="s">``eb``</span>, the main EasyBuild command, with the version of the EasyBuild module that was installed.
+For example<span class="se">::</span>
 
-    $ module load EasyBuild
-    $ module list
+<span class="s">    $ module load EasyBuild</span>
+<span class="s">    $ module list</span>
 
-    Currently Loaded Modules:
-      1) EasyBuild/4.4.0
+<span class="s">    Currently Loaded Modules:</span>
+<span class="s">      1) EasyBuild/4.4.0</span>
 
-    $ eb --version
-    This is EasyBuild 4.4.0 (framework: 4.4.0, easyblocks: 4.4.0) on host example.local
+<span class="s">    $ eb --version</span>
+<span class="s">    This is EasyBuild 4.4.0 (framework: 4.4.0, easyblocks: 4.4.0) on host example.local</span>
 
-.. tip::
+<span class="p">..</span> <span class="ow">tip</span><span class="p">::</span>
 
   The Tcl-based or Lmod implementations of environment modules do their default sorting differently.
   The former will normally sort in the lexicographic order, while Lmod follows
-  an approach that is closer to Python&#39;s construct ``LooseVersion`` way of ordering. Such aspects
+  an approach that is closer to Python&#39;s construct <span class="s">``LooseVersion``</span> way of ordering. Such aspects
   may make a big difference, if you have installed both versions 1.9.0 and 1.15.2,
   with respect to what is the version being loaded by default.
 
-You can also run ``eb --show-system-info`` to see system information relevant to EasyBuild,
-or run``eb --show-config`` to see the default EasyBuild configuration (see also :ref:`configuring_easybuild`).
+You can also run <span class="s">``eb --show-system-info``</span> to see system information relevant to EasyBuild,
+or run<span class="s">``eb --show-config``</span> to see the default EasyBuild configuration (see also <span class="na">:ref:</span><span class="nv">`configuring_easybuild`</span>).
 
-.. _updating:
+<span class="p">..</span> <span class="nt">_updating:</span>
 
-Updating an existing EasyBuild installation
-~~~~~~~~~~~~
+<span class="gh">Updating an existing EasyBuild installation</span>
+<span class="gh">~~~~~~~~~~~~</span>
 
 To upgrade to a newer EasyBuild version than the one currently installed:
 
-* ``pip install --upgrade easybuild`` will upgrade EasyBuild to the latest release.
+<span class="m">*</span> <span class="s">``pip install --upgrade easybuild``</span> will upgrade EasyBuild to the latest release.
 
-.. _more_pip:
+<span class="p">..</span> <span class="nt">_more_pip:</span>
 
-Additional pip install options
-~~~~~~~~~~~~
+<span class="gh">Additional pip install options</span>
+<span class="gh">~~~~~~~~~~~~</span>
 
-For the ``pip`` install, you may wish to slightly change this command depending on the context and your personal preferences:
+For the <span class="s">``pip``</span> install, you may wish to slightly change this command depending on the context and your personal preferences:
 
-* to install EasyBuild *system-wide*, you can use ``sudo`` (if you have admin privileges):
+<span class="m">*</span> to install EasyBuild <span class="ge">*system-wide*</span>, you can use <span class="s">``sudo``</span> (if you have admin privileges):
 
-  .. code:: sh
+<span class="p">  ..</span> <span class="ow">code</span><span class="p">::</span> sh
 
       sudo pip install easybuild
 
-* To install EasyBuild *in your personal home directory*, you can use the ``--user`` option:
+<span class="m">*</span> To install EasyBuild <span class="ge">*in your personal home directory*</span>, you can use the <span class="s">``--user``</span> option:
 
-  .. code:: sh
+<span class="p">  ..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">sh</span>
 
       pip install --user easybuild
 
-  This will result in an EasyBuild installation in ``$HOME/.local/``.
+  This will result in an EasyBuild installation in <span class="s">``$HOME/.local/``</span>.
 
-* To install EasyBuild in a *specific directory* you can use the ``--prefix`` option:
+<span class="m">*</span> To install EasyBuild in a <span class="ge">*specific directory*</span> you can use the <span class="s">``--prefix``</span> option:
 
-  .. code:: sh
+<span class="p">  ..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">sh</span>
 
       pip install --prefix _PREFIX_ easybuild
 
-  In this command, you should replace &#39;``_PREFIX_``&#39; with the location where you want to have EasyBuild installed
-  (for example, ``$HOME/tools`` or ``/tmp/$USER``).
+  In this command, you should replace &#39;<span class="s">``_PREFIX_``</span>&#39; with the location where you want to have EasyBuild installed
+  (for example, <span class="s">``$HOME/tools``</span> or <span class="s">``/tmp/$USER``</span>).
 
-Keep in mind that you may need to update your environment too when using ``--user`` or ``--prefix``,
-see :ref:`more_pip_env`.
+Keep in mind that you may need to update your environment too when using <span class="s">``--user``</span> or <span class="s">``--prefix``</span>,
+see <span class="na">:ref:</span><span class="nv">`more_pip_env`</span>.
 
 
-.. _more_pip_pip3:
+<span class="p">..</span> <span class="nt">_more_pip_pip3:</span>
 
-``pip`` vs ``pip3``
-~~~~~~~~~~~~
+<span class="gh">``pip`` vs ``pip3``</span>
+<span class="gh">~~~~~~~~~~~~</span>
 
-On systems where both Python 2 and Python 3 are installed you may also have different ``pip`` commands
-available. Or maybe ``pip`` is not available at all, and only &quot;versioned&quot; ``pip`` commands like ``pip3`` are
+On systems where both Python 2 and Python 3 are installed you may also have different <span class="s">``pip``</span> commands
+available. Or maybe <span class="s">``pip``</span> is not available at all, and only &quot;versioned&quot; <span class="s">``pip``</span> commands like <span class="s">``pip3``</span> are
 available.
 
-If you (only) have ``pip3`` available, you can replace ``pip`` with ``pip3`` in any of the ``pip install`` commands
+If you (only) have <span class="s">``pip3``</span> available, you can replace <span class="s">``pip``</span> with <span class="s">``pip3``</span> in any of the <span class="s">``pip install``</span> commands
 above:
 
-.. code:: sh
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">sh</span>
 
     pip3 install easybuild
 
-If you want to ensure that you are using the ``pip`` installation that corresponds to the Python 3 installation
-that you intend to use, you can use ``python3 -m pip`` rather than ``pip3``.
+If you want to ensure that you are using the <span class="s">``pip``</span> installation that corresponds to the Python 3 installation
+that you intend to use, you can use <span class="s">``python3 -m pip``</span> rather than <span class="s">``pip3``</span>.
 
-.. code:: sh
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">sh</span>
 
     python3.6 -m pip install easybuild
 
-Note that you may also need to instruct the ``eb`` command to use the correct Python version at runtime,
-via ``$EB_PYTHON`` (see :ref:`more_pip_env_EB_PYTHON`).
+Note that you may also need to instruct the <span class="s">``eb``</span> command to use the correct Python version at runtime,
+via <span class="s">``$EB_PYTHON``</span> (see <span class="na">:ref:</span><span class="nv">`more_pip_env_EB_PYTHON`</span>).
 
-.. _more_pip_env:
+<span class="p">..</span> <span class="nt">_more_pip_env:</span>
 
-Updating your environment
-~~~~~~~~~~~~
+<span class="gh">Updating your environment</span>
+<span class="gh">~~~~~~~~~~~~</span>
 
-If you used the ``--user`` or ``--prefix`` option in the ``pip install`` command,
-or if you installed EasyBuild with a ``pip`` version that does not correspond
+If you used the <span class="s">``--user``</span> or <span class="s">``--prefix``</span> option in the <span class="s">``pip install``</span> command,
+or if you installed EasyBuild with a <span class="s">``pip``</span> version that does not correspond
 to your default Python installation, you will need to update your environment to make EasyBuild ready for use.
 This is not required if you did a system-wide installation in a standard location with the default Python version.
 
-.. note::
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
   Keep in mind that you will have to make these environment changes again if you start a new shell session.
-  To avoid this, you can update one of the shell startup scripts in your home directory (``.bashrc`` for example).
+  To avoid this, you can update one of the shell startup scripts in your home directory (<span class="s">``.bashrc``</span> for example).
 
-.. _more_pip_env_PATH:
+<span class="p">..</span> <span class="nt">_more_pip_env_PATH:</span>
 
-Updating ``$PATH``
-~~~~~~~~~~~~
+<span class="gh">Updating ``$PATH``</span>
+<span class="gh">~~~~~~~~~~~~</span>
 
-Update the ``$PATH`` environment variable to make sure the ``eb`` command is available::
+Update the <span class="s">``$PATH``</span> environment variable to make sure the <span class="s">``eb``</span> command is available<span class="se">::</span>
 
-  export PATH=_PREFIX_/bin:$PATH
+<span class="s">  export PATH=_PREFIX_/bin:$PATH</span>
 
-**Replace** ``_PREFIX_`` **in this command** with the directory path where EasyBuild was installed into
-(use ``$HOME/.local`` if you used ``pip install --user``).
+<span class="gs">**Replace**</span> <span class="s">``_PREFIX_``</span> <span class="gs">**in this command**</span> with the directory path where EasyBuild was installed into
+(use <span class="s">``$HOME/.local``</span> if you used <span class="s">``pip install --user``</span>).
 
 This is not required if you installing EasyBuild in a standard system location.
 
-You can check with the ``which eb`` command to determine whether or not you need to update the ``$PATH`` environment variable.
+You can check with the <span class="s">``which eb``</span> command to determine whether or not you need to update the <span class="s">``$PATH``</span> environment variable.
 
-.. _more_pip_env_PYTHONPATH:
+<span class="p">..</span> <span class="nt">_more_pip_env_PYTHONPATH:</span>
 
-Updating ``$PYTHONPATH``
-~~~~~~~~~~~~
+<span class="gh">Updating ``$PYTHONPATH``</span>
+<span class="gh">~~~~~~~~~~~~</span>
 
-If you installed EasyBuild to a non-standard location using ``pip install --prefix``,
-you also need to update the Python search path environment variable ``$PYTHONPATH`` to instruct Python where
+If you installed EasyBuild to a non-standard location using <span class="s">``pip install --prefix``</span>,
+you also need to update the Python search path environment variable <span class="s">``$PYTHONPATH``</span> to instruct Python where
 it can find the EasyBuild Python packages.
 
-This is not required if you used the ``--user`` option, since Python will automatically consider
-``$HOME/.local`` when searching for installed Python packages, or if you installed EasyBuild in a standard
+This is not required if you used the <span class="s">``--user``</span> option, since Python will automatically consider
+<span class="s">``$HOME/.local``</span> when searching for installed Python packages, or if you installed EasyBuild in a standard
 system-wide location.
 
-Update ``$PYTHONPATH`` by running a command like::
+Update <span class="s">``$PYTHONPATH``</span> by running a command like<span class="se">::</span>
 
-  export PYTHONPATH=_PREFIX_/lib/pythonX.Y/site-packages:$PYTHONPATH
+<span class="s">  export PYTHONPATH=_PREFIX_/lib/pythonX.Y/site-packages:$PYTHONPATH</span>
 
-Here, you need to replace the ``X`` and ``Y`` with the major and minor version of your Python installation,
-which you can determine by running ``python -V``.
-For example, if you are using Python 3.6, make sure you are using ``/python3.6/`` in the command to update ``$PYTHONPATH``.
+Here, you need to replace the <span class="s">``X``</span> and <span class="s">``Y``</span> with the major and minor version of your Python installation,
+which you can determine by running <span class="s">``python -V``</span>.
+For example, if you are using Python 3.6, make sure you are using <span class="s">``/python3.6/``</span> in the command to update <span class="s">``$PYTHONPATH``</span>.
 
-And of course, you again need to **replace &#39;``_PREFIX_``&#39;** with the installation prefix where EasyBuild was installed
+And of course, you again need to <span class="gs">**replace &#39;``_PREFIX_``&#39;**</span> with the installation prefix where EasyBuild was installed
 into.
 
-For example::
+For example<span class="se">::</span>
 
-  # update $PYTHONPATH if EasyBuild was installed in $HOME/tools with Python 3.6
-  export PYTHONPATH=$HOME/tools/lib/python3.6/site-packages:$PYTHONPATH
+<span class="s">  # update $PYTHONPATH if EasyBuild was installed in $HOME/tools with Python 3.6</span>
+<span class="s">  export PYTHONPATH=$HOME/tools/lib/python3.6/site-packages:$PYTHONPATH</span>
 
-.. _more_pip_env_EB_PYTHON:
+<span class="p">..</span> <span class="nt">_more_pip_env_EB_PYTHON:</span>
 
-Setting ``$EB_PYTHON``
-~~~~~~~~~~~~
+<span class="gh">Setting ``$EB_PYTHON``</span>
+<span class="gh">~~~~~~~~~~~~</span>
 
 If you want to control which Python version is used to run EasyBuild,
-you can specify the name or the full path to the ``python`` command that should be used by the ``eb`` command
-via the ``$EB_PYTHON`` environment variable.
+you can specify the name or the full path to the <span class="s">``python``</span> command that should be used by the <span class="s">``eb``</span> command
+via the <span class="s">``$EB_PYTHON``</span> environment variable.
 
-This may be required when you installing EasyBuild with a version of ``pip`` that does not correspond
+This may be required when you installing EasyBuild with a version of <span class="s">``pip``</span> that does not correspond
 with the default Python version.
 
-For example, to ensure that ``eb`` uses ``python3.6``::
+For example, to ensure that <span class="s">``eb``</span> uses <span class="s">``python3.6``</span><span class="se">::</span>
 
-  export EB_PYTHON=python3.6
-
-
-.. _more_pip_env_EB_VERBOSE:
-
-Setting ``$EB_VERBOSE``
-~~~~~~~~~~~~
-
-To determine which ``python`` commands are being considered by the ``eb`` command,
-you can define the ``$EB_VERBOSE`` environment variable. For example::
-
-  $ EB_VERBOSE=1 eb --version
-  &gt;&gt; Considering &#39;python3.6&#39;...
-  &gt;&gt; &#39;python3&#39; version: 3.6.8, which matches Python 3 version requirement (&gt;= 3.5)
-  &gt;&gt; Selected Python command: python3 (/usr/bin/python3.6)
-  &gt;&gt; python3.6 -m easybuild.main --version
-  This is EasyBuild 4.3.3 (framework: 4.3.3, easyblocks: 4.3.3) on host example
+<span class="s">  export EB_PYTHON=python3.6</span>
 
 
-.. _eb_as_module:
+<span class="p">..</span> <span class="nt">_more_pip_env_EB_VERBOSE:</span>
 
-Installing EasyBuild with EasyBuild
------------------------
+<span class="gh">Setting ``$EB_VERBOSE``</span>
+<span class="gh">~~~~~~~~~~~~</span>
+
+To determine which <span class="s">``python``</span> commands are being considered by the <span class="s">``eb``</span> command,
+you can define the <span class="s">``$EB_VERBOSE``</span> environment variable. For example<span class="se">::</span>
+
+<span class="s">  $ EB_VERBOSE=1 eb --version</span>
+<span class="s">  &gt;&gt; Considering &#39;python3.6&#39;...</span>
+<span class="s">  &gt;&gt; &#39;python3&#39; version: 3.6.8, which matches Python 3 version requirement (&gt;= 3.5)</span>
+<span class="s">  &gt;&gt; Selected Python command: python3 (/usr/bin/python3.6)</span>
+<span class="s">  &gt;&gt; python3.6 -m easybuild.main --version</span>
+<span class="s">  This is EasyBuild 4.3.3 (framework: 4.3.3, easyblocks: 4.3.3) on host example</span>
+
+
+<span class="p">..</span> <span class="nt">_eb_as_module:</span>
+
+<span class="gh">Installing EasyBuild with EasyBuild</span>
+<span class="gh">-----------------------</span>
 
 If you prefer having EasyBuild available through an environment module file,
 you can consider installing EasyBuild with EasyBuild. This can be done in 3 steps:
 
-* Step 1: Installing EasyBuild with ``pip`` into a temporary location (only needed if EasyBuild is not installed yet)
-* Step 2: Using EasyBuild to install EasyBuild as a module
-* Step 3: Loading the EasyBuild module
+<span class="m">*</span> Step 1: Installing EasyBuild with <span class="s">``pip``</span> into a temporary location (only needed if EasyBuild is not installed yet)
+<span class="m">*</span> Step 2: Using EasyBuild to install EasyBuild as a module
+<span class="m">*</span> Step 3: Loading the EasyBuild module
 
-.. _eb_as_module_step1:
+<span class="p">..</span> <span class="nt">_eb_as_module_step1:</span>
 
-Step 1: Installing EasyBuild into a temporary location
-~~~~~~~~~~~~
+<span class="gh">Step 1: Installing EasyBuild into a temporary location</span>
+<span class="gh">~~~~~~~~~~~~</span>
 
 If you don&#39;t have EasyBuild installed yet, you need to install it in a temporary location first.
-The recommended way of doing this is using :ref:`pip`.
+The recommended way of doing this is using <span class="na">:ref:</span><span class="nv">`pip`</span>.
 
-For example, to install EasyBuild into a subdirectory ``/tmp/$USER`` using the default Python 3 version::
+For example, to install EasyBuild into a subdirectory <span class="s">``/tmp/$USER``</span> using the default Python 3 version<span class="se">::</span>
 
-  # pick installation prefix, and install EasyBuild into it
-  export EB_TMPDIR=/tmp/$USER/eb_tmp
-  python3 -m pip install --ignore-installed --prefix $EB_TMPDIR easybuild
+<span class="s">  # pick installation prefix, and install EasyBuild into it</span>
+<span class="s">  export EB_TMPDIR=/tmp/$USER/eb_tmp</span>
+<span class="s">  python3 -m pip install --ignore-installed --prefix $EB_TMPDIR easybuild</span>
 
-  # update environment to use this temporary EasyBuild installation
-  export PATH=$EB_TMPDIR/bin:$PATH
-  export PYTHONPATH=$(/bin/ls -rtd -1 $EB_TMPDIR/lib*/python*/site-packages | tail -1):$PYTHONPATH
-  export EB_PYTHON=python3
+<span class="s">  # update environment to use this temporary EasyBuild installation</span>
+<span class="s">  export PATH=$EB_TMPDIR/bin:$PATH</span>
+<span class="s">  export PYTHONPATH=$(/bin/ls -rtd -1 $EB_TMPDIR/lib*/python*/site-packages | tail -1):$PYTHONPATH</span>
+<span class="s">  export EB_PYTHON=python3</span>
 
-.. _eb_as_module_step2:
+<span class="p">..</span> <span class="nt">_eb_as_module_step2:</span>
 
-Step 2: Using EasyBuild to install EasyBuild
-~~~~~~~~~~~~
+<span class="gh">Step 2: Using EasyBuild to install EasyBuild</span>
+<span class="gh">~~~~~~~~~~~~</span>
 
 Once you have a working (recent) temporary EasyBuild installation, you can use it to
 install EasyBuild as a module. Usually this is done in the location where you would
 like to install other software too.
 
-You can use the ``eb --install-latest-eb-release`` command for this,
-combined with the ``--prefix`` option to control which directories are used by EasyBuild for the installation.
+You can use the <span class="s">``eb --install-latest-eb-release``</span> command for this,
+combined with the <span class="s">``--prefix``</span> option to control which directories are used by EasyBuild for the installation.
 
-For example, to install the latest version of EasyBuild as a module into ``$HOME/easybuild``::
+For example, to install the latest version of EasyBuild as a module into <span class="s">``$HOME/easybuild``</span><span class="se">::</span>
 
-  eb --install-latest-eb-release --prefix $HOME/easybuild
+<span class="s">  eb --install-latest-eb-release --prefix $HOME/easybuild</span>
 
-.. note::
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
 
   You may see a harmless deprecation warning popping up when performing this installation, just ignore it.
 
-.. _eb_as_module_step3:
+<span class="p">..</span> <span class="nt">_eb_as_module_step3:</span>
 
-Step 3: Loading the EasyBuild module
-~~~~~~~~~~~~
+<span class="gh">Step 3: Loading the EasyBuild module</span>
+<span class="gh">~~~~~~~~~~~~</span>
 
-Once :ref:`eb_as_module_step2` is completed, you should be able to load the module that was generated alongside
+Once <span class="na">:ref:</span><span class="nv">`eb_as_module_step2`</span> is completed, you should be able to load the module that was generated alongside
 the EasyBuild installation. You will need to do this every time you start a new shell session.
 
 First, make the module available by running the following command (which will update the module search path
-environment variable ``$MODULEPATH``)::
+environment variable <span class="s">``$MODULEPATH``</span>)<span class="se">::</span>
 
-  module use _PREFIX_/modules/all
+<span class="s">  module use _PREFIX_/modules/all</span>
 
-**Replace** ``_PREFIX_`` with the path to the directory that you used when running :ref:`eb_as_module_step2`
-(for example, ``$HOME/easybuild``).
+<span class="gs">**Replace**</span> <span class="s">``_PREFIX_``</span> with the path to the directory that you used when running <span class="na">:ref:</span><span class="nv">`eb_as_module_step2`</span>
+(for example, <span class="s">``$HOME/easybuild``</span>).
 
-Then, load the EasyBuild module to update your environment and make EasyBuild available for use::
+Then, load the EasyBuild module to update your environment and make EasyBuild available for use<span class="se">::</span>
 
-  module load EasyBuild
+<span class="s">  module load EasyBuild</span>
 
-.. note::
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
   Note that in this case, we don&#39;t need to make any changes to our environment for EasyBuild to work correctly.
   The environment module file that was generated by EasyBuild specifies all changes that need to be made.
 
 
-.. _dependencies:
+<span class="p">..</span> <span class="nt">_dependencies:</span>
 
-Dependencies
-------------
+<span class="gh">Dependencies</span>
+<span class="gh">------------</span>
 
 EasyBuild has a couple of dependencies, some are optional.
 
-.. _required_dependencies:
+<span class="p">..</span> <span class="nt">_required_dependencies:</span>
 
-Required dependencies
-~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Required dependencies</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~</span>
 
-* a **GNU/Linux** distribution as operating system
+<span class="m">*</span> a <span class="gs">**GNU/Linux**</span> distribution as operating system
 
-  * some common shell tools are expected to be available, see :ref:`required_shell_tools`
+  <span class="m">*</span> some common shell tools are expected to be available, see <span class="na">:ref:</span><span class="nv">`required_shell_tools`</span>
 
-* `Python &lt;http://python.org&gt;`_:
+<span class="m">*</span> <span class="s">`Python </span><span class="si">&lt;http://python.org&gt;</span><span class="s">`_</span>:
 
-  * Python 2.7, or Python 3.x (&gt;= 3.5);
+  <span class="m">*</span> Python 2.7, or Python 3.x (&gt;= 3.5);
 
-  * since Python 2 is end-of-life (https://www.python.org/doc/sunset-python-2/) we strongly recommend
+  <span class="m">*</span> since Python 2 is end-of-life (https://www.python.org/doc/sunset-python-2/) we strongly recommend
     using Python 3 if it is available;
 
-  * no third-party Python packages are strictly required (the Python standard library is sufficient);
+  <span class="m">*</span> no third-party Python packages are strictly required (the Python standard library is sufficient);
 
-  * for some *specific* EasyBuild features additional Python packages are required however, see :ref:`optional_python_packages`;
+  <span class="m">*</span> for some <span class="ge">*specific*</span> EasyBuild features additional Python packages are required however, see <span class="na">:ref:</span><span class="nv">`optional_python_packages`</span>;
 
-* a **modules tool**: Tcl(/C) environment modules or Lmod
+<span class="m">*</span> a <span class="gs">**modules tool**</span>: Tcl(/C) environment modules or Lmod
 
-  * the actual modules tool *must* be available via ``$PATH``, see :ref:`required_modules_tool`
+  <span class="m">*</span> the actual modules tool <span class="ge">*must*</span> be available via <span class="s">``$PATH``</span>, see <span class="na">:ref:</span><span class="nv">`required_modules_tool`</span>
 
-* a C/C++ compiler (e.g., ``gcc`` and ``g++``)
+<span class="m">*</span> a C/C++ compiler (e.g., <span class="s">``gcc``</span> and <span class="s">``g++``</span>)
 
-  * only required to build and install GCC with, or as a dependency for the Intel compilers, for example
+  <span class="m">*</span> only required to build and install GCC with, or as a dependency for the Intel compilers, for example
 
-.. _required_shell_tools:
+<span class="p">..</span> <span class="nt">_required_shell_tools:</span>
 
-Required shell tools
-^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Required shell tools</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^</span>
 
-.. XXX - UPDATE BY VERSION, below
+<span class="cp">.. XXX - UPDATE BY VERSION, below</span>
 
 A couple of shell tools may be required, depending on the particular use case (in relative order of importance):
 
-* shell builtin commands:
+<span class="m">*</span> shell builtin commands:
 
-  * ``type``, for inspecting the ``module`` function (if defined)
-  * ``ulimit``, for querying user limits
+  <span class="m">*</span> <span class="s">``type``</span>, for inspecting the <span class="s">``module``</span> function (if defined)
+  <span class="m">*</span> <span class="s">``ulimit``</span>, for querying user limits
 
-* tools for unpacking (source) archives:
+<span class="m">*</span> tools for unpacking (source) archives:
 
-  * commonly required: ``tar``, ``gunzip``, ``bunzip2``
-  * occasionally required: ``unzip``, ``unxz``
+  <span class="m">*</span> commonly required: <span class="s">``tar``</span>, <span class="s">``gunzip``</span>, <span class="s">``bunzip2``</span>
+  <span class="m">*</span> occasionally required: <span class="s">``unzip``</span>, <span class="s">``unxz``</span>
 
-* ``patch``, for applying patch files to unpacked sources (relatively common)
-* ``rpm`` or ``dpkg``, for querying OS dependencies (only needed occasionally)
-* ``locate``, only as a (poor mans) fallback to ``rpm``/``dpkg`` (rarely needed)
-* ``sysctl``, for querying system characteristics (only required on non-Linux systems)
+<span class="m">*</span> <span class="s">``patch``</span>, for applying patch files to unpacked sources (relatively common)
+<span class="m">*</span> <span class="s">``rpm``</span> or <span class="s">``dpkg``</span>, for querying OS dependencies (only needed occasionally)
+<span class="m">*</span> <span class="s">``locate``</span>, only as a (poor mans) fallback to <span class="s">``rpm``</span>/<span class="s">``dpkg``</span> (rarely needed)
+<span class="m">*</span> <span class="s">``sysctl``</span>, for querying system characteristics (only required on non-Linux systems)
 
-.. _required_modules_tool:
+<span class="p">..</span> <span class="nt">_required_modules_tool:</span>
 
-Required modules tool
-^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Required modules tool</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^</span>
 
 EasyBuild not only generates module files to be used along with the software it installs,
 it also depends on the generated modules, mainly for resolving dependencies.
 Hence, a modules tool must be available to consume module files with.
 
-.. XXX - UPDATE BY VERSION, below
+<span class="cp">.. XXX - UPDATE BY VERSION, below</span>
 
 Supported module tools:
 
-* `Tcl/C environment-modules &lt;http://modules.sourceforge.net/&gt;`_ (version &gt;= 3.2.10)
-* `Tcl-only variant of environment modules &lt;http://sourceforge.net/p/modules/modules-tcl&gt;`_
-* `Lmod &lt;http://lmod.sourceforge.net&gt;`_ (version &gt;= 6.5.1), *highly recommended*
+<span class="m">*</span> <span class="s">`Tcl/C environment-modules </span><span class="si">&lt;http://modules.sourceforge.net/&gt;</span><span class="s">`_</span> (version &gt;= 3.2.10)
+<span class="m">*</span> <span class="s">`Tcl-only variant of environment modules </span><span class="si">&lt;http://sourceforge.net/p/modules/modules-tcl&gt;</span><span class="s">`_</span>
+<span class="m">*</span> <span class="s">`Lmod </span><span class="si">&lt;http://lmod.sourceforge.net&gt;</span><span class="s">`_</span> (version &gt;= 6.5.1), <span class="ge">*highly recommended*</span>
 
-.. note::
-  The path to the actual modules tool binary/script used *must* be included in ``$PATH``,
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
+  The path to the actual modules tool binary/script used <span class="ge">*must*</span> be included in <span class="s">``$PATH``</span>,
   to make it readily available to EasyBuild.
 
-  * for Tcl/C environment modules: ``modulecmd``
-  * for Tcl-only environment modules: ``modulecmd.tcl``
-  * for Lmod: ``lmod``
+  <span class="m">*</span> for Tcl/C environment modules: <span class="s">``modulecmd``</span>
+  <span class="m">*</span> for Tcl-only environment modules: <span class="s">``modulecmd.tcl``</span>
+  <span class="m">*</span> for Lmod: <span class="s">``lmod``</span>
 
   The path where the modules tool binary/script is located can be determined via the definition of
-  the ``module`` function; for example, using ``type module`` or ``type -f module``.
+  the <span class="s">``module``</span> function; for example, using <span class="s">``type module``</span> or <span class="s">``type -f module``</span>.
 
-.. note::
-  For Lmod specifically, EasyBuild will try to fall back to finding the ``lmod`` binary via the ``$LMOD_CMD``
-  environment variable, in case ``lmod`` is not available in ``$PATH``.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
+  For Lmod specifically, EasyBuild will try to fall back to finding the <span class="s">``lmod``</span> binary via the <span class="s">``$LMOD_CMD``</span>
+  environment variable, in case <span class="s">``lmod``</span> is not available in <span class="s">``$PATH``</span>.
 
-  In EasyBuild versions *prior* to 2.1.1, the path specified by ``$LMOD_CMD`` was (erroneously) preferred over the
-  (first) ``lmod`` binary available via ``$PATH``.
+  In EasyBuild versions <span class="ge">*prior*</span> to 2.1.1, the path specified by <span class="s">``$LMOD_CMD``</span> was (erroneously) preferred over the
+  (first) <span class="s">``lmod``</span> binary available via <span class="s">``$PATH``</span>.
 
 
 Additional notes:
 
-* Tcl(/C) environment-modules requires `Tcl &lt;http://www.tcl.tk/&gt;`_ to be
+<span class="m">*</span> Tcl(/C) environment-modules requires <span class="s">`Tcl </span><span class="si">&lt;http://www.tcl.tk/&gt;</span><span class="s">`_</span> to be
   installed (with header files and development libraries)
-* Lmod requires `Lua &lt;http://www.lua.org/&gt;`_ and a couple of non-standard Lua libraries
-  (``lua-posix``, ``lua-filesystem``) to be available
+<span class="m">*</span> Lmod requires <span class="s">`Lua </span><span class="si">&lt;http://www.lua.org/&gt;</span><span class="s">`_</span> and a couple of non-standard Lua libraries
+  (<span class="s">``lua-posix``</span>, <span class="s">``lua-filesystem``</span>) to be available
 
-  * Tcl (``tclsh``) must also be available for Lmod to support module files in ``Tcl`` syntax
-* a guide to installing Tcl/C environment modules without having root
-  permissions is available at :ref:`installing_env_mod_c`.
-* a guide to installing Lmod without having root permissions is available at
-  :ref:`installing_lmod`.
+  <span class="m">*</span> Tcl (<span class="s">``tclsh``</span>) must also be available for Lmod to support module files in <span class="s">``Tcl``</span> syntax
+<span class="m">*</span> a guide to installing Tcl/C environment modules without having root
+  permissions is available at <span class="na">:ref:</span><span class="nv">`installing_env_mod_c`</span>.
+<span class="m">*</span> a guide to installing Lmod without having root permissions is available at
+  <span class="na">:ref:</span><span class="nv">`installing_lmod`</span>.
 
-.. _required_python_packages:
+<span class="p">..</span> <span class="nt">_required_python_packages:</span>
 
-Required Python packages
-^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Required Python packages</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-Since EasyBuild v4.0, *no* Python packages outside of the Python standard library are required.
+Since EasyBuild v4.0, <span class="ge">*no*</span> Python packages outside of the Python standard library are required.
 
-.. _required_python_packages_eb3:
+<span class="p">..</span> <span class="nt">_required_python_packages_eb3:</span>
 
-Required Python packages for older EasyBuild versions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+<span class="gh">Required Python packages for older EasyBuild versions</span>
+<span class="gh">+++++++++++++++++++++++++++++++++++++++++++++++++++++</span>
 
 For EasyBuild versions prior to version 4.0, a couple of additional Python packages are required:
 
-* ``setuptools``: used to define the ``easybuild`` namespace across different directories
+<span class="m">*</span> <span class="s">``setuptools``</span>: used to define the <span class="s">``easybuild``</span> namespace across different directories
 
-  * available at https://pypi.python.org/pypi/setuptools
-  * must be version 0.6 or more recent
-  * strictly required since EasyBuild v2.7.0
+  <span class="m">*</span> available at https://pypi.python.org/pypi/setuptools
+  <span class="m">*</span> must be version 0.6 or more recent
+  <span class="m">*</span> strictly required since EasyBuild v2.7.0
 
-* ``vsc-install``: provides setuptools functions and support for unit test suites for Python tools
+<span class="m">*</span> <span class="s">``vsc-install``</span>: provides setuptools functions and support for unit test suites for Python tools
 
-  * also required to install ``vsc-base`` (see below)
-  * available at https://pypi.python.org/pypi/vsc-install
-  * the required version depends primarily on the ``vsc-base`` version
+  <span class="m">*</span> also required to install <span class="s">``vsc-base``</span> (see below)
+  <span class="m">*</span> available at https://pypi.python.org/pypi/vsc-install
+  <span class="m">*</span> the required version depends primarily on the <span class="s">``vsc-base``</span> version
 
-* ``vsc-base``: a Python library providing the ``fancylogger`` and ``generaloption`` Python modules
+<span class="m">*</span> <span class="s">``vsc-base``</span>: a Python library providing the <span class="s">``fancylogger``</span> and <span class="s">``generaloption``</span> Python modules
 
-  * available at https://pypi.python.org/pypi/vsc-base and https://github.com/hpcugent/vsc-base
-  * the required version of ``vsc-base`` depends on the EasyBuild version
+  <span class="m">*</span> available at https://pypi.python.org/pypi/vsc-base and https://github.com/hpcugent/vsc-base
+  <span class="m">*</span> the required version of <span class="s">``vsc-base``</span> depends on the EasyBuild version
 
-.. note::
-   ``vsc-base`` is installed automatically along with EasyBuild 3.x, if an installation procedure is used that
-   consumes the ``setup.py`` script that comes with the EasyBuild framework (e.g., EasyBuild or the EasyBuild
-   bootstrap script, ``pip``, ``easy_install``, ...)
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
+   <span class="s">``vsc-base``</span> is installed automatically along with EasyBuild 3.x, if an installation procedure is used that
+   consumes the <span class="s">``setup.py``</span> script that comes with the EasyBuild framework (e.g., EasyBuild or the EasyBuild
+   bootstrap script, <span class="s">``pip``</span>, <span class="s">``easy_install``</span>, ...)
 
-Other Python packages are optional dependencies, see :ref:`optional_python_packages`.
+Other Python packages are optional dependencies, see <span class="na">:ref:</span><span class="nv">`optional_python_packages`</span>.
 
-Optional dependencies
-~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Optional dependencies</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~</span>
 
 Some dependencies are optional and are only required to support certain features.
 
-.. _optional_python_packages:
+<span class="p">..</span> <span class="nt">_optional_python_packages:</span>
 
-Optional Python packages
-^^^^^^^^^^^^^^^^^^^^^^^^
+<span class="gh">Optional Python packages</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^</span>
 
-* `GC3Pie &lt;https://pypi.org/project/gc3pie&gt;`_, only needed when using `GC3Pie` as a backend for ``--job``,
-  see also :ref:`submitting_jobs`;
-* `GitPython &lt;http://gitorious.org/git-python&gt;`_, only needed if
+<span class="m">*</span> <span class="s">`GC3Pie </span><span class="si">&lt;https://pypi.org/project/gc3pie&gt;</span><span class="s">`_</span>, only needed when using <span class="nv">`GC3Pie`</span> as a backend for <span class="s">``--job``</span>,
+  see also <span class="na">:ref:</span><span class="nv">`submitting_jobs`</span>;
+<span class="m">*</span> <span class="s">`GitPython </span><span class="si">&lt;http://gitorious.org/git-python&gt;</span><span class="s">`_</span>, only needed if
   EasyBuild is hosted in a git repository or if you’re using a git
   repository for easyconfig files (.eb);
-* `graphviz for Python &lt;https://pypi.python.org/pypi/graphviz&gt;`_,
-  only needed for building nice-looking dependency graphs using ``--dep-graph *.pdf / *.png``;
-* `keyring &lt;https://pypi.org/project/keyring&gt;`_, only needed for securely storing a GitHub token
-  (see :ref:`integration_with_github`);
-* `pycodestyle &lt;https://pypi.org/project/pycodestyle&gt;`_,
-  only required for ``--check-style`` and ``--check-contrib``;
-* `pysvn &lt;http://pysvn.tigris.org/&gt;`_, only needed if you’re using an
+<span class="m">*</span> <span class="s">`graphviz for Python </span><span class="si">&lt;https://pypi.python.org/pypi/graphviz&gt;</span><span class="s">`_</span>,
+  only needed for building nice-looking dependency graphs using <span class="s">``--dep-graph *.pdf / *.png``</span>;
+<span class="m">*</span> <span class="s">`keyring </span><span class="si">&lt;https://pypi.org/project/keyring&gt;</span><span class="s">`_</span>, only needed for securely storing a GitHub token
+  (see <span class="na">:ref:</span><span class="nv">`integration_with_github`</span>);
+<span class="m">*</span> <span class="s">`pycodestyle </span><span class="si">&lt;https://pypi.org/project/pycodestyle&gt;</span><span class="s">`_</span>,
+  only required for <span class="s">``--check-style``</span> and <span class="s">``--check-contrib``</span>;
+<span class="m">*</span> <span class="s">`pysvn </span><span class="si">&lt;http://pysvn.tigris.org/&gt;</span><span class="s">`_</span>, only needed if you’re using an
   SVN repository for easyconfig files;
-* `python-graph-dot &lt;https://pypi.python.org/pypi/python-graph-dot/&gt;`_,
-  only needed for building nice-looking dependency graphs using ``--dep-graph *.dot``
-* `Rich &lt;https://pypi.org/project/rich/&gt;`_,
-  only needed to let ``eb`` produce rich output, like :ref:`progress_bars`;
+<span class="m">*</span> <span class="s">`python-graph-dot </span><span class="si">&lt;https://pypi.python.org/pypi/python-graph-dot/&gt;</span><span class="s">`_</span>,
+  only needed for building nice-looking dependency graphs using <span class="s">``--dep-graph *.dot``</span>
+<span class="m">*</span> <span class="s">`Rich </span><span class="si">&lt;https://pypi.org/project/rich/&gt;</span><span class="s">`_</span>,
+  only needed to let <span class="s">``eb``</span> produce rich output, like <span class="na">:ref:</span><span class="nv">`progress_bars`</span>;
 
-Sources
--------
+<span class="gh">Sources</span>
+<span class="gh">-------</span>
 
 EasyBuild is split up into three different packages, which are available
 from the Python Package Index (PyPi):
 
-* `easybuild-framework &lt;http://pypi.python.org/pypi/easybuild-framework&gt;`_ - the EasyBuild framework, which includes the
+<span class="m">*</span> <span class="s">`easybuild-framework </span><span class="si">&lt;http://pypi.python.org/pypi/easybuild-framework&gt;</span><span class="s">`_</span> - the EasyBuild framework, which includes the
   easybuild.framework and easybuild.tools Python packages that provide
   general support for building and installing software
-* `easybuild-easyblocks &lt;http://pypi.python.org/pypi/easybuild-easyblocks&gt;`_ - a collection of easyblocks that implement
+<span class="m">*</span> <span class="s">`easybuild-easyblocks </span><span class="si">&lt;http://pypi.python.org/pypi/easybuild-easyblocks&gt;</span><span class="s">`_</span> - a collection of easyblocks that implement
   support for building and installing (collections of) software
   packages
-* `easybuild-easyconfigs &lt;http://pypi.python.org/pypi/easybuild-easyconfigs&gt;`_ - a collection of example easyconfig files
+<span class="m">*</span> <span class="s">`easybuild-easyconfigs </span><span class="si">&lt;http://pypi.python.org/pypi/easybuild-easyconfigs&gt;</span><span class="s">`_</span> - a collection of example easyconfig files
   that specify which software to build, and using which build options;
   these easyconfigs will be well tested with the latest compatible
   versions of the easybuild-framework and easybuild-easyblocks packages
 
-Next to these packages, a meta-package named `easybuild &lt;http://pypi.python.org/pypi/easybuild&gt;`_ is also
+Next to these packages, a meta-package named <span class="s">`easybuild </span><span class="si">&lt;http://pypi.python.org/pypi/easybuild&gt;</span><span class="s">`_</span> is also
 available on PyPi, in order to easily install the full EasyBuild
 distribution.
 
 The source code for these packages is also available on GitHub:
 
-* `easybuild-framework git repository &lt;https://github.com/easybuilders/easybuild-framework&gt;`_
-* `easybuild-easyblocks git repository &lt;https://github.com/easybuilders/easybuild-easyblocks&gt;`_
-* `easybuild-easyconfigs git repository &lt;https://github.com/easybuilders/easybuild-easyconfigs&gt;`_
-* the `main EasyBuild repository &lt;https://github.com/easybuilders/easybuild&gt;`_ mainly hosts *this* EasyBuild documentation
+<span class="m">*</span> <span class="s">`easybuild-framework git repository </span><span class="si">&lt;https://github.com/easybuilders/easybuild-framework&gt;</span><span class="s">`_</span>
+<span class="m">*</span> <span class="s">`easybuild-easyblocks git repository </span><span class="si">&lt;https://github.com/easybuilders/easybuild-easyblocks&gt;</span><span class="s">`_</span>
+<span class="m">*</span> <span class="s">`easybuild-easyconfigs git repository </span><span class="si">&lt;https://github.com/easybuilders/easybuild-easyconfigs&gt;</span><span class="s">`_</span>
+<span class="m">*</span> the <span class="s">`main EasyBuild repository </span><span class="si">&lt;https://github.com/easybuilders/easybuild&gt;</span><span class="s">`_</span> mainly hosts <span class="ge">*this*</span> EasyBuild documentation
 
 
-In case of installation issues...
----------------------------------
+<span class="gh">In case of installation issues...</span>
+<span class="gh">---------------------------------</span>
 
-Should the installation of EasyBuild fail for you, `please open an issue`_
+Should the installation of EasyBuild fail for you, <span class="s">`please open an issue`_</span>
 to report the problems you&#39;re running into.
 
-How to collect info in case sanity checks fail or there is another issue
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">How to collect info in case sanity checks fail or there is another issue</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 In order to get a better understanding in which kind of environment
 you are using the bootstrap script, please copy-paste the commands below
 and provide the output in your problem report.
-**Do not worry if some of these commands fail or spit out error messages.**
+<span class="gs">**Do not worry if some of these commands fail or spit out error messages.**</span>
 
-.. code:: sh
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">sh</span>
 
     python -V
-    type module
-    type -f module
+    <span class="nb">type</span> module
+    <span class="nb">type</span> -f module
     module --version
     module av EasyBuild
     which -a eb
@@ -963,7 +963,7 @@ and provide the output in your problem report.
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
       
     
   </small>

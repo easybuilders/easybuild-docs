@@ -387,150 +387,150 @@ and you can help with that!
 </ul>
 <p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
 </div>
-<div class="highlight"><pre><span></span><code>.. _deprecated:
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_deprecated:</span>
 
-Deprecated functionality
-========================
+<span class="gh">Deprecated functionality</span>
+<span class="gh">========================</span>
 
-Some of the functionality that was available in previous EasyBuild versions is *deprecated*, and should no longer be used.
+Some of the functionality that was available in previous EasyBuild versions is <span class="ge">*deprecated*</span>, and should no longer be used.
 
-This functionality will be removed in a future version of EasyBuild (see :ref:`removed_functionality`
+This functionality will be removed in a future version of EasyBuild (see <span class="na">:ref:</span><span class="nv">`removed_functionality`</span>
 for more information about functionality that has been removed already).
 
 This page:
 
-* provides an :ref:`overview of currently deprecated functionality &lt;overview_deprecated&gt;` together with
+<span class="m">*</span> provides an <span class="na">:ref:</span><span class="nv">`overview of currently deprecated functionality &lt;overview_deprecated&gt;`</span> together with
   available alternatives
-* describes the :ref:`EasyBuild deprecation policy &lt;deprecation_policy&gt;`
-* explains how to easily :ref:`check whether you are still relying on deprecated functionality
+<span class="m">*</span> describes the <span class="na">:ref:</span><span class="nv">`EasyBuild deprecation policy &lt;deprecation_policy&gt;`</span>
+<span class="m">*</span> explains how to easily :ref:`check whether you are still relying on deprecated functionality
   &lt;how_to_check_use_of_deprecated_functionality&gt;`
 
-.. _overview_deprecated:
+<span class="p">..</span> <span class="nt">_overview_deprecated:</span>
 
-Overview of deprecated functionality in EasyBuild version |version|
--------------------------------------------------------------------
+<span class="gh">Overview of deprecated functionality in EasyBuild version |version|</span>
+<span class="gh">-------------------------------------------------------------------</span>
 
 The different section below document the functionality that is deprecated in EasyBuild version |version|,
 for which support will be removed in EasyBuild version 5.0.
 
 For EasyBuild users:
 
-* :ref:`depr_lmod6`
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`depr_lmod6`</span>
 
 For authors of easyconfig files:
 
-* :ref:`depr_dummy_toolchain`
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`depr_dummy_toolchain`</span>
 
 For developers of easyblocks:
 
-*(nothing yet)*
+<span class="ge">*(nothing yet)*</span>
 
 For EasyBuild framework developers:
 
-*(nothing yet)*
+<span class="ge">*(nothing yet)*</span>
 
-.. _depr_lmod6:
+<span class="p">..</span> <span class="nt">_depr_lmod6:</span>
 
-Support for using Lmod 6.x
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Support for using Lmod 6.x</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-* *deprecated since:* EasyBuild v4.1.0 (Nov&#39;19)
-* *removed in:* EasyBuild v5.0
-* *alternative(s)*: **use Lmod 7.x or more recent**
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v4.1.0 (Nov&#39;19)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v5.0
+<span class="m">*</span> <span class="ge">*alternative(s)*</span>: <span class="gs">**use Lmod 7.x or more recent**</span>
 
 Support for using Lmod 6.x as modules tool with EasyBuild has been deprecated,
 and will be removed in a future version of EasyBuild.
 
 
-.. _depr_dummy_toolchain:
+<span class="p">..</span> <span class="nt">_depr_dummy_toolchain:</span>
 
-``dummy`` toolchain
-~~~~~~~~~~~~~~~~~~~
+<span class="gh">``dummy`` toolchain</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~</span>
 
-* *deprecated since:* EasyBuild v4.0.0 (Sept&#39;19)
-* *removed in:* EasyBuild v5.0
-* *alternative(s)*: **use** ``system`` **toolchain instead**
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v4.0.0 (Sept&#39;19)
+<span class="m">*</span> <span class="ge">*removed in:*</span> EasyBuild v5.0
+<span class="m">*</span> <span class="ge">*alternative(s)*</span>: <span class="gs">**use**</span> <span class="s">``system``</span> <span class="gs">**toolchain instead**</span>
 
-The ``dummy`` toolchain is has been deprecated, and is replaced with the ``system`` toolchain.
+The <span class="s">``dummy``</span> toolchain is has been deprecated, and is replaced with the <span class="s">``system``</span> toolchain.
 
-For more information, see :ref:`system_toolchain`.
+For more information, see <span class="na">:ref:</span><span class="nv">`system_toolchain`</span>.
 
 
-.. _deprecation_policy:
+<span class="p">..</span> <span class="nt">_deprecation_policy:</span>
 
-Deprecation policy
-------------------
+<span class="gh">Deprecation policy</span>
+<span class="gh">------------------</span>
 
-With every EasyBuild release, we try very hard to maintain *backward compatibility*. That is, EasyBuild version ``X.Y``
-should still build software packages that could be built with EasyBuild version ``X.(Y-1)``, without requiring
+With every EasyBuild release, we try very hard to maintain <span class="ge">*backward compatibility*</span>. That is, EasyBuild version <span class="s">``X.Y``</span>
+should still build software packages that could be built with EasyBuild version <span class="s">``X.(Y-1)``</span>, without requiring
 modifications to the used easyconfig file or easyblock.
 
 However, every now and then a breaking change needs to be made to EasyBuild, because of design decisions or to resolve
-mistakes that were made in the past. These changes involve *deprecating* the behaviour or functionality we want to get
+mistakes that were made in the past. These changes involve <span class="ge">*deprecating*</span> the behaviour or functionality we want to get
 rid of, together with supporting a better alternative.
 
-**Deprecating functionaliy:**
+<span class="gs">**Deprecating functionaliy:**</span>
 
-* using a ``log.deprecated(&quot;msg&quot;, &#39;X.Y&#39;)`` statement in EasyBuild version ``X.(Y-n)`` a certain block of code is tagged
-  as *deprecated*, indicating that the corresponding functionality will no longer be supported in EasyBuild version
-  ``X.Y``; for example, to deprecate the use of the ``makeopts`` easyconfig parameter with EasyBuild v2.0::
+<span class="m">*</span> using a <span class="s">``log.deprecated(&quot;msg&quot;, &#39;X.Y&#39;)``</span> statement in EasyBuild version <span class="s">``X.(Y-n)``</span> a certain block of code is tagged
+  as <span class="ge">*deprecated*</span>, indicating that the corresponding functionality will no longer be supported in EasyBuild version
+  <span class="s">``X.Y``</span>; for example, to deprecate the use of the <span class="s">``makeopts``</span> easyconfig parameter with EasyBuild v2.0<span class="se">::</span>
 
-    if self.cfg[&#39;makeopts&#39;]:
-        self.log.deprecated(&quot;Easyconfig parameter &#39;makeopts&#39; is deprecated, use &#39;buildopts&#39; instead&quot;, &#39;2.0&#39;)
+<span class="s">    if self.cfg[&#39;makeopts&#39;]:</span>
+<span class="s">        self.log.deprecated(&quot;Easyconfig parameter &#39;makeopts&#39; is deprecated, use &#39;buildopts&#39; instead&quot;, &#39;2.0&#39;)</span>
 
-* until EasyBuild version ``X.Y``, the deprecation log message will manifest itself as a *warning*, highlighting the use
+<span class="m">*</span> until EasyBuild version <span class="s">``X.Y``</span>, the deprecation log message will manifest itself as a <span class="ge">*warning*</span>, highlighting the use
   of deprecated functionality; for example::
 
     == 2014-12-16 16:29:07,906 main.easyconfig.easyconfig WARNING Deprecated functionality, will no longer work in v2.0:
     Easyconfig parameter &#39;makeopts&#39; is deprecated, use &#39;buildopts&#39; instead;
     see http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html for more information
 
-**Removing support for deprecated behavior:**
+<span class="gs">**Removing support for deprecated behavior:**</span>
 
-* starting with EasyBuild version ``X.Y``, the deprecation log message will result in an *error*,
-  indicating that the deprecated behavior is no longer supported; for example::
+<span class="m">*</span> starting with EasyBuild version <span class="s">``X.Y``</span>, the deprecation log message will result in an <span class="ge">*error*</span>,
+  indicating that the deprecated behavior is no longer supported; for example<span class="se">::</span>
 
-    ERROR: EasyBuild encountered an exception (at easybuild/framework/easyconfig/easyconfig.py:937 in process_easyconfig):
-    Failed to process easyconfig /home/example/gzip-1.5-goolf-1.4.10.eb:
-    DEPRECATED (since v2.0) functionality used: Easyconfig parameter &#39;makeopts&#39; is deprecated, use &#39;buildopts&#39; instead;
-    see http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html for more information.
+<span class="s">    ERROR: EasyBuild encountered an exception (at easybuild/framework/easyconfig/easyconfig.py:937 in process_easyconfig):</span>
+<span class="s">    Failed to process easyconfig /home/example/gzip-1.5-goolf-1.4.10.eb:</span>
+<span class="s">    DEPRECATED (since v2.0) functionality used: Easyconfig parameter &#39;makeopts&#39; is deprecated, use &#39;buildopts&#39; instead;</span>
+<span class="s">    see http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html for more information.</span>
 
-* the code supporting the deprecated functionality is *removed* in EasyBuild version ``X.(Y+1)`` (i.e., the first
-  non-bugfix-only release after version ``X.Y``), see also :ref:`removed_functionality`
+<span class="m">*</span> the code supporting the deprecated functionality is <span class="ge">*removed*</span> in EasyBuild version <span class="s">``X.(Y+1)``</span> (i.e., the first
+  non-bugfix-only release after version <span class="s">``X.Y``</span>), see also <span class="na">:ref:</span><span class="nv">`removed_functionality`</span>
 
-* until EasyBuild version ``X.(Y+1)``, the code supporting the deprecated functionality will still be available; using
-  the ``--deprecated`` command line option (or, equivalently, the ``$EASYBUILD_DEPRECATED`` environment variable), the
-  deprecated functionality can be reactivated by specifying a *lower* version; for example, to avoid running into an
-  error with EasyBuild v2.0 for functionality that was deprecated for EasyBuild v2.0::
+<span class="m">*</span> until EasyBuild version <span class="s">``X.(Y+1)``</span>, the code supporting the deprecated functionality will still be available; using
+  the <span class="s">``--deprecated``</span> command line option (or, equivalently, the <span class="s">``$EASYBUILD_DEPRECATED``</span> environment variable), the
+  deprecated functionality can be reactivated by specifying a <span class="ge">*lower*</span> version; for example, to avoid running into an
+  error with EasyBuild v2.0 for functionality that was deprecated for EasyBuild v2.0<span class="se">::</span>
 
-    eb gzip-1.5-goolf-1.4.10.eb --deprecated=1.0
+<span class="s">    eb gzip-1.5-goolf-1.4.10.eb --deprecated=1.0</span>
 
 
-.. _how_to_check_use_of_deprecated_functionality:
+<span class="p">..</span> <span class="nt">_how_to_check_use_of_deprecated_functionality:</span>
 
-How to check for use of deprecated functionality
-------------------------------------------------
+<span class="gh">How to check for use of deprecated functionality</span>
+<span class="gh">------------------------------------------------</span>
 
-Since EasyBuild v1.16.0, the ``--deprecated`` command line option can be used to check whether deprecated behavior is
+Since EasyBuild v1.16.0, the <span class="s">``--deprecated``</span> command line option can be used to check whether deprecated behavior is
 still being triggered in your EasyBuild setup.
 
-For example, using ``--deprecated=5.0`` with EasyBuild v4.x will transform any deprecation warning for functionality that
-will no longer be supported in EasyBuild v5.0 into an error message. For example::
+For example, using <span class="s">``--deprecated=5.0``</span> with EasyBuild v4.x will transform any deprecation warning for functionality that
+will no longer be supported in EasyBuild v5.0 into an error message. For example<span class="se">::</span>
 
-  $ eb test.eb --deprecated=5.0
-  == temporary log file in case of crash /tmp/easybuild-WWalWX/easybuild-aoL9Nd.log
-  ERROR: Failed to process easyconfig /home/example/test.eb:
-  DEPRECATED (since v5.0) functionality used: Use of &#39;dummy&#39; toolchain is deprecated, use &#39;system&#39; toolchain instead;
-  see http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html for more information
-  be used; see http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html for more information
+<span class="s">  $ eb test.eb --deprecated=5.0</span>
+<span class="s">  == temporary log file in case of crash /tmp/easybuild-WWalWX/easybuild-aoL9Nd.log</span>
+<span class="s">  ERROR: Failed to process easyconfig /home/example/test.eb:</span>
+<span class="s">  DEPRECATED (since v5.0) functionality used: Use of &#39;dummy&#39; toolchain is deprecated, use &#39;system&#39; toolchain instead;</span>
+<span class="s">  see http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html for more information</span>
+<span class="s">  be used; see http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html for more information</span>
 
 
-.. tip:: Define ``deprecated`` to the next major EasyBuild version in one of your EasyBuild configuration files
-         (see :ref:`configuration_file`) or by defining ``$EASYBUILD_DEPRECATED=5.0``, to ensure you are made aware
+<span class="p">..</span> <span class="ow">tip</span><span class="p">::</span> Define <span class="s">``deprecated``</span> to the next major EasyBuild version in one of your EasyBuild configuration files
+         (see <span class="na">:ref:</span><span class="nv">`configuration_file`</span>) or by defining <span class="s">``$EASYBUILD_DEPRECATED=5.0``</span>, to ensure you are made aware
          of deprecated behavior as early as possible.
 
          You can (temporarily) still rely on the deprecated functionality by
-         specifying a *lower* version via ``--deprecated`` to overrule that setting, until the
+         specifying a <span class="ge">*lower*</span> version via <span class="s">``--deprecated``</span> to overrule that setting, until the
          functionality is actually disabled.
 </code></pre></div>
 
@@ -539,7 +539,7 @@ will no longer be supported in EasyBuild v5.0 into an error message. For example
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
       
     
   </small>

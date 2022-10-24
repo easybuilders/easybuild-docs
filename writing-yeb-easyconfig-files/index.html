@@ -386,376 +386,376 @@ and you can help with that!
 </ul>
 <p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
 </div>
-<div class="highlight"><pre><span></span><code>.. _easyconfig_yeb_format:
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_easyconfig_yeb_format:</span>
 
-Writing easyconfig files in YAML syntax (``.yeb`` format) **[IN DEVELOPMENT]**
-==============================================================================
+<span class="gh">Writing easyconfig files in YAML syntax (``.yeb`` format) **[IN DEVELOPMENT]**</span>
+<span class="gh">==============================================================================</span>
 
-.. note::
-    Because support for easyconfig files in YAML syntax (a.k.a. ``.yeb`` files) is still *in development*,
-    using them currently requires enabling the use of experimental features (``--experimental``),
-    see also :ref:`experimental_features` .
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
+    Because support for easyconfig files in YAML syntax (a.k.a. <span class="s">``.yeb``</span> files) is still <span class="ge">*in development*</span>,
+    using them currently requires enabling the use of experimental features (<span class="s">``--experimental``</span>),
+    see also <span class="na">:ref:</span><span class="nv">`experimental_features`</span> .
 
-    An up-to-date overview of current progress on support for ``.yeb`` easyconfigs is available at
+    An up-to-date overview of current progress on support for <span class="s">``.yeb``</span> easyconfigs is available at
     https://github.com/easybuilders/easybuild-framework/issues/1407.
 
 Useful links:
 
-* YAML syntax specification: http://www.yaml.org/spec/1.2/spec.html
+<span class="m">*</span> YAML syntax specification: http://www.yaml.org/spec/1.2/spec.html
 
-.. contents::
-    :depth: 3
-    :backlinks: none
+<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
+    <span class="nc">:depth:</span> 3
+    <span class="nc">:backlinks:</span> none
 
-.. _easyconfig_yeb_format_requirements:
+<span class="p">..</span> <span class="nt">_easyconfig_yeb_format_requirements:</span>
 
-Requirements
-------------
+<span class="gh">Requirements</span>
+<span class="gh">------------</span>
 
-To use ``.yeb`` easyconfigs, you need to have:
+To use <span class="s">``.yeb``</span> easyconfigs, you need to have:
 
-* an EasyBuild (development) version which is aware of the ``.yeb`` format (i.e., version 2.3.0dev or higher)
-* `PyYAML &lt;https://pypi.python.org/pypi/PyYAML&gt;`_ installed and available in your Python search path
-  (via ``$PYTHONPATH`` for example), such that ``import yaml`` works
+<span class="m">*</span> an EasyBuild (development) version which is aware of the <span class="s">``.yeb``</span> format (i.e., version 2.3.0dev or higher)
+<span class="m">*</span> <span class="s">`PyYAML </span><span class="si">&lt;https://pypi.python.org/pypi/PyYAML&gt;</span><span class="s">`_</span> installed and available in your Python search path
+  (via <span class="s">``$PYTHONPATH``</span> for example), such that <span class="s">``import yaml``</span> works
 
-.. _easyconfig_yeb_format_syntax:
+<span class="p">..</span> <span class="nt">_easyconfig_yeb_format_syntax:</span>
 
-Syntax
-------
+<span class="gh">Syntax</span>
+<span class="gh">------</span>
 
-.. _easyconfig_yeb_format_syntax_YAML_header:
+<span class="p">..</span> <span class="nt">_easyconfig_yeb_format_syntax_YAML_header:</span>
 
-YAML header (optional)
-~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">YAML header (optional)</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~</span>
 
 Easyconfig files in YAML syntax can start with a standard YAML header.
 
 It consists of two lines:
 
-* a line with a &#39;``%YAML``&#39; *directive* which also indicates the YAML version being used
+<span class="m">*</span> a line with a &#39;<span class="s">``%YAML``</span>&#39; <span class="ge">*directive*</span> which also indicates the YAML version being used
   (the latest YAML version is 1.2, and dates from 2009);
-* followed by a *document marker* line &#39;``---``&#39; (which is used to separate directives from content)
+<span class="m">*</span> followed by a <span class="ge">*document marker*</span> line &#39;<span class="s">``---``</span>&#39; (which is used to separate directives from content)
 
-For example::
+For example<span class="se">::</span>
 
-    %YAML 1.2
-    ---
+<span class="s">    %YAML 1.2</span>
+<span class="s">    ---</span>
 
 This header is optional, but we recommend including it; one advantage is that editor will use proper syntax
-highlighting for YAML when the ``%YAML`` directory is included.
+highlighting for YAML when the <span class="s">``%YAML``</span> directory is included.
 
-.. _easyconfig_yeb_format_syntax_comments:
+<span class="p">..</span> <span class="nt">_easyconfig_yeb_format_syntax_comments:</span>
 
-Comments
-~~~~~~~~
+<span class="gh">Comments</span>
+<span class="gh">~~~~~~~~</span>
 
-Comments can be included anywhere, and are prefixed with a hash character ``#``::
+Comments can be included anywhere, and are prefixed with a hash character <span class="s">``#``</span><span class="se">::</span>
 
-    # this is a comment
+<span class="s">    # this is a comment</span>
 
 
-.. _easyconfig_yeb_format_syntax_internal_variables:
+<span class="p">..</span> <span class="nt">_easyconfig_yeb_format_syntax_internal_variables:</span>
 
-Internal variables
-~~~~~~~~~~~~~~~~~~
+<span class="gh">Internal variables</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~</span>
 
 To define and use temporary/internal variables in easyconfig files, which can be useful to avoid hardcoding (partial)
 easyconfig parameter values, the YAML anchor/alias functionality can be used
 (see also http://www.yaml.org/spec/1.2/spec.html#id2765878).
 
-A value can be marked for future reference via an *anchor*, using the ampersand character &#39;``&amp;``&#39;.
-Referring to it later is done using an asterisk character &#39;``*``&#39;.
+A value can be marked for future reference via an <span class="ge">*anchor*</span>, using the ampersand character &#39;<span class="s">``&amp;``</span>&#39;.
+Referring to it later is done using an asterisk character &#39;<span class="s">``*``</span>&#39;.
 
-Typically, internal variables are defined at the top of the ``.yeb`` easyconfig file using a list named
-``_internal_variables_``, but this is just a matter of style; anchors can be defined throughout the entire file if
+Typically, internal variables are defined at the top of the <span class="s">``.yeb``</span> easyconfig file using a list named
+<span class="s">``_internal_variables_``</span>, but this is just a matter of style; anchors can be defined throughout the entire file if
 desired.
 
-For example, referring to the Python version being used in both the ``versionsuffix`` and list of dependencies can
-be done as follows::
+For example, referring to the Python version being used in both the <span class="s">``versionsuffix``</span> and list of dependencies can
+be done as follows<span class="se">::</span>
 
-    _internal_variables_:
-        - &amp;pyver 2.7.10
+<span class="s">    _internal_variables_:</span>
+<span class="s">        - &amp;pyver 2.7.10</span>
 
-    versionsuffix: !join [-Python-, *pyver]
-    dependencies:
-        - [Python, *pyver]
+<span class="s">    versionsuffix: !join [-Python-, *pyver]</span>
+<span class="s">    dependencies:</span>
+<span class="s">        - [Python, *pyver]</span>
 
-In this example, the ``!join`` is used to concatenate two string values,
-see also :ref:`easyconfig_yeb_format_syntax_string_concatenation`.
+In this example, the <span class="s">``!join``</span> is used to concatenate two string values,
+see also <span class="na">:ref:</span><span class="nv">`easyconfig_yeb_format_syntax_string_concatenation`</span>.
 
-A more elaborate example of this is the :ref:`easyconfig_yeb_format_examples_goolf1410` example easyconfig.
+A more elaborate example of this is the <span class="na">:ref:</span><span class="nv">`easyconfig_yeb_format_examples_goolf1410`</span> example easyconfig.
 
 
-.. _easyconfig_yeb_format_syntax_string_concatenation:
+<span class="p">..</span> <span class="nt">_easyconfig_yeb_format_syntax_string_concatenation:</span>
 
-Concatenating strings and/or variables
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Concatenating strings and/or variables</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 The standard YAML format does not support the notion of string concatenation.
 
 Since concatenating string values is a common pattern in easyconfig files, the EasyBuild framework
-defines the ``!join`` operator to support this.
+defines the <span class="s">``!join``</span> operator to support this.
 
-For example, defining a ``versionsuffix`` that contains the Python version being used (which may be referred to
-elsewhere too) can be done as follows::
+For example, defining a <span class="s">``versionsuffix``</span> that contains the Python version being used (which may be referred to
+elsewhere too) can be done as follows<span class="se">::</span>
 
-    _internal_variables_:
-        - &amp;pyver 2.7.10
+<span class="s">    _internal_variables_:</span>
+<span class="s">        - &amp;pyver 2.7.10</span>
 
-    versionsuffix: !join [-Python-, *pyver]
+<span class="s">    versionsuffix: !join [-Python-, *pyver]</span>
 
 
-.. _easyconfig_yeb_format_syntax_escaping:
+<span class="p">..</span> <span class="nt">_easyconfig_yeb_format_syntax_escaping:</span>
 
-Escaping string values with single or double quotes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Escaping string values with single or double quotes</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 Strings in YAML can be unquoted. However, when they contain special characters they need to be escaped by either single-
 or double-quoting the string.
 
-Special characters that require single quotes are: `:` `{` `}` `[` `]` `,` `&amp;` `*` `#` `?` `|` `-` `&lt;` `&gt;` `=` `!` `%` `@` and `\``.
+Special characters that require single quotes are: <span class="nv">`:`</span> <span class="nv">`{`</span> <span class="nv">`}`</span> <span class="nv">`[`</span> <span class="nv">`]`</span> <span class="nv">`,`</span> <span class="nv">`&amp;`</span> <span class="nv">`*`</span> <span class="nv">`#`</span> <span class="nv">`?`</span> <span class="nv">`|`</span> <span class="nv">`-`</span> <span class="nv">`&lt;`</span> <span class="nv">`&gt;`</span> <span class="nv">`=`</span> <span class="nv">`!`</span> <span class="nv">`%`</span> <span class="nv">`@`</span> and <span class="nv">`\`</span>`.
 When using single-quoted strings, any single quote inside the string must be doubled to escape it.
 
-If the string contains control characters such as `\n`, it must be escaped with double quotes. 
+If the string contains control characters such as <span class="nv">`\n`</span>, it must be escaped with double quotes. 
 
 
-.. _easyconfig_yeb_format_syntax_easyconfig_parameters:
+<span class="p">..</span> <span class="nt">_easyconfig_yeb_format_syntax_easyconfig_parameters:</span>
 
-Easyconfig parameter values
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Easyconfig parameter values</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-To define an easyconfig parameter, simply use ``&lt;key&gt;: &lt;value&gt;`` (i.e., use a colon ``:`` as a separator).
+To define an easyconfig parameter, simply use <span class="s">``&lt;key&gt;: &lt;value&gt;``</span> (i.e., use a colon <span class="s">``:``</span> as a separator).
 
-In YAML terminology, an easyconfig file is expressed as a *mapping*, with easyconfig parameters as keys.
+In YAML terminology, an easyconfig file is expressed as a <span class="ge">*mapping*</span>, with easyconfig parameters as keys.
 
-Three types of values (*nodes*) are supported: *scalars* (strings, integers), *sequences* (lists) and *mappings*
+Three types of values (<span class="ge">*nodes*</span>) are supported: <span class="ge">*scalars*</span> (strings, integers), <span class="ge">*sequences*</span> (lists) and <span class="ge">*mappings*</span>
 (dictionaries).
 
-.. _easyconfig_yeb_format_syntax_scalars:
+<span class="p">..</span> <span class="nt">_easyconfig_yeb_format_syntax_scalars:</span>
 
-Scalar values
-#############
+<span class="gh">Scalar values</span>
+<span class="gh">#############</span>
 
 Using scalar values is straight-forward, no special syntax is required.
 
 For string values, no quotes must be used (in general).
-However, quotes are sometimes required to escape characters that have special meaning in YAML (like &#39;``:``&#39;).
-(Also see: :ref:`easyconfig_yeb_format_syntax_escaping`)
+However, quotes are sometimes required to escape characters that have special meaning in YAML (like &#39;<span class="s">``:``</span>&#39;).
+(Also see: <span class="na">:ref:</span><span class="nv">`easyconfig_yeb_format_syntax_escaping`</span>)
 It&#39;s worth noting that there&#39;s a subtle difference between using single and double quotes, see
-`Flow Scalar Styles &lt;http://www.yaml.org/spec/1.2/spec.html#id2786942&gt;`_.
+<span class="s">`Flow Scalar Styles </span><span class="si">&lt;http://www.yaml.org/spec/1.2/spec.html#id2786942&gt;</span><span class="s">`_</span>.
 
-Examples::
+Examples<span class="se">::</span>
 
-    name: gzip
-    version: 1.6
+<span class="s">    name: gzip</span>
+<span class="s">    version: 1.6</span>
 
-    # single quotes are required for string values representing URLs, to escape the &#39;:&#39;
-    homepage: &#39;http://www.gnu.org/software/gzip/&#39;
+<span class="s">    # single quotes are required for string values representing URLs, to escape the &#39;:&#39;</span>
+<span class="s">    homepage: &#39;http://www.gnu.org/software/gzip/&#39;</span>
 
-    parallel: 1
+<span class="s">    parallel: 1</span>
 
-Multiline strings can be expressed using indentation::
+Multiline strings can be expressed using indentation<span class="se">::</span>
 
-    description:
-        gzip is a popular data compression program
-        as a replacement for compress
+<span class="s">    description:</span>
+<span class="s">        gzip is a popular data compression program</span>
+<span class="s">        as a replacement for compress</span>
 
-.. _easyconfig_yeb_format_syntax_sequences:
+<span class="p">..</span> <span class="nt">_easyconfig_yeb_format_syntax_sequences:</span>
 
-Sequences
-#########
+<span class="gh">Sequences</span>
+<span class="gh">#########</span>
 
 Sequence values (a.k.a. lists) can be expressed in different ways, depending on their size.
 
 If there are a limited number of (short) entries the value can be expressed on a single line,
-using square brackets &#39;``[``&#39; &#39;``]``&#39; and with comma &#39;``,``&#39; as separator.
+using square brackets &#39;<span class="s">``[``</span>&#39; &#39;<span class="s">``]``</span>&#39; and with comma &#39;<span class="s">``,``</span>&#39; as separator.
 
-Example::
+Example<span class="se">::</span>
 
-    # quotes are required to escape the &#39;:&#39;
-    source_urls: [&#39;http://ftpmirror.gnu.org/gzip/&#39;, &#39;ftp://ftp.gnu.org/gnu/gzip/&#39;]
+<span class="s">    # quotes are required to escape the &#39;:&#39;</span>
+<span class="s">    source_urls: [&#39;http://ftpmirror.gnu.org/gzip/&#39;, &#39;ftp://ftp.gnu.org/gnu/gzip/&#39;]</span>
 
 Alternatively indentation can be used for scope, with each entry on its own line,
-indicated with a dash and a space ``- ``.
+indicated with a dash and a space <span class="s">``- ``</span>.
 
-Example::
+Example<span class="se">::</span>
 
-    # no quotes required here, since there&#39;s no ambiguity w.r.t. &#39;:&#39;
-    source_urls:
-        - http://ftpmirror.gnu.org/gzip/
-        - http://ftp.gnu.org/gnu/gzip/
-        - ftp://ftp.gnu.org/gnu/gzip/
+<span class="s">    # no quotes required here, since there&#39;s no ambiguity w.r.t. &#39;:&#39;</span>
+<span class="s">    source_urls:</span>
+<span class="s">        - http://ftpmirror.gnu.org/gzip/</span>
+<span class="s">        - http://ftp.gnu.org/gnu/gzip/</span>
+<span class="s">        - ftp://ftp.gnu.org/gnu/gzip/</span>
 
-.. _easyconfig_yeb_format_syntax_mappings:
+<span class="p">..</span> <span class="nt">_easyconfig_yeb_format_syntax_mappings:</span>
 
-Mappings
-########
+<span class="gh">Mappings</span>
+<span class="gh">########</span>
 
-Mapping values (a.k.a. dictionaries) are expressed using a colon &#39;``:``&#39; and space as key-value separator,
-a comma &#39;``,``&#39; to key-value pairs, and curly braces &#39;``{``&#39; &#39;``}``&#39; to mark the start/end.
+Mapping values (a.k.a. dictionaries) are expressed using a colon &#39;<span class="s">``:``</span>&#39; and space as key-value separator,
+a comma &#39;<span class="s">``,``</span>&#39; to key-value pairs, and curly braces &#39;<span class="s">``{``</span>&#39; &#39;<span class="s">``}``</span>&#39; to mark the start/end.
 
-For example::
+For example<span class="se">::</span>
 
-    toolchain: {name: intel, version: 2015b}
+<span class="s">    toolchain: {name: intel, version: 2015b}</span>
 
-.. _easyconfig_yeb_format_syntax_nesting:
+<span class="p">..</span> <span class="nt">_easyconfig_yeb_format_syntax_nesting:</span>
 
-Nesting
-#######
+<span class="gh">Nesting</span>
+<span class="gh">#######</span>
 
 Different types of values can be nested.
 
-For example, sequence values can be used in a mapping::
+For example, sequence values can be used in a mapping<span class="se">::</span>
 
-    sanity_check_paths: {
-        files: [bin/gunzip, bin/gzip, bin/uncompress],
-        dirs: [],
-    }
+<span class="s">    sanity_check_paths: {</span>
+<span class="s">        files: [bin/gunzip, bin/gzip, bin/uncompress],</span>
+<span class="s">        dirs: [],</span>
+<span class="s">    }</span>
 
-And sequences of sequences are also supported::
+And sequences of sequences are also supported<span class="se">::</span>
 
-    osdependencies
-        - zlib
-        - [openssl-devel, libssl-dev, libopenssl-devel]
+<span class="s">    osdependencies</span>
+<span class="s">        - zlib</span>
+<span class="s">        - [openssl-devel, libssl-dev, libopenssl-devel]</span>
 
 
-.. _easyconfig_yeb_format_syntax_template_values_constants:
+<span class="p">..</span> <span class="nt">_easyconfig_yeb_format_syntax_template_values_constants:</span>
 
-Templates values and constants
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Templates values and constants</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-Template values can be specified as a part of string values, using ``%(template_name)``.
+Template values can be specified as a part of string values, using <span class="s">``%(template_name)``</span>.
 
-Template constants are injected by the easyconfig ``.yeb`` parser as *node anchors*,
-and can be referred to with an *alias node*, i.e. using an asterisk ``*``.
+Template constants are injected by the easyconfig <span class="s">``.yeb``</span> parser as <span class="ge">*node anchors*</span>,
+and can be referred to with an <span class="ge">*alias node*</span>, i.e. using an asterisk <span class="s">``*``</span>.
 
-For example::
+For example<span class="se">::</span>
 
-    source_urls: [*GNU_SOURCE]
-    sources: [&#39;%(name)s-%(version)s.tar.gz&#39;]  # equivalent with [*SOURCE_TAR_GZ]
+<span class="s">    source_urls: [*GNU_SOURCE]</span>
+<span class="s">    sources: [&#39;%(name)s-%(version)s.tar.gz&#39;]  # equivalent with [*SOURCE_TAR_GZ]</span>
 
-See also :ref:`easyconfig_param_templates`.
+See also <span class="na">:ref:</span><span class="nv">`easyconfig_param_templates`</span>.
 
-.. _easyconfig_yeb_format_syntax_dependencies:
+<span class="p">..</span> <span class="nt">_easyconfig_yeb_format_syntax_dependencies:</span>
 
-Dependencies
-~~~~~~~~~~~~
+<span class="gh">Dependencies</span>
+<span class="gh">~~~~~~~~~~~~</span>
 
-We updated the way dependencies are specified to match with the new toolchain format (:ref:`easyconfig_yeb_format_new`)
+We updated the way dependencies are specified to match with the new toolchain format (<span class="na">:ref:</span><span class="nv">`easyconfig_yeb_format_new`</span>)
 The format is a bit more verbose than before, but easier to read. Each dependency is a list entry, indicated by a dash
-and space (`- `). Each entry can specify a ``name: version`` key-value pair, and a ``versionsuffix`` and ``toolchain``.
-Only the ``name: version`` pair is required.
+and space (<span class="nv">`- `</span>). Each entry can specify a <span class="s">``name: version``</span> key-value pair, and a <span class="s">``versionsuffix``</span> and <span class="s">``toolchain``</span>.
+Only the <span class="s">``name: version``</span> pair is required.
 
-Dependencies can also be external modules. In this case, the dependency has to be specified with a ``name`` and the marker 
-``external_module: True``. The boolean value is not case-sensitive.
+Dependencies can also be external modules. In this case, the dependency has to be specified with a <span class="s">``name``</span> and the marker 
+<span class="s">``external_module: True``</span>. The boolean value is not case-sensitive.
 
 
-A straightforward example::
+A straightforward example<span class="se">::</span>
 
-    dependencies:
-        - libreadline: 6.3
-        - Tcl: 8.6.4
-        - name: fftw/3.3.4.4
-          external_module: True
+<span class="s">    dependencies:</span>
+<span class="s">        - libreadline: 6.3</span>
+<span class="s">        - Tcl: 8.6.4</span>
+<span class="s">        - name: fftw/3.3.4.4</span>
+<span class="s">          external_module: True</span>
 
-    builddependencies:
-        # empty versionsuffix, different toolchain (GCC/4.9.2)
-        - CMake: 3.2.2
-          toolchain: GCC, 4.9.2
+<span class="s">    builddependencies:</span>
+<span class="s">        # empty versionsuffix, different toolchain (GCC/4.9.2)</span>
+<span class="s">        - CMake: 3.2.2</span>
+<span class="s">          toolchain: GCC, 4.9.2</span>
 
-A more complicated example from a toolchain easyconfig, where also the ``!join`` operator
-(see :ref:`easyconfig_yeb_format_syntax_string_concatenation`) and internal variables
-(see :ref:`easyconfig_yeb_format_syntax_internal_variables`) are used::
+A more complicated example from a toolchain easyconfig, where also the <span class="s">``!join``</span> operator
+(see <span class="na">:ref:</span><span class="nv">`easyconfig_yeb_format_syntax_string_concatenation`</span>) and internal variables
+(see <span class="na">:ref:</span><span class="nv">`easyconfig_yeb_format_syntax_internal_variables`</span>) are used<span class="se">::</span>
 
-    _internal_variables_:
-        - &amp;comp_name GCC
-        - &amp;comp_version 4.7.2
-        - &amp;comp [*comp_name, *comp_version]
+<span class="s">    _internal_variables_:</span>
+<span class="s">        - &amp;comp_name GCC</span>
+<span class="s">        - &amp;comp_version 4.7.2</span>
+<span class="s">        - &amp;comp [*comp_name, *comp_version]</span>
 
-        - &amp;blaslib OpenBLAS
-        - &amp;blasver 0.2.6
-        - &amp;blas !join [*blaslib, -, *blasver]
-        - &amp;blas_suff -LAPACK-3.4.2
+<span class="s">        - &amp;blaslib OpenBLAS</span>
+<span class="s">        - &amp;blasver 0.2.6</span>
+<span class="s">        - &amp;blas !join [*blaslib, -, *blasver]</span>
+<span class="s">        - &amp;blas_suff -LAPACK-3.4.2</span>
 
-        - &amp;comp_mpi_tc [gompi, 1.4.10]
+<span class="s">        - &amp;comp_mpi_tc [gompi, 1.4.10]</span>
 
-    dependencies:
-        - *comp_name: *comp_version
-        - OpenMPI: 1.6.4
-          toolchain: *comp
-        - *blaslib: *blasver
-          versionsuffix: *blas_suff
-          toolchain: *comp_mpi_tc
-        - FFTW: 3.3.3
-          toolchain: *comp_mpi_tc
-        - ScaLAPACK: 2.0.2
-          versionsuffix: !join [-, *blas, *blas_suff]
-          toolchain: *comp_mpi_tc
+<span class="s">    dependencies:</span>
+<span class="s">        - *comp_name: *comp_version</span>
+<span class="s">        - OpenMPI: 1.6.4</span>
+<span class="s">          toolchain: *comp</span>
+<span class="s">        - *blaslib: *blasver</span>
+<span class="s">          versionsuffix: *blas_suff</span>
+<span class="s">          toolchain: *comp_mpi_tc</span>
+<span class="s">        - FFTW: 3.3.3</span>
+<span class="s">          toolchain: *comp_mpi_tc</span>
+<span class="s">        - ScaLAPACK: 2.0.2</span>
+<span class="s">          versionsuffix: !join [-, *blas, *blas_suff]</span>
+<span class="s">          toolchain: *comp_mpi_tc</span>
 
-For the full version of this easyconfig file, see the example ``.yeb`` easyconfig
-:ref:`easyconfig_yeb_format_examples_goolf1410`.
+For the full version of this easyconfig file, see the example <span class="s">``.yeb``</span> easyconfig
+<span class="na">:ref:</span><span class="nv">`easyconfig_yeb_format_examples_goolf1410`</span>.
 
-.. _easyconfig_yeb_format_new:
+<span class="p">..</span> <span class="nt">_easyconfig_yeb_format_new:</span>
 
-OS dependencies and sanity check paths
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">OS dependencies and sanity check paths</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-To specify parameters that used to contain tuples such as ``osdependencies`` and ``sanity_check_paths``, simply use
+To specify parameters that used to contain tuples such as <span class="s">``osdependencies``</span> and <span class="s">``sanity_check_paths``</span>, simply use
 lists (sequences) instead of tuples.
 
-For example::
+For example<span class="se">::</span>
 
-    # note: this is eb syntax, will not work in .yeb files
-    osdependencies = [(&#39;openssl-devel&#39;, &#39;libssl-dev&#39;, &#39;libopenssl-devel&#39;)]
+<span class="s">    # note: this is eb syntax, will not work in .yeb files</span>
+<span class="s">    osdependencies = [(&#39;openssl-devel&#39;, &#39;libssl-dev&#39;, &#39;libopenssl-devel&#39;)]</span>
 
-Becomes::
+Becomes<span class="se">::</span>
 
-    osdependencies: [[openssl-devel, libssl-dev, libopenssl-devel]] 
+<span class="s">    osdependencies: [[openssl-devel, libssl-dev, libopenssl-devel]] </span>
 
-And::
+And<span class="se">::</span>
 
-    # note: this is eb syntax, will not work in .yeb files
-    sanity_check_paths = {
-        &#39;files&#39;: [&#39;fileA&#39;, (&#39;fileB&#39;, &#39;fileC&#39;)],
-        &#39;dirs&#39; : [&#39;dirA&#39;, &#39;dirB&#39;],
-    }
+<span class="s">    # note: this is eb syntax, will not work in .yeb files</span>
+<span class="s">    sanity_check_paths = {</span>
+<span class="s">        &#39;files&#39;: [&#39;fileA&#39;, (&#39;fileB&#39;, &#39;fileC&#39;)],</span>
+<span class="s">        &#39;dirs&#39; : [&#39;dirA&#39;, &#39;dirB&#39;],</span>
+<span class="s">    }</span>
 
-Becomes::
+Becomes<span class="se">::</span>
 
-    sanity_check_paths: {
-        files: [fileA, [fileB, fileC]],
-        dirs: [dirA, dirB]
-    }
+<span class="s">    sanity_check_paths: {</span>
+<span class="s">        files: [fileA, [fileB, fileC]],</span>
+<span class="s">        dirs: [dirA, dirB]</span>
+<span class="s">    }</span>
 
-Shorthands for common easyconfig parameters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Shorthands for common easyconfig parameters</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-Toolchain format
-################
+<span class="gh">Toolchain format</span>
+<span class="gh">################</span>
 
-The easyconfig parameter ``toolchain`` in .eb files is defined as a dictionary ``{&#39;name&#39;:&#39;foo&#39;, &#39;version&#39;:&#39;bar&#39;}``. In
-the .yeb format, this can be done much easier by just using ``name, version``. E.g::
+The easyconfig parameter <span class="s">``toolchain``</span> in .eb files is defined as a dictionary <span class="s">``{&#39;name&#39;:&#39;foo&#39;, &#39;version&#39;:&#39;bar&#39;}``</span>. In
+the .yeb format, this can be done much easier by just using <span class="s">``name, version``</span>. E.g<span class="se">::</span>
 
-    # note: this is eb syntax, will not work in yeb files
-    toolchain = {&#39;name&#39;:&#39;intel&#39;, &#39;version&#39;:&#39;2015b&#39;}
+<span class="s">    # note: this is eb syntax, will not work in yeb files</span>
+<span class="s">    toolchain = {&#39;name&#39;:&#39;intel&#39;, &#39;version&#39;:&#39;2015b&#39;}</span>
 
-becomes::
+becomes<span class="se">::</span>
 
-    toolchain: intel, 2015b
+<span class="s">    toolchain: intel, 2015b</span>
 
-.. _easyconfig_yeb_format_examples:
+<span class="p">..</span> <span class="nt">_easyconfig_yeb_format_examples:</span>
 
-Examples
---------
+<span class="gh">Examples</span>
+<span class="gh">--------</span>
 
-.. _easyconfig_yeb_format_examples_gzip16_GCC492:
+<span class="p">..</span> <span class="nt">_easyconfig_yeb_format_examples_gzip16_GCC492:</span>
 
-gzip-1.6-GCC-4.9.2.yeb
-~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">gzip-1.6-GCC-4.9.2.yeb</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~</span>
 
-Example easyconfig for gzip v1.6 using the ``GCC/4.9.2`` toolchain.
+Example easyconfig for gzip v1.6 using the <span class="s">``GCC/4.9.2``</span> toolchain.
 
-.. code::
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span>
 
     %YAML 1.2
     ---
@@ -783,28 +783,28 @@ Example easyconfig for gzip v1.6 using the ``GCC/4.9.2`` toolchain.
 
     moduleclass: tools
 
-.. _easyconfig_yeb_format_examples_goolf1410:
+<span class="p">..</span> <span class="nt">_easyconfig_yeb_format_examples_goolf1410:</span>
 
-goolf-1.4.10.yeb
-~~~~~~~~~~~~~~~~
+<span class="gh">goolf-1.4.10.yeb</span>
+<span class="gh">~~~~~~~~~~~~~~~~</span>
 
 Easyconfig file in YAML syntax for the goolf v1.4.10 toolchain.
 
-.. code::
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span>
 
     _internal_variables_:
-        - &amp;version 1.4.10
+        <span class="m">-</span> &amp;version 1.4.10
 
-        - &amp;comp_name GCC
-        - &amp;comp_version 4.7.2
-        - &amp;comp [*comp_name, *comp_version]
+        <span class="m">-</span> &amp;comp_name GCC
+        <span class="m">-</span> &amp;comp_version 4.7.2
+        <span class="m">-</span> &amp;comp [<span class="ge">*comp_name, *</span>comp_version]
 
-        - &amp;blaslib OpenBLAS
-        - &amp;blasver 0.2.6
-        - &amp;blas !join [*blaslib, -, *blasver]
-        - &amp;blas_suff -LAPACK-3.4.2
+        <span class="m">-</span> &amp;blaslib OpenBLAS
+        <span class="m">-</span> &amp;blasver 0.2.6
+        <span class="m">-</span> &amp;blas !join [<span class="ge">*blaslib, -, *</span>blasver]
+        <span class="m">-</span> &amp;blas_suff -LAPACK-3.4.2
 
-        - &amp;comp_mpi_tc [gompi, *version]
+        <span class="m">-</span> &amp;comp_mpi_tc [gompi, *version]
 
 
     easyblock: Toolchain
@@ -823,30 +823,30 @@ Easyconfig file in YAML syntax for the goolf v1.4.10 toolchain.
     # we need GCC and OpenMPI as explicit dependencies instead of gompi toolchain
     # because of toolchain preparation functions
         dependencies:
-            - *comp_name: *comp_version
-            - OpenMPI: 1.6.4
+            <span class="m">-</span> <span class="ge">*comp_name: *</span>comp_version
+            <span class="m">-</span> OpenMPI: 1.6.4
               toolchain: *comp
-            - *blaslib: *blasver
+            <span class="m">-</span> <span class="ge">*blaslib: *</span>blasver
               versionsuffix: *blas_suff
               toolchain: *comp_mpi_tc
-            - FFTW: 3.3.3
+            <span class="m">-</span> FFTW: 3.3.3
               toolchain: *comp_mpi_tc
-            - ScaLAPACK: 2.0.2
-              versionsuffix: !join [-, *blas, *blas_suff]
+            <span class="m">-</span> ScaLAPACK: 2.0.2
+              versionsuffix: !join [-, <span class="ge">*blas, *</span>blas_suff]
               toolchain: *comp_mpi_tc
 
     moduleclass: toolchain
 
 
 
-Python-2.7.10-intel-2015b.yeb
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Python-2.7.10-intel-2015b.yeb</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-.. code::
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span>
 
     _internal_variables_:
-        - &amp;numpyversion 1.9.2
-        - &amp;scipyversion 0.15.1
+        <span class="m">-</span> &amp;numpyversion 1.9.2
+        <span class="m">-</span> &amp;scipyversion 0.15.1
 
     easyblock: ConfigureMake
 
@@ -866,12 +866,12 @@ Python-2.7.10-intel-2015b.yeb
 
     # python needs bzip2 to build the bz2 package
     dependencies: [
-        - bzip2: 1.0.6
-        - zlib: 1.2.8
-        - libreadline: 6.3
-        - ncurses: 5.9
-        - SQLite: 3.8.10.2
-        - Tk: 8.4.6
+        <span class="m">-</span> bzip2: 1.0.6
+        <span class="m">-</span> zlib: 1.2.8
+        <span class="m">-</span> libreadline: 6.3
+        <span class="m">-</span> ncurses: 5.9
+        <span class="m">-</span> SQLite: 3.8.10.2
+        <span class="m">-</span> Tk: 8.4.6
           versionsuffix: -no-X11
       # - OpenSSL: 1.0.1m
       #   OS dependency should be preferred if the os version is more recent then this version, its
@@ -982,7 +982,7 @@ Python-2.7.10-intel-2015b.yeb
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
       
     
   </small>

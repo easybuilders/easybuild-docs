@@ -386,100 +386,100 @@ and you can help with that!
 </ul>
 <p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
 </div>
-<div class="highlight"><pre><span></span><code>.. _integration_with_github:
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_integration_with_github:</span>
 
-Integration with GitHub
-=======================
+<span class="gh">Integration with GitHub</span>
+<span class="gh">=======================</span>
 
 EasyBuild provides several features that integrate with GitHub, where the different EasyBuild repositories are located.
 
-From the EasyBuild command line ``eb`` several options are available to reach out to GitHub,
+From the EasyBuild command line <span class="s">``eb``</span> several options are available to reach out to GitHub,
 which are documented below.
 
-.. contents::
-    :depth: 3
-    :backlinks: none
+<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
+    <span class="nc">:depth:</span> 3
+    <span class="nc">:backlinks:</span> none
 
-.. _github_requirements:
+<span class="p">..</span> <span class="nt">_github_requirements:</span>
 
-Requirements
-------------
+<span class="gh">Requirements</span>
+<span class="gh">------------</span>
 
 Depending on which GitHub integration features you want to use, there are a couple of requirements:
 
-* **a GitHub account**
+<span class="m">*</span> <span class="gs">**a GitHub account**</span>
 
-  * see https://github.com; creating an account is free
+  <span class="m">*</span> see https://github.com; creating an account is free
 
-* **a GitHub user name**
+<span class="m">*</span> <span class="gs">**a GitHub user name**</span>
 
-  * only required for authenticated access to the GitHub API, which can help to avoid rate limitations
-  * *not* strictly necessary for read-only operations
+  <span class="m">*</span> only required for authenticated access to the GitHub API, which can help to avoid rate limitations
+  <span class="m">*</span> <span class="ge">*not*</span> strictly necessary for read-only operations
 
-    * i.e. *not* required for :ref:`github_from_pr` and :ref:`github_review_pr` (but it can help)
+    <span class="m">*</span> i.e. <span class="ge">*not*</span> required for <span class="na">:ref:</span><span class="nv">`github_from_pr`</span> and <span class="na">:ref:</span><span class="nv">`github_review_pr`</span> (but it can help)
 
-  * see :ref:`github_user`
+  <span class="m">*</span> see <span class="na">:ref:</span><span class="nv">`github_user`</span>
 
-* **a GitHub token** + ``keyring`` **Python package**
+<span class="m">*</span> <span class="gs">**a GitHub token**</span> + <span class="s">``keyring``</span> <span class="gs">**Python package**</span>
 
-  * install via ``pip install keyring`` (for Python2: ``pip install &#39;keyring&lt;19.0&#39;``)
-  * optionally install potentially unsafe keyrings: ``pip install keyrings.alt`` (but read and understand the `warning &lt;https://pypi.org/project/keyrings.alt/&gt;`_)
-  * allows accessing the GitHub API with authentication
-  * only strictly required for features that require GitHub &#39;write&#39; permissions
+  <span class="m">*</span> install via <span class="s">``pip install keyring``</span> (for Python2: <span class="s">``pip install &#39;keyring&lt;19.0&#39;``</span>)
+  <span class="m">*</span> optionally install potentially unsafe keyrings: <span class="s">``pip install keyrings.alt``</span> (but read and understand the <span class="s">`warning </span><span class="si">&lt;https://pypi.org/project/keyrings.alt/&gt;</span><span class="s">`_</span>)
+  <span class="m">*</span> allows accessing the GitHub API with authentication
+  <span class="m">*</span> only strictly required for features that require GitHub &#39;write&#39; permissions
 
-    * i.e. for :ref:`github_upload_test_report` and :ref:`github_new_pr`
+    <span class="m">*</span> i.e. for <span class="na">:ref:</span><span class="nv">`github_upload_test_report`</span> and <span class="na">:ref:</span><span class="nv">`github_new_pr`</span>
 
-  * see :ref:`github_token`
+  <span class="m">*</span> see <span class="na">:ref:</span><span class="nv">`github_token`</span>
 
-* ``git`` **command** / ``GitPython`` **Python package**
+<span class="m">*</span> <span class="s">``git``</span> <span class="gs">**command**</span> / <span class="s">``GitPython``</span> <span class="gs">**Python package**</span>
 
-  * install via ``pip install GitPython`` (for Python2: ``pip install &#39;GitPython&lt;3.0&#39;``)
-  * only required when local ``git`` commands need to be executed, e.g. to manipulate a Git repository
+  <span class="m">*</span> install via <span class="s">``pip install GitPython``</span> (for Python2: <span class="s">``pip install &#39;GitPython&lt;3.0&#39;``</span>)
+  <span class="m">*</span> only required when local <span class="s">``git``</span> commands need to be executed, e.g. to manipulate a Git repository
 
-    * i.e. for :ref:`github_new_pr` and :ref:`github_update_pr`
+    <span class="m">*</span> i.e. for <span class="na">:ref:</span><span class="nv">`github_new_pr`</span> and <span class="na">:ref:</span><span class="nv">`github_update_pr`</span>
 
-* **SSH public key registered on GitHub**
+<span class="m">*</span> <span class="gs">**SSH public key registered on GitHub**</span>
 
-  * only required when ``push`` access to Git repositories that reside on GitHub is required
+  <span class="m">*</span> only required when <span class="s">``push``</span> access to Git repositories that reside on GitHub is required
 
-    * i.e. for :ref:`github_new_pr` and :ref:`github_update_pr`
+    <span class="m">*</span> i.e. for <span class="na">:ref:</span><span class="nv">`github_new_pr`</span> and <span class="na">:ref:</span><span class="nv">`github_update_pr`</span>
 
-  * see https://github.com/settings/ssh
+  <span class="m">*</span> see https://github.com/settings/ssh
 
-* **fork of the EasyBuild repositories on GitHub**
+<span class="m">*</span> <span class="gs">**fork of the EasyBuild repositories on GitHub**</span>
 
-  * only required for submitting/updating pull requests (:ref:`github_new_pr` and :ref:`github_update_pr`)
-  * see ``Fork`` button (top right) at https://github.com/easybuilders/easybuild-easyconfigs (for example)
+  <span class="m">*</span> only required for submitting/updating pull requests (<span class="na">:ref:</span><span class="nv">`github_new_pr`</span> and <span class="na">:ref:</span><span class="nv">`github_update_pr`</span>)
+  <span class="m">*</span> see <span class="s">``Fork``</span> button (top right) at https://github.com/easybuilders/easybuild-easyconfigs (for example)
 
-See also :ref:`github_requirements_check`.
+See also <span class="na">:ref:</span><span class="nv">`github_requirements_check`</span>.
 
-.. _github_configuration:
+<span class="p">..</span> <span class="nt">_github_configuration:</span>
 
-Configuration
--------------
+<span class="gh">Configuration</span>
+<span class="gh">-------------</span>
 
 The following sections discuss the EasyBuild configuration options relevant to the GitHub integration features.
 
-.. _github_user:
+<span class="p">..</span> <span class="nt">_github_user:</span>
 
-Providing a GitHub username (``--github-user``)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Providing a GitHub username (``--github-user``)</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 To specify your GitHub username, do one of the following:
 
-* use the ``--github-user`` configuration option on the ``eb`` command line
-* define the ``$EASYBUILD_GITHUB_USER`` environment variable
-* specify ``github-user`` in your EasyBuild configuration file
+<span class="m">*</span> use the <span class="s">``--github-user``</span> configuration option on the <span class="s">``eb``</span> command line
+<span class="m">*</span> define the <span class="s">``$EASYBUILD_GITHUB_USER``</span> environment variable
+<span class="m">*</span> specify <span class="s">``github-user``</span> in your EasyBuild configuration file
 
-(see also :ref:`configuring_easybuild`)
+(see also <span class="na">:ref:</span><span class="nv">`configuring_easybuild`</span>)
 
 
-.. _github_token:
+<span class="p">..</span> <span class="nt">_github_token:</span>
 
-Installing a GitHub token (``--install-github-token``)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Installing a GitHub token (``--install-github-token``)</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-.. note:: *requires*: GitHub username + ``keyring`` Python package
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> <span class="ge">*requires*</span>: GitHub username + <span class="s">``keyring``</span> Python package
 
 A GitHub token is a string of 40 characters that is tied to your GitHub account,
 allowing you to access the GitHub API authenticated.
@@ -489,436 +489,436 @@ Using a GitHub token is beneficial with respect to rate limitations, and enables
 
 To obtain a GitHub token:
 
-* visit https://github.com/settings/tokens/new and log in with your GitHub account
-* enter a token description, for example: &quot;``EasyBuild``&quot;
-* make sure (only) the ``gist`` and ``public_repo`` (in the ``repo`` section) scopes are fully enabled
-* click ``Generate token``
-* *copy-paste* the generated token
+<span class="m">*</span> visit https://github.com/settings/tokens/new and log in with your GitHub account
+<span class="m">*</span> enter a token description, for example: &quot;<span class="s">``EasyBuild``</span>&quot;
+<span class="m">*</span> make sure (only) the <span class="s">``gist``</span> and <span class="s">``public_repo``</span> (in the <span class="s">``repo``</span> section) scopes are fully enabled
+<span class="m">*</span> click <span class="s">``Generate token``</span>
+<span class="m">*</span> <span class="ge">*copy-paste*</span> the generated token
 
-.. note:: You will only be able to copy-paste the generated token right after you have created it.
-          The value corresponding to an existing token can *not* be retrieved later through the GitHub interface.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> You will only be able to copy-paste the generated token right after you have created it.
+          The value corresponding to an existing token can <span class="ge">*not*</span> be retrieved later through the GitHub interface.
 
-          **Please keep your token secret at all times**; it allows fully authenticated access to your GitHub account!
+          <span class="gs">**Please keep your token secret at all times**</span>; it allows fully authenticated access to your GitHub account!
 
 
 You can install the GitHub token in your keyring using EasyBuild, so it can pick it up when it needs to,
-using ``eb --install-github-token``::
+using <span class="s">``eb --install-github-token``</span><span class="se">::</span>
 
-    $ eb --github-user example --install-github-token
-    Token: &lt;copy-paste-your-40-character-token-here&gt;
-    Validating token...
-    Token seems to be valid, installing it.
-    Token &#39;e3a..0c2&#39; installed!
+<span class="s">    $ eb --github-user example --install-github-token</span>
+<span class="s">    Token: &lt;copy-paste-your-40-character-token-here&gt;</span>
+<span class="s">    Validating token...</span>
+<span class="s">    Token seems to be valid, installing it.</span>
+<span class="s">    Token &#39;e3a..0c2&#39; installed!</span>
 
 EasyBuild will validate the provided token, to check that authenticated access to your GitHub account works as expected.
 
-.. note:: EasyBuild will never print the full token value, to avoid leaking it.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> EasyBuild will never print the full token value, to avoid leaking it.
           For debugging purposes, only the first and last 3 characters will be shown.
 
 
-.. _github_git_working_dirs_path:
+<span class="p">..</span> <span class="nt">_github_git_working_dirs_path:</span>
 
-Specify location of working directories (``--git-working-dirs-path``)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Specify location of working directories (``--git-working-dirs-path``)</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 You can specify the location of your Git working directories with one of the following:
 
-* use the ``--git-working-dirs-path`` configuration option on the ``eb`` command line
-* define the ``$EASYBUILD_GIT_WORKING_DIRS_PATH`` environment variable
-* specify the ``git-working-dirs-path`` option in your EasyBuild configuration file
+<span class="m">*</span> use the <span class="s">``--git-working-dirs-path``</span> configuration option on the <span class="s">``eb``</span> command line
+<span class="m">*</span> define the <span class="s">``$EASYBUILD_GIT_WORKING_DIRS_PATH``</span> environment variable
+<span class="m">*</span> specify the <span class="s">``git-working-dirs-path``</span> option in your EasyBuild configuration file
 
-The provided path should be the *parent* directory of the location of the working directories (i.e. clones)
-of the EasyBuild repositories (``easybuild-easyconfigs``, etc.); the assumption is that you keep them all in a single
+The provided path should be the <span class="ge">*parent*</span> directory of the location of the working directories (i.e. clones)
+of the EasyBuild repositories (<span class="s">``easybuild-easyconfigs``</span>, etc.); the assumption is that you keep them all in a single
 parent directory.
 
-Although not strictly required, this is useful for speeding up ``--new-pr`` and ``--update-pr``,
+Although not strictly required, this is useful for speeding up <span class="s">``--new-pr``</span> and <span class="s">``--update-pr``</span>,
 since it allows that the repository can be copied &amp; updated, rather than being cloned from scratch.
 
 
-.. _github_requirements_check:
+<span class="p">..</span> <span class="nt">_github_requirements_check:</span>
 
-Checking status of GitHub integration (``--check-github``)
-----------------------------------------------------------
+<span class="gh">Checking status of GitHub integration (``--check-github``)</span>
+<span class="gh">----------------------------------------------------------</span>
 
-To check the status of your setup w.r.t. GitHub integration, the ``--check-github`` command line option can be used.
+To check the status of your setup w.r.t. GitHub integration, the <span class="s">``--check-github``</span> command line option can be used.
 
 Using this will trigger EasyBuild to perform a number of checks, and report back on what the test results mean
 for the different GitHub integration features.
 
-If all requirements are taken care of in your setup, you should see output like this::
+If all requirements are taken care of in your setup, you should see output like this<span class="se">::</span>
 
-    $ eb --check-github
+<span class="s">    $ eb --check-github</span>
 
-    == temporary log file in case of crash /tmp/eb-xWCpWl/easybuild-hGnKS5.log
+<span class="s">    == temporary log file in case of crash /tmp/eb-xWCpWl/easybuild-hGnKS5.log</span>
 
-    Checking status of GitHub integration...
+<span class="s">    Checking status of GitHub integration...</span>
 
-    Making sure we&#39;re online... OK
+<span class="s">    Making sure we&#39;re online... OK</span>
 
-    * GitHub user... example =&gt; OK
-    * GitHub token... e3f..0c8 (len: 40) =&gt; OK (validated)
-    * git command... OK (&quot;git version 2.7.4 (Apple Git-66); &quot;)
-    * GitPython module... OK
-    * push access to example/easybuild-easyconfigs repo @ GitHub... OK
-    * creating gists... OK
-    * location to Git working dirs...  OK (/home/example/git-working-dirs)
+<span class="s">    * GitHub user... example =&gt; OK</span>
+<span class="s">    * GitHub token... e3f..0c8 (len: 40) =&gt; OK (validated)</span>
+<span class="s">    * git command... OK (&quot;git version 2.7.4 (Apple Git-66); &quot;)</span>
+<span class="s">    * GitPython module... OK</span>
+<span class="s">    * push access to example/easybuild-easyconfigs repo @ GitHub... OK</span>
+<span class="s">    * creating gists... OK</span>
+<span class="s">    * location to Git working dirs...  OK (/home/example/git-working-dirs)</span>
 
-    All checks PASSed!
+<span class="s">    All checks PASSed!</span>
 
-    Status of GitHub integration:
-    * --from-pr: OK
-    * --new-pr: OK
-    * --review-pr: OK
-    * --update-pr: OK
-    * --upload-test-report: OK
+<span class="s">    Status of GitHub integration:</span>
+<span class="s">    * --from-pr: OK</span>
+<span class="s">    * --new-pr: OK</span>
+<span class="s">    * --review-pr: OK</span>
+<span class="s">    * --update-pr: OK</span>
+<span class="s">    * --upload-test-report: OK</span>
 
-.. note:: Checking whether push access to GitHub works may take some time, since a recent clone of
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Checking whether push access to GitHub works may take some time, since a recent clone of
           the easybuild-easyconfigs GitHub repository will be created in the process (at a temporary location).
 
-See also :ref:`github_requirements`.
+See also <span class="na">:ref:</span><span class="nv">`github_requirements`</span>.
 
 
-.. _github_from_pr:
+<span class="p">..</span> <span class="nt">_github_from_pr:</span>
 
-Using easyconfigs from pull requests (``--from-pr``)
-----------------------------------------------------
+<span class="gh">Using easyconfigs from pull requests (``--from-pr``)</span>
+<span class="gh">----------------------------------------------------</span>
 
-*(supported since EasyBuild v1.13.0)*
+<span class="ge">*(supported since EasyBuild v1.13.0)*</span>
 
-Via the ``--from-pr`` command line option (available since EasyBuild v1.13.0), easyconfig files that are added or
+Via the <span class="s">``--from-pr``</span> command line option (available since EasyBuild v1.13.0), easyconfig files that are added or
 modified by a particular pull request to the `easybuild-easyconfigs GitHub repository
-&lt;https://github.com/easybuilders/easybuild-easyconfigs&gt;`_ can be used (regardless of whether the pull request is merged
+<span class="nt">&lt;https://github.com/easybuilders/easybuild-easyconfigs&gt;</span>`_ can be used (regardless of whether the pull request is merged
 or not).
 
 This can be useful to employ easyconfig files that are not available yet in the active EasyBuild installation,
-or to test new contributions by combining ``--from-pr`` with ``--upload-test-report``
-(see :ref:`github_upload_test_report`).
+or to test new contributions by combining <span class="s">``--from-pr``</span> with <span class="s">``--upload-test-report``</span>
+(see <span class="na">:ref:</span><span class="nv">`github_upload_test_report`</span>).
 
-When ``--from-pr`` is used, EasyBuild will download all modified files (easyconfig files and patches) to a temporary
+When <span class="s">``--from-pr``</span> is used, EasyBuild will download all modified files (easyconfig files and patches) to a temporary
 directory before processing them.
 
 For example, to use the GCC v4.9.2 easyconfigs contributed via `easyconfigs pull request #1177
-&lt;https://github.com/easybuilders/easybuild-easyconfigs/pull/1177&gt;`_::
+<span class="nt">&lt;https://github.com/easybuilders/easybuild-easyconfigs/pull/1177&gt;</span>`_<span class="se">::</span>
 
-    $ eb --from-pr 1177 --dry-run
-    == temporary log file in case of crash /tmp/eb-88quZc/easybuild-62fFdo.log
-    Dry run: printing build status of easyconfigs and dependencies
-     * [ ] /tmp/eb-88quZc/files_pr1177/GCC-4.9.2-CLooG-multilib.eb (module: GCC/4.9.2-CLooG-multilib)
-     * [ ] /tmp/eb-88quZc/files_pr1177/GCC-4.9.2-CLooG.eb (module: GCC/4.9.2-CLooG)
-     * [ ] /tmp/eb-88quZc/files_pr1177/GCC-4.9.2.eb (module: GCC/4.9.2)
-    == temporary log file /tmp/eb-88quZc/easybuild-62fFdo.log has been removed.
-    == temporary directory /tmp/eb-88quZc has been removed.
+<span class="s">    $ eb --from-pr 1177 --dry-run</span>
+<span class="s">    == temporary log file in case of crash /tmp/eb-88quZc/easybuild-62fFdo.log</span>
+<span class="s">    Dry run: printing build status of easyconfigs and dependencies</span>
+<span class="s">     * [ ] /tmp/eb-88quZc/files_pr1177/GCC-4.9.2-CLooG-multilib.eb (module: GCC/4.9.2-CLooG-multilib)</span>
+<span class="s">     * [ ] /tmp/eb-88quZc/files_pr1177/GCC-4.9.2-CLooG.eb (module: GCC/4.9.2-CLooG)</span>
+<span class="s">     * [ ] /tmp/eb-88quZc/files_pr1177/GCC-4.9.2.eb (module: GCC/4.9.2)</span>
+<span class="s">    == temporary log file /tmp/eb-88quZc/easybuild-62fFdo.log has been removed.</span>
+<span class="s">    == temporary directory /tmp/eb-88quZc has been removed.</span>
 
-.. note::
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
 
   To avoid GitHub rate limiting, let EasyBuild know which GitHub account should be used to query the GitHub API,
-  and provide a matching GitHub token; see also :ref:`github_token`.
+  and provide a matching GitHub token; see also <span class="na">:ref:</span><span class="nv">`github_token`</span>.
 
-.. _github_from_pr_vs_develop:
+<span class="p">..</span> <span class="nt">_github_from_pr_vs_develop:</span>
 
-Relation between pull requests and current ``develop`` branch
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Relation between pull requests and current ``develop`` branch</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-Since EasyBuild v2.9.0, the current ``develop`` branch of the central ``easybuild-easyconfigs`` GitHub repository
-is taken into account when applicable with ``--from-pr``. Before, only the branch corresponding to the specified pull
+Since EasyBuild v2.9.0, the current <span class="s">``develop``</span> branch of the central <span class="s">``easybuild-easyconfigs``</span> GitHub repository
+is taken into account when applicable with <span class="s">``--from-pr``</span>. Before, only the branch corresponding to the specified pull
 request itself was being considered, which potentially did not reflect the correct state of things, in particular
-for pull requests based on an outdated branch in which easyconfigs are changed that have been updated in ``develop``
+for pull requests based on an outdated branch in which easyconfigs are changed that have been updated in <span class="s">``develop``</span>
 as well.
 
-As such, the exact semantics of ``--from-pr`` depends on the state of the specified pull request, i.e. whether or not
+As such, the exact semantics of <span class="s">``--from-pr``</span> depends on the state of the specified pull request, i.e. whether or not
 the pull request was merged already, whether the pull request is mergeable and stable (as indicated by GitHub Actions), etc.
 
-.. _github_from_pr_vs_develop_open_stable_prs:
+<span class="p">..</span> <span class="nt">_github_from_pr_vs_develop_open_stable_prs:</span>
 
-Open stable pull requests
-+++++++++++++++++++++++++
+<span class="gh">Open stable pull requests</span>
+<span class="gh">+++++++++++++++++++++++++</span>
 
-For *open* pull requests that are *stable* (i.e. tests pass and no merge conflicts), the pull request is effectively
-treated as a patch to the current ``develop`` branch. This is done to ensure that contributions that are picked
-up via ``--from-pr`` are correctly evaluated.
+For <span class="ge">*open*</span> pull requests that are <span class="ge">*stable*</span> (i.e. tests pass and no merge conflicts), the pull request is effectively
+treated as a patch to the current <span class="s">``develop``</span> branch. This is done to ensure that contributions that are picked
+up via <span class="s">``--from-pr``</span> are correctly evaluated.
 
-First, the current ``develop`` branch of the central ``easybuild-easyconfigs`` GitHub repository is downloaded to a
+First, the current <span class="s">``develop``</span> branch of the central <span class="s">``easybuild-easyconfigs``</span> GitHub repository is downloaded to a
 temporary directory. Afterwards, the patch corresponding to the specified pull request is applied on top of the
-``develop`` branch. This results in a correct reflection of how the easyconfig files would look
+<span class="s">``develop``</span> branch. This results in a correct reflection of how the easyconfig files would look
 like if the pull request would be merged, which is particularly important for testing of contributions (see also
-:ref:`github_upload_test_report`).
+<span class="na">:ref:</span><span class="nv">`github_upload_test_report`</span>).
 
 Easyconfig files touched by the pull request that are explicitly specified are then picked up from this location;
-see also :ref:`github_from_pr_specifying_easyconfigs`.
+see also <span class="na">:ref:</span><span class="nv">`github_from_pr_specifying_easyconfigs`</span>.
 
-.. _github_from_pr_vs_develop_merged_prs:
+<span class="p">..</span> <span class="nt">_github_from_pr_vs_develop_merged_prs:</span>
 
-Merged pull requests
-++++++++++++++++++++
+<span class="gh">Merged pull requests</span>
+<span class="gh">++++++++++++++++++++</span>
 
-For merged pull requests, the current ``develop`` branch is considered to be the correct state of
+For merged pull requests, the current <span class="s">``develop``</span> branch is considered to be the correct state of
 the easyconfigs touched by the pull request.
 
 Note that this implies that the easyconfig files being picked up are potentially different from the ones that
 appear in the specified pull request itself, taking into account that further updates may have been applied
-in the ``develop`` branch since the pull request got merged.
+in the <span class="s">``develop``</span> branch since the pull request got merged.
 
-.. _github_from_pr_vs_develop_closed_unstable_prs:
+<span class="p">..</span> <span class="nt">_github_from_pr_vs_develop_closed_unstable_prs:</span>
 
-Closed or unstable pull requests
-++++++++++++++++++++++++++++++++
+<span class="gh">Closed or unstable pull requests</span>
+<span class="gh">++++++++++++++++++++++++++++++++</span>
 
 For closed and unstable pull requests, only the branch corresponding to the pull request itself is being considered,
-which aligns with the semantics of ``--from-pr`` as it was before EasyBuild v2.9.0. In this case, the current
-``develop`` branch is *not* taken into account.
+which aligns with the semantics of <span class="s">``--from-pr``</span> as it was before EasyBuild v2.9.0. In this case, the current
+<span class="s">``develop``</span> branch is <span class="ge">*not*</span> taken into account.
 
-.. note:: A pull request is considered unstable when GitHub reports merge conflicts or when GitHub Actions reports
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> A pull request is considered unstable when GitHub reports merge conflicts or when GitHub Actions reports
           one or more failing tests.
 
 
-.. _github_from_pr_robot_synergy:
+<span class="p">..</span> <span class="nt">_github_from_pr_robot_synergy:</span>
 
-Synergy with ``--robot``
-~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Synergy with ``--robot``</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 Since EasyBuild v1.15.0, the temporary directory containing the easyconfigs (and patch files) from the specified
 pull request is included in the robot search path.
 
-Up until EasyBuild v2.9.0, this directory was *prepended* to the robot search path, to ensure that easyconfigs
-that were modified in the respective pull request are picked up via ``--robot`` when they are required.
+Up until EasyBuild v2.9.0, this directory was <span class="ge">*prepended*</span> to the robot search path, to ensure that easyconfigs
+that were modified in the respective pull request are picked up via <span class="s">``--robot``</span> when they are required.
 Thus, for easyconfig files that were available in the pull request as well as locally, the ones from the
 specified pull request were preferred.
 
 This was changed in EasyBuild v2.9.0, where the directory containing the easyconfigs touched by the pull request
-is *appended* to the robot search path. This change was made to ensure that customized easyconfig files that are
-available in the robot search path are preferred over the (patched) easyconfig files from the ``develop`` branch
-(see also :ref:`github_from_pr_vs_develop`).
+is <span class="ge">*appended*</span> to the robot search path. This change was made to ensure that customized easyconfig files that are
+available in the robot search path are preferred over the (patched) easyconfig files from the <span class="s">``develop``</span> branch
+(see also <span class="na">:ref:</span><span class="nv">`github_from_pr_vs_develop`</span>).
 
-For example, to build and install ``HPL`` with the ``intel/2015a`` toolchain, both of which are contributed via
-`easyconfigs pull request #1238 &lt;https://github.com/easybuilders/easybuild-easyconfigs/pull/1238&gt;`_::
+For example, to build and install <span class="s">``HPL``</span> with the <span class="s">``intel/2015a``</span> toolchain, both of which are contributed via
+<span class="s">`easyconfigs pull request #1238 </span><span class="si">&lt;https://github.com/easybuilders/easybuild-easyconfigs/pull/1238&gt;</span><span class="s">`_</span><span class="se">::</span>
 
-    $ eb --from-pr 1238 --dry-run --robot $HOME/easyconfigs
-    == temporary log file in case of crash /tmp/eb-A1fRvw/easybuild-Eqc8Oi.log
-    Dry run: printing build status of easyconfigs and dependencies
-     * [x] /home/example/easyconfigs/g/GCC/GCC-4.9.2.eb (module: GCC/4.9.2)
-     * [x] /home/example/easyconfigs/i/icc/icc-2015.1.133-GCC-4.9.2.eb (module: icc/2015.1.133-GCC-4.9.2)
-     * [x] /home/example/easyconfigs/i/ifort/ifort-2015.1.133-GCC-4.9.2.eb (module: ifort/2015.1.133-GCC-4.9.2)
-     * [x] /home/example/easyconfigs/i/iccifort/iccifort-2015.1.133-GCC-4.9.2.eb (module: iccifort/2015.1.133-GCC-4.9.2)
-     * [x] /home/example/easyconfigs/i/impi/impi-5.0.2.044-iccifort-2015.1.133-GCC-4.9.2.eb (module: impi/5.0.2.044-iccifort-2015.1.133-GCC-4.9.2)
-     * [x] /home/example/easyconfigs/i/iimpi/iimpi-7.2.3-GCC-4.9.2.eb (module: iimpi/7.2.3-GCC-4.9.2)
-     * [x] /home/example/easyconfigs/i/imkl/imkl-11.2.1.133-iimpi-7.2.3-GCC-4.9.2.eb (module: imkl/11.2.1.133-iimpi-7.2.3-GCC-4.9.2)
-     * [ ] /tmp/eb-A1fRvw/files_pr1238/intel-2015a.eb (module: intel/2015a)
-     * [ ] /tmp/eb-A1fRvw/files_pr1238/HPL-2.1-intel-2015a.eb (module: HPL/2.1-intel-2015a)
-    == temporary log file /tmp/eb-A1fRvw/easybuild-Eqc8Oi.log has been removed.
-    == temporary directory /tmp/eb-A1fRvw has been removed.
+<span class="s">    $ eb --from-pr 1238 --dry-run --robot $HOME/easyconfigs</span>
+<span class="s">    == temporary log file in case of crash /tmp/eb-A1fRvw/easybuild-Eqc8Oi.log</span>
+<span class="s">    Dry run: printing build status of easyconfigs and dependencies</span>
+<span class="s">     * [x] /home/example/easyconfigs/g/GCC/GCC-4.9.2.eb (module: GCC/4.9.2)</span>
+<span class="s">     * [x] /home/example/easyconfigs/i/icc/icc-2015.1.133-GCC-4.9.2.eb (module: icc/2015.1.133-GCC-4.9.2)</span>
+<span class="s">     * [x] /home/example/easyconfigs/i/ifort/ifort-2015.1.133-GCC-4.9.2.eb (module: ifort/2015.1.133-GCC-4.9.2)</span>
+<span class="s">     * [x] /home/example/easyconfigs/i/iccifort/iccifort-2015.1.133-GCC-4.9.2.eb (module: iccifort/2015.1.133-GCC-4.9.2)</span>
+<span class="s">     * [x] /home/example/easyconfigs/i/impi/impi-5.0.2.044-iccifort-2015.1.133-GCC-4.9.2.eb (module: impi/5.0.2.044-iccifort-2015.1.133-GCC-4.9.2)</span>
+<span class="s">     * [x] /home/example/easyconfigs/i/iimpi/iimpi-7.2.3-GCC-4.9.2.eb (module: iimpi/7.2.3-GCC-4.9.2)</span>
+<span class="s">     * [x] /home/example/easyconfigs/i/imkl/imkl-11.2.1.133-iimpi-7.2.3-GCC-4.9.2.eb (module: imkl/11.2.1.133-iimpi-7.2.3-GCC-4.9.2)</span>
+<span class="s">     * [ ] /tmp/eb-A1fRvw/files_pr1238/intel-2015a.eb (module: intel/2015a)</span>
+<span class="s">     * [ ] /tmp/eb-A1fRvw/files_pr1238/HPL-2.1-intel-2015a.eb (module: HPL/2.1-intel-2015a)</span>
+<span class="s">    == temporary log file /tmp/eb-A1fRvw/easybuild-Eqc8Oi.log has been removed.</span>
+<span class="s">    == temporary directory /tmp/eb-A1fRvw has been removed.</span>
 
 Note that the easyconfigs that are required to resolve dependencies and are available locally in
-``$HOME/easyconfigs`` are being picked up as needed.
+<span class="s">``$HOME/easyconfigs``</span> are being picked up as needed.
 
-.. _github_from_pr_specifying_easyconfigs:
+<span class="p">..</span> <span class="nt">_github_from_pr_specifying_easyconfigs:</span>
 
-Specifying particular easyconfig files
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Specifying particular easyconfig files</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 Since EasyBuid v2.0.0 the particular easyconfigs to be used can be specified, rather than using all easyconfigs that are
-touched by the pull request (which is the default if no easyconfigs are specified alongside ``--from-pr``).
+touched by the pull request (which is the default if no easyconfigs are specified alongside <span class="s">``--from-pr``</span>).
 
-For example, to only use ``CMake-3.0.0-intel-2015a.eb`` from `easyconfigs pull request #1330
-&lt;https://github.com/easybuilders/easybuild-easyconfigs/pull/1330&gt;`_, and ignore the other easyconfigs being contributed
-in that same pull request for netCDF, WRF, ...::
+For example, to only use <span class="s">``CMake-3.0.0-intel-2015a.eb``</span> from `easyconfigs pull request #1330
+<span class="nt">&lt;https://github.com/easybuilders/easybuild-easyconfigs/pull/1330&gt;</span>`_, and ignore the other easyconfigs being contributed
+in that same pull request for netCDF, WRF, ...<span class="se">::</span>
 
-    $ eb --from-pr 1330 CMake-3.0.0-intel-2015a.eb --dry-run --robot $HOME/easyconfigs
-    == temporary log file in case of crash /tmp/eb-QhM_qc/easybuild-TPvMkJ.log
-    Dry run: printing build status of easyconfigs and dependencies
-     * [x] /home/example/easyconfigs/g/GCC/GCC-4.9.2.eb (module: GCC/4.9.2)
-     * [x] /home/example/easyconfigs/i/icc/icc-2015.1.133-GCC-4.9.2.eb (module: icc/2015.1.133-GCC-4.9.2)
-     * [x] /home/example/easyconfigs/i/ifort/ifort-2015.1.133-GCC-4.9.2.eb (module: ifort/2015.1.133-GCC-4.9.2)
-     * [x] /home/example/easyconfigs/i/iccifort/iccifort-2015.1.133-GCC-4.9.2.eb (module: iccifort/2015.1.133-GCC-4.9.2)
-     * [x] /home/example/easyconfigs/i/impi/impi-5.0.2.044-iccifort-2015.1.133-GCC-4.9.2.eb (module: impi/5.0.2.044-iccifort-2015.1.133-GCC-4.9.2)
-     * [x] /home/example/easyconfigs/i/iimpi/iimpi-7.2.3-GCC-4.9.2.eb (module: iimpi/7.2.3-GCC-4.9.2)
-     * [x] /home/example/easyconfigs/i/imkl/imkl-11.2.1.133-iimpi-7.2.3-GCC-4.9.2.eb (module: imkl/11.2.1.133-iimpi-7.2.3-GCC-4.9.2)
-     * [x] /home/example/easyconfigs/i/intel/intel-2015a.eb (module: intel/2015a)
-     * [x] /home/example/easyconfigs/n/ncurses/ncurses-5.9-intel-2015a.eb (module: ncurses/5.9-intel-2015a)
-     * [ ] /tmp/eb-QhM_qc/files_pr1330/CMake-3.0.0-intel-2015a.eb (module: CMake/3.0.0-intel-2015a)
-    == temporary log file /tmp/eb-QhM_qc/easybuild-TPvMkJ.log has been removed.
-    == temporary directory /tmp/eb-QhM_qc has been removed.
+<span class="s">    $ eb --from-pr 1330 CMake-3.0.0-intel-2015a.eb --dry-run --robot $HOME/easyconfigs</span>
+<span class="s">    == temporary log file in case of crash /tmp/eb-QhM_qc/easybuild-TPvMkJ.log</span>
+<span class="s">    Dry run: printing build status of easyconfigs and dependencies</span>
+<span class="s">     * [x] /home/example/easyconfigs/g/GCC/GCC-4.9.2.eb (module: GCC/4.9.2)</span>
+<span class="s">     * [x] /home/example/easyconfigs/i/icc/icc-2015.1.133-GCC-4.9.2.eb (module: icc/2015.1.133-GCC-4.9.2)</span>
+<span class="s">     * [x] /home/example/easyconfigs/i/ifort/ifort-2015.1.133-GCC-4.9.2.eb (module: ifort/2015.1.133-GCC-4.9.2)</span>
+<span class="s">     * [x] /home/example/easyconfigs/i/iccifort/iccifort-2015.1.133-GCC-4.9.2.eb (module: iccifort/2015.1.133-GCC-4.9.2)</span>
+<span class="s">     * [x] /home/example/easyconfigs/i/impi/impi-5.0.2.044-iccifort-2015.1.133-GCC-4.9.2.eb (module: impi/5.0.2.044-iccifort-2015.1.133-GCC-4.9.2)</span>
+<span class="s">     * [x] /home/example/easyconfigs/i/iimpi/iimpi-7.2.3-GCC-4.9.2.eb (module: iimpi/7.2.3-GCC-4.9.2)</span>
+<span class="s">     * [x] /home/example/easyconfigs/i/imkl/imkl-11.2.1.133-iimpi-7.2.3-GCC-4.9.2.eb (module: imkl/11.2.1.133-iimpi-7.2.3-GCC-4.9.2)</span>
+<span class="s">     * [x] /home/example/easyconfigs/i/intel/intel-2015a.eb (module: intel/2015a)</span>
+<span class="s">     * [x] /home/example/easyconfigs/n/ncurses/ncurses-5.9-intel-2015a.eb (module: ncurses/5.9-intel-2015a)</span>
+<span class="s">     * [ ] /tmp/eb-QhM_qc/files_pr1330/CMake-3.0.0-intel-2015a.eb (module: CMake/3.0.0-intel-2015a)</span>
+<span class="s">    == temporary log file /tmp/eb-QhM_qc/easybuild-TPvMkJ.log has been removed.</span>
+<span class="s">    == temporary directory /tmp/eb-QhM_qc has been removed.</span>
 
 Again, note that locally available easyconfigs that are required to resolve dependencies are being picked up as needed.
 
 
-.. _github_include_easyblocks_from_pr:
+<span class="p">..</span> <span class="nt">_github_include_easyblocks_from_pr:</span>
 
-Using easyblocks from pull requests (``--include-easyblocks-from-pr``)
-----------------------------------------------------
+<span class="gh">Using easyblocks from pull requests (``--include-easyblocks-from-pr``)</span>
+<span class="gh">----------------------------------------------------</span>
 
-*(supported since EasyBuild v4.2.0)*
+<span class="ge">*(supported since EasyBuild v4.2.0)*</span>
 
-Via the ``--include-easyblocks-from-pr`` command line option, easyblocks that are added or
+Via the <span class="s">``--include-easyblocks-from-pr``</span> command line option, easyblocks that are added or
 modified by a particular pull request to the `easybuild-easyblocks GitHub repository
-&lt;https://github.com/easybuilders/easybuild-easyblocks&gt;`_ can be used (regardless of whether the pull request is merged
+<span class="nt">&lt;https://github.com/easybuilders/easybuild-easyblocks&gt;</span>`_ can be used (regardless of whether the pull request is merged
 or not).
 
 This can be useful to employ easyblocks that are not available yet in the active EasyBuild installation,
-or to test new contributions by combining ``--include-easyblocks-from-pr`` with ``--from-pr`` and ``--upload-test-report``
-(see :ref:`github_upload_test_report`).
+or to test new contributions by combining <span class="s">``--include-easyblocks-from-pr``</span> with <span class="s">``--from-pr``</span> and <span class="s">``--upload-test-report``</span>
+(see <span class="na">:ref:</span><span class="nv">`github_upload_test_report`</span>).
 
-When ``--include-easyblocks-from-pr`` is used, EasyBuild will download all modified easyblocks to a temporary
-directory before processing them. Just like with ``--include-easyblocks`` (see :ref:`include_easyblocks`),
+When <span class="s">``--include-easyblocks-from-pr``</span> is used, EasyBuild will download all modified easyblocks to a temporary
+directory before processing them. Just like with <span class="s">``--include-easyblocks``</span> (see <span class="na">:ref:</span><span class="nv">`include_easyblocks`</span>),
 the easyblocks that are included are preferred over the ones included in the EasyBuild installation.
 
 For example, to use the LAMMPS easyblock contributed via `easyblocks pull request #1964 
-&lt;https://github.com/easybuilders/easybuild-easyblocks/pull/1964&gt;`_ together with the LAMMPS v7Aug2019 easyconfigs contributed via 
-`easyconfigs pull request #9884 &lt;https://github.com/easybuilders/easybuild-easyconfigs/pull/9884&gt;`_::
+<span class="nt">&lt;https://github.com/easybuilders/easybuild-easyblocks/pull/1964&gt;</span>`_ together with the LAMMPS v7Aug2019 easyconfigs contributed via 
+<span class="s">`easyconfigs pull request #9884 </span><span class="si">&lt;https://github.com/easybuilders/easybuild-easyconfigs/pull/9884&gt;</span><span class="s">`_</span><span class="se">::</span>
 
-    $ eb --from-pr 9884 --include-easyblocks-from-pr 1964 --list-easyblocks=detailed
-    == temporary log file in case of crash /tmp/eb-Eq2zsJ/easybuild-1AaWf8.log
-    EasyBlock (easybuild.framework.easyblock)
-    ...
-    |   |   |-- EB_LAMMPS (easybuild.easyblocks.lammps @ /tmp/included-easyblocks-rD2HEQ/easybuild/easyblocks/lammps.py)
-    ...
+<span class="s">    $ eb --from-pr 9884 --include-easyblocks-from-pr 1964 --list-easyblocks=detailed</span>
+<span class="s">    == temporary log file in case of crash /tmp/eb-Eq2zsJ/easybuild-1AaWf8.log</span>
+<span class="s">    EasyBlock (easybuild.framework.easyblock)</span>
+<span class="s">    ...</span>
+<span class="s">    |   |   |-- EB_LAMMPS (easybuild.easyblocks.lammps @ /tmp/included-easyblocks-rD2HEQ/easybuild/easyblocks/lammps.py)</span>
+<span class="s">    ...</span>
 
 
-.. _github_upload_test_report:
+<span class="p">..</span> <span class="nt">_github_upload_test_report:</span>
 
-Uploading test reports (``--upload-test-report``)
--------------------------------------------------
+<span class="gh">Uploading test reports (``--upload-test-report``)</span>
+<span class="gh">-------------------------------------------------</span>
 
-*(supported since EasyBuild v1.13.0)*
+<span class="ge">*(supported since EasyBuild v1.13.0)*</span>
 
-.. note:: requires that a GitHub token was required ``gist`` permissions is available, cfr. :ref:`github_token`
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> requires that a GitHub token was required <span class="s">``gist``</span> permissions is available, cfr. <span class="na">:ref:</span><span class="nv">`github_token`</span>
 
 For every installation performed with EasyBuild, a test report is generated.
 By default, the test report is copied in the installation directory, right next to the log file
-(see also :ref:`understanding_easyBuild_logs`).
+(see also <span class="na">:ref:</span><span class="nv">`understanding_easyBuild_logs`</span>).
 
-Using ``--upload-test-report``, the test report can also be pushed to GitHub
-(as a *gist*, cfr. https://gist.github.com) to share it with others.
+Using <span class="s">``--upload-test-report``</span>, the test report can also be pushed to GitHub
+(as a <span class="ge">*gist*</span>, cfr. https://gist.github.com) to share it with others.
 
 Each test report includes:
 
-* an overview of the easyconfigs being processed
-* time &amp; date
-* the exact ``eb`` command line that was used
-* the full EasyBuild configuration that was in place
-* information about the system on which EasyBuild was used (hostname, OS, architecture, etc.)
-* the list of modules that was loaded
-* the full environment of the session in which ``eb`` was run
-  (note: can be filtered, see :ref:`github_test_report_env_filter`)
+<span class="m">*</span> an overview of the easyconfigs being processed
+<span class="m">*</span> time &amp; date
+<span class="m">*</span> the exact <span class="s">``eb``</span> command line that was used
+<span class="m">*</span> the full EasyBuild configuration that was in place
+<span class="m">*</span> information about the system on which EasyBuild was used (hostname, OS, architecture, etc.)
+<span class="m">*</span> the list of modules that was loaded
+<span class="m">*</span> the full environment of the session in which <span class="s">``eb``</span> was run
+  (note: can be filtered, see <span class="na">:ref:</span><span class="nv">`github_test_report_env_filter`</span>)
 
-For each easyconfig that *failed* to install a partial log will be uploaded as a separate gist,
+For each easyconfig that <span class="ge">*failed*</span> to install a partial log will be uploaded as a separate gist,
 and a link to this gist will be included in the test report.
 
-If ``--upload-test-report`` is combined with ``--from-pr``, a comment referring to the test report (incl. a brief
+If <span class="s">``--upload-test-report``</span> is combined with <span class="s">``--from-pr``</span>, a comment referring to the test report (incl. a brief
 summary) will be placed in the respective pull request. This makes it a very powerful tool when testing contributions.
 
-.. note:: If you want to easily access a test report without uploading it to GitHub, use ``--dump-test-report``.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> If you want to easily access a test report without uploading it to GitHub, use <span class="s">``--dump-test-report``</span>.
 
-Example::
+Example<span class="se">::</span>
 
-    $ eb --from-pr 3153 --rebuild --upload-test-report
-    == temporary log file in case of crash /tmp/eb-aqk20q/easybuild-wuyZBV.log
-    == processing EasyBuild easyconfig /tmp/eb-aqk20q/files_pr3153/EasyBuild/EasyBuild-2.8.1.eb
-    == building and installing EasyBuild/2.8.1...
-    ...
-    == COMPLETED: Installation ended successfully
-    == Results of the build can be found in the log file /home/example/software/EasyBuild/2.8.1/easybuild/easybuild-EasyBuild-2.8.1-20160603.090702.log
-    == Test report uploaded to https://gist.github.com/1cb2db8a2913a1b8ddbf1c6fee3ff83c and mentioned in a comment in easyconfigs PR#3153
-    == Build succeeded for 1 out of 1
-    == Temporary log file(s) /tmp/eb-aqk20q/easybuild-wuyZBV.log* have been removed.
-    == Temporary directory /tmp/eb-aqk20q has been removed.
+<span class="s">    $ eb --from-pr 3153 --rebuild --upload-test-report</span>
+<span class="s">    == temporary log file in case of crash /tmp/eb-aqk20q/easybuild-wuyZBV.log</span>
+<span class="s">    == processing EasyBuild easyconfig /tmp/eb-aqk20q/files_pr3153/EasyBuild/EasyBuild-2.8.1.eb</span>
+<span class="s">    == building and installing EasyBuild/2.8.1...</span>
+<span class="s">    ...</span>
+<span class="s">    == COMPLETED: Installation ended successfully</span>
+<span class="s">    == Results of the build can be found in the log file /home/example/software/EasyBuild/2.8.1/easybuild/easybuild-EasyBuild-2.8.1-20160603.090702.log</span>
+<span class="s">    == Test report uploaded to https://gist.github.com/1cb2db8a2913a1b8ddbf1c6fee3ff83c and mentioned in a comment in easyconfigs PR#3153</span>
+<span class="s">    == Build succeeded for 1 out of 1</span>
+<span class="s">    == Temporary log file(s) /tmp/eb-aqk20q/easybuild-wuyZBV.log* have been removed.</span>
+<span class="s">    == Temporary directory /tmp/eb-aqk20q has been removed.</span>
 
 The resulting test report can be viewed at https://gist.github.com/1cb2db8a2913a1b8ddbf1c6fee3ff83c .
 
-.. note:: It is common to use ``--rebuild`` in combination with ``--upload-test-report``, to ensure that all easyconfigs
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> It is common to use <span class="s">``--rebuild``</span> in combination with <span class="s">``--upload-test-report``</span>, to ensure that all easyconfigs
           in the pull request are rebuilt, resulting in a complete test report.
 
-.. _github_test_report_env_filter:
+<span class="p">..</span> <span class="nt">_github_test_report_env_filter:</span>
 
-Filtering the environment details (``--test-report-env-filter``)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Filtering the environment details (``--test-report-env-filter``)</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-Since the environment of the session in which ``eb`` was used may contain sensitive information,
-it can be filtered through ``--test-report-env-filter``.
+Since the environment of the session in which <span class="s">``eb``</span> was used may contain sensitive information,
+it can be filtered through <span class="s">``--test-report-env-filter``</span>.
 
 This configuration option takes a regular expression that is used to determine which environment variables
 can be included in the test report (based on their name).
-Environment variables for which the name *matches* the specified regular expression will *not* be included
+Environment variables for which the name <span class="ge">*matches*</span> the specified regular expression will <span class="ge">*not*</span> be included
 in the test report.
 
-An example of a typical setting::
+An example of a typical setting<span class="se">::</span>
 
-    export EASYBUILD_TEST_REPORT_ENV_FILTER=&#39;^SSH|USER|HOSTNAME|UID|.*COOKIE.*&#39;
+<span class="s">    export EASYBUILD_TEST_REPORT_ENV_FILTER=&#39;^SSH|USER|HOSTNAME|UID|.*COOKIE.*&#39;</span>
 
 
-.. _github_review_pr:
+<span class="p">..</span> <span class="nt">_github_review_pr:</span>
 
-Reviewing easyconfig pull requests (``--review-pr``)
-----------------------------------------------------
+<span class="gh">Reviewing easyconfig pull requests (``--review-pr``)</span>
+<span class="gh">----------------------------------------------------</span>
 
 A useful tool when reviewing pull requests for the `easybuild-easyconfigs repository
-&lt;https://github.com/easybuilders/easybuild-easyconfigs&gt;`_ that add new or update existing easyconfig files is
-``--review-pr``.
+<span class="nt">&lt;https://github.com/easybuilders/easybuild-easyconfigs&gt;</span>`_ that add new or update existing easyconfig files is
+<span class="s">``--review-pr``</span>.
 
 The &#39;files&#39; tab in the GitHub interface shows the changes being made to existing files;
-using ``--review-pr`` the differences with one or more other *similar* easyconfig files, for example the one(s)
+using <span class="s">``--review-pr``</span> the differences with one or more other <span class="ge">*similar*</span> easyconfig files, for example the one(s)
 with the same toolchain (version) and/or software version, can also be evaluated.
 
 This is very useful to quickly see how easyconfig files in pull requests differ from existing easyconfig files,
 and to maintain consistency across easyconfig files where desired.
 
-The ``--review-pr`` output consists of a &#39;multidiff&#39; view per easyconfig file that is being touched by
+The <span class="s">``--review-pr``</span> output consists of a &#39;multidiff&#39; view per easyconfig file that is being touched by
 the specified pull request. The exact format of the output depends on whether EasyBuild is configured to allow
-colored output (enabled by default, see ``--color``).
+colored output (enabled by default, see <span class="s">``--color``</span>).
 
-Search criteria for similar easyconfigs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Search criteria for similar easyconfigs</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 The set of existing similar easyconfig files is determined by specific search criteria; the first one that results
 in a non-empty set of easyconfigs is retained.
 
-The search criteria consists of a combination of the *software version criterion* with additional restrictions.
+The search criteria consists of a combination of the <span class="ge">*software version criterion*</span> with additional restrictions.
 
-The software version criterion is one of the criterions below (considered in order), with ``x.y.z`` the software
+The software version criterion is one of the criterions below (considered in order), with <span class="s">``x.y.z``</span> the software
 version of the easyconfig file from the pull request:
 
-* exact same software version
-* same major/minor software version (same ``x`` and ``y``)
-* same major software version (same ``x``)
-* no (partial) version match (so consider any version)
+<span class="m">*</span> exact same software version
+<span class="m">*</span> same major/minor software version (same <span class="s">``x``</span> and <span class="s">``y``</span>)
+<span class="m">*</span> same major software version (same <span class="s">``x``</span>)
+<span class="m">*</span> no (partial) version match (so consider any version)
 
 The addition restrictions are the following (also considered in order):
 
-* matching versionsuffix and toolchain name/version
-* matching versionsuffix and toolchain name (any toolchain version)
-* matching versionsuffix (any toolchain name/version)
-* matching toolchain name/version (any versionsuffix)
-* matching toolchain name (any versionsuffix, toolchain version)
-* no extra requirements (any versionsuffix, toolchain name/version)
+<span class="m">*</span> matching versionsuffix and toolchain name/version
+<span class="m">*</span> matching versionsuffix and toolchain name (any toolchain version)
+<span class="m">*</span> matching versionsuffix (any toolchain name/version)
+<span class="m">*</span> matching toolchain name/version (any versionsuffix)
+<span class="m">*</span> matching toolchain name (any versionsuffix, toolchain version)
+<span class="m">*</span> no extra requirements (any versionsuffix, toolchain name/version)
 
 
-.. _github_merge_pr:
+<span class="p">..</span> <span class="nt">_github_merge_pr:</span>
 
-Merging easyconfig pull requests (``--merge-pr``)
--------------------------------------------------
+<span class="gh">Merging easyconfig pull requests (``--merge-pr``)</span>
+<span class="gh">-------------------------------------------------</span>
 
-*(supported since EasyBuild v3.3.1)*
+<span class="ge">*(supported since EasyBuild v3.3.1)*</span>
 
-:ref:`maintainers` need to take the :ref:`contributing_review_process_pr_requirements` into account.
+<span class="na">:ref:</span><span class="nv">`maintainers`</span> need to take the <span class="na">:ref:</span><span class="nv">`contributing_review_process_pr_requirements`</span> into account.
 
-They can merge a pull request to the ``easybuild-easyconfigs`` repository via ``eb --merge-pr``,
+They can merge a pull request to the <span class="s">``easybuild-easyconfigs``</span> repository via <span class="s">``eb --merge-pr``</span>,
 which will first verify whether the pull request meets the prescribed requirements
 (at least the ones that can be verified automatically).
 
-For example, for a pull request that is not eligible for merging yet::
+For example, for a pull request that is not eligible for merging yet<span class="se">::</span>
 
-    $ eb --merge-pr 4725
-    == temporary log file in case of crash /tmp/eb-ba7rVp/easybuild-fBfcwN.log
+<span class="s">    $ eb --merge-pr 4725</span>
+<span class="s">    == temporary log file in case of crash /tmp/eb-ba7rVp/easybuild-fBfcwN.log</span>
 
-    easybuilders/easybuild-easyconfigs PR #4725 was submitted by vanzod, you are using GitHub account &#39;example&#39;
+<span class="s">    easybuilders/easybuild-easyconfigs PR #4725 was submitted by vanzod, you are using GitHub account &#39;example&#39;</span>
 
-    Checking eligibility of easybuilders/easybuild-easyconfigs PR #4725 for merging...
-    * targets develop branch: OK
-    * test suite passes: FAILED =&gt; not eligible for merging!
-    * last test report is successful: (no test reports found) =&gt; not eligible for merging!
-    * approved review: MISSING =&gt; not eligible for merging!
-    * milestone is set: no milestone found =&gt; not eligible for merging!
+<span class="s">    Checking eligibility of easybuilders/easybuild-easyconfigs PR #4725 for merging...</span>
+<span class="s">    * targets develop branch: OK</span>
+<span class="s">    * test suite passes: FAILED =&gt; not eligible for merging!</span>
+<span class="s">    * last test report is successful: (no test reports found) =&gt; not eligible for merging!</span>
+<span class="s">    * approved review: MISSING =&gt; not eligible for merging!</span>
+<span class="s">    * milestone is set: no milestone found =&gt; not eligible for merging!</span>
 
-    WARNING: Review indicates this PR should not be merged (use -f/--force to do so anyway)
+<span class="s">    WARNING: Review indicates this PR should not be merged (use -f/--force to do so anyway)</span>
 
 
 When a PR is considered eligible for merging, EasyBuild will go ahead and merge it::
@@ -930,11 +930,11 @@ When a PR is considered eligible for merging, EasyBuild will go ahead and merge 
     easybuilders/easybuild-easyconfigs PR #4829 was submitted by SethosII, you are using GitHub account &#39;example&#39;
 
     Checking eligibility of easybuilders/easybuild-easyconfigs PR #4829 for merging...
-    * targets develop branch: OK
-    * test suite passes: OK
-    * last test report is successful: OK
-    * approved review: OK (by boegel)
-    * milestone is set: OK (3.3.1)
+    <span class="m">*</span> targets develop branch: OK
+    <span class="m">*</span> test suite passes: OK
+    <span class="m">*</span> last test report is successful: OK
+    <span class="m">*</span> approved review: OK (by boegel)
+    <span class="m">*</span> milestone is set: OK (3.3.1)
 
     Review OK, merging pull request!
 
@@ -942,322 +942,322 @@ When a PR is considered eligible for merging, EasyBuild will go ahead and merge 
     Merged easybuilders/easybuild-easyconfigs pull request #4829
 
 
-.. note:: ``eb --merge-pr`` can also be run in dry run mode, by also using one of the following options:
-          ``--dry-run``, ``-D``, ``--extended-dry-run``, ``-x``.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> <span class="s">``eb --merge-pr``</span> can also be run in dry run mode, by also using one of the following options:
+          <span class="s">``--dry-run``</span>, <span class="s">``-D``</span>, <span class="s">``--extended-dry-run``</span>, <span class="s">``-x``</span>.
 
           This results in the same checks being performed but skips the actual merging of the pull request,
-          resulting in messages like::
+          resulting in messages like<span class="se">::</span>
 
-            $ eb --merge-pr 4829 --dry-run
+<span class="s">            $ eb --merge-pr 4829 --dry-run</span>
 
-            ...
+<span class="s">            ...</span>
 
-            Review OK, merging pull request!
+<span class="s">            Review OK, merging pull request!</span>
 
-            [DRY RUN] Adding comment to easybuild-easyconfigs issue #4829: &#39;Going in, thanks @SethosII!&#39;
-            [DRY RUN] Merged easybuilders/easybuild-easyconfigs pull request #4829
+<span class="s">            [DRY RUN] Adding comment to easybuild-easyconfigs issue #4829: &#39;Going in, thanks @SethosII!&#39;</span>
+<span class="s">            [DRY RUN] Merged easybuilders/easybuild-easyconfigs pull request #4829</span>
 
 
-.. _github_new_update_pr:
+<span class="p">..</span> <span class="nt">_github_new_update_pr:</span>
 
-Submitting new and updating pull requests (``--new-pr``, ``--update-pr``)
--------------------------------------------------------------------------
+<span class="gh">Submitting new and updating pull requests (``--new-pr``, ``--update-pr``)</span>
+<span class="gh">-------------------------------------------------------------------------</span>
 
-*(supported since EasyBuild v2.6.0)*
+<span class="ge">*(supported since EasyBuild v2.6.0)*</span>
 
 EasyBuild provides two simple yet powerful features that make contributing to the central EasyBuild repositories
-significantly easier and less error-prone, especially for people who are not very familiar with ``git`` and/or GitHub
+significantly easier and less error-prone, especially for people who are not very familiar with <span class="s">``git``</span> and/or GitHub
 yet:
 
-* ``--new-pr`` to create new pull requests
-* ``--update-pr`` to update existing pull requests
+<span class="m">*</span> <span class="s">``--new-pr``</span> to create new pull requests
+<span class="m">*</span> <span class="s">``--update-pr``</span> to update existing pull requests
 
-.. _github_preview_pr:
+<span class="p">..</span> <span class="nt">_github_preview_pr:</span>
 
-Previewing easyconfig pull requests (``--preview-pr``)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Previewing easyconfig pull requests (``--preview-pr``)</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-*(supported since EasyBuild v3.5.0)*
+<span class="ge">*(supported since EasyBuild v3.5.0)*</span>
 
 It is very useful to quickly see how easyconfig files in pull requests differ from existing easyconfig files, and to 
 maintain consistency across easyconfig files where desired. 
 
-Maintainers will use ``--review-pr`` as part of the review process once the PR is submitted (see :ref:`github_review_pr`),
+Maintainers will use <span class="s">``--review-pr``</span> as part of the review process once the PR is submitted (see <span class="na">:ref:</span><span class="nv">`github_review_pr`</span>),
 but it is now possible to preview that output before submitting a PR, eventually fixing any inconsistencies in advance.
 
-To preview a PR before submitting, simply use ``--preview-pr`` with the list of files to submit::
+To preview a PR before submitting, simply use <span class="s">``--preview-pr``</span> with the list of files to submit<span class="se">::</span>
 
-    $ eb --preview-pr example.eb example.patch 
+<span class="s">    $ eb --preview-pr example.eb example.patch </span>
 
-Besides accepting local files instead of a PR number, ``--preview-pr`` works the same as ``--review-pr``,
-as described in :ref:`contributing_review_process_review_pr`.
+Besides accepting local files instead of a PR number, <span class="s">``--preview-pr``</span> works the same as <span class="s">``--review-pr``</span>,
+as described in <span class="na">:ref:</span><span class="nv">`contributing_review_process_review_pr`</span>.
 
-.. _github_new_pr:
+<span class="p">..</span> <span class="nt">_github_new_pr:</span>
 
-Submitting pull requests (``--new-pr``)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Submitting pull requests (``--new-pr``)</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-.. note:: Submitting pull requests using ``--new-pr`` only works for the ``easybuild-easyconfigs`` repository, for now.
-          For other repositories, see the manual procedure documented at :ref:`contributing_pull_requests`.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Submitting pull requests using <span class="s">``--new-pr``</span> only works for the <span class="s">``easybuild-easyconfigs``</span> repository, for now.
+          For other repositories, see the manual procedure documented at <span class="na">:ref:</span><span class="nv">`contributing_pull_requests`</span>.
 
-To create a new pull request, the ``--new-pr`` command line option can be used, provided that the necessary
-requirements are fulfilled (see :ref:`github_requirements`).
+To create a new pull request, the <span class="s">``--new-pr``</span> command line option can be used, provided that the necessary
+requirements are fulfilled (see <span class="na">:ref:</span><span class="nv">`github_requirements`</span>).
 
-In its simplest form, you just provide the location of the file(s) that you want to include in the pull request::
+In its simplest form, you just provide the location of the file(s) that you want to include in the pull request<span class="se">::</span>
 
-    $ eb --new-pr test.eb
+<span class="s">    $ eb --new-pr test.eb</span>
 
 This takes care of all the steps required to make a contribution, i.e.:
 
-* set up a working copy of the relevant EasyBuild repository (e.g., ``easybuild-easyconfigs``)
-* create a new &#39;feature&#39; branch, starting from the up-to-date ``develop`` branch
-* renaming easyconfig files according to their ``name``, ``version``, ``versionsuffix`` and ``toolchain``
-* moving easyconfig files to the right location in the repository (e.g. ``easybuild/easyconfigs/e/EasyBuild/``)
-* staging and committing the files in the feature branch
-* pushing the feature branch to your fork of the relevant EasyBuild repository on GitHub
-* creating the pull request, targeting the ``develop`` branch of the central EasyBuild repository (e.g. ``easybuilders/easybuild-easyconfigs``)
+<span class="m">*</span> set up a working copy of the relevant EasyBuild repository (e.g., <span class="s">``easybuild-easyconfigs``</span>)
+<span class="m">*</span> create a new &#39;feature&#39; branch, starting from the up-to-date <span class="s">``develop``</span> branch
+<span class="m">*</span> renaming easyconfig files according to their <span class="s">``name``</span>, <span class="s">``version``</span>, <span class="s">``versionsuffix``</span> and <span class="s">``toolchain``</span>
+<span class="m">*</span> moving easyconfig files to the right location in the repository (e.g. <span class="s">``easybuild/easyconfigs/e/EasyBuild/``</span>)
+<span class="m">*</span> staging and committing the files in the feature branch
+<span class="m">*</span> pushing the feature branch to your fork of the relevant EasyBuild repository on GitHub
+<span class="m">*</span> creating the pull request, targeting the <span class="s">``develop``</span> branch of the central EasyBuild repository (e.g. <span class="s">``easybuilders/easybuild-easyconfigs``</span>)
 
-It should be clear that automating this whole procedure with a single simple ``eb`` command greatly lowers the bar
-for contributing, especially since it even alleviates the need for interacting directly with ``git`` entirely!
+It should be clear that automating this whole procedure with a single simple <span class="s">``eb``</span> command greatly lowers the bar
+for contributing, especially since it even alleviates the need for interacting directly with <span class="s">``git``</span> entirely!
 
 The working copy of the EasyBuild repository is created in a temporary location, and cleaned up once the pull request
-has been created. EasyBuild does *not* make changes to an existing working copy you may have in place already
-(cfr. :ref:`github_git_working_dirs_path`).
+has been created. EasyBuild does <span class="ge">*not*</span> make changes to an existing working copy you may have in place already
+(cfr. <span class="na">:ref:</span><span class="nv">`github_git_working_dirs_path`</span>).
 
-.. note:: When modifying existing files via ``--new-pr``,
-          you *must* specify a (meaningful) commit message using ``--pr-commit-msg``, see :ref:`github_controlling_pr_metadata`.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> When modifying existing files via <span class="s">``--new-pr``</span>,
+          you <span class="ge">*must*</span> specify a (meaningful) commit message using <span class="s">``--pr-commit-msg``</span>, see <span class="na">:ref:</span><span class="nv">`github_controlling_pr_metadata`</span>.
 
-Example
-+++++++
+<span class="gh">Example</span>
+<span class="gh">+++++++</span>
 
-For example, to create a pull request for a new version of, let&#39;s say, EasyBuild::
+For example, to create a pull request for a new version of, let&#39;s say, EasyBuild<span class="se">::</span>
 
-    $ eb --new-pr example.eb
-    == temporary log file in case of crash /tmp/eb-mWKR9u/easybuild-cTpf2W.log
-    == copying /home/example/git-working-dirs/easybuild-easyconfigs...
-    == fetching branch &#39;develop&#39; from https://github.com/easybuilders/easybuild-easyconfigs.git...
+<span class="s">    $ eb --new-pr example.eb</span>
+<span class="s">    == temporary log file in case of crash /tmp/eb-mWKR9u/easybuild-cTpf2W.log</span>
+<span class="s">    == copying /home/example/git-working-dirs/easybuild-easyconfigs...</span>
+<span class="s">    == fetching branch &#39;develop&#39; from https://github.com/easybuilders/easybuild-easyconfigs.git...</span>
 
-    Opening pull request
-    * target: easybuilders/easybuild-easyconfigs:develop
-    * from: boegel/easybuild-easyconfigs:20160530131447_new_pr_EasyBuild281
-    * title: &quot;{tools}[dummy/dummy] EasyBuild v2.8.1&quot;
-    * description:
-    &quot;&quot;&quot;
-    (created using `eb --new-pr`)
+<span class="s">    Opening pull request</span>
+<span class="s">    * target: easybuilders/easybuild-easyconfigs:develop</span>
+<span class="s">    * from: boegel/easybuild-easyconfigs:20160530131447_new_pr_EasyBuild281</span>
+<span class="s">    * title: &quot;{tools}[dummy/dummy] EasyBuild v2.8.1&quot;</span>
+<span class="s">    * description:</span>
+<span class="s">    &quot;&quot;&quot;</span>
+<span class="s">    (created using `eb --new-pr`)</span>
 
-    &quot;&quot;&quot;
-    * overview of changes:
-     .../easyconfigs/e/EasyBuild/EasyBuild-2.8.1.eb     | 35 ++++++++++++++++++++++
-     1 file changed, 35 insertions(+)
+<span class="s">    &quot;&quot;&quot;</span>
+<span class="s">    * overview of changes:</span>
+<span class="s">     .../easyconfigs/e/EasyBuild/EasyBuild-2.8.1.eb     | 35 ++++++++++++++++++++++</span>
+<span class="s">     1 file changed, 35 insertions(+)</span>
 
-    Opened pull request: https://github.com/easybuilders/easybuild-easyconfigs/pull/3153
+<span class="s">    Opened pull request: https://github.com/easybuilders/easybuild-easyconfigs/pull/3153</span>
 
 Yes, it&#39;s that easy!
 
-.. _github_update_pr:
+<span class="p">..</span> <span class="nt">_github_update_pr:</span>
 
-Updating existing pull requests (``--update-pr``)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Updating existing pull requests (``--update-pr``)</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-.. note:: Updating pull requests using ``--update-pr`` only works for the ``easybuild-easyconfigs`` repository, for now.
-          For other repositories, see the manual procedure documented at :ref:`contributing_pull_requests`.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Updating pull requests using <span class="s">``--update-pr``</span> only works for the <span class="s">``easybuild-easyconfigs``</span> repository, for now.
+          For other repositories, see the manual procedure documented at <span class="na">:ref:</span><span class="nv">`contributing_pull_requests`</span>.
 
-Similarly to creating new pull requests, existing pull requests can be easily updated using ``eb --update-pr``
-(regardless of whether or not they were created with ``--new-pr``).
+Similarly to creating new pull requests, existing pull requests can be easily updated using <span class="s">``eb --update-pr``</span>
+(regardless of whether or not they were created with <span class="s">``--new-pr``</span>).
 
-The usage is equally simple, for example to update pull request ``#1234`` just list the changed/new file(s)::
+The usage is equally simple, for example to update pull request <span class="s">``#1234``</span> just list the changed/new file(s)<span class="se">::</span>
 
-    $ eb --update-pr 1234 example.eb
+<span class="s">    $ eb --update-pr 1234 example.eb</span>
 
 Again, this take care of the whole procedure required to update an existing pull request:
 
-* set up a working copy of the relevant EasyBuild repository (e.g., ``easybuild-easyconfigs``)
-* determining the branch corresponding to the pull request, which should be updated by pushing a new commit to it
-* checking out that branch
-* renaming easyconfig files according to their ``name``, ``version``, ``versionsuffix`` and ``toolchain``
-* moving easyconfig files to the right location in the repository (e.g. ``easybuild/easyconfigs/e/EasyBuild/``)
-* staging and committing the (changed/new) files
-* pushing the updated branch to GitHub
+<span class="m">*</span> set up a working copy of the relevant EasyBuild repository (e.g., <span class="s">``easybuild-easyconfigs``</span>)
+<span class="m">*</span> determining the branch corresponding to the pull request, which should be updated by pushing a new commit to it
+<span class="m">*</span> checking out that branch
+<span class="m">*</span> renaming easyconfig files according to their <span class="s">``name``</span>, <span class="s">``version``</span>, <span class="s">``versionsuffix``</span> and <span class="s">``toolchain``</span>
+<span class="m">*</span> moving easyconfig files to the right location in the repository (e.g. <span class="s">``easybuild/easyconfigs/e/EasyBuild/``</span>)
+<span class="m">*</span> staging and committing the (changed/new) files
+<span class="m">*</span> pushing the updated branch to GitHub
 
-Again, not a single ``git`` command to be executed; the only thing that is required is the ID of the pull request
+Again, not a single <span class="s">``git``</span> command to be executed; the only thing that is required is the ID of the pull request
 that should be updated.
 
-Just like with ``--new-pr``, this is done in a temporary working copy of the repository, no changes are made to
+Just like with <span class="s">``--new-pr``</span>, this is done in a temporary working copy of the repository, no changes are made to
 a possible existing working copy.
 
-.. note:: When using ``--update-pr`` you *must* specify a (meaningful) commit message
-          via ``--pr-commit-msg``, see :ref:`github_controlling_pr_metadata`.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> When using <span class="s">``--update-pr``</span> you <span class="ge">*must*</span> specify a (meaningful) commit message
+          via <span class="s">``--pr-commit-msg``</span>, see <span class="na">:ref:</span><span class="nv">`github_controlling_pr_metadata`</span>.
 
-Example
-+++++++
+<span class="gh">Example</span>
+<span class="gh">+++++++</span>
 
-For example, to update pull request #3153 with a changed easyconfig file::
+For example, to update pull request #3153 with a changed easyconfig file<span class="se">::</span>
 
-    eb --update-pr 3153 example.eb
-    == temporary log file in case of crash /tmp/eb-gO2wJu/easybuild-37Oo2z.log
-    == Determined branch name corresponding to easybuilders/easybuild-easyconfigs PR #3153: 20160530131447_new_pr_EasyBuild281
-    == copying /home/example/git-working-dirs/easybuild-easyconfigs...
-    == fetching branch &#39;20160530131447_new_pr_EasyBuild281&#39; from https://github.com/boegel/easybuild-easyconfigs.git...
-    Overview of changes:
-     easybuild/easyconfigs/e/EasyBuild/EasyBuild-2.8.1.eb | 3 +++
-     1 file changed, 3 insertions(+)
+<span class="s">    eb --update-pr 3153 example.eb</span>
+<span class="s">    == temporary log file in case of crash /tmp/eb-gO2wJu/easybuild-37Oo2z.log</span>
+<span class="s">    == Determined branch name corresponding to easybuilders/easybuild-easyconfigs PR #3153: 20160530131447_new_pr_EasyBuild281</span>
+<span class="s">    == copying /home/example/git-working-dirs/easybuild-easyconfigs...</span>
+<span class="s">    == fetching branch &#39;20160530131447_new_pr_EasyBuild281&#39; from https://github.com/boegel/easybuild-easyconfigs.git...</span>
+<span class="s">    Overview of changes:</span>
+<span class="s">     easybuild/easyconfigs/e/EasyBuild/EasyBuild-2.8.1.eb | 3 +++</span>
+<span class="s">     1 file changed, 3 insertions(+)</span>
 
-    Updated easybuilders/easybuild-easyconfigs PR #3159 by pushing to branch boegel/20160530131447_new_pr_EasyBuild281
+<span class="s">    Updated easybuilders/easybuild-easyconfigs PR #3159 by pushing to branch boegel/20160530131447_new_pr_EasyBuild281</span>
 
-.. _github_new_update_pr_patches:
+<span class="p">..</span> <span class="nt">_github_new_update_pr_patches:</span>
 
-Including patch files in easyconfigs pull requests
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Including patch files in easyconfigs pull requests</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-Next to providing one or more easyconfig files to add/update via ``--new-pr`` or ``--update-pr``,
+Next to providing one or more easyconfig files to add/update via <span class="s">``--new-pr``</span> or <span class="s">``--update-pr``</span>,
 you can also include patch files that are required by those easyconfig files.
 
 EasyBuild will try and figure out where each patch file should be located
 (i.e. in the same directory as the easyconfig files that require that patch file),
-by scanning the provided easyconfigs (or, if needed, scanning *all* existing easyconfig files).
+by scanning the provided easyconfigs (or, if needed, scanning <span class="ge">*all*</span> existing easyconfig files).
 
-For example::
+For example<span class="se">::</span>
 
-  eb --new-pr example.eb example.patch --pr-commit-msg &quot;just an example&quot;
+<span class="s">  eb --new-pr example.eb example.patch --pr-commit-msg &quot;just an example&quot;</span>
 
-.. note:: When providing one or more patch files, you *must* specify a (meaningful) commit message
-          via ``--pr-commit-msg``, see :ref:`github_controlling_pr_metadata`.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> When providing one or more patch files, you <span class="ge">*must*</span> specify a (meaningful) commit message
+          via <span class="s">``--pr-commit-msg``</span>, see <span class="na">:ref:</span><span class="nv">`github_controlling_pr_metadata`</span>.
 
-.. _github_new_update_pr_delete:
+<span class="p">..</span> <span class="nt">_github_new_update_pr_delete:</span>
 
-Deleting easyconfig files or patches
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Deleting easyconfig files or patches</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-Next to adding easyconfigs files or patches, or modifying existing ones, you can also specify to *delete*
-particular files, by including a colon character ``:`` before the name of the file.
+Next to adding easyconfigs files or patches, or modifying existing ones, you can also specify to <span class="ge">*delete*</span>
+particular files, by including a colon character <span class="s">``:``</span> before the name of the file.
 
-For example::
+For example<span class="se">::</span>
 
-  eb --new-pr :example-1.0.eb --pr-commit-msg &quot;delete example-1.0.eb easyconfig file&quot;
+<span class="s">  eb --new-pr :example-1.0.eb --pr-commit-msg &quot;delete example-1.0.eb easyconfig file&quot;</span>
 
-.. note:: When deleting existing files, you *must* specify a custom commit message using ``--pr-commit-msg``,
-          see also :ref:`github_controlling_pr_metadata`.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> When deleting existing files, you <span class="ge">*must*</span> specify a custom commit message using <span class="s">``--pr-commit-msg``</span>,
+          see also <span class="na">:ref:</span><span class="nv">`github_controlling_pr_metadata`</span>.
 
-.. _github_controlling_pr_metadata:
+<span class="p">..</span> <span class="nt">_github_controlling_pr_metadata:</span>
 
-Controlling pull request metadata
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Controlling pull request metadata</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
 You can control the metadata for pull requests using the following configuration options:
 
-* ``--pr-branch-name``: branch name for new pull requests
-* ``--pr-commit-msg``: commit message to use when creating new or updating existing pull requests
-* ``--pr-descr``: pull request description
-* ``--pr-title``: pull request title
+<span class="m">*</span> <span class="s">``--pr-branch-name``</span>: branch name for new pull requests
+<span class="m">*</span> <span class="s">``--pr-commit-msg``</span>: commit message to use when creating new or updating existing pull requests
+<span class="m">*</span> <span class="s">``--pr-descr``</span>: pull request description
+<span class="m">*</span> <span class="s">``--pr-title``</span>: pull request title
 
 EasyBuild will use sensible defaults for each of these, see below.
 
-Default branch name for new pull requests
-+++++++++++++++++++++++++++++++++++++++++
+<span class="gh">Default branch name for new pull requests</span>
+<span class="gh">+++++++++++++++++++++++++++++++++++++++++</span>
 
 The branch name for new pull requests will be composed from:
 
-* a timestamp, down to the second in an attempt to make it unique
+<span class="m">*</span> a timestamp, down to the second in an attempt to make it unique
 
-  * example: ``20160513141133`` for a pull request created on May 13th 2016, 2:11:33 PM
+  <span class="m">*</span> example: <span class="s">``20160513141133``</span> for a pull request created on May 13th 2016, 2:11:33 PM
 
-* a label ``new_pr``
+<span class="m">*</span> a label <span class="s">``new_pr``</span>
 
-* the software name and version of the first easyconfig file, with some filtering (e.g. remove ``.``&#39;s)
+<span class="m">*</span> the software name and version of the first easyconfig file, with some filtering (e.g. remove <span class="s">``.``</span>&#39;s)
 
-  * example: ``GCC530`` for GCC v5.3.0
+  <span class="m">*</span> example: <span class="s">``GCC530``</span> for GCC v5.3.0
 
-Full example: ``20160513141133_new_pr_GCC530``
+Full example: <span class="s">``20160513141133_new_pr_GCC530``</span>
 
-Although there is usually no reason to change this default, it can be done if desired using ``--pr-branch-name``
-when opening a new pull request with ``--new-pr``.
+Although there is usually no reason to change this default, it can be done if desired using <span class="s">``--pr-branch-name``</span>
+when opening a new pull request with <span class="s">``--new-pr``</span>.
 
-Default commit message
-++++++++++++++++++++++
+<span class="gh">Default commit message</span>
+<span class="gh">++++++++++++++++++++++</span>
 
-EasyBuild will try to generate an appropriate default commit message when only new easyconfigs are being added via ``--new-pr``.
+EasyBuild will try to generate an appropriate default commit message when only new easyconfigs are being added via <span class="s">``--new-pr``</span>.
 
-When existing easyconfigs are being modified, patch files are being added/updated or ``--update-pr`` is used,
-a custom (meaningful) commit message *must* be provided via ``--pr-commit-msg`` (see :ref:`github_controlling_pr_metadata`).
+When existing easyconfigs are being modified, patch files are being added/updated or <span class="s">``--update-pr``</span> is used,
+a custom (meaningful) commit message <span class="ge">*must*</span> be provided via <span class="s">``--pr-commit-msg``</span> (see <span class="na">:ref:</span><span class="nv">`github_controlling_pr_metadata`</span>).
 
-Default pull request description
-++++++++++++++++++++++++++++++++
+<span class="gh">Default pull request description</span>
+<span class="gh">++++++++++++++++++++++++++++++++</span>
 
-By default, the pull description will only contain the following text::
+By default, the pull description will only contain the following text<span class="se">::</span>
 
-    (created using eb --new-pr)
+<span class="s">    (created using eb --new-pr)</span>
 
 It is generally advised to provide more descriptive information, although the changes made by the pull request
 may be self-explanatory (e.g. when only adding new easyconfig files).
 
-To change this default text, you can either use ``--pr-descr`` or edit the description via the GitHub interface
+To change this default text, you can either use <span class="s">``--pr-descr``</span> or edit the description via the GitHub interface
 after the pull request has been opened.
 
 Particularly useful information to specify here is dependencies on other pull requests, by copy-pasting the
-respective URLs with a short descriptive message like &#39;``depends on PR &lt;URL&gt;``&#39;.
+respective URLs with a short descriptive message like &#39;<span class="s">``depends on PR &lt;URL&gt;``</span>&#39;.
 
-Default pull request title
-++++++++++++++++++++++++++
+<span class="gh">Default pull request title</span>
+<span class="gh">++++++++++++++++++++++++++</span>
 
 The pull request title is derived from the easyconfig files being changed/added, taking into account the
 recommendation for easyconfig pull requests to clearly specify module class, toolchain, software name/version, as
-follows: ``{&lt;module_class&gt;}[&lt;toolchain&gt;] &lt;software_name&gt; v&lt;software_version&gt;``.
+follows: <span class="s">``{&lt;module_class&gt;}[&lt;toolchain&gt;] &lt;software_name&gt; v&lt;software_version&gt;``</span>.
 
-For example, when opening a pull request for an easyconfig for Python 2.7.11 with the ``intel/2016a`` toolchain,
-the default pull request title will be something like: ``{lang}[intel/2016a] Python v2.7.11`` .
+For example, when opening a pull request for an easyconfig for Python 2.7.11 with the <span class="s">``intel/2016a``</span> toolchain,
+the default pull request title will be something like: <span class="s">``{lang}[intel/2016a] Python v2.7.11``</span> .
 
-If multiple easyconfig files are provided, the respective software names/versions will be included separated by a ``,``,
+If multiple easyconfig files are provided, the respective software names/versions will be included separated by a <span class="s">``,``</span>,
 up until the first 3 easyconfig files (to avoid excessively lengthy pull request titles).
 
 In case (only) existing easyconfig files are being changed, it&#39;s advisable to provide a more descriptive title
-using ``--pr-title``.
+using <span class="s">``--pr-title``</span>.
 
-.. _github_configuring_new_update_pr:
+<span class="p">..</span> <span class="nt">_github_configuring_new_update_pr:</span>
 
-Configuring ``--new-pr`` and ``--update-pr``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Configuring ``--new-pr`` and ``--update-pr``</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-By default, ``--new-pr`` and ``--update-pr`` affect pull requests to the central ``easybuilders/easybuild-easyconfigs``
+By default, <span class="s">``--new-pr``</span> and <span class="s">``--update-pr``</span> affect pull requests to the central <span class="s">``easybuilders/easybuild-easyconfigs``</span>
 repository.
 
 However, this can be changed with the following configurations options:
 
-* ``--pr-target-account`` (default: ``easybuilders``): target GitHub account for new pull requests
-* ``--pr-target-branch`` (default: ``develop``): target branch for new pull requests
-* ``--pr-target-repo`` (default: ``easybuild-easyconfigs``): target repository for new pull requests
+<span class="m">*</span> <span class="s">``--pr-target-account``</span> (default: <span class="s">``easybuilders``</span>): target GitHub account for new pull requests
+<span class="m">*</span> <span class="s">``--pr-target-branch``</span> (default: <span class="s">``develop``</span>): target branch for new pull requests
+<span class="m">*</span> <span class="s">``--pr-target-repo``</span> (default: <span class="s">``easybuild-easyconfigs``</span>): target repository for new pull requests
 
-.. _github_synergy_new_update_pr_dry_run:
+<span class="p">..</span> <span class="nt">_github_synergy_new_update_pr_dry_run:</span>
 
-Synergy with ``--dry-run``/``-D`` and ``--extended-dry-run``/``-x``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Synergy with ``--dry-run``/``-D`` and ``--extended-dry-run``/``-x``</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-Both ``--new-pr`` and ``--update-pr`` are &#39;dry run-aware&#39;, in the sense that you can combine them with either
-``--dry-run``/``-D-`` or ``--extended-dry-run``/``-x`` to preview the pull request they would create/update without
+Both <span class="s">``--new-pr``</span> and <span class="s">``--update-pr``</span> are &#39;dry run-aware&#39;, in the sense that you can combine them with either
+<span class="s">``--dry-run``</span>/<span class="s">``-D-``</span> or <span class="s">``--extended-dry-run``</span>/<span class="s">``-x``</span> to preview the pull request they would create/update without
 actually doing so.
 
-For example::
+For example<span class="se">::</span>
 
-    $ eb --new-pr EasyBuild-2.9.0.eb -D
-    == temporary log file in case of crash /tmp/eb-1ny69k/easybuild-UR1Wr4.log
-    == copying /home/example/git-working-dirs/easybuild-easyconfigs...
-    == fetching branch &#39;develop&#39; from https://github.com/easybuilders/easybuild-easyconfigs.git...
+<span class="s">    $ eb --new-pr EasyBuild-2.9.0.eb -D</span>
+<span class="s">    == temporary log file in case of crash /tmp/eb-1ny69k/easybuild-UR1Wr4.log</span>
+<span class="s">    == copying /home/example/git-working-dirs/easybuild-easyconfigs...</span>
+<span class="s">    == fetching branch &#39;develop&#39; from https://github.com/easybuilders/easybuild-easyconfigs.git...</span>
 
-    Opening pull request [DRY RUN]
-    * target: easybuilders/easybuild-easyconfigs:develop
-    * from: boegel/easybuild-easyconfigs:20160603105641_new_pr_EasyBuild290
-    * title: &quot;{tools}[dummy/dummy] EasyBuild v2.9.0&quot;
-    * description:
-    &quot;&quot;&quot;
-    (created using `eb --new-pr`)
+<span class="s">    Opening pull request [DRY RUN]</span>
+<span class="s">    * target: easybuilders/easybuild-easyconfigs:develop</span>
+<span class="s">    * from: boegel/easybuild-easyconfigs:20160603105641_new_pr_EasyBuild290</span>
+<span class="s">    * title: &quot;{tools}[dummy/dummy] EasyBuild v2.9.0&quot;</span>
+<span class="s">    * description:</span>
+<span class="s">    &quot;&quot;&quot;</span>
+<span class="s">    (created using `eb --new-pr`)</span>
 
-    &quot;&quot;&quot;
-    * overview of changes:
-     .../easyconfigs/e/EasyBuild/EasyBuild-2.9.0.eb     | 35 ++++++++++++++++++++++
-     1 file changed, 35 insertions(+)
+<span class="s">    &quot;&quot;&quot;</span>
+<span class="s">    * overview of changes:</span>
+<span class="s">     .../easyconfigs/e/EasyBuild/EasyBuild-2.9.0.eb     | 35 ++++++++++++++++++++++</span>
+<span class="s">     1 file changed, 35 insertions(+)</span>
 
-The only difference between using ``--dry-run`` and ``--extended-dry-run`` is that the latter will show the full diff
-of the changes (equivalent to ``git diff``), while the former will only show a summary of the changes
-(equivalent to ``git diff --stat``, see example above).
+The only difference between using <span class="s">``--dry-run``</span> and <span class="s">``--extended-dry-run``</span> is that the latter will show the full diff
+of the changes (equivalent to <span class="s">``git diff``</span>), while the former will only show a summary of the changes
+(equivalent to <span class="s">``git diff --stat``</span>, see example above).
 </code></pre></div>
 
   <hr>
@@ -1265,7 +1265,7 @@ of the changes (equivalent to ``git diff``), while the former will only show a s
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
       
     
   </small>

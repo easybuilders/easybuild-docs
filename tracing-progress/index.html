@@ -386,49 +386,49 @@ and you can help with that!
 </ul>
 <p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
 </div>
-<div class="highlight"><pre><span></span><code>.. _trace:
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_trace:</span>
 
-Tracing progress
-================
+<span class="gh">Tracing progress</span>
+<span class="gh">================</span>
 
-To trace the progress of EasyBuild while it is installing software, you can use ``eb --trace``.
+To trace the progress of EasyBuild while it is installing software, you can use <span class="s">``eb --trace``</span>.
 
-.. note:: Tracing support was added as an experimental feature in EasyBuild v3.4.0, and thus required
-          using ``--experimental``. Since EasyBuild v3.4.1, ``--trace`` is considered stable and no longer
-          requires the use of ``--experimental``.
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Tracing support was added as an experimental feature in EasyBuild v3.4.0, and thus required
+          using <span class="s">``--experimental``</span>. Since EasyBuild v3.4.1, <span class="s">``--trace``</span> is considered stable and no longer
+          requires the use of <span class="s">``--experimental``</span>.
 
 
-.. contents::
-    :depth: 3
-    :backlinks: none
+<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
+    <span class="nc">:depth:</span> 3
+    <span class="nc">:backlinks:</span> none
 
-.. _trace_output:
+<span class="p">..</span> <span class="nt">_trace_output:</span>
 
-Trace output
-------------
+<span class="gh">Trace output</span>
+<span class="gh">------------</span>
 
-When ``eb --trace`` is used, EasyBuild will print additional output on top of the standard output,
+When <span class="s">``eb --trace``</span> is used, EasyBuild will print additional output on top of the standard output,
 which only mentions which step of the installation procedure is being executed (without any further details).
 
 This output includes:
 
-* location of build and install directories
-* list of sources and patches
-* modules being loaded
-* executed commands
-* results of the sanity check
-* location of generated module file
+<span class="m">*</span> location of build and install directories
+<span class="m">*</span> list of sources and patches
+<span class="m">*</span> modules being loaded
+<span class="m">*</span> executed commands
+<span class="m">*</span> results of the sanity check
+<span class="m">*</span> location of generated module file
 
 For each (non-trivial) executed command, the location to a temporary log file will be provided so the output of that
 command can be monitored while it is running. In addition, the start time of the command is printed, to allow
 determining how long the command has been running.
 
-.. _trace_example:
+<span class="p">..</span> <span class="nt">_trace_example:</span>
 
-Example
--------
+<span class="gh">Example</span>
+<span class="gh">-------</span>
 
-.. code::
+<span class="p">..</span> <span class="ow">code</span><span class="p">::</span>
 
     $ eb HDF5-1.10.1-intel-2017a.eb -df --trace --experimental
     == temporary log file in case of crash /tmp/eb-ieEeg3/easybuild-Ouw3jV.log
@@ -505,7 +505,7 @@ Example
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
       
     
   </small>

@@ -386,186 +386,186 @@ and you can help with that!
 </ul>
 <p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
 </div>
-<div class="highlight"><pre><span></span><code>.. _deprecated_easyconfigs:
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_deprecated_easyconfigs:</span>
 
-Deprecated easyconfigs
-======================
+<span class="gh">Deprecated easyconfigs</span>
+<span class="gh">======================</span>
 
 Since EasyBuild v3.8.0, individual easyconfig files or particular (versions of) toolchains can be marked as deprecated.
 
-.. contents::
-    :depth: 3
-    :backlinks: none
+<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
+    <span class="nc">:depth:</span> 3
+    <span class="nc">:backlinks:</span> none
 
 
-.. _deprecated_easyconfigs_symptoms:
+<span class="p">..</span> <span class="nt">_deprecated_easyconfigs_symptoms:</span>
 
-Symptoms
---------
+<span class="gh">Symptoms</span>
+<span class="gh">--------</span>
 
 Using an easyconfig file or toolchain that was marked as deprecated results in a warning message like:
 
-::
+<span class="se">::</span>
 
-  WARNING: Deprecated functionality, will no longer work in v4.0: easyconfig file &#39;/home/example/test.eb&#39; is marked as deprecated:
-  This is an example message explaining why the easyconfig file was deprecated.
-  (see also http://easybuild.readthedocs.org/en/latest/Deprecated-easyconfigs.html)
+<span class="s">  WARNING: Deprecated functionality, will no longer work in v4.0: easyconfig file &#39;/home/example/test.eb&#39; is marked as deprecated:</span>
+<span class="s">  This is an example message explaining why the easyconfig file was deprecated.</span>
+<span class="s">  (see also http://easybuild.readthedocs.org/en/latest/Deprecated-easyconfigs.html)</span>
 
 Or, in case you are trying to use an easyconfig file or toolchain that was marked deprecated in a previous major version
 of EasyBuild:
 
-::
+<span class="se">::</span>
 
-  ERROR: Failed to process easyconfig /home/example/test.eb: DEPRECATED (since v4.0) functionality used: easyconfig file &#39;/home/example/test.eb&#39; is marked as deprecated:
-  This is an example message explaining why the easyconfig file was deprecated.
-  (see also http://easybuild.readthedocs.org/en/latest/Deprecated-easyconfigs.html)
+<span class="s">  ERROR: Failed to process easyconfig /home/example/test.eb: DEPRECATED (since v4.0) functionality used: easyconfig file &#39;/home/example/test.eb&#39; is marked as deprecated:</span>
+<span class="s">  This is an example message explaining why the easyconfig file was deprecated.</span>
+<span class="s">  (see also http://easybuild.readthedocs.org/en/latest/Deprecated-easyconfigs.html)</span>
 
 
-.. _deprecated_easyconfigs_why:
+<span class="p">..</span> <span class="nt">_deprecated_easyconfigs_why:</span>
 
-Reasons for deprecation
------------------------
+<span class="gh">Reasons for deprecation</span>
+<span class="gh">-----------------------</span>
 
 There are several possible reasons why a particular easyconfig file or toolchain was deprecated, some of which include:
 
-* old/obsolete versions of software or toolchain components
-* toolchains that are superseded by other toolchains
-* known installation problems that are hard to resolve (or not worth the effort to resolve)
+<span class="m">*</span> old/obsolete versions of software or toolchain components
+<span class="m">*</span> toolchains that are superseded by other toolchains
+<span class="m">*</span> known installation problems that are hard to resolve (or not worth the effort to resolve)
 
 
-.. _deprecated_easyconfigs_implications:
+<span class="p">..</span> <span class="nt">_deprecated_easyconfigs_implications:</span>
 
-Implications
-------------
+<span class="gh">Implications</span>
+<span class="gh">------------</span>
 
-Easyconfig files that are deprecated or which use a deprecated toolchain are *not actively maintained*,
-and are *no longer included in the EasyBuild regression test* (which means they may be broken by recent changes
+Easyconfig files that are deprecated or which use a deprecated toolchain are <span class="ge">*not actively maintained*</span>,
+and are <span class="ge">*no longer included in the EasyBuild regression test*</span> (which means they may be broken by recent changes
 to the EasyBuild framework or relevant easyblocks).
 
-In a future major version of EasyBuild, these easyconfig files will be archived (see also :ref:`archived_easyconfigs`).
+In a future major version of EasyBuild, these easyconfig files will be archived (see also <span class="na">:ref:</span><span class="nv">`archived_easyconfigs`</span>).
 
-.. _deprecated_easyconfigs_toolchains:
+<span class="p">..</span> <span class="nt">_deprecated_easyconfigs_toolchains:</span>
 
-Deprecated toolchains
----------------------
+<span class="gh">Deprecated toolchains</span>
+<span class="gh">---------------------</span>
 
 Overview of deprecated toolchains:
 
-* :ref:`deprecated_easyconfigs_toolchains_foss`
-* :ref:`deprecated_easyconfigs_toolchains_gcc`
-* :ref:`deprecated_easyconfigs_toolchains_gcccuda`
-* :ref:`deprecated_easyconfigs_toolchains_gompi`
-* :ref:`deprecated_easyconfigs_toolchains_goolf`
-* :ref:`deprecated_easyconfigs_toolchains_ictce`
-* :ref:`deprecated_easyconfigs_toolchains_intel`
-* :ref:`deprecated_easyconfigs_toolchains_iomkl`
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`deprecated_easyconfigs_toolchains_foss`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`deprecated_easyconfigs_toolchains_gcc`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`deprecated_easyconfigs_toolchains_gcccuda`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`deprecated_easyconfigs_toolchains_gompi`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`deprecated_easyconfigs_toolchains_goolf`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`deprecated_easyconfigs_toolchains_ictce`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`deprecated_easyconfigs_toolchains_intel`</span>
+<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`deprecated_easyconfigs_toolchains_iomkl`</span>
 
 
-.. _deprecated_easyconfigs_toolchains_foss:
+<span class="p">..</span> <span class="nt">_deprecated_easyconfigs_toolchains_foss:</span>
 
-``foss`` and ``fosscuda`` toolchain
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">``foss`` and ``fosscuda`` toolchain</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-* *deprecated since:* EasyBuild v4.5.0
-* *will be archived in:* EasyBuild v5.0.0
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v4.5.0
+<span class="m">*</span> <span class="ge">*will be archived in:*</span> EasyBuild v5.0.0
 
-The oldest versions of the ``foss`` and ``fosscuda`` toolchains have been deprecated,
-which currently includes any version older than ``foss/2019a`` and ``fosscuda/2019a``.
-
-
-.. _deprecated_easyconfigs_toolchains_gcc:
-
-``GCCcore`` and ``GCC`` toolchains
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-* *deprecated since:* EasyBuild v4.5.0
-* *will be archived in:* EasyBuild v5.0.0
-
-The oldest versions of the ``GCCcore`` and ``GCC`` toolchains have been deprecated,
-which currently includes any version older than ``8.0``.
+The oldest versions of the <span class="s">``foss``</span> and <span class="s">``fosscuda``</span> toolchains have been deprecated,
+which currently includes any version older than <span class="s">``foss/2019a``</span> and <span class="s">``fosscuda/2019a``</span>.
 
 
-.. _deprecated_easyconfigs_toolchains_gcccuda:
+<span class="p">..</span> <span class="nt">_deprecated_easyconfigs_toolchains_gcc:</span>
 
-``gcccuda`` toolchain
-~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">``GCCcore`` and ``GCC`` toolchains</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-* *deprecated since:* EasyBuild v4.5.0
-* *will be archived in:* EasyBuild v5.0.0
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v4.5.0
+<span class="m">*</span> <span class="ge">*will be archived in:*</span> EasyBuild v5.0.0
 
-The oldest versions of the ``gcccuda`` toolchains have been deprecated,
-which currently includes any version older than ``gcccuda/2019a``.
-
-
-.. _deprecated_easyconfigs_toolchains_gompi:
-
-``gompi`` and ``gompic`` toolchains
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-* *deprecated since:* EasyBuild v4.5.0
-* *will be archived in:* EasyBuild v5.0.0
-
-Versions of the ``gompi`` and ``gompic`` toolchains that were used as a subtoolchain for a deprecated toolchain
-have also been deprecated; this includes versions older than ``gompi/2019a`` and ``gompic/2019a``.
+The oldest versions of the <span class="s">``GCCcore``</span> and <span class="s">``GCC``</span> toolchains have been deprecated,
+which currently includes any version older than <span class="s">``8.0``</span>.
 
 
-.. _deprecated_easyconfigs_toolchains_goolf:
+<span class="p">..</span> <span class="nt">_deprecated_easyconfigs_toolchains_gcccuda:</span>
 
-``goolf`` and ``goolfc`` toolchains
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">``gcccuda`` toolchain</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~</span>
 
-* *deprecated since:* EasyBuild v3.8.0
-* *archived in:* EasyBuild v4.0.0
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v4.5.0
+<span class="m">*</span> <span class="ge">*will be archived in:*</span> EasyBuild v5.0.0
 
-The ``goolf`` and ``goolfc`` toolchains have been deprecated,
-since they are superseded by the :ref:`common_toolchains_foss` and ``fosscuda`` toolchains, respectively.
-
-The ``foss*`` toolchains are equivalent to the ``goolf*`` toolchains,
-except that ``binutils`` is also included as a companion to ``GCC(core)`` in the ``foss*`` toolchains.
+The oldest versions of the <span class="s">``gcccuda``</span> toolchains have been deprecated,
+which currently includes any version older than <span class="s">``gcccuda/2019a``</span>.
 
 
-.. _deprecated_easyconfigs_toolchains_ictce:
+<span class="p">..</span> <span class="nt">_deprecated_easyconfigs_toolchains_gompi:</span>
 
-``ictce`` toolchain
-~~~~~~~~~~~~~~~~~~~
+<span class="gh">``gompi`` and ``gompic`` toolchains</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-* *deprecated since:* EasyBuild v3.8.0
-* *archived in:* EasyBuild v4.0.0
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v4.5.0
+<span class="m">*</span> <span class="ge">*will be archived in:*</span> EasyBuild v5.0.0
 
-The ``ictce`` toolchain has been deprecated, since it is superseded by the :ref:`common_toolchains_intel`.
-
-The ``ictce`` toolchain is equivalent to ``intel`` w.r.t. toolchain components,
-except that ``binutils`` is also included as a companion to ``GCC(core)`` (which serves as a base
-for the Intel compilers) in the ``intel`` toolchain.
+Versions of the <span class="s">``gompi``</span> and <span class="s">``gompic``</span> toolchains that were used as a subtoolchain for a deprecated toolchain
+have also been deprecated; this includes versions older than <span class="s">``gompi/2019a``</span> and <span class="s">``gompic/2019a``</span>.
 
 
-.. _deprecated_easyconfigs_toolchains_intel:
+<span class="p">..</span> <span class="nt">_deprecated_easyconfigs_toolchains_goolf:</span>
 
-``iccifort``, ``iimpi``, ``iimpic``, ``intel``, and ``intelcuda`` toolchains
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">``goolf`` and ``goolfc`` toolchains</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-* *deprecated since:* EasyBuild v4.5.0
-* *will be archived in:* EasyBuild v5.0.0
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v3.8.0
+<span class="m">*</span> <span class="ge">*archived in:*</span> EasyBuild v4.0.0
 
-The oldest versions of the ``iccifort``, ``iimpi`` and :ref:`common_toolchains_intel` have been deprecated.
+The <span class="s">``goolf``</span> and <span class="s">``goolfc``</span> toolchains have been deprecated,
+since they are superseded by the <span class="na">:ref:</span><span class="nv">`common_toolchains_foss`</span> and <span class="s">``fosscuda``</span> toolchains, respectively.
+
+The <span class="s">``foss*``</span> toolchains are equivalent to the <span class="s">``goolf*``</span> toolchains,
+except that <span class="s">``binutils``</span> is also included as a companion to <span class="s">``GCC(core)``</span> in the <span class="s">``foss*``</span> toolchains.
+
+
+<span class="p">..</span> <span class="nt">_deprecated_easyconfigs_toolchains_ictce:</span>
+
+<span class="gh">``ictce`` toolchain</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~</span>
+
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v3.8.0
+<span class="m">*</span> <span class="ge">*archived in:*</span> EasyBuild v4.0.0
+
+The <span class="s">``ictce``</span> toolchain has been deprecated, since it is superseded by the <span class="na">:ref:</span><span class="nv">`common_toolchains_intel`</span>.
+
+The <span class="s">``ictce``</span> toolchain is equivalent to <span class="s">``intel``</span> w.r.t. toolchain components,
+except that <span class="s">``binutils``</span> is also included as a companion to <span class="s">``GCC(core)``</span> (which serves as a base
+for the Intel compilers) in the <span class="s">``intel``</span> toolchain.
+
+
+<span class="p">..</span> <span class="nt">_deprecated_easyconfigs_toolchains_intel:</span>
+
+<span class="gh">``iccifort``, ``iimpi``, ``iimpic``, ``intel``, and ``intelcuda`` toolchains</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v4.5.0
+<span class="m">*</span> <span class="ge">*will be archived in:*</span> EasyBuild v5.0.0
+
+The oldest versions of the <span class="s">``iccifort``</span>, <span class="s">``iimpi``</span> and <span class="na">:ref:</span><span class="nv">`common_toolchains_intel`</span> have been deprecated.
 
 Deprecated versions include:
 
-* ``iccifort`` versions older than ``2019.0``
-* ``iimpi`` and ``iimpic`` versions older than ``2019a``
-* ``intel`` and ``intelcuda`` versions older than ``2019a``
+<span class="m">*</span> <span class="s">``iccifort``</span> versions older than <span class="s">``2019.0``</span>
+<span class="m">*</span> <span class="s">``iimpi``</span> and <span class="s">``iimpic``</span> versions older than <span class="s">``2019a``</span>
+<span class="m">*</span> <span class="s">``intel``</span> and <span class="s">``intelcuda``</span> versions older than <span class="s">``2019a``</span>
 
 
-.. _deprecated_easyconfigs_toolchains_iomkl:
+<span class="p">..</span> <span class="nt">_deprecated_easyconfigs_toolchains_iomkl:</span>
 
-``iompi``, ``iompic``, ``iomkl``, and ``iomklc`` toolchains
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">``iompi``, ``iompic``, ``iomkl``, and ``iomklc`` toolchains</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-* *deprecated since:* EasyBuild v4.5.0
-* *will be archived in:* EasyBuild v5.0.0
+<span class="m">*</span> <span class="ge">*deprecated since:*</span> EasyBuild v4.5.0
+<span class="m">*</span> <span class="ge">*will be archived in:*</span> EasyBuild v5.0.0
 
-The oldest versions of the ``iompi``, ``iompic``, ``iomkl`` and ``iomklc`` toolchains have been deprecated,
-which currently includes any version older than ``2019a``.
+The oldest versions of the <span class="s">``iompi``</span>, <span class="s">``iompic``</span>, <span class="s">``iomkl``</span> and <span class="s">``iomklc``</span> toolchains have been deprecated,
+which currently includes any version older than <span class="s">``2019a``</span>.
 </code></pre></div>
 
   <hr>
@@ -573,7 +573,7 @@ which currently includes any version older than ``2019a``.
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
       
     
   </small>

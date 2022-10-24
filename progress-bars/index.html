@@ -386,26 +386,26 @@ and you can help with that!
 </ul>
 <p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
 </div>
-<div class="highlight"><pre><span></span><code>.. _progress_bars:
+<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_progress_bars:</span>
 
-Progress bars
-=============
+<span class="gh">Progress bars</span>
+<span class="gh">=============</span>
 
-*(supported since: EasyBuild v4.5.0)*
+<span class="ge">*(supported since: EasyBuild v4.5.0)*</span>
 
-.. contents::
-    :depth: 3
-    :backlinks: none
+<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
+    <span class="nc">:depth:</span> 3
+    <span class="nc">:backlinks:</span> none
 
-.. _progress_bar_generic:
+<span class="p">..</span> <span class="nt">_progress_bar_generic:</span>
 
-General information on progress bars
-------------------------------------
+<span class="gh">General information on progress bars</span>
+<span class="gh">------------------------------------</span>
 
-EasyBuild will show **progress bars** for various aspects of the installation progress
-by default, if the `Rich &lt;https://pypi.org/project/rich/&gt;`_ Python package is available.
+EasyBuild will show <span class="gs">**progress bars**</span> for various aspects of the installation progress
+by default, if the <span class="s">`Rich </span><span class="si">&lt;https://pypi.org/project/rich/&gt;</span><span class="s">`_</span> Python package is available.
 
-The progress bars shown by EasyBuild are *dynamic*: they are only visible when they are relevant.
+The progress bars shown by EasyBuild are <span class="ge">*dynamic*</span>: they are only visible when they are relevant.
 
 Note that for most progress bars each step is treated as being equal even though the time taken for the
 various steps varies. There are many factors that impact how long an individual installation step, installing
@@ -413,119 +413,119 @@ an easyconfig, or installing an extension may and this makes it very difficult t
 much time will be needed.
 The download progress bar is an exception here (as long as the size of the file to download could be determined first).
 
-.. _progress_bars_types:
+<span class="p">..</span> <span class="nt">_progress_bars_types:</span>
 
-Types of progress bars
-----------------------
+<span class="gh">Types of progress bars</span>
+<span class="gh">----------------------</span>
 
 EasyBuild will show different progress bars to show the progress for different aspects of the installation process.
 
-Overall progress bar (status bar)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Overall progress bar (status bar)</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-.. image:: img/progress_bar_overall.png
-  :height: 18px
-  :align: center
+<span class="p">..</span> <span class="ow">image</span><span class="p">::</span> img/progress_bar_overall.png
+  <span class="nc">:height:</span> 18px
+  <span class="nc">:align:</span> center
 
-The progress bar at the bottom, also known as the *status bar*, shows the *overall progress*
+The progress bar at the bottom, also known as the <span class="ge">*status bar*</span>, shows the <span class="ge">*overall progress*</span>
 in installing software for the currently active EasyBuild session.
 
 From left to right, the following information is included:
 
-* The total amount of time that this EasyBuild session has spent on installing software.
-* The number of easyconfigs that have been processed already, the total number of easyconfigs
+<span class="m">*</span> The total amount of time that this EasyBuild session has spent on installing software.
+<span class="m">*</span> The number of easyconfigs that have been processed already, the total number of easyconfigs
   being processed, and a count of easyconfigs that failed to installed so far (if there are any).
-* The list of already processed easyconfigs, along with the result:
-    * ``OK`` (in green) for a successful installation;
-    * ``FAILED`` (in red) for a failed installation;
+<span class="m">*</span> The list of already processed easyconfigs, along with the result:
+    <span class="m">*</span> <span class="s">``OK``</span> (in green) for a successful installation;
+    <span class="m">*</span> <span class="s">``FAILED``</span> (in red) for a failed installation;
 
 Processed easyconfigs are shown in reversed order: most recently processed easyconfigs are listed first.
 
 If EasyBuild is configured to continue processing easyconfigs when an installation failed
-(for example when using ``--upload-test-report``), failing easyconfigs are listed before easyconfigs
+(for example when using <span class="s">``--upload-test-report``</span>), failing easyconfigs are listed before easyconfigs
 that were installed successfully, to highlight failing installations.
 
 The status bar is not shown if only a single easyconfig file is being installed,
 and is hidden automatically as soon as the EasyBuild session finishes.
 
-Easyconfig progress bar
-~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Easyconfig progress bar</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-.. image:: img/progress_bar_easyconfig.png
-  :height: 16px
-  :align: center
+<span class="p">..</span> <span class="ow">image</span><span class="p">::</span> img/progress_bar_easyconfig.png
+  <span class="nc">:height:</span> 16px
+  <span class="nc">:align:</span> center
 
 A dedicated progress bar is shown for every easyconfig file that is installed,
 right above the status bar (if present), which shows:
 
-* The name of the module that is being installed.
-* The currently active installation step.
-* The number of completed installations steps, as well as the total number of installation steps for this easyconfig.
-* A visual progress bar that represents the progress in installing this easyconfig.
-* The total amount of time spent on installing this easyconfig so far.
+<span class="m">*</span> The name of the module that is being installed.
+<span class="m">*</span> The currently active installation step.
+<span class="m">*</span> The number of completed installations steps, as well as the total number of installation steps for this easyconfig.
+<span class="m">*</span> A visual progress bar that represents the progress in installing this easyconfig.
+<span class="m">*</span> The total amount of time spent on installing this easyconfig so far.
 
 The progress bar for a specific easyconfig file will be hidden as soon as the installation
 finishes (regardless of whether it was successful or not).
 
-Download progress bars
-~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Download progress bars</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~</span>
 
-.. image:: img/progress_bar_download.png
-  :height: 56px
-  :align: center
+<span class="p">..</span> <span class="ow">image</span><span class="p">::</span> img/progress_bar_download.png
+  <span class="nc">:height:</span> 56px
+  <span class="nc">:align:</span> center
 
 When EasyBuild is downloading one or more files,
 a dedicated progress bar will be visible:
 
-* For large downloads: the name of the file being downloaded,
+<span class="m">*</span> For large downloads: the name of the file being downloaded,
   a visual progress bar, the amount of data downloaded so far,
   the amount of data to download in total, the average download speed,
   and the estimated time remaining to complete the download (based on average download speed).
-* If there are multiple files being downloaded: an overview of how
+<span class="m">*</span> If there are multiple files being downloaded: an overview of how
   many files have been downloaded already, and how many need to be downloaded in total.
 
 The download progress bars will be hidden as soon as the downloading has been completed (or has failed).
 
-Extensions progress bar
-~~~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">Extensions progress bar</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~</span>
 
-.. image:: img/progress_bar_extensions.png
-  :height: 22px
-  :align: center
+<span class="p">..</span> <span class="ow">image</span><span class="p">::</span> img/progress_bar_extensions.png
+  <span class="nc">:height:</span> 22px
+  <span class="nc">:align:</span> center
 
 When extensions are being installed for a particular easyconfig,
-a dedicated progress bar will pop up for the ``extensions`` step,
+a dedicated progress bar will pop up for the <span class="s">``extensions``</span> step,
 which shows:
 
-* The name of the extension that is currently being installed.
-* The number of extensions installed so far, and the total number of extensions to install.
-* A visual progress bar that represents the progress for installing extensions so far.
-* The total amount of time spent installing extensions for this easyconfig.
+<span class="m">*</span> The name of the extension that is currently being installed.
+<span class="m">*</span> The number of extensions installed so far, and the total number of extensions to install.
+<span class="m">*</span> A visual progress bar that represents the progress for installing extensions so far.
+<span class="m">*</span> The total amount of time spent installing extensions for this easyconfig.
 
-.. _progress_bars_configuration:
+<span class="p">..</span> <span class="nt">_progress_bars_configuration:</span>
 
-Relevant configuration options
-------------------------------
+<span class="gh">Relevant configuration options</span>
+<span class="gh">------------------------------</span>
 
-``output-style``
-~~~~~~~~~~~~~~~~
+<span class="gh">``output-style``</span>
+<span class="gh">~~~~~~~~~~~~~~~~</span>
 
-The ``output-style`` configuration option determines the output style of the ``eb`` command.
+The <span class="s">``output-style``</span> configuration option determines the output style of the <span class="s">``eb``</span> command.
 
-Setting ``output-style`` to &#39;``rich``&#39; results in rich output being produced, which includes progress bars.
-This also makes ``Rich`` a *required* dependency for EasyBuild.
+Setting <span class="s">``output-style``</span> to &#39;<span class="s">``rich``</span>&#39; results in rich output being produced, which includes progress bars.
+This also makes <span class="s">``Rich``</span> a <span class="ge">*required*</span> dependency for EasyBuild.
 
-Using &#39;``basic``&#39; as value for ``output-style`` results in basic output (no progress bars).
+Using &#39;<span class="s">``basic``</span>&#39; as value for <span class="s">``output-style``</span> results in basic output (no progress bars).
 
-By default ``output-style`` is set to &#39;``auto``&#39;, which implies using the ``Rich`` Python package to produce
+By default <span class="s">``output-style``</span> is set to &#39;<span class="s">``auto``</span>&#39;, which implies using the <span class="s">``Rich``</span> Python package to produce
 rich output (incl. progress bars) if is available,
-and falling back to using the basic output style if ``Rich`` is not available.
+and falling back to using the basic output style if <span class="s">``Rich``</span> is not available.
 
-``show-progress-bar``
-~~~~~~~~~~~~~~~~~~~~~
+<span class="gh">``show-progress-bar``</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~</span>
 
-The ``show-progress-bar`` configuration option (enabled by default) controls whether or not
-progress bars are shown, regardless of the active output style and whether ``Rich`` is available.
+The <span class="s">``show-progress-bar``</span> configuration option (enabled by default) controls whether or not
+progress bars are shown, regardless of the active output style and whether <span class="s">``Rich``</span> is available.
 </code></pre></div>
 
   <hr>
@@ -533,7 +533,7 @@ progress bars are shown, regardless of the active output style and whether ``Ric
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
       
     
   </small>
