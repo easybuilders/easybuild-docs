@@ -12,7 +12,7 @@ This repository contains the *sources* of the EasyBuild documentation, which is 
 ## Porting effort (we need your help!)
 
 We are currently moving the EasyBuild documentation from the [``easybuild`` repository](https://github.com/easybuilders/easybuild)
-to this reposiotry, and are converting the documentation sources from [reStructuredText](https://en.wikipedia.org/wiki/ReStructuredText) (``.rst``)
+to this repository, and are converting the documentation sources from [reStructuredText](https://en.wikipedia.org/wiki/ReStructuredText) (``.rst``)
 to [MarkDown](https://daringfireball.net/projects/markdown) (``.md``), so it can be rendered using [MkDocs](https://mkdocs.org).
 
 If you would like to help, here's what you should do:
@@ -22,7 +22,7 @@ If you would like to help, here's what you should do:
    ```shell
    git clone git@github.com:easybuilders/easybuild-docs.git
    cd easybuild-docs
-   git add remote YOUR_GITHUB_ACCOUNT git@github.com:YOUR_GITHUB_ACCOUNT/easybuild-docs.git
+   git remote add YOUR_GITHUB_ACCOUNT git@github.com:YOUR_GITHUB_ACCOUNT/easybuild-docs.git
    ```
 
 1) Pick a documentation page that you would like to port to MarkDown format.
@@ -36,7 +36,6 @@ If you would like to help, here's what you should do:
    (we're using `example_branch` below):
 
    ```shell
-   cd easybuild-docs
    git checkout main
    git pull origin main
    git branch example_branch
