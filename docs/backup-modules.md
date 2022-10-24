@@ -39,7 +39,7 @@ Both these module files are missing an update statement for $PATH
 because the `/bin` subdirectory was missing in the installation, for the
 purpose of this example:
 
-!!! example
+!!! example ""
 
     ```
     $ ls -la $EASYBUILD_PREFIX/modules/all/bzip2
@@ -56,7 +56,7 @@ Using `--force` and `--backup-modules`, we can reinstall the
 To reinstall the `bzip2/1.0.6` module in Lua syntax while retaining a
 backup of the existing module:
 
-!!! example
+!!! example ""
 
     ```
     $ eb bzip2-1.0.6.eb --module-syntax=Lua --force --backup-modules
@@ -89,7 +89,7 @@ eb bzip2-1.0.6.eb --module-syntax=Tcl --force --backup-modules
 Afterwards, both the newly generated modules and the backups are in
 place:
 
-!!! example
+!!! example ""
 
     ```
     $ ls -la $EASYBUILD_PREFIX/modules/all/bzip2
@@ -105,7 +105,7 @@ place:
 Cleaning up the backup module files can be done with the following
 command (for example):
 
-!!! example
+!!! example ""
 
     ```
     $ find $EASYBUILD_PREFIX/modules/all/bzip2 -name '*.bak*' | xargs rm -v
