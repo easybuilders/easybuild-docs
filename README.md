@@ -1,10 +1,10 @@
 # EasyBuild documentation
 
-This repository contains the *sources* of the EasyBuild documentation, which is hosted at https://docs.easybuild.io.
+This repository contains the *sources* of the EasyBuild documentation, which is hosted at <https://docs.easybuild.io>.
 
 > **Warning**
 > 
-> The sources of the EasyBuild documentation currently still reside at https://github.com/easybuilders/easybuild/tree/main/docs.
+> The sources of the EasyBuild documentation currently still reside at <https://github.com/easybuilders/easybuild/tree/main/docs>.
 >
 > We are actively porting the sources from [reStructuredText](https://en.wikipedia.org/wiki/ReStructuredText) format
 > to [MarkDown](https://daringfireball.net/projects/markdown) format.
@@ -40,7 +40,7 @@ If you would like to help, here's what you should do:
    git pull origin main
    git branch example_branch
    ```
-   
+
 3) Remove the top warning in the existing `.md` file that corresponds to the documentation page you would like to work on, and create a commit for it:
 
    ```shell
@@ -57,7 +57,7 @@ If you would like to help, here's what you should do:
 
    By creating a pull request already at this stage, it is clear to others who want to help with the porting effort
    that someone is already working on that documentation page, and we can avoid duplicate work being done.
-   
+
    ```shell
    git push YOUR_GITHUB_ACCOUNT example_branch
    # create pull request in GitHub, change PR title to "port example page to MarkDown";
@@ -73,7 +73,7 @@ If you would like to help, here's what you should do:
    git commit -m "port example page to MarkDown"
    git push YOUR_GITHUB_ACCOUNT example_branch
    ```
-   
+
 6) Keep an eye on your pull request, and update your pull request again if any changes are suggested by the person who reviews it,
    or if the tests fail.
 
@@ -109,7 +109,7 @@ Useful links:
 
 ## Publishing
 
-The documentation is automatically built and published to https://docs.easybuild.io on every push to the `main` branch of this repository.
+The documentation is automatically built and published to <https://docs.easybuild.io> on every push to the `main` branch of this repository.
 
 This is taken care of by the [`deploy` GitHub Actions workflow](https://github.com/easybuilders/easybuild-docs/tree/main/.github/workflows/deploy.yml).
 
@@ -119,7 +119,7 @@ This is taken care of by the [`deploy` GitHub Actions workflow](https://github.c
 
 To install all the required `mkdocs` Python packages, use the provided [requirements.txt](https://github.com/easybuilders/easybuild-docs/tree/main/requirements.txt) file:
 
-```
+```shell
 pip install -r requirements.txt
 ```
 
@@ -127,13 +127,13 @@ pip install -r requirements.txt
 
 To build the documentation, use:
 
-```
+```shell
 mkdocs build
 ```
 
 or use the `Makefile` that is provided in this repository:
 
-```
+```shell
 make
 ```
 
@@ -141,13 +141,13 @@ make
 
 To test whether the documentation is building correctly, and whether all (internal) links are correct, use:
 
-```
+```shell
 mkdocs build --strict
 ```
 
 or
 
-```
+```shell
 make test
 ```
 
@@ -157,19 +157,19 @@ These commands will exit with a non-zero exit code if `mkdocs` produces any erro
 
 To see a local preview of the rendered documentation in your browser, use
 
-```
+```shell
 mkdocs serve
 ```
 
 or
 
-```
+```shell
 make preview
 ```
 
 and click the link that is provided, for example:
 
-```
+```shell
 INFO     -  Documentation built in 0.24 seconds
 INFO     -  [17:52:07] Watching paths for changes: 'docs', 'mkdocs.yml'
 INFO     -  [17:52:07] Serving on http://127.0.0.1:8000/
