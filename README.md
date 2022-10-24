@@ -57,7 +57,7 @@ If you would like to help, here's what you should do:
 
    By creating a pull request already at this stage, it is clear to others who want to help with the porting effort
    that someone is already working on that documentation page, and we can avoid duplicate work being done.
- 
+
    ```shell
    git push YOUR_GITHUB_ACCOUNT example_branch
    # create pull request in GitHub, change PR title to "port example page to MarkDown";
@@ -73,7 +73,7 @@ If you would like to help, here's what you should do:
    git commit -m "port example page to MarkDown"
    git push YOUR_GITHUB_ACCOUNT example_branch
    ```
- 
+
 6) Keep an eye on your pull request, and update your pull request again if any changes are suggested by the person who reviews it,
    or if the tests fail.
 
