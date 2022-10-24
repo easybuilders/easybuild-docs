@@ -12,7 +12,7 @@ This repository contains the *sources* of the EasyBuild documentation, which is 
 ## Porting effort (we need your help!)
 
 We are currently moving the EasyBuild documentation from the [``easybuild`` repository](https://github.com/easybuilders/easybuild)
-to this reposiotry, and are converting the documentation sources from [reStructuredText](https://en.wikipedia.org/wiki/ReStructuredText) (``.rst``)
+to this repository, and are converting the documentation sources from [reStructuredText](https://en.wikipedia.org/wiki/ReStructuredText) (``.rst``)
 to [MarkDown](https://daringfireball.net/projects/markdown) (``.md``), so it can be rendered using [MkDocs](https://mkdocs.org).
 
 If you would like to help, here's what you should do:
