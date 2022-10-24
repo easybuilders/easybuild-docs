@@ -13,7 +13,7 @@
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
 
-```
+```rst
 .. _archived_easyconfigs:
 
 Archived easyconfigs
