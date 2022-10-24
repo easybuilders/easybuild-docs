@@ -12,7 +12,8 @@
     - target: [`docs/easybuild-v4/overview-relocated-functions-constants.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/easybuild-v4/overview-relocated-functions-constants.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _eb4_relocated_functions_classes_constants:
 
 Overview of relocated functions, classes and constants in EasyBuild v4.0
