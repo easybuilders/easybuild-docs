@@ -12,7 +12,8 @@
     - target: [`docs/installing-lmod-without-root-permissions.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/installing-lmod-without-root-permissions.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 
 .. _installing_lmod:
 

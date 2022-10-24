@@ -12,7 +12,8 @@
     - target: [`docs/useful-scripts.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/useful-scripts.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _useful_scripts:
 
 Useful scripts

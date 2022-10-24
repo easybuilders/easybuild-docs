@@ -12,7 +12,8 @@
     - target: [`docs/controlling-compiler-optimization-flags.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/controlling-compiler-optimization-flags.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _controlling_compiler_optimization_flags:
 
 Controlling compiler optimization flags

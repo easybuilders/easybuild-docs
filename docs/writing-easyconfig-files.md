@@ -12,7 +12,8 @@
     - target: [`docs/writing-easyconfig-files.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/writing-easyconfig-files.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _writing_easyconfig_files:
 
 Writing easyconfig files: the basics

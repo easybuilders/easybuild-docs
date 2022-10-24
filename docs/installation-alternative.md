@@ -12,7 +12,8 @@
     - target: [`docs/installation-alternative.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/installation-alternative.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 
 .. toctree::
      :maxdepth: 1

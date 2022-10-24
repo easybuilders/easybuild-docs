@@ -12,7 +12,8 @@
     - target: [`docs/backup-modules.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/backup-modules.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _backup_modules:
 
 Backing up of existing modules (``--backup-modules``)

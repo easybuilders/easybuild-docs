@@ -12,7 +12,8 @@
     - target: [`docs/typical-workflow-example-with-wrf.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/typical-workflow-example-with-wrf.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _typical_workflow:
 
 Typical workflow example: building and installing WRF

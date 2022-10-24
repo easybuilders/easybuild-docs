@@ -12,7 +12,8 @@
     - target: [`docs/unit-tests.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/unit-tests.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _unit_tests:
 
 Unit tests

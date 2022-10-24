@@ -12,7 +12,8 @@
     - target: [`docs/integration-with-github.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/integration-with-github.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _integration_with_github:
 
 Integration with GitHub

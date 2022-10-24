@@ -12,7 +12,8 @@
     - target: [`docs/cray-support.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/cray-support.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _cray_support:
 
 EasyBuild on Cray

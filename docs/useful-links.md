@@ -12,7 +12,8 @@
     - target: [`docs/useful-links.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/useful-links.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 
 .. _useful_links:
 

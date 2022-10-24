@@ -12,7 +12,8 @@
     - target: [`docs/writing-yeb-easyconfig-files.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/writing-yeb-easyconfig-files.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _easyconfig_yeb_format:
 
 Writing easyconfig files in YAML syntax (``.yeb`` format) **[IN DEVELOPMENT]**

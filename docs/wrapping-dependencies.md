@@ -12,7 +12,8 @@
     - target: [`docs/wrapping-dependencies.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/wrapping-dependencies.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _wrapping_dependencies:
 
 Wrapping dependencies

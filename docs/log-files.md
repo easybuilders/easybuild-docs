@@ -12,7 +12,8 @@
     - target: [`docs/log-files.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/log-files.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _understanding_easyBuild_logs:
 
 Understanding EasyBuild logs
