@@ -1,5 +1,5 @@
 # documentation: https://help.github.com/en/articles/workflow-syntax-for-github-actions
-name: test building of EasyBuild documentation
+name: MarkDown linting
 on: [push, pull_request]
 jobs:
   build:
