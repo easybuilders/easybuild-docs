@@ -12,7 +12,8 @@
     - target: [`docs/rpath-support.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/rpath-support.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _rpath_support:
 
 Support for RPATH

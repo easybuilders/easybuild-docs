@@ -27,7 +27,8 @@
     - target: [`examples` section of `docs/extended-dry-run.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/extended-dry-run.md#examples)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _extended_dry_run_examples:
 
 Extended dry run: examples
@@ -552,7 +553,8 @@ WRF v3.6.1 with intel/2015a
 
 
 ```
-```
+
+```rst
 .. _extended_dry_run:
 
 Extended dry run

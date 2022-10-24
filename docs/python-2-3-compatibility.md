@@ -12,7 +12,8 @@
     - target: [`docs/python-2-3-compatibility.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/python-2-3-compatibility.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _py2_py3_compatibility:
 
 Compatibility with Python 2 and Python 3

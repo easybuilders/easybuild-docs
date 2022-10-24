@@ -12,7 +12,8 @@
     - target: [`docs/common-toolchains.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/common-toolchains.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _common_toolchains:
 
 Common toolchains

@@ -12,7 +12,8 @@
     - target: [`docs/system-toolchain.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/system-toolchain.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _system_toolchain:
 
 System toolchain

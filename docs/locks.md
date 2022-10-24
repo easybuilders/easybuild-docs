@@ -12,7 +12,8 @@
     - target: [`docs/locks.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/locks.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _locks:
 
 Locks to prevent duplicate installations running at the same time

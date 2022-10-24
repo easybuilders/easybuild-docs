@@ -12,7 +12,8 @@
     - target: [`docs/deprecated-easyconfigs.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/deprecated-easyconfigs.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _deprecated_easyconfigs:
 
 Deprecated easyconfigs

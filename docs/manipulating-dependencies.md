@@ -12,7 +12,8 @@
     - target: [`docs/manipulating-dependencies.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/manipulating-dependencies.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _manipulating_dependencies:
 
 Manipulating dependencies

@@ -12,7 +12,8 @@
     - target: [`docs/submitting-jobs.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/submitting-jobs.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _submitting_jobs:
 
 Submitting jobs using ``--job``

@@ -12,7 +12,8 @@
     - target: [`docs/using-external-modules.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/using-external-modules.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _using_external_modules:
 
 Using external modules

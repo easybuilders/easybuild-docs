@@ -13,7 +13,8 @@
     - target: [`docs/deprecated-functionality.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/deprecated-functionality.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _deprecated:
 
 Deprecated functionality

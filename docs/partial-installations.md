@@ -12,7 +12,8 @@
     - target: [`docs/partial-installations.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/partial-installations.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _partial_installations:
 
 Partial installations
