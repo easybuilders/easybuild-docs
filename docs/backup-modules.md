@@ -69,13 +69,13 @@ backup of the existing module:
     --- /example/modules/all/bzip2/1.0.6.lua.bak_20170824102603
     +++ /example/modules/all/bzip2/1.0.6.lua
     @@ -25,9 +25,10 @@
-    prepend_path("LD_LIBRARY_PATH", pathJoin(root, "lib"))
-    prepend_path("LIBRARY_PATH", pathJoin(root, "lib"))
-    prepend_path("MANPATH", pathJoin(root, "man"))
+     prepend_path("LD_LIBRARY_PATH", pathJoin(root, "lib"))
+     prepend_path("LIBRARY_PATH", pathJoin(root, "lib"))
+     prepend_path("MANPATH", pathJoin(root, "man"))
     +prepend_path("PATH", pathJoin(root, "bin"))
-    setenv("EBROOTBZIP2", root)
-    setenv("EBVERSIONBZIP2", "1.0.6")
-    setenv("EBDEVELBZIP2", pathJoin(root, "easybuild/bzip2-1.0.6-easybuild-devel"))
+     setenv("EBROOTBZIP2", root)
+     setenv("EBVERSIONBZIP2", "1.0.6")
+     setenv("EBDEVELBZIP2", pathJoin(root, "easybuild/bzip2-1.0.6-easybuild-devel"))
 
     ...
     ```
