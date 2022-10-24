@@ -2,6 +2,8 @@
 
 ## All available easyconfig parameters
 
+## Enabling dependency resolution
+
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Using_the_EasyBuild_command_line.html>.
 

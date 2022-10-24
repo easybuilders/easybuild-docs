@@ -1,10 +1,6 @@
 # What is EasyBuild?
 
-```rst
-.. _what_is_easybuild:
-
-What is EasyBuild?
-------------------
+## What is EasyBuild?
 
 EasyBuild is a software build and installation framework that allows you to manage (scientific) software on High 
 Performance Computing (HPC) systems in an efficient way. It is motivated by the need for a tool that combines the
@@ -26,16 +22,16 @@ Some key features of EasyBuild:
 
   * also interactive installers, code patching, generating module file, ...
 
-* easily :ref:`configurable <configuring_easybuild>`: config file/environment/command line
+* easily [configurable](configuration.md): configuration files / environment variables / command line options
 
   * including aspects like module naming scheme
 
-* thorough logging and archiving (see :doc:`Logfiles`)
+* thorough logging and archiving (see [Log files](log-files.md))
 
   * entire build process is logged thoroughly, logs are stored in install directory;
   * easyconfig file used for build is archived (install directory + file/svn/git repo) 
 
-* automatic **dependency resolution** (see :ref:`use_robot`)
+* automatic **dependency resolution** (see [`--robot`](using-easybuild.md#enabling-dependency-resolution))
 
   * build entire software stack with a single command, using ``--robot``
 
@@ -44,8 +40,6 @@ Some key features of EasyBuild:
 * thriving, growing **community**
 
 Take a look at our HUST'14 workshop paper
-`Modern Scientific Software Management Using EasyBuild and Lmod`
-(`download PDF here <https://easybuilders.github.io/easybuild/files/hust14_paper.pdf>`_)
+*Modern Scientific Software Management Using EasyBuild and Lmod*
+([PDF](https://easybuilders.github.io/easybuild/files/hust14_paper.pdf)),
 and use that as a reference in case you present academic work mentioning EasyBuild.
-
-```
