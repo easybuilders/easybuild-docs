@@ -12,7 +12,8 @@
     - target: [`docs/contributing.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/contributing.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _contributing:
 
 Contributing

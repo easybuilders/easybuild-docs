@@ -12,7 +12,8 @@
     - target: [`docs/implementing-easyblocks.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/implementing-easyblocks.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _implementing_easyblocks:
 
 Implementing easyblocks

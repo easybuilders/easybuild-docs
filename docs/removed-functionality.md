@@ -12,7 +12,8 @@
     - target: [`docs/removed-functionality.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/removed-functionality.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _removed_functionality:
 
 Removed functionality

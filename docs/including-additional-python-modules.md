@@ -12,7 +12,8 @@
     - target: [`docs/including-additional-python-modules.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/including-additional-python-modules.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _including_additional_python_modules:
 
 Including additional Python modules (``--include-*``)

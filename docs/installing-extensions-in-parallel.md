@@ -12,7 +12,8 @@
     - target: [`docs/installing-extensions-in-parallel.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/installing-extensions-in-parallel.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _installing_extensions_in_parallel:
 
 Installing extensions in parallel (experimental!)

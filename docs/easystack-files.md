@@ -12,7 +12,8 @@
     - target: [`docs/easystack-files.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/easystack-files.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _easystack:
 
 Easystack files

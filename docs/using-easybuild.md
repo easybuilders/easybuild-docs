@@ -14,7 +14,8 @@
     - target: [`docs/using-easybuild.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/using-easybuild.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _using_the_easybuild_command_line:
 
 Using the EasyBuild command line

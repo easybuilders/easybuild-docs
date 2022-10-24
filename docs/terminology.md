@@ -12,7 +12,8 @@
     - target: [`docs/terminology.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/terminology.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _concepts_and_terminology:
 
 Concepts and terminology

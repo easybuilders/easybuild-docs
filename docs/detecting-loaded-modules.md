@@ -12,7 +12,8 @@
     - target: [`docs/detecting-loaded-modules.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/detecting-loaded-modules.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-```
+
+```rst
 .. _detecting_loaded_modules:
 
 Detection of loaded modules
