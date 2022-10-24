@@ -22,7 +22,7 @@ If you would like to help, here's what you should do:
    ```shell
    git clone git@github.com:easybuilders/easybuild-docs.git
    cd easybuild-docs
-   git add remote YOUR_GITHUB_ACCOUNT git@github.com:YOUR_GITHUB_ACCOUNT/easybuild-docs.git
+   git remote add YOUR_GITHUB_ACCOUNT git@github.com:YOUR_GITHUB_ACCOUNT/easybuild-docs.git
    ```
 
 1) Pick a documentation page that you would like to port to MarkDown format.
@@ -36,7 +36,6 @@ If you would like to help, here's what you should do:
    (we're using `example_branch` below):
 
    ```shell
-   cd easybuild-docs
    git checkout main
    git pull origin main
    git branch example_branch
