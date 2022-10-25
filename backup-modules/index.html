@@ -354,6 +354,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#disabling-automatic-backup-of-modules" class="md-nav__link">
+    Disabling automatic backup of modules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -373,117 +395,86 @@
 
 
 <h1 id="backing-up-of-existing-modules">Backing up of existing modules<a class="headerlink" href="#backing-up-of-existing-modules" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/Backup_modules.html">https://docs.easybuild.io/en/latest/Backup_modules.html</a>.</p>
-<p><strong>
-It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
-and you can help with that!
-</strong></p>
+<p>While regenerating existing module files, you may want to preserve the
+existing module files to compare and assess that the changes in the
+newly generated module file match expectations.</p>
+<p>Backing up of existing modules can be enabled with <code>--backup-modules</code>.</p>
+<p>Backups are stored in the same directory as where the module file was
+located, and the files are given an additional extension of the form
+<code>.bak_&lt;year&gt;&lt;month&gt;&lt;day&gt;&lt;hour&gt;&lt;min&gt;&lt;sec&gt;</code>.</p>
 <ul>
-<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Backup_modules.rst"><code>docs/Backup_modules.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
-<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/backup-modules.md"><code>docs/backup-modules.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
+<li>With module files in Tcl syntax, the backup module file is hidden by
+  adding a leading dot to the filename; this is done to avoid that it
+  is displayed as a normal module in <code>module avail</code>.</li>
+<li>With module files in Lua syntax, the backup module file is not made
+  hidden (unless Lmod 6.x is used), since the additional <code>.bak_*</code>
+  extension prevents from picking it up as a valid module file; only
+  files ending in <code>.lua</code> are considered to be module files by Lmod 7+.</li>
 </ul>
-<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_backup_modules:</span>
+<p>The location of the backed up module file will be printed, as well as a
+"unified diff" comparison (very similar to what <code>diff -u</code> produces)
+between the backed up module file and the newly generated module file
+(or a message mentioning that no differences were found).</p>
+<h2 id="disabling-automatic-backup-of-modules">Disabling automatic backup of modules<a class="headerlink" href="#disabling-automatic-backup-of-modules" title="Permanent link">&para;</a></h2>
+<p>When <code>--skip</code> or <code>--module-only</code> is used, backing up of existing modules
+is enabled automatically.</p>
+<p>This can be disabled with <code>--disable-backup-modules</code>.</p>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<p>Suppose existing modules in both Tcl &amp; Lua syntax are present
+(<code>bzip2/1.0.6</code>).</p>
+<p>Both these module files are missing an update statement for <code>$PATH</code>
+because the <code>/bin</code> subdirectory was missing in the installation, for the
+purpose of this example:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>ls -la <span class="nv">$EASYBUILD_PREFIX</span>/modules/all/bzip2
+<span class="go">total 16</span>
+<span class="go">drwxr-xr-x  2 example  example   136 Aug 24 10:20 .</span>
+<span class="go">drwxr-xr-x  3 example  example   102 Aug 24 10:18 ..</span>
+<span class="go">-rw-r--r--  1 example  example  1256 Aug 24 10:19 1.0.6</span>
+<span class="go">-rw-r--r--  1 example  example  1303 Aug 24 10:18 1.0.6.lua</span>
+</code></pre></div>
+<p>Using <code>--force</code> and <code>--backup-modules</code>, we can reinstall the
+<code>bzip2/1.0.6</code> modules and get a clear view on what has changed.</p>
+<p>To reinstall the <code>bzip2/1.0.6</code> module in Lua syntax while retaining a
+backup of the existing module:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb bzip2-1.0.6.eb --module-syntax<span class="o">=</span>Lua --force --backup-modules
+<span class="go">...</span>
+<span class="go">== creating build dir, resetting environment...</span>
+<span class="go">== backup of existing module file stored at /example/modules/all/bzip2/1.0.6.lua.bak_20170824102603</span>
+<span class="go">...</span>
+<span class="go">== creating module...</span>
+<span class="go">== comparing module file with backup /example/modules/all/bzip2/1.0.6.lua.bak_20170824102603; diff is:</span>
+<span class="go">--- /example/modules/all/bzip2/1.0.6.lua.bak_20170824102603</span>
+<span class="go">+++ /example/modules/all/bzip2/1.0.6.lua</span>
+<span class="go">@@ -25,9 +25,10 @@</span>
+<span class="go"> prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(root, &quot;lib&quot;))</span>
+<span class="go"> prepend_path(&quot;LIBRARY_PATH&quot;, pathJoin(root, &quot;lib&quot;))</span>
+<span class="go"> prepend_path(&quot;MANPATH&quot;, pathJoin(root, &quot;man&quot;))</span>
+<span class="go">+prepend_path(&quot;PATH&quot;, pathJoin(root, &quot;bin&quot;))</span>
+<span class="go"> setenv(&quot;EBROOTBZIP2&quot;, root)</span>
+<span class="go"> setenv(&quot;EBVERSIONBZIP2&quot;, &quot;1.0.6&quot;)</span>
+<span class="go"> setenv(&quot;EBDEVELBZIP2&quot;, pathJoin(root, &quot;easybuild/bzip2-1.0.6-easybuild-devel&quot;))</span>
 
-<span class="gh">Backing up of existing modules (``--backup-modules``)</span>
-<span class="gh">-----------------------------------------------------</span>
-
-While regenerating existing module files, you may want to preserve the existing module files
-to compare and assess that the changes in the newly generated module file match expectations.
-
-Backing up of existing modules can be enabled with <span class="s">``--backup-modules``</span>.
-
-Backups are stored in the same directory as where the module file was located,
-and the files are given an additional extension of the form <span class="s">``.bak_&lt;year&gt;&lt;month&gt;&lt;day&gt;&lt;hour&gt;&lt;min&gt;&lt;sec&gt;``</span>.
-
-<span class="m">*</span> With module files in Tcl syntax, the backup module file is hidden by adding a leading dot to the filename;
-  this is done to avoid that it is displayed as a normal module in <span class="s">``module avail``</span>.
-<span class="m">*</span> With module files in Lua syntax, the backup module file is not made hidden (unless Lmod 6.x is used),
-  since the additional <span class="s">``.bak_*``</span> extension prevents from picking it up as a valid module file;
-  only files ending in <span class="s">``.lua``</span> are considered to be module files by Lmod 7+ .
-
-The location of the backed up module file will be printed, as well as a &quot;unified diff&quot; comparison
-(very similar to what <span class="s">``diff -u``</span> produces) between the backed up module file and the newly generated module file
-(or a message mentioning that no differences were found).
-
-
-<span class="p">..</span> <span class="nt">_backup_modules_disable:</span>
-
-<span class="gh">Disabling automatic backup of modules</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-When <span class="s">``--skip``</span> or <span class="s">``--module-only``</span> is used, backing up of existing modules is enabled automatically.
-
-This can be disabled with <span class="s">``--disable-backup-modules``</span>.
-
-
-<span class="p">..</span> <span class="nt">_backup_modules_example:</span>
-
-<span class="gh">Example</span>
-<span class="gh">~~~~~~~</span>
-
-Suppose existing modules in both Tcl &amp; Lua syntax are present (<span class="s">``bzip2/1.0.6``</span>).
-
-Both these module files are missing an update statement for $PATH
-because the <span class="s">``/bin``</span> subdirectory was missing in the installation,
-for the purpose of this example<span class="se">::</span>
-
-<span class="s">    $ ls -la $EASYBUILD_PREFIX/modules/all/bzip2</span>
-<span class="s">    total 16</span>
-<span class="s">    drwxr-xr-x  2 example  example   136 Aug 24 10:20 .</span>
-<span class="s">    drwxr-xr-x  3 example  example   102 Aug 24 10:18 ..</span>
-<span class="s">    -rw-r--r--  1 example  example  1256 Aug 24 10:19 1.0.6</span>
-<span class="s">    -rw-r--r--  1 example  example  1303 Aug 24 10:18 1.0.6.lua</span>
-
-
-Using <span class="s">``--force``</span> and <span class="s">``--backup-modules``</span>, we can reinstall the <span class="s">``bzip2/1.0.6``</span> modules
-and get a clear view on what has changed.
-
-To reinstall the <span class="s">``bzip2/1.0.6``</span> module in Lua syntax while retaining a backup of the existing module<span class="se">::</span>
-
-<span class="s">    $ eb bzip2-1.0.6.eb --module-syntax=Lua --force --backup-modules</span>
-<span class="s">    ...</span>
-<span class="s">    == creating build dir, resetting environment...</span>
-<span class="s">    == backup of existing module file stored at /example/modules/all/bzip2/1.0.6.lua.bak_20170824102603</span>
-<span class="s">    ...</span>
-<span class="s">    == creating module...</span>
-<span class="s">    == comparing module file with backup /example/modules/all/bzip2/1.0.6.lua.bak_20170824102603; diff is:</span>
-<span class="s">    --- /example/modules/all/bzip2/1.0.6.lua.bak_20170824102603</span>
-<span class="s">    +++ /example/modules/all/bzip2/1.0.6.lua</span>
-<span class="s">    @@ -25,9 +25,10 @@</span>
-<span class="s">     prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(root, &quot;lib&quot;))</span>
-<span class="s">     prepend_path(&quot;LIBRARY_PATH&quot;, pathJoin(root, &quot;lib&quot;))</span>
-<span class="s">     prepend_path(&quot;MANPATH&quot;, pathJoin(root, &quot;man&quot;))</span>
-<span class="s">    +prepend_path(&quot;PATH&quot;, pathJoin(root, &quot;bin&quot;))</span>
-<span class="s">     setenv(&quot;EBROOTBZIP2&quot;, root)</span>
-<span class="s">     setenv(&quot;EBVERSIONBZIP2&quot;, &quot;1.0.6&quot;)</span>
-<span class="s">     setenv(&quot;EBDEVELBZIP2&quot;, pathJoin(root, &quot;easybuild/bzip2-1.0.6-easybuild-devel&quot;))</span>
-
-<span class="s">    ...</span>
-
-Equivalently, we can reinstall the module in Tcl syntax using<span class="se">::</span>
-
-<span class="s">    $ eb bzip2-1.0.6.eb --module-syntax=Tcl --force --backup-modules</span>
-
-Afterwards, both the newly generated modules and the backups are in place<span class="se">::</span>
-
-<span class="s">    $ ls -la $EASYBUILD_PREFIX/modules/all/bzip2</span>
-<span class="s">    total 32</span>
-<span class="s">    drwxr-xr-x  2 example  example   204 Aug 24 10:26 .</span>
-<span class="s">    drwxr-xr-x  3 example  example   102 Jul 11 10:18 ..</span>
-<span class="s">    -rw-r--r--  1 example  example  1227 Aug 24 10:24 .1.0.6.bak_20170824102412</span>
-<span class="s">    -rw-r--r--  1 example  example  1256 Jul 11 01:24 1.0.6</span>
-<span class="s">    -rw-r--r--  1 example  example  1303 Jul 11 01:26 1.0.6.lua</span>
-<span class="s">    -rw-r--r--  1 example  example  1259 Aug 24 10:26 1.0.6.lua.bak_20170824102603</span>
-
-Cleaning up the backup module files can be done with the following command (for example)<span class="se">::</span>
-
-<span class="s">    $ find $EASYBUILD_PREFIX/modules/all/bzip2 -name &#39;*.bak*&#39; | xargs rm -v</span>
-<span class="s">    /example/modules/all/bzip2/.1.0.6.bak_20170824102412</span>
-<span class="s">    /example/modules/all/bzip2/1.0.6.lua.bak_20170824102603</span>
+<span class="go">...</span>
+</code></pre></div>
+<p>Equivalently, we can reinstall the module in Tcl syntax using:</p>
+<div class="highlight"><pre><span></span><code>eb bzip2-1.0.6.eb --module-syntax<span class="o">=</span>Tcl --force --backup-modules
+</code></pre></div>
+<p>Afterwards, both the newly generated modules and the backups are in
+place:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>ls -la <span class="nv">$EASYBUILD_PREFIX</span>/modules/all/bzip2
+<span class="go">total 32</span>
+<span class="go">drwxr-xr-x  2 example  example   204 Aug 24 10:26 .</span>
+<span class="go">drwxr-xr-x  3 example  example   102 Jul 11 10:18 ..</span>
+<span class="go">-rw-r--r--  1 example  example  1227 Aug 24 10:24 .1.0.6.bak_20170824102412</span>
+<span class="go">-rw-r--r--  1 example  example  1256 Jul 11 01:24 1.0.6</span>
+<span class="go">-rw-r--r--  1 example  example  1303 Jul 11 01:26 1.0.6.lua</span>
+<span class="go">-rw-r--r--  1 example  example  1259 Aug 24 10:26 1.0.6.lua.bak_20170824102603</span>
+</code></pre></div>
+<p>Cleaning up the backup module files can be done with the following
+command (for example):</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>find <span class="nv">$EASYBUILD_PREFIX</span>/modules/all/bzip2 -name <span class="s1">&#39;*.bak*&#39;</span> <span class="p">|</span> xargs rm -v
+<span class="go">/example/modules/all/bzip2/.1.0.6.bak_20170824102412</span>
+<span class="go">/example/modules/all/bzip2/1.0.6.lua.bak_20170824102603</span>
 </code></pre></div>
 
   <hr>
@@ -491,7 +482,7 @@ Cleaning up the backup module files can be done with the following command (for 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 25, 2022</span>
       
     
   </small>
