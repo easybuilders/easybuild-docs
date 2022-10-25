@@ -78,7 +78,7 @@ $ eb bzip2-1.0.6.eb --module-syntax=Lua --force --backup-modules
 
 Equivalently, we can reinstall the module in Tcl syntax using:
 
-``` console
+``` shell
 eb bzip2-1.0.6.eb --module-syntax=Tcl --force --backup-modules
 ```
 
