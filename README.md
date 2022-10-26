@@ -77,6 +77,9 @@ If you would like to help, here's what you should do:
 6) Keep an eye on your pull request, and update your pull request again if any changes are suggested by the person who reviews it,
    or if the tests fail.
 
+An example pull request in which the [``what-is-easybuild``](https://easybuilders.github.io/easybuild-docs/what-is-easybuild)
+page was ported to MarkDown can be seen [here](https://github.com/easybuilders/easybuild-docs/pull/7).
+
 Some important attention points:
 
 - **Focus your effort on *porting* to the MarkDown format**, not on the contents of the documentation page.
