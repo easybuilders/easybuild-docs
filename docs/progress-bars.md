@@ -21,9 +21,7 @@ EasyBuild will show different progress bars to show the progress for different a
 
 ### Overall progress bar (status bar)
 
-.. image:: img/progress_bar_overall.png
-  :height: 18px
-  :align: center
+![Overall progress bar](img/progress_bar_overall.png)
 
 The progress bar at the bottom, also known as the *status bar*, shows the *overall progress*
 in installing software for the currently active EasyBuild session.
@@ -48,9 +46,7 @@ and is hidden automatically as soon as the EasyBuild session finishes.
 
 ### Easyconfig progress bar
 
-.. image:: img/progress_bar_easyconfig.png
-  :height: 16px
-  :align: center
+![Easyconfig progress bars](img/progress_bar_easyconfig.png)
 
 A dedicated progress bar is shown for every easyconfig file that is installed,
 right above the status bar (if present), which shows:
@@ -66,9 +62,7 @@ finishes (regardless of whether it was successful or not).
 
 ### Download progress bars
 
-.. image:: img/progress_bar_download.png
-  :height: 56px
-  :align: center
+![Download progress bars](img/progress_bar_download.png)
 
 When EasyBuild is downloading one or more files, a dedicated progress bar will be visible:
 
@@ -82,11 +76,8 @@ When EasyBuild is downloading one or more files, a dedicated progress bar will b
 The download progress bars will be hidden as soon as the downloading has been completed (or has failed).
 
 ### Extensions progress bar
-~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: img/progress_bar_extensions.png
-  :height: 22px
-  :align: center
+![Extensions progress bar](img/progress_bar_extensions.png)
 
 When extensions are being installed for a particular easyconfig,
 a dedicated progress bar will pop up for the `extensions` step,
