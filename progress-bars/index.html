@@ -354,6 +354,89 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-information-on-progress-bars" class="md-nav__link">
+    General information on progress bars
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-progress-bars" class="md-nav__link">
+    Types of progress bars
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of progress bars">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overall-progress-bar-status-bar" class="md-nav__link">
+    Overall progress bar (status bar)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easyconfig-progress-bar" class="md-nav__link">
+    Easyconfig progress bar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-progress-bars" class="md-nav__link">
+    Download progress bars
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extensions-progress-bar" class="md-nav__link">
+    Extensions progress bar
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relevant-configuration-options" class="md-nav__link">
+    Relevant configuration options
+  </a>
+  
+    <nav class="md-nav" aria-label="Relevant configuration options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#output-style" class="md-nav__link">
+    output-style
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-progress-bar" class="md-nav__link">
+    show-progress-bar
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -373,167 +456,94 @@
 
 
 <h1 id="progress-bars">Progress bars<a class="headerlink" href="#progress-bars" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/Progress_bars.html">https://docs.easybuild.io/en/latest/Progress_bars.html</a>.</p>
-<p><strong>
-It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
-and you can help with that!
-</strong></p>
-<ul>
-<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Progress_bars.rst"><code>docs/Progress_bars.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
-<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/progress-bars.md"><code>docs/progress-bars.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
-</ul>
-<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_progress_bars:</span>
-
-<span class="gh">Progress bars</span>
-<span class="gh">=============</span>
-
-<span class="ge">*(supported since: EasyBuild v4.5.0)*</span>
-
-<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
-    <span class="nc">:depth:</span> 3
-    <span class="nc">:backlinks:</span> none
-
-<span class="p">..</span> <span class="nt">_progress_bar_generic:</span>
-
-<span class="gh">General information on progress bars</span>
-<span class="gh">------------------------------------</span>
-
-EasyBuild will show <span class="gs">**progress bars**</span> for various aspects of the installation progress
-by default, if the <span class="s">`Rich </span><span class="si">&lt;https://pypi.org/project/rich/&gt;</span><span class="s">`_</span> Python package is available.
-
-The progress bars shown by EasyBuild are <span class="ge">*dynamic*</span>: they are only visible when they are relevant.
-
-Note that for most progress bars each step is treated as being equal even though the time taken for the
+<p><em>(supported since: EasyBuild v4.5.0)</em></p>
+<h2 id="general-information-on-progress-bars">General information on progress bars<a class="headerlink" href="#general-information-on-progress-bars" title="Permanent link">&para;</a></h2>
+<p>EasyBuild will show <strong>progress bars</strong> for various aspects of the installation progress
+by default, if the <a href="https://pypi.org/project/rich/"><code>Rich</code></a> Python package is available.</p>
+<p>The progress bars shown by EasyBuild are <em>dynamic</em>: they are only visible when they are relevant.</p>
+<p>Note that for most progress bars each step is treated as being equal even though the time taken for the
 various steps varies. There are many factors that impact how long an individual installation step, installing
 an easyconfig, or installing an extension may and this makes it very difficult to get a good estimate on how
 much time will be needed.
-The download progress bar is an exception here (as long as the size of the file to download could be determined first).
-
-<span class="p">..</span> <span class="nt">_progress_bars_types:</span>
-
-<span class="gh">Types of progress bars</span>
-<span class="gh">----------------------</span>
-
-EasyBuild will show different progress bars to show the progress for different aspects of the installation process.
-
-<span class="gh">Overall progress bar (status bar)</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-<span class="p">..</span> <span class="ow">image</span><span class="p">::</span> img/progress_bar_overall.png
-  <span class="nc">:height:</span> 18px
-  <span class="nc">:align:</span> center
-
-The progress bar at the bottom, also known as the <span class="ge">*status bar*</span>, shows the <span class="ge">*overall progress*</span>
-in installing software for the currently active EasyBuild session.
-
-From left to right, the following information is included:
-
-<span class="m">*</span> The total amount of time that this EasyBuild session has spent on installing software.
-<span class="m">*</span> The number of easyconfigs that have been processed already, the total number of easyconfigs
-  being processed, and a count of easyconfigs that failed to installed so far (if there are any).
-<span class="m">*</span> The list of already processed easyconfigs, along with the result:
-    <span class="m">*</span> <span class="s">``OK``</span> (in green) for a successful installation;
-    <span class="m">*</span> <span class="s">``FAILED``</span> (in red) for a failed installation;
-
-Processed easyconfigs are shown in reversed order: most recently processed easyconfigs are listed first.
-
-If EasyBuild is configured to continue processing easyconfigs when an installation failed
-(for example when using <span class="s">``--upload-test-report``</span>), failing easyconfigs are listed before easyconfigs
-that were installed successfully, to highlight failing installations.
-
-The status bar is not shown if only a single easyconfig file is being installed,
-and is hidden automatically as soon as the EasyBuild session finishes.
-
-<span class="gh">Easyconfig progress bar</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-<span class="p">..</span> <span class="ow">image</span><span class="p">::</span> img/progress_bar_easyconfig.png
-  <span class="nc">:height:</span> 16px
-  <span class="nc">:align:</span> center
-
-A dedicated progress bar is shown for every easyconfig file that is installed,
-right above the status bar (if present), which shows:
-
-<span class="m">*</span> The name of the module that is being installed.
-<span class="m">*</span> The currently active installation step.
-<span class="m">*</span> The number of completed installations steps, as well as the total number of installation steps for this easyconfig.
-<span class="m">*</span> A visual progress bar that represents the progress in installing this easyconfig.
-<span class="m">*</span> The total amount of time spent on installing this easyconfig so far.
-
-The progress bar for a specific easyconfig file will be hidden as soon as the installation
-finishes (regardless of whether it was successful or not).
-
-<span class="gh">Download progress bars</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~</span>
-
-<span class="p">..</span> <span class="ow">image</span><span class="p">::</span> img/progress_bar_download.png
-  <span class="nc">:height:</span> 56px
-  <span class="nc">:align:</span> center
-
-When EasyBuild is downloading one or more files,
-a dedicated progress bar will be visible:
-
-<span class="m">*</span> For large downloads: the name of the file being downloaded,
+The download progress bar is an exception here (as long as the size of the file to download could be determined first).</p>
+<h2 id="types-of-progress-bars">Types of progress bars<a class="headerlink" href="#types-of-progress-bars" title="Permanent link">&para;</a></h2>
+<p>EasyBuild will show different progress bars to show the progress for different aspects of the installation process.</p>
+<h3 id="overall-progress-bar-status-bar">Overall progress bar (status bar)<a class="headerlink" href="#overall-progress-bar-status-bar" title="Permanent link">&para;</a></h3>
+<p><img alt="Overall progress bar" src="../img/progress_bar_overall.png" /></p>
+<p>The progress bar at the bottom, also known as the <em>status bar</em>, shows the <em>overall progress</em>
+in installing software for the currently active EasyBuild session.</p>
+<p>From left to right, the following information is included:</p>
+<ul>
+<li>The total amount of time that this EasyBuild session has spent on installing software.</li>
+<li>The number of easyconfigs that have been processed already, the total number of easyconfigs
+  being processed, and a count of easyconfigs that failed to installed so far (if there are any).</li>
+<li>The list of already processed easyconfigs, along with the result:<ul>
+<li><code>OK</code> (in green) for a successful installation;</li>
+<li><code>FAILED</code> (in red) for a failed installation;</li>
+</ul>
+</li>
+</ul>
+<p>Processed easyconfigs are shown in reversed order: most recently processed easyconfigs are listed first.</p>
+<p>If EasyBuild is configured to continue processing easyconfigs when an installation failed
+(for example when using <code>--upload-test-report</code>), failing easyconfigs are listed before easyconfigs
+that were installed successfully, to highlight failing installations.</p>
+<p>The status bar is not shown if only a single easyconfig file is being installed,
+and is hidden automatically as soon as the EasyBuild session finishes.</p>
+<h3 id="easyconfig-progress-bar">Easyconfig progress bar<a class="headerlink" href="#easyconfig-progress-bar" title="Permanent link">&para;</a></h3>
+<p><img alt="Easyconfig progress bars" src="../img/progress_bar_easyconfig.png" /></p>
+<p>A dedicated progress bar is shown for every easyconfig file that is installed,
+right above the status bar (if present), which shows:</p>
+<ul>
+<li>The name of the module that is being installed.</li>
+<li>The currently active installation step.</li>
+<li>The number of completed installations steps, as well as the total number of installation steps for this easyconfig.</li>
+<li>A visual progress bar that represents the progress in installing this easyconfig.</li>
+<li>The total amount of time spent on installing this easyconfig so far.</li>
+</ul>
+<p>The progress bar for a specific easyconfig file will be hidden as soon as the installation
+finishes (regardless of whether it was successful or not).</p>
+<h3 id="download-progress-bars">Download progress bars<a class="headerlink" href="#download-progress-bars" title="Permanent link">&para;</a></h3>
+<p><img alt="Download progress bars" src="../img/progress_bar_download.png" /></p>
+<p>When EasyBuild is downloading one or more files, a dedicated progress bar will be visible:</p>
+<ul>
+<li>For large downloads: the name of the file being downloaded,
   a visual progress bar, the amount of data downloaded so far,
   the amount of data to download in total, the average download speed,
-  and the estimated time remaining to complete the download (based on average download speed).
-<span class="m">*</span> If there are multiple files being downloaded: an overview of how
-  many files have been downloaded already, and how many need to be downloaded in total.
-
-The download progress bars will be hidden as soon as the downloading has been completed (or has failed).
-
-<span class="gh">Extensions progress bar</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-<span class="p">..</span> <span class="ow">image</span><span class="p">::</span> img/progress_bar_extensions.png
-  <span class="nc">:height:</span> 22px
-  <span class="nc">:align:</span> center
-
-When extensions are being installed for a particular easyconfig,
-a dedicated progress bar will pop up for the <span class="s">``extensions``</span> step,
-which shows:
-
-<span class="m">*</span> The name of the extension that is currently being installed.
-<span class="m">*</span> The number of extensions installed so far, and the total number of extensions to install.
-<span class="m">*</span> A visual progress bar that represents the progress for installing extensions so far.
-<span class="m">*</span> The total amount of time spent installing extensions for this easyconfig.
-
-<span class="p">..</span> <span class="nt">_progress_bars_configuration:</span>
-
-<span class="gh">Relevant configuration options</span>
-<span class="gh">------------------------------</span>
-
-<span class="gh">``output-style``</span>
-<span class="gh">~~~~~~~~~~~~~~~~</span>
-
-The <span class="s">``output-style``</span> configuration option determines the output style of the <span class="s">``eb``</span> command.
-
-Setting <span class="s">``output-style``</span> to &#39;<span class="s">``rich``</span>&#39; results in rich output being produced, which includes progress bars.
-This also makes <span class="s">``Rich``</span> a <span class="ge">*required*</span> dependency for EasyBuild.
-
-Using &#39;<span class="s">``basic``</span>&#39; as value for <span class="s">``output-style``</span> results in basic output (no progress bars).
-
-By default <span class="s">``output-style``</span> is set to &#39;<span class="s">``auto``</span>&#39;, which implies using the <span class="s">``Rich``</span> Python package to produce
+  and the estimated time remaining to complete the download (based on average download speed).</li>
+<li>If there are multiple files being downloaded: an overview of how
+  many files have been downloaded already, and how many need to be downloaded in total.</li>
+</ul>
+<p>The download progress bars will be hidden as soon as the downloading has been completed (or has failed).</p>
+<h3 id="extensions-progress-bar">Extensions progress bar<a class="headerlink" href="#extensions-progress-bar" title="Permanent link">&para;</a></h3>
+<p><img alt="Extensions progress bar" src="../img/progress_bar_extensions.png" /></p>
+<p>When extensions are being installed for a particular easyconfig,
+a dedicated progress bar will pop up for the <code>extensions</code> step,
+which shows:</p>
+<ul>
+<li>The name of the extension that is currently being installed.</li>
+<li>The number of extensions installed so far, and the total number of extensions to install.</li>
+<li>A visual progress bar that represents the progress for installing extensions so far.</li>
+<li>The total amount of time spent installing extensions for this easyconfig.</li>
+</ul>
+<h2 id="relevant-configuration-options">Relevant configuration options<a class="headerlink" href="#relevant-configuration-options" title="Permanent link">&para;</a></h2>
+<h3 id="output-style"><code>output-style</code><a class="headerlink" href="#output-style" title="Permanent link">&para;</a></h3>
+<p>The <code>output-style</code> configuration option determines the output style of the <code>eb</code> command.</p>
+<p>Setting <code>output-style</code> to '<code>rich</code>' results in rich output being produced, which includes progress bars.
+This also makes <code>Rich</code> a <em>required</em> dependency for EasyBuild.</p>
+<p>Using '<code>basic</code>' as value for <code>output-style</code> results in basic output (no progress bars).</p>
+<p>By default <code>output-style</code> is set to '<code>auto</code>', which implies using the <code>Rich</code> Python package to produce
 rich output (incl. progress bars) if is available,
-and falling back to using the basic output style if <span class="s">``Rich``</span> is not available.
-
-<span class="gh">``show-progress-bar``</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~</span>
-
-The <span class="s">``show-progress-bar``</span> configuration option (enabled by default) controls whether or not
-progress bars are shown, regardless of the active output style and whether <span class="s">``Rich``</span> is available.
-</code></pre></div>
+and falling back to using the basic output style if <code>Rich</code> is not available.</p>
+<h3 id="show-progress-bar"><code>show-progress-bar</code><a class="headerlink" href="#show-progress-bar" title="Permanent link">&para;</a></h3>
+<p>The <code>show-progress-bar</code> configuration option (enabled by default) controls whether or not
+progress bars are shown, regardless of the active output style and whether <code>Rich</code> is available.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 26, 2022</span>
       
     
   </small>
