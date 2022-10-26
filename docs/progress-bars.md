@@ -1,6 +1,6 @@
 # Progress bars
 
-(supported since: EasyBuild v4.5.0)
+*(supported since: EasyBuild v4.5.0)*
 
 ## General information on progress bars
 

@@ -8,6 +8,7 @@ exclude_rule 'MD010' # Hard tabs
 exclude_rule 'MD012' # multiple blank lines
 exclude_rule 'MD013' # line length
 exclude_rule 'MD026' # Trailing punctuation in header
+exclude_rule 'MD036' # Emphasis instead of header
 exclude_rule 'MD046' # Code block style. Doesn't like MkDocs admonitions or content tabs
 
 rule 'MD024', :allow_different_nesting => true
