@@ -201,6 +201,7 @@ hence any updates on the copy are effectively lost immediately.
 To achieve the intended effect, you can either:
 
 * temporarily disable the templating mechanism:
+
   ```py
   def pre_fetch_hook(self):
       "Example of pre-fetch hook to manipulate list of patches."
@@ -210,7 +211,9 @@ To achieve the intended effect, you can either:
           self.cfg['patches'].append('example.patch')
       # templating state restored
   ```
+
 * or replace the original value entirely:
+
   ```py
   def pre_fetch_hook(self):
       "Example of pre-fetch hook to manipulate list of patches."

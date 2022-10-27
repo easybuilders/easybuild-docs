@@ -30,8 +30,11 @@ A demo on configuring EasyBuild is available :ref:`here <demo_configuring>`.
 
 .. _configuration_types:
 
-Supported configuration types
------------------------------
+```
+
+## Supported configuration types
+
+```rst
 
 Configuring EasyBuild can be done by:
 
