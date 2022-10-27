@@ -154,7 +154,7 @@ implementing hooks.
 Here are some things to take into account:
 
 
-## Resolving of template values
+### Resolving of template values
 
 In all *step* hooks, template values in easyconfig parameters will be resolved whenever they are accessed.
 
