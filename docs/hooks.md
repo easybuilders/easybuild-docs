@@ -202,23 +202,23 @@ To achieve the intended effect, you can either:
 
 * temporarily disable the templating mechanism:
 
-  ```py
-  def pre_fetch_hook(self):
-      "Example of pre-fetch hook to manipulate list of patches."
-      # temporarily disable templating, so changes to 'patches' easyconfig parameter are picked up
-      with self.cfg.disable_templating:
-          # add patch
-          self.cfg['patches'].append('example.patch')
-      # templating state restored
-  ```
+    ```py
+    def pre_fetch_hook(self):
+        "Example of pre-fetch hook to manipulate list of patches."
+        # temporarily disable templating, so changes to 'patches' easyconfig parameter are picked up
+        with self.cfg.disable_templating:
+            # add patch
+            self.cfg['patches'].append('example.patch')
+        # templating state restored
+    ```
 
 * or replace the original value entirely:
 
-  ```py
-  def pre_fetch_hook(self):
-      "Example of pre-fetch hook to manipulate list of patches."
-      self.cfg['patches'] = self.cfg['patches'] + ['example.patch']
-  ```
+    ```py
+    def pre_fetch_hook(self):
+        "Example of pre-fetch hook to manipulate list of patches."
+        self.cfg['patches'] = self.cfg['patches'] + ['example.patch']
+    ```
 
 A better approach for manipulating easyconfig parameters is to use the `parse_hook` that
 was introduced in EasyBuild v3.7.0 (see [Parse hook specifics](#parse-hook-specifics)),
