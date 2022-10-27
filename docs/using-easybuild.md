@@ -4,6 +4,8 @@
 
 ## Enabling dependency resolution
 
+## Searching for easyconfigs: the robot search path
+
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Using_the_EasyBuild_command_line.html>.
 
