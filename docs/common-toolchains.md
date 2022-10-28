@@ -85,7 +85,7 @@ and libraries, i.e.:
 ## Versioning scheme for common toolchains
 
 The common toolchains follow a specific versioning scheme, which takes
-the [6-month update cycle](update-cycle-for-common-toolchains) into account.
+the [6-month update cycle](#update-cycle-for-common-toolchains) into account.
 
 Each revision of the common toolchains is versioned as the *year* in
 which it was defined, plus an additional '`a`' or '`b`' to indicate
