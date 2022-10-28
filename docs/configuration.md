@@ -1,5 +1,13 @@
 # Configuring EasyBuild
 
+## Supported configuration types
+
+### Configuration file(s)
+
+#### List of used configuration files
+
+#### Templates and constants supported in configuration files
+
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Configuration.html>.
 
