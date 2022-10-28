@@ -354,6 +354,123 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-hooks" class="md-nav__link">
+    What are hooks?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-easybuild-to-use-your-hook-implementations" class="md-nav__link">
+    Configuring EasyBuild to use your hook implementations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-hooks" class="md-nav__link">
+    Available hooks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementing-hooks" class="md-nav__link">
+    Implementing hooks
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementing hooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parse-hook-specifics" class="md-nav__link">
+    Parse hook specifics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caveats" class="md-nav__link">
+    Caveats
+  </a>
+  
+    <nav class="md-nav" aria-label="Caveats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resolving-of-template-values" class="md-nav__link">
+    Resolving of template values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manipulating-easyconfig-parameters" class="md-nav__link">
+    Manipulating easyconfig parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archived-easyconfig-file-vs-hooks" class="md-nav__link">
+    Archived easyconfig file vs hooks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples-of-hook-implementations" class="md-nav__link">
+    Examples of hook implementations
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples of hook implementations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#replace-with-verbs-with-without-verbs-in-openmpi-configure-options" class="md-nav__link">
+    Replace --with-verbs with --without-verbs in OpenMPI configure options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inject-a-custom-patch-file" class="md-nav__link">
+    Inject a custom patch file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replace-pythonpath-by-ebpythonprefixes-in-lua-modules" class="md-nav__link">
+    Replace PYTHONPATH by EBPYTHONPREFIXES in (Lua) modules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -373,338 +490,215 @@
 
 
 <h1 id="hooks">Hooks<a class="headerlink" href="#hooks" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/Hooks.html">https://docs.easybuild.io/en/latest/Hooks.html</a>.</p>
-<p><strong>
-It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
-and you can help with that!
-</strong></p>
-<ul>
-<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Hooks.rst"><code>docs/Hooks.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
-<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/hooks.md"><code>docs/hooks.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
-</ul>
-<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_hooks:</span>
-
-<span class="gh">Hooks</span>
-<span class="gh">=====</span>
-
-Since v3.5.0, EasyBuild supports <span class="ge">*hooks*</span> that can be used
+<p>Since v3.5.0, EasyBuild supports <em>hooks</em> that can be used
 to customise the behaviour of EasyBuild according to site policies if needed,
-without having to change the EasyBuild framework or the existing easyblocks.
-
-<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
-    <span class="nc">:depth:</span> 3
-    <span class="nc">:backlinks:</span> none
-
-<span class="p">..</span> <span class="nt">_hooks_what:</span>
-
-<span class="gh">What are hooks?</span>
-<span class="gh">---------------</span>
-
-<span class="ge">*Hooks*</span> are user-defined functions that are called by the EasyBuild framework at specific times during
-the installation procedure. They can be leveraged to alter or augment the installation procedure.
-
-This is usually done to conform with site-specific policies that are difficult to enforce otherwise,
+without having to change the EasyBuild framework or the existing easyblocks.</p>
+<h2 id="what-are-hooks">What are hooks?<a class="headerlink" href="#what-are-hooks" title="Permanent link">&para;</a></h2>
+<p><em>Hooks</em> are user-defined functions that are called by the EasyBuild framework at specific times during
+the installation procedure. They can be leveraged to alter or augment the installation procedure.</p>
+<p>This is usually done to conform with site-specific policies that are difficult to enforce otherwise,
 but it can also be (ab)used to fix specific problems or inject self-implemented enhancements
-(before you flesh them out in a proper contribution, for example).
-
-Both the <span class="s">``EasyBlock``</span> instance and the parsed easyconfig file that are being used
+(before you flesh them out in a proper contribution, for example).</p>
+<p>Both the <code>EasyBlock</code> instance and the parsed easyconfig file that are being used
 are fully accessible (and modifiable) from within hook implementations. Hence, this mechanism
 provides a lot of flexibility to change the EasyBuild functionality should you require it,
-without having to modify the codebase of EasyBuild itself.
-
-
-<span class="p">..</span> <span class="nt">_hooks_configuration:</span>
-
-<span class="gh">Configuring EasyBuild to use your hook implementations</span>
-<span class="gh">------------------------------------------------------</span>
-
-To instruct EasyBuild to use your hook implementations,
-you only need to specify the location of the Python module (<span class="s">``*.py``</span>) that implements them.
-
-This is done via the <span class="s">``--hooks``</span> configuration option
-(or equivalently via the <span class="s">``$EASYBUILD_HOOKS``</span> environment variable, or via <span class="s">``hooks = ...``</span>
-in an EasyBuild configuration file, see also <span class="na">:ref:</span><span class="nv">`configuring_easybuild`</span>).
-
-For example<span class="se">::</span>
-
-<span class="s">    eb --hooks=$HOME/my_eb_hooks.py ...</span>
-
-or<span class="se">::</span>
-
-<span class="s">    export EASYBUILD_HOOKS=$HOME/my_eb_hooks.py</span>
-<span class="s">    eb ...</span>
-
-
-<span class="p">..</span> <span class="nt">_hooks_available:</span>
-
-<span class="gh">Available hooks</span>
-<span class="gh">---------------</span>
-
-Currently (since EasyBuild v3.7.0), three types of hooks are supported:
-
-<span class="m">*</span> <span class="s">``start_hook``</span> and <span class="s">``end_hook``</span>, which are triggered <span class="ge">*once*</span> before starting software installations,
-  and <span class="ge">*once*</span> right after completing all installations, respectively
-<span class="m">*</span> <span class="s">``parse_hook``</span>, which is triggered when an easyconfig file is being parsed
-<span class="m">*</span> <span class="s">``module_write_hook``</span>, which is triggered right before a module file is written.
+without having to modify the codebase of EasyBuild itself.</p>
+<h2 id="configuring-easybuild-to-use-your-hook-implementations">Configuring EasyBuild to use your hook implementations<a class="headerlink" href="#configuring-easybuild-to-use-your-hook-implementations" title="Permanent link">&para;</a></h2>
+<p>To instruct EasyBuild to use your hook implementations,
+you only need to specify the location of the Python module (<code>*.py</code>) that implements them.</p>
+<p>This is done via the <code>--hooks</code> configuration option
+(or equivalently via the <code>$EASYBUILD_HOOKS</code> environment variable, or via <code>hooks = ...</code>
+in an EasyBuild configuration file, see also <a href="../configuration/#configuring-easybuild">Configuring EasyBuild</a>).</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code>eb --hooks<span class="o">=</span><span class="nv">$HOME</span>/my_eb_hooks.py ...
+</code></pre></div>
+<p>or:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">EASYBUILD_HOOKS</span><span class="o">=</span><span class="nv">$HOME</span>/my_eb_hooks.py
+eb ...
+</code></pre></div>
+<h2 id="available-hooks">Available hooks<a class="headerlink" href="#available-hooks" title="Permanent link">&para;</a></h2>
+<p>Currently (since EasyBuild v3.7.0), three types of hooks are supported:</p>
+<ul>
+<li><code>start_hook</code> and <code>end_hook</code>, which are triggered <em>once</em> before starting software installations,
+  and <em>once</em> right after completing all installations, respectively</li>
+<li><code>parse_hook</code>, which is triggered when an easyconfig file is being parsed</li>
+<li><code>module_write_hook</code>, which is triggered right before a module file is written.
   This includes the temporary module file used when installing extensions and during the sanity check,
-  as well as the devel module.
-<span class="m">*</span> &quot;<span class="ge">*step*</span>&quot; hooks that are triggered before and after every step of each installation procedure that is performed,
-  also aptly named &#39;<span class="s">``pre``</span>&#39;- and &#39;<span class="s">``post``</span>&#39;-hooks
+  as well as the devel module.</li>
+<li>"<em>step</em>" hooks that are triggered before and after every step of each installation procedure that is performed,
+  also aptly named '<code>pre</code>'- and '<code>post</code>'-hooks</li>
+</ul>
+<p>The list of currently available hooks in order of execution,
+which can also be consulted using <code>eb --avail-hooks</code>, is:</p>
+<ul>
+<li><code>start_hook</code> <em>(only called once in an EasyBuild session)</em></li>
+<li><code>parse_hook</code> <em>(available since EasyBuild v3.7.0)</em></li>
+<li><code>pre_fetch_hook</code>, <code>post_fetch_hook</code></li>
+<li><code>pre_ready_hook</code>, <code>post_ready_hook</code></li>
+<li><code>pre_source_hook</code>, <code>post_source_hook</code></li>
+<li><code>pre_patch_hook</code>, <code>post_patch_hook</code></li>
+<li><code>pre_prepare_hook</code>, <code>post_prepare_hook</code></li>
+<li><code>pre_configure_hook</code>, <code>post_configure_hook</code></li>
+<li><code>pre_build_hook</code>, <code>post_build_hook</code></li>
+<li><code>pre_test_hook</code>, <code>post_test_hook</code></li>
+<li><code>pre_install_hook</code>, <code>post_install_hook</code></li>
+<li><code>pre_extensions_hook</code>, <code>post_extensions_hook</code></li>
+<li><code>pre_postproc_hook</code>, <code>post_postproc_hook</code></li>
+<li><code>pre_sanitycheck_hook</code>, <code>post_sanitycheck_hook</code></li>
+<li><code>pre_cleanup_hook</code>, <code>post_cleanup_hook</code></li>
+<li><code>pre_module_hook</code>, <code>post_module_hook</code></li>
+<li><code>pre_permissions_hook</code>, <code>post_permissions_hook</code></li>
+<li><code>pre_package_hook</code>, <code>post_package_hook</code></li>
+<li><code>pre_testcases_hook</code>, <code>post_testcases_hook</code></li>
+<li><code>end_hook</code> <em>(only called once in an EasyBuild session)</em></li>
+<li><code>module_write_hook</code> <em>(called multiple times per installation, available since EasyBuild v4.4.1)</em></li>
+</ul>
+<p>All functions implemented in the provided Python module for which the name ends with <code>_hook</code> are considered.</p>
+<p>If any <code>*_hook</code> functions are encountered that do not match any of the available hooks, an error is reported.
+EasyBuild will try to provide suggestions for available hooks that closely match the encountered unknown hook.</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb --hooks wrong_hooks.py example.eb
+<span class="go">== temporary log file in case of crash /tmp/eb-nMawy1/easybuild-Gu2ZP6.log</span>
+<span class="go">ERROR: Found one or more unknown hooks:</span>
+<span class="go">* stat_hook (did you mean &#39;start_hook&#39;?)</span>
+<span class="go">* this_is_not_a_hook</span>
+<span class="go">* install_hook (did you mean &#39;pre_install_hook&#39;, or &#39;post_install_hook&#39;?)</span>
 
-The list of currently available hooks in order of execution,
-which can also be consulted using <span class="s">``eb --avail-hooks``</span>, is:
-
-    <span class="m">*</span> <span class="s">``start_hook``</span> <span class="ge">*(only called once in an EasyBuild session)*</span>
-    <span class="m">*</span> <span class="s">``parse_hook``</span> <span class="ge">*(available since EasyBuild v3.7.0)*</span>
-    <span class="m">*</span> <span class="s">``pre_fetch_hook``</span>, <span class="s">``post_fetch_hook``</span>
-    <span class="m">*</span> <span class="s">``pre_ready_hook``</span>, <span class="s">``post_ready_hook``</span>
-    <span class="m">*</span> <span class="s">``pre_source_hook``</span>, <span class="s">``post_source_hook``</span>
-    <span class="m">*</span> <span class="s">``pre_patch_hook``</span>, <span class="s">``post_patch_hook``</span>
-    <span class="m">*</span> <span class="s">``pre_prepare_hook``</span>, <span class="s">``post_prepare_hook``</span>
-    <span class="m">*</span> <span class="s">``pre_configure_hook``</span>, <span class="s">``post_configure_hook``</span>
-    <span class="m">*</span> <span class="s">``pre_build_hook``</span>, <span class="s">``post_build_hook``</span>
-    <span class="m">*</span> <span class="s">``pre_test_hook``</span>, <span class="s">``post_test_hook``</span>
-    <span class="m">*</span> <span class="s">``pre_install_hook``</span>, <span class="s">``post_install_hook``</span>
-    <span class="m">*</span> <span class="s">``pre_extensions_hook``</span>, <span class="s">``post_extensions_hook``</span>
-    <span class="m">*</span> <span class="s">``pre_postproc_hook``</span>, <span class="s">``post_postproc_hook``</span>
-    <span class="m">*</span> <span class="s">``pre_sanitycheck_hook``</span>, <span class="s">``post_sanitycheck_hook``</span>
-    <span class="m">*</span> <span class="s">``pre_cleanup_hook``</span>, <span class="s">``post_cleanup_hook``</span>
-    <span class="m">*</span> <span class="s">``pre_module_hook``</span>, <span class="s">``post_module_hook``</span>
-    <span class="m">*</span> <span class="s">``pre_permissions_hook``</span>, <span class="s">``post_permissions_hook``</span>
-    <span class="m">*</span> <span class="s">``pre_package_hook``</span>, <span class="s">``post_package_hook``</span>
-    <span class="m">*</span> <span class="s">``pre_testcases_hook``</span>, <span class="s">``post_testcases_hook``</span>
-    <span class="m">*</span> <span class="s">``end_hook``</span> <span class="ge">*(only called once in an EasyBuild session)*</span>
-    <span class="m">*</span> <span class="s">``module_write_hook``</span> <span class="ge">*(called multiple times per installation, available since EasyBuild v4.4.1)*</span>
-
-All functions implemented in the provided Python module for which the name ends with <span class="s">``_hook``</span> are considered.
-
-If any <span class="s">``*_hook``</span> functions are encountered that do not match any of the available hooks, an error is reported.
-EasyBuild will try to provide suggestions for available hooks that closely match the encountered unknown hook.
-
-For example<span class="se">::</span>
-
-<span class="s">    $ eb --hooks wrong_hooks.py example.eb</span>
-<span class="s">    == temporary log file in case of crash /tmp/eb-nMawy1/easybuild-Gu2ZP6.log</span>
-<span class="s">    ERROR: Found one or more unknown hooks:</span>
-<span class="s">    * stat_hook (did you mean &#39;start_hook&#39;?)</span>
-<span class="s">    * this_is_not_a_hook</span>
-<span class="s">    * install_hook (did you mean &#39;pre_install_hook&#39;, or &#39;post_install_hook&#39;?)</span>
-
-<span class="s">    Run &#39;eb --avail-hooks&#39; to get an overview of known hooks</span>
-
-<span class="p">..</span> <span class="nt">_hooks_implementation:</span>
-
-<span class="gh">Implementing hooks</span>
-<span class="gh">------------------</span>
-
-To implement hooks, simply define one or more functions in a Python module (<span class="s">``*.py``</span>),
-each named after an available hook.
-
-Do take into account the following:
-
-<span class="m">*</span> for <span class="s">``start_hook``</span> and <span class="s">``end_hook``</span>, no arguments are provided
-
-<span class="m">*</span> for <span class="s">``parse_hook``</span>, one argument is provided: the <span class="s">``EasyConfig``</span> instance
-  that corresponds to the easyconfig file being parsed (usually referred to as <span class="s">``ec``</span>)
-
-<span class="m">*</span> for <span class="s">``module_write_hook``</span>, 3 arguments are provided:
-   <span class="m">*</span> the <span class="s">``EasyBlock``</span> instance used to perform the installation (usually referred to as <span class="s">``self``</span>)
-   <span class="m">*</span> the filepath of the module that will be written
-   <span class="m">*</span> the module text as a string
-  The return value of this hook, when set, will replace the original text that is then written to the module file.
-
-<span class="m">*</span> for the step hooks, one argument is provided:
-  the <span class="s">``EasyBlock``</span> instance used to perform the installation (usually referred to as <span class="s">``self``</span>)
-
-<span class="m">*</span> the parsed easyconfig file can be accessed in the step hooks via the <span class="s">``EasyBlock``</span> instance,
-  i.e., via <span class="s">``self.cfg``</span>
-
-It is recommended to anticipate possible changes in the provided (named) arguments,
-using the <span class="s">``*args``</span> and <span class="s">``**kwargs``</span> mechanism commonly used in Python. This
-avoids that your hook implementations may break when updating to future EasyBuild versions. For example<span class="se">::</span>
-
-<span class="s">  # example pre-configure hook that anticipates changes in provided arguments</span>
-<span class="s">  def pre_configure_hook(self, *args, **kwargs):</span>
-<span class="s">      ...</span>
-
-In hooks you have access to the full functionality provided by the EasyBuild framework,
-so do <span class="s">``import``</span> from <span class="s">``easybuild.tools.*``</span> (or other <span class="s">``easybuild.*``</span> namespaces) to leverage
-those functions.
-
-<span class="p">..</span> <span class="nt">_hooks_parse_hook:</span>
-
-<span class="gh">Parse hook specifics</span>
-<span class="gh">++++++++++++++++++++</span>
-
-<span class="s">``parse_hook``</span> is triggered right <span class="ge">*after*</span> reading the easyconfig file,
-before further parsing of some easyconfig parameters (like <span class="s">``*dependencies``</span>) into
-custom data structures is done.
-
-This is important since it allows to dynamically modify easyconfig files
-while they are still &quot;raw&quot;, i.e. when the easyconfig parameter values are
+<span class="go">Run &#39;eb --avail-hooks&#39; to get an overview of known hooks</span>
+</code></pre></div>
+<h2 id="implementing-hooks">Implementing hooks<a class="headerlink" href="#implementing-hooks" title="Permanent link">&para;</a></h2>
+<p>To implement hooks, simply define one or more functions in a Python module (<code>*.py</code>),
+each named after an available hook.</p>
+<p>Do take into account the following:</p>
+<ul>
+<li>for <code>start_hook</code> and <code>end_hook</code>, no arguments are provided</li>
+<li>for <code>parse_hook</code>, one argument is provided: the <code>EasyConfig</code> instance
+  that corresponds to the easyconfig file being parsed (usually referred to as <code>ec</code>)</li>
+<li>for <code>module_write_hook</code>, 3 arguments are provided:</li>
+<li>the <code>EasyBlock</code> instance used to perform the installation (usually referred to as <code>self</code>)</li>
+<li>the filepath of the module that will be written</li>
+<li>the module text as a string
+  The return value of this hook, when set, will replace the original text that is then written to the module file.</li>
+<li>for the step hooks, one argument is provided:
+  the <code>EasyBlock</code> instance used to perform the installation (usually referred to as <code>self</code>)</li>
+<li>the parsed easyconfig file can be accessed in the step hooks via the <code>EasyBlock</code> instance,
+  i.e., via <code>self.cfg</code></li>
+</ul>
+<p>It is recommended to anticipate possible changes in the provided (named) arguments,
+using the <code>*args</code> and <code>**kwargs</code> mechanism commonly used in Python. This
+avoids that your hook implementations may break when updating to future EasyBuild versions. For example:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># example pre-configure hook that anticipates changes in provided arguments</span>
+<span class="k">def</span> <span class="nf">pre_configure_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="o">...</span>
+</code></pre></div>
+<p>In hooks you have access to the full functionality provided by the EasyBuild framework,
+so do <code>import</code> from <code>easybuild.tools.*</code> (or other <code>easybuild.*</code> namespaces) to leverage
+those functions.</p>
+<h3 id="parse-hook-specifics">Parse hook specifics<a class="headerlink" href="#parse-hook-specifics" title="Permanent link">&para;</a></h3>
+<p><code>parse_hook</code> is triggered right <em>after</em> reading the easyconfig file,
+before further parsing of some easyconfig parameters (like <code>*dependencies</code>) into
+custom data structures is done.</p>
+<p>This is important since it allows to dynamically modify easyconfig files
+while they are still "raw", i.e. when the easyconfig parameter values are
 still basic Python data structures like lists, dictionaries, etc.
-that are easy to manipulate (see also <span class="na">:ref:</span><span class="nv">`hooks_caveats_manipulating`</span>).
-
-In <span class="s">``parse_hook``</span> easyconfig parameters can be accessed and/or modified in a straightforward way,
-see <span class="na">:ref:</span><span class="nv">`hooks_examples_inject_patch`</span>.
-
-
-<span class="p">..</span> <span class="nt">_hooks_caveats:</span>
-
-<span class="gh">Caveats</span>
-<span class="gh">-------</span>
-
-Due to internal details of the EasyBuild framework, you may run into some surprises when
+that are easy to manipulate (see also <a href="#manipulating-easyconfig-parameters">Manipulating easyconfig parameters</a>).</p>
+<p>In <code>parse_hook</code> easyconfig parameters can be accessed and/or modified in a straightforward way,
+see <a href="#inject-a-custom-patch-file">Example hook to inject a custom patch file</a>.</p>
+<h2 id="caveats">Caveats<a class="headerlink" href="#caveats" title="Permanent link">&para;</a></h2>
+<p>Due to internal details of the EasyBuild framework, you may run into some surprises when
 implementing hooks.
-Here are some things to take into account:
-
-<span class="p">..</span> <span class="nt">_hooks_caveats_template_values:</span>
-
-<span class="gh">Resolving of template values</span>
-<span class="gh">++++++++++++++++++++++++++++</span>
-
-In all <span class="ge">*step*</span> hooks, template values in easyconfig parameters will be resolved whenever they are accessed.
-
-That is, if the <span class="s">``%(version)``</span> template is used in for example the <span class="s">``sources``</span> easyconfig parameter,
-it will be replaced with the actual value of the <span class="s">``version``</span> easyconfig parameter whenever the
-<span class="s">``sources``</span> value is used.
-This can be avoided by temporarily disabling templating by wrapping the code in <span class="s">``with self.cfg.disable_templating:``</span>.
-
-There is one notable exception to this:
-Templates in easyconfig parameters are <span class="ge">*not*</span> resolved in <span class="s">``parse_hook``</span>,
-because templating has been disabled explicitly before <span class="s">``parse_hook``</span> is called;
+Here are some things to take into account:</p>
+<h3 id="resolving-of-template-values">Resolving of template values<a class="headerlink" href="#resolving-of-template-values" title="Permanent link">&para;</a></h3>
+<p>In all <em>step</em> hooks, template values in easyconfig parameters will be resolved whenever they are accessed.</p>
+<p>That is, if the <code>%(version)</code> template is used in for example the <code>sources</code> easyconfig parameter,
+it will be replaced with the actual value of the <code>version</code> easyconfig parameter whenever the
+<code>sources</code> value is used.
+This can be avoided by temporarily disabling templating by wrapping the code in <code>with self.cfg.disable_templating:</code>.</p>
+<p>There is one notable exception to this:
+Templates in easyconfig parameters are <em>not</em> resolved in <code>parse_hook</code>,
+because templating has been disabled explicitly before <code>parse_hook</code> is called;
 this helps significantly to simplify manipulating of easyconfig parameter values
-(see also <span class="na">:ref:</span><span class="nv">`hooks_caveats_manipulating`</span>).
-
-
-<span class="p">..</span> <span class="nt">_hooks_caveats_manipulating:</span>
-
-<span class="gh">Manipulating easyconfig parameters</span>
-<span class="gh">++++++++++++++++++++++++++++++++++</span>
-
-You may run into surprises when trying to manipulate easyconfig parameters, for various reasons.
-
-First of all, the original easyconfig parameters may already be processed in another data structure
-which does not resemble the original format in which the parameter was defined in the easyconfig file.
-
-Moreover, this processing could be done either &quot;in place&quot; by replacing the original easyconfig parameter value,
+(see also <a href="#manipulating-easyconfig-parameters">Manipulating easyconfig parameters</a>).</p>
+<h3 id="manipulating-easyconfig-parameters">Manipulating easyconfig parameters<a class="headerlink" href="#manipulating-easyconfig-parameters" title="Permanent link">&para;</a></h3>
+<p>You may run into surprises when trying to manipulate easyconfig parameters, for various reasons.</p>
+<p>First of all, the original easyconfig parameters may already be processed in another data structure
+which does not resemble the original format in which the parameter was defined in the easyconfig file.</p>
+<p>Moreover, this processing could be done either "in place" by replacing the original easyconfig parameter value,
 or in a separate variable, which effectively means that any changes to the original easyconfig parameter value
-are simply ignored.
-
-In addition, because of how the templating mechanism for easyconfig parameter works,
+are simply ignored.</p>
+<p>In addition, because of how the templating mechanism for easyconfig parameter works,
 changes to easyconfig parameters with non-string values (i.e. lists, dictionaries, etc.) will go up
-in smoke if not done correctly.
-
-More specifically, the following approach will <span class="ge">*not*</span> work in any of the (step) hooks, except for <span class="s">``parse_hook``</span>:
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
-
-    <span class="k">def</span> <span class="nf">pre_fetch_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="s2">&quot;Example of pre-fetch hook to manipulate list of patches.&quot;</span>
-        <span class="c1"># this does NOT have the intended affect in any pre- or post-step hook</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;patches&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;example.patch&#39;</span><span class="p">)</span>
-
-The problem here is that the value obtained via <span class="s">``self.cfg[&#39;patches&#39;]``</span> is not a reference
+in smoke if not done correctly.</p>
+<p>More specifically, the following approach will <em>not</em> work in any of the (step) hooks, except for <code>parse_hook</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">pre_fetch_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+     <span class="s2">&quot;Example of pre-fetch hook to manipulate list of patches.&quot;</span>
+     <span class="c1"># this does NOT have the intended affect in any pre- or post-step hook</span>
+     <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;patches&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;example.patch&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p>The problem here is that the value obtained via <code>self.cfg['patches']</code> is not a reference
 to the actual easyconfig parameter value but a reference to a temporary copy thereof;
-hence any updates on the copy are effectively lost immediately.
-
-To achieve the intended effect, you can either:
-
-<span class="m">*</span> temporarily disable the templating mechanism:
-
-<span class="p">  ..</span> <span class="ow">code</span><span class="p">::</span> python
-
-    def pre_fetch_hook(self):
-        &quot;Example of pre-fetch hook to manipulate list of patches.&quot;
-        # temporarily disable templating, so changes to &#39;patches&#39; easyconfig parameter are picked up
-        with self.cfg.disable_templating:
-            # add patch
-            self.cfg[&#39;patches&#39;].append(&#39;example.patch&#39;)
-        # templating state restored
-
-<span class="m">*</span> or replace the original value entirely:
-
-<span class="p">  ..</span> <span class="ow">code</span><span class="p">::</span> python
-
-    def pre_fetch_hook(self):
-        &quot;Example of pre-fetch hook to manipulate list of patches.&quot;
-        self.cfg[&#39;patches&#39;] = self.cfg[&#39;patches&#39;] + [&#39;example.patch&#39;]
-
-
-A better approach for manipulating easyconfig parameters is to use the <span class="s">``parse_hook``</span> that
-was introduced in EasyBuild v3.7.0 (see <span class="na">:ref:</span><span class="nv">`hooks_parse_hook`</span>),
+hence any updates on the copy are effectively lost immediately.</p>
+<p>To achieve the intended effect, you can either:</p>
+<ul>
+<li>
+<p>temporarily disable the templating mechanism:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">pre_fetch_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="s2">&quot;Example of pre-fetch hook to manipulate list of patches.&quot;</span>
+    <span class="c1"># temporarily disable templating, so changes to &#39;patches&#39; easyconfig parameter are picked up</span>
+    <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">disable_templating</span><span class="p">:</span>
+        <span class="c1"># add patch</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;patches&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;example.patch&#39;</span><span class="p">)</span>
+    <span class="c1"># templating state restored</span>
+</code></pre></div>
+</li>
+<li>
+<p>or replace the original value entirely:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">pre_fetch_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="s2">&quot;Example of pre-fetch hook to manipulate list of patches.&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;patches&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;patches&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;example.patch&#39;</span><span class="p">]</span>
+</code></pre></div>
+</li>
+</ul>
+<p>A better approach for manipulating easyconfig parameters is to use the <code>parse_hook</code> that
+was introduced in EasyBuild v3.7.0 (see <a href="#parse-hook-specifics">Parse hook specifics</a>),
 where these kind of surprises will not occur (because templating is automatically disabled
-before <span class="s">``parse_hook``</span> is called and restored immediately afterwards).
-See also <span class="na">:ref:</span><span class="nv">`hooks_examples_inject_patch`</span>.
-
-<span class="p">..</span> <span class="nt">_hooks_caveats_archived_easyconfig:</span>
-
-<span class="gh">Archived easyconfig file vs hooks</span>
-<span class="gh">+++++++++++++++++++++++++++++++++</span>
-
-EasyBuild archives the easyconfig file that was used for a particular installation:
-A copy is stored both in the <span class="s">``easybuild``</span> subdirectory of the software installation
-directory and in the easyconfigs repository (see <span class="na">:ref:</span><span class="nv">`easyconfigs_repo`</span>).
-
-If any changes were made to the easyconfig file via hooks, these changes will <span class="ge">*not*</span> be
+before <code>parse_hook</code> is called and restored immediately afterwards).
+See also <a href="#inject-a-custom-patch-file">Example hook to inject a custom patch file</a>.</p>
+<h3 id="archived-easyconfig-file-vs-hooks">Archived easyconfig file vs hooks<a class="headerlink" href="#archived-easyconfig-file-vs-hooks" title="Permanent link">&para;</a></h3>
+<p>EasyBuild archives the easyconfig file that was used for a particular installation:
+A copy is stored both in the <code>easybuild</code> subdirectory of the software installation
+directory and in the easyconfigs repository (see <a href="../configuration/#easyconfigs-repository-repository-repositorypath">Easyconfigs repository</a>).</p>
+<p>If any changes were made to the easyconfig file via hooks, these changes will <em>not</em> be
 reflected in these copies.
-The assumption here is that the hooks will also be in place for future (re-)installations.
-
-EasyBuild does however store an additional copy of the easyconfig file which includes
+The assumption here is that the hooks will also be in place for future (re-)installations.</p>
+<p>EasyBuild does however store an additional copy of the easyconfig file which includes
 any modifications that were done dynamically, for example by hooks.
-If subtoolchains were used to resolve dependencies, they will also be hardwired in this copy.
-
-This &quot;<span class="ge">*reproducible easyconfig*</span>&quot; is stored in the <span class="s">``easybuild/reprod``</span> subdirectory
-of the software installation directory.
-
-
-<span class="p">..</span> <span class="nt">_hooks_examples:</span>
-
-<span class="gh">Examples of hook implementations</span>
-<span class="gh">--------------------------------</span>
-
-<span class="p">..</span> <span class="nt">_hooks_examples_openmpi_configopts:</span>
-
-<span class="gh">Example hook to replace ``--with-verbs`` with ``--without-verbs`` in OpenMPI configure options</span>
-<span class="gh">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span>
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
-
-    <span class="k">def</span> <span class="nf">pre_configure_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Example pre-configure hook to replace --with-verbs with --without -verbs for OpenMPI.&quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;OpenMPI&#39;</span> <span class="ow">and</span> <span class="s1">&#39;--with-verbs&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;configopts&#39;</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;[pre-configure hook] Replacing --with-verbs with --without-verbs&quot;</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;configopts&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;configopts&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;--with-verbs&#39;</span><span class="p">,</span> <span class="s1">&#39;--without-verbs&#39;</span><span class="p">)</span>
-
-<span class="p">..</span> <span class="nt">_hooks_examples_inject_patch:</span>
-
-<span class="gh">Example hook to inject a custom patch file</span>
-<span class="gh">++++++++++++++++++++++++++++++++++++++++++</span>
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
-
-    <span class="k">def</span> <span class="nf">parse_hook</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Example parse hook to inject a patch file for a fictive software package named &#39;Example&#39;.&quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="n">ec</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;Example&#39;</span><span class="p">:</span>
-            <span class="n">patch_file</span> <span class="o">=</span> <span class="s1">&#39;example.patch&#39;</span>
-            <span class="n">ec</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;[parse hook] Injecting additional patch file &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">patch_file</span><span class="p">)</span>
-            <span class="n">ec</span><span class="p">[</span><span class="s1">&#39;patches&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">patch_file</span><span class="p">)</span>
-
-<span class="gh">Example hook to replace PYTHONPATH by EBPYTHONPREFIXES in (Lua) modules</span>
-<span class="gh">+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span>
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
-
-    <span class="k">def</span> <span class="nf">module_write_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filepath</span><span class="p">,</span> <span class="n">module_txt</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="c1"># note: if `self.mod_filepath == filepath` =&gt; final module file</span>
-        <span class="k">if</span> <span class="s1">&#39;Python&#39;</span> <span class="ow">in</span> <span class="p">(</span><span class="n">dep</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">dep</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">dependencies</span><span class="p">()):</span>
-            <span class="n">search</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;prepend_path\(&quot;PYTHONPATH&quot;, pathJoin\(root, &quot;lib/python\d.\d/site-packages&quot;\)\)&#39;</span>
-            <span class="n">replace</span> <span class="o">=</span> <span class="s1">&#39;prepend_path(&quot;EBPYTHONPREFIXES&quot;, root)&#39;</span>
-            <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">search</span><span class="p">,</span> <span class="n">replace</span><span class="p">,</span> <span class="n">module_txt</span><span class="p">)</span>
+If subtoolchains were used to resolve dependencies, they will also be hardwired in this copy.</p>
+<p>This "<em>reproducible easyconfig</em>" is stored in the <code>easybuild/reprod</code> subdirectory
+of the software installation directory.</p>
+<h2 id="examples-of-hook-implementations">Examples of hook implementations<a class="headerlink" href="#examples-of-hook-implementations" title="Permanent link">&para;</a></h2>
+<h3 id="replace-with-verbs-with-without-verbs-in-openmpi-configure-options">Replace <code>--with-verbs</code> with <code>--without-verbs</code> in OpenMPI configure options<a class="headerlink" href="#replace-with-verbs-with-without-verbs-in-openmpi-configure-options" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">pre_configure_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Example pre-configure hook to replace --with-verbs with --without -verbs for OpenMPI.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;OpenMPI&#39;</span> <span class="ow">and</span> <span class="s1">&#39;--with-verbs&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;configopts&#39;</span><span class="p">]:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;[pre-configure hook] Replacing --with-verbs with --without-verbs&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;configopts&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;configopts&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;--with-verbs&#39;</span><span class="p">,</span> <span class="s1">&#39;--without-verbs&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="inject-a-custom-patch-file">Inject a custom patch file<a class="headerlink" href="#inject-a-custom-patch-file" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">parse_hook</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Example parse hook to inject a patch file for a fictive software package named &#39;Example&#39;.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">ec</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;Example&#39;</span><span class="p">:</span>
+        <span class="n">patch_file</span> <span class="o">=</span> <span class="s1">&#39;example.patch&#39;</span>
+        <span class="n">ec</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;[parse hook] Injecting additional patch file &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">patch_file</span><span class="p">)</span>
+        <span class="n">ec</span><span class="p">[</span><span class="s1">&#39;patches&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">patch_file</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="replace-pythonpath-by-ebpythonprefixes-in-lua-modules">Replace <code>PYTHONPATH</code> by <code>EBPYTHONPREFIXES</code> in (Lua) modules<a class="headerlink" href="#replace-pythonpath-by-ebpythonprefixes-in-lua-modules" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">module_write_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filepath</span><span class="p">,</span> <span class="n">module_txt</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="c1"># note: if `self.mod_filepath == filepath` =&gt; final module file</span>
+    <span class="k">if</span> <span class="s1">&#39;Python&#39;</span> <span class="ow">in</span> <span class="p">(</span><span class="n">dep</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">dep</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">dependencies</span><span class="p">()):</span>
+        <span class="n">search</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;prepend_path\(&quot;PYTHONPATH&quot;, pathJoin\(root, &quot;lib/python\d.\d/site-packages&quot;\)\)&#39;</span>
+        <span class="n">replace</span> <span class="o">=</span> <span class="s1">&#39;prepend_path(&quot;EBPYTHONPREFIXES&quot;, root)&#39;</span>
+        <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">search</span><span class="p">,</span> <span class="n">replace</span><span class="p">,</span> <span class="n">module_txt</span><span class="p">)</span>
 </code></pre></div>
 
   <hr>
@@ -712,7 +706,7 @@ of the software installation directory.
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 28, 2022</span>
       
     
   </small>

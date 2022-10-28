@@ -276,9 +276,53 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Configuration
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#supported-configuration-types" class="md-nav__link">
+    Supported configuration types
+  </a>
+  
+    <nav class="md-nav" aria-label="Supported configuration types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#easyconfigs-repository-repository-repositorypath" class="md-nav__link">
+    Easyconfigs repository (--repository, --repositorypath)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -364,6 +408,34 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#supported-configuration-types" class="md-nav__link">
+    Supported configuration types
+  </a>
+  
+    <nav class="md-nav" aria-label="Supported configuration types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#easyconfigs-repository-repository-repositorypath" class="md-nav__link">
+    Easyconfigs repository (--repository, --repositorypath)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -411,11 +483,9 @@ A demo on configuring EasyBuild is available <span class="na">:ref:</span><span 
     <span class="nc">:backlinks:</span> none
 
 <span class="p">..</span> <span class="nt">_configuration_types:</span>
-
-<span class="gh">Supported configuration types</span>
-<span class="gh">-----------------------------</span>
-
-Configuring EasyBuild can be done by:
+</code></pre></div>
+<h2 id="supported-configuration-types">Supported configuration types<a class="headerlink" href="#supported-configuration-types" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>Configuring EasyBuild can be done by:
 
 <span class="m">*</span> using <span class="s">``eb``</span> with <span class="gs">**command line arguments**</span>
 <span class="m">*</span> setting <span class="gs">**environment variables**</span> (<span class="s">``$EASYBUILD_...``</span>)
@@ -904,11 +974,9 @@ so you do not need to adjust <span class="s">``$MODULEPATH``</span> every time y
           runtime according to the modules install path it is configured with.
 
 <span class="p">..</span> <span class="nt">_easyconfigs_repo:</span>
-
-<span class="gh">Easyconfigs repository (``--repository``, ``--repositorypath``)</span>
-<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
-
-<span class="ge">*default*</span>: <span class="s">``FileRepository``</span> at <span class="s">``$HOME/.local/easybuild/ebfiles_repo``</span>
+</code></pre></div>
+<h3 id="easyconfigs-repository-repository-repositorypath">Easyconfigs repository (<code>--repository</code>, <code>--repositorypath</code>)<a class="headerlink" href="#easyconfigs-repository-repository-repositorypath" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="ge">*default*</span>: <span class="s">``FileRepository``</span> at <span class="s">``$HOME/.local/easybuild/ebfiles_repo``</span>
 (determined via <span class="na">:ref:</span><span class="nv">`prefix`</span>)
 
 EasyBuild has support for archiving (tested) <span class="s">``.eb``</span> easyconfig files.
@@ -1134,7 +1202,7 @@ Possible values are:
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2022</span>
       
     
   </small>
