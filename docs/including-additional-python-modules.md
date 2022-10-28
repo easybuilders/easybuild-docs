@@ -1,5 +1,7 @@
 # Including additional Python modules
 
+## Including additional easyblocks (`--include-easyblocks`)
+
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Including_additional_Python_modules.html>.
 
