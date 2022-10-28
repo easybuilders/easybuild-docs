@@ -120,7 +120,7 @@ Do take into account the following:
 
 It is recommended to anticipate possible changes in the provided (named) arguments,
 using the `*args` and `**kwargs` mechanism commonly used in Python. This
-avoids that your hook implementations may break when updating to future EasyBuild versions. For example::
+avoids that your hook implementations may break when updating to future EasyBuild versions. For example:
 
 ```py
 # example pre-configure hook that anticipates changes in provided arguments
