@@ -10,6 +10,8 @@ theme:
   favicon: favicon.ico
   features:
     - instant
+    - navigation.top
+    - toc.integrate
   palette:
     scheme: easybuild
 extra_css:
