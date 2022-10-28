@@ -1,5 +1,9 @@
 # Configuring EasyBuild
 
+## Overall prefix path (`--prefix`)
+
+## Source path (`--sourcepath`)
+
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Configuration.html>.
 
