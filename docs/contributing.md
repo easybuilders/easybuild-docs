@@ -1,5 +1,11 @@
 # Contributing
 
+## Requirements for pull requests
+
+## Comparing with existing easyconfigs (`--review-pr`)
+
+## Pull requests
+
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Contributing.html>.
 
