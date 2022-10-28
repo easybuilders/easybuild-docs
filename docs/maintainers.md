@@ -1,7 +1,5 @@
 # EasyBuild maintainers
 
-## EasyBuild maintainers
-
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Maintainers.html>.
 
