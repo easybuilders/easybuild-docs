@@ -144,7 +144,7 @@ still basic Python data structures like lists, dictionaries, etc.
 that are easy to manipulate (see also [Manipulating easyconfig parameters](#manipulating-easyconfig-parameters)).
 
 In `parse_hook` easyconfig parameters can be accessed and/or modified in a straightforward way,
-see [Example hook to inject a custom patch file](#example-hook-to-inject-a-custom-patch-file).
+see [Example hook to inject a custom patch file](#inject-a-custom-patch-file).
 
 
 ## Caveats
@@ -224,7 +224,7 @@ A better approach for manipulating easyconfig parameters is to use the `parse_ho
 was introduced in EasyBuild v3.7.0 (see [Parse hook specifics](#parse-hook-specifics)),
 where these kind of surprises will not occur (because templating is automatically disabled
 before `parse_hook` is called and restored immediately afterwards).
-See also [Example hook to inject a custom patch file](#example-hook-to-inject-a-custom-patch-file).
+See also [Example hook to inject a custom patch file](#inject-a-custom-patch-file).
 
 ### Archived easyconfig file vs hooks
 
