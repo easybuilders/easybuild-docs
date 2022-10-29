@@ -27,4 +27,13 @@ There are broadly two types of code block used, which take different syntax high
 
 ## Admonitions
 
-Use [admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/) primarily for warnings (`!!! warning`) and info (`!!! info`).
+Use [admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/) primarily for warnings and notes.
+For example:
+
+``` markdown
+!!! warning
+    This is a warning!
+
+!!! note
+    This is a note.
+```
