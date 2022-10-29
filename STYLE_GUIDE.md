@@ -6,7 +6,8 @@ General guidance on the style of the EasyBuild documentation.
 
 There are broadly two types of code block used, which take different syntax highlighting:
 
-* Where the code represents a single command use the `shell` lexer and don't include a leading `$`. E.g.
+* Where the code represents a single command use the `shell` lexer, and don't include a leading `$`.
+  For example:
 
     ```` markdown
     ``` shell
