@@ -1,4 +1,4 @@
-# Style Guide for *docs.easybuild.io*
+# Style guide for EasyBuild documentation
 
 General guidance on the style of the EasyBuild documentation.
 
