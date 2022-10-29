@@ -15,7 +15,8 @@ There are broadly two types of code block used, which take different syntax high
     ```
     ````
 
-* Where the code represents a command, followed by some example output, use the `console` lexer and *do* include a leading `$`. E.g.
+* Where the code represents a command, followed by some example output, use the `console` lexer, and *do* include a leading `$`.
+  For example:
 
     ```` markdown
     ``` console
