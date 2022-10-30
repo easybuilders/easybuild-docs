@@ -375,7 +375,7 @@ without having to modify the codebase of EasyBuild itself.</p>
 you only need to specify the location of the Python module (<code>*.py</code>) that implements them.</p>
 <p>This is done via the <code>--hooks</code> configuration option
 (or equivalently via the <code>$EASYBUILD_HOOKS</code> environment variable, or via <code>hooks = ...</code>
-in an EasyBuild configuration file, see also <a href="../configuration/#configuring-easybuild">Configuring EasyBuild</a>).</p>
+in an EasyBuild configuration file, see also <a class="autorefs autorefs-internal" href="../configuration/#configuring-easybuild">Configuring EasyBuild</a>).</p>
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code>eb --hooks<span class="o">=</span><span class="nv">$HOME</span>/my_eb_hooks.py ...
 </code></pre></div>
@@ -534,7 +534,7 @@ See also <a href="#inject-a-custom-patch-file">Example hook to inject a custom p
 <h3 id="archived-easyconfig-file-vs-hooks">Archived easyconfig file vs hooks<a class="headerlink" href="#archived-easyconfig-file-vs-hooks" title="Permanent link">&para;</a></h3>
 <p>EasyBuild archives the easyconfig file that was used for a particular installation:
 A copy is stored both in the <code>easybuild</code> subdirectory of the software installation
-directory and in the easyconfigs repository (see <a href="../configuration/#easyconfigs-repository-repository-repositorypath">Easyconfigs repository</a>).</p>
+directory and in the easyconfigs repository (see <a class="autorefs autorefs-internal" href="../configuration/#configuration-easyconfigs-repository">Easyconfigs repository</a>).</p>
 <p>If any changes were made to the easyconfig file via hooks, these changes will <em>not</em> be
 reflected in these copies.
 The assumption here is that the hooks will also be in place for future (re-)installations.</p>
@@ -573,7 +573,7 @@ of the software installation directory.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 28, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 30, 2022</span>
       
     
   </small>
