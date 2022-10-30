@@ -36,4 +36,3 @@ For example:
 
 !!! note
     This is a note.
-```
