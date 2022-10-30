@@ -18,7 +18,7 @@ are fully accessible (and modifiable) from within hook implementations. Hence, t
 provides a lot of flexibility to change the EasyBuild functionality should you require it,
 without having to modify the codebase of EasyBuild itself.
 
-## Configuring EasyBuild to use your hook implementations {: #some_slug }
+## Configuring EasyBuild to use your hook implementations
 
 To instruct EasyBuild to use your hook implementations,
 you only need to specify the location of the Python module (`*.py`) that implements them.
