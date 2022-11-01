@@ -1,6 +1,6 @@
 # Installing EasyBuild
 
-## Requirements
+## Requirements {: #requirements }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Installation.html>.

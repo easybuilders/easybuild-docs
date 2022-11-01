@@ -1,8 +1,13 @@
 # Configuring EasyBuild
 
-## Overall prefix path (`--prefix`)
+## Overall prefix path (`--prefix`) {: #prefix }
 
-## Source path (`--sourcepath`)
+## Source path (`--sourcepath`) {: #sourcepath }
+
+## Supported configuration types {: #configuration_types }
+
+### Easyconfigs repository (``--repository``, ``--repositorypath``) {: #easyconfigs_repo }
+
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Configuration.html>.
@@ -34,11 +39,8 @@ A demo on configuring EasyBuild is available :ref:`here <demo_configuring>`.
 
 .. _configuration_types:
 
-```
-
-## Supported configuration types
-
-```rst
+Supported configuration types
+-----------------------------
 
 Configuring EasyBuild can be done by:
 
@@ -530,11 +532,8 @@ so you do not need to adjust ``$MODULEPATH`` every time you start a new session.
 
 .. _easyconfigs_repo:
 
-```
-
-### Easyconfigs repository (``--repository``, ``--repositorypath``) {: #configuration-easyconfigs-repository }
-
-```rst
+Easyconfigs repository (``--repository``, ``--repositorypath``)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 *default*: ``FileRepository`` at ``$HOME/.local/easybuild/ebfiles_repo``
 (determined via :ref:`prefix`)
