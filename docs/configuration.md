@@ -532,7 +532,7 @@ so you do not need to adjust ``$MODULEPATH`` every time you start a new session.
 
 ```
 
-### Easyconfigs repository (``--repository``, ``--repositorypath``)
+### Easyconfigs repository (``--repository``, ``--repositorypath``) {: #configuration-easyconfigs-repository }
 
 ```rst
 

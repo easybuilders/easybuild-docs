@@ -10,6 +10,8 @@ theme:
   favicon: favicon.ico
   features:
     - instant
+    - navigation.top
+    - toc.integrate
   palette:
     scheme: easybuild
 extra_css:
@@ -30,6 +32,8 @@ nav:
   - Getting help: getting-help.md
 
 markdown_extensions:
+  # add attributes to html elements
+  - attr_list
   # notes, warnings, hints, ...
   - admonition
   # code blocks with syntax highlighting, graphs
@@ -52,6 +56,8 @@ extra:
       link: https://docs.easybuild.io
 
 plugins:
+  # autolinks across pages
+  - autorefs
   # show revision date at bottom of each page
   - git-revision-date-localized
   # necessary for search to work
