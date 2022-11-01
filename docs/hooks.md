@@ -229,7 +229,7 @@ See also [Example hook to inject a custom patch file](#inject-a-custom-patch-fil
 
 EasyBuild archives the easyconfig file that was used for a particular installation:
 A copy is stored both in the `easybuild` subdirectory of the software installation
-directory and in the easyconfigs repository (see [Easyconfigs repository][configuration-easyconfigs-repository]).
+directory and in the easyconfigs repository (see [Easyconfigs repository][easyconfigs_repo]).
 
 If any changes were made to the easyconfig file via hooks, these changes will *not* be
 reflected in these copies.
