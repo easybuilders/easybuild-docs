@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://docs.easybuild.io/locks/">
       
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.7">
     
     
       
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#locks" class="md-skip">
+        <a href="#locks_1" class="md-skip">
           Skip to content
         </a>
       
@@ -356,130 +356,72 @@
   </a>
 
 
-<h1 id="locks">Locks<a class="headerlink" href="#locks" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/Locks.html">https://docs.easybuild.io/en/latest/Locks.html</a>.</p>
-<p><strong>
-It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
-and you can help with that!
-</strong></p>
-<ul>
-<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Locks.rst"><code>docs/Locks.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
-<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/locks.md"><code>docs/locks.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
-</ul>
-<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
+<h1 id="locks_1">Locks<a class="headerlink" href="#locks_1" title="Permanent link">&para;</a></h1>
+<h2 id="locks">Locks to prevent duplicate installations running at the same time<a class="headerlink" href="#locks" title="Permanent link">&para;</a></h2>
+<p>Easybuild creates a lock before starting the installation of an easyconfig file,
+to avoid a collision between multiple installations running at the same time.</p>
+<p>If an EasyBuild session tries to install an easyconfig file when a lock for that installation already exists,
+it will be automatically aborted with an error like "<code>Lock ... already exists, aborting!</code>".</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Locking of installations was implemented in EasyBuild version 4.2.0 .</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_locks:</span>
-
-<span class="gh">Locks to prevent duplicate installations running at the same time</span>
-<span class="gh">=================================================================</span>
-
-Easybuild creates a lock before starting the installation of an easyconfig file,
-to avoid a collision between multiple installations running at the same time.
-
-If an EasyBuild session tries to install an easyconfig file when a lock for that installation already exists,
-it will be automatically aborted with an error like &quot;<span class="s">``Lock ... already exists, aborting!``</span>&quot;.
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Locking of installations was implemented in EasyBuild version 4.2.0 .
-
-
-<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
-    <span class="nc">:depth:</span> 3
-    <span class="nc">:backlinks:</span> none
-
-<span class="p">..</span> <span class="nt">_locks_implementation:</span>
-
-<span class="gh">Locking implementation details</span>
-<span class="gh">------------------------------</span>
-
-Easybuild will create a lock when starting an installation if no corresponding lock exists yet,
-regardless of whether the installation was requested explicitly or is performed to resolve a dependency.
-
-The name of the lock corresponds to the <span class="ge">*full*</span> path of the installation directory, with slashes (<span class="s">``/``</span>) and
-dashes (<span class="s">``-``</span>) replaced by underscores (<span class="s">``_``</span>), and with an additional <span class="s">``.lock``</span> added at the end.
-
-Locks are created in the <span class="na">:ref:</span><span class="nv">`locks_dir`</span>.
-
-The lock created by EasyBuild is an empty directory (rather than a file),
-because that can be created more atomically on modern filesystems.
-
-For example, if <span class="s">``OpenFOAM-7-foss-2019b.eb``</span> is being installed to <span class="s">``/apps/easybuild/software``</span>,
+<h3 id="locks_implementation">Locking implementation details<a class="headerlink" href="#locks_implementation" title="Permanent link">&para;</a></h3>
+<p>Easybuild will create a lock when starting an installation if no corresponding lock exists yet,
+regardless of whether the installation was requested explicitly or is performed to resolve a dependency.</p>
+<p>The name of the lock corresponds to the <em>full</em> path of the installation directory, with slashes (<code>/</code>) and
+dashes (<code>-</code>) replaced by underscores (<code>_</code>), and with an additional <code>.lock</code> added at the end.</p>
+<p>Locks are created in the <a class="autorefs autorefs-internal" href="#locks_dir">locks directory</a>.</p>
+<p>The lock created by EasyBuild is an empty directory (rather than a file),
+because that can be created more atomically on modern filesystems.</p>
+<p>For example, if <code>OpenFOAM-7-foss-2019b.eb</code> is being installed to <code>/apps/easybuild/software</code>,
 an empty directory that serves as a lock for this installation will be created at
-<span class="s">``/apps/easybuild/software/.locks/_apps_easybuild_software_OpenFOAM_7_foss_2019b.lock``</span>
-(assuming the default <span class="na">:ref:</span><span class="nv">`locks_dir`</span> is used).
-
-A lock is automatically removed by Easybuild when the installation ends, regardless of whether the installation
-was successful or not. Therefore, new installations of the same easyconfig will be aborted in case of:
-
-<span class="m">*</span> another installation for the same easyconfig is in progress;
-<span class="m">*</span> a previous installation of the same easyconfig was abruptly interrupted;
-
-
-<span class="p">..</span> <span class="nt">_locks_removing:</span>
-
-<span class="gh">Removing locks</span>
-<span class="gh">--------------</span>
-
-If a previous installation was abruptly interrupted and a lock was left in place,
-it can be easily removed using the <span class="s">``rmdir``</span> command (since the lock is actually an empty directory).
-
-
-<span class="p">..</span> <span class="nt">_locks_configuration_options:</span>
-
-<span class="gh">Configuration options related to installation locks</span>
-<span class="gh">---------------------------------------------------</span>
-
-The behaviour of the locking mechanism in Easybuild can be tuned with the following configuration options:
-
-<span class="p">..</span> <span class="nt">_locks_ignore:</span>
-
-<span class="gh">Ignoring locks (``--ignore-locks``)</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-Using the <span class="s">``--ignore-locks``</span> configuration option, you can instruct EasyBuild to ignore any existing locks.
-Locks that exist are left untouched, even if the installation completes successfully.
-
-**Use this with caution, since installations may be (partially) overwritten if another EasyBuild session is also
-performing those installations!**
-
-
-<span class="p">..</span> <span class="nt">_locks_wait:</span>
-
-<span class="gh">Waiting for locks to be removed (``--wait-on-lock``)</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-Using the <span class="s">``--wait-on-lock``</span> configuration option, you can change how EasyBuild deals with existing locks,
-by specifying how frequently EasyBuild should check whether an existing lock was removed. By specifying a non-zero value <span class="s">``S``</span>,
-you can indicate how many seconds EasyBuild should wait before checking again whether the lock is still in place.
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> EasyBuild will wait indefinitely for an existing lock to be removed if <span class="s">``--wait-on-lock``</span> is set to a non-zero value...
-
-  If the lock is never removed, the EasyBuild session will never terminate; it will keep checking every <span class="s">``S``</span> seconds whether the lock is still in place.
-
-By default, EasyBuild will <span class="ge">*abort*</span> the installation with an error like &quot;<span class="s">``Lock ... already exists, aborting!``</span>&quot;
-if a corresponding lock already exists, which is equivalent to setting <span class="s">``--wait-on-lock``</span> to zero (<span class="s">``0``</span>),
-implying that no waiting should be done at all.
-
-
-<span class="p">..</span> <span class="nt">_locks_dir:</span>
-
-<span class="gh">Locks directory</span>
-<span class="gh">---------------</span>
-
-If desired, an alternate location where locks should be created and checked for can be specified via the <span class="s">``--locks-dir``</span> configuration option.
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Keep in mind that a path on a <span class="ge">*shared*</span> filesystem should be used, to ensure that active EasyBuild sessions running on different systems use the same locks directory.
-
-By default, locks are created in a hidden subdirectory <span class="s">``.locks``</span> in the top-level <span class="s">``software``</span> installation directory; that is, the <span class="s">``software``</span> subdirectory of the <span class="s">``installpath``</span> configuration setting of the active EasyBuild session.
-</code></pre></div>
+<code>/apps/easybuild/software/.locks/_apps_easybuild_software_OpenFOAM_7_foss_2019b.lock</code>
+(assuming the default <a class="autorefs autorefs-internal" href="#locks_dir">locks directory</a> is used).</p>
+<p>A lock is automatically removed by Easybuild when the installation ends, regardless of whether the installation
+was successful or not. Therefore, new installations of the same easyconfig will be aborted in case of:</p>
+<ul>
+<li>another installation for the same easyconfig is in progress;</li>
+<li>a previous installation of the same easyconfig was abruptly interrupted;</li>
+</ul>
+<h3 id="locks_removing">Removing locks<a class="headerlink" href="#locks_removing" title="Permanent link">&para;</a></h3>
+<p>If a previous installation was abruptly interrupted and a lock was left in place,
+it can be easily removed using the <code>rmdir</code> command (since the lock is actually an empty directory).</p>
+<h3 id="locks_configuration_options">Configuration options related to installation locks<a class="headerlink" href="#locks_configuration_options" title="Permanent link">&para;</a></h3>
+<p>The behaviour of the locking mechanism in Easybuild can be tuned with the following configuration options:</p>
+<h4 id="locks_ignore">Ignoring locks<a class="headerlink" href="#locks_ignore" title="Permanent link">&para;</a></h4>
+<p><em>(<code>--ignore-locks</code>)</em></p>
+<p>Using the <code>--ignore-locks</code> configuration option, you can instruct EasyBuild to ignore any existing locks.
+Locks that exist are left untouched, even if the installation completes successfully.</p>
+<p><strong>Use this with caution, since installations may be (partially) overwritten if another EasyBuild session is also
+performing those installations!</strong></p>
+<h4 id="locks_wait">Waiting for locks to be removed<a class="headerlink" href="#locks_wait" title="Permanent link">&para;</a></h4>
+<p><em>(<code>--wait-on-lock</code>)</em></p>
+<p>Using the <code>--wait-on-lock</code> configuration option, you can change how EasyBuild deals with existing locks,
+by specifying how frequently EasyBuild should check whether an existing lock was removed. By specifying a non-zero value <code>S</code>,
+you can indicate how many seconds EasyBuild should wait before checking again whether the lock is still in place.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>EasyBuild will wait indefinitely for an existing lock to be removed if <code>--wait-on-lock</code> is set to a non-zero value...</p>
+<p>If the lock is never removed, the EasyBuild session will never terminate; it will keep checking every <code>S</code> seconds whether the lock is still in place.</p>
+</div>
+<p>By default, EasyBuild will <em>abort</em> the installation with an error like "<code>Lock ... already exists, aborting!</code>"
+if a corresponding lock already exists, which is equivalent to setting <code>--wait-on-lock</code> to zero (<code>0</code>),
+implying that no waiting should be done at all.</p>
+<h3 id="locks_dir">Locks directory<a class="headerlink" href="#locks_dir" title="Permanent link">&para;</a></h3>
+<p>If desired, an alternate location where locks should be created and checked for can be specified via the <code>--locks-dir</code> configuration option.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Keep in mind that a path on a <em>shared</em> filesystem should be used, to ensure that active EasyBuild sessions running on different systems use the same locks directory.</p>
+</div>
+<p>By default, locks are created in a hidden subdirectory <code>.locks</code> in the top-level <code>software</code> installation directory; that is, the <code>software</code> subdirectory of the <code>installpath</code> configuration setting of the active EasyBuild session.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 2, 2022</span>
       
     
   </small>
