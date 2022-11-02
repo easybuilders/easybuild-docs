@@ -1,12 +1,12 @@
-# Common toolchains
+# Common toolchains {: #common_toolchains }
 
 This page documents the concept of *common toolchains* in the EasyBuild
 community; for a more general definition of what (compiler) toolchains
-are, see [Toolchains](terminology.md#toolchains).
+are, see [Toolchains][toolchains].
 
-## Definition and motivation
+## Definition and motivation {: #common_toolchains_what }
 
-Picking a [compiler toolchain](terminology.md#toolchains)
+Picking a [compiler toolchain][toolchains]
 to use is one of the first things you (need to) do
 when starting to use EasyBuild. This can be a daunting task, since a
 whole bunch of toolchains and different toolchain versions are readily
@@ -28,14 +28,14 @@ resulting in a wide range of readily available easyconfig files using
 the common toolchains.
 
 The intention is to revise/update the definitions of the common
-toolchains regularly (see [Update cycle for common toolchains](#update-cycle-for-common-toolchains)), which again
+toolchains regularly (see [Update cycle for common toolchains][common_toolchains_update_cycle]), which again
 can be a joint effort that benefits many HPC sites.
 
 Currently, two different common toolchains are being maintained: `foss`
 and `intel`; see below for more details, and also
-[Overview of common toolchains](#overview-of-common-toolchains).
+[Overview of common toolchains][common_toolchains_overview].
 
-### `foss` toolchain
+### `foss` toolchain {: #common_toolchains_foss }
 
 The `foss` common compiler toolchain consists entirely of open source
 software (hence the name, derived from the common term 'FOSS', which is
@@ -61,7 +61,7 @@ This toolchain consists of:
     swapping any of the toolchain components with a better (open source)
     alternative in the future, should the need or opportunity arise.
 
-### `intel` toolchain
+### `intel` toolchain {: #common_toolchains_intel }
 
 The `intel` common compiler toolchain consists of the Intel compilers
 and libraries, i.e.:
@@ -82,10 +82,10 @@ and libraries, i.e.:
     This compiler toolchain includes licensed software; valid licenses must
     be available to install and use it.
 
-## Versioning scheme for common toolchains
+## Versioning scheme for common toolchains {: #common_toolchains_versioning_scheme }
 
 The common toolchains follow a specific versioning scheme, which takes
-the [6-month update cycle](#update-cycle-for-common-toolchains) into account.
+the [6-month update cycle][common_toolchains_update_cycle] into account.
 
 Each revision of the common toolchains is versioned as the *year* in
 which it was defined, plus an additional '`a`' or '`b`' to indicate
@@ -97,7 +97,7 @@ For example, `foss/2016b` is a revision of the `foss` that was composed
 mid-2016.
 
 A full historic overview of the `foss` and `intel` common toolchains is
-available in [Overview of common toolchains](#overview-of-common-toolchains).
+available in [Overview of common toolchains][common_toolchains_overview].
 
 !!! note
 
@@ -114,7 +114,7 @@ available in [Overview of common toolchains](#overview-of-common-toolchains).
     most recent component included was released, or when that particular
     toolchain composition was defined.
 
-## Update cycle for common toolchains
+## Update cycle for common toolchains {: #common_toolchains_update_cycle }
 
 The intention is to revise and update the common toolchains every 6
 months: once in late December/early January (version `<year>a`), and
@@ -132,9 +132,9 @@ Moreover, the proposed toolchain compositions are tested extensively,
 typically by rebuilding all available easyconfigs that are using the
 most recent revision of the common toolchains at that time.
 
-## Overview of common toolchains
+## Overview of common toolchains {: #common_toolchains_overview }
 
-### Component versions in `foss` toolchain
+### Component versions in `foss` toolchain {: #common_toolchains_overview_foss }
 
 | `foss`  | *date*   | *binutils* | *GCC*  | *Open MPI* | *FlexiBLAS* | *OpenBLAS* | *LAPACK*              | *ScaLAPACK* | *FFTW* |
 |---------|----------|------------|--------|------------|-------------|------------|-----------------------|-------------|--------|
@@ -148,7 +148,7 @@ most recent revision of the common toolchains at that time.
 
 *(components marked with* \* *were patched)*
 
-### Component versions in `intel` toolchain
+### Component versions in `intel` toolchain {: #common_toolchains_overview_intel }
 
 | `intel` | *date*   | *binutils* | *GCC*  | *Intel compilers* | *Intel MPI* | *Intel MKL* |
 |---------|----------|------------|--------|-------------------|-------------|-------------|
@@ -160,9 +160,9 @@ most recent revision of the common toolchains at that time.
 | `2021b` | Oct'21   | 2.37       | 11.2.0 | 2021.4.0          | 2021.4.0    | 2021.4.0    |
 | `2022a` | Jun'22   | 2.38       | 11.3.0 | 2022.1.0          | 2021.6.0    | 2022.1.0    |
 
-## Overview of common toolchains (deprecated versions)
+## Overview of common toolchains (deprecated versions) {: #common_toolchains_overview_deprecated }
 
-### Component versions in `foss` toolchain (deprecated versions)
+### Component versions in `foss` toolchain (deprecated versions) {: #common_toolchains_overview_foss_deprecated }
 
 | `foss`  | *date*  | *binutils* | *GCC* | *Open MPI* | *FlexiBLAS* | *OpenBLAS* | *LAPACK*              | *ScaLAPACK* | *FFTW*      |
 |---------|---------|------------|-------|------------|-------------|------------|-----------------------|-------------|-------------|
@@ -176,7 +176,7 @@ most recent revision of the common toolchains at that time.
 | `2018a` | Jan '18 | 2.28       | 6.4.0 | 2.1.2      | *(none)*    | 0.2.20\*   | (incl. with OpenBLAS) | 2.0.2       | 3.3.7       |
 | `2018b` | Jul '18 | 2.30       | 7.3.0 | 3.1.1      | *(none)*    | 0.3.1      | (incl. with OpenBLAS) | 2.0.2       | 3.3.8       |
 
-### Component versions in `intel` toolchain (deprecated versions)
+### Component versions in `intel` toolchain (deprecated versions) {: #common_toolchains_overview_intel_deprecated }
 
 | `intel` | *date*  | *binutils* | *GCC* | *Intel compilers* | *Intel MPI* | *Intel MKL* |
 |---------|---------|------------|-------|-------------------|-------------|-------------|
@@ -190,7 +190,7 @@ most recent revision of the common toolchains at that time.
 | `2018a` | Jan '18 | 2.28       | 6.4.0 | 2018.1.163        | 2018.1.163  | 2018.1.163  |
 | `2018b` | Jul '18 | 2.30       | 7.3.0 | 2018.3.222        | 2018.3.222  | 2018.3.222  |
 
-## Customizing common toolchains
+## Customizing common toolchains {: #common_toolchains_customizing }
 
 Sometimes the need arises to customize one or more components of a
 common toolchain w.r.t. site-specific aspects. One common example is
@@ -200,7 +200,7 @@ To customize a toolchain component, you should copy the corresponding
 easyconfig file, modify according to your needs, and make sure it is
 included in a location in the robot search path that precedes the
 location of the easyconfig files that are included with EasyBuild (see
-also [Searching for easyconfigs: the robot search path](using-easybuild.md#searching-for-easyconfigs-the-robot-search-path)), before building and
+also [Searching for easyconfigs: the robot search path][robot_search_path]), before building and
 installation the toolchain.
 
 !!! info "More information about toolchains"
