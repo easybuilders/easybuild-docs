@@ -1,10 +1,10 @@
 # Contributing
 
-## Requirements for pull requests
+## Requirements for pull requests {: #contributing_review_process_pr_requirements }
 
-## Comparing with existing easyconfigs (`--review-pr`)
+## Comparing with existing easyconfigs (`--review-pr`) {: #contributing_review_process_review_pr}
 
-## Pull requests
+## Pull requests {: #contributing_pull_requests}
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Contributing.html>.

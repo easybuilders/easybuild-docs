@@ -1,6 +1,6 @@
 # EasyBuild log files
 
-## Understanding EasyBuild logs
+## Understanding EasyBuild logs {: #understanding_easyBuild_logs}
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Logfiles.html>.
