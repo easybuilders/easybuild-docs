@@ -1,6 +1,6 @@
 # Locks
 
-## Locks to prevent duplicate installations running at the same time
+## Locks to prevent duplicate installations running at the same time {: #locks }
 
 Easybuild creates a lock before starting the installation of an easyconfig file,
 to avoid a collision between multiple installations running at the same time.
@@ -12,7 +12,7 @@ it will be automatically aborted with an error like "`Lock ... already exists, a
     Locking of installations was implemented in EasyBuild version 4.2.0 .
 
 
-### Locking implementation details
+### Locking implementation details {: #locks_implementation }
 
 Easybuild will create a lock when starting an installation if no corresponding lock exists yet,
 regardless of whether the installation was requested explicitly or is performed to resolve a dependency.
@@ -20,7 +20,7 @@ regardless of whether the installation was requested explicitly or is performed 
 The name of the lock corresponds to the *full* path of the installation directory, with slashes (`/`) and
 dashes (`-`) replaced by underscores (`_`), and with an additional `.lock` added at the end.
 
-Locks are created in the [locks directory](#locks-directory).
+Locks are created in the [locks directory][locks_dir].
 
 The lock created by EasyBuild is an empty directory (rather than a file),
 because that can be created more atomically on modern filesystems.
@@ -28,7 +28,7 @@ because that can be created more atomically on modern filesystems.
 For example, if `OpenFOAM-7-foss-2019b.eb` is being installed to `/apps/easybuild/software`,
 an empty directory that serves as a lock for this installation will be created at
 `/apps/easybuild/software/.locks/_apps_easybuild_software_OpenFOAM_7_foss_2019b.lock`
-(assuming the default [locks directory](#locks-directory) is used).
+(assuming the default [locks directory][locks_dir] is used).
 
 A lock is automatically removed by Easybuild when the installation ends, regardless of whether the installation
 was successful or not. Therefore, new installations of the same easyconfig will be aborted in case of:
@@ -37,13 +37,13 @@ was successful or not. Therefore, new installations of the same easyconfig will 
 * a previous installation of the same easyconfig was abruptly interrupted;
 
 
-### Removing locks
+### Removing locks {: #locks_removing }
 
 If a previous installation was abruptly interrupted and a lock was left in place,
 it can be easily removed using the `rmdir` command (since the lock is actually an empty directory).
 
 
-### Configuration options related to installation locks
+### Configuration options related to installation locks {: #locks_configuration_options }
 
 The behaviour of the locking mechanism in Easybuild can be tuned with the following configuration options:
 
@@ -76,7 +76,7 @@ if a corresponding lock already exists, which is equivalent to setting `--wait-o
 implying that no waiting should be done at all.
 
 
-### Locks directory
+### Locks directory {: #locks_dir }
 
 If desired, an alternate location where locks should be created and checked for can be specified via the `--locks-dir` configuration option.
 
