@@ -17,9 +17,9 @@ are a couple of requirements:
     - only required for authenticated access to the GitHub API, which can
         help to avoid rate limitations
     - *not* strictly necessary for read-only operations
-        - i.e. *not* required for [Using easyconfigs from pull requests](#using-easyconfigs-from-pull-requests-from-pr) and 
-        [Reviewing easyconfig pull requests](#reviewing-easyconfig-pull-requests-review-pr) (but it can help)
-    - see [Providing a GitHub username](#providing-a-github-username-github-user)
+        - i.e. *not* required for [Using easyconfigs from pull requests][github_from_pr] and 
+        [Reviewing easyconfig pull requests][github_review_pr]
+    - see [Providing a GitHub username][github_user]
 - **a GitHub token** + `keyring` **Python package**
     - install via `pip install keyring` (for Python2: `pip install 'keyring<19.0'`)
     - optionally install potentially unsafe keyrings: `pip install keyrings.alt` (but read and understand the
@@ -27,36 +27,30 @@ are a couple of requirements:
     - allows accessing the GitHub API with authentication
     - only strictly required for features that require GitHub 'write'
       permissions
-        - i.e. for [Uploading test reports](#uploading-test-reports-upload-test-report) and
-          [Submitting pull requests](#submitting-pull-requests-new-pr)
-    - see [Installing a GitHub token](#installing-a-github-token-install-github-token)
+        - i.e. for [Uploading test reports][github_upload_test_report] and
+          [Submitting pull requests][github_new_pr]
+    - see [Installing a GitHub token][github_token]
 - `git` **command** / `GitPython` **Python package**
     - install via `pip install GitPython` (for Python2:
         `pip install 'GitPython<3.0'`)
     - only required when local `git` commands need to be executed, e.g. to
         manipulate a Git repository
-        - i.e. for [Submitting pull
-        requests](#submitting-pull-requests-new-pr) and [Updating
-        existing pull
-        requests](#updating-existing-pull-requests-update-pr)
+        - i.e. for [Submitting pull requests][github_new_pr] and 
+        [Updating existing pull requests][github_update_pr]
 - **SSH public key registered on GitHub**
     - only required when `push` access to Git repositories that reside on
         GitHub is required
-        - i.e. for [Submitting pull
-        requests](#submitting-pull-requests-new-pr) and [Updating
-        existing pull
-        requests](#updating-existing-pull-requests-update-pr)
+        - i.e. for [Submitting pull requests][github_new_pr] and
+        [Updating existing pull requests][github_update_pr]
     - see <https://github.com/settings/ssh>
 - **fork of the EasyBuild repositories on GitHub**
-    - only required for submitting/updating pull requests ([Submitting
-        pull requests](#submitting-pull-requests-new-pr) and [Updating
-        existing pull
-        requests](#updating-existing-pull-requests-update-pr))
+    - only required for submitting/updating pull requests ([Submitting pull requests][github_new_pr] and
+    [Updating existing pull requests][github_update_pr]
     - see `Fork` button (top right) at
         <https://github.com/easybuilders/easybuild-easyconfigs> (for
         example)
 
-See also [Checking status of GitHub integration](#checking-status-of-github-integration-check-github).
+See also [Checking status of GitHub integration][github_requirements_check].
 
 ## Configuration {: #github_configuration }
 
@@ -73,7 +67,7 @@ To specify your GitHub username, do one of the following:
 - define the `$EASYBUILD_GITHUB_USER` environment variable
 - specify `github-user` in your EasyBuild configuration file
 
-(see also [Configuring EasyBuild](configuration.md))
+(see also [Configuring EasyBuild][configuring_easybuild]
 
 ### Installing a GitHub token {: #github_token }
 
@@ -194,7 +188,7 @@ Status of GitHub integration:
     the easybuild-easyconfigs GitHub repository will be created in the
     process (at a temporary location).
 
-See also [Requirements](#requirements).
+See also [Requirements][github_requirements].
 
 ## Using easyconfigs from pull requests {: #github_from_pr }
 
@@ -210,8 +204,7 @@ be used (regardless of whether the pull request is merged or not).
 
 This can be useful to employ easyconfig files that are not available yet
 in the active EasyBuild installation, or to test new contributions by
-combining `--from-pr` with `--upload-test-report` (see [Uploading test
-reports](#uploading-test-reports-upload-test-report)).
+combining `--from-pr` with `--upload-test-report` (see [Uploading test reports][github_upload_test_report].
 
 When `--from-pr` is used, EasyBuild will download all modified files
 (easyconfig files and patches) to a temporary directory before
@@ -236,8 +229,7 @@ Dry run: printing build status of easyconfigs and dependencies
 
     To avoid GitHub rate limiting, let EasyBuild know which GitHub account
     should be used to query the GitHub API, and provide a matching GitHub
-    token; see also [Installing a GitHub
-    token](#installing-a-github-token-install-github-token).
+    token; see also [Installing a GitHub token][github_token].
 
 ### Relation between pull requests and current `develop` branch {: #github_from_pr_vs_develop }
 
@@ -267,11 +259,10 @@ directory. Afterwards, the patch corresponding to the specified pull
 request is applied on top of the `develop` branch. This results in a
 correct reflection of how the easyconfig files would look like if the
 pull request would be merged, which is particularly important for
-testing of contributions (see also [Uploading test
-reports](#uploading-test-reports-upload-test-report)).
+testing of contributions (see also [Uploading test reports][github_upload_test_report].
 
 Easyconfig files touched by the pull request that are explicitly
-specified are then picked up from this location; see also [Specifying particular easyconfig files](#specifying-particular-easyconfig-files).
+specified are then picked up from this location; see also [Specifying particular easyconfig files][github_from_pr_specifying_easyconfigs].
 
 #### Merged pull requests {: #github_from_pr_vs_develop_merged_prs }
 
@@ -312,7 +303,7 @@ easyconfigs touched by the pull request is *appended* to the robot
 search path. This change was made to ensure that customized easyconfig
 files that are available in the robot search path are preferred over the
 (patched) easyconfig files from the `develop` branch (see also
-[Relation between pull requests and current `develop` branch](#relation-between-pull-requests-and-current-develop-branch)).
+[Relation between pull requests and current `develop` branch][github_from_pr_vs_develop]).
 
 For example, to build and install `HPL` with the `intel/2015a`
 toolchain, both of which are contributed via [easyconfigs pull request
@@ -381,15 +372,13 @@ resolve dependencies are being picked up as needed.
 
 Via the `--include-easyblocks-from-pr` command line option, easyblocks
 that are added or modified by a particular pull request to the
-[easybuild-easyblocks GitHub
-repository](https://github.com/easybuilders/easybuild-easyblocks) can be
+[easybuild-easyblocks GitHub repository](https://github.com/easybuilders/easybuild-easyblocks) can be
 used (regardless of whether the pull request is merged or not).
 
 This can be useful to employ easyblocks that are not available yet in
 the active EasyBuild installation, or to test new contributions by
 combining `--include-easyblocks-from-pr` with `--from-pr` and
-`--upload-test-report` (see [Uploading test
-reports](#uploading-test-reports-upload-test-report)).
+`--upload-test-report` (see [Uploading test reports][github_upload_test_report]).
 
 When `--include-easyblocks-from-pr` is used, EasyBuild will download all
 modified easyblocks to a temporary directory before processing them.
@@ -420,8 +409,7 @@ EasyBlock (easybuild.framework.easyblock)
 
 !!! note
     requires that a GitHub token was required `gist` permissions is
-    available, cfr. [Installing a GitHub
-    token](#installing-a-github-token-install-github-token)
+    available, cfr. [Installing a GitHub token][github_token]
 
 For every installation performed with EasyBuild, a test report is
 generated. By default, the test report is copied in the installation
@@ -441,7 +429,7 @@ Each test report includes:
   OS, architecture, etc.)
 - the list of modules that was loaded
 - the full environment of the session in which `eb` was run (note: can
-  be filtered, see [Filtering the environment details](#filtering-the-environment-details-test-report-env-filter)
+  be filtered, see [Filtering the environment details][github_test_report_env_filter]
 
 For each easyconfig that *failed* to install a partial log will be
 uploaded as a separate gist, and a link to this gist will be included in
@@ -646,7 +634,7 @@ differ from existing easyconfig files, and to maintain consistency
 across easyconfig files where desired.
 
 Maintainers will use `--review-pr` as part of the review process once
-the PR is submitted (see [Reviewing easyconfig pull requests](#reviewing-easyconfig-pull-requests-review-pr), but it is now possible to
+the PR is submitted (see [Reviewing easyconfig pull requests][github_review_pr], but it is now possible to
 preview that output before submitting a PR, eventually fixing any
 inconsistencies in advance.
 
@@ -658,7 +646,7 @@ eb --preview-pr example.eb example.patch
 ```
 
 Besides accepting local files instead of a PR number, `--preview-pr`
-works the same as `--review-pr`, as described in [Comparing with existing easyconfigs](#comparing-with-existing-easyconfigs-review-pr).
+works the same as `--review-pr`, as described in [Comparing with existing easyconfigs][contributing_review_process_review_pr].
 
 ### Submitting pull requests {: #github_new_pr }
 
@@ -670,7 +658,7 @@ works the same as `--review-pr`, as described in [Comparing with existing easyco
 
 To create a new pull request, the `--new-pr` command line option can be
 used, provided that the necessary requirements are fulfilled (see
-[Requirements](#requirements)).
+[Requirements][github_requirements]).
 
 In its simplest form, you just provide the location of the file(s) that
 you want to include in the pull request:
@@ -704,13 +692,12 @@ entirely!
 The working copy of the EasyBuild repository is created in a temporary
 location, and cleaned up once the pull request has been created.
 EasyBuild does *not* make changes to an existing working copy you may
-have in place already (cfr. [Specify location of working directories](#specify-location-of-working-directories-git-working-dirs-path)).
+have in place already (cfr. [Specify location of working directories][github_git_working_dirs_path].
 
 !!! note
     When modifying existing files via `--new-pr`,  
     you *must* specify a (meaningful) commit message using
-    `--pr-commit-msg`, see [Controlling pull request
-    metadata](controlling-pull-request-metadata).
+    `--pr-commit-msg`, see [Controlling pull request metadata][github_controlling_pr_metadata].
 
 #### Example
 
@@ -783,8 +770,7 @@ the repository, no changes are made to a possible existing working copy.
 
 !!! note
     When using `--update-pr` you *must* specify a (meaningful) commit message  
-    via `--pr-commit-msg`, see [Controlling pull request
-    metadata](controlling-pull-request-metadata).
+    via `--pr-commit-msg`, see [Controlling pull request metadata][github_controlling_pr_metadata].
 
 #### Example
 
@@ -840,8 +826,7 @@ eb --new-pr :example-1.0.eb --pr-commit-msg "delete example-1.0.eb easyconfig fi
 
 !!! note
     When deleting existing files, you *must* specify a custom commit message using `--pr-commit-msg`,  
-    see also [Controlling pull request
-    metadata](controlling-pull-request-metadata).
+    see also [Controlling pull request metadata][github_controlling_pr_metadata].
 
 ### Controlling pull request metadata {: #github_controlling_pr_metadata }
 
@@ -881,8 +866,7 @@ when only new easyconfigs are being added via `--new-pr`.
 
 When existing easyconfigs are being modified, patch files are being
 added/updated or `--update-pr` is used, a custom (meaningful) commit
-message *must* be provided via `--pr-commit-msg` (see [Controlling pull
-request metadata](controlling-pull-request-metadata)).
+message *must* be provided via `--pr-commit-msg` (see [Controlling pull request metadata][github_controlling_pr_metadata]).
 
 #### Default pull request description
 
