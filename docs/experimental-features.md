@@ -1,4 +1,4 @@
-# Experimental features
+# Experimental features {: #experimental_features }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Experimental_features.html>.
