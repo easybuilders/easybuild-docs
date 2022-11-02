@@ -47,7 +47,9 @@ it can be easily removed using the `rmdir` command (since the lock is actually a
 
 The behaviour of the locking mechanism in Easybuild can be tuned with the following configuration options:
 
-#### Ignoring locks (`--ignore-locks`)
+#### Ignoring locks {: #locks_ignore }
+
+*(`--ignore-locks`)*
 
 Using the `--ignore-locks` configuration option, you can instruct EasyBuild to ignore any existing locks.
 Locks that exist are left untouched, even if the installation completes successfully.
@@ -56,7 +58,9 @@ Locks that exist are left untouched, even if the installation completes successf
 performing those installations!**
 
 
-#### Waiting for locks to be removed (`--wait-on-lock`)
+#### Waiting for locks to be removed {: #locks_wait }
+
+*(`--wait-on-lock`)*
 
 Using the `--wait-on-lock` configuration option, you can change how EasyBuild deals with existing locks,
 by specifying how frequently EasyBuild should check whether an existing lock was removed. By specifying a non-zero value `S`,
