@@ -1,4 +1,4 @@
-# Integration with GitHub
+# Integration with GitHub {: #integration_with_github }
 
 EasyBuild provides several features that integrate with GitHub, where
 the different EasyBuild repositories are located.
@@ -6,7 +6,7 @@ the different EasyBuild repositories are located.
 From the EasyBuild command line `eb` several options are available to
 reach out to GitHub, which are documented below.
 
-## Requirements
+## Requirements {: #github_requirements }
 
 Depending on which GitHub integration features you want to use, there
 are a couple of requirements:
@@ -58,12 +58,14 @@ are a couple of requirements:
 
 See also [Checking status of GitHub integration](#checking-status-of-github-integration-check-github).
 
-## Configuration
+## Configuration {: #github_configuration }
 
 The following sections discuss the EasyBuild configuration options
 relevant to the GitHub integration features.
 
-### Providing a GitHub username (`--github-user`)
+### Providing a GitHub username {: #github_user }
+
+*(`--github-user`)*
 
 To specify your GitHub username, do one of the following:
 
@@ -71,9 +73,11 @@ To specify your GitHub username, do one of the following:
 - define the `$EASYBUILD_GITHUB_USER` environment variable
 - specify `github-user` in your EasyBuild configuration file
 
-(see also [Configuring EasyBuild](configuration.md#configuring-easybuild))
+(see also [Configuring EasyBuild](configuration.md))
 
-### Installing a GitHub token (`--install-github-token`)
+### Installing a GitHub token {: #github_token }
+
+*(`--install-github-token`)*
 
 !!! note
     *requires*: GitHub username + `keyring` Python package
@@ -122,7 +126,9 @@ access to your GitHub account works as expected.
     For debugging purposes, only the first and last 3 characters will be
     shown.
 
-### Specify location of working directories (`--git-working-dirs-path`)
+### Specify location of working directories {: #github_git_working_dirs_path }
+
+*(`--git-working-dirs-path`)*
 
 You can specify the location of your Git working directories with one of
 the following:
@@ -142,7 +148,9 @@ Although not strictly required, this is useful for speeding up
 `--new-pr` and `--update-pr`, since it allows that the repository can be
 copied & updated, rather than being cloned from scratch.
 
-## Checking status of GitHub integration (`--check-github`)
+## Checking status of GitHub integration {: #github_requirements_check }
+
+*(`--check-github`)*
 
 To check the status of your setup w.r.t. GitHub integration, the
 `--check-github` command line option can be used.
@@ -188,7 +196,9 @@ Status of GitHub integration:
 
 See also [Requirements](#requirements).
 
-## Using easyconfigs from pull requests (`--from-pr`)
+## Using easyconfigs from pull requests {: #github_from_pr }
+
+*(`--from-pr`)*
 
 *(supported since EasyBuild v1.13.0)*
 
@@ -229,7 +239,7 @@ Dry run: printing build status of easyconfigs and dependencies
     token; see also [Installing a GitHub
     token](#installing-a-github-token-install-github-token).
 
-### Relation between pull requests and current `develop` branch
+### Relation between pull requests and current `develop` branch {: #github_from_pr_vs_develop }
 
 Since EasyBuild v2.9.0, the current `develop` branch of the central
 `easybuild-easyconfigs` GitHub repository is taken into account when
@@ -244,7 +254,7 @@ specified pull request, i.e. whether or not the pull request was merged
 already, whether the pull request is mergeable and stable (as indicated
 by GitHub Actions), etc.
 
-#### Open stable pull requests
+#### Open stable pull requests {: #github_from_pr_vs_develop_open_stable_prs }
 
 For *open* pull requests that are *stable* (i.e. tests pass and no merge
 conflicts), the pull request is effectively treated as a patch to the
@@ -263,7 +273,7 @@ reports](#uploading-test-reports-upload-test-report)).
 Easyconfig files touched by the pull request that are explicitly
 specified are then picked up from this location; see also [Specifying particular easyconfig files](#specifying-particular-easyconfig-files).
 
-#### Merged pull requests
+#### Merged pull requests {: #github_from_pr_vs_develop_merged_prs }
 
 For merged pull requests, the current `develop` branch is considered to
 be the correct state of the easyconfigs touched by the pull request.
@@ -273,7 +283,7 @@ potentially different from the ones that appear in the specified pull
 request itself, taking into account that further updates may have been
 applied in the `develop` branch since the pull request got merged.
 
-#### Closed or unstable pull requests
+#### Closed or unstable pull requests {: #github_from_pr_vs_develop_closed_unstable_prs }
 
 For closed and unstable pull requests, only the branch corresponding to
 the pull request itself is being considered, which aligns with the
@@ -284,7 +294,7 @@ case, the current `develop` branch is *not* taken into account.
     A pull request is considered unstable when GitHub reports merge conflicts or when GitHub Actions reports  
     one or more failing tests.
 
-### Synergy with `--robot`
+### Synergy with `--robot` {: #github_from_pr_robot_synergy }
 
 Since EasyBuild v1.15.0, the temporary directory containing the
 easyconfigs (and patch files) from the specified pull request is
@@ -329,7 +339,7 @@ Note that the easyconfigs that are required to resolve dependencies and
 are available locally in `$HOME/easyconfigs` are being picked up as
 needed.
 
-### Specifying particular easyconfig files
+### Specifying particular easyconfig files {: #github_from_pr_specifying_easyconfigs }
 
 Since EasyBuid v2.0.0 the particular easyconfigs to be used can be
 specified, rather than using all easyconfigs that are touched by the
@@ -363,7 +373,9 @@ Dry run: printing build status of easyconfigs and dependencies
 Again, note that locally available easyconfigs that are required to
 resolve dependencies are being picked up as needed.
 
-## Using easyblocks from pull requests (`--include-easyblocks-from-pr`)
+## Using easyblocks from pull requests {: #github_include_easyblocks_from_pr }
+
+*(`--include-easyblocks-from-pr`)*
 
 *(supported since EasyBuild v4.2.0)*
 
@@ -381,7 +393,7 @@ reports](#uploading-test-reports-upload-test-report)).
 
 When `--include-easyblocks-from-pr` is used, EasyBuild will download all
 modified easyblocks to a temporary directory before processing them.
-Just like with `--include-easyblocks` (see [Including additional easyblocks](including-additional-python-modules.md#including-additional-easyblocks-include-easyblocks)), the easyblocks that are
+Just like with `--include-easyblocks` (see [Including additional easyblocks][include_easyblocks]), the easyblocks that are
 included are preferred over the ones included in the EasyBuild installation.
 
 For example, to use the LAMMPS easyblock contributed via [easyblocks
@@ -400,7 +412,9 @@ EasyBlock (easybuild.framework.easyblock)
 ...
 ```
 
-## Uploading test reports (`--upload-test-report`)
+## Uploading test reports {: #github_upload_test_report }
+
+*(`--upload-test-report`)*
 
 *(supported since EasyBuild v1.13.0)*
 
@@ -411,7 +425,7 @@ EasyBlock (easybuild.framework.easyblock)
 
 For every installation performed with EasyBuild, a test report is
 generated. By default, the test report is copied in the installation
-directory, right next to the log file (see also [Understanding EasyBuild logs](log-files.md#understanding-easybuild-logs)).
+directory, right next to the log file (see also [Understanding EasyBuild logs][understanding_easyBuild_logs]).
 
 Using `--upload-test-report`, the test report can also be pushed to
 GitHub (as a *gist*, cfr. <https://gist.github.com>) to share it with
@@ -465,7 +479,9 @@ The resulting test report can be viewed at
     It is common to use `--rebuild` in combination with `--upload-test-report`, to ensure that all easyconfigs  
     in the pull request are rebuilt, resulting in a complete test report.
 
-### Filtering the environment details (`--test-report-env-filter`)
+### Filtering the environment details {: #github_test_report_env_filter }
+
+*(`--test-report-env-filter`)*
 
 Since the environment of the session in which `eb` was used may contain
 sensitive information, it can be filtered through
@@ -483,7 +499,9 @@ An example of a typical setting:
 export EASYBUILD_TEST_REPORT_ENV_FILTER='^SSH|USER|HOSTNAME|UID|.*COOKIE.*'
 ```
 
-## Reviewing easyconfig pull requests (`--review-pr`)
+## Reviewing easyconfig pull requests {: #github_review_pr }
+
+*(`--review-pr`)*
 
 A useful tool when reviewing pull requests for the
 [easybuild-easyconfigs
@@ -531,12 +549,14 @@ The addition restrictions are the following (also considered in order):
 - matching toolchain name (any versionsuffix, toolchain version)
 - no extra requirements (any versionsuffix, toolchain name/version)
 
-## Merging easyconfig pull requests (`--merge-pr`)
+## Merging easyconfig pull requests {: #github_merge_pr }
+
+*(`--merge-pr`)*
 
 *(supported since EasyBuild v3.3.1)*
 
-[EasyBuild maintainers](maintainers.md#easybuild-maintainers) need to take the
-[Requirements for pull requests](contributing.md#requirements-for-pull-requests) into account.
+[EasyBuild maintainers][maintainers] need to take the
+[Requirements for pull requests][contributing_review_process_pr_requirements] into account.
 
 They can merge a pull request to the `easybuild-easyconfigs` repository
 via `eb --merge-pr`, which will first verify whether the pull request
@@ -601,7 +621,9 @@ Merged easybuilders/easybuild-easyconfigs pull request #4829
     [DRY RUN] Merged easybuilders/easybuild-easyconfigs pull request #4829
     ```
 
-## Submitting new and updating pull requests (`--new-pr`, `--update-pr`)
+## Submitting new and updating pull requests {: #github_new_update_pr }
+
+*(`--new-pr`, `--update-pr`)*
 
 *(supported since EasyBuild v2.6.0)*
 
@@ -613,7 +635,9 @@ with `git` and/or GitHub yet:
 - `--new-pr` to create new pull requests
 - `--update-pr` to update existing pull requests
 
-### Previewing easyconfig pull requests (`--preview-pr`)
+### Previewing easyconfig pull requests {: #github_preview_pr }
+
+*(`--preview-pr`)*
 
 *(supported since EasyBuild v3.5.0)*
 
@@ -636,11 +660,13 @@ eb --preview-pr example.eb example.patch
 Besides accepting local files instead of a PR number, `--preview-pr`
 works the same as `--review-pr`, as described in [Comparing with existing easyconfigs](#comparing-with-existing-easyconfigs-review-pr).
 
-### Submitting pull requests (`--new-pr`)
+### Submitting pull requests {: #github_new_pr }
+
+*(`--new-pr`)*
 
 !!! note
     Submitting pull requests using `--new-pr` only works for the `easybuild-easyconfigs` repository, for now.  
-    For other repositories, see the manual procedure documented at [Pull requests](contributing.md#pull-requests).
+    For other repositories, see the manual procedure documented at [Pull requests][contributing_pull_requests].
 
 To create a new pull request, the `--new-pr` command line option can be
 used, provided that the necessary requirements are fulfilled (see
@@ -715,11 +741,13 @@ Opened pull request: https://github.com/easybuilders/easybuild-easyconfigs/pull/
 
 Yes, it's that easy!
 
-### Updating existing pull requests (`--update-pr`)
+### Updating existing pull requests {: #github_update_pr }
+
+*(`--update-pr`)*
 
 !!! note
     Updating pull requests using `--update-pr` only works for the `easybuild-easyconfigs` repository, for now.  
-    For other repositories, see the manual procedure documented at [Pull requests](contributing.md#pull-requests).
+    For other repositories, see the manual procedure documented at [Pull requests][contributing_pull_requests].
 
 Similarly to creating new pull requests, existing pull requests can be
 easily updated using `eb --update-pr` (regardless of whether or not they
@@ -776,7 +804,7 @@ Overview of changes:
 Updated easybuilders/easybuild-easyconfigs PR #3159 by pushing to branch boegel/20160530131447_new_pr_EasyBuild281
 ```
 
-### Including patch files in easyconfigs pull requests
+### Including patch files in easyconfigs pull requests {: #github_new_update_pr_patches }
 
 Next to providing one or more easyconfig files to add/update via
 `--new-pr` or `--update-pr`, you can also include patch files that are
@@ -798,7 +826,7 @@ eb --new-pr example.eb example.patch --pr-commit-msg "just an example"
     via `--pr-commit-msg`, see [Controlling pull request
     metadata](controlling-pull-request-metadata).
 
-### Deleting easyconfig files or patches
+### Deleting easyconfig files or patches {: #github_new_update_pr_delete }
 
 Next to adding easyconfigs files or patches, or modifying existing ones,
 you can also specify to *delete* particular files, by including a colon
@@ -815,7 +843,7 @@ eb --new-pr :example-1.0.eb --pr-commit-msg "delete example-1.0.eb easyconfig fi
     see also [Controlling pull request
     metadata](controlling-pull-request-metadata).
 
-### Controlling pull request metadata
+### Controlling pull request metadata {: #github_controlling_pr_metadata }
 
 You can control the metadata for pull requests using the following
 configuration options:
@@ -895,7 +923,7 @@ easyconfig files (to avoid excessively lengthy pull request titles).
 In case (only) existing easyconfig files are being changed, it's
 advisable to provide a more descriptive title using `--pr-title`.
 
-### Configuring `--new-pr` and `--update-pr`
+### Configuring `--new-pr` and `--update-pr` {: #github_configuring_new_update_pr }
 
 By default, `--new-pr` and `--update-pr` affect pull requests to the
 central `easybuilders/easybuild-easyconfigs` repository.
@@ -909,7 +937,7 @@ However, this can be changed with the following configurations options:
 - `--pr-target-repo` (default: `easybuild-easyconfigs`): target
   repository for new pull requests
 
-### Synergy with `--dry-run`/`-D` and `--extended-dry-run`/`-x`
+### Synergy with `--dry-run`/`-D` and `--extended-dry-run`/`-x` {: #github_synergy_new_update_pr_dry_run }
 
 Both `--new-pr` and `--update-pr` are 'dry run-aware', in the sense that
 you can combine them with either `--dry-run`/`-D-` or
