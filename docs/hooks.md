@@ -25,7 +25,7 @@ you only need to specify the location of the Python module (`*.py`) that impleme
 
 This is done via the `--hooks` configuration option
 (or equivalently via the `$EASYBUILD_HOOKS` environment variable, or via `hooks = ...`
-in an EasyBuild configuration file, see also [Configuring EasyBuild][configuring-easybuild]).
+in an EasyBuild configuration file, see also [Configuring EasyBuild][configuring_easybuild]).
 
 For example:
 
