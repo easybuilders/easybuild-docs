@@ -10,25 +10,25 @@ and hereby the most common command line options are being documented.
 ## Specifying what to install {: #specifying_easyconfigs }
 
 To instruct EasyBuild which software packages it should build/install and which build parameters it should use,
-one or more [*easyconfig files*](terminology.md#easyconfig-files) must be specified.
+one or more [*easyconfig files*][easyconfig_files] must be specified.
 
 This can be done in a number of ways:
 
-* [by providing a single easyconfig file](#by-providing-a-single-easyconfig-file)
-* [via command line options](#via-command-line-options)
-* [by providing a set of easyconfig files](#by-providing-a-set-of-easyconfig-files)
-* [using `eb --from-pr`](integration-with-github.md#using-easyconfigs-from-pull-requests)
+* [by providing a single easyconfig file][specifying_easyconfigs_single]
+* [via command line options][specifying_easyconfigs_command_line]
+* [by providing a set of easyconfig files][specifying_easyconfigs_set_of_easyconfigs]
+* [using `eb --from-pr`][github_from_pr]
 
 Whenever EasyBuild searches for *explicitly specified* easyconfig files, it considers a couple of locations, i.e. (in order of preference):
 
 * (i)   the local working directory
-* (ii)  the robot search path (see [robot search path](#searching-for-easyconfigs-the-robot-search-path))
+* (ii)  the robot search path (see [robot search path][robot_search_path])
 * (iii) the path to easyconfig files that are part of the active EasyBuild installation
         (which is included in the default robot search path)
 
 These locations are only considered for easyconfig files that are specified only by filename or using a relative path,
 *not* for easyconfig files that are specified via an absolute path. The dependencies are resolved using the
-robot search path (see [robot search path](#searching-for-easyconfigs-the-robot-search-path)).
+robot search path (see [robot search path][robot_search_path]).
 
 !!! note
 
@@ -83,20 +83,20 @@ $ which xhpl
 All easyconfig file names' suffixes are `.eb` and follow format:
 `<name>-<version>-<toolchain><versionsuffix>`
 
-This is a crucial design aspect, since the dependency resolution mechanism (see [robot]()) relies upon this convention.
+This is a crucial design aspect, since the dependency resolution mechanism (see [robot][use_robot]) relies upon this convention.
 
 !!! tip
 
     You may wish to modify the installation prefix (e.g., using `--prefix` or by defining `$EASYBUILD_PREFIX`),
     in order to redefine the build/install/source path prefix to be used; default value is: `$HOME/.local/easybuild`;
-    see [Configuration](configuration.md)
+    see [Configuration][configuring_easybuild]
 
 
 ### Via command line options {: #specifying_easyconfigs_command_line }
 
 An alternative approach is to only use command line options to specify which software to build.
 Refer to the `Software search and build options` section in the `eb --help` output for an overview
-of the available command line options for this purpose (see also [`--help`](#command-line-help)).
+of the available command line options for this purpose (see also [`--help`][basic_usage_help]).
 
 Here is how to build and install last version of HPL (that EasyBuild is aware of)
 using the `foss/2021b` toolchain:
@@ -196,22 +196,22 @@ This is EasyBuild 4.6.2 (framework: 4.6.2, easyblocks: 4.6.2) on host example.lo
 
 *(`--list-toolchains`)*
 
-For an overview of known [toolchains](terminology.md#toolchains), use `eb --list-toolchains`.
+For an overview of known [toolchains][toolchains], use `eb --list-toolchains`.
 
-The complete table of available toolchains is available [here](version-specific/eb-list-toolchains.md).
+The complete table of available toolchains is available [here][toolchains_table].
 
 
 ### List of available easyblocks {: #list_easyblocks }
 
 *(`--list-easyblocks`)*
 
-You can obtain a list of available [easyblocks](terminology.md#easyblocks) via `--list-easyblocks`.
+You can obtain a list of available [easyblocks][easyblocks] via `--list-easyblocks`.
 
 The `--list-easyblocks` command line option prints the easyblocks in a hierarchical way,
 showing the inheritance patterns, with the "base" easyblock class `EasyBlock` on top.
 
 Software-specific easyblocks have a name that starts with `EB_`; the ones that do not are generic easyblocks.
-(see [easyblocks](terminology.md#easyblocks) for the distinction between both types of easyblocks).
+(see [easyblocks][easyblocks] for the distinction between both types of easyblocks).
 
 For example, a list of easyblocks can be obtained with:
 
@@ -231,7 +231,7 @@ EasyBuild provides a significant amount of easyconfig parameters.
 An overview of all available easyconfig parameters can be obtained via
 `eb --avail-easyconfig-params`, or `eb -a` for short.
 
-See [available easyconfig parameters](version-specific/easyconfig-parameters.md) for more information,
+See [available easyconfig parameters][easyconfig_params] for more information,
 the supported parameters are a very rich set.
 
 Combine -a with `--easyblock`/`-e` to include parameters that are specific to a particular easyblock. For example:
@@ -240,7 +240,7 @@ Combine -a with `--easyblock`/`-e` to include parameters that are specific to a 
 eb -a -e EB_WRF
 ```
 
-If you want to see the full output of running this command, see [here](version-specific/eb-a-wrf.md).
+If you want to see the full output of running this command, see [here][eb_a_e_EB_WRF].
 
 
 ### Enable debug logging
@@ -275,12 +275,12 @@ Use `eb --rebuild` to rebuild a given easyconfig/module.
 !!! tip
 
     Combine `--rebuild` with `--dry-run` to get a good view on which installations will be rebuilt
-    (see also [Getting an overview of planned installations](#getting-an-overview-of-planned-installations)).
+    (see also [Getting an overview of planned installations][get_an_overview]).
 
 !!! note
 
     To create a backup of existing modules that are regenerated when `--rebuild` is used,
-    use `--backup-modules` (see also [Backing up of existing modules](backup-modules.md)).
+    use `--backup-modules` (see also [Backing up of existing modules][backup_modules]).
 
 
 ### Forced reinstallation {: #force_option }
@@ -297,12 +297,12 @@ The behavior of `--force` is the same as `--rebuild` and `--ignore-osdeps`.
 !!! tip
 
     Combine `--force` with `--dry-run` to get a good view on which installations will be forced
-    (see also [Getting an overview of planned installations](#getting-an-overview-of-planned-installations)).
+    (see also [Getting an overview of planned installations][get_an_overview]).
 
 !!! note
 
     To create a backup of existing modules that are regenerated when `--rebuild` is used,
-    use `--backup-modules` (see also [Backing up of existing modules](backup-modules.md)).
+    use `--backup-modules` (see also [Backing up of existing modules][backup_modules]).
 
 
 ### Searching for easyconfigs {: #searching_for_easyconfigs }
@@ -311,7 +311,7 @@ The behavior of `--force` is the same as `--rebuild` and `--ignore-osdeps`.
 
 Searching for available easyconfig files can be done using the `--search` (long output) and `-S` (short output)
 command line options. All easyconfig files available in the robot search path are considered
-(see [robot search path](#searching-for-easyconfigs-the-robot-search-path)), and searching is done *case-insensitive*.
+(see [robot search path][robot_search_path]), and searching is done *case-insensitive*.
 
 For example, to see which easyconfig files are available for the software package named `Mesquite`:
 
@@ -411,7 +411,7 @@ For each dependency that does not have a matching module installed yet, EasyBuil
 file. If no such easyconfig file was specified on the `eb` command line, the dependency resolution mechanism will try
 to locate one in the `robot search path`.
 
-Searching for easyconfigs is done based on filename (see also [What is an easyconfig (file)?](#what-is-an-easyconfig-file)),
+Searching for easyconfigs is done based on filename (see also [What is an easyconfig (file)?][what_is_an_easyconfig]),
 with filenames being derived from the dependency specification (i.e. software name/version, toolchain and version suffix).
 For each entry in the robot search path, a couple of different filepaths are considered, mostly determined by the software name.
 
@@ -476,19 +476,19 @@ These two configuration options each serve a particular purpose, and together de
     * by default, only the path to the easyconfig files that are part of the EasyBuild installation is listed;
     * **note**: setting this configuration option implies redefining the default robot search path, unless a
       prepending/appending list of paths is specified, see
-      [Prepending/appending to the default robot search path](#prependingappending-to-the-default-robot-search-path);
+      [Prepending/appending to the default robot search path][robot_search_path_prepend_append];
 
 For both options, the list of paths should be specified as a colon-separated (`:`) list.
 
 By combining `--robot` and `--robot-paths` using the different configuration types (see also
-[Supported configuration types](#supported-configuration-types)), you have full control over the robot search path: which paths are included,
+[Supported configuration types][configuration_types]), you have full control over the robot search path: which paths are included,
 the order of those paths, whether or not the easyconfig files that are part of the EasyBuild installation should be
 considered, etc.
 
 A constant named `DEFAULT_ROBOT_PATHS` is available that can be used (only) in EasyBuild configuration files to refer
 to the default robot search path, i.e. the path to the easyconfigs that are part of the EasyBuild installation.
 For more information on using constants in EasyBuild configuration files, see
-[Templates and constants supported in configuration files](#templates-and-constants-supported-in-configuration-files).
+[Templates and constants supported in configuration files][configuration_file_templates_constants].
 
 !!! tip
 
@@ -504,7 +504,7 @@ For more information on using constants in EasyBuild configuration files, see
     the value in `$EASYBUILD_ROBOT`, `$EASYBUILD_ROBOT_PATHS` *overrides* the `robot-paths` specification in an
     EasyBuild configuration file, etc. Of course, the value specified for `--robot` does not directly affect the value
     specified for `--robot-paths`, on any configuration level, and vice versa. For more information on the relation
-    between the different configuration types, see [Supported configuration types](#supported-configuration-types).
+    between the different configuration types, see [Supported configuration types][configuration_types].
 
 
 ### Prepending/appending to the default robot search path {: #robot_search_path_prepend_append }
@@ -531,7 +531,7 @@ For example, say we want to configure EasyBuild to behave as follows w.r.t. the 
 Matching setup:
 
 * satisfy (i) using `robot-paths` in one of the active EasyBuild configuration files (see also
-  [List of configuration files](#list-of-used-configuration-files)):
+  [List of configuration files][list_of_configuration_files]):
 
   ```ini
   [basic]
@@ -575,7 +575,7 @@ Note how the different status symbols denote distinct handling states by EasyBui
 !!! note
 
     Since EasyBuild v2.4.0, a detailed overview of the build and install procedure that EasyBuild
-    will be execute can be obtained using `--extended-dry-run` or `-x`, see [Extended dry run](extended-dry-run.md).
+    will be execute can be obtained using `--extended-dry-run` or `-x`, see [Extended dry run][extended_dry_run].
 
 
 ## Getting an overview of missing installations {: #eb_missing }
