@@ -2,6 +2,8 @@
 
 ## Easyconfig files {: #easyconfig_files }
 
+## Toolchains {: #toolchains }
+
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Concepts_and_Terminology.html>.
 
