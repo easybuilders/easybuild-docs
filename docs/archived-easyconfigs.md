@@ -1,9 +1,9 @@
-# Archived easyconfigs
+# Archived easyconfigs {: #archived_easyconfigs }
 
 Since EasyBuild v3.0.0, easyconfig files using deprecated (i.e., old and
 inactive) toolchains are *archived*.
 
-## Toolchain deprecation
+## Toolchain deprecation {: #archived_easyconfigs_toolchain_deprecation }
 
 Once in a blue moon, we review the list of toolchains (& versions) that
 are included in EasyBuild.
@@ -13,7 +13,7 @@ moved to the *easyconfigs archive*, i.e. the `__archive__` subdirectory
 in the `easybuild-easyconfigs` repository (see
 <https://github.com/easybuilders/easybuild-easyconfigs/tree/main/easybuild/easyconfigs/__archive__>).
 
-### What are deprecated toolchains?
+### What are deprecated toolchains? {: #archived_easyconfigs_deprecated_toolchains_what }
 
 Toolchains become deprecated if:
 
@@ -38,7 +38,7 @@ For toolchains for which no active versions are available (outside of
 the easyconfigs archive), it is possible that they will be reactivated,
 if a new toolchain version is contributed.
 
-### Why are toolchains being deprecated?
+### Why are toolchains being deprecated? {: #archived_easyconfigs_deprecated_toolchains_why }
 
 - using old toolchains (incl. old compilers and/or libraries) is
   likely to become more and more difficult on modern operating systems
@@ -47,7 +47,7 @@ if a new toolchain version is contributed.
 - easyconfigs using old toolchains are likely to be for old software
   versions, which may no longer be relevant anyway
 
-## Using `--consider-archived-easyconfigs`
+## Using `--consider-archived-easyconfigs` {: #archived_easyconfigs_consider }
 
 To make EasyBuild consider archived easyconfig files, you need to enable
 the `--consider-archived-easyconfigs` configuration option:
