@@ -1,6 +1,6 @@
-# EasyBuild terminology
+# EasyBuild terminology {: #concepts_and_terminology }
 
-## Easyconfig files
+## Easyconfig files {: #easyconfig_files }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Concepts_and_Terminology.html>.

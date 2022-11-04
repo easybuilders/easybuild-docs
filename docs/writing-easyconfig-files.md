@@ -1,7 +1,7 @@
-# Writing easyconfig files
+# Writing easyconfig files {: #writing_easyconfig_files }
 
 
-## What is an easyconfig (file)?
+## What is an easyconfig (file)? {: #what_is_an_easyconfig }
 
 
 !!! warning

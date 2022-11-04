@@ -1,4 +1,4 @@
-# Using the EasyBuild command line
+# Using the EasyBuild command line {: #using_the_easybuild_command_line }
 
 Basic usage of EasyBuild is described in the following sections, covering the most important range of topics
 if you are new to EasyBuild.
@@ -7,7 +7,7 @@ if you are new to EasyBuild.
 and hereby the most common command line options are being documented.
 
 
-## Specifying what to install
+## Specifying what to install {: #specifying_easyconfigs }
 
 To instruct EasyBuild which software packages it should build/install and which build parameters it should use,
 one or more [*easyconfig files*](terminology.md#easyconfig-files) must be specified.
@@ -37,7 +37,7 @@ robot search path (see [robot search path](#searching-for-easyconfigs-the-robot-
     part of the active EasyBuild installation for *explicitly specified* easyconfig files.
 
 
-### By providing a single easyconfig file
+### By providing a single easyconfig file {: #specifying_easyconfigs_single }
 
 The most basic usage is to simply provide the name of an easyconfig file to the `eb` command.
 EasyBuild will (try and) locate the easyconfig file, and perform the installation as specified by that easyconfig file.
@@ -92,7 +92,7 @@ This is a crucial design aspect, since the dependency resolution mechanism (see 
     see [Configuration](configuration.md)
 
 
-### Via command line options
+### Via command line options {: #specifying_easyconfigs_command_line }
 
 An alternative approach is to only use command line options to specify which software to build.
 Refer to the `Software search and build options` section in the `eb --help` output for an overview
@@ -113,7 +113,7 @@ $ eb --software-name=HPL --toolchain=foss,2021b
 At this point, a module `HPL/2.3-foss-2021b` should have been installed.
 
 
-### By providing a set of easyconfig files
+### By providing a set of easyconfig files {: #specifying_easyconfigs_set_of_easyconfigs }
 
 Multiple easyconfig files can be provided as well, either directly or by specifying a directory that contains easyconfig files.
 
@@ -192,7 +192,7 @@ This is EasyBuild 4.6.2 (framework: 4.6.2, easyblocks: 4.6.2) on host example.lo
     Asking EasyBuild to print own its version is a quick way to ensure that `$PYTHONPATH`
     is set up correctly, so that the entire EasyBuild installation (framework and easyblocks) is available.
 
-### List of known toolchains
+### List of known toolchains {: #list_toolchains }
 
 *(`--list-toolchains`)*
 
@@ -201,7 +201,7 @@ For an overview of known [toolchains](terminology.md#toolchains), use `eb --list
 The complete table of available toolchains is available [here](version-specific/eb-list-toolchains.md).
 
 
-### List of available easyblocks
+### List of available easyblocks {: #list_easyblocks }
 
 *(`--list-easyblocks`)*
 
@@ -223,7 +223,7 @@ To see more details about the available easyblocks, i.e., in which Python module
 located, use `--list-easyblocks=detailed`.
 
 
-## All available easyconfig parameters
+## All available easyconfig parameters {: #avail_easyconfig_params }
 
 *(`--avail-easyconfig-params` / `-a`)*
 
@@ -262,7 +262,7 @@ eb HPL-2.3-foss-2021b.eb --debug
     Debug log files are significantly larger than non-debug logs, beware!
 
 
-### Rebuild installation
+### Rebuild installation {: #rebuild_option }
 
 *(`--rebuild`)*
 
@@ -283,7 +283,7 @@ Use `eb --rebuild` to rebuild a given easyconfig/module.
     use `--backup-modules` (see also [Backing up of existing modules](backup-modules.md)).
 
 
-### Forced reinstallation
+### Forced reinstallation {: #force_option }
 
 *(`--force` / `-f`)*
 
@@ -305,7 +305,7 @@ The behavior of `--force` is the same as `--rebuild` and `--ignore-osdeps`.
     use `--backup-modules` (see also [Backing up of existing modules](backup-modules.md)).
 
 
-### Searching for easyconfigs
+### Searching for easyconfigs {: #searching_for_easyconfigs }
 
 *(`--search` / `-S`)*
 
@@ -359,7 +359,7 @@ CFGS1=/home/example/easybuild-easyconfigs/easybuild/easyconfigs/m/matplotlib
 ```
 
 
-## Enabling dependency resolution
+## Enabling dependency resolution {: #use_robot }
 
 *(`--robot` / `-r` and `--robot-paths`)*
 
@@ -405,7 +405,7 @@ by the dependency graph.
     Missing modules for dependencies (use --robot?): zlib/1.2.12
     ```
 
-## Searching for easyconfigs: the robot search path
+## Searching for easyconfigs: the robot search path {: #robot_search_path }
 
 For each dependency that does not have a matching module installed yet, EasyBuild requires a corresponding easyconfig
 file. If no such easyconfig file was specified on the `eb` command line, the dependency resolution mechanism will try
@@ -452,7 +452,7 @@ by the `$PYTHONPATH` environment variable) that contain a subdirectory named `ea
 part of the robot search path (in the order they are encountered).
 
 
-### Controlling the robot search path
+### Controlling the robot search path {: #controlling_robot_search_path }
 
 To control the robot search path, you can specify a (colon-separated list of) path(s) to `--robot`/`-r` and/or
 `--robot-paths` (or, equivalently, `$EASYBUILD_ROBOT` and/or `$EASYBUILD_ROBOT_PATHS`):
@@ -507,7 +507,7 @@ For more information on using constants in EasyBuild configuration files, see
     between the different configuration types, see [Supported configuration types](#supported-configuration-types).
 
 
-### Prepending/appending to the default robot search path
+### Prepending/appending to the default robot search path {: #robot_search_path_prepend_append }
 
 Prepending or appending to the default robot search path is supported via the `--robot-paths` configuration option.
 
@@ -546,7 +546,7 @@ Matching setup:
   ```
 
 
-## Getting an overview of planned installations
+## Getting an overview of planned installations {: #get_an_overview }
 
 *(`--dry-run` / `-D`)*
 
@@ -578,7 +578,7 @@ Note how the different status symbols denote distinct handling states by EasyBui
     will be execute can be obtained using `--extended-dry-run` or `-x`, see [Extended dry run](extended-dry-run.md).
 
 
-## Getting an overview of missing installations
+## Getting an overview of missing installations {: #eb_missing }
 
 *(`--missing-modules` / `-M`)*
 
@@ -599,7 +599,7 @@ Note that dependency resolution is enabled automatically
 (i.e., `--robot` is implied when using `--missing-modules` or `-M`).
 
 
-## Tweaking existing easyconfig files
+## Tweaking existing easyconfig files {: #tweaking_easyconfigs_using_try }
 
 *(`--try-*`)*
 
