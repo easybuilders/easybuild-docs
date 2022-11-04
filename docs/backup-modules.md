@@ -1,4 +1,4 @@
-# Backing up of existing modules
+# Backing up of existing modules {: #backup_modules }
 
 While regenerating existing module files, you may want to preserve the
 existing module files to compare and assess that the changes in the
@@ -23,14 +23,14 @@ The location of the backed up module file will be printed, as well as a
 between the backed up module file and the newly generated module file
 (or a message mentioning that no differences were found).
 
-## Disabling automatic backup of modules
+## Disabling automatic backup of modules {: #backup_modules_disable }
 
 When `--skip` or `--module-only` is used, backing up of existing modules
 is enabled automatically.
 
 This can be disabled with `--disable-backup-modules`.
 
-## Example
+## Example {: #backup_modules_example }
 
 Suppose existing modules in both Tcl & Lua syntax are present
 (`bzip2/1.0.6`).
