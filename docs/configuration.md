@@ -496,9 +496,9 @@ repositorypath = <path>
 
 Or, optionally an extra argument representing a subdirectory can be specified, e.g.:
 
-``` console
-$ export EASYBUILD_REPOSITORY=GitRepository
-$ export EASYBUILD_REPOSITORYPATH=<path>,<subdir>
+``` shell
+export EASYBUILD_REPOSITORY=GitRepository
+export EASYBUILD_REPOSITORYPATH=<path>,<subdir>
 ```
 
 You do not have to worry about importing these classes,
