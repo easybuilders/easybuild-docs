@@ -15,7 +15,7 @@
     
     
       
-        <title>Common toolchains - EasyBuild - building software with ease</title>
+        <title>Common toolchains {: #common_toolchains } - EasyBuild - building software with ease</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#common-toolchains" class="md-skip">
+        <a href="#common_toolchains" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Common toolchains
+              Common toolchains {: #common_toolchains }
             
           </span>
         </div>
@@ -356,303 +356,548 @@
   </a>
 
 
-<h1 id="common-toolchains">Common toolchains<a class="headerlink" href="#common-toolchains" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/Common-toolchains.html">https://docs.easybuild.io/en/latest/Common-toolchains.html</a>.</p>
-<p><strong>
-It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
-and you can help with that!
-</strong></p>
+<h1 id="common_toolchains">Common toolchains<a class="headerlink" href="#common_toolchains" title="Permanent link">&para;</a></h1>
+<p>This page documents the concept of <em>common toolchains</em> in the EasyBuild
+community; for a more general definition of what (compiler) toolchains
+are, see <a class="autorefs autorefs-internal" href="../terminology/#toolchains">Toolchains</a>.</p>
+<h2 id="common_toolchains_what">Definition and motivation<a class="headerlink" href="#common_toolchains_what" title="Permanent link">&para;</a></h2>
+<p>Picking a <a class="autorefs autorefs-internal" href="../terminology/#toolchains">compiler toolchain</a>
+to use is one of the first things you (need to) do
+when starting to use EasyBuild. This can be a daunting task, since a
+whole bunch of toolchains and different toolchain versions are readily
+available in EasyBuild. It may be difficult to determine which toolchain
+would be most rewarding to use, in terms of stability, performance of
+the resulting binaries and readily available easyconfig files.</p>
+<p>In an attempt to focus the effort of the EasyBuild community, the
+concept of so-called <em>common toolchains</em> was introduced.</p>
+<p>The idea is to compose and maintain a limited set of specific compiler
+toolchains, and try and convince many HPC sites to employ these
+toolchains. This helps in assuring stability of these toolchains w.r.t.
+which software can be built (correctly) with them, since they get
+significantly more testing. In addition, the expectation/hope is that
+more easyconfigs are contributed back to the central easyconfigs
+repository (<a href="https://github.com/easybuilders/easybuild-easyconfigs">https://github.com/easybuilders/easybuild-easyconfigs</a>),
+resulting in a wide range of readily available easyconfig files using
+the common toolchains.</p>
+<p>The intention is to revise/update the definitions of the common
+toolchains regularly (see <a class="autorefs autorefs-internal" href="#common_toolchains_update_cycle">Update cycle for common toolchains</a>), which again
+can be a joint effort that benefits many HPC sites.</p>
+<p>Currently, two different common toolchains are being maintained: <code>foss</code>
+and <code>intel</code>; see below for more details, and also
+<a class="autorefs autorefs-internal" href="#common_toolchains_overview">Overview of common toolchains</a>.</p>
+<h3 id="common_toolchains_foss"><code>foss</code> toolchain<a class="headerlink" href="#common_toolchains_foss" title="Permanent link">&para;</a></h3>
+<p>The <code>foss</code> common compiler toolchain consists entirely of open source
+software (hence the name, derived from the common term 'FOSS', which is
+short for "Free and Open Source Software").</p>
+<p>This toolchain consists of:</p>
 <ul>
-<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Common-toolchains.rst"><code>docs/Common-toolchains.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
-<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/common-toolchains.md"><code>docs/common-toolchains.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
+<li>binutils (<a href="https://www.gnu.org/software/binutils/">https://www.gnu.org/software/binutils/</a>)</li>
+<li>the GNU Compiler Collection (GCC, <a href="https://gcc.gnu.org/">https://gcc.gnu.org/</a>), i.e. <code>gcc</code>
+  (C), <code>g++</code> (C++) and <code>gfortran</code> (Fortran)</li>
+<li>the Open MPI library (<a href="https://www.open-mpi.org/">https://www.open-mpi.org/</a>)</li>
+<li>the OpenBLAS (<a href="http://www.openblas.net/">http://www.openblas.net/</a>) + LAPACK
+  (<a href="http://netlib.org/lapack">http://netlib.org/lapack</a>) libraries (for <code>foss</code> \&lt; 2021a)</li>
+<li>the FlexiBLAS library
+  (<a href="https://www.mpi-magdeburg.mpg.de/projects/flexiblas">https://www.mpi-magdeburg.mpg.de/projects/flexiblas</a>), with
+  OpenBLAS + LAPACK as backend (for <code>foss</code> >= 2021a)</li>
+<li>the ScaLAPACK (<a href="http://netlib.org/scalapack">http://netlib.org/scalapack</a>) library is also included</li>
+<li>the FFTW library (<a href="http://fftw.org/">http://fftw.org/</a>)</li>
 </ul>
-<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The toolchain name was deliberately chosen to be generic, to allow for
+swapping any of the toolchain components with a better (open source)
+alternative in the future, should the need or opportunity arise.</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_common_toolchains:</span>
-
-<span class="gh">Common toolchains</span>
-<span class="gh">=================</span>
-
-This page documents the concept of <span class="ge">*common toolchains*</span> in the EasyBuild community;
-for a more general definition of what (compiler) toolchains are, see <span class="na">:ref:</span><span class="nv">`toolchains`</span>.
-
-<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
-    <span class="nc">:depth:</span> 3
-    <span class="nc">:backlinks:</span> none
-
-
-<span class="p">..</span> <span class="nt">_common_toolchains_what:</span>
-
-<span class="gh">Definition and motivation</span>
-<span class="gh">-------------------------</span>
-
-Picking a <span class="na">:ref:</span><span class="nv">`compiler toolchain &lt;toolchains&gt;`</span> to use is one of the first things you (need to) do when starting to use EasyBuild.
-This can be a daunting task, since a whole bunch of toolchains and different toolchain versions
-are readily available in EasyBuild. It may be difficult to determine which toolchain would be most rewarding to use,
-in terms of stability, performance of the resulting binaries and readily available easyconfig files.
-
-In an attempt to focus the effort of the EasyBuild community,
-the concept of so-called <span class="ge">*common toolchains*</span> was introduced.
-
-The idea is to compose and maintain a limited set of specific compiler toolchains,
-and try and convince many HPC sites to employ these toolchains.
-This helps in assuring stability of these toolchains w.r.t. which software can be built (correctly) with them,
-since they get significantly more testing. In addition, the expectation/hope is that more easyconfigs are
-contributed back to the central easyconfigs repository (https://github.com/easybuilders/easybuild-easyconfigs),
-resulting in a wide range of readily available easyconfig files using the common toolchains.
-
-The intention is to revise/update the definitions of the common toolchains regularly
-(see <span class="na">:ref:</span><span class="nv">`common_toolchains_update_cycle`</span>), which again can be a joint effort
-that benefits many HPC sites.
-
-Currently, two different common toolchains are being maintained: <span class="s">``foss``</span> and <span class="s">``intel``</span>;
-see below for more details, and also <span class="na">:ref:</span><span class="nv">`common_toolchains_overview`</span>.
-
-
-<span class="p">..</span> <span class="nt">_common_toolchains_foss:</span>
-
-<span class="gh">``foss`` toolchain</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~</span>
-
-The <span class="s">``foss``</span> common compiler toolchain consists entirely of open source software (hence the name,
-derived from the common term &#39;FOSS&#39;, which is short for &quot;Free and Open Source Software&quot;).
-
-This toolchain consists of:
-
-<span class="m">*</span> binutils (https://www.gnu.org/software/binutils/)
-
-<span class="m">*</span> the GNU Compiler Collection (GCC, https://gcc.gnu.org/),
-  i.e. <span class="s">``gcc``</span> (C), <span class="s">``g++``</span> (C++) and <span class="s">``gfortran``</span> (Fortran)
-
-<span class="m">*</span> the Open MPI library (https://www.open-mpi.org/)
-
-<span class="m">*</span> the OpenBLAS (http://www.openblas.net/) + LAPACK (http://netlib.org/lapack) libraries (for <span class="s">``foss``</span> &lt; 2021a)
-
-<span class="m">*</span> the FlexiBLAS library (https://www.mpi-magdeburg.mpg.de/projects/flexiblas), with OpenBLAS + LAPACK as backend (for <span class="s">``foss``</span> &gt;= 2021a)
-
-<span class="m">*</span> the ScaLAPACK (http://netlib.org/scalapack) library is also included
-
-<span class="m">*</span> the FFTW library (http://fftw.org/)
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> The toolchain name was deliberately chosen to be generic, to allow for swapping
-          any of the toolchain components with a better (open source) alternative in the future,
-          should the need or opportunity arise.
-
-
-<span class="p">..</span> <span class="nt">_common_toolchains_intel:</span>
-
-<span class="gh">``intel`` toolchain</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~</span>
-
-The <span class="s">``intel``</span> common compiler toolchain consists of the Intel compilers and libraries, i.e.:
-
-<span class="m">*</span> the Intel C/C++/Fortran compilers (https://software.intel.com/en-us/intel-compilers),
-  i.e. <span class="s">``icc``</span>, <span class="s">``icpc``</span> and <span class="s">``ifort``</span>,
-
-  <span class="m">*</span> binutils and GCC, which serve as a base for the Intel compilers, are also included
-
-<span class="m">*</span> the Intel MPI library (https://software.intel.com/en-us/intel-mpi-library)
-
-<span class="m">*</span> the Intel Math Kernel Library (MKL, https://software.intel.com/en-us/intel-mkl) for BLAS/LAPACK/FFT functionality
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> This compiler toolchain includes licensed software;
-          valid licenses must be available to install and use it.
-
-
-<span class="p">..</span> <span class="nt">_common_toolchains_versioning_scheme:</span>
-
-<span class="gh">Versioning scheme for common toolchains</span>
-<span class="gh">---------------------------------------</span>
-
-The common toolchains follow a specific versioning scheme, which takes the
-<span class="na">:ref:</span><span class="nv">`6-month update cycle &lt;common_toolchains_update_cycle&gt;`</span> into account.
-
-Each revision of the common toolchains is versioned as the <span class="ge">*year*</span> in which it
-was defined, plus an additional &#39;<span class="s">``a``</span>&#39; or &#39;<span class="s">``b``</span>&#39; to indicate whether the toolchain
-was defined at the start of the year (&#39;<span class="s">``a``</span>&#39;) or halfway through the year (&#39;<span class="s">``b``</span>&#39;);
-in short, the common toolchains are versioned as <span class="s">``&lt;year&gt;{a,b}``</span>.
-
-For example, <span class="s">``foss/2016b``</span> is a revision of the <span class="s">``foss``</span> that was composed mid-2016.
-
-A full historic overview of the <span class="s">``foss``</span> and <span class="s">``intel``</span> common toolchains is
-available in <span class="na">:ref:</span><span class="nv">`common_toolchains_overview`</span>.
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Next to the versions that follow the <span class="s">``&lt;year&gt;{a,b}``</span> versioning scheme,
-          additional versions of the <span class="s">``foss``</span> and <span class="s">``intel``</span> versions are available
-          as well.
-
-          These versions are <span class="gs">**not**</span> considered to be part of the series of common
-          toolchains (even though they consists of the same toolchain components).
-          These versions may be site-specific, or compositions that were put in
-          place to evaluate a potential future common toolchain.
-
-          Typically, they are versioned as <span class="s">``&lt;year&gt;.&lt;month&gt;``</span>, indicating when
-          the most recent component included was released, or when that particular
-          toolchain composition was defined.
-
-
-<span class="p">..</span> <span class="nt">_common_toolchains_update_cycle:</span>
-
-<span class="gh">Update cycle for common toolchains</span>
-<span class="gh">----------------------------------</span>
-
-The intention is to revise and update the common toolchains every 6 months:
-once in late December/early January (version <span class="s">``&lt;year&gt;a``</span>),
-and once in late June/early July (version <span class="s">``&lt;year&gt;b``</span>).
-
-This is meant be to be a community effort, in the sense that a proposal
-for an updated composition is shared and discussed before it is set in stone.
-
-Recent versions of each of the toolchain components are considered, taking
-into account stability, performance improvements, added features,
-known bugs/issues and experiences with those versions.
-
-Moreover, the proposed toolchain compositions are tested extensively,
+<h3 id="common_toolchains_intel"><code>intel</code> toolchain<a class="headerlink" href="#common_toolchains_intel" title="Permanent link">&para;</a></h3>
+<p>The <code>intel</code> common compiler toolchain consists of the Intel compilers
+and libraries, i.e.:</p>
+<ul>
+<li>the Intel C/C++/Fortran compilers
+  (<a href="https://software.intel.com/en-us/intel-compilers">https://software.intel.com/en-us/intel-compilers</a>), i.e. <code>icc</code>,
+  <code>icpc</code> and <code>ifort</code>,</li>
+<li>binutils and GCC, which serve as a base for the Intel compilers, are
+    also included</li>
+<li>the Intel MPI library
+  (<a href="https://software.intel.com/en-us/intel-mpi-library">https://software.intel.com/en-us/intel-mpi-library</a>)</li>
+<li>the Intel Math Kernel Library (MKL,
+  <a href="https://software.intel.com/en-us/intel-mkl">https://software.intel.com/en-us/intel-mkl</a>) for BLAS/LAPACK/FFT
+  functionality</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This compiler toolchain includes licensed software; valid licenses must
+be available to install and use it.</p>
+</div>
+<h2 id="common_toolchains_versioning_scheme">Versioning scheme for common toolchains<a class="headerlink" href="#common_toolchains_versioning_scheme" title="Permanent link">&para;</a></h2>
+<p>The common toolchains follow a specific versioning scheme, which takes
+the <a class="autorefs autorefs-internal" href="#common_toolchains_update_cycle">6-month update cycle</a> into account.</p>
+<p>Each revision of the common toolchains is versioned as the <em>year</em> in
+which it was defined, plus an additional '<code>a</code>' or '<code>b</code>' to indicate
+whether the toolchain was defined at the start of the year ('<code>a</code>') or
+halfway through the year ('<code>b</code>'); in short, the common toolchains are
+versioned as <code>&lt;year&gt;{a,b}</code>.</p>
+<p>For example, <code>foss/2016b</code> is a revision of the <code>foss</code> that was composed
+mid-2016.</p>
+<p>A full historic overview of the <code>foss</code> and <code>intel</code> common toolchains is
+available in <a class="autorefs autorefs-internal" href="#common_toolchains_overview">Overview of common toolchains</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Next to the versions that follow the <code>&lt;year&gt;{a,b}</code> versioning scheme,
+additional versions of the <code>foss</code> and <code>intel</code> versions are available as
+well.</p>
+<p>These versions are <strong>not</strong> considered to be part of the series of common
+toolchains (even though they consists of the same toolchain components).
+These versions may be site-specific, or compositions that were put in
+place to evaluate a potential future common toolchain.</p>
+<p>Typically, they are versioned as <code>&lt;year&gt;.&lt;month&gt;</code>, indicating when the
+most recent component included was released, or when that particular
+toolchain composition was defined.</p>
+</div>
+<h2 id="common_toolchains_update_cycle">Update cycle for common toolchains<a class="headerlink" href="#common_toolchains_update_cycle" title="Permanent link">&para;</a></h2>
+<p>The intention is to revise and update the common toolchains every 6
+months: once in late December/early January (version <code>&lt;year&gt;a</code>), and
+once in late June/early July (version <code>&lt;year&gt;b</code>).</p>
+<p>This is meant be to be a community effort, in the sense that a proposal
+for an updated composition is shared and discussed before it is set in
+stone.</p>
+<p>Recent versions of each of the toolchain components are considered,
+taking into account stability, performance improvements, added features,
+known bugs/issues and experiences with those versions.</p>
+<p>Moreover, the proposed toolchain compositions are tested extensively,
 typically by rebuilding all available easyconfigs that are using the
-most recent revision of the common toolchains at that time.
-
-<span class="p">..</span> <span class="nt">_common_toolchains_overview:</span>
-
-<span class="gh">Overview of common toolchains</span>
-<span class="gh">-----------------------------</span>
-
-<span class="p">..</span> <span class="nt">_common_toolchains_overview_foss:</span>
-
-<span class="gh">Component versions in ``foss`` toolchain</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-+----------------+-------------+------------+-----------+------------+-------------+------------+-----------------------+--------------+-------------+
-<span class="o">|</span> <span class="s">``foss``</span>       | <span class="ge">*date*</span>      |<span class="ge">*binutils*</span>  | <span class="ge">*GCC*</span>     | <span class="ge">*Open MPI*</span> | <span class="ge">*FlexiBLAS*</span> | <span class="ge">*OpenBLAS*</span> | <span class="ge">*LAPACK*</span>              | <span class="ge">*ScaLAPACK*</span>  | <span class="ge">*FFTW*</span>      |
-+================+=============+============+===========+============+=============+============+=======================+==============+=============+
-<span class="o">|</span> <span class="s">``2019a``</span>      | Jan &#39;19     | 2.31.1     | 8.2.0     | 3.1.3      | <span class="ge">*(none)*</span>    | 0.3.5      | (incl. with OpenBLAS) | 2.0.2        | 3.3.8       |
-+----------------+-------------+------------+-----------+------------+-------------+------------+-----------------------+--------------+-------------+
-<span class="o">|</span> <span class="s">``2019b``</span>      | Sept &#39;19    | 2.32       | 8.3.0     | 3.1.4      | <span class="ge">*(none)*</span>    | 0.3.7      | (incl. with OpenBLAS) | 2.0.2        | 3.3.8       |
-+----------------+-------------+------------+-----------+------------+-------------+------------+-----------------------+--------------+-------------+
-<span class="o">|</span> <span class="s">``2020a``</span>      | May &#39;20     | 2.34       | 9.3.0     | 4.0.3      | <span class="ge">*(none)*</span>    | 0.3.9      | (incl. with OpenBLAS) | 2.1.0        | 3.3.8       |
-+----------------+-------------+------------+-----------+------------+-------------+------------+-----------------------+--------------+-------------+
-<span class="o">|</span> <span class="s">``2020b``</span>      | Nov &#39;20     | 2.35       | 10.2.0    | 4.0.5      | <span class="ge">*(none)*</span>    | 0.3.12     | (incl. with OpenBLAS) | 2.1.0        | 3.3.8       |
-+----------------+-------------+------------+-----------+------------+-------------+------------+-----------------------+--------------+-------------+
-<span class="o">|</span> <span class="s">``2021a``</span>      | May &#39;21     | 2.36.1     | 10.3.0    | 4.1.1      | 3.0.4       | 0.3.15     | (incl. with OpenBLAS) | 2.1.0        | 3.3.9       |
-+----------------+-------------+------------+-----------+------------+-------------+------------+-----------------------+--------------+-------------+
-<span class="o">|</span> <span class="s">``2021b``</span>      | Oct &#39;21     | 2.37       | 11.2.0    | 4.1.1      | 3.0.4       | 0.3.18     | (incl. with OpenBLAS) | 2.1.0        | 3.3.10      |
-+----------------+-------------+------------+-----------+------------+-------------+------------+-----------------------+--------------+-------------+
-<span class="o">|</span> <span class="s">``2022a``</span>      | Jun &#39;22     | 2.38       | 11.3.0    | 4.1.4      | 3.2.0       | 0.3.20     | (incl. with OpenBLAS) | 2.2.0        | 3.3.10      |
-+----------------+-------------+------------+-----------+------------+-------------+------------+-----------------------+--------------+-------------+
-
-<span class="ge">*(components marked with*</span> <span class="ge">* *</span>were patched)*
-
-<span class="p">..</span> <span class="nt">_common_toolchains_overview_intel:</span>
-
-<span class="gh">Component versions in ``intel`` toolchain</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-+----------------+-------------+-------------+-----------+--------------------+-------------+--------------+
-<span class="o">|</span> <span class="s">``intel``</span>      | <span class="ge">*date*</span>      | <span class="ge">*binutils*</span>  | <span class="ge">*GCC*</span>     | <span class="ge">*Intel compilers*</span>  | <span class="ge">*Intel MPI*</span> | <span class="ge">*Intel MKL*</span>  |
-+================+=============+=============+===========+====================+=============+==============+
-<span class="o">|</span> <span class="s">``2019a``</span>      | Jan &#39;19     | 2.31.1      | 8.2.0     | 2019.1.144         | 2018.4.274  | 2019.1.144   |
-+----------------+-------------+-------------+-----------+--------------------+-------------+--------------+
-<span class="o">|</span> <span class="s">``2019b``</span>      | Sept &#39;19    | 2.32        | 8.3.0     | 2019.5.281         | 2018.5.288  | 2019.5.281   |
-+----------------+-------------+-------------+-----------+--------------------+-------------+--------------+
-<span class="o">|</span> <span class="s">``2020a``</span>      | May&#39;20      | 2.34        | 9.3.0     | 2020.1.217         | 2019.7.217  | 2020.1.217   |
-+----------------+-------------+-------------+-----------+--------------------+-------------+--------------+
-<span class="o">|</span> <span class="s">``2020b``</span>      | Nov&#39;20      | 2.35        | 10.2.0    | 2020.4.304         | 2019.9.304  | 2020.4.304   |
-+----------------+-------------+-------------+-----------+--------------------+-------------+--------------+
-<span class="o">|</span> <span class="s">``2021a``</span>      | May&#39;21      | 2.36.1      | 10.3.0    | 2021.2.0           | 2021.2.0    | 2021.2.0     |
-+----------------+-------------+-------------+-----------+--------------------+-------------+--------------+
-<span class="o">|</span> <span class="s">``2021b``</span>      | Oct&#39;21      | 2.37        | 11.2.0    | 2021.4.0           | 2021.4.0    | 2021.4.0     |
-+----------------+-------------+-------------+-----------+--------------------+-------------+--------------+
-<span class="o">|</span> <span class="s">``2022a``</span>      | Jun&#39;22      | 2.38        | 11.3.0    | 2022.1.0           | 2021.6.0    | 2022.1.0     |
-+----------------+-------------+-------------+-----------+--------------------+-------------+--------------+
-
-<span class="p">..</span> <span class="nt">_common_toolchains_overview_deprecated:</span>
-
-<span class="gh">Overview of common toolchains (deprecated versions)</span>
-<span class="gh">---------------------------------------------------</span>
-
-<span class="p">..</span> <span class="nt">_common_toolchains_overview_foss_deprecated:</span>
-
-<span class="gh">Component versions in ``foss`` toolchain (deprecated versions)</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-+----------------+-------------+------------+-----------+------------+-------------+------------+-----------------------+--------------+-------------+
-<span class="o">|</span> <span class="s">``foss``</span>       | <span class="ge">*date*</span>      |<span class="ge">*binutils*</span>  | <span class="ge">*GCC*</span>     | <span class="ge">*Open MPI*</span> | <span class="ge">*FlexiBLAS*</span> | <span class="ge">*OpenBLAS*</span> | <span class="ge">*LAPACK*</span>              | <span class="ge">*ScaLAPACK*</span>  | <span class="ge">*FFTW*</span>      |
-+================+=============+============+===========+============+=============+============+=======================+==============+=============+
-<span class="o">|</span> <span class="s">``2014b``</span>      | Jul &#39;14     | &#39;<span class="ge">*(none)*</span>  | 4.8.3     | 1.8.1      | <span class="ge">*(none)*</span>    | 0.2.9      | 3.5.0                 | 2.0.2        | 3.3.4       |
-+----------------+-------------+------------+-----------+------------+-------------+------------+-----------------------+--------------+-------------+
-<span class="o">|</span> <span class="s">``2015a``</span>      | Jan &#39;15     | &#39;<span class="ge">*(none)*</span>  | 4.9.2     | 1.8.4      | <span class="ge">*(none)*</span>    | 0.2.13     | 3.5.0                 | 2.0.2        | 3.3.4       |
-+----------------+-------------+------------+-----------+------------+-------------+------------+-----------------------+--------------+-------------+
-<span class="o">|</span> <span class="s">``2015b``</span>      | Jul &#39;15     | 2.25       | 4.9.3     | 1.8.8      | <span class="ge">*(none)*</span>    | 0.2.14     | 3.5.0                 | 2.0.2        | 3.3.4       |
-+----------------+-------------+------------+-----------+------------+-------------+------------+-----------------------+--------------+-------------+
-<span class="o">|</span> <span class="s">``2016a``</span>      | Jan &#39;16     | 2.25       | 4.9.3     | 1.10.2     | <span class="ge">*(none)*</span>    | 0.2.15     | 3.6.0                 | 2.0.2        | 3.3.4       |
-+----------------+-------------+------------+-----------+------------+-------------+------------+-----------------------+--------------+-------------+
-<span class="o">|</span> <span class="s">``2016b``</span>      | Jul &#39;16     | 2.26       | 5.4.0     | 1.10.3     | <span class="ge">*(none)*</span>    | 0.2.18     | 3.6.1                 | 2.0.2        | 3.3.4       |
-+----------------+-------------+------------+-----------+------------+-------------+------------+-----------------------+--------------+-------------+
-<span class="o">|</span> <span class="s">``2017a``</span>      | Jan &#39;17     | 2.27       | 6.3.0     | 2.0.2      | <span class="ge">*(none)*</span>    | 0.2.19     | 3.7.0                 | 2.0.2        | 3.3.6(-pl2) |
-+----------------+-------------+------------+-----------+------------+-------------+------------+-----------------------+--------------+-------------+
-<span class="o">|</span> <span class="s">``2017b``</span>      | Jul &#39;17     | 2.28       | 6.4.0     | 2.1.1      | <span class="ge">*(none)*</span>    | 0.2.20*    | (incl. with OpenBLAS) | 2.0.2        | 3.3.6(-pl2) |
-+----------------+-------------+------------+-----------+------------+-------------+------------+-----------------------+--------------+-------------+
-<span class="o">|</span> <span class="s">``2018a``</span>      | Jan &#39;18     | 2.28       | 6.4.0     | 2.1.2      | <span class="ge">*(none)*</span>    | 0.2.20*    | (incl. with OpenBLAS) | 2.0.2        | 3.3.7       |
-+----------------+-------------+------------+-----------+------------+-------------+------------+-----------------------+--------------+-------------+
-<span class="o">|</span> <span class="s">``2018b``</span>      | Jul &#39;18     | 2.30       | 7.3.0     | 3.1.1      | <span class="ge">*(none)*</span>    | 0.3.1      | (incl. with OpenBLAS) | 2.0.2        | 3.3.8       |
-+----------------+-------------+------------+-----------+------------+-------------+------------+-----------------------+--------------+-------------+
-
-<span class="p">..</span> <span class="nt">_common_toolchains_overview_intel_deprecated:</span>
-
-<span class="gh">Component versions in ``intel`` toolchain (deprecated versions)</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-+----------------+-------------+-------------+-----------+--------------------+-------------+--------------+
-<span class="o">|</span> <span class="s">``intel``</span>      | <span class="ge">*date*</span>      | <span class="ge">*binutils*</span>  | <span class="ge">*GCC*</span>     | <span class="ge">*Intel compilers*</span>  | <span class="ge">*Intel MPI*</span> | <span class="ge">*Intel MKL*</span>  |
-+================+=============+=============+===========+====================+=============+==============+
-<span class="o">|</span> <span class="s">``2014b``</span>      | Jul &#39;14     | &#39;<span class="ge">*(none)*</span>   | 4.8.3     | 2013.5.192         | 4.1.3.049   | 11.1.2.144   |
-+----------------+-------------+-------------+-----------+--------------------+-------------+--------------+
-<span class="o">|</span> <span class="s">``2015a``</span>      | Jan &#39;15     | &#39;<span class="ge">*(none)*</span>   | 4.9.2     | 2015.1.133         | 5.0.2.044   | 11.2.1.133   |
-+----------------+-------------+-------------+-----------+--------------------+-------------+--------------+
-<span class="o">|</span> <span class="s">``2015b``</span>      | Jul &#39;15     | 2.25        | 4.9.3     | 2015.3.187         | 5.0.3.048   | 11.2.3.187   |
-+----------------+-------------+-------------+-----------+--------------------+-------------+--------------+
-<span class="o">|</span> <span class="s">``2016a``</span>      | Jan &#39;16     | 2.26        | 4.9.3     | 2016.1.150         | 5.1.2.150   | 11.3.1.150   |
-+----------------+-------------+-------------+-----------+--------------------+-------------+--------------+
-<span class="o">|</span> <span class="s">``2016b``</span>      | Jul &#39;16     | 2.26        | 5.4.0     | 2016.3.210         | 5.1.3.181   | 11.3.3.210   |
-+----------------+-------------+-------------+-----------+--------------------+-------------+--------------+
-<span class="o">|</span> <span class="s">``2017a``</span>      | Jan &#39;17     | 2.27        | 6.3.0     | 2017.1.132         | 2017.1.132  | 2017.1.132   |
-+----------------+-------------+-------------+-----------+--------------------+-------------+--------------+
-<span class="o">|</span> <span class="s">``2017b``</span>      | Jul &#39;17     | 2.28        | 6.4.0     | 2017.4.196         | 2017.3.196  | 2017.3.196   |
-+----------------+-------------+-------------+-----------+--------------------+-------------+--------------+
-<span class="o">|</span> <span class="s">``2018a``</span>      | Jan &#39;18     | 2.28        | 6.4.0     | 2018.1.163         | 2018.1.163  | 2018.1.163   |
-+----------------+-------------+-------------+-----------+--------------------+-------------+--------------+
-<span class="o">|</span> <span class="s">``2018b``</span>      | Jul &#39;18     | 2.30        | 7.3.0     | 2018.3.222         | 2018.3.222  | 2018.3.222   |
-+----------------+-------------+-------------+-----------+--------------------+-------------+--------------+
-
-<span class="p">..</span> <span class="nt">_common_toolchains_customizing:</span>
-
-<span class="gh">Customizing common toolchains</span>
-<span class="gh">-----------------------------</span>
-
-
-Sometimes the need arises to customize one or more components of a common toolchain w.r.t. site-specific aspects.
-One common example is using additional configuration options for Open MPI.
-
-To customize a toolchain component, you should copy the corresponding easyconfig file,
-modify according to your needs, and make sure it is included in a location in the robot search path
-that precedes the location of the easyconfig files that are included with EasyBuild
-(see also <span class="na">:ref:</span><span class="nv">`robot_search_path`</span>), before building and installation the toolchain.
-
-<span class="gh">More information about toolchains</span>
-<span class="gh">---------------------------------</span>
-
-Please see the <span class="na">:ref:</span><span class="nv">`toolchains_table`</span> for how to obtain a listing of the currently known toolchains.
-
-For a detailed listing of the compiler options available with each toolchain, please see <span class="na">:ref:</span><span class="nv">`avail_toolchain_opts`</span>.
-</code></pre></div>
+most recent revision of the common toolchains at that time.</p>
+<h2 id="common_toolchains_overview">Overview of common toolchains<a class="headerlink" href="#common_toolchains_overview" title="Permanent link">&para;</a></h2>
+<h3 id="common_toolchains_overview_foss">Component versions in <code>foss</code> toolchain<a class="headerlink" href="#common_toolchains_overview_foss" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>foss</code></th>
+<th><em>date</em></th>
+<th><em>binutils</em></th>
+<th><em>GCC</em></th>
+<th><em>Open MPI</em></th>
+<th><em>FlexiBLAS</em></th>
+<th><em>OpenBLAS</em></th>
+<th><em>LAPACK</em></th>
+<th><em>ScaLAPACK</em></th>
+<th><em>FFTW</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>2019a</code></td>
+<td>Jan '19</td>
+<td>2.31.1</td>
+<td>8.2.0</td>
+<td>3.1.3</td>
+<td><em>(none)</em></td>
+<td>0.3.5</td>
+<td>(incl. with OpenBLAS)</td>
+<td>2.0.2</td>
+<td>3.3.8</td>
+</tr>
+<tr>
+<td><code>2019b</code></td>
+<td>Sept '19</td>
+<td>2.32</td>
+<td>8.3.0</td>
+<td>3.1.4</td>
+<td><em>(none)</em></td>
+<td>0.3.7</td>
+<td>(incl. with OpenBLAS)</td>
+<td>2.0.2</td>
+<td>3.3.8</td>
+</tr>
+<tr>
+<td><code>2020a</code></td>
+<td>May '20</td>
+<td>2.34</td>
+<td>9.3.0</td>
+<td>4.0.3</td>
+<td><em>(none)</em></td>
+<td>0.3.9</td>
+<td>(incl. with OpenBLAS)</td>
+<td>2.1.0</td>
+<td>3.3.8</td>
+</tr>
+<tr>
+<td><code>2020b</code></td>
+<td>Nov '20</td>
+<td>2.35</td>
+<td>10.2.0</td>
+<td>4.0.5</td>
+<td><em>(none)</em></td>
+<td>0.3.12</td>
+<td>(incl. with OpenBLAS)</td>
+<td>2.1.0</td>
+<td>3.3.8</td>
+</tr>
+<tr>
+<td><code>2021a</code></td>
+<td>May '21</td>
+<td>2.36.1</td>
+<td>10.3.0</td>
+<td>4.1.1</td>
+<td>3.0.4</td>
+<td>0.3.15</td>
+<td>(incl. with OpenBLAS)</td>
+<td>2.1.0</td>
+<td>3.3.9</td>
+</tr>
+<tr>
+<td><code>2021b</code></td>
+<td>Oct '21</td>
+<td>2.37</td>
+<td>11.2.0</td>
+<td>4.1.1</td>
+<td>3.0.4</td>
+<td>0.3.18</td>
+<td>(incl. with OpenBLAS)</td>
+<td>2.1.0</td>
+<td>3.3.10</td>
+</tr>
+<tr>
+<td><code>2022a</code></td>
+<td>Jun '22</td>
+<td>2.38</td>
+<td>11.3.0</td>
+<td>4.1.4</td>
+<td>3.2.0</td>
+<td>0.3.20</td>
+<td>(incl. with OpenBLAS)</td>
+<td>2.2.0</td>
+<td>3.3.10</td>
+</tr>
+</tbody>
+</table>
+<p><em>(components marked with</em> * <em>were patched)</em></p>
+<h3 id="common_toolchains_overview_intel">Component versions in <code>intel</code> toolchain<a class="headerlink" href="#common_toolchains_overview_intel" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>intel</code></th>
+<th><em>date</em></th>
+<th><em>binutils</em></th>
+<th><em>GCC</em></th>
+<th><em>Intel compilers</em></th>
+<th><em>Intel MPI</em></th>
+<th><em>Intel MKL</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>2019a</code></td>
+<td>Jan '19</td>
+<td>2.31.1</td>
+<td>8.2.0</td>
+<td>2019.1.144</td>
+<td>2018.4.274</td>
+<td>2019.1.144</td>
+</tr>
+<tr>
+<td><code>2019b</code></td>
+<td>Sept '19</td>
+<td>2.32</td>
+<td>8.3.0</td>
+<td>2019.5.281</td>
+<td>2018.5.288</td>
+<td>2019.5.281</td>
+</tr>
+<tr>
+<td><code>2020a</code></td>
+<td>May '20</td>
+<td>2.34</td>
+<td>9.3.0</td>
+<td>2020.1.217</td>
+<td>2019.7.217</td>
+<td>2020.1.217</td>
+</tr>
+<tr>
+<td><code>2020b</code></td>
+<td>Nov '20</td>
+<td>2.35</td>
+<td>10.2.0</td>
+<td>2020.4.304</td>
+<td>2019.9.304</td>
+<td>2020.4.304</td>
+</tr>
+<tr>
+<td><code>2021a</code></td>
+<td>May '21</td>
+<td>2.36.1</td>
+<td>10.3.0</td>
+<td>2021.2.0</td>
+<td>2021.2.0</td>
+<td>2021.2.0</td>
+</tr>
+<tr>
+<td><code>2021b</code></td>
+<td>Oct '21</td>
+<td>2.37</td>
+<td>11.2.0</td>
+<td>2021.4.0</td>
+<td>2021.4.0</td>
+<td>2021.4.0</td>
+</tr>
+<tr>
+<td><code>2022a</code></td>
+<td>Jun '22</td>
+<td>2.38</td>
+<td>11.3.0</td>
+<td>2022.1.0</td>
+<td>2021.6.0</td>
+<td>2022.1.0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="common_toolchains_overview_deprecated">Overview of common toolchains (deprecated versions)<a class="headerlink" href="#common_toolchains_overview_deprecated" title="Permanent link">&para;</a></h2>
+<h3 id="common_toolchains_overview_foss_deprecated">Component versions in <code>foss</code> toolchain (deprecated versions)<a class="headerlink" href="#common_toolchains_overview_foss_deprecated" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>foss</code></th>
+<th><em>date</em></th>
+<th><em>binutils</em></th>
+<th><em>GCC</em></th>
+<th><em>Open MPI</em></th>
+<th><em>FlexiBLAS</em></th>
+<th><em>OpenBLAS</em></th>
+<th><em>LAPACK</em></th>
+<th><em>ScaLAPACK</em></th>
+<th><em>FFTW</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>2014b</code></td>
+<td>Jul '14</td>
+<td>'<em>(none)</em></td>
+<td>4.8.3</td>
+<td>1.8.1</td>
+<td><em>(none)</em></td>
+<td>0.2.9</td>
+<td>3.5.0</td>
+<td>2.0.2</td>
+<td>3.3.4</td>
+</tr>
+<tr>
+<td><code>2015a</code></td>
+<td>Jan '15</td>
+<td>'<em>(none)</em></td>
+<td>4.9.2</td>
+<td>1.8.4</td>
+<td><em>(none)</em></td>
+<td>0.2.13</td>
+<td>3.5.0</td>
+<td>2.0.2</td>
+<td>3.3.4</td>
+</tr>
+<tr>
+<td><code>2015b</code></td>
+<td>Jul '15</td>
+<td>2.25</td>
+<td>4.9.3</td>
+<td>1.8.8</td>
+<td><em>(none)</em></td>
+<td>0.2.14</td>
+<td>3.5.0</td>
+<td>2.0.2</td>
+<td>3.3.4</td>
+</tr>
+<tr>
+<td><code>2016a</code></td>
+<td>Jan '16</td>
+<td>2.25</td>
+<td>4.9.3</td>
+<td>1.10.2</td>
+<td><em>(none)</em></td>
+<td>0.2.15</td>
+<td>3.6.0</td>
+<td>2.0.2</td>
+<td>3.3.4</td>
+</tr>
+<tr>
+<td><code>2016b</code></td>
+<td>Jul '16</td>
+<td>2.26</td>
+<td>5.4.0</td>
+<td>1.10.3</td>
+<td><em>(none)</em></td>
+<td>0.2.18</td>
+<td>3.6.1</td>
+<td>2.0.2</td>
+<td>3.3.4</td>
+</tr>
+<tr>
+<td><code>2017a</code></td>
+<td>Jan '17</td>
+<td>2.27</td>
+<td>6.3.0</td>
+<td>2.0.2</td>
+<td><em>(none)</em></td>
+<td>0.2.19</td>
+<td>3.7.0</td>
+<td>2.0.2</td>
+<td>3.3.6(-pl2)</td>
+</tr>
+<tr>
+<td><code>2017b</code></td>
+<td>Jul '17</td>
+<td>2.28</td>
+<td>6.4.0</td>
+<td>2.1.1</td>
+<td><em>(none)</em></td>
+<td>0.2.20*</td>
+<td>(incl. with OpenBLAS)</td>
+<td>2.0.2</td>
+<td>3.3.6(-pl2)</td>
+</tr>
+<tr>
+<td><code>2018a</code></td>
+<td>Jan '18</td>
+<td>2.28</td>
+<td>6.4.0</td>
+<td>2.1.2</td>
+<td><em>(none)</em></td>
+<td>0.2.20*</td>
+<td>(incl. with OpenBLAS)</td>
+<td>2.0.2</td>
+<td>3.3.7</td>
+</tr>
+<tr>
+<td><code>2018b</code></td>
+<td>Jul '18</td>
+<td>2.30</td>
+<td>7.3.0</td>
+<td>3.1.1</td>
+<td><em>(none)</em></td>
+<td>0.3.1</td>
+<td>(incl. with OpenBLAS)</td>
+<td>2.0.2</td>
+<td>3.3.8</td>
+</tr>
+</tbody>
+</table>
+<h3 id="common_toolchains_overview_intel_deprecated">Component versions in <code>intel</code> toolchain (deprecated versions)<a class="headerlink" href="#common_toolchains_overview_intel_deprecated" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>intel</code></th>
+<th><em>date</em></th>
+<th><em>binutils</em></th>
+<th><em>GCC</em></th>
+<th><em>Intel compilers</em></th>
+<th><em>Intel MPI</em></th>
+<th><em>Intel MKL</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>2014b</code></td>
+<td>Jul '14</td>
+<td>'<em>(none)</em></td>
+<td>4.8.3</td>
+<td>2013.5.192</td>
+<td>4.1.3.049</td>
+<td>11.1.2.144</td>
+</tr>
+<tr>
+<td><code>2015a</code></td>
+<td>Jan '15</td>
+<td>'<em>(none)</em></td>
+<td>4.9.2</td>
+<td>2015.1.133</td>
+<td>5.0.2.044</td>
+<td>11.2.1.133</td>
+</tr>
+<tr>
+<td><code>2015b</code></td>
+<td>Jul '15</td>
+<td>2.25</td>
+<td>4.9.3</td>
+<td>2015.3.187</td>
+<td>5.0.3.048</td>
+<td>11.2.3.187</td>
+</tr>
+<tr>
+<td><code>2016a</code></td>
+<td>Jan '16</td>
+<td>2.26</td>
+<td>4.9.3</td>
+<td>2016.1.150</td>
+<td>5.1.2.150</td>
+<td>11.3.1.150</td>
+</tr>
+<tr>
+<td><code>2016b</code></td>
+<td>Jul '16</td>
+<td>2.26</td>
+<td>5.4.0</td>
+<td>2016.3.210</td>
+<td>5.1.3.181</td>
+<td>11.3.3.210</td>
+</tr>
+<tr>
+<td><code>2017a</code></td>
+<td>Jan '17</td>
+<td>2.27</td>
+<td>6.3.0</td>
+<td>2017.1.132</td>
+<td>2017.1.132</td>
+<td>2017.1.132</td>
+</tr>
+<tr>
+<td><code>2017b</code></td>
+<td>Jul '17</td>
+<td>2.28</td>
+<td>6.4.0</td>
+<td>2017.4.196</td>
+<td>2017.3.196</td>
+<td>2017.3.196</td>
+</tr>
+<tr>
+<td><code>2018a</code></td>
+<td>Jan '18</td>
+<td>2.28</td>
+<td>6.4.0</td>
+<td>2018.1.163</td>
+<td>2018.1.163</td>
+<td>2018.1.163</td>
+</tr>
+<tr>
+<td><code>2018b</code></td>
+<td>Jul '18</td>
+<td>2.30</td>
+<td>7.3.0</td>
+<td>2018.3.222</td>
+<td>2018.3.222</td>
+<td>2018.3.222</td>
+</tr>
+</tbody>
+</table>
+<h2 id="common_toolchains_customizing">Customizing common toolchains<a class="headerlink" href="#common_toolchains_customizing" title="Permanent link">&para;</a></h2>
+<p>Sometimes the need arises to customize one or more components of a
+common toolchain w.r.t. site-specific aspects. One common example is
+using additional configuration options for Open MPI.</p>
+<p>To customize a toolchain component, you should copy the corresponding
+easyconfig file, modify according to your needs, and make sure it is
+included in a location in the robot search path that precedes the
+location of the easyconfig files that are included with EasyBuild (see
+also <a class="autorefs autorefs-internal" href="../using-easybuild/#robot_search_path">Searching for easyconfigs: the robot search path</a>), before building and
+installation the toolchain.</p>
+<h2 id="more-information-about-toolchains">More information about toolchains<a class="headerlink" href="#more-information-about-toolchains" title="Permanent link">&para;</a></h2>
+<p>Please see the <a href="../version-specific/eb-list-toolchains/">List of known toolchains</a> for how to obtain a listing of
+the currently known toolchains.</p>
+<p>For a detailed listing of the compiler options available with each
+toolchain, please see <a href="../version-specific/toolchain-opts/">Available toolchain options (by toolchain)</a>.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 5, 2022</span>
       
     
   </small>
