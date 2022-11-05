@@ -1,5 +1,9 @@
 # Configuring EasyBuild {: #configuring_easybuild }
 
+## Overall prefix path (`--prefix`) {: #prefix }
+
+## Source path (`--sourcepath`) {: #sourcepath }
+
 ## Supported configuration types {: #configuration_types }
 
 ### Configuration file(s) {: #configuration_file }

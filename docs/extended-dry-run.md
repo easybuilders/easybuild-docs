@@ -1,5 +1,7 @@
 # Extended dry run {: #extended_dry_run }
 
+## Extended dry run: examples {: #extended_dry_run_examples }
+
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Extended_dry_run.html>.
 
@@ -12,8 +14,6 @@
     - target: [`docs/extended-dry-run.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/extended-dry-run.md)
 
     See <https://github.com/easybuilders/easybuild-docs> for more information.
-
-## Examples
 
 !!! warning
     This section will soon replace <https://docs.easybuild.io/en/latest/Extended_dry_run_examples.html>.
