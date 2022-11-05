@@ -1,4 +1,4 @@
-# Configuring EasyBuild
+# Configuring EasyBuild {: #configuring_easybuild }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Configuration.html>.
