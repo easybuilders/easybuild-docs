@@ -1,4 +1,4 @@
-# Demo: configuring EasyBuild
+# Demo: configuring EasyBuild {: #demo_configuring}
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/demos/configuring.html>.

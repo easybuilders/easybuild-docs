@@ -1,5 +1,7 @@
 # Using the EasyBuild command line {: #using_the_easybuild_command_line }
 
+## Controlling the robot search path {: #controlling_robot_search_path }
+
 ## All available easyconfig parameters {: #avail_easyconfig_params }
 
 ## Enabling dependency resolution {: #use_robot }
