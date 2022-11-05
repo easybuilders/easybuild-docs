@@ -1,4 +1,4 @@
-# Extended dry run
+# Extended dry run {: #extended_dry_run }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Extended_dry_run.html>.
