@@ -1,8 +1,10 @@
-# Using the EasyBuild command line
+# Using the EasyBuild command line {: #using_the_easybuild_command_line }
 
-## All available easyconfig parameters
+## All available easyconfig parameters {: #avail_easyconfig_params }
 
-## Enabling dependency resolution
+## Enabling dependency resolution {: #use_robot }
+
+## Searching for easyconfigs: the robot search path {: #robot_search_path }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Using_the_EasyBuild_command_line.html>.
