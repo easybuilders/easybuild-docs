@@ -168,7 +168,7 @@ There are a couple of specific requirements for the base container
 image:
 
 - all dependencies of EasyBuild must be installed, including:
-    - Python 2.6 or 2.7
+    - Python 2.7 or 3.6+
     - Lmod
     - standard tools & utilities like `make`, `patch`, `tar`, etc.
     - OS packages for system libraries like OpenSSL
@@ -564,7 +564,7 @@ the `$EASYBUILD_CONTAINERPATH` environment variable or specify
 The default value for this location is
 `$HOME/.local/easybuild/containers`, unless the `--prefix` configuration
 setting was provided, in which case it becomes `<prefix>/containers`
-(see [Overall prefix path][prefix].
+(see [Overall prefix path][prefix]).
 
 Use `eb --show-full-config | grep containerpath` to determine the
 currently active setting.
@@ -582,7 +582,7 @@ The format for container images that EasyBuild is produces via the
 functionality provided by the container software can be controlled via
 the `--container-image-format` configuration setting.
 
-For Singularity containers (see [Type of container recipe/image to generate][containers_cfg_type])),
+For Singularity containers (see [Type of container recipe/image to generate][containers_cfg_type]),
 three image formats are supported:
 
 - `squashfs` *(default when using Singularity 2.x)*: compressed images
