@@ -31,19 +31,26 @@ Note that the various available configuration options are handled
 For example: to configure EasyBuild to use Lmod as modules tool, the following alternatives are available:
 
 * configuration file entry (key-value assignment):
+
    ``` ini
    [config]
    modules-tool = Lmod
    ```
+
 * environment variable (upper case, `EASYBUILD_` prefix, `-`'s becomes `_`'s):
+
    ``` shell
    export EASYBUILD_MODULES_TOOL=Lmod
    ```
+
 * command line argument (long options preceded by `--` and (optionally) using `=`):
+
    ``` shell
    eb --modules-tool=Lmod
    ```
+
   or
+
    ``` shell
    $ eb --modules-tool Lmod
    ```
@@ -179,9 +186,9 @@ Since EasyBuild v1.10, a command line option `--confighelp` is
 available that prints out the help text as an annotated configuration
 file. This can be used as an empty template configuration file:
 
-``` console
-$ mkdir -p $HOME/.config/easybuild
-$ eb --confighelp > $HOME/.config/easybuild/config.cfg
+``` shell
+mkdir -p $HOME/.config/easybuild
+eb --confighelp > $HOME/.config/easybuild/config.cfg
 ```
 
 ``` console
@@ -240,10 +247,13 @@ For boolean configuration settings, both the `--<option>` and
 Examples (more below):
 
 * enable debug logging (long option) and logging to stdout (short option)
+
    ``` shell
    eb --debug -l ...
    ```
+
 * use `/dev/shm` as build path, install to temporary install path, disable debug logging
+
    ``` shell
    eb --buildpath=/dev/shm --installpath=/tmp/$USER --disable-debug ...
    ```
@@ -412,7 +422,8 @@ The install path for software and modules specifically is determined by combinin
 `--subdir-software`, and combining `--installpath` with `--subdir-modules` and `--suffix-modules-path`,
 respectively.
 
-For more information on these companion configuration options, see :ref:`installpath_subdirs`.
+For more information on these companion configuration options, see
+[Software and modules install path subdirectories (`--subdir-software`, `--subdir-modules`, `--suffix-modules-path`)][installpath_subdirs].
 
 ##### Full install path for software and module file
 
@@ -425,7 +436,8 @@ install path named according to the active module naming scheme (default format:
 Additionally, symlinks to the actual module file are installed in a subdirectory of the modules install path
 named according to the value of the `moduleclass` easyconfig parameter.
 
-For more information on the module naming scheme used by EasyBuild, see :ref:`module_naming_scheme`.
+For more information on the module naming scheme used by EasyBuild, see
+[Active module naming scheme (`--module-naming-scheme`)][module_naming_scheme].
 
 ##### Updating `$MODULEPATH`
 
@@ -435,9 +447,9 @@ to include the modules install path.
 The recommended way to do this is to use the `module use` command.
 For example:
 
-``` console
-$ eb --installpath=$HOME/easybuild
-$ module use $HOME/easybuild/modules/all
+``` shell
+eb --installpath=$HOME/easybuild
+module use $HOME/easybuild/modules/all
 ```
 
 It is probably a good idea to add this to your (favourite) shell
@@ -493,7 +505,7 @@ You do not have to worry about importing these classes,
 EasyBuild will make them available to the configuration file.
 
 Using `git` requires the `GitPython` Python modules, using `svn`
-requires the `pysvn` Python module (see :ref:`dependencies`).
+requires the `pysvn` Python module (see [Dependencies][dependencies]).
 
 If access to the easyconfigs repository fails for some reason
 (e.g., no network or a missing required Python module), EasyBuild will
@@ -519,9 +531,10 @@ is supported:
 
 !!! note
     Because templating is supported in configuration files themselves (see
-    :ref:`configuration_file_templates_constants`), the '`%`' character in these template values must be escaped
-    when used in a configuration file (and only then), e.g., '`%%(name)s`'. Without escaping, an error like
-    `InterpolationMissingOptionError: Bad value substitution` will be thrown by `ConfigParser`.
+    [Templates and constants supported in configuration files][configuration_file_templates_constants]), the
+    '`%`' character in these template values must be escaped when used in a configuration file (and only then),
+    e.g., '`%%(name)s`'. Without escaping, an error like `InterpolationMissingOptionError: Bad value
+    substitution` will be thrown by `ConfigParser`.
 
 For example, configuring EasyBuild to generate a log file mentioning only the software name in a directory named
 `easybuild` can be done via the `--logfile-format` command line option:
@@ -625,9 +638,8 @@ specified using the `module-naming-scheme` configuration setting.
 eb --module-naming-scheme=HierarchicalMNS ...
 ```
 
-For more details, see the dedicated page: https://github.com/easybuilders/easybuild/wiki/Using-a-custom-module-naming-scheme .
-
-.. _`http://docs.python.org/2/library/configparser.html`: http://docs.python.org/2/library/configparser.html
+For more details, see the dedicated page on
+[using a custom module naming scheme](https://github.com/easybuilders/easybuild/wiki/Using-a-custom-module-naming-scheme).
 
 
 #### Module files syntax (`--module-syntax`) {: #module_syntax }
