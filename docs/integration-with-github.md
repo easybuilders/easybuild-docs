@@ -67,7 +67,7 @@ To specify your GitHub username, do one of the following:
 - define the `$EASYBUILD_GITHUB_USER` environment variable
 - specify `github-user` in your EasyBuild configuration file
 
-(see also [Configuring EasyBuild][configuring_easybuild]
+(see also [Configuring EasyBuild][configuring_easybuild])
 
 ### Installing a GitHub token {: #github_token }
 
@@ -192,9 +192,7 @@ See also [Requirements][github_requirements].
 
 ## Using easyconfigs from pull requests {: #github_from_pr }
 
-*(`--from-pr`)*
-
-*(supported since EasyBuild v1.13.0)*
+*(`--from-pr`, supported since EasyBuild v1.13.0)*
 
 Via the `--from-pr` command line option (available since EasyBuild
 v1.13.0), easyconfig files that are added or modified by a particular
@@ -204,7 +202,7 @@ be used (regardless of whether the pull request is merged or not).
 
 This can be useful to employ easyconfig files that are not available yet
 in the active EasyBuild installation, or to test new contributions by
-combining `--from-pr` with `--upload-test-report` (see [Uploading test reports][github_upload_test_report].
+combining `--from-pr` with `--upload-test-report` (see [Uploading test reports][github_upload_test_report]).
 
 When `--from-pr` is used, EasyBuild will download all modified files
 (easyconfig files and patches) to a temporary directory before
@@ -259,7 +257,7 @@ directory. Afterwards, the patch corresponding to the specified pull
 request is applied on top of the `develop` branch. This results in a
 correct reflection of how the easyconfig files would look like if the
 pull request would be merged, which is particularly important for
-testing of contributions (see also [Uploading test reports][github_upload_test_report].
+testing of contributions (see also [Uploading test reports][github_upload_test_report]).
 
 Easyconfig files touched by the pull request that are explicitly
 specified are then picked up from this location; see also [Specifying particular easyconfig files][github_from_pr_specifying_easyconfigs].
@@ -366,9 +364,7 @@ resolve dependencies are being picked up as needed.
 
 ## Using easyblocks from pull requests {: #github_include_easyblocks_from_pr }
 
-*(`--include-easyblocks-from-pr`)*
-
-*(supported since EasyBuild v4.2.0)*
+*(`--include-easyblocks-from-pr`, supported since EasyBuild v4.2.0)*
 
 Via the `--include-easyblocks-from-pr` command line option, easyblocks
 that are added or modified by a particular pull request to the
@@ -403,9 +399,7 @@ EasyBlock (easybuild.framework.easyblock)
 
 ## Uploading test reports {: #github_upload_test_report }
 
-*(`--upload-test-report`)*
-
-*(supported since EasyBuild v1.13.0)*
+*(`--upload-test-report`, supported since EasyBuild v1.13.0)*
 
 !!! note
     requires that a GitHub token was required `gist` permissions is
@@ -539,9 +533,7 @@ The addition restrictions are the following (also considered in order):
 
 ## Merging easyconfig pull requests {: #github_merge_pr }
 
-*(`--merge-pr`)*
-
-*(supported since EasyBuild v3.3.1)*
+*(`--merge-pr`, supported since EasyBuild v3.3.1)*
 
 [EasyBuild maintainers][maintainers] need to take the
 [Requirements for pull requests][contributing_review_process_pr_requirements] into account.
@@ -611,9 +603,7 @@ Merged easybuilders/easybuild-easyconfigs pull request #4829
 
 ## Submitting new and updating pull requests {: #github_new_update_pr }
 
-*(`--new-pr`, `--update-pr`)*
-
-*(supported since EasyBuild v2.6.0)*
+*(`--new-pr`, `--update-pr`, supported since EasyBuild v2.6.0)*
 
 EasyBuild provides two simple yet powerful features that make
 contributing to the central EasyBuild repositories significantly easier
@@ -625,16 +615,14 @@ with `git` and/or GitHub yet:
 
 ### Previewing easyconfig pull requests {: #github_preview_pr }
 
-*(`--preview-pr`)*
-
-*(supported since EasyBuild v3.5.0)*
+*(`--preview-pr`, supported since EasyBuild v3.5.0)*
 
 It is very useful to quickly see how easyconfig files in pull requests
 differ from existing easyconfig files, and to maintain consistency
 across easyconfig files where desired.
 
 Maintainers will use `--review-pr` as part of the review process once
-the PR is submitted (see [Reviewing easyconfig pull requests][github_review_pr], but it is now possible to
+the PR is submitted (see [Reviewing easyconfig pull requests][github_review_pr]), but it is now possible to
 preview that output before submitting a PR, eventually fixing any
 inconsistencies in advance.
 
@@ -692,7 +680,7 @@ entirely!
 The working copy of the EasyBuild repository is created in a temporary
 location, and cleaned up once the pull request has been created.
 EasyBuild does *not* make changes to an existing working copy you may
-have in place already (cfr. [Specify location of working directories][github_git_working_dirs_path].
+have in place already (cfr. [Specify location of working directories][github_git_working_dirs_path]).
 
 !!! note
     When modifying existing files via `--new-pr`,  
