@@ -154,11 +154,11 @@ most recent revision of the common toolchains at that time.
 |---------|----------|------------|--------|-------------------|-------------|-------------|
 | `2019a` | Jan '19  | 2.31.1     | 8.2.0  | 2019.1.144        | 2018.4.274  | 2019.1.144  |
 | `2019b` | Sept '19 | 2.32       | 8.3.0  | 2019.5.281        | 2018.5.288  | 2019.5.281  |
-| `2020a` | May'20   | 2.34       | 9.3.0  | 2020.1.217        | 2019.7.217  | 2020.1.217  |
-| `2020b` | Nov'20   | 2.35       | 10.2.0 | 2020.4.304        | 2019.9.304  | 2020.4.304  |
-| `2021a` | May'21   | 2.36.1     | 10.3.0 | 2021.2.0          | 2021.2.0    | 2021.2.0    |
-| `2021b` | Oct'21   | 2.37       | 11.2.0 | 2021.4.0          | 2021.4.0    | 2021.4.0    |
-| `2022a` | Jun'22   | 2.38       | 11.3.0 | 2022.1.0          | 2021.6.0    | 2022.1.0    |
+| `2020a` | May '20   | 2.34       | 9.3.0  | 2020.1.217        | 2019.7.217  | 2020.1.217  |
+| `2020b` | Nov '20   | 2.35       | 10.2.0 | 2020.4.304        | 2019.9.304  | 2020.4.304  |
+| `2021a` | May '21   | 2.36.1     | 10.3.0 | 2021.2.0          | 2021.2.0    | 2021.2.0    |
+| `2021b` | Oct '21   | 2.37       | 11.2.0 | 2021.4.0          | 2021.4.0    | 2021.4.0    |
+| `2022a` | Jun '22   | 2.38       | 11.3.0 | 2022.1.0          | 2021.6.0    | 2022.1.0    |
 
 ## Overview of common toolchains (deprecated versions) {: #common_toolchains_overview_deprecated }
 
@@ -203,10 +203,10 @@ location of the easyconfig files that are included with EasyBuild (see
 also [Searching for easyconfigs: the robot search path][robot_search_path]), before building and
 installation the toolchain.
 
-!!! info "More information about toolchains"
+## More information about toolchains
 
-    Please see the [List of known toolchains](version-specific/eb-list-toolchains.md) for how to obtain a listing of
-    the currently known toolchains.
+Please see the [List of known toolchains](version-specific/eb-list-toolchains.md) for how to obtain a listing of
+the currently known toolchains.
 
-    For a detailed listing of the compiler options available with each
-    toolchain, please see [Available toolchain options (by toolchain)](version-specific/toolchain-opts.md).
+For a detailed listing of the compiler options available with each
+toolchain, please see [Available toolchain options (by toolchain)](version-specific/toolchain-opts.md).
