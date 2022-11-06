@@ -1,4 +1,4 @@
-# Submitting jobs using `--job`
+# Submitting jobs using `--job` {: #submitting_jobs }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Submitting_jobs.html>.

@@ -1,4 +1,4 @@
-# Installing Lmod without root permissions
+# Installing Lmod without root permissions {: #installing_lmod }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Installing-Lmod-without-root-permissions.html>.

@@ -1,4 +1,4 @@
-# Getting help
+# Getting help {: #getting_help }
 
 Having trouble? We would like to help!
 
