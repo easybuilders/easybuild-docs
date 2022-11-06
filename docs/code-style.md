@@ -1,4 +1,4 @@
-# Code style {: #code_style }
+# Code style
 
 The code style we follow in the EasyBuild code repository is mainly dictated by the Python standard
 [PEP8](https://www.python.org/dev/peps/pep-0008).
