@@ -1,5 +1,7 @@
 # Packaging support
 
+## Configuration options {: #packaging_config}
+
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Packaging_support.html>.
 
