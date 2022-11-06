@@ -1,4 +1,4 @@
-# Alternative installation methods
+# Alternative installation methods {: #alt_inst_methods }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Installation_Alternative.html>.
