@@ -97,9 +97,9 @@ need to be aware of, for example, the particular compiler being used to determin
 
 Recent releases of EasyBuild include out-of-the-box toolchain support for:
 
-- various compilers, including GCC, Intel, Clang, CUDA
-- common MPI libraries, such as Intel MPI, MPICH, MVAPICH2, OpenMPI
-- various numerical libraries, including ATLAS, Intel MKL, OpenBLAS, ScalaPACK, FFTW
+* various compilers, including GCC, Intel, Clang, CUDA
+* common MPI libraries, such as Intel MPI, MPICH, MVAPICH2, OpenMPI
+* various numerical libraries, including ATLAS, Intel MKL, OpenBLAS, ScalaPACK, FFTW
 
 Please see the [Common toolchains][common_toolchains] page for details about the two most common toolchains,
 one for "free and open source software" (`foss`) based on GCC and one based on the Intel compilers
