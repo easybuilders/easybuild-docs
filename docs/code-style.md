@@ -9,8 +9,7 @@ Highlighted PEP8 code style rules:
     * for example, use `:set tabstop 4` and `:set expandtab` in Vim
 * indent items in a list at an extra 4 spaces
     * nested lists can be indented at the same indentation as the first item in the list if it is on the first line, closing brackets must match visual indentation
-* use `optional underscores`, not camelCase, for variable, function and method names (i.e. `poll.get_unique_voters()`,
-  **not** `poll.getUniqueVoters`)
+* use `optional underscores`, not camelCase, for variable, function and method names (i.e. `poll.get_unique_voters()`, **not** `poll.getUniqueVoters`)
 * use `InitialCaps` for class names
 * in docstrings, don't use "action words"
 
@@ -25,8 +24,8 @@ for example: `eb --check-contrib sympy-1.3-intel-2018a-Python-2.7.14.eb`
 
 Style guides that go a step beyond PEP8:
 
- * <https://www.gramps-project.org/wiki/index.php?title=Programming_guidelines>
- * <https://code.google.com/p/volatility/wiki/StyleGuide>
+* <https://www.gramps-project.org/wiki/index.php?title=Programming_guidelines>
+* <https://code.google.com/p/volatility/wiki/StyleGuide>
 
 Automatic rewriting of Python code: [PythonTidy](http://pypi.python.org/pypi/PythonTidy/1.22)
 
