@@ -1,8 +1,8 @@
 # Writing easyconfig files {: #writing_easyconfig_files }
 
-
 ## What is an easyconfig (file)? {: #what_is_an_easyconfig }
 
+### Easyblock specification {: #writing_easyconfigs_easyblock_spec }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Writing_easyconfig_files.html>.

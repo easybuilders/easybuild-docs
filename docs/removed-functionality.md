@@ -1,5 +1,9 @@
 # Removed functionality
 
+## Overview of removed functionality since EasyBuild v2.0 {: #overview_removed_20 }
+
+### Automagic fallback to ConfigureMake {: #depr_ConfigureMake_fallback_eb1 }
+
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Removed-functionality.html>.
 
