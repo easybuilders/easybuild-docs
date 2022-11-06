@@ -46,7 +46,7 @@ versions:
 
 *(see below for more information)*
 
-*  **HPL** (LINPACK) benchmark version 2.1
+* **HPL** (LINPACK) benchmark version 2.1
 
 ### Major scientific software applications
 
