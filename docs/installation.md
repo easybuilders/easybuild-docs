@@ -90,26 +90,26 @@ For the `pip` install, you may wish to slightly change this command depending on
 
 * to install EasyBuild *system-wide*, you can use `sudo` (if you have admin privileges):
 
-  ``` shell
-  sudo pip install easybuild
-  ```
+    ``` shell
+    sudo pip install easybuild
+    ```
 
 * To install EasyBuild *in your personal home directory*, you can use the `--user` option:
 
-  ``` shell
-  pip install --user easybuild
-  ```
+    ``` shell
+    pip install --user easybuild
+    ```
 
-  This will result in an EasyBuild installation in `$HOME/.local/`.
+    This will result in an EasyBuild installation in `$HOME/.local/`.
 
 * To install EasyBuild in a *specific directory* you can use the `--prefix` option:
 
-  ``` shell
-  pip install --prefix _PREFIX_ easybuild
-  ```
+    ``` shell
+    pip install --prefix _PREFIX_ easybuild
+    ```
 
-  In this command, you should replace '`_PREFIX_`' with the location where you want to have EasyBuild installed
-  (for example, `$HOME/tools` or `/tmp/$USER`).
+    In this command, you should replace '`_PREFIX_`' with the location where you want to have EasyBuild installed
+    (for example, `$HOME/tools` or `/tmp/$USER`).
 
 Keep in mind that you may need to update your environment too when using `--user` or `--prefix`,
 see [Updating your environment][more_pip_env].
@@ -291,7 +291,7 @@ environment variable `$MODULEPATH`):
 module use _PREFIX_/modules/all
 ```
 
-**Replace** `_PREFIX_` with the path to the directory that you used when running [Step 2: Using EasyBuild to install EasyBuild][eb_as_module_step2
+**Replace** `_PREFIX_` with the path to the directory that you used when running [Step 2: Using EasyBuild to install EasyBuild][eb_as_module_step2]
 (for example, `$HOME/easybuild`).
 
 Then, load the EasyBuild module to update your environment and make EasyBuild available for use:
@@ -416,7 +416,7 @@ For EasyBuild versions prior to version 4.0, a couple of additional Python packa
     consumes the `setup.py` script that comes with the EasyBuild framework (e.g., EasyBuild or the EasyBuild
     bootstrap script, `pip`, `easy_install`, ...)
 
-Other Python packages are optional dependencies, see [Optional Python packages]optional_python_packages].
+Other Python packages are optional dependencies, see [Optional Python packages][optional_python_packages].
 
 ### Optional dependencies
 
