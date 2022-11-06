@@ -1,4 +1,4 @@
-# Installing environment modules without root permissions
+# Installing environment modules without root permissions {: #installing_env_mod_c }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Installing-environment-modules-without-root-permissions.html>.

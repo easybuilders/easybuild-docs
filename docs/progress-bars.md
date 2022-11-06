@@ -1,4 +1,4 @@
-# Progress bars
+# Progress bars {: #progress_bars }
 
 *(supported since: EasyBuild v4.5.0)*
 
