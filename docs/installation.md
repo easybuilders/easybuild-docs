@@ -137,7 +137,7 @@ python3.6 -m pip install easybuild
 ```
 
 Note that you may also need to instruct the `eb` command to use the correct Python version at runtime,
-via `$EB_PYTHON` (see [Setting $EB_PYTHON][more_pip_env_EB_PYTHON]).
+via `$EB_PYTHON` (see [Setting `$EB_PYTHON`][more_pip_env_EB_PYTHON]).
 
 
 ### Updating your environment {: #more_pip_env }
@@ -355,7 +355,7 @@ Hence, a modules tool must be available to consume module files with.
 Supported module tools:
 
 * [Tcl/C environment-modules](https://modules.sourceforge.net/) (version >= 3.2.10)
-* [Tcl-only variant of environment modules](https://sourceforge.net/p/modules/modules-tcl)
+* [Tcl-only variant of environment modules](https://sourceforge.net/projects/modules/files/Modules-Tcl)
 * [Lmod](https://lmod.sourceforge.net) (version >= 6.5.1), *highly recommended*
 
 !!! note
