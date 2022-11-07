@@ -1,19 +1,5 @@
 # Unit tests
 
-!!! warning
-    This page will soon replace <https://docs.easybuild.io/en/latest/Unit-tests.html>.
-
-    **
-    It still needs to be ported from *reStructuredText* (.rst) to *MarkDown* (.md),  
-    and you can help with that!
-    **
-
-    - source: [`docs/Unit-tests.rst` in `easybuilders/easybuild` repo](https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Unit-tests.rst)
-    - target: [`docs/unit-tests.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/unit-tests.md)
-
-    See <https://github.com/easybuilders/easybuild-docs> for more information.
-
-```rst
 .. _unit_tests:
 
 Unit tests
@@ -305,4 +291,3 @@ corresponding traceback::
     ERROR: Not all tests were successful.
     Log available at /tmp/example/easybuild-dy2ZTx/easybuild-tests-l0doQ2.log
 
-```
