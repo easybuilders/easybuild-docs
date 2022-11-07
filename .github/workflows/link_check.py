@@ -41,6 +41,8 @@ def main():
         print("Internal link tests failed!")
         print('\n'.join(fail_info))
         raise SystemExit(1)
+    else:
+        print("Link check tests successful")
 
 
 if __name__ == '__main__':
