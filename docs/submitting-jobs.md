@@ -174,7 +174,7 @@ See also [Example: submitting installations to SLURM via GC3Pie][submitting_jobs
 
 When using GC3Pie as a job backend, a configuration file must be provided via `--job-backend-config`.
 This section includes a couple of examples of GC3Pie configuration files (see also
-https://gc3pie.readthedocs.org/en/latest/users/configuration.html).
+<https://gc3pie.readthedocs.org/en/latest/users/configuration.html>).
 
 #### Example GC3Pie configuration for local system
 
@@ -275,7 +275,7 @@ $ eb GCC-4.6.0.eb OpenMPI-1.8.4-GCC-4.9.2.eb --robot --job --job-cores=16 --job-
 == temporary log file(s) /tmp/eb-ivAiwD/easybuild-PCgmCB.log* have been removed.
 == temporary directory /tmp/eb-ivAiwD has been removed.
 ```
-  
+
 Checking which jobs have been submitted to SLURM at regular intervals reveals that indeed only tasks for which all
 dependencies have been processed are actually submitted as jobs::
 
