@@ -19,6 +19,10 @@ jobs:
         check_filenames: true
         ignore_words_list: atleast,ninjs,simpy,proovread,namd,precice
 
+    - name: check internal links
+      run: |
+          python ./.github/workflows/link_check.py
+
     - name: install mkdocs
       run: |
           pip install -r requirements.txt
