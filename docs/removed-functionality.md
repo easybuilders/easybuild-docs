@@ -1,4 +1,4 @@
-# Removed functionality
+# Removed functionality {: #removed_functionality }
 
 ## Overview of removed functionality since EasyBuild v2.0 {: #overview_removed_20 }
 
