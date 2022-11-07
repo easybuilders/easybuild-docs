@@ -1,19 +1,5 @@
 # Submitting jobs using `--job` {: #submitting_jobs }
 
-!!! warning
-    This page will soon replace <https://docs.easybuild.io/en/latest/Submitting_jobs.html>.
-
-    **
-    It still needs to be ported from *reStructuredText* (.rst) to *MarkDown* (.md),  
-    and you can help with that!
-    **
-
-    - source: [`docs/Submitting_jobs.rst` in `easybuilders/easybuild` repo](https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Submitting_jobs.rst)
-    - target: [`docs/submitting-jobs.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/submitting-jobs.md)
-
-    See <https://github.com/easybuilders/easybuild-docs> for more information.
-
-```rst
 .. _submitting_jobs:
 
 Submitting jobs using ``--job``
@@ -432,4 +418,3 @@ These holds are released by the TORQUE server as soon as they jobs on which they
   ------------------- ----------- -------- ---------------- ------ ----- ------ ------ --------- - ---------
   508031.example.pbs  easybuild   batch    OpenMPI-1.8.4-GC    --      1     16    --   24:00:00 R  00:03:46
 
-```
