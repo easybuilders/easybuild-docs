@@ -273,8 +273,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#easyconfig_files" class="md-nav__link">
-    Easyconfig files
+  <a href="#framework" class="md-nav__link">
+    EasyBuild framework
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easyblocks" class="md-nav__link">
+    Easyblocks
   </a>
   
 </li>
@@ -284,11 +291,45 @@
     Toolchains
   </a>
   
+    <nav class="md-nav" aria-label="Toolchains">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system_toolchain" class="md-nav__link">
+    system toolchain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dummy_toolchain" class="md-nav__link">
+    dummy toolchain (DEPRECATED)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-toolchains" class="md-nav__link">
+    Common toolchains
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#easyblocks" class="md-nav__link">
-    Easyblocks
+  <a href="#easyconfig_files" class="md-nav__link">
+    Easyconfig files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extensions" class="md-nav__link">
+    Extensions
   </a>
   
 </li>
@@ -411,218 +452,134 @@
   </a>
 
 
-<h1 id="concepts_and_terminology">EasyBuild terminology<a class="headerlink" href="#concepts_and_terminology" title="Permanent link">&para;</a></h1>
-<h2 id="easyconfig_files">Easyconfig files<a class="headerlink" href="#easyconfig_files" title="Permanent link">&para;</a></h2>
-<h2 id="toolchains">Toolchains<a class="headerlink" href="#toolchains" title="Permanent link">&para;</a></h2>
-<h2 id="easyblocks">Easyblocks<a class="headerlink" href="#easyblocks" title="Permanent link">&para;</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/Concepts_and_Terminology.html">https://docs.easybuild.io/en/latest/Concepts_and_Terminology.html</a>.</p>
-<p><strong>
-It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
-and you can help with that!
-</strong></p>
-<ul>
-<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Concepts_and_Terminology.rst"><code>docs/Concepts_and_Terminology.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
-<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/terminology.md"><code>docs/terminology.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
-</ul>
-<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_concepts_and_terminology:</span>
-
-<span class="gh">Concepts and terminology</span>
-<span class="gh">========================</span>
-
-
-EasyBuild consists of a collection of Python modules and packages that interact with each other,
+<h1 id="concepts_and_terminology">Concepts and terminology<a class="headerlink" href="#concepts_and_terminology" title="Permanent link">&para;</a></h1>
+<p>EasyBuild consists of a collection of Python modules and packages that interact with each other,
 dynamically picking up additional Python modules as needed for building and installing
-a (stack of) software package(s) specified via simple specification files.
-
-Or, in EasyBuild terminology: **the EasyBuild framework leverages easyblocks to automatically
-build and install software using particular compiler toolchains, as specified by one or multiple easyconfig files**.
-
-<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
-    <span class="nc">:depth:</span> 3
-    <span class="nc">:backlinks:</span> none
-
-<span class="p">..</span> <span class="nt">_framework:</span>
-
-<span class="gh">EasyBuild framework</span>
-<span class="gh">-------------------</span>
-
-The EasyBuild <span class="gs">**framework**</span> embodies the core of the tool, providing functionality commonly
+a (stack of) software package(s) specified via simple specification files.</p>
+<p>Or, in EasyBuild terminology: <strong>the EasyBuild framework leverages easyblocks to automatically
+build and install software using particular compiler toolchains, as specified by one or multiple easyconfig files</strong>.</p>
+<h2 id="framework">EasyBuild framework<a class="headerlink" href="#framework" title="Permanent link">&para;</a></h2>
+<p>The EasyBuild <strong>framework</strong> embodies the core of the tool, providing functionality commonly
 needed when installing scientific software on HPC systems. For example, it deals with downloading,
 unpacking and patching of sources, loading module files for dependencies,
 setting up the build environment, autonomously running (interactive) shell commands,
-creating module files that match the specification files, etc.
-
-Included in the framework is an <span class="nv">`abstract`</span> implementation of a software build and install procedure,
-which is split up into different <span class="nv">`steps`</span>:
-
-<span class="m">*</span> unpacking sources
-<span class="m">*</span> configuration
-<span class="m">*</span> build
-<span class="m">*</span> installation
-<span class="m">*</span> module generation
-<span class="m">*</span> etc.
-
-Most of these steps, i.e., the ones which are generally more-or-less
+creating module files that match the specification files, etc.</p>
+<p>Included in the framework is an <code>abstract</code> implementation of a software build and install procedure,
+which is split up into different <code>steps</code>:</p>
+<ul>
+<li>unpacking sources</li>
+<li>configuration</li>
+<li>build</li>
+<li>installation</li>
+<li>module generation</li>
+<li>etc.</li>
+</ul>
+<p>Most of these steps, i.e., the ones which are generally more-or-less
 analogous across different software packages, have appropriate (default) implementations.
 The only exceptions are the configuration, build and installation steps that are purposely
-left unimplemented (since there is no common procedure for them).
-
-Each of the steps can be
+left unimplemented (since there is no common procedure for them).</p>
+<p>Each of the steps can be
 tweaked and steered via different parameters known to the framework, for which values are
 either obtained from the provided specification files or set to reasonable default values.
-See <span class="na">:ref:</span><span class="nv">`easyconfig_files`</span>.
+See <a class="autorefs autorefs-internal" href="#easyconfig_files">Easyconfig files</a>.</p>
+<!-- XXX - UPDATE BY VERSION FIXME -->
 
-<span class="cp">.. XXX - UPDATE BY VERSION FIXME</span>
-
-In EasyBuild version |version| the framework source code consists of about 19000 lines of code,
+<p>In EasyBuild version |version| the framework source code consists of about 19000 lines of code,
 organized across about 125 Python modules in roughly a dozen Python package directories,
 next to almost 7000 lines of code for tests. This provides some notion of the size of the
-EasyBuild framework and the amount of supporting functionality it has to offer.
-
-
-<span class="p">..</span> <span class="nt">_Easyblocks:</span>
-
-<span class="gh">Easyblocks</span>
-<span class="gh">----------</span>
-
-The implementation of a particular software build and install procedure is done in a Python module,
-which is aptly referred to as an <span class="gs">**easyblock**</span>.
-
-Each easyblock ties in with the framework API
+EasyBuild framework and the amount of supporting functionality it has to offer.</p>
+<h2 id="easyblocks">Easyblocks<a class="headerlink" href="#easyblocks" title="Permanent link">&para;</a></h2>
+<p>The implementation of a particular software build and install procedure is done in a Python module,
+which is aptly referred to as an <strong>easyblock</strong>.</p>
+<p>Each easyblock ties in with the framework API
 by defining (or extending/replacing) one or more of the step functions that are part
 of the abstract procedure used by the EasyBuild framework. Easyblocks typically heavily
 rely on the supporting functionality provided by the framework, for example for
-(autonomously) executing (interactive) shell commands and obtaining the command&#39;s output and exit code.
-
-A distinction is made between <span class="gs">**software-specific**</span> and <span class="gs">**generic**</span> easyblocks. Software-specific
+(autonomously) executing (interactive) shell commands and obtaining the command's output and exit code.</p>
+<p>A distinction is made between <strong>software-specific</strong> and <strong>generic</strong> easyblocks. Software-specific
 easyblocks implement a build and install procedure which is entirely custom to one particular
 software package (e.g., WRF), while generic easyblocks implement a procedure using standard
 tools (e.g., CMake). Since easyblocks are implemented in an object-oriented scheme, the step
 methods implemented by a particular easyblock can be reused in others via inheritance,
-enabling code reuse across build procedure implementations.
+enabling code reuse across build procedure implementations.</p>
+<p>For each software package being built, the EasyBuild framework will determine which easyblock
+should be used, based on the name of the software package or the value of the <code>easyblock</code>
+specification parameter (see <a class="autorefs autorefs-internal" href="../writing-easyconfig-files/#writing_easyconfigs_easyblock_spec">Easyblock specification</a>).
+Since EasyBuild v2.0, an easyblock <em>must</em> be specified in case no matching easyblock is found based on the
+software name (cfr. <a class="autorefs autorefs-internal" href="../removed-functionality/#depr_ConfigureMake_fallback_eb1">Automagic fallback to ConfigureMake</a>).</p>
+<!-- XXX - UPDATE BY VERSION FIXME -->
 
-For each software package being built, the EasyBuild framework will determine which easyblock
-should be used, based on the name of the software package or the value of the <span class="s">``easyblock``</span>
-specification parameter (see <span class="na">:ref:</span><span class="nv">`writing_easyconfigs_easyblock_spec`</span>).
-Since EasyBuild v2.0, an easyblock <span class="ge">*must*</span> be specified in case no matching easyblock is found based on the
-software name (cfr. <span class="na">:ref:</span><span class="nv">`depr_ConfigureMake_fallback_eb1`</span>).
-
-<span class="cp">.. XXX - UPDATE BY VERSION FIXME</span>
-
-EasyBuild version 2.4.0 includes 154 software-specific easyblocks and 28 generic
-easyblocks (see also <span class="na">:ref:</span><span class="nv">`basic_usage_easyblocks`</span>), providing support for automatically installing a wide range
+<p>EasyBuild version 2.4.0 includes 154 software-specific easyblocks and 28 generic
+easyblocks (see also [List of easyblocks][basic_usage_easyblocks]), providing support for automatically installing a wide range
 of software packages. Examples range from fairly easy-to-build programs like gzip, other basic tools
 like compilers, various MPI stacks and commonly used libraries, primarily for x86_64 architecture systems,
 to large scientific software packages that are notorious for their involved and tedious install procedures, such as:
-<span class="nv">`CP2K`</span>, <span class="nv">`NWChem`</span>, <span class="nv">`OpenFOAM`</span>, <span class="nv">`QuantumESPRESSO`</span>, <span class="nv">`WRF`</span>.
-
-<span class="p">..</span> <span class="nt">_toolchains:</span>
-
-<span class="gh">Toolchains</span>
-<span class="gh">----------</span>
-
-EasyBuild employs so-called <span class="gs">**compiler toolchains**</span> or, simply <span class="nv">`toolchains`</span> for short,
-which are a major concept in handling the build and installation processes.
-
-A typical toolchain consists of one or more compilers, usually put together with some libraries for specific functionality,
+<code>CP2K</code>, <code>NWChem</code>, <code>OpenFOAM</code>, <code>QuantumESPRESSO</code>, <code>WRF</code>.</p>
+<h2 id="toolchains">Toolchains<a class="headerlink" href="#toolchains" title="Permanent link">&para;</a></h2>
+<p>EasyBuild employs so-called <strong>compiler toolchains</strong> or, simply <code>toolchains</code> for short,
+which are a major concept in handling the build and installation processes.</p>
+<p>A typical toolchain consists of one or more compilers, usually put together with some libraries for specific functionality,
 e.g., for using an MPI stack for distributed computing, or which provide optimized routines for commonly
-used math operations, e.g., the well-known BLAS/LAPACK APIs for linear algebra routines.
-
-For each software package being built, the toolchain to be used must be specified in some way.
-
-The EasyBuild framework prepares the <span class="nv">`build environment`</span> for the different toolchain components,
+used math operations, e.g., the well-known BLAS/LAPACK APIs for linear algebra routines.</p>
+<p>For each software package being built, the toolchain to be used must be specified in some way.</p>
+<p>The EasyBuild framework prepares the <code>build environment</code> for the different toolchain components,
 by loading their respective modules and defining environment variables to specify compiler commands
-(e.g., via <span class="s">``$F90``</span>), compiler and linker options (e.g., via <span class="s">``$CFLAGS``</span> and <span class="s">``$LDFLAGS``</span>), the list
-of library names to supply to the linker (via <span class="s">``$LIBS``</span>), etc. This enables making easyblocks largely
-<span class="nv">`toolchain-agnostic`</span> since they can simply rely on these environment variables; that is, unless they
-need to be aware of, for example, the particular compiler being used to determine the build configuration options.
-
-Recent releases of EasyBuild include out-of-the-box toolchain support for:
-
-<span class="m">-</span> various compilers, including GCC, Intel, Clang, CUDA
-<span class="m">-</span> common MPI libraries, such as Intel MPI, MPICH, MVAPICH2, OpenMPI
-<span class="m">-</span> various numerical libraries, including ATLAS, Intel MKL, OpenBLAS, ScalaPACK, FFTW
-
-Please see the <span class="na">:ref:</span><span class="nv">`common_toolchains`</span> page for details about the two most common toolchains,
-one for &quot;free and open source software&quot; (<span class="s">``foss``</span>) based on GCC and one based on the Intel compilers
-(<span class="s">``intel``</span>).
-
-<span class="p">..</span> <span class="nt">_system_toolchain:</span>
-
-<span class="gh">``system`` toolchain</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~</span>
-
-The <span class="s">``system``</span> toolchain is a special case. It is an <span class="ge">*empty*</span> toolchain, i.e. a toolchain without any components,
+(e.g., via <code>$F90</code>), compiler and linker options (e.g., via <code>$CFLAGS</code> and <code>$LDFLAGS</code>), the list
+of library names to supply to the linker (via <code>$LIBS</code>), etc. This enables making easyblocks largely
+<code>toolchain-agnostic</code> since they can simply rely on these environment variables; that is, unless they
+need to be aware of, for example, the particular compiler being used to determine the build configuration options.</p>
+<p>Recent releases of EasyBuild include out-of-the-box toolchain support for:</p>
+<ul>
+<li>various compilers, including GCC, Intel, Clang, CUDA</li>
+<li>common MPI libraries, such as Intel MPI, MPICH, MVAPICH2, OpenMPI</li>
+<li>various numerical libraries, including ATLAS, Intel MKL, OpenBLAS, ScalaPACK, FFTW</li>
+</ul>
+<p>Please see the <a class="autorefs autorefs-internal" href="../common-toolchains/#common_toolchains">Common toolchains</a> page for details about the two most common toolchains,
+one for "free and open source software" (<code>foss</code>) based on GCC and one based on the Intel compilers
+(<code>intel</code>).</p>
+<h3 id="system_toolchain"><code>system</code> toolchain<a class="headerlink" href="#system_toolchain" title="Permanent link">&para;</a></h3>
+<p>The <code>system</code> toolchain is a special case. It is an <em>empty</em> toolchain, i.e. a toolchain without any components,
 and corresponds to using the readily available compilers and libraries (e.g., the ones provided by the operating
-system, or by modules which were loaded before issuing the <span class="s">``eb``</span> command).
-
-When the <span class="s">``system``</span> toolchain is used, a corresponding <span class="s">``system``</span> module file is not required/loaded and no build
-environment is being defined.
-
-
-<span class="p">..</span> <span class="nt">_dummy_toolchain:</span>
-
-<span class="gh">``dummy`` toolchain *(DEPRECATED)*</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-The <span class="s">``dummy``</span> toolchain has been deprecated in EasyBuild v4.0, and replaced by the <span class="na">:ref:</span><span class="nv">`system_toolchain`</span>.
-
-
-<span class="gh">Common toolchains</span>
-<span class="gh">~~~~~~~~~~~~~~~~~</span>
-
-For more information on the concept of <span class="ge">*common toolchains*</span>, see <span class="na">:ref:</span><span class="nv">`common_toolchains`</span>.
-
-<span class="p">..</span> <span class="nt">_easyconfig_files:</span>
-
-<span class="gh">Easyconfig files</span>
-<span class="gh">----------------</span>
-
-The specification files that are supplied to EasyBuild are referred to as <span class="gs">**easyconfig files**</span>
-(or simply <span class="nv">`easyconfigs`</span>), which are basically plain text files containing (mostly)
+system, or by modules which were loaded before issuing the <code>eb</code> command).</p>
+<p>When the <code>system</code> toolchain is used, a corresponding <code>system</code> module file is not required/loaded and no build
+environment is being defined.</p>
+<h3 id="dummy_toolchain"><code>dummy</code> toolchain <em>(DEPRECATED)</em><a class="headerlink" href="#dummy_toolchain" title="Permanent link">&para;</a></h3>
+<p>The <code>dummy</code> toolchain has been deprecated in EasyBuild v4.0, and replaced by the <a class="autorefs autorefs-internal" href="#system_toolchain"><code>system</code> toolchain</a>.</p>
+<h3 id="common-toolchains">Common toolchains<a class="headerlink" href="#common-toolchains" title="Permanent link">&para;</a></h3>
+<p>For more information on the concept of <em>common toolchains</em>, see <a class="autorefs autorefs-internal" href="../common-toolchains/#common_toolchains">Common toolchains</a>.</p>
+<h2 id="easyconfig_files">Easyconfig files<a class="headerlink" href="#easyconfig_files" title="Permanent link">&para;</a></h2>
+<p>The specification files that are supplied to EasyBuild are referred to as <strong>easyconfig files</strong>
+(or simply <code>easyconfigs</code>), which are basically plain text files containing (mostly)
 key-value assignments for build parameters supported by the framework, also referred
-to as <span class="gs">**easyconfig parameters**</span> (see <span class="na">:doc:</span><span class="nv">`Writing_easyconfig_files`</span> for more information).
-
-Note that easyconfig files only provide the bits of information required
+to as <strong>easyconfig parameters</strong> (see <a class="autorefs autorefs-internal" href="../writing-easyconfig-files/#writing_easyconfig_files">Writing easyconfig files: the basics</a> for more information).</p>
+<p>Note that easyconfig files only provide the bits of information required
 to determine the corresponding module name; the module name itself is computed by EasyBuild
 framework by querying the module naming scheme being used. The complete
 list of supported easyconfig parameters can be easily obtained via the EasyBuild command line using
-<span class="s">``eb -a``</span> (see also <span class="na">:ref:</span><span class="nv">`avail_easyconfig_params`</span>).
-
-As such, each easyconfig file provides a complete specification of which particular software
+<code>eb -a</code> (see also <a class="autorefs autorefs-internal" href="../using-easybuild/#avail_easyconfig_params">All available easyconfig parameters, <code>--avail-easyconfig-params</code> / <code>-a</code></a>).</p>
+<p>As such, each easyconfig file provides a complete specification of which particular software
 package should be installed, and which settings should be used for building it. After completing
 an installation, EasyBuild copies the used easyconfig file to the install directory, as a template,
 and also supports maintaining an easyconfig archive which is updated on every successful installation.
-Therefore, reproducing installations becomes trivial.
-
-<span class="p">..</span> <span class="nt">_extensions:</span>
-
-<span class="gh">Extensions</span>
-<span class="gh">----------</span>
-
-Some software packages support installing additional add-ons alongside the &#39;main&#39; software, either in the same
-installation prefix, or in a separate location.
-
-In EasyBuild, we use the neutral term &#39;<span class="gs">**extensions**</span>&#39; to refer these add-ons.
-
-Well-known examples include:
-
-<span class="m">*</span> Perl modules (http://www.cpan.org/modules/)
-<span class="m">*</span> Python packages (https://pypi.python.org/pypi)
-<span class="m">*</span> R libraries (http://cran.r-project.org/web/packages/)
-<span class="m">*</span> Ruby gems (http://guides.rubygems.org/what-is-a-gem/)
-</code></pre></div>
+Therefore, reproducing installations becomes trivial.</p>
+<h2 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Permanent link">&para;</a></h2>
+<p>Some software packages support installing additional add-ons alongside the 'main' software, either in the same
+installation prefix, or in a separate location.</p>
+<p>In EasyBuild, we use the neutral term '<strong>extensions</strong>' to refer these add-ons.</p>
+<p>Well-known examples include:</p>
+<ul>
+<li><a href="https://www.cpan.org/modules/">Perl modules</a></li>
+<li><a href="https://pypi.python.org/pypi">Python packages</a></li>
+<li><a href="https://cran.r-project.org/web/packages/">R libraries</a></li>
+<li><a href="https://guides.rubygems.org/what-is-a-gem/">Ruby gems</a></li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 5, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 6, 2022</span>
       
     
   </small>
