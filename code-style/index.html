@@ -357,64 +357,41 @@
 
 
 <h1 id="code-style">Code style<a class="headerlink" href="#code-style" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/Code_style.html">https://docs.easybuild.io/en/latest/Code_style.html</a>.</p>
-<p><strong>
-It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
-and you can help with that!
-</strong></p>
+<p>The code style we follow in the EasyBuild code repository is mainly dictated by the Python standard
+<a href="https://www.python.org/dev/peps/pep-0008">PEP8</a>.</p>
+<p>Highlighted PEP8 code style rules:</p>
 <ul>
-<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Code_style.rst"><code>docs/Code_style.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
-<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/code-style.md"><code>docs/code-style.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
+<li>use <strong>4 spaces</strong> for indentation, <strong>do not use tabs</strong><ul>
+<li>for example, use <code>:set tabstop 4</code> and <code>:set expandtab</code> in Vim</li>
 </ul>
-<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_code_style:</span>
-
-<span class="gh">Code style</span>
-<span class="gh">==========</span>
-
-The code style we follow in the EasyBuild code repository is mainly dictated by the Python standard <span class="s">`PEP8`_</span>.
-
-Highlighted PEP8 code style rules:
-
-<span class="m">*</span> use <span class="gs">**4 spaces**</span> for indentation, <span class="gs">**do not use tabs**</span>
-    for example, use <span class="s">``:set tabstop 4``</span> and <span class="s">``:set expandtab``</span> in Vim
-<span class="m">*</span> indent items in a list at an extra 4 spaces
-    nested lists can be indented at the same indentation as the first item in the list if it is on the first line, closing brackets must match visual indentation
-<span class="m">*</span> use <span class="nv">`optional underscores`</span>, not camelCase, for variable, function and method names (i.e. <span class="s">``poll.get_unique_voters()``</span>,
-  <span class="gs">**not**</span> <span class="s">``poll.getUniqueVoters``</span>)
-<span class="m">*</span> use <span class="s">``InitialCaps``</span> for class names
-<span class="m">*</span> in docstrings, don&#39;t use &quot;action words&quot;
-
-The only (major) exception to PEP8 is our preference for longer line lengths: line lengths <span class="gs">**must be limited to 120 characters**</span>, and should by preference be <span class="nv">`shorter than 100 characters`</span> (as opposed to the 80-character limit in PEP8).
-
-<span class="p">..</span> <span class="nt">_PEP8:</span> http://www.python.org/dev/peps/pep-0008
-
-
-<span class="gh">Notes</span>
-<span class="gh">~~~~~</span>
-
-Code style in easyconfig files can be <span class="gs">**automatically checked**</span> using <span class="s">``--check-contrib``</span>, 
-for example: <span class="s">``eb --check-contrib sympy-1.3-intel-2018a-Python-2.7.14.eb``</span> 
-(see <span class="na">:ref:</span><span class="nv">`contributing_review_process_code_style`</span> for more details).
-
-Style guides that go a step beyond PEP8:
- * http://www.gramps-project.org/wiki/index.php?title=Programming_guidelines
- <span class="m">*</span> http://code.google.com/p/volatility/wiki/StyleGuide
-
-Automatic rewriting of Python code: http://pypi.python.org/pypi/PythonTidy/1.22
-
-<span class="s">``pep8``</span> might be a useful tool to check PEP8 compliance: https://github.com/jcrocholl/pep8
-</code></pre></div>
+</li>
+<li>indent items in a list at an extra 4 spaces<ul>
+<li>nested lists can be indented at the same indentation as the first item in the list if it is on the first line, closing brackets must match visual indentation</li>
+</ul>
+</li>
+<li>use <code>optional underscores</code>, not camelCase, for variable, function and method names (i.e. <code>poll.get_unique_voters()</code>, <strong>not</strong> <code>poll.getUniqueVoters</code>)</li>
+<li>use <code>InitialCaps</code> for class names</li>
+<li>in docstrings, don't use "action words"</li>
+</ul>
+<p>The only (major) exception to PEP8 is our preference for longer line lengths: line lengths <strong>must be limited to 120 characters</strong>, and should by preference be <code>shorter than 100 characters</code> (as opposed to the 80-character limit in PEP8).</p>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<p>Code style in easyconfig files can be <strong>automatically checked</strong> using <code>--check-contrib</code>, 
+for example: <code>eb --check-contrib sympy-1.3-intel-2018a-Python-2.7.14.eb</code> 
+(see <a class="autorefs autorefs-internal" href="../contributing/#contributing_review_process_code_style">Code style review</a> for more details).</p>
+<p>Style guides that go a step beyond PEP8:</p>
+<ul>
+<li><a href="https://www.gramps-project.org/wiki/index.php?title=Programming_guidelines">https://www.gramps-project.org/wiki/index.php?title=Programming_guidelines</a></li>
+<li><a href="https://code.google.com/p/volatility/wiki/StyleGuide">https://code.google.com/p/volatility/wiki/StyleGuide</a></li>
+</ul>
+<p>Automatic rewriting of Python code: <a href="http://pypi.python.org/pypi/PythonTidy/1.22">PythonTidy</a></p>
+<p><a href="https://github.com/jcrocholl/pep8"><code>pep8</code></a> might be a useful tool to check PEP8 compliance.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 6, 2022</span>
       
     
   </small>
