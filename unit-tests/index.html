@@ -15,7 +15,7 @@
     
     
       
-        <title>Unit tests - EasyBuild - building software with ease</title>
+        <title>Unit tests {: #unit_tests } - EasyBuild - building software with ease</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#unit-tests" class="md-skip">
+        <a href="#unit_tests" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Unit tests
+              Unit tests {: #unit_tests }
             
           </span>
         </div>
@@ -356,310 +356,199 @@
   </a>
 
 
-<h1 id="unit-tests">Unit tests<a class="headerlink" href="#unit-tests" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/Unit-tests.html">https://docs.easybuild.io/en/latest/Unit-tests.html</a>.</p>
-<p><strong>
-It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
-and you can help with that!
-</strong></p>
-<ul>
-<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Unit-tests.rst"><code>docs/Unit-tests.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
-<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/unit-tests.md"><code>docs/unit-tests.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
-</ul>
-<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_unit_tests:</span>
-
-<span class="gh">Unit tests</span>
-<span class="gh">==========</span>
-
-Since EasyBuild v1.0, an extensive suite of unit tests has been implemented. The unit tests have become an indispensable
-factor in keeping EasyBuild stable and backward-compatible during development.
-
-We refer to the available tests as unit tests, even though they may not be <span class="ge">*unit*</span> tests in the strict sense of the word.
+<h1 id="unit_tests">Unit tests<a class="headerlink" href="#unit_tests" title="Permanent link">&para;</a></h1>
+<p>Since EasyBuild v1.0, an extensive suite of unit tests has been implemented. The unit tests have become an indispensable
+factor in keeping EasyBuild stable and backward-compatible during development.</p>
+<p>We refer to the available tests as unit tests, even though they may not be <em>unit</em> tests in the strict sense of the word.
 Some tests are actually end-to-end tests or integration tests, see also
-http://en.wikipedia.org/wiki/Software_testing#Testing_levels.
-
-Following the test-driven development paradigm, additional unit tests are implemented when new features are added or
-when bugs are uncovered (and fixed).
-
-<span class="p">..</span> <span class="nt">_unit_tests_what:</span>
-
-<span class="gh">What the unit tests are *not*</span>
-<span class="gh">-----------------------------</span>
-
-Each of the EasyBuild unit tests aim to test a specific characteristic of EasyBuild, e.g., a configuration option, a
+<a href="https://en.wikipedia.org/wiki/Software_testing#Testing_levels">https://en.wikipedia.org/wiki/Software_testing#Testing_levels</a>.</p>
+<p>Following the test-driven development paradigm, additional unit tests are implemented when new features are added or
+when bugs are uncovered (and fixed).</p>
+<h2 id="unit_tests_what">What the unit tests are <em>not</em><a class="headerlink" href="#unit_tests_what" title="Permanent link">&para;</a></h2>
+<p>Each of the EasyBuild unit tests aim to test a specific characteristic of EasyBuild, e.g., a configuration option, a
 particular function or method in the EasyBuild framework, some specific feature, how EasyBuild handles a particular
-type of input, etc.
-
-The unit tests do <span class="ge">*not*</span> test the build and installation process of particular supported software packages (other than
+type of input, etc.</p>
+<p>The unit tests do <em>not</em> test the build and installation process of particular supported software packages (other than
 a handful of toy ones included in the tests themselves), let alone test the software installations obtained using
-EasyBuild themselves.
-
-Each stable EasyBuild release is subjected to a (time- and resource-consuming) <span class="ge">*regression test*</span>, however,
-which is out of scope here.
-
-<span class="p">..</span> <span class="nt">_unit_tests_suites:</span>
-
-<span class="gh">Available unit test suites</span>
-<span class="gh">--------------------------</span>
-
-Three different unit test suites are available for EasyBuild, each of which tied to one of the EasyBuild code
-repositories on GitHub: <span class="ge">*EasyBuild framework*</span>, <span class="ge">*easyblocks*</span>, <span class="ge">*easyconfigs*</span>.
-
-<span class="p">..</span> <span class="nt">_unit_tests_framework:</span>
-
-<span class="gh">EasyBuild framework unit tests</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-The unit test suite for the EasyBuild framework is by far the most extensive one, in terms of code size, coverage and
-the amount of effort that is put into it.
-
-These tests probe the functionality provided by the EasyBuild framework, ranging from standard operation (building and
+EasyBuild themselves.</p>
+<p>Each stable EasyBuild release is subjected to a (time- and resource-consuming) <em>regression test</em>, however,
+which is out of scope here.</p>
+<h2 id="unit_tests_suites">Available unit test suites<a class="headerlink" href="#unit_tests_suites" title="Permanent link">&para;</a></h2>
+<p>Three different unit test suites are available for EasyBuild, each of which tied to one of the EasyBuild code
+repositories on GitHub: <em>EasyBuild framework</em>, <em>easyblocks</em>, <em>easyconfigs</em>.</p>
+<h3 id="unit_tests_framework">EasyBuild framework unit tests<a class="headerlink" href="#unit_tests_framework" title="Permanent link">&para;</a></h3>
+<p>The unit test suite for the EasyBuild framework is by far the most extensive one, in terms of code size, coverage and
+the amount of effort that is put into it.</p>
+<p>These tests probe the functionality provided by the EasyBuild framework, ranging from standard operation (building and
 installing software, and generating module files) to specific configuration options, selected functional aspects,
-optional features and edge cases.
-
-At the time of writing (EasyBuild v2.0), more than 250 tests were implemented, organised in 28 subgroups.
-
-Running the full EasyBuild framework unit test suite takes about 15-40 minutes, depending on your system resources and
-testing configuration (see for example https://jenkins1.ugent.be/view/EasyBuild/).
-
-<span class="p">..</span> <span class="nt">_unit_tests_easyblocks:</span>
-
-<span class="gh">easyblocks unit tests</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~</span>
-
-The easyblocks unit test suite consists of a coupe of light-weight tests that are run per easyblock:
-
-<span class="m">*</span> initialising the easyblock, to check for Python syntax errors and faulty imports
-<span class="m">*</span> checking for the use of deprecated (or no longer supported) functionality
-
-Running the full easyblocks unit test suite takes less than one minute.
-
-<span class="p">..</span> <span class="nt">_unit_tests_easyconfigs:</span>
-
-<span class="gh">easyconfigs unit tests</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~</span>
-
-The easyconfigs unit test suite consists a couple of tests for each of the available easyconfig files, followed by two
-large-scale overall tests.
-
-For each of the available easyconfig files, the following aspects are tested:
-
-<span class="m">*</span> parsing the easyconfig file, to make sure no syntax errors are present
-<span class="m">*</span> verifying that the filename matches the contents of the easyconfig file (software name/version, version suffix and
-  toolchain name/version)
-<span class="m">*</span> creating an <span class="s">``EasyBlock``</span> instance using the parsed easyconfig, to check whether mandatory easyconfig parameters
-  are defined
-<span class="m">*</span> ensuring that all required patch files are available (right next to the easyconfig file)
-<span class="m">*</span> making sure that the specified sanity check paths adhere to the requirements, i.e. only (and both) the <span class="s">``files``</span>/<span class="s">``dirs``</span>
-  keys are listed, with the value for either one being non-empty
-<span class="m">*</span> checking for the use of deprecated (or no longer supported) functionality
-<span class="m">*</span> verifying whether <span class="s">``eb --check-style``</span> on the easyconfig file passes
-<span class="m">*</span> ensuring SHA256 checksums are included in new or changed easyconfig files
-
-If these tests pass for each and every available easyconfig file, two additional overall tests are run, i.e.:
-
-<span class="m">*</span> ensuring that an easyconfig file is available for each specified dependency
-<span class="m">*</span> checking whether any version conflicts occur in the dependency graph for each easyconfig file
-
-Running the full easyconfigs unit test suite should only take a couple of minutes.
-
-
-<span class="p">..</span> <span class="nt">_unit_tests_applications:</span>
-
-<span class="gh">Applications</span>
-<span class="gh">------------</span>
-
-The unit test suites are automatically triggered by <span class="s">`Jenkins </span><span class="si">&lt;https://jenkins1.ugent.be&gt;</span><span class="s">`_</span> for:
-
-<span class="m">*</span> each pull request (update), see https://jenkins1.ugent.be/view/pull-request-builder/
-<span class="m">*</span> each (set of) change(s) that is merged in (usually via a pull request)
-
-The status of the different unit test suites is tracked separately for the <span class="s">``main``</span> and <span class="s">``develop``</span> branches
-of the EasyBuild code repositories:
-
-<span class="m">*</span> <span class="s">``main``</span> (stable, latest EasyBuild release): https://jenkins1.ugent.be/view/EasyBuild/
-<span class="m">*</span> <span class="s">``develop``</span> (development, potentially unstable): https://jenkins1.ugent.be/view/EasyBuild%20(develop)/
-
-We strictly adher to the policy of only merging pull requests for which the corresponding (latest) run of the <span class="ge">*full*</span> unit
-test suite passes successfully.
-
-
-<span class="p">..</span> <span class="nt">_unit_tests_usage:</span>
-
-<span class="gh">Usage</span>
-<span class="gh">-----</span>
-
-Using the unit tests is deliberately kept very simple.
-
-<span class="p">..</span> <span class="nt">_unit_tests_config:</span>
-
-<span class="gh">Configuration</span>
-<span class="gh">~~~~~~~~~~~~~</span>
-
-Since EasyBuild v2.0, the unit test suites are fully isolated from any (system- or user-level)
-EasyBuild configuration which is in place in the environment where the tests are being run.
-
-The easyblocks and easyconfigs unit test suite are oblivious to any defined configuration options.
-
-For the EasyBuild framework unit tests, all configuration files and <span class="s">``EASYBUILD_``</span>-prefixed environment variables
-are ignored (see also <span class="na">:ref:</span><span class="nv">`configuration_types:`</span>).
-
-To enable running the EasyBuild framework unit test suite under a specific configuration that differs from
-the default, environment variables can be defined for each of the configuration options supported by EasyBuild.
-
-Before starting a set of EasyBuild framework tests, all defined environment variables for which the name is prefixed by
-<span class="s">``TEST_EASYBUILD_``</span> will be injected into the test environment as environment variables prefixed with <span class="s">``EASYBUILD_``</span>
-instead. Thus, to set a particular configuration option <span class="s">``--foo``</span>, you should define the environment variable
-<span class="s">``$TEST_EASYBUILD_FOO``</span>.
-
-<span class="p">..</span> <span class="nt">_unit_tests_modules_tool:</span>
-
-<span class="gh">Modules tool to use for running tests</span>
-<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
-
-One particular configuration option worth mentioning explicitly is the modules tool that is to be used by the EasyBuild
-framework, which is by default the traditional Tcl/C environment modules, referred to as <span class="s">``EnvironmentModulesC``</span> in
-EasyBuild configuration terms (see <span class="s">``eb --help``</span> and <span class="s">``eb --avail-modules-tools``</span>).
-
-To run the EasyBuild framework unit tests with a particular modules tool, simply define the
-<span class="s">``$TEST_EASYBUILD_MODULES_TOOL``</span> environment variable with the corresponding value. For example<span class="se">::</span>
-
-<span class="s">  export TEST_EASYBUILD_MODULES_TOOL=Lmod</span>
-
-Just like for EasyBuild itself, the EasyBuild framework unit test suite expects that the modules tool binary/script
-(<span class="s">``modulecmd``</span>, <span class="s">``modulecmd.tcl``</span> or <span class="s">``lmod``</span>) is available via <span class="s">``$PATH``</span>, see <span class="na">:ref:</span><span class="nv">`required_modules_tool`</span>.
-
-<span class="p">..</span> <span class="nt">_unit_tests_github_token:</span>
-
-<span class="gh">Installing a GitHub token for the unit tests</span>
-<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
-
-Some of the EasyBuild framework unit tests require that a GitHub token is in place for the <span class="s">``easybuild_test``</span> user,
-in a non-encrypted keyring (so it can be obtained without having to provide a password).
-
-This can be done as follows (copy-paste the GitHub token at the <span class="s">``Password:``</span> prompt)<span class="se">::</span>
-
-<span class="s">    $ python</span>
-<span class="s">    &gt;&gt;&gt; import getpass, keyring</span>
-<span class="s">    &gt;&gt;&gt; keyring.set_keyring(keyring.backends.file.PlaintextKeyring())</span>
-<span class="s">    &gt;&gt;&gt; keyring.set_password(&#39;github_token&#39;, &#39;easybuild_test&#39;, getpass.getpass())</span>
-<span class="s">    Password:</span>
-<span class="s">    &gt;&gt;&gt; exit()</span>
-
-More details about obtaining and installing a GitHub token in your keyring are available at
-https://github.com/easybuilders/easybuild/wiki/Review-process-for-contributions#setting-things-up.
-
-<span class="p">..</span> <span class="nt">_unit_tests_running:</span>
-
-<span class="gh">Running</span>
-<span class="gh">~~~~~~~</span>
-
-To run a full unit test suite, simply run the respective <span class="s">``suite``</span> Python module.
-
-<span class="m">*</span> EasyBuild framework: <span class="s">``python -m test.framework.suite``</span>
-<span class="m">*</span> easyblocks: <span class="s">``python -m test.easyblocks.suite``</span>
-<span class="m">*</span> easyconfigs: <span class="s">``python -m test.easyconfigs.suite``</span>
-
-For the EasyBuild framework unit tests, each of the test subgroups can be run separately via a dedicated Python module
-other than <span class="s">``suite``</span>, to focus on testing a particular aspect. See
-https://github.com/easybuilders/easybuild-framework/tree/main/test/framework for an overview of the available Python
-modules corresponding to subgroups of tests (note: <span class="s">``__init__.py``</span> and <span class="s">``utilities.py``</span> are <span class="ge">*not*</span> such modules).
-
-For example, to run the full EasyBuild framework unit test suite using Lmod as a modules tool<span class="se">::</span>
-
-<span class="s">    $ export TEST_EASYBUILD_MODULES_TOOL=Lmod</span>
-<span class="s">    $ python -m test.framework.suite</span>
-
-To only run the subgroup of tests for <span class="s">``filetools``</span><span class="se">::</span>
-
-<span class="s">    $ python -m test.framework.filetools</span>
-
-Since EasyBuild v2.8.2, tests can be <span class="ge">*filtered*</span> by name. Simply add the string to filter with to the test command.
-
-For example, to run only the tests containing the word <span class="s">``load``</span> in the subgroup <span class="s">``modules``</span>, run<span class="se">::</span>
-
-<span class="s">    $ python -m test.framework.modules load</span>
-
-<span class="s">    Filtered ModulesTest tests using &#39;load&#39;, retained 2/19 tests: test_load, test_load_in_hierarchy</span>
-<span class="s">    ..</span>
-<span class="s">    ----------------------------------------------------------------------</span>
-<span class="s">    Ran 2 tests in 2.688s</span>
-
-<span class="s">    OK</span>
-
-
-This works with as many filter words as you want to use. For example, to run every test method in <span class="s">``modules``</span>
-containing the words <span class="s">``load``</span> or <span class="s">``bash``</span>: <span class="se">::</span>
-
-<span class="s">    $ python -m test.framework.modules load bash</span>
-
-
-
-<span class="p">..</span> <span class="nt">_unit_tests_results:</span>
-
-<span class="gh">Results</span>
-<span class="gh">~~~~~~~</span>
-
-The test results will be printed as the unit test suite progresses, potentially producing a lot of information for
+optional features and edge cases.</p>
+<p>At the time of writing (EasyBuild v2.0), more than 250 tests were implemented, organised in 28 subgroups.</p>
+<p>Running the full EasyBuild framework unit test suite takes about 15-40 minutes, depending on your system resources and
+testing configuration.</p>
+<h3 id="unit_tests_easyblocks">easyblocks unit tests<a class="headerlink" href="#unit_tests_easyblocks" title="Permanent link">&para;</a></h3>
+<p>The easyblocks unit test suite consists of a coupe of light-weight tests that are run per easyblock:</p>
+<ul>
+<li>initialising the easyblock, to check for Python syntax errors and faulty imports</li>
+<li>checking for the use of deprecated (or no longer supported) functionality</li>
+</ul>
+<p>Running the full easyblocks unit test suite takes less than one minute.</p>
+<h3 id="unit_tests_easyconfigs">easyconfigs unit tests<a class="headerlink" href="#unit_tests_easyconfigs" title="Permanent link">&para;</a></h3>
+<p>The easyconfigs unit test suite consists a couple of tests for each of the available easyconfig files, followed by two
+large-scale overall tests.</p>
+<p>For each of the available easyconfig files, the following aspects are tested:</p>
+<ul>
+<li>parsing the easyconfig file, to make sure no syntax errors are present</li>
+<li>verifying that the filename matches the contents of the easyconfig file (software name/version, version suffix and
+  toolchain name/version)</li>
+<li>creating an <code>EasyBlock</code> instance using the parsed easyconfig, to check whether mandatory easyconfig parameters
+  are defined</li>
+<li>ensuring that all required patch files are available (right next to the easyconfig file)</li>
+<li>making sure that the specified sanity check paths adhere to the requirements, i.e. only (and both) the <code>files</code>/<code>dirs</code>
+  keys are listed, with the value for either one being non-empty</li>
+<li>checking for the use of deprecated (or no longer supported) functionality</li>
+<li>verifying whether <code>eb --check-style</code> on the easyconfig file passes</li>
+<li>ensuring SHA256 checksums are included in new or changed easyconfig files</li>
+</ul>
+<p>If these tests pass for each and every available easyconfig file, two additional overall tests are run, i.e.:</p>
+<ul>
+<li>ensuring that an easyconfig file is available for each specified dependency</li>
+<li>checking whether any version conflicts occur in the dependency graph for each easyconfig file</li>
+</ul>
+<p>Running the full easyconfigs unit test suite should only take a couple of minutes.</p>
+<h2 id="unit_tests_applications">Applications<a class="headerlink" href="#unit_tests_applications" title="Permanent link">&para;</a></h2>
+<p>The unit test suites are automatically triggered for:</p>
+<ul>
+<li>each pull request (update)</li>
+<li>each (set of) change(s) that is merged in (usually via a pull request)</li>
+</ul>
+<p>The status of the different unit test suites is tracked separately for the <code>main</code> and <code>develop</code> branches
+of the EasyBuild code repositories:</p>
+<ul>
+<li><code>main</code> (stable, latest EasyBuild release)</li>
+<li><code>develop</code> (development, potentially unstable)</li>
+</ul>
+<p>We strictly adhere to the policy of only merging pull requests for which the corresponding (latest) run of the <em>full</em> unit
+test suite passes successfully.</p>
+<h2 id="unit_tests_usage">Usage<a class="headerlink" href="#unit_tests_usage" title="Permanent link">&para;</a></h2>
+<p>Using the unit tests is deliberately kept very simple.</p>
+<h3 id="unit_tests_config">Configuration<a class="headerlink" href="#unit_tests_config" title="Permanent link">&para;</a></h3>
+<p>Since EasyBuild v2.0, the unit test suites are fully isolated from any (system- or user-level)
+EasyBuild configuration which is in place in the environment where the tests are being run.</p>
+<p>The easyblocks and easyconfigs unit test suite are oblivious to any defined configuration options.</p>
+<p>For the EasyBuild framework unit tests, all configuration files and <code>EASYBUILD_</code>-prefixed environment variables
+are ignored.</p>
+<p>To enable running the EasyBuild framework unit test suite under a specific configuration that differs from
+the default, environment variables can be defined for each of the configuration options supported by EasyBuild.</p>
+<p>Before starting a set of EasyBuild framework tests, all defined environment variables for which the name is prefixed by
+<code>TEST_EASYBUILD_</code> will be injected into the test environment as environment variables prefixed with <code>EASYBUILD_</code>
+instead. Thus, to set a particular configuration option <code>--foo</code>, you should define the environment variable
+<code>$TEST_EASYBUILD_FOO</code>.</p>
+<h4 id="unit_tests_modules_tool">Modules tool to use for running tests<a class="headerlink" href="#unit_tests_modules_tool" title="Permanent link">&para;</a></h4>
+<p>One particular configuration option worth mentioning explicitly is the modules tool that is to be used by the EasyBuild
+framework, which is by default the traditional Tcl/C environment modules, referred to as <code>EnvironmentModulesC</code> in
+EasyBuild configuration terms (see <code>eb --help</code> and <code>eb --avail-modules-tools</code>).</p>
+<p>To run the EasyBuild framework unit tests with a particular modules tool, simply define the
+<code>$TEST_EASYBUILD_MODULES_TOOL</code> environment variable with the corresponding value. For example::</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">TEST_EASYBUILD_MODULES_TOOL</span><span class="o">=</span>Lmod
+</code></pre></div>
+<p>Just like for EasyBuild itself, the EasyBuild framework unit test suite expects that the modules tool binary/script
+(<code>modulecmd</code>, <code>modulecmd.tcl</code> or <code>lmod</code>) is available via <code>$PATH</code>, see <a class="autorefs autorefs-internal" href="../installation/#required_modules_tool">Required modules tool</a>.</p>
+<h4 id="unit_tests_github_token">Installing a GitHub token for the unit tests<a class="headerlink" href="#unit_tests_github_token" title="Permanent link">&para;</a></h4>
+<p>Some of the EasyBuild framework unit tests require that a GitHub token is in place for the <code>easybuild_test</code> user,
+in a non-encrypted keyring (so it can be obtained without having to provide a password).</p>
+<p>This can be done as follows (copy-paste the GitHub token at the <code>Password:</code> prompt)::</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>python
+<span class="go">&gt;&gt;&gt; import getpass, keyring</span>
+<span class="go">&gt;&gt;&gt; keyring.set_keyring(keyring.backends.file.PlaintextKeyring())</span>
+<span class="go">&gt;&gt;&gt; keyring.set_password(&#39;github_token&#39;, &#39;easybuild_test&#39;, getpass.getpass())</span>
+<span class="go">Password:</span>
+<span class="go">&gt;&gt;&gt; exit()</span>
+</code></pre></div>
+<p>More details about obtaining and installing a GitHub token in your keyring are available at
+<a href="https://github.com/easybuilders/easybuild/wiki/Review-process-for-contributions#setting-things-up">https://github.com/easybuilders/easybuild/wiki/Review-process-for-contributions#setting-things-up</a>.</p>
+<h4 id="unit_tests_running">Running<a class="headerlink" href="#unit_tests_running" title="Permanent link">&para;</a></h4>
+<p>To run a full unit test suite, simply run the respective <code>suite</code> Python module.</p>
+<ul>
+<li>EasyBuild framework: <code>python -m test.framework.suite</code></li>
+<li>easyblocks: <code>python -m test.easyblocks.suite</code></li>
+<li>easyconfigs: <code>python -m test.easyconfigs.suite</code></li>
+</ul>
+<p>For the EasyBuild framework unit tests, each of the test subgroups can be run separately via a dedicated Python module
+other than <code>suite</code>, to focus on testing a particular aspect. See
+<a href="https://github.com/easybuilders/easybuild-framework/tree/main/test/framework">https://github.com/easybuilders/easybuild-framework/tree/main/test/framework</a> for an overview of the available Python
+modules corresponding to subgroups of tests (note: <code>__init__.py</code> and <code>utilities.py</code> are <em>not</em> such modules).</p>
+<p>For example, to run the full EasyBuild framework unit test suite using Lmod as a modules tool::</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">TEST_EASYBUILD_MODULES_TOOL</span><span class="o">=</span>Lmod
+python -m test.framework.suite
+</code></pre></div>
+<p>To only run the subgroup of tests for <code>filetools</code>::</p>
+<div class="highlight"><pre><span></span><code>python -m test.framework.filetools
+</code></pre></div>
+<p>Since EasyBuild v2.8.2, tests can be <em>filtered</em> by name. Simply add the string to filter with to the test command.</p>
+<p>For example, to run only the tests containing the word <code>load</code> in the subgroup <code>modules</code>, run::</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>python -m test.framework.modules load
+
+<span class="go">Filtered ModulesTest tests using &#39;load&#39;, retained 2/19 tests: test_load, test_load_in_hierarchy</span>
+<span class="go">..</span>
+<span class="go">----------------------------------------------------------------------</span>
+<span class="go">Ran 2 tests in 2.688s</span>
+
+<span class="go">OK</span>
+</code></pre></div>
+<p>This works with as many filter words as you want to use. For example, to run every test method in <code>modules</code>
+containing the words <code>load</code> or <code>bash</code>:</p>
+<div class="highlight"><pre><span></span><code>python -m test.framework.modules load bash
+</code></pre></div>
+<h3 id="unit_tests_results">Results<a class="headerlink" href="#unit_tests_results" title="Permanent link">&para;</a></h3>
+<p>The test results will be printed as the unit test suite progresses, potentially producing a lot of information for
 failing tests to help determine the cause of the failure. It may thus be useful to capture the output for later inspection,
-for example<span class="se">::</span>
+for example::</p>
+<div class="highlight"><pre><span></span><code>python -m test.framework.suite <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> tee eb_test.log
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some tests will be skipped deliberately, because of missing optional dependencies or other provisions, for example
+a GitHub token. The output of the unit tests will clearly indicate which tests were skipped.</p>
+</div>
+<h4 id="unit_tests_examples">Examples<a class="headerlink" href="#unit_tests_examples" title="Permanent link">&para;</a></h4>
+<p>A successful run of the EasyBuild framework test suite, without skipped tests::</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>python -m test.framework.suite
+<span class="go">Running tests...</span>
+<span class="go">----------------------------------------------------------------------</span>
+<span class="go">..........................................................................................................................................................................................................................................................</span>
+<span class="go">----------------------------------------------------------------------</span>
+<span class="go">Ran 250 tests in 1404.897s</span>
 
-<span class="s">    python -m test.framework.suite 2&gt;&amp;1 | tee eb_test.log</span>
+<span class="go">OK</span>
+</code></pre></div>
+<p>A run with a couple of deliberately skipped tests and a single failed test (denoted by <code>F</code>), along with the
+corresponding traceback::</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>python -m test.framework.suite
+<span class="go">Running tests...</span>
+<span class="go">----------------------------------------------------------------------</span>
+<span class="go">................Skipping test_from_pr, no GitHub token available?</span>
+<span class="go">.Skipping test_from_pr, no GitHub token available?</span>
+<span class="go">......F..............(skipping GitRepository test)</span>
+<span class="go">..(skipping SvnRepository test)</span>
+<span class="go">..................................................................................................................Skipping test_fetch_easyconfigs_from_pr, no GitHub token available?</span>
+<span class="go">.Skipping test_read, no GitHub token available?</span>
+<span class="go">.Skipping test_read_api, no GitHub token available?</span>
+<span class="go">.Skipping test_walk, no GitHub token available?</span>
+<span class="go">.............................................................................................</span>
+<span class="go">======================================================================</span>
+<span class="go">FAIL: Test listing easyblock hierarchy.</span>
+<span class="go">----------------------------------------------------------------------</span>
+<span class="go">Traceback (most recent call last):</span>
+<span class="go">  File &quot;/tmp/example/easybuild-framework/test/framework/options.py&quot;, line 544, in test_list_easyblocks</span>
+<span class="go">    self.assertTrue(re.search(pat, outtxt), &quot;Pattern &#39;%s&#39; is found in output of --list-easyblocks: %s&quot; % (pat, outtxt))</span>
+<span class="go">AssertionError: Pattern &#39;EasyBlock\n&#39; is found in output of --list-easyblocks:</span>
 
+<span class="go">----------------------------------------------------------------------</span>
+<span class="go">Ran 250 tests in 2641.200s</span>
 
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
-    Some tests will be skipped deliberately, because of missing optional dependencies or other provisions, for example
-    a GitHub token. The output of the unit tests will clearly indicate which tests were skipped.
-
-<span class="p">..</span> <span class="nt">_unit_tests_examples:</span>
-
-<span class="gh">Examples</span>
-<span class="gh">^^^^^^^^</span>
-
-A successful run of the EasyBuild framework test suite, without skipped tests<span class="se">::</span>
-
-<span class="s">    $ python -m test.framework.suite</span>
-<span class="s">    Running tests...</span>
-<span class="s">    ----------------------------------------------------------------------</span>
-<span class="s">    ..........................................................................................................................................................................................................................................................</span>
-<span class="s">    ----------------------------------------------------------------------</span>
-<span class="s">    Ran 250 tests in 1404.897s</span>
-
-<span class="s">    OK</span>
-
-A run with a couple of deliberately skipped tests and a single failed test (denoted by <span class="s">``F``</span>), along with the
-corresponding traceback<span class="se">::</span>
-
-<span class="s">    $ python -m test.framework.suite</span>
-<span class="s">    Running tests...</span>
-<span class="s">    ----------------------------------------------------------------------</span>
-<span class="s">    ................Skipping test_from_pr, no GitHub token available?</span>
-<span class="s">    .Skipping test_from_pr, no GitHub token available?</span>
-<span class="s">    ......F..............(skipping GitRepository test)</span>
-<span class="s">    ..(skipping SvnRepository test)</span>
-<span class="s">    ..................................................................................................................Skipping test_fetch_easyconfigs_from_pr, no GitHub token available?</span>
-<span class="s">    .Skipping test_read, no GitHub token available?</span>
-<span class="s">    .Skipping test_read_api, no GitHub token available?</span>
-<span class="s">    .Skipping test_walk, no GitHub token available?</span>
-<span class="s">    .............................................................................................</span>
-<span class="s">    ======================================================================</span>
-<span class="s">    FAIL: Test listing easyblock hierarchy.</span>
-<span class="s">    ----------------------------------------------------------------------</span>
-<span class="s">    Traceback (most recent call last):</span>
-<span class="s">      File &quot;/tmp/example/easybuild-framework/test/framework/options.py&quot;, line 544, in test_list_easyblocks</span>
-<span class="s">        self.assertTrue(re.search(pat, outtxt), &quot;Pattern &#39;%s&#39; is found in output of --list-easyblocks: %s&quot; % (pat, outtxt))</span>
-<span class="s">    AssertionError: Pattern &#39;EasyBlock\n&#39; is found in output of --list-easyblocks:</span>
-
-<span class="s">    ----------------------------------------------------------------------</span>
-<span class="s">    Ran 250 tests in 2641.200s</span>
-
-<span class="s">    FAILED (failures=1)</span>
-<span class="s">    ERROR: Not all tests were successful.</span>
-<span class="s">    Log available at /tmp/example/easybuild-dy2ZTx/easybuild-tests-l0doQ2.log</span>
+<span class="go">FAILED (failures=1)</span>
+<span class="go">ERROR: Not all tests were successful.</span>
+<span class="go">Log available at /tmp/example/easybuild-dy2ZTx/easybuild-tests-l0doQ2.log</span>
 </code></pre></div>
 
   <hr>
@@ -667,7 +556,7 @@ corresponding traceback<span class="se">::</span>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 8, 2022</span>
       
     
   </small>
