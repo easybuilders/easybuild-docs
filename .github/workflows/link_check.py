@@ -56,7 +56,7 @@ def main():
             fail_info.append(f"\"{k}\" is used in {len(v)} locations: {v}")
 
     if tests_fail:
-        print("Internal link tests failed!")
+        print("Internal link tests failed! Each link definition name should appear only once.\n")
         print('\n'.join(fail_info))
         raise SystemExit(1)
     else:
