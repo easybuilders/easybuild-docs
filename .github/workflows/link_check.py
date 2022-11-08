@@ -1,12 +1,23 @@
 #!/usr/bin/env python
 
+"""
+Script to raise an error if there are any duplicated internal links
+Designed for use in Github actions.
+"""
+
 import os
 import re
 
 intlnk_regex = re.compile(r".*{:(\s*)#(\w+)(\s*)}")
 
 
-def check_file(filepath, link_dict):
+def check_for_links(filepath, link_dict):
+    """Search Markdown file for occurrences of any internal links
+
+    Args:
+        filepath (string): path to Markdown file
+        link_dict (dict): instance of dictionary
+    """
 
     with open(filepath) as fh:
         for index, line in enumerate(fh.readlines(), 1):
@@ -21,6 +32,12 @@ def check_file(filepath, link_dict):
 
 
 def main():
+    """Traverse the "docs" directory and locate all Markdown files.
+    Determine whether there are any duplicate entries in the parsed files.
+
+    Raises:
+        SystemExit: Exits with code "1" if any duplicates are discovered.
+    """
 
     link_dict = {}
 
@@ -31,12 +48,12 @@ def main():
         for file in files:
             if file.endswith('.md'):
                 filepath = os.path.join(root, file)
-                check_file(filepath, link_dict)
+                check_for_links(filepath, link_dict)
 
     for k, v in link_dict.items():
         if len(v) > 1:
             tests_fail = True
-            fail_info.append(f"\"{k}\" is used in {len(v)} files: {v}")
+            fail_info.append(f"\"{k}\" is used in {len(v)} locations: {v}")
 
     if tests_fail:
         print("Internal link tests failed!")
