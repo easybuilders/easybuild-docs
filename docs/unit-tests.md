@@ -95,7 +95,7 @@ of the EasyBuild code repositories:
 * `main` (stable, latest EasyBuild release)
 * `develop` (development, potentially unstable)
 
-We strictly adher to the policy of only merging pull requests for which the corresponding (latest) run of the *full* unit
+We strictly adhere to the policy of only merging pull requests for which the corresponding (latest) run of the *full* unit
 test suite passes successfully.
 
 
