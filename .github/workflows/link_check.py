@@ -53,12 +53,12 @@ def main():
     for k, v in link_dict.items():
         if len(v) > 1:
             tests_fail = True
-            fail_info.append(f"\"{k}\" is used in {len(v)} locations: {v}")
+            fail_info.append(f"\n##[error]'{k}' is used in {len(v)} locations: {v}")
 
     if tests_fail:
-        print("Internal link tests failed! Each link definition name should appear only once.\n")
-        print('\n'.join(fail_info))
-        raise SystemExit(1)
+        msg = "##[error]Internal link tests failed! Each link definition name should appear only once."
+        msg = f"{msg}{''.join(fail_info)}"
+        raise SystemExit(msg)
     else:
         print("Link check tests successful")
 
