@@ -8,7 +8,7 @@ Designed for use in Github actions.
 import os
 import re
 
-intlnk_regex = re.compile(r".*{:(\s*)#(\w+)(\s*)}")
+INT_LNK_REGEX = re.compile(r".*{:(\s*)#(\w+)(\s*)}")
 
 
 def check_for_links(filepath, link_dict):
@@ -22,7 +22,7 @@ def check_for_links(filepath, link_dict):
     with open(filepath) as fh:
         for index, line in enumerate(fh.readlines(), 1):
             path_line = f"{filepath}#L{index}"
-            match = intlnk_regex.match(line)
+            match = INT_LNK_REGEX.match(line)
             if match:
                 if match[2] in link_dict:
                     if path_line not in link_dict[match[2]]:
