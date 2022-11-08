@@ -144,7 +144,7 @@ eb Python-2.7.9-CrayGNU-2015.06.eb -dr
 
 ### WRF
 
-* <https://www.wrf-model.org>
+* <https://www2.mmm.ucar.edu/wrf/users/>
 * version(s): 3.6.1
 
 ``` shell
