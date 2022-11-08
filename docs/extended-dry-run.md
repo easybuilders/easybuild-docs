@@ -2,6 +2,10 @@
 
 ## Extended dry run: examples {: #extended_dry_run_examples }
 
+### Errors are ignored (by default) during dry run {: #extended_dry_run_notes_ignored_errors }
+
+### Detecting dry run mode and enhancing the dry run output {: #extended_dry_run_guidelines_easyblocks_detect_dry_run }
+
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Extended_dry_run.html>.
 

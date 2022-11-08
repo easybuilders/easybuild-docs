@@ -1,4 +1,4 @@
-# Available easyconfig parameters
+# Available easyconfig parameters {: #vsd_avail_easyconfig_params }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/version-specific/easyconfig_parameters.html>.
