@@ -9,14 +9,15 @@ intlnk_regex = re.compile(r".*{:(\s*)#(\w+)(\s*)}")
 def check_file(filepath, link_dict):
 
     with open(filepath) as fh:
-        for line in fh.readlines():
+        for index, line in enumerate(fh.readlines(), 1):
+            path_line = f"{filepath}#L{index}"
             match = intlnk_regex.match(line)
             if match:
                 if match[2] in link_dict:
-                    if filepath not in link_dict[match[2]]:
-                        link_dict[match[2]].append(filepath)
+                    if path_line not in link_dict[match[2]]:
+                        link_dict[match[2]].append(path_line)
                 else:
-                    link_dict[match[2]] = [filepath]
+                    link_dict[match[2]] = [path_line]
 
 
 def main():
