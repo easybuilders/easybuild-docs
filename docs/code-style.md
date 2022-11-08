@@ -30,3 +30,4 @@ Style guides that go a step beyond PEP8:
 Automatic rewriting of Python code: [PythonTidy](http://pypi.python.org/pypi/PythonTidy/1.22)
 
 [`pep8`](https://github.com/jcrocholl/pep8) might be a useful tool to check PEP8 compliance.
+
