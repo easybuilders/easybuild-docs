@@ -1,5 +1,7 @@
 # List of easyblocks
 
+## Overview of generic easyblocks {: #generic_easyblocks }
+
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/version-specific/easyblocks.html>.
 

@@ -1,5 +1,7 @@
 # Partial installations
 
+## Only (re)generating (additional) module files using --module-only {: #module_only }
+
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Partial_installations.html>.
 
