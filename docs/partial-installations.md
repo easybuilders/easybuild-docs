@@ -250,12 +250,12 @@ Examples:
      -rw-rw-r-- 1 example example 1249 Apr 30 11:56 /home/example/.local/modules/all/GCC/4.8.2.lua
      ```
 
-     !!! note
-         Since only Lmod can consume module files in Lua syntax, it must be used as a modules tool;
-         see also [Module files syntax (`--module-syntax`)][module_syntax].
+    !!! note
+        Since only Lmod can consume module files in Lua syntax, it must be used as a modules tool;
+        see also [Module files syntax (`--module-syntax`)][module_syntax].
 
-         Only changing the syntax of the module file does not affect the module name, so Lmod will
-         report the module as being available. Hence, `--rebuild` must be used here as well.
+        Only changing the syntax of the module file does not affect the module name, so Lmod will
+        report the module as being available. Hence, `--rebuild` must be used here as well.
 
 * to generate a module file using a different naming scheme, `--module-only` can be combined with
   `--module-naming-scheme`:
@@ -277,27 +277,27 @@ Examples:
      Core/GCC/4.8.2
      ```
 
-     !!! note
-         Modules that are generated used different module naming schemes should *never* be mixed, hence the use
-         of `--installpath-modules`, see also [Direct options: `--installpath-software` and `--installpath-modules`][installpath_direct_options].
+    !!! note
+        Modules that are generated used different module naming schemes should *never* be mixed, hence the use
+        of `--installpath-modules`, see also [Direct options: `--installpath-software` and `--installpath-modules`][installpath_direct_options].
 
-     !!! note
-         The modules files generated using the specified module naming scheme will most likely **not** be tied to
-         an existing software installation in this case (unless the software installation was already there somehow),
-         since the name of the subdirectory of the software installation prefix is also governed by the active
-         module naming scheme. This is also why `--rebuild` must be used in the example above (to skip the sanity
-         check that verifies the software installation).
+    !!! note
+        The modules files generated using the specified module naming scheme will most likely **not** be tied to
+        an existing software installation in this case (unless the software installation was already there somehow),
+        since the name of the subdirectory of the software installation prefix is also governed by the active
+        module naming scheme. This is also why `--rebuild` must be used in the example above (to skip the sanity
+        check that verifies the software installation).
 
-         Thus, this is only useful to assess how the module tree would look like under a particular module naming
-         scheme; the modules themselves are useless since they point to empty installation directories.
+        Thus, this is only useful to assess how the module tree would look like under a particular module naming
+        scheme; the modules themselves are useless since they point to empty installation directories.
 
-         To tie a module file generated using to an existing software installation that was performed under a
-         different module naming scheme, a simple module naming scheme can be implemented that mixes two modules
-         naming schemes, by providing the name of the software installation subdirectory using one scheme, and the
-         module names (and other metadata for module files) with the other.
+        To tie a module file generated using to an existing software installation that was performed under a
+        different module naming scheme, a simple module naming scheme can be implemented that mixes two modules
+        naming schemes, by providing the name of the software installation subdirectory using one scheme, and the
+        module names (and other metadata for module files) with the other.
 
-         An example of such a module naming scheme is `MigrateFromEBToHMNS`, which allows to generate module files
-         using the hierarchical module naming scheme implemented by `HierarchicalMNS` for the software installed
-         in subdirectories following the default EasyBuild module naming scheme `EasyBuildMNS`.
-         The `MigrateFromEBToHMNS` module naming scheme is available since EasyBuild v2.2.0.
+        An example of such a module naming scheme is `MigrateFromEBToHMNS`, which allows to generate module files
+        using the hierarchical module naming scheme implemented by `HierarchicalMNS` for the software installed
+        in subdirectories following the default EasyBuild module naming scheme `EasyBuildMNS`.
+        The `MigrateFromEBToHMNS` module naming scheme is available since EasyBuild v2.2.0.
 
