@@ -21,7 +21,7 @@ Easyblocks can either be *generic* or *software-specific*.
 Generic easyblocks implement a 'standard' software build and installation procedure that is used by multiple different
 software packages.
 A commonly used example is the
-[ConfigureMake](https://github.com/easybuilders/easybuild-easyblocks/blob/main/easybuild/easyblocks/generic/configuremake.py>)
+[ConfigureMake](https://github.com/easybuilders/easybuild-easyblocks/blob/main/easybuild/easyblocks/generic/configuremake.py)
 generic easyblock, which implements the standard `configure` - `make` - `make install` installation procedure used
 by most GNU software packages.
 
