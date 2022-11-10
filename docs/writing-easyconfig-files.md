@@ -4,6 +4,8 @@
 
 ### Easyblock specification {: #writing_easyconfigs_easyblock_spec }
 
+## Dynamic values for easyconfig parameters {: #easyconfig_param_templates }
+
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Writing_easyconfig_files.html>.
 
