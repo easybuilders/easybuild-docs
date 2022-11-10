@@ -174,7 +174,7 @@ source_urls: ['http://ftpmirror.gnu.org/gzip/', 'ftp://ftp.gnu.org/gnu/gzip/']
 ```
 
 Alternatively indentation can be used for scope, with each entry on its own line,
-indicated with a dash and a space `- `.
+indicated with a dash and a space `- item`
 
 Example:
 
@@ -243,7 +243,7 @@ See also [Dynamic values for easyconfig parameters][easyconfig_param_templates].
 
 We updated the way dependencies are specified to match with the new toolchain format ([OS dependencies and sanity check paths][easyconfig_yeb_format_new])
 The format is a bit more verbose than before, but easier to read. Each dependency is a list entry, indicated by a dash
-and space (`- `). Each entry can specify a `name: version` key-value pair, and a `versionsuffix` and `toolchain`.
+and space (`- item`). Each entry can specify a `name: version` key-value pair, and a `versionsuffix` and `toolchain`.
 Only the `name: version` pair is required.
 
 Dependencies can also be external modules. In this case, the dependency has to be specified with a `name` and the marker 
