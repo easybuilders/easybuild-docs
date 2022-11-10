@@ -10,7 +10,7 @@
 
 Useful links:
 
-* YAML syntax specification: http://www.yaml.org/spec/1.2/spec.html
+* YAML syntax specification: <https://www.yaml.org/spec/1.2/spec.html>
 
 
 ## Requirements {: #easyconfig_yeb_format_requirements }
