@@ -1,5 +1,7 @@
 # Alternative installation methods {: #alt_inst_methods }
 
+## Installation of latest development version using provided script {: #install_latest_develop_using_script }
+
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Installation_Alternative.html>.
 

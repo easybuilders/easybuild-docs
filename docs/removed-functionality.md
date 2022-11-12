@@ -4,6 +4,12 @@
 
 ### Automagic fallback to ConfigureMake {: #depr_ConfigureMake_fallback_eb1 }
 
+### Options for build command {: #depr_premakeopts_makeopts_eb1 }
+
+### Shared library extension {: #depr_shared_lib_ext_eb1 }
+
+### Software license {: #depr_license_eb1 }
+
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Removed-functionality.html>.
 
