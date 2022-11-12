@@ -1,25 +1,3 @@
-# Writing easyconfig files {: #writing_easyconfig_files }
-
-## What is an easyconfig (file)? {: #what_is_an_easyconfig }
-
-### Easyblock specification {: #writing_easyconfigs_easyblock_spec }
-
-## Dynamic values for easyconfig parameters {: #easyconfig_param_templates }
-
-!!! warning
-    This page will soon replace <https://docs.easybuild.io/en/latest/Writing_easyconfig_files.html>.
-
-    **
-    It still needs to be ported from *reStructuredText* (.rst) to *MarkDown* (.md),  
-    and you can help with that!
-    **
-
-    - source: [`docs/Writing_easyconfig_files.rst` in `easybuilders/easybuild` repo](https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Writing_easyconfig_files.rst)
-    - target: [`docs/writing-easyconfig-files.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/writing-easyconfig-files.md)
-
-    See <https://github.com/easybuilders/easybuild-docs> for more information.
-
-```rst
 .. _writing_easyconfig_files:
 
 Writing easyconfig files: the basics
@@ -941,5 +919,3 @@ Share your expertise with the community, avoid duplicate work, especially if:
 * it is a frequently used software package (compilers, MPI, etc.)
 
 See :ref:`contributing` for more information.
-
-```
