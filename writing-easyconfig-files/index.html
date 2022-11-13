@@ -15,7 +15,7 @@
     
     
       
-        <title>Writing easyconfig files {: #writing_easyconfig_files } - EasyBuild - building software with ease</title>
+        <title>Writing easyconfig files: the basics {: #writing_easyconfig_files } - EasyBuild - building software with ease</title>
       
     
     
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Writing easyconfig files {: #writing_easyconfig_files }
+              Writing easyconfig files: the basics {: #writing_easyconfig_files }
             
           </span>
         </div>
@@ -356,952 +356,866 @@
   </a>
 
 
-<h1 id="writing_easyconfig_files">Writing easyconfig files<a class="headerlink" href="#writing_easyconfig_files" title="Permanent link">&para;</a></h1>
+<h1 id="writing_easyconfig_files">Writing easyconfig files: the basics<a class="headerlink" href="#writing_easyconfig_files" title="Permanent link">&para;</a></h1>
+<p>This page explains all the basic information about how to write
+easyconfig files.</p>
+<p>For software builds that follow established build patterns, an
+easyconfig is all that you need to create in order to build and install
+the software and the corresponding module file.</p>
+<p>Luckily, the majority of software delivery mechanisms are being designed
+around either autotools or CMake or, perhaps, some simple file
+extraction/copy pattern. In that case, a <em>generic easyblock</em> can be
+leveraged; see <a class="autorefs autorefs-internal" href="../version-specific/easyblocks/#generic_easyblocks">Overview of generic easyblocks</a>.</p>
+<p>Yet, in case the software build calls for more elaborate steps
+(scientific software never fails to surprise us in this regard), a
+software-specific easyblock may be required; see
+<a class="autorefs autorefs-internal" href="../implementing-easyblocks/#implementing_easyblocks">Implementing easyblocks</a>.</p>
 <h2 id="what_is_an_easyconfig">What is an easyconfig (file)?<a class="headerlink" href="#what_is_an_easyconfig" title="Permanent link">&para;</a></h2>
-<h3 id="writing_easyconfigs_easyblock_spec">Easyblock specification<a class="headerlink" href="#writing_easyconfigs_easyblock_spec" title="Permanent link">&para;</a></h3>
-<h2 id="easyconfig_param_templates">Dynamic values for easyconfig parameters<a class="headerlink" href="#easyconfig_param_templates" title="Permanent link">&para;</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/Writing_easyconfig_files.html">https://docs.easybuild.io/en/latest/Writing_easyconfig_files.html</a>.</p>
-<p><strong>
-It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
-and you can help with that!
-</strong></p>
-<ul>
-<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Writing_easyconfig_files.rst"><code>docs/Writing_easyconfig_files.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
-<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/writing-easyconfig-files.md"><code>docs/writing-easyconfig-files.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
-</ul>
-<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
+<p>An easyconfig file serves as a <em>build specification</em> for
+EasyBuild.</p>
+<p>It consists of a plain text file (in Python syntax) with mostly
+<em>key-value</em> assignment to define <strong>easyconfig parameters</strong>.</p>
+<p>Easyconfigs typically follow a (fixed) strict naming scheme, i.e.
+<code>&lt;name&gt;-&lt;version&gt;[-&lt;toolchain&gt;][&lt;versionsuffix&gt;].eb</code>.</p>
+<p>The <code>-&lt;toolchain&gt;</code> label (which includes the toolchain name and version)
+is omitted when a <a class="autorefs autorefs-internal" href="../terminology/#system_toolchain"><code>system</code> toolchain</a> is
+used. The <code>&lt;versionsuffix&gt;</code> label is omitted when the version suffix is
+empty.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>the filename of an easyconfig is only important w.r.t.
+dependency resolution (<code>--robot</code>), see <a class="autorefs autorefs-internal" href="../using-easybuild/#use_robot">Enabling dependency resolution</a>.</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_writing_easyconfig_files:</span>
-
-<span class="gh">Writing easyconfig files: the basics</span>
-<span class="gh">====================================</span>
-
-This page explains all the basic information about how to write easyconfig files.
-
-For software builds that follow established build patterns, an easyconfig is all that you need to create in order to
-build and install the software and the corresponding module file.
-
-Luckily, the majority of software delivery mechanisms are being designed around
-either autotools or CMake or, perhaps, some simple file extraction/copy pattern.
-In that case, a <span class="ge">*generic easyblock*</span> can be leveraged; see <span class="na">:ref:</span><span class="nv">`generic_easyblocks`</span>.
-
-Yet, in case the software build calls for more elaborate steps
-(scientific software never fails to surprise us in this regard),
-a software-specific easyblock may be required; see <span class="na">:ref:</span><span class="nv">`implementing_easyblocks`</span>.
-
-<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
-    <span class="nc">:depth:</span> 3
-    <span class="nc">:backlinks:</span> none
-
-<span class="p">..</span> <span class="nt">_what_is_an_easyconfig:</span>
-
-<span class="gh">What is an easyconfig (file)?</span>
-<span class="gh">-----------------------------</span>
-
-An easyconfig file serves as a <span class="nv">`build specification`</span> for EasyBuild.
-
-It consists of a plain text file (in Python syntax) with mostly <span class="nv">`key-value`</span> assignment to define <span class="gs">**easyconfig parameters**</span>.
-
-Easyconfigs typically follow a (fixed) strict naming scheme, i.e.  <span class="s">``&lt;name&gt;-&lt;version&gt;[-&lt;toolchain&gt;][&lt;versionsuffix&gt;].eb``</span>.
-
-The <span class="s">``-&lt;toolchain&gt;``</span> label (which includes the toolchain name and version) is omitted when a <span class="na">:ref:</span><span class="nv">`system_toolchain`</span> is used.
-The <span class="s">``&lt;versionsuffix&gt;``</span> label is omitted when the version suffix is empty.
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> the filename of an easyconfig is only important w.r.t. dependency resolution (<span class="s">``--robot``</span>), see <span class="na">:ref:</span><span class="nv">`use_robot`</span>.
-
-Example:
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
-
-  <span class="c1"># easyconfig file for GCC v4.8.3</span>
-  <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;GCC&#39;</span>
-  <span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;4.8.3&#39;</span>
-  <span class="o">...</span>
-
-<span class="p">..</span> <span class="ow">tip</span><span class="p">::</span> Comments can be included in easyconfig files using the hash (<span class="s">``#``</span>) character (just like in Python code).
-
-<span class="gh">Available easyconfig parameters</span>
-<span class="gh">-------------------------------</span>
-
-About 50 different (generic) easyconfig parameters are supported currently.
-An overview of all available easyconfig parameters is available via the <span class="s">``-a``</span> command line option.
-
-By default, the parameters specific to generic (default) easyblock <span class="s">``ConfigureMake``</span> are included;
-using <span class="s">``--easyblock``</span>/<span class="s">``-e``</span> parameters that are specific to a particular easyblock can be consulted.
-
-See <span class="na">:ref:</span><span class="nv">`easyconfig_params`</span> for more details.
-
-Example<span class="se">::</span>
-
-<span class="s"> $ eb -a -e Binary</span>
-<span class="s"> Available easyconfig parameters (* indicates specific for the Binary EasyBlock)</span>
-<span class="s"> MANDATORY</span>
-<span class="s"> ---------</span>
-<span class="s"> [..]</span>
-<span class="s"> name:           Name of software (default: None)</span>
-<span class="s"> [...]</span>
-<span class="s"> EASYBLOCK-SPECIFIC</span>
-<span class="s"> ------------------</span>
-<span class="s"> install_cmd(*):     Install command to be used. (default: None)</span>
-<span class="s"> [...]</span>
-
-<span class="gh">Mandatory easyconfig parameters</span>
-<span class="gh">-------------------------------</span>
-
-A handful of easyconfig parameters are <span class="nv">`mandatory`</span>:
-
-<span class="m">*</span> <span class="gs">**name, version**</span>: specify what software (version) to build
-<span class="m">*</span> <span class="gs">**homepage, description**</span>: metadata (used for module help)
-<span class="m">*</span> <span class="gs">**toolchain**</span>: specifies name and version of compiler toolchain to use
-
-  <span class="m">*</span> format: dictionary with name/version keys, e.g., <span class="s">``{&#39;name&#39;: &#39;foo&#39;, &#39;version&#39;: &#39;1.2.3&#39;}``</span>
-  <span class="m">*</span> a list of supported toolchains can be found <span class="na">:ref:</span><span class="nv">`here &lt;vsd_list_toolchains&gt;`</span>
-
-Remarks:
-
-<span class="m">*</span> some others are planned to be required in the future
-
-  <span class="m">*</span> <span class="nv">`docurls, software license, software license urls`</span>
-
-Example:
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
-
-  <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;HPL&#39;</span>
-  <span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;2.0&#39;</span>
-
-  <span class="n">homepage</span> <span class="o">=</span> <span class="s1">&#39;http://www.netlib.org/benchmark/hpl/&#39;</span>
-  <span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;High Performance Computing Linpack Benchmark&quot;</span>
-
-  <span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;goolf&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;1.4.10&#39;</span><span class="p">}</span>
-  <span class="p">[</span><span class="o">...</span><span class="p">]</span>
-
-<span class="gh">Common easyconfig parameters</span>
-<span class="gh">----------------------------</span>
-
-This section includes an overview of some commonly used (optional) easyconfig parameters.
-
-<span class="p">..</span> <span class="nt">_common_easyconfig_param_sources:</span>
-
-<span class="gh">Source files, patches and checksums</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-<span class="m">*</span> <span class="gs">**sources**</span>: list of source files (filenames only)
-<span class="m">*</span> <span class="gs">**source urls**</span>: list of URLs where sources can be downloaded
-<span class="m">*</span> <span class="gs">**patches**</span>: list of patch files to be applied (<span class="s">``.patch``</span> extension)
-<span class="m">*</span> <span class="gs">**checksums**</span>: list of checksums for source and patch files
-
-Remarks:
-
-<span class="m">*</span> sources are downloaded (best effort), unless already available
-<span class="m">*</span> proxy settings are taken into account, since the <span class="s">`urllib2 Python package </span><span class="si">&lt;https://docs.python.org/2/library/urllib2.html&gt;</span><span class="s">`_</span>
-  is used for downloading (since EasyBuild v2.0)
-<span class="m">*</span> patches need to be EasyBuild-compatible
-
-  <span class="m">*</span> unified diff format (<span class="s">``diff -ruN``</span>)
-  <span class="m">*</span> patched locations relative to unpacked sources
-
-<span class="m">*</span> see <span class="na">:ref:</span><span class="nv">`common_easyconfig_param_sources_patches`</span> for more information on <span class="s">``patches``</span>
-<span class="m">*</span> see <span class="na">:ref:</span><span class="nv">`common_easyconfig_param_sources_checksums`</span> for more information on <span class="s">``checksums``</span>
-<span class="m">*</span> <span class="s">``sources``</span> is usually specified as a list of strings representing filenames for source files,
-  but other formats are supported too, see <span class="na">:ref:</span><span class="nv">`common_easyconfig_param_sources_alt`</span>
-
-Example:
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
-
-  <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;HPL&#39;</span>
-  <span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;2.2&#39;</span>
-
-  <span class="p">[</span><span class="o">...</span><span class="p">]</span>
-
-  <span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;http://www.netlib.org/benchmark/hpl&#39;</span><span class="p">]</span>
-  <span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hpl-</span><span class="si">%(version)s</span><span class="s1">.tar.gz&#39;</span><span class="p">]</span>
-
-  <span class="c1"># fix Make dependencies, so parallel build also works</span>
-  <span class="n">patches</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;HPL_parallel-make.patch&#39;</span><span class="p">]</span>
-
-  <span class="n">checksums</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ac7534163a09e21a5fa763e4e16dfc119bc84043f6e6a807aba666518f8df440&#39;</span><span class="p">]</span>
-
-  <span class="p">[</span><span class="o">...</span><span class="p">]</span>
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Rather than hardcoding the version (and name) in the list of sources,
-  a string template <span class="nv">`%(version)s`</span> can be used, see also <span class="na">:ref:</span><span class="nv">`easyconfig_param_templates`</span>.
-
-<span class="p">..</span> <span class="nt">_common_easyconfig_param_sources_patches:</span>
-
-<span class="gh">Patches</span>
-<span class="gh">^^^^^^^</span>
-
-Patches can be provided via the <span class="s">``patches``</span> easyconfig parameter (list). A patch can be defined as:
-
-<span class="m">*</span> a <span class="s">``string``</span>,
-<span class="m">*</span> a <span class="s">``tuple``</span> of 2 elements, or
-<span class="m">*</span> a <span class="s">``dict``</span>
-
-The most straight-forward use-case is <span class="s">``string``</span>, which contains the name of the patch file
-(and must have <span class="s">``.patch``</span> extension).
-
-A <span class="s">``tuple``</span> adds the possibility to specify where patch should be applied.
-This is mostly needed if a patch file adds new files or it is generally not possible to determine
-the starting directory.  
-The first element is the patch file and the second is
-either the patch level (as an integer) which is used in the patch command (<span class="s">``patch -p&lt;n&gt;``</span>)
-or a directory relative to the unpacked source dir.
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> <span class="s">``tuple``</span> also has a special use case if the patch file has any other extension than <span class="s">``.patch``</span>.
-          In this case, the first tuple argument is a file which should be copied to the unpacked source
-          dir and the second tuple argument is the target path, where the files should be copied to
-          (relative to the unpacked source dir). See below for an example of this use case.
-
-A <span class="s">``dict``</span> adds the ability to pass the <span class="s">``patch``</span> command additional arguments. For example, the
-<span class="s">``--binary``</span> flag is needed to patch files with CRLF endings.
-The <span class="s">``dict``</span> has a required <span class="s">``filename``</span> key, with <span class="s">``level``</span> and <span class="s">``opts``</span> being optional ones.
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Specifying only <span class="s">``filename``</span> in <span class="s">``dict``</span> is the same as using a plain <span class="s">``string``</span> definition.
-          Specifying <span class="s">``filename``</span> and <span class="s">``level``</span> is same as using a <span class="s">``tuple``</span> definition.
-
-Example:
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
-
-    <span class="n">patches</span> <span class="o">=</span> <span class="p">[</span>
-      <span class="c1"># a simple patch file</span>
-      <span class="s1">&#39;name-versions-fix.patch&#39;</span><span class="p">,</span>
-
-      <span class="c1"># when creating only new files by patch file, you need to specify the level:</span>
-      <span class="p">(</span><span class="s1">&#39;name-versions-fix.patch&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
-
-      <span class="c1"># apply the patch in a (sub-)subdirectory inside the source tree</span>
-      <span class="p">(</span><span class="s1">&#39;name-versions-fix.patch&#39;</span><span class="p">,</span> <span class="s1">&#39;src/subfolder&#39;</span><span class="p">),</span>
-
-      <span class="c1"># copy file to target_path folder</span>
-      <span class="p">(</span><span class="s1">&#39;Makefile&#39;</span><span class="p">,</span> <span class="s1">&#39;target_path&#39;</span><span class="p">),</span>
-
-      <span class="c1"># specify patch file and optionally level and opts for patch command</span>
-      <span class="p">{</span><span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;name-versions-fix.patch&#39;</span><span class="p">,</span> <span class="s1">&#39;level&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;opts&#39;</span><span class="p">:</span> <span class="s1">&#39;-l&#39;</span><span class="p">}</span>
-    <span class="p">]</span>
-
-<span class="p">..</span> <span class="nt">_common_easyconfig_param_sources_checksums:</span>
-
-<span class="gh">Checksums</span>
-<span class="gh">^^^^^^^^^</span>
-
-Checksums for source files and patches can be provided via the <span class="s">``checksums``</span> easyconfig parameter.
-
-EasyBuild does not enforce checksums to be available for all source files and patches.
-Provided checksums will be &#39;consumed&#39; first for the specified sources (in order), and subsequently also for patches.
-
-Nevertheless, providing checksums for <span class="ge">*all*</span> source files and patches is highly recommended.
-
-If checksums are provided, the checksum of the corresponding source files and patches is verified to match.
-
-
-The <span class="s">``checksums``</span> easyconfig parameter is usually defined as a list of strings.
-
-Until EasyBuild v3.3.0, only MD5 checksums could be provided through a list of strings.
-Since EasyBuild v3.3.0, the checksum type is determined by looking at the length of the string:
-
-<span class="m">*</span> 32-character strings are considered to be MD5 checksums (<span class="s">``md5``</span>)
-<span class="m">*</span> 64-character strings are considered to be SHA256 checksums (<span class="s">``sha256``</span>)
-<span class="m">*</span> (other lengths will result in an error message)
-
-The intention is to move towards making <span class="s">``sha256``</span> the recommended and default checksum type.
-
-Other checksum types are also supported: <span class="s">``adler32``</span>, <span class="s">``crc32``</span>, <span class="s">``sha1``</span>, <span class="s">``sha512``</span>, <span class="s">``size``</span> (filesize in bytes).
-To provide checksum values of a specific type, elements of the <span class="s">``checksums``</span> list can also be 2-element tuples
-of the form <span class="s">``(&#39;&lt;checksum type&gt;&#39;, &#39;&lt;checksum value&gt;&#39;)``</span>. For example:
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
-
-  <span class="n">checksums</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;sha512&#39;</span><span class="p">,</span> <span class="s1">&#39;f962008105639f58e9a4455c8057933ab0a5e2f43db8340ae1e1afe6dc2d24105bfca3b2e1f79cb242495ca4eb363c9820d8cea6084df9d62c4c3e5211d99266&#39;</span><span class="p">)]</span>
-
-<span class="p">..</span> <span class="nt">_inject_checksums:</span>
-
-<span class="gh">Adding or replacing checksums using ``--inject-checksums``</span>
-<span class="gh">++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</span>
-
-Using the <span class="s">``--inject-checksums``</span> command line option, you can let EasyBuild add or update checksums
-in one or more easyconfig files (which is significantly more convenient than doing it manually).
-
-With <span class="s">``--inject-checksums``</span>, checksums are injected for all sources and patches (if any),
-as well as for all sources &amp; patches of every extension listed in <span class="s">``exts_list``</span> (if any, see <span class="na">:ref:</span><span class="nv">`module_extensions`</span>).
-
-If the sources (&amp; patches) are not available yet, EasyBuild will try to download them first; i.e.,
-the <span class="s">``fetch``</span> step is run prior to computing &amp; injecting the checksums.
-
-A backup is created of every easyconfig file that is touched by <span class="s">``--inject-checksums``</span>,
-to avoid accidental loss of information. Backups are given an additional extension of the
-form <span class="s">``.bak_&lt;year&gt;&lt;month&gt;&lt;day&gt;&lt;hour&gt;&lt;min&gt;&lt;sec&gt;``</span>.
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
-
-    To clean up backup easyconfig files, you can use this one-liner<span class="se">::</span>
-
-<span class="s">        find . -name &#39;*.eb.bak_*&#39; | xargs rm -v</span>
-
-    The <span class="s">``-v``</span> option makes <span class="s">``rm``</span> print the path of files that are being removed.
-
-    <span class="gs">**Do use this with care; just run**</span> <span class="s">``find . -name &#39;*.eb.bak_*&#39;``</span> <span class="gs">**first in case of doubt!**</span>
-
-Multilple easyconfigs can be specified when using <span class="s">``--inject-checksums``</span>, they will be processed in sequence.
-In addition, you can also combine <span class="s">``--inject-checksums``</span> with <span class="s">``--robot``</span>, see <span class="na">:ref:</span><span class="nv">`inject_checksums_robot_synergy`</span>.
-
-<span class="p">..</span> <span class="nt">_inject_checksums_adding:</span>
-
-<span class="gh">Adding checksums when none are specified yet</span>
-<span class="gh">********************************************</span>
-
-If the easyconfig file does not specify any checksums yet, they are simply injected after the
-<span class="s">``sources``</span> (or <span class="s">``patches``</span>, if present) specification when <span class="s">``--inject-checksums``</span> is used.
-
-For example<span class="se">::</span>
-
-<span class="s">    $ eb bzip2-1.0.6.eb --inject-checksums</span>
-<span class="s">    == temporary log file in case of crash /tmp/eb-Vm6w3e/easybuild-cAVQl6.log</span>
-<span class="s">    == injecting sha256 checksums in /example/bzip2-1.0.6.eb</span>
-<span class="s">    == fetching sources &amp; patches for bzip2-1.0.6.eb...</span>
-<span class="s">    == backup of easyconfig file saved to /example/bzip2-1.0.6.eb.bak_20170824200906...</span>
-<span class="s">    == injecting sha256 checksums for sources &amp; patches in bzip2-1.0.6.eb...</span>
-<span class="s">    == * bzip2-1.0.6.tar.gz: a2848f34fcd5d6cf47def00461fcb528a0484d8edef8208d6d2e2909dc61d9cd</span>
-<span class="s">    == Temporary log file(s) /tmp/eb-Vm6w3e/easybuild-cAVQl6.log* have been removed.</span>
-<span class="s">    == Temporary directory /tmp/eb-Vm6w3e has been removed.</span>
-
-The backup easyconfig file can be used to double-check the difference between the original easyconfig file
-and the one produced by <span class="s">``--inject-checksums``</span><span class="se">::</span>
-
-<span class="s">    $ diff -u /example/bzip2-1.0.6.eb.bak_20170824200906 /example/bzip2-1.0.6.eb</span>
-<span class="s">    diff --git a//example/bzip2-1.0.6.eb.bak_20170824200906 b/example/bzip2-1.0.6.eb</span>
-<span class="s">    index 46b2debed..2eb73f15a 100644</span>
-<span class="s">    --- a/example/bzip2-1.0.6.eb.bak_20170824200906</span>
-<span class="s">    +++ b/example/bzip2-1.0.6.eb</span>
-<span class="s">    @@ -9,8 +9,9 @@ compressors), whilst being around twice as fast at compression and six times fas</span>
-<span class="s">     toolchain = SYSTEM</span>
-<span class="s">     toolchainopts = {&#39;pic&#39;: True}</span>
-
-<span class="s">    -sources = [SOURCE_TAR_GZ]</span>
-<span class="s">     source_urls = [&#39;http://www.bzip.org/%(version)s/&#39;]</span>
-<span class="s">    +sources = [SOURCE_TAR_GZ]</span>
-<span class="s">    +checksums = [&#39;a2848f34fcd5d6cf47def00461fcb528a0484d8edef8208d6d2e2909dc61d9cd&#39;]</span>
-
-<span class="s">     buildopts = &quot;CC=gcc CFLAGS=&#39;-Wall -Winline -O3 -fPIC -g $(BIGFILES)&#39;&quot;</span>
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Along with injecting checksums, EasyBuild will also reorder the <span class="s">``source_urls``</span>, <span class="s">``sources``</span>
-          and <span class="s">``patches``</span> specifications, in that order and if they are present, and include the <span class="s">``checksums``</span>
-          specification afterwards. This is done to facilitate working towards a uniform style in easyconfig files,
-          which also applies to the order of specified easyconfig parameters.
-
-<span class="p">..</span> <span class="nt">_inject_checksums_replacing:</span>
-
-<span class="gh">Replacing existing checksums</span>
-<span class="gh">****************************</span>
-
-When one or more checksums are already specified, EasyBuild requires the use of <span class="s">``--force``</span> together
-with <span class="s">``--inject-checksums``</span> to replace those checksums. A clear warning will be printed to notify
-that existing checksums will be replaced.
-
-For example<span class="se">::</span>
-
-<span class="s">    $ eb bzip2-1.0.6.eb --inject-checksums</span>
-<span class="s">    == temporary log file in case of crash /tmp/eb-WhSwVH/easybuild-HCODnl.log</span>
-<span class="s">    == injecting sha256 checksums in /example/bzip2-1.0.6.eb</span>
-<span class="s">    == fetching sources &amp; patches for bzip2-1.0.6.eb...</span>
-<span class="s">    ERROR: Found existing checksums, use --force to overwrite them</span>
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">bash</span>
-
-    $ eb bzip2-1.0.6.eb --inject-checksums --force
-    <span class="o">==</span> temporary log file <span class="k">in</span> <span class="k">case</span> of crash /tmp/eb-dS2QLa/easybuild-JGxOzC.log
-    <span class="o">==</span> injecting sha256 checksums <span class="k">in</span> /example/bzip2-1.0.6.eb
-    <span class="o">==</span> fetching sources <span class="p">&amp;</span> patches <span class="k">for</span> bzip2-1.0.6.eb...
-
-    WARNING: Found existing checksums <span class="k">in</span> bzip2-1.0.6.eb, overwriting them <span class="o">(</span>due to use of --force<span class="o">)</span>...
-
-    <span class="o">==</span> backup of easyconfig file saved to /example/bzip2-1.0.6.eb.bak_20170824203850...
-    <span class="o">==</span> injecting sha256 checksums <span class="k">for</span> sources <span class="p">&amp;</span> patches <span class="k">in</span> bzip2-1.0.6.eb...
-    ...
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
-    Any existing checksums are <span class="ge">*blindly*</span> replaced when <span class="s">``--inject-checksums --force``</span> is used:
-    the existing checksums are <span class="ge">*not verified*</span> to be correct as during normal use of EasyBuild
-    (since that would kind of defeat the purpose of <span class="s">``--inject-checksums``</span>).
-
-    In addition, it also doesn&#39;t matter whether or not checksums are available for all sources &amp; patches:
-    with <span class="s">``--inject-checksums``</span>, checksums will be added for <span class="ge">*all*</span> sources and patches,
-    including for extensions listed in <span class="s">``exts_list``</span> (if any).
-
-<span class="p">..</span> <span class="nt">_inject_checksums_robot_synergy:</span>
-
-<span class="gh">Synergy between ``--inject-checksums`` and ``--robot``</span>
-<span class="gh">******************************************************</span>
-
-When <span class="s">``--inject-checksums``</span> is combined with <span class="s">``--robot``</span>, checksums are injected for <span class="ge">*each*</span> easyconfig file
-in the dependency graph for which no module is available yet.
-
-For example, to inject checksums in <span class="ge">*every*</span> easyconfig file required to build HPL 2.2 with the <span class="s">``foss/2017a``</span> toolchain<span class="se">::</span>
-
-<span class="s">    $ MODULEPATH= eb HPL-2.2-foss-2017a.eb --installpath /tmp/$USER/sandbox --inject-checksums --robot</span>
-<span class="s">    == temporary log file in case of crash /tmp/eb-8HpJc3/easybuild-H35khM.log</span>
-<span class="s">    == resolving dependencies ...</span>
-<span class="s">    ...</span>
-<span class="s">    == injecting sha256 checksums in /example/GCCcore-6.3.0.eb</span>
-<span class="s">    ...</span>
-<span class="s">    == injecting sha256 checksums in /example/OpenMPI-2.0.2-GCC-6.3.0-2.27.eb</span>
-<span class="s">    ...</span>
-<span class="s">    == injecting sha256 checksums in /example/FFTW-3.3.6-gompi-2017a.eb</span>
-<span class="s">    ...</span>
-<span class="s">    == injecting sha256 checksums in /example/HPL-2.2-foss-2017a.eb</span>
-<span class="s">    ...</span>
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> We are clearing <span class="s">``$MODULEPATH``</span> and specifying a custom (empty) location to <span class="s">``--installpath``</span> to
-          avoid that EasyBuild skips any easyconfig because a corresponding module is already available.
-
-<span class="p">..</span> <span class="nt">_inject_checksums_type:</span>
-
-<span class="gh">Type of checksum to inject</span>
-<span class="gh">**************************</span>
-
-By default, <span class="s">``--inject-checksums``</span> will compute &amp; inject <span class="s">``SHA256``</span> checksums, but a different checksum type
-can be specified as an argument (e.g., <span class="s">``--inject-checksums md5``</span>).
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Because of the optional argument that can be passed to <span class="s">``--inject-checksums``</span>,
-          you should not specify an easyconfig file name directly after the <span class="s">``--inject-checksums``</span>,
-          since it will be assumed to specify a checksum type, which will result in an error message like<span class="se">::</span>
-
-<span class="s">            $ eb --inject-checksums bzip2-1.0.6.eb</span>
-<span class="s">            Usage: eb [options] easyconfig [...]</span>
-
-<span class="s">            eb: error: option --inject-checksums: invalid choice: &#39;bzip2-1.0.6.eb&#39; (choose from &#39;adler32&#39;, &#39;crc32&#39;, &#39;md5&#39;, &#39;sha1&#39;, &#39;sha256&#39;, &#39;sha512&#39;, &#39;size&#39;)</span>
-
-
-<span class="p">..</span> <span class="nt">_common_easyconfig_param_sources_alt:</span>
-
-<span class="gh">Alternative formats for ``sources``</span>
-<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
-
-In some cases, it can be required to provide additional information next to the name of a source file,
-e.g., a custom extraction command (because the one derived from the file extension is not correct),
-or an altername filename that should be used to download the source file.
-
-This can be specified using a Python dictionary value in the <span class="s">``sources``</span> easyconfig parameter.
-
-Since EasyBuild v3.3.0, three keys are supported:
-
-<span class="m">*</span> <span class="s">``filename``</span> (<span class="ge">*mandatory*</span>): filename of source file
-<span class="m">*</span> <span class="s">``download_filename``</span>: filename that should be used when downloading this source file; the downloaded file will be
-  saved using the <span class="s">``filename``</span> value
-<span class="m">*</span> <span class="s">``extract_cmd``</span>: custom extraction command for this source file
-<span class="m">*</span> <span class="s">``source_urls``</span>: source URLs to consider for downloading this source file
-<span class="m">*</span> <span class="s">``git_config``</span>: see <span class="na">:ref:</span><span class="nv">`common_easyconfig_param_sources_git_config`</span>
-
-For example:
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
-
-  <span class="n">sources</span> <span class="o">=</span> <span class="p">[{</span>
-      <span class="s1">&#39;source_urls&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;https://example.com&#39;</span><span class="p">],</span>
-      <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;example-</span><span class="si">%(version)s</span><span class="s1">.gz&#39;</span><span class="p">,</span>
-      <span class="s1">&#39;download_filename&#39;</span><span class="p">:</span> <span class="s1">&#39;example.gz&#39;</span><span class="p">,</span>  <span class="c1"># provided source tarball is not versioned...</span>
-      <span class="s1">&#39;extract_cmd&#39;</span><span class="p">:</span> <span class="s2">&quot;tar xfvz </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>  <span class="c1"># source file is actually a gzipped tarball (filename should be .tar.gz)</span>
-  <span class="p">}]</span>
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Custom extraction commands can also be specified as a 2-element tuple, but this format has been deprecated
-          in favor of the Python dictionary format described above; see also <span class="na">:ref:</span><span class="nv">`depr_sources_2_element_tuple`</span>.
-
-<span class="gh">Using ``download_instructions`` for user-side part of installation</span>
-<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
-
-In some cases, getting some of the files required for an installation cannot be automated. Reasons for this include:
-
-<span class="m">*</span> there is a manual stage to combine multiple downloaded files into the required installation file
-<span class="m">*</span> the file requires a login to download
-
-You can use the <span class="s">``download_instructions``</span> parameter to specify steps for the user to do.
-This parameter takes string value and prints it whenever build fails because any file needed was not found.
-If <span class="s">``download_instructions``</span> is not specified, Easybuild prints the default message stating the paths that were tested.
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
-
-    <span class="n">download_instructions</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-    <span class="s2">  Step 1: Go to example.com and download example.jar.</span>
-    <span class="s2">  Step 2: Install example.jar (ensure Java is installed).</span>
-    <span class="s2">  Step 3: Go to the installation directory and create Tarball of its contents (tar -czvf example.tar.gz *).</span>
-    <span class="s2">  Step 4: Move created Tarball into the same directory, where your easyconfig is located and run build again.</span>
-    <span class="s2">&quot;&quot;&quot;</span>
-
-<span class="p">..</span> <span class="nt">_common_easyconfig_param_sources_git_config:</span>
-
-<span class="gh">Downloading from a Git repository</span>
-<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
-
-Since EasyBuild v3.7.0, support for downloading directly from a Git repository is available.
-
-When <span class="s">``git_config``</span> is provided for a particular source file (see <span class="na">:ref:</span><span class="nv">`common_easyconfig_param_sources_alt`</span>),
-EasyBuild will create a source tarball after downloading the specified Git repository.
-
-The value for <span class="s">``git_config``</span> is a Python dictionary, where the following keys are <span class="ge">*mandatory*</span>:
-
-<span class="m">*</span> <span class="s">``url``</span>: the URL where the Git repository is located
-<span class="m">*</span> <span class="s">``repo_name``</span>: the name of the Git repository
-
-The value for <span class="s">``filename``</span> in the source specification <span class="ge">*must*</span> end in <span class="s">``.tar.gz``</span> (because a gzipped tarball
-will be created from the cloned repository).
-
-In addition, either of the following keys <span class="ge">*must*</span> also be defined:
-
-<span class="m">*</span> <span class="s">``tag``</span>: the specific tag to download
-<span class="m">*</span> <span class="s">``commit``</span>: the specific commit ID to download
-
-If a recursive checkout should be made of the repository, the <span class="s">``recursive``</span> key can be set to <span class="s">``True``</span>.
-
-To also retain the <span class="s">``.git``</span> directory (which holds the Git metadata for the repository),
-you can set the <span class="s">``keep_git_dir``</span> to <span class="s">``True``</span> (supported since EasyBuild v4.2.0).
-
-A different name for the top-level directory can be specified via <span class="s">``clone_into``</span>;
-by default the name of the repository is used.
-
-Examples:
-
-  <span class="m">*</span> creating a source tarball named <span class="s">``example-main.tar.gz``</span> of the <span class="s">``main``</span> branch of a (fictional)
-    <span class="s">``test``</span> repository from <span class="s">``https://agitserver.org/example``</span>, and use <span class="s">``example-test``</span> as top-level directory name:
-
-<span class="p">    ..</span> <span class="ow">code</span><span class="p">::</span>
-
-      sources = [{
-          &#39;filename&#39;: &#39;example-main.tar.gz&#39;,
-          &#39;git_config&#39;: {
-              &#39;url&#39;: &#39;https://agitserver.org/example&#39;,
-              &#39;repo_name&#39;: &#39;test&#39;,
-              &#39;tag&#39;: &#39;main&#39;,
-              &#39;clone_into&#39;: &#39;example-test&#39;,
-          },
-      }]
-
-  <span class="m">*</span> creating a source tarball named <span class="s">``example-20180920.tar.gz``</span> of the recursive checkout of commit <span class="s">``abcdef12``</span>
-    of the <span class="s">``test``</span> repository from <span class="s">``https://agitserver.org/example``</span>:
-
-<span class="p">    ..</span> <span class="ow">code</span><span class="p">::</span>
-
-      sources = [{
-          &#39;filename&#39;: &#39;example-20180920.tar.gz&#39;,
-          &#39;git_config&#39;: {
-              &#39;url&#39;: &#39;https://agitserver.org/example&#39;,
-              &#39;repo_name&#39;: &#39;test&#39;,
-              &#39;commit&#39;: &#39;abcdef12&#39;,
-              &#39;recursive&#39;: True,
-              &#39;keep_git_dir&#39;: True,
-          },
-      }]
-
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Because the source tarball is created locally (by running <span class="s">``tar cfvz``</span> on the directory containing
-          the cloned repository), the (SHA256) checksum is not guaranteed to be the same across different systems.
-
-          Whenever you have the option to download a source tarball (or equivalent) directly (for example from GitHub,
-          which also allows downloading a tarball of a specific commit), we strongly recommend you to do so,
-          <span class="s">``git_config``</span> is intended for other Git repos.
-
-
-<span class="p">..</span> <span class="nt">_dependency_specs:</span>
-
-<span class="gh">Dependencies</span>
-<span class="gh">~~~~~~~~~~~~</span>
-
-<span class="m">*</span> <span class="gs">**dependencies**</span>: build/runtime dependencies
-<span class="m">*</span> <span class="gs">**builddependencies**</span>: build-only dependencies (not in module)
-<span class="m">*</span> <span class="gs">**hiddendependencies**</span>: dependencies via hidden modules (see also <span class="na">:ref:</span><span class="nv">`hide_deps`</span>)
-<span class="m">*</span> <span class="gs">**osdependencies**</span>: system dependencies (package names)
-
-Remarks:
-
-<span class="m">*</span> modules must exist for all (non-system) dependencies
-<span class="m">*</span> (non-system) dependencies can be resolved via <span class="s">``--robot``</span>
-<span class="m">*</span> format: <span class="s">``(&lt;name&gt;, &lt;version&gt;[, &lt;versionsuffix&gt;[, &lt;toolchain&gt;]])``</span>
-
-Example:
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
-
-  <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;GTI&#39;</span>
-  <span class="o">...</span>
-  <span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;goolf&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;1.5.14&#39;</span><span class="p">}</span>
-  <span class="n">dependencies</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;PnMPI&#39;</span><span class="p">,</span> <span class="s1">&#39;1.2.0&#39;</span><span class="p">)]</span>
-  <span class="n">builddependencies</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;CMake&#39;</span><span class="p">,</span> <span class="s1">&#39;2.8.12&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;GCC&#39;</span><span class="p">,</span> <span class="s1">&#39;4.8.2&#39;</span><span class="p">))]</span>
-
-For each of the specified (build) dependencies, the corresponding module will be loaded in the build environment
-defined by EasyBuild. For the <span class="ge">*runtime*</span> dependencies, <span class="s">``module load``</span> statements will be included in the generated
-module file.
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> By default, EasyBuild will try to resolve dependencies using the same toolchain as specified for the
-  software being installed. As of v3.0, if no easyconfig exists to resolve a dependency using the default
-  toolchain EasyBuild will search for the dependency using a compatible subtoolchain.
-
-  A different toolchain can be specified on a per-dependency level (cfr. the <span class="s">``CMake``</span> build dependency in the
-  example above).
-
-  Alternatively, you can instruct EasyBuild to use the most minimal (sub)toolchain when resolving dependencies,
-  see <span class="na">:ref:</span><span class="nv">`minimal_toolchains`</span>.
-
-<span class="gh">Loading of modules for dependencies with a ``system`` toolchain</span>
-<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
-
-When a <span class="na">:ref:</span><span class="nv">`system_toolchain`</span> is used, the modules for each of the (build) dependencies are <span class="ge">*always*</span>
-loaded, regardless of the toolchain version (as opposed the behaviour with the <span class="s">``dummy``</span> toolchain in EasyBuild
-versions prior to v4.0, see <span class="na">:ref:</span><span class="nv">`system_toolchain_motivation_deprecating_dummy`</span>).
-
-<span class="gh">Specifying dependencies using ``system`` toolchain</span>
-<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
-
-To make EasyBuild resolve a dependency using the <span class="s">``system``</span> toolchain, simply use the <span class="s">``SYSTEM``</span> template constant as
-the 4th value in the tuple representing the dependency specification.
-
-For example, to specify PnMPI version 1.2.0 built with the <span class="s">``system``</span> toolchain as a (runtime) dependency<span class="se">::</span>
-
-<span class="s">  dependencies = [(&#39;PnMPI&#39;, &#39;1.2.0&#39;, &#39;&#39;, SYSTEM)]</span>
-
-
-<span class="gh">Using external modules as dependencies</span>
-<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
-
-Since EasyBuild v2.1, specifying modules that are not provided via EasyBuild as dependencies is also supported.
-See <span class="na">:ref:</span><span class="nv">`using_external_modules`</span> for more information.
-
-
-<span class="gh">Extensions</span>
-<span class="gh">~~~~~~~~~~</span>
-
-Besides dependencies, which are found outside the software being built but are part of the site&#39;s EasyBuild installation,
-it is also possible to incorporate extensions to the software within the build.  This is done via the <span class="s">``exts_list``</span> array.
-
-Each entry in <span class="s">``exts_list``</span> is a three-component tuple, with the name and
-version number, and a dictionary of configuration options for the entry:
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
-
-  <span class="n">exts_list</span> <span class="o">=</span> <span class="p">[</span>
-      <span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="s1">&#39;option&#39;</span><span class="p">:</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="s1">&#39;option&#39;</span><span class="p">:</span><span class="s1">&#39;value&#39;</span> <span class="p">})</span>
-  <span class="p">]</span>
-
-The latter may contain essentially any of the full easyconfig parameters, including <span class="s">``buildopts``</span>, <span class="s">``installopts``</span>, etc.
-Among those options, the following exceptions and special cases should be noted:
-
-<span class="m">*</span> <span class="gs">**nosource**</span>: If set <span class="s">``True``</span>, no download will be done
-<span class="m">*</span> <span class="gs">**source_tmpl**</span>: Template string for the file to be downloaded
-  <span class="m">*</span> default is <span class="s">``&#39;%(name)s-%(version)s.tar.gz&#39;``</span>
-  <span class="m">*</span> <span class="s">``%(name)s``</span> and <span class="s">``%(version)s``</span> come from the <span class="s">``exts_list``</span> entry (above)
-<span class="m">*</span> <span class="gs">**sources**</span>: Dictionary specifying details of where to download the extension
-  <span class="m">*</span> equivalent to a single entry from the easyconfig <span class="s">``sources``</span> list
-  <span class="m">*</span> preferred to use of <span class="s">``source_tmpl``</span>
-<span class="m">*</span> <span class="gs">**start_dir**</span>: If not set, will be derived; the easyconfig value will not be used
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
-
-  <span class="n">exts_list</span> <span class="o">=</span> <span class="p">[</span>
-      <span class="p">(</span><span class="s1">&#39;llvmlite&#39;</span><span class="p">,</span> <span class="s1">&#39;0.26.0&#39;</span><span class="p">,</span> <span class="p">{</span>
-          <span class="s1">&#39;source_urls&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;https://pypi.python.org/packages/source/l/llvmlite/&#39;</span><span class="p">],</span>
-          <span class="s1">&#39;patches&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;llvmlite-0.26.0_fix-ffi-Makefile.patch&#39;</span><span class="p">],</span>
-          <span class="s1">&#39;checksums&#39;</span><span class="p">:</span> <span class="p">[</span>
-              <span class="s1">&#39;13e84fe6ebb0667233074b429fd44955f309dead3161ec89d9169145dbad2ebf&#39;</span><span class="p">,</span>    <span class="c1"># llvmlite-0.26.0.tar.gz</span>
-              <span class="s1">&#39;40e6fe6de48709b45daebf8082f65ac26f73a4afdf58fc1e8099b97c575fecae&#39;</span><span class="p">,</span>    <span class="c1"># llvmlite-0.26.0_fix-ffi-Makefile.patch</span>
-          <span class="p">],</span>
-      <span class="p">}),</span>
-      <span class="p">(</span><span class="s1">&#39;singledispatch&#39;</span><span class="p">,</span> <span class="s1">&#39;3.4.0.3&#39;</span><span class="p">,</span> <span class="p">{</span>
-          <span class="s1">&#39;source_urls&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;https://pypi.python.org/packages/source/s/singledispatch/&#39;</span><span class="p">],</span>
-          <span class="s1">&#39;checksums&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;5b06af87df13818d14f08a028e42f566640aef80805c3b50c5056b086e3c2b9c&#39;</span><span class="p">],</span>
-      <span class="p">}),</span>
-      <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="p">{</span>
-          <span class="s1">&#39;source_urls&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;https://pypi.python.org/packages/source/n/numba/&#39;</span><span class="p">],</span>
-          <span class="s1">&#39;checksums&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;c62121b2d384d8b4d244ef26c1cf8bb5cb819278a80b893bf41918ad6d391258&#39;</span><span class="p">],</span>
-      <span class="p">}),</span>
-  <span class="p">]</span>
-
-That third instance uses the <span class="s">``name``</span> and <span class="s">``version``</span> variables defined in the easyconfig file.  Since EasyBuild
-v4.2.2, a single-entry <span class="s">``sources``</span> dictionary (see <span class="na">:ref:</span><span class="nv">`_common_easyconfig_param_sources_alt`</span>) may be included in an
-<span class="s">``exts_list``</span> entry.  For example, to download Git sources from a private repository and convert them to a tar-ball for
-installation:
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
-
-  <span class="n">exts_defaultclass</span> <span class="o">=</span> <span class="s1">&#39;PythonPackage&#39;</span>
-  <span class="n">exts_list</span> <span class="o">=</span> <span class="p">[</span>
-      <span class="p">(</span><span class="s1">&#39;pyCAP&#39;</span><span class="p">,</span> <span class="s1">&#39;0.1&#39;</span><span class="p">,</span> <span class="p">{</span>
-          <span class="s1">&#39;sources&#39;</span><span class="p">:</span> <span class="p">{</span>
-              <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">%(name)s</span><span class="s1">-</span><span class="si">%(version)s</span><span class="s1">.tar.gz&#39;</span><span class="p">,</span>
-              <span class="s1">&#39;git_config&#39;</span><span class="p">:</span> <span class="p">{</span>
-                  <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;ssh://nero.stanford.edu/data/git/Analysis&#39;</span><span class="p">,</span>
-                  <span class="s1">&#39;repo_name&#39;</span><span class="p">:</span> <span class="s1">&#39;pyCAP&#39;</span><span class="p">,</span>
-                  <span class="s1">&#39;tag&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">%(version)s</span><span class="s1">&#39;</span><span class="p">,</span>
-              <span class="p">}</span>
-          <span class="p">}</span>
-      <span class="p">}),</span>
-  <span class="p">]</span>
-
-Here, the template strings <span class="s">``%(name)s``</span> and <span class="s">``%(version)s``</span> will be substituted from the
-<span class="s">``exts_list``</span> entry elements (&quot;pyCAP&quot; and &quot;0.1&quot;, respectively), not from the easyconfig values.
-
-
-<span class="p">..</span> <span class="nt">_configure_build_install_command_options:</span>
-
-<span class="gh">Configure/build/install command options</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-<span class="m">*</span> <span class="gs">**configopts**</span>: options for configure command
-<span class="m">*</span> <span class="gs">**preconfigopts**</span>: options used as prefix for configure command
-
-In analogy to <span class="nv">`configure`</span>, also <span class="nv">`build`</span> and <span class="nv">`install`</span> commands are tuneable:
-
-<span class="m">*</span> <span class="gs">**buildopts, prebuildopts**</span>: options for build command
-<span class="m">*</span> <span class="gs">**installopts, preinstallopts**</span>: options for install command
-
-Example:
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
-
-    <span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;ConfigureMake&#39;</span>
-    <span class="o">...</span>
-    <span class="c1"># configure with: ./autogen.sh &amp;&amp; ./configure CC=&quot;$CC&quot; CFLAGS=&quot;$CFLAGS&quot;</span>
-    <span class="n">preconfigopts</span> <span class="o">=</span> <span class="s2">&quot;./autogen.sh &amp;&amp; &quot;</span>
-    <span class="n">buildopts</span> <span class="o">=</span> <span class="s1">&#39;CC=&quot;$CC&quot; CFLAGS=&quot;$CFLAGS&quot;&#39;</span>
-    <span class="c1"># install with: make install PREFIX=&lt;installation prefix&gt;</span>
-    <span class="n">installopts</span> <span class="o">=</span> <span class="s1">&#39;PREFIX=</span><span class="si">%(installdir)s</span><span class="s1">&#39;</span>
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> For more details w.r.t. use of string templates like <span class="s">``%(installdir)s``</span>, see <span class="na">:ref:</span><span class="nv">`easyconfig_param_templates`</span>.
-
-
-<span class="p">..</span> <span class="nt">_configure_build_install_command_options_iterate:</span>
-
-<span class="gh">List of configure/build/install options</span>
-<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
-
-In some cases, the <span class="ge">*configure-build-install*</span> cycle must be executed multiple times during a single installation,
-using different options for one or more steps.
-
-EasyBuild supports specifying a <span class="ge">*list*</span> of strings, each of which specifying a particular set of options to use.
-
-For example, to perform the installation procedure with three different sets of configuration options:
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
-
-    <span class="n">configopts</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="s2">&quot;--common-opt --one --one-more&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;--common-opt --two&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;--common-opt --three&quot;</span><span class="p">,</span>
-    <span class="p">]</span>
-
-This way, EasyBuild will perform the <span class="ge">*configure-build-install*</span> cycle <span class="gs">**three**</span> times:
-
-<span class="m">*</span> configure using <span class="s">``--common-opt --one --one-more``</span>, build and install
-<span class="m">*</span> configure using <span class="s">``--common-opt --two``</span>, build and install on top of the existing installation
-<span class="m">*</span> configure using <span class="s">``--common-opt --three``</span>, build and install once more on top of what is installed already
-
-During this process, the environment is reset and the build directory is cleaned up after each cycle,
-while the installation directory is left untouched (in order to not destroy the result of earlier cycles).
-
-If several <span class="s">``(pre){config|build|install}opts``</span> parameters are defined as being a list of strings, the number of
-items in the lists must be the same. Any of these parameters defined as a single string value are just reused
-for each of the cycles performed. For example:
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
-
-    <span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;ConfigureMake&#39;</span>
-    <span class="n">configopts</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;--one&#39;</span><span class="p">,</span> <span class="s1">&#39;--two&#39;</span><span class="p">,</span> <span class="s1">&#39;--three&#39;</span><span class="p">]</span>
-    <span class="n">buildopts</span> <span class="o">=</span> <span class="s1">&#39;lib&#39;</span>
-    <span class="n">preinstallopts</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;TYPE=one&#39;</span><span class="p">,</span> <span class="s1">&#39;TYPE=two&#39;</span><span class="p">,</span> <span class="s1">&#39;TYPE=three&#39;</span><span class="p">]</span>
-
-would result in:
-
-<span class="m">*</span> <span class="s">``./configure --prefix=... --one; make lib; TYPE=one make install``</span>
-<span class="m">*</span> <span class="s">``./configure --prefix=... --two; make lib; TYPE=two make install``</span>
-<span class="m">*</span> <span class="s">``./configure --prefix=... --three; make lib; TYPE=three make install``</span>
-
-
-An example use case of this is building FFTW with different precisions, see the
-<span class="s">`FFTW easyconfig files </span><span class="si">&lt;https://github.com/easybuilders/easybuild-easyconfigs/tree/main/easybuild/easyconfigs/f/FFTW&gt;</span><span class="s">`_</span>.
-
-<span class="gh">Sanity check</span>
-<span class="gh">~~~~~~~~~~~~</span>
-
-Custom paths and commands to be used in the sanity check step can be specified using the respective parameters.
-These are used to make sure that an installation didn&#39;t (partly) fail unnoticed.
-
-<span class="m">*</span> <span class="gs">**sanity_check_paths**</span>: files/directories that must get installed
-<span class="m">*</span> <span class="gs">**sanity_check_commands**</span>: (simple) commands that must work when the installed module is loaded
-
-Remarks:
-
-<span class="m">*</span> format: Python dictionary with (<span class="nv">`only`</span>) <span class="s">``files``</span>/<span class="s">``dirs``</span> keys
-<span class="m">*</span> values must be lists of (tuples of) strings, one of both <span class="gs">**must**</span> be non-empty
-
-  <span class="m">*</span> paths are <span class="nv">`relative`</span> to installation directory
-  <span class="m">*</span> for a path specified as a tuple, only one of the specified paths must be available
-
-<span class="m">*</span> default values:
-
-  <span class="m">*</span> paths: non-empty <span class="s">``bin``</span> and <span class="s">``lib``</span> or <span class="s">``lib64``</span> directories
-  <span class="m">*</span> commands: none
-
-Example:
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
-
-  <span class="n">sanity_check_paths</span> <span class="o">=</span> <span class="p">{</span>
-      <span class="s1">&#39;files&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;bin/xhpl&quot;</span><span class="p">],</span>
-      <span class="s1">&#39;dirs&#39;</span><span class="p">:</span> <span class="p">[],</span>
-  <span class="p">}</span>
-
-<span class="p">..</span> <span class="nt">_writing_easyconfigs_easyblock_spec:</span>
-
-<span class="gh">Easyblock specification</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-To make EasyBuild use a specific (usually generic) easyblock the <span class="gs">**easyblock**</span> parameter can be used.
-
-By default, EasyBuild will assume that the easyblock to use can be derived from the software name.
-For example: for <span class="s">``GCC``</span>, EasyBuild will look for an easyblock class named <span class="s">``EB_GCC``</span> in the Python module
-<span class="s">``easybuild.easyblocks.gcc``</span>.
-
-A list of available easyblocks is available via <span class="s">``--list-easyblocks``</span> (see also <span class="na">:ref:</span><span class="nv">`list_easyblocks`</span>);
-generic easyblocks are the ones for which the name does <span class="ge">*not*</span> start with <span class="s">``EB_``</span>.
-
-Example:
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
-
-    <span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;CMakeMake&#39;</span>
-    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;GTI&#39;</span>
-    <span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;1.2.0&#39;</span>
-    <span class="o">...</span>
-
-<span class="p">..</span> <span class="ow">tip</span><span class="p">::</span>
-  It is highly recommended to use existing (generic) easyblocks, where applicable.
-  This avoids the need for creating (and maintaining) new easyblocks.
-  Typically, generic easyblocks support several custom easyconfig parameters which allow to steer
-  their behavior (see also <span class="na">:ref:</span><span class="nv">`avail_easyconfig_params`</span>).
-
-Example:
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
-
-  <span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;Binary&#39;</span>
-  <span class="p">[</span><span class="o">...</span><span class="p">]</span>
-  <span class="n">install_cmd</span> <span class="o">=</span> <span class="s2">&quot;./install.bin&quot;</span>
-  <span class="p">[</span><span class="o">...</span><span class="p">]</span>
-
-
-<span class="gh">Module class</span>
-<span class="gh">~~~~~~~~~~~~</span>
-
-The category to which the software belongs to can be specified using the <span class="gs">**moduleclass**</span> easyconfig parameter.
-By default, the <span class="s">``base``</span> module class is used (which should be replaced with a more appropriate category).
-
-EasyBuild enforces that only known module classes can be specified (to avoid misclassification due to typos).
-
-The default list of module classes is available via <span class="s">``--show-default-moduleclasses``</span>;
-additional module classes can be defined via the <span class="s">``--moduleclasses``</span> configure option.
-
-Example:
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
-
-    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;GCC&#39;</span>
-    <span class="p">[</span><span class="o">...</span><span class="p">]</span>
-    <span class="n">moduleclass</span> <span class="o">=</span> <span class="s1">&#39;compiler&#39;</span>
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> By default, EasyBuild will create a symlink to the generated module file in a module class-specific path.
-  This behavior is configurable through the module naming scheme being used.
-
-<span class="p">..</span> <span class="ow">tip</span><span class="p">::</span> The module class may play a significant role in other aspects. For example, the alternative (hierarchical)
-  module naming scheme <span class="s">``HierarchicalMNS``</span> heavily relies on the <span class="s">``moduleclass``</span> parameter for discriminating compilers
-  and MPI libraries.
-
-<span class="gh">Tweaking existing easyconfig files</span>
-<span class="gh">----------------------------------</span>
-
-The ability to modify easyconfig files on the fly with EasyBuild,
-provides a very powerful and flexible feature to describe builds,
-without having to manually create all the input files.
-
-Tweaking existing easyconfigs can be done using the <span class="s">``--try-*``</span> command lines options.
-See <span class="na">:ref:</span><span class="nv">`tweaking_easyconfigs_using_try`</span> for more details.
-
-Example:
-
-<span class="m">*</span> GCC version update::
-
-   eb GCC-4.9.0.eb --try-software-version=4.9.1
-
-<span class="m">*</span> install WRF + its dozen dependencies with a different toolchain (!)::
-
-   eb WRF-3.5.1-ictce-5.3.0-dmpar.eb --try-toolchain=intel,2014b -r
-
-<span class="p">..</span> <span class="nt">_easyconfig_param_templates:</span>
-
-<span class="gh">Dynamic values for easyconfig parameters</span>
-<span class="gh">----------------------------------------</span>
-
-String templates are completed using the value of particular easyconfig parameters, typically <span class="s">``name``</span> and/or <span class="s">``version``</span>.
-These help to avoid hardcoding values in multiple locations.
-
-A list of available string templates can be obtained using <span class="s">``--avail-easyconfig-templates``</span>.
-
-Additionally, constants that can be used in easyconfig files are available via <span class="s">``--avail-easyconfig-constants``</span>.
-
-Example:
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">python</span>
-
-  <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;GCC&#39;</span>
-  <span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;4.8.3&#39;</span>
-  <span class="o">...</span>
-  <span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span>
-      <span class="c1"># http://ftpmirror.gnu.org/gcc/gcc-4.8.3</span>
-      <span class="s1">&#39;http://ftpmirror.gnu.org/</span><span class="si">%(namelower)s</span><span class="s1">/</span><span class="si">%(namelower)s</span><span class="s1">-</span><span class="si">%(version)s</span><span class="s1">&#39;</span><span class="p">,</span>
-  <span class="p">]</span>
-  <span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="n">SOURCELOWER_TAR_GZ</span><span class="p">]</span>  <span class="c1"># gcc-4.8.3.tar.gz</span>
-  <span class="o">...</span>
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Proper use of string templates is important, in particular to avoid hardcoding the software version
-  in multiple locations of an easyconfig file; this is critical to make <span class="s">``--try-software-version``</span> behave
-  as expected (see also <span class="na">:ref:</span><span class="nv">`tweaking_easyconfigs_using_try`</span>).
-
-
-<span class="gh">Version-specific documentation relevant to easyconfigs</span>
-<span class="gh">------------------------------------------------------</span>
-
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`Available config file constants &lt;avail_cfgfile_constants&gt;`</span>
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`Available easyconfig parameters &lt;vsd_avail_easyconfig_params&gt;`</span>
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`Constants available for easyconfig files &lt;avail_easyconfig_constants&gt;`</span>
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`License constants available for easyconfig files &lt;avail_easyconfig_licenses&gt;`</span>
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`List of available easyblocks &lt;vsd_list_easyblocks&gt;`</span>
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`List of available toolchain options &lt;avail_toolchain_opts&gt;`</span>
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`List of known toolchains &lt;vsd_list_toolchains&gt;`</span>
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`List of supported software &lt;list_software&gt;`</span>
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`Overview of generic easyblocks &lt;generic_easyblocks&gt;`</span>
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`Templates available for easyconfig files &lt;avail_easyconfig_templates&gt;`</span>
-
-
-<span class="gh">Contributing easyconfigs</span>
-<span class="gh">------------------------</span>
-
-<span class="gs">**Contribute your working easyconfig files!**</span>
-
-Share your expertise with the community, avoid duplicate work, especially if:
-
-<span class="m">*</span> the software package is not supported yet
-<span class="m">*</span> an existing easyconfig needs (non-trivial) changes for a different version/toolchain
-<span class="m">*</span> it is a frequently used software package (compilers, MPI, etc.)
-
-See <span class="na">:ref:</span><span class="nv">`contributing`</span> for more information.
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># easyconfig file for GCC v4.8.3</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;GCC&#39;</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;4.8.3&#39;</span>
+<span class="o">...</span>
 </code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Comments can be included in easyconfig files using the hash
+(<code>#</code>) character (just like in Python code).</p>
+</div>
+<h2 id="available-easyconfig-parameters">Available easyconfig parameters<a class="headerlink" href="#available-easyconfig-parameters" title="Permanent link">&para;</a></h2>
+<p>About 50 different (generic) easyconfig parameters are supported
+currently. An overview of all available easyconfig parameters is
+available via the <code>-a</code> command line option.</p>
+<p>By default, the parameters specific to generic (default) easyblock
+<code>ConfigureMake</code> are included; using <code>--easyblock</code>/<code>-e</code> parameters that
+are specific to a particular easyblock can be consulted.</p>
+<p>See <a class="autorefs autorefs-internal" href="../version-specific/easyconfig-parameters/#vsd_avail_easyconfig_params">Available easyconfig parameters</a> for more details.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb -a -e Binary
+<span class="go">Available easyconfig parameters (* indicates specific for the Binary EasyBlock)</span>
+<span class="go">MANDATORY</span>
+<span class="go">---------</span>
+<span class="go">[..]</span>
+<span class="go">name:           Name of software (default: None)</span>
+<span class="go">[...]</span>
+<span class="go">EASYBLOCK-SPECIFIC</span>
+<span class="go">------------------</span>
+<span class="go">install_cmd(*):     Install command to be used. (default: None)</span>
+<span class="go">[...]</span>
+</code></pre></div>
+<h2 id="mandatory-easyconfig-parameters">Mandatory easyconfig parameters<a class="headerlink" href="#mandatory-easyconfig-parameters" title="Permanent link">&para;</a></h2>
+<p>A handful of easyconfig parameters are <em>mandatory</em>:</p>
+<ul>
+<li><strong>name, version</strong>: specify what software (version) to build</li>
+<li><strong>homepage, description</strong>: metadata (used for module help)</li>
+<li><strong>toolchain</strong>: specifies name and version of compiler toolchain to
+    use<ul>
+<li>format: dictionary with name/version keys, e.g.,
+    <code>{'name': 'foo', 'version': '1.2.3'}</code></li>
+<li>a list of supported toolchains can be found
+    <a class="autorefs autorefs-internal" href="../version-specific/toolchain/#vsd_list_toolchains">here</a></li>
+</ul>
+</li>
+</ul>
+<p>Remarks:</p>
+<ul>
+<li>some others are planned to be required in the future<ul>
+<li><em>docurls, software license, software license urls</em></li>
+</ul>
+</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="go">name = &#39;HPL&#39;</span>
+<span class="go">version = &#39;2.0&#39;</span>
+
+<span class="go">homepage = &#39;http://www.netlib.org/benchmark/hpl/&#39;</span>
+<span class="go">description = &quot;High Performance Computing Linpack Benchmark&quot;</span>
+
+<span class="go">toolchain = {&#39;name&#39;: &#39;goolf&#39;, &#39;version&#39;: &#39;1.4.10&#39;}</span>
+<span class="go">[...]</span>
+</code></pre></div>
+<h2 id="common-easyconfig-parameters">Common easyconfig parameters<a class="headerlink" href="#common-easyconfig-parameters" title="Permanent link">&para;</a></h2>
+<p>This section includes an overview of some commonly used (optional)
+easyconfig parameters.</p>
+<h3 id="common_easyconfig_param_sources">Source files, patches and checksums<a class="headerlink" href="#common_easyconfig_param_sources" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>sources</strong>: list of source files (filenames only)</li>
+<li><strong>source urls</strong>: list of URLs where sources can be downloaded</li>
+<li><strong>patches</strong>: list of patch files to be applied (<code>.patch</code> extension)</li>
+<li><strong>checksums</strong>: list of checksums for source and patch files</li>
+</ul>
+<p>Remarks:</p>
+<ul>
+<li>sources are downloaded (best effort), unless already available</li>
+<li>proxy settings are taken into account, since the <a href="https://docs.python.org/2/library/urllib2.html">urllib2 Python
+    package</a> is used for
+    downloading (since EasyBuild v2.0)</li>
+<li>patches need to be EasyBuild-compatible<ul>
+<li>unified diff format (<code>diff -ruN</code>)</li>
+<li>patched locations relative to unpacked sources</li>
+</ul>
+</li>
+<li>see <a class="autorefs autorefs-internal" href="#common_easyconfig_param_sources_patches">Patches</a> for more information on <code>patches</code></li>
+<li>see <a class="autorefs autorefs-internal" href="#common_easyconfig_param_sources_checksums">Checksums</a> for more information on <code>checksums</code></li>
+<li><code>sources</code> is usually specified as a list of strings representing
+    filenames for source files, but other formats are supported too, see
+    <a class="autorefs autorefs-internal" href="#common_easyconfig_param_sources_alt">Alternative formats for <code>sources</code></a></li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;HPL&#39;</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;2.2&#39;</span>
+
+<span class="p">[</span><span class="o">...</span><span class="p">]</span>
+
+<span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;http://www.netlib.org/benchmark/hpl&#39;</span><span class="p">]</span>
+<span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hpl-</span><span class="si">%(version)s</span><span class="s1">.tar.gz&#39;</span><span class="p">]</span>
+
+<span class="c1"># fix Make dependencies, so parallel build also works</span>
+<span class="n">patches</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;HPL_parallel-make.patch&#39;</span><span class="p">]</span>
+
+<span class="n">checksums</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ac7534163a09e21a5fa763e4e16dfc119bc84043f6e6a807aba666518f8df440&#39;</span><span class="p">]</span>
+
+<span class="p">[</span><span class="o">...</span><span class="p">]</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Rather than hardcoding the version (and name) in the list of sources,
+a string template <code>%(version)s</code> can be used, see also
+<a class="autorefs autorefs-internal" href="#easyconfig_param_templates">Dynamic values for easyconfig parameters</a>.</p>
+</div>
+<h4 id="common_easyconfig_param_sources_patches">Patches<a class="headerlink" href="#common_easyconfig_param_sources_patches" title="Permanent link">&para;</a></h4>
+<p>Patches can be provided via the <code>patches</code> easyconfig parameter (list). A
+patch can be defined as:</p>
+<ul>
+<li>a <code>string</code>,</li>
+<li>a <code>tuple</code> of 2 elements, or</li>
+<li>a <code>dict</code></li>
+</ul>
+<p>The most straight-forward use-case is <code>string</code>, which contains the name
+of the patch file (and must have <code>.patch</code> extension).</p>
+<p>A <code>tuple</code> adds the possibility to specify where patch should be applied.
+This is mostly needed if a patch file adds new files or it is generally
+not possible to determine the starting directory. The first element is
+the patch file and the second is either the patch level (as an integer)
+which is used in the patch command (<code>patch -p&lt;n&gt;</code>) or a directory
+relative to the unpacked source dir.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>tuple</code> also has a special use case if the patch file has any other extension than <code>.patch</code>.
+In this case, the first tuple argument is a file which should be
+copied to the unpacked source dir and the second tuple argument is
+the target path, where the files should be copied to (relative to
+the unpacked source dir). See below for an example of this use case.</p>
+</div>
+<p>A <code>dict</code> adds the ability to pass the <code>patch</code> command additional
+arguments. For example, the <code>--binary</code> flag is needed to patch files
+with CRLF endings. The <code>dict</code> has a required <code>filename</code> key, with
+<code>level</code> and <code>opts</code> being optional ones.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Specifying only <code>filename</code> in <code>dict</code> is the same as using a plain <code>string</code> definition.
+Specifying <code>filename</code> and <code>level</code> is same as using a <code>tuple</code>
+definition.</p>
+</div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">patches</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="c1"># a simple patch file</span>
+  <span class="s1">&#39;name-versions-fix.patch&#39;</span><span class="p">,</span>
+
+  <span class="c1"># when creating only new files by patch file, you need to specify the level:</span>
+  <span class="p">(</span><span class="s1">&#39;name-versions-fix.patch&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+
+  <span class="c1"># apply the patch in a (sub-)subdirectory inside the source tree</span>
+  <span class="p">(</span><span class="s1">&#39;name-versions-fix.patch&#39;</span><span class="p">,</span> <span class="s1">&#39;src/subfolder&#39;</span><span class="p">),</span>
+
+  <span class="c1"># copy file to target_path folder</span>
+  <span class="p">(</span><span class="s1">&#39;Makefile&#39;</span><span class="p">,</span> <span class="s1">&#39;target_path&#39;</span><span class="p">),</span>
+
+  <span class="c1"># specify patch file and optionally level and opts for patch command</span>
+  <span class="p">{</span><span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;name-versions-fix.patch&#39;</span><span class="p">,</span> <span class="s1">&#39;level&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;opts&#39;</span><span class="p">:</span> <span class="s1">&#39;-l&#39;</span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<h4 id="common_easyconfig_param_sources_checksums">Checksums<a class="headerlink" href="#common_easyconfig_param_sources_checksums" title="Permanent link">&para;</a></h4>
+<p>Checksums for source files and patches can be provided via the
+<code>checksums</code> easyconfig parameter.</p>
+<p>EasyBuild does not enforce checksums to be available for all source
+files and patches. Provided checksums will be 'consumed' first for the
+specified sources (in order), and subsequently also for patches.</p>
+<p>Nevertheless, providing checksums for <em>all</em> source files and patches is
+highly recommended.</p>
+<p>If checksums are provided, the checksum of the corresponding source
+files and patches is verified to match.</p>
+<p>The <code>checksums</code> easyconfig parameter is usually defined as a list of
+strings.</p>
+<p>Until EasyBuild v3.3.0, only MD5 checksums could be provided through a
+list of strings. Since EasyBuild v3.3.0, the checksum type is determined
+by looking at the length of the string:</p>
+<ul>
+<li>32-character strings are considered to be MD5 checksums (<code>md5</code>)</li>
+<li>64-character strings are considered to be SHA256 checksums
+    (<code>sha256</code>)</li>
+<li>(other lengths will result in an error message)</li>
+</ul>
+<p>The intention is to move towards making <code>sha256</code> the recommended and
+default checksum type.</p>
+<p>Other checksum types are also supported: <code>adler32</code>, <code>crc32</code>, <code>sha1</code>,
+<code>sha512</code>, <code>size</code> (filesize in bytes). To provide checksum values of a
+specific type, elements of the <code>checksums</code> list can also be 2-element
+tuples of the form <code>('&lt;checksum type&gt;', '&lt;checksum value&gt;')</code>. For
+example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">checksums</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;sha512&#39;</span><span class="p">,</span> <span class="s1">&#39;f962008105639f58e9a4455c8057933ab0a5e2f43db8340ae1e1afe6dc2d24105bfca3b2e1f79cb242495ca4eb363c9820d8cea6084df9d62c4c3e5211d99266&#39;</span><span class="p">)]</span>
+</code></pre></div>
+<h5 id="inject_checksums">Adding or replacing checksums using <code>--inject-checksums</code><a class="headerlink" href="#inject_checksums" title="Permanent link">&para;</a></h5>
+<p>Using the <code>--inject-checksums</code> command line option, you can let
+EasyBuild add or update checksums in one or more easyconfig files (which
+is significantly more convenient than doing it manually).</p>
+<p>With <code>--inject-checksums</code>, checksums are injected for all sources and
+patches (if any), as well as for all sources &amp; patches of every
+extension listed in <code>exts_list</code> (if any, see
+<a class="autorefs autorefs-internal" href="#module_extensions">Extensions</a>).</p>
+<p>If the sources (&amp; patches) are not available yet, EasyBuild will try to
+download them first; i.e., the <code>fetch</code> step is run prior to computing &amp;
+injecting the checksums.</p>
+<p>A backup is created of every easyconfig file that is touched by
+<code>--inject-checksums</code>, to avoid accidental loss of information. Backups
+are given an additional extension of the form
+<code>.bak_&lt;year&gt;&lt;month&gt;&lt;day&gt;&lt;hour&gt;&lt;min&gt;&lt;sec&gt;</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To clean up backup easyconfig files, you can use this one-liner:</p>
+<div class="highlight"><pre><span></span><code>find . -name <span class="s1">&#39;*.eb.bak_*&#39;</span> <span class="p">|</span> xargs rm -v
+</code></pre></div>
+<p>The <code>-v</code> option makes <code>rm</code> print the path of files that are being
+removed.</p>
+<p><strong>Do use this with care; just run</strong> <code>find . -name '*.eb.bak_*'</code>
+<strong>first in case of doubt!</strong></p>
+</div>
+<p>Multiple easyconfigs can be specified when using <code>--inject-checksums</code>,
+they will be processed in sequence. In addition, you can also combine
+<code>--inject-checksums</code> with <code>--robot</code>, see
+<a class="autorefs autorefs-internal" href="#inject_checksums_robot_synergy">Synergy between <code>--inject-checksums</code> and <code>--robot</code></a>.</p>
+<h6 id="inject_checksums_adding">Adding checksums when none are specified yet<a class="headerlink" href="#inject_checksums_adding" title="Permanent link">&para;</a></h6>
+<p>If the easyconfig file does not specify any checksums yet, they are
+simply injected after the <code>sources</code> (or <code>patches</code>, if present)
+specification when <code>--inject-checksums</code> is used.</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb bzip2-1.0.6.eb --inject-checksums
+<span class="go">== temporary log file in case of crash /tmp/eb-Vm6w3e/easybuild-cAVQl6.log</span>
+<span class="go">== injecting sha256 checksums in /example/bzip2-1.0.6.eb</span>
+<span class="go">== fetching sources &amp; patches for bzip2-1.0.6.eb...</span>
+<span class="go">== backup of easyconfig file saved to /example/bzip2-1.0.6.eb.bak_20170824200906...</span>
+<span class="go">== injecting sha256 checksums for sources &amp; patches in bzip2-1.0.6.eb...</span>
+<span class="go">== * bzip2-1.0.6.tar.gz: a2848f34fcd5d6cf47def00461fcb528a0484d8edef8208d6d2e2909dc61d9cd</span>
+<span class="go">== Temporary log file(s) /tmp/eb-Vm6w3e/easybuild-cAVQl6.log* have been removed.</span>
+<span class="go">== Temporary directory /tmp/eb-Vm6w3e has been removed.</span>
+</code></pre></div>
+<p>The backup easyconfig file can be used to double-check the difference
+between the original easyconfig file and the one produced by
+<code>--inject-checksums</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>diff -u /example/bzip2-1.0.6.eb.bak_20170824200906 /example/bzip2-1.0.6.eb
+<span class="go">diff --git a//example/bzip2-1.0.6.eb.bak_20170824200906 b/example/bzip2-1.0.6.eb</span>
+<span class="go">index 46b2debed..2eb73f15a 100644</span>
+<span class="go">--- a/example/bzip2-1.0.6.eb.bak_20170824200906</span>
+<span class="go">+++ b/example/bzip2-1.0.6.eb</span>
+<span class="go">@@ -9,8 +9,9 @@ compressors), whilst being around twice as fast at compression and six times fas</span>
+<span class="go"> toolchain = SYSTEM</span>
+<span class="go"> toolchainopts = {&#39;pic&#39;: True}</span>
+
+<span class="go">-sources = [SOURCE_TAR_GZ]</span>
+<span class="go"> source_urls = [&#39;http://www.bzip.org/%(version)s/&#39;]</span>
+<span class="go">+sources = [SOURCE_TAR_GZ]</span>
+<span class="go">+checksums = [&#39;a2848f34fcd5d6cf47def00461fcb528a0484d8edef8208d6d2e2909dc61d9cd&#39;]</span>
+
+<span class="go"> buildopts = &quot;CC=gcc CFLAGS=&#39;-Wall -Winline -O3 -fPIC -g $(BIGFILES)&#39;&quot;</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Along with injecting checksums, EasyBuild will also reorder the <code>source_urls</code>, <code>sources</code>
+and <code>patches</code> specifications, in that order and if they are present,
+and include the <code>checksums</code> specification afterwards. This is done
+to facilitate working towards a uniform style in easyconfig files,
+which also applies to the order of specified easyconfig parameters.</p>
+</div>
+<h6 id="inject_checksums_replacing">Replacing existing checksums<a class="headerlink" href="#inject_checksums_replacing" title="Permanent link">&para;</a></h6>
+<p>When one or more checksums are already specified, EasyBuild requires the
+use of <code>--force</code> together with <code>--inject-checksums</code> to replace those
+checksums. A clear warning will be printed to notify that existing
+checksums will be replaced.</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb bzip2-1.0.6.eb --inject-checksums
+<span class="go">== temporary log file in case of crash /tmp/eb-WhSwVH/easybuild-HCODnl.log</span>
+<span class="go">== injecting sha256 checksums in /example/bzip2-1.0.6.eb</span>
+<span class="go">== fetching sources &amp; patches for bzip2-1.0.6.eb...</span>
+<span class="go">ERROR: Found existing checksums, use --force to overwrite them</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb bzip2-1.0.6.eb --inject-checksums --force
+<span class="go">== temporary log file in case of crash /tmp/eb-dS2QLa/easybuild-JGxOzC.log</span>
+<span class="go">== injecting sha256 checksums in /example/bzip2-1.0.6.eb</span>
+<span class="go">== fetching sources &amp; patches for bzip2-1.0.6.eb...</span>
+
+<span class="go">WARNING: Found existing checksums in bzip2-1.0.6.eb, overwriting them (due to use of --force)...</span>
+
+<span class="go">== backup of easyconfig file saved to /example/bzip2-1.0.6.eb.bak_20170824203850...</span>
+<span class="go">== injecting sha256 checksums for sources &amp; patches in bzip2-1.0.6.eb...</span>
+<span class="go">...</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Any existing checksums are <em>blindly</em> replaced when
+<code>--inject-checksums --force</code> is used: the existing checksums are
+<em>not verified</em> to be correct as during normal use of EasyBuild
+(since that would kind of defeat the purpose of
+<code>--inject-checksums</code>).
+In addition, it also doesn't matter whether or not checksums are
+available for all sources &amp; patches: with <code>--inject-checksums</code>,
+checksums will be added for <em>all</em> sources and patches, including for
+extensions listed in <code>exts_list</code> (if any).</p>
+</div>
+<h6 id="inject_checksums_robot_synergy">Synergy between <code>--inject-checksums</code> and <code>--robot</code><a class="headerlink" href="#inject_checksums_robot_synergy" title="Permanent link">&para;</a></h6>
+<p>When <code>--inject-checksums</code> is combined with <code>--robot</code>, checksums are
+injected for <em>each</em> easyconfig file in the dependency graph for which no
+module is available yet.</p>
+<p>For example, to inject checksums in <em>every</em> easyconfig file required to
+build HPL 2.2 with the <code>foss/2017a</code> toolchain:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nv">MODULEPATH</span><span class="o">=</span> eb HPL-2.2-foss-2017a.eb --installpath /tmp/<span class="nv">$USER</span>/sandbox --inject-checksums --robot
+<span class="go">== temporary log file in case of crash /tmp/eb-8HpJc3/easybuild-H35khM.log</span>
+<span class="go">== resolving dependencies ...</span>
+<span class="go">...</span>
+<span class="go">== injecting sha256 checksums in /example/GCCcore-6.3.0.eb</span>
+<span class="go">...</span>
+<span class="go">== injecting sha256 checksums in /example/OpenMPI-2.0.2-GCC-6.3.0-2.27.eb</span>
+<span class="go">...</span>
+<span class="go">== injecting sha256 checksums in /example/FFTW-3.3.6-gompi-2017a.eb</span>
+<span class="go">...</span>
+<span class="go">== injecting sha256 checksums in /example/HPL-2.2-foss-2017a.eb</span>
+<span class="go">...</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We are clearing <code>$MODULEPATH</code> and specifying a custom (empty) location to <code>--installpath</code> to
+avoid that EasyBuild skips any easyconfig because a corresponding
+module is already available.</p>
+</div>
+<h6 id="inject_checksums_type">Type of checksum to inject<a class="headerlink" href="#inject_checksums_type" title="Permanent link">&para;</a></h6>
+<p>By default, <code>--inject-checksums</code> will compute &amp; inject <code>SHA256</code>
+checksums, but a different checksum type can be specified as an argument
+(e.g., <code>--inject-checksums md5</code>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Because of the optional argument that can be passed to <code>--inject-checksums</code>,
+you should not specify an easyconfig file name directly after the
+<code>--inject-checksums</code>, since it will be assumed to specify a checksum
+type, which will result in an error message like:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb --inject-checksums bzip2-1.0.6.eb
+<span class="go">Usage: eb [options] easyconfig [...]</span>
+
+<span class="go">eb: error: option --inject-checksums: invalid choice: &#39;bzip2-1.0.6.eb&#39; (choose from &#39;adler32&#39;, &#39;crc32&#39;, &#39;md5&#39;, &#39;sha1&#39;, &#39;sha256&#39;, &#39;sha512&#39;, &#39;size&#39;)</span>
+</code></pre></div>
+</div>
+<h4 id="common_easyconfig_param_sources_alt">Alternative formats for <code>sources</code><a class="headerlink" href="#common_easyconfig_param_sources_alt" title="Permanent link">&para;</a></h4>
+<p>In some cases, it can be required to provide additional information next
+to the name of a source file, e.g., a custom extraction command (because
+the one derived from the file extension is not correct), or an altername
+filename that should be used to download the source file.</p>
+<p>This can be specified using a Python dictionary value in the <code>sources</code>
+easyconfig parameter.</p>
+<p>Since EasyBuild v3.3.0, three keys are supported:</p>
+<ul>
+<li><code>filename</code> (<em>mandatory</em>): filename of source file</li>
+<li><code>download_filename</code>: filename that should be used when downloading
+    this source file; the downloaded file will be saved using the
+    <code>filename</code> value</li>
+<li><code>extract_cmd</code>: custom extraction command for this source file</li>
+<li><code>source_urls</code>: source URLs to consider for downloading this source
+    file</li>
+<li><code>git_config</code>: see
+    <a class="autorefs autorefs-internal" href="#common_easyconfig_param_sources_git_config">Downloading from a Git repository</a></li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">sources</span> <span class="o">=</span> <span class="p">[{</span>
+    <span class="s1">&#39;source_urls&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;https://example.com&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;example-</span><span class="si">%(version)s</span><span class="s1">.gz&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;download_filename&#39;</span><span class="p">:</span> <span class="s1">&#39;example.gz&#39;</span><span class="p">,</span>  <span class="c1"># provided source tarball is not versioned...</span>
+    <span class="s1">&#39;extract_cmd&#39;</span><span class="p">:</span> <span class="s2">&quot;tar xfvz </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>  <span class="c1"># source file is actually a gzipped tarball (filename should be .tar.gz)</span>
+<span class="p">}]</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Custom extraction commands can also be specified as a 2-element tuple, but this format has been deprecated
+in favour of the Python dictionary format described above; see also
+<a class="autorefs autorefs-internal" href="../removed-functionality/#depr_sources_2_element_tuple">Specifying source files as 2-element tuples to provide a custom extraction command</a>.</p>
+</div>
+<h4 id="using-download_instructions-for-user-side-part-of-installation">Using <code>download_instructions</code> for user-side part of installation<a class="headerlink" href="#using-download_instructions-for-user-side-part-of-installation" title="Permanent link">&para;</a></h4>
+<p>In some cases, getting some of the files required for an installation
+cannot be automated. Reasons for this include:</p>
+<ul>
+<li>there is a manual stage to combine multiple downloaded files into
+    the required installation file</li>
+<li>the file requires a login to download</li>
+</ul>
+<p>You can use the <code>download_instructions</code> parameter to specify steps for
+the user to do. This parameter takes string value and prints it whenever
+build fails because any file needed was not found. If
+<code>download_instructions</code> is not specified, Easybuild prints the default
+message stating the paths that were tested.</p>
+<div class="highlight"><pre><span></span><code><span class="n">download_instructions</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">  Step 1: Go to example.com and download example.jar.</span>
+<span class="s2">  Step 2: Install example.jar (ensure Java is installed).</span>
+<span class="s2">  Step 3: Go to the installation directory and create Tarball of its contents (tar -czvf example.tar.gz *).</span>
+<span class="s2">  Step 4: Move created Tarball into the same directory, where your easyconfig is located and run build again.</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</code></pre></div>
+<h4 id="common_easyconfig_param_sources_git_config">Downloading from a Git repository<a class="headerlink" href="#common_easyconfig_param_sources_git_config" title="Permanent link">&para;</a></h4>
+<p>Since EasyBuild v3.7.0, support for downloading directly from a Git
+repository is available.</p>
+<p>When <code>git_config</code> is provided for a particular source file (see
+<a class="autorefs autorefs-internal" href="#common_easyconfig_param_sources_alt">Alternative formats for <code>sources</code></a>),
+EasyBuild will create a source tarball after downloading the specified
+Git repository.</p>
+<p>The value for <code>git_config</code> is a Python dictionary, where the following
+keys are <em>mandatory</em>:</p>
+<ul>
+<li><code>url</code>: the URL where the Git repository is located</li>
+<li><code>repo_name</code>: the name of the Git repository</li>
+</ul>
+<p>The value for <code>filename</code> in the source specification <em>must</em> end in
+<code>.tar.gz</code> (because a gzipped tarball will be created from the cloned
+repository).</p>
+<p>In addition, either of the following keys <em>must</em> also be defined:</p>
+<ul>
+<li><code>tag</code>: the specific tag to download</li>
+<li><code>commit</code>: the specific commit ID to download</li>
+</ul>
+<p>If a recursive checkout should be made of the repository, the
+<code>recursive</code> key can be set to <code>True</code>.</p>
+<p>To also retain the <code>.git</code> directory (which holds the Git metadata for
+the repository), you can set the <code>keep_git_dir</code> to <code>True</code> (supported
+since EasyBuild v4.2.0).</p>
+<p>A different name for the top-level directory can be specified via
+<code>clone_into</code>; by default the name of the repository is used.</p>
+<p>Examples:</p>
+<ul>
+<li>
+<p>creating a source tarball named <code>example-main.tar.gz</code> of the
+    <code>main</code> branch of a (fictional) <code>test</code> repository from
+    <code>https://agitserver.org/example</code>, and use <code>example-test</code> as
+    top-level directory name:</p>
+<div class="highlight"><pre><span></span><code><span class="go">sources = [{</span>
+<span class="go">    &#39;filename&#39;: &#39;example-main.tar.gz&#39;,</span>
+<span class="go">    &#39;git_config&#39;: {</span>
+<span class="go">        &#39;url&#39;: &#39;https://agitserver.org/example&#39;,</span>
+<span class="go">        &#39;repo_name&#39;: &#39;test&#39;,</span>
+<span class="go">        &#39;tag&#39;: &#39;main&#39;,</span>
+<span class="go">        &#39;clone_into&#39;: &#39;example-test&#39;,</span>
+<span class="go">    },</span>
+<span class="go">}]</span>
+</code></pre></div>
+</li>
+<li>
+<p>creating a source tarball named <code>example-20180920.tar.gz</code> of the
+    recursive checkout of commit <code>abcdef12</code> of the <code>test</code> repository
+    from <code>https://agitserver.org/example</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="go">sources = [{</span>
+<span class="go">    &#39;filename&#39;: &#39;example-20180920.tar.gz&#39;,</span>
+<span class="go">    &#39;git_config&#39;: {</span>
+<span class="go">        &#39;url&#39;: &#39;https://agitserver.org/example&#39;,</span>
+<span class="go">        &#39;repo_name&#39;: &#39;test&#39;,</span>
+<span class="go">        &#39;commit&#39;: &#39;abcdef12&#39;,</span>
+<span class="go">        &#39;recursive&#39;: True,</span>
+<span class="go">        &#39;keep_git_dir&#39;: True,</span>
+<span class="go">    },</span>
+<span class="go">}]</span>
+</code></pre></div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Because the source tarball is created locally (by running <code>tar cfvz</code> on the directory containing
+the cloned repository), the (SHA256) checksum is not guaranteed to
+be the same across different systems.</p>
+<p>Whenever you have the option to download a source tarball (or
+equivalent) directly (for example from GitHub, which also allows
+downloading a tarball of a specific commit), we strongly recommend
+you to do so, <code>git_config</code> is intended for other Git repos.</p>
+</div>
+<h3 id="dependency_specs">Dependencies<a class="headerlink" href="#dependency_specs" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>dependencies</strong>: build/runtime dependencies</li>
+<li><strong>builddependencies</strong>: build-only dependencies (not in module)</li>
+<li><strong>hiddendependencies</strong>: dependencies via hidden modules (see also
+    <a class="autorefs autorefs-internal" href="../manipulating-dependencies/#hide_deps">Installing dependencies as hidden modules using <code>--hide-deps</code></a>)</li>
+<li><strong>osdependencies</strong>: system dependencies (package names)</li>
+</ul>
+<p>Remarks:</p>
+<ul>
+<li>modules must exist for all (non-system) dependencies</li>
+<li>(non-system) dependencies can be resolved via <code>--robot</code></li>
+<li>format: <code>(&lt;name&gt;, &lt;version&gt;[, &lt;versionsuffix&gt;[, &lt;toolchain&gt;]])</code></li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;GTI&#39;</span>
+<span class="o">...</span>
+<span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;goolf&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;1.5.14&#39;</span><span class="p">}</span>
+<span class="n">dependencies</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;PnMPI&#39;</span><span class="p">,</span> <span class="s1">&#39;1.2.0&#39;</span><span class="p">)]</span>
+<span class="n">builddependencies</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;CMake&#39;</span><span class="p">,</span> <span class="s1">&#39;2.8.12&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;GCC&#39;</span><span class="p">,</span> <span class="s1">&#39;4.8.2&#39;</span><span class="p">))]</span>
+</code></pre></div>
+<p>For each of the specified (build) dependencies, the corresponding module
+will be loaded in the build environment defined by EasyBuild. For the
+<em>runtime</em> dependencies, <code>module load</code> statements will be included in the
+generated module file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By default, EasyBuild will try to resolve dependencies using the same toolchain as specified for the
+software being installed. As of v3.0, if no easyconfig exists to
+resolve a dependency using the default toolchain EasyBuild will
+search for the dependency using a compatible subtoolchain.</p>
+<p>A different toolchain can be specified on a per-dependency level
+(cfr. the <code>CMake</code> build dependency in the example above).</p>
+<p>Alternatively, you can instruct EasyBuild to use the most minimal
+(sub)toolchain when resolving dependencies, see
+<a class="autorefs autorefs-internal" href="../manipulating-dependencies/#minimal_toolchains">Using minimal toolchains for dependencies</a>.</p>
+</div>
+<h4 id="loading-of-modules-for-dependencies-with-a-system-toolchain">Loading of modules for dependencies with a <code>system</code> toolchain<a class="headerlink" href="#loading-of-modules-for-dependencies-with-a-system-toolchain" title="Permanent link">&para;</a></h4>
+<p>When a <a class="autorefs autorefs-internal" href="../terminology/#system_toolchain"><code>system</code> toolchain</a> is used, the
+modules for each of the (build) dependencies are <em>always</em> loaded,
+regardless of the toolchain version (as opposed the behaviour with the
+<code>dummy</code> toolchain in EasyBuild versions prior to v4.0, see
+<a class="autorefs autorefs-internal" href="../system-toolchain/#system_toolchain_motivation_deprecating_dummy">Motivation for deprecating the <code>dummy</code> toolchain</a>).</p>
+<h4 id="specifying-dependencies-using-system-toolchain">Specifying dependencies using <code>system</code> toolchain<a class="headerlink" href="#specifying-dependencies-using-system-toolchain" title="Permanent link">&para;</a></h4>
+<p>To make EasyBuild resolve a dependency using the <code>system</code> toolchain,
+simply use the <code>SYSTEM</code> template constant as the 4th value in the tuple
+representing the dependency specification.</p>
+<p>For example, to specify PnMPI version 1.2.0 built with the <code>system</code>
+toolchain as a (runtime) dependency:</p>
+<div class="highlight"><pre><span></span><code><span class="n">dependencies</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;PnMPI&#39;</span><span class="p">,</span> <span class="s1">&#39;1.2.0&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">SYSTEM</span><span class="p">)]</span>
+</code></pre></div>
+<h4 id="using-external-modules-as-dependencies">Using external modules as dependencies<a class="headerlink" href="#using-external-modules-as-dependencies" title="Permanent link">&para;</a></h4>
+<p>Since EasyBuild v2.1, specifying modules that are not provided via
+EasyBuild as dependencies is also supported. See
+<a class="autorefs autorefs-internal" href="../using-external-modules/#using_external_modules">Using external modules</a> for more
+information.</p>
+<h3 id="module_extensions">Extensions<a class="headerlink" href="#module_extensions" title="Permanent link">&para;</a></h3>
+<p>Besides dependencies, which are found outside the software being built
+but are part of the site's EasyBuild installation, it is also possible
+to incorporate extensions to the software within the build. This is done
+via the <code>exts_list</code> array.</p>
+<p>Each entry in <code>exts_list</code> is a three-component tuple, with the name and
+version number, and a dictionary of configuration options for the entry:</p>
+<div class="highlight"><pre><span></span><code><span class="n">exts_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="s1">&#39;option&#39;</span><span class="p">:</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="s1">&#39;option&#39;</span><span class="p">:</span><span class="s1">&#39;value&#39;</span> <span class="p">})</span>
+<span class="p">]</span>
+</code></pre></div>
+<p>The latter may contain essentially any of the full easyconfig
+parameters, including <code>buildopts</code>, <code>installopts</code>, etc. Among those
+options, the following exceptions and special cases should be noted:</p>
+<ul>
+<li><strong>nosource</strong>: If set <code>True</code>, no download will be done</li>
+<li><strong>source_tmpl</strong>: Template string for the file to be downloaded<ul>
+<li>default is <code>'%(name)s-%(version)s.tar.gz'</code></li>
+<li><code>%(name)s</code> and <code>%(version)s</code> come from the <code>exts_list</code> entry
+    (above)</li>
+</ul>
+</li>
+<li><strong>sources</strong>: Dictionary specifying details of where to download the
+    extension<ul>
+<li>equivalent to a single entry from the easyconfig <code>sources</code> list</li>
+<li>preferred to use of <code>source_tmpl</code></li>
+</ul>
+</li>
+<li><strong>start_dir</strong>: If not set, will be derived; the easyconfig value
+    will not be used</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">exts_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s1">&#39;llvmlite&#39;</span><span class="p">,</span> <span class="s1">&#39;0.26.0&#39;</span><span class="p">,</span> <span class="p">{</span>
+        <span class="s1">&#39;source_urls&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;https://pypi.python.org/packages/source/l/llvmlite/&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;patches&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;llvmlite-0.26.0_fix-ffi-Makefile.patch&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;checksums&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s1">&#39;13e84fe6ebb0667233074b429fd44955f309dead3161ec89d9169145dbad2ebf&#39;</span><span class="p">,</span>    <span class="c1"># llvmlite-0.26.0.tar.gz</span>
+            <span class="s1">&#39;40e6fe6de48709b45daebf8082f65ac26f73a4afdf58fc1e8099b97c575fecae&#39;</span><span class="p">,</span>    <span class="c1"># llvmlite-0.26.0_fix-ffi-Makefile.patch</span>
+        <span class="p">],</span>
+    <span class="p">}),</span>
+    <span class="p">(</span><span class="s1">&#39;singledispatch&#39;</span><span class="p">,</span> <span class="s1">&#39;3.4.0.3&#39;</span><span class="p">,</span> <span class="p">{</span>
+        <span class="s1">&#39;source_urls&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;https://pypi.python.org/packages/source/s/singledispatch/&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;checksums&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;5b06af87df13818d14f08a028e42f566640aef80805c3b50c5056b086e3c2b9c&#39;</span><span class="p">],</span>
+    <span class="p">}),</span>
+    <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="p">{</span>
+        <span class="s1">&#39;source_urls&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;https://pypi.python.org/packages/source/n/numba/&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;checksums&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;c62121b2d384d8b4d244ef26c1cf8bb5cb819278a80b893bf41918ad6d391258&#39;</span><span class="p">],</span>
+    <span class="p">}),</span>
+<span class="p">]</span>
+</code></pre></div>
+<p>That third instance uses the <code>name</code> and <code>version</code> variables defined in
+the easyconfig file. Since EasyBuild v4.2.2, a single-entry <code>sources</code>
+dictionary (see <a class="autorefs autorefs-internal" href="#common_easyconfig_param_sources_alt">Alternative formats for <code>sources</code></a>) may be included in an <code>exts_list</code> entry. For example, to
+download Git sources from a private repository and convert them to a
+tar-ball for installation:</p>
+<div class="highlight"><pre><span></span><code><span class="n">exts_defaultclass</span> <span class="o">=</span> <span class="s1">&#39;PythonPackage&#39;</span>
+<span class="n">exts_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s1">&#39;pyCAP&#39;</span><span class="p">,</span> <span class="s1">&#39;0.1&#39;</span><span class="p">,</span> <span class="p">{</span>
+        <span class="s1">&#39;sources&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">%(name)s</span><span class="s1">-</span><span class="si">%(version)s</span><span class="s1">.tar.gz&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;git_config&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;ssh://nero.stanford.edu/data/git/Analysis&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;repo_name&#39;</span><span class="p">:</span> <span class="s1">&#39;pyCAP&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;tag&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">%(version)s</span><span class="s1">&#39;</span><span class="p">,</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}),</span>
+<span class="p">]</span>
+</code></pre></div>
+<p>Here, the template strings <code>%(name)s</code> and <code>%(version)s</code> will be
+substituted from the <code>exts_list</code> entry elements ("pyCAP" and "0.1",
+respectively), not from the easyconfig values.</p>
+<h3 id="configure_build_install_command_options">Configure/build/install command options<a class="headerlink" href="#configure_build_install_command_options" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>configopts</strong>: options for configure command</li>
+<li><strong>preconfigopts</strong>: options used as prefix for configure command</li>
+</ul>
+<p>In analogy to <em>configure</em>, also <em>build</em> and
+<em>install</em> commands are tuneable:</p>
+<ul>
+<li><strong>buildopts, prebuildopts</strong>: options for build command</li>
+<li><strong>installopts, preinstallopts</strong>: options for install command</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;ConfigureMake&#39;</span>
+<span class="o">...</span>
+<span class="c1"># configure with: ./autogen.sh &amp;&amp; ./configure CC=&quot;$CC&quot; CFLAGS=&quot;$CFLAGS&quot;</span>
+<span class="n">preconfigopts</span> <span class="o">=</span> <span class="s2">&quot;./autogen.sh &amp;&amp; &quot;</span>
+<span class="n">buildopts</span> <span class="o">=</span> <span class="s1">&#39;CC=&quot;$CC&quot; CFLAGS=&quot;$CFLAGS&quot;&#39;</span>
+<span class="c1"># install with: make install PREFIX=&lt;installation prefix&gt;</span>
+<span class="n">installopts</span> <span class="o">=</span> <span class="s1">&#39;PREFIX=</span><span class="si">%(installdir)s</span><span class="s1">&#39;</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more details w.r.t. use of string templates like
+<code>%(installdir)s</code>, see <a class="autorefs autorefs-internal" href="#easyconfig_param_templates">Dynamic values for easyconfig parameters</a>.</p>
+</div>
+<h4 id="configure_build_install_command_options_iterate">List of configure/build/install options<a class="headerlink" href="#configure_build_install_command_options_iterate" title="Permanent link">&para;</a></h4>
+<p>In some cases, the <em>configure-build-install</em> cycle must be executed
+multiple times during a single installation, using different options for
+one or more steps.</p>
+<p>EasyBuild supports specifying a <em>list</em> of strings, each of which
+specifying a particular set of options to use.</p>
+<p>For example, to perform the installation procedure with three different
+sets of configuration options:</p>
+<div class="highlight"><pre><span></span><code><span class="n">configopts</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;--common-opt --one --one-more&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--common-opt --two&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--common-opt --three&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+</code></pre></div>
+<p>This way, EasyBuild will perform the <em>configure-build-install</em> cycle
+<strong>three</strong> times:</p>
+<ul>
+<li>configure using <code>--common-opt --one --one-more</code>, build and install</li>
+<li>configure using <code>--common-opt --two</code>, build and install on top of
+    the existing installation</li>
+<li>configure using <code>--common-opt --three</code>, build and install once more
+    on top of what is installed already</li>
+</ul>
+<p>During this process, the environment is reset and the build directory is
+cleaned up after each cycle, while the installation directory is left
+untouched (in order to not destroy the result of earlier cycles).</p>
+<p>If several <code>(pre){config|build|install}opts</code> parameters are defined as
+being a list of strings, the number of items in the lists must be the
+same. Any of these parameters defined as a single string value are just
+reused for each of the cycles performed. For example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;ConfigureMake&#39;</span>
+<span class="n">configopts</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;--one&#39;</span><span class="p">,</span> <span class="s1">&#39;--two&#39;</span><span class="p">,</span> <span class="s1">&#39;--three&#39;</span><span class="p">]</span>
+<span class="n">buildopts</span> <span class="o">=</span> <span class="s1">&#39;lib&#39;</span>
+<span class="n">preinstallopts</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;TYPE=one&#39;</span><span class="p">,</span> <span class="s1">&#39;TYPE=two&#39;</span><span class="p">,</span> <span class="s1">&#39;TYPE=three&#39;</span><span class="p">]</span>
+</code></pre></div>
+<p>would result in:</p>
+<ul>
+<li><code>./configure --prefix=... --one; make lib; TYPE=one make install</code></li>
+<li><code>./configure --prefix=... --two; make lib; TYPE=two make install</code></li>
+<li><code>./configure --prefix=... --three; make lib; TYPE=three make install</code></li>
+</ul>
+<p>An example use case of this is building FFTW with different precisions,
+see the <a href="https://github.com/easybuilders/easybuild-easyconfigs/tree/main/easybuild/easyconfigs/f/FFTW">FFTW easyconfig
+files</a>.</p>
+<h3 id="sanity-check">Sanity check<a class="headerlink" href="#sanity-check" title="Permanent link">&para;</a></h3>
+<p>Custom paths and commands to be used in the sanity check step can be
+specified using the respective parameters. These are used to make sure
+that an installation didn't (partly) fail unnoticed.</p>
+<ul>
+<li><strong>sanity_check_paths</strong>: files/directories that must get installed</li>
+<li><strong>sanity_check_commands</strong>: (simple) commands that must work when the
+    installed module is loaded</li>
+</ul>
+<p>Remarks:</p>
+<ul>
+<li>format: Python dictionary with (<em>only</em>) <code>files</code>/<code>dirs</code>
+    keys</li>
+<li>values must be lists of (tuples of) strings, one of both <strong>must</strong> be
+    non-empty<ul>
+<li>paths are <em>relative</em> to installation directory</li>
+<li>for a path specified as a tuple, only one of the specified paths
+    must be available</li>
+</ul>
+</li>
+<li>default values:<ul>
+<li>paths: non-empty <code>bin</code> and <code>lib</code> or <code>lib64</code> directories</li>
+<li>commands: none</li>
+</ul>
+</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">sanity_check_paths</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;files&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;bin/xhpl&quot;</span><span class="p">],</span>
+    <span class="s1">&#39;dirs&#39;</span><span class="p">:</span> <span class="p">[],</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="writing_easyconfigs_easyblock_spec">Easyblock specification<a class="headerlink" href="#writing_easyconfigs_easyblock_spec" title="Permanent link">&para;</a></h3>
+<p>To make EasyBuild use a specific (usually generic) easyblock the
+<strong>easyblock</strong> parameter can be used.</p>
+<p>By default, EasyBuild will assume that the easyblock to use can be
+derived from the software name. For example: for <code>GCC</code>, EasyBuild will
+look for an easyblock class named <code>EB_GCC</code> in the Python module
+<code>easybuild.easyblocks.gcc</code>.</p>
+<p>A list of available easyblocks is available via <code>--list-easyblocks</code> (see
+also <a class="autorefs autorefs-internal" href="../using-easybuild/#list_easyblocks">List of available easyblocks</a>); generic
+easyblocks are the ones for which the name does <em>not</em> start with <code>EB_</code>.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;CMakeMake&#39;</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;GTI&#39;</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;1.2.0&#39;</span>
+<span class="o">...</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>It is highly recommended to use existing (generic) easyblocks, where
+applicable. This avoids the need for creating (and maintaining) new
+easyblocks. Typically, generic easyblocks support several custom
+easyconfig parameters which allow to steer their behavior (see also
+<a class="autorefs autorefs-internal" href="../using-easybuild/#avail_easyconfig_params">All available easyconfig parameters</a>).</p>
+</div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;Binary&#39;</span>
+<span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="n">install_cmd</span> <span class="o">=</span> <span class="s2">&quot;./install.bin&quot;</span>
+<span class="p">[</span><span class="o">...</span><span class="p">]</span>
+</code></pre></div>
+<h3 id="module-class">Module class<a class="headerlink" href="#module-class" title="Permanent link">&para;</a></h3>
+<p>The category to which the software belongs to can be specified using the
+<strong>moduleclass</strong> easyconfig parameter. By default, the <code>base</code> module
+class is used (which should be replaced with a more appropriate
+category).</p>
+<p>EasyBuild enforces that only known module classes can be specified (to
+avoid misclassification due to typos).</p>
+<p>The default list of module classes is available via
+<code>--show-default-moduleclasses</code>; additional module classes can be defined
+via the <code>--moduleclasses</code> configure option.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;GCC&#39;</span>
+<span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="n">moduleclass</span> <span class="o">=</span> <span class="s1">&#39;compiler&#39;</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By default, EasyBuild will create a symlink to the generated module file in a module class-specific path.
+This behavior is configurable through the module naming scheme being
+used.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The module class may play a significant role in other aspects. For example, the alternative (hierarchical)
+module naming scheme <code>HierarchicalMNS</code> heavily relies on the
+<code>moduleclass</code> parameter for discriminating compilers and MPI
+libraries.</p>
+</div>
+<h2 id="tweaking-existing-easyconfig-files">Tweaking existing easyconfig files<a class="headerlink" href="#tweaking-existing-easyconfig-files" title="Permanent link">&para;</a></h2>
+<p>The ability to modify easyconfig files on the fly with EasyBuild,
+provides a very powerful and flexible feature to describe builds,
+without having to manually create all the input files.</p>
+<p>Tweaking existing easyconfigs can be done using the <code>--try-*</code> command
+lines options. See <a class="autorefs autorefs-internal" href="../using-easybuild/#tweaking_easyconfigs_using_try">Tweaking existing easyconfig files</a> for more details.</p>
+<p>Example:</p>
+<ul>
+<li>
+<p>GCC version update:</p>
+<div class="highlight"><pre><span></span><code>eb GCC-4.9.0.eb --try-software-version<span class="o">=</span><span class="m">4</span>.9.1
+</code></pre></div>
+</li>
+<li>
+<p>install WRF + its dozen dependencies with a different toolchain (!):</p>
+<div class="highlight"><pre><span></span><code>eb WRF-3.5.1-ictce-5.3.0-dmpar.eb --try-toolchain<span class="o">=</span>intel,2014b -r
+</code></pre></div>
+</li>
+</ul>
+<h2 id="easyconfig_param_templates">Dynamic values for easyconfig parameters<a class="headerlink" href="#easyconfig_param_templates" title="Permanent link">&para;</a></h2>
+<p>String templates are completed using the value of particular easyconfig
+parameters, typically <code>name</code> and/or <code>version</code>. These help to avoid
+hardcoding values in multiple locations.</p>
+<p>A list of available string templates can be obtained using
+<code>--avail-easyconfig-templates</code>.</p>
+<p>Additionally, constants that can be used in easyconfig files are
+available via <code>--avail-easyconfig-constants</code>.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;GCC&#39;</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;4.8.3&#39;</span>
+<span class="o">...</span>
+<span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># http://ftpmirror.gnu.org/gcc/gcc-4.8.3</span>
+    <span class="s1">&#39;http://ftpmirror.gnu.org/</span><span class="si">%(namelower)s</span><span class="s1">/</span><span class="si">%(namelower)s</span><span class="s1">-</span><span class="si">%(version)s</span><span class="s1">&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+<span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="n">SOURCELOWER_TAR_GZ</span><span class="p">]</span>  <span class="c1"># gcc-4.8.3.tar.gz</span>
+<span class="o">...</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Proper use of string templates is important, in particular to avoid hardcoding the software version
+in multiple locations of an easyconfig file; this is critical to
+make <code>--try-software-version</code> behave as expected (see also
+<a class="autorefs autorefs-internal" href="../using-easybuild/#tweaking_easyconfigs_using_try">Tweaking existing easyconfig files</a>).</p>
+</div>
+<h2 id="version-specific-documentation-relevant-to-easyconfigs">Version-specific documentation relevant to easyconfigs<a class="headerlink" href="#version-specific-documentation-relevant-to-easyconfigs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a class="autorefs autorefs-internal" href="../version-specific/config-file-constants/#avail_cfgfile_constants">Available config file constants</a></li>
+<li><a class="autorefs autorefs-internal" href="../version-specific/easyconfig-parameters/#vsd_avail_easyconfig_params">Available easyconfig parameters</a></li>
+<li><a class="autorefs autorefs-internal" href="../version-specific/easyconfig-constants/#avail_easyconfig_constants">Constants available for easyconfig files</a></li>
+<li><a class="autorefs autorefs-internal" href="../version-specific/easyconfig-license-constants/#avail_easyconfig_licenses">License constants available for easyconfig files</a></li>
+<li><a class="autorefs autorefs-internal" href="../version-specific/easyblocks/#vsd_list_easyblocks">List of available easyblocks</a></li>
+<li><a class="autorefs autorefs-internal" href="../version-specific/toolchain-opts/#avail_toolchain_opts">List of available toolchain options</a></li>
+<li><a class="autorefs autorefs-internal" href="../version-specific/toolchain/#vsd_list_toolchains">List of known toolchains</a></li>
+<li><a class="autorefs autorefs-internal" href="../version-specific/supported-software/#list_software">List of supported software</a></li>
+<li><a class="autorefs autorefs-internal" href="../version-specific/easyblocks/#generic_easyblocks">Overview of generic easyblocks</a></li>
+<li><a class="autorefs autorefs-internal" href="../version-specific/easyconfig-templates/#avail_easyconfig_templates">Templates available for easyconfig files</a></li>
+</ul>
+<h2 id="contributing-easyconfigs">Contributing easyconfigs<a class="headerlink" href="#contributing-easyconfigs" title="Permanent link">&para;</a></h2>
+<p><strong>Contribute your working easyconfig files!</strong></p>
+<p>Share your expertise with the community, avoid duplicate work,
+especially if:</p>
+<ul>
+<li>the software package is not supported yet</li>
+<li>an existing easyconfig needs (non-trivial) changes for a different
+    version/toolchain</li>
+<li>it is a frequently used software package (compilers, MPI, etc.)</li>
+</ul>
+<p>See <a class="autorefs autorefs-internal" href="../contributing/#contributing">Contributing</a> for more information.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 10, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 13, 2022</span>
       
     
   </small>
