@@ -1,4 +1,4 @@
-# Available template values for easyconfigs
+# Available template values for easyconfigs {: #avail_easyconfig_templates }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/version-specific/easyconfig_templates.html>.

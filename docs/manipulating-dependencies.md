@@ -1,5 +1,9 @@
 # Manipulating dependencies
 
+## Installing dependencies as hidden modules using `--hide-deps` {: #hide_deps }
+
+## Using minimal toolchains for dependencies {: #minimal_toolchains }
+
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Manipulating_dependencies.html>.
 

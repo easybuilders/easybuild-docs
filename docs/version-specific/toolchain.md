@@ -1,4 +1,4 @@
-# List of known toolchains
+# List of known toolchains {: #vsd_list_toolchains }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/version-specific/toolchains.html>.

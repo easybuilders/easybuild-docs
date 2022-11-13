@@ -1,4 +1,4 @@
-# Using external modules
+# Using external modules {: #using_external_modules }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Using_external_modules.html>.

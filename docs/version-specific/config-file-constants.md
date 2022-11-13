@@ -1,4 +1,4 @@
-# Constants available (only) in configuration files
+# Constants available (only) in configuration files {: #avail_cfgfile_constants }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/version-specific/config_file_constants.html>.

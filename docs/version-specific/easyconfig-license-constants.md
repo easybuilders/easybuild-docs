@@ -1,4 +1,4 @@
-# Output of `eb --list-easyblocks`
+# License constants that can be used in easyconfigs {: #avail_easyconfig_licenses }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/version-specific/easyconfig_license_constants.html>.

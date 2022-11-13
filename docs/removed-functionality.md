@@ -10,6 +10,8 @@
 
 ### Software license {: #depr_license_eb1 }
 
+### Specifying source files as 2-element tuples to provide a custom extraction command {: #depr_sources_2_element_tuple }
+
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Removed-functionality.html>.
 

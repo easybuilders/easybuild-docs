@@ -1,4 +1,4 @@
-# List of supported software
+# List of supported software {: #list_software }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/version-specific/Supported_software.html>.
