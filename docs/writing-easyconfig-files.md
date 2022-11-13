@@ -89,7 +89,7 @@ A handful of easyconfig parameters are *mandatory*:
     - format: dictionary with name/version keys, e.g.,
         `{'name': 'foo', 'version': '1.2.3'}`
     - a list of supported toolchains can be found
-        [here <vsd_list_toolchains>][vsd_list_toolchains]
+        [here][vsd_list_toolchains]
 
 Remarks:
 
