@@ -157,7 +157,7 @@ checksums = ['ac7534163a09e21a5fa763e4e16dfc119bc84043f6e6a807aba666518f8df440']
 
 !!! note
     Rather than hardcoding the version (and name) in the list of sources,
-    a string template *%(version)s* can be used, see also
+    a string template `%(version)s` can be used, see also
     [Dynamic values for easyconfig parameters][easyconfig_param_templates].
 
 #### Patches {: #common_easyconfig_param_sources_patches }
@@ -266,7 +266,7 @@ is significantly more convenient than doing it manually).
 With `--inject-checksums`, checksums are injected for all sources and
 patches (if any), as well as for all sources & patches of every
 extension listed in `exts_list` (if any, see
-[module_extensions][module_extensions]).
+[Extensions][module_extensions]).
 
 If the sources (& patches) are not available yet, EasyBuild will try to
 download them first; i.e., the `fetch` step is run prior to computing &
@@ -646,7 +646,7 @@ EasyBuild as dependencies is also supported. See
 [Using external modules][using_external_modules] for more
 information.
 
-### Extensions
+### Extensions {: #module_extensions }
 
 Besides dependencies, which are found outside the software being built
 but are part of the site's EasyBuild installation, it is also possible
