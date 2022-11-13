@@ -1,4 +1,4 @@
-# Available toolchain options (by toolchain)
+# Available toolchain options (by toolchain) {: #avail_toolchain_opts }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/version-specific/toolchain_opts.html>.

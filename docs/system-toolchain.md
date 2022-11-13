@@ -1,5 +1,7 @@
 # System toolchain
 
+## Motivation for deprecating the `dummy` toolchain {: #system_toolchain_motivation_deprecating_dummy }
+
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/System_toolchain.html>.
 

@@ -1,4 +1,4 @@
-# List of easyblocks
+# List of easyblocks {: #vsd_list_easyblocks }
 
 ## Overview of generic easyblocks {: #generic_easyblocks }
 

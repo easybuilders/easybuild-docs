@@ -1,4 +1,4 @@
-# Constants that can be used in easyconfigs
+# Constants that can be used in easyconfigs {: #avail_easyconfig_constants }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/version-specific/easyconfig_constants.html>.
