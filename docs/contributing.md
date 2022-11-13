@@ -1,27 +1,3 @@
-# Contributing
-
-## Requirements for pull requests {: #contributing_review_process_pr_requirements }
-
-## Comparing with existing easyconfigs (`--review-pr`) {: #contributing_review_process_review_pr }
-
-## Pull requests {: #contributing_pull_requests }
-
-### Code style review {: #contributing_review_process_code_style }
-
-!!! warning
-    This page will soon replace <https://docs.easybuild.io/en/latest/Contributing.html>.
-
-    **
-    It still needs to be ported from *reStructuredText* (.rst) to *MarkDown* (.md),  
-    and you can help with that!
-    **
-
-    - source: [`docs/Contributing.rst` in `easybuilders/easybuild` repo](https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Contributing.rst)
-    - target: [`docs/contributing.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/contributing.md)
-
-    See <https://github.com/easybuilders/easybuild-docs> for more information.
-
-```rst
 .. _contributing:
 
 Contributing
@@ -730,7 +706,3 @@ Although it is generally avoided, there are a few reasons why maintainers might 
 
 This is done routinely as a way of focusing everyone's efforts on relevant contributions, and should not be seen as a rejection. 
 In fact, contributors are encouraged to reopen the pull request if they feel it is still relevant.
-
-
-
-```
