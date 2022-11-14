@@ -646,15 +646,6 @@ The output of `--review-pr` provides a 'multidiff' comparison, which
 highlights the differences between the easyconfig file in the pull
 request and the most similar selected ones from the current `develop`
 branch.
-
-For example:
-
-!!! raw html
-
-> \<script type=\"text/javascript\"
-> src=\"<https://asciinema.org/a/103889.js>\" id=\"asciicast-103889\"
-> async\>\</script\>
-
 Interpreting this output is a quick and easy way to assess how different
 the contributed easyconfig files are from the existing easyconfigs,
 although it does require a bit of practice because of the density of the
