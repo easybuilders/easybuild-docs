@@ -37,11 +37,9 @@ It is mandatory to specify basic software-related keywords: *software
 name*, *toolchains* and *versions*.
 
 - *software name*: Name of the software.
-- *toolchains*: Names and versions of compiler
-    [toolchains][toolchains].
-- *versions*: Versions of software. If multiple entries are provided,
-EasyBuild will install all of them. Can be in form of a list or
-consecutive line entries (see example).
+- *toolchains*: Names and versions of compiler [toolchains][toolchains].
+- *versions*: Versions of software. If multiple entries are provided, EasyBuild will install all of
+  them. Can be in form of a list or consecutive line entries (see example).
 
 **General structure of YAML-formatted easystack:**
 
