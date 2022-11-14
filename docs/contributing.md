@@ -124,15 +124,12 @@ Python code is by **writing documentation**, i.e. enhancing or updating
 existing documentation or documenting features that are not covered yet.
 
 To contribute to the documentation hosted at
-<http://easybuild.readthedocs.io/>, you should open a pull request to
-the `develop` branch of the main EasyBuild repository at
-<https://github.com/easybuilders/easybuild>; see the `docs`
-subdirectory.
+<https://docs.easybuild.io>, you should open a pull request to
+the `main` branch of the <https://github.com/easybuilders/easybuild-docs> repository;
+see the `docs` subdirectory.
 
-A particularly useful tool is <http://rst.ninjs.org/>, which can be used
-to preview how the documentation written in `reStructuredText` format
-will be rendered on `readthedocs.org` (select the `Nature` theme for
-optimal results).
+The EasyBuild documentation is made with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material)
+and written in [MarkDown](https://daringfireball.net/projects/markdown).
 
 ### Joining the conversation {: #contributing_conversation }
 
