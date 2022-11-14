@@ -1,708 +1,703 @@
-.. _contributing:
+# Contributing {: #contributing }
 
-Contributing
-============
+This documentation explains how you can contribute to EasyBuild, and
+discusses the review process for contributions.
 
-This documentation explains how you can contribute to EasyBuild,
-and discusses the review process for contributions.
-
-.. contents::
-    :depth: 3
-    :backlinks: none
-
-.. _contributing_how:
-
-How to contribute
------------------
+## How to contribute {: #contributing_how }
 
 It is a common misconception that contributing to an open source project
 requires being intimately familiar with its codebase.
 
-There are various ways to contribute, even if you don't have any experience
-with the programming language(s) being used by the project you are interested in.
+There are various ways to contribute, even if you don't have any
+experience with the programming language(s) being used by the project
+you are interested in.
 
 You can contribute to EasyBuild by:
 
-* :ref:`contributing_feedback`
-* :ref:`contributing_bugs`
-* :ref:`contributing_requests`
-* :ref:`contributing_helping_others`
-* :ref:`contributing_easyconfigs`
-* :ref:`contributing_code`
-* :ref:`contributing_docs`
-* :ref:`contributing_conversation`
+- [Giving feedback][contributing_feedback]
+- [Reporting bugs][contributing_bugs]
+- [Submitting feature/change requests][contributing_requests]
+- [Helping others][contributing_helping_others]
+- [Contributing easyconfig files][contributing_easyconfigs]
+- [Contributing code changes][contributing_code]
+- [Writing documentation][contributing_docs]
+- [Joining the conversation][contributing_conversation]
 
-.. _contributing_feedback:
-
-Giving feedback
-~~~~~~~~~~~~~~~
+### Giving feedback {: #contributing_feedback }
 
 An easy way to contribute to EasyBuild, even without having a lot of
-hands-on experience with it, is to **provide feedback** on your experiences.
+hands-on experience with it, is to **provide feedback** on your
+experiences.
 
-Feedback from people new to EasyBuild is valuable, since it provides
-a perspective that is easily overlooked by more experienced users.
+Feedback from people new to EasyBuild is valuable, since it provides a
+perspective that is easily overlooked by more experienced users.
 
-You can contact the EasyBuild community via the EasyBuild mailing
-list (``easybuild@lists.ugent.be``), the ``#easybuild`` IRC channel (see also :ref:`getting_help`).
+You can contact the EasyBuild community via the EasyBuild mailing list
+(`easybuild@lists.ugent.be`), the `#easybuild` IRC channel (see also
+[Getting help][getting_help]).
 
-.. _contributing_bugs:
+### Reporting bugs {: #contributing_bugs }
 
-Reporting bugs
-~~~~~~~~~~~~~~
+If you run into unexpected problems when using EasyBuild, please **open
+a bug report** in the issue tracker of the relevant GitHub repository:
 
-If you run into unexpected problems when using EasyBuild, please **open a bug report**
-in the issue tracker of the relevant GitHub repository:
-
-* https://github.com/easybuilders/easybuild-framework/issues: for general problems with ``eb``, the EasyBuild framework, etc.
-* https://github.com/easybuilders/easybuild-easyblocks/issues: for problems specific to a particular (generic or software-specific) easyblock, etc.
-* https://github.com/easybuilders/easybuild-easyconfigs/issues: for problems specific to a particular software package,
-  e.g., with building and installing a particular version of that software, or when using a particular toolchain, etc.
-* https://github.com/easybuilders/easybuild/issues: for problems with the EasyBuild documentation, etc.
+- <https://github.com/easybuilders/easybuild-framework/issues>: for
+    general problems with `eb`, the EasyBuild framework, etc.
+- <https://github.com/easybuilders/easybuild-easyblocks/issues>: for
+    problems specific to a particular (generic or software-specific)
+    easyblock, etc.
+- <https://github.com/easybuilders/easybuild-easyconfigs/issues>: for
+    problems specific to a particular software package, e.g., with
+    building and installing a particular version of that software, or
+    when using a particular toolchain, etc.
+- <https://github.com/easybuilders/easybuild/issues>: for problems
+    with the EasyBuild documentation, etc.
 
 Please try and provide all relevant information, which may include:
 
-* the EasyBuild version you are using
-* the specifics of the system you are using, incl. OS + version, Python version, modules tool & version, etc.
-* the active EasyBuild configuration; usually the output of ``eb --show-config`` is sufficient
-* the full ``eb`` command line that was used
-* warning or error messages, or other relevant informative messages
-* filename or contents of easyconfig file(s) being used
-* EasyBuild log file (for example via https://gist.github.com/), preferably collected with ``eb --debug``
+- the EasyBuild version you are using
+- the specifics of the system you are using, incl. OS + version,
+    Python version, modules tool & version, etc.
+- the active EasyBuild configuration; usually the output of
+    `eb --show-config` is sufficient
+- the full `eb` command line that was used
+- warning or error messages, or other relevant informative messages
+- filename or contents of easyconfig file(s) being used
+- EasyBuild log file (for example via <https://gist.github.com/>),
+    preferably collected with `eb --debug`
 
+### Submitting feature/change requests {: #contributing_requests }
 
-.. _contributing_requests:
+If you have **suggestions for enhancements or ideas for new features**
+that could be useful, please open an issue in the relevant GitHub
+repository (see [Reporting bugs][contributing_bugs]).
 
-Submitting feature/change requests
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Describe what you have in mind, and maybe also provide a concrete
+example to illustrate how your suggestion would improve the current
+functionality.
 
-If you have **suggestions for enhancements or ideas for new features** that could be useful,
-please open an issue in the relevant GitHub repository (see :ref:`contributing_bugs`).
+### Helping others {: #contributing_helping_others }
 
-Describe what you have in mind, and maybe also provide a concrete example to illustrate
-how your suggestion would improve the current functionality.
+Try and **help others** based on your experience, or help them figure
+out an answer to their question or a solution to their problem using the
+EasyBuild documentation or by reaching out to someone else in the
+EasyBuild community that may know the answer.
 
+The EasyBuild community is known to be very welcoming and helpful, and
+you too can be a part of that.
 
-.. _contributing_helping_others:
+### Contributing easyconfig files {: #contributing_easyconfigs }
 
-Helping others
-~~~~~~~~~~~~~~
+Please **contribute easyconfig files** that are not included yet in (the
+`develop` branch of) the `easybuild-easyconfigs` GitHub repository at
+<https://github.com/easybuilders/easybuild-easyconfigs>.
 
-Try and **help others** based on your experience, or help them figure out an answer to their question
-or a solution to their problem using the EasyBuild documentation or by reaching out
-to someone else in the EasyBuild community that may know the answer.
+This includes easyconfigs for software that is not supported yet by
+EasyBuild, as well as updates to existing easyconfigs (e.g., version
+updates, using a different toolchain, etc.), even if you consider the
+updates to be trivial. Keep in mind that being able to use something
+that is known to work out-of-the-box can save quite a bit of time
+compared to having to tweak existing easyconfigs and validate the result
+installations.
 
-The EasyBuild community is known to be very welcoming and helpful, and you too can be a part of that.
+We highly recommend using the `--new-pr` and `--update-pr` command line
+options for contributing easyconfig files; see
+[Submitting new and updating pull requests][github_new_update_pr].
 
-
-.. _contributing_easyconfigs:
-
-Contributing easyconfig files
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Please **contribute easyconfig files** that are not included yet in
-(the ``develop`` branch of) the ``easybuild-easyconfigs`` GitHub repository at
-https://github.com/easybuilders/easybuild-easyconfigs.
-
-This includes easyconfigs for software that is not supported yet by EasyBuild,
-as well as updates to existing easyconfigs (e.g., version updates, using a
-different toolchain, etc.), even if you consider the updates to be trivial.
-Keep in mind that being able to use something that is known to work out-of-the-box
-can save quite a bit of time compared to having to tweak existing easyconfigs
-and validate the result installations.
-
-We highly recommend using the ``--new-pr`` and ``--update-pr`` command
-line options for contributing easyconfig files; see :ref:`github_new_update_pr`.
-
-
-.. _contributing_code:
-
-Contributing code changes
-~~~~~~~~~~~~~~~~~~~~~~~~~
+### Contributing code changes {: #contributing_code }
 
 Of course you can also **contribute code changes**, including bug fixes,
-enhancements or additional features in the EasyBuild framework, the easyblocks repository,
-the test suites or in related scripts.
+enhancements or additional features in the EasyBuild framework, the
+easyblocks repository, the test suites or in related scripts.
 
-Do keep in mind that this requires some experience with Python,
-although you should be able to go a long way by using the existing code base as support.
+Do keep in mind that this requires some experience with Python, although
+you should be able to go a long way by using the existing code base as
+support.
 
-See :ref:`contributing_pull_requests` for more information on the practical
-aspects of contributing code.
+See [Pull requests][contributing_pull_requests] for more
+information on the practical aspects of contributing code.
 
+### Writing documentation {: #contributing_docs }
 
-.. _contributing_docs:
+Another way to contribute to EasyBuild without having to implement
+Python code is by **writing documentation**, i.e. enhancing or updating
+existing documentation or documenting features that are not covered yet.
 
-Writing documentation
-~~~~~~~~~~~~~~~~~~~~~
+To contribute to the documentation hosted at
+<http://easybuild.readthedocs.io/>, you should open a pull request to
+the `develop` branch of the main EasyBuild repository at
+<https://github.com/easybuilders/easybuild>; see the `docs`
+subdirectory.
 
-Another way to contribute to EasyBuild without having to implement Python
-code is by **writing documentation**, i.e. enhancing or updating existing
-documentation or documenting features that are not covered yet.
+A particularly useful tool is <http://rst.ninjs.org/>, which can be used
+to preview how the documentation written in `reStructuredText` format
+will be rendered on `readthedocs.org` (select the `Nature` theme for
+optimal results).
 
-To contribute to the documentation hosted at http://easybuild.readthedocs.io/,
-you should open a pull request to the ``develop`` branch of the
-main EasyBuild repository at https://github.com/easybuilders/easybuild; see the ``docs`` subdirectory.
+### Joining the conversation {: #contributing_conversation }
 
-A particularly useful tool is http://rst.ninjs.org/, which can be used to
-preview how the documentation written in ``reStructuredText`` format
-will be rendered on ``readthedocs.org`` (select the ``Nature`` theme for optimal
-results).
+Last but not least, you can actively **join the conversation** that
+arise on the EasyBuild mailing list, the `#easybuild` IRC channel and
+during the bi-weekly EasyBuild conference calls (see
+<https://github.com/easybuilders/easybuild/wiki/Conference-calls>).
 
+Engage with the EasyBuild community, and help steer EasyBuild
+development by participating in the conversations regarding a variety of
+topics related to building and installing (scientific) software.
 
-.. _contributing_conversation:
-
-Joining the conversation
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-Last but not least, you can actively **join the conversation** that arise on the EasyBuild
-mailing list, the ``#easybuild`` IRC channel and during the bi-weekly EasyBuild
-conference calls (see https://github.com/easybuilders/easybuild/wiki/Conference-calls).
-
-Engage with the EasyBuild community, and help steer EasyBuild development by participating
-in the conversations regarding a variety of topics related to building and installing (scientific) software.
-
-
-.. _contributing_pull_requests:
-
-Pull requests
--------------
+## Pull requests {: #contributing_pull_requests }
 
 To contribute to the EasyBuild framework, easyblocks, easyconfig files
-or the EasyBuild documentation, you will need to open a **pull request** to the
-corresponding GitHub repository:
+or the EasyBuild documentation, you will need to open a **pull request**
+to the corresponding GitHub repository:
 
-* EasyBuild framework: https://github.com/easybuilders/easybuild-framework
-* easyblocks: https://github.com/easybuilders/easybuild-easyblocks
-* easyconfigs: https://github.com/easybuilders/easybuild-easyconfigs
-* documentation: https://github.com/easybuilders/easybuild (see ``docs`` subdirectory)
+- EasyBuild framework:
+    <https://github.com/easybuilders/easybuild-framework>
+- easyblocks: <https://github.com/easybuilders/easybuild-easyblocks>
+- easyconfigs: <https://github.com/easybuilders/easybuild-easyconfigs>
+- documentation: <https://github.com/easybuilders/easybuild> (see
+    `docs` subdirectory)
 
-Doing this the traditional way requires some knowledge about using ``git``
-(i.e. creating commits, using branches, pushing to and pulling from remote
-Git repositories, etc.), and being familiar with GitHub.
+Doing this the traditional way requires some knowledge about using `git`
+(i.e. creating commits, using branches, pushing to and pulling from
+remote Git repositories, etc.), and being familiar with GitHub.
 
-**However, this can be largely circumvented by using the GitHub integration
-provided by EasyBuild, see** :ref:`integration_with_github` **.**
+**However, this can be largely circumvented by using the GitHub
+integration provided by EasyBuild, see**
+[Integration with GitHub][integration_with_github] **.**
 
+### Setting up {: #contributing_pull_request_setup }
 
-.. _contributing_pull_request_setup:
+!!! note
+    These instructions assume that you already have a working
+    GitHub account.
 
-Setting up
-~~~~~~~~~~
+    If you don't have a GitHub account yet, visit <https://github.com/>
+    to create one.
 
-.. note:: These instructions assume that you already have a working GitHub account.
+    We highly recommend registering your SSH public key in your GitHub
+    account, via <https://github.com/settings/keys>. This allows pushing
+    to your fork of the GitHub repositories without using a password.
 
-          If you don't have a GitHub account yet, visit https://github.com/ to create one.
+Before you can open pull requests, you will need to **fork** the GitHub
+repository you are targeting, and create a local **working copy** of
+that repository. This only needs to be done *once* for every of the
+EasyBuild repositories.
 
-          We highly recommend registering your SSH public key in your GitHub account,
-          via https://github.com/settings/keys. This allows pushing to your fork of
-          the GitHub repositories without using a password.
+!!! note
+    For the purpose of this guide, we will be using the
+    `easybuild-framework` repository.
 
-Before you can open pull requests, you will need to **fork** the GitHub repository
-you are targeting, and create a local **working copy** of that repository. This only
-needs to be done *once* for every of the EasyBuild repositories.
+    However, the instructions are equivalent for the other EasyBuild
+    repositories.
 
-.. note:: For the purpose of this guide, we will be using the ``easybuild-framework`` repository.
+#### Forking the repository {: #contributing_pull_request_setup_fork_repo }
 
-          However, the instructions are equivalent for the other EasyBuild repositories.
+First, create your own *fork* of the repository in your GitHub account
+using the `Fork` button on the top right at
+<https://github.com/easybuilders/easybuild-framework>.
 
-.. _contributing_pull_request_setup_fork_repo:
+This will create a 'copy' of the `easybuild-framework` repository
+owned by the `easybuilders` GitHub organisation to your own personal
+GitHub account.
 
-Forking the repository
-++++++++++++++++++++++
+You will have to use this fork as a staging area for your work, to
+prepare your contributions before creating the actual pull requests.
 
-First, create your own *fork* of the repository in your GitHub account using the
-'``Fork``' button on the top right at https://github.com/easybuilders/easybuild-framework.
-
-This will create a 'copy' of the ``easybuild-framework`` repository
-owned by the ``easybuilders`` GitHub organisation to your own personal GitHub account.
-
-You will have to use this fork as a staging area for your work,
-to prepare your contributions before creating the actual pull requests.
-
-.. _contributing_pull_request_setup_working_copy:
-
-Creating a working copy
-+++++++++++++++++++++++
-
-.. note:: Do not forget to replace '``EXAMPLE``' with your GitHub account name in the instructions below.
+#### Creating a working copy {: #contributing_pull_request_setup_working_copy }
 
 In addition to forking the repository on GitHub, you also need to create
-a local *working copy* of the repository. This is basically a local checkout
-of the repository where you can track the changes you are making.
+a local *working copy* of the repository. This is basically a local
+checkout of the repository where you can track the changes you are
+making.
 
 First, *clone* your fork of the repository:
 
-.. code:: shell
+``` shell
+git clone git@github.com:EXAMPLE/easybuild-framework.git
+```
 
-  git clone git@github.com:EXAMPLE/easybuild-framework.git
+!!! note
+    Do not forget to replace `EXAMPLE` with your GitHub account name.
 
-If that worked as expected, you should have a new directory named ``easybuild-framework``.
-Move into the ``easybuild-framework`` directory:
+If that worked as expected, you should have a new directory named
+`easybuild-framework`. Move into the `easybuild-framework` directory:
 
-.. code:: shell
+``` shell
+cd easybuild-framework
+```
 
-  cd easybuild-framework
+Finally, we recommended to also check out the `develop` branch, which
+will be used as the base for your own branches:
 
-Finally, we recommended to also check out the ``develop`` branch,
-which will be used as the base for your own branches:
+``` shell
+git checkout -b develop origin/develop
+```
 
-.. code:: shell
+With this in place, you are all set to open pull requests for your
+contributions.
 
-  git checkout -b develop origin/develop
+##### Keeping the `develop` branch in sync
 
-With this in place, you are all set to open pull requests for your contributions.
+It is important to keep the `develop` branch in your working copy in
+sync with the upstream repository in the GitHub `easybuilders`
+organization.
 
-Keeping the ``develop`` branch in sync
-######################################
+For this, you need to add the upstream repository as a '*remote*'
+repository:
 
-It is important to keep the ``develop`` branch in your working copy in sync
-with the upstream repository in the GitHub ``easybuilders`` organization.
+``` shell
+git remote add upstream git@github.com:easybuilders/easybuild-framework.git
+```
 
-For this, you need to add the upstream repository as a '*remote*' repository:
+!!! note
+    `upstream` is just a name that you give to the remote the central
 
-.. code:: shell
+    `easybuilders` repository on GitHub; you can modify this to your
+    liking if desired (but do take that into account for the further
+    instructions if you do so).
 
-  git remote add upstream git@github.com:easybuilders/easybuild-framework.git
+    For your fork of the repository, a default remote named `origin`
+    should have been created via `git clone` (see the output of
+    `git remote -v`).
 
-.. note:: '``upstream``' is just a name that you give to the remote the central
-          ``easybuilders`` repository on GitHub; you can modify this to your liking
-          if desired (but do take that into account for the further instructions if you do so).
+To sync your `develop` branch, use `git pull upstream develop` after
+making sure you have the `develop` branch checked out:
 
-          For your fork of the repository, a default remote named ``origin`` should
-          have been created via ``git clone`` (see the output of ``git remote -v``).
+``` shell
+git checkout develop
+git pull upstream develop
+```
 
-To sync your ``develop`` branch, use ``git pull upstream develop`` after making
-sure you have the ``develop`` branch checked out:
+### Opening a new pull request {: #contributing_creating_pull_requests }
 
-.. code:: shell
+!!! note
+    This section describes the manual procedure to open a new pull
+    request.
 
-  git checkout develop
-  git pull upstream develop
+    Please consider using `eb --new-pr` instead, see
+    [Submitting pull requests][github_new_pr].
 
+!!! note
+    We assume you are already located in your local working copy of
+    the repository you want to contribute to (e.g., `easybuild-framework`).
 
-.. _contributing_creating_pull_requests:
+To open a pull request for your contribution, you must follow these
+steps:
 
-Opening a new pull request
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. [Creating a new branch][contributing_creating_pull_requests_branch]
+1. [Committing your changes][contributing_creating_pull_requests_commit]
+1. [Pushing your branch][contributing_creating_pull_requests_push]
+1. [Pull request title & description][contributing_creating_pull_requests_pr_title]
+1. [Opening the pull request][contributing_creating_pull_requests_open_pr]
 
-.. note:: This section describes the manual procedure to open a new pull request.
-
-          Please consider using ``eb --new-pr`` instead, see :ref:`github_new_pr`.
-
-.. note:: We assume you are already located in your local working copy of
-          the repository you want to contribute to (e.g., ``easybuild-framework``).
-
-To open a pull request for your contribution, you must follow these steps:
-
-i. :ref:`contributing_creating_pull_requests_branch`
-ii. :ref:`contributing_creating_pull_requests_commit`
-iii. :ref:`contributing_creating_pull_requests_push`
-iv. :ref:`contributing_creating_pull_requests_pr_title`
-v. :ref:`contributing_creating_pull_requests_open_pr`
-
-
-.. _contributing_creating_pull_requests_branch:
-
-Creating a new branch
-+++++++++++++++++++++
+#### Creating a new branch {: #contributing_creating_pull_requests_branch }
 
 First, create a new branch for your work. You can do this either before
 or after making the changes that you would like to contribute, but we
 recommend to create a new branch before making any changes.
 
-Make sure you have the ``develop`` branch checked out before creating your branch:
+Make sure you have the `develop` branch checked out before creating your
+branch:
 
-.. code:: shell
+``` shell
+git checkout develop
+```
 
-  git checkout develop
+To create a new branch, you should use `git branch <branch_name>`
+followed by `git checkout <branch_name>`, or equivalently
+`git checkout -b <branch_name>`.
 
-To create a new branch, you should use ``git branch <branch_name>`` followed by
-``git checkout <branch_name>``, or equivalently ``git checkout -b <branch_name>``.
+For example, to create a new branch named `mybranch`:
 
-For example, to create a new branch named ``mybranch``:
+``` shell
+git checkout -b mybranch
+```
 
-.. code:: shell
+You can choose the branch name freely, but make it sufficiently
+descriptive – your future self will thank you.
 
-  git checkout -b mybranch
+#### Committing your changes {: #contributing_creating_pull_requests_commit }
 
-You can choose the branch name freely, but make it sufficiently descriptive --
-your future self will thank you.
+To 'save' your changes, you should create one or more *commits* in the
+branch you created. We recommended making separate commits for different
+'units of work'.
 
+First, make sure you have checked out the branch were you want to commit
+the changes to. For example, to prepare for committing changes to the
+`mybranch` branch:
 
-.. _contributing_creating_pull_requests_commit:
+``` shell
+git checkout mybranch
+```
 
-Committing your changes
-+++++++++++++++++++++++
+To check which branch is currently checked out, use `git branch`.
 
-To 'save' your changes, you should create one or more *commits* in the branch
-you created. We recommended making separate commits for different 'units of work'.
+To get a high-level overview of the changes before committing them, you
+can use `git status`.
 
-First, make sure you have checked out the branch were you want to commit the changes to.
-For example, to prepare for committing changes to the ``mybranch`` branch:
+To see the actual changes that were made, use `git diff`.
 
-.. code:: shell
-
-  git checkout mybranch
-
-To check which branch is currently checked out, use ``git branch``.
-
-To get a high-level overview of the changes before committing them, you can use ``git status``.
-
-To see the actual changes that were made, use ``git diff``.
-
-To commit the changes you want to contribute, use ``git add <files>``
-to *stage* the changes, followed by ``git commit -m "<message>"`` to create
+To commit the changes you want to contribute, use `git add <files>` to
+*stage* the changes, followed by `git commit -m "<message>"` to create
 the actual commit.
 
-For example, to commit the changes that were made to ``easybuild/tools/filetools.py``:
+For example, to commit the changes that were made to
+`easybuild/tools/filetools.py`:
 
-.. code:: shell
+``` shell
+git add easybuild/tools/filetools.py
+git status  # check which files are staged for commit
+git commit -m "example commit message for changes to filetools.py"
+```
 
-  git add easybuild/tools/filetools.py
-  git status  # check which files are staged for commit
-  git commit -m "example commit message for changes to filetools.py"
+!!! note
+    Please use a concise commit message that describes the changes you made.
 
-.. note:: Please use a concise commit message that describes the changes you made.
+!!! note
+    For files that are already being tracked, you can use `git commit -am <message>`
+    to commit all changes at once.
 
-.. note:: For files that are already being tracked, you can use ``git commit -am <message>``
-          to commit all changes at once.
+To verify that your work was committed, use `git log` to see all commits
+on the current branch. Use `git log --stat` and/or `git log --diff` to
+see more details about which changes are included in each of the
+commits.
 
-To verify that your work was committed, use ``git log`` to see all commits
-on the current branch. Use ``git log --stat`` and/or ``git log --diff`` to see
-more details about which changes are included in each of the commits.
-
-
-.. _contributing_creating_pull_requests_push:
-
-Pushing your branch
-+++++++++++++++++++
+#### Pushing your branch {: #contributing_creating_pull_requests_push }
 
 Once you have committed your changes to a branch, you should *push* your
-branch to your fork of the GitHub repository using ``git push``.
+branch to your fork of the GitHub repository using `git push`.
 
-For example, to push the ``mybranch`` branch to your fork of the GitHub repository
-(via the ``origin`` remote, see :ref:`contributing_pull_request_setup_working_copy`):
+For example, to push the `mybranch` branch to your fork of the GitHub
+repository (via the `origin` remote, see
+[Creating a working copy][contributing_pull_request_setup_working_copy]):
 
-.. code:: shell
+``` shell
+git push origin mybranch
+```
 
-  git push origin mybranch
+!!! note
+    The above command will make your work public.
 
-Note: this will make your work public.
+#### Pull request title & description {: #contributing_creating_pull_requests_pr_title }
 
+Please use a descriptive (short) title for your pull requests, and
+clarify (if needed) in the pull request description.
 
-.. _contributing_creating_pull_requests_pr_title:
+If any other pull requests are required, refer to them in the
+description using `#<PR number>` (only for pull requests to the same
+repository), or by copy-pasting the URL to the pull request.
 
-Pull request title & description
-++++++++++++++++++++++++++++++++
+For pull requests to the easyconfig repository, we recommend using this
+format for the pull request title when contributing new easyconfig
+files:
 
-Please use a descriptive (short) title for your pull requests, and clarify (if needed) in the pull request description.
-
-If any other pull requests are required, refer to them in the description using ``#<PR number>`` (only for pull requests
-to the same repository), or by copy-pasting the URL to the pull request.
-
-For pull requests to the easyconfig repository, we recommend using this format for the pull request title
-when contributing new easyconfig files::
-
-  {<moduleclass>}[<toolchain>] <software name> <software version> <extra info>
+``` shell
+{<moduleclass>}[<toolchain>] <software name> <software version> <extra info>
+```
 
 For example:
 
-* ``{tools}[dummy] EasyBuild v3.2.1``
-* ``{math}[intel/2017a] numpy 1.13.0 w/ Python 2.7.13``
-* ``{math,numlib}[foss/2017a] METIS v5.1.0, ParMETIS v4.0.3, SuiteSparse v4.5.5, ...``
+- `{tools}[dummy] EasyBuild v3.2.1`
+- `{math}[intel/2017a] numpy 1.13.0 w/ Python 2.7.13`
+- `{math,numlib}[foss/2017a] METIS v5.1.0, ParMETIS v4.0.3, SuiteSparse v4.5.5, ...`
 
-If you are opening a work-in-progress pull request, for example to solicit feedback, tag it using ``(WIP)``.
-in the pull request title.
+If you are opening a work-in-progress pull request, for example to
+solicit feedback, tag it using `(WIP)`. in the pull request title.
 
-.. _contributing_creating_pull_requests_open_pr:
+#### Opening the pull request {: #contributing_creating_pull_requests_open_pr }
 
-Opening the pull request
-++++++++++++++++++++++++
+To open a pull request using the branch you pushed, you should use the
+GitHub interface, and follow the steps outlined below.
 
-To open a pull request using the branch you pushed,
-you should use the GitHub interface, and follow the steps outlined below.
+1. visit <https://github.com/EXAMPLE/easybuild-framework>
 
-.. note:: Replace '``EXAMPLE``' with your GitHub account name, and
-          '``easybuild-framework``' with the name of the target EasyBuild repository.
+    !!! note
+        Replace `EXAMPLE` with your GitHub account name, and
+        `easybuild-framework` with the name of the target EasyBuild
+        repository.
 
-i. visit https://github.com/EXAMPLE/easybuild-framework;
-ii. switch to the branch that includes the changes you want to contribute
-    using the '``Branch: main``' button on the left,
-    for example by selecting ``Branch: mybranch`` from the dropdown list
-iii. click the '``New pull request``' button;
-iv. change the target branch to ``develop`` using the '``base: main``' button;
-v. review your changes using the 'diff' view presented by GitHub;
-vi. provide an appropriate title and description for your contribution;
-vii. open the pull request by clicking the green '``Create pull request``' button
+1. switch to the branch that includes the changes you want to
+    contribute using the `Branch: main` button on the left, for
+    example by selecting `Branch: mybranch` from the dropdown list
+1. click the `New pull request` button
+1. change the target branch to `develop` using the `base: main` button
+1. review your changes using the 'diff' view presented by GitHub;
+1. provide an appropriate title and description for your contribution;
+1. open the pull request by clicking the green
+     `Create pull request` button
 
-Next, your pull request will be reviewed & tested, see :ref:`contributing_review_process`.
+Next, your pull request will be reviewed & tested, see
+[Review process for contributions][contributing_review_process].
 
-.. _contributing_updating_pull_requests:
+### Updating existing pull requests {: #contributing_updating_pull_requests }
 
-Updating existing pull requests
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!!! note
+    This section describes the manual procedure to create a new pull request.
 
-.. note:: This section describes the manual procedure to create a new pull request.
+    Please consider using `eb --update-pr` instead, see [Updating existing pull requests][github_update_pr].
 
-          Please consider using ``eb --update-pr`` instead, see :ref:`github_update_pr`.
+It is quite common to update a pull request after creating it, for
+example if the test suite run in GitHub Actions reports problems with
+the changes being made, or as a response to someone reviewing your
+contribution.
 
-It is quite common to update a pull request after creating it,
-for example if the test suite run in GitHub Actions reports problems with the changes being made, or as a response
-to someone reviewing your contribution.
+To update an existing pull request, it suffices to add commits to the
+branch that was used for opening the pull request, and pushing the
+updated branch to GitHub.
 
-To update an existing pull request, it suffices to add commits to the branch
-that was used for opening the pull request, and pushing the updated branch to GitHub.
+For example, to update the pull request that was created using the
+`mybranch` branch:
 
-For example, to update the pull request that was created using the ``mybranch`` branch:
+``` shell
+git checkout mybranch
+# make changes...
+git add <paths to changed files>
+git commit -m "example commit message for additional changes"
+git push origin mybranch
+```
 
-.. code:: shell
+Updating a pull request will trigger GitHub Actions to re-test your
+contribution, and a notification will be sent out to whoever is
+'watching' your pull request.
 
-  git checkout mybranch
-  # make changes...
-  git add <paths to changed files>
-  git commit -m "example commit message for additional changes"
-  git push origin mybranch
+### Merging of pull requests {: #contributing_merging_pull_requests }
 
-Updating a pull request will trigger GitHub Actions to re-test your contribution,
-and a notification will be sent out to whoever is 'watching' your pull request.
-
-
-.. _contributing_merging_pull_requests:
-
-Merging of pull requests
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-Once your pull request has been given the green light by GitHub Actions and one or more
-people reviewing have approved the changes, it can be merged into
-the ``develop`` branch.
+Once your pull request has been given the green light by GitHub Actions
+and one or more people reviewing have approved the changes, it can be
+merged into the `develop` branch.
 
 **This can only be done by a member of the EasyBuild maintainers team.
 Only pull requests that meet the requirements are eligible for merging,
-see** :ref:`contributing_review_process_pr_requirements` **.**
+see** [Requirements for pull requests][contributing_review_process_pr_requirements] **.**
 
-Merging a pull request usually implies that the changes will be part of the next EasyBuild release.
+Merging a pull request usually implies that the changes will be part of
+the next EasyBuild release.
 
+## Review process for contributions {: #contributing_review_process }
 
-.. _contributing_review_process:
+Each contribution is thoroughly reviewed and tested before it gets
+merged in. Some aspects of this are automated, others require human
+intervention.
 
-Review process for contributions
---------------------------------
+### Requirements for pull requests {: #contributing_review_process_pr_requirements }
 
-Each contribution is thoroughly reviewed and tested before it gets merged in.
-Some aspects of this are automated, others require human intervention.
+**Only pull requests (PRs) that fulfil these requirements are eligible
+to be merged:**
 
-.. _contributing_review_process_pr_requirements:
+- *the PR must target the* `develop` *branch of the repository*; see
+    [`develop` branch][contributing_review_process_develop_branch]
+- *the test suite must (still) pass*, i.e. GitHub Actions *must* give
+     a green light; see [Test suite (GitHub Actions)][contributing_review_process_github_actions]
 
-Requirements for pull requests
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    - *tests should be added or enhanced when appropriate*; see
+        [Adding tests][contributing_review_process_adding_tests], especially for PRs to the `easybuild-framework` repository
 
-**Only pull requests (PRs) that fulfill these requirements are eligible to be merged:**
+- *backward compatibility should be retained*; see
+      [Backward compatibility][contributing_review_process_backward_compatibility]
+- *code style must be kept consistent*; see
+     [Code style review][contributing_review_process_code_style]
 
-(i) *the PR must target the* ``develop`` *branch of the repository*; see :ref:`contributing_review_process_develop_branch`
+    - *easyconfigs should be kept consistent across versions &
+        toolchains*; see [Comparing with existing easyconfigs][contributing_review_process_review_pr]
 
-(ii) *the test suite must (still) pass*, i.e. GitHub Actions *must* give a green light; see :ref:`contributing_review_process_travis`
+- *(successful) test reports must be submitted for easyconfig PRs*;
+    see [Test reports for easyconfig contributions][contributing_review_process_test_reports]
 
-  * *tests should be added or enhanced when appropriate*; see :ref:`contributing_review_process_adding_tests`,
-    especially for PRs to the ``easybuild-framework`` repository
+- *the PR is approved by one or more maintainers of the repository*;
+     see [EasyBuild maintainers][maintainers]
+- *the PR should be merged by one of the maintainers, other than the
+      author of the PR*; see
+      [Pull requests are merged by a maintainer other than the author][contributing_review_process_do_not_merge_your_own_prs]
 
-(iii) *backward compatibility should be retained*; see :ref:`contributing_review_process_backward_compatibility`
-(iv) *code style must be kept consistent*; see :ref:`contributing_review_process_code_style`
+### `develop` branch {: #contributing_review_process_develop_branch }
 
-  * *easyconfigs should be kept consistent across versions & toolchains*; see :ref:`contributing_review_process_review_pr`
+**Pull requests are only merged in the** `develop` **branch** of the
+EasyBuild repositories, which contains the changes that will be included
+in the next EasyBuild release.
 
-(v) *(successful) test reports must be submitted for easyconfig PRs*; see :ref:`contributing_review_process_test_reports`
+The `main` branch provides the latest stable release of EasyBuild at
+all times. Only the EasyBuild release manager should issue a pull
+request to the EasyBuild `main` branch, when preparing a new
+EasyBuild release.
 
-(vi) *the PR is approved by one or more maintainers of the repository*; see :ref:`maintainers`
+Occasionally, an additional version branch (e.g. `3.3.x`) may be
+introduced temporarily, in case an intermittent bugfix release is being
+worked on.
 
-(vii) *the PR should be merged by one of the maintainers, other than the author of the PR*; see :ref:`contributing_review_process_do_not_merge_your_own_prs`
+### Test suite (GitHub Actions) {: #contributing_review_process_github_actions }
 
-.. _contributing_review_process_develop_branch:
+Each pull request is tested automatically by [GitHub
+Actions](https://github.com/features/actions) and the test result is
+reported in the pull request.
 
-``develop`` branch
-~~~~~~~~~~~~~~~~~~
+**Only pull requests that have been tested and approved by GitHub
+Actions are eligible for being merged!**
 
-**Pull requests are only merged in the** '``develop``' **branch** of the EasyBuild repositories,
-which contains the changes that will be included in the next EasyBuild release.
+Note that GitHub Actions will only run the *test suite* for that
+particular repository. That is, for easyconfig contributions it does
+*not* include actually building and installing software.
 
-The '``main``' branch provides the latest stable release of EasyBuild at all times.
-Only the EasyBuild release manager should issue a pull request to the EasyBuild '``main``' branch,
-when preparing a new EasyBuild release.
+For more information on the test suites, see [Unit tests][unit_tests].
 
-Occasionally, an additional version branch (e.g. '``3.3.x``') may be introduced temporarily,
-in case an intermittent bugfix release is being worked on.
+#### Adding tests {: #contributing_review_process_adding_tests }
 
-.. _contributing_review_process_github_actions:
-
-Test suite (GitHub Actions)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Each pull request is tested automatically by `GitHub Actions <https://github.com/features/actions>`_
-and the test result is reported in the pull request.
-
-**Only pull requests that have been tested and approved by GitHub Actions are
-eligible for being merged!**
-
-Note that GitHub Actions will only run the *test suite* for that particular repository.
-That is, for easyconfig contributions it does *not* include
-actually building and installing software.
-
-For more information on the test suites, see :ref:`unit_tests`.
-
-.. _contributing_review_process_adding_tests:
-
-Adding tests
-++++++++++++
-
-An implicit requirement for contributions, in particular contributions to the EasyBuild framework,
-is that they **must be accompanied by additional tests or test cases**.
+An implicit requirement for contributions, in particular contributions
+to the EasyBuild framework, is that they **must be accompanied by
+additional tests or test cases**.
 
 For new features or enhancements, a dedicated test (case) must be added
 which verifies that the feature implementation works as expected.
 
-For bug fixes, a test (case) must be added that triggers the code path where the bug manifested,
-and which verifies that the bug was indeed fixed.
+For bug fixes, a test (case) must be added that triggers the code path
+where the bug manifested, and which verifies that the bug was indeed
+fixed.
 
-Tests not only confirm that the implementation is correct, it also helps to ensure
-that any future changes will not break the functionality you contributed.
+Tests not only confirm that the implementation is correct, it also helps
+to ensure that any future changes will not break the functionality you
+contributed.
 
+### Backward compatibility {: #contributing_review_process_backward_compatibility }
 
-.. _contributing_review_process_backward_compatibility:
+**Contributions should retain backward compatibility**, i.e., they
+should *not* make any changes that alter the (default) functionality of
+the existing code base. Of course, enhancements to existing code that
+retain backward compatibility can be made.
 
-Backward compatibility
-~~~~~~~~~~~~~~~~~~~~~~
+One exception to this rule is *bug fixes*, where the whole point is
+usually to fix functionality that was implemented incorrectly.
 
-**Contributions should retain backward compatibility**, i.e., they should *not*
-make any changes that alter the (default) functionality of the existing code base.
-Of course, enhancements to existing code that retain backward compatibility can be made.
+This also applies to existing easyconfig files; for example, the
+versions of dependencies should *not* be altered. Adding dependencies
+that were missing or otherwise enhancing existing easyconfigs (e.g.,
+adding extra extensions, enabling additional features, etc.) are usually
+considered acceptable.
 
-One exception to this rule is *bug fixes*, where the whole point is usually
-to fix functionality that was implemented incorrectly.
+Changes that break backward compatibility have to be motivated well with
+technical arguments, and must be approved by the EasyBuild maintainers.
 
-This also applies to existing easyconfig files; for example, the versions
-of dependencies should *not* be altered. Adding dependencies that were missing
-or otherwise enhancing existing easyconfigs (e.g., adding extra extensions,
-enabling additional features, etc.) are usually considered acceptable.
-
-Changes that break backward compatibility have to be motivated
-well with technical arguments, and must be approved by the EasyBuild maintainers.
-
-
-.. _contributing_review_process_code_style:
-
-Code style review
-~~~~~~~~~~~~~~~~~
+### Code style review {: #contributing_review_process_code_style }
 
 Next to functional evaluation of contributions, care is also taken to
-maintain a consistent code style across the EasyBuild code base
-(see also :ref:`code_style`);
-**contributions must take the (mostly PEP8) code style into account.**
+maintain a consistent code style across the EasyBuild code base (see
+also [Code style][code_style]); **contributions must
+take the (mostly PEP8) code style into account.**
 
-This aspect is sometimes considered to be needless overhead, yet it is an
-important aspect of the review process. A consistent code style is invaluable
-in a large code base that is constantly being updated by a worldwide community.
+This aspect is sometimes considered to be needless overhead, yet it is
+an important aspect of the review process. A consistent code style is
+invaluable in a large code base that is constantly being updated by a
+worldwide community.
 
-This also applies to easyconfig files, where we try to maintain a strict style
-that mostly matches the established PEP8 coding style for Python (since
-easyconfigs are written in Python syntax). However, also the grouping and
-ordering of easyconfig parameters is a part of the 'code' style we maintain.
+This also applies to easyconfig files, where we try to maintain a strict
+style that mostly matches the established PEP8 coding style for Python
+(since easyconfigs are written in Python syntax). However, also the
+grouping and ordering of easyconfig parameters is a part of the 'code'
+style we maintain.
 
-An automated (partial) check to see whether easyconfig files are ready to
-be contributed can be performed via ``eb --check-contrib``. This will check:
+An automated (partial) check to see whether easyconfig files are ready
+to be contributed can be performed via `eb --check-contrib`. This will
+check:
 
-* style aspects for the specified easyconfig files
-* whether SHA256 checksums are included for all source files & patches
+- style aspects for the specified easyconfig files
+- whether SHA256 checksums are included for all source files & patches
 
-This check is also a part of the test suite run by GitHub Actions for easyconfig PRs.
+This check is also a part of the test suite run by GitHub Actions for
+easyconfig PRs.
 
+#### Comparing with existing easyconfigs {: #contributing_review_process_review_pr }
 
-.. _contributing_review_process_review_pr:
+*(`--review-pr`)*
 
-Comparing with existing easyconfigs (``--review-pr``)
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+We try to maintain **consistency across easyconfig files** for a
+particular software package, across multiple software versions,
+toolchains and variants (with a different `versionsuffix`).
 
-We try to maintain **consistency across easyconfig files** for a particular
-software package, across multiple software versions, toolchains and variants
-(with a different ``versionsuffix``).
-
-Therefore, easyconfig contributions are also reviewed using ``eb --review-pr <PR #>``,
-which compares the touched easyconfig files to those in the current
-``develop`` branch that are most closely related.
+Therefore, easyconfig contributions are also reviewed using
+`eb --review-pr <PR #>`, which compares the touched easyconfig files to
+those in the current `develop` branch that are most closely related.
 
 The easyconfig files to compare with are selected based on similarity,
 by combining two criteria, in order.
 
-First, the software version is taken into account, using one of the following
-criteria:
+First, the software version is taken into account, using one of the
+following criteria:
 
-* exact match on software version match
-* match on major/minor software version
-* match on major software version
-* no match on software version
+- exact match on software version match
+- match on major/minor software version
+- match on major software version
+- no match on software version
 
 This is combined with one of the criteria below (in order):
 
-* matching versionsuffix and toolchain name/version
-* matching versionsuffix and toolchain name (any toolchain version)
-* matching versionsuffix (any toolchain name/version)
-* matching toolchain name/version (any versionsuffix)
-* matching toolchain name (any versionsuffix, toolchain version)
-* no extra requirements (any versionsuffix, toolchain name/version)
+- matching versionsuffix and toolchain name/version
+- matching versionsuffix and toolchain name (any toolchain version)
+- matching versionsuffix (any toolchain name/version)
+- matching toolchain name/version (any versionsuffix)
+- matching toolchain name (any versionsuffix, toolchain version)
+- no extra requirements (any versionsuffix, toolchain name/version)
 
-The first combination of one of the software version criteria with one of
-the other criteria that yields one or more matching easyconfig files is used.
-If none of the combinations match, no easyconfig files for that particular software
-package are available yet, and no comparison is made.
+The first combination of one of the software version criteria with one
+of the other criteria that yields one or more matching easyconfig files
+is used. If none of the combinations match, no easyconfig files for that
+particular software package are available yet, and no comparison is
+made.
 
-The output of ``--review-pr`` provides a 'multidiff' comparison, which highlights
-the differences between the easyconfig file in the pull request and the most similar
-selected ones from the current ``develop`` branch.
+The output of `--review-pr` provides a 'multidiff' comparison, which
+highlights the differences between the easyconfig file in the pull
+request and the most similar selected ones from the current `develop`
+branch.
 
 For example:
 
-.. raw:: html
+!!! raw html
 
-  <script type="text/javascript" src="https://asciinema.org/a/103889.js" id="asciicast-103889" async></script>
+> \<script type=\"text/javascript\"
+> src=\"<https://asciinema.org/a/103889.js>\" id=\"asciicast-103889\"
+> async\>\</script\>
 
-Interpreting this output is a quick and easy way to assess how different the
-contributed easyconfig files are from the existing easyconfigs, although it
-does require a bit of practice because of the density of the provided information.
+Interpreting this output is a quick and easy way to assess how different
+the contributed easyconfig files are from the existing easyconfigs,
+although it does require a bit of practice because of the density of the
+provided information.
 
+### Test reports for easyconfig contributions {: #contributing_review_process_test_reports }
 
-.. _contributing_review_process_test_reports:
+*(`upload-test-report`)*
 
-Test reports for easyconfig contributions (``upload-test-report``)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+For easyconfig contributions, one or more accompanying **test reports
+must be submitted** to confirm that the added and/or changed easyconfig
+files (still) work as expected.
 
-For easyconfig contributions, one or more accompanying **test reports must be submitted** to confirm that the added and/or changed easyconfig files (still) work as expected.
+We recommend that you submit a test report for your own easyconfig pull
+requests. Other people can also submit test reports to confirm that your
+contribution works as expected on their system(s).
 
-We recommend that you submit a test report for your own easyconfig pull requests.
-Other people can also submit test reports to confirm that your contribution works as expected on their system(s).
+With EasyBuild being properly configured (see
+[GitHub: Configuration][github_configuration]), this should be as
+simple as running
+`eb --from-pr <PR#> --upload-test-report --force --robot`.
 
-With EasyBuild being properly configured (see :ref:`github_configuration`), this should be as simple as running ``eb --from-pr <PR#> --upload-test-report --force --robot``.
+See [Uploading test reports][github_upload_test_report] for more
+information.
 
-See :ref:`github_upload_test_report` for more information.
-
-
-.. _contributing_review_process_do_not_merge_your_own_prs:
-
-Pull requests are merged by a maintainer other than the author
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+### Pull requests are merged by a maintainer other than the author {: #contributing_review_process_do_not_merge_your_own_prs }
 
 **A pull request should never be merged by its author.**
 
-This policy is maintained in order to ensure a *"two-pairs-of-eyes"* review process of all contributions.
+This policy is maintained in order to ensure a *"two-pairs-of-eyes"*
+review process of all contributions.
 
-.. _contributing_review_process_why_pr_closed_by_maintainer:
+### Why a pull request may be closed by a maintainer {: #contributing_review_process_why_pr_closed_by_maintainer }
 
-Why a pull request may be closed by a maintainer
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Although it is generally avoided, there are a few reasons why
+maintainers might close a pull request:
 
-Although it is generally avoided, there are a few reasons why maintainers might close a pull request:
+- uses an archived toolchain
+- no activity for > 6 months
+- obsolete because more recent PRs for newer versions of the software
+    have been merged already
 
-* uses an archived toolchain
-* no activity for > 6 months
-* obsolete because more recent PRs for newer versions of the software have been merged already
-
-This is done routinely as a way of focusing everyone's efforts on relevant contributions, and should not be seen as a rejection. 
-In fact, contributors are encouraged to reopen the pull request if they feel it is still relevant.
+This is done routinely as a way of focusing everyone's efforts on
+relevant contributions, and should not be seen as a rejection. In fact,
+contributors are encouraged to reopen the pull request if they feel it
+is still relevant.
