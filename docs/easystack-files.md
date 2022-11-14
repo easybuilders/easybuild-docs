@@ -1,19 +1,3 @@
-# Easystack files
-
-!!! warning
-    This page will soon replace <https://docs.easybuild.io/en/latest/Easystack-files.html>.
-
-    **
-    It still needs to be ported from *reStructuredText* (.rst) to *MarkDown* (.md),  
-    and you can help with that!
-    **
-
-    - source: [`docs/Easystack-files.rst` in `easybuilders/easybuild` repo](https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Easystack-files.rst)
-    - target: [`docs/easystack-files.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/easystack-files.md)
-
-    See <https://github.com/easybuilders/easybuild-docs> for more information.
-
-```rst
 .. _easystack:
 
 Easystack files
@@ -135,4 +119,3 @@ Optionally, more advanced keywords can be specified: *easybuild_version*, *robot
 - *include-labels:* only include this software when EasyBuild is configured with one of the specified labels
 - *exclude-labels:* **do not** include this software when EasyBuild is configured with one of the specified labels
 
-```
