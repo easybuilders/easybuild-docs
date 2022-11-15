@@ -1,4 +1,5 @@
-site_name: EasyBuild - building software with ease 
+---
+site_name: EasyBuild - building software with ease
 site_url: https://docs.easybuild.io
 extra:
   analytics:
