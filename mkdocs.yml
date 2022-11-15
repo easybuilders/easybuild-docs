@@ -1,5 +1,5 @@
 site_name: EasyBuild - building software with ease 
-site_url: https://docs.easybuild.io
+site_url: https://easybuilders.github.io/easybuild-docs
 extra:
   analytics:
     provider: google
