@@ -1,3 +1,4 @@
+---
 # documentation: https://help.github.com/en/articles/workflow-syntax-for-github-actions
 name: deploy EasyBuild documentation (only on push to main branch)
 on:
