@@ -1,10 +1,6 @@
 ---
 site_name: EasyBuild - building software with ease
 site_url: https://docs.easybuild.io
-extra:
-  analytics:
-    provider: google
-    property: G-BLVCH6991S
 theme:
   name: material
   logo: img/easybuild_logo.png
@@ -47,6 +43,9 @@ markdown_extensions:
       permalink: true
 
 extra:
+  analytics:
+    provider: google
+    property: G-BLVCH6991S
   # add links in bottom right
   social:
     - icon: fontawesome/brands/twitter
