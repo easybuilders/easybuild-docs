@@ -1,5 +1,6 @@
-site_name: EasyBuild - building software with ease 
-site_url: https://easybuilders.github.io/easybuild-docs
+---
+site_name: EasyBuild - building software with ease
+site_url: https://docs.easybuild.io
 theme:
   name: material
   logo: img/easybuild_logo.png
