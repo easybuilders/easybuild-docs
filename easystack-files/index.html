@@ -15,7 +15,7 @@
     
     
       
-        <title>Easystack files - EasyBuild - building software with ease</title>
+        <title>Easystack files {: #easystack } - EasyBuild - building software with ease</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#easystack-files" class="md-skip">
+        <a href="#easystack" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Easystack files
+              Easystack files {: #easystack }
             
           </span>
         </div>
@@ -356,148 +356,106 @@
   </a>
 
 
-<h1 id="easystack-files">Easystack files<a class="headerlink" href="#easystack-files" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/Easystack-files.html">https://docs.easybuild.io/en/latest/Easystack-files.html</a>.</p>
-<p><strong>
-It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
-and you can help with that!
-</strong></p>
-<ul>
-<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Easystack-files.rst"><code>docs/Easystack-files.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
-<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/easystack-files.md"><code>docs/easystack-files.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
-</ul>
-<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_easystack:</span>
-
-<span class="gh">Easystack files</span>
-<span class="gh">===============</span>
-
-This documentation covers aspects of specifying a software stack to install with Easybuild with <span class="ge">*easystack files*</span>.
-
-<span class="gs">**Note: this is an**</span> <span class="na">:ref:</span><span class="nv">`experimental feature &lt;experimental_features&gt;`</span>. <span class="gs">**Some of the mentioned functionality may be subject to change or be prone to errors.**</span>
-
-<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
-    <span class="nc">:depth:</span> 3
-    <span class="nc">:backlinks:</span> none
-
-
-<span class="p">..</span> <span class="nt">_easystack_basics:</span>
-
-<span class="gh">The basics</span>
-<span class="gh">----------</span>
-
-<span class="ge">*Easystack files*</span> describe an entire software stack, and can be used to specify to EasyBuild what to install.
-
-<span class="p">..</span> <span class="nt">_easystack_usage:</span>
-
-<span class="gh">Usage</span>
-<span class="gh">-----</span>
-
-To build software with <span class="ge">*Easystack*</span>, type:
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span>
-
-  eb --easystack example.yaml --experimental
-
-where <span class="s">``example.yaml``</span> is the file with specifications that you just created (more about this in the next section).
-
-<span class="p">..</span> <span class="nt">_easystack_structure:</span>
-
-<span class="gh">Structure of an easystack file</span>
-<span class="gh">------------------------------</span>
-
-Easystack files are written in <span class="s">`YAML syntax </span><span class="si">&lt;https://learnxinyminutes.com/docs/yaml&gt;</span><span class="s">`_</span>.
-
-General options, which should be applied to each software (for example <span class="s">``robot``</span>), are defined at the top of the file.
-
-Afterwards, particular software specifications follow.
-
-It is mandatory to specify basic software-related keywords: <span class="ge">*software name*</span>, <span class="ge">*toolchains*</span> and <span class="ge">*versions*</span>.
-
-<span class="m">-</span> <span class="ge">*software name*</span>: Name of the software.
-<span class="m">-</span> <span class="ge">*toolchains*</span>: Names and versions of compiler <span class="na">:ref:</span><span class="nv">`toolchains`</span>.
-<span class="m">-</span> <span class="ge">*versions*</span>: Versions of software. If multiple entries are provided, EasyBuild will install all of them. 
-Can be in form of a list or consecutive line entries (see example). 
-
-<span class="gs">**General structure of YAML-formatted easystack:**</span>
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">yaml</span>
-
-  <span class="nt">software</span><span class="p">:</span><span class="w"></span>
-  <span class="w">  </span><span class="nt">&lt;software_name&gt;</span><span class="p">:</span><span class="w"></span>
-  <span class="w">    </span><span class="nt">toolchains</span><span class="p">:</span><span class="w"></span>
-  <span class="w">      </span><span class="nt">&lt;toolchain name and version&gt;</span><span class="p">:</span><span class="w"></span>
-  <span class="w">          </span><span class="nt">&lt;software_version&gt;</span><span class="p">:</span><span class="w"></span>
-  <span class="w">            </span><span class="nt">versionsuffix</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&lt;-example&gt;&#39;</span><span class="w"></span>
-
-<span class="gs">**Example of YAML-formatted easystack:**</span>
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">yaml</span>
-
-  <span class="nt">software</span><span class="p">:</span><span class="w"></span>
-  <span class="w">  </span><span class="nt">Bioconductor</span><span class="p">:</span><span class="w"></span>
-  <span class="w">    </span><span class="nt">toolchains</span><span class="p">:</span><span class="w"></span>
-  <span class="w">      </span><span class="nt">foss-2020a</span><span class="p">:</span><span class="w"></span>
-  <span class="w">        </span><span class="nt">versions</span><span class="p">:</span><span class="w"></span>
-  <span class="w">          </span><span class="nt">3.11</span><span class="p">:</span><span class="w"></span>
-  <span class="w">  </span><span class="nt">EasyBuild</span><span class="p">:</span><span class="w"></span>
-  <span class="w">    </span><span class="nt">toolchains</span><span class="p">:</span><span class="w"></span>
-  <span class="w">      </span><span class="nt">SYSTEM</span><span class="p">:</span><span class="w"></span>
-  <span class="w">        </span><span class="nt">versions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">4.3.1</span><span class="p p-Indicator">]</span><span class="w"></span>
-  <span class="w">  </span><span class="nt">GROMACS</span><span class="p">:</span><span class="w"></span>
-  <span class="w">    </span><span class="nt">toolchains</span><span class="p">:</span><span class="w"></span>
-  <span class="w">      </span><span class="nt">foss-2020a</span><span class="p">:</span><span class="w"></span>
-  <span class="w">        </span><span class="nt">versions</span><span class="p">:</span><span class="w"></span>
-  <span class="w">          </span><span class="nt">2020.1</span><span class="p">:</span><span class="w"></span>
-  <span class="w">          </span><span class="nt">2020.3</span><span class="p">:</span><span class="w"></span>
-  <span class="w">      </span><span class="nt">fosscuda-2020a</span><span class="p">:</span><span class="w"></span>
-  <span class="w">        </span><span class="nt">versions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">2020.1</span><span class="p p-Indicator">]</span><span class="w"></span>
-  <span class="w">  </span><span class="nt">OpenFOAM</span><span class="p">:</span><span class="w"></span>
-  <span class="w">    </span><span class="nt">toolchains</span><span class="p">:</span><span class="w"></span>
-  <span class="w">      </span><span class="nt">foss-2020a</span><span class="p">:</span><span class="w"></span>
-  <span class="w">        </span><span class="nt">versions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">8</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">v2006</span><span class="p p-Indicator">]</span><span class="w"></span>
-  <span class="w">  </span><span class="nt">R</span><span class="p">:</span><span class="w"></span>
-  <span class="w">    </span><span class="nt">toolchains</span><span class="p">:</span><span class="w"></span>
-  <span class="w">      </span><span class="nt">foss-2020a</span><span class="p">:</span><span class="w"></span>
-  <span class="w">        </span><span class="nt">versions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">4.0.0</span><span class="p p-Indicator">]</span><span class="w"></span>
-
-To install the software specified in this <span class="ge">*easystack file*</span> named &#39;<span class="s">``myeasystack.yaml``</span>&#39;, run:
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span>
-
-  eb --easystack myeasystack.yaml
-
-This is equivalent to running:
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span>
-
-  eb Bioconductor-3.11-foss-2020a.eb EasyBuild-4.3.1-SYSTEM.eb GROMACS-2020.1-foss-2020a.eb GROMACS-2020.3-foss-2020a.eb GROMACS-2020.1-fosscuda-2020a.eb OpenFOAM-8-foss-2020a.eb OpenFOAM-v2006-foss-2020a.eb R-4.0.0-foss-2020a.eb
-
-<span class="gh">To be developed</span>
-<span class="gh">---------------</span>
-
-Optionally, more advanced keywords can be specified: <span class="ge">*easybuild_version*</span>, <span class="ge">*robot*</span>, <span class="ge">*from_pr*</span>, <span class="ge">*versionsuffix*</span>, <span class="ge">*include-labels*</span>, <span class="ge">*exclude-labels*</span>.
-
-<span class="m">-</span> <span class="ge">*easybuild_version:*</span> if present, EasyBuild will check if the easystack file was intended for the current version of EasyBuild.
-<span class="m">-</span> <span class="ge">*robot:*</span> enables dependency resolution; see <span class="na">:ref:</span><span class="nv">`Using_the_EasyBuild_command_line`</span> for more details.
-<span class="m">-</span> <span class="ge">*from_pr:*</span> easyconfig files that are added or modified by a
-  particular pull request to the easybuild-easyconfigs GitHub repository
-  can be used (regardless of whether the pull request is merged or not).
-  (see <span class="na">:ref:</span><span class="nv">`Integration_with_GitHub`</span> for more details).
-<span class="m">-</span> <span class="ge">*versionsuffix:*</span> additional suffix for software version (placed after toolchain name)
-<span class="m">-</span> <span class="ge">*include-labels:*</span> only include this software when EasyBuild is configured with one of the specified labels
-<span class="m">-</span> <span class="ge">*exclude-labels:*</span> <span class="gs">**do not**</span> include this software when EasyBuild is configured with one of the specified labels
+<h1 id="easystack">Easystack files<a class="headerlink" href="#easystack" title="Permanent link">&para;</a></h1>
+<p>This documentation covers aspects of specifying a software stack to
+install with Easybuild with <em>easystack files</em>.</p>
+<p><strong>Note: this is an</strong>
+<a class="autorefs autorefs-internal" href="../experimental-features/#experimental_features">experimental feature</a>. <strong>Some of the mentioned functionality may be subject to
+change or be prone to errors.</strong></p>
+<h2 id="easystack_basics">The basics<a class="headerlink" href="#easystack_basics" title="Permanent link">&para;</a></h2>
+<p><em>Easystack files</em> describe an entire software stack, and can be used to
+specify to EasyBuild what to install.</p>
+<h2 id="easystack_usage">Usage<a class="headerlink" href="#easystack_usage" title="Permanent link">&para;</a></h2>
+<p>To build software with <em>Easystack</em>, type:</p>
+<div class="highlight"><pre><span></span><code>eb --easystack example.yaml --experimental
 </code></pre></div>
+<p>where <code>example.yaml</code> is the file with specifications that you just
+created (more about this in the next section).</p>
+<h2 id="easystack_structure">Structure of an easystack file<a class="headerlink" href="#easystack_structure" title="Permanent link">&para;</a></h2>
+<p>Easystack files are written in <a href="https://learnxinyminutes.com/docs/yaml">YAML
+syntax</a>.</p>
+<p>General options, which should be applied to each software (for example
+<code>robot</code>), are defined at the top of the file.</p>
+<p>Afterwards, particular software specifications follow.</p>
+<p>It is mandatory to specify basic software-related keywords: <em>software
+name</em>, <em>toolchains</em> and <em>versions</em>.</p>
+<ul>
+<li><em>software name</em>: Name of the software.</li>
+<li><em>toolchains</em>: Names and versions of compiler <a class="autorefs autorefs-internal" href="../terminology/#toolchains">toolchains</a>.</li>
+<li><em>versions</em>: Versions of software. If multiple entries are provided, EasyBuild will install all of
+  them. Can be in form of a list or consecutive line entries (see example).</li>
+</ul>
+<p><strong>General structure of YAML-formatted easystack:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">software</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&lt;software_name&gt;</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">toolchains</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&lt;toolchain name and version&gt;</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&lt;software_version&gt;</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">versionsuffix</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&lt;-example&gt;&#39;</span><span class="w"></span>
+</code></pre></div>
+<p><strong>Example of YAML-formatted easystack:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">software</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">Bioconductor</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">toolchains</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">foss-2020a</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">versions</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">3.11</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">EasyBuild</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">toolchains</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">SYSTEM</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">versions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">4.3.1</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">  </span><span class="nt">GROMACS</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">toolchains</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">foss-2020a</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">versions</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">2020.1</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">2020.3</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">fosscuda-2020a</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">versions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">2020.1</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">  </span><span class="nt">OpenFOAM</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">toolchains</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">foss-2020a</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">versions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">8</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">v2006</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">  </span><span class="nt">R</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">toolchains</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">foss-2020a</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">versions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">4.0.0</span><span class="p p-Indicator">]</span><span class="w"></span>
+</code></pre></div>
+<p>To install the software specified in this <em>easystack file</em> named
+<code>myeasystack.yaml</code>, run:</p>
+<div class="highlight"><pre><span></span><code>eb --easystack myeasystack.yaml
+</code></pre></div>
+<p>This is equivalent to running:</p>
+<div class="highlight"><pre><span></span><code>eb Bioconductor-3.11-foss-2020a.eb EasyBuild-4.3.1-SYSTEM.eb GROMACS-2020.1-foss-2020a.eb GROMACS-2020.3-foss-2020a.eb GROMACS-2020.1-fosscuda-2020a.eb OpenFOAM-8-foss-2020a.eb OpenFOAM-v2006-foss-2020a.eb R-4.0.0-foss-2020a.eb
+</code></pre></div>
+<h2 id="to-be-developed">To be developed<a class="headerlink" href="#to-be-developed" title="Permanent link">&para;</a></h2>
+<p>Optionally, more advanced keywords can be specified:
+<em>easybuild_version</em>, <em>robot</em>, <em>from_pr</em>, <em>versionsuffix</em>,
+<em>include-labels</em>, <em>exclude-labels</em>.</p>
+<ul>
+<li><em>easybuild_version:</em> if present, EasyBuild will check if the
+    easystack file was intended for the current version of EasyBuild.</li>
+<li><em>robot:</em> enables dependency resolution; see
+    <a class="autorefs autorefs-internal" href="../using-easybuild/#using_the_easybuild_command_line">Using the EasyBuild command line</a> for
+    more details.</li>
+<li><em>from_pr:</em> easyconfig files that are added or modified by a
+    particular pull request to the easybuild-easyconfigs GitHub
+    repository can be used (regardless of whether the pull request is
+    merged or not). (see <a class="autorefs autorefs-internal" href="../integration-with-github/#integration_with_github">Integration with GitHub</a> for more details).</li>
+<li><em>versionsuffix:</em> additional suffix for software version (placed
+    after toolchain name)</li>
+<li><em>include-labels:</em> only include this software when EasyBuild is
+    configured with one of the specified labels</li>
+<li><em>exclude-labels:</em> <strong>do not</strong> include this software when EasyBuild is
+    configured with one of the specified labels</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 14, 2022</span>
       
     
   </small>
