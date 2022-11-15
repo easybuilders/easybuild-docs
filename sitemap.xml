@@ -1,387 +1,387 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/</loc>
+         <loc>https://docs.easybuild.io/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/archived-easyconfigs/</loc>
+         <loc>https://docs.easybuild.io/archived-easyconfigs/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/backup-modules/</loc>
+         <loc>https://docs.easybuild.io/backup-modules/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/changelog-docs/</loc>
+         <loc>https://docs.easybuild.io/changelog-docs/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/code-style/</loc>
+         <loc>https://docs.easybuild.io/code-style/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/common-toolchains/</loc>
+         <loc>https://docs.easybuild.io/common-toolchains/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/configuration/</loc>
+         <loc>https://docs.easybuild.io/configuration/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/containers/</loc>
+         <loc>https://docs.easybuild.io/containers/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/contributing/</loc>
+         <loc>https://docs.easybuild.io/contributing/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/controlling-compiler-optimization-flags/</loc>
+         <loc>https://docs.easybuild.io/controlling-compiler-optimization-flags/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/cray-support/</loc>
+         <loc>https://docs.easybuild.io/cray-support/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/deprecated-easyconfigs/</loc>
+         <loc>https://docs.easybuild.io/deprecated-easyconfigs/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/deprecated-functionality/</loc>
+         <loc>https://docs.easybuild.io/deprecated-functionality/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/detecting-loaded-modules/</loc>
+         <loc>https://docs.easybuild.io/detecting-loaded-modules/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/easyconfig-files-local-variables/</loc>
+         <loc>https://docs.easybuild.io/easyconfig-files-local-variables/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/easyconfigs-search-index/</loc>
+         <loc>https://docs.easybuild.io/easyconfigs-search-index/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/easystack-files/</loc>
+         <loc>https://docs.easybuild.io/easystack-files/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/experimental-features/</loc>
+         <loc>https://docs.easybuild.io/experimental-features/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/extended-dry-run/</loc>
+         <loc>https://docs.easybuild.io/extended-dry-run/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/getting-help/</loc>
+         <loc>https://docs.easybuild.io/getting-help/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/hooks/</loc>
+         <loc>https://docs.easybuild.io/hooks/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/implementing-easyblocks/</loc>
+         <loc>https://docs.easybuild.io/implementing-easyblocks/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/including-additional-python-modules/</loc>
+         <loc>https://docs.easybuild.io/including-additional-python-modules/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/installation-alternative/</loc>
+         <loc>https://docs.easybuild.io/installation-alternative/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/installation/</loc>
+         <loc>https://docs.easybuild.io/installation/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/installing-environment-modules-without-root-permissions/</loc>
+         <loc>https://docs.easybuild.io/installing-environment-modules-without-root-permissions/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/installing-extensions-in-parallel/</loc>
+         <loc>https://docs.easybuild.io/installing-extensions-in-parallel/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/installing-lmod-without-root-permissions/</loc>
+         <loc>https://docs.easybuild.io/installing-lmod-without-root-permissions/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/integration-with-github/</loc>
+         <loc>https://docs.easybuild.io/integration-with-github/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/locks/</loc>
+         <loc>https://docs.easybuild.io/locks/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/log-files/</loc>
+         <loc>https://docs.easybuild.io/log-files/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/maintainers/</loc>
+         <loc>https://docs.easybuild.io/maintainers/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/manipulating-dependencies/</loc>
+         <loc>https://docs.easybuild.io/manipulating-dependencies/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/packaging-support/</loc>
+         <loc>https://docs.easybuild.io/packaging-support/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/partial-installations/</loc>
+         <loc>https://docs.easybuild.io/partial-installations/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/progress-bars/</loc>
+         <loc>https://docs.easybuild.io/progress-bars/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/python-2-3-compatibility/</loc>
+         <loc>https://docs.easybuild.io/python-2-3-compatibility/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/release-notes/</loc>
+         <loc>https://docs.easybuild.io/release-notes/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/removed-functionality/</loc>
+         <loc>https://docs.easybuild.io/removed-functionality/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/rpath-support/</loc>
+         <loc>https://docs.easybuild.io/rpath-support/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/submitting-jobs/</loc>
+         <loc>https://docs.easybuild.io/submitting-jobs/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/system-toolchain/</loc>
+         <loc>https://docs.easybuild.io/system-toolchain/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/terminology/</loc>
+         <loc>https://docs.easybuild.io/terminology/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/tracing-progress/</loc>
+         <loc>https://docs.easybuild.io/tracing-progress/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/typical-workflow-example-with-wrf/</loc>
+         <loc>https://docs.easybuild.io/typical-workflow-example-with-wrf/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/unit-tests/</loc>
+         <loc>https://docs.easybuild.io/unit-tests/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/useful-links/</loc>
+         <loc>https://docs.easybuild.io/useful-links/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/useful-scripts/</loc>
+         <loc>https://docs.easybuild.io/useful-scripts/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/using-easybuild/</loc>
+         <loc>https://docs.easybuild.io/using-easybuild/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/using-external-modules/</loc>
+         <loc>https://docs.easybuild.io/using-external-modules/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/what-is-easybuild/</loc>
+         <loc>https://docs.easybuild.io/what-is-easybuild/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/wrapping-dependencies/</loc>
+         <loc>https://docs.easybuild.io/wrapping-dependencies/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/writing-easyconfig-files/</loc>
+         <loc>https://docs.easybuild.io/writing-easyconfig-files/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/writing-yeb-easyconfig-files/</loc>
+         <loc>https://docs.easybuild.io/writing-yeb-easyconfig-files/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/api/</loc>
+         <loc>https://docs.easybuild.io/api/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/demos/</loc>
+         <loc>https://docs.easybuild.io/demos/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/demos/bootstrapping/</loc>
+         <loc>https://docs.easybuild.io/demos/bootstrapping/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/demos/configuring/</loc>
+         <loc>https://docs.easybuild.io/demos/configuring/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/demos/review-pr/</loc>
+         <loc>https://docs.easybuild.io/demos/review-pr/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/easybuild-v4/overview-of-changes/</loc>
+         <loc>https://docs.easybuild.io/easybuild-v4/overview-of-changes/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/easybuild-v4/overview-relocated-functions-constants/</loc>
+         <loc>https://docs.easybuild.io/easybuild-v4/overview-relocated-functions-constants/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/legacy/configuration/</loc>
+         <loc>https://docs.easybuild.io/legacy/configuration/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/version-specific/</loc>
+         <loc>https://docs.easybuild.io/version-specific/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/version-specific/config-file-constants/</loc>
+         <loc>https://docs.easybuild.io/version-specific/config-file-constants/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/version-specific/easyblocks/</loc>
+         <loc>https://docs.easybuild.io/version-specific/easyblocks/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/version-specific/easyconfig-constants/</loc>
+         <loc>https://docs.easybuild.io/version-specific/easyconfig-constants/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/version-specific/easyconfig-license-constants/</loc>
+         <loc>https://docs.easybuild.io/version-specific/easyconfig-license-constants/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/version-specific/easyconfig-parameters/</loc>
+         <loc>https://docs.easybuild.io/version-specific/easyconfig-parameters/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/version-specific/easyconfig-templates/</loc>
+         <loc>https://docs.easybuild.io/version-specific/easyconfig-templates/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/version-specific/eb-a-wrf/</loc>
+         <loc>https://docs.easybuild.io/version-specific/eb-a-wrf/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/version-specific/eb-help/</loc>
+         <loc>https://docs.easybuild.io/version-specific/eb-help/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/version-specific/eb-list-easyblocks/</loc>
+         <loc>https://docs.easybuild.io/version-specific/eb-list-easyblocks/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/version-specific/eb-list-toolchains/</loc>
+         <loc>https://docs.easybuild.io/version-specific/eb-list-toolchains/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/version-specific/generic-easyblocks/</loc>
+         <loc>https://docs.easybuild.io/version-specific/generic-easyblocks/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/version-specific/supported-software/</loc>
+         <loc>https://docs.easybuild.io/version-specific/supported-software/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/version-specific/toolchain-opts/</loc>
+         <loc>https://docs.easybuild.io/version-specific/toolchain-opts/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://easybuilders.github.io/easybuild-docs/version-specific/toolchain/</loc>
+         <loc>https://docs.easybuild.io/version-specific/toolchain/</loc>
          <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
