@@ -3,6 +3,10 @@
  * derived from default dark mode color scheme 'slate'.
 */
 [data-md-color-scheme="easybuild"] {
+  --eb-blue:  #94BDCF;
+  --eb-green: #A8BD90;
+  --eb-red:   #B2666C;
+
   /* hue (in range [0,360]) */
   --md-hue: 232;
 
@@ -16,12 +20,9 @@
   --md-default-bg-color--lighter:    hsla(var(--md-hue), 15%, 21%, 0.26);
   --md-default-bg-color--lightest:   hsla(var(--md-hue), 15%, 21%, 0.07);
 
-  /* --md-primary-fg-color:        #3E70E4;  /* blue from original EasyBuild logo */
-  --md-primary-fg-color:        #94BDCF;  /* blue from new EasyBuild logo */
-  /* --md-primary-fg-color--light: #44932B;  /* green from original EasyBuild logo */
-  --md-primary-fg-color--light: #A8BD90;  /* green from new EasyBuild logo */
-  /* --md-primary-fg-color--dark:  #A5241E;  /* red from original EasyBuild logo */
-  --md-primary-fg-color--dark:  #B2666C;  /* red from new EasyBuild logo */
+  --md-primary-fg-color:              hsla(var(--md-hue), 15%, 12%, 0.87);
+  --md-primary-fg-color--dark:        hsla(var(--md-hue), 15%, 10%, 1);
+  --md-primary-fg-color--light:       var(--eb-green);
 
   /* Code color shades */
   --md-code-fg-color:                hsla(var(--md-hue), 18%, 86%, 1);
@@ -46,7 +47,10 @@
   --md-typeset-color:                var(--md-default-fg-color);
 
   /* Typeset `a` color shades */
-  --md-typeset-a-color:              var(--md-primary-fg-color);
+  --md-typeset-a-color:              var(--eb-blue);
+
+  /* Typeset `a:hover` color shades */
+  --md-accent-fg-color:              var(--eb-green);
 
   /* Typeset `mark` color shades */
   --md-typeset-mark-color:           hsla(#{hex2hsl($clr-blue-a200)}, 0.3);
@@ -125,5 +129,5 @@
 [data-md-color-switching] *,
 [data-md-color-switching] *::before,
 [data-md-color-switching] *::after {
-  transition-duration: 0ms !important; // stylelint-disable-line
+  transition-duration: 0ms !important; /* stylelint-disable-line */
 }
