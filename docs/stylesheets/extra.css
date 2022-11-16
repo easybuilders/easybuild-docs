@@ -49,6 +49,9 @@
   /* Typeset `a` color shades */
   --md-typeset-a-color:              var(--eb-blue);
 
+  /* Typeset `a:hover` color shades */
+  --md-accent-fg-color:              var(--eb-green);
+
   /* Typeset `mark` color shades */
   --md-typeset-mark-color:           hsla(#{hex2hsl($clr-blue-a200)}, 0.3);
 
