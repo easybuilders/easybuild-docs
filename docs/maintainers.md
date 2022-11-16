@@ -8,9 +8,9 @@ EasyBuild maintainers should meet the following criteria:
 * being sufficiently familiar with the contribution procedure (see [Contributing][contributing])
 * frequently contributing to the EasyBuild GitHub repositories
 * being an active member of the EasyBuild community for a significant amount of time, i.e.:
-   * following the EasyBuild mailing list and participating in discussions (see [Getting help][getting_help])
-   * actively participating in the EasyBuild IRC or Slack channel (see [Getting help][getting_help]);
-   * (occasionally) joining in on the EasyBuild conference calls (see <https://github.com/easybuilders/easybuild/wiki/Conference-calls>)
+    * following the EasyBuild mailing list and participating in discussions (see [Getting help][getting_help])
+    * actively participating in the EasyBuild IRC or Slack channel (see [Getting help][getting_help]);
+    * (occasionally) joining in on the EasyBuild conference calls (see <https://github.com/easybuilders/easybuild/wiki/Conference-calls>)
 * having access to a working setup for submitting test reports (see [Test reports for easyconfig contributions (`--upload-test-report`)][contributing_review_process_test_reports])
 
 
@@ -23,7 +23,7 @@ The release managers are responsible for releasing new stable EasyBuild versions
 with the help of the other EasyBuild maintainers.
 
 Sebastian, Miguel & Kenneth have been working together to get EasyBuild releases out the door on a regular basis
-(about once every 6 weeks, see https://pypi.org/project/easybuild/#history).
+(about once every 6 weeks, see <https://pypi.org/project/easybuild/#history>).
 
 * **Sebastian Achilles** ([JSC](https://www.fz-juelich.de/ias/jsc/EN))
     * GitHub: [@SebastianAchilles](https://github.com/SebastianAchilles) - e-mail: `s.achilles (at) fz-juelich.de` - IRC/Slack: `Sebastian Achilles`
@@ -38,7 +38,7 @@ Sebastian, Miguel & Kenneth have been working together to get EasyBuild releases
 
 The EasyBuild maintainers all have admin access to the different EasyBuild GitHub repositories:
 
-* <https://github.com/easybuilders/easybuild> (documentation (http://easybuild.readthedocs.io), EasyBuild website, `easybuild` metapackage)
+* <https://github.com/easybuilders/easybuild> (documentation (<https://easybuild.readthedocs.io>), EasyBuild website, `easybuild` metapackage)
 * <https://github.com/easybuilders/easybuild-framework> (EasyBuild framework)
 * <https://github.com/easybuilders/easybuild-easyblocks> (central repository for easyblocks)
 * <https://github.com/easybuilders/easybuild-easyconfigs> (central repository for easyconfigs)
