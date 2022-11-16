@@ -15,7 +15,7 @@
     
     
       
-        <title>Controlling compiler optimization flags - EasyBuild - building software with ease</title>
+        <title>Controlling compiler optimization flags {: #controlling_compiler_optimization_flags } - EasyBuild - building software with ease</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#controlling-compiler-optimization-flags" class="md-skip">
+        <a href="#controlling_compiler_optimization_flags" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Controlling compiler optimization flags
+              Controlling compiler optimization flags {: #controlling_compiler_optimization_flags }
             
           </span>
         </div>
@@ -368,191 +368,109 @@
   </a>
 
 
-<h1 id="controlling-compiler-optimization-flags">Controlling compiler optimization flags<a class="headerlink" href="#controlling-compiler-optimization-flags" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/Controlling_compiler_optimization_flags.html">https://docs.easybuild.io/en/latest/Controlling_compiler_optimization_flags.html</a>.</p>
-<p><strong>
-It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
-and you can help with that!
-</strong></p>
+<h1 id="controlling_compiler_optimization_flags">Controlling compiler optimization flags<a class="headerlink" href="#controlling_compiler_optimization_flags" title="Permanent link">&para;</a></h1>
+<p>This page provides an overview on the different ways in which compiler optimization flags used by EasyBuild
+can be controlled.</p>
+<h2 id="controlling_compiler_optimization_flags_optarch">Controlling target architecture specific optimizations via <code>--optarch</code><a class="headerlink" href="#controlling_compiler_optimization_flags_optarch" title="Permanent link">&para;</a></h2>
+<h3 id="controlling_compiler_optimization_flags_optarch_default">Default behaviour<a class="headerlink" href="#controlling_compiler_optimization_flags_optarch_default" title="Permanent link">&para;</a></h3>
+<p>By default, EasyBuild optimizes builds for the CPU architecture of the build host, by instructing the compiler to
+generate instructions for the highest instruction set supported by the process architecture of the build host processor.</p>
+<p>This is done by including specific compiler flags in <code>$CFLAGS</code>, <code>$CXXFLAGS</code>, <code>$FFLAGS</code>, <code>$F90FLAGS</code>, etc.</p>
+<p>For example:</p>
 <ul>
-<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Controlling_compiler_optimization_flags.rst"><code>docs/Controlling_compiler_optimization_flags.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
-<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/controlling-compiler-optimization-flags.md"><code>docs/controlling-compiler-optimization-flags.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
+<li>for toolchains using the GCC compilers, <code>--march=native</code> will be used
+  (see <a href="https://gcc.gnu.org/onlinedocs/gcc-4.9.0/gcc/i386-and-x86-64-Options.html">https://gcc.gnu.org/onlinedocs/gcc-4.9.0/gcc/i386-and-x86-64-Options.html</a>)</li>
+<li>for toolchains using the Intel compilers, <code>-xHost</code> will be used
+  (<a href="https://software.intel.com/en-us/node/522846">https://software.intel.com/en-us/node/522846</a>)</li>
 </ul>
-<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_controlling_compiler_optimization_flags:</span>
-
-<span class="gh">Controlling compiler optimization flags</span>
-<span class="gh">=======================================</span>
-
-This page provides an overview on the different ways in which compiler optimization flags used by EasyBuild
-can be controlled.
-
-<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
-    <span class="nc">:depth:</span> 3
-    <span class="nc">:backlinks:</span> none
-
-<span class="p">..</span> <span class="nt">_controlling_compiler_optimization_flags_optarch:</span>
-
-<span class="gh">Controlling target architecture specific optimizations via ``--optarch``</span>
-<span class="gh">------------------------------------------------------------------------</span>
-
-<span class="p">..</span> <span class="nt">_controlling_compiler_optimization_flags_optarch_default:</span>
-
-<span class="gh">Default behaviour</span>
-<span class="gh">~~~~~~~~~~~~~~~~~</span>
-
-By default, EasyBuild optimizes builds for the CPU architecture of the build host, by instructing the compiler to
-generate instructions for the highest instruction set supported by the process architecture of the build host processor.
-
-This is done by including specific compiler flags in <span class="s">``$CFLAGS``</span>, <span class="s">``$CXXFLAGS``</span>, <span class="s">``$FFLAGS``</span>, <span class="s">``$F90FLAGS``</span>, etc.
-
-For example:
-
-<span class="m">*</span> for toolchains using the GCC compilers, <span class="s">``--march=native``</span> will be used
-  (see https://gcc.gnu.org/onlinedocs/gcc-4.9.0/gcc/i386-and-x86-64-Options.html)
-<span class="m">*</span> for toolchains using the Intel compilers, <span class="s">``-xHost``</span> will be used
-  (https://software.intel.com/en-us/node/522846)
-
-<span class="p">..</span> <span class="nt">_controlling_compiler_optimization_flags_optarch_caveats:</span>
-
-<span class="gh">Caveats</span>
-<span class="gh">~~~~~~~</span>
-
-<span class="p">..</span> <span class="nt">_controlling_compiler_optimization_flags_optarch_caveats_heterogeneous:</span>
-
-<span class="gh">Heterogeneous clusters</span>
-<span class="gh">^^^^^^^^^^^^^^^^^^^^^^</span>
-
-Optimizing for the processor architecture of the build host is usually what you want in an HPC cluster,
+<h3 id="controlling_compiler_optimization_flags_optarch_caveats">Caveats<a class="headerlink" href="#controlling_compiler_optimization_flags_optarch_caveats" title="Permanent link">&para;</a></h3>
+<h4 id="controlling_compiler_optimization_flags_optarch_caveats_heterogeneous">Heterogeneous clusters<a class="headerlink" href="#controlling_compiler_optimization_flags_optarch_caveats_heterogeneous" title="Permanent link">&para;</a></h4>
+<p>Optimizing for the processor architecture of the build host is usually what you want in an HPC cluster,
 but it has some implications if your cluster is heterogeneous (i.e., has different processor generations),
 or if you want to execute your applications in a machine with a processor architecture that is different from
-the one of the build host.
-
-For example, if you compile your application optimized for an Intel Haswell processor (i.e. using AVX2 instructions),
-it will not run on a system with an older Intel Nehalem processor.
-
-One possible workaround for heterogeneous HPC clusters is to build as many copies of the software stack as you have
+the one of the build host.</p>
+<p>For example, if you compile your application optimized for an Intel Haswell processor (i.e. using AVX2 instructions),
+it will not run on a system with an older Intel Nehalem processor.</p>
+<p>One possible workaround for heterogeneous HPC clusters is to build as many copies of the software stack as you have
 processor generations in your cluster, and to configure your system so each compute node uses the right software stack
 matching its processor architecture type.
-Details for one way of doing this, using automounter/autofs are available at https://easybuilders.github.io/easybuild/files/sciCORE-software-management_20150611.pdf .
-
-Another solution is to configure EasyBuild to not optimize for the processor architecture of the build host via
-<span class="s">``--optarch``</span>, see below.
-
-<span class="p">..</span> <span class="nt">_controlling_compiler_optimization_flags_optarch_caveats_hardcoding:</span>
-
-<span class="gh">Build environment vs hardcoding in build scripts</span>
-<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
-
-Be aware that that using <span class="s">``--optarch``</span> as described below does not provide hard guarantees that the build
-will be executed using the intended compiler flags.
-
-EasyBuild will define the appropriate environment variables (<span class="s">``$CFLAGS``</span> and co) to use the compiler flags as
+Details for one way of doing this, using automounter/autofs are available at <a href="https://easybuilders.github.io/easybuild/files/sciCORE-software-management_20150611.pdf">https://easybuilders.github.io/easybuild/files/sciCORE-software-management_20150611.pdf</a>.</p>
+<p>Another solution is to configure EasyBuild to not optimize for the processor architecture of the build host via
+<code>--optarch</code>, see below.</p>
+<h4 id="controlling_compiler_optimization_flags_optarch_caveats_hardcoding">Build environment vs hardcoding in build scripts<a class="headerlink" href="#controlling_compiler_optimization_flags_optarch_caveats_hardcoding" title="Permanent link">&para;</a></h4>
+<p>Be aware that that using <code>--optarch</code> as described below does not provide hard guarantees that the build
+will be executed using the intended compiler flags.</p>
+<p>EasyBuild will define the appropriate environment variables (<code>$CFLAGS</code> and co) to use the compiler flags as
 specified, but some MakeFiles or build systems could have hardcoded values that have not been dealt with yet
-(for example, via a patch file or by specifying options to the <span class="s">``make``</span> command).
-
-For example, the OpenBLAS build system will autodetect the processor architecture in the build host,
-and will optimize for that processor architecture by default.
-
-If you want a generic OpenBLAS build you will need to tweak the OpenBLAS easyconfig file to define
-the desired <span class="s">``TARGET``</span> to use. For this you will need to modify the <span class="s">``buildopts``</span> easyconfig parameter, for example<span class="se">::</span>
-
-<span class="s">    buildopts = &#39;TARGET=PRESCOTT BINARY=64 &#39; + threading + &#39; CC=&quot;$CC&quot; FC=&quot;$F77&quot;&#39;</span>
-
-See these links for more details w.r.t. OpenBLAS:
-
-<span class="m">*</span> https://github.com/xianyi/OpenBLAS/blob/develop/TargetList.txt
-<span class="m">*</span> https://github.com/xianyi/OpenBLAS/issues/685
-
-<span class="p">..</span> <span class="nt">_controlling_compiler_optimization_flags_optarch_flags:</span>
-
-<span class="gh">Specifying target architecture specific optimization flags to use via ``--optarch=&lt;flags&gt;``</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-Using the <span class="s">``--optarch``</span> EasyBuild configuration option, specific compiler flags can be provided that EasyBuild
-should use, rather than the ones used by default (depending on the compiler in the toolchain being used).
-
-Like any other configuration setting, this can also be specified via <span class="s">``$EASYBUILD_OPTARCH``</span>, or by defining <span class="s">``optarch``</span>
-in an EasyBuild configuration file (cfr. <span class="na">:ref:</span><span class="nv">`configuration_consistency`</span>).
-
-For example, by specifying <span class="s">``--optarch=march=core2``</span>, EasyBuild will use <span class="s">``-march=core2``</span> rather than the default
-flag <span class="s">``--march=native``</span> (when using GCC compilers).
-
-Likewise, to avoid using the default <span class="s">``-xHost``</span> flag with the Intel compilers and using <span class="s">``-xSSSE3``</span> instead,
-you can define <span class="s">``$EASYBUILD_OPTARCH``</span> to be equal to <span class="s">``xSSSE3``</span>.
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
-
-  The first dash (<span class="s">``-``</span>) is added automagically to the value specified to <span class="s">``--optarch``</span>,
-  because of technicalities with the current implementation.
-
-The <span class="s">``--optarch``</span> configuration option gives you flexibility to define the specific target architecture optimization
+(for example, via a patch file or by specifying options to the <code>make</code> command).</p>
+<p>For example, the OpenBLAS build system will autodetect the processor architecture in the build host,
+and will optimize for that processor architecture by default.</p>
+<p>If you want a generic OpenBLAS build you will need to tweak the OpenBLAS easyconfig file to define
+the desired <code>TARGET</code> to use. For this you will need to modify the <code>buildopts</code> easyconfig parameter, for example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">buildopts</span> <span class="o">=</span> <span class="s1">&#39;TARGET=PRESCOTT BINARY=64 &#39;</span> <span class="o">+</span> <span class="n">threading</span> <span class="o">+</span> <span class="s1">&#39; CC=&quot;$CC&quot; FC=&quot;$F77&quot;&#39;</span>
+</code></pre></div>
+<p>See these links for more details w.r.t. OpenBLAS:</p>
+<ul>
+<li><a href="https://github.com/xianyi/OpenBLAS/blob/develop/TargetList.txt">https://github.com/xianyi/OpenBLAS/blob/develop/TargetList.txt</a></li>
+<li><a href="https://github.com/xianyi/OpenBLAS/issues/685">https://github.com/xianyi/OpenBLAS/issues/685</a></li>
+</ul>
+<h3 id="controlling_compiler_optimization_flags_optarch_flags">Specifying target architecture specific optimization flags to use via <code>--optarch=&lt;flags&gt;</code><a class="headerlink" href="#controlling_compiler_optimization_flags_optarch_flags" title="Permanent link">&para;</a></h3>
+<p>Using the <code>--optarch</code> EasyBuild configuration option, specific compiler flags can be provided that EasyBuild
+should use, rather than the ones used by default (depending on the compiler in the toolchain being used).</p>
+<p>Like any other configuration setting, this can also be specified via <code>$EASYBUILD_OPTARCH</code>, or by defining <code>optarch</code>
+in an EasyBuild configuration file (cfr. <a class="autorefs autorefs-internal" href="../configuration/#configuration_consistency">Consistency across supported configuration types</a>).</p>
+<p>For example, by specifying <code>--optarch=march=core2</code>, EasyBuild will use <code>-march=core2</code> rather than the default
+flag <code>--march=native</code> (when using GCC compilers).</p>
+<p>Likewise, to avoid using the default <code>-xHost</code> flag with the Intel compilers and using <code>-xSSSE3</code> instead,
+you can define <code>$EASYBUILD_OPTARCH</code> to be equal to <code>xSSSE3</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The first dash (<code>-</code>) is added automagically to the value specified to <code>--optarch</code>,
+because of technicalities with the current implementation.</p>
+</div>
+<p>The <code>--optarch</code> configuration option gives you flexibility to define the specific target architecture optimization
 flags you want, but requires that you take care of specifying different flags for different compilers and choose
-the right flags depending on your specific processor architecture.
-
-
-<span class="p">..</span> <span class="nt">_controlling_compiler_optimization_flags_optarch_generic:</span>
-
-<span class="gh">Optimizing for a generic processor architecture via ``--optarch=GENERIC``</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-To make EasyBuild optimize for a <span class="ge">*generic*</span> processor architecture, <span class="s">``--optarch``</span> can be set to &#39;<span class="s">``GENERIC``</span>&#39;.
-
-When this is the case, EasyBuild will use the right compiler flags to optimize for a generic processor
-architecture, i.e. avoid using machine instructions that are only supported by very recent processors.
-
-The <span class="s">``GENERIC``</span> keyword for <span class="s">``--optarch``</span> is recognized since EasyBuild v2.5.0, and is supported for GCC and Intel
+the right flags depending on your specific processor architecture.</p>
+<h3 id="controlling_compiler_optimization_flags_optarch_generic">Optimizing for a generic processor architecture via <code>--optarch=GENERIC</code><a class="headerlink" href="#controlling_compiler_optimization_flags_optarch_generic" title="Permanent link">&para;</a></h3>
+<p>To make EasyBuild optimize for a <em>generic</em> processor architecture, <code>--optarch</code> can be set to '<code>GENERIC</code>'.</p>
+<p>When this is the case, EasyBuild will use the right compiler flags to optimize for a generic processor
+architecture, i.e. avoid using machine instructions that are only supported by very recent processors.</p>
+<p>The <code>GENERIC</code> keyword for <code>--optarch</code> is recognized since EasyBuild v2.5.0, and is supported for GCC and Intel
 compilers on x86-64 systems (Intel or AMD).
 For other compilers that can be used in toolchains and other system architectures,
-the necessary compiler flags will be defined in later EasyBuild versions.
-
-Currently, using <span class="s">``--optarch=GENERIC``</span> will result in the following target architecture optimization flags being used,
-(on a Linux x86-64 system):
-
-<span class="m">*</span> for toolchains using GCC compilers: <span class="s">``-march=x86-64 -mtune=generic``</span>
-<span class="m">*</span> for toolchains using Intel compilers: <span class="s">``-xSSE2``</span>
-
-On other systems or for other compilers, you can check which compiler flags will be used via <span class="na">:ref:</span><span class="nv">`extended_dry_run`</span>.
-
-
-<span class="p">..</span> <span class="nt">_controlling_compiler_optimization_flags_optarch_per_compiler:</span>
-
-<span class="gh">Setting architecture flags for different compilers via ``--optarch=&lt;compiler:flags&gt;;&lt;compiler:flags&gt;``</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-Starting with version 3.1.0, EasyBuild supports specifying architecture flags on a per-compiler basis. This enables to
-&quot;set and forget&quot; the <span class="s">``--optarch``</span> option for your compilers of interest, as opposed to change it depending on the
-compiler used on the packages to be installed.
-
-The syntax is <span class="s">``&lt;compiler:flags&gt;;&lt;compiler:flags&gt;``</span>, where <span class="s">``:``</span> separates the compiler name from the compiler flags,
-and <span class="s">``;``</span> separates different compilers. This is an example for the Intel and GCC compilers:
-<span class="s">``--optarch=&#39;Intel:xHost;GCC:march=x86-64 -mtune=generic&#39;``</span>. As in the simple cases, EasyBuild adds one <span class="s">``-``</span> to the
-flags specified, so the flags passed to the Intel and GCC compilers in this case are <span class="s">``-xHost``</span> and
-<span class="s">``-march=x86-64 -mtune=generic``</span>. Please note the quotes to escape the space in the GCC flags.
-
-Additionally, <span class="s">``GENERIC``</span> is also supported on a compiler basis, allowing to specify a generic compilation for the
-desired compilers. This is an example of this usage: <span class="s">``--optarch=Intel:xHost;GCC:GENERIC``</span>. Of course, this is
-supported just for compiler toolchains that recognize <span class="s">``GENERIC``</span>.
-
-The options for each compiler are set independently. That means that if a GCC-based toolchain is used, but the only
-compiler specified is <span class="s">``Intel``</span> (for example with <span class="s">``--optarch=Intel:xCORE-AVX2``</span>), then EasyBuild will behave as if
-<span class="s">``--optarch``</span> was not specified for this toolchain.
-
-The compiler name corresponds to the value of the <span class="s">``COMPILER_FAMILY``</span> constant of the toolchain. Two common examples
-are <span class="s">``GCC``</span> and <span class="s">``Intel``</span>.
-
-Due to the special treatment of <span class="s">``--optarch``</span> in Cray environments, this feature is not supported on this platform.
-</code></pre></div>
+the necessary compiler flags will be defined in later EasyBuild versions.</p>
+<p>Currently, using <code>--optarch=GENERIC</code> will result in the following target architecture optimization flags being used,
+(on a Linux x86-64 system):</p>
+<ul>
+<li>for toolchains using GCC compilers: <code>-march=x86-64 -mtune=generic</code></li>
+<li>for toolchains using Intel compilers: <code>-xSSE2</code></li>
+</ul>
+<p>On other systems or for other compilers, you can check which compiler flags will be used via <a class="autorefs autorefs-internal" href="../extended-dry-run/#extended_dry_run">Extended dry run</a>.</p>
+<h3 id="controlling_compiler_optimization_flags_optarch_per_compiler">Setting architecture flags for different compilers via <code>--optarch=&lt;compiler:flags&gt;;&lt;compiler:flags&gt;</code><a class="headerlink" href="#controlling_compiler_optimization_flags_optarch_per_compiler" title="Permanent link">&para;</a></h3>
+<p>Starting with version 3.1.0, EasyBuild supports specifying architecture flags on a per-compiler basis. This enables to
+"set and forget" the <code>--optarch</code> option for your compilers of interest, as opposed to change it depending on the
+compiler used on the packages to be installed.</p>
+<p>The syntax is <code>&lt;compiler:flags&gt;;&lt;compiler:flags&gt;</code>, where <code>:</code> separates the compiler name from the compiler flags,
+and <code>;</code> separates different compilers. This is an example for the Intel and GCC compilers:
+<code>--optarch='Intel:xHost;GCC:march=x86-64 -mtune=generic'</code>. As in the simple cases, EasyBuild adds one <code>-</code> to the
+flags specified, so the flags passed to the Intel and GCC compilers in this case are <code>-xHost</code> and
+<code>-march=x86-64 -mtune=generic</code>. Please note the quotes to escape the space in the GCC flags.</p>
+<p>Additionally, <code>GENERIC</code> is also supported on a compiler basis, allowing to specify a generic compilation for the
+desired compilers. This is an example of this usage: <code>--optarch=Intel:xHost;GCC:GENERIC</code>. Of course, this is
+supported just for compiler toolchains that recognize <code>GENERIC</code>.</p>
+<p>The options for each compiler are set independently. That means that if a GCC-based toolchain is used, but the only
+compiler specified is <code>Intel</code> (for example with <code>--optarch=Intel:xCORE-AVX2</code>), then EasyBuild will behave as if
+<code>--optarch</code> was not specified for this toolchain.</p>
+<p>The compiler name corresponds to the value of the <code>COMPILER_FAMILY</code> constant of the toolchain. Two common examples
+are <code>GCC</code> and <code>Intel</code>.</p>
+<p>Due to the special treatment of <code>--optarch</code> in Cray environments, this feature is not supported on this platform.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 16, 2022</span>
       
     
   </small>
