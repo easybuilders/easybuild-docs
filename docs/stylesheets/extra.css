@@ -129,5 +129,5 @@
 [data-md-color-switching] *,
 [data-md-color-switching] *::before,
 [data-md-color-switching] *::after {
-  transition-duration: 0ms !important; // stylelint-disable-line
+  transition-duration: 0ms !important; /* stylelint-disable-line */
 }
