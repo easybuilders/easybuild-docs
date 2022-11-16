@@ -369,114 +369,59 @@
 
 
 <h1 id="installing_lmod">Installing Lmod without root permissions<a class="headerlink" href="#installing_lmod" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/Installing-Lmod-without-root-permissions.html">https://docs.easybuild.io/en/latest/Installing-Lmod-without-root-permissions.html</a>.</p>
-<p><strong>
-It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
-and you can help with that!
-</strong></p>
-<ul>
-<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Installing-Lmod-without-root-permissions.rst"><code>docs/Installing-Lmod-without-root-permissions.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
-<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/installing-lmod-without-root-permissions.md"><code>docs/installing-lmod-without-root-permissions.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
-</ul>
-<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_installing_lmod:</span>
-
-<span class="gh">Installing Lmod without root permissions</span>
-<span class="gh">========================================</span>
-
-This short guide will show how to install Lmod (and Lua, on which it
-depends) on Linux, without requiring root permissions.
-
-<span class="gh">Lua</span>
-<span class="gh">~~~</span>
-
-Dependencies: Installing Lua using the steps below requires rsync, make and gcc
-
-Build and install Lua using the source tarball available in the Lmod
-SourceForge repository (<span class="s">`http://sourceforge.net/projects/lmod/files/`_</span>).
+<p>This short guide will show how to install Lmod (and Lua, on which it
+depends) on Linux, without requiring root permissions.</p>
+<h2 id="lua">Lua<a class="headerlink" href="#lua" title="Permanent link">&para;</a></h2>
+<p>Dependencies: Installing Lua using the steps below requires rsync, make and gcc</p>
+<p>Build and install Lua using the source tarball available in the Lmod
+<a href="https://sourceforge.net/projects/lmod/files/">SourceForge repository</a>.
 This version is a lot easier to build, and already includes the required
 extra Lua modules. At the time of writing this relates to the
-<span class="s">``lua-5.1.4.8.tar.gz``</span> tarball.
-
-<span class="gs">**Step 1**</span>: Download and unpack <span class="s">`lua-5.1.4.8.tar.gz`_</span>.
-
-<span class="gs">**Step 2**</span>: Configure the Lua build, provide a custom installation
-prefix (e.g. <span class="s">``$HOME/lua``</span>) and specify to statically link libraries
-(i.e. <span class="s">``libreadline``</span> and <span class="s">``ncurses``</span>), to avoid problems when modules
+<code>lua-5.1.4.8.tar.gz</code> tarball.</p>
+<p><strong>Step 1</strong>: Download and unpack <a href="https://sourceforge.net/projects/lmod/files/lua-5.1.4.8.tar.gz/download">lua-5.1.4.8.tar.gz</a>.</p>
+<p><strong>Step 2</strong>: Configure the Lua build, provide a custom installation
+prefix (e.g. <code>$HOME/lua</code>) and specify to statically link libraries
+(i.e. <code>libreadline</code> and <code>ncurses</code>), to avoid problems when modules
 that provide these libraries are being loaded. Then build and install
-via <span class="s">``make``</span>:
+via <code>make</code>:</p>
+<div class="highlight"><pre><span></span><code>./configure --with-static<span class="o">=</span>yes --prefix<span class="o">=</span><span class="nv">$HOME</span>/lua <span class="o">&amp;&amp;</span> make <span class="o">&amp;&amp;</span> make install
+</code></pre></div>
+<p><strong>Step 3</strong>: Make sure the <code>lua</code> binary is available in your <code>$PATH</code>
+(only required when building Lmod, see below):</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$HOME</span>/lua/bin:<span class="nv">$PATH</span>
+</code></pre></div>
+<p>Optionally, check whether the <code>lua</code> binary indeed doesn’t link to any
+unexpected <code>readline</code> or <code>ncurses</code> libraries:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>ldd <span class="nv">$HOME</span>/lua/bin/lua
+<span class="go">        linux-vdso.so.1 (0x00007fffad7ff000)</span>
+<span class="go">        libm.so.6 =&gt; /lib64/libm.so.6 (0x00007ff9914db000)</span>
+<span class="go">        libdl.so.2 =&gt; /lib64/libdl.so.2 (0x00007ff9912d7000)</span>
+<span class="go">        libc.so.6 =&gt; /lib64/libc.so.6 (0x00007ff990f2a000)</span>
+<span class="go">        /lib64/ld-linux-x86-64.so.2 (0x00007ff9917d9000)</span>
+</code></pre></div>
+<h2 id="lmod">Lmod<a class="headerlink" href="#lmod" title="Permanent link">&para;</a></h2>
+<p>Dependencies: building Lmod using the steps below requires tcl, tcl-dev(el), make and bzip2</p>
+<p><strong>Step 1</strong>: Download and unpack the latest available Lmod version,
+<a href="https://sourceforge.net/projects/lmod/files/Lmod-8.4.tar.bz2/download">Lmod-8.4.tar.bz2</a> at the time of writing.</p>
+<div class="highlight"><pre><span></span><code>tar xfvj Lmod-8.4.tar.bz2 <span class="o">&amp;&amp;</span> <span class="nb">cd</span> Lmod-8.4
+</code></pre></div>
+<p><strong>Step 2</strong>: Configure, build and install Lmod build, in a custom prefix:</p>
+<div class="highlight"><pre><span></span><code>./configure --prefix<span class="o">=</span><span class="nv">$HOME</span> <span class="o">&amp;&amp;</span> make install
+</code></pre></div>
+<p><strong>Step 3</strong>: Update <code>$PATH</code> so <code>lmod</code> is available (put this in your
+<code>.bashrc</code>):</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$HOME</span>/lmod/8.4/libexec:<span class="nv">$PATH</span>
+</code></pre></div>
+<p>Optionally, give it a spin:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>lmod --version
 
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">bash</span>
-
-    ./configure --with-static<span class="o">=</span>yes --prefix<span class="o">=</span><span class="nv">$HOME</span>/lua <span class="o">&amp;&amp;</span> make <span class="o">&amp;&amp;</span> make install
-
-<span class="gs">**Step 3**</span>: Make sure the <span class="s">``lua``</span> binary is available in your <span class="s">``$PATH``</span>
-(only required when building Lmod, see below):
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">bash</span>
-
-    <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$HOME</span>/lua/bin:<span class="nv">$PATH</span>
-
-Optionally, check whether the <span class="s">``lua``</span> binary indeed doesn’t link to any
-unexpected <span class="s">``readline``</span> or <span class="s">``ncurses``</span> libraries:
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">bash</span>
-
-    $ ldd <span class="nv">$HOME</span>/lua/bin/lua
-            linux-vdso.so.1 <span class="o">(</span>0x00007fffad7ff000<span class="o">)</span>
-            libm.so.6 <span class="o">=</span>&gt; /lib64/libm.so.6 <span class="o">(</span>0x00007ff9914db000<span class="o">)</span>
-            libdl.so.2 <span class="o">=</span>&gt; /lib64/libdl.so.2 <span class="o">(</span>0x00007ff9912d7000<span class="o">)</span>
-            libc.so.6 <span class="o">=</span>&gt; /lib64/libc.so.6 <span class="o">(</span>0x00007ff990f2a000<span class="o">)</span>
-            /lib64/ld-linux-x86-64.so.2 <span class="o">(</span>0x00007ff9917d9000<span class="o">)</span>
-
-<span class="gh">Lmod</span>
-<span class="gh">~~~~</span>
-
-Dependencies: building Lmod using the steps below requires tcl, tcl-dev(el), make and bzip2
-
-<span class="gs">**Step 1**</span>: Download and unpack the latest available Lmod version,
-<span class="s">`Lmod-8.4.tar.bz2`_</span> at the time of writing.
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">bash</span>
-
-    tar xfvj Lmod-8.4.tar.bz2 <span class="o">&amp;&amp;</span> <span class="nb">cd</span> Lmod-8.4
-
-<span class="gs">**Step 2**</span>: Configure, build and install Lmod build, in a custom prefix:
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">bash</span>
-
-    ./configure --prefix<span class="o">=</span><span class="nv">$HOME</span> <span class="o">&amp;&amp;</span> make install
-
-<span class="gs">**Step 3**</span>: Update <span class="s">``$PATH``</span> so <span class="s">``lmod``</span> is available (put this in your
-<span class="s">``.bashrc``</span>):
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">bash</span>
-
-    <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$HOME</span>/lmod/8.4/libexec:<span class="nv">$PATH</span>
-
-Optionally, give it a spin:
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">bash</span>
-
-    $ lmod --version
-
-    Modules based on Lua: Version <span class="m">8</span>.4  <span class="m">2020</span>-07-31 <span class="m">12</span>:25 -05:00
-        by Robert McLay mclay@tacc.utexas.edu
-
-<span class="gs">**Step 4**</span>: Define <span class="s">``module``</span> function to use <span class="s">``lmod``</span> (optional for use
-with EasyBuild):
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span> <span class="k">bash</span>
-
-    <span class="nb">source</span> <span class="nv">$HOME</span>/lmod/8.4/init/bash
-    <span class="nb">export</span> <span class="nv">LMOD_CMD</span><span class="o">=</span><span class="nv">$HOME</span>/lmod/8.4/libexec/lmod
-
-<span class="p">..</span> <span class="nt">_`http:</span>//sourceforge.net/projects/lmod/files/`: http://sourceforge.net/projects/lmod/files/
-<span class="p">..</span> <span class="nt">_lua-5.1.4.8.tar.gz:</span> https://sourceforge.net/projects/lmod/files/lua-5.1.4.8.tar.gz/download
-<span class="p">..</span> <span class="nt">_Lmod-8.4.tar.bz2:</span> https://sourceforge.net/projects/lmod/files/Lmod-8.4.tar.bz2/download
+<span class="go">Modules based on Lua: Version 8.4  2020-07-31 12:25 -05:00</span>
+<span class="go">    by Robert McLay mclay@tacc.utexas.edu</span>
+</code></pre></div>
+<p><strong>Step 4</strong>: Define <code>module</code> function to use <code>lmod</code> (optional for use
+with EasyBuild):</p>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span> <span class="nv">$HOME</span>/lmod/8.4/init/bash
+<span class="nb">export</span> <span class="nv">LMOD_CMD</span><span class="o">=</span><span class="nv">$HOME</span>/lmod/8.4/libexec/lmod
 </code></pre></div>
 
   <hr>
@@ -484,7 +429,7 @@ with EasyBuild):
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 6, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 16, 2022</span>
       
     
   </small>
