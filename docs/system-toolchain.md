@@ -10,7 +10,6 @@ This page provides more information about this change, and how to deal with the 
 
 
 ## Use case for the `system` toolchain {: #system_toolchain_semantics }
--------------------------------------
 
 The [System toolchain][system_toolchain] is intended for the same use case as the `dummy` toolchain was: it should (only) be used
 for software installations where the compiler & libraries provided by the operating system are assumed to
