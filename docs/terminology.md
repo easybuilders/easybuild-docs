@@ -106,7 +106,7 @@ one for "free and open source software" (`foss`) based on GCC and one based on t
 (`intel`).
 
 
-### `system` toolchain {: #system_toolchain }
+### `system` toolchain {: #system_toolchain_terminology }
 
 The `system` toolchain is a special case. It is an *empty* toolchain, i.e. a toolchain without any components,
 and corresponds to using the readily available compilers and libraries (e.g., the ones provided by the operating
