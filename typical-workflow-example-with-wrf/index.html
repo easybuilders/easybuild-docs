@@ -15,7 +15,7 @@
     
     
       
-        <title>Typical workflow example: building and installing WRF - EasyBuild - building software with ease</title>
+        <title>Typical workflow example: building and installing WRF {: #typical_workflow } - EasyBuild - building software with ease</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#typical-workflow-example-building-and-installing-wrf" class="md-skip">
+        <a href="#typical_workflow" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Typical workflow example: building and installing WRF
+              Typical workflow example: building and installing WRF {: #typical_workflow }
             
           </span>
         </div>
@@ -368,207 +368,163 @@
   </a>
 
 
-<h1 id="typical-workflow-example-building-and-installing-wrf">Typical workflow example: building and installing WRF<a class="headerlink" href="#typical-workflow-example-building-and-installing-wrf" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/Typical_workflow_example_with_WRF.html">https://docs.easybuild.io/en/latest/Typical_workflow_example_with_WRF.html</a>.</p>
-<p><strong>
-It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
-and you can help with that!
-</strong></p>
-<ul>
-<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Typical_workflow_example_with_WRF.rst"><code>docs/Typical_workflow_example_with_WRF.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
-<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/typical-workflow-example-with-wrf.md"><code>docs/typical-workflow-example-with-wrf.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
-</ul>
-<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_typical_workflow:</span>
-
-<span class="gh">Typical workflow example: building and installing WRF</span>
-<span class="gh">=====================================================</span>
-
-This section shows an example case of building
-<span class="s">`Weather Research and Forecasting (WRF) </span><span class="si">&lt;http://www.wrf-model.org&gt;</span><span class="s">`_</span> scientific software application,
+<h1 id="typical_workflow">Typical workflow example: building and installing WRF<a class="headerlink" href="#typical_workflow" title="Permanent link">&para;</a></h1>
+<p>This section shows an example case of building
+<a href="https://www.mmm.ucar.edu/models/wrf">Weather Research and Forecasting (WRF)</a> scientific software application,
 which is a notoriously complex software application to build and install.
-With EasyBuild however, WRF can be installed quite easily and here is how.
+With EasyBuild however, WRF can be installed quite easily and here is how.</p>
+<p>First, you search which easyconfigs are available for WRF, using <code>--search</code> (see <a class="autorefs autorefs-internal" href="../using-easybuild/#searching_for_easyconfigs">Searching for easyconfigs, <code>--search</code> / <code>-S</code></a>)
+and you select one based on the software version, toolchain, etc.</p>
+<p>Using the selected easyconfig file, you can get an overview of the planned installations using <code>--dry-run</code> (see <a class="autorefs autorefs-internal" href="../using-easybuild/#get_an_overview">Getting an overview of planned installations <code>--dry-run</code> / <code>-D</code></a>).</p>
+<p>Finally, building and installing WRF is done by specifying the matching easyconfig file in the eb command line,
+and using <code>--robot</code> (see <a class="autorefs autorefs-internal" href="../using-easybuild/#use_robot">Enabling dependency resolution, <code>--robot</code> / <code>-r</code> and <code>--robot-paths</code></a>) to enable dependency resolution. That way WRF and all of its dependencies are installed with <code>a single command</code>!</p>
+<h2 id="searching-for-available-easyconfigs-files">Searching for available easyconfigs files<a class="headerlink" href="#searching-for-available-easyconfigs-files" title="Permanent link">&para;</a></h2>
+<p>Searching for build specification for a particular software package can be done using the
+<code>--search</code>/<code>-S</code> command line options (see <a class="autorefs autorefs-internal" href="../using-easybuild/#searching_for_easyconfigs">Searching for easyconfigs, <code>--search</code> / <code>-S</code></a>);
+for example, to get a list of available easyconfig files for WRF:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb -S WRF
+<span class="go">CFGS1=/home/example/.local/easybuild/software/EasyBuild/4.1.1/easybuild/easyconfigs</span>
+<span class="go"> * $CFGS1/w/WPS/WPS-4.0.1_find-wrfdir.patch</span>
+<span class="go"> * $CFGS1/w/WPS/WPS-4.0.2_find-wrfdir.patch</span>
+<span class="go"> [ . . . ]</span>
+<span class="go"> * $CFGS1/w/WRF/WRF-4.0.1-intel-2018b-dmpar.eb</span>
+<span class="go"> * $CFGS1/w/WRF/WRF-4.0.2-foss-2018b-dmpar.eb</span>
+<span class="go"> [ . . . ]</span>
 
-
-First, you search which easyconfigs are available for WRF, using <span class="s">``--search``</span> (see <span class="na">:ref:</span><span class="nv">`searching_for_easyconfigs`</span>)
-and you select one based on the software version, toolchain, etc.
-
-Using the selected easyconfig file, you can get an overview of the planned installations using <span class="s">``--dry-run``</span> (see <span class="na">:ref:</span><span class="nv">`get_an_overview`</span>).
-
-Finally, building and installing WRF is done by specifying the matching easyconfig file in the eb command line,
-and using <span class="s">``--robot``</span> (see <span class="na">:ref:</span><span class="nv">`use_robot`</span>) to enable dependency resolution. That way WRF and all of its dependencies are installed with <span class="nv">`a single command`</span>!
-
-
-<span class="gh">Searching for available easyconfigs files</span>
-<span class="gh">-----------------------------------------</span>
-
-Searching for build specification for a particular software package can be done using the
-<span class="s">``--search``</span>/<span class="s">``-S``</span> command line options (see <span class="na">:ref:</span><span class="nv">`searching_for_easyconfigs`</span>);
-for example, to get a list of available easyconfig files for WRF<span class="se">::</span>
-
-<span class="s">  $ eb -S WRF</span>
-<span class="s">  CFGS1=/home/example/.local/easybuild/software/EasyBuild/4.1.1/easybuild/easyconfigs</span>
-<span class="s">   * $CFGS1/w/WPS/WPS-4.0.1_find-wrfdir.patch</span>
-<span class="s">   * $CFGS1/w/WPS/WPS-4.0.2_find-wrfdir.patch</span>
-<span class="s">   [ . . . ]</span>
-<span class="s">   * $CFGS1/w/WRF/WRF-4.0.1-intel-2018b-dmpar.eb</span>
-<span class="s">   * $CFGS1/w/WRF/WRF-4.0.2-foss-2018b-dmpar.eb</span>
-<span class="s">   [ . . . ]</span>
-
-<span class="s">  Note: 16 matching archived easyconfig(s) found, use --consider-archived-easyconfigs to see them</span>
-
-
-
-Various easyconfig files are found: for different versions of WRF (e.g., v4.0.1 and v4.0.2),
-for different (versions of) compiler toolchains (e.g., foss 2018b, intel 2018b), etc.
-
-For the remainder of this example, we will use the available
-<span class="s">``WRF-4.0.2-foss-2018b-dmpar.eb``</span> easyconfig file to specify to EasyBuild
-to build and install WRF v4.0.2 using version 2018b of the <span class="s">``foss``</span>
-toolchain, which is one of the <span class="na">:ref:</span><span class="nv">`common_toolchains`</span>.  The <span class="s">``foss``</span>
-toolchain stands for <span class="s">``GCC, OpenMPI, OpenBLAS/LAPACK, ScaLAPACK, and FFTW``</span>.
-See <span class="na">:ref:</span><span class="nv">`toolchains_table`</span> for a list of all available toolchains.
-
-<span class="gh">Getting an overview of planned installations</span>
-<span class="gh">--------------------------------------------</span>
-
-To get an overview of the software that EasyBuild is going to build and install
-we can use the <span class="s">``--dry-run``</span>/<span class="s">``-D``</span> (see <span class="na">:ref:</span><span class="nv">`get_an_overview`</span>) command line option.
+<span class="go">Note: 16 matching archived easyconfig(s) found, use --consider-archived-easyconfigs to see them</span>
+</code></pre></div>
+<p>Various easyconfig files are found: for different versions of WRF (e.g., v4.0.1 and v4.0.2),
+for different (versions of) compiler toolchains (e.g., foss 2018b, intel 2018b), etc.</p>
+<p>For the remainder of this example, we will use the available
+<code>WRF-4.0.2-foss-2018b-dmpar.eb</code> easyconfig file to specify to EasyBuild
+to build and install WRF v4.0.2 using version 2018b of the <code>foss</code>
+toolchain, which is one of the <a class="autorefs autorefs-internal" href="../common-toolchains/#common_toolchains">Common toolchains</a>.  The <code>foss</code>
+toolchain stands for <code>GCC, OpenMPI, OpenBLAS/LAPACK, ScaLAPACK, and FFTW</code>.
+See <a class="autorefs autorefs-internal" href="../version-specific/eb-list-toolchains/#toolchains_table">List of known toolchains</a> for a list of all available toolchains.</p>
+<h2 id="getting-an-overview-of-planned-installations">Getting an overview of planned installations<a class="headerlink" href="#getting-an-overview-of-planned-installations" title="Permanent link">&para;</a></h2>
+<p>To get an overview of the software that EasyBuild is going to build and install
+we can use the <code>--dry-run</code>/<code>-D</code> (see <a class="autorefs autorefs-internal" href="../using-easybuild/#get_an_overview">Getting an overview of planned installations <code>--dry-run</code> / <code>-D</code></a>) command line option.
 This will show a list of easyconfig files
 that will be used, together with the module files that will be installed,
-as well as their current availability (<span class="s">``[x]``</span> marks available modules).
-
-Note that EasyBuild will take care of all of the dependencies of WRF as well,
-and can even install the compiler toolchain as well if the corresponding modules are not available yet<span class="se">::</span>
-
-<span class="s">  $ eb WRF-4.0.2-foss-2018b-dmpar.eb -Dr</span>
-<span class="s">  == temporary log file in case of crash /tmp/eb-eEnBF5/easybuild-pvrvNP.log</span>
-<span class="s">  Dry run: printing build status of easyconfigs and dependencies</span>
-<span class="s">  CFGS=/home/example/.local/easybuild/software/EasyBuild/4.1.1/easybuild/easyconfigs</span>
-<span class="s">   * [x] $CFGS/m/M4/M4-1.4.18.eb (module: M4/1.4.18)</span>
-<span class="s">   * [x] $CFGS/z/zlib/zlib-1.2.11.eb (module: zlib/1.2.11)</span>
-<span class="s">   * [x] $CFGS/h/help2man/help2man-1.47.4.eb (module: help2man/1.47.4)</span>
-<span class="s">   * [x] $CFGS/m/M4/M4-1.4.17.eb (module: M4/1.4.17)</span>
-<span class="s">   * [x] $CFGS/b/Bison/Bison-3.0.4.eb (module: Bison/3.0.4)</span>
-<span class="s">   * [x] $CFGS/f/flex/flex-2.6.4.eb (module: flex/2.6.4)</span>
-<span class="s">   * [x] $CFGS/b/binutils/binutils-2.30.eb (module: binutils/2.30)</span>
-<span class="s">   * [x] $CFGS/g/GCCcore/GCCcore-7.3.0.eb (module: GCCcore/7.3.0)</span>
-<span class="s">   * [x] $CFGS/h/help2man/help2man-1.47.4-GCCcore-7.3.0.eb (module: help2man/1.47.4-GCCcore-7.3.0)</span>
-<span class="s">   * [x] $CFGS/m/M4/M4-1.4.18-GCCcore-7.3.0.eb (module: M4/1.4.18-GCCcore-7.3.0)</span>
-<span class="s">   * [x] $CFGS/z/zlib/zlib-1.2.11-GCCcore-7.3.0.eb (module: zlib/1.2.11-GCCcore-7.3.0)</span>
-<span class="s">   * [x] $CFGS/b/Bison/Bison-3.0.4-GCCcore-7.3.0.eb (module: Bison/3.0.4-GCCcore-7.3.0)</span>
-<span class="s">   * [x] $CFGS/b/Bison/Bison-3.0.5-GCCcore-7.3.0.eb (module: Bison/3.0.5-GCCcore-7.3.0)</span>
-<span class="s">   * [x] $CFGS/f/flex/flex-2.6.4-GCCcore-7.3.0.eb (module: flex/2.6.4-GCCcore-7.3.0)</span>
-<span class="s">   * [x] $CFGS/b/binutils/binutils-2.30-GCCcore-7.3.0.eb (module: binutils/2.30-GCCcore-7.3.0)</span>
-<span class="s">   * [ ] $CFGS/n/ncurses/ncurses-6.1-GCCcore-7.3.0.eb (module: ncurses/6.1-GCCcore-7.3.0)</span>
-<span class="s">   * [ ] $CFGS/c/CMake/CMake-3.11.4-GCCcore-7.3.0.eb (module: CMake/3.11.4-GCCcore-7.3.0)</span>
-<span class="s">   * [x] $CFGS/a/Autoconf/Autoconf-2.69-GCCcore-7.3.0.eb (module: Autoconf/2.69-GCCcore-7.3.0)</span>
-<span class="s">   * [x] $CFGS/a/Automake/Automake-1.16.1-GCCcore-7.3.0.eb (module: Automake/1.16.1-GCCcore-7.3.0)</span>
-<span class="s">   * [x] $CFGS/g/GCC/GCC-7.3.0-2.30.eb (module: GCC/7.3.0-2.30)</span>
-<span class="s">   * [ ] $CFGS/p/pkg-config/pkg-config-0.29.2-GCCcore-7.3.0.eb (module: pkg-config/0.29.2-GCCcore-7.3.0)</span>
-<span class="s">   * [ ] $CFGS/c/cURL/cURL-7.60.0-GCCcore-7.3.0.eb (module: cURL/7.60.0-GCCcore-7.3.0)</span>
-<span class="s">   * [x] $CFGS/l/libtool/libtool-2.4.6-GCCcore-7.3.0.eb (module: libtool/2.4.6-GCCcore-7.3.0)</span>
-<span class="s">   * [ ] $CFGS/s/Szip/Szip-2.1.1-GCCcore-7.3.0.eb (module: Szip/2.1.1-GCCcore-7.3.0)</span>
-<span class="s">   * [x] $CFGS/o/OpenBLAS/OpenBLAS-0.3.1-GCC-7.3.0-2.30.eb (module: OpenBLAS/0.3.1-GCC-7.3.0-2.30)</span>
-<span class="s">   * [ ] $CFGS/t/tcsh/tcsh-6.20.00-GCCcore-7.3.0.eb (module: tcsh/6.20.00-GCCcore-7.3.0)</span>
-<span class="s">   * [ ] $CFGS/j/JasPer/JasPer-2.0.14-GCCcore-7.3.0.eb (module: JasPer/2.0.14-GCCcore-7.3.0)</span>
-<span class="s">   * [x] $CFGS/a/Autotools/Autotools-20180311-GCCcore-7.3.0.eb (module: Autotools/20180311-GCCcore-7.3.0)</span>
-<span class="s">   * [ ] $CFGS/d/Doxygen/Doxygen-1.8.14-GCCcore-7.3.0.eb (module: Doxygen/1.8.14-GCCcore-7.3.0)</span>
-<span class="s">   * [x] $CFGS/n/numactl/numactl-2.0.11-GCCcore-7.3.0.eb (module: numactl/2.0.11-GCCcore-7.3.0)</span>
-<span class="s">   * [x] $CFGS/x/xorg-macros/xorg-macros-1.19.2-GCCcore-7.3.0.eb (module: xorg-macros/1.19.2-GCCcore-7.3.0)</span>
-<span class="s">   * [x] $CFGS/l/libpciaccess/libpciaccess-0.14-GCCcore-7.3.0.eb (module: libpciaccess/0.14-GCCcore-7.3.0)</span>
-<span class="s">   * [x] $CFGS/n/ncurses/ncurses-6.0.eb (module: ncurses/6.0)</span>
-<span class="s">   * [x] $CFGS/g/gettext/gettext-0.19.8.1.eb (module: gettext/0.19.8.1)</span>
-<span class="s">   * [x] $CFGS/x/XZ/XZ-5.2.4-GCCcore-7.3.0.eb (module: XZ/5.2.4-GCCcore-7.3.0)</span>
-<span class="s">   * [x] $CFGS/l/libxml2/libxml2-2.9.8-GCCcore-7.3.0.eb (module: libxml2/2.9.8-GCCcore-7.3.0)</span>
-<span class="s">   * [x] $CFGS/h/hwloc/hwloc-1.11.10-GCCcore-7.3.0.eb (module: hwloc/1.11.10-GCCcore-7.3.0)</span>
-<span class="s">   * [x] $CFGS/o/OpenMPI/OpenMPI-3.1.1-GCC-7.3.0-2.30.eb (module: OpenMPI/3.1.1-GCC-7.3.0-2.30)</span>
-<span class="s">   * [x] $CFGS/g/gompi/gompi-2018b.eb (module: gompi/2018b)</span>
-<span class="s">   * [x] $CFGS/f/FFTW/FFTW-3.3.8-gompi-2018b.eb (module: FFTW/3.3.8-gompi-2018b)</span>
-<span class="s">   * [x] $CFGS/s/ScaLAPACK/ScaLAPACK-2.0.2-gompi-2018b-OpenBLAS-0.3.1.eb (module: ScaLAPACK/2.0.2-gompi-2018b-OpenBLAS-0.3.1)</span>
-<span class="s">   * [x] $CFGS/f/foss/foss-2018b.eb (module: foss/2018b)</span>
-<span class="s">   * [ ] $CFGS/h/HDF5/HDF5-1.10.2-foss-2018b.eb (module: HDF5/1.10.2-foss-2018b)</span>
-<span class="s">   * [ ] $CFGS/n/netCDF/netCDF-4.6.1-foss-2018b.eb (module: netCDF/4.6.1-foss-2018b)</span>
-<span class="s">   * [ ] $CFGS/n/netCDF-Fortran/netCDF-Fortran-4.4.4-foss-2018b.eb (module: netCDF-Fortran/4.4.4-foss-2018b)</span>
-<span class="s">   * [ ] $CFGS/w/WRF/WRF-4.0.2-foss-2018b-dmpar.eb (module: WRF/4.0.2-foss-2018b-dmpar)</span>
-<span class="s">  == Temporary log file(s) /tmp/eb-eEnBF5/easybuild-pvrvNP.log* have been removed.</span>
-<span class="s">  == Temporary directory /tmp/eb-eEnBF5 has been removed.</span>
-
-
-
-<span class="gh">Installing a software stack</span>
-<span class="gh">---------------------------</span>
-
-To make EasyBuild build and install WRF, including all of its dependencies, a <span class="gs">**single command**</span> is sufficient.
-
-By using the <span class="s">``--robot``</span>/<span class="s">``-r``</span> (see <span class="na">:ref:</span><span class="nv">`use_robot`</span>) command line option,
-we enable dependency resolution such that the entire software stack is handled<span class="se">::</span>
-
-<span class="s">  $ eb WRF-4.0.2-foss-2018b-dmpar.eb --robot</span>
-<span class="s">  == temporary log file in case of crash /tmp/eb-LfQa8b/easybuild-TBXLTy.log</span>
-<span class="s">  == resolving dependencies ...</span>
-<span class="s">  == processing EasyBuild easyconfig /home/example/.local/easybuild/software/EasyBuild/4.1.1/easybuild/easyconfigs/n/ncurses/ncurses-6.1-GCCcore-7.3.0.eb</span>
-<span class="s">  == building and installing ncurses/6.1-GCCcore-7.3.0...</span>
-<span class="s">  [...]</span>
-<span class="s">  == building and installing tcsh/6.20.00-GCCcore-7.3.0...</span>
-<span class="s">  [...]</span>
-<span class="s">  == building and installing CMake/3.11.4-GCCcore-7.3.0...</span>
-<span class="s">  [...]</span>
-<span class="s">  == building and installing JasPer/2.0.14-GCCcore-7.3.0...</span>
-<span class="s">  [...]</span>
-<span class="s">  == building and installing pkg-config/0.29.2-GCCcore-7.3.0...</span>
-<span class="s">  [...]</span>
-<span class="s">  == building and installing Doxygen/1.8.14-GCCcore-7.3.0...</span>
-<span class="s">  [...]</span>
-<span class="s">  == building and installing cURL/7.60.0-GCCcore-7.3.0...</span>
-<span class="s">  [...]</span>
-<span class="s">  == building and installing Szip/2.1.1-GCCcore-7.3.0...</span>
-<span class="s">  [...]</span>
-<span class="s">  == building and installing HDF5/1.10.2-foss-2018b...</span>
-<span class="s">  [...]</span>
-<span class="s">  == building and installing netCDF/4.6.1-foss-2018b...</span>
-<span class="s">  [...]</span>
-<span class="s">  == building and installing netCDF-Fortran/4.4.4-foss-2018b...</span>
-<span class="s">  [...]</span>
-<span class="s">  == building and installing WRF/4.0.2-foss-2018b-dmpar...</span>
-<span class="s">  [...]</span>
-<span class="s">  == Build succeeded for 12 out of 12</span>
-<span class="s">  == Temporary log file(s) /tmp/eb-LfQa8b/easybuild-TBXLTy.log* have been removed.</span>
-<span class="s">  == Temporary directory /tmp/eb-LfQa8b has been removed.</span>
-
-
-Once the installation has succeeded, modules will be available for WRF and all of its dependencies<span class="se">::</span>
-
-<span class="s">  $ module load WRF</span>
-<span class="s">  $ module list</span>
-<span class="s">  $ module list</span>
-
-<span class="s">  Currently Loaded Modules:</span>
-<span class="s">    1) EasyBuild/4.1.1                  13) gompi/2018b</span>
-<span class="s">    2) GCCcore/7.3.0                    14) FFTW/3.3.8-gompi-2018b</span>
-<span class="s">    3) zlib/1.2.11-GCCcore-7.3.0        15) ScaLAPACK/2.0.2-gompi-2018b-OpenBLAS-0.3.1</span>
-<span class="s">    4) binutils/2.30-GCCcore-7.3.0      16) foss/2018b</span>
-<span class="s">    5) GCC/7.3.0-2.30                   17) JasPer/2.0.14-GCCcore-7.3.0</span>
-<span class="s">    6) numactl/2.0.11-GCCcore-7.3.0     18) Szip/2.1.1-GCCcore-7.3.0</span>
-<span class="s">    7) XZ/5.2.4-GCCcore-7.3.0           19) HDF5/1.10.2-foss-2018b</span>
-<span class="s">    8) libxml2/2.9.8-GCCcore-7.3.0      20) cURL/7.60.0-GCCcore-7.3.0</span>
-<span class="s">    9) libpciaccess/0.14-GCCcore-7.3.0  21) netCDF/4.6.1-foss-2018b</span>
-<span class="s">   10) hwloc/1.11.10-GCCcore-7.3.0      22) netCDF-Fortran/4.4.4-foss-2018b</span>
-<span class="s">   11) OpenMPI/3.1.1-GCC-7.3.0-2.30     23) WRF/4.0.2-foss-2018b-dmpar</span>
-<span class="s">   12) OpenBLAS/0.3.1-GCC-7.3.0-2.30</span>
-
-For more information, see the other topics discussed in the documentation (see <span class="na">:ref:</span><span class="nv">`contents`</span>).
+as well as their current availability (<code>[x]</code> marks available modules).</p>
+<p>Note that EasyBuild will take care of all of the dependencies of WRF as well,
+and can even install the compiler toolchain as well if the corresponding modules are not available yet:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb WRF-4.0.2-foss-2018b-dmpar.eb -Dr
+<span class="go">== temporary log file in case of crash /tmp/eb-eEnBF5/easybuild-pvrvNP.log</span>
+<span class="go">Dry run: printing build status of easyconfigs and dependencies</span>
+<span class="go">CFGS=/home/example/.local/easybuild/software/EasyBuild/4.1.1/easybuild/easyconfigs</span>
+<span class="go"> * [x] $CFGS/m/M4/M4-1.4.18.eb (module: M4/1.4.18)</span>
+<span class="go"> * [x] $CFGS/z/zlib/zlib-1.2.11.eb (module: zlib/1.2.11)</span>
+<span class="go"> * [x] $CFGS/h/help2man/help2man-1.47.4.eb (module: help2man/1.47.4)</span>
+<span class="go"> * [x] $CFGS/m/M4/M4-1.4.17.eb (module: M4/1.4.17)</span>
+<span class="go"> * [x] $CFGS/b/Bison/Bison-3.0.4.eb (module: Bison/3.0.4)</span>
+<span class="go"> * [x] $CFGS/f/flex/flex-2.6.4.eb (module: flex/2.6.4)</span>
+<span class="go"> * [x] $CFGS/b/binutils/binutils-2.30.eb (module: binutils/2.30)</span>
+<span class="go"> * [x] $CFGS/g/GCCcore/GCCcore-7.3.0.eb (module: GCCcore/7.3.0)</span>
+<span class="go"> * [x] $CFGS/h/help2man/help2man-1.47.4-GCCcore-7.3.0.eb (module: help2man/1.47.4-GCCcore-7.3.0)</span>
+<span class="go"> * [x] $CFGS/m/M4/M4-1.4.18-GCCcore-7.3.0.eb (module: M4/1.4.18-GCCcore-7.3.0)</span>
+<span class="go"> * [x] $CFGS/z/zlib/zlib-1.2.11-GCCcore-7.3.0.eb (module: zlib/1.2.11-GCCcore-7.3.0)</span>
+<span class="go"> * [x] $CFGS/b/Bison/Bison-3.0.4-GCCcore-7.3.0.eb (module: Bison/3.0.4-GCCcore-7.3.0)</span>
+<span class="go"> * [x] $CFGS/b/Bison/Bison-3.0.5-GCCcore-7.3.0.eb (module: Bison/3.0.5-GCCcore-7.3.0)</span>
+<span class="go"> * [x] $CFGS/f/flex/flex-2.6.4-GCCcore-7.3.0.eb (module: flex/2.6.4-GCCcore-7.3.0)</span>
+<span class="go"> * [x] $CFGS/b/binutils/binutils-2.30-GCCcore-7.3.0.eb (module: binutils/2.30-GCCcore-7.3.0)</span>
+<span class="go"> * [ ] $CFGS/n/ncurses/ncurses-6.1-GCCcore-7.3.0.eb (module: ncurses/6.1-GCCcore-7.3.0)</span>
+<span class="go"> * [ ] $CFGS/c/CMake/CMake-3.11.4-GCCcore-7.3.0.eb (module: CMake/3.11.4-GCCcore-7.3.0)</span>
+<span class="go"> * [x] $CFGS/a/Autoconf/Autoconf-2.69-GCCcore-7.3.0.eb (module: Autoconf/2.69-GCCcore-7.3.0)</span>
+<span class="go"> * [x] $CFGS/a/Automake/Automake-1.16.1-GCCcore-7.3.0.eb (module: Automake/1.16.1-GCCcore-7.3.0)</span>
+<span class="go"> * [x] $CFGS/g/GCC/GCC-7.3.0-2.30.eb (module: GCC/7.3.0-2.30)</span>
+<span class="go"> * [ ] $CFGS/p/pkg-config/pkg-config-0.29.2-GCCcore-7.3.0.eb (module: pkg-config/0.29.2-GCCcore-7.3.0)</span>
+<span class="go"> * [ ] $CFGS/c/cURL/cURL-7.60.0-GCCcore-7.3.0.eb (module: cURL/7.60.0-GCCcore-7.3.0)</span>
+<span class="go"> * [x] $CFGS/l/libtool/libtool-2.4.6-GCCcore-7.3.0.eb (module: libtool/2.4.6-GCCcore-7.3.0)</span>
+<span class="go"> * [ ] $CFGS/s/Szip/Szip-2.1.1-GCCcore-7.3.0.eb (module: Szip/2.1.1-GCCcore-7.3.0)</span>
+<span class="go"> * [x] $CFGS/o/OpenBLAS/OpenBLAS-0.3.1-GCC-7.3.0-2.30.eb (module: OpenBLAS/0.3.1-GCC-7.3.0-2.30)</span>
+<span class="go"> * [ ] $CFGS/t/tcsh/tcsh-6.20.00-GCCcore-7.3.0.eb (module: tcsh/6.20.00-GCCcore-7.3.0)</span>
+<span class="go"> * [ ] $CFGS/j/JasPer/JasPer-2.0.14-GCCcore-7.3.0.eb (module: JasPer/2.0.14-GCCcore-7.3.0)</span>
+<span class="go"> * [x] $CFGS/a/Autotools/Autotools-20180311-GCCcore-7.3.0.eb (module: Autotools/20180311-GCCcore-7.3.0)</span>
+<span class="go"> * [ ] $CFGS/d/Doxygen/Doxygen-1.8.14-GCCcore-7.3.0.eb (module: Doxygen/1.8.14-GCCcore-7.3.0)</span>
+<span class="go"> * [x] $CFGS/n/numactl/numactl-2.0.11-GCCcore-7.3.0.eb (module: numactl/2.0.11-GCCcore-7.3.0)</span>
+<span class="go"> * [x] $CFGS/x/xorg-macros/xorg-macros-1.19.2-GCCcore-7.3.0.eb (module: xorg-macros/1.19.2-GCCcore-7.3.0)</span>
+<span class="go"> * [x] $CFGS/l/libpciaccess/libpciaccess-0.14-GCCcore-7.3.0.eb (module: libpciaccess/0.14-GCCcore-7.3.0)</span>
+<span class="go"> * [x] $CFGS/n/ncurses/ncurses-6.0.eb (module: ncurses/6.0)</span>
+<span class="go"> * [x] $CFGS/g/gettext/gettext-0.19.8.1.eb (module: gettext/0.19.8.1)</span>
+<span class="go"> * [x] $CFGS/x/XZ/XZ-5.2.4-GCCcore-7.3.0.eb (module: XZ/5.2.4-GCCcore-7.3.0)</span>
+<span class="go"> * [x] $CFGS/l/libxml2/libxml2-2.9.8-GCCcore-7.3.0.eb (module: libxml2/2.9.8-GCCcore-7.3.0)</span>
+<span class="go"> * [x] $CFGS/h/hwloc/hwloc-1.11.10-GCCcore-7.3.0.eb (module: hwloc/1.11.10-GCCcore-7.3.0)</span>
+<span class="go"> * [x] $CFGS/o/OpenMPI/OpenMPI-3.1.1-GCC-7.3.0-2.30.eb (module: OpenMPI/3.1.1-GCC-7.3.0-2.30)</span>
+<span class="go"> * [x] $CFGS/g/gompi/gompi-2018b.eb (module: gompi/2018b)</span>
+<span class="go"> * [x] $CFGS/f/FFTW/FFTW-3.3.8-gompi-2018b.eb (module: FFTW/3.3.8-gompi-2018b)</span>
+<span class="go"> * [x] $CFGS/s/ScaLAPACK/ScaLAPACK-2.0.2-gompi-2018b-OpenBLAS-0.3.1.eb (module: ScaLAPACK/2.0.2-gompi-2018b-OpenBLAS-0.3.1)</span>
+<span class="go"> * [x] $CFGS/f/foss/foss-2018b.eb (module: foss/2018b)</span>
+<span class="go"> * [ ] $CFGS/h/HDF5/HDF5-1.10.2-foss-2018b.eb (module: HDF5/1.10.2-foss-2018b)</span>
+<span class="go"> * [ ] $CFGS/n/netCDF/netCDF-4.6.1-foss-2018b.eb (module: netCDF/4.6.1-foss-2018b)</span>
+<span class="go"> * [ ] $CFGS/n/netCDF-Fortran/netCDF-Fortran-4.4.4-foss-2018b.eb (module: netCDF-Fortran/4.4.4-foss-2018b)</span>
+<span class="go"> * [ ] $CFGS/w/WRF/WRF-4.0.2-foss-2018b-dmpar.eb (module: WRF/4.0.2-foss-2018b-dmpar)</span>
+<span class="go">== Temporary log file(s) /tmp/eb-eEnBF5/easybuild-pvrvNP.log* have been removed.</span>
+<span class="go">== Temporary directory /tmp/eb-eEnBF5 has been removed.</span>
 </code></pre></div>
+<h2 id="installing-a-software-stack">Installing a software stack<a class="headerlink" href="#installing-a-software-stack" title="Permanent link">&para;</a></h2>
+<p>To make EasyBuild build and install WRF, including all of its dependencies, a <strong>single command</strong> is sufficient.</p>
+<p>By using the <code>--robot</code>/<code>-r</code> (see <a class="autorefs autorefs-internal" href="../using-easybuild/#use_robot">Enabling dependency resolution, <code>--robot</code> / <code>-r</code> and <code>--robot-paths</code></a>) command line option,
+we enable dependency resolution such that the entire software stack is handled:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb WRF-4.0.2-foss-2018b-dmpar.eb --robot
+<span class="go">== temporary log file in case of crash /tmp/eb-LfQa8b/easybuild-TBXLTy.log</span>
+<span class="go">== resolving dependencies ...</span>
+<span class="go">== processing EasyBuild easyconfig /home/example/.local/easybuild/software/EasyBuild/4.1.1/easybuild/easyconfigs/n/ncurses/ncurses-6.1-GCCcore-7.3.0.eb</span>
+<span class="go">== building and installing ncurses/6.1-GCCcore-7.3.0...</span>
+<span class="go">[...]</span>
+<span class="go">== building and installing tcsh/6.20.00-GCCcore-7.3.0...</span>
+<span class="go">[...]</span>
+<span class="go">== building and installing CMake/3.11.4-GCCcore-7.3.0...</span>
+<span class="go">[...]</span>
+<span class="go">== building and installing JasPer/2.0.14-GCCcore-7.3.0...</span>
+<span class="go">[...]</span>
+<span class="go">== building and installing pkg-config/0.29.2-GCCcore-7.3.0...</span>
+<span class="go">[...]</span>
+<span class="go">== building and installing Doxygen/1.8.14-GCCcore-7.3.0...</span>
+<span class="go">..]</span>
+<span class="go">== building and installing cURL/7.60.0-GCCcore-7.3.0...</span>
+<span class="go">[...]</span>
+<span class="go">== building and installing Szip/2.1.1-GCCcore-7.3.0...</span>
+<span class="go">[...]</span>
+<span class="go">== building and installing HDF5/1.10.2-foss-2018b...</span>
+<span class="go">[...]</span>
+<span class="go">== building and installing netCDF/4.6.1-foss-2018b...</span>
+<span class="go">[...]</span>
+<span class="go">== building and installing netCDF-Fortran/4.4.4-foss-2018b...</span>
+<span class="go">[...]</span>
+<span class="go">== building and installing WRF/4.0.2-foss-2018b-dmpar...</span>
+<span class="go">[...]</span>
+<span class="go">== Build succeeded for 12 out of 12</span>
+<span class="go">== Temporary log file(s) /tmp/eb-LfQa8b/easybuild-TBXLTy.log* have been removed.</span>
+<span class="go">== Temporary directory /tmp/eb-LfQa8b has been removed.</span>
+</code></pre></div>
+<p>Once the installation has succeeded, modules will be available for WRF and all of its dependencies:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>module load WRF
+<span class="gp">$ </span>module list
+<span class="gp">$ </span>module list
+
+<span class="go">Currently Loaded Modules:</span>
+<span class="go">  1) EasyBuild/4.1.1                  13) gompi/2018b</span>
+<span class="go">  2) GCCcore/7.3.0                    14) FFTW/3.3.8-gompi-2018b</span>
+<span class="go">  3) zlib/1.2.11-GCCcore-7.3.0        15) ScaLAPACK/2.0.2-gompi-2018b-OpenBLAS-0.3.1</span>
+<span class="go">  4) binutils/2.30-GCCcore-7.3.0      16) foss/2018b</span>
+<span class="go">  5) GCC/7.3.0-2.30                   17) JasPer/2.0.14-GCCcore-7.3.0</span>
+<span class="go">  6) numactl/2.0.11-GCCcore-7.3.0     18) Szip/2.1.1-GCCcore-7.3.0</span>
+<span class="go">  7) XZ/5.2.4-GCCcore-7.3.0           19) HDF5/1.10.2-foss-2018b</span>
+<span class="go">  8) libxml2/2.9.8-GCCcore-7.3.0      20) cURL/7.60.0-GCCcore-7.3.0</span>
+<span class="go">  9) libpciaccess/0.14-GCCcore-7.3.0  21) netCDF/4.6.1-foss-2018b</span>
+<span class="go"> 10) hwloc/1.11.10-GCCcore-7.3.0      22) netCDF-Fortran/4.4.4-foss-2018b</span>
+<span class="go"> 11) OpenMPI/3.1.1-GCC-7.3.0-2.30     23) WRF/4.0.2-foss-2018b-dmpar</span>
+<span class="go"> 12) OpenBLAS/0.3.1-GCC-7.3.0-2.30</span>
+</code></pre></div>
+<p>For more information, see the other topics discussed in the documentation (see <a class="autorefs autorefs-internal" href="../#contents">Introductory topics</a>).</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 17, 2022</span>
       
     
   </small>
