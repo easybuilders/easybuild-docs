@@ -15,7 +15,7 @@
     
     
       
-        <title>Wrapping dependencies - EasyBuild - building software with ease</title>
+        <title>Wrapping dependencies {: #wrapping_dependencies} - EasyBuild - building software with ease</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#wrapping-dependencies" class="md-skip">
+        <a href="#wrapping_dependencies" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Wrapping dependencies
+              Wrapping dependencies {: #wrapping_dependencies}
             
           </span>
         </div>
@@ -368,71 +368,47 @@
   </a>
 
 
-<h1 id="wrapping-dependencies">Wrapping dependencies<a class="headerlink" href="#wrapping-dependencies" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/Wrapping_dependencies.html">https://docs.easybuild.io/en/latest/Wrapping_dependencies.html</a>.</p>
-<p><strong>
-It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
-and you can help with that!
-</strong></p>
-<ul>
-<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Wrapping_dependencies.rst"><code>docs/Wrapping_dependencies.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
-<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/wrapping-dependencies.md"><code>docs/wrapping-dependencies.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
-</ul>
-<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
+<h1 id="wrapping_dependencies">Wrapping dependencies<a class="headerlink" href="#wrapping_dependencies" title="Permanent link">&para;</a></h1>
+<p>Since EasyBuild v3.7.0 a special-purpose generic easyblock named <code>ModuleRC</code> is available,
+which can be used to generate a (software-specific) <code>.modulerc</code> file
+(as opposed to generating an actual module file).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For compatibility with the different modules tools supported by EasyBuild (see <a class="autorefs autorefs-internal" href="../configuration/#modules_tool">Modules tool (<code>--modules-tool</code>)</a>),
+the <code>.modulerc</code> file is always generated in Tcl syntax (for now), regardless of the module syntax
+that is used for module files. Only Lmod 7.8 (or later) supports <code>.modulerc.lua</code> files
+in Lua syntax.</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_wrapping_dependencies:</span>
-
-<span class="gh">Wrapping dependencies</span>
-<span class="gh">=====================</span>
-
-Since EasyBuild v3.7.0 a special-purpose generic easyblock named <span class="s">``ModuleRC``</span> is available,
-which can be used to generate a (software-specific) <span class="s">``.modulerc``</span> file
-(as opposed to generating an actual module file).
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> For compatibility with the different modules tools supported by EasyBuild (see <span class="na">:ref:</span><span class="nv">`modules_tool`</span>),
-          the <span class="s">``.modulerc``</span> file is always generated in Tcl syntax (for now), regardless of the module syntax
-          that is used for module files. Only Lmod 7.8 (or later) supports <span class="s">``.modulerc.lua``</span> files
-          in Lua syntax.
-
-The <span class="s">``ModuleRC``</span> easyblock supports including <span class="s">``module-version``</span> in the generated <span class="s">``.modulerc``</span> file,
-which defines a so-called <span class="ge">*&quot;symbolic version&quot;*</span>.
-
-This can be used to install a <span class="ge">*&quot;wrapper&quot;*</span> for a particular module, which can be useful in the context
+<p>The <code>ModuleRC</code> easyblock supports including <code>module-version</code> in the generated <code>.modulerc</code> file,
+which defines a so-called <em>"symbolic version"</em>.</p>
+<p>This can be used to install a <em>"wrapper"</em> for a particular module, which can be useful in the context
 of dependencies. For example, it can be used to avoid depending on a specific version of
-a particular software package by specifying the dependency only on the <span class="s">``&lt;major&gt;.&lt;minor&gt;``</span> version instead
-(i.e., without including the &quot;subminor&quot; version, which usually corresponds to a bugfix release).
-
-One particular example where this is employed is for <span class="s">``Java``</span>. Since the <span class="s">``2018b``</span> generation of
-the <span class="na">:ref:</span><span class="nv">`common_toolchains`</span>, we use a wrapper for <span class="s">``Java``</span> (e.g., <span class="s">``Java/1.8``</span>), rather than
-depending on a specific version (e.g., <span class="s">``Java/1.8.0_181``</span>):
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span>
-
-  # specify dependency on Java/1.8 &quot;wrapper&quot;, rather than a specific Java version
-  dependencies = [(&#39;Java&#39;, &#39;1.8&#39;, &#39;&#39;, SYSTEM)]
-
-This has a couple of advantages:
-
-<span class="m">*</span> it helps with avoiding version conflicts on the <span class="s">``Java``</span> dependency used by two (or more) otherwise independent
-  module files;
-
-<span class="m">*</span> it allows to perform an in-place update of the <span class="s">``Java``</span> wrapper to a more recent <span class="s">``Java``</span> (bugfix) release
-  in the blink of an eye, since it only involves re-generating a <span class="s">``.modulerc``</span> file (as opposed to performing
-  actual installation and generating a module file); in addition, it doesn&#39;t require updating/re-generating existing
-  module files that depend on the <span class="s">``Java``</span> wrapper (since the version of the wrapper does not change)
-
-Since <span class="s">``ModuleRC``</span> is a generic easyblock , it can also be employed to install module &quot;wrappers&quot; for dependencies
-other than <span class="s">``Java``</span>.
+a particular software package by specifying the dependency only on the <code>&lt;major&gt;.&lt;minor&gt;</code> version instead
+(i.e., without including the "subminor" version, which usually corresponds to a bugfix release).</p>
+<p>One particular example where this is employed is for <code>Java</code>. Since the <code>2018b</code> generation of
+the <a class="autorefs autorefs-internal" href="../common-toolchains/#common_toolchains">Common toolchains</a>, we use a wrapper for <code>Java</code> (e.g., <code>Java/1.8</code>), rather than
+depending on a specific version (e.g., <code>Java/1.8.0_181</code>):</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># specify dependency on Java/1.8 &quot;wrapper&quot;, rather than a specific Java version</span>
+<span class="n">dependencies</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="s1">&#39;1.8&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">SYSTEM</span><span class="p">)]</span>
 </code></pre></div>
+<p>This has a couple of advantages:</p>
+<ul>
+<li>it helps with avoiding version conflicts on the <code>Java</code> dependency used by two (or more) otherwise independent
+  module files;</li>
+<li>it allows to perform an in-place update of the <code>Java</code> wrapper to a more recent <code>Java</code> (bugfix) release
+  in the blink of an eye, since it only involves re-generating a <code>.modulerc</code> file (as opposed to performing
+  actual installation and generating a module file); in addition, it doesn't require updating/re-generating existing
+  module files that depend on the <code>Java</code> wrapper (since the version of the wrapper does not change)</li>
+</ul>
+<p>Since <code>ModuleRC</code> is a generic easyblock , it can also be employed to install module "wrappers" for dependencies
+other than <code>Java</code>.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 17, 2022</span>
       
     
   </small>
