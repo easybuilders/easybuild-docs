@@ -22,3 +22,5 @@
 - [Installing](installation.md) and [configuring](configuration.md) EasyBuild
 - [Using EasyBuild](using-easybuild.md)
 - [Getting help](getting-help.md)
+
+## Introductory topics {: #contents }
