@@ -1,5 +1,7 @@
 # Local variables in easyconfig files
 
+## Renaming local variables to match the recommended naming scheme using `eb --fix-deprecated-easyconfigs` {: #easyconfig_files_local_variables_fix_deprecated_easyconfigs }
+
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Easyconfig-files-local-variables.html>.
 
