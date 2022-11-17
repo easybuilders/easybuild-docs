@@ -1,4 +1,4 @@
-# Output of `eb --list-toolchains`
+# Output of `eb --list-toolchains` {: #toolchains_table }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/eb_list_toolchains.html>.
