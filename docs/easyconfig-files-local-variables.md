@@ -1,21 +1,3 @@
-# Local variables in easyconfig files
-
-## Renaming local variables to match the recommended naming scheme using `eb --fix-deprecated-easyconfigs` {: #easyconfig_files_local_variables_fix_deprecated_easyconfigs }
-
-!!! warning
-    This page will soon replace <https://docs.easybuild.io/en/latest/Easyconfig-files-local-variables.html>.
-
-    **
-    It still needs to be ported from *reStructuredText* (.rst) to *MarkDown* (.md),  
-    and you can help with that!
-    **
-
-    - source: [`docs/Easyconfig-files-local-variables.rst` in `easybuilders/easybuild` repo](https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Easyconfig-files-local-variables.rst)
-    - target: [`docs/easyconfig-files-local-variables.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/easyconfig-files-local-variables.md)
-
-    See <https://github.com/easybuilders/easybuild-docs> for more information.
-
-```rst
 .. _easyconfig_files_local_variables:
 
 Local variables in easyconfig files
@@ -177,5 +159,3 @@ This means that it may make some unintended changes, so make sure to **always do
 In addition, it sometimes make more sense to simply *eliminate* the local variable rather than renaming it, for
 example when it wasn't really needed at all: maybe it was only actually used once, or maybe using a template like
 ``%(pyver)s`` or ``(pyshortver)s`` (see also :ref:`avail_easyconfig_templates`) renders it obsolete.
-
-```
