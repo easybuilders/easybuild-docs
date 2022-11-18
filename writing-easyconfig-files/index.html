@@ -390,7 +390,7 @@ EasyBuild.</p>
 <p>Easyconfigs typically follow a (fixed) strict naming scheme, i.e.
 <code>&lt;name&gt;-&lt;version&gt;[-&lt;toolchain&gt;][&lt;versionsuffix&gt;].eb</code>.</p>
 <p>The <code>-&lt;toolchain&gt;</code> label (which includes the toolchain name and version)
-is omitted when a <a class="autorefs autorefs-internal" href="../terminology/#system_toolchain"><code>system</code> toolchain</a> is
+is omitted when a <a class="autorefs autorefs-internal" href="../system-toolchain/#system_toolchain"><code>system</code> toolchain</a> is
 used. The <code>&lt;versionsuffix&gt;</code> label is omitted when the version suffix is
 empty.</p>
 <div class="admonition note">
@@ -903,7 +903,7 @@ search for the dependency using a compatible subtoolchain.</p>
 <a class="autorefs autorefs-internal" href="../manipulating-dependencies/#minimal_toolchains">Using minimal toolchains for dependencies</a>.</p>
 </div>
 <h4 id="loading-of-modules-for-dependencies-with-a-system-toolchain">Loading of modules for dependencies with a <code>system</code> toolchain<a class="headerlink" href="#loading-of-modules-for-dependencies-with-a-system-toolchain" title="Permanent link">&para;</a></h4>
-<p>When a <a class="autorefs autorefs-internal" href="../terminology/#system_toolchain"><code>system</code> toolchain</a> is used, the
+<p>When a <a class="autorefs autorefs-internal" href="../system-toolchain/#system_toolchain"><code>system</code> toolchain</a> is used, the
 modules for each of the (build) dependencies are <em>always</em> loaded,
 regardless of the toolchain version (as opposed the behaviour with the
 <code>dummy</code> toolchain in EasyBuild versions prior to v4.0, see
