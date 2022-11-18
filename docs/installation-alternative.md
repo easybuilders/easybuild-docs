@@ -198,8 +198,6 @@ This script will clone the different EasyBuild repositories from GitHub:
     collection of easyblocks
 - [easybuild-easyconfigs](https://github.com/easybuilders/easybuild-easyconfigs):
     collection of easyconfig files
-- [easybuild-wiki](https://github.com/easybuilders/easybuild-wiki):
-    EasyBuild wiki pages
 
 It can be used as follows:
 
