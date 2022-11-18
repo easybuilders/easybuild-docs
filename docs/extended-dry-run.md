@@ -57,7 +57,7 @@ Ignored errors are reported as follows, for example:
 !!!
 ```
 
-At the end of dry run output, anonother warning message is shown if any
+At the end of dry run output, another warning message is shown if any
 ignored errors occurred:
 
 ``` console
@@ -270,7 +270,7 @@ aborted (see [Errors are ignored (by default) during dry run][extended_dry_run_n
 ### Module `load` statements are executed or simulated {: #extended_dry_run_overview_module_load }
 
 `module load` statements are either effectively executed or simulated,
-dependending on whether the corresponding module files are available or
+depending on whether the corresponding module files are available or
 not.
 
 #### Available modules are loaded {: #extended_dry_run_overview_module_load_available }
