@@ -1,4 +1,4 @@
-# Demo: bootstrapping EasyBuild
+# Demo: bootstrapping EasyBuild {: #bootstrapping }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/demos/bootstrapping.html>.
