@@ -1,5 +1,7 @@
 # EasyBuild release notes
 
+## EasyBuild v2.4.0 (November 10th 2015) {: #release_notes_eb240 }
+
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Release_notes.html>.
 

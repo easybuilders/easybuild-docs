@@ -86,8 +86,8 @@ plugins:
         en/latest/Easyconfigs_index.html: easyconfigs-search-index.md
         en/latest/Easystack-files.html: easystack-files.md
         en/latest/Experimental_features.html: experimental-features.md
-        en/latest/Extended_dry_run.html: extended-dry-run.md#examples
-        en/latest/Extended_dry_run_examples.html: extended-dry-run.md#examples
+        en/latest/Extended_dry_run.html: extended-dry-run.md
+        en/latest/Extended_dry_run_examples.html: extended-dry-run.md#extended_dry_run_examples
         en/latest/Hooks.html: hooks.md
         en/latest/Implementing-easyblocks.html: implementing-easyblocks.md
         en/latest/Including_additional_Python_modules.html: including-additional-python-modules.md
