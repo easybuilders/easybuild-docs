@@ -15,7 +15,7 @@
     
     
       
-        <title>Detecting loaded modules - EasyBuild - building software with ease</title>
+        <title>Detection of loaded modules {: #detecting_loaded_modules } - EasyBuild - building software with ease</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#detecting-loaded-modules" class="md-skip">
+        <a href="#detecting_loaded_modules" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Detecting loaded modules
+              Detection of loaded modules {: #detecting_loaded_modules }
             
           </span>
         </div>
@@ -368,320 +368,241 @@
   </a>
 
 
-<h1 id="detecting-loaded-modules">Detecting loaded modules<a class="headerlink" href="#detecting-loaded-modules" title="Permanent link">&para;</a></h1>
+<h1 id="detecting_loaded_modules">Detection of loaded modules<a class="headerlink" href="#detecting_loaded_modules" title="Permanent link">&para;</a></h1>
+<p>Since EasyBuild v3.3.0, the <code>eb</code> command performs a check to see if any
+(EasyBuild-generated) modules have been loaded in the current
+environment.</p>
+<p>This check can be controlled via the <code>--detect-loaded-modules</code> and
+<code>--allow-loaded-modules</code> configuration options.</p>
+<p>In addition any unknown <code>$EBROOT*</code> environment variables are detected
+and acted upon, according to how the <code>--check-ebroot-env-vars</code>
+configuration option was set.</p>
+<h2 id="detecting_loaded_modules_motivation">Motivation<a class="headerlink" href="#detecting_loaded_modules_motivation" title="Permanent link">&para;</a></h2>
+<p>Running EasyBuild in an environment where one or more
+(EasyBuild-generated) modules are loaded may interfere with the software
+installations performed by EasyBuild, i.e.:</p>
+<ul>
+<li>they may cause installations failures, for example due to
+    incompatibilities with the modules being loaded during the
+    installation procedure being performed;</li>
+<li>they may cause installations to work in that particular environment,
+    for example by providing a necessary dependency</li>
+</ul>
+<p>Since manually loading modules may affect the reproducibility of
+software installations, it should be discouraged.</p>
+<p>In EasyBuild versions before v3.3.0, having a loaded module for the same
+software packages as the one being installed resulted in an EasyBuild
+error message.</p>
+<p>Since EasyBuild v3.3.0 a more extensive detection mechanism is available
+and the action that should be taken for loaded modules can be controlled
+via <code>--detect-loaded-modules</code>. Having a module loaded for any software
+package that is being installed still results in a hard error.</p>
+<h2 id="detecting_loaded_modules_mechanism">Detection mechanism<a class="headerlink" href="#detecting_loaded_modules_mechanism" title="Permanent link">&para;</a></h2>
+<p>Detecting loaded EasyBuild-generated modules is done by checking the
+environment for defined <code>$EBROOT*</code> environment variables. If any are
+found, the corresponding loaded module is determined for better
+reporting.</p>
+<p>In case defined <code>$EBROOT*</code> environment variables are found that do not
+match a loaded modules, action is taken as well; see
+<a class="autorefs autorefs-internal" href="#detecting_loaded_modules_EBROOT_env_vars">Checking of <code>$EBROOT*</code> environment variables</a>.</p>
+<h2 id="detecting_loaded_modules_action">Action to take if loaded modules are detected<a class="headerlink" href="#detecting_loaded_modules_action" title="Permanent link">&para;</a></h2>
+<p>The action that should be taken when one or more loaded
+(EasyBuild-generated) modules are detected can be specified via the
+<code>--detect-loaded-modules</code> configuration option.</p>
+<p>Supported values include:</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#detecting_loaded_modules_action_error"><code>error</code>: report error and stop EasyBuild upon detection of loaded modules</a></li>
+<li><a class="autorefs autorefs-internal" href="#detecting_loaded_modules_action_ignore"><code>ignore</code>: ignore any loaded modules</a></li>
+<li><a class="autorefs autorefs-internal" href="#detecting_loaded_modules_action_purge"><code>purge</code>: run '<code>module purge</code>' to clean environment of loaded modules</a></li>
+<li><a class="autorefs autorefs-internal" href="#detecting_loaded_modules_action_unload"><code>unload</code>: unload loaded modules</a></li>
+<li><a class="autorefs autorefs-internal" href="#detecting_loaded_modules_action_warn"><code>warn</code>: print warning and continue upon detection of loaded modules</a>
+    (current default)</li>
+</ul>
+<p>The specified action is only taken for non-allowed loaded modules, see
+<a class="autorefs autorefs-internal" href="#detecting_loaded_modules_allow">Allowing particular loaded modules</a>.</p>
+<h3 id="detecting_loaded_modules_action_error"><code>error</code>: report error and stop EasyBuild upon detection of loaded modules<a class="headerlink" href="#detecting_loaded_modules_action_error" title="Permanent link">&para;</a></h3>
+<p>When EasyBuild is configured with <code>--detect-loaded-modules=error</code>, it
+will print a clear error and stop when any (non-allowed) loaded modules
+are detected.</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb example.eb --detect-loaded-modules<span class="o">=</span>error
+<span class="go">== temporary log file in case of crash /tmp/eb-UlKMRN/easybuild-MgfEHi.log</span>
+<span class="go">ERROR: Found one or more non-allowed loaded (EasyBuild-generated) modules in current environment:</span>
+<span class="go">* Spack/0.10.0</span>
+
+<span class="go">To make EasyBuild allow particular loaded modules, use the --allow-loaded-modules configuration option.</span>
+<span class="go">Use --detect-loaded-modules={error,ignore,purge,unload,warn} to specify action to take when loaded modules are detected.</span>
+
+<span class="go">See http://easybuild.readthedocs.io/en/latest/Detecting_loaded_modules.html for more information.</span>
+</code></pre></div>
+<h3 id="detecting_loaded_modules_action_ignore"><code>ignore</code>: ignore any loaded modules<a class="headerlink" href="#detecting_loaded_modules_action_ignore" title="Permanent link">&para;</a></h3>
+<p>With <code>--detect-loaded-modules=ignore</code> in place, any loaded modules are
+simply ignored and EasyBuild continues silently.</p>
+<p>This is equivalent to the behaviour of EasyBuild versions prior to
+version 3.3.0.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/Detecting_loaded_modules.html">https://docs.easybuild.io/en/latest/Detecting_loaded_modules.html</a>.</p>
-<p><strong>
-It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
-and you can help with that!
-</strong></p>
-<ul>
-<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Detecting_loaded_modules.rst"><code>docs/Detecting_loaded_modules.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
-<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/detecting-loaded-modules.md"><code>docs/detecting-loaded-modules.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
-</ul>
-<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
+<p>This is <strong>not</strong> recommended!</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_detecting_loaded_modules:</span>
-
-<span class="gh">Detection of loaded modules</span>
-<span class="gh">===========================</span>
-
-Since EasyBuild v3.3.0, the <span class="s">``eb``</span> command performs a check to see if any (EasyBuild-generated)
-modules have been loaded in the current environment.
-
-This check can be controlled via the <span class="s">``--detect-loaded-modules``</span> and <span class="s">``--allow-loaded-modules``</span> configuration options.
-
-In addition any unknown <span class="s">``$EBROOT*``</span> environment variables are detected and acted upon, according to how
-the <span class="s">``--check-ebroot-env-vars``</span> configuration option was set.
-
-
-<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
-    <span class="nc">:depth:</span> 3
-    <span class="nc">:backlinks:</span> none
-
-
-<span class="p">..</span> <span class="nt">_detecting_loaded_modules_motivation:</span>
-
-<span class="gh">Motivation</span>
-<span class="gh">----------</span>
-
-Running EasyBuild in an environment where one or more (EasyBuild-generated) modules are loaded may interfere
-with the software installations performed by EasyBuild, i.e.:
-
-<span class="m">*</span> they may cause installations failures, for example due to incompatibilities with the modules being loaded
-  during the installation procedure being performed;
-<span class="m">*</span> they may cause installations to work in that particular environment, for example by providing a necessary
-  dependency
-
-Since manually loading modules may affect the reproducibility of software installations, it should be discouraged.
-
-In EasyBuild versions before v3.3.0, having a loaded module for the same software packages as the one being installed
-resulted in an EasyBuild error message.
-
-Since EasyBuild v3.3.0 a more extensive detection mechanism is available
-and the action that should be taken for loaded modules can be controlled via <span class="s">``--detect-loaded-modules``</span>.
-Having a module loaded for any software package that is being installed still results in a hard error.
-
-
-<span class="p">..</span> <span class="nt">_detecting_loaded_modules_mechanism:</span>
-
-<span class="gh">Detection mechanism</span>
-<span class="gh">-------------------</span>
-
-Detecting loaded EasyBuild-generated modules is done by checking the environment for defined <span class="s">``$EBROOT*``</span>
-environment variables. If any are found, the corresponding loaded module is determined for better reporting.
-
-In case defined <span class="s">``$EBROOT*``</span> environment variables are found that do not match a loaded modules,
-action is taken as well; see <span class="na">:ref:</span><span class="nv">`detecting_loaded_modules_EBROOT_env_vars`</span>.
-
-
-<span class="p">..</span> <span class="nt">_detecting_loaded_modules_action:</span>
-
-<span class="gh">Action to take if loaded modules are detected</span>
-<span class="gh">---------------------------------------------</span>
-
-The action that should be taken when one or more loaded (EasyBuild-generated) modules are detected
-can be specified via the <span class="s">``--detect-loaded-modules``</span> configuration option.
-
-Supported values include:
-
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`detecting_loadeD_modules_action_error`</span>
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`detecting_loadeD_modules_action_ignore`</span>
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`detecting_loadeD_modules_action_purge`</span>
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`detecting_loadeD_modules_action_unload`</span>
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`detecting_loadeD_modules_action_warn`</span> (current default)
-
-The specified action is only taken for non-allowed loaded modules, see <span class="na">:ref:</span><span class="nv">`detecting_loaded_modules_allow`</span>.
-
-
-<span class="p">..</span> <span class="nt">_detecting_loaded_modules_action_error:</span>
-
-<span class="gh">``error``: report error and stop EasyBuild upon detection of loaded modules</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-When EasyBuild is configured with <span class="s">``--detect-loaded-modules=error``</span>, it will print a clear error and stop when
-any (non-allowed) loaded modules are detected.
-
-For example<span class="se">::</span>
-
-<span class="s">    $ eb example.eb --detect-loaded-modules=error</span>
-<span class="s">    == temporary log file in case of crash /tmp/eb-UlKMRN/easybuild-MgfEHi.log</span>
-<span class="s">    ERROR: Found one or more non-allowed loaded (EasyBuild-generated) modules in current environment:</span>
-<span class="s">    * Spack/0.10.0</span>
-
-<span class="s">    To make EasyBuild allow particular loaded modules, use the --allow-loaded-modules configuration option.</span>
-<span class="s">    Use --detect-loaded-modules={error,ignore,purge,unload,warn} to specify action to take when loaded modules are detected.</span>
-
-<span class="s">    See http://easybuild.readthedocs.io/en/latest/Detecting_loaded_modules.html for more information.</span>
-
-
-<span class="p">..</span> <span class="nt">_detecting_loaded_modules_action_ignore:</span>
-
-<span class="gh">``ignore``: ignore any loaded modules</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-With <span class="s">``--detect-loaded-modules=ignore``</span> in place, any loaded modules are simply ignored and EasyBuild continues silently.
-
-This is equivalent to the behaviour of EasyBuild versions prior to version 3.3.0.
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> This is <span class="gs">**not**</span> recommended!
-
-
-<span class="p">..</span> <span class="nt">_detecting_loaded_modules_action_purge:</span>
-
-<span class="gh">``purge``: run &#39;``module purge``&#39; to clean environment of loaded modules</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-Using <span class="s">``--detect-loaded-modules=purge``</span>, EasyBuild will run <span class="s">``module purge``</span> if any (non-allowed) loaded modules
-are detected, in an attempt to restore the environment to a clean state before starting software installations.
-
-A short warning message is printed in case <span class="s">``module purge``</span> was used to clean up the environment<span class="se">::</span>
-
-<span class="s">    $ export EASYBUILD_DETECT_LOADED_MODULES=purge</span>
-<span class="s">    $ eb example.eb</span>
-<span class="s">    == temporary log file in case of crash /tmp/eb-QLTV9v/easybuild-6mOmIN.log</span>
-
-<span class="s">    WARNING: Found non-allowed loaded (EasyBuild-generated) modules (Spack/0.10.0), running &#39;module purge&#39;</span>
-
-<span class="s">    ...</span>
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
-  Whether or not <span class="s">``module purge``</span> is a suitable action is site-specific, since this will unload <span class="ge">*all*</span> loaded modules
-  (except for &#39;sticky&#39; modules when Lmod is used),
-  including modules that were not installed with EasyBuild and which may be always required.
-
-  Configuring EasyBuild to use <span class="s">``module purge``</span> when (non-allowed) loaded modules are found should <span class="ge">*not*</span> be
-  done on Cray systems, since it will result in a broken environment.
-
-
-<span class="p">..</span> <span class="nt">_detecting_loaded_modules_action_unload:</span>
-
-<span class="gh">``unload``: unload loaded modules</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-When <span class="s">``--detect-loaded-modules=unload``</span> is used, EasyBuild will only unload the (non-allowed &amp; EasyBuild-generated) modules.
-The modules are unloaded in reverse order, i.e. the last loaded module is unloaded first.
-
-This is an alternative to using <span class="s">``module purge``</span>, in case some other (allowed) modules are loaded and should remain loaded.
-
-A short warning message is printed when loaded modules are unloaded<span class="se">::</span>
-
-<span class="s">    $ eb example.eb --detect-loaded-modules=unload</span>
-<span class="s">    == temporary log file in case of crash /tmp/eb-JyyaEF/easybuild-WyGqZs.log</span>
-
-<span class="s">    WARNING: Unloading non-allowed loaded (EasyBuild-generated) modules: Spack/0.10.0</span>
-
-<span class="s">    ...</span>
-
-
-<span class="p">..</span> <span class="nt">_detecting_loaded_modules_action_warn:</span>
-
-<span class="gh">``warn``: print warning and continue upon detection of loaded modules</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-When EasyBuild is configured with <span class="s">``--detect-loaded-modules=warn``</span>, EasyBuild will print a warning
-mentioning that one or more loaded (EasyBuild-generated) were detected, before continuing as normal.
-
-The warning is intended to make the user aware that the environment in which EasyBuild is being run is not clean.
-
-For example<span class="se">::</span>
-
-<span class="s">    $ export EASYBUILD_DETECT_LOADED_MODULES=warn</span>
-<span class="s">    $ eb example.eb</span>
-<span class="s">    == temporary log file in case of crash /tmp/eb-9HD20m/easybuild-WAYzK2.log</span>
-
-<span class="s">    WARNING: Found one or more non-allowed loaded (EasyBuild-generated) modules in current environment:</span>
-<span class="s">    * Spack/0.10.0</span>
-
-<span class="s">    To make EasyBuild allow particular loaded modules, use the --allow-loaded-modules configuration option.</span>
-<span class="s">    Use --detect-loaded-modules={error,ignore,purge,unload,warn} to specify action to take when loaded modules are detected.</span>
-
-<span class="s">    See http://easybuild.readthedocs.io/en/latest/Detecting_loaded_modules.html for more information.</span>
-
-<span class="s">    ...</span>
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> This is the default behaviour in EasyBuild v3.3.0 and newer.
-
-
-<span class="p">..</span> <span class="nt">_detecting_loaded_modules_allow:</span>
-
-<span class="gh">Allowing particular loaded modules</span>
-<span class="gh">----------------------------------</span>
-
-By default, only EasyBuild itself is considered as an allowed module.
-
-EasyBuild can be configured to allow particular modules to be loaded via <span class="s">``--allow-loaded-modules``</span>,
-by specifying a comma-seperated list of software names.
-
-For example<span class="se">::</span>
-
-<span class="s">  $ export EASYBUILD_DETECT_LOADED_MODULES=error</span>
-<span class="s">  $ export EASYBUILD_ALLOW_LOADED_MODULES=EasyBuild,GC3Pie</span>
-
-<span class="s">  $ module load EasyBuild</span>
-<span class="s">  $ module load GC3Pie</span>
-<span class="s">  $ eb example.eb</span>
-<span class="s">  ...</span>
-
-When <span class="s">``--allow-loaded-modules``</span> is used, the EasyBuild module is no more allowed by default and must
-be explicitly listed if you want to allow an EasyBuild installation provided through a module.
-
-<span class="p">..</span> <span class="nt">_detecting_loaded_modules_EBROOT_env_vars:</span>
-
-<span class="gh">Checking of ``$EBROOT*`` environment variables</span>
-<span class="gh">----------------------------------------------</span>
-
-The detection mechanism for loaded modules relies on defined <span class="s">``$EBROOT*``</span> environment variables, and
-determining by which loaded module they were set.
-
-When one or more <span class="s">``$EBROOT*``</span> environment variables are found for which the corresponding loaded modules can not
-be found, this can lead to problems.
-
-Hence, EasyBuild will detect this and act on it, according to the value specified to <span class="s">``--check-ebroot-env-vars``</span>:
-
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`detecting_loaded_modules_EBROOT_env_vars_error`</span>
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`detecting_loaded_modules_EBROOT_env_vars_ignore`</span>
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`detecting_loaded_modules_EBROOT_env_vars_unset`</span>
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`detecting_loaded_modules_EBROOT_env_vars_warn`</span> (current default)
-
-
-<span class="p">..</span> <span class="nt">_detecting_loaded_modules_EBROOT_env_vars_error:</span>
-
-<span class="gh">``error``: report error and stop EasyBuild on unknown ``$EBROOT*`` environment variables</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-When configured with <span class="s">``--check-ebroot-env-vars=error``</span>, EasyBuild will stop with a clear error message
-when it discovers one or more <span class="s">``$EBROOT*``</span> environment variables that do not correspond to a loaded module<span class="se">::</span>
-
-<span class="s">  $ export EBROOTUNKNOWN=just_an_example</span>
-
-<span class="s">  $ eb example.eb --check-ebroot-env-vars=error</span>
-
-<span class="s">  == temporary log file in case of crash /tmp/eb-cNqOzG/easybuild-xmV8vc.log</span>
-<span class="s">  ERROR: Found defined $EBROOT* environment variables without matching loaded module: $EBROOTUNKNOWN</span>
-<span class="s">  (control action via --check-ebroot-env-vars={error,ignore,unset,warn})</span>
-
-<span class="p">..</span> <span class="nt">_detecting_loaded_modules_EBROOT_env_vars_ignore:</span>
-
-<span class="gh">``ignore``: ignore unknown ``$EBROOT*`` environment variables</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-To simply ignore any defined <span class="s">``$EBROOT*``</span> environment variables that do not correspond with a loaded module,
-configure EasyBuild with <span class="s">``--check-ebroot-env-vars=ignore``</span>.
-
-<span class="p">..</span> <span class="nt">_detecting_loaded_modules_EBROOT_env_vars_unset:</span>
-
-<span class="gh">``unset``: unset unknown ``$EBROOT*`` environment variables and print warning</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-If you are confident that the defined <span class="s">``$EBROOT*``</span> environment variables for which no matching loaded module was found
-are harmless, you can specify that EasyBuild should clean up the environment by unsetting them, before continuing.
-A clear warning message will be printed whenever this occurs<span class="se">::</span>
-
-<span class="s">    $ export EBROOTUNKNOWN=just_an_example</span>
-
-<span class="s">    $ eb bzip2-1.0.6.eb --check-ebroot-env-vars=unset</span>
-
-<span class="s">    == temporary log file in case of crash /tmp/eb-IvXik8/easybuild-cjHjhs.log</span>
-
-<span class="s">    WARNING: Found defined $EBROOT* environment variables without matching loaded module: $EBROOTUNKNOWN; unsetting them</span>
-
-<span class="s">    ...</span>
-
-Note that these unknown <span class="s">``$EBROOT*``</span> will only be unset in the environment of the running EasyBuild session,
-not in the current session in which <span class="s">``eb``</span> is being run.
-
-
-<span class="p">..</span> <span class="nt">_detecting_loaded_modules_EBROOT_env_vars_warn:</span>
-
-<span class="gh">``warn``: print warning for unknown ``$EBROOT*`` environment variables and continue</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-If EasyBuild was configured with <span class="s">``--check-ebroot-env-vars=warn``</span>, a warning will be printed
-when one or more defined <span class="s">``$EBROOT*``</span> environment variables are encountered for which no corresponding loaded module
-was found<span class="se">::</span>
-
-<span class="s">    $ export EBROOTUNKNOWN=just_an_example</span>
-
-<span class="s">    $ export EASYBUILD_CHECK_EBROOT_ENV_VARS=warn</span>
-<span class="s">    $ eb example.eb</span>
-
-<span class="s">    == temporary log file in case of crash /tmp/eb-1h_LQ9/easybuild-BHrPk4.log</span>
-<span class="s">    WARNING: Found defined $EBROOT* environment variables without matching loaded module: $EBROOTUNKNOWN</span>
-<span class="s">    (control action via --check-ebroot-env-vars={error,ignore,unset,warn})</span>
-
-<span class="s">    ...</span>
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> This is the default behaviour in EasyBuild v3.3.0 and newer.
+<h3 id="detecting_loaded_modules_action_purge"><code>purge</code>: run '<code>module purge</code>' to clean environment of loaded modules<a class="headerlink" href="#detecting_loaded_modules_action_purge" title="Permanent link">&para;</a></h3>
+<p>Using <code>--detect-loaded-modules=purge</code>, EasyBuild will run <code>module purge</code>
+if any (non-allowed) loaded modules are detected, in an attempt to
+restore the environment to a clean state before starting software
+installations.</p>
+<p>A short warning message is printed in case <code>module purge</code> was used to
+clean up the environment:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span> <span class="nv">EASYBUILD_DETECT_LOADED_MODULES</span><span class="o">=</span>purge
+<span class="gp">$ </span>eb example.eb
+<span class="go">== temporary log file in case of crash /tmp/eb-QLTV9v/easybuild-6mOmIN.log</span>
+
+<span class="go">WARNING: Found non-allowed loaded (EasyBuild-generated) modules (Spack/0.10.0), running &#39;module purge&#39;</span>
+
+<span class="go">...</span>
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Whether or not <code>module purge</code> is a suitable action is site-specific,
+since this will unload <em>all</em> loaded modules (except for 'sticky'
+modules when Lmod is used), including modules that were not
+installed with EasyBuild and which may be always required.</p>
+<p>Configuring EasyBuild to use <code>module purge</code> when (non-allowed)
+loaded modules are found should <em>not</em> be done on Cray systems, since
+it will result in a broken environment.</p>
+</div>
+<h3 id="detecting_loaded_modules_action_unload"><code>unload</code>: unload loaded modules<a class="headerlink" href="#detecting_loaded_modules_action_unload" title="Permanent link">&para;</a></h3>
+<p>When <code>--detect-loaded-modules=unload</code> is used, EasyBuild will only
+unload the (non-allowed &amp; EasyBuild-generated) modules. The modules are
+unloaded in reverse order, i.e. the last loaded module is unloaded
+first.</p>
+<p>This is an alternative to using <code>module purge</code>, in case some other
+(allowed) modules are loaded and should remain loaded.</p>
+<p>A short warning message is printed when loaded modules are unloaded:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb example.eb --detect-loaded-modules<span class="o">=</span>unload
+<span class="go">== temporary log file in case of crash /tmp/eb-JyyaEF/easybuild-WyGqZs.log</span>
+
+<span class="go">WARNING: Unloading non-allowed loaded (EasyBuild-generated) modules: Spack/0.10.0</span>
+
+<span class="go">...</span>
+</code></pre></div>
+<h3 id="detecting_loaded_modules_action_warn"><code>warn</code>: print warning and continue upon detection of loaded modules<a class="headerlink" href="#detecting_loaded_modules_action_warn" title="Permanent link">&para;</a></h3>
+<p>When EasyBuild is configured with <code>--detect-loaded-modules=warn</code>,
+EasyBuild will print a warning mentioning that one or more loaded
+(EasyBuild-generated) were detected, before continuing as normal.</p>
+<p>The warning is intended to make the user aware that the environment in
+which EasyBuild is being run is not clean.</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span> <span class="nv">EASYBUILD_DETECT_LOADED_MODULES</span><span class="o">=</span>warn
+<span class="gp">$ </span>eb example.eb
+<span class="go">== temporary log file in case of crash /tmp/eb-9HD20m/easybuild-WAYzK2.log</span>
+
+<span class="go">WARNING: Found one or more non-allowed loaded (EasyBuild-generated) modules in current environment:</span>
+<span class="go">* Spack/0.10.0</span>
+
+<span class="go">To make EasyBuild allow particular loaded modules, use the --allow-loaded-modules configuration option.</span>
+<span class="go">Use --detect-loaded-modules={error,ignore,purge,unload,warn} to specify action to take when loaded modules are detected.</span>
+
+<span class="go">See http://easybuild.readthedocs.io/en/latest/Detecting_loaded_modules.html for more information.</span>
+
+<span class="go">...</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is the default behaviour in EasyBuild v3.3.0 and newer.</p>
+</div>
+<h2 id="detecting_loaded_modules_allow">Allowing particular loaded modules<a class="headerlink" href="#detecting_loaded_modules_allow" title="Permanent link">&para;</a></h2>
+<p>By default, only EasyBuild itself is considered as an allowed module.</p>
+<p>EasyBuild can be configured to allow particular modules to be loaded via
+<code>--allow-loaded-modules</code>, by specifying a comma-separated list of
+software names.</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span> <span class="nv">EASYBUILD_DETECT_LOADED_MODULES</span><span class="o">=</span>error
+<span class="gp">$ </span><span class="nb">export</span> <span class="nv">EASYBUILD_ALLOW_LOADED_MODULES</span><span class="o">=</span>EasyBuild,GC3Pie
+
+<span class="gp">$ </span>module load EasyBuild
+<span class="gp">$ </span>module load GC3Pie
+<span class="gp">$ </span>eb example.eb
+<span class="go">...</span>
+</code></pre></div>
+<p>When <code>--allow-loaded-modules</code> is used, the EasyBuild module is no more
+allowed by default and must be explicitly listed if you want to allow an
+EasyBuild installation provided through a module.</p>
+<h2 id="detecting_loaded_modules_EBROOT_env_vars">Checking of <code>$EBROOT*</code> environment variables<a class="headerlink" href="#detecting_loaded_modules_EBROOT_env_vars" title="Permanent link">&para;</a></h2>
+<p>The detection mechanism for loaded modules relies on defined <code>$EBROOT*</code>
+environment variables, and determining by which loaded module they were
+set.</p>
+<p>When one or more <code>$EBROOT*</code> environment variables are found for which
+the corresponding loaded modules can not be found, this can lead to
+problems.</p>
+<p>Hence, EasyBuild will detect this and act on it, according to the value
+specified to <code>--check-ebroot-env-vars</code>:</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#detecting_loaded_modules_EBROOT_env_vars_error"><code>error</code>: report error and stop EasyBuild on unknown <code>$EBROOT*</code> environment variables</a></li>
+<li><a class="autorefs autorefs-internal" href="#detecting_loaded_modules_EBROOT_env_vars_ignore"><code>ignore</code>: ignore unknown <code>$EBROOT*</code> environment variables</a></li>
+<li><a class="autorefs autorefs-internal" href="#detecting_loaded_modules_EBROOT_env_vars_unset"><code>unset</code>: unset unknown <code>$EBROOT*</code> environment variables and print warning</a></li>
+<li><a class="autorefs autorefs-internal" href="#detecting_loaded_modules_EBROOT_env_vars_warn"><code>warn</code>: print warning for unknown <code>$EBROOT*</code> environment variables and continue</a> (current default)</li>
+</ul>
+<h3 id="detecting_loaded_modules_EBROOT_env_vars_error"><code>error</code>: report error and stop EasyBuild on unknown <code>$EBROOT*</code> environment variables<a class="headerlink" href="#detecting_loaded_modules_EBROOT_env_vars_error" title="Permanent link">&para;</a></h3>
+<p>When configured with <code>--check-ebroot-env-vars=error</code>, EasyBuild will
+stop with a clear error message when it discovers one or more <code>$EBROOT*</code>
+environment variables that do not correspond to a loaded module:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span> <span class="nv">EBROOTUNKNOWN</span><span class="o">=</span>just_an_example
+
+<span class="gp">$ </span>eb example.eb --check-ebroot-env-vars<span class="o">=</span>error
+
+<span class="go">== temporary log file in case of crash /tmp/eb-cNqOzG/easybuild-xmV8vc.log</span>
+<span class="go">ERROR: Found defined $EBROOT* environment variables without matching loaded module: $EBROOTUNKNOWN</span>
+<span class="gp gp-VirtualEnv">(control action via --check-ebroot-env-vars={error,ignore,unset,warn})</span>
+</code></pre></div>
+<h3 id="detecting_loaded_modules_EBROOT_env_vars_ignore"><code>ignore</code>: ignore unknown <code>$EBROOT*</code> environment variables<a class="headerlink" href="#detecting_loaded_modules_EBROOT_env_vars_ignore" title="Permanent link">&para;</a></h3>
+<p>To simply ignore any defined <code>$EBROOT*</code> environment variables that do
+not correspond with a loaded module, configure EasyBuild with
+<code>--check-ebroot-env-vars=ignore</code>.</p>
+<h3 id="detecting_loaded_modules_EBROOT_env_vars_unset"><code>unset</code>: unset unknown <code>$EBROOT*</code> environment variables and print warning<a class="headerlink" href="#detecting_loaded_modules_EBROOT_env_vars_unset" title="Permanent link">&para;</a></h3>
+<p>If you are confident that the defined <code>$EBROOT*</code> environment variables
+for which no matching loaded module was found are harmless, you can
+specify that EasyBuild should clean up the environment by unsetting
+them, before continuing. A clear warning message will be printed
+whenever this occurs:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span> <span class="nv">EBROOTUNKNOWN</span><span class="o">=</span>just_an_example
+
+<span class="gp">$ </span>eb bzip2-1.0.6.eb --check-ebroot-env-vars<span class="o">=</span><span class="nb">unset</span>
+
+<span class="go">== temporary log file in case of crash /tmp/eb-IvXik8/easybuild-cjHjhs.log</span>
+
+<span class="go">WARNING: Found defined $EBROOT* environment variables without matching loaded module: $EBROOTUNKNOWN; unsetting them</span>
+
+<span class="go">...</span>
+</code></pre></div>
+<p>Note that these unknown <code>$EBROOT*</code> will only be unset in the environment
+of the running EasyBuild session, not in the current session in which
+<code>eb</code> is being run.</p>
+<h3 id="detecting_loaded_modules_EBROOT_env_vars_warn"><code>warn</code>: print warning for unknown <code>$EBROOT*</code> environment variables and continue<a class="headerlink" href="#detecting_loaded_modules_EBROOT_env_vars_warn" title="Permanent link">&para;</a></h3>
+<p>If EasyBuild was configured with <code>--check-ebroot-env-vars=warn</code>, a
+warning will be printed when one or more defined <code>$EBROOT*</code> environment
+variables are encountered for which no corresponding loaded module was
+found:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span> <span class="nv">EBROOTUNKNOWN</span><span class="o">=</span>just_an_example
+
+<span class="gp">$ </span><span class="nb">export</span> <span class="nv">EASYBUILD_CHECK_EBROOT_ENV_VARS</span><span class="o">=</span>warn
+<span class="gp">$ </span>eb example.eb
+
+<span class="go">== temporary log file in case of crash /tmp/eb-1h_LQ9/easybuild-BHrPk4.log</span>
+<span class="go">WARNING: Found defined $EBROOT* environment variables without matching loaded module: $EBROOTUNKNOWN</span>
+<span class="gp gp-VirtualEnv">(control action via --check-ebroot-env-vars={error,ignore,unset,warn})</span>
+
+<span class="go">...</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is the default behaviour in EasyBuild v3.3.0 and newer.</p>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 18, 2022</span>
       
     
   </small>
