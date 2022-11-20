@@ -1,31 +1,3 @@
-# Removed functionality {: #removed_functionality }
-
-## Overview of removed functionality since EasyBuild v2.0 {: #overview_removed_20 }
-
-### Automagic fallback to ConfigureMake {: #depr_ConfigureMake_fallback_eb1 }
-
-### Options for build command {: #depr_premakeopts_makeopts_eb1 }
-
-### Shared library extension {: #depr_shared_lib_ext_eb1 }
-
-### Software license {: #depr_license_eb1 }
-
-### Specifying source files as 2-element tuples to provide a custom extraction command {: #depr_sources_2_element_tuple }
-
-!!! warning
-    This page will soon replace <https://docs.easybuild.io/en/latest/Removed-functionality.html>.
-
-    **
-    It still needs to be ported from *reStructuredText* (.rst) to *MarkDown* (.md),  
-    and you can help with that!
-    **
-
-    - source: [`docs/Removed-functionality.rst` in `easybuilders/easybuild` repo](https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Removed-functionality.rst)
-    - target: [`docs/removed-functionality.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/removed-functionality.md)
-
-    See <https://github.com/easybuilders/easybuild-docs> for more information.
-
-```rst
 .. _removed_functionality:
 
 Removed functionality
@@ -690,5 +662,3 @@ The ``get_sitearch_suffix`` function provided by the ``Perl`` easyblock, which c
 easyblocks, has been replaced by the more generic ``get_site_suffix`` function.
 
 To obtain the same functionality as was provided by ``get_sitearch_suffix``, use ``get_site_suffix('sitearch')`` instead.
-
-```
