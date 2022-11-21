@@ -15,7 +15,7 @@
     
     
       
-        <title>Tracing progress - EasyBuild - building software with ease</title>
+        <title>Tracing progress {: #trace } - EasyBuild - building software with ease</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tracing-progress" class="md-skip">
+        <a href="#trace" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tracing progress
+              Tracing progress {: #trace }
             
           </span>
         </div>
@@ -368,132 +368,102 @@
   </a>
 
 
-<h1 id="tracing-progress">Tracing progress<a class="headerlink" href="#tracing-progress" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/Tracing_progress.html">https://docs.easybuild.io/en/latest/Tracing_progress.html</a>.</p>
-<p><strong>
-It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
-and you can help with that!
-</strong></p>
-<ul>
-<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Tracing_progress.rst"><code>docs/Tracing_progress.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
-<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/tracing-progress.md"><code>docs/tracing-progress.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
-</ul>
-<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
+<h1 id="trace">Tracing progress<a class="headerlink" href="#trace" title="Permanent link">&para;</a></h1>
+<p>To trace the progress of EasyBuild while it is installing software, you
+can use <code>eb --trace</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Tracing support was added as an experimental feature in EasyBuild v3.4.0, and thus required
+using <code>--experimental</code>. Since EasyBuild v3.4.1, <code>--trace</code> is
+considered stable and no longer requires the use of
+<code>--experimental</code>.</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_trace:</span>
-
-<span class="gh">Tracing progress</span>
-<span class="gh">================</span>
-
-To trace the progress of EasyBuild while it is installing software, you can use <span class="s">``eb --trace``</span>.
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Tracing support was added as an experimental feature in EasyBuild v3.4.0, and thus required
-          using <span class="s">``--experimental``</span>. Since EasyBuild v3.4.1, <span class="s">``--trace``</span> is considered stable and no longer
-          requires the use of <span class="s">``--experimental``</span>.
-
-
-<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
-    <span class="nc">:depth:</span> 3
-    <span class="nc">:backlinks:</span> none
-
-<span class="p">..</span> <span class="nt">_trace_output:</span>
-
-<span class="gh">Trace output</span>
-<span class="gh">------------</span>
-
-When <span class="s">``eb --trace``</span> is used, EasyBuild will print additional output on top of the standard output,
-which only mentions which step of the installation procedure is being executed (without any further details).
-
-This output includes:
-
-<span class="m">*</span> location of build and install directories
-<span class="m">*</span> list of sources and patches
-<span class="m">*</span> modules being loaded
-<span class="m">*</span> executed commands
-<span class="m">*</span> results of the sanity check
-<span class="m">*</span> location of generated module file
-
-For each (non-trivial) executed command, the location to a temporary log file will be provided so the output of that
-command can be monitored while it is running. In addition, the start time of the command is printed, to allow
-determining how long the command has been running.
-
-<span class="p">..</span> <span class="nt">_trace_example:</span>
-
-<span class="gh">Example</span>
-<span class="gh">-------</span>
-
-<span class="p">..</span> <span class="ow">code</span><span class="p">::</span>
-
-    $ eb HDF5-1.10.1-intel-2017a.eb -df --trace --experimental
-    == temporary log file in case of crash /tmp/eb-ieEeg3/easybuild-Ouw3jV.log
-    == processing EasyBuild easyconfig /home/example/HDF5/HDF5-1.10.1-intel-2017a.eb
-    == building and installing HDF5/1.10.1-intel-2017a...
-      &gt;&gt; installation prefix: /prefix/software/HDF5/1.10.1-intel-2017a
-    == fetching files...
-      &gt;&gt; sources:
-      &gt;&gt; /prefix/sources/h/HDF5/hdf5-1.10.1.tar.gz [SHA256: 048a9d149fb99aaa1680a712963f5a78e9c43b588d0e79d55e06760ec377c172]
-    == creating build dir, resetting environment...
-      &gt;&gt; build dir: /tmp/HDF5/1.10.1/intel-2017a
-    == unpacking...
-      &gt;&gt; running command &#39;tar xzf /prefix/sources/h/HDF5/hdf5-1.10.1.tar.gz&#39; (output in /tmp/eb-ieEeg3/easybuild-run_cmd-P9kf6c.log) [started at: 2017-09-06 08:28:42]
-    == patching...
-    == preparing...
-      &gt;&gt; loading toolchain module: intel/2017a
-      &gt;&gt; (no build dependencies specified)
-      &gt;&gt; loading modules for (runtime) dependencies:
-      &gt;&gt;  * zlib/1.2.11-GCCcore-6.3.0
-      &gt;&gt;  * Szip/2.1-intel-2017a
-      &gt;&gt; defining build environment for intel/2017a toolchain
-    == configuring...
-      &gt;&gt; running command &#39;./configure --prefix=/prefix/software/HDF5/1.10.1-intel-2017a  --with-szlib=/prefix/software/Szip/2.1-intel-2017a  --with-zlib=/prefix/software/zlib/1.2.11-GCCcore-6.3.0  --with-pic --with-pthread --enable-shared  --enable-cxx --enable-fortran FC=&quot;mpiifort&quot;  --enable-unsupported --enable-parallel&#39; (output in /tmp/eb-ieEeg3/easybuild-run_cmd-dPat3D.log) [started at: 2017-09-06 08:28:44]
-    == building...
-      &gt;&gt; running command &#39;make -j 24  CXXFLAGS=&quot;$CXXFLAGS -DMPICH_IGNORE_CXX_SEEK&quot;  FC=&quot;mpiifort&quot;&#39; (output in /tmp/eb-ieEeg3/easybuild-run_cmd-25vKdK.log) [started at: 2017-09-06 08:31:01]
-    == testing...
-    == installing...
-      &gt;&gt; running command &#39;make install&#39; (output in /tmp/eb-ieEeg3/easybuild-run_cmd-BepE8P.log) [started at: 2017-09-06 08:34:09]
-    == taking care of extensions...
-    == postprocessing...
-    == sanity checking...
-      &gt;&gt; file &#39;bin/h52gif&#39; found: OK
-      &gt;&gt; file &#39;bin/h5c++&#39; found: OK
-      &gt;&gt; file &#39;bin/h5copy&#39; found: OK
-      &gt;&gt; file &#39;bin/h5debug&#39; found: OK
-      &gt;&gt; file &#39;bin/h5diff&#39; found: OK
-      &gt;&gt; file &#39;bin/h5dump&#39; found: OK
-      &gt;&gt; file &#39;bin/h5import&#39; found: OK
-      &gt;&gt; file &#39;bin/h5jam&#39; found: OK
-      &gt;&gt; file &#39;bin/h5ls&#39; found: OK
-      &gt;&gt; file &#39;bin/h5mkgrp&#39; found: OK
-      &gt;&gt; file &#39;bin/h5perf_serial&#39; found: OK
-      &gt;&gt; file &#39;bin/h5redeploy&#39; found: OK
-      &gt;&gt; file &#39;bin/h5repack&#39; found: OK
-      &gt;&gt; file &#39;bin/h5repart&#39; found: OK
-      &gt;&gt; file &#39;bin/h5stat&#39; found: OK
-      &gt;&gt; file &#39;bin/h5unjam&#39; found: OK
-      &gt;&gt; file &#39;bin/gif2h5&#39; found: OK
-      &gt;&gt; file &#39;bin/h5perf&#39; found: OK
-      &gt;&gt; file &#39;bin/h5pcc&#39; found: OK
-      &gt;&gt; file &#39;bin/h5pfc&#39; found: OK
-      &gt;&gt; file &#39;bin/ph5diff&#39; found: OK
-      &gt;&gt; file &#39;lib/libhdf5.so&#39; found: OK
-      &gt;&gt; file &#39;lib/libhdf5_cpp.so&#39; found: OK
-      &gt;&gt; file &#39;lib/libhdf5_fortran.so&#39; found: OK
-      &gt;&gt; file &#39;lib/libhdf5_hl_cpp.so&#39; found: OK
-      &gt;&gt; file &#39;lib/libhdf5_hl.so&#39; found: OK
-      &gt;&gt; file &#39;lib/libhdf5hl_fortran.so&#39; found: OK
-      &gt;&gt; (non-empty) directory &#39;include&#39; found: OK
-    == cleaning up...
-    == creating module...
-      &gt;&gt; generating module file @ /prefix/modules/all/HDF5/1.10.1-intel-2017a.lua
-    == permissions...
-    == packaging...
-    == COMPLETED: Installation ended successfully
-    == Results of the build can be found in the log file(s) /prefix/software/HDF5/1.10.1-intel-2017a/easybuild/easybuild-HDF5-1.10.1-20170906.083425.log
-    == Build succeeded for 1 out of 1
-    == Temporary log file(s) /tmp/eb-ieEeg3/easybuild-Ouw3jV.log* have been removed.
-    == Temporary directory /tmp/eb-ieEeg3 has been removed.
+<h2 id="trace_output">Trace output<a class="headerlink" href="#trace_output" title="Permanent link">&para;</a></h2>
+<p>When <code>eb --trace</code> is used, EasyBuild will print additional output on top
+of the standard output, which only mentions which step of the
+installation procedure is being executed (without any further details).</p>
+<p>This output includes:</p>
+<ul>
+<li>location of build and install directories</li>
+<li>list of sources and patches</li>
+<li>modules being loaded</li>
+<li>executed commands</li>
+<li>results of the sanity check</li>
+<li>location of generated module file</li>
+</ul>
+<p>For each (non-trivial) executed command, the location to a temporary log
+file will be provided so the output of that command can be monitored
+while it is running. In addition, the start time of the command is
+printed, to allow determining how long the command has been running.</p>
+<h2 id="trace_example">Example<a class="headerlink" href="#trace_example" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb HDF5-1.10.1-intel-2017a.eb -df --trace --experimental
+<span class="go">== temporary log file in case of crash /tmp/eb-ieEeg3/easybuild-Ouw3jV.log</span>
+<span class="go">== processing EasyBuild easyconfig /home/example/HDF5/HDF5-1.10.1-intel-2017a.eb</span>
+<span class="go">== building and installing HDF5/1.10.1-intel-2017a...</span>
+<span class="go">  &gt;&gt; installation prefix: /prefix/software/HDF5/1.10.1-intel-2017a</span>
+<span class="go">== fetching files...</span>
+<span class="go">  &gt;&gt; sources:</span>
+<span class="go">  &gt;&gt; /prefix/sources/h/HDF5/hdf5-1.10.1.tar.gz [SHA256: 048a9d149fb99aaa1680a712963f5a78e9c43b588d0e79d55e06760ec377c172]</span>
+<span class="go">== creating build dir, resetting environment...</span>
+<span class="go">  &gt;&gt; build dir: /tmp/HDF5/1.10.1/intel-2017a</span>
+<span class="go">== unpacking...</span>
+<span class="go">  &gt;&gt; running command &#39;tar xzf /prefix/sources/h/HDF5/hdf5-1.10.1.tar.gz&#39; (output in /tmp/eb-ieEeg3/easybuild-run_cmd-P9kf6c.log) [started at: 2017-09-06 08:28:42]</span>
+<span class="go">== patching...</span>
+<span class="go">== preparing...</span>
+<span class="go">  &gt;&gt; loading toolchain module: intel/2017a</span>
+<span class="go">  &gt;&gt; (no build dependencies specified)</span>
+<span class="go">  &gt;&gt; loading modules for (runtime) dependencies:</span>
+<span class="go">  &gt;&gt;  * zlib/1.2.11-GCCcore-6.3.0</span>
+<span class="go">  &gt;&gt;  * Szip/2.1-intel-2017a</span>
+<span class="go">  &gt;&gt; defining build environment for intel/2017a toolchain</span>
+<span class="go">== configuring...</span>
+<span class="go">  &gt;&gt; running command &#39;./configure --prefix=/prefix/software/HDF5/1.10.1-intel-2017a  --with-szlib=/prefix/software/Szip/2.1-intel-2017a  --with-zlib=/prefix/software/zlib/1.2.11-GCCcore-6.3.0  --with-pic --with-pthread --enable-shared  --enable-cxx --enable-fortran FC=&quot;mpiifort&quot;  --enable-unsupported --enable-parallel&#39; (output in /tmp/eb-ieEeg3/easybuild-run_cmd-dPat3D.log) [started at: 2017-09-06 08:28:44]</span>
+<span class="go">== building...</span>
+<span class="go">  &gt;&gt; running command &#39;make -j 24  CXXFLAGS=&quot;$CXXFLAGS -DMPICH_IGNORE_CXX_SEEK&quot;  FC=&quot;mpiifort&quot;&#39; (output in /tmp/eb-ieEeg3/easybuild-run_cmd-25vKdK.log) [started at: 2017-09-06 08:31:01]</span>
+<span class="go">== testing...</span>
+<span class="go">== installing...</span>
+<span class="go">  &gt;&gt; running command &#39;make install&#39; (output in /tmp/eb-ieEeg3/easybuild-run_cmd-BepE8P.log) [started at: 2017-09-06 08:34:09]</span>
+<span class="go">== taking care of extensions...</span>
+<span class="go">== postprocessing...</span>
+<span class="go">== sanity checking...</span>
+<span class="go">  &gt;&gt; file &#39;bin/h52gif&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;bin/h5c++&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;bin/h5copy&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;bin/h5debug&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;bin/h5diff&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;bin/h5dump&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;bin/h5import&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;bin/h5jam&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;bin/h5ls&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;bin/h5mkgrp&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;bin/h5perf_serial&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;bin/h5redeploy&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;bin/h5repack&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;bin/h5repart&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;bin/h5stat&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;bin/h5unjam&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;bin/gif2h5&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;bin/h5perf&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;bin/h5pcc&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;bin/h5pfc&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;bin/ph5diff&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;lib/libhdf5.so&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;lib/libhdf5_cpp.so&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;lib/libhdf5_fortran.so&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;lib/libhdf5_hl_cpp.so&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;lib/libhdf5_hl.so&#39; found: OK</span>
+<span class="go">  &gt;&gt; file &#39;lib/libhdf5hl_fortran.so&#39; found: OK</span>
+<span class="go">  &gt;&gt; (non-empty) directory &#39;include&#39; found: OK</span>
+<span class="go">== cleaning up...</span>
+<span class="go">== creating module...</span>
+<span class="go">  &gt;&gt; generating module file @ /prefix/modules/all/HDF5/1.10.1-intel-2017a.lua</span>
+<span class="go">== permissions...</span>
+<span class="go">== packaging...</span>
+<span class="go">== COMPLETED: Installation ended successfully</span>
+<span class="go">== Results of the build can be found in the log file(s) /prefix/software/HDF5/1.10.1-intel-2017a/easybuild/easybuild-HDF5-1.10.1-20170906.083425.log</span>
+<span class="go">== Build succeeded for 1 out of 1</span>
+<span class="go">== Temporary log file(s) /tmp/eb-ieEeg3/easybuild-Ouw3jV.log* have been removed.</span>
+<span class="go">== Temporary directory /tmp/eb-ieEeg3 has been removed.</span>
 </code></pre></div>
 
   <hr>
@@ -501,7 +471,7 @@ determining how long the command has been running.
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 20, 2022</span>
       
     
   </small>
