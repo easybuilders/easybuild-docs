@@ -271,11 +271,6 @@ For EasyBuild framework developers:
 
 - [`easybuild.tools.modules` Python module][depr_easybuild_tools_modules_eb1]
 
-!!! note
-    A script `fix-broken-easyconfigs.py` is provided to fix easyconfig
-    files that were broken by the backward-incompatible changes
-    documented at [Automagic fallback to `ConfigureMake`][depr_ConfigureMake_fallback_eb1] and [Easyconfig parameters][depr_easyconfig_parameters_eb1]. See [fix_broken_easyconfigs_script][fix_broken_easyconfigs_script] for more information.
-
 ### Python version compatibility {: #depr_python_version_compatibility }
 
 **Compatibility with Python 2.6 is removed.**
@@ -375,11 +370,6 @@ easyblock = 'ConfigureMake'
 ### Easyconfig parameters {: #depr_easyconfig_parameters_eb1 }
 
 Some easyconfig parameters are removed.
-
-!!! note
-    A script is available to fix easyconfig files that are broken
-    because they still rely on this functionality, see
-    [fix_broken_easyconfigs_script][fix_broken_easyconfigs_script].
 
 #### Options for build command {: #depr_premakeopts_makeopts_eb1 }
 
