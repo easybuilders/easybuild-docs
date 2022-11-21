@@ -1,4 +1,4 @@
-# Compatibility with Python 2 and Python 3
+# Compatibility with Python 2 and Python 3 {: #py2_py3_compatibility }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Python-2-3-compatibility.html>.
