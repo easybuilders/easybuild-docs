@@ -19697,8 +19697,6 @@ feature + bugfix release
         ([#1151](https://github.com/easybuilders/easybuild-framework/pull//1151),
         [#1206](https://github.com/easybuilders/easybuild-framework/pull//1206),
         [#1207](https://github.com/easybuilders/easybuild-framework/pull//1207))
-    - for more information about this script, see
-        [fix_broken_easyconfigs_script][fix_broken_easyconfigs_script]
 - stop including a crippled copy of vsc-base, include vsc-base as a
     proper dependency instead
     ([#1160](https://github.com/easybuilders/easybuild-framework/pull//1160),
@@ -19743,7 +19741,6 @@ feature + bugfix release
     - enhance bootstrap script to allow bootstrapping using supplied
         tarballs
         ([#1184](https://github.com/easybuilders/easybuild-framework/pull//1184))
-        - see [bootstrap_advanced_options][bootstrap_advanced_options]
     - disable updating of Lmod user cache by default, add
         configuration option `--update-modules-tool-cache`
         ([#1185](https://github.com/easybuilders/easybuild-framework/pull//1185))
