@@ -1,21 +1,3 @@
-# EasyBuild release notes
-
-## EasyBuild v2.4.0 (November 10th 2015) {: #release_notes_eb240 }
-
-!!! warning
-    This page will soon replace <https://docs.easybuild.io/en/latest/Release_notes.html>.
-
-    **
-    It still needs to be ported from *reStructuredText* (.rst) to *MarkDown* (.md),  
-    and you can help with that!
-    **
-
-    - source: [`docs/Release_notes.rst` in `easybuilders/easybuild` repo](https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Release_notes.rst)
-    - target: [`docs/release-notes.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/release-notes.md)
-
-    See <https://github.com/easybuilders/easybuild-docs> for more information.
-
-```rst
 .. _release_notes:
 
 EasyBuild release notes
@@ -10590,5 +10572,3 @@ EasyBuild v0.5 (April 6th 2012)
   * the goalf toolkit consists of the GCC compilers, and the OpenMPI, ATLAS, LAPACK, FFTW and ScaLAPACK libraries
 
 * also support build and installation of MVAPICH2
-
-```
