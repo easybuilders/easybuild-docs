@@ -1,5 +1,7 @@
 # Deprecated functionality
 
+## Deprecation policy {: #deprecation_policy }
+
 :s
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Deprecated-functionality.html>.

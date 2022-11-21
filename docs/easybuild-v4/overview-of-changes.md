@@ -1,4 +1,4 @@
-# Overview of changes in EasyBuild v4.0
+# Overview of changes in EasyBuild v4.0 {: #eb4_changes_overview }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/EasyBuild4-overview-of-changes.html>.

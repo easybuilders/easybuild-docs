@@ -1,4 +1,4 @@
-# Legacy configuration
+# Legacy configuration {: #configuring_easybuild_legacy }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Configuration_Legacy.html>.
