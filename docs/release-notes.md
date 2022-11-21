@@ -3732,7 +3732,7 @@ bugfix/update release
         ([#13183](https://github.com/easybuilders/easybuild-easyconfigs/pull/13183))
     - disable own avx detection of libfabric v1.12.1
         ([#13215](https://github.com/easybuilders/easybuild-easyconfigs/pull/13215))
-    - add GCCcore-[1-9][0-9].x to
+    - add GCCcore-\[1-9\]\[0-9\].x to
         `test_dep_versions_per_toolchain_generation`
         ([#13243](https://github.com/easybuilders/easybuild-easyconfigs/pull/13243),
         [#13249](https://github.com/easybuilders/easybuild-easyconfigs/pull/13249),
