@@ -3888,7 +3888,7 @@ feature release
         `swap` is not supported by Lmod
         ([#3685](https://github.com/easybuilders/easybuild-framework/pull/3685))
     - update HierarchicalMNS to also return
-        'Toolchain/<name>/<version>' as `$MODULEPATH` extension
+        'Toolchain/<name\>/<version\>' as `$MODULEPATH` extension
         for cpe* Cray toolchains
         ([#3686](https://github.com/easybuilders/easybuild-framework/pull/3686))
     - make `EasyConfigParser.get_config_dict` return a copy rather
@@ -5712,7 +5712,7 @@ bugfix/update release
         ([#3451](https://github.com/easybuilders/easybuild-framework/pull/3451))
     - add support for NVHPC compiler + toolchain (based on PGI)
         ([#3454](https://github.com/easybuilders/easybuild-framework/pull/3454))
-    - check for _VERSION and _PREFIX Cray environment variables with
+    - check for \_VERSION and \_PREFIX Cray environment variables with
         both software and module name
         ([#3460](https://github.com/easybuilders/easybuild-framework/pull/3460))
     - allow including easyblocks from multiple PRs
@@ -9588,7 +9588,7 @@ feature release (incl. backwards-incompatible changes)
         [#8881](https://github.com/easybuilders/easybuild-easyconfigs/pull/8881))
     - add pRoloc to R-bundle-Bioconductor v3.9
         ([#8882](https://github.com/easybuilders/easybuild-easyconfigs/pull/8882))
-    - clean up OpenMPI 3.1.* and 4.* easyconfigs to use custom
+    - clean up OpenMPI 3.1.\* and 4.\* easyconfigs to use custom
         OpenMPI easyblock
         ([#8889](https://github.com/easybuilders/easybuild-easyconfigs/pull/8889),
         [#8890](https://github.com/easybuilders/easybuild-easyconfigs/pull/8890))
@@ -15231,7 +15231,7 @@ bugfix/update release
     - set `CMAKE_PREFIX_PATH` to ncurses install directory in CMake
         easyconfigs
         ([#4196](https://github.com/easybuilders/easybuild-easyconfigs/pull/4196))
-    - switch to `lowopt=True` for libxc v2.2.* and v3.*
+    - switch to `lowopt=True` for libxc v2.2.\* and v3.\*
         ([#4199](https://github.com/easybuilders/easybuild-easyconfigs/pull/4199))
     - remove custom `sanity_check_paths`, since it's identical to
         that used by the R easyblock
