@@ -2713,30 +2713,25 @@ feature release
     - remove help2man build dependency for flex using system toolchain
         (because it requires Perl)
         ([#13922](https://github.com/easybuilders/easybuild-easyconfigs/pull/13922))
-
     - use proper dependency for python-Levenshtein in CIRI-long
         easyconfig
         ([#13985](https://github.com/easybuilders/easybuild-easyconfigs/pull/13985))
-
     - in-place updates for foss/2021b and intel/2021b common
         toolchains
-
-        > - update to UCX(-CUDA) 1.11.2 as dependency for OpenMPI
-        >     v4.1.1 + NCCL v2.10.3
-        >     ([#14090](https://github.com/easybuilders/easybuild-easyconfigs/pull/14090))
-        > - update libfabric to 1.13.1 in OpenMPI and add it as a
-        >     dependency in PMIx for the upcoming foss 2021b toolchain
-        >     ([#14164](https://github.com/easybuilders/easybuild-easyconfigs/pull/14164))
-        > - update to OpenBLAS 0.3.18 as dependency for FlexiBLAS
-        >     3.0.4 with GCCcore/11.2.0 toolchain
-        >     ([#14167](https://github.com/easybuilders/easybuild-easyconfigs/pull/14167))
-        > - update libfabric to 1.13.2 in OpenMPI v4.1.1 + PMIx 4.1.0
-        >     for the upcoming foss/2021b toolchain
-        >     ([#14176](https://github.com/easybuilders/easybuild-easyconfigs/pull/14176))
-
+        - update to UCX(-CUDA) 1.11.2 as dependency for OpenMPI
+            v4.1.1 + NCCL v2.10.3
+            ([#14090](https://github.com/easybuilders/easybuild-easyconfigs/pull/14090))
+        - update libfabric to 1.13.1 in OpenMPI and add it as a
+            dependency in PMIx for the upcoming foss 2021b toolchain
+            ([#14164](https://github.com/easybuilders/easybuild-easyconfigs/pull/14164))
+        - update to OpenBLAS 0.3.18 as dependency for FlexiBLAS
+            3.0.4 with GCCcore/11.2.0 toolchain
+            ([#14167](https://github.com/easybuilders/easybuild-easyconfigs/pull/14167))
+        - update libfabric to 1.13.2 in OpenMPI v4.1.1 + PMIx 4.1.0
+            for the upcoming foss/2021b toolchain
+            ([#14176](https://github.com/easybuilders/easybuild-easyconfigs/pull/14176))
     - remove format mapping from homepage of Subread easyconfigs
         ([#14145](https://github.com/easybuilders/easybuild-easyconfigs/pull/14145))
-
     - add BLIS and imkl (x86_64 only) builddependencies to FlexiBLAS
         0.3.4 with GCC/11.2.0 toolchain
         ([#14225](https://github.com/easybuilders/easybuild-easyconfigs/pull/14225))
@@ -18293,11 +18288,8 @@ feature + bugfix release
         zlibbioc
         ([#2175](https://github.com/easybuilders/easybuild-easyconfigs/pull/2175))
 
--
-
-    added new easyconfigs for existing toolchains:
-
-    :   `intel/2015.08`
+- added new easyconfigs for existing toolchains:
+    - `intel/2015.08`
         ([#2194](https://github.com/easybuilders/easybuild-easyconfigs/pull/2194)),
         `intel/2016.00`
         ([#2209](https://github.com/easybuilders/easybuild-easyconfigs/pull/2209)),
