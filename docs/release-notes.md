@@ -8155,17 +8155,15 @@ feature release
 bugfix release
 
 !!! note
+    This release includes a bug fix for the leaking of your GitHub token
+    in the EasyBuild (debug) log file.
 
-> This release includes a bug fix for the leaking of your GitHub token
-> in the EasyBuild (debug) log file.
->
-> **We strongly encourage that you revoke the GitHub tokens you are
-> using currently, via** <https://github.com/settings/tokens>, **and to
-> replace them using a new token (using**
-> `eb --install-github-token --force` **).**
->
-> More information in
-> <https://github.com/easybuilders/easybuild-framework/pull/3248> .
+    **We strongly encourage that you revoke the GitHub tokens you are
+    using currently, via** <https://github.com/settings/tokens>, **and to
+    replace them using a new token (using** `eb --install-github-token --force` **).**
+
+    More information in
+    <https://github.com/easybuilders/easybuild-framework/pull/3248>.
 
 **framework**
 
@@ -18295,7 +18293,7 @@ feature + bugfix release
         zlibbioc
         ([#2175](https://github.com/easybuilders/easybuild-easyconfigs/pull/2175))
 
--   
+-
 
     added new easyconfigs for existing toolchains:
 
