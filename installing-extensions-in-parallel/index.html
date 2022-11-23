@@ -15,7 +15,7 @@
     
     
       
-        <title>Installing extensions in parallel *(experimental!)* - EasyBuild - building software with ease</title>
+        <title>Installing extensions in parallel *(experimental!)* {: #installing_extensions_in_parallel } - EasyBuild - building software with ease</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installing-extensions-in-parallel-experimental" class="md-skip">
+        <a href="#installing_extensions_in_parallel" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installing extensions in parallel *(experimental!)*
+              Installing extensions in parallel *(experimental!)* {: #installing_extensions_in_parallel }
             
           </span>
         </div>
@@ -368,137 +368,85 @@
   </a>
 
 
-<h1 id="installing-extensions-in-parallel-experimental">Installing extensions in parallel <em>(experimental!)</em><a class="headerlink" href="#installing-extensions-in-parallel-experimental" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/Installing_extensions_in_parallel.html">https://docs.easybuild.io/en/latest/Installing_extensions_in_parallel.html</a>.</p>
-<p><strong>
-It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
-and you can help with that!
-</strong></p>
+<h1 id="installing_extensions_in_parallel">Installing extensions in parallel <em>(experimental!)</em><a class="headerlink" href="#installing_extensions_in_parallel" title="Permanent link">&para;</a></h1>
+<p>Since EasyBuild v4.5.0 (initial) support is available for installing
+extensions in parallel, that is to run the installation command for
+multiple extensions that are ready to install at the same time in the
+background, to exploit the availability of multiple cores.</p>
+<p><strong>Note: this is an</strong>
+<a class="autorefs autorefs-internal" href="../experimental-features/#experimental_features">experimental feature</a>. <strong>Some of the mentioned functionality may be subject to
+change or be prone to errors.</strong></p>
+<h2 id="installing_extensions_in_parallel_configuration">Configuration<a class="headerlink" href="#installing_extensions_in_parallel_configuration" title="Permanent link">&para;</a></h2>
+<p>To let EasyBuild install extensions in parallel, the
+<code>parallel-extensions-install</code> configuration option must be enabled.</p>
+<p>In addition, since the support for installing extensions in parallel is
+an experimental feature, the <code>experimental</code> configuration option must be
+also be enabled (see also <a class="autorefs autorefs-internal" href="../experimental-features/#experimental_features">Experimental features</a>).</p>
+<p>How many extension installations should be started (at maximum) at the
+same time is controlled by the <code>parallel</code> configuration option.</p>
+<h2 id="installing_extensions_in_parallel_requirements">Requirements<a class="headerlink" href="#installing_extensions_in_parallel_requirements" title="Permanent link">&para;</a></h2>
+<p>For EasyBuild to be able to install a list of extensions in parallel,
+two requirements must be met:</p>
 <ul>
-<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Installing_extensions_in_parallel.rst"><code>docs/Installing_extensions_in_parallel.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
-<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/installing-extensions-in-parallel.md"><code>docs/installing-extensions-in-parallel.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
+<li>The easyblock(s) that are used for installing the extensions must
+    have support for determining which installed extensions are required
+    to fulfil the dependencies for a particular extension. This is done
+    via the <code>required_deps</code> property method.</li>
+<li>EasyBuild must be able to start a single shell command
+    (asynchronously, so it runs in the background) to perform the
+    installation of the extension via the <code>run_async</code> method, and check
+    whether the command has completed via the <code>async_cmd_check</code> method.</li>
 </ul>
-<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_installing_extensions_in_parallel:</span>
-
-<span class="gh">Installing extensions in parallel (experimental!)</span>
-<span class="gh">=================================================</span>
-
-Since EasyBuild v4.5.0 (initial) support is available for installing extensions in parallel,
-that is to run the installation command for multiple extensions that are ready to install at the same time
-in the background, to exploit the availability of multiple cores.
-
-<span class="gs">**Note: this is an**</span> <span class="na">:ref:</span><span class="nv">`experimental feature &lt;experimental_features&gt;`</span>.
-<span class="gs">**Some of the mentioned functionality may be subject to change or be prone to errors.**</span>
-
-<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
-    <span class="nc">:depth:</span> 3
-    <span class="nc">:backlinks:</span> none
-
-<span class="p">..</span> <span class="nt">_installing_extensions_in_parallel_configuration:</span>
-
-<span class="gh">Configuration</span>
-<span class="gh">-------------</span>
-
-To let EasyBuild install extensions in parallel, the <span class="s">``parallel-extensions-install``</span> configuration option must be
-enabled.
-
-In addition, since the support for installing extensions in parallel is an experimental feature, the <span class="s">``experimental``</span>
-configuration option must be also be enabled (see also <span class="na">:ref:</span><span class="nv">`experimental_features`</span>).
-
-How many extension installations should be started (at maximum) at the same time is controlled by
-the <span class="s">``parallel``</span> configuration option.
-
-
-<span class="p">..</span> <span class="nt">_installing_extensions_in_parallel_requirements:</span>
-
-<span class="gh">Requirements</span>
-<span class="gh">------------</span>
-
-For EasyBuild to be able to install a list of extensions in parallel, two requirements must be met:
-
-<span class="m">*</span> The easyblock(s) that are used for installing the extensions must have support for determining
-  which installed extensions are required to fulfill the dependencies for a particular extension.
-  This is done via the <span class="s">``required_deps``</span> property method.
-<span class="m">*</span> EasyBuild must be able to start a single shell command (asynchronously, so it runs in the background)
-  to perform the installation of the extension via the <span class="s">``run_async``</span> method,
-  and check whether the command has completed via the <span class="s">``async_cmd_check``</span> method.
-
-For an example of how <span class="s">``required_deps``</span>, <span class="s">``run_async``</span>, and <span class="s">``async_cmd_check``</span> can be implemented,
-see the `RPackage
-<span class="nt">&lt;https://github.com/easybuilders/easybuild-easyblocks/blob/main/easybuild/easyblocks/generic/rpackage.py&gt;</span>`_ easyblock.
-
-<span class="p">..</span> <span class="nt">_installing_extensions_in_parallel_caveats_known_issues:</span>
-
-<span class="gh">Caveats and Known issues</span>
-<span class="gh">------------------------</span>
-
-<span class="ge">*(last update: EasyBuild v4.5.0)*</span>
-
-There are a couple of caveats and known issues with installing extensions in parallel,
-which we hope to resolve in future EasyBuild releases.
-
-This is also why the support for installing extensions in parallel is currently marked as an experimental feature.
-
-<span class="p">..</span> <span class="nt">_installing_extensions_in_parallel_caveats_known_issues_only_r:</span>
-
-<span class="gh">Only works for R extensions</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-The support for installing extensions in parallel currently only works for R extensions,
-since only the <span class="s">``RPackage``</span> easyblock (which is used to install R packages as extensions) implements
-the necessary methods (see <span class="na">:ref:</span><span class="nv">`installing_extensions_in_parallel_requirements`</span>).
-
-Supporting other types of extensions (Python, Perl, etc.) requires that the corresponding easyblocks that
-are used to install those extensions (like <span class="s">``PythonPackage``</span>, <span class="s">``PerlModule``</span>) are enhanced to support determining
-required dependencies and starting the installation command asynchronously.
-
-<span class="p">..</span> <span class="nt">_installing_extensions_in_parallel_caveats_known_issues_exts_list:</span>
-
-<span class="gh">List of extensions must be self-contained</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-The EasyBuild framework currently enforces that all required dependencies for a particular extension
-are included in the list of extensions that is being installed (specified via the <span class="s">``exts_list``</span> easyconfig
-parameter). Extensions provided by dependencies are not taken into account (yet).
-
-As a result, trying to install an
-<span class="s">`R-bundle-Bioconductor </span><span class="si">&lt;https://github.com/easybuilders/easybuild-easyconfigs/tree/main/easybuild/easyconfigs/r/R-bundle-Bioconductor&gt;</span><span class="s">`_</span>
-easyconfig with <span class="s">``parallel-extensions-install``</span> enabled
-will result in an error reporting missing required dependencies.
-
-
-<span class="p">..</span> <span class="nt">_installing_extensions_in_parallel_caveats_known_issues_skip:</span>
-
-<span class="gh">Skipping of installed extensions is still done sequentially</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-Checking which extensions are already installed for which the installation can be skipped
-when <span class="s">``--skip``</span> (see <span class="na">:ref:</span><span class="nv">`partial_installation_skip`</span>) is being used is still done sequentially.
-
-Additional work is needed to also run these checks in parallel across the cores that are available to EasyBuild.
-
-
-<span class="p">..</span> <span class="nt">_installing_extensions_in_parallel_caveats_known_issues_sanity_check:</span>
-
-<span class="gh">Sanity check for extensions is still run sequentially</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-The sanity checks that are done for each extension are still done through a sequential loop over the
-list of extensions.
-
-Additional work is needed to also run these checks in parallel across the cores that are available to EasyBuild.
-</code></pre></div>
+<p>For an example of how <code>required_deps</code>, <code>run_async</code>, and
+<code>async_cmd_check</code> can be implemented, see the
+<a href="https://github.com/easybuilders/easybuild-easyblocks/blob/main/easybuild/easyblocks/generic/rpackage.py">RPackage</a>
+easyblock.</p>
+<h2 id="installing_extensions_in_parallel_caveats_known_issues">Caveats and Known issues<a class="headerlink" href="#installing_extensions_in_parallel_caveats_known_issues" title="Permanent link">&para;</a></h2>
+<p><em>(last update: EasyBuild v4.5.0)</em></p>
+<p>There are a couple of caveats and known issues with installing
+extensions in parallel, which we hope to resolve in future EasyBuild
+releases.</p>
+<p>This is also why the support for installing extensions in parallel is
+currently marked as an experimental feature.</p>
+<h3 id="installing_extensions_in_parallel_caveats_known_issues_only_r">Only works for R extensions<a class="headerlink" href="#installing_extensions_in_parallel_caveats_known_issues_only_r" title="Permanent link">&para;</a></h3>
+<p>The support for installing extensions in parallel currently only works
+for R extensions, since only the <code>RPackage</code> easyblock (which is used to
+install R packages as extensions) implements the necessary methods (see
+<a class="autorefs autorefs-internal" href="#installing_extensions_in_parallel_requirements">Requirements</a>).</p>
+<p>Supporting other types of extensions (Python, Perl, etc.) requires that
+the corresponding easyblocks that are used to install those extensions
+(like <code>PythonPackage</code>, <code>PerlModule</code>) are enhanced to support determining
+required dependencies and starting the installation command
+asynchronously.</p>
+<h3 id="installing_extensions_in_parallel_caveats_known_issues_exts_list">List of extensions must be self-contained<a class="headerlink" href="#installing_extensions_in_parallel_caveats_known_issues_exts_list" title="Permanent link">&para;</a></h3>
+<p>The EasyBuild framework currently enforces that all required
+dependencies for a particular extension are included in the list of
+extensions that is being installed (specified via the <code>exts_list</code>
+easyconfig parameter). Extensions provided by dependencies are not taken
+into account (yet).</p>
+<p>As a result, trying to install an
+<a href="https://github.com/easybuilders/easybuild-easyconfigs/tree/main/easybuild/easyconfigs/r/R-bundle-Bioconductor">R-bundle-Bioconductor</a>
+easyconfig with <code>parallel-extensions-install</code> enabled will result in an
+error reporting missing required dependencies.</p>
+<h3 id="installing_extensions_in_parallel_caveats_known_issues_skip">Skipping of installed extensions is still done sequentially<a class="headerlink" href="#installing_extensions_in_parallel_caveats_known_issues_skip" title="Permanent link">&para;</a></h3>
+<p>Checking which extensions are already installed for which the
+installation can be skipped when <code>--skip</code> (see
+<a class="autorefs autorefs-internal" href="../partial-installations/#partial_installation_skip">Installing additional extensions using <code>-k</code>/<code>-skip</code></a>) is being used
+is still done sequentially.</p>
+<p>Additional work is needed to also run these checks in parallel across
+the cores that are available to EasyBuild.</p>
+<h3 id="installing_extensions_in_parallel_caveats_known_issues_sanity_check">Sanity check for extensions is still run sequentially<a class="headerlink" href="#installing_extensions_in_parallel_caveats_known_issues_sanity_check" title="Permanent link">&para;</a></h3>
+<p>The sanity checks that are done for each extension are still done
+through a sequential loop over the list of extensions.</p>
+<p>Additional work is needed to also run these checks in parallel across
+the cores that are available to EasyBuild.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 22, 2022</span>
       
     
   </small>
