@@ -1,4 +1,4 @@
-# Packaging support
+# Packaging support {: #packaging_support }
 
 ## Configuration options {: #packaging_config}
 

@@ -1,4 +1,4 @@
-# Overview of relocated functions, classes and constants in EasyBuild v4.0
+# Overview of relocated functions, classes and constants in EasyBuild v4.0 {: #eb4_relocated_functions_classes_constants }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/EasyBuild4-overview-relocated-functions-constants.html>.

@@ -1,4 +1,35 @@
-# Overview of changes in EasyBuild v4.0 {: #eb4_changes_overview }
+# Overview of changes in EasyBuild version 4.0 {: #eb4_changes_overview }
+
+## Significant enhancements in EasyBuild v4.0 {: #eb4_changes_significant_enhancements }
+
+### No more required Python packages {: #eb4_no_required_deps }
+
+### Support for running EasyBuild on top of Python 3 {: #eb4_python3_support }
+
+### Custom software-specific easyblocks for `iccifort`, `numexpr`, `OpenMPI` {: #eb4_custom_easyblocks }
+
+### 2019b update of common toolchains {: #eb4_2019b_common_toolchains }
+
+### Local variables in easyconfigs should follow recommended naming scheme {: #eb4_changes_local_variables }
+
+## Backwards-incompatible changes in EasyBuild v4.0 {: #eb4_changes_backwards_incompatible }
+
+### `--fixed-installdir-naming-scheme` enabled by default {: #eb4_changes_fixed_installdir_naming_scheme }
+
+#### Disabling `--fixed-installdir-naming-scheme` {: #eb4_changes_fixed_installdir_naming_scheme_disabling }
+
+### Relocated functions, classes and constants in EasyBuild framework {: #eb4_changes_relocated_stuff }
+
+### Ingested functionality from `vsc-base` and `vsc-install` {: #eb4_changes_ingested_vsc_base }
+
+#### Fake `vsc` namespace {: #eb4_changes_ingested_vsc_base_fake_vsc_namespace }
+
+### Functions & classes that must be imported from the `easybuild.tools.py2vs3` namespace {: #eb4_changes_py2vs3 }
+
+## Deprecated functionality in EasyBuild v4.0 {: #eb4_changes_deprecated }
+
+### Deprecated `dummy` toolchain {: #eb4_changes_dummy_tc }
+
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/EasyBuild4-overview-of-changes.html>.
