@@ -374,6 +374,13 @@ install with Easybuild with <em>easystack files</em>.</p>
 <p><strong>Note: this is an</strong>
 <a class="autorefs autorefs-internal" href="../experimental-features/#experimental_features">experimental feature</a>. <strong>Some of the mentioned functionality may be subject to
 change or be prone to errors.</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some breaking changes were made to the experimental easystack support in EasyBuild v4.7.0.</p>
+<p>Easystack files must now use the <code>easyconfigs</code> top-level key to list <em>easyconfig filenames</em>,
+as opposed to the <code>software</code> top-level key and separate subkeys like <code>version</code>, <code>versionsuffix</code> and
+<code>toolchain</code> to specify aspects of an easyconfig file that were supported before.</p>
+</div>
 <h2 id="easystack_basics">The basics<a class="headerlink" href="#easystack_basics" title="Permanent link">&para;</a></h2>
 <p><em>Easystack files</em> describe an entire software stack, and can be used to
 specify to EasyBuild what to install.</p>
@@ -386,88 +393,114 @@ created (more about this in the next section).</p>
 <h2 id="easystack_structure">Structure of an easystack file<a class="headerlink" href="#easystack_structure" title="Permanent link">&para;</a></h2>
 <p>Easystack files are written in <a href="https://learnxinyminutes.com/docs/yaml">YAML
 syntax</a>.</p>
-<p>General options, which should be applied to each software (for example
-<code>robot</code>), are defined at the top of the file.</p>
-<p>Afterwards, particular software specifications follow.</p>
-<p>It is mandatory to specify basic software-related keywords: <em>software
-name</em>, <em>toolchains</em> and <em>versions</em>.</p>
-<ul>
-<li><em>software name</em>: Name of the software.</li>
-<li><em>toolchains</em>: Names and versions of compiler <a class="autorefs autorefs-internal" href="../terminology/#toolchains">toolchains</a>.</li>
-<li><em>versions</em>: Versions of software. If multiple entries are provided, EasyBuild will install all of
-  them. Can be in form of a list or consecutive line entries (see example).</li>
-</ul>
-<p><strong>General structure of YAML-formatted easystack:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="nt">software</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&lt;software_name&gt;</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">toolchains</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">&lt;toolchain name and version&gt;</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">&lt;software_version&gt;</span><span class="p">:</span><span class="w"></span>
-<span class="w">            </span><span class="nt">versionsuffix</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&lt;-example&gt;&#39;</span><span class="w"></span>
+<p>Essentially, an easystack file lists the easyconfig files you want to install, which are specified under the
+<code>easyconfigs</code> key.</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">easyconfigs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OpenFOAM-v2206-foss-2022a.eb</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Example of YAML-formatted easystack:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="nt">software</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">Bioconductor</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">toolchains</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">foss-2020a</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">versions</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">3.11</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">EasyBuild</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">toolchains</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">SYSTEM</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">versions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">4.3.1</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="w">  </span><span class="nt">GROMACS</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">toolchains</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">foss-2020a</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">versions</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">2020.1</span><span class="p">:</span><span class="w"></span>
-<span class="w">          </span><span class="nt">2020.3</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">fosscuda-2020a</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">versions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">2020.1</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="w">  </span><span class="nt">OpenFOAM</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">toolchains</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">foss-2020a</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">versions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">8</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">v2006</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="w">  </span><span class="nt">R</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">toolchains</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">foss-2020a</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="nt">versions</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">4.0.0</span><span class="p p-Indicator">]</span><span class="w"></span>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You must use '<code>-</code>' to list the easyconfigs in an easystack file.</p>
+</div>
+<p>In addition, you can specify additional configuration options via the <code>options</code> subkey
+which will only apply to the installation of a particular easyconfig file.</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">easyconfigs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">options</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">from-pr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15924</span><span class="w"></span>
+<span class="w">      </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Hypre-2.25.0-foss-2022a.eb</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">OpenFOAM-v2206-foss-2022a.eb</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">options</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">installpath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/my/custom/installpath</span><span class="w"></span>
 </code></pre></div>
-<p>To install the software specified in this <em>easystack file</em> named
-<code>myeasystack.yaml</code>, run:</p>
-<div class="highlight"><pre><span></span><code>eb --easystack myeasystack.yaml
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You need to take care with some values in YAML, especially integers, booleans, etc.</p>
+<p>If the specified value definitely must be a string value, you should use quotes (<code>'...'</code>) to avoid
+that the YAML parser automatically converts the value to be of a specific type.</p>
+<p>In other cases, the automatic conversion is useful, like for the <code>True</code> used above,
+since <code>debug</code> is a boolean configuration option.</p>
+</div>
+<p>The configuration options that are valid for the <code>eb</code> command can be used (see <code>eb --help</code>),
+but the <code>-</code> or <code>--</code> prefixes that are commonly used on the command line are omitted in easystack files.</p>
+<p>Using the example easystack file above would be equivalent to running:</p>
+<div class="highlight"><pre><span></span><code>eb PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb --from-pr <span class="m">15924</span> --debug
+eb Hypre-2.25.0-foss-2022a.eb
+eb OpenFOAM-v2206-foss-2022a.eb --installpath /my/custom/installpath
 </code></pre></div>
-<p>This is equivalent to running:</p>
-<div class="highlight"><pre><span></span><code>eb Bioconductor-3.11-foss-2020a.eb EasyBuild-4.3.1-SYSTEM.eb GROMACS-2020.1-foss-2020a.eb GROMACS-2020.3-foss-2020a.eb GROMACS-2020.1-fosscuda-2020a.eb OpenFOAM-8-foss-2020a.eb OpenFOAM-v2006-foss-2020a.eb R-4.0.0-foss-2020a.eb
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Whenever configuration options are <em>not</em> specified (as is the case for <code>Hypre</code> in the example easystack file above),
+you are still allowed to use '<code>:</code>' after the easyconfig filename: there is no difference in behaviour in ending with or without '<code>:</code>'.</p>
+</div>
+<p>Specifying short options in an easystack file is allowed, for example:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">easyconfigs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">OpenFOAM-v2206-foss-2022a.eb</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">options</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">D</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
 </code></pre></div>
+<p>This is not recommended however, as short options are more difficult to interpret by humans.</p>
+<h2 id="easystack_combining_options">Combining command line options with options in an easystack file<a class="headerlink" href="#easystack_combining_options" title="Permanent link">&para;</a></h2>
+<p>When building software with an easystack file, you can still add additional options on the command line as well.
+These apply to <em>all</em> items in the easystack file. For example, if you have an easystack file named
+<code>my_easystack.yaml</code></p>
+<div class="highlight"><pre><span></span><code><span class="nt">easyconfigs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">options</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">from-pr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15924</span><span class="w"></span>
+<span class="w">      </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">OpenFOAM-v2206-foss-2022a.eb</span><span class="p">:</span><span class="w"></span>
+</code></pre></div>
+<p>and you run with</p>
+<div class="highlight"><pre><span></span><code>eb --experimental --easystack my_easystack.yaml --dry-run
+</code></pre></div>
+<p>this will have the same effect as running</p>
+<div class="highlight"><pre><span></span><code>eb PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb --dry-run --from-pr <span class="m">15924</span> --debug
+eb OpenFOAM-v2206-foss-2022a.eb --dry-run --installpath /my/custom/installpath
+</code></pre></div>
+<p>Note that options specified on the command line are placed <em>before</em> the easyconfig-specific options in the easystack file.
+EasyBuild will always respect the argument that was put <em>last</em>.</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code>eb PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb --dry-run --disable-dry-run
+</code></pre></div>
+<p>will effectively run <em>without</em> enabling dry run mode, since <code>--disable-dry-run</code> is specified after <code>--dry-run</code>.</p>
+<p>Since easyconfig-specific configuration options specified in the easystack file are put <em>last</em>,
+they take priority over the the ones on the command line, if the same configuration option is specified in both.</p>
+<p>For example, running:</p>
+<div class="highlight"><pre><span></span><code>eb --experimental --easystack my_easystack.yaml --disable-debug
+</code></pre></div>
+<p>will effectively cause <code>PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb</code> to be installed with debug logging enabled,
+while <code>OpenFOAM-v2206-foss-2022a.eb</code> will be effectively installed <em>without</em> debug logging.</p>
 <h2 id="to-be-developed">To be developed<a class="headerlink" href="#to-be-developed" title="Permanent link">&para;</a></h2>
-<p>Optionally, more advanced keywords can be specified:
-<em>easybuild_version</em>, <em>robot</em>, <em>from_pr</em>, <em>versionsuffix</em>,
-<em>include-labels</em>, <em>exclude-labels</em>.</p>
-<ul>
-<li><em>easybuild_version:</em> if present, EasyBuild will check if the
-    easystack file was intended for the current version of EasyBuild.</li>
-<li><em>robot:</em> enables dependency resolution; see
-    <a class="autorefs autorefs-internal" href="../using-easybuild/#using_the_easybuild_command_line">Using the EasyBuild command line</a> for
-    more details.</li>
-<li><em>from_pr:</em> easyconfig files that are added or modified by a
-    particular pull request to the easybuild-easyconfigs GitHub
-    repository can be used (regardless of whether the pull request is
-    merged or not). (see <a class="autorefs autorefs-internal" href="../integration-with-github/#integration_with_github">Integration with GitHub</a> for more details).</li>
-<li><em>versionsuffix:</em> additional suffix for software version (placed
-    after toolchain name)</li>
-<li><em>include-labels:</em> only include this software when EasyBuild is
-    configured with one of the specified labels</li>
-<li><em>exclude-labels:</em> <strong>do not</strong> include this software when EasyBuild is
-    configured with one of the specified labels</li>
-</ul>
+<p>In the future, we are planning to support additional also global options specified in the easystack file. For example:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">options</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">robot</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
+<span class="nt">easyconfigs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OpenFOAM-v2206-foss-2022a.eb</span><span class="w"></span>
+</code></pre></div>
+<p>would installed both <code>PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb</code> and <code>OpenFOAM-v2206-foss-2022a.eb</code> using <code>--robot</code>
+(see <a href="https://github.com/easybuilders/easybuild-framework/issues/4105">issue #4105</a>).</p>
+<p>Additionally, we plan to support specifying for which EasyBuild version an easystack file was intended,
+which can be helpful in more accurately recreating a certain software stack
+(see <a href="https://github.com/easybuilders/easybuild-framework/issues/4106">issue #4106</a>).</p>
+<p>In the future, the <code>--easystack</code> option will probably be dropped, and EasyBuild will automatically detect
+the use of easystack files (see <a href="https://github.com/easybuilders/easybuild-framework/issues/4104">issue #4104</a>).</p>
+<p>Finally, we plan to support specifying <em>labels</em>, which would make it more easy to install only a certain subset of
+the items listed in an easystack file. For example, by labelling all GPU-capable software with a <code>gpu</code> label,
+one could easily choose to <em>not</em> build anything labeled <code>gpu</code> on a CPU node
+(see <a href="https://github.com/easybuilders/easybuild-framework/issues/3512">issue #3512</a>).</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 14, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 23, 2022</span>
       
     
   </small>
