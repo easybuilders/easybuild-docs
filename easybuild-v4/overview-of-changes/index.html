@@ -369,298 +369,158 @@
 
 
 <h1 id="eb4_changes_overview">Overview of changes in EasyBuild version 4.0<a class="headerlink" href="#eb4_changes_overview" title="Permanent link">&para;</a></h1>
+<p>This page provides a concise overview of the most prominent changes in EasyBuild version 4.0,
+compared to the latest EasyBuild v3.x (version 3.9.4).</p>
+<p>A detailed overview with links to the pull requests in which the changes are made is available in the
+<a class="autorefs autorefs-internal" href="../../release-notes/#release_notes">EasyBuild release notes</a> (see <a class="autorefs autorefs-internal" href="../../release-notes/#release_notes_eb400">EasyBuild v4.0.0 (September 20th 2019)</a> in particular).</p>
 <h2 id="eb4_changes_significant_enhancements">Significant enhancements in EasyBuild v4.0<a class="headerlink" href="#eb4_changes_significant_enhancements" title="Permanent link">&para;</a></h2>
-<h3 id="eb4_no_required_deps">No more required Python packages<a class="headerlink" href="#eb4_no_required_deps" title="Permanent link">&para;</a></h3>
-<h3 id="eb4_python3_support">Support for running EasyBuild on top of Python 3<a class="headerlink" href="#eb4_python3_support" title="Permanent link">&para;</a></h3>
-<h3 id="eb4_custom_easyblocks">Custom software-specific easyblocks for <code>iccifort</code>, <code>numexpr</code>, <code>OpenMPI</code><a class="headerlink" href="#eb4_custom_easyblocks" title="Permanent link">&para;</a></h3>
-<h3 id="eb4_2019b_common_toolchains">2019b update of common toolchains<a class="headerlink" href="#eb4_2019b_common_toolchains" title="Permanent link">&para;</a></h3>
-<h3 id="eb4_changes_local_variables">Local variables in easyconfigs should follow recommended naming scheme<a class="headerlink" href="#eb4_changes_local_variables" title="Permanent link">&para;</a></h3>
-<h2 id="eb4_changes_backwards_incompatible">Backwards-incompatible changes in EasyBuild v4.0<a class="headerlink" href="#eb4_changes_backwards_incompatible" title="Permanent link">&para;</a></h2>
-<h3 id="eb4_changes_fixed_installdir_naming_scheme"><code>--fixed-installdir-naming-scheme</code> enabled by default<a class="headerlink" href="#eb4_changes_fixed_installdir_naming_scheme" title="Permanent link">&para;</a></h3>
-<h4 id="eb4_changes_fixed_installdir_naming_scheme_disabling">Disabling <code>--fixed-installdir-naming-scheme</code><a class="headerlink" href="#eb4_changes_fixed_installdir_naming_scheme_disabling" title="Permanent link">&para;</a></h4>
-<h3 id="eb4_changes_relocated_stuff">Relocated functions, classes and constants in EasyBuild framework<a class="headerlink" href="#eb4_changes_relocated_stuff" title="Permanent link">&para;</a></h3>
-<h3 id="eb4_changes_ingested_vsc_base">Ingested functionality from <code>vsc-base</code> and <code>vsc-install</code><a class="headerlink" href="#eb4_changes_ingested_vsc_base" title="Permanent link">&para;</a></h3>
-<h4 id="eb4_changes_ingested_vsc_base_fake_vsc_namespace">Fake <code>vsc</code> namespace<a class="headerlink" href="#eb4_changes_ingested_vsc_base_fake_vsc_namespace" title="Permanent link">&para;</a></h4>
-<h3 id="eb4_changes_py2vs3">Functions &amp; classes that must be imported from the <code>easybuild.tools.py2vs3</code> namespace<a class="headerlink" href="#eb4_changes_py2vs3" title="Permanent link">&para;</a></h3>
-<h2 id="eb4_changes_deprecated">Deprecated functionality in EasyBuild v4.0<a class="headerlink" href="#eb4_changes_deprecated" title="Permanent link">&para;</a></h2>
-<h3 id="eb4_changes_dummy_tc">Deprecated <code>dummy</code> toolchain<a class="headerlink" href="#eb4_changes_dummy_tc" title="Permanent link">&para;</a></h3>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/EasyBuild4-overview-of-changes.html">https://docs.easybuild.io/en/latest/EasyBuild4-overview-of-changes.html</a>.</p>
-<p><strong>
-It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
-and you can help with that!
-</strong></p>
+<p>Various significant enhancements are included in EasyBuild v4.0, including:</p>
 <ul>
-<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/EasyBuild4-overview-of-changes.rst"><code>docs/EasyBuild4-overview-of-changes.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
-<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/easybuild-v4/overview-of-changes.md"><code>docs/easybuild-v4/overview-of-changes.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
+<li><a class="autorefs autorefs-internal" href="#eb4_no_required_deps">No more required Python packages</a></li>
+<li><a class="autorefs autorefs-internal" href="#eb4_python3_support">Support for running EasyBuild on top of Python 3</a></li>
+<li><a class="autorefs autorefs-internal" href="#eb4_custom_easyblocks">Custom software-specific easyblocks for <code>iccifort</code>, <code>numexpr</code>, <code>OpenMPI</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#eb4_2019b_common_toolchains">2019b update of common toolchains</a></li>
+<li><a class="autorefs autorefs-internal" href="#eb4_changes_local_variables">Local variables in easyconfigs should follow recommended naming scheme</a></li>
 </ul>
-<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_eb4_changes_overview:</span>
-
-<span class="gh">Overview of changes in EasyBuild version 4.0</span>
-<span class="gh">============================================</span>
-
-This page provides a concise overview of the most prominent changes in EasyBuild version 4.0,
-compared to the latest EasyBuild v3.x (version 3.9.4).
-
-A detailed overview with links to the pull requests in which the changes are made is available in the
-<span class="na">:ref:</span><span class="nv">`release_notes`</span> (see <span class="na">:ref:</span><span class="nv">`release_notes_eb400`</span> in particular).
-
-<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
-    <span class="nc">:depth:</span> 2
-    <span class="nc">:backlinks:</span> none
-    <span class="nc">:local:</span>
-
-
-<span class="p">..</span> <span class="nt">_eb4_changes_significant_enhancements:</span>
-
-<span class="gh">Significant enhancements in EasyBuild v4.0</span>
-<span class="gh">------------------------------------------</span>
-
-Various significant enhancements are included in EasyBuild v4.0, including:
-
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`eb4_no_required_deps`</span>
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`eb4_python3_support`</span>
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`eb4_custom_easyblocks`</span>
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`eb4_2019b_common_toolchains`</span>
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`eb4_changes_local_variables`</span>
-
-<span class="p">..</span> <span class="nt">_eb4_no_required_deps:</span>
-
-<span class="gh">No more required Python packages</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-To simplify the installation of EasyBuild, **no Python packages other than the ones included in the Python standard
-library are required** for EasyBuild v4.0. More specifically:
-
-<span class="m">*</span> <span class="s">``setuptools``</span> <span class="gs">**is no longer a required dependency**</span>, neither for using EasyBuild nor for installing it.
+<h3 id="eb4_no_required_deps">No more required Python packages<a class="headerlink" href="#eb4_no_required_deps" title="Permanent link">&para;</a></h3>
+<p>To simplify the installation of EasyBuild, <strong>no Python packages other than the ones included in the Python standard
+library are required</strong> for EasyBuild v4.0. More specifically:</p>
+<ul>
+<li><code>setuptools</code> <strong>is no longer a required dependency</strong>, neither for using EasyBuild nor for installing it.
   This change was motivated by the various problems with installing EasyBuild that were reported, which could
-  often be attributed to <span class="s">``setuptools``</span> in one way or another (ancient versions being installed via the OS package
-  manager, quirky or broken functionality in specific versions, etc.).
-
-<span class="m">*</span> <span class="s">``vsc-base``</span> <span class="gs">**and**</span> <span class="s">``vsc-install``</span> <span class="gs">**are no longer required dependencies**</span>. The relevant parts of these packages
-  were ingested into the EasyBuild framework codebase itself (see also <span class="na">:ref:</span><span class="nv">`eb4_changes_ingested_vsc_base`</span>),
-  mostly to facilitate making EasyBuild compatible with Python 3.
-
-Note that specific Python packages may currently still be required for certain EasyBuild functionality outside
-of the core functionality of building and installing scientific software, including <span class="s">``keyring``</span> for the GitHub
-integration features (see <span class="na">:ref:</span><span class="nv">`integration_with_github`</span>), etc.
-
-
-<span class="p">..</span> <span class="nt">_eb4_python3_support:</span>
-
-<span class="gh">Support for running EasyBuild on top of Python 3</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-A significant effort has been made to ensure that the EasyBuild framework and the easyblocks included with EasyBuild
-are <span class="gs">**compatible with Python 3**</span>, while retaining the compatibility with Python 2.
-
-Currently supported Python versions include: <span class="s">``2.6``</span>, <span class="s">``2.7``</span>, <span class="s">``3.5``</span>, <span class="s">``3.6``</span>, <span class="s">``3.7``</span>.
-
-To achieve this in a maintainable way, the <span class="s">``easybuild.tools.py2vs3``</span> package was introduced.
-For more details, please see <span class="na">:ref:</span><span class="nv">`py2_py3_compatibility`</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_custom_easyblocks:</span>
-
-<span class="gh">Custom software-specific easyblocks for ``iccifort``, ``numexpr``, ``OpenMPI``</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-A couple of <span class="gs">**additional custom software-specific easyblocks**</span> were added in EasyBuild v4.0, including:
-
-<span class="m">*</span> <span class="s">``iccifort``</span>: to install <span class="s">``icc``</span> and <span class="s">``ifort``</span> together in a single prefix, and use that installation as a toolchain
-
-<span class="m">*</span> <span class="s">``numexpr``</span>: to ensure that <span class="s">``numexpr``</span> is linked with Intel MKL&#39;s VML when it is available
-
-<span class="m">*</span> <span class="s">``OpenMPI``</span>: to improve the (default) configuration of <span class="s">``OpenMPI``</span> based on installed OS packages (for example for
-  InfiniBand support) and available dependencies
-
-In addition, various (generic and software-specific) easyblocks were improved and enhanced
-(see <span class="na">:ref:</span><span class="nv">`release_notes`</span> for more details).
-
-
-<span class="p">..</span> <span class="nt">_eb4_2019b_common_toolchains:</span>
-
-<span class="gh">2019b update of common toolchains</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-The <span class="s">``2019b``</span> update of the common toolchains is included with EasyBuild v4.0; see also <span class="na">:ref:</span><span class="nv">`common_toolchains`</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_changes_local_variables:</span>
-
-<span class="gh">Local variables in easyconfigs should follow recommended naming scheme</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-A recommended naming scheme for local variables in easyconfig files was introduced.
-
-If an easyconfig file contains local variables that do not follow the recommended naming scheme,
-a warning will be printed (by default).
-
-For more information, see <span class="na">:ref:</span><span class="nv">`easyconfig_files_local_variables`</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_changes_backwards_incompatible:</span>
-
-<span class="gh">Backwards-incompatible changes in EasyBuild v4.0</span>
-<span class="gh">------------------------------------------------</span>
-
-A couple of <span class="ge">*backwards-incompatible*</span> changes were made in EasyBuild v4.0:
-
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`eb4_changes_fixed_installdir_naming_scheme`</span>
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`eb4_changes_relocated_stuff`</span>
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`eb4_changes_ingested_vsc_base`</span>
-<span class="m">*</span> <span class="na">:ref:</span><span class="nv">`eb4_changes_py2vs3`</span>
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> **Other than the changed default configuration, these changes are mainly important for developers
-          of the EasyBuild framework and easyblock implementers.**
-
-<span class="p">..</span> <span class="nt">_eb4_changes_fixed_installdir_naming_scheme:</span>
-
-<span class="gh">``--fixed-installdir-naming-scheme`` enabled by default</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-<span class="gs">**The**</span> <span class="s">``--fixed-installdir-naming-scheme``</span> <span class="gs">**was changed to be**</span> <span class="ge">*enabled*</span> **by default,
-which makes the name of the software installation directory independent of the module naming scheme being used.**
-
-With this configuration setting enabled, the name of software installation directories will match the module name
-generated by the (default) <span class="s">``EasyBuildMNS``</span> module naming scheme.
-
-So, for an easyconfig file <span class="s">``example-1.2.3-foss-2019b.eb``</span>, the software installation directory will always be
-<span class="s">``&lt;prefix&gt;/software/example/1.2.3-foss-2019b``</span>, regardless of the active module naming scheme.
-
-This change was done to make it easier to generate module files using one or more additional module naming scheme
-(using <span class="s">``--module-only``</span>) for already existing software installations. Only when the name of the software installation
+  often be attributed to <code>setuptools</code> in one way or another (ancient versions being installed via the OS package
+  manager, quirky or broken functionality in specific versions, etc.).</li>
+<li><code>vsc-base</code> <strong>and</strong> <code>vsc-install</code> <strong>are no longer required dependencies</strong>. The relevant parts of these packages
+  were ingested into the EasyBuild framework codebase itself (see also <a class="autorefs autorefs-internal" href="#eb4_changes_ingested_vsc_base">Ingested functionality from <code>vsc-base</code> and <code>vsc-install</code></a>),
+  mostly to facilitate making EasyBuild compatible with Python 3.</li>
+</ul>
+<p>Note that specific Python packages may currently still be required for certain EasyBuild functionality outside
+of the core functionality of building and installing scientific software, including <code>keyring</code> for the GitHub
+integration features (see <a class="autorefs autorefs-internal" href="../../integration-with-github/#integration_with_github">Integration with GitHub</a>), etc.</p>
+<h3 id="eb4_python3_support">Support for running EasyBuild on top of Python 3<a class="headerlink" href="#eb4_python3_support" title="Permanent link">&para;</a></h3>
+<p>A significant effort has been made to ensure that the EasyBuild framework and the easyblocks included with EasyBuild
+are <strong>compatible with Python 3</strong>, while retaining the compatibility with Python 2.</p>
+<p>Currently supported Python versions include: <code>2.6</code>, <code>2.7</code>, <code>3.5</code>, <code>3.6</code>, <code>3.7</code>.</p>
+<p>To achieve this in a maintainable way, the <code>easybuild.tools.py2vs3</code> package was introduced.
+For more details, please see <a class="autorefs autorefs-internal" href="../../python-2-3-compatibility/#py2_py3_compatibility">Compatibility with Python 2 and Python 3</a>.</p>
+<h3 id="eb4_custom_easyblocks">Custom software-specific easyblocks for <code>iccifort</code>, <code>numexpr</code>, <code>OpenMPI</code><a class="headerlink" href="#eb4_custom_easyblocks" title="Permanent link">&para;</a></h3>
+<p>A couple of <strong>additional custom software-specific easyblocks</strong> were added in EasyBuild v4.0, including:</p>
+<ul>
+<li><code>iccifort</code>: to install <code>icc</code> and <code>ifort</code> together in a single prefix, and use that installation as a toolchain</li>
+<li><code>numexpr</code>: to ensure that <code>numexpr</code> is linked with Intel MKL's VML when it is available</li>
+<li><code>OpenMPI</code>: to improve the (default) configuration of <code>OpenMPI</code> based on installed OS packages (for example for
+  InfiniBand support) and available dependencies</li>
+</ul>
+<p>In addition, various (generic and software-specific) easyblocks were improved and enhanced
+(see <a class="autorefs autorefs-internal" href="../../release-notes/#release_notes">EasyBuild release notes</a> for more details).</p>
+<h3 id="eb4_2019b_common_toolchains">2019b update of common toolchains<a class="headerlink" href="#eb4_2019b_common_toolchains" title="Permanent link">&para;</a></h3>
+<p>The <code>2019b</code> update of the common toolchains is included with EasyBuild v4.0; see also <a class="autorefs autorefs-internal" href="../../common-toolchains/#common_toolchains">Common toolchains</a>.</p>
+<h3 id="eb4_changes_local_variables">Local variables in easyconfigs should follow recommended naming scheme<a class="headerlink" href="#eb4_changes_local_variables" title="Permanent link">&para;</a></h3>
+<p>A recommended naming scheme for local variables in easyconfig files was introduced.</p>
+<p>If an easyconfig file contains local variables that do not follow the recommended naming scheme,
+a warning will be printed (by default).</p>
+<p>For more information, see <a class="autorefs autorefs-internal" href="../../easyconfig-files-local-variables/#easyconfig_files_local_variables">Local variables in easyconfig files</a>.</p>
+<h2 id="eb4_changes_backwards_incompatible">Backwards-incompatible changes in EasyBuild v4.0<a class="headerlink" href="#eb4_changes_backwards_incompatible" title="Permanent link">&para;</a></h2>
+<p>A couple of <em>backwards-incompatible</em> changes were made in EasyBuild v4.0:</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="#eb4_changes_fixed_installdir_naming_scheme"><code>--fixed-installdir-naming-scheme</code> enabled by default</a></li>
+<li><a class="autorefs autorefs-internal" href="#eb4_changes_relocated_stuff">Relocated functions, classes and constants in EasyBuild framework</a></li>
+<li><a class="autorefs autorefs-internal" href="#eb4_changes_ingested_vsc_base">Ingested functionality from <code>vsc-base</code> and <code>vsc-install</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#eb4_changes_py2vs3">Functions &amp; classes that must be imported from the <code>easybuild.tools.py2vs3</code> namespace</a></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Other than the changed default configuration, these changes are mainly important for developers
+of the EasyBuild framework and easyblock implementers.</strong></p>
+</div>
+<h3 id="eb4_changes_fixed_installdir_naming_scheme"><code>--fixed-installdir-naming-scheme</code> enabled by default<a class="headerlink" href="#eb4_changes_fixed_installdir_naming_scheme" title="Permanent link">&para;</a></h3>
+<p><strong>The</strong> <code>--fixed-installdir-naming-scheme</code> <strong>was changed to be</strong> <em>enabled</em> <strong>by default,
+which makes the name of the software installation directory independent of the module naming scheme being used.</strong></p>
+<p>With this configuration setting enabled, the name of software installation directories will match the module name
+generated by the (default) <code>EasyBuildMNS</code> module naming scheme.</p>
+<p>So, for an easyconfig file <code>example-1.2.3-foss-2019b.eb</code>, the software installation directory will always be
+<code>&lt;prefix&gt;/software/example/1.2.3-foss-2019b</code>, regardless of the active module naming scheme.</p>
+<p>This change was done to make it easier to generate module files using one or more additional module naming scheme
+(using <code>--module-only</code>) for already existing software installations. Only when the name of the software installation
 directories is independent of the module naming scheme being used during the (first) installation is it possible to
-later generate additional module files using a different module naming scheme.
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Having <span class="s">``--fixed-installdir-naming-scheme``</span> enabled should not cause problems in existing setups.
-
-          Mixing different naming schemes for software installations directories in a single software stack
-          works just fine; it&#39;s mostly a matter of inconsistency that could be confusing for humans.
-
-<span class="p">..</span> <span class="nt">_eb4_changes_fixed_installdir_naming_scheme_disabling:</span>
-
-<span class="gh">Disabling ``--fixed-installdir-naming-scheme``</span>
-<span class="gh">++++++++++++++++++++++++++++++++++++++++++++++</span>
-
-If you are using a module naming scheme other than the default <span class="s">``EasyBuildMNS``</span>, you may prefer disabling
-<span class="s">``--fixed-installdir-naming-scheme``</span> to maintain consistency in the names of software installation directories.
-*Do note that this implies that you won&#39;t be able to generate additional modules files using a different module
-naming scheme for existing installations.*
-
-To disable <span class="s">``--fixed-installdir-naming-scheme``</span>, you can either
-
-<span class="m">*</span> disable the <span class="s">``fixed-installdir-naming-scheme``</span> configuration option
-  in the <span class="s">``[override]``</span> section of an EasyBuild configuration file<span class="se">::</span>
-
-<span class="s">    [override]</span>
-<span class="s">    fixed-installdir-naming-scheme = 0</span>
-
-  (see also <span class="na">:ref:</span><span class="nv">`configuration_file`</span>)
-
-<span class="m">*</span> set the <span class="s">``$EASYBUILD_DISABLE_FIXED_INSTALLDIR_NAMING_SCHEME``</span> environment variable::
-
-    export EASYBUILD_DISABLE_FIXED_INSTALLDIR_NAMING_SCHEME=1
-
-  (see also <span class="na">:ref:</span><span class="nv">`configuration_env_vars`</span>)
-
-<span class="m">*</span> use the <span class="s">``--disable-fixed-installdir-naming-scheme ...``</span> command line option::
-
-    eb --disable-fixed-installdir-naming-scheme ...
-
-  (see also <span class="na">:ref:</span><span class="nv">`configuration_cmdline`</span>)
-
-
-<span class="p">..</span> <span class="nt">_eb4_changes_relocated_stuff:</span>
-
-<span class="gh">Relocated functions, classes and constants in EasyBuild framework</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-<span class="gs">**A limited number of functions, classes and constants have been relocated in the EasyBuild framework.**</span>
-
-This was done mostly to ensure that the <span class="s">``__init__.py``</span> files that define packages are empty, other
-than the <span class="s">``pkgutil.extend_path``</span> (which replaces the <span class="s">``pkg_resources.declare_namespace``</span> which requires <span class="s">``setuptools``</span>,
-see also <span class="na">:ref:</span><span class="nv">`eb4_no_required_deps`</span>).
-
-Making EasyBuild compatible with Python 3 also required some similar changes, see <span class="na">:ref:</span><span class="nv">`eb4_changes_py2vs3`</span>.
-
-A detailed overview of relocated functions and constants is available at <span class="na">:ref:</span><span class="nv">`eb4_relocated_functions_classes_constants`</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_changes_ingested_vsc_base:</span>
-
-<span class="gh">Ingested functionality from ``vsc-base`` and ``vsc-install``</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-The <span class="gs">**functionality from the**</span> <span class="s">``vsc-base``</span> <span class="gs">**and**</span> <span class="s">``vsc-install``</span> **packages required by EasyBuild has been ingested
-in the EasyBuild framework**, see also <span class="na">:ref:</span><span class="nv">`eb4_no_required_deps`</span>.
-
-This has primarily been done in the new <span class="s">``easybuild.base``</span> package, so in general imports
-from a module in the <span class="s">``vsc.utils``</span> package should be replaced with a corresponding import statement
-from that same module in the <span class="s">``easybuild.base``</span> package.
-
-A number of specific functions and classes have been placed in existing modules in the <span class="s">``easybuild.tools``</span> package instead.
-
-The affected functions are listed in <span class="na">:ref:</span><span class="nv">`eb4_relocated_functions_classes_constants`</span>.
-
-<span class="p">..</span> <span class="nt">_eb4_changes_ingested_vsc_base_fake_vsc_namespace:</span>
-
-<span class="gh">Fake ``vsc`` namespace</span>
-<span class="gh">++++++++++++++++++++++</span>
-
-To avoid that any functionality is imported from an already installed <span class="s">``vsc-base``</span> (or <span class="s">``vsc-install``</span>) package,
-which could lead to strange side-effects, a fake <span class="s">``vsc``</span> namespace is injected since EasyBuild v4.0.
-
-If an import from <span class="s">``vsc.utils.*``</span> is detected (for example from an easyblock or from a module that is included
-via one of the <span class="s">``--include-*``</span> options), an error like this will be produced<span class="se">::</span>
-
-<span class="s">  ERROR: Detected import from &#39;vsc&#39; namespace in /home/example/old_easyblock.py (line 7)</span>
-<span class="s">  vsc-base &amp; vsc-install were ingested into the EasyBuild framework in EasyBuild v4.0</span>
-<span class="s">  The functionality you need may be available in the &#39;easybuild.base.*&#39; namespace.</span>
-
-
-<span class="p">..</span> <span class="nt">_eb4_changes_py2vs3:</span>
-
-<span class="gh">Functions &amp; classes that must be imported from the ``easybuild.tools.py2vs3`` namespace</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-**A handful functions and classes that could be imported directly from the Python standard library should now be
-imported from the<span class="gs">** ``easybuild.tools.py2vs3`` **</span>namespace instead** (perhaps under a different name),
-to ensure compatibility with Python 2 and 3.
-
-See <span class="na">:ref:</span><span class="nv">`py2_py3_compatibility`</span> for more information.
-
-The affected functions are also included in <span class="na">:ref:</span><span class="nv">`eb4_relocated_functions_classes_constants`</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_changes_deprecated:</span>
-
-<span class="gh">Deprecated functionality in EasyBuild v4.0</span>
-<span class="gh">------------------------------------------</span>
-
-Some functionality was deprecated in EasyBuild v4.0, and will no longer be supported in EasyBuild v5.0.
-
-If you trigger any deprecated functionality, a warning message will be printed.
-
-<span class="p">..</span> <span class="nt">_eb4_changes_dummy_tc:</span>
-
-<span class="gh">Deprecated ``dummy`` toolchain</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-The <span class="s">``dummy``</span> toolchain is now deprecated, and has been replaced with the <span class="s">``system``</span> toolchain.
-
-For more information, please consult <span class="na">:ref:</span><span class="nv">`system_toolchain`</span>.
+later generate additional module files using a different module naming scheme.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Having <code>--fixed-installdir-naming-scheme</code> enabled should not cause problems in existing setups.</p>
+<p>Mixing different naming schemes for software installations directories in a single software stack
+works just fine; it's mostly a matter of inconsistency that could be confusing for humans.</p>
+</div>
+<h4 id="eb4_changes_fixed_installdir_naming_scheme_disabling">Disabling <code>--fixed-installdir-naming-scheme</code><a class="headerlink" href="#eb4_changes_fixed_installdir_naming_scheme_disabling" title="Permanent link">&para;</a></h4>
+<p>If you are using a module naming scheme other than the default <code>EasyBuildMNS</code>, you may prefer disabling
+<code>--fixed-installdir-naming-scheme</code> to maintain consistency in the names of software installation directories.
+<em>Do note that this implies that you won't be able to generate additional modules files using a different module
+naming scheme for existing installations.</em></p>
+<p>To disable <code>--fixed-installdir-naming-scheme</code>, you can either</p>
+<ul>
+<li>
+<p>disable the <code>fixed-installdir-naming-scheme</code> configuration option
+  in the <code>[override]</code> section of an EasyBuild configuration file:</p>
+<div class="highlight"><pre><span></span><code>[override]
+fixed-installdir-naming-scheme = 0
 </code></pre></div>
+<p>(see also <a class="autorefs autorefs-internal" href="../../configuration/#configuration_file">Configuration file(s)</a>)</p>
+</li>
+<li>
+<p>set the <code>$EASYBUILD_DISABLE_FIXED_INSTALLDIR_NAMING_SCHEME</code> environment variable:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">EASYBUILD_DISABLE_FIXED_INSTALLDIR_NAMING_SCHEME</span><span class="o">=</span><span class="m">1</span>
+</code></pre></div>
+<p>(see also <a class="autorefs autorefs-internal" href="../../configuration/#configuration_env_vars">Environment variables</a>)</p>
+</li>
+<li>
+<p>use the <code>--disable-fixed-installdir-naming-scheme ...</code> command line option:</p>
+<div class="highlight"><pre><span></span><code>eb --disable-fixed-installdir-naming-scheme ...
+</code></pre></div>
+<p>(see also <a class="autorefs autorefs-internal" href="../../configuration/#configuration_cmdline">Command line arguments</a>)</p>
+</li>
+</ul>
+<h3 id="eb4_changes_relocated_stuff">Relocated functions, classes and constants in EasyBuild framework<a class="headerlink" href="#eb4_changes_relocated_stuff" title="Permanent link">&para;</a></h3>
+<p><strong>A limited number of functions, classes and constants have been relocated in the EasyBuild framework.</strong></p>
+<p>This was done mostly to ensure that the <code>__init__.py</code> files that define packages are empty, other
+than the <code>pkgutil.extend_path</code> (which replaces the <code>pkg_resources.declare_namespace</code> which requires <code>setuptools</code>,
+see also <a class="autorefs autorefs-internal" href="#eb4_no_required_deps">No more required Python packages</a>).</p>
+<p>Making EasyBuild compatible with Python 3 also required some similar changes, see <a class="autorefs autorefs-internal" href="#eb4_changes_py2vs3">Functions &amp; classes that must be imported from the <code>easybuild.tools.py2vs3</code> namespace</a>.</p>
+<p>A detailed overview of relocated functions and constants is available at <a class="autorefs autorefs-internal" href="../overview-relocated-functions-constants/#eb4_relocated_functions_classes_constants">Overview of relocated functions, classes and constants in EasyBuild v4.0</a>.</p>
+<h3 id="eb4_changes_ingested_vsc_base">Ingested functionality from <code>vsc-base</code> and <code>vsc-install</code><a class="headerlink" href="#eb4_changes_ingested_vsc_base" title="Permanent link">&para;</a></h3>
+<p>The <strong>functionality from the</strong> <code>vsc-base</code> <strong>and</strong> <code>vsc-install</code> <strong>packages required by EasyBuild has been ingested
+in the EasyBuild framework</strong>, see also <a class="autorefs autorefs-internal" href="#eb4_no_required_deps">No more required Python packages</a>.</p>
+<p>This has primarily been done in the new <code>easybuild.base</code> package, so in general imports
+from a module in the <code>vsc.utils</code> package should be replaced with a corresponding import statement
+from that same module in the <code>easybuild.base</code> package.</p>
+<p>A number of specific functions and classes have been placed in existing modules in the <code>easybuild.tools</code> package instead.</p>
+<p>The affected functions are listed in <a class="autorefs autorefs-internal" href="../overview-relocated-functions-constants/#eb4_relocated_functions_classes_constants">Overview of relocated functions, classes and constants in EasyBuild v4.0</a>.</p>
+<h4 id="eb4_changes_ingested_vsc_base_fake_vsc_namespace">Fake <code>vsc</code> namespace<a class="headerlink" href="#eb4_changes_ingested_vsc_base_fake_vsc_namespace" title="Permanent link">&para;</a></h4>
+<p>To avoid that any functionality is imported from an already installed <code>vsc-base</code> (or <code>vsc-install</code>) package,
+which could lead to strange side-effects, a fake <code>vsc</code> namespace is injected since EasyBuild v4.0.</p>
+<p>If an import from <code>vsc.utils.*</code> is detected (for example from an easyblock or from a module that is included
+via one of the <code>--include-*</code> options), an error like this will be produced:</p>
+<div class="highlight"><pre><span></span><code>ERROR: Detected import from <span class="s1">&#39;vsc&#39;</span> namespace <span class="k">in</span> /home/example/old_easyblock.py <span class="o">(</span>line <span class="m">7</span><span class="o">)</span>
+vsc-base <span class="p">&amp;</span> vsc-install were ingested into the EasyBuild framework <span class="k">in</span> EasyBuild v4.0
+The functionality you need may be available <span class="k">in</span> the <span class="s1">&#39;easybuild.base.*&#39;</span> namespace.
+</code></pre></div>
+<h3 id="eb4_changes_py2vs3">Functions &amp; classes that must be imported from the <code>easybuild.tools.py2vs3</code> namespace<a class="headerlink" href="#eb4_changes_py2vs3" title="Permanent link">&para;</a></h3>
+<p><strong>A handful functions and classes that could be imported directly from the Python standard library should now be
+imported from the</strong> <code>easybuild.tools.py2vs3</code> <strong>namespace instead</strong> (perhaps under a different name),
+to ensure compatibility with Python 2 and 3.</p>
+<p>See <a class="autorefs autorefs-internal" href="../../python-2-3-compatibility/#py2_py3_compatibility">Compatibility with Python 2 and Python 3</a> for more information.</p>
+<p>The affected functions are also included in <a class="autorefs autorefs-internal" href="../overview-relocated-functions-constants/#eb4_relocated_functions_classes_constants">Overview of relocated functions, classes and constants in EasyBuild v4.0</a>.</p>
+<h2 id="eb4_changes_deprecated">Deprecated functionality in EasyBuild v4.0<a class="headerlink" href="#eb4_changes_deprecated" title="Permanent link">&para;</a></h2>
+<p>Some functionality was deprecated in EasyBuild v4.0, and will no longer be supported in EasyBuild v5.0.</p>
+<p>If you trigger any deprecated functionality, a warning message will be printed.</p>
+<h3 id="eb4_changes_dummy_tc">Deprecated <code>dummy</code> toolchain<a class="headerlink" href="#eb4_changes_dummy_tc" title="Permanent link">&para;</a></h3>
+<p>The <code>dummy</code> toolchain is now deprecated, and has been replaced with the <code>system</code> toolchain.</p>
+<p>For more information, please consult <a class="autorefs autorefs-internal" href="../../system-toolchain/#system_toolchain">System toolchain</a>.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 23, 2022</span>
       
     
   </small>

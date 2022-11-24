@@ -369,264 +369,99 @@
 
 
 <h1 id="eb4_relocated_functions_classes_constants">Overview of relocated functions, classes and constants in EasyBuild v4.0<a class="headerlink" href="#eb4_relocated_functions_classes_constants" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/EasyBuild4-overview-relocated-functions-constants.html">https://docs.easybuild.io/en/latest/EasyBuild4-overview-relocated-functions-constants.html</a>.</p>
-<p><strong>
-It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
-and you can help with that!
-</strong></p>
-<ul>
-<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/EasyBuild4-overview-relocated-functions-constants.rst"><code>docs/EasyBuild4-overview-relocated-functions-constants.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
-<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/easybuild-v4/overview-relocated-functions-constants.md"><code>docs/easybuild-v4/overview-relocated-functions-constants.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
-</ul>
-<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
+<p>This page provides an alphabetical overview of relocated functions, classes and constants in EasyBuild version 4.0;
+see <a class="autorefs autorefs-internal" href="../overview-of-changes/#eb4_changes_backwards_incompatible">Backwards-incompatible changes in EasyBuild v4.0</a> for motivation and high-level information.</p>
+<h2 id="eb4_relocated_basestring"><code>basestring</code> type<a class="headerlink" href="#eb4_relocated_basestring" title="Permanent link">&para;</a></h2>
+<p>Rather than using the <code>basestring</code> type from the Python 2 standard library directly (for example in
+an <code>isinstance</code> expression), the <code>string_type</code> type from the <code>easybuild.tools.py2vs3</code> package should be used instead,
+to ensure that the code is compatible with both Python 2 and 3.</p>
+<p>See also <a class="autorefs autorefs-internal" href="../../python-2-3-compatibility/#py2_py3_compatibility">Compatibility with Python 2 and Python 3</a>.</p>
+<h2 id="eb4_relocated_configparser"><code>configparser</code> module<a class="headerlink" href="#eb4_relocated_configparser" title="Permanent link">&para;</a></h2>
+<p>The <code>configparser</code> module that is part of the Python 2 standard library (via <code>ConfigParser</code>)
+must now be imported from the <code>easybuild.tools.py2vs3</code> package, to ensure that the code is compatible with both Python 2 and 3.</p>
+<p>See also <a class="autorefs autorefs-internal" href="../../python-2-3-compatibility/#py2_py3_compatibility">Compatibility with Python 2 and Python 3</a>.</p>
+<h2 id="eb4_relocated_DEVEL_MODULE_SUFFIX"><code>DEVEL_MODULE_SUFFIX</code> constant<a class="headerlink" href="#eb4_relocated_DEVEL_MODULE_SUFFIX" title="Permanent link">&para;</a></h2>
+<p>The <code>DEVEL_MODULE_SUFFIX</code> constant was relocated from <code>easybuild.tools.module_naming_scheme</code> to <code>easybuild.tools.module_naming_scheme.mns</code>.</p>
+<h2 id="eb4_relocated_DUMMY_TOOLCHAIN_NAME_VERSION:"><code>DUMMY_TOOLCHAIN_NAME</code> and <code>DUMMY_TOOLCHAIN_VERSION</code> constants<a class="headerlink" href="#eb4_relocated_DUMMY_TOOLCHAIN_NAME_VERSION:" title="Permanent link">&para;</a></h2>
+<p>The <code>DUMMY_TOOLCHAIN_NAME</code> and <code>DUMMY_TOOLCHAIN_VERSION</code> constants were relocated from <code>easybuild.tools.toolchain</code> to <code>easybuild.tools.toolchain.toolchain</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since the <code>dummy</code> toolchain has been deprecated and is replaced by the <code>system</code> toolchain (see <a class="autorefs autorefs-internal" href="../../system-toolchain/#system_toolchain">System toolchain</a>),
+you should use the <code>is_system_toolchain</code> function or <code>Toolchain.is_system_toolchain</code> method to check whether a toolchain
+is a <code>dummy</code> or <code>system</code> toolchain, rather than using these constants directly (or using the <code>SYSTEM_TOOLCHAIN-*</code> equivalents).</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_eb4_relocated_functions_classes_constants:</span>
-
-<span class="gh">Overview of relocated functions, classes and constants in EasyBuild v4.0</span>
-<span class="gh">========================================================================</span>
-
-This page provides an alphabetical overview of relocated functions, classes and constants in EasyBuild version 4.0;
-see <span class="na">:ref:</span><span class="nv">`eb4_changes_backwards_incompatible`</span> for motivation and high-level information.
-
-
-<span class="p">..</span> <span class="nt">_eb4_relocated_basestring:</span>
-
-<span class="gh">``basestring`` type</span>
-<span class="gh">-------------------</span>
-
-Rather than using the <span class="s">``basestring``</span> type from the Python 2 standard library directly (for example in
-an <span class="s">``isinstance``</span> expression), the <span class="s">``string_type``</span> type from the <span class="s">``easybuild.tools.py2vs3``</span> package should be used instead,
-to ensure that the code is compatible with both Python 2 and 3.
-
-See also <span class="na">:ref:</span><span class="nv">`py2_py3_compatibility`</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_relocated_configparser:</span>
-
-<span class="gh">``configparser`` module</span>
-<span class="gh">------------------------</span>
-
-The <span class="s">``configparser``</span> module that is part of the Python 2 standard library (via <span class="s">``ConfigParser``</span>)
-must now be imported from the <span class="s">``easybuild.tools.py2vs3``</span> package, to ensure that the code is compatible with both Python 2 and 3.
-
-See also <span class="na">:ref:</span><span class="nv">`py2_py3_compatibility`</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_relocated_DEVEL_MODULE_SUFFIX:</span>
-
-
-<span class="gh">``DEVEL_MODULE_SUFFIX`` constant</span>
-<span class="gh">--------------------------------</span>
-
-The <span class="s">``DEVEL_MODULE_SUFFIX``</span> constant was relocated from <span class="s">``easybuild.tools.module_naming_scheme``</span> to <span class="s">``easybuild.tools.module_naming_scheme.mns``</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_relocated_DUMMY_TOOLCHAIN_NAME_VERSION:</span>
-
-<span class="gh">``DUMMY_TOOLCHAIN_NAME`` and ``DUMMY_TOOLCHAIN_VERSION`` constants</span>
-<span class="gh">------------------------------------------------------------------</span>
-
-The <span class="s">``DUMMY_TOOLCHAIN_NAME``</span> and <span class="s">``DUMMY_TOOLCHAIN_VERSION``</span> constants were relocated from <span class="s">``easybuild.tools.toolchain``</span> to <span class="s">``easybuild.tools.toolchain.toolchain``</span>.
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Since the <span class="s">``dummy``</span> toolchain has been deprecated and is replaced by the <span class="s">``system``</span> toolchain (see <span class="na">:ref:</span><span class="nv">`system_toolchain`</span>),
-          you should use the <span class="s">``is_system_toolchain``</span> function or <span class="s">``Toolchain.is_system_toolchain``</span> method to check whether a toolchain
-          is a <span class="s">``dummy``</span> or <span class="s">``system``</span> toolchain, rather than using these constants directly (or using the <span class="s">``SYSTEM_TOOLCHAIN-*``</span> equivalents).
-
-
-<span class="p">..</span> <span class="nt">_eb4_relocated_FrozenDictKnownKeys:</span>
-
-<span class="gh">``FrozenDictKnownKeys`` class</span>
-<span class="gh">-----------------------------</span>
-
-The <span class="s">``FrozenDictKnownKeys``</span> class from <span class="s">``vsc.utils.missing``</span> is now available from <span class="s">``easybuild.base.frozendict``</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_relocated_GEENRAL_CLASS:</span>
-
-<span class="gh">``GENERAL_CLASS`` constant</span>
-<span class="gh">--------------------------</span>
-
-The <span class="s">``GENERAL_CLASS``</span> constant was relocated from <span class="s">``easybuild.tools.module_naming_scheme``</span> to <span class="s">``easybuild.tools.config``</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_relocated_get_class_for:</span>
-
-<span class="gh">``get_class_for`` function</span>
-<span class="gh">--------------------------</span>
-
-The <span class="s">``get_class_for``</span> function from <span class="s">``vsc.utils.missing``</span> is now available from <span class="s">``easybuild.tools.utilities``</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_relocated_get_subclasses:</span>
-
-<span class="gh">``get_subclasses`` function</span>
-<span class="gh">---------------------------</span>
-
-The <span class="s">``get_subclasses``</span> function from <span class="s">``vsc.utils.missing``</span> is now available from <span class="s">``easybuild.tools.utilities``</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_relocated_INDENT_4SPACES:</span>
-
-<span class="gh">``INDENT_4SPACES`` constant</span>
-<span class="gh">---------------------------</span>
-
-The <span class="s">``INDENT_4SPACES``</span> constants was relocated from <span class="s">``easybuild.framework.easyconfig.format.format``</span> to <span class="s">``easybuild.tools.utilities``</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_relocated_mk_rst_table:</span>
-
-<span class="gh">``mk_rst_table`` function</span>
-<span class="gh">--------------------------</span>
-
-The <span class="s">``mk_rst_table``</span> function from <span class="s">``vsc.utils.docs``</span> is now available from <span class="s">``easybuild.tools.docs``</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_relocated_ModuleNamingScheme:</span>
-
-<span class="gh">``ModuleNamingScheme`` class</span>
-<span class="gh">----------------------------</span>
-
-The <span class="s">``ModuleNamingScheme``</span> class was relocated from <span class="s">``easybuild.tools.module_naming_scheme``</span> to <span class="s">``easybuild.tools.module_naming_scheme.mns``</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_relocated_nub:</span>
-
-<span class="gh">``nub`` function</span>
-<span class="gh">----------------</span>
-
-The <span class="s">``nub``</span> function from <span class="s">``vsc.utils.missing``</span> is now available from <span class="s">``easybuild.tools.utilities``</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_relocated_OrderedDict:</span>
-
-<span class="gh">``OrderedDict`` class</span>
-<span class="gh">---------------------</span>
-
-The <span class="s">``OrderedDict``</span> class that is part of the Python 2 standard library (via <span class="s">``collections``</span>)
-must now be imported from the <span class="s">``easybuild.tools.py2vs3``</span> package, to ensure that the code is compatible with both Python 2 and 3.
-
-See also <span class="na">:ref:</span><span class="nv">`py2_py3_compatibility`</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_relocated_reload:</span>
-
-<span class="gh">``reload`` function</span>
-<span class="gh">-------------------</span>
-
-The <span class="s">``reload``</span> function that is a built-in function of the Python 2 standard library
-must now be imported from the <span class="s">``easybuild.tools.py2vs3``</span> package, to ensure that the code is compatible with both Python 2 and 3.
-
-See also <span class="na">:ref:</span><span class="nv">`py2_py3_compatibility`</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_relocated_shell_quote:</span>
-
-<span class="gh">``shell_quote`` function</span>
-<span class="gh">------------------------</span>
-
-The <span class="s">``shell_quote``</span> function from <span class="s">``vsc.utils.missing``</span> is now available from <span class="s">``easybuild.tools.utilities``</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_relocated_sched_getaffinity:</span>
-
-<span class="gh">``sched_getaffinity`` function</span>
-<span class="gh">------------------------------</span>
-
-The <span class="s">``sched_getaffinity``</span> function from <span class="s">``vsc.utils.affinity``</span> is now available from <span class="s">``easybuild.tools.systemtools``</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_relocated_Singleton:</span>
-
-<span class="gh">``Singleton`` class</span>
-<span class="gh">-------------------</span>
-
-The <span class="s">``Singleton``</span> class from <span class="s">``vsc.utils.patterns``</span> is now available from <span class="s">``easybuild.tools.config``</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_relocated_StringIO:</span>
-
-<span class="gh">``StringIO`` class</span>
-<span class="gh">------------------</span>
-
-Rather than importing the <span class="s">``StringIO``</span> class from the <span class="s">``StringIO``</span> module of the Python 2 standard library,
-it should be imported from the <span class="s">``easybuild.tools.py2vs3``</span> package instead,
-to ensure that the code is compatible with both Python 2 and 3.
-
-See also <span class="na">:ref:</span><span class="nv">`py2_py3_compatibility`</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_relocated_subprocess_Popen:</span>
-
-<span class="gh">``subprocess.Popen`` function</span>
-<span class="gh">-----------------------------</span>
-
-Rather than using the <span class="s">``subprocess.Popen``</span> function directly, the <span class="s">``subprocess_popen_text``</span> function from
-the <span class="s">``easybuild.tools.py2vs3``</span> package should be used instead, to ensure that the code is compatible with both Python 2 and 3.
-
-See also <span class="na">:ref:</span><span class="nv">`py2_py3_compatibility`</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_relocated_urlencode:</span>
-
-<span class="gh">``urlencode`` function</span>
-<span class="gh">----------------------</span>
-
-Rather than importing the <span class="s">``urlencode``</span> function from the <span class="s">``urllib``</span> module of the Python 2 standard library,
-it should be imported from the <span class="s">``easybuild.tools.py2vs3``</span> package instead,
-to ensure that the code is compatible with both Python 2 and 3.
-
-See also <span class="na">:ref:</span><span class="nv">`py2_py3_compatibility`</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_relocated_urllib:</span>
-
-<span class="gh">``urllib`` module</span>
-<span class="gh">-----------------</span>
-
-Rather than using the <span class="s">``urllib``</span> module from the Python 2 standard library directly,
-the <span class="s">``std_urllib``</span> module from the <span class="s">``easybuild.tools.py2vs3``</span> package should be used instead,
-to ensure that the code is compatible with both Python 2 and 3.
-
-See also <span class="na">:ref:</span><span class="nv">`py2_py3_compatibility`</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_relocated_urllib2:</span>
-
-<span class="gh">``urllib2`` module</span>
-<span class="gh">------------------</span>
-
-Functions that were imported from the <span class="s">``urllib2``</span> package that is part of the Python 2 standard library
-must now be imported from the <span class="s">``easybuild.tools.py2vs3``</span> package, to ensure that the code is compatible with both Python 2 and 3.
-
-See also <span class="na">:ref:</span><span class="nv">`py2_py3_compatibility`</span>.
-
-
-<span class="p">..</span> <span class="nt">_eb4_relocated_vsc_utils_modules:</span>
-
-<span class="gh">``vsc.utils.*`` modules</span>
-<span class="gh">-----------------------</span>
-
-The functionality from the following <span class="s">``vsc.utils.*``</span> modules required by EasyBuild has been ingested in the corresponding <span class="s">``easybuild.base.*``</span> module:
-
-<span class="m">*</span> <span class="s">``vsc.utils.exceptions``</span>
-<span class="m">*</span> <span class="s">``vsc.utils.fancylogger``</span>
-<span class="m">*</span> <span class="s">``vsc.utils.generaloption``</span>
-<span class="m">*</span> <span class="s">``vsc.utils.optcomplete``</span>
-<span class="m">*</span> <span class="s">``vsc.utils.rest``</span>
-<span class="m">*</span> <span class="s">``vsc.utils.testing``</span>
-<span class="m">*</span> <span class="s">``vsc.utils.wrapper``</span>
-
-See also <span class="na">:ref:</span><span class="nv">`eb4_no_required_deps`</span>.
-</code></pre></div>
+<h2 id="eb4_relocated_FrozenDictKnownKeys"><code>FrozenDictKnownKeys</code> class<a class="headerlink" href="#eb4_relocated_FrozenDictKnownKeys" title="Permanent link">&para;</a></h2>
+<p>The <code>FrozenDictKnownKeys</code> class from <code>vsc.utils.missing</code> is now available from <code>easybuild.base.frozendict</code>.</p>
+<h2 id="eb4_relocated_GEENRAL_CLASS"><code>GENERAL_CLASS</code> constant<a class="headerlink" href="#eb4_relocated_GEENRAL_CLASS" title="Permanent link">&para;</a></h2>
+<p>The <code>GENERAL_CLASS</code> constant was relocated from <code>easybuild.tools.module_naming_scheme</code> to <code>easybuild.tools.config</code>.</p>
+<p><code>get_class_for</code> function {: #eb4_relocated_get_class_for }</p>
+<p>The <code>get_class_for</code> function from <code>vsc.utils.missing</code> is now available from <code>easybuild.tools.utilities</code>.</p>
+<h2 id="eb4_relocated_get_subclasses"><code>get_subclasses</code> function<a class="headerlink" href="#eb4_relocated_get_subclasses" title="Permanent link">&para;</a></h2>
+<p>The <code>get_subclasses</code> function from <code>vsc.utils.missing</code> is now available from <code>easybuild.tools.utilities</code>.</p>
+<h2 id="eb4_relocated_INDENT_4SPACES"><code>INDENT_4SPACES</code> constant<a class="headerlink" href="#eb4_relocated_INDENT_4SPACES" title="Permanent link">&para;</a></h2>
+<p>The <code>INDENT_4SPACES</code> constants was relocated from <code>easybuild.framework.easyconfig.format.format</code> to <code>easybuild.tools.utilities</code>.</p>
+<h2 id="eb4_relocated_mk_rst_table"><code>mk_rst_table</code> function<a class="headerlink" href="#eb4_relocated_mk_rst_table" title="Permanent link">&para;</a></h2>
+<p>The <code>mk_rst_table</code> function from <code>vsc.utils.docs</code> is now available from <code>easybuild.tools.docs</code>.</p>
+<h2 id="eb4_relocated_ModuleNamingScheme"><code>ModuleNamingScheme</code> class<a class="headerlink" href="#eb4_relocated_ModuleNamingScheme" title="Permanent link">&para;</a></h2>
+<p>The <code>ModuleNamingScheme</code> class was relocated from <code>easybuild.tools.module_naming_scheme</code> to <code>easybuild.tools.module_naming_scheme.mns</code>.</p>
+<h2 id="eb4_relocated_nub"><code>nub</code> function<a class="headerlink" href="#eb4_relocated_nub" title="Permanent link">&para;</a></h2>
+<p>The <code>nub</code> function from <code>vsc.utils.missing</code> is now available from <code>easybuild.tools.utilities</code>.</p>
+<h2 id="eb4_relocated_OrderedDict"><code>OrderedDict</code> class<a class="headerlink" href="#eb4_relocated_OrderedDict" title="Permanent link">&para;</a></h2>
+<p>The <code>OrderedDict</code> class that is part of the Python 2 standard library (via <code>collections</code>)
+must now be imported from the <code>easybuild.tools.py2vs3</code> package, to ensure that the code is compatible with both Python 2 and 3.</p>
+<p>See also <a class="autorefs autorefs-internal" href="../../python-2-3-compatibility/#py2_py3_compatibility">Compatibility with Python 2 and Python 3</a>.</p>
+<h2 id="eb4_relocated_reload"><code>reload</code> function<a class="headerlink" href="#eb4_relocated_reload" title="Permanent link">&para;</a></h2>
+<p>The <code>reload</code> function that is a built-in function of the Python 2 standard library
+must now be imported from the <code>easybuild.tools.py2vs3</code> package, to ensure that the code is compatible with both Python 2 and 3.</p>
+<p>See also <a class="autorefs autorefs-internal" href="../../python-2-3-compatibility/#py2_py3_compatibility">Compatibility with Python 2 and Python 3</a>.</p>
+<h2 id="eb4_relocated_shell_quote"><code>shell_quote</code> function<a class="headerlink" href="#eb4_relocated_shell_quote" title="Permanent link">&para;</a></h2>
+<p>The <code>shell_quote</code> function from <code>vsc.utils.missing</code> is now available from <code>easybuild.tools.utilities</code>.</p>
+<h2 id="eb4_relocated_sched_getaffinity"><code>sched_getaffinity</code> function<a class="headerlink" href="#eb4_relocated_sched_getaffinity" title="Permanent link">&para;</a></h2>
+<p>The <code>sched_getaffinity</code> function from <code>vsc.utils.affinity</code> is now available from <code>easybuild.tools.systemtools</code>.</p>
+<h2 id="eb4_relocated_Singleton"><code>Singleton</code> class<a class="headerlink" href="#eb4_relocated_Singleton" title="Permanent link">&para;</a></h2>
+<p>The <code>Singleton</code> class from <code>vsc.utils.patterns</code> is now available from <code>easybuild.tools.config</code>.</p>
+<h2 id="eb4_relocated_StringIO"><code>StringIO</code> class<a class="headerlink" href="#eb4_relocated_StringIO" title="Permanent link">&para;</a></h2>
+<p>Rather than importing the <code>StringIO</code> class from the <code>StringIO</code> module of the Python 2 standard library,
+it should be imported from the <code>easybuild.tools.py2vs3</code> package instead,
+to ensure that the code is compatible with both Python 2 and 3.</p>
+<p>See also <a class="autorefs autorefs-internal" href="../../python-2-3-compatibility/#py2_py3_compatibility">Compatibility with Python 2 and Python 3</a>.</p>
+<h2 id="eb4_relocated_subprocess_Popen"><code>subprocess.Popen</code> function<a class="headerlink" href="#eb4_relocated_subprocess_Popen" title="Permanent link">&para;</a></h2>
+<p>Rather than using the <code>subprocess.Popen</code> function directly, the <code>subprocess_popen_text</code> function from
+the <code>easybuild.tools.py2vs3</code> package should be used instead, to ensure that the code is compatible with both Python 2 and 3.</p>
+<p>See also <a class="autorefs autorefs-internal" href="../../python-2-3-compatibility/#py2_py3_compatibility">Compatibility with Python 2 and Python 3</a>.</p>
+<h2 id="eb4_relocated_urlencode"><code>urlencode</code> function<a class="headerlink" href="#eb4_relocated_urlencode" title="Permanent link">&para;</a></h2>
+<p>Rather than importing the <code>urlencode</code> function from the <code>urllib</code> module of the Python 2 standard library,
+it should be imported from the <code>easybuild.tools.py2vs3</code> package instead,
+to ensure that the code is compatible with both Python 2 and 3.</p>
+<p>See also <a class="autorefs autorefs-internal" href="../../python-2-3-compatibility/#py2_py3_compatibility">Compatibility with Python 2 and Python 3</a>.</p>
+<h2 id="eb4_relocated_urllib"><code>urllib</code> module<a class="headerlink" href="#eb4_relocated_urllib" title="Permanent link">&para;</a></h2>
+<p>Rather than using the <code>urllib</code> module from the Python 2 standard library directly,
+the <code>std_urllib</code> module from the <code>easybuild.tools.py2vs3</code> package should be used instead,
+to ensure that the code is compatible with both Python 2 and 3.</p>
+<p>See also <a class="autorefs autorefs-internal" href="../../python-2-3-compatibility/#py2_py3_compatibility">Compatibility with Python 2 and Python 3</a>.</p>
+<h2 id="eb4_relocated_urllib2"><code>urllib2</code> module<a class="headerlink" href="#eb4_relocated_urllib2" title="Permanent link">&para;</a></h2>
+<p>Functions that were imported from the <code>urllib2</code> package that is part of the Python 2 standard library
+must now be imported from the <code>easybuild.tools.py2vs3</code> package, to ensure that the code is compatible with both Python 2 and 3.</p>
+<p>See also <a class="autorefs autorefs-internal" href="../../python-2-3-compatibility/#py2_py3_compatibility">Compatibility with Python 2 and Python 3</a>.</p>
+<h2 id="eb4_relocated_vsc_utils_modules"><code>vsc.utils.*</code> modules<a class="headerlink" href="#eb4_relocated_vsc_utils_modules" title="Permanent link">&para;</a></h2>
+<p>The functionality from the following <code>vsc.utils.*</code> modules required by EasyBuild has been ingested in the corresponding <code>easybuild.base.*</code> module:</p>
+<ul>
+<li><code>vsc.utils.exceptions</code></li>
+<li><code>vsc.utils.fancylogger</code></li>
+<li><code>vsc.utils.generaloption</code></li>
+<li><code>vsc.utils.optcomplete</code></li>
+<li><code>vsc.utils.rest</code></li>
+<li><code>vsc.utils.testing</code></li>
+<li><code>vsc.utils.wrapper</code></li>
+</ul>
+<p>See also <a class="autorefs autorefs-internal" href="../overview-of-changes/#eb4_no_required_deps">No more required Python packages</a>.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 23, 2022</span>
       
     
   </small>
