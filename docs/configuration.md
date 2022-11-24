@@ -58,6 +58,8 @@ For example: to configure EasyBuild to use Lmod as modules tool, the following a
 For more details w.r.t. each of the supported configuration types, see below.
 
 
+### Configuration file(s) {: #configuration_file }
+
 #### List of used configuration files {: #list_of_configuration_files }
 
 The list of configuration files that will be used by EasyBuild is determined in the following order of preference:
