@@ -1,4 +1,4 @@
-# Output of `eb --help`
+# Output of `eb --help` {: #basic_usage_help }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/eb_help.html>.
