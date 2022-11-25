@@ -1,245 +1,188 @@
-.. _py2_py3_compatibility:
+# Compatibility with Python 2 and Python 3 {: #py2_py3_compatibility }
 
-Compatibility with Python 2 and Python 3
-========================================
+Starting with EasyBuild v4.0, the EasyBuild framework and easyblocks are
+compatible with both Python versions 2 and 3. More specifically, the
+following Python versions are currently supported:
 
-Starting with EasyBuild v4.0, the EasyBuild framework and easyblocks are compatible with both Python versions 2 and 3.
-More specifically, the following Python versions are currently supported:
+- Python 2.6.x (support was removed in EasyBuild v4.4.0)
+- Python 2.7.x
+- Python 3.5.x
+- Python 3.6.x
+- Python 3.7.x
+- Python 3.8.x (requires EasyBuild v4.1.0)
 
-* Python 2.6.x (support was removed in EasyBuild v4.4.0)
-* Python 2.7.x
-* Python 3.5.x
-* Python 3.6.x
-* Python 3.7.x
-* Python 3.8.x (requires EasyBuild v4.1.0)
+## Determining which Python version EasyBuild is using via `$EB_VERBOSE` {: #py2_py3_compatibility_EB_VERBOSE }
 
-.. _py2_py3_compatibility_EB_VERBOSE:
+To determine which Python version is being used to run EasyBuild, you
+can define the `$EB_VERBOSE` environment variable.
 
-Determining which Python version EasyBuild is using via ``$EB_VERBOSE``
------------------------------------------------------------------------
+For example:
 
-To determine which Python version is being used to run EasyBuild, you can define the ``$EB_VERBOSE`` environment variable.
+``` console
+$ export EB_VERBOSE=1
+$ eb --version
+>> Considering 'python'...
+>> No 'python' found in $PATH, skipping...
+>> Considering 'python3'...
+>> 'python3' version: 3.6.9, which matches Python 3 version requirement (>= 3.5)
+>> Selected Python command: python3 (/usr/local/bin/python3)
+>> python3 -m easybuild.main --version
+This is EasyBuild 4.0.0 (framework: 4.0.0, easyblocks: 4.0.0) on host example.
+```
 
-For example::
+## Controlling which `python` command EasyBuild will use via `$EB_PYTHON` {: #py2_py3_compatibility_EB_PYTHON }
 
-  $ export EB_VERBOSE=1
-  $ eb --version
-  >> Considering 'python'...
-  >> No 'python' found in $PATH, skipping...
-  >> Considering 'python3'...
-  >> 'python3' version: 3.6.9, which matches Python 3 version requirement (>= 3.5)
-  >> Selected Python command: python3 (/usr/local/bin/python3)
-  >> python3 -m easybuild.main --version
-  This is EasyBuild 4.0.0 (framework: 4.0.0, easyblocks: 4.0.0) on host example.
+The `eb` command will consider different `python` commands, and check
+the Python version corresponding with the command before selecting one.
+The commands considered are (in order):
 
+- `python`
+- `python3`
+- `python2`
 
-.. _py2_py3_compatibility_EB_PYTHON:
+Before considering these commands, `eb` will first consider the command
+name specified via the `$EB_PYTHON` environment variable (if defined),
+so you can always control which Python version is being used if desired.
 
-Controlling which ``python`` command EasyBuild will use via ``$EB_PYTHON``
---------------------------------------------------------------------------
+For example:
 
-The ``eb`` command will consider different ``python`` commands, and check the Python version corresponding with
-the command before selecting one. The commands considered are (in order):
+``` console
+$ export EB_PYTHON=python3.7
+$ export EB_VERBOSE=1
+$ eb --version
+>> Considering 'python3.7'...
+>> 'python3.7' version: 3.7.2, which matches Python 3 version requirement (>= 3.5)
+>> Selected Python command: python3.7 (/usr/local/bin/python3.7)
+>> python3.7 -m easybuild.main --version
+This is EasyBuild 4.0.0 (framework: 4.0.0, easyblocks: 4.0.0) on host example.
+```
 
-* ``python``
-* ``python3``
-* ``python2``
+## The `easybuild.tools.py2vs3` package
 
-Before considering these commands, ``eb`` will first consider the command name specified via the ``$EB_PYTHON``
-environment variable (if defined), so you can always control which Python version is being used if desired.
+To facilitate this, the `easybuild.tools.py2vs3` package was introduced
+in EasyBuild v4.0. When importing a function from this package, you will
+automatically get a version of the function that is compatible with the
+Python version being used to run EasyBuild.
 
-For example::
+Through this approach we can hide subtle differences between Python 2
+and 3, while avoiding code duplication and Python version checks
+throughout the codebase, as well as avoid requiring packages like `six`
+or `future` (which facilitate maintaining compatibility with Python 2
+and 3, but are also a bit of a burden).
 
-  $ export EB_PYTHON=python3.7
-  $ export EB_VERBOSE=1
-  $ eb --version
-  >> Considering 'python3.7'...
-  >> 'python3.7' version: 3.7.2, which matches Python 3 version requirement (>= 3.5)
-  >> Selected Python command: python3.7 (/usr/local/bin/python3.7)
-  >> python3.7 -m easybuild.main --version
-  This is EasyBuild 4.0.0 (framework: 4.0.0, easyblocks: 4.0.0) on host example.
+The `easybuild.tools.py2vs3` package provides two major classes of items
+(listed below in alphabetical order):
 
+- functions from the Python standard library which should be imported
+    from different locations in Python 2 and 3
+- wrappers for functionality in the Python standard library which
+    behaves differently in Python 2 and 3
 
-.. _py2_py3_compatibility_py2vs3_package
+## `ascii_letters` {: #py2vs3_ascii_letters }
 
-The ``easybuild.tools.py2vs3`` package
---------------------------------------
+- Python 2: corresponds to `string.letters`
+- Python 3: corresponds to `string.ascii_letters`
 
-To facilitate this, the ``easybuild.tools.py2vs3`` package was introduced in EasyBuild v4.0.
-When importing a function from this package, you will automatically get a version of the function that
-is compatible with the Python version being used to run EasyBuild.
+## `ascii_lowercase` {: #py2vs3_ascii_lowercase }
 
-Through this approach we can hide subtle differences between Python 2 and 3, while avoiding code duplication
-and Python version checks throughout the codebase, as well as avoid requiring packages like ``six`` or ``future``
-(which facilitate maintaining compatibility with Python 2 and 3, but are also a bit of a burden).
+- Python 2: corresponds to `string.lowercase`
+- Python 3: corresponds to `string.ascii_lowercase`
 
-The ``easybuild.tools.py2vs3`` package provides two major classes of items (listed below in alphabetical order):
+## `build_opener` {: #py2vs3_build_opener }
 
-* functions from the Python standard library which should be imported from different locations in Python 2 and 3
-* wrappers for functionality in the Python standard library which behaves differently in Python 2 and 3
+- Python 2: corresponds to `urllib2.build_opener` function
+- Python 3: corresponds to `urllib.request.build_opener` function
 
-.. _py2vs3_ascii_letters:
+## `configparser` {: #py2vs3_configparser }
 
-``ascii_letters``
------------------
+- Python 2: corresponds to `ConfigParser.configparser` module
+- Python 3: corresponds to `configparser` module
 
-* Python 2: corresponds to ``string.letters``
-* Python 3: corresponds to ``string.ascii_letters``
+## `create_base_metaclass` {: #py2vs3_create_base_metaclass }
 
-.. _py2vs3_ascii_lowercase:
+Function to create a metaclass that can be used as a base class,
+implemented in a way that is compatible with both Python 2 and 3.
 
-``ascii_lowercase``
--------------------
+## `extract_method_name` {: #py2vs3_extract_method_name }
 
-* Python 2: corresponds to ``string.lowercase``
-* Python 3: corresponds to ``string.ascii_lowercase``
+Function to method name from lambda function, implemented in a way that
+is compatible with both Python 2 and 3.
 
-.. _py2vs3_build_opener:
+## `HTTPError` {: #py2vs3_HTTPError }
 
-``build_opener``
-----------------
+- Python 2: corresponds to `urllib2.HTTPError`
+- Python 3: corresponds to `urllib.request.HTTPError`
 
-* Python 2: corresponds to ``urllib2.build_opener`` function
-* Python 3: corresponds to ``urllib.request.build_opener`` function
+## `HTTPSHandler` {: #py2vs3_HTTPSHandler }
 
-.. _py2vs3_configparser:
+- Python 2: corresponds to `urllib2.HTTPSHandler`
+- Python 3: corresponds to `urllib.request.HTTPSHandler`
 
-``configparser``
-----------------
+## `json_loads` {: #py2vs3_json_loads }
 
-* Python 2: corresponds to ``ConfigParser.configparser`` module
-* Python 3: corresponds to ``configparser`` module
+- Python 2: wraps `json.loads` function
 
-.. _py2vs3_create_base_metaclass:
+- Python 3: wraps `json.loads` function, taking into account that for Python versions older than 3.6
+    - a value of type `string` (rather than `bytes`) is required as argument
 
-``create_base_metaclass``
--------------------------
+## `mk_wrapper_baseclass` {: #py2vs3_mk_wrapper_baseclass }
 
-Function to create a metaclass that can be used as a base class, implemented in a way that is compatible with both Python 2 and 3.
+Function to create a wrapper base class using the specified metaclass,
+implemented in a way that is compatible with both Python 2 and 3.
 
-.. _py2vs3_extract_method_name:
+## `OrderedDict` {: #py2vs3_OrderedDict }
 
-``extract_method_name``
-------------------------
+- Python 2.6: corresponds to `easybuild.tools.ordereddict.OrderedDict`
+- Python 2.7: corresponds to `collections.OrderedDict`
+- Python 3: corresponds to `collections.OrderedDict`
 
-Function to method name from lambda function, implemented in a way that is compatible with both Python 2 and 3.
+## `reload` {: #py2vs3_reload }
 
-.. _py2vs3_HTTPError:
+- Python 2: corresponds to `reload` built-in function
+- Python 3: corresponds to `importlib.reload` function
 
-``HTTPError``
--------------
+## `raise_with_traceback` {: #py2vs3_raise_with_traceback }
 
-* Python 2: corresponds to ``urllib2.HTTPError``
-* Python 3: corresponds to ``urllib.request.HTTPError``
+Function to raise an error with specified message and traceback,
+implemented in a way that is compatible with both Python 2 and 3.
 
-.. _py2vs3_HTTPSHandler:
+## `Request` {: #py2vs3_Request }
 
-``HTTPSHandler``
-----------------
+- Python 2: corresponds to `urllib2.Request`
+- Python 3: corresponds to `urllib.request.Request`
 
-* Python 2: corresponds to ``urllib2.HTTPSHandler``
-* Python 3: corresponds to ``urllib.request.HTTPSHandler``
+## `subprocess_popen_text` {: #py2vs3_subprocess_popen_text }
 
-.. _py2vs3_json_loads:
+- Python 2: wrapper for `subprocess.Popen`
+- Python 3: wrapper for `subprocess.Popen` while forcing text mode
+    (using `universal_newlines=True`)
 
-``json_loads``
---------------
+## `std_urllib` {: #py2vs3_std_urllib }
 
-* Python 2: wraps ``json.loads`` function
-* Python 3: wraps ``json.loads`` function, taking into account that for Python versions older than 3.6
-            a value of type ``string`` (rather than ``bytes``) is required as argument
+- Python 2: corresponds to `urllib` package
+- Python 3: corresponds to `urllib.request` package
 
-.. _py2vs3_mk_wrapper_baseclass:
+## `string_type` {: #py2vs3_string_type }
 
-``mk_wrapper_baseclass``
-------------------------
+- Python 2: corresponds to `basestring` built-in string type
+- Python 3: corresponds to `str` built-in string type
 
-Function to create a wrapper base class using the specified metaclass, implemented in a way that is compatible with both Python 2 and 3.
+## `StringIO` {: #py2vs3_StringIO }
 
-.. _py2vs3_OrderedDict:
+- Python 2: corresponds to `StringIO.StringIO` class
+- Python 3: corresponds to `io.StringIO` class
 
-``OrderedDict``
----------------
+## `urlencode` {: #py2vs3_urlencode }
 
-* Python 2.6: corresponds to ``easybuild.tools.ordereddict.OrderedDict``
-* Python 2.7: corresponds to ``collections.OrderedDict``
-* Python 3: corresponds to ``collections.OrderedDict``
+- Python 2: corresponds to `urllib.urlencode` function
+- Python 2: corresponds to `urllib.parse.urlencode` function
 
-.. _py2vs3_reload:
+## `URLError` {: #py2vs3_URLError }
 
-``reload``
-----------
+- Python 2: corresponds to `urllib2.URLError`
+- Python 3: corresponds to `urllib.request.URLError`
 
-* Python 2: corresponds to ``reload`` built-in function
-* Python 3: corresponds to ``importlib.reload`` function
+## `urlopen` {: #py2vs3_urlopen }
 
-.. _py2vs3_raise_with_traceback:
-
-``raise_with_traceback``
-------------------------
-
-Function to raise an error with specified message and traceback, implemented in a way that is compatible with both Python 2 and 3.
-
-.. _py2vs3_Request:
-
-``Request``
------------
-
-* Python 2: corresponds to ``urllib2.Request``
-* Python 3: corresponds to ``urllib.request.Request``
-
-.. _py2vs3_subprocess_popen_text:
-
-``subprocess_popen_text``
--------------------------
-
-* Python 2: wrapper for ``subprocess.Popen``
-* Python 3: wrapper for ``subprocess.Popen`` while forcing text mode (using ``universal_newlines=True``)
-
-.. _py2vs3_std_urllib:
-
-``std_urllib``
---------------
-
-* Python 2: corresponds to ``urllib`` package
-* Python 3: corresponds to ``urllib.request`` package
-
-.. _py2vs3_string_type:
-
-``string_type``
----------------
-
-* Python 2: corresponds to ``basestring`` built-in string type
-* Python 3: corresponds to ``str`` built-in string type
-
-.. _py2vs3_StringIO:
-
-``StringIO``
-------------
-
-* Python 2: corresponds to ``StringIO.StringIO`` class
-* Python 3: corresponds to ``io.StringIO`` class
-
-.. _py2vs3_urlencode:
-
-``urlencode``
--------------
-
-* Python 2: corresponds to ``urllib.urlencode`` function
-* Python 2: corresponds to ``urllib.parse.urlencode`` function
-
-.. _py2vs3_URLError:
-
-``URLError``
-------------
-
-* Python 2: corresponds to ``urllib2.URLError``
-* Python 3: corresponds to ``urllib.request.URLError``
-
-.. _py2vs3_urlopen:
-
-``urlopen``
------------
-
-* Python 2: corresponds to ``urllib2.urlopen``
-* Python 3: corresponds to ``urllib.request.urlopen``
+- Python 2: corresponds to `urllib2.urlopen`
+- Python 3: corresponds to `urllib.request.urlopen`
