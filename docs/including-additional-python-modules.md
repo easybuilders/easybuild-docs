@@ -1,21 +1,3 @@
-# Including additional Python modules {: #including_additional_python_modules }
-
-## Including additional easyblocks (`--include-easyblocks`) {: #include_easyblocks}
-
-!!! warning
-    This page will soon replace <https://docs.easybuild.io/en/latest/Including_additional_Python_modules.html>.
-
-    **
-    It still needs to be ported from *reStructuredText* (.rst) to *MarkDown* (.md),  
-    and you can help with that!
-    **
-
-    - source: [`docs/Including_additional_Python_modules.rst` in `easybuilders/easybuild` repo](https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Including_additional_Python_modules.rst)
-    - target: [`docs/including-additional-python-modules.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/including-additional-python-modules.md)
-
-    See <https://github.com/easybuilders/easybuild-docs> for more information.
-
-```rst
 .. _including_additional_python_modules:
 
 Including additional Python modules (``--include-*``)
@@ -180,5 +162,3 @@ components implemented by the Python modules located in the directory ``$HOME/my
         ...
         mytoolchain: MyCompiler, MyMPI
         ...
-
-```
