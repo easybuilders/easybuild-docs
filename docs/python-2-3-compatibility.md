@@ -175,7 +175,7 @@ implemented in a way that is compatible with both Python 2 and 3.
 ## `urlencode` {: #py2vs3_urlencode }
 
 - Python 2: corresponds to `urllib.urlencode` function
-- Python 2: corresponds to `urllib.parse.urlencode` function
+- Python 3: corresponds to `urllib.parse.urlencode` function
 
 ## `URLError` {: #py2vs3_URLError }
 
