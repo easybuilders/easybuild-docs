@@ -14,9 +14,7 @@ This page:
 - describes the
     [Deprecation policy][deprecation_policy]
 - explains how to easily
-    [check whether you are still relying on deprecated functionality
-    <how_to_check_use_of_deprecated_functionality>][check whether you are still relying on deprecated functionality
-    <how_to_check_use_of_deprecated_functionality>]
+    [check for use of deprecated functionality][how_to_check_use_of_deprecated_functionality]
 
 ## Overview of deprecated functionality in EasyBuild version {: #overview_deprecated }
 
