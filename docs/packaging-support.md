@@ -1,21 +1,3 @@
-# Packaging support {: #packaging_support }
-
-## Configuration options {: #packaging_config}
-
-!!! warning
-    This page will soon replace <https://docs.easybuild.io/en/latest/Packaging_support.html>.
-
-    **
-    It still needs to be ported from *reStructuredText* (.rst) to *MarkDown* (.md),  
-    and you can help with that!
-    **
-
-    - source: [`docs/Packaging_support.rst` in `easybuilders/easybuild` repo](https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Packaging_support.rst)
-    - target: [`docs/packaging-support.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/packaging-support.md)
-
-    See <https://github.com/easybuilders/easybuild-docs> for more information.
-
-```rst
 .. _packaging_support:
 
 Packaging support
@@ -194,5 +176,3 @@ To create packages for existing software installations (performed using EasyBuil
     == COMPLETED: Installation ended successfully
     == Results of the build can be found in the log file /home/example/software/Perl/5.20.1-GCC-4.9.2-bare/easybuild/easybuild-Perl-5.20.1-20150527.041734.log
     == Build succeeded for 1 out of 1
-
-```
