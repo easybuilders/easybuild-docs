@@ -1,20 +1,3 @@
-# Installing environment modules without root permissions {: #installing_env_mod_c }
-
-!!! warning
-    This page will soon replace <https://docs.easybuild.io/en/latest/Installing-environment-modules-without-root-permissions.html>.
-
-    **
-    It still needs to be ported from *reStructuredText* (.rst) to *MarkDown* (.md),  
-    and you can help with that!
-    **
-
-    - source: [`docs/Installing-environment-modules-without-root-permissions.rst` in `easybuilders/easybuild` repo](https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Installing-environment-modules-without-root-permissions.rst)
-    - target: [`docs/installing-environment-modules-without-root-permissions.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/installing-environment-modules-without-root-permissions.md)
-
-    See <https://github.com/easybuilders/easybuild-docs> for more information.
-
-```rst
-
 .. _installing_env_mod_c:
 
 Installing environment modules without root permissions
@@ -134,6 +117,3 @@ To make a long story short, these are the commands you need to execute:
     source $HOME/.local/environment-modules/Modules/3.2.10/init/bash
 
 .. tip:: Add these three lines in your ``.bashrc`` file, that way they’ll be executed every time you log in.
-
-
-```
