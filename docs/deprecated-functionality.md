@@ -19,7 +19,7 @@ This page:
 ## Overview of deprecated functionality in EasyBuild version {: #overview_deprecated }
 
 The different section below document the functionality that is
-deprecated in EasyBuild version , for which support will be removed in
+deprecated in EasyBuild version, for which support will be removed in
 EasyBuild version 5.0.
 
 For EasyBuild users:
