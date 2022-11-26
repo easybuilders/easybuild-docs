@@ -3,4 +3,5 @@ mkdocs-material
 mkdocs-redirects
 mkdocs-git-revision-date-localized-plugin
 mkdocs-autorefs
+mkdocs-exclude-search
 mkapi

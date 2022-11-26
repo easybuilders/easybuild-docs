@@ -131,3 +131,67 @@
 [data-md-color-switching] *::after {
   transition-duration: 0ms !important; /* stylelint-disable-line */
 }
+
+/* mkapi */
+.mkapi-section-name-body {
+  color: var(--md-typeset-color);
+  font-weight: inherit;
+  letter-spacing: inherit;
+}
+
+.mkapi-item-type,
+.mkapi-object-kind.module,
+.mkapi-object-kind.package,
+.mkapi-section-name-body.bases {
+  color: var(--eb-green);
+}
+
+.mkapi-items code.mkapi-item-name,
+.mkapi-items code.mkapi-object-parenthesis,
+.mkapi-items code.mkapi-object-signature {
+  background-color: inherit;
+  color: inherit;
+}
+
+a.mkapi-docs-link,
+a.mkapi-src-link,
+.mkapi-item-name a:hover {
+  background-color: inherit;
+}
+
+a.mkapi-src-link:hover,
+a.mkapi-docs-link:hover {
+  border-color: var(--eb-blue);
+  background-color: var(--eb-green);
+  color: var(--md-default-bg-color);
+}
+
+.mkapi-object-body code.mkapi-object-parenthesis,
+.mkapi-object-body code.mkapi-object-signature,
+.mkapi-node .mkapi-object-body.top code.mkapi-object-parenthesis,
+.mkapi-node .mkapi-object-body.top code.mkapi-object-signature {
+  color: var(--md-code-hl-keyword-color);
+}
+
+.mkapi-object-kind.top {
+  color: var(--md-code-hl-operator-color);
+}
+
+code.mkapi-object-name,
+code.mkapi-object-prefix {
+  color: var(--md-code-hl-name-color);
+}
+
+div.mkapi-object.class.code,
+div.mkapi-object.class.top.code,
+div.mkapi-object.function.code,
+div.mkapi-object.function.top.code,
+div.mkapi-object.generator.code,
+div.mkapi-object.generator.top.code,
+div.mkapi-object.method.code,
+div.mkapi-object.method.top.code {
+  color: var(--md-default-fg-color);
+  background-color: var(--md-code-bg-color);
+  border-color: var(--eb-blue);
+  max-width: calc(101% - 4em);
+}

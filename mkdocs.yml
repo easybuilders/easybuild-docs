@@ -27,7 +27,12 @@ nav:
   - Release notes: release-notes.md
   - API: api/index.md
   - Getting help: getting-help.md
-  - API: mkapi/api-base/base
+  - API (easybuild.base): mkapi/api-base/base
+  - API (easybuild.framework): mkapi/api-framework/framework
+  # exclude because lots of pages makes "mkdocs serve" take a long time
+  # - API (easybuild.toolchains): mkapi/api-toolchains/toolchains
+  # exclude because it blows up on configobj.py
+  # - API (easybuild.tools): mkapi/api-tools/tools
 
 markdown_extensions:
   # add attributes to html elements
@@ -63,6 +68,9 @@ plugins:
   - git-revision-date-localized:
       exclude:
         - api-base/*
+        - api-framework/*
+        - api-toolchains/*
+        - api-tools/*
   # generate API docs
   - mkapi:
       src_dirs: ["../easybuild-framework/easybuild"]
@@ -72,6 +80,9 @@ plugins:
   - exclude-search:
       exclude:
         - api-base/*
+        - api-framework/*
+        - api-toolchains/*
+        - api-tools/*
   # redirects for original EasyBuild documentation to avoid broken URLs
   - redirects:
       redirect_maps:
