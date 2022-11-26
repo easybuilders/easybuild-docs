@@ -8,15 +8,6 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
-        with:
-          path: docs
-
-      - name: Check out branfosj/easybuild-framework
-        uses: actions/checkout@v3
-        with:
-          repository: branfosj/easybuild-framework
-          ref: doc
-          path: easybuild-framework
 
       - name: set up Python
         uses: actions/setup-python@v4
@@ -28,24 +19,17 @@ jobs:
         with:
           check_filenames: true
           ignore_words_list: atleast,ninjs,simpy,proovread,namd,precice
-          path: docs
 
       - name: check internal links
-        run: |
-          python ./.github/workflows/link_check.py
+        run: python ./.github/workflows/link_check.py
 
       - name: install mkdocs
         run: |
           pip install -r requirements.txt
           mkdocs --version
 
-      - name: install branfosj/easybuild-framework
-        run: (cd easybuild-framework && pip install -e .)
-
       - name: build tutorial
         # can't use --strict due to warnings being produced by mkdocs-redirect plugin
         # because we are re-directing .html pages
         # run: mkdocs build --strict
-        run: |
-          cd docs
-          mkdocs build
+        run: mkdocs build
