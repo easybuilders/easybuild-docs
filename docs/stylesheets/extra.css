@@ -189,7 +189,9 @@ div.mkapi-object.function.top.code,
 div.mkapi-object.generator.code,
 div.mkapi-object.generator.top.code,
 div.mkapi-object.method.code,
-div.mkapi-object.method.top.code {
+div.mkapi-object.method.top.code,
+div.mkapi-object.staticmethod.code,
+div.mkapi-object.staticmethod.top.code {
   color: var(--md-default-fg-color);
   background-color: var(--md-code-bg-color);
   border-color: var(--eb-blue);
