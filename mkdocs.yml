@@ -27,6 +27,7 @@ nav:
   - Release notes: release-notes.md
   - API: api/index.md
   - Getting help: getting-help.md
+  - API: mkapi/api-base/base
 
 markdown_extensions:
   # add attributes to html elements
@@ -59,9 +60,18 @@ plugins:
   # autolinks across pages
   - autorefs
   # show revision date at bottom of each page
-  - git-revision-date-localized
+  - git-revision-date-localized:
+      exclude:
+        - api-base/*
+  # generate API docs
+  - mkapi:
+      src_dirs: ["../easybuild-framework/easybuild"]
+      filters: [strict]
   # necessary for search to work
   - search
+  - exclude-search:
+      exclude:
+        - api-base/*
   # redirects for original EasyBuild documentation to avoid broken URLs
   - redirects:
       redirect_maps:
