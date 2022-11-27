@@ -3,3 +3,5 @@ mkdocs-material
 mkdocs-redirects
 mkdocs-git-revision-date-localized-plugin
 mkdocs-autorefs
+novella
+pydoc-markdown[novella]

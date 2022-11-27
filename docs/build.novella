@@ -1,0 +1,10 @@
+
+template "mkdocs"
+
+action "mkdocs-update-config" {
+  pass
+}
+
+action "preprocess-markdown" {
+  use "pydoc"
+}
