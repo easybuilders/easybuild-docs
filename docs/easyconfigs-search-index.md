@@ -1,4 +1,4 @@
-# Using an index to speed up searching for easyconfigs
+# Using an index to speed up searching for easyconfigs {: #easyconfigs_index }
 
 !!! warning
     This page will soon replace <https://docs.easybuild.io/en/latest/Easyconfigs_index.html>.

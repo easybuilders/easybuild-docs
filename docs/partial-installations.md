@@ -1,4 +1,4 @@
-# Partial installations {: partial_installations }
+# Partial installations {: #partial_installations }
 
 Several ways of performing partial installations are supported. These may be useful when debugging a particular issue
 with the installation procedure being performed by EasyBuild, updating existing software installations or module files,
