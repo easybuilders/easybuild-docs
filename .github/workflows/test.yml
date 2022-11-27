@@ -38,7 +38,7 @@ jobs:
       - name: install eb
         run: |
           (cd src/easybuild/tools/py2vs3 && mv py2.py{,.orig} && ln -s py3.py py2.py)
-          (cd src/easybuild && pip install -e .)
+          (cd src && pip install -e .)
 
       - name: build tutorial
         # can't use --strict due to warnings being produced by mkdocs-redirect plugin
