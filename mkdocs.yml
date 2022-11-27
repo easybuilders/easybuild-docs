@@ -27,6 +27,7 @@ nav:
   - Release notes: release-notes.md
   - API: api/index.md
   - Getting help: getting-help.md
+  - Code Reference: reference/
 
 markdown_extensions:
   # add attributes to html elements
@@ -58,8 +59,23 @@ extra:
 plugins:
   # autolinks across pages
   - autorefs
+  # api documentation
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          options:
+            show_source: true
+            docstring_style: sphinx
+  - gen-files:
+      scripts:
+        - docs/gen_ref_pages.py
+  - literate-nav:
+      nav_file: SUMMARY.md
+  - section-index
   # show revision date at bottom of each page
-  - git-revision-date-localized
+  - git-revision-date-localized:
+      fallback_to_build_date: true
   # necessary for search to work
   - search
   # redirects for original EasyBuild documentation to avoid broken URLs
