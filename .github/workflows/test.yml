@@ -9,12 +9,6 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
 
-      - name: checkout easybuild framework
-        uses: actions/checkout@v3
-        with:
-          repository: easybuilders/easybuild-framework
-          path: src
-
       - name: set up Python
         uses: actions/setup-python@v4
         with:
@@ -25,11 +19,16 @@ jobs:
         with:
           check_filenames: true
           ignore_words_list: atleast,ninjs,simpy,proovread,namd,precice
-          skip: src/*
 
       - name: check internal links
         run: |
           python ./.github/workflows/link_check.py
+
+      - name: checkout easybuild framework
+        uses: actions/checkout@v3
+        with:
+          repository: easybuilders/easybuild-framework
+          path: src
 
       - name: install mkdocs
         run: |
