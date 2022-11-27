@@ -25,6 +25,7 @@ jobs:
         with:
           check_filenames: true
           ignore_words_list: atleast,ninjs,simpy,proovread,namd,precice
+          skip: src/*
 
       - name: check internal links
         run: |
