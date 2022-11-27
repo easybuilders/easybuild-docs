@@ -76,6 +76,8 @@ plugins:
   # show revision date at bottom of each page
   - git-revision-date-localized:
       fallback_to_build_date: true
+      exclude:
+        - reference/*
   # necessary for search to work
   - search
   # redirects for original EasyBuild documentation to avoid broken URLs
