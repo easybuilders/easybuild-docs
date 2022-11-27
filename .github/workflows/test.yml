@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: set up Python
         uses: actions/setup-python@v4
@@ -21,8 +23,7 @@ jobs:
           ignore_words_list: atleast,ninjs,simpy,proovread,namd,precice
 
       - name: check internal links
-        run: |
-          python ./.github/workflows/link_check.py
+        run: python ./.github/workflows/link_check.py
 
       - name: checkout easybuild framework
         uses: actions/checkout@v3
@@ -35,7 +36,7 @@ jobs:
           pip install -r requirements.txt
           mkdocs --version
 
-      - name: install eb
+      - name: install easybuild framework, having first removed the problematic py2.py
         run: |
           (cd src/easybuild/tools/py2vs3 && mv py2.py{,.orig} && ln -s py3.py py2.py)
           (cd src && pip install -e .)
