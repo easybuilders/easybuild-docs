@@ -1,3 +1,3 @@
-# easybuild.main
+# easybuild
 
-@pydoc easybuild.main
+@pydoc easybuild
