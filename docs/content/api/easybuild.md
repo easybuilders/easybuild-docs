@@ -1,3 +1,0 @@
-# easybuild
-
-@pydoc easybuild
