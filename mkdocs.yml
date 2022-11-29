@@ -115,7 +115,6 @@ plugins:
         en/latest/Typical_workflow_example_with_WRF.html: typical-workflow-example-with-wrf.md
         en/latest/Unit-tests.html: unit-tests.md
         en/latest/Useful-scripts.html: useful-scripts.md
-        en/latest/Useful_links.html: useful-links.md
         en/latest/Using_external_modules.html: using-external-modules.md
         en/latest/Using_the_EasyBuild_command_line.html: using-easybuild.md
         en/latest/Wrapping_dependencies.html: wrapping-dependencies.md
