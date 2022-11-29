@@ -131,7 +131,7 @@ Using the `--index-max-age` configuration option, you can specify how
 long after the creation time the index remains valid (in seconds).
 
 By default, EasyBuild will consider index files to remain valid for 1
-week (7 * 24 * 60 * 60 = 604,800 seconds).
+week (`7 * 24 * 60 * 60 = 604,800` seconds).
 
 To create an index that *always* remains valid (never expires), use zero
 (`0`) as value for `--index-max-age`:
