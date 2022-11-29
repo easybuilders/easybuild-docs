@@ -231,11 +231,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.easybuild.io/useful-links/</loc>
-         <lastmod>2022-11-29</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.easybuild.io/useful-scripts/</loc>
          <lastmod>2022-11-29</lastmod>
          <changefreq>daily</changefreq>
