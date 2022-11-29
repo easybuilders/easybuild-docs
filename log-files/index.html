@@ -15,7 +15,7 @@
     
     
       
-        <title>EasyBuild log files - EasyBuild - building software with ease</title>
+        <title>Understanding EasyBuild logs {: #understanding_easyBuild_logs } - EasyBuild - building software with ease</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#easybuild-log-files" class="md-skip">
+        <a href="#understanding_easyBuild_logs" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              EasyBuild log files
+              Understanding EasyBuild logs {: #understanding_easyBuild_logs }
             
           </span>
         </div>
@@ -368,141 +368,110 @@
   </a>
 
 
-<h1 id="easybuild-log-files">EasyBuild log files<a class="headerlink" href="#easybuild-log-files" title="Permanent link">&para;</a></h1>
-<h2 id="understanding_easyBuild_logs">Understanding EasyBuild logs<a class="headerlink" href="#understanding_easyBuild_logs" title="Permanent link">&para;</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/Logfiles.html">https://docs.easybuild.io/en/latest/Logfiles.html</a>.</p>
-<p><strong>
-It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
-and you can help with that!
-</strong></p>
-<ul>
-<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/Logfiles.rst"><code>docs/Logfiles.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
-<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/log-files.md"><code>docs/log-files.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
-</ul>
-<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_understanding_easyBuild_logs:</span>
-
-<span class="gh">Understanding EasyBuild logs</span>
-<span class="gh">=============================</span>
-
-EasyBuild thoroughly keeps track of the executed build and install procedures.
-This page details some of the specifics, to help you making sense of them.
-
-
-<span class="gh">Basic information</span>
-<span class="gh">-----------------</span>
-
-During an invocation of the <span class="s">``eb``</span> command, a temporary log file is provided.
-This log can be consulted in case any problems occur during the process.
-Right before completing successfully, EasyBuild will clean up this temporary log file.
-
-A separate log file is created for each build and install procedure that is performed.
-After each successful installation, this application log file is copied to the install
-directory for future reference.
-
-By default, the application log file is copied to a subdirectory of the installation
-prefix named <span class="s">``easybuild``</span>, and has a filename like
-<span class="s">``easybuild-HPL-2.0-20141103.104412.log``</span> for example, which corresponds to the filename
-template <span class="s">``easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log``</span>.
-This aspect can be tweaked via the <span class="s">``--logfile-format``</span> configuration option.
-
-Example<span class="se">::</span>
-
-<span class="s">  $ eb HPL-2.0-goolf-1.4.10.eb</span>
-<span class="s">  == temporary log file in case of crash /tmp/easybuild-rHHgBu/easybuild-XD0Ae_.log</span>
-<span class="s">  [...]</span>
-<span class="s">  == building and installing HPL/2.0-goolf-1.4.10...</span>
-<span class="s">  [...]</span>
-<span class="s">  == COMPLETED: Installation ended successfully</span>
-<span class="s">  == Results of the build can be found in the log file /home/example/.local/easybuild/software/HPL/2.0-goolf-1.4.10/easybuild/easybuild-HPL-2.0-20141103.104412.log</span>
-<span class="s">  == Build succeeded for 1 out of 1</span>
-<span class="s">  == temporary log file /tmp/easybuild-rHHgBu/easybuild-XD0Ae_.log has been removed.</span>
-<span class="s">  == temporary directory /tmp/easybuild-rHHgBu has been removed.</span>
-
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Enabling debug mode using the <span class="s">``--debug``</span> or <span class="s">``-d``</span> command line option
-  ensures that all details of the executed build and installation procedure are included
-  in the log file, but will also result is significantly bigger and more verbose logs.
-
-<span class="p">..</span> <span class="ow">tip</span><span class="p">::</span> Always include a reference to a log file (even if partial) when reporting
-  a potential bug in EasyBuild. A particularly useful way of doing so is by creating
-  a Gist (https://gist.github.com/), and sharing the corresponding URL. This is much
-  better than sending a lengthy log file via email, since it can be easily shared across
-  different communication channels (mailing list, IRC, IM, etc.).
-
-
-<span class="gh">Navigating log files</span>
-<span class="gh">--------------------</span>
-
-Extracting the information you&#39;re interested in from an EasyBuild log file
-may be a daunting task, especially for debug logs. The information and guidelines
-in this section should make navigating logs less scary.
-
-<span class="gh">Log message format</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~</span>
-
-
-Each log message as emitted by EasyBuild follows a well-defined format.
-Example<span class="se">::</span>
-
-<span class="s">  == 2014-11-03 13:34:31,906 main.EB_HPL INFO This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host example.</span>
-
-Each log line consists of the following parts:
-
-<span class="m">*</span> a prefix label <span class="s">``==``</span>, which is useful to discriminate between EasyBuild log messages and the output of executed shell commands;
-<span class="m">*</span> date and time information (e.g., <span class="s">``2014-11-03 13:34:31,906``</span>);
-<span class="m">*</span> the Python module/class/function that is responsible for the log message (e.g., <span class="s">``main.EB_HPL``</span>);
-<span class="m">*</span> the log level (e.g., <span class="s">``INFO``</span>);
-<span class="m">*</span> and a string with the actual log message at the end
-
-<span class="gh">Useful handles in log files</span>
-<span class="gh">~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
-
-Next to looking for a particular search pattern (e.g., <span class="s">``[Ee]rror``</span>),
-there are a couple of handles that can be used to jump around in log files.
-
-<span class="gh">Step markers</span>
-<span class="gh">^^^^^^^^^^^^</span>
-
-For each step performed in the build and installation process, corresponding log messages is emitted. For example<span class="se">::</span>
-
-<span class="s">  == 2014-11-03 13:34:48,816 main.EB_HPL INFO configuring...</span>
-<span class="s">  == 2014-11-03 13:34:48,817 main.EB_HPL INFO Starting configure step</span>
-<span class="s">  [...]</span>
-<span class="s">  == 2014-11-03 13:34:48,823 main.EB_HPL INFO Running method configure_step part of step configure</span>
-
-
-This allows you to navigate a log file step by step, for example using the <span class="s">``_step``</span> search pattern.
-
-
-<span class="gh">Executed shell commands</span>
-<span class="gh">^^^^^^^^^^^^^^^^^^^^^^^</span>
-
-For each executed shell command, log messages are included with the full command line,
-the location where the command was executed and the command&#39;s output and exit code.
-For example<span class="se">::</span>
-
-<span class="s">  == 2014-11-03 13:34:48,823 main.run DEBUG run_cmd: running cmd /bin/bash make_generic (in /tmp/user/easybuild_build/HPL/2.0/goolf-1.4.10/hpl-2.0/setup)</span>
-<span class="s">  == 2014-11-03 13:34:48,823 main.run DEBUG run_cmd: Command output will be logged to /tmp/easybuild-W85p4r/easybuild-run_cmd-XoJwMY.log</span>
-<span class="s">  == 2014-11-03 13:34:48,849 main.run INFO cmd &quot;/bin/bash make_generic&quot; exited with exitcode 0 and output:</span>
-
-If you are primarily interested in the different commands as they were executed by EasyBuild,
-you can use <span class="s">``INFO cmd``</span> (or <span class="s">``run_cmd``</span>, in debug logs) as a search pattern.
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> Next to the configure/build/install commands, EasyBuild also runs
-  a couple of other commands to obtain system information, or to query the modules tool.
-  Typically, a single invocation of <span class="s">``eb``</span> involves executing a dozen or so different shell commands, minimally.
+<h1 id="understanding_easyBuild_logs">Understanding EasyBuild logs<a class="headerlink" href="#understanding_easyBuild_logs" title="Permanent link">&para;</a></h1>
+<p>EasyBuild thoroughly keeps track of the executed build and install
+procedures. This page details some of the specifics, to help you making
+sense of them.</p>
+<h2 id="basic-information">Basic information<a class="headerlink" href="#basic-information" title="Permanent link">&para;</a></h2>
+<p>During an invocation of the <code>eb</code> command, a temporary log file is
+provided. This log can be consulted in case any problems occur during
+the process. Right before completing successfully, EasyBuild will clean
+up this temporary log file.</p>
+<p>A separate log file is created for each build and install procedure that
+is performed. After each successful installation, this application log
+file is copied to the install directory for future reference.</p>
+<p>By default, the application log file is copied to a subdirectory of the
+installation prefix named <code>easybuild</code>, and has a filename like
+<code>easybuild-HPL-2.0-20141103.104412.log</code> for example, which corresponds
+to the filename template
+<code>easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log</code>. This aspect can
+be tweaked via the <code>--logfile-format</code> configuration option.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb HPL-2.0-goolf-1.4.10.eb
+<span class="go">== temporary log file in case of crash /tmp/easybuild-rHHgBu/easybuild-XD0Ae_.log</span>
+<span class="go">[...]</span>
+<span class="go">== building and installing HPL/2.0-goolf-1.4.10...</span>
+<span class="go">[...]</span>
+<span class="go">== COMPLETED: Installation ended successfully</span>
+<span class="go">== Results of the build can be found in the log file /home/example/.local/easybuild/software/HPL/2.0-goolf-1.4.10/easybuild/easybuild-HPL-2.0-20141103.104412.log</span>
+<span class="go">== Build succeeded for 1 out of 1</span>
+<span class="go">== temporary log file /tmp/easybuild-rHHgBu/easybuild-XD0Ae_.log has been removed.</span>
+<span class="go">== temporary directory /tmp/easybuild-rHHgBu has been removed.</span>
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Enabling debug mode using the <code>--debug</code> or <code>-d</code> command line option
+ensures that all details of the executed build and installation
+procedure are included in the log file, but will also result is
+significantly bigger and more verbose logs.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Always include a reference to a log file (even if partial) when reporting
+a potential bug in EasyBuild. A particularly useful way of doing so
+is by creating a Gist (<a href="https://gist.github.com/">https://gist.github.com/</a>), and sharing the
+corresponding URL. This is much better than sending a lengthy log
+file via email, since it can be easily shared across different
+communication channels (mailing list, IRC, IM, etc.).</p>
+</div>
+<h2 id="navigating-log-files">Navigating log files<a class="headerlink" href="#navigating-log-files" title="Permanent link">&para;</a></h2>
+<p>Extracting the information you're interested in from an EasyBuild log
+file may be a daunting task, especially for debug logs. The information
+and guidelines in this section should make navigating logs less scary.</p>
+<h3 id="log-message-format">Log message format<a class="headerlink" href="#log-message-format" title="Permanent link">&para;</a></h3>
+<p>Each log message as emitted by EasyBuild follows a well-defined format.
+Example:</p>
+<div class="highlight"><pre><span></span><code><span class="go">== 2014-11-03 13:34:31,906 main.EB_HPL INFO This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host example.</span>
+</code></pre></div>
+<p>Each log line consists of the following parts:</p>
+<ul>
+<li>a prefix label <code>==</code>, which is useful to discriminate between
+    EasyBuild log messages and the output of executed shell commands;</li>
+<li>date and time information (e.g., <code>2014-11-03 13:34:31,906</code>);</li>
+<li>the Python module/class/function that is responsible for the log
+    message (e.g., <code>main.EB_HPL</code>);</li>
+<li>the log level (e.g., <code>INFO</code>);</li>
+<li>and a string with the actual log message at the end</li>
+</ul>
+<h3 id="useful-handles-in-log-files">Useful handles in log files<a class="headerlink" href="#useful-handles-in-log-files" title="Permanent link">&para;</a></h3>
+<p>Next to looking for a particular search pattern (e.g., <code>[Ee]rror</code>),
+there are a couple of handles that can be used to jump around in log
+files.</p>
+<h4 id="step-markers">Step markers<a class="headerlink" href="#step-markers" title="Permanent link">&para;</a></h4>
+<p>For each step performed in the build and installation process,
+corresponding log messages is emitted. For example:</p>
+<div class="highlight"><pre><span></span><code><span class="go">== 2014-11-03 13:34:48,816 main.EB_HPL INFO configuring...</span>
+<span class="go">== 2014-11-03 13:34:48,817 main.EB_HPL INFO Starting configure step</span>
+<span class="go">[...]</span>
+<span class="go">== 2014-11-03 13:34:48,823 main.EB_HPL INFO Running method configure_step part of step configure</span>
+</code></pre></div>
+<p>This allows you to navigate a log file step by step, for example using
+the <code>_step</code> search pattern.</p>
+<h4 id="executed-shell-commands">Executed shell commands<a class="headerlink" href="#executed-shell-commands" title="Permanent link">&para;</a></h4>
+<p>For each executed shell command, log messages are included with the full
+command line, the location where the command was executed and the
+command's output and exit code. For example:</p>
+<div class="highlight"><pre><span></span><code><span class="go">== 2014-11-03 13:34:48,823 main.run DEBUG run_cmd: running cmd /bin/bash make_generic (in /tmp/user/easybuild_build/HPL/2.0/goolf-1.4.10/hpl-2.0/setup)</span>
+<span class="go">== 2014-11-03 13:34:48,823 main.run DEBUG run_cmd: Command output will be logged to /tmp/easybuild-W85p4r/easybuild-run_cmd-XoJwMY.log</span>
+<span class="go">== 2014-11-03 13:34:48,849 main.run INFO cmd &quot;/bin/bash make_generic&quot; exited with exitcode 0 and output:</span>
+</code></pre></div>
+<p>If you are primarily interested in the different commands as they were
+executed by EasyBuild, you can use <code>INFO cmd</code> (or <code>run_cmd</code>, in debug
+logs) as a search pattern.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Next to the configure/build/install commands, EasyBuild also runs
+a couple of other commands to obtain system information, or to query
+the modules tool. Typically, a single invocation of <code>eb</code> involves
+executing a dozen or so different shell commands, minimally.</p>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 2, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 26, 2022</span>
       
     
   </small>
