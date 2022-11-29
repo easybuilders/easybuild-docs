@@ -1,9 +1,9 @@
 # Using an index to speed up searching for easyconfigs {: #easyconfigs_index }
 
-EasyBuild often needs to search for [easyconfig_files][easyconfig_files] (or accompanying files like patches), either based on
+EasyBuild often needs to search for [Easyconfig files][easyconfig_files] (or accompanying files like patches), either based on
 command line arguments (like the name of an easyconfig file) or options
 to the `eb` command (like `--search`, see
-[searching_for_easyconfigs][searching_for_easyconfigs]), or to
+[Searching for easyconfigs][searching_for_easyconfigs]), or to
 resolve dependencies for a particular easyconfig file that was parsed
 already.
 
@@ -19,7 +19,9 @@ files in your setup, using an *index* file could make a big difference.
     Support for index files was implemented in EasyBuild version
     4.2.0 .
 
-## Creating an index (`--create-index`) {: #easyconfigs_index_create }
+## Creating an index {: #easyconfigs_index_create }
+
+*(`--create-index`)*
 
 `eb --create-index` can be used to create an index file for a particular
 directory that holds a (large) set of easyconfig files.
@@ -29,14 +31,14 @@ the specified directory. It will contain a list of (relative) paths for
 all files in that directory, along with some metadata: the time at which
 the index file was created and a timestamp that indicates how long the
 index is considered to be valid (see
-[easyconfigs_index_max_age][easyconfigs_index_max_age]).
+[Controlling how long the index is valid][easyconfigs_index_max_age]).
 
 !!! note
     Make sure to create an index for the correct path.
 
     The search for easyconfig files performed by EasyBuild will *not*
     recurse into subdirectories of the locations it considers (see
-    [robot_search_path][robot_search_path]), other than those
+    [Searching for easyconfigs: the robot search path][robot_search_path]), other than those
     with a name matching the software for which it is trying to find an
     easyconfig file (like `t/TensorFlow/` when searching for an
     easyconfig file for `TensorFlow`).
@@ -68,7 +70,9 @@ b/bokeh/bokeh-1.4.0-foss-2019b-Python-3.7.4.eb
     EasyBuild tries to load the index file right after creating it, as a
     sanity check.
 
-## Updating an existing index (`--create-index --force`) {: #easyconfigs_index_update }
+## Updating an existing index {: #easyconfigs_index_update }
+
+*(`--create-index --force`)*
 
 To update an existing index, you can use `--create-index --force`.
 
@@ -99,14 +103,16 @@ $ eb --search TensorFlow-2.1.0-foss-2019b
 * /home/example/easybuild-easyconfigs/easybuild/easyconfigs/t/TensorFlow/TensorFlow-2.1.0-foss-2019b-Python-3.7.4.eb
 ```
 
-## Ignoring indices (`--ignore-index`) {: #easyconfigs_index_ignore }
+## Ignoring indices {: #easyconfigs_index_ignore }
+
+*(`--ignore-index`)*
 
 One potential issue with having an index in place is that it may get
 outdated: new files may have been added to the directory since the index
 was created or last updated.
 
 If updating the indexes is not an option (see
-[easyconfigs_index_update][easyconfigs_index_update]), you can
+[Updating an existing index][easyconfigs_index_update]), you can
 instruct EasyBuild to ignore any existing indices using the
 `--ignore-index` configuration option.
 
@@ -114,7 +120,9 @@ The only downside of this option is that searching for easyconfig files
 may be significantly slower. Any existing index files are left untouched
 (they will *not* be updated or removed).
 
-## Controlling how long the index is valid (`--index-max-age`) {: #easyconfigs_index_max_age }
+## Controlling how long the index is valid {: #easyconfigs_index_max_age }
+
+*(`--index-max-age`)*
 
 When creating an index file, you can specify how long the index should
 be considered valid.
