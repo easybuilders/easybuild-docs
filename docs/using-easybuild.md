@@ -356,7 +356,7 @@ eb HPL-2.3-foss-2021b.eb --debug
 
 !!! tip
 
-   You may enable this by default via adding `debug = True` in your EasyBuild configuration file.
+    You may enable this by default via adding `debug = True` in your EasyBuild configuration file.
 
 !!! note
 
