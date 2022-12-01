@@ -29,7 +29,7 @@ Some key features of EasyBuild:
   * entire build process is logged thoroughly, logs are stored in install directory;
   * easyconfig file used for build is archived (install directory + file/svn/git repo) 
 
-* automatic **dependency resolution** (see [`--robot`](using-easybuild.md#enabling-dependency-resolution))
+* automatic **dependency resolution** (see [`--robot`][use_robot])
 
   * build entire software stack with a single command, using ``--robot``
 
