@@ -219,8 +219,7 @@
     documentation and release notes for EasyBuild v3.0.2 (see
     [EasyBuild v3.0.2 (December 22nd 2016)][release_notes_eb302])
 - **release 20161218.01** (*Dec 18th 2016*): document need
-    to download `vsc-*` source tarballs from PyPI (see
-    [bootstrap_offline][bootstrap_offline])
+    to download `vsc-*` source tarballs from PyPI
 - **release 20161202.01** (*Dec 2nd 2016*): add
     documentation on Cray support (see [EasyBuild on Cray][cray_support])
 - **release 20161130.01** (*Nov 16th 2016*): update
@@ -374,8 +373,7 @@
 
 - **release 20150407.01** (*Apr 7th 2015*):
     - add link to [Unit tests][unit_tests] page in
-        dedicated section at [Installing EasyBuild][installation] page (see
-        [install_running_unit_tests][install_running_unit_tests])
+        dedicated section at [Installing EasyBuild][installation] page
     - clarify relation between `--installpath`, `--prefix`,
         `-subdir-*` and `--installpath-*` configuration options (see
         [Software and modules install path][installpath])
