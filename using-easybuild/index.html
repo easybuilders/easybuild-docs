@@ -756,12 +756,115 @@ located, use <code>--list-easyblocks=detailed</code>.</p>
 <p>EasyBuild provides a significant amount of easyconfig parameters.
 An overview of all available easyconfig parameters can be obtained via
 <code>eb --avail-easyconfig-params</code>, or <code>eb -a</code> for short.</p>
-<p>See [available easyconfig parameters][easyconfig_params] for more information,
+<p>See <a class="autorefs autorefs-internal" href="../version-specific/easyconfig-parameters/#vsd_avail_easyconfig_params">available easyconfig parameters</a> for more information,
 the supported parameters are a very rich set.</p>
-<p>Combine -a with <code>--easyblock</code>/<code>-e</code> to include parameters that are specific to a particular easyblock. For example:</p>
-<div class="highlight"><pre><span></span><code>eb -a -e EB_WRF
+<p>Combine -a with <code>--easyblock</code>/<code>-e</code> to include parameters that are specific to a particular easyblock.</p>
+<details class="example">
+<summary>Overview of easyconfig parameters, including those specific to the easyblock for WRF (indicated with (<code>*</code>)):</summary>
+<div id="eb_a_e_EB_WRF" class="highlight"><pre><span></span><code><span class="gp">$ </span>eb -a -e EB_WRF
+
+<span class="go">Available easyconfig parameters (* indicates specific for the EB_WRF EasyBlock)</span>
+<span class="go">MANDATORY</span>
+<span class="go">---------</span>
+<span class="go">buildtype(*):         Specify the type of build (serial, smpar (OpenMP), dmpar (MPI), dm+sm (hybrid OpenMP/MPI)). (default: None)</span>
+<span class="go">description:          A short description of the software (default: None)</span>
+<span class="go">docurls:              List of urls with documentation of the software (not necessarily on homepage) (default: None)</span>
+<span class="go">homepage:             The homepage of the software (default: None)</span>
+<span class="go">name:                 Name of software (default: None)</span>
+<span class="go">software_license:     Software license (default: None)</span>
+<span class="go">software_license_urls:        List of software license locations (default: None)</span>
+<span class="go">toolchain:            Name and version of toolchain (default: None)</span>
+<span class="go">version:              Version of software (default: None)</span>
+
+<span class="go">EASYBLOCK-SPECIFIC</span>
+<span class="go">------------------</span>
+<span class="go">rewriteopts(*):       Replace -O3 with CFLAGS/FFLAGS (default: True)</span>
+<span class="go">runtest(*):           Build and run WRF tests (default: True)</span>
+
+<span class="go">TOOLCHAIN</span>
+<span class="go">---------</span>
+<span class="go">onlytcmod:            Boolean/string to indicate if the toolchain should only load the environment with module (True) or also set all other variables (False) like compiler CC etc (if string: comma separated list of variables that will be ignored). (default: False)</span>
+<span class="go">toolchainopts:        Extra options for compilers (default: None)</span>
+
+<span class="go">BUILD</span>
+<span class="go">-----</span>
+<span class="go">buildopts:            Extra options passed to make step (default already has -j X) (default: )</span>
+<span class="go">checksums:            Checksums for sources and patches (default: [])</span>
+<span class="go">configopts:           Extra options passed to configure (default already has --prefix) (default: )</span>
+<span class="go">easyblock:            EasyBlock to use for building (default: ConfigureMake)</span>
+<span class="go">easybuild_version:    EasyBuild-version this spec-file was written for (default: None)</span>
+<span class="go">installopts:          Extra options for installation (default: )</span>
+<span class="go">maxparallel:          Max degree of parallelism (default: None)</span>
+<span class="go">parallel:             Degree of parallelism for e.g. make (default: based on the number of cores, active cpuset and restrictions in ulimit) (default: None)</span>
+<span class="go">patches:              List of patches to apply (default: [])</span>
+<span class="go">postinstallcmds:      Commands to run after the install step. (default: [])</span>
+<span class="go">prebuildopts:         Extra options pre-passed to build command. (default: )</span>
+<span class="go">preconfigopts:        Extra options pre-passed to configure. (default: )</span>
+<span class="go">preinstallopts:       Extra prefix options for installation. (default: )</span>
+<span class="go">runtest(*):           Indicates if a test should be run after make; should specify argument after make (for e.g.,&quot;test&quot; for make test) (default: None)</span>
+<span class="go">sanity_check_commands:        format: [(name, options)] e.g. [(&#39;gzip&#39;,&#39;-h&#39;)]. Using a non-tuple is equivalent to (name, &#39;-h&#39;) (default: [])</span>
+<span class="go">sanity_check_paths:   List of files and directories to check (format: {&#39;files&#39;:&lt;list&gt;, &#39;dirs&#39;:&lt;list&gt;}) (default: {})</span>
+<span class="go">skip:                 Skip existing software (default: False)</span>
+<span class="go">skipsteps:            Skip these steps (default: [])</span>
+<span class="go">source_urls:          List of URLs for source files (default: [])</span>
+<span class="go">sources:              List of source files (default: [])</span>
+<span class="go">stop:                 Keyword to halt the build process after a certain step. (default: None)</span>
+<span class="go">tests:                List of test-scripts to run after install. A test script should return a non-zero exit status to fail (default: [])</span>
+<span class="go">unpack_options:       Extra options for unpacking source (default: None)</span>
+<span class="go">unwanted_env_vars:    List of environment variables that shouldn&#39;t be set during build (default: [])</span>
+<span class="go">versionprefix:        Additional prefix for software version (placed before version and toolchain name) (default: )</span>
+<span class="go">versionsuffix:        Additional suffix for software version (placed after toolchain name) (default: )</span>
+
+<span class="go">FILE-MANAGEMENT</span>
+<span class="go">---------------</span>
+<span class="go">buildininstalldir:    Boolean to build (True) or not build (False) in the installation directory (default: False)</span>
+<span class="go">cleanupoldbuild:      Boolean to remove (True) or backup (False) the previous build directory with identical name or not. (default: True)</span>
+<span class="go">cleanupoldinstall:    Boolean to remove (True) or backup (False) the previous install directory with identical name or not. (default: True)</span>
+<span class="go">dontcreateinstalldir: Boolean to create (False) or not create (True) the install directory (default: False)</span>
+<span class="go">keeppreviousinstall:  Boolean to keep the previous installation with identical name. Experts only! (default: False)</span>
+<span class="go">keepsymlinks:         Boolean to determine whether symlinks are to be kept during copying or if the content of the files pointed to should be copied (default: False)</span>
+<span class="go">start_dir:            Path to start the make in. If the path is absolute, use that path. If not, this is added to the guessed path. (default: None)</span>
+
+<span class="go">DEPENDENCIES</span>
+<span class="go">------------</span>
+<span class="go">allow_system_deps:    Allow listed system dependencies (format: (&lt;name&gt;, &lt;version&gt;)) (default: [])</span>
+<span class="go">builddependencies:    List of build dependencies (default: [])</span>
+<span class="go">dependencies:         List of dependencies (default: [])</span>
+<span class="go">hiddendependencies:   List of dependencies available as hidden modules (default: [])</span>
+<span class="go">osdependencies:               OS dependencies that should be present on the system (default: [])</span>
+
+<span class="go">LICENSE</span>
+<span class="go">-------</span>
+<span class="go">group:                Name of the user group for which the software should be available (default: None)</span>
+<span class="go">key:                  Key for installing software (default: None)</span>
+<span class="go">license_file:         License file for software (default: None)</span>
+<span class="go">license_server:       License server for software (default: None)</span>
+<span class="go">license_server_port:  Port for license server (default: None)</span>
+
+<span class="go">EXTENSIONS</span>
+<span class="go">----------</span>
+<span class="go">exts_classmap:        Map of extension name to class for handling build and installation. (default: {})</span>
+<span class="go">exts_defaultclass:    List of module for and name of the default extension class (default: None)</span>
+<span class="go">exts_filter:          Extension filter details: template for cmd and input to cmd (templates for name, version and src). (default: None)</span>
+<span class="go">exts_list:            List with extensions added to the base installation (default: [])</span>
+
+<span class="go">MODULES</span>
+<span class="go">-------</span>
+<span class="go">include_modpath_extensions: Include $MODULEPATH extensions specified by module naming scheme. (default: True)</span>
+<span class="go">modaliases:           Aliases to be defined in module file (default: {})</span>
+<span class="go">modextrapaths:        Extra paths to be prepended in module file (default: {})</span>
+<span class="go">modextravars:         Extra environment variables to be added to module file (default: {})</span>
+<span class="go">modloadmsg:           Message that should be printed when generated module is loaded (default: {})</span>
+<span class="go">modtclfooter:         Footer to include in generated module file (Tcl syntax) (default: )</span>
+<span class="go">moduleclass:          Module class to be used for this software (default: base)</span>
+<span class="go">moduleforceunload:    Force unload of all modules when loading the extension (default: False)</span>
+<span class="go">moduleloadnoconflict: Don&#39;t check for conflicts, unload other versions instead  (default: False)</span>
+
+<span class="go">OTHER</span>
+<span class="go">-----</span>
+<span class="go">buildstats:           A list of dicts with build statistics (default: None)</span>
 </code></pre></div>
-<p>If you want to see the full output of running this command, see [here][eb_a_e_EB_WRF].</p>
+</details>
 <h3 id="enable-debug-logging">Enable debug logging<a class="headerlink" href="#enable-debug-logging" title="Permanent link">&para;</a></h3>
 <p><em>(<code>--debug</code> / <code>-d</code>)</em></p>
 <p>Use <code>eb --debug</code>/<code>-d</code> to enable debug logging, to include all details of how EasyBuild performed a build in the log file:</p>
@@ -769,8 +872,8 @@ the supported parameters are a very rich set.</p>
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-</div>
 <p>You may enable this by default via adding <code>debug = True</code> in your EasyBuild configuration file.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Debug log files are significantly larger than non-debug logs, beware!</p>
@@ -1100,7 +1203,7 @@ since a software version is tied to a particular software package.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 4, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 1, 2022</span>
       
     
   </small>
