@@ -237,7 +237,6 @@ the supported parameters are a very rich set.
 Combine -a with `--easyblock`/`-e` to include parameters that are specific to a particular easyblock.
 
 ??? example "Overview of easyconfig parameters, including those specific to the easyblock for WRF (indicated with (`*`)):"
-    {: #eb_a_e_EB_WRF }
 
     ```console
     $ eb -a -e EB_WRF
@@ -343,7 +342,7 @@ Combine -a with `--easyblock`/`-e` to include parameters that are specific to a 
     -----
     buildstats:           A list of dicts with build statistics (default: None)
     ```
-
+    {: #eb_a_e_EB_WRF }
 
 
 ### Enable debug logging
