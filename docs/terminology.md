@@ -70,7 +70,7 @@ software name (cfr. [Automagic fallback to ConfigureMake][depr_ConfigureMake_fal
 <!-- XXX - UPDATE BY VERSION FIXME -->
 
 EasyBuild version 2.4.0 includes 154 software-specific easyblocks and 28 generic
-easyblocks (see also [List of easyblocks][basic_usage_easyblocks]), providing support for automatically installing a wide range
+easyblocks (see also [List of easyblocks][vsd_list_easyblocks]), providing support for automatically installing a wide range
 of software packages. Examples range from fairly easy-to-build programs like gzip, other basic tools
 like compilers, various MPI stacks and commonly used libraries, primarily for x86_64 architecture systems,
 to large scientific software packages that are notorious for their involved and tedious install procedures, such as:
