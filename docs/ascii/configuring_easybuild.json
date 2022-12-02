@@ -20041,7 +20041,7 @@
       "#\r\n# Current EasyBuild configuration\r\n# (C: command line argument, D: default value, E: environment variable, F: configuration file)\r\n#\r\nbuildpath      (F) = /tmp/eb_prefix_via_cfgfile/build\r\nconfigfiles    (C) = /Users/kehoste/.config/easybuild/config.cfg, /Users/kehoste/work/eb-asciinema/my_eb_settings.cfg\r\ninstallpath    (F) = /tmp/eb_prefix_via_cfgfile\r\npackagepath    (F) = /tmp/eb_prefix_via_cfgfile/packages\r\nprefix         (F) = /tmp/eb_prefix_via_cfgfile\r\nrepositorypath (F) = /tmp/eb_prefix_via_cfgfile/ebfiles_repo\r\nrobot-paths    (D) = /Users/kehoste/EasyBuild/software/EasyBuild/2.9.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.9.0-py2.7.egg/easybuild/easyconfigs\r\nsourcepath     (F) = /tmp/eb_prefix_via_cfgfile/sources\r\n"
     ]
   ],
-  "width": 140,
+  "width": 100,
   "height": 30,
   "env": {
     "TERM": "xterm-256color",
