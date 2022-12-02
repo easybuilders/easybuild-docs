@@ -19,7 +19,7 @@ jobs:
         with:
           check_filenames: true
           ignore_words_list: atleast,ninjs,simpy,proovread,namd,precice
-          skip: docs/js,
+          skip: docs/js
 
       - name: check internal links
         run: |
