@@ -13,6 +13,9 @@ theme:
     scheme: easybuild
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/asciinema-player-2.6.1.css
+extra_javascript:
+  - js/asciinema-player-2.6.1.js
 repo_name: EasyBuild @ GitHub
 repo_url: https://github.com/easybuilders/easybuild-docs
 edit_uri: easybuild-docs/edit/main/docs
@@ -120,7 +123,7 @@ plugins:
         en/latest/Wrapping_dependencies.html: wrapping-dependencies.md
         en/latest/Writing_easyconfig_files.html: writing-easyconfig-files.md
         en/latest/Writing_yeb_easyconfig_files.html: writing-yeb-easyconfig-files.md
-        en/latest/demos/bootstrapping.html: demos/bootstrapping.md
+        en/latest/demos/bootstrapping.html: installation.md
         en/latest/demos/configuring.html: demos/configuring.md
         en/latest/demos/index.html: demos/index.md
         en/latest/demos/review_pr.html: demos/review-pr.md
