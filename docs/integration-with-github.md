@@ -798,7 +798,7 @@ eb --new-pr example.eb example.patch --pr-commit-msg "just an example"
 !!! note
     When providing one or more patch files, you *must* specify a (meaningful) commit message  
     via `--pr-commit-msg`, see [Controlling pull request
-    metadata](controlling-pull-request-metadata).
+    metadata][github_controlling_pr_metadata].
 
 ### Deleting easyconfig files or patches {: #github_new_update_pr_delete }
 

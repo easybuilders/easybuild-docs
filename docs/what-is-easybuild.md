@@ -1,4 +1,4 @@
-# What is EasyBuild?
+# What is EasyBuild? {: #what_is_easybuild }
 
 EasyBuild is a software build and installation framework that allows you to manage (scientific) software on High 
 Performance Computing (HPC) systems in an efficient way. It is motivated by the need for a tool that combines the
@@ -29,7 +29,7 @@ Some key features of EasyBuild:
   * entire build process is logged thoroughly, logs are stored in install directory;
   * easyconfig file used for build is archived (install directory + file/svn/git repo) 
 
-* automatic **dependency resolution** (see [`--robot`](using-easybuild.md#enabling-dependency-resolution))
+* automatic **dependency resolution** (see [`--robot`][use_robot])
 
   * build entire software stack with a single command, using ``--robot``
 
