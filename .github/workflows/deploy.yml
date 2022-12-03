@@ -18,6 +18,12 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: checkout easybuild framework
+        uses: actions/checkout@v3
+        with:
+          repository: easybuilders/easybuild-framework
+          path: src
+
       - name: install mkdocs
         run: |
             pip install -r requirements.txt

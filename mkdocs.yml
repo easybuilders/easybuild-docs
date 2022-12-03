@@ -25,9 +25,8 @@ nav:
   - Configuration: configuration.md
   - Using EasyBuild: using-easybuild.md
   - Release notes: release-notes.md
-  - API: api/index.md
+  - API: api/
   - Getting help: getting-help.md
-  - Code Reference: reference/
 
 markdown_extensions:
   # add attributes to html elements
@@ -73,13 +72,14 @@ plugins:
       scripts:
         - docs/gen_ref_pages.py
   - literate-nav:
-      nav_file: SUMMARY.md
+      nav_file: summary.md
   - section-index
   # show revision date at bottom of each page
   - git-revision-date-localized:
       fallback_to_build_date: true
       exclude:
-        - reference/*
+        - api/easybuild/*
+        - api/summary.md
   # necessary for search to work
   - search
   # redirects for original EasyBuild documentation to avoid broken URLs
@@ -162,8 +162,8 @@ plugins:
         en/latest/version-specific/index.html: version-specific/index.md
         en/latest/version-specific/toolchain_opts.html: version-specific/toolchain-opts.md
         en/latest/version-specific/toolchains.html: version-specific/toolchain.md
-        # en/latest/api/easybuild.base.exceptions.html: ???
-        # en/latest/api/easybuild.base.fancylogger.html: ???
+        en/latest/api/easybuild.base.exceptions.html: api/easybuild/base/exceptions.md
+        en/latest/api/easybuild.base.fancylogger.html: api/easybuild/base/fancylogger.md
         # en/latest/api/easybuild.base.frozendict.html: ???
         # en/latest/api/easybuild.base.generaloption.html: ???
         # en/latest/api/easybuild.base.optcomplete.html: ???
