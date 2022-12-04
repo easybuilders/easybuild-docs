@@ -1,8 +1,5 @@
 # Alternative installation methods {: #alt_inst_methods }
 
-We warmly recommend installing EasyBuild via the bootstrap procedure,
-see [Demo: bootstrapping EasyBuild][bootstrapping].
-
 This page describes the alternative installation methods:
 
 - [Standard installation of latest

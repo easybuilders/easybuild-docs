@@ -11,3 +11,5 @@ jobs:
 
       - name: MarkdownLint mdl Action
         uses: actionshub/markdownlint@2.0.2
+        with:
+          filesToIgnoreRegex: "docs/demos/.*"
