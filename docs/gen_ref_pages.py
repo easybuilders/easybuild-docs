@@ -9,8 +9,8 @@ import mkdocs_gen_files
 
 
 # remove the problematic py2.py and symlink the py3.py in its place
-Path(f"src/easybuild/tools/py2vs3/py2.py").unlink(missing_ok=True)
-Path(f"src/easybuild/tools/py2vs3/py2.py").symlink_to(Path("py3.py"))
+Path("src/easybuild/tools/py2vs3/py2.py").unlink(missing_ok=True)
+Path("src/easybuild/tools/py2vs3/py2.py").symlink_to(Path("py3.py"))
 
 # build a navigation for the menu and a dictionary of navigations for each section
 menu_nav = mkdocs_gen_files.Nav()
@@ -49,7 +49,7 @@ for path in sorted(Path("src/easybuild/").rglob("*.py")):
     mkdocs_gen_files.set_edit_path(full_doc_path, path)
 
 # Generate the menu navigation file
-with mkdocs_gen_files.open(f"api/summary.md", "w") as nav_file:
+with mkdocs_gen_files.open("api/summary.md", "w") as nav_file:
     nav_file.writelines(menu_nav.build_literate_nav())
 
 # Generate the section navigation files, appending to any existing API content
