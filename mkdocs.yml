@@ -171,7 +171,7 @@ plugins:
         en/latest/api/easybuild.base.generaloption.html: api/easybuild/base/generaloption.md
         en/latest/api/easybuild.base.optcomplete.html: api/easybuild/base/optcomplete.md
         en/latest/api/easybuild.base.rest.html: api/easybuild/base/rest.md
-        en/latest/api/easybuild.base.html: api/easybuild/base.md
+        en/latest/api/easybuild.base.html: api/easybuild/base/index.md
         en/latest/api/easybuild.base.testing.html: api/easybuild/base/testing.md
         en/latest/api/easybuild.base.wrapper.html: api/easybuild/base/wrapper.md
         en/latest/api/easybuild.framework.easyblock.html: api/easybuild/framework/easyblock.md
@@ -182,13 +182,13 @@ plugins:
         en/latest/api/easybuild.framework.easyconfig.format.format.html: api/easybuild/framework/easyconfig/format/format.md
         en/latest/api/easybuild.framework.easyconfig.format.one.html: api/easybuild/framework/easyconfig/format/one.md
         en/latest/api/easybuild.framework.easyconfig.format.pyheaderconfigobj.html: api/easybuild/framework/easyconfig/format/pyheaderconfigobj.md
-        en/latest/api/easybuild.framework.easyconfig.format.html: api/easybuild/framework/easyconfig/format.md
+        en/latest/api/easybuild.framework.easyconfig.format.html: api/easybuild/framework/easyconfig/format/index.md
         en/latest/api/easybuild.framework.easyconfig.format.two.html: api/easybuild/framework/easyconfig/format/two.md
         en/latest/api/easybuild.framework.easyconfig.format.version.html: api/easybuild/framework/easyconfig/format/version.md
         en/latest/api/easybuild.framework.easyconfig.format.yeb.html: api/easybuild/framework/easyconfig/format/yeb.md
         en/latest/api/easybuild.framework.easyconfig.licenses.html: api/easybuild/framework/easyconfig/licenses.md
         en/latest/api/easybuild.framework.easyconfig.parser.html: api/easybuild/framework/easyconfig/parser.md
-        en/latest/api/easybuild.framework.easyconfig.html: api/easybuild/framework/easyconfig.md
+        en/latest/api/easybuild.framework.easyconfig.html: api/easybuild/framework/easyconfig/index.md
         en/latest/api/easybuild.framework.easyconfig.style.html: api/easybuild/framework/easyconfig/style.md
         en/latest/api/easybuild.framework.easyconfig.templates.html: api/easybuild/framework/easyconfig/templates.md
         en/latest/api/easybuild.framework.easyconfig.tools.html: api/easybuild/framework/easyconfig/tools.md
@@ -196,9 +196,9 @@ plugins:
         en/latest/api/easybuild.framework.easyconfig.types.html: api/easybuild/framework/easyconfig/types.md
         en/latest/api/easybuild.framework.extension.html: api/easybuild/framework/extension.md
         en/latest/api/easybuild.framework.extensioneasyblock.html: api/easybuild/framework/extensioneasyblock.md
-        en/latest/api/easybuild.framework.html: api/easybuild/framework.md
+        en/latest/api/easybuild.framework.html: api/easybuild/framework/index.md
         en/latest/api/easybuild.main.html: api/easybuild/main.md
-        en/latest/api/easybuild.html: api/easybuild.md
+        en/latest/api/easybuild.html: api/easybuild/index.md
         en/latest/api/easybuild.toolchains.cgmpich.html: api/easybuild/toolchains/cgmpich.md
         en/latest/api/easybuild.toolchains.cgmpolf.html: api/easybuild/toolchains/cgmpolf.md
         en/latest/api/easybuild.toolchains.cgmvapich2.html: api/easybuild/toolchains/cgmvapich2.md
@@ -214,17 +214,17 @@ plugins:
         en/latest/api/easybuild.toolchains.compiler.ibmxl.html: api/easybuild/toolchains/compiler/ibmxl.md
         en/latest/api/easybuild.toolchains.compiler.inteliccifort.html: api/easybuild/toolchains/compiler/inteliccifort.md
         en/latest/api/easybuild.toolchains.compiler.pgi.html: api/easybuild/toolchains/compiler/pgi.md
-        en/latest/api/easybuild.toolchains.compiler.html: api/easybuild/toolchains/compiler.md
+        en/latest/api/easybuild.toolchains.compiler.html: api/easybuild/toolchains/compiler/index.md
         en/latest/api/easybuild.toolchains.compiler.systemcompiler.html: api/easybuild/toolchains/compiler/systemcompiler.md
         en/latest/api/easybuild.toolchains.craycce.html: api/easybuild/toolchains/craycce.md
         en/latest/api/easybuild.toolchains.craygnu.html: api/easybuild/toolchains/craygnu.md
         en/latest/api/easybuild.toolchains.crayintel.html: api/easybuild/toolchains/crayintel.md
         en/latest/api/easybuild.toolchains.craypgi.html: api/easybuild/toolchains/craypgi.md
         en/latest/api/easybuild.toolchains.dummy.html: api/easybuild/toolchains/dummy.md
-        en/latest/api/easybuild.toolchains.fft.crayfftw.html: api/easybuild/toolchains/fft/crayfftw.md
+        # en/latest/api/easybuild.toolchains.fft.crayfftw.html: ???
         en/latest/api/easybuild.toolchains.fft.fftw.html: api/easybuild/toolchains/fft/fftw.md
         en/latest/api/easybuild.toolchains.fft.intelfftw.html: api/easybuild/toolchains/fft/intelfftw.md
-        en/latest/api/easybuild.toolchains.fft.html: api/easybuild/toolchains/fft.md
+        en/latest/api/easybuild.toolchains.fft.html: api/easybuild/toolchains/fft/index.md
         en/latest/api/easybuild.toolchains.foss.html: api/easybuild/toolchains/foss.md
         en/latest/api/easybuild.toolchains.fosscuda.html: api/easybuild/toolchains/fosscuda.md
         en/latest/api/easybuild.toolchains.gcc.html: api/easybuild/toolchains/gcc.md
@@ -289,7 +289,7 @@ plugins:
         en/latest/api/easybuild.toolchains.linalg.lapack.html: api/easybuild/toolchains/linalg/lapack.md
         en/latest/api/easybuild.toolchains.linalg.libsci.html: api/easybuild/toolchains/linalg/libsci.md
         en/latest/api/easybuild.toolchains.linalg.openblas.html: api/easybuild/toolchains/linalg/openblas.md
-        en/latest/api/easybuild.toolchains.linalg.html: api/easybuild/toolchains/linalg.md
+        en/latest/api/easybuild.toolchains.linalg.html: api/easybuild/toolchains/linalg/index.md
         en/latest/api/easybuild.toolchains.linalg.scalapack.html: api/easybuild/toolchains/linalg/scalapack.md
         en/latest/api/easybuild.toolchains.mpi.craympich.html: api/easybuild/toolchains/mpi/craympich.md
         en/latest/api/easybuild.toolchains.mpi.intelmpi.html: api/easybuild/toolchains/mpi/intelmpi.md
@@ -299,13 +299,13 @@ plugins:
         en/latest/api/easybuild.toolchains.mpi.openmpi.html: api/easybuild/toolchains/mpi/openmpi.md
         en/latest/api/easybuild.toolchains.mpi.psmpi.html: api/easybuild/toolchains/mpi/psmpi.md
         en/latest/api/easybuild.toolchains.mpi.qlogicmpi.html: api/easybuild/toolchains/mpi/qlogicmpi.md
-        en/latest/api/easybuild.toolchains.mpi.html: api/easybuild/toolchains/mpi.md
+        en/latest/api/easybuild.toolchains.mpi.html: api/easybuild/toolchains/mpi/index.md
         en/latest/api/easybuild.toolchains.mpi.spectrummpi.html: api/easybuild/toolchains/mpi/spectrummpi.md
         en/latest/api/easybuild.toolchains.pgi.html: api/easybuild/toolchains/pgi.md
         en/latest/api/easybuild.toolchains.pmkl.html: api/easybuild/toolchains/pmkl.md
         en/latest/api/easybuild.toolchains.pomkl.html: api/easybuild/toolchains/pomkl.md
         en/latest/api/easybuild.toolchains.pompi.html: api/easybuild/toolchains/pompi.md
-        en/latest/api/easybuild.toolchains.html: api/easybuild/toolchains.md
+        en/latest/api/easybuild.toolchains.html: api/easybuild/toolchains/index.md
         en/latest/api/easybuild.toolchains.system.html: api/easybuild/toolchains/system.md
         en/latest/api/easybuild.toolchains.xlcxlf.html: api/easybuild/toolchains/xlcxlf.md
         en/latest/api/easybuild.toolchains.xlmpich.html: api/easybuild/toolchains/xlmpich.md
@@ -320,11 +320,11 @@ plugins:
         en/latest/api/easybuild.tools.containers.base.html: api/easybuild/tools/containers/base.md
         en/latest/api/easybuild.tools.containers.common.html: api/easybuild/tools/containers/common.md
         en/latest/api/easybuild.tools.containers.docker.html: api/easybuild/tools/containers/docker.md
-        en/latest/api/easybuild.tools.containers.html: api/easybuild/tools/containers.md
+        en/latest/api/easybuild.tools.containers.html: api/easybuild/tools/containers/index.md
         en/latest/api/easybuild.tools.containers.singularity.html: api/easybuild/tools/containers/singularity.md
         en/latest/api/easybuild.tools.containers.utils.html: api/easybuild/tools/containers/utils.md
         en/latest/api/easybuild.tools.convert.html: api/easybuild/tools/convert.md
-        en/latest/api/easybuild.tools.deprecated.html: api/easybuild/tools/deprecated.md
+        en/latest/api/easybuild.tools.deprecated.html: api/easybuild/tools/deprecated/index.md
         en/latest/api/easybuild.tools.docs.html: api/easybuild/tools/docs.md
         en/latest/api/easybuild.tools.environment.html: api/easybuild/tools/environment.md
         en/latest/api/easybuild.tools.filetools.html: api/easybuild/tools/filetools.md
@@ -335,7 +335,7 @@ plugins:
         en/latest/api/easybuild.tools.job.backend.html: api/easybuild/tools/job/backend.md
         en/latest/api/easybuild.tools.job.gc3pie.html: api/easybuild/tools/job/gc3pie.md
         en/latest/api/easybuild.tools.job.pbs_python.html: api/easybuild/tools/job/pbs_python.md
-        en/latest/api/easybuild.tools.job.html: api/easybuild/tools/job.md
+        en/latest/api/easybuild.tools.job.html: api/easybuild/tools/job/index.md
         en/latest/api/easybuild.tools.job.slurm.html: api/easybuild/tools/job/slurm.md
         en/latest/api/easybuild.tools.module_generator.html: api/easybuild/tools/module_generator.md
         en/latest/api/easybuild.tools.module_naming_scheme.categorized_hmns.html: api/easybuild/tools/module_naming_scheme/categorized_hmns.md
@@ -344,30 +344,30 @@ plugins:
         en/latest/api/easybuild.tools.module_naming_scheme.hierarchical_mns.html: api/easybuild/tools/module_naming_scheme/hierarchical_mns.md
         en/latest/api/easybuild.tools.module_naming_scheme.migrate_from_eb_to_hmns.html: api/easybuild/tools/module_naming_scheme/migrate_from_eb_to_hmns.md
         en/latest/api/easybuild.tools.module_naming_scheme.mns.html: api/easybuild/tools/module_naming_scheme/mns.md
-        en/latest/api/easybuild.tools.module_naming_scheme.html: api/easybuild/tools/module_naming_scheme.md
+        en/latest/api/easybuild.tools.module_naming_scheme.html: api/easybuild/tools/module_naming_scheme/index.md
         en/latest/api/easybuild.tools.module_naming_scheme.toolchain.html: api/easybuild/tools/module_naming_scheme/toolchain.md
         en/latest/api/easybuild.tools.module_naming_scheme.utilities.html: api/easybuild/tools/module_naming_scheme/utilities.md
         en/latest/api/easybuild.tools.modules.html: api/easybuild/tools/modules.md
         en/latest/api/easybuild.tools.multidiff.html: api/easybuild/tools/multidiff.md
         en/latest/api/easybuild.tools.options.html: api/easybuild/tools/options.md
-        en/latest/api/easybuild.tools.ordereddict.html: api/easybuild/tools/ordereddict.md
+        # en/latest/api/easybuild.tools.ordereddict.html: ???
         en/latest/api/easybuild.tools.package.package_naming_scheme.easybuild_pns.html: api/easybuild/tools/package/package_naming_scheme/easybuild_pns.md
         en/latest/api/easybuild.tools.package.package_naming_scheme.pns.html: api/easybuild/tools/package/package_naming_scheme/pns.md
-        en/latest/api/easybuild.tools.package.package_naming_scheme.html: api/easybuild/tools/package/package_naming_scheme.md
-        en/latest/api/easybuild.tools.package.html: api/easybuild/tools/package.md
+        en/latest/api/easybuild.tools.package.package_naming_scheme.html: api/easybuild/tools/package/package_naming_scheme/index.md
+        en/latest/api/easybuild.tools.package.html: api/easybuild/tools/package/index.md
         en/latest/api/easybuild.tools.package.utilities.html: api/easybuild/tools/package/utilities.md
         en/latest/api/easybuild.tools.parallelbuild.html: api/easybuild/tools/parallelbuild.md
         en/latest/api/easybuild.tools.py2vs3.py2.html: api/easybuild/tools/py2vs3/py2.md
         en/latest/api/easybuild.tools.py2vs3.py3.html: api/easybuild/tools/py2vs3/py3.md
-        en/latest/api/easybuild.tools.py2vs3.html: api/easybuild/tools/py2vs3.md
+        en/latest/api/easybuild.tools.py2vs3.html: api/easybuild/tools/py2vs3/index.md
         en/latest/api/easybuild.tools.repository.filerepo.html: api/easybuild/tools/repository/filerepo.md
         en/latest/api/easybuild.tools.repository.gitrepo.html: api/easybuild/tools/repository/gitrepo.md
         en/latest/api/easybuild.tools.repository.hgrepo.html: api/easybuild/tools/repository/hgrepo.md
         en/latest/api/easybuild.tools.repository.repository.html: api/easybuild/tools/repository/repository.md
-        en/latest/api/easybuild.tools.repository.html: api/easybuild/tools/repository.md
+        en/latest/api/easybuild.tools.repository.html: api/easybuild/tools/repository/index.md
         en/latest/api/easybuild.tools.repository.svnrepo.html: api/easybuild/tools/repository/svnrepo.md
         en/latest/api/easybuild.tools.robot.html: api/easybuild/tools/robot.md
-        en/latest/api/easybuild.tools.html: api/easybuild/tools.md
+        en/latest/api/easybuild.tools.html: api/easybuild/tools/index.md
         en/latest/api/easybuild.tools.run.html: api/easybuild/tools/run.md
         en/latest/api/easybuild.tools.systemtools.html: api/easybuild/tools/systemtools.md
         en/latest/api/easybuild.tools.testing.html: api/easybuild/tools/testing.md
@@ -377,7 +377,7 @@ plugins:
         en/latest/api/easybuild.tools.toolchain.linalg.html: api/easybuild/tools/toolchain/linalg.md
         en/latest/api/easybuild.tools.toolchain.mpi.html: api/easybuild/tools/toolchain/mpi.md
         en/latest/api/easybuild.tools.toolchain.options.html: api/easybuild/tools/toolchain/options.md
-        en/latest/api/easybuild.tools.toolchain.html: api/easybuild/tools/toolchain.md
+        en/latest/api/easybuild.tools.toolchain.html: api/easybuild/tools/toolchain/index.md
         en/latest/api/easybuild.tools.toolchain.toolchain.html: api/easybuild/tools/toolchain/toolchain.md
         en/latest/api/easybuild.tools.toolchain.toolchainvariables.html: api/easybuild/tools/toolchain/toolchainvariables.md
         en/latest/api/easybuild.tools.toolchain.utilities.html: api/easybuild/tools/toolchain/utilities.md
@@ -385,29 +385,29 @@ plugins:
         en/latest/api/easybuild.tools.utilities.html: api/easybuild/tools/utilities.md
         en/latest/api/easybuild.tools.variables.html: api/easybuild/tools/variables.md
         en/latest/api/easybuild.tools.version.html: api/easybuild/tools/version.md
-        en/latest/api/framework.easyblock.html: api/framework/easyblock.md
-        en/latest/api/framework.easyconfig.constants.html: api/framework/easyconfig/constants.md
-        en/latest/api/framework.easyconfig.default.html: api/framework/easyconfig/default.md
-        en/latest/api/framework.easyconfig.easyconfig.html: api/framework/easyconfig/easyconfig.md
-        en/latest/api/framework.easyconfig.format.convert.html: api/framework/easyconfig/format/convert.md
-        en/latest/api/framework.easyconfig.format.format.html: api/framework/easyconfig/format/format.md
-        en/latest/api/framework.easyconfig.format.one.html: api/framework/easyconfig/format/one.md
-        en/latest/api/framework.easyconfig.format.pyheaderconfigobj.html: api/framework/easyconfig/format/pyheaderconfigobj.md
-        en/latest/api/framework.easyconfig.format.html: api/framework/easyconfig/format.md
-        en/latest/api/framework.easyconfig.format.two.html: api/framework/easyconfig/format/two.md
-        en/latest/api/framework.easyconfig.format.version.html: api/framework/easyconfig/format/version.md
-        en/latest/api/framework.easyconfig.format.yeb.html: api/framework/easyconfig/format/yeb.md
-        en/latest/api/framework.easyconfig.licenses.html: api/framework/easyconfig/licenses.md
-        en/latest/api/framework.easyconfig.parser.html: api/framework/easyconfig/parser.md
-        en/latest/api/framework.easyconfig.html: api/framework/easyconfig.md
-        en/latest/api/framework.easyconfig.style.html: api/framework/easyconfig/style.md
-        en/latest/api/framework.easyconfig.templates.html: api/framework/easyconfig/templates.md
-        en/latest/api/framework.easyconfig.tools.html: api/framework/easyconfig/tools.md
-        en/latest/api/framework.easyconfig.tweak.html: api/framework/easyconfig/tweak.md
-        en/latest/api/framework.easyconfig.types.html: api/framework/easyconfig/types.md
-        en/latest/api/framework.easystack.html: api/framework/easystack.md
-        en/latest/api/framework.extension.html: api/framework/extension.md
-        en/latest/api/framework.extensioneasyblock.html: api/framework/extensioneasyblock.md
-        en/latest/api/framework.html: api/framework.md
+        en/latest/api/framework.easyblock.html: api/easybuild/framework/easyblock.md
+        en/latest/api/framework.easyconfig.constants.html: api/easybuild/framework/easyconfig/constants.md
+        en/latest/api/framework.easyconfig.default.html: api/easybuild/framework/easyconfig/default.md
+        en/latest/api/framework.easyconfig.easyconfig.html: api/easybuild/framework/easyconfig/easyconfig.md
+        en/latest/api/framework.easyconfig.format.convert.html: api/easybuild/framework/easyconfig/format/convert.md
+        en/latest/api/framework.easyconfig.format.format.html: api/easybuild/framework/easyconfig/format/format.md
+        en/latest/api/framework.easyconfig.format.one.html: api/easybuild/framework/easyconfig/format/one.md
+        en/latest/api/framework.easyconfig.format.pyheaderconfigobj.html: api/easybuild/framework/easyconfig/format/pyheaderconfigobj.md
+        en/latest/api/framework.easyconfig.format.html: api/easybuild/framework/easyconfig/format/index.md
+        en/latest/api/framework.easyconfig.format.two.html: api/easybuild/framework/easyconfig/format/two.md
+        en/latest/api/framework.easyconfig.format.version.html: api/easybuild/framework/easyconfig/format/version.md
+        en/latest/api/framework.easyconfig.format.yeb.html: api/easybuild/framework/easyconfig/format/yeb.md
+        en/latest/api/framework.easyconfig.licenses.html: api/easybuild/framework/easyconfig/licenses.md
+        en/latest/api/framework.easyconfig.parser.html: api/easybuild/framework/easyconfig/parser.md
+        en/latest/api/framework.easyconfig.html: api/easybuild/framework/easyconfig/index.md
+        en/latest/api/framework.easyconfig.style.html: api/easybuild/framework/easyconfig/style.md
+        en/latest/api/framework.easyconfig.templates.html: api/easybuild/framework/easyconfig/templates.md
+        en/latest/api/framework.easyconfig.tools.html: api/easybuild/framework/easyconfig/tools.md
+        en/latest/api/framework.easyconfig.tweak.html: api/easybuild/framework/easyconfig/tweak.md
+        en/latest/api/framework.easyconfig.types.html: api/easybuild/framework/easyconfig/types.md
+        en/latest/api/framework.easystack.html: api/easybuild/framework/easystack.md
+        en/latest/api/framework.extension.html: api/easybuild/framework/extension.md
+        en/latest/api/framework.extensioneasyblock.html: api/easybuild/framework/extensioneasyblock.md
+        en/latest/api/framework.html: api/easybuild/framework/index.md
         en/latest/api/index.html: api/index.md
-        en/latest/api/modules.html: api/modules.md
+        # en/latest/api/modules.html: ???
