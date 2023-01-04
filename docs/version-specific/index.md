@@ -1,14 +1,14 @@
-# Overview of version specific (auto-generated) documentation pages
+# Overview of version-specific (auto-generated) documentation pages
 
-!!! warning
-    This page will soon replace <https://docs.easybuild.io/en/latest/version-specific/index.html>.
 
-    **
-    It still needs to be ported from *reStructuredText* (.rst) to *MarkDown* (.md),  
-    and you can help with that!
-    **
-
-    - source: [`docs/version-specific/index.rst` in `easybuilders/easybuild` repo](https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/version-specific/index.rst)
-    - target: [`docs/version-specific/index.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/version-specific/index.md)
-
-    See <https://github.com/easybuilders/easybuild-docs> for more information.
+* [Config file constants](config-file-constants.md)
+* [Available easyconfig parameters](easyconfig-parameters.md)
+* [Constants available for easyconfig files](easyconfig-constants.md)
+* [License constants available for easyconfig files](easyconfig-license-constants.md)
+* [List of available easyblocks](easyblocks.md)
+* [List of available toolchain options](toolchain-opts.md)
+* [List of known toolchains](eb-list-toolchains.md)
+* [List of supported software](supported-software.md)
+* [Overview of EasyBuild configuration options](eb-help.md)
+* [Overview of generic easyblocks](generic-easyblocks.md)
+* [Templates available for easyconfig files](easyconfig-templates.md)
