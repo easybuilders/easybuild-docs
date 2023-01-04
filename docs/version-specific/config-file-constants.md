@@ -1,14 +1,12 @@
 # Constants available (only) in configuration files {: #avail_cfgfile_constants }
 
-!!! warning
-    This page will soon replace <https://docs.easybuild.io/en/latest/version-specific/config_file_constants.html>.
+### Only in 'DEFAULT' section:
 
-    **
-    It still needs to be ported from *reStructuredText* (.rst) to *MarkDown* (.md),  
-    and you can help with that!
-    **
+Constant name             |Constant help                                      |Constant value
+--------------------------|---------------------------------------------------|-------------------------------------------------------------------
+``DEFAULT_REPOSITORYPATH``|Default easyconfigs repository path                |``/home/example/.local/easybuild/ebfiles_repo``
+``DEFAULT_ROBOT_PATHS``   |List of default robot paths (':'-separated)        |``/home/example/work/easybuild-easyconfigs/easybuild/easyconfigs``
+``HOME``                  |Current user's home directory, expanded '~'        |``/home/example``
+``USER``                  |Current username, translated uid from password file|``example``
 
-    - source: [`docs/version-specific/config_file_constants.rst` in `easybuilders/easybuild` repo](https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/version-specific/config_file_constants.rst)
-    - target: [`docs/version-specific/config-file-constants.md` in `easybuilders/easybuild-docs` repo](https://github.com/easybuilders/easybuild-docs/tree/main/docs/version-specific/config-file-constants.md)
-
-    See <https://github.com/easybuilders/easybuild-docs> for more information.
+*(see also* ``eb --avail-cfgfile-constants`` *)*
