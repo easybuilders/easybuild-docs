@@ -31,10 +31,10 @@
 `checksums`                  |Checksums for sources and patches                                                                                                        |`[]`
 `configopts`                 |Extra options passed to configure (default already has --prefix)                                                                         |`""`
 `cuda_compute_capabilities`  |List of CUDA compute capabilities to build with (if supported)                                                                           |`[]`
-`download_instructions`      |Specify steps to aquire necessary file, if obtaining it is difficult                                                                     |`""`
+`download_instructions`      |Specify steps to acquire necessary file, if obtaining it is difficult                                                                    |`""`
 `easyblock`                  |EasyBlock to use for building; if set to None, an easyblock is selected based on the software name                                       |`None`
 `easybuild_version`          |EasyBuild-version this spec-file was written for                                                                                         |`None`
-`enhance_sanity_check`       |Indicate that additional sanity check commands & paths should enhance the existin sanity check, not replace it                           |`False`
+`enhance_sanity_check`       |Indicate that additional sanity check commands & paths should enhance the existing sanity check, not replace it                          |`False`
 `fix_bash_shebang_for`       |List of files for which Bash shebang should be fixed to '#!/usr/bin/env bash' (glob patterns supported)                                  |`None`
 `fix_perl_shebang_for`       |List of files for which Perl shebang should be fixed to '#!/usr/bin/env perl' (glob patterns supported)                                  |`None`
 `fix_python_shebang_for`     |List of files for which Python shebang should be fixed to '#!/usr/bin/env python' (glob patterns supported)                              |`None`
@@ -45,6 +45,7 @@
 `parallel`                   |Degree of parallelism for e.g. make (default: based on the number of cores, active cpuset and restrictions in ulimit)                    |`None`
 `patches`                    |List of patches to apply                                                                                                                 |`[]`
 `postinstallcmds`            |Commands to run after the install step.                                                                                                  |`[]`
+`postinstallmsgs`            |Messages to print after running the install step.                                                                                        |`[]`
 `postinstallpatches`         |Patch files to apply after running the install step.                                                                                     |`[]`
 `prebuildopts`               |Extra options pre-passed to build command.                                                                                               |`""`
 `preconfigopts`              |Extra options pre-passed to configure.                                                                                                   |`""`

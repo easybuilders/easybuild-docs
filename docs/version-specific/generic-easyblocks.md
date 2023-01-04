@@ -6,7 +6,7 @@
 
 # Overview of generic easyblocks {: #generic_easyblocks }
 
-<a href='#binariestarball'>BinariesTarball</a> - <a href='#binary'>Binary</a> - <a href='#buildenv'>BuildEnv</a> - <a href='#bundle'>Bundle</a> - <a href='#cmakemake'>CMakeMake</a> - <a href='#cmakemakecp'>CMakeMakeCp</a> - <a href='#cmakeninja'>CMakeNinja</a> - <a href='#cmakepythonpackage'>CMakePythonPackage</a> - <a href='#cmdcp'>CmdCp</a> - <a href='#conda'>Conda</a> - <a href='#configuremake'>ConfigureMake</a> - <a href='#configuremakepythonpackage'>ConfigureMakePythonPackage</a> - <a href='#craytoolchain'>CrayToolchain</a> - <a href='#fortranpythonpackage'>FortranPythonPackage</a> - <a href='#gopackage'>GoPackage</a> - <a href='#intelbase'>IntelBase</a> - <a href='#jar'>JAR</a> - <a href='#juliabundle'>JuliaBundle</a> - <a href='#juliapackage'>JuliaPackage</a> - <a href='#makecp'>MakeCp</a> - <a href='#mesonninja'>MesonNinja</a> - <a href='#modulerc'>ModuleRC</a> - <a href='#ocamlpackage'>OCamlPackage</a> - <a href='#octavepackage'>OctavePackage</a> - <a href='#packedbinary'>PackedBinary</a> - <a href='#perlmodule'>PerlModule</a> - <a href='#pythonbundle'>PythonBundle</a> - <a href='#pythonpackage'>PythonPackage</a> - <a href='#rpackage'>RPackage</a> - <a href='#rpm'>Rpm</a> - <a href='#rubygem'>RubyGem</a> - <a href='#scons'>SCons</a> - <a href='#systemcompiler'>SystemCompiler</a> - <a href='#systemmpi'>SystemMPI</a> - <a href='#tarball'>Tarball</a> - <a href='#toolchain'>Toolchain</a> - <a href='#vscpythonpackage'>VSCPythonPackage</a> - <a href='#versionindependentpythonpackage'>VersionIndependentPythonPackage</a> - <a href='#waf'>Waf</a>
+[BinariesTarball](#binariestarball) - [Binary](#binary) - [BuildEnv](#buildenv) - [Bundle](#bundle) - [CMakeMake](#cmakemake) - [CMakeMakeCp](#cmakemakecp) - [CMakeNinja](#cmakeninja) - [CMakePythonPackage](#cmakepythonpackage) - [CmdCp](#cmdcp) - [Conda](#conda) - [ConfigureMake](#configuremake) - [ConfigureMakePythonPackage](#configuremakepythonpackage) - [CrayToolchain](#craytoolchain) - [FortranPythonPackage](#fortranpythonpackage) - [GoPackage](#gopackage) - [IntelBase](#intelbase) - [JAR](#jar) - [JuliaBundle](#juliabundle) - [JuliaPackage](#juliapackage) - [MakeCp](#makecp) - [MesonNinja](#mesonninja) - [ModuleRC](#modulerc) - [OCamlPackage](#ocamlpackage) - [OctavePackage](#octavepackage) - [PackedBinary](#packedbinary) - [PerlModule](#perlmodule) - [PythonBundle](#pythonbundle) - [PythonPackage](#pythonpackage) - [RPackage](#rpackage) - [Rpm](#rpm) - [RubyGem](#rubygem) - [SCons](#scons) - [SystemCompiler](#systemcompiler) - [SystemMPI](#systemmpi) - [Tarball](#tarball) - [Toolchain](#toolchain) - [VSCPythonPackage](#vscpythonpackage) - [VersionIndependentPythonPackage](#versionindependentpythonpackage) - [Waf](#waf)
 
 ## ``BinariesTarball``
 
@@ -25,6 +25,7 @@ easyconfig parameter|description                                                
 ``preinstall_cmd``  |Command to execute before installation                                                                                                                       |``None``
 
 ### Customised steps in ``BinariesTarball`` easyblock
+
 * ``install_step`` - Install by copying unzipped binaries to 'bin' subdir of installation dir, and fixing permissions.
 
 
@@ -47,6 +48,7 @@ easyconfig parameter|description                                                
 ``staged_install``  |Perform staged installation via subdirectory of build directory                                                                                |``False``
 
 ### Customised steps in ``Binary`` easyblock
+
 * ``build_step`` - No compilation, this is binary software
 
 * ``configure_step`` - No configuration, this is binary software
@@ -122,6 +124,7 @@ easyconfig parameter           |description                                     
 ``sanity_check_components``    |List of components for which to run sanity checks                          |``[]``
 
 ### Customised steps in ``Bundle`` easyblock
+
 * ``build_step`` - Do nothing.
 
 * ``configure_step`` - Collect altroot/altversion info.
@@ -182,6 +185,7 @@ easyconfig parameter            |description                                    
 ``test_cmd``                    |Test command to use ('runtest' value is appended)                                                                                                                                                 |``"make"``
 
 ### Customised steps in ``CMakeMake`` easyblock
+
 * ``configure_step`` - Configure build using cmake
 
 * ``install_step`` - Configure build using cmake
@@ -258,6 +262,7 @@ easyconfig parameter            |description                                    
 ``with_configure``              |Run configure script before building                                                                                                                                                              |``False``
 
 ### Customised steps in ``CMakeMakeCp`` easyblock
+
 * ``configure_step`` - Configure build using CMake
 
 * ``install_step`` - Install by copying specified files and directories.
@@ -293,6 +298,7 @@ easyconfig parameter            |description                                    
 ``test_cmd``                    |Test command to use ('runtest' value is appended)                                                                                                                                                 |``"make"``
 
 ### Customised steps in ``CMakeNinja`` easyblock
+
 * ``build_step`` - Build using MesonNinja.
 
 * ``configure_step`` - Configure using CMake.
@@ -358,6 +364,7 @@ easyconfig parameter            |description                                    
 ``zipped_egg``                  |Install as a zipped eggs                                                                                                                                                                                                                                                                                                |``False``
 
 ### Customised steps in ``CMakePythonPackage`` easyblock
+
 * ``configure_step`` - Main configuration using cmake
 
 * ``install_step`` - Main configuration using cmake
@@ -392,6 +399,7 @@ easyconfig parameter            |description                                    
 ``with_configure``              |Run configure script before building                                                                                                                                                               |``False``
 
 ### Customised steps in ``CmdCp`` easyblock
+
 * ``build_step`` - Build by running the command with the inputfiles
 
 * ``configure_step`` - Build by running the command with the inputfiles
@@ -419,6 +427,7 @@ easyconfig parameter  |description                                              
 ``staged_install``    |Perform staged installation via subdirectory of build directory                                                                                |``False``
 
 ### Customised steps in ``Conda`` easyblock
+
 * ``install_step`` - Install software using 'conda env create' or 'conda create' & 'conda install'.
 
 
@@ -455,6 +464,7 @@ buildopts           |Extra options passed to make step (default already has -j X
 installopts         |Extra options for installation
 
 ### Customised steps in ``ConfigureMake`` easyblock
+
 * ``build_step`` - Start the actual build
         - typical: make -j X
 
@@ -541,6 +551,7 @@ easyconfig parameter            |description                                    
 ``zipped_egg``                  |Install as a zipped eggs                                                                                                                                                                                                                                                                                                |``False``
 
 ### Customised steps in ``ConfigureMakePythonPackage`` easyblock
+
 * ``build_step`` - Build Python package with 'make'.
 
 * ``configure_step`` - Configure build using 'python configure'.
@@ -636,6 +647,7 @@ easyconfig parameter    |description                                            
 ``zipped_egg``          |Install as a zipped eggs                                                                                                                                                                                                                                                                                                |``False``
 
 ### Customised steps in ``FortranPythonPackage`` easyblock
+
 * ``build_step`` - Customize the build step by adding compiler-specific flags to the build command.
 
 * ``configure_step`` - Customize the build step by adding compiler-specific flags to the build command.
@@ -657,6 +669,7 @@ easyconfig parameter|description                                                
 ``modulename``      |Module name of the Go package, when building non-native module       |``None``
 
 ### Customised steps in ``GoPackage`` easyblock
+
 * ``build_step`` - If Go package is not native go module, lets try to make the module.
 
 * ``configure_step`` - Configure Go package build/install.
@@ -686,6 +699,7 @@ easyconfig parameter        |description                                        
 ``usetmppath``              |Use temporary path for installation                            |``False``
 
 ### Customised steps in ``IntelBase`` easyblock
+
 * ``build_step`` - Binary installation files, so no building.
 
 * ``configure_step`` - Configure: handle license file and clean home dir.
@@ -745,6 +759,7 @@ easyconfig parameter |description                                               
 ``options``          |Dictionary with extension options.                                         |``{}``
 
 ### Customised steps in ``JuliaPackage`` easyblock
+
 * ``build_step`` - No separate build procedure for JuliaPackage.
 
 * ``configure_step`` - No separate configuration for JuliaPackage.
@@ -779,6 +794,7 @@ easyconfig parameter            |description                                    
 ``with_configure``              |Run configure script before building                                                                                                                                                               |``False``
 
 ### Customised steps in ``MakeCp`` easyblock
+
 * ``configure_step`` - Configure build if required
 
 * ``install_step`` - Install by copying specified files and directories.
@@ -799,6 +815,7 @@ easyconfig parameter  |description                          |default value
 ``separate_build_dir``|Perform build in a separate directory|``True``
 
 ### Customised steps in ``MesonNinja`` easyblock
+
 * ``build_step`` - Build with Ninja.
 
 * ``configure_step`` - Configure with Meson.
@@ -815,6 +832,7 @@ Generic easyblock to create a software-specific .modulerc file
 
 
 ### Customised steps in ``ModuleRC`` easyblock
+
 * ``build_step`` - Do nothing.
 
 * ``configure_step`` - Do nothing.
@@ -835,6 +853,7 @@ easyconfig parameter|description                       |default value
 ``options``         |Dictionary with extension options.|``{}``
 
 ### Customised steps in ``OCamlPackage`` easyblock
+
 * ``configure_step`` - Raise error when configure step is run: installing OCaml packages stand-alone is not supported (yet)
 
 * ``install_step`` - Raise error when configure step is run: installing OCaml packages stand-alone is not supported (yet)
@@ -853,6 +872,7 @@ easyconfig parameter|description                       |default value
 ``options``         |Dictionary with extension options.|``{}``
 
 ### Customised steps in ``OctavePackage`` easyblock
+
 * ``configure_step`` - Raise error when configure step is run: installing Octave toolboxes stand-alone is not supported (yet)
 
 * ``install_step`` - Raise error when configure step is run: installing Octave toolboxes stand-alone is not supported (yet)
@@ -876,6 +896,7 @@ easyconfig parameter|description                                                
 ``staged_install``  |Perform staged installation via subdirectory of build directory                                                                                |``False``
 
 ### Customised steps in ``PackedBinary`` easyblock
+
 * ``install_step`` - Copy all unpacked source directories to install directory, one-by-one.
 
 
@@ -893,6 +914,7 @@ easyconfig parameter|description                       |default value
 ``runtest``         |Run unit tests.                   |``"test"``
 
 ### Customised steps in ``PerlModule`` easyblock
+
 * ``build_step`` - No separate build procedure for Perl modules.
 
 * ``configure_step`` - No separate configuration for Perl modules.
@@ -975,6 +997,7 @@ easyconfig parameter    |description                                            
 ``zipped_egg``          |Install as a zipped eggs                                                                                                                                                                                                                                                                                                |``False``
 
 ### Customised steps in ``PythonPackage`` easyblock
+
 * ``build_step`` - Build Python package using setup.py
 
 * ``configure_step`` - Configure Python package build/install.
@@ -999,6 +1022,7 @@ easyconfig parameter|description                                             |de
 ``unpack_sources``  |Unpack sources before installation                      |``False``
 
 ### Customised steps in ``RPackage`` easyblock
+
 * ``build_step`` - No separate build step for R packages.
 
 * ``configure_step`` - No configuration for installing R packages.
@@ -1030,6 +1054,7 @@ easyconfig parameter|description                                                
 ``staged_install``  |Perform staged installation via subdirectory of build directory                                                                                |``False``
 
 ### Customised steps in ``Rpm`` easyblock
+
 * ``configure_step`` - Custom configuration procedure for RPMs: rebuild RPMs for relocation if required.
 
 * ``install_step`` - Custom installation procedure for RPMs into a custom prefix.
@@ -1049,6 +1074,7 @@ easyconfig parameter|description                         |default value
 ``options``         |Dictionary with extension options.  |``{}``
 
 ### Customised steps in ``RubyGem`` easyblock
+
 * ``build_step`` - No separate build procedure for Ruby Gems.
 
 * ``configure_step`` - No separate configuration for Ruby Gems.
@@ -1069,6 +1095,7 @@ easyconfig parameter|description                              |default value
 ``prefix_arg``      |Syntax for specifying installation prefix|``"PREFIX="``
 
 ### Customised steps in ``SCons`` easyblock
+
 * ``build_step`` - Build with SCons
 
 * ``configure_step`` - No configure step for SCons
@@ -1200,6 +1227,7 @@ easyconfig parameter|description                                                
 ``preinstall_cmd``  |Command to execute before installation                                                                                                                       |``None``
 
 ### Customised steps in ``Tarball`` easyblock
+
 * ``build_step`` - Dummy build method: nothing to build
 
 * ``configure_step`` - Dummy configure method
@@ -1291,6 +1319,7 @@ easyconfig parameter    |description                                            
 ``zipped_egg``          |Install as a zipped eggs                                                                                                                                                                                                                                                                                                |``False``
 
 ### Customised steps in ``VersionIndependentPythonPackage`` easyblock
+
 * ``build_step`` - No build procedure.
 
 * ``configure_step`` - No build procedure.
@@ -1307,6 +1336,7 @@ Support for building and installing applications with waf
 
 
 ### Customised steps in ``Waf`` easyblock
+
 * ``build_step`` - Build with ./waf build
 
 * ``configure_step`` - Configure with ./waf configure --prefix=<installdir>
