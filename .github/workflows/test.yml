@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: set up Python
         uses: actions/setup-python@v4
@@ -25,8 +27,13 @@ jobs:
           skip: './docs/js/asciinema-player-2.6.1.js,./docs/version-specific/supported-software.md'
 
       - name: check internal links
-        run: |
-          python ./.github/workflows/link_check.py
+        run: python ./.github/workflows/link_check.py
+
+      - name: checkout easybuild framework
+        uses: actions/checkout@v3
+        with:
+          repository: easybuilders/easybuild-framework
+          path: src
 
       - name: install mkdocs
         run: |

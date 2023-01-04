@@ -1,0 +1,17 @@
+---
+name: flake8 Lint
+on: [push, pull_request]  # yamllint disable-line rule:truthy
+jobs:
+  flake8-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: flake8 Lint
+        uses: py-actions/flake8@v2
