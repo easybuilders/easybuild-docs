@@ -13,4 +13,4 @@ jobs:
         uses: actionshub/markdownlint@2.0.2
         with:
           # filter out version-specific/* for now, until we fix all issues that mdl trips over
-          filesToIgnoreRegex: "(docs/demos/.*|docs/version-specific/.*)"
+          filesToIgnoreRegex: "(docs\/demos\/.*|docs\/version-specific\/.*)"
