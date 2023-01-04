@@ -1,0 +1,6207 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.easybuild.io/api/easybuild/base/generaloption/">
+      
+      
+        <link rel="prev" href="../frozendict/">
+      
+      
+        <link rel="next" href="../optcomplete/">
+      
+      <link rel="icon" href="../../../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
+    
+    
+      
+        <title>generaloption - EasyBuild - building software with ease</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.f56500e0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/asciinema-player-2.6.1.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-BLVCH6991S"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-BLVCH6991S",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-BLVCH6991S",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="easybuild" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#easybuild.base.generaloption" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="EasyBuild - building software with ease" class="md-header__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
+      
+  <img src="../../../../img/easybuild_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EasyBuild - building software with ease
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              generaloption
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/easybuilders/easybuild-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EasyBuild @ GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
+      
+  <img src="../../../../img/easybuild_logo.png" alt="logo">
+
+    </a>
+    EasyBuild - building software with ease
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/easybuilders/easybuild-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EasyBuild @ GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../what-is-easybuild/" class="md-nav__link">
+        What is EasyBuild?
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../terminology/" class="md-nav__link">
+        Terminology
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../configuration/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../using-easybuild/" class="md-nav__link">
+        Using EasyBuild
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../release-notes/" class="md-nav__link">
+        Release notes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1" type="checkbox" id="__nav_8_1" checked>
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">easybuild</a>
+          
+            <label for="__nav_8_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="easybuild" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_1">
+          <span class="md-nav__icon md-icon"></span>
+          easybuild
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_1" type="checkbox" id="__nav_8_1_1" checked>
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">base</a>
+          
+            <label for="__nav_8_1_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="base" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          base
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exceptions/" class="md-nav__link">
+        exceptions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fancylogger/" class="md-nav__link">
+        fancylogger
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../frozendict/" class="md-nav__link">
+        frozendict
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          generaloption
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        generaloption
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption" class="md-nav__link">
+    easybuild.base.generaloption
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOption" class="md-nav__link">
+    ExtOption
+  </a>
+  
+    <nav class="md-nav" aria-label="ExtOption">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOption.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOption.process" class="md-nav__link">
+    process()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOption.take_action" class="md-nav__link">
+    take_action()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOptionGroup" class="md-nav__link">
+    ExtOptionGroup
+  </a>
+  
+    <nav class="md-nav" aria-label="ExtOptionGroup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOptionGroup.add_option" class="md-nav__link">
+    add_option()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOptionParser" class="md-nav__link">
+    ExtOptionParser
+  </a>
+  
+    <nav class="md-nav" aria-label="ExtOptionParser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOptionParser.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOptionParser.check_help" class="md-nav__link">
+    check_help()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOptionParser.format_description" class="md-nav__link">
+    format_description()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOptionParser.format_epilog" class="md-nav__link">
+    format_epilog()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOptionParser.format_help" class="md-nav__link">
+    format_help()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOptionParser.format_option_mdhelp" class="md-nav__link">
+    format_option_mdhelp()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOptionParser.format_option_rsthelp" class="md-nav__link">
+    format_option_rsthelp()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOptionParser.get_default_values" class="md-nav__link">
+    get_default_values()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOptionParser.get_env_options" class="md-nav__link">
+    get_env_options()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOptionParser.get_env_options_prefix" class="md-nav__link">
+    get_env_options_prefix()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOptionParser.get_option_by_long_name" class="md-nav__link">
+    get_option_by_long_name()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOptionParser.is_value_a_commandline_option" class="md-nav__link">
+    is_value_a_commandline_option()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOptionParser.print_confighelp" class="md-nav__link">
+    print_confighelp()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOptionParser.print_help" class="md-nav__link">
+    print_help()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOptionParser.print_mdhelp" class="md-nav__link">
+    print_mdhelp()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOptionParser.print_rsthelp" class="md-nav__link">
+    print_rsthelp()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOptionParser.print_shorthelp" class="md-nav__link">
+    print_shorthelp()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOptionParser.set_description_docstring" class="md-nav__link">
+    set_description_docstring()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.ExtOptionParser.set_usage" class="md-nav__link">
+    set_usage()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.GeneralOption" class="md-nav__link">
+    GeneralOption
+  </a>
+  
+    <nav class="md-nav" aria-label="GeneralOption">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.GeneralOption.add_group_parser" class="md-nav__link">
+    add_group_parser()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.GeneralOption.autocomplete" class="md-nav__link">
+    autocomplete()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.GeneralOption.configfile_parser_init" class="md-nav__link">
+    configfile_parser_init()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.GeneralOption.default_parseoptions" class="md-nav__link">
+    default_parseoptions()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.GeneralOption.dict_by_prefix" class="md-nav__link">
+    dict_by_prefix()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.GeneralOption.generate_cmd_line" class="md-nav__link">
+    generate_cmd_line()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.GeneralOption.get_options_by_prefix" class="md-nav__link">
+    get_options_by_prefix()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.GeneralOption.get_options_by_section" class="md-nav__link">
+    get_options_by_section()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.GeneralOption.main_options" class="md-nav__link">
+    main_options()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.GeneralOption.make_option_metavar" class="md-nav__link">
+    make_option_metavar()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.GeneralOption.make_options_option_name_and_destination" class="md-nav__link">
+    make_options_option_name_and_destination()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.GeneralOption.parseconfigfiles" class="md-nav__link">
+    parseconfigfiles()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.GeneralOption.parseoptions" class="md-nav__link">
+    parseoptions()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.GeneralOption.postprocess" class="md-nav__link">
+    postprocess()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.GeneralOption.set_go_debug" class="md-nav__link">
+    set_go_debug()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.GeneralOption.validate" class="md-nav__link">
+    validate()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.SimpleOption" class="md-nav__link">
+    SimpleOption
+  </a>
+  
+    <nav class="md-nav" aria-label="SimpleOption">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.SimpleOption.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.check_str_list_tuple" class="md-nav__link">
+    check_str_list_tuple()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.get_empty_add_flex" class="md-nav__link">
+    get_empty_add_flex()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.set_columns" class="md-nav__link">
+    set_columns()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.simple_option" class="md-nav__link">
+    simple_option()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.generaloption.what_str_list_tuple" class="md-nav__link">
+    what_str_list_tuple()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optcomplete/" class="md-nav__link">
+        optcomplete
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rest/" class="md-nav__link">
+        rest
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing/" class="md-nav__link">
+        testing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wrapper/" class="md-nav__link">
+        wrapper
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_2" type="checkbox" id="__nav_8_1_2" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../framework/">framework</a>
+          
+            <label for="__nav_8_1_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="framework" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          framework
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyblock/" class="md-nav__link">
+        easyblock
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_2_2" type="checkbox" id="__nav_8_1_2_2" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../framework/easyconfig/">easyconfig</a>
+          
+            <label for="__nav_8_1_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="easyconfig" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          easyconfig
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/constants/" class="md-nav__link">
+        constants
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/default/" class="md-nav__link">
+        default
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/easyconfig/" class="md-nav__link">
+        easyconfig
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_2_2_4" type="checkbox" id="__nav_8_1_2_2_4" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../framework/easyconfig/format/">format</a>
+          
+            <label for="__nav_8_1_2_2_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="format" data-md-level="5">
+        <label class="md-nav__title" for="__nav_8_1_2_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          format
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/format/convert/" class="md-nav__link">
+        convert
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/format/format/" class="md-nav__link">
+        format
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/format/one/" class="md-nav__link">
+        one
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/format/pyheaderconfigobj/" class="md-nav__link">
+        pyheaderconfigobj
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/format/two/" class="md-nav__link">
+        two
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/format/version/" class="md-nav__link">
+        version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/format/yeb/" class="md-nav__link">
+        yeb
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/licenses/" class="md-nav__link">
+        licenses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/parser/" class="md-nav__link">
+        parser
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/style/" class="md-nav__link">
+        style
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/templates/" class="md-nav__link">
+        templates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/tools/" class="md-nav__link">
+        tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/tweak/" class="md-nav__link">
+        tweak
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/types/" class="md-nav__link">
+        types
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easystack/" class="md-nav__link">
+        easystack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/extension/" class="md-nav__link">
+        extension
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/extensioneasyblock/" class="md-nav__link">
+        extensioneasyblock
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../main/" class="md-nav__link">
+        main
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_4" type="checkbox" id="__nav_8_1_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_1_4">
+          scripts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="scripts" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          scripts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripts/bootstrap_eb/" class="md-nav__link">
+        bootstrap_eb
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripts/clean_gists/" class="md-nav__link">
+        clean_gists
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripts/findPythonDeps/" class="md-nav__link">
+        findPythonDeps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripts/fix_docs/" class="md-nav__link">
+        fix_docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripts/mk_tmpl_easyblock_for/" class="md-nav__link">
+        mk_tmpl_easyblock_for
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripts/rpath_args/" class="md-nav__link">
+        rpath_args
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_5" type="checkbox" id="__nav_8_1_5" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../toolchains/">toolchains</a>
+          
+            <label for="__nav_8_1_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="toolchains" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          toolchains
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/cgmpich/" class="md-nav__link">
+        cgmpich
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/cgmpolf/" class="md-nav__link">
+        cgmpolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/cgmvapich2/" class="md-nav__link">
+        cgmvapich2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/cgmvolf/" class="md-nav__link">
+        cgmvolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/cgompi/" class="md-nav__link">
+        cgompi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/cgoolf/" class="md-nav__link">
+        cgoolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/clanggcc/" class="md-nav__link">
+        clanggcc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_5_8" type="checkbox" id="__nav_8_1_5_8" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../toolchains/compiler/">compiler</a>
+          
+            <label for="__nav_8_1_5_8">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="compiler" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_5_8">
+          <span class="md-nav__icon md-icon"></span>
+          compiler
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/clang/" class="md-nav__link">
+        clang
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/craype/" class="md-nav__link">
+        craype
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/cuda/" class="md-nav__link">
+        cuda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/dummycompiler/" class="md-nav__link">
+        dummycompiler
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/fujitsu/" class="md-nav__link">
+        fujitsu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/gcc/" class="md-nav__link">
+        gcc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/ibmxl/" class="md-nav__link">
+        ibmxl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/intel_compilers/" class="md-nav__link">
+        intel_compilers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/inteliccifort/" class="md-nav__link">
+        inteliccifort
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/nvhpc/" class="md-nav__link">
+        nvhpc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/pgi/" class="md-nav__link">
+        pgi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/systemcompiler/" class="md-nav__link">
+        systemcompiler
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/craycce/" class="md-nav__link">
+        craycce
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/craygnu/" class="md-nav__link">
+        craygnu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/crayintel/" class="md-nav__link">
+        crayintel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/craypgi/" class="md-nav__link">
+        craypgi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/dummy/" class="md-nav__link">
+        dummy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/fcc/" class="md-nav__link">
+        fcc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/ffmpi/" class="md-nav__link">
+        ffmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_5_16" type="checkbox" id="__nav_8_1_5_16" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../toolchains/fft/">fft</a>
+          
+            <label for="__nav_8_1_5_16">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="fft" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_5_16">
+          <span class="md-nav__icon md-icon"></span>
+          fft
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/fft/fftw/" class="md-nav__link">
+        fftw
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/fft/fujitsufftw/" class="md-nav__link">
+        fujitsufftw
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/fft/intelfftw/" class="md-nav__link">
+        intelfftw
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/foss/" class="md-nav__link">
+        foss
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/fosscuda/" class="md-nav__link">
+        fosscuda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/fujitsu/" class="md-nav__link">
+        fujitsu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gcc/" class="md-nav__link">
+        gcc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gcccore/" class="md-nav__link">
+        gcccore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gcccuda/" class="md-nav__link">
+        gcccuda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gfbf/" class="md-nav__link">
+        gfbf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gimkl/" class="md-nav__link">
+        gimkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gimpi/" class="md-nav__link">
+        gimpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gimpic/" class="md-nav__link">
+        gimpic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/giolf/" class="md-nav__link">
+        giolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/giolfc/" class="md-nav__link">
+        giolfc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmacml/" class="md-nav__link">
+        gmacml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmkl/" class="md-nav__link">
+        gmkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmklc/" class="md-nav__link">
+        gmklc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmpich/" class="md-nav__link">
+        gmpich
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmpich2/" class="md-nav__link">
+        gmpich2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmpit/" class="md-nav__link">
+        gmpit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmpolf/" class="md-nav__link">
+        gmpolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmvapich2/" class="md-nav__link">
+        gmvapich2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmvolf/" class="md-nav__link">
+        gmvolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gnu/" class="md-nav__link">
+        gnu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/goalf/" class="md-nav__link">
+        goalf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gobff/" class="md-nav__link">
+        gobff
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/goblf/" class="md-nav__link">
+        goblf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gofbf/" class="md-nav__link">
+        gofbf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/golf/" class="md-nav__link">
+        golf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/golfc/" class="md-nav__link">
+        golfc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gomkl/" class="md-nav__link">
+        gomkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gomklc/" class="md-nav__link">
+        gomklc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gompi/" class="md-nav__link">
+        gompi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gompic/" class="md-nav__link">
+        gompic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/goolf/" class="md-nav__link">
+        goolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/goolfc/" class="md-nav__link">
+        goolfc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gpsmpi/" class="md-nav__link">
+        gpsmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gpsolf/" class="md-nav__link">
+        gpsolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gqacml/" class="md-nav__link">
+        gqacml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gsmpi/" class="md-nav__link">
+        gsmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gsolf/" class="md-nav__link">
+        gsolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iccifort/" class="md-nav__link">
+        iccifort
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iccifortcuda/" class="md-nav__link">
+        iccifortcuda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/ictce/" class="md-nav__link">
+        ictce
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iibff/" class="md-nav__link">
+        iibff
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iimkl/" class="md-nav__link">
+        iimkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iimklc/" class="md-nav__link">
+        iimklc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iimpi/" class="md-nav__link">
+        iimpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iimpic/" class="md-nav__link">
+        iimpic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iiqmpi/" class="md-nav__link">
+        iiqmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/impich/" class="md-nav__link">
+        impich
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/impmkl/" class="md-nav__link">
+        impmkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/intel-para/" class="md-nav__link">
+        intel-para
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/intel/" class="md-nav__link">
+        intel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/intel_compilers/" class="md-nav__link">
+        intel_compilers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/intelcuda/" class="md-nav__link">
+        intelcuda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iomkl/" class="md-nav__link">
+        iomkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iomklc/" class="md-nav__link">
+        iomklc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iompi/" class="md-nav__link">
+        iompi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iompic/" class="md-nav__link">
+        iompic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/ipsmpi/" class="md-nav__link">
+        ipsmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iqacml/" class="md-nav__link">
+        iqacml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/ismkl/" class="md-nav__link">
+        ismkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_5_78" type="checkbox" id="__nav_8_1_5_78" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../toolchains/linalg/">linalg</a>
+          
+            <label for="__nav_8_1_5_78">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="linalg" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_5_78">
+          <span class="md-nav__icon md-icon"></span>
+          linalg
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/acml/" class="md-nav__link">
+        acml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/atlas/" class="md-nav__link">
+        atlas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/blacs/" class="md-nav__link">
+        blacs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/blis/" class="md-nav__link">
+        blis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/flame/" class="md-nav__link">
+        flame
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/flexiblas/" class="md-nav__link">
+        flexiblas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/fujitsussl/" class="md-nav__link">
+        fujitsussl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/gotoblas/" class="md-nav__link">
+        gotoblas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/intelmkl/" class="md-nav__link">
+        intelmkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/lapack/" class="md-nav__link">
+        lapack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/libsci/" class="md-nav__link">
+        libsci
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/openblas/" class="md-nav__link">
+        openblas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/scalapack/" class="md-nav__link">
+        scalapack
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_5_79" type="checkbox" id="__nav_8_1_5_79" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../toolchains/mpi/">mpi</a>
+          
+            <label for="__nav_8_1_5_79">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="mpi" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_5_79">
+          <span class="md-nav__icon md-icon"></span>
+          mpi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/craympich/" class="md-nav__link">
+        craympich
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/fujitsumpi/" class="md-nav__link">
+        fujitsumpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/intelmpi/" class="md-nav__link">
+        intelmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/mpich/" class="md-nav__link">
+        mpich
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/mpich2/" class="md-nav__link">
+        mpich2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/mpitrampoline/" class="md-nav__link">
+        mpitrampoline
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/mvapich2/" class="md-nav__link">
+        mvapich2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/openmpi/" class="md-nav__link">
+        openmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/psmpi/" class="md-nav__link">
+        psmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/qlogicmpi/" class="md-nav__link">
+        qlogicmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/spectrummpi/" class="md-nav__link">
+        spectrummpi
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/nvhpc/" class="md-nav__link">
+        nvhpc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/nvompi/" class="md-nav__link">
+        nvompi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/nvompic/" class="md-nav__link">
+        nvompic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/nvpsmpi/" class="md-nav__link">
+        nvpsmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/nvpsmpic/" class="md-nav__link">
+        nvpsmpic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/pgi/" class="md-nav__link">
+        pgi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/pmkl/" class="md-nav__link">
+        pmkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/pomkl/" class="md-nav__link">
+        pomkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/pompi/" class="md-nav__link">
+        pompi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/system/" class="md-nav__link">
+        system
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/xlcxlf/" class="md-nav__link">
+        xlcxlf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/xlmpich/" class="md-nav__link">
+        xlmpich
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/xlmpich2/" class="md-nav__link">
+        xlmpich2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/xlmvapich2/" class="md-nav__link">
+        xlmvapich2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/xlompi/" class="md-nav__link">
+        xlompi
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6" type="checkbox" id="__nav_8_1_6" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tools/">tools</a>
+          
+            <label for="__nav_8_1_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="tools" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/asyncprocess/" class="md-nav__link">
+        asyncprocess
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/build_details/" class="md-nav__link">
+        build_details
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/build_log/" class="md-nav__link">
+        build_log
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/config/" class="md-nav__link">
+        config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/configobj/" class="md-nav__link">
+        configobj
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6_6" type="checkbox" id="__nav_8_1_6_6" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tools/containers/">containers</a>
+          
+            <label for="__nav_8_1_6_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="containers" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_6_6">
+          <span class="md-nav__icon md-icon"></span>
+          containers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/containers/base/" class="md-nav__link">
+        base
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/containers/common/" class="md-nav__link">
+        common
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/containers/docker/" class="md-nav__link">
+        docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/containers/singularity/" class="md-nav__link">
+        singularity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/containers/utils/" class="md-nav__link">
+        utils
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/convert/" class="md-nav__link">
+        convert
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/deprecated/" class="md-nav__link">
+        deprecated
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/docs/" class="md-nav__link">
+        docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/environment/" class="md-nav__link">
+        environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/filetools/" class="md-nav__link">
+        filetools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/github/" class="md-nav__link">
+        github
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/hooks/" class="md-nav__link">
+        hooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/include/" class="md-nav__link">
+        include
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/jenkins/" class="md-nav__link">
+        jenkins
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6_16" type="checkbox" id="__nav_8_1_6_16" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tools/job/">job</a>
+          
+            <label for="__nav_8_1_6_16">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="job" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_6_16">
+          <span class="md-nav__icon md-icon"></span>
+          job
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/job/backend/" class="md-nav__link">
+        backend
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/job/gc3pie/" class="md-nav__link">
+        gc3pie
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/job/pbs_python/" class="md-nav__link">
+        pbs_python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/job/slurm/" class="md-nav__link">
+        slurm
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/loose_version/" class="md-nav__link">
+        loose_version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/module_generator/" class="md-nav__link">
+        module_generator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6_19" type="checkbox" id="__nav_8_1_6_19" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tools/module_naming_scheme/">module_naming_scheme</a>
+          
+            <label for="__nav_8_1_6_19">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="module_naming_scheme" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_6_19">
+          <span class="md-nav__icon md-icon"></span>
+          module_naming_scheme
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/module_naming_scheme/categorized_hmns/" class="md-nav__link">
+        categorized_hmns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/module_naming_scheme/categorized_mns/" class="md-nav__link">
+        categorized_mns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/module_naming_scheme/easybuild_mns/" class="md-nav__link">
+        easybuild_mns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/module_naming_scheme/hierarchical_mns/" class="md-nav__link">
+        hierarchical_mns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/module_naming_scheme/migrate_from_eb_to_hmns/" class="md-nav__link">
+        migrate_from_eb_to_hmns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/module_naming_scheme/mns/" class="md-nav__link">
+        mns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/module_naming_scheme/toolchain/" class="md-nav__link">
+        toolchain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/module_naming_scheme/utilities/" class="md-nav__link">
+        utilities
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/modules/" class="md-nav__link">
+        modules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/multidiff/" class="md-nav__link">
+        multidiff
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/options/" class="md-nav__link">
+        options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/output/" class="md-nav__link">
+        output
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6_24" type="checkbox" id="__nav_8_1_6_24" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tools/package/">package</a>
+          
+            <label for="__nav_8_1_6_24">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="package" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_6_24">
+          <span class="md-nav__icon md-icon"></span>
+          package
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6_24_1" type="checkbox" id="__nav_8_1_6_24_1" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tools/package/package_naming_scheme/">package_naming_scheme</a>
+          
+            <label for="__nav_8_1_6_24_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="package_naming_scheme" data-md-level="5">
+        <label class="md-nav__title" for="__nav_8_1_6_24_1">
+          <span class="md-nav__icon md-icon"></span>
+          package_naming_scheme
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/package/package_naming_scheme/easybuild_pns/" class="md-nav__link">
+        easybuild_pns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/package/package_naming_scheme/pns/" class="md-nav__link">
+        pns
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/package/utilities/" class="md-nav__link">
+        utilities
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/parallelbuild/" class="md-nav__link">
+        parallelbuild
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6_26" type="checkbox" id="__nav_8_1_6_26" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tools/py2vs3/">py2vs3</a>
+          
+            <label for="__nav_8_1_6_26">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="py2vs3" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_6_26">
+          <span class="md-nav__icon md-icon"></span>
+          py2vs3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/py2vs3/py2/" class="md-nav__link">
+        py2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/py2vs3/py3/" class="md-nav__link">
+        py3
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6_27" type="checkbox" id="__nav_8_1_6_27" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tools/repository/">repository</a>
+          
+            <label for="__nav_8_1_6_27">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="repository" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_6_27">
+          <span class="md-nav__icon md-icon"></span>
+          repository
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/repository/filerepo/" class="md-nav__link">
+        filerepo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/repository/gitrepo/" class="md-nav__link">
+        gitrepo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/repository/hgrepo/" class="md-nav__link">
+        hgrepo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/repository/repository/" class="md-nav__link">
+        repository
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/repository/svnrepo/" class="md-nav__link">
+        svnrepo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/robot/" class="md-nav__link">
+        robot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/run/" class="md-nav__link">
+        run
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/systemtools/" class="md-nav__link">
+        systemtools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/testing/" class="md-nav__link">
+        testing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6_32" type="checkbox" id="__nav_8_1_6_32" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tools/toolchain/">toolchain</a>
+          
+            <label for="__nav_8_1_6_32">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="toolchain" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_6_32">
+          <span class="md-nav__icon md-icon"></span>
+          toolchain
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/toolchain/compiler/" class="md-nav__link">
+        compiler
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/toolchain/constants/" class="md-nav__link">
+        constants
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/toolchain/fft/" class="md-nav__link">
+        fft
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/toolchain/linalg/" class="md-nav__link">
+        linalg
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/toolchain/mpi/" class="md-nav__link">
+        mpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/toolchain/options/" class="md-nav__link">
+        options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/toolchain/toolchain/" class="md-nav__link">
+        toolchain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/toolchain/toolchainvariables/" class="md-nav__link">
+        toolchainvariables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/toolchain/utilities/" class="md-nav__link">
+        utilities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/toolchain/variables/" class="md-nav__link">
+        variables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/utilities/" class="md-nav__link">
+        utilities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/variables/" class="md-nav__link">
+        variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/version/" class="md-nav__link">
+        version
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-help/" class="md-nav__link">
+        Getting help
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+
+  <h1>generaloption</h1>
+
+<div class="doc doc-object doc-module">
+
+
+<a id="easybuild.base.generaloption"></a>
+  <div class="doc doc-contents first">
+  
+      <p>A class that can be used to generated options to python scripts in a general way.</p>
+<p>:author: Stijn De Weirdt (Ghent University)
+:author: Jens Timmerman (Ghent University)</p>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="easybuild.base.generaloption.ExtOption" class="doc doc-heading">
+        <code>ExtOption</code>
+
+
+<a href="#easybuild.base.generaloption.ExtOption" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><a class="autorefs autorefs-internal" title="easybuild.base.optcomplete.CompleterOption" href="../optcomplete/#easybuild.base.optcomplete.CompleterOption">CompleterOption</a></code></p>
+
+  
+      <p>Extended options class
+ - enable/disable support</p>
+<p>Actions:
+  - shorthelp : hook for shortend help messages
+  - confighelp : hook for configfile-style help messages
+  - store_debuglog : turns on fancylogger debugloglevel
+     - also: 'store_infolog', 'store_warninglog'
+  - add : add value to default (result is default + value)
+      - add_first : add default to value (result is value + default)
+      - extend : alias for add with strlist type
+      - type must support + (<strong>add</strong>) and one of negate (<strong>neg</strong>) or slicing (<strong>getslice</strong>)
+  - add_flex : similar to add / add_first, but replaces the first "empty" element with the default
+      - the empty element is dependent of the type
+          - for {str,path}{list,tuple} this is the empty string
+      - types must support the index method to determine the location of the "empty" element
+      - the replacement uses +
+      - e.g. a strlist type with value "0,,1"` and default [3,4] and action add_flex will
+            use the empty string '' as "empty" element, and will result in [0,3,4,1] (not [0,[3,4],1])
+            (but also a strlist with value "" and default [3,4] will result in [3,4];
+            so you can't set an empty list with add_flex)
+  - date : convert into datetime.date
+  - datetime : convert into datetime.datetime
+  - regex: compile str in regexp
+  - store_or_None
+    - set default to None if no option passed,
+    - set to default if option without value passed,
+    - set to value if option with value passed</p>
+<p>Types:
+   - strlist, strtuple : convert comma-separated string in a list resp. tuple of strings
+   - pathlist, pathtuple : using os.pathsep, convert pathsep-separated string in a list resp. tuple of strings
+       - the path separator is OS-dependent</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.ExtOption.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.ExtOption.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Add logger to init</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.ExtOption.process" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">process</span><span class="p">(</span><span class="n">opt</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">parser</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.ExtOption.process" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Handle option-as-value issues before actually processing option.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.ExtOption.take_action" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">take_action</span><span class="p">(</span><span class="n">action</span><span class="p">,</span> <span class="n">dest</span><span class="p">,</span> <span class="n">opt</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">parser</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.ExtOption.take_action" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Extended take_action</p>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="easybuild.base.generaloption.ExtOptionGroup" class="doc doc-heading">
+        <code>ExtOptionGroup</code>
+
+
+<a href="#easybuild.base.generaloption.ExtOptionGroup" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="optparse.OptionGroup">OptionGroup</span></code></p>
+
+  
+      <p>An OptionGroup with support for configfile section names</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.ExtOptionGroup.add_option" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_option</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.ExtOptionGroup.add_option" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Extract configfile section info</p>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="easybuild.base.generaloption.ExtOptionParser" class="doc doc-heading">
+        <code>ExtOptionParser</code>
+
+
+<a href="#easybuild.base.generaloption.ExtOptionParser" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><span title="optparse.OptionParser">OptionParser</span></code></p>
+
+  
+      <p>Make an option parser that limits the C{-h} / C{--shorthelp} to short opts only,
+C{-H} / C{--help} for all options.</p>
+<p>Pass options through environment. Like:</p>
+<ul>
+<li>C{export PROGNAME_SOMEOPTION = value} will generate {--someoption=value}</li>
+<li>C{export PROGNAME_OTHEROPTION = 1} will generate {--otheroption}</li>
+<li>C{export PROGNAME_OTHEROPTION = 0} (or no or false) won't do anything</li>
+</ul>
+<p>distinction is made based on option.action in TYPED_ACTIONS allow
+C{--enable-} / C{--disable-} (using eg ExtOption option_class)</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.ExtOptionParser.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.ExtOptionParser.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Following named arguments are specific to ExtOptionParser
+(the remaining ones are passed to the parent OptionParser class)</p>
+<pre><code>:param help_to_string: boolean, if True, the help is written
+                       to a newly created StingIO instance
+:param help_to_file: filehandle, help is written to this filehandle
+:param envvar_prefix: string, specify the environment variable prefix
+                      to use (if you don't want the default one)
+:param process_env_options: boolean, if False, don't check the
+                            environment for options (default: True)
+:param error_env_options: boolean, if True, use error_env_options_method
+                          if an environment variable with correct envvar_prefix
+                          exists but does not correspond to an existing option
+                          (default: False)
+:param error_env_options_method: callable; method to use to report error
+                                 in used environment variables (see error_env_options);
+                                 accepts string value + additional
+                                 string arguments for formatting the message
+                                 (default: own log.error method)
+</code></pre>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.ExtOptionParser.check_help" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">check_help</span><span class="p">(</span><span class="n">fh</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.ExtOptionParser.check_help" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Checks filehandle for help functions</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.ExtOptionParser.format_description" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">format_description</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.ExtOptionParser.format_description" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Extend to allow docstring as description</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.ExtOptionParser.format_epilog" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">format_epilog</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.ExtOptionParser.format_epilog" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Allow multiple epilog parts</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.ExtOptionParser.format_help" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">format_help</span><span class="p">(</span><span class="n">formatter</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.ExtOptionParser.format_help" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>For py2.4 compatibility reasons (missing epilog). This is the py2.7 / optparse 1.5.3 code</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.ExtOptionParser.format_option_mdhelp" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">format_option_mdhelp</span><span class="p">(</span><span class="n">formatter</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.ExtOptionParser.format_option_mdhelp" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Formatting for help in rst format</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.ExtOptionParser.format_option_rsthelp" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">format_option_rsthelp</span><span class="p">(</span><span class="n">formatter</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.ExtOptionParser.format_option_rsthelp" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Formatting for help in rst format</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.ExtOptionParser.get_default_values" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_default_values</span><span class="p">()</span></code>
+
+<a href="#easybuild.base.generaloption.ExtOptionParser.get_default_values" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Introduce the ExtValues class with class constant
+- make it dynamic, otherwise the class constant is shared between multiple instances
+- class constant is used to avoid _action_taken as option in the <strong>dict</strong>
+    - only works by using reference to object
+    - same for _logaction_taken</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.ExtOptionParser.get_env_options" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_env_options</span><span class="p">()</span></code>
+
+<a href="#easybuild.base.generaloption.ExtOptionParser.get_env_options" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Retrieve options from the environment: prefix_longopt.upper()</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.ExtOptionParser.get_env_options_prefix" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_env_options_prefix</span><span class="p">()</span></code>
+
+<a href="#easybuild.base.generaloption.ExtOptionParser.get_env_options_prefix" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Return the prefix to use for options passed through the environment</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.ExtOptionParser.get_option_by_long_name" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_option_by_long_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.ExtOptionParser.get_option_by_long_name" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Return the option matching the long option name</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.ExtOptionParser.is_value_a_commandline_option" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">is_value_a_commandline_option</span><span class="p">(</span><span class="n">opt</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.ExtOptionParser.is_value_a_commandline_option" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Determine if value is/could be an option passed via the commandline.
+If it is, return the reason why (can be used as message); or return None if it isn't.</p>
+<p>opt is the option flag to which the value is passed;
+index is the index of the value on the commandline (if None, it is determined from orig_rargs and rargs)</p>
+<p>The method tests for possible ambiguity on the commandline when the parser
+interprets the argument following an option as a value, whereas it is far more likely that
+it is (intended as) an option; --longopt=value is never considered ambiguous, regardless of the value.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.ExtOptionParser.print_confighelp" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">print_confighelp</span><span class="p">(</span><span class="n">fh</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.ExtOptionParser.print_confighelp" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Print help as a configfile.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.ExtOptionParser.print_help" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">print_help</span><span class="p">(</span><span class="n">fh</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.ExtOptionParser.print_help" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Intercept print to file to print to string and remove the ENABLE/DISABLE options from help</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.ExtOptionParser.print_mdhelp" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">print_mdhelp</span><span class="p">(</span><span class="n">fh</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.ExtOptionParser.print_mdhelp" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Print help in MarkDown format</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.ExtOptionParser.print_rsthelp" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">print_rsthelp</span><span class="p">(</span><span class="n">fh</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.ExtOptionParser.print_rsthelp" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Print help in rst format</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.ExtOptionParser.print_shorthelp" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">print_shorthelp</span><span class="p">(</span><span class="n">fh</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.ExtOptionParser.print_shorthelp" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Print a shortened help (no longopts)</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.ExtOptionParser.set_description_docstring" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">set_description_docstring</span><span class="p">()</span></code>
+
+<a href="#easybuild.base.generaloption.ExtOptionParser.set_description_docstring" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Try to find the main docstring and add it if description is not None</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.ExtOptionParser.set_usage" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">set_usage</span><span class="p">(</span><span class="n">usage</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.ExtOptionParser.set_usage" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Return usage and set try to set autogenerated description.</p>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="easybuild.base.generaloption.GeneralOption" class="doc doc-heading">
+        <code>GeneralOption</code>
+
+
+<a href="#easybuild.base.generaloption.GeneralOption" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code>object</code></p>
+
+  
+      <p>'Used-to-be simple' wrapper class for option parsing</p>
+<p>Options with go_ prefix are for this class, the remainder is passed to the parser
+    - go_args : use these instead of of sys.argv[1:]
+    - go_columns : specify column width (in columns)
+    - go_useconfigfiles : use configfiles or not (default set by CONFIGFILES_USE)
+        if True, an option --configfiles will be added
+    - go_configfiles : list of configfiles to parse. Uses ConfigParser.read; last file wins
+    - go_configfiles_initenv : section dict of key/value dict; inserted before configfileparsing
+        As a special case, using all uppercase key in DEFAULT section with a case-sensitive
+        configparser can be used to set "constants" for easy interpolation in all sections.
+    - go_loggername : name of logger, default classname
+    - go_mainbeforedefault : set the main options before the default ones
+    - go_autocompleter : dict with named options to pass to the autocomplete call (eg arg_completer)
+        if is None: disable autocompletion; default is {} (ie no extra args passed)</p>
+<p>Sections starting with the string 'raw_' in the sectionname will be parsed as raw sections,
+meaning there will be no interpolation of the strings. This comes in handy if you want to configure strings
+with templates in them.</p>
+<p>Options process order (last one wins)
+    0. default defined with option
+    1. value in (last) configfile (last configfile wins)
+    2. options parsed by option parser
+    In case the ExtOptionParser is used
+        0. value set through environment variable
+        1. value set through commandline option</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.GeneralOption.add_group_parser" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_group_parser</span><span class="p">(</span><span class="n">opt_dict</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">otherdefaults</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">section_name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.GeneralOption.add_group_parser" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Make a group parser from a dict</p>
+<p>@type opt_dict: dict
+@type description: a 2 element list (short and long description)
+@section_name: str, the name of the section group in the config file.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>opt_dict</code></td>
+          <td class="doc-param-details">
+            <p>options, with the form C{"long_opt" : value}. Value is a C{tuple} containing C{(help,type,action,default(,optional string=short option; list/tuple=choices; dict=add_option kwargs))}  help message passed through opt_dict will be extended with type and default  If section_name is None, prefix will be used. If prefix is None or '', 'DEFAULT' is used.</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.GeneralOption.autocomplete" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">autocomplete</span><span class="p">()</span></code>
+
+<a href="#easybuild.base.generaloption.GeneralOption.autocomplete" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Set the autocompletion magic via optcomplete</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.GeneralOption.configfile_parser_init" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">configfile_parser_init</span><span class="p">(</span><span class="n">initenv</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.GeneralOption.configfile_parser_init" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Initialise the configparser to use.</p>
+<pre><code>:param initenv: insert initial environment into the configparser.
+    It is a dict of dicts; the first level key is the section name;
+    the 2nd level key,value is the key=value.
+    All section names, keys and values are converted to strings.
+</code></pre>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.GeneralOption.default_parseoptions" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">default_parseoptions</span><span class="p">()</span></code>
+
+<a href="#easybuild.base.generaloption.GeneralOption.default_parseoptions" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Return default options</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.GeneralOption.dict_by_prefix" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">dict_by_prefix</span><span class="p">(</span><span class="n">merge_empty_prefix</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.GeneralOption.dict_by_prefix" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Break the options dict by prefix; return nested dict.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code></code></td>
+          <td class="doc-param-details">
+            <p>boolean (default False) also (try to) merge the empty prefix in the root of the dict. If there is a non-prefixed optionname that matches a prefix, it will be rejected and error will be logged.</p>
+            <p>
+                <span class="doc-param-annotation">
+                  <b>TYPE:</b>
+                    <code>merge_empty_prefix</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.GeneralOption.generate_cmd_line" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">generate_cmd_line</span><span class="p">(</span><span class="n">ignore</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">add_default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.GeneralOption.generate_cmd_line" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create the commandline options that would create the current self.options.
+The result is sorted on the destination names.</p>
+<p>:param ignore : regex on destination
+ :param add_default : print value that are equal to default</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.GeneralOption.get_options_by_prefix" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_options_by_prefix</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.GeneralOption.get_options_by_prefix" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get all options that set with prefix. Return a dict. The keys are stripped of the prefix.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.GeneralOption.get_options_by_section" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_options_by_section</span><span class="p">(</span><span class="n">section</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.GeneralOption.get_options_by_section" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get all options from section. Return a dict.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.GeneralOption.main_options" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">main_options</span><span class="p">()</span></code>
+
+<a href="#easybuild.base.generaloption.GeneralOption.main_options" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create the main options automatically</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.GeneralOption.make_option_metavar" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">make_option_metavar</span><span class="p">(</span><span class="n">longopt</span><span class="p">,</span> <span class="n">details</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.GeneralOption.make_option_metavar" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Generate the metavar for option longopt
+@type longopt: str
+@type details: tuple</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.GeneralOption.make_options_option_name_and_destination" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">make_options_option_name_and_destination</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.GeneralOption.make_options_option_name_and_destination" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Make the options option name</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.GeneralOption.parseconfigfiles" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">parseconfigfiles</span><span class="p">()</span></code>
+
+<a href="#easybuild.base.generaloption.GeneralOption.parseconfigfiles" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Parse configfiles</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.GeneralOption.parseoptions" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">parseoptions</span><span class="p">(</span><span class="n">options_list</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.GeneralOption.parseoptions" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Parse the options</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.GeneralOption.postprocess" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">postprocess</span><span class="p">()</span></code>
+
+<a href="#easybuild.base.generaloption.GeneralOption.postprocess" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Some additional processing</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.GeneralOption.set_go_debug" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">set_go_debug</span><span class="p">()</span></code>
+
+<a href="#easybuild.base.generaloption.GeneralOption.set_go_debug" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Check if debug options are on and then set fancylogger to debug.
+This is not the default way to set debug, it enables debug logging
+in an earlier stage to debug generaloption itself.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.GeneralOption.validate" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">validate</span><span class="p">()</span></code>
+
+<a href="#easybuild.base.generaloption.GeneralOption.validate" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Final step, allows for validating the options and/or args</p>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="easybuild.base.generaloption.SimpleOption" class="doc doc-heading">
+        <code>SimpleOption</code>
+
+
+<a href="#easybuild.base.generaloption.SimpleOption" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code><a class="autorefs autorefs-internal" title="easybuild.base.generaloption.GeneralOption" href="#easybuild.base.generaloption.GeneralOption">GeneralOption</a></code></p>
+
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.base.generaloption.SimpleOption.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">go_dict</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">descr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">short_groupdescr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">long_groupdescr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">config_files</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.SimpleOption.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Initialisation</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>go_dict</code></td>
+          <td class="doc-param-details">
+            <p>General Option option dict</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>short_groupdescr</code></td>
+          <td class="doc-param-details">
+            <p>short description of main options</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>long_groupdescr</code></td>
+          <td class="doc-param-details">
+            <p>longer description of main options</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>config_files</code></td>
+          <td class="doc-param-details">
+            <p>list of configfiles to read options from  a general options dict has as key the long option name, and is followed by a list/tuple mandatory are 4 elements : option help, type, action, default a 5th element is optional and is the short help name (if any)  the generated help will include the docstring</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.base.generaloption.check_str_list_tuple" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">check_str_list_tuple</span><span class="p">(</span><span class="n">option</span><span class="p">,</span> <span class="n">opt</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.check_str_list_tuple" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>check function for strlist and strtuple type
+    assumes value is comma-separated list
+    returns list or tuple of strings</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.base.generaloption.get_empty_add_flex" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_empty_add_flex</span><span class="p">(</span><span class="n">allvalues</span><span class="p">,</span> <span class="bp">self</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.get_empty_add_flex" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Return the empty element for add_flex action for allvalues</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.base.generaloption.set_columns" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">set_columns</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.set_columns" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Set os.environ COLUMNS variable
+- only if it is not set already</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.base.generaloption.simple_option" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">simple_option</span><span class="p">(</span><span class="n">go_dict</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">descr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">short_groupdescr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">long_groupdescr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">config_files</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.simple_option" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>A function that returns a single level GeneralOption option parser</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>go_dict</code></td>
+          <td class="doc-param-details">
+            <p>General Option option dict</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>short_groupdescr</code></td>
+          <td class="doc-param-details">
+            <p>short description of main options</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>long_groupdescr</code></td>
+          <td class="doc-param-details">
+            <p>longer description of main options</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>config_files</code></td>
+          <td class="doc-param-details">
+            <p>list of configfiles to read options from  a general options dict has as key the long option name, and is followed by a list/tuple mandatory are 4 elements : option help, type, action, default a 5th element is optional and is the short help name (if any)  the generated help will include the docstring</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.base.generaloption.what_str_list_tuple" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">what_str_list_tuple</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+
+<a href="#easybuild.base.generaloption.what_str_list_tuple" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Given name, return separator, class and helptext wrt separator.
+(Currently supports strlist, strtuple, pathlist, pathtuple)</p>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/easy_build" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/c/easybuilders" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://docs.easybuild.io" target="_blank" rel="noopener" title="docs.easybuild.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M96 0C43 0 0 43 0 96v320c0 53 43 96 96 96h320c17.7 0 32-14.3 32-32s-14.3-32-32-32v-64c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H96zm0 384h256v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.5cf534bf.min.js"></script>
+      
+        <script src="../../../../js/asciinema-player-2.6.1.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,7073 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.easybuild.io/api/easybuild/tools/github/">
+      
+      
+        <link rel="prev" href="../filetools/">
+      
+      
+        <link rel="next" href="../hooks/">
+      
+      <link rel="icon" href="../../../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
+    
+    
+      
+        <title>github - EasyBuild - building software with ease</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.f56500e0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/asciinema-player-2.6.1.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-BLVCH6991S"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-BLVCH6991S",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-BLVCH6991S",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="easybuild" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#easybuild.tools.github" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="EasyBuild - building software with ease" class="md-header__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
+      
+  <img src="../../../../img/easybuild_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EasyBuild - building software with ease
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              github
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/easybuilders/easybuild-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EasyBuild @ GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
+      
+  <img src="../../../../img/easybuild_logo.png" alt="logo">
+
+    </a>
+    EasyBuild - building software with ease
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/easybuilders/easybuild-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EasyBuild @ GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../what-is-easybuild/" class="md-nav__link">
+        What is EasyBuild?
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../terminology/" class="md-nav__link">
+        Terminology
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../configuration/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../using-easybuild/" class="md-nav__link">
+        Using EasyBuild
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../release-notes/" class="md-nav__link">
+        Release notes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1" type="checkbox" id="__nav_8_1" checked>
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">easybuild</a>
+          
+            <label for="__nav_8_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="easybuild" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_1">
+          <span class="md-nav__icon md-icon"></span>
+          easybuild
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_1" type="checkbox" id="__nav_8_1_1" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../base/">base</a>
+          
+            <label for="__nav_8_1_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="base" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          base
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/exceptions/" class="md-nav__link">
+        exceptions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/fancylogger/" class="md-nav__link">
+        fancylogger
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/frozendict/" class="md-nav__link">
+        frozendict
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/generaloption/" class="md-nav__link">
+        generaloption
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/optcomplete/" class="md-nav__link">
+        optcomplete
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/rest/" class="md-nav__link">
+        rest
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/testing/" class="md-nav__link">
+        testing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/wrapper/" class="md-nav__link">
+        wrapper
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_2" type="checkbox" id="__nav_8_1_2" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../framework/">framework</a>
+          
+            <label for="__nav_8_1_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="framework" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          framework
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyblock/" class="md-nav__link">
+        easyblock
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_2_2" type="checkbox" id="__nav_8_1_2_2" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../framework/easyconfig/">easyconfig</a>
+          
+            <label for="__nav_8_1_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="easyconfig" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          easyconfig
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/constants/" class="md-nav__link">
+        constants
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/default/" class="md-nav__link">
+        default
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/easyconfig/" class="md-nav__link">
+        easyconfig
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_2_2_4" type="checkbox" id="__nav_8_1_2_2_4" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../framework/easyconfig/format/">format</a>
+          
+            <label for="__nav_8_1_2_2_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="format" data-md-level="5">
+        <label class="md-nav__title" for="__nav_8_1_2_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          format
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/format/convert/" class="md-nav__link">
+        convert
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/format/format/" class="md-nav__link">
+        format
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/format/one/" class="md-nav__link">
+        one
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/format/pyheaderconfigobj/" class="md-nav__link">
+        pyheaderconfigobj
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/format/two/" class="md-nav__link">
+        two
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/format/version/" class="md-nav__link">
+        version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/format/yeb/" class="md-nav__link">
+        yeb
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/licenses/" class="md-nav__link">
+        licenses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/parser/" class="md-nav__link">
+        parser
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/style/" class="md-nav__link">
+        style
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/templates/" class="md-nav__link">
+        templates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/tools/" class="md-nav__link">
+        tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/tweak/" class="md-nav__link">
+        tweak
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easyconfig/types/" class="md-nav__link">
+        types
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/easystack/" class="md-nav__link">
+        easystack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/extension/" class="md-nav__link">
+        extension
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../framework/extensioneasyblock/" class="md-nav__link">
+        extensioneasyblock
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../main/" class="md-nav__link">
+        main
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_4" type="checkbox" id="__nav_8_1_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_1_4">
+          scripts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="scripts" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          scripts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripts/bootstrap_eb/" class="md-nav__link">
+        bootstrap_eb
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripts/clean_gists/" class="md-nav__link">
+        clean_gists
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripts/findPythonDeps/" class="md-nav__link">
+        findPythonDeps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripts/fix_docs/" class="md-nav__link">
+        fix_docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripts/mk_tmpl_easyblock_for/" class="md-nav__link">
+        mk_tmpl_easyblock_for
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripts/rpath_args/" class="md-nav__link">
+        rpath_args
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_5" type="checkbox" id="__nav_8_1_5" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../toolchains/">toolchains</a>
+          
+            <label for="__nav_8_1_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="toolchains" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          toolchains
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/cgmpich/" class="md-nav__link">
+        cgmpich
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/cgmpolf/" class="md-nav__link">
+        cgmpolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/cgmvapich2/" class="md-nav__link">
+        cgmvapich2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/cgmvolf/" class="md-nav__link">
+        cgmvolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/cgompi/" class="md-nav__link">
+        cgompi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/cgoolf/" class="md-nav__link">
+        cgoolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/clanggcc/" class="md-nav__link">
+        clanggcc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_5_8" type="checkbox" id="__nav_8_1_5_8" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../toolchains/compiler/">compiler</a>
+          
+            <label for="__nav_8_1_5_8">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="compiler" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_5_8">
+          <span class="md-nav__icon md-icon"></span>
+          compiler
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/clang/" class="md-nav__link">
+        clang
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/craype/" class="md-nav__link">
+        craype
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/cuda/" class="md-nav__link">
+        cuda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/dummycompiler/" class="md-nav__link">
+        dummycompiler
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/fujitsu/" class="md-nav__link">
+        fujitsu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/gcc/" class="md-nav__link">
+        gcc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/ibmxl/" class="md-nav__link">
+        ibmxl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/intel_compilers/" class="md-nav__link">
+        intel_compilers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/inteliccifort/" class="md-nav__link">
+        inteliccifort
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/nvhpc/" class="md-nav__link">
+        nvhpc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/pgi/" class="md-nav__link">
+        pgi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/systemcompiler/" class="md-nav__link">
+        systemcompiler
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/craycce/" class="md-nav__link">
+        craycce
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/craygnu/" class="md-nav__link">
+        craygnu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/crayintel/" class="md-nav__link">
+        crayintel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/craypgi/" class="md-nav__link">
+        craypgi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/dummy/" class="md-nav__link">
+        dummy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/fcc/" class="md-nav__link">
+        fcc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/ffmpi/" class="md-nav__link">
+        ffmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_5_16" type="checkbox" id="__nav_8_1_5_16" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../toolchains/fft/">fft</a>
+          
+            <label for="__nav_8_1_5_16">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="fft" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_5_16">
+          <span class="md-nav__icon md-icon"></span>
+          fft
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/fft/fftw/" class="md-nav__link">
+        fftw
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/fft/fujitsufftw/" class="md-nav__link">
+        fujitsufftw
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/fft/intelfftw/" class="md-nav__link">
+        intelfftw
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/foss/" class="md-nav__link">
+        foss
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/fosscuda/" class="md-nav__link">
+        fosscuda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/fujitsu/" class="md-nav__link">
+        fujitsu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gcc/" class="md-nav__link">
+        gcc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gcccore/" class="md-nav__link">
+        gcccore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gcccuda/" class="md-nav__link">
+        gcccuda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gfbf/" class="md-nav__link">
+        gfbf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gimkl/" class="md-nav__link">
+        gimkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gimpi/" class="md-nav__link">
+        gimpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gimpic/" class="md-nav__link">
+        gimpic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/giolf/" class="md-nav__link">
+        giolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/giolfc/" class="md-nav__link">
+        giolfc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmacml/" class="md-nav__link">
+        gmacml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmkl/" class="md-nav__link">
+        gmkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmklc/" class="md-nav__link">
+        gmklc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmpich/" class="md-nav__link">
+        gmpich
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmpich2/" class="md-nav__link">
+        gmpich2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmpit/" class="md-nav__link">
+        gmpit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmpolf/" class="md-nav__link">
+        gmpolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmvapich2/" class="md-nav__link">
+        gmvapich2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmvolf/" class="md-nav__link">
+        gmvolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gnu/" class="md-nav__link">
+        gnu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/goalf/" class="md-nav__link">
+        goalf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gobff/" class="md-nav__link">
+        gobff
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/goblf/" class="md-nav__link">
+        goblf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gofbf/" class="md-nav__link">
+        gofbf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/golf/" class="md-nav__link">
+        golf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/golfc/" class="md-nav__link">
+        golfc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gomkl/" class="md-nav__link">
+        gomkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gomklc/" class="md-nav__link">
+        gomklc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gompi/" class="md-nav__link">
+        gompi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gompic/" class="md-nav__link">
+        gompic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/goolf/" class="md-nav__link">
+        goolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/goolfc/" class="md-nav__link">
+        goolfc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gpsmpi/" class="md-nav__link">
+        gpsmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gpsolf/" class="md-nav__link">
+        gpsolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gqacml/" class="md-nav__link">
+        gqacml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gsmpi/" class="md-nav__link">
+        gsmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gsolf/" class="md-nav__link">
+        gsolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iccifort/" class="md-nav__link">
+        iccifort
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iccifortcuda/" class="md-nav__link">
+        iccifortcuda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/ictce/" class="md-nav__link">
+        ictce
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iibff/" class="md-nav__link">
+        iibff
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iimkl/" class="md-nav__link">
+        iimkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iimklc/" class="md-nav__link">
+        iimklc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iimpi/" class="md-nav__link">
+        iimpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iimpic/" class="md-nav__link">
+        iimpic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iiqmpi/" class="md-nav__link">
+        iiqmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/impich/" class="md-nav__link">
+        impich
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/impmkl/" class="md-nav__link">
+        impmkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/intel-para/" class="md-nav__link">
+        intel-para
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/intel/" class="md-nav__link">
+        intel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/intel_compilers/" class="md-nav__link">
+        intel_compilers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/intelcuda/" class="md-nav__link">
+        intelcuda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iomkl/" class="md-nav__link">
+        iomkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iomklc/" class="md-nav__link">
+        iomklc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iompi/" class="md-nav__link">
+        iompi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iompic/" class="md-nav__link">
+        iompic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/ipsmpi/" class="md-nav__link">
+        ipsmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iqacml/" class="md-nav__link">
+        iqacml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/ismkl/" class="md-nav__link">
+        ismkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_5_78" type="checkbox" id="__nav_8_1_5_78" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../toolchains/linalg/">linalg</a>
+          
+            <label for="__nav_8_1_5_78">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="linalg" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_5_78">
+          <span class="md-nav__icon md-icon"></span>
+          linalg
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/acml/" class="md-nav__link">
+        acml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/atlas/" class="md-nav__link">
+        atlas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/blacs/" class="md-nav__link">
+        blacs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/blis/" class="md-nav__link">
+        blis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/flame/" class="md-nav__link">
+        flame
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/flexiblas/" class="md-nav__link">
+        flexiblas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/fujitsussl/" class="md-nav__link">
+        fujitsussl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/gotoblas/" class="md-nav__link">
+        gotoblas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/intelmkl/" class="md-nav__link">
+        intelmkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/lapack/" class="md-nav__link">
+        lapack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/libsci/" class="md-nav__link">
+        libsci
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/openblas/" class="md-nav__link">
+        openblas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/scalapack/" class="md-nav__link">
+        scalapack
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_5_79" type="checkbox" id="__nav_8_1_5_79" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../toolchains/mpi/">mpi</a>
+          
+            <label for="__nav_8_1_5_79">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="mpi" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_5_79">
+          <span class="md-nav__icon md-icon"></span>
+          mpi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/craympich/" class="md-nav__link">
+        craympich
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/fujitsumpi/" class="md-nav__link">
+        fujitsumpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/intelmpi/" class="md-nav__link">
+        intelmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/mpich/" class="md-nav__link">
+        mpich
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/mpich2/" class="md-nav__link">
+        mpich2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/mpitrampoline/" class="md-nav__link">
+        mpitrampoline
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/mvapich2/" class="md-nav__link">
+        mvapich2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/openmpi/" class="md-nav__link">
+        openmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/psmpi/" class="md-nav__link">
+        psmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/qlogicmpi/" class="md-nav__link">
+        qlogicmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/spectrummpi/" class="md-nav__link">
+        spectrummpi
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/nvhpc/" class="md-nav__link">
+        nvhpc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/nvompi/" class="md-nav__link">
+        nvompi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/nvompic/" class="md-nav__link">
+        nvompic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/nvpsmpi/" class="md-nav__link">
+        nvpsmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/nvpsmpic/" class="md-nav__link">
+        nvpsmpic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/pgi/" class="md-nav__link">
+        pgi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/pmkl/" class="md-nav__link">
+        pmkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/pomkl/" class="md-nav__link">
+        pomkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/pompi/" class="md-nav__link">
+        pompi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/system/" class="md-nav__link">
+        system
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/xlcxlf/" class="md-nav__link">
+        xlcxlf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/xlmpich/" class="md-nav__link">
+        xlmpich
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/xlmpich2/" class="md-nav__link">
+        xlmpich2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/xlmvapich2/" class="md-nav__link">
+        xlmvapich2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/xlompi/" class="md-nav__link">
+        xlompi
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6" type="checkbox" id="__nav_8_1_6" checked>
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">tools</a>
+          
+            <label for="__nav_8_1_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="tools" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../asyncprocess/" class="md-nav__link">
+        asyncprocess
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build_details/" class="md-nav__link">
+        build_details
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build_log/" class="md-nav__link">
+        build_log
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/" class="md-nav__link">
+        config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configobj/" class="md-nav__link">
+        configobj
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6_6" type="checkbox" id="__nav_8_1_6_6" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../containers/">containers</a>
+          
+            <label for="__nav_8_1_6_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="containers" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_6_6">
+          <span class="md-nav__icon md-icon"></span>
+          containers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../containers/base/" class="md-nav__link">
+        base
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../containers/common/" class="md-nav__link">
+        common
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../containers/docker/" class="md-nav__link">
+        docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../containers/singularity/" class="md-nav__link">
+        singularity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../containers/utils/" class="md-nav__link">
+        utils
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../convert/" class="md-nav__link">
+        convert
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deprecated/" class="md-nav__link">
+        deprecated
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/" class="md-nav__link">
+        docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../environment/" class="md-nav__link">
+        environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filetools/" class="md-nav__link">
+        filetools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          github
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        github
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github" class="md-nav__link">
+    easybuild.tools.github
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.GithubError" class="md-nav__link">
+    GithubError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.Githubfs" class="md-nav__link">
+    Githubfs
+  </a>
+  
+    <nav class="md-nav" aria-label="Githubfs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.tools.github.Githubfs.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.tools.github.Githubfs.get_path" class="md-nav__link">
+    get_path()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.tools.github.Githubfs.get_repo" class="md-nav__link">
+    get_repo()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.tools.github.Githubfs.isdir" class="md-nav__link">
+    isdir()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.tools.github.Githubfs.isfile" class="md-nav__link">
+    isfile()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.tools.github.Githubfs.join" class="md-nav__link">
+    join()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.tools.github.Githubfs.listdir" class="md-nav__link">
+    listdir()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.tools.github.Githubfs.read" class="md-nav__link">
+    read()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.tools.github.Githubfs.walk" class="md-nav__link">
+    walk()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.add_pr_labels" class="md-nav__link">
+    add_pr_labels()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.check_github" class="md-nav__link">
+    check_github()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.check_online_status" class="md-nav__link">
+    check_online_status()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.check_pr_eligible_to_merge" class="md-nav__link">
+    check_pr_eligible_to_merge()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.close_pr" class="md-nav__link">
+    close_pr()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.create_gist" class="md-nav__link">
+    create_gist()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.create_remote" class="md-nav__link">
+    create_remote()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.delete_gist" class="md-nav__link">
+    delete_gist()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.det_account_branch_for_pr" class="md-nav__link">
+    det_account_branch_for_pr()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.det_commit_status" class="md-nav__link">
+    det_commit_status()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.det_patch_specs" class="md-nav__link">
+    det_patch_specs()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.det_pr_labels" class="md-nav__link">
+    det_pr_labels()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.det_pr_target_repo" class="md-nav__link">
+    det_pr_target_repo()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.download_repo" class="md-nav__link">
+    download_repo()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.fetch_easyblocks_from_pr" class="md-nav__link">
+    fetch_easyblocks_from_pr()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.fetch_easyconfigs_from_pr" class="md-nav__link">
+    fetch_easyconfigs_from_pr()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.fetch_files_from_pr" class="md-nav__link">
+    fetch_files_from_pr()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.fetch_github_token" class="md-nav__link">
+    fetch_github_token()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.fetch_latest_commit_sha" class="md-nav__link">
+    fetch_latest_commit_sha()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.fetch_pr_data" class="md-nav__link">
+    fetch_pr_data()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.find_easybuild_easyconfig" class="md-nav__link">
+    find_easybuild_easyconfig()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.find_software_name_for_patch" class="md-nav__link">
+    find_software_name_for_patch()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.github_api_get_request" class="md-nav__link">
+    github_api_get_request()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.github_api_put_request" class="md-nav__link">
+    github_api_put_request()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.init_repo" class="md-nav__link">
+    init_repo()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.install_github_token" class="md-nav__link">
+    install_github_token()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.is_patch_for" class="md-nav__link">
+    is_patch_for()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.list_prs" class="md-nav__link">
+    list_prs()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.merge_pr" class="md-nav__link">
+    merge_pr()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.new_branch_github" class="md-nav__link">
+    new_branch_github()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.new_pr" class="md-nav__link">
+    new_pr()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.new_pr_from_branch" class="md-nav__link">
+    new_pr_from_branch()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.pick_default_branch" class="md-nav__link">
+    pick_default_branch()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.post_comment_in_issue" class="md-nav__link">
+    post_comment_in_issue()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.post_pr_labels" class="md-nav__link">
+    post_pr_labels()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.pr_files_cache" class="md-nav__link">
+    pr_files_cache()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.push_branch_to_github" class="md-nav__link">
+    push_branch_to_github()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.reasons_for_closing" class="md-nav__link">
+    reasons_for_closing()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.setup_repo" class="md-nav__link">
+    setup_repo()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.setup_repo_from" class="md-nav__link">
+    setup_repo_from()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.sync_branch_with_develop" class="md-nav__link">
+    sync_branch_with_develop()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.sync_pr_with_develop" class="md-nav__link">
+    sync_pr_with_develop()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.sync_with_develop" class="md-nav__link">
+    sync_with_develop()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.update_branch" class="md-nav__link">
+    update_branch()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.update_pr" class="md-nav__link">
+    update_pr()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.github.validate_github_token" class="md-nav__link">
+    validate_github_token()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hooks/" class="md-nav__link">
+        hooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../include/" class="md-nav__link">
+        include
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jenkins/" class="md-nav__link">
+        jenkins
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6_16" type="checkbox" id="__nav_8_1_6_16" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../job/">job</a>
+          
+            <label for="__nav_8_1_6_16">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="job" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_6_16">
+          <span class="md-nav__icon md-icon"></span>
+          job
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../job/backend/" class="md-nav__link">
+        backend
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../job/gc3pie/" class="md-nav__link">
+        gc3pie
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../job/pbs_python/" class="md-nav__link">
+        pbs_python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../job/slurm/" class="md-nav__link">
+        slurm
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../loose_version/" class="md-nav__link">
+        loose_version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_generator/" class="md-nav__link">
+        module_generator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6_19" type="checkbox" id="__nav_8_1_6_19" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../module_naming_scheme/">module_naming_scheme</a>
+          
+            <label for="__nav_8_1_6_19">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="module_naming_scheme" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_6_19">
+          <span class="md-nav__icon md-icon"></span>
+          module_naming_scheme
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_naming_scheme/categorized_hmns/" class="md-nav__link">
+        categorized_hmns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_naming_scheme/categorized_mns/" class="md-nav__link">
+        categorized_mns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_naming_scheme/easybuild_mns/" class="md-nav__link">
+        easybuild_mns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_naming_scheme/hierarchical_mns/" class="md-nav__link">
+        hierarchical_mns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_naming_scheme/migrate_from_eb_to_hmns/" class="md-nav__link">
+        migrate_from_eb_to_hmns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_naming_scheme/mns/" class="md-nav__link">
+        mns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_naming_scheme/toolchain/" class="md-nav__link">
+        toolchain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module_naming_scheme/utilities/" class="md-nav__link">
+        utilities
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        modules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multidiff/" class="md-nav__link">
+        multidiff
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../options/" class="md-nav__link">
+        options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../output/" class="md-nav__link">
+        output
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6_24" type="checkbox" id="__nav_8_1_6_24" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../package/">package</a>
+          
+            <label for="__nav_8_1_6_24">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="package" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_6_24">
+          <span class="md-nav__icon md-icon"></span>
+          package
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6_24_1" type="checkbox" id="__nav_8_1_6_24_1" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../package/package_naming_scheme/">package_naming_scheme</a>
+          
+            <label for="__nav_8_1_6_24_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="package_naming_scheme" data-md-level="5">
+        <label class="md-nav__title" for="__nav_8_1_6_24_1">
+          <span class="md-nav__icon md-icon"></span>
+          package_naming_scheme
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../package/package_naming_scheme/easybuild_pns/" class="md-nav__link">
+        easybuild_pns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../package/package_naming_scheme/pns/" class="md-nav__link">
+        pns
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../package/utilities/" class="md-nav__link">
+        utilities
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parallelbuild/" class="md-nav__link">
+        parallelbuild
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6_26" type="checkbox" id="__nav_8_1_6_26" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../py2vs3/">py2vs3</a>
+          
+            <label for="__nav_8_1_6_26">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="py2vs3" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_6_26">
+          <span class="md-nav__icon md-icon"></span>
+          py2vs3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../py2vs3/py2/" class="md-nav__link">
+        py2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../py2vs3/py3/" class="md-nav__link">
+        py3
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6_27" type="checkbox" id="__nav_8_1_6_27" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../repository/">repository</a>
+          
+            <label for="__nav_8_1_6_27">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="repository" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_6_27">
+          <span class="md-nav__icon md-icon"></span>
+          repository
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../repository/filerepo/" class="md-nav__link">
+        filerepo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../repository/gitrepo/" class="md-nav__link">
+        gitrepo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../repository/hgrepo/" class="md-nav__link">
+        hgrepo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../repository/repository/" class="md-nav__link">
+        repository
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../repository/svnrepo/" class="md-nav__link">
+        svnrepo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../robot/" class="md-nav__link">
+        robot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run/" class="md-nav__link">
+        run
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systemtools/" class="md-nav__link">
+        systemtools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing/" class="md-nav__link">
+        testing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6_32" type="checkbox" id="__nav_8_1_6_32" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../toolchain/">toolchain</a>
+          
+            <label for="__nav_8_1_6_32">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="toolchain" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_6_32">
+          <span class="md-nav__icon md-icon"></span>
+          toolchain
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toolchain/compiler/" class="md-nav__link">
+        compiler
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toolchain/constants/" class="md-nav__link">
+        constants
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toolchain/fft/" class="md-nav__link">
+        fft
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toolchain/linalg/" class="md-nav__link">
+        linalg
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toolchain/mpi/" class="md-nav__link">
+        mpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toolchain/options/" class="md-nav__link">
+        options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toolchain/toolchain/" class="md-nav__link">
+        toolchain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toolchain/toolchainvariables/" class="md-nav__link">
+        toolchainvariables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toolchain/utilities/" class="md-nav__link">
+        utilities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toolchain/variables/" class="md-nav__link">
+        variables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utilities/" class="md-nav__link">
+        utilities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../variables/" class="md-nav__link">
+        variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version/" class="md-nav__link">
+        version
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-help/" class="md-nav__link">
+        Getting help
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+
+  <h1>github</h1>
+
+<div class="doc doc-object doc-module">
+
+
+<a id="easybuild.tools.github"></a>
+  <div class="doc doc-contents first">
+  
+      <p>Utility module for working with github</p>
+<p>:author: Jens Timmerman (Ghent University)
+:author: Kenneth Hoste (Ghent University)
+:author: Toon Willems (Ghent University)</p>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="easybuild.tools.github.GithubError" class="doc doc-heading">
+        <code>GithubError</code>
+
+
+<a href="#easybuild.tools.github.GithubError" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code>Exception</code></p>
+
+  
+      <p>Error raised by the Githubfs</p>
+
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="easybuild.tools.github.Githubfs" class="doc doc-heading">
+        <code>Githubfs</code>
+
+
+<a href="#easybuild.tools.github.Githubfs" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code>object</code></p>
+
+  
+      <p>This class implements some higher level functionality on top of the Github api</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.tools.github.Githubfs.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">githubuser</span><span class="p">,</span> <span class="n">reponame</span><span class="p">,</span> <span class="n">branchname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.Githubfs.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Construct a new githubfs object</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>githubuser</code></td>
+          <td class="doc-param-details">
+            <p>the github user's repo we want to use.</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>reponame</code></td>
+          <td class="doc-param-details">
+            <p>The name of the repository we want to use.</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>branchname</code></td>
+          <td class="doc-param-details">
+            <p>Then name of the branch to use (defaults to 'main' for easybuilders org, 'master' otherwise)</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>username</code></td>
+          <td class="doc-param-details">
+            <p>(optional) your github username.</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>password</code></td>
+          <td class="doc-param-details">
+            <p>(optional) your github password.</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>token</code></td>
+          <td class="doc-param-details">
+            <p>(optional) a github api token.</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.tools.github.Githubfs.get_path" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.Githubfs.get_path" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>returns the path as a Github object (from agithub)</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.tools.github.Githubfs.get_repo" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_repo</span><span class="p">()</span></code>
+
+<a href="#easybuild.tools.github.Githubfs.get_repo" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Returns the repo as a Github object (from agithub)</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.tools.github.Githubfs.isdir" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">isdir</span><span class="p">(</span><span class="n">githubobj</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#easybuild.tools.github.Githubfs.isdir" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Check if this path points to a directory</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.tools.github.Githubfs.isfile" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">isfile</span><span class="p">(</span><span class="n">githubobj</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#easybuild.tools.github.Githubfs.isfile" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Check if this path points to a file</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.tools.github.Githubfs.join" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">join</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#easybuild.tools.github.Githubfs.join" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>This method joins 'paths' inside a github repository</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.tools.github.Githubfs.listdir" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.Githubfs.listdir" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>List the contents of a directory</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.tools.github.Githubfs.read" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">read</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">api</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.Githubfs.read" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Read the contents of a file and return it
+Or, if api=False it will download the file and return the location of the downloaded file</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.tools.github.Githubfs.walk" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">walk</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">topdown</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.Githubfs.walk" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Walk the github repo in an os.walk like fashion.</p>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.add_pr_labels" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_pr_labels</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">branch</span><span class="o">=</span><span class="n">GITHUB_DEVELOP_BRANCH</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.add_pr_labels" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Try to determine and add labels to PR.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>pr</code></td>
+          <td class="doc-param-details">
+            <p>pull request number in easybuild-easyconfigs repo</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>branch</code></td>
+          <td class="doc-param-details">
+            <p>easybuild-easyconfigs branch to compare with</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>GITHUB_DEVELOP_BRANCH</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.check_github" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">check_github</span><span class="p">()</span></code>
+
+<a href="#easybuild.tools.github.check_github" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Check status of GitHub integration, and report back.
+* check whether GitHub username is available
+* check whether a GitHub token is available, and whether it works
+* check whether git and GitPython are available
+* check whether push access to own GitHub repositories works
+* check whether creating gists works
+* check whether location to local working directories for Git repositories is available (not strictly needed)</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.check_online_status" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">check_online_status</span><span class="p">()</span></code>
+
+<a href="#easybuild.tools.github.check_online_status" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Check whether we currently are online
+Return True if online, else a list of error messages</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.check_pr_eligible_to_merge" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">check_pr_eligible_to_merge</span><span class="p">(</span><span class="n">pr_data</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.check_pr_eligible_to_merge" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Check whether PR is eligible for merging.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>pr_data</code></td>
+          <td class="doc-param-details">
+            <p>PR data obtained through GitHub API</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td class="doc-returns-details">
+            <p>boolean value indicates whether PR is eligible</p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.close_pr" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">close_pr</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">motivation_msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.close_pr" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Close specified pull request</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>pr</code></td>
+          <td class="doc-param-details">
+            <p>PR number</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>motivation_msg</code></td>
+          <td class="doc-param-details">
+            <p>string containing motivation for closing the PR</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.create_gist" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">create_gist</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="n">fn</span><span class="p">,</span> <span class="n">descr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_token</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.create_gist" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create a gist with the provided text.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.create_remote" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">create_remote</span><span class="p">(</span><span class="n">git_repo</span><span class="p">,</span> <span class="n">account</span><span class="p">,</span> <span class="n">repo</span><span class="p">,</span> <span class="n">https</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.create_remote" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create remote in specified git working directory for specified account &amp; repository.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>git_repo</code></td>
+          <td class="doc-param-details">
+            <p>git.Repo instance to use (after init_repo &amp; setup_repo)</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>account</code></td>
+          <td class="doc-param-details">
+            <p>GitHub account name</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>repo</code></td>
+          <td class="doc-param-details">
+            <p>repository name</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>https</code></td>
+          <td class="doc-param-details">
+            <p>use https:// URL rather than git@</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>False</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.delete_gist" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">delete_gist</span><span class="p">(</span><span class="n">gist_id</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_token</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.delete_gist" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Delete gist with specified ID.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.det_account_branch_for_pr" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">det_account_branch_for_pr</span><span class="p">(</span><span class="n">pr_id</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">pr_target_repo</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.det_account_branch_for_pr" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Determine account &amp; branch corresponding to pull request with specified id.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.det_commit_status" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">det_commit_status</span><span class="p">(</span><span class="n">account</span><span class="p">,</span> <span class="n">repo</span><span class="p">,</span> <span class="n">commit_sha</span><span class="p">,</span> <span class="n">github_user</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.det_commit_status" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Determine status of specified commit (pending, error, failure, success)</p>
+<p>We combine two different things here:</p>
+<ul>
+<li>the combined commit status (Travis CI sets a commit status)</li>
+<li>results of check suites (set by CI run in GitHub Actions)</li>
+</ul>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.det_patch_specs" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">det_patch_specs</span><span class="p">(</span><span class="n">patch_paths</span><span class="p">,</span> <span class="n">file_info</span><span class="p">,</span> <span class="n">ec_dirs</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.det_patch_specs" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Determine software names for patch files</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.det_pr_labels" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">det_pr_labels</span><span class="p">(</span><span class="n">file_info</span><span class="p">,</span> <span class="n">pr_target_repo</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.det_pr_labels" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Determine labels for a pull request based on provided information on files changed by that pull request.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.det_pr_target_repo" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">det_pr_target_repo</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.det_pr_target_repo" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Determine target repository for pull request from given cagetorized list of files</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>paths</code></td>
+          <td class="doc-param-details">
+            <p>paths to categorized lists of files (easyconfigs, files to delete, patches, .py files)</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.download_repo" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">download_repo</span><span class="p">(</span><span class="n">repo</span><span class="o">=</span><span class="n">GITHUB_EASYCONFIGS_REPO</span><span class="p">,</span> <span class="n">branch</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">account</span><span class="o">=</span><span class="n">GITHUB_EB_MAIN</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.download_repo" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Download entire GitHub repo as a tar.gz archive, and extract it into specified path.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>repo</code></td>
+          <td class="doc-param-details">
+            <p>repo to download</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>GITHUB_EASYCONFIGS_REPO</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>branch</code></td>
+          <td class="doc-param-details">
+            <p>branch to download</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>account</code></td>
+          <td class="doc-param-details">
+            <p>GitHub account to download repo from</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>GITHUB_EB_MAIN</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>path</code></td>
+          <td class="doc-param-details">
+            <p>path to extract to</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>github_user</code></td>
+          <td class="doc-param-details">
+            <p>name of GitHub user to use</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.fetch_easyblocks_from_pr" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">fetch_easyblocks_from_pr</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.fetch_easyblocks_from_pr" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Fetch patched easyconfig files for a particular PR.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.fetch_easyconfigs_from_pr" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">fetch_easyconfigs_from_pr</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.fetch_easyconfigs_from_pr" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Fetch patched easyconfig files for a particular PR.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.fetch_files_from_pr" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">fetch_files_from_pr</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_account</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_repo</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.fetch_files_from_pr" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Fetch patched files for a particular PR.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.fetch_github_token" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">fetch_github_token</span><span class="p">(</span><span class="n">user</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.fetch_github_token" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Fetch GitHub token for specified user from keyring.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.fetch_latest_commit_sha" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">fetch_latest_commit_sha</span><span class="p">(</span><span class="n">repo</span><span class="p">,</span> <span class="n">account</span><span class="p">,</span> <span class="n">branch</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.fetch_latest_commit_sha" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Fetch latest SHA1 for a specified repository and branch.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>repo</code></td>
+          <td class="doc-param-details">
+            <p>GitHub repository</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>account</code></td>
+          <td class="doc-param-details">
+            <p>GitHub account</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>branch</code></td>
+          <td class="doc-param-details">
+            <p>branch to fetch latest SHA1 for</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>github_user</code></td>
+          <td class="doc-param-details">
+            <p>name of GitHub user to use</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>token</code></td>
+          <td class="doc-param-details">
+            <p>GitHub token to use</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td class="doc-returns-details">
+            <p>latest SHA1</p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.fetch_pr_data" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">fetch_pr_data</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">pr_target_account</span><span class="p">,</span> <span class="n">pr_target_repo</span><span class="p">,</span> <span class="n">github_user</span><span class="p">,</span> <span class="n">full</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">parameters</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.fetch_pr_data" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Fetch PR data from GitHub</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.find_easybuild_easyconfig" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">find_easybuild_easyconfig</span><span class="p">(</span><span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.find_easybuild_easyconfig" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Fetches the latest EasyBuild version eb file from GitHub</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>github_user</code></td>
+          <td class="doc-param-details">
+            <p>name of GitHub user to use when querying GitHub</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.find_software_name_for_patch" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">find_software_name_for_patch</span><span class="p">(</span><span class="n">patch_name</span><span class="p">,</span> <span class="n">ec_dirs</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.find_software_name_for_patch" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Scan all easyconfigs in the robot path(s) to determine which software a patch file belongs to</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>patch_name</code></td>
+          <td class="doc-param-details">
+            <p>name of the patch file</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>ec_dirs</code></td>
+          <td class="doc-param-details">
+            <p>list of directories to consider when looking for easyconfigs</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td class="doc-returns-details">
+            <p>name of the software that this patch file belongs to (if found)</p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.github_api_get_request" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">github_api_get_request</span><span class="p">(</span><span class="n">request_f</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.github_api_get_request" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Helper method, for performing get requests to GitHub API.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>request_f</code></td>
+          <td class="doc-param-details">
+            <p>function that should be called to compose request, providing a RestClient instance</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>github_user</code></td>
+          <td class="doc-param-details">
+            <p>GitHub user name (to try and obtain matching GitHub token if none is provided)</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>token</code></td>
+          <td class="doc-param-details">
+            <p>GitHub token to use</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td class="doc-returns-details">
+            <p>tuple with return status and data</p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.github_api_put_request" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">github_api_put_request</span><span class="p">(</span><span class="n">request_f</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.github_api_put_request" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Helper method, for performing put requests to GitHub API.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>request_f</code></td>
+          <td class="doc-param-details">
+            <p>function that should be called to compose request, providing a RestClient instance</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>github_user</code></td>
+          <td class="doc-param-details">
+            <p>GitHub user name (to try and obtain matching GitHub token if none is provided)</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>token</code></td>
+          <td class="doc-param-details">
+            <p>GitHub token to use</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td class="doc-returns-details">
+            <p>tuple with return status and data</p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.init_repo" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">init_repo</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">repo_name</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.init_repo" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Initialize a new Git repository at the specified location.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>path</code></td>
+          <td class="doc-param-details">
+            <p>location where Git repository should be initialized</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>repo_name</code></td>
+          <td class="doc-param-details">
+            <p>name of Git repository</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>silent</code></td>
+          <td class="doc-param-details">
+            <p>keep quiet (don't print any messages)</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>False</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.install_github_token" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">install_github_token</span><span class="p">(</span><span class="n">github_user</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.install_github_token" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Install specified GitHub token for specified user.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>github_user</code></td>
+          <td class="doc-param-details">
+            <p>GitHub user to install token for</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>silent</code></td>
+          <td class="doc-param-details">
+            <p>keep quiet (don't print any messages)</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>False</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.is_patch_for" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">is_patch_for</span><span class="p">(</span><span class="n">patch_name</span><span class="p">,</span> <span class="n">ec</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.is_patch_for" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Check whether specified patch matches any patch in the provided EasyConfig instance.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.list_prs" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">list_prs</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">per_page</span><span class="o">=</span><span class="n">GITHUB_MAX_PER_PAGE</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.list_prs" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>List pull requests according to specified selection/order parameters</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>params</code></td>
+          <td class="doc-param-details">
+            <p>3-tuple with selection parameters for PRs (<state>, <sort>, <direction>), see https://developer.github.com/v3/pulls/#parameters</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.merge_pr" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">merge_pr</span><span class="p">(</span><span class="n">pr</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.merge_pr" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Merge specified pull request</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.new_branch_github" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">new_branch_github</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">ecs</span><span class="p">,</span> <span class="n">commit_msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.new_branch_github" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create new branch on GitHub using specified files</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>paths</code></td>
+          <td class="doc-param-details">
+            <p>paths to categorized lists of files (easyconfigs, files to delete, patches, files with .py extension)</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>ecs</code></td>
+          <td class="doc-param-details">
+            <p>list of parsed easyconfigs, incl. for dependencies (if robot is enabled)</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>commit_msg</code></td>
+          <td class="doc-param-details">
+            <p>commit message to use</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.new_pr" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">new_pr</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">ecs</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">descr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">commit_msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.new_pr" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Open new pull request using specified files</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>paths</code></td>
+          <td class="doc-param-details">
+            <p>paths to categorized lists of files (easyconfigs, files to delete, patches)</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>ecs</code></td>
+          <td class="doc-param-details">
+            <p>list of parsed easyconfigs, incl. for dependencies (if robot is enabled)</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>title</code></td>
+          <td class="doc-param-details">
+            <p>title to use for pull request</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>descr</code></td>
+          <td class="doc-param-details">
+            <p>description to use for description</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>commit_msg</code></td>
+          <td class="doc-param-details">
+            <p>commit message to use</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.new_pr_from_branch" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">new_pr_from_branch</span><span class="p">(</span><span class="n">branch_name</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">descr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">pr_target_repo</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">pr_metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">commit_msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.new_pr_from_branch" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create new pull request from specified branch on GitHub.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.pick_default_branch" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">pick_default_branch</span><span class="p">(</span><span class="n">github_owner</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.pick_default_branch" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Determine default name to use.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.post_comment_in_issue" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">post_comment_in_issue</span><span class="p">(</span><span class="n">issue</span><span class="p">,</span> <span class="n">txt</span><span class="p">,</span> <span class="n">account</span><span class="o">=</span><span class="n">GITHUB_EB_MAIN</span><span class="p">,</span> <span class="n">repo</span><span class="o">=</span><span class="n">GITHUB_EASYCONFIGS_REPO</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.post_comment_in_issue" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Post a comment in the specified PR.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.post_pr_labels" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">post_pr_labels</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.post_pr_labels" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Update PR labels</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.pr_files_cache" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">pr_files_cache</span><span class="p">(</span><span class="n">func</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.pr_files_cache" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Decorator to cache result of fetch_files_from_pr.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.push_branch_to_github" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">push_branch_to_github</span><span class="p">(</span><span class="n">git_repo</span><span class="p">,</span> <span class="n">target_account</span><span class="p">,</span> <span class="n">target_repo</span><span class="p">,</span> <span class="n">branch</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.push_branch_to_github" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Push specified branch to GitHub from specified git repository.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>git_repo</code></td>
+          <td class="doc-param-details">
+            <p>git.Repo instance to use (after init_repo &amp; setup_repo)</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>target_account</code></td>
+          <td class="doc-param-details">
+            <p>GitHub account name</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>target_repo</code></td>
+          <td class="doc-param-details">
+            <p>repository name</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>branch</code></td>
+          <td class="doc-param-details">
+            <p>name of branch to push</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.reasons_for_closing" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">reasons_for_closing</span><span class="p">(</span><span class="n">pr_data</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.reasons_for_closing" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Look for valid reasons to close PR by comparing with existing easyconfigs.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.setup_repo" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">setup_repo</span><span class="p">(</span><span class="n">git_repo</span><span class="p">,</span> <span class="n">target_account</span><span class="p">,</span> <span class="n">target_repo</span><span class="p">,</span> <span class="n">branch_name</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">git_only</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.setup_repo" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Set up repository by checking out specified branch for specfied GitHub account/repository.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>git_repo</code></td>
+          <td class="doc-param-details">
+            <p>git.Repo instance</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>target_account</code></td>
+          <td class="doc-param-details">
+            <p>name of GitHub account that owns GitHub repository</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>target_repo</code></td>
+          <td class="doc-param-details">
+            <p>name of GitHib repository</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>branch_name</code></td>
+          <td class="doc-param-details">
+            <p>name of branch to check out</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>silent</code></td>
+          <td class="doc-param-details">
+            <p>keep quiet (don't print any messages)</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>False</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>git_only</code></td>
+          <td class="doc-param-details">
+            <p>only use git@github.com repo URL, skip trying https://github.com first</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>False</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.setup_repo_from" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">setup_repo_from</span><span class="p">(</span><span class="n">git_repo</span><span class="p">,</span> <span class="n">github_url</span><span class="p">,</span> <span class="n">target_account</span><span class="p">,</span> <span class="n">branch_name</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.setup_repo_from" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Set up repository by checking out specified branch from repository at specified URL.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>git_repo</code></td>
+          <td class="doc-param-details">
+            <p>git.Repo instance</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>github_url</code></td>
+          <td class="doc-param-details">
+            <p>URL to GitHub repository</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>target_account</code></td>
+          <td class="doc-param-details">
+            <p>name of GitHub account that owns GitHub repository at specified URL</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>branch_name</code></td>
+          <td class="doc-param-details">
+            <p>name of branch to check out</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>silent</code></td>
+          <td class="doc-param-details">
+            <p>keep quiet (don't print any messages)</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>False</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.sync_branch_with_develop" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">sync_branch_with_develop</span><span class="p">(</span><span class="n">branch_name</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.sync_branch_with_develop" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Sync branch with specified name with current develop branch.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.sync_pr_with_develop" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">sync_pr_with_develop</span><span class="p">(</span><span class="n">pr_id</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.sync_pr_with_develop" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Sync pull request with specified ID with current develop branch.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.sync_with_develop" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">sync_with_develop</span><span class="p">(</span><span class="n">git_repo</span><span class="p">,</span> <span class="n">branch_name</span><span class="p">,</span> <span class="n">github_account</span><span class="p">,</span> <span class="n">github_repo</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.sync_with_develop" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Sync specified branch with develop branch.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.update_branch" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">update_branch</span><span class="p">(</span><span class="n">branch_name</span><span class="p">,</span> <span class="n">paths</span><span class="p">,</span> <span class="n">ecs</span><span class="p">,</span> <span class="n">github_account</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">commit_msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.update_branch" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Update specified branch in GitHub using specified files</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>paths</code></td>
+          <td class="doc-param-details">
+            <p>paths to categorized lists of files (easyconfigs, files to delete, patches)</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>github_account</code></td>
+          <td class="doc-param-details">
+            <p>GitHub account where branch is located</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>ecs</code></td>
+          <td class="doc-param-details">
+            <p>list of parsed easyconfigs, incl. for dependencies (if robot is enabled)</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>commit_msg</code></td>
+          <td class="doc-param-details">
+            <p>commit message to use</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.update_pr" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">update_pr</span><span class="p">(</span><span class="n">pr_id</span><span class="p">,</span> <span class="n">paths</span><span class="p">,</span> <span class="n">ecs</span><span class="p">,</span> <span class="n">commit_msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.update_pr" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Update specified pull request using specified files</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>pr_id</code></td>
+          <td class="doc-param-details">
+            <p>ID of pull request to update</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>paths</code></td>
+          <td class="doc-param-details">
+            <p>paths to categorized lists of files (easyconfigs, files to delete, patches)</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>ecs</code></td>
+          <td class="doc-param-details">
+            <p>list of parsed easyconfigs, incl. for dependencies (if robot is enabled)</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>commit_msg</code></td>
+          <td class="doc-param-details">
+            <p>commit message to use</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.github.validate_github_token" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">validate_github_token</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">github_user</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.github.validate_github_token" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Check GitHub token:
+* see if it conforms expectations (only [a-f]+[0-9] characters, length of 40)
+* see if it can be used for authenticated access</p>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/easy_build" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/c/easybuilders" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://docs.easybuild.io" target="_blank" rel="noopener" title="docs.easybuild.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M96 0C43 0 0 43 0 96v320c0 53 43 96 96 96h320c17.7 0 32-14.3 32-32s-14.3-32-32-32v-64c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H96zm0 384h256v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.5cf534bf.min.js"></script>
+      
+        <script src="../../../../js/asciinema-player-2.6.1.js"></script>
+      
+    
+  </body>
+</html>

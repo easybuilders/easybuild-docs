@@ -1,0 +1,8130 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.easybuild.io/api/easybuild/framework/easyblock/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../easyconfig/">
+      
+      <link rel="icon" href="../../../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
+    
+    
+      
+        <title>easyblock - EasyBuild - building software with ease</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.f56500e0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/asciinema-player-2.6.1.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-BLVCH6991S"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-BLVCH6991S",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-BLVCH6991S",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="easybuild" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#easybuild.framework.easyblock" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="EasyBuild - building software with ease" class="md-header__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
+      
+  <img src="../../../../img/easybuild_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EasyBuild - building software with ease
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              easyblock
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/easybuilders/easybuild-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EasyBuild @ GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
+      
+  <img src="../../../../img/easybuild_logo.png" alt="logo">
+
+    </a>
+    EasyBuild - building software with ease
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/easybuilders/easybuild-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EasyBuild @ GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../what-is-easybuild/" class="md-nav__link">
+        What is EasyBuild?
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../terminology/" class="md-nav__link">
+        Terminology
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../configuration/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../using-easybuild/" class="md-nav__link">
+        Using EasyBuild
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../release-notes/" class="md-nav__link">
+        Release notes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1" type="checkbox" id="__nav_8_1" checked>
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">easybuild</a>
+          
+            <label for="__nav_8_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="easybuild" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_1">
+          <span class="md-nav__icon md-icon"></span>
+          easybuild
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_1" type="checkbox" id="__nav_8_1_1" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../base/">base</a>
+          
+            <label for="__nav_8_1_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="base" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          base
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/exceptions/" class="md-nav__link">
+        exceptions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/fancylogger/" class="md-nav__link">
+        fancylogger
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/frozendict/" class="md-nav__link">
+        frozendict
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/generaloption/" class="md-nav__link">
+        generaloption
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/optcomplete/" class="md-nav__link">
+        optcomplete
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/rest/" class="md-nav__link">
+        rest
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/testing/" class="md-nav__link">
+        testing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/wrapper/" class="md-nav__link">
+        wrapper
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_2" type="checkbox" id="__nav_8_1_2" checked>
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">framework</a>
+          
+            <label for="__nav_8_1_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="framework" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          framework
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          easyblock
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        easyblock
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock" class="md-nav__link">
+    easybuild.framework.easyblock
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock" class="md-nav__link">
+    EasyBlock
+  </a>
+  
+    <nav class="md-nav" aria-label="EasyBlock">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.full_mod_name" class="md-nav__link">
+    full_mod_name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.mod_subdir" class="md-nav__link">
+    mod_subdir
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.moduleGenerator" class="md-nav__link">
+    moduleGenerator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.name" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.short_mod_name" class="md-nav__link">
+    short_mod_name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.start_dir" class="md-nav__link">
+    start_dir
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.toolchain" class="md-nav__link">
+    toolchain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.version" class="md-nav__link">
+    version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.apply_post_install_patches" class="md-nav__link">
+    apply_post_install_patches()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.banned_linked_shared_libs" class="md-nav__link">
+    banned_linked_shared_libs()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.bin_lib_subdirs" class="md-nav__link">
+    bin_lib_subdirs()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.build_step" class="md-nav__link">
+    build_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.check_accepted_eula" class="md-nav__link">
+    check_accepted_eula()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.check_checksums" class="md-nav__link">
+    check_checksums()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.check_checksums_for" class="md-nav__link">
+    check_checksums_for()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.check_readiness_step" class="md-nav__link">
+    check_readiness_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.checksum_step" class="md-nav__link">
+    checksum_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.clean_up_fake_module" class="md-nav__link">
+    clean_up_fake_module()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.cleanup_step" class="md-nav__link">
+    cleanup_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.close_log" class="md-nav__link">
+    close_log()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.collect_exts_file_info" class="md-nav__link">
+    collect_exts_file_info()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.configure_step" class="md-nav__link">
+    configure_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.det_iter_cnt" class="md-nav__link">
+    det_iter_cnt()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.dry_run_msg" class="md-nav__link">
+    dry_run_msg()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.extensions_step" class="md-nav__link">
+    extensions_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.extra_options" class="md-nav__link">
+    extra_options()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.extract_step" class="md-nav__link">
+    extract_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.fetch_extension_sources" class="md-nav__link">
+    fetch_extension_sources()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.fetch_patches" class="md-nav__link">
+    fetch_patches()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.fetch_source" class="md-nav__link">
+    fetch_source()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.fetch_sources" class="md-nav__link">
+    fetch_sources()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.fetch_step" class="md-nav__link">
+    fetch_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.fix_shebang" class="md-nav__link">
+    fix_shebang()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.gen_builddir" class="md-nav__link">
+    gen_builddir()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.gen_installdir" class="md-nav__link">
+    gen_installdir()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.get_checksum_for" class="md-nav__link">
+    get_checksum_for()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.get_checksums_from_json" class="md-nav__link">
+    get_checksums_from_json()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.get_steps" class="md-nav__link">
+    get_steps()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.guess_start_dir" class="md-nav__link">
+    guess_start_dir()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.handle_iterate_opts" class="md-nav__link">
+    handle_iterate_opts()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.init_dry_run" class="md-nav__link">
+    init_dry_run()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.init_ext_instances" class="md-nav__link">
+    init_ext_instances()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.install_extensions" class="md-nav__link">
+    install_extensions()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.install_extensions_parallel" class="md-nav__link">
+    install_extensions_parallel()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.install_extensions_sequential" class="md-nav__link">
+    install_extensions_sequential()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.install_step" class="md-nav__link">
+    install_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.invalidate_module_caches" class="md-nav__link">
+    invalidate_module_caches()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.load_dependency_modules" class="md-nav__link">
+    load_dependency_modules()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.load_fake_module" class="md-nav__link">
+    load_fake_module()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.load_module" class="md-nav__link">
+    load_module()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_builddir" class="md-nav__link">
+    make_builddir()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_devel_module" class="md-nav__link">
+    make_devel_module()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_dir" class="md-nav__link">
+    make_dir()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_installdir" class="md-nav__link">
+    make_installdir()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_module_dep" class="md-nav__link">
+    make_module_dep()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_module_deppaths" class="md-nav__link">
+    make_module_deppaths()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_module_description" class="md-nav__link">
+    make_module_description()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_module_extend_modpath" class="md-nav__link">
+    make_module_extend_modpath()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_module_extra" class="md-nav__link">
+    make_module_extra()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_module_extra_extensions" class="md-nav__link">
+    make_module_extra_extensions()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_module_footer" class="md-nav__link">
+    make_module_footer()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_module_group_check" class="md-nav__link">
+    make_module_group_check()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_module_req" class="md-nav__link">
+    make_module_req()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_module_req_guess" class="md-nav__link">
+    make_module_req_guess()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_module_step" class="md-nav__link">
+    make_module_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.obtain_file" class="md-nav__link">
+    obtain_file()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.package_step" class="md-nav__link">
+    package_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.patch_step" class="md-nav__link">
+    patch_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.permissions_step" class="md-nav__link">
+    permissions_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.post_init" class="md-nav__link">
+    post_init()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.post_install_step" class="md-nav__link">
+    post_install_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.post_iter_step" class="md-nav__link">
+    post_iter_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.prepare_for_extensions" class="md-nav__link">
+    prepare_for_extensions()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.prepare_step" class="md-nav__link">
+    prepare_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.print_post_install_messages" class="md-nav__link">
+    print_post_install_messages()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.remove_module_file" class="md-nav__link">
+    remove_module_file()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.report_test_failure" class="md-nav__link">
+    report_test_failure()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.required_linked_shared_libs" class="md-nav__link">
+    required_linked_shared_libs()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.reset_env" class="md-nav__link">
+    reset_env()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.run_all_steps" class="md-nav__link">
+    run_all_steps()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.run_post_install_commands" class="md-nav__link">
+    run_post_install_commands()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.run_step" class="md-nav__link">
+    run_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.sanity_check_linked_shared_libs" class="md-nav__link">
+    sanity_check_linked_shared_libs()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.sanity_check_load_module" class="md-nav__link">
+    sanity_check_load_module()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.sanity_check_rpath" class="md-nav__link">
+    sanity_check_rpath()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.sanity_check_step" class="md-nav__link">
+    sanity_check_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.set_parallel" class="md-nav__link">
+    set_parallel()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.set_up_cuda_cache" class="md-nav__link">
+    set_up_cuda_cache()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.skip_extensions" class="md-nav__link">
+    skip_extensions()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.skip_extensions_parallel" class="md-nav__link">
+    skip_extensions_parallel()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.skip_extensions_sequential" class="md-nav__link">
+    skip_extensions_sequential()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.skip_step" class="md-nav__link">
+    skip_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.stage_install_step" class="md-nav__link">
+    stage_install_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.test_cases_step" class="md-nav__link">
+    test_cases_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.test_step" class="md-nav__link">
+    test_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.update_config_template_run_step" class="md-nav__link">
+    update_config_template_run_step()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.update_exts_progress_bar" class="md-nav__link">
+    update_exts_progress_bar()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.StopException" class="md-nav__link">
+    StopException
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.build_and_install_one" class="md-nav__link">
+    build_and_install_one()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.build_easyconfigs" class="md-nav__link">
+    build_easyconfigs()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.get_easyblock_instance" class="md-nav__link">
+    get_easyblock_instance()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.inject_checksums" class="md-nav__link">
+    inject_checksums()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.inject_checksums_to_json" class="md-nav__link">
+    inject_checksums_to_json()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.print_dry_run_note" class="md-nav__link">
+    print_dry_run_note()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.reproduce_build" class="md-nav__link">
+    reproduce_build()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_2_2" type="checkbox" id="__nav_8_1_2_2" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../easyconfig/">easyconfig</a>
+          
+            <label for="__nav_8_1_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="easyconfig" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          easyconfig
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easyconfig/constants/" class="md-nav__link">
+        constants
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easyconfig/default/" class="md-nav__link">
+        default
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easyconfig/easyconfig/" class="md-nav__link">
+        easyconfig
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_2_2_4" type="checkbox" id="__nav_8_1_2_2_4" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../easyconfig/format/">format</a>
+          
+            <label for="__nav_8_1_2_2_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="format" data-md-level="5">
+        <label class="md-nav__title" for="__nav_8_1_2_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          format
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easyconfig/format/convert/" class="md-nav__link">
+        convert
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easyconfig/format/format/" class="md-nav__link">
+        format
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easyconfig/format/one/" class="md-nav__link">
+        one
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easyconfig/format/pyheaderconfigobj/" class="md-nav__link">
+        pyheaderconfigobj
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easyconfig/format/two/" class="md-nav__link">
+        two
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easyconfig/format/version/" class="md-nav__link">
+        version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easyconfig/format/yeb/" class="md-nav__link">
+        yeb
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easyconfig/licenses/" class="md-nav__link">
+        licenses
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easyconfig/parser/" class="md-nav__link">
+        parser
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easyconfig/style/" class="md-nav__link">
+        style
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easyconfig/templates/" class="md-nav__link">
+        templates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easyconfig/tools/" class="md-nav__link">
+        tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easyconfig/tweak/" class="md-nav__link">
+        tweak
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easyconfig/types/" class="md-nav__link">
+        types
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easystack/" class="md-nav__link">
+        easystack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extension/" class="md-nav__link">
+        extension
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extensioneasyblock/" class="md-nav__link">
+        extensioneasyblock
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../main/" class="md-nav__link">
+        main
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_4" type="checkbox" id="__nav_8_1_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8_1_4">
+          scripts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="scripts" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          scripts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripts/bootstrap_eb/" class="md-nav__link">
+        bootstrap_eb
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripts/clean_gists/" class="md-nav__link">
+        clean_gists
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripts/findPythonDeps/" class="md-nav__link">
+        findPythonDeps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripts/fix_docs/" class="md-nav__link">
+        fix_docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripts/mk_tmpl_easyblock_for/" class="md-nav__link">
+        mk_tmpl_easyblock_for
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scripts/rpath_args/" class="md-nav__link">
+        rpath_args
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_5" type="checkbox" id="__nav_8_1_5" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../toolchains/">toolchains</a>
+          
+            <label for="__nav_8_1_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="toolchains" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          toolchains
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/cgmpich/" class="md-nav__link">
+        cgmpich
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/cgmpolf/" class="md-nav__link">
+        cgmpolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/cgmvapich2/" class="md-nav__link">
+        cgmvapich2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/cgmvolf/" class="md-nav__link">
+        cgmvolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/cgompi/" class="md-nav__link">
+        cgompi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/cgoolf/" class="md-nav__link">
+        cgoolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/clanggcc/" class="md-nav__link">
+        clanggcc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_5_8" type="checkbox" id="__nav_8_1_5_8" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../toolchains/compiler/">compiler</a>
+          
+            <label for="__nav_8_1_5_8">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="compiler" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_5_8">
+          <span class="md-nav__icon md-icon"></span>
+          compiler
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/clang/" class="md-nav__link">
+        clang
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/craype/" class="md-nav__link">
+        craype
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/cuda/" class="md-nav__link">
+        cuda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/dummycompiler/" class="md-nav__link">
+        dummycompiler
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/fujitsu/" class="md-nav__link">
+        fujitsu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/gcc/" class="md-nav__link">
+        gcc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/ibmxl/" class="md-nav__link">
+        ibmxl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/intel_compilers/" class="md-nav__link">
+        intel_compilers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/inteliccifort/" class="md-nav__link">
+        inteliccifort
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/nvhpc/" class="md-nav__link">
+        nvhpc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/pgi/" class="md-nav__link">
+        pgi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/compiler/systemcompiler/" class="md-nav__link">
+        systemcompiler
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/craycce/" class="md-nav__link">
+        craycce
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/craygnu/" class="md-nav__link">
+        craygnu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/crayintel/" class="md-nav__link">
+        crayintel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/craypgi/" class="md-nav__link">
+        craypgi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/dummy/" class="md-nav__link">
+        dummy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/fcc/" class="md-nav__link">
+        fcc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/ffmpi/" class="md-nav__link">
+        ffmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_5_16" type="checkbox" id="__nav_8_1_5_16" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../toolchains/fft/">fft</a>
+          
+            <label for="__nav_8_1_5_16">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="fft" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_5_16">
+          <span class="md-nav__icon md-icon"></span>
+          fft
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/fft/fftw/" class="md-nav__link">
+        fftw
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/fft/fujitsufftw/" class="md-nav__link">
+        fujitsufftw
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/fft/intelfftw/" class="md-nav__link">
+        intelfftw
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/foss/" class="md-nav__link">
+        foss
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/fosscuda/" class="md-nav__link">
+        fosscuda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/fujitsu/" class="md-nav__link">
+        fujitsu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gcc/" class="md-nav__link">
+        gcc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gcccore/" class="md-nav__link">
+        gcccore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gcccuda/" class="md-nav__link">
+        gcccuda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gfbf/" class="md-nav__link">
+        gfbf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gimkl/" class="md-nav__link">
+        gimkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gimpi/" class="md-nav__link">
+        gimpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gimpic/" class="md-nav__link">
+        gimpic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/giolf/" class="md-nav__link">
+        giolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/giolfc/" class="md-nav__link">
+        giolfc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmacml/" class="md-nav__link">
+        gmacml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmkl/" class="md-nav__link">
+        gmkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmklc/" class="md-nav__link">
+        gmklc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmpich/" class="md-nav__link">
+        gmpich
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmpich2/" class="md-nav__link">
+        gmpich2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmpit/" class="md-nav__link">
+        gmpit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmpolf/" class="md-nav__link">
+        gmpolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmvapich2/" class="md-nav__link">
+        gmvapich2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gmvolf/" class="md-nav__link">
+        gmvolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gnu/" class="md-nav__link">
+        gnu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/goalf/" class="md-nav__link">
+        goalf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gobff/" class="md-nav__link">
+        gobff
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/goblf/" class="md-nav__link">
+        goblf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gofbf/" class="md-nav__link">
+        gofbf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/golf/" class="md-nav__link">
+        golf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/golfc/" class="md-nav__link">
+        golfc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gomkl/" class="md-nav__link">
+        gomkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gomklc/" class="md-nav__link">
+        gomklc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gompi/" class="md-nav__link">
+        gompi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gompic/" class="md-nav__link">
+        gompic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/goolf/" class="md-nav__link">
+        goolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/goolfc/" class="md-nav__link">
+        goolfc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gpsmpi/" class="md-nav__link">
+        gpsmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gpsolf/" class="md-nav__link">
+        gpsolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gqacml/" class="md-nav__link">
+        gqacml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gsmpi/" class="md-nav__link">
+        gsmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/gsolf/" class="md-nav__link">
+        gsolf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iccifort/" class="md-nav__link">
+        iccifort
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iccifortcuda/" class="md-nav__link">
+        iccifortcuda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/ictce/" class="md-nav__link">
+        ictce
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iibff/" class="md-nav__link">
+        iibff
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iimkl/" class="md-nav__link">
+        iimkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iimklc/" class="md-nav__link">
+        iimklc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iimpi/" class="md-nav__link">
+        iimpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iimpic/" class="md-nav__link">
+        iimpic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iiqmpi/" class="md-nav__link">
+        iiqmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/impich/" class="md-nav__link">
+        impich
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/impmkl/" class="md-nav__link">
+        impmkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/intel-para/" class="md-nav__link">
+        intel-para
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/intel/" class="md-nav__link">
+        intel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/intel_compilers/" class="md-nav__link">
+        intel_compilers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/intelcuda/" class="md-nav__link">
+        intelcuda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iomkl/" class="md-nav__link">
+        iomkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iomklc/" class="md-nav__link">
+        iomklc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iompi/" class="md-nav__link">
+        iompi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iompic/" class="md-nav__link">
+        iompic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/ipsmpi/" class="md-nav__link">
+        ipsmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/iqacml/" class="md-nav__link">
+        iqacml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/ismkl/" class="md-nav__link">
+        ismkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_5_78" type="checkbox" id="__nav_8_1_5_78" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../toolchains/linalg/">linalg</a>
+          
+            <label for="__nav_8_1_5_78">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="linalg" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_5_78">
+          <span class="md-nav__icon md-icon"></span>
+          linalg
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/acml/" class="md-nav__link">
+        acml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/atlas/" class="md-nav__link">
+        atlas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/blacs/" class="md-nav__link">
+        blacs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/blis/" class="md-nav__link">
+        blis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/flame/" class="md-nav__link">
+        flame
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/flexiblas/" class="md-nav__link">
+        flexiblas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/fujitsussl/" class="md-nav__link">
+        fujitsussl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/gotoblas/" class="md-nav__link">
+        gotoblas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/intelmkl/" class="md-nav__link">
+        intelmkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/lapack/" class="md-nav__link">
+        lapack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/libsci/" class="md-nav__link">
+        libsci
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/openblas/" class="md-nav__link">
+        openblas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/linalg/scalapack/" class="md-nav__link">
+        scalapack
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_5_79" type="checkbox" id="__nav_8_1_5_79" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../toolchains/mpi/">mpi</a>
+          
+            <label for="__nav_8_1_5_79">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="mpi" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_5_79">
+          <span class="md-nav__icon md-icon"></span>
+          mpi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/craympich/" class="md-nav__link">
+        craympich
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/fujitsumpi/" class="md-nav__link">
+        fujitsumpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/intelmpi/" class="md-nav__link">
+        intelmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/mpich/" class="md-nav__link">
+        mpich
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/mpich2/" class="md-nav__link">
+        mpich2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/mpitrampoline/" class="md-nav__link">
+        mpitrampoline
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/mvapich2/" class="md-nav__link">
+        mvapich2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/openmpi/" class="md-nav__link">
+        openmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/psmpi/" class="md-nav__link">
+        psmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/qlogicmpi/" class="md-nav__link">
+        qlogicmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/mpi/spectrummpi/" class="md-nav__link">
+        spectrummpi
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/nvhpc/" class="md-nav__link">
+        nvhpc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/nvompi/" class="md-nav__link">
+        nvompi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/nvompic/" class="md-nav__link">
+        nvompic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/nvpsmpi/" class="md-nav__link">
+        nvpsmpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/nvpsmpic/" class="md-nav__link">
+        nvpsmpic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/pgi/" class="md-nav__link">
+        pgi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/pmkl/" class="md-nav__link">
+        pmkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/pomkl/" class="md-nav__link">
+        pomkl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/pompi/" class="md-nav__link">
+        pompi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/system/" class="md-nav__link">
+        system
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/xlcxlf/" class="md-nav__link">
+        xlcxlf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/xlmpich/" class="md-nav__link">
+        xlmpich
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/xlmpich2/" class="md-nav__link">
+        xlmpich2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/xlmvapich2/" class="md-nav__link">
+        xlmvapich2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/xlompi/" class="md-nav__link">
+        xlompi
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6" type="checkbox" id="__nav_8_1_6" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tools/">tools</a>
+          
+            <label for="__nav_8_1_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="tools" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_1_6">
+          <span class="md-nav__icon md-icon"></span>
+          tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/asyncprocess/" class="md-nav__link">
+        asyncprocess
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/build_details/" class="md-nav__link">
+        build_details
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/build_log/" class="md-nav__link">
+        build_log
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/config/" class="md-nav__link">
+        config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/configobj/" class="md-nav__link">
+        configobj
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6_6" type="checkbox" id="__nav_8_1_6_6" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tools/containers/">containers</a>
+          
+            <label for="__nav_8_1_6_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="containers" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_6_6">
+          <span class="md-nav__icon md-icon"></span>
+          containers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/containers/base/" class="md-nav__link">
+        base
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/containers/common/" class="md-nav__link">
+        common
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/containers/docker/" class="md-nav__link">
+        docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/containers/singularity/" class="md-nav__link">
+        singularity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/containers/utils/" class="md-nav__link">
+        utils
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/convert/" class="md-nav__link">
+        convert
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/deprecated/" class="md-nav__link">
+        deprecated
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/docs/" class="md-nav__link">
+        docs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/environment/" class="md-nav__link">
+        environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/filetools/" class="md-nav__link">
+        filetools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/github/" class="md-nav__link">
+        github
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/hooks/" class="md-nav__link">
+        hooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/include/" class="md-nav__link">
+        include
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/jenkins/" class="md-nav__link">
+        jenkins
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6_16" type="checkbox" id="__nav_8_1_6_16" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tools/job/">job</a>
+          
+            <label for="__nav_8_1_6_16">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="job" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_6_16">
+          <span class="md-nav__icon md-icon"></span>
+          job
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/job/backend/" class="md-nav__link">
+        backend
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/job/gc3pie/" class="md-nav__link">
+        gc3pie
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/job/pbs_python/" class="md-nav__link">
+        pbs_python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/job/slurm/" class="md-nav__link">
+        slurm
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/loose_version/" class="md-nav__link">
+        loose_version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/module_generator/" class="md-nav__link">
+        module_generator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6_19" type="checkbox" id="__nav_8_1_6_19" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tools/module_naming_scheme/">module_naming_scheme</a>
+          
+            <label for="__nav_8_1_6_19">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="module_naming_scheme" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_6_19">
+          <span class="md-nav__icon md-icon"></span>
+          module_naming_scheme
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/module_naming_scheme/categorized_hmns/" class="md-nav__link">
+        categorized_hmns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/module_naming_scheme/categorized_mns/" class="md-nav__link">
+        categorized_mns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/module_naming_scheme/easybuild_mns/" class="md-nav__link">
+        easybuild_mns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/module_naming_scheme/hierarchical_mns/" class="md-nav__link">
+        hierarchical_mns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/module_naming_scheme/migrate_from_eb_to_hmns/" class="md-nav__link">
+        migrate_from_eb_to_hmns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/module_naming_scheme/mns/" class="md-nav__link">
+        mns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/module_naming_scheme/toolchain/" class="md-nav__link">
+        toolchain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/module_naming_scheme/utilities/" class="md-nav__link">
+        utilities
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/modules/" class="md-nav__link">
+        modules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/multidiff/" class="md-nav__link">
+        multidiff
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/options/" class="md-nav__link">
+        options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/output/" class="md-nav__link">
+        output
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6_24" type="checkbox" id="__nav_8_1_6_24" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tools/package/">package</a>
+          
+            <label for="__nav_8_1_6_24">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="package" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_6_24">
+          <span class="md-nav__icon md-icon"></span>
+          package
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6_24_1" type="checkbox" id="__nav_8_1_6_24_1" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tools/package/package_naming_scheme/">package_naming_scheme</a>
+          
+            <label for="__nav_8_1_6_24_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="package_naming_scheme" data-md-level="5">
+        <label class="md-nav__title" for="__nav_8_1_6_24_1">
+          <span class="md-nav__icon md-icon"></span>
+          package_naming_scheme
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/package/package_naming_scheme/easybuild_pns/" class="md-nav__link">
+        easybuild_pns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/package/package_naming_scheme/pns/" class="md-nav__link">
+        pns
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/package/utilities/" class="md-nav__link">
+        utilities
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/parallelbuild/" class="md-nav__link">
+        parallelbuild
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6_26" type="checkbox" id="__nav_8_1_6_26" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tools/py2vs3/">py2vs3</a>
+          
+            <label for="__nav_8_1_6_26">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="py2vs3" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_6_26">
+          <span class="md-nav__icon md-icon"></span>
+          py2vs3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/py2vs3/py2/" class="md-nav__link">
+        py2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/py2vs3/py3/" class="md-nav__link">
+        py3
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6_27" type="checkbox" id="__nav_8_1_6_27" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tools/repository/">repository</a>
+          
+            <label for="__nav_8_1_6_27">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="repository" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_6_27">
+          <span class="md-nav__icon md-icon"></span>
+          repository
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/repository/filerepo/" class="md-nav__link">
+        filerepo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/repository/gitrepo/" class="md-nav__link">
+        gitrepo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/repository/hgrepo/" class="md-nav__link">
+        hgrepo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/repository/repository/" class="md-nav__link">
+        repository
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/repository/svnrepo/" class="md-nav__link">
+        svnrepo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/robot/" class="md-nav__link">
+        robot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/run/" class="md-nav__link">
+        run
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/systemtools/" class="md-nav__link">
+        systemtools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/testing/" class="md-nav__link">
+        testing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_6_32" type="checkbox" id="__nav_8_1_6_32" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../tools/toolchain/">toolchain</a>
+          
+            <label for="__nav_8_1_6_32">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="toolchain" data-md-level="4">
+        <label class="md-nav__title" for="__nav_8_1_6_32">
+          <span class="md-nav__icon md-icon"></span>
+          toolchain
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/toolchain/compiler/" class="md-nav__link">
+        compiler
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/toolchain/constants/" class="md-nav__link">
+        constants
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/toolchain/fft/" class="md-nav__link">
+        fft
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/toolchain/linalg/" class="md-nav__link">
+        linalg
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/toolchain/mpi/" class="md-nav__link">
+        mpi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/toolchain/options/" class="md-nav__link">
+        options
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/toolchain/toolchain/" class="md-nav__link">
+        toolchain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/toolchain/toolchainvariables/" class="md-nav__link">
+        toolchainvariables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/toolchain/utilities/" class="md-nav__link">
+        utilities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/toolchain/variables/" class="md-nav__link">
+        variables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/utilities/" class="md-nav__link">
+        utilities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/variables/" class="md-nav__link">
+        variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/version/" class="md-nav__link">
+        version
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../getting-help/" class="md-nav__link">
+        Getting help
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+
+  <h1>easyblock</h1>
+
+<div class="doc doc-object doc-module">
+
+
+<a id="easybuild.framework.easyblock"></a>
+  <div class="doc doc-contents first">
+  
+      <p>Generic EasyBuild support for building and installing software.
+The EasyBlock class should serve as a base class for all easyblocks.</p>
+<p>:author: Stijn De Weirdt (Ghent University)
+:author: Dries Verdegem (Ghent University)
+:author: Kenneth Hoste (Ghent University)
+:author: Pieter De Baets (Ghent University)
+:author: Jens Timmerman (Ghent University)
+:author: Toon Willems (Ghent University)
+:author: Ward Poelmans (Ghent University)
+:author: Fotis Georgatos (Uni.Lu, NTUA)
+:author: Damian Alvarez (Forschungszentrum Juelich GmbH)
+:author: Maxime Boissonneault (Compute Canada)
+:author: Davide Vanzo (Vanderbilt University)
+:author: Caspar van Leeuwen (SURF)</p>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="easybuild.framework.easyblock.EasyBlock" class="doc doc-heading">
+        <code>EasyBlock</code>
+
+
+<a href="#easybuild.framework.easyblock.EasyBlock" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code>object</code></p>
+
+  
+      <p>Generic support for building and installing software, base class for actual easyblocks.</p>
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.full_mod_name" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">full_mod_name</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.full_mod_name" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Full module name (including subdirectory in module install path)</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.mod_subdir" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">mod_subdir</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.mod_subdir" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Subdirectory in module install path</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.moduleGenerator" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">moduleGenerator</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.moduleGenerator" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Module generator (DEPRECATED, use self.module_generator instead).</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.name" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">name</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.name" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Shortcut the get the module name.</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.short_mod_name" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">short_mod_name</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.short_mod_name" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Short module name (not including subdirectory in module install path)</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.start_dir" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">start_dir</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.start_dir" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Start directory in build directory</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.toolchain" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">toolchain</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.toolchain" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Toolchain used to build this easyblock</p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.version" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">version</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.version" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Shortcut the get the module version.</p>
+  </div>
+
+</div>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.__init__" class="doc doc-heading">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Initialize the EasyBlock instance.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>ec</code></td>
+          <td class="doc-param-details">
+            <p>a parsed easyconfig file (EasyConfig instance)</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.apply_post_install_patches" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">apply_post_install_patches</span><span class="p">(</span><span class="n">patches</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.apply_post_install_patches" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Apply post-install patch files that are specified via the 'postinstallpatches' easyconfig parameter.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.banned_linked_shared_libs" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">banned_linked_shared_libs</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.banned_linked_shared_libs" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>List of shared libraries which are not allowed to be linked in any installed binary/library.
+Supported values are pure library names without 'lib' prefix or extension ('example'),
+file names ('libexample.so'), and full paths ('/usr/lib64/libexample.so').</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.bin_lib_subdirs" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">bin_lib_subdirs</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.bin_lib_subdirs" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>List of subdirectories for binaries and libraries for this software installation.
+This is used during the sanity check to check RPATH linking and banned/required linked shared libraries.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.build_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">build_step</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.build_step" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Build software  (abstract method).</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.check_accepted_eula" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">check_accepted_eula</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">more_info</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.check_accepted_eula" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Check whether EULA for this software is accepted in current EasyBuild configuration.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.check_checksums" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">check_checksums</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.check_checksums" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Check whether a SHA256 checksum is available for all sources &amp; patches (incl. extensions).</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td class="doc-returns-details">
+            <p>list of strings describing checksum issues (missing checksums, wrong checksum type, etc.)</p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.check_checksums_for" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">check_checksums_for</span><span class="p">(</span><span class="n">ent</span><span class="p">,</span> <span class="n">sub</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">source_cnt</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.check_checksums_for" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Utility method: check whether SHA256 checksums for all sources/patches are available, for given entity</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.check_readiness_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">check_readiness_step</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.check_readiness_step" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Verify if all is ok to start build.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.checksum_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">checksum_step</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.checksum_step" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Verify checksum of sources and patches, if a checksum is available.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.clean_up_fake_module" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">clean_up_fake_module</span><span class="p">(</span><span class="n">fake_mod_data</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.clean_up_fake_module" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Clean up fake module.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.cleanup_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">cleanup_step</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.cleanup_step" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Cleanup leftover mess: remove/clean build directory</p>
+<p>except when we're building in the installation directory or
+cleanup_builddir is False, otherwise we remove the installation</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.close_log" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">close_log</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.close_log" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Shutdown the logger.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.collect_exts_file_info" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">collect_exts_file_info</span><span class="p">(</span><span class="n">fetch_files</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">verify_checksums</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.collect_exts_file_info" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Collect information on source and patch files for extensions.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>fetch_files</code></td>
+          <td class="doc-param-details">
+            <p>whether or not to fetch files (if False, path to files will be missing from info)</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>True</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>verify_checksums</code></td>
+          <td class="doc-param-details">
+            <p>whether or not to verify checksums</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>True</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td class="doc-returns-details">
+            <p>list of dict values, one per extension, with information on source/patch files.</p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.configure_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">configure_step</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.configure_step" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Configure build  (abstract method).</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.det_iter_cnt" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">det_iter_cnt</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.det_iter_cnt" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Determine iteration count based on configure/build/install options that may be lists.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.dry_run_msg" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">dry_run_msg</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.dry_run_msg" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Print dry run message.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.extensions_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">extensions_step</span><span class="p">(</span><span class="n">fetch</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">install</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.extensions_step" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>After make install, run this.
+- only if variable len(exts_list) &gt; 0
+- optionally: load module that was just created using temp module file
+- find source for extensions, in 'extensions' (and 'packages' for legacy reasons)
+- run extra_extensions</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.extra_options" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">extra_options</span><span class="p">(</span><span class="n">extra</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.extra_options" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Extra options method which will be passed to the EasyConfig constructor.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.extract_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">extract_step</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.extract_step" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Unpack the source files.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.fetch_extension_sources" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">fetch_extension_sources</span><span class="p">(</span><span class="n">skip_checksums</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.fetch_extension_sources" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Fetch source and patch files for extensions (DEPRECATED, use collect_exts_file_info instead).</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.fetch_patches" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">fetch_patches</span><span class="p">(</span><span class="n">patch_specs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">extension</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">checksums</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.fetch_patches" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Add a list of patches.
+All patches will be checked if a file exists (or can be located)</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.fetch_source" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">fetch_source</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">checksum</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">extension</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">download_instructions</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.fetch_source" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get a specific source (tarball, iso, url)
+Will be tested for existence or can be located</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>source</code></td>
+          <td class="doc-param-details">
+            <p>source to be found (single dictionary in 'sources' list, or filename)</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>checksum</code></td>
+          <td class="doc-param-details">
+            <p>checksum corresponding to source</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>extension</code></td>
+          <td class="doc-param-details">
+            <p>flag if being called from collect_exts_file_info()</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>False</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.fetch_sources" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">fetch_sources</span><span class="p">(</span><span class="n">sources</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">checksums</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.fetch_sources" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Add a list of source files (can be tarballs, isos, urls).
+All source files will be checked if a file exists (or can be located)</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>sources</code></td>
+          <td class="doc-param-details">
+            <p>list of sources to fetch (if None, use 'sources' easyconfig parameter)</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>checksums</code></td>
+          <td class="doc-param-details">
+            <p>list of checksums for sources</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.fetch_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">fetch_step</span><span class="p">(</span><span class="n">skip_checksums</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.fetch_step" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Fetch source files and patches (incl. extensions).</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.fix_shebang" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">fix_shebang</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.fix_shebang" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Fix shebang lines for specified files.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.gen_builddir" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">gen_builddir</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.gen_builddir" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Generate the (unique) name for the builddir</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.gen_installdir" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">gen_installdir</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.gen_installdir" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Generate the name of the installation directory.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.get_checksum_for" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_checksum_for</span><span class="p">(</span><span class="n">checksums</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.get_checksum_for" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Obtain checksum for given filename.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>checksums</code></td>
+          <td class="doc-param-details">
+            <p>a list or tuple of checksums (or None)</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>filename</code></td>
+          <td class="doc-param-details">
+            <p>name of the file to obtain checksum for</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>index</code></td>
+          <td class="doc-param-details">
+            <p>index of file in list</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.get_checksums_from_json" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_checksums_from_json</span><span class="p">(</span><span class="n">always_read</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.get_checksums_from_json" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get checksums for this software that are provided in a checksums.json file</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>always_read</code></td>
+          <td class="doc-param-details">
+            <p>always read the checksums.json file, even if it has been read before</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>False</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.get_steps" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_steps</span><span class="p">(</span><span class="n">run_test_cases</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">iteration_count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.get_steps" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Return a list of all steps to be performed.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.guess_start_dir" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">guess_start_dir</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.guess_start_dir" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Return the directory where to start the whole configure/make/make install cycle from
+- typically self.src[0]['finalpath']
+- start_dir option
+-- if abspath: use that
+-- else, treat it as subdir for regular procedure</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.handle_iterate_opts" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">handle_iterate_opts</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.handle_iterate_opts" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Handle options relevant during iterated part of build/install procedure.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.init_dry_run" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">init_dry_run</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.init_dry_run" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Initialise easyblock instance for performing a dry run.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.init_ext_instances" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">init_ext_instances</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.init_ext_instances" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create class instances for all extensions.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.install_extensions" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">install_extensions</span><span class="p">(</span><span class="n">install</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.install_extensions" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Install extensions.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>install</code></td>
+          <td class="doc-param-details">
+            <p>actually install extensions, don't just prepare environment for installing</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>True</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.install_extensions_parallel" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">install_extensions_parallel</span><span class="p">(</span><span class="n">install</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.install_extensions_parallel" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Install extensions in parallel.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>install</code></td>
+          <td class="doc-param-details">
+            <p>actually install extensions, don't just prepare environment for installing</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>True</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.install_extensions_sequential" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">install_extensions_sequential</span><span class="p">(</span><span class="n">install</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.install_extensions_sequential" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Install extensions sequentially.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>install</code></td>
+          <td class="doc-param-details">
+            <p>actually install extensions, don't just prepare environment for installing</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>True</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.install_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">install_step</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.install_step" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Install built software (abstract method).</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.invalidate_module_caches" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">invalidate_module_caches</span><span class="p">(</span><span class="n">modpath</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.invalidate_module_caches" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Helper method to invalidate module caches for specified module path.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.load_dependency_modules" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">load_dependency_modules</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.load_dependency_modules" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Load dependency modules.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.load_fake_module" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">load_fake_module</span><span class="p">(</span><span class="n">purge</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">extra_modules</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.load_fake_module" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create and load fake module.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>purge</code></td>
+          <td class="doc-param-details">
+            <p>boolean indicating whether or not to purge currently loaded modules first</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>False</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>extra_modules</code></td>
+          <td class="doc-param-details">
+            <p>list of extra modules to load (these are loaded <em>before</em> loading the 'self' module)</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.load_module" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">load_module</span><span class="p">(</span><span class="n">mod_paths</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">purge</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">extra_modules</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.load_module" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Load module for this software package/version, after purging all currently loaded modules.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>mod_paths</code></td>
+          <td class="doc-param-details">
+            <p>list of (additional) module paths to take into account</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>purge</code></td>
+          <td class="doc-param-details">
+            <p>boolean indicating whether or not to purge currently loaded modules first</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>True</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>extra_modules</code></td>
+          <td class="doc-param-details">
+            <p>list of extra modules to load (these are loaded <em>before</em> loading the 'self' module)</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>verbose</code></td>
+          <td class="doc-param-details">
+            <p>print modules being loaded when trace mode is enabled</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>True</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.make_builddir" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">make_builddir</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.make_builddir" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create the build directory.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.make_devel_module" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">make_devel_module</span><span class="p">(</span><span class="n">create_in_builddir</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.make_devel_module" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create a develop module file which sets environment based on the build
+Usage: module load name, which loads the module you want to use. $EBDEVELNAME should then be the full path
+to the devel module file. So now you can module load $EBDEVELNAME.</p>
+<p>WARNING: you cannot unload using $EBDEVELNAME (for now: use module unload <code>basename $EBDEVELNAME</code>)</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.make_dir" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">make_dir</span><span class="p">(</span><span class="n">dir_name</span><span class="p">,</span> <span class="n">clean</span><span class="p">,</span> <span class="n">dontcreateinstalldir</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.make_dir" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create the directory.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.make_installdir" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">make_installdir</span><span class="p">(</span><span class="n">dontcreate</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.make_installdir" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create the installation directory.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.make_module_dep" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">make_module_dep</span><span class="p">(</span><span class="n">unload_info</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.make_module_dep" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Make the dependencies for the module file.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>unload_info</code></td>
+          <td class="doc-param-details">
+            <p>dictionary with full module names as keys and module name to unload first as corr. value</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.make_module_deppaths" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">make_module_deppaths</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.make_module_deppaths" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Add specific 'module use' actions to module file, in order to find
+dependencies outside the end user's MODULEPATH.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.make_module_description" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">make_module_description</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.make_module_description" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create the module description.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.make_module_extend_modpath" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">make_module_extend_modpath</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.make_module_extend_modpath" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Include prepend-path statements for extending $MODULEPATH.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.make_module_extra" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">make_module_extra</span><span class="p">(</span><span class="n">altroot</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">altversion</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.make_module_extra" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Set extra stuff in module file, e.g. $EBROOT<em>, $EBVERSION</em>, etc.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>altroot</code></td>
+          <td class="doc-param-details">
+            <p>path to use to define $EBROOT*</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>altversion</code></td>
+          <td class="doc-param-details">
+            <p>version to use to define $EBVERSION*</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.make_module_extra_extensions" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">make_module_extra_extensions</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.make_module_extra_extensions" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Sets optional variables for extensions.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.make_module_footer" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">make_module_footer</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.make_module_footer" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Insert a footer section in the module file, primarily meant for contextual information</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.make_module_group_check" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">make_module_group_check</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.make_module_group_check" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create the necessary group check.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.make_module_req" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">make_module_req</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.make_module_req" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Generate the environment-variables to run the module.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.make_module_req_guess" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">make_module_req_guess</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.make_module_req_guess" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>A dictionary of possible directories to look for.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.make_module_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">make_module_step</span><span class="p">(</span><span class="n">fake</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.make_module_step" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Generate module file</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>fake</code></td>
+          <td class="doc-param-details">
+            <p>generate 'fake' module in temporary location, rather than actual module file</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>False</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.obtain_file" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">obtain_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">extension</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">urls</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">download_filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force_download</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">git_config</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">no_download</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">download_instructions</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">alt_location</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.obtain_file" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Locate the file with the given name
+- searches in different subdirectories of source path
+- supports fetching file from the web if path is specified as an url (i.e. starts with "http://:")</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>filename</code></td>
+          <td class="doc-param-details">
+            <p>filename of source</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>extension</code></td>
+          <td class="doc-param-details">
+            <p>indicates whether locations for extension sources should also be considered</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>False</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>urls</code></td>
+          <td class="doc-param-details">
+            <p>list of source URLs where this file may be available</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>download_filename</code></td>
+          <td class="doc-param-details">
+            <p>filename with which the file should be downloaded, and then renamed to <filename></p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>force_download</code></td>
+          <td class="doc-param-details">
+            <p>always try to download file, even if it's already available in source path</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>False</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>git_config</code></td>
+          <td class="doc-param-details">
+            <p>dictionary to define how to download a git repository</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>no_download</code></td>
+          <td class="doc-param-details">
+            <p>do not try to download the file</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>False</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>download_instructions</code></td>
+          <td class="doc-param-details">
+            <p>instructions to manually add source (used for complex cases)</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>alt_location</code></td>
+          <td class="doc-param-details">
+            <p>alternative location to use instead of self.name</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>None</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.package_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">package_step</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.package_step" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Package installed software (e.g., into an RPM), if requested, using selected package tool.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.patch_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">patch_step</span><span class="p">(</span><span class="n">beginpath</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">patches</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.patch_step" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Apply the patches</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.permissions_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">permissions_step</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.permissions_step" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Finalize installation procedure: adjust permissions as configured, change group ownership (if requested).
+Installing user must be member of the group that it is changed to.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.post_init" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">post_init</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.post_init" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Run post-initialization tasks.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.post_install_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">post_install_step</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.post_install_step" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Do some postprocessing
+- run post install commands if any were specified</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.post_iter_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">post_iter_step</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.post_iter_step" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Restore options that were iterated over</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.prepare_for_extensions" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">prepare_for_extensions</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.prepare_for_extensions" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Also do this before (eg to set the template)</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.prepare_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">prepare_step</span><span class="p">(</span><span class="n">start_dir</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">load_tc_deps_modules</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.prepare_step" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Pre-configure step. Set's up the builddir just before starting configure</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>start_dir</code></td>
+          <td class="doc-param-details">
+            <p>guess start directory based on unpacked sources</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>True</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>load_tc_deps_modules</code></td>
+          <td class="doc-param-details">
+            <p>load modules for toolchain and dependencies in build environment</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>True</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.print_post_install_messages" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">print_post_install_messages</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.print_post_install_messages" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Print post-install messages that are specified via the 'postinstallmsgs' easyconfig parameter.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.remove_module_file" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">remove_module_file</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.remove_module_file" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Remove module file (if it exists), and check for ghost installation directory (and deal with it).</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.report_test_failure" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">report_test_failure</span><span class="p">(</span><span class="n">msg_or_error</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.report_test_failure" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Report a failing test either via an exception or warning depending on ignore-test-failure</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>msg_or_error</code></td>
+          <td class="doc-param-details">
+            <p>failure description (string value or an EasyBuildError instance)</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.required_linked_shared_libs" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">required_linked_shared_libs</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.required_linked_shared_libs" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>List of shared libraries which must be linked in all installed binaries/libraries.
+Supported values are pure library names without 'lib' prefix or extension ('example'),
+file names ('libexample.so'), and full paths ('/usr/lib64/libexample.so').</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.reset_env" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">reset_env</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.reset_env" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Reset environment.
+When iterating over builddependencies, every time we start a new iteration
+we need to restore the environment to where it was before the relevant modules
+were loaded.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.run_all_steps" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">run_all_steps</span><span class="p">(</span><span class="n">run_test_cases</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.run_all_steps" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Build and install this software.
+run_test_cases (bool): run tests after building (e.g.: make test)</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.run_post_install_commands" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">run_post_install_commands</span><span class="p">(</span><span class="n">commands</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.run_post_install_commands" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Run post install commands that are specified via 'postinstallcmds' easyconfig parameter.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.run_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">run_step</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">step_methods</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.run_step" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Run step, returns false when execution should be stopped</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.sanity_check_linked_shared_libs" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">sanity_check_linked_shared_libs</span><span class="p">(</span><span class="n">subdirs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.sanity_check_linked_shared_libs" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Check whether specific shared libraries are (not) linked into installed binaries/libraries.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.sanity_check_load_module" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">sanity_check_load_module</span><span class="p">(</span><span class="n">extension</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">extra_modules</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.sanity_check_load_module" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Load module to prepare environment for sanity check</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.sanity_check_rpath" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">sanity_check_rpath</span><span class="p">(</span><span class="n">rpath_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.sanity_check_rpath" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Sanity check binaries/libraries w.r.t. RPATH linking.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.sanity_check_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">sanity_check_step</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.sanity_check_step" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Do a sanity check on the installation
+- if <em>any</em> of the files/subdirectories in the installation directory listed
+  in sanity_check_paths are non-existent (or empty), the sanity check fails</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.set_parallel" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">set_parallel</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.set_parallel" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Set 'parallel' easyconfig parameter to determine how many cores can/should be used for parallel builds.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.set_up_cuda_cache" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">set_up_cuda_cache</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.set_up_cuda_cache" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Set up CUDA PTX cache.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.skip_extensions" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">skip_extensions</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.skip_extensions" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Skip already installed extensions,
+by removing them from list of Extension instances to install (self.ext_instances).</p>
+<p>This is done in parallel when EasyBuild is configured to install extensions in parallel.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.skip_extensions_parallel" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">skip_extensions_parallel</span><span class="p">(</span><span class="n">exts_filter</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.skip_extensions_parallel" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Skip already installed extensions (checking in parallel),
+by removing them from list of Extension instances to install (self.ext_instances).</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.skip_extensions_sequential" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">skip_extensions_sequential</span><span class="p">(</span><span class="n">exts_filter</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.skip_extensions_sequential" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Skip already installed extensions (checking sequentially),
+by removing them from list of Extension instances to install (self.ext_instances).</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.skip_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">skip_step</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">skippable</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.skip_step" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Dedice whether or not to skip the specified step.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.stage_install_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">stage_install_step</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.stage_install_step" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Install in a stage directory before actual installation.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.test_cases_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">test_cases_step</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.test_cases_step" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Run provided test cases.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.test_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">test_step</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.test_step" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Run unit tests provided by software (if any).</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.update_config_template_run_step" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">update_config_template_run_step</span><span class="p">()</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.update_config_template_run_step" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Update the the easyconfig template dictionary with easyconfig.TEMPLATE_NAMES_EASYBLOCK_RUN_STEP names</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.update_exts_progress_bar" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">update_exts_progress_bar</span><span class="p">(</span><span class="n">info</span><span class="p">,</span> <span class="n">progress_size</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.update_exts_progress_bar" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Update extensions progress bar with specified info and amount of progress made</p>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="easybuild.framework.easyblock.StopException" class="doc doc-heading">
+        <code>StopException</code>
+
+
+<a href="#easybuild.framework.easyblock.StopException" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+      <p class="doc doc-class-bases">
+        Bases: <code>Exception</code></p>
+
+  
+      <p>StopException class definition.</p>
+
+
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.framework.easyblock.build_and_install_one" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">build_and_install_one</span><span class="p">(</span><span class="n">ecdict</span><span class="p">,</span> <span class="n">init_env</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.build_and_install_one" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Build the software</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>ecdict</code></td>
+          <td class="doc-param-details">
+            <p>dictionary contaning parsed easyconfig + metadata</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>init_env</code></td>
+          <td class="doc-param-details">
+            <p>original environment (used to reset environment)</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.framework.easyblock.build_easyconfigs" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">build_easyconfigs</span><span class="p">(</span><span class="n">easyconfigs</span><span class="p">,</span> <span class="n">output_dir</span><span class="p">,</span> <span class="n">test_results</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.build_easyconfigs" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Build the list of easyconfigs.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.framework.easyblock.get_easyblock_instance" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_easyblock_instance</span><span class="p">(</span><span class="n">ecdict</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.get_easyblock_instance" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get an instance for this easyconfig</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>ecdict</code></td>
+          <td class="doc-param-details">
+            <p>parsed easyconfig (EasyConfig instance)  returns an instance of EasyBlock (or subclass thereof)</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.framework.easyblock.inject_checksums" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">inject_checksums</span><span class="p">(</span><span class="n">ecs</span><span class="p">,</span> <span class="n">checksum_type</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.inject_checksums" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Inject checksums of given type in specified easyconfig files</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>ecs</code></td>
+          <td class="doc-param-details">
+            <p>list of EasyConfig instances to inject checksums into corresponding files</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>checksum_type</code></td>
+          <td class="doc-param-details">
+            <p>type of checksum to use</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.framework.easyblock.inject_checksums_to_json" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">inject_checksums_to_json</span><span class="p">(</span><span class="n">ecs</span><span class="p">,</span> <span class="n">checksum_type</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.inject_checksums_to_json" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Inject checksums of given type in corresponding json files</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>ecs</code></td>
+          <td class="doc-param-details">
+            <p>list of EasyConfig instances to calculate checksums and inject them into checksums.json</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>checksum_type</code></td>
+          <td class="doc-param-details">
+            <p>type of checksum to use</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.framework.easyblock.print_dry_run_note" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">print_dry_run_note</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.print_dry_run_note" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Print note on interpreting dry run output.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.framework.easyblock.reproduce_build" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">reproduce_build</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">reprod_dir_root</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.reproduce_build" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Create reproducibility files (processed easyconfig and easyblocks used) from class instance</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>app</code></td>
+          <td class="doc-param-details">
+            <p>easyblock class instance</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>reprod_dir_root</code></td>
+          <td class="doc-param-details">
+            <p>root directory in which to create the 'reprod' directory</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>RETURNS</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td class="doc-returns-details">
+            <p>reprod_dir directory containing reproducibility files</p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/easy_build" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/c/easybuilders" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://docs.easybuild.io" target="_blank" rel="noopener" title="docs.easybuild.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M96 0C43 0 0 43 0 96v320c0 53 43 96 96 96h320c17.7 0 32-14.3 32-32s-14.3-32-32-32v-64c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H96zm0 384h256v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.5cf534bf.min.js"></script>
+      
+        <script src="../../../../js/asciinema-player-2.6.1.js"></script>
+      
+    
+  </body>
+</html>
