@@ -10,8 +10,10 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/backup-modules/">
       
+      
+      
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -364,10 +365,9 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/backup-modules.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="backup_modules">Backing up of existing modules<a class="headerlink" href="#backup_modules" title="Permanent link">&para;</a></h1>
@@ -401,7 +401,7 @@ is enabled automatically.</p>
 <p>Both these module files are missing an update statement for <code>$PATH</code>
 because the <code>/bin</code> subdirectory was missing in the installation, for the
 purpose of this example:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>ls -la <span class="nv">$EASYBUILD_PREFIX</span>/modules/all/bzip2
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>ls<span class="w"> </span>-la<span class="w"> </span><span class="nv">$EASYBUILD_PREFIX</span>/modules/all/bzip2
 <span class="go">total 16</span>
 <span class="go">drwxr-xr-x  2 example  example   136 Aug 24 10:20 .</span>
 <span class="go">drwxr-xr-x  3 example  example   102 Aug 24 10:18 ..</span>
@@ -412,7 +412,7 @@ purpose of this example:</p>
 <code>bzip2/1.0.6</code> modules and get a clear view on what has changed.</p>
 <p>To reinstall the <code>bzip2/1.0.6</code> module in Lua syntax while retaining a
 backup of the existing module:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb bzip2-1.0.6.eb --module-syntax<span class="o">=</span>Lua --force --backup-modules
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>bzip2-1.0.6.eb<span class="w"> </span>--module-syntax<span class="o">=</span>Lua<span class="w"> </span>--force<span class="w"> </span>--backup-modules
 <span class="go">...</span>
 <span class="go">== creating build dir, resetting environment...</span>
 <span class="go">== backup of existing module file stored at /example/modules/all/bzip2/1.0.6.lua.bak_20170824102603</span>
@@ -433,11 +433,11 @@ backup of the existing module:</p>
 <span class="go">...</span>
 </code></pre></div>
 <p>Equivalently, we can reinstall the module in Tcl syntax using:</p>
-<div class="highlight"><pre><span></span><code>eb bzip2-1.0.6.eb --module-syntax<span class="o">=</span>Tcl --force --backup-modules
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>bzip2-1.0.6.eb<span class="w"> </span>--module-syntax<span class="o">=</span>Tcl<span class="w"> </span>--force<span class="w"> </span>--backup-modules
 </code></pre></div>
 <p>Afterwards, both the newly generated modules and the backups are in
 place:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>ls -la <span class="nv">$EASYBUILD_PREFIX</span>/modules/all/bzip2
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>ls<span class="w"> </span>-la<span class="w"> </span><span class="nv">$EASYBUILD_PREFIX</span>/modules/all/bzip2
 <span class="go">total 32</span>
 <span class="go">drwxr-xr-x  2 example  example   204 Aug 24 10:26 .</span>
 <span class="go">drwxr-xr-x  3 example  example   102 Jul 11 10:18 ..</span>
@@ -448,7 +448,7 @@ place:</p>
 </code></pre></div>
 <p>Cleaning up the backup module files can be done with the following
 command (for example):</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>find <span class="nv">$EASYBUILD_PREFIX</span>/modules/all/bzip2 -name <span class="s1">&#39;*.bak*&#39;</span> <span class="p">|</span> xargs rm -v
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>find<span class="w"> </span><span class="nv">$EASYBUILD_PREFIX</span>/modules/all/bzip2<span class="w"> </span>-name<span class="w"> </span><span class="s1">&#39;*.bak*&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>rm<span class="w"> </span>-v
 <span class="go">/example/modules/all/bzip2/.1.0.6.bak_20170824102412</span>
 <span class="go">/example/modules/all/bzip2/1.0.6.lua.bak_20170824102603</span>
 </code></pre></div>
@@ -538,14 +538,13 @@ command (for example):</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

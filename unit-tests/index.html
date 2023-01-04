@@ -10,8 +10,10 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/unit-tests/">
       
+      
+      
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -364,10 +365,9 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/unit-tests.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="unit_tests">Unit tests<a class="headerlink" href="#unit_tests" title="Permanent link">&para;</a></h1>
@@ -463,7 +463,7 @@ framework, which is by default the traditional Tcl/C environment modules, referr
 EasyBuild configuration terms (see <code>eb --help</code> and <code>eb --avail-modules-tools</code>).</p>
 <p>To run the EasyBuild framework unit tests with a particular modules tool, simply define the
 <code>$TEST_EASYBUILD_MODULES_TOOL</code> environment variable with the corresponding value. For example::</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">TEST_EASYBUILD_MODULES_TOOL</span><span class="o">=</span>Lmod
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">TEST_EASYBUILD_MODULES_TOOL</span><span class="o">=</span>Lmod
 </code></pre></div>
 <p>Just like for EasyBuild itself, the EasyBuild framework unit test suite expects that the modules tool binary/script
 (<code>modulecmd</code>, <code>modulecmd.tcl</code> or <code>lmod</code>) is available via <code>$PATH</code>, see <a class="autorefs autorefs-internal" href="../installation/#required_modules_tool">Required modules tool</a>.</p>
@@ -492,15 +492,15 @@ other than <code>suite</code>, to focus on testing a particular aspect. See
 <a href="https://github.com/easybuilders/easybuild-framework/tree/main/test/framework">https://github.com/easybuilders/easybuild-framework/tree/main/test/framework</a> for an overview of the available Python
 modules corresponding to subgroups of tests (note: <code>__init__.py</code> and <code>utilities.py</code> are <em>not</em> such modules).</p>
 <p>For example, to run the full EasyBuild framework unit test suite using Lmod as a modules tool::</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">TEST_EASYBUILD_MODULES_TOOL</span><span class="o">=</span>Lmod
-python -m test.framework.suite
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">TEST_EASYBUILD_MODULES_TOOL</span><span class="o">=</span>Lmod
+python<span class="w"> </span>-m<span class="w"> </span>test.framework.suite
 </code></pre></div>
 <p>To only run the subgroup of tests for <code>filetools</code>::</p>
-<div class="highlight"><pre><span></span><code>python -m test.framework.filetools
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>test.framework.filetools
 </code></pre></div>
 <p>Since EasyBuild v2.8.2, tests can be <em>filtered</em> by name. Simply add the string to filter with to the test command.</p>
 <p>For example, to run only the tests containing the word <code>load</code> in the subgroup <code>modules</code>, run::</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>python -m test.framework.modules load
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>test.framework.modules<span class="w"> </span>load
 
 <span class="go">Filtered ModulesTest tests using &#39;load&#39;, retained 2/19 tests: test_load, test_load_in_hierarchy</span>
 <span class="go">..</span>
@@ -511,13 +511,13 @@ python -m test.framework.suite
 </code></pre></div>
 <p>This works with as many filter words as you want to use. For example, to run every test method in <code>modules</code>
 containing the words <code>load</code> or <code>bash</code>:</p>
-<div class="highlight"><pre><span></span><code>python -m test.framework.modules load bash
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>test.framework.modules<span class="w"> </span>load<span class="w"> </span>bash
 </code></pre></div>
 <h3 id="unit_tests_results">Results<a class="headerlink" href="#unit_tests_results" title="Permanent link">&para;</a></h3>
 <p>The test results will be printed as the unit test suite progresses, potentially producing a lot of information for
 failing tests to help determine the cause of the failure. It may thus be useful to capture the output for later inspection,
 for example::</p>
-<div class="highlight"><pre><span></span><code>python -m test.framework.suite <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> tee eb_test.log
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>test.framework.suite<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>eb_test.log
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -526,7 +526,7 @@ a GitHub token. The output of the unit tests will clearly indicate which tests w
 </div>
 <h4 id="unit_tests_examples">Examples<a class="headerlink" href="#unit_tests_examples" title="Permanent link">&para;</a></h4>
 <p>A successful run of the EasyBuild framework test suite, without skipped tests::</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>python -m test.framework.suite
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>test.framework.suite
 <span class="go">Running tests...</span>
 <span class="go">----------------------------------------------------------------------</span>
 <span class="go">..........................................................................................................................................................................................................................................................</span>
@@ -537,7 +537,7 @@ a GitHub token. The output of the unit tests will clearly indicate which tests w
 </code></pre></div>
 <p>A run with a couple of deliberately skipped tests and a single failed test (denoted by <code>F</code>), along with the
 corresponding traceback::</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>python -m test.framework.suite
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>test.framework.suite
 <span class="go">Running tests...</span>
 <span class="go">----------------------------------------------------------------------</span>
 <span class="go">................Skipping test_from_pr, no GitHub token available?</span>
@@ -650,14 +650,13 @@ corresponding traceback::</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

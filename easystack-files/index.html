@@ -10,8 +10,10 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/easystack-files/">
       
+      
+      
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -364,10 +365,9 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/easystack-files.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="easystack">Easystack files<a class="headerlink" href="#easystack" title="Permanent link">&para;</a></h1>
@@ -388,7 +388,7 @@ as opposed to the <code>software</code> top-level key and separate subkeys like 
 specify to EasyBuild what to install.</p>
 <h2 id="easystack_usage">Usage<a class="headerlink" href="#easystack_usage" title="Permanent link">&para;</a></h2>
 <p>To build software with <em>Easystack</em>, type:</p>
-<div class="highlight"><pre><span></span><code>eb --easystack example.yaml --experimental
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--easystack<span class="w"> </span>example.yaml<span class="w"> </span>--experimental
 </code></pre></div>
 <p>where <code>example.yaml</code> is the file with specifications that you just
 created (more about this in the next section).</p>
@@ -398,9 +398,9 @@ syntax</a>.</p>
 <p>Essentially, an easystack file lists the easyconfig files you want to install, which are specified under the
 <code>easyconfigs</code> key.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">easyconfigs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OpenFOAM-v2206-foss-2022a.eb</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">easyconfigs</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OpenFOAM-v2206-foss-2022a.eb</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -409,15 +409,15 @@ syntax</a>.</p>
 <p>In addition, you can specify additional configuration options via the <code>options</code> subkey
 which will only apply to the installation of a particular easyconfig file.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">easyconfigs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">options</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">from-pr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15924</span><span class="w"></span>
-<span class="w">      </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Hypre-2.25.0-foss-2022a.eb</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">OpenFOAM-v2206-foss-2022a.eb</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">options</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">installpath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/my/custom/installpath</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">easyconfigs</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">options</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">from-pr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15924</span>
+<span class="w">      </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Hypre-2.25.0-foss-2022a.eb</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">OpenFOAM-v2206-foss-2022a.eb</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">options</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">installpath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/my/custom/installpath</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -430,9 +430,9 @@ since <code>debug</code> is a boolean configuration option.</p>
 <p>The configuration options that are valid for the <code>eb</code> command can be used (see <code>eb --help</code>),
 but the <code>-</code> or <code>--</code> prefixes that are commonly used on the command line are omitted in easystack files.</p>
 <p>Using the example easystack file above would be equivalent to running:</p>
-<div class="highlight"><pre><span></span><code>eb PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb --from-pr <span class="m">15924</span> --debug
-eb Hypre-2.25.0-foss-2022a.eb
-eb OpenFOAM-v2206-foss-2022a.eb --installpath /my/custom/installpath
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb<span class="w"> </span>--from-pr<span class="w"> </span><span class="m">15924</span><span class="w"> </span>--debug
+eb<span class="w"> </span>Hypre-2.25.0-foss-2022a.eb
+eb<span class="w"> </span>OpenFOAM-v2206-foss-2022a.eb<span class="w"> </span>--installpath<span class="w"> </span>/my/custom/installpath
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -440,50 +440,50 @@ eb OpenFOAM-v2206-foss-2022a.eb --installpath /my/custom/installpath
 you are still allowed to use '<code>:</code>' after the easyconfig filename: there is no difference in behaviour in ending with or without '<code>:</code>'.</p>
 </div>
 <p>Specifying short options in an easystack file is allowed, for example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">easyconfigs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">OpenFOAM-v2206-foss-2022a.eb</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">options</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">D</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">easyconfigs</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">OpenFOAM-v2206-foss-2022a.eb</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">options</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">D</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
 </code></pre></div>
 <p>This is not recommended however, as short options are more difficult to interpret by humans.</p>
 <h2 id="easystack_combining_options">Combining command line options with options in an easystack file<a class="headerlink" href="#easystack_combining_options" title="Permanent link">&para;</a></h2>
 <p>When building software with an easystack file, you can still add additional options on the command line as well.
 These apply to <em>all</em> items in the easystack file. For example, if you have an easystack file named
 <code>my_easystack.yaml</code></p>
-<div class="highlight"><pre><span></span><code><span class="nt">easyconfigs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">options</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">from-pr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15924</span><span class="w"></span>
-<span class="w">      </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">OpenFOAM-v2206-foss-2022a.eb</span><span class="p">:</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">easyconfigs</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">options</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">from-pr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15924</span>
+<span class="w">      </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">OpenFOAM-v2206-foss-2022a.eb</span><span class="p">:</span>
 </code></pre></div>
 <p>and you run with</p>
-<div class="highlight"><pre><span></span><code>eb --experimental --easystack my_easystack.yaml --dry-run
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--experimental<span class="w"> </span>--easystack<span class="w"> </span>my_easystack.yaml<span class="w"> </span>--dry-run
 </code></pre></div>
 <p>this will have the same effect as running</p>
-<div class="highlight"><pre><span></span><code>eb PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb --dry-run --from-pr <span class="m">15924</span> --debug
-eb OpenFOAM-v2206-foss-2022a.eb --dry-run --installpath /my/custom/installpath
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb<span class="w"> </span>--dry-run<span class="w"> </span>--from-pr<span class="w"> </span><span class="m">15924</span><span class="w"> </span>--debug
+eb<span class="w"> </span>OpenFOAM-v2206-foss-2022a.eb<span class="w"> </span>--dry-run<span class="w"> </span>--installpath<span class="w"> </span>/my/custom/installpath
 </code></pre></div>
 <p>Note that options specified on the command line are placed <em>before</em> the easyconfig-specific options in the easystack file.
 EasyBuild will always respect the argument that was put <em>last</em>.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>eb PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb --dry-run --disable-dry-run
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb<span class="w"> </span>--dry-run<span class="w"> </span>--disable-dry-run
 </code></pre></div>
 <p>will effectively run <em>without</em> enabling dry run mode, since <code>--disable-dry-run</code> is specified after <code>--dry-run</code>.</p>
 <p>Since easyconfig-specific configuration options specified in the easystack file are put <em>last</em>,
 they take priority over the the ones on the command line, if the same configuration option is specified in both.</p>
 <p>For example, running:</p>
-<div class="highlight"><pre><span></span><code>eb --experimental --easystack my_easystack.yaml --disable-debug
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--experimental<span class="w"> </span>--easystack<span class="w"> </span>my_easystack.yaml<span class="w"> </span>--disable-debug
 </code></pre></div>
 <p>will effectively cause <code>PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb</code> to be installed with debug logging enabled,
 while <code>OpenFOAM-v2206-foss-2022a.eb</code> will be effectively installed <em>without</em> debug logging.</p>
 <h2 id="to-be-developed">To be developed<a class="headerlink" href="#to-be-developed" title="Permanent link">&para;</a></h2>
 <p>In the future, we are planning to support additional also global options specified in the easystack file. For example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">options</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">robot</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
-<span class="nt">easyconfigs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OpenFOAM-v2206-foss-2022a.eb</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">options</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">robot</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
+<span class="nt">easyconfigs</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OpenFOAM-v2206-foss-2022a.eb</span>
 </code></pre></div>
 <p>would installed both <code>PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb</code> and <code>OpenFOAM-v2206-foss-2022a.eb</code> using <code>--robot</code>
 (see <a href="https://github.com/easybuilders/easybuild-framework/issues/4105">issue #4105</a>).</p>
@@ -582,14 +582,13 @@ one could easily choose to <em>not</em> build anything labeled <code>gpu</code> 
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

@@ -10,8 +10,10 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/hooks/">
       
+      
+      
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -364,10 +365,9 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/hooks.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="hooks">Hooks<a class="headerlink" href="#hooks" title="Permanent link">&para;</a></h1>
@@ -391,11 +391,11 @@ you only need to specify the location of the Python module (<code>*.py</code>) t
 (or equivalently via the <code>$EASYBUILD_HOOKS</code> environment variable, or via <code>hooks = ...</code>
 in an EasyBuild configuration file, see also <a class="autorefs autorefs-internal" href="../configuration/#configuring_easybuild">Configuring EasyBuild</a>).</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>eb --hooks<span class="o">=</span><span class="nv">$HOME</span>/my_eb_hooks.py ...
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--hooks<span class="o">=</span><span class="nv">$HOME</span>/my_eb_hooks.py<span class="w"> </span>...
 </code></pre></div>
 <p>or:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">EASYBUILD_HOOKS</span><span class="o">=</span><span class="nv">$HOME</span>/my_eb_hooks.py
-eb ...
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_HOOKS</span><span class="o">=</span><span class="nv">$HOME</span>/my_eb_hooks.py
+eb<span class="w"> </span>...
 </code></pre></div>
 <h2 id="available-hooks">Available hooks<a class="headerlink" href="#available-hooks" title="Permanent link">&para;</a></h2>
 <p>Currently (since EasyBuild v3.7.0), three types of hooks are supported:</p>
@@ -438,7 +438,7 @@ which can also be consulted using <code>eb --avail-hooks</code>, is:</p>
 <p>If any <code>*_hook</code> functions are encountered that do not match any of the available hooks, an error is reported.
 EasyBuild will try to provide suggestions for available hooks that closely match the encountered unknown hook.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb --hooks wrong_hooks.py example.eb
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--hooks<span class="w"> </span>wrong_hooks.py<span class="w"> </span>example.eb
 <span class="go">== temporary log file in case of crash /tmp/eb-nMawy1/easybuild-Gu2ZP6.log</span>
 <span class="go">ERROR: Found one or more unknown hooks:</span>
 <span class="go">* stat_hook (did you mean &#39;start_hook&#39;?)</span>
@@ -560,14 +560,14 @@ of the software installation directory.</p>
 <h2 id="examples-of-hook-implementations">Examples of hook implementations<a class="headerlink" href="#examples-of-hook-implementations" title="Permanent link">&para;</a></h2>
 <h3 id="replace-with-verbs-with-without-verbs-in-openmpi-configure-options">Replace <code>--with-verbs</code> with <code>--without-verbs</code> in OpenMPI configure options<a class="headerlink" href="#replace-with-verbs-with-without-verbs-in-openmpi-configure-options" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">pre_configure_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Example pre-configure hook to replace --with-verbs with --without -verbs for OpenMPI.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Example pre-configure hook to replace --with-verbs with --without -verbs for OpenMPI.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;OpenMPI&#39;</span> <span class="ow">and</span> <span class="s1">&#39;--with-verbs&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;configopts&#39;</span><span class="p">]:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;[pre-configure hook] Replacing --with-verbs with --without-verbs&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;configopts&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;configopts&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;--with-verbs&#39;</span><span class="p">,</span> <span class="s1">&#39;--without-verbs&#39;</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="inject-a-custom-patch-file">Inject a custom patch file<a class="headerlink" href="#inject-a-custom-patch-file" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">parse_hook</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Example parse hook to inject a patch file for a fictive software package named &#39;Example&#39;.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Example parse hook to inject a patch file for a fictive software package named &#39;Example&#39;.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">ec</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;Example&#39;</span><span class="p">:</span>
         <span class="n">patch_file</span> <span class="o">=</span> <span class="s1">&#39;example.patch&#39;</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;[parse hook] Injecting additional patch file &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="n">patch_file</span><span class="p">)</span>
@@ -667,14 +667,13 @@ of the software installation directory.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

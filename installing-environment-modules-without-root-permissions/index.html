@@ -10,8 +10,10 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/installing-environment-modules-without-root-permissions/">
       
+      
+      
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -364,10 +365,9 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/installing-environment-modules-without-root-permissions.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="installing_env_mod_c">Installing environment modules without root permissions<a class="headerlink" href="#installing_env_mod_c" title="Permanent link">&para;</a></h1>
@@ -389,7 +389,7 @@ Mac OS X system, together with Tcl on which it depends.</p>
 </li>
 <li>
 <p>Unpack the Tcl source tarball:</p>
-<div class="highlight"><pre><span></span><code>tar xfvz tcl8.5.15-src.tar.gz
+<div class="highlight"><pre><span></span><code>tar<span class="w"> </span>xfvz<span class="w"> </span>tcl8.5.15-src.tar.gz
 </code></pre></div>
 </li>
 <li>
@@ -400,8 +400,8 @@ Mac OS X system, together with Tcl on which it depends.</p>
 <li>
 <p>Go to the <code>unix</code> subdirectory of the unpacked Tcl directory, and run
     the <code>configure</code> script using the <code>--prefix</code> option:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> tcl8.5.15/unix
-./configure --prefix<span class="o">=</span><span class="nv">$HOME</span>/.local/Tcl
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>tcl8.5.15/unix
+./configure<span class="w"> </span>--prefix<span class="o">=</span><span class="nv">$HOME</span>/.local/Tcl
 </code></pre></div>
 <p>If you're building Tcl and environment modules on Mac, you should
 run <code>configure</code> in the <code>tcl8.5.15/macosx</code> directory instead.</p>
@@ -412,13 +412,13 @@ run <code>configure</code> in the <code>tcl8.5.15/macosx</code> directory instea
     up the build. Just use the <code>-j</code> option, and pass it a degree of
     parallelism (just use the number of cores your system has
     available), e.g.:</p>
-<div class="highlight"><pre><span></span><code>make -j <span class="m">4</span>
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>-j<span class="w"> </span><span class="m">4</span>
 </code></pre></div>
 </li>
 <li>
 <p>The final step consists of installing Tcl to the directory specified
     in step 4. To do this, simply run:</p>
-<div class="highlight"><pre><span></span><code>make install
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>install
 </code></pre></div>
 </li>
 </ol>
@@ -434,7 +434,7 @@ package, which requires Tcl.</p>
 </li>
 <li>
 <p>Unpack the downloaded source tarball:</p>
-<div class="highlight"><pre><span></span><code>tar xfvz modules-3.2.10.tar.gz
+<div class="highlight"><pre><span></span><code>tar<span class="w"> </span>xfvz<span class="w"> </span>modules-3.2.10.tar.gz
 </code></pre></div>
 </li>
 <li>
@@ -443,19 +443,19 @@ package, which requires Tcl.</p>
     install Tcl by hand as outlined in the previous section, you'll also
     need to specify where it was installed using the <code>--with-tcl</code>
     option:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> modules-3.2.10
-./configure --prefix<span class="o">=</span><span class="nv">$HOME</span>/.local/environment-modules --with-tcl<span class="o">=</span><span class="nv">$HOME</span>/.local/Tcl/lib
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>modules-3.2.10
+./configure<span class="w"> </span>--prefix<span class="o">=</span><span class="nv">$HOME</span>/.local/environment-modules<span class="w"> </span>--with-tcl<span class="o">=</span><span class="nv">$HOME</span>/.local/Tcl/lib
 </code></pre></div>
 </li>
 <li>
 <p>Build with <code>make</code>, consider parallel build if your system is recent
     enough:</p>
-<div class="highlight"><pre><span></span><code>make -j <span class="m">4</span>
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>-j<span class="w"> </span><span class="m">4</span>
 </code></pre></div>
 </li>
 <li>
 <p>Install:</p>
-<div class="highlight"><pre><span></span><code>make install
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>install
 </code></pre></div>
 </li>
 </ol>
@@ -465,10 +465,10 @@ package, which requires Tcl.</p>
 location, you need to make sure your environment is setup up correctly
 to use them.</p>
 <p>To make a long story short, these are the commands you need to execute:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$HOME</span>/.local/environment-modules/Modules/3.2.10/bin:<span class="nv">$PATH</span>
-<span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$HOME</span>/.local/Tcl/lib:<span class="nv">$LD_LIBRARY_PATH</span>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$HOME</span>/.local/environment-modules/Modules/3.2.10/bin:<span class="nv">$PATH</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$HOME</span>/.local/Tcl/lib:<span class="nv">$LD_LIBRARY_PATH</span>
 <span class="c1"># adjust line below if you&#39;re using a shell other than bash, check with &#39;echo $SHELL&#39;</span>
-<span class="nb">source</span> <span class="nv">$HOME</span>/.local/environment-modules/Modules/3.2.10/init/bash
+<span class="nb">source</span><span class="w"> </span><span class="nv">$HOME</span>/.local/environment-modules/Modules/3.2.10/init/bash
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -561,14 +561,13 @@ be executed every time you log in.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

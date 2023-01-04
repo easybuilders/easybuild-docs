@@ -10,8 +10,10 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/extended-dry-run/">
       
+      
+      
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -364,10 +365,9 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/extended-dry-run.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="extended_dry_run">Extended dry run<a class="headerlink" href="#extended_dry_run" title="Permanent link">&para;</a></h1>
@@ -783,7 +783,7 @@ statements, e.g. for <code>$PATH</code>, <code>$LD_LIBRARY_PATH</code>, etc.</p>
 <span class="go">    setenv  EBVERSIONMAKE       &quot;3.82&quot;</span>
 <span class="go">    setenv  EBDEVELMAKE     &quot;$root/easybuild/make-3.82-GCC-4.8.2-easybuild-devel&quot;</span>
 
-<span class="gp">    # </span>Built with EasyBuild version <span class="m">2</span>.4.0
+<span class="gp">    # </span>Built<span class="w"> </span>with<span class="w"> </span>EasyBuild<span class="w"> </span>version<span class="w"> </span><span class="m">2</span>.4.0
 </code></pre></div>
 <p>Note that there is no <code>prepend-path PATH</code> statement for the <code>bin</code>
 subdirectory, for example.</p>
@@ -963,7 +963,7 @@ useful for easyblocks (if used correctly).</p>
 <li><a class="autorefs autorefs-internal" href="#extended_dry_run_examples_WRF361_intel2015a">WRF v3.6.1 with intel/2015a</a></li>
 </ul>
 <h3 id="extended_dry_run_examples_make382_GCC482">make v3.82 with GCC/4.8.2<a class="headerlink" href="#extended_dry_run_examples_make382_GCC482" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb make-3.82-GCC-4.8.2.eb -x
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>make-3.82-GCC-4.8.2.eb<span class="w"> </span>-x
 <span class="go">== temporary log file in case of crash /tmp/eb-ksVC07/easybuild-MmAugb.log</span>
 
 <span class="go">== processing EasyBuild easyconfig /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/m/make/make-3.82-GCC-4.8.2.eb</span>
@@ -1116,7 +1116,7 @@ useful for easyblocks (if used correctly).</p>
 <span class="go">    setenv  EBVERSIONMAKE       &quot;3.82&quot;</span>
 <span class="go">    setenv  EBDEVELMAKE     &quot;$root/easybuild/make-3.82-GCC-4.8.2-easybuild-devel&quot;</span>
 
-<span class="gp">    # </span>Built with EasyBuild version <span class="m">2</span>.4.0
+<span class="gp">    # </span>Built<span class="w"> </span>with<span class="w"> </span>EasyBuild<span class="w"> </span>version<span class="w"> </span><span class="m">2</span>.4.0
 
 
 <span class="go">permissions... [DRY RUN]</span>
@@ -1142,7 +1142,7 @@ useful for easyblocks (if used correctly).</p>
 <span class="go">== Temporary directory /tmp/eb-ksVC07 has been removed.</span>
 </code></pre></div>
 <h3 id="extended_dry_run_examples_WRF361_intel2015a">WRF v3.6.1 with intel/2015a<a class="headerlink" href="#extended_dry_run_examples_WRF361_intel2015a" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb WRF-3.6.1-intel-2015a-dmpar.eb -x
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>WRF-3.6.1-intel-2015a-dmpar.eb<span class="w"> </span>-x
 <span class="go">== temporary log file in case of crash /tmp/eb-Dh1wOp/easybuild-0bu9u9.log</span>
 
 <span class="go">== processing EasyBuild easyconfig /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1-intel-2015a-dmpar.eb</span>
@@ -1435,7 +1435,7 @@ useful for easyblocks (if used correctly).</p>
 
 <span class="go">    setenv  NETCDF      &quot;$EBROOTNETCDF&quot;</span>
 <span class="go">    setenv  NETCDFF     &quot;$EBROOTNETCDFMINFORTRAN&quot;</span>
-<span class="gp">    # </span>Built with EasyBuild version <span class="m">2</span>.4.0
+<span class="gp">    # </span>Built<span class="w"> </span>with<span class="w"> </span>EasyBuild<span class="w"> </span>version<span class="w"> </span><span class="m">2</span>.4.0
 
 
 <span class="go">permissions... [DRY RUN]</span>
@@ -1546,14 +1546,13 @@ useful for easyblocks (if used correctly).</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

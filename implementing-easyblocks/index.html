@@ -10,8 +10,10 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/implementing-easyblocks/">
       
+      
+      
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -364,10 +365,9 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/implementing-easyblocks.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="implementing_easyblocks">Implementing easyblocks<a class="headerlink" href="#implementing_easyblocks" title="Permanent link">&para;</a></h1>
@@ -396,13 +396,13 @@ sanity check is also included.</p>
 If it is not specified, EasyBuild will try and find the software-specific easyblock derived from the software name.</p>
 <p>The distinction between generic and software-specific easyblocks can be made based on the naming scheme that is used
 for an easyblock (see also <a class="autorefs autorefs-internal" href="#implementing_easyblocks_naming_scheme">Naming scheme for easyblocks</a>).</p>
-<p>See also <a class="autorefs autorefs-internal" href="../version-specific/easyblocks/#generic_easyblocks"></a>.</p>
+<p>See also <a class="autorefs autorefs-internal" href="../version-specific/generic-easyblocks/#generic_easyblocks"></a>.</p>
 <h2 id="implementing_easyblocks_vs_easyconfigs">Easyblocks vs easyconfigs<a class="headerlink" href="#implementing_easyblocks_vs_easyconfigs" title="Permanent link">&para;</a></h2>
 <p>Before you start implementing an easyblock, you should determine whether or not you really need an easyblock.</p>
 <p><a class="autorefs autorefs-internal" href="../terminology/#easyconfig_files">Easyconfig files</a> provide quite a bit of flexibility that alleviate the need for implementing many (software-specific)
 easyblocks. Examples include easyconfig parameters like <code>(pre){config,build,installopts}</code> (available for any easyblock),
 <code>install_cmd</code> (only for <code>Binary</code> generic easyblock or derivates), etc. See <a class="autorefs autorefs-internal" href="../writing-easyconfig-files/#writing_easyconfig_files">Writing easyconfig files: the basics</a> for an
-overview of what is supported in easyconfig files, and <a class="autorefs autorefs-internal" href="../version-specific/easyblocks/#generic_easyblocks"></a> for custom easyconfig parameters for
+overview of what is supported in easyconfig files, and <a class="autorefs autorefs-internal" href="../version-specific/generic-easyblocks/#generic_easyblocks"></a> for custom easyconfig parameters for
 the existing generic easyblocks (see also '<code>eb -e &lt;easyblock&gt; -a</code>').</p>
 <p>On the other hand, somewhat complex or heavily customised software build and installation procedures may be handled better
 via a custom easyblock.</p>
@@ -488,10 +488,10 @@ use <code>--include-easyblocks</code> to make EasyBuild use additional or custom
 <span class="kn">from</span> <span class="nn">easybuild.tools.run</span> <span class="kn">import</span> <span class="n">run_cmd</span>
 
 <span class="k">class</span> <span class="nc">EB_Example</span><span class="p">(</span><span class="n">EasyBlock</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Custom easyblock for Example&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Custom easyblock for Example&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">configure_step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Custom implementation of configure step for Example&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Custom implementation of configure step for Example&quot;&quot;&quot;</span>
 
         <span class="c1"># run configure.sh to configure the build</span>
         <span class="n">run_cmd</span><span class="p">(</span><span class="s2">&quot;./configure.sh --install-prefix=</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">installdir</span><span class="p">)</span>
@@ -515,10 +515,10 @@ redefining it entirely, since we call out to the original <code>configure_step</
 <span class="kn">from</span> <span class="nn">easybuild.tools.filetools</span> <span class="kn">import</span> <span class="n">copy_file</span>
 
 <span class="k">class</span> <span class="nc">EB_Example</span><span class="p">(</span><span class="n">ConfigureMake</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Custom easyblock for Example&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Custom easyblock for Example&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">configure_step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Custom implementation of configure step for Example&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Custom implementation of configure step for Example&quot;&quot;&quot;</span>
 
         <span class="c1"># use example make.cfg for x86-64</span>
         <span class="n">copy_file</span><span class="p">(</span><span class="s1">&#39;make.cfg.x86&#39;</span><span class="p">,</span> <span class="s1">&#39;make.cfg&#39;</span><span class="p">)</span>
@@ -559,11 +559,11 @@ This is done via the <code>extra_options</code> static method. Custom parameters
 <span class="kn">from</span> <span class="nn">easybuild.framework.easyconfig</span> <span class="kn">import</span> <span class="n">CUSTOM</span><span class="p">,</span> <span class="n">MANDATORY</span>
 
 <span class="k">class</span> <span class="nc">EB_Example</span><span class="p">(</span><span class="n">ConfigureMake</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Custom easyblock for Example&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Custom easyblock for Example&quot;&quot;&quot;</span>
 
     <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">extra_options</span><span class="p">():</span>
-        <span class="sd">&quot;&quot;&quot;Custom easyconfig parameters for Example&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Custom easyconfig parameters for Example&quot;&quot;&quot;</span>
         <span class="n">extra_vars</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;required_example_param&#39;</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;Help text for required example custom parameter&quot;</span><span class="p">,</span> <span class="n">MANDATORY</span><span class="p">],</span>
             <span class="s1">&#39;optional_example_param&#39;</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;Help text for (optional) example custom parameter&quot;</span><span class="p">,</span> <span class="n">CUSTOM</span><span class="p">],</span>
@@ -580,10 +580,10 @@ can be initialised. These can be used for sharing information between different 
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">easybuild.framework.easyblock</span> <span class="kn">import</span> <span class="n">EasyBlock</span>
 
 <span class="k">class</span> <span class="nc">EB_Example</span><span class="p">(</span><span class="n">EasyBlock</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Custom easyblock for Example&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Custom easyblock for Example&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Constructor for Example easyblock, initialises class variables.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Constructor for Example easyblock, initialises class variables.&quot;&quot;&quot;</span>
 
         <span class="c1"># call out to original constructor first, so &#39;self&#39; (i.e. the class instance) is initialised</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">EB_Example</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
@@ -637,10 +637,10 @@ successful or not.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">easybuild.framework.easyblock</span> <span class="kn">import</span> <span class="n">EasyBlock</span>
 
 <span class="k">class</span> <span class="nc">EB_Example</span><span class="p">(</span><span class="n">EasyBlock</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Custom easyblock for Example&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Custom easyblock for Example&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">sanity_check_step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Custom sanity check for Example.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Custom sanity check for Example.&quot;&quot;&quot;</span>
 
         <span class="n">custom_paths</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;files&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;bin/example&#39;</span><span class="p">],</span>
@@ -664,10 +664,10 @@ For this, it is recommended to use <code>LooseVersion</code> rather than directl
 <span class="kn">from</span> <span class="nn">easybuild.framework.easyblock</span> <span class="kn">import</span> <span class="n">EasyBlock</span>
 
 <span class="k">class</span> <span class="nc">EB_Example</span><span class="p">(</span><span class="n">EasyBlock</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Custom easyblock for Example&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Custom easyblock for Example&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">sanity_check_step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Custom sanity check for Example.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Custom sanity check for Example.&quot;&quot;&quot;</span>
 
         <span class="n">custom_paths</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;files&#39;</span><span class="p">:</span> <span class="p">[],</span>
@@ -802,14 +802,13 @@ performend).</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

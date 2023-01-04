@@ -10,8 +10,10 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/easyconfigs-search-index/">
       
+      
+      
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -364,10 +365,9 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/easyconfigs-search-index.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="easyconfigs_index">Using an index to speed up searching for easyconfigs<a class="headerlink" href="#easyconfigs_index" title="Permanent link">&para;</a></h1>
@@ -413,15 +413,15 @@ the <code>easybuild-easyconfigs</code> repository), create the index <em>in</em>
 subdirectory, rather than in the higher-level directory.</p>
 </div>
 <h3 id="easyconfigs_index_create_example">Example of creating an index<a class="headerlink" href="#easyconfigs_index_create_example" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb --create-index <span class="nv">$HOME</span>/easybuild-easyconfigs/easybuild/easyconfigs
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--create-index<span class="w"> </span><span class="nv">$HOME</span>/easybuild-easyconfigs/easybuild/easyconfigs
 <span class="go">== temporary log file in case of crash /tmp/eb-tUu6_w/easybuild-SKBnVO.log</span>
 <span class="go">Creating index for /home/example/easybuild-easyconfigs/easybuild/easyconfigs...</span>
 <span class="go">== found valid index for /home/example/easybuild-easyconfigs/easybuild/easyconfigs, so using it...</span>
 <span class="go">Index created at /home/example/easybuild-easyconfigs/easybuild/easyconfigs/.eb-path-index (738 files)</span>
 
-<span class="gp">$ </span>head -n <span class="m">5</span> <span class="nv">$HOME</span>/easybuild-easyconfigs/easybuild/easyconfigs/.eb-path-index
-<span class="gp"># </span>created at: <span class="m">2020</span>-04-13 <span class="m">14</span>:19:57.008981
-<span class="gp"># </span>valid <span class="k">until</span>: <span class="m">2020</span>-04-20 <span class="m">14</span>:19:57.008981
+<span class="gp">$ </span>head<span class="w"> </span>-n<span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="nv">$HOME</span>/easybuild-easyconfigs/easybuild/easyconfigs/.eb-path-index
+<span class="gp"># </span>created<span class="w"> </span>at:<span class="w"> </span><span class="m">2020</span>-04-13<span class="w"> </span><span class="m">14</span>:19:57.008981
+<span class="gp"># </span>valid<span class="w"> </span><span class="k">until</span>:<span class="w"> </span><span class="m">2020</span>-04-20<span class="w"> </span><span class="m">14</span>:19:57.008981
 <span class="go">a/Arrow/Arrow-0.16.0-intel-2019b-Python-3.7.4.eb</span>
 <span class="go">b/Boost/Boost-1.71.0-gompi-2019b.eb</span>
 <span class="go">b/bokeh/bokeh-1.4.0-foss-2019b-Python-3.7.4.eb</span>
@@ -437,7 +437,7 @@ sanity check.</p>
 <p>To update an existing index, you can use <code>--create-index --force</code>.</p>
 <p>Without using <code>--force</code>, EasyBuild will refuse to overwrite the existing
 index file:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb --create-index <span class="nv">$HOME</span>/easybuild-easyconfigs/easybuild/easyconfigs
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--create-index<span class="w"> </span><span class="nv">$HOME</span>/easybuild-easyconfigs/easybuild/easyconfigs
 <span class="go">== temporary log file in case of crash /tmp/eb-tUu6_w/easybuild-SKBnVO.log</span>
 <span class="go">Creating index for /home/example/easybuild-easyconfigs/easybuild/easyconfigs...</span>
 <span class="go">ERROR: File exists, not overwriting it without --force: /home/example/easybuild-easyconfigs/easybuild/easyconfigs/.eb-path-index</span>
@@ -450,7 +450,7 @@ to check for the target file, which is likely to significantly speed up
 the search operation.</p>
 <p>When a (valid) index file is found for a particular path, a message will
 be printed mentioning "<code>found valid index for...</code>":</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb --search TensorFlow-2.1.0-foss-2019b
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--search<span class="w"> </span>TensorFlow-2.1.0-foss-2019b
 <span class="go">== found valid index for /home/example/easybuild-easyconfigs/easybuild/easyconfigs, so using it...</span>
 <span class="go">* /home/example/easybuild-easyconfigs/easybuild/easyconfigs/t/TensorFlow/TensorFlow-2.1.0-foss-2019b-Python-3.7.4.eb</span>
 </code></pre></div>
@@ -476,11 +476,11 @@ long after the creation time the index remains valid (in seconds).</p>
 week (<code>7 * 24 * 60 * 60 = 604,800</code> seconds).</p>
 <p>To create an index that <em>always</em> remains valid (never expires), use zero
 (<code>0</code>) as value for <code>--index-max-age</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb --index-max-age<span class="o">=</span><span class="m">0</span> --create-index <span class="nv">$HOME</span>/easybuild-easyconfigs/easybuild/easyconfigs
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--index-max-age<span class="o">=</span><span class="m">0</span><span class="w"> </span>--create-index<span class="w"> </span><span class="nv">$HOME</span>/easybuild-easyconfigs/easybuild/easyconfigs
 
-<span class="gp">$ </span>head -n <span class="m">2</span> <span class="nv">$HOME</span>/easybuild-easyconfigs/easybuild/easyconfigs/.eb-path-index
-<span class="gp"># </span>created at: <span class="m">2020</span>-04-13 <span class="m">15</span>:10:07.173191
-<span class="gp"># </span>valid <span class="k">until</span>: <span class="m">9999</span>-12-31 <span class="m">23</span>:59:59.999999
+<span class="gp">$ </span>head<span class="w"> </span>-n<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="nv">$HOME</span>/easybuild-easyconfigs/easybuild/easyconfigs/.eb-path-index
+<span class="gp"># </span>created<span class="w"> </span>at:<span class="w"> </span><span class="m">2020</span>-04-13<span class="w"> </span><span class="m">15</span>:10:07.173191
+<span class="gp"># </span>valid<span class="w"> </span><span class="k">until</span>:<span class="w"> </span><span class="m">9999</span>-12-31<span class="w"> </span><span class="m">23</span>:59:59.999999
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -602,14 +602,13 @@ to ensure that EasyBuild will take all available files in account.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

@@ -10,8 +10,10 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/writing-easyconfig-files/">
       
+      
+      
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -364,10 +365,9 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/writing-easyconfig-files.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="writing_easyconfig_files">Writing easyconfig files: the basics<a class="headerlink" href="#writing_easyconfig_files" title="Permanent link">&para;</a></h1>
@@ -379,7 +379,7 @@ the software and the corresponding module file.</p>
 <p>Luckily, the majority of software delivery mechanisms are being designed
 around either autotools or CMake or, perhaps, some simple file
 extraction/copy pattern. In that case, a <em>generic easyblock</em> can be
-leveraged; see <a class="autorefs autorefs-internal" href="../version-specific/easyblocks/#generic_easyblocks">Overview of generic easyblocks</a>.</p>
+leveraged; see <a class="autorefs autorefs-internal" href="../version-specific/generic-easyblocks/#generic_easyblocks">Overview of generic easyblocks</a>.</p>
 <p>Yet, in case the software build calls for more elaborate steps
 (scientific software never fails to surprise us in this regard), a
 software-specific easyblock may be required; see
@@ -420,7 +420,7 @@ available via the <code>-a</code> command line option.</p>
 are specific to a particular easyblock can be consulted.</p>
 <p>See <a class="autorefs autorefs-internal" href="../version-specific/easyconfig-parameters/#vsd_avail_easyconfig_params">Available easyconfig parameters</a> for more details.</p>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb -a -e Binary
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>-a<span class="w"> </span>-e<span class="w"> </span>Binary
 <span class="go">Available easyconfig parameters (* indicates specific for the Binary EasyBlock)</span>
 <span class="go">MANDATORY</span>
 <span class="go">---------</span>
@@ -612,7 +612,7 @@ are given an additional extension of the form
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To clean up backup easyconfig files, you can use this one-liner:</p>
-<div class="highlight"><pre><span></span><code>find . -name <span class="s1">&#39;*.eb.bak_*&#39;</span> <span class="p">|</span> xargs rm -v
+<div class="highlight"><pre><span></span><code>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s1">&#39;*.eb.bak_*&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>rm<span class="w"> </span>-v
 </code></pre></div>
 <p>The <code>-v</code> option makes <code>rm</code> print the path of files that are being
 removed.</p>
@@ -628,7 +628,7 @@ they will be processed in sequence. In addition, you can also combine
 simply injected after the <code>sources</code> (or <code>patches</code>, if present)
 specification when <code>--inject-checksums</code> is used.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb bzip2-1.0.6.eb --inject-checksums
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>bzip2-1.0.6.eb<span class="w"> </span>--inject-checksums
 <span class="go">== temporary log file in case of crash /tmp/eb-Vm6w3e/easybuild-cAVQl6.log</span>
 <span class="go">== injecting sha256 checksums in /example/bzip2-1.0.6.eb</span>
 <span class="go">== fetching sources &amp; patches for bzip2-1.0.6.eb...</span>
@@ -641,7 +641,7 @@ specification when <code>--inject-checksums</code> is used.</p>
 <p>The backup easyconfig file can be used to double-check the difference
 between the original easyconfig file and the one produced by
 <code>--inject-checksums</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>diff -u /example/bzip2-1.0.6.eb.bak_20170824200906 /example/bzip2-1.0.6.eb
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>diff<span class="w"> </span>-u<span class="w"> </span>/example/bzip2-1.0.6.eb.bak_20170824200906<span class="w"> </span>/example/bzip2-1.0.6.eb
 <span class="go">diff --git a//example/bzip2-1.0.6.eb.bak_20170824200906 b/example/bzip2-1.0.6.eb</span>
 <span class="go">index 46b2debed..2eb73f15a 100644</span>
 <span class="go">--- a/example/bzip2-1.0.6.eb.bak_20170824200906</span>
@@ -671,13 +671,13 @@ use of <code>--force</code> together with <code>--inject-checksums</code> to rep
 checksums. A clear warning will be printed to notify that existing
 checksums will be replaced.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb bzip2-1.0.6.eb --inject-checksums
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>bzip2-1.0.6.eb<span class="w"> </span>--inject-checksums
 <span class="go">== temporary log file in case of crash /tmp/eb-WhSwVH/easybuild-HCODnl.log</span>
 <span class="go">== injecting sha256 checksums in /example/bzip2-1.0.6.eb</span>
 <span class="go">== fetching sources &amp; patches for bzip2-1.0.6.eb...</span>
 <span class="go">ERROR: Found existing checksums, use --force to overwrite them</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb bzip2-1.0.6.eb --inject-checksums --force
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>bzip2-1.0.6.eb<span class="w"> </span>--inject-checksums<span class="w"> </span>--force
 <span class="go">== temporary log file in case of crash /tmp/eb-dS2QLa/easybuild-JGxOzC.log</span>
 <span class="go">== injecting sha256 checksums in /example/bzip2-1.0.6.eb</span>
 <span class="go">== fetching sources &amp; patches for bzip2-1.0.6.eb...</span>
@@ -706,7 +706,7 @@ injected for <em>each</em> easyconfig file in the dependency graph for which no
 module is available yet.</p>
 <p>For example, to inject checksums in <em>every</em> easyconfig file required to
 build HPL 2.2 with the <code>foss/2017a</code> toolchain:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nv">MODULEPATH</span><span class="o">=</span> eb HPL-2.2-foss-2017a.eb --installpath /tmp/<span class="nv">$USER</span>/sandbox --inject-checksums --robot
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nv">MODULEPATH</span><span class="o">=</span><span class="w"> </span>eb<span class="w"> </span>HPL-2.2-foss-2017a.eb<span class="w"> </span>--installpath<span class="w"> </span>/tmp/<span class="nv">$USER</span>/sandbox<span class="w"> </span>--inject-checksums<span class="w"> </span>--robot
 <span class="go">== temporary log file in case of crash /tmp/eb-8HpJc3/easybuild-H35khM.log</span>
 <span class="go">== resolving dependencies ...</span>
 <span class="go">...</span>
@@ -735,7 +735,7 @@ checksums, but a different checksum type can be specified as an argument
 you should not specify an easyconfig file name directly after the
 <code>--inject-checksums</code>, since it will be assumed to specify a checksum
 type, which will result in an error message like:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb --inject-checksums bzip2-1.0.6.eb
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--inject-checksums<span class="w"> </span>bzip2-1.0.6.eb
 <span class="go">Usage: eb [options] easyconfig [...]</span>
 
 <span class="go">eb: error: option --inject-checksums: invalid choice: &#39;bzip2-1.0.6.eb&#39; (choose from &#39;adler32&#39;, &#39;crc32&#39;, &#39;md5&#39;, &#39;sha1&#39;, &#39;sha256&#39;, &#39;sha512&#39;, &#39;size&#39;)</span>
@@ -1164,12 +1164,12 @@ lines options. See <a class="autorefs autorefs-internal" href="../using-easybuil
 <ul>
 <li>
 <p>GCC version update:</p>
-<div class="highlight"><pre><span></span><code>eb GCC-4.9.0.eb --try-software-version<span class="o">=</span><span class="m">4</span>.9.1
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>GCC-4.9.0.eb<span class="w"> </span>--try-software-version<span class="o">=</span><span class="m">4</span>.9.1
 </code></pre></div>
 </li>
 <li>
 <p>install WRF + its dozen dependencies with a different toolchain (!):</p>
-<div class="highlight"><pre><span></span><code>eb WRF-3.5.1-ictce-5.3.0-dmpar.eb --try-toolchain<span class="o">=</span>intel,2014b -r
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>WRF-3.5.1-ictce-5.3.0-dmpar.eb<span class="w"> </span>--try-toolchain<span class="o">=</span>intel,2014b<span class="w"> </span>-r
 </code></pre></div>
 </li>
 </ul>
@@ -1209,7 +1209,7 @@ make <code>--try-software-version</code> behave as expected (see also
 <li><a class="autorefs autorefs-internal" href="../version-specific/toolchain-opts/#avail_toolchain_opts">List of available toolchain options</a></li>
 <li><a class="autorefs autorefs-internal" href="../version-specific/toolchain/#vsd_list_toolchains">List of known toolchains</a></li>
 <li><a class="autorefs autorefs-internal" href="../version-specific/supported-software/#list_software">List of supported software</a></li>
-<li><a class="autorefs autorefs-internal" href="../version-specific/easyblocks/#generic_easyblocks">Overview of generic easyblocks</a></li>
+<li><a class="autorefs autorefs-internal" href="../version-specific/generic-easyblocks/#generic_easyblocks">Overview of generic easyblocks</a></li>
 <li><a class="autorefs autorefs-internal" href="../version-specific/easyconfig-templates/#avail_easyconfig_templates">Templates available for easyconfig files</a></li>
 </ul>
 <h2 id="contributing-easyconfigs">Contributing easyconfigs<a class="headerlink" href="#contributing-easyconfigs" title="Permanent link">&para;</a></h2>
@@ -1309,14 +1309,13 @@ especially if:</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

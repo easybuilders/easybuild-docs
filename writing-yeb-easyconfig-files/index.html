@@ -10,8 +10,10 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/writing-yeb-easyconfig-files/">
       
+      
+      
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -364,10 +365,9 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/writing-yeb-easyconfig-files.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="easyconfig_yeb_format">Writing easyconfig files in YAML syntax (<code>.yeb</code> format) <strong>[IN DEVELOPMENT]</strong><a class="headerlink" href="#easyconfig_yeb_format" title="Permanent link">&para;</a></h1>
@@ -400,14 +400,14 @@ see also <a class="autorefs autorefs-internal" href="../experimental-features/#e
 <li>followed by a <em>document marker</em> line '<code>---</code>' (which is used to separate directives from content)</li>
 </ul>
 <p>For example::</p>
-<div class="highlight"><pre><span></span><code><span class="nt">%YAML</span><span class="w"> </span><span class="m">1.2</span><span class="w"></span>
-<span class="nn">---</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">%YAML</span><span class="w"> </span><span class="m">1.2</span>
+<span class="nn">---</span>
 </code></pre></div>
 <p>This header is optional, but we recommend including it; one advantage is that editor will use proper syntax
 highlighting for YAML when the <code>%YAML</code> directory is included.</p>
 <h3 id="easyconfig_yeb_format_syntax_comments">Comments<a class="headerlink" href="#easyconfig_yeb_format_syntax_comments" title="Permanent link">&para;</a></h3>
 <p>Comments can be included anywhere, and are prefixed with a hash character <code>#</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># this is a comment</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># this is a comment</span>
 </code></pre></div>
 <h3 id="easyconfig_yeb_format_syntax_internal_variables">Internal variables<a class="headerlink" href="#easyconfig_yeb_format_syntax_internal_variables" title="Permanent link">&para;</a></h3>
 <p>To define and use temporary/internal variables in easyconfig files, which can be useful to avoid hardcoding (partial)
@@ -420,12 +420,12 @@ Referring to it later is done using an asterisk character '<code>*</code>'.</p>
 desired.</p>
 <p>For example, referring to the Python version being used in both the <code>versionsuffix</code> and list of dependencies can
 be done as follows::</p>
-<div class="highlight"><pre><span></span><code><span class="nt">_internal_variables_</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;pyver</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.7.10</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">_internal_variables_</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;pyver</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.7.10</span>
 
-<span class="nt">versionsuffix</span><span class="p">:</span><span class="w"> </span><span class="kt">!join</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">-Python-</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*pyver</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="nt">dependencies</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">Python</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*pyver</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="nt">versionsuffix</span><span class="p">:</span><span class="w"> </span><span class="kt">!join</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">-Python-</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*pyver</span><span class="p p-Indicator">]</span>
+<span class="nt">dependencies</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">Python</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*pyver</span><span class="p p-Indicator">]</span>
 </code></pre></div>
 <p>In this example, the <code>!join</code> is used to concatenate two string values,
 see also <a class="autorefs autorefs-internal" href="#easyconfig_yeb_format_syntax_string_concatenation">Concatenating strings and/or variables</a>.</p>
@@ -436,10 +436,10 @@ see also <a class="autorefs autorefs-internal" href="#easyconfig_yeb_format_synt
 defines the <code>!join</code> operator to support this.</p>
 <p>For example, defining a <code>versionsuffix</code> that contains the Python version being used (which may be referred to
 elsewhere too) can be done as follows:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">_internal_variables_</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;pyver</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.7.10</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">_internal_variables_</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;pyver</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.7.10</span>
 
-<span class="nt">versionsuffix</span><span class="p">:</span><span class="w"> </span><span class="kt">!join</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">-Python-</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*pyver</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="nt">versionsuffix</span><span class="p">:</span><span class="w"> </span><span class="kt">!join</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">-Python-</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*pyver</span><span class="p p-Indicator">]</span>
 </code></pre></div>
 <h3 id="easyconfig_yeb_format_syntax_escaping">Escaping string values with single or double quotes<a class="headerlink" href="#easyconfig_yeb_format_syntax_escaping" title="Permanent link">&para;</a></h3>
 <p>Strings in YAML can be unquoted. However, when they contain special characters they need to be escaped by either single-
@@ -460,62 +460,62 @@ However, quotes are sometimes required to escape characters that have special me
 It's worth noting that there's a subtle difference between using single and double quotes, see
 <a href="https://www.yaml.org/spec/1.2/spec.html#id2786942">Flow Scalar Styles</a>.</p>
 <p>Examples:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gzip</span><span class="w"></span>
-<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.6</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gzip</span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.6</span>
 
-<span class="c1"># single quotes are required for string values representing URLs, to escape the &#39;:&#39;</span><span class="w"></span>
-<span class="nt">homepage</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;http://www.gnu.org/software/gzip/&#39;</span><span class="w"></span>
+<span class="c1"># single quotes are required for string values representing URLs, to escape the &#39;:&#39;</span>
+<span class="nt">homepage</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;http://www.gnu.org/software/gzip/&#39;</span>
 
-<span class="nt">parallel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<span class="nt">parallel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 </code></pre></div>
 <p>Multiline strings can be expressed using indentation:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">description</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">gzip is a popular data compression program</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">as a replacement for compress</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">description</span><span class="p">:</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">gzip is a popular data compression program</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">as a replacement for compress</span>
 </code></pre></div>
 <h4 id="easyconfig_yeb_format_syntax_sequences">Sequences<a class="headerlink" href="#easyconfig_yeb_format_syntax_sequences" title="Permanent link">&para;</a></h4>
 <p>Sequence values (a.k.a. lists) can be expressed in different ways, depending on their size.</p>
 <p>If there are a limited number of (short) entries the value can be expressed on a single line,
 using square brackets '<code>[</code>' '<code>]</code>' and with comma '<code>,</code>' as separator.</p>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># quotes are required to escape the &#39;:&#39;</span><span class="w"></span>
-<span class="nt">source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;http://ftpmirror.gnu.org/gzip/&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;ftp://ftp.gnu.org/gnu/gzip/&#39;</span><span class="p p-Indicator">]</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># quotes are required to escape the &#39;:&#39;</span>
+<span class="nt">source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;http://ftpmirror.gnu.org/gzip/&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;ftp://ftp.gnu.org/gnu/gzip/&#39;</span><span class="p p-Indicator">]</span>
 </code></pre></div>
 <p>Alternatively indentation can be used for scope, with each entry on its own line,
 indicated with a dash and a space <code>- item</code></p>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># no quotes required here, since there&#39;s no ambiguity w.r.t. &#39;:&#39;</span><span class="w"></span>
-<span class="nt">source_urls</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://ftpmirror.gnu.org/gzip/</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://ftp.gnu.org/gnu/gzip/</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ftp://ftp.gnu.org/gnu/gzip/</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="c1"># no quotes required here, since there&#39;s no ambiguity w.r.t. &#39;:&#39;</span>
+<span class="nt">source_urls</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://ftpmirror.gnu.org/gzip/</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://ftp.gnu.org/gnu/gzip/</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ftp://ftp.gnu.org/gnu/gzip/</span>
 </code></pre></div>
 <h4 id="easyconfig_yeb_format_syntax_mappings">Mappings<a class="headerlink" href="#easyconfig_yeb_format_syntax_mappings" title="Permanent link">&para;</a></h4>
 <p>Mapping values (a.k.a. dictionaries) are expressed using a colon '<code>:</code>' and space as key-value separator,
 a comma '<code>,</code>' to key-value pairs, and curly braces '<code>{</code>' '<code>}</code>' to mark the start/end.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="nv">intel</span><span class="p p-Indicator">,</span><span class="nt"> version</span><span class="p">:</span><span class="w"> </span><span class="nv">2015b</span><span class="p p-Indicator">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="nv">intel</span><span class="p p-Indicator">,</span><span class="nt"> version</span><span class="p">:</span><span class="w"> </span><span class="nv">2015b</span><span class="p p-Indicator">}</span>
 </code></pre></div>
 <h4 id="easyconfig_yeb_format_syntax_nesting">Nesting<a class="headerlink" href="#easyconfig_yeb_format_syntax_nesting" title="Permanent link">&para;</a></h4>
 <p>Different types of values can be nested.</p>
 <p>For example, sequence values can be used in a mapping:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">sanity_check_paths</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">    files</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">bin/gunzip</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">bin/gzip</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">bin/uncompress</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="nt">    dirs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[],</span><span class="w"></span>
-<span class="p p-Indicator">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">sanity_check_paths</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">    files</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">bin/gunzip</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">bin/gzip</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">bin/uncompress</span><span class="p p-Indicator">],</span>
+<span class="nt">    dirs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[],</span>
+<span class="p p-Indicator">}</span>
 </code></pre></div>
 <p>And sequences of sequences are also supported:</p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">osdependencies</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">- zlib</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">- [openssl-devel, libssl-dev, libopenssl-devel]</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">osdependencies</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">- zlib</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">- [openssl-devel, libssl-dev, libopenssl-devel]</span>
 </code></pre></div>
 <h3 id="easyconfig_yeb_format_syntax_template_values_constants">Templates values and constants<a class="headerlink" href="#easyconfig_yeb_format_syntax_template_values_constants" title="Permanent link">&para;</a></h3>
 <p>Template values can be specified as a part of string values, using <code>%(template_name)</code>.</p>
 <p>Template constants are injected by the easyconfig <code>.yeb</code> parser as <em>node anchors</em>,
 and can be referred to with an <em>alias node</em>, i.e. using an asterisk <code>*</code>.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">*GNU_SOURCE</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="w">    </span><span class="nt">sources</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;%(name)s-%(version)s.tar.gz&#39;</span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># equivalent with [*SOURCE_TAR_GZ]</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">*GNU_SOURCE</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">sources</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;%(name)s-%(version)s.tar.gz&#39;</span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># equivalent with [*SOURCE_TAR_GZ]</span>
 </code></pre></div>
 <p>See also <a class="autorefs autorefs-internal" href="../writing-easyconfig-files/#easyconfig_param_templates">Dynamic values for easyconfig parameters</a>.</p>
 <h3 id="easyconfig_yeb_format_syntax_dependencies">Dependencies<a class="headerlink" href="#easyconfig_yeb_format_syntax_dependencies" title="Permanent link">&para;</a></h3>
@@ -526,44 +526,44 @@ Only the <code>name: version</code> pair is required.</p>
 <p>Dependencies can also be external modules. In this case, the dependency has to be specified with a <code>name</code> and the marker 
 <code>external_module: True</code>. The boolean value is not case-sensitive.</p>
 <p>A straightforward example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">dependencies</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">libreadline</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6.3</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Tcl</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8.6.4</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fftw/3.3.4.4</span><span class="w"></span>
-<span class="w">      </span><span class="nt">external_module</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">dependencies</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">libreadline</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">6.3</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Tcl</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8.6.4</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fftw/3.3.4.4</span>
+<span class="w">      </span><span class="nt">external_module</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
 
-<span class="nt">builddependencies</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># empty versionsuffix, different toolchain (GCC/4.9.2)</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">CMake</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.2.2</span><span class="w"></span>
-<span class="w">      </span><span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GCC, 4.9.2</span><span class="w"></span>
+<span class="nt">builddependencies</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># empty versionsuffix, different toolchain (GCC/4.9.2)</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">CMake</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.2.2</span>
+<span class="w">      </span><span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GCC, 4.9.2</span>
 </code></pre></div>
 <p>A more complicated example from a toolchain easyconfig, where also the <code>!join</code> operator
 (see <a class="autorefs autorefs-internal" href="#easyconfig_yeb_format_syntax_string_concatenation">Concatenating strings and/or variables</a>) and internal variables
 (see <a class="autorefs autorefs-internal" href="#easyconfig_yeb_format_syntax_internal_variables">Internal variables</a>) are used:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">_internal_variables_</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;comp_name</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GCC</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;comp_version</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4.7.2</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;comp</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">*comp_name</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*comp_version</span><span class="p p-Indicator">]</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">_internal_variables_</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;comp_name</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GCC</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;comp_version</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4.7.2</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;comp</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">*comp_name</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*comp_version</span><span class="p p-Indicator">]</span>
 
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;blaslib</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OpenBLAS</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;blasver</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.2.6</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;blas</span><span class="w"> </span><span class="kt">!join</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">*blaslib</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">-</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*blasver</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;blas_suff</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-LAPACK-3.4.2</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;blaslib</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OpenBLAS</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;blasver</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.2.6</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;blas</span><span class="w"> </span><span class="kt">!join</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">*blaslib</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">-</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*blasver</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;blas_suff</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-LAPACK-3.4.2</span>
 
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;comp_mpi_tc</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">gompi</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.4.10</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;comp_mpi_tc</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">gompi</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.4.10</span><span class="p p-Indicator">]</span>
 
-<span class="nt">dependencies</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">*comp_name</span><span class="p">:</span><span class="w"> </span><span class="nv">*comp_version</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">OpenMPI</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.6.4</span><span class="w"></span>
-<span class="w">      </span><span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="nv">*comp</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">*blaslib</span><span class="p">:</span><span class="w"> </span><span class="nv">*blasver</span><span class="w"></span>
-<span class="w">      </span><span class="nt">versionsuffix</span><span class="p">:</span><span class="w"> </span><span class="nv">*blas_suff</span><span class="w"></span>
-<span class="w">      </span><span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="nv">*comp_mpi_tc</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">FFTW</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.3.3</span><span class="w"></span>
-<span class="w">      </span><span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="nv">*comp_mpi_tc</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ScaLAPACK</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.0.2</span><span class="w"></span>
-<span class="w">      </span><span class="nt">versionsuffix</span><span class="p">:</span><span class="w"> </span><span class="kt">!join</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">-</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*blas</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*blas_suff</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="w">      </span><span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="nv">*comp_mpi_tc</span><span class="w"></span>
+<span class="nt">dependencies</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">*comp_name</span><span class="p">:</span><span class="w"> </span><span class="nv">*comp_version</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">OpenMPI</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.6.4</span>
+<span class="w">      </span><span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="nv">*comp</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">*blaslib</span><span class="p">:</span><span class="w"> </span><span class="nv">*blasver</span>
+<span class="w">      </span><span class="nt">versionsuffix</span><span class="p">:</span><span class="w"> </span><span class="nv">*blas_suff</span>
+<span class="w">      </span><span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="nv">*comp_mpi_tc</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">FFTW</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.3.3</span>
+<span class="w">      </span><span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="nv">*comp_mpi_tc</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ScaLAPACK</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.0.2</span>
+<span class="w">      </span><span class="nt">versionsuffix</span><span class="p">:</span><span class="w"> </span><span class="kt">!join</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">-</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*blas</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*blas_suff</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="nv">*comp_mpi_tc</span>
 </code></pre></div>
 <p>For the full version of this easyconfig file, see the example <code>.yeb</code> easyconfig
 <a class="autorefs autorefs-internal" href="#easyconfig_yeb_format_examples_goolf1410"><code>goolf-1.4.10.yeb</code></a>.</p>
@@ -575,7 +575,7 @@ lists (sequences) instead of tuples.</p>
 <span class="n">osdependencies</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;openssl-devel&#39;</span><span class="p">,</span> <span class="s1">&#39;libssl-dev&#39;</span><span class="p">,</span> <span class="s1">&#39;libopenssl-devel&#39;</span><span class="p">)]</span>
 </code></pre></div>
 <p>Becomes:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">osdependencies</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[[</span><span class="nv">openssl-devel</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">libssl-dev</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">libopenssl-devel</span><span class="p p-Indicator">]]</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">osdependencies</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[[</span><span class="nv">openssl-devel</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">libssl-dev</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">libopenssl-devel</span><span class="p p-Indicator">]]</span>
 </code></pre></div>
 <p>And:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># note: this is eb syntax, will not work in .yeb files</span>
@@ -585,10 +585,10 @@ lists (sequences) instead of tuples.</p>
 <span class="p">}</span>
 </code></pre></div>
 <p>Becomes:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">sanity_check_paths</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">    files</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">fileA</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">fileB</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">fileC</span><span class="p p-Indicator">]],</span><span class="w"></span>
-<span class="nt">    dirs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">dirA</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">dirB</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="p p-Indicator">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">sanity_check_paths</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">    files</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">fileA</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">fileB</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">fileC</span><span class="p p-Indicator">]],</span>
+<span class="nt">    dirs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">dirA</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">dirB</span><span class="p p-Indicator">]</span>
+<span class="p p-Indicator">}</span>
 </code></pre></div>
 <h3 id="shorthands-for-common-easyconfig-parameters">Shorthands for common easyconfig parameters<a class="headerlink" href="#shorthands-for-common-easyconfig-parameters" title="Permanent link">&para;</a></h3>
 <h4 id="toolchain-format">Toolchain format<a class="headerlink" href="#toolchain-format" title="Permanent link">&para;</a></h4>
@@ -598,216 +598,216 @@ the .yeb format, this can be done much easier by just using <code>name, version<
 <span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;intel&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span><span class="s1">&#39;2015b&#39;</span><span class="p">}</span>
 </code></pre></div>
 <p>becomes:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">intel, 2015b</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">intel, 2015b</span>
 </code></pre></div>
 <h2 id="easyconfig_yeb_format_examples">Examples<a class="headerlink" href="#easyconfig_yeb_format_examples" title="Permanent link">&para;</a></h2>
 <h3 id="easyconfig_yeb_format_examples_gzip16_GCC492">gzip-1.6-GCC-4.9.2.yeb<a class="headerlink" href="#easyconfig_yeb_format_examples_gzip16_GCC492" title="Permanent link">&para;</a></h3>
 <p>Example easyconfig for gzip v1.6 using the <code>GCC/4.9.2</code> toolchain.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">%YAML</span><span class="w"> </span><span class="m">1.2</span><span class="w"></span>
-<span class="nn">---</span><span class="w"></span>
-<span class="nt">easyblock</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConfigureMake</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">%YAML</span><span class="w"> </span><span class="m">1.2</span>
+<span class="nn">---</span>
+<span class="nt">easyblock</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConfigureMake</span>
 
-<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gzip</span><span class="w"></span>
-<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.6</span><span class="w"></span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gzip</span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.6</span>
 
-<span class="nt">homepage</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;http://www.gnu.org/software/gzip/&#39;</span><span class="w"></span>
-<span class="nt">description</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">gzip is a popular data compression program</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">as a replacement for compress</span><span class="w"></span>
+<span class="nt">homepage</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;http://www.gnu.org/software/gzip/&#39;</span>
+<span class="nt">description</span><span class="p">:</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">gzip is a popular data compression program</span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">as a replacement for compress</span>
 
-<span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GCC, 4.9.2</span><span class="w"></span>
+<span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GCC, 4.9.2</span>
 
-<span class="c1"># http://ftp.gnu.org/gnu/gzip/gzip-1.6.tar.gz</span><span class="w"></span>
-<span class="nt">source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">*GNU_SOURCE</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="nt">sources</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="err">%</span><span class="nv">(name)s-%(version)s.tar.gz</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="c1"># http://ftp.gnu.org/gnu/gzip/gzip-1.6.tar.gz</span>
+<span class="nt">source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">*GNU_SOURCE</span><span class="p p-Indicator">]</span>
+<span class="nt">sources</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="err">%</span><span class="nv">(name)s-%(version)s.tar.gz</span><span class="p p-Indicator">]</span>
 
-<span class="c1"># make sure the gzip, gunzip and compress binaries are available after installation</span><span class="w"></span>
-<span class="nt">sanity_check_paths</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">    files</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">bin/gunzip</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">bin/gzip</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">bin/uncompress</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="nt">    dirs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[],</span><span class="w"></span>
-<span class="p p-Indicator">}</span><span class="w"></span>
+<span class="c1"># make sure the gzip, gunzip and compress binaries are available after installation</span>
+<span class="nt">sanity_check_paths</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">    files</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">bin/gunzip</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">bin/gzip</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">bin/uncompress</span><span class="p p-Indicator">],</span>
+<span class="nt">    dirs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[],</span>
+<span class="p p-Indicator">}</span>
 
-<span class="nt">moduleclass</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tools</span><span class="w"></span>
+<span class="nt">moduleclass</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tools</span>
 </code></pre></div>
 <h3 id="easyconfig_yeb_format_examples_goolf1410">goolf-1.4.10.yeb<a class="headerlink" href="#easyconfig_yeb_format_examples_goolf1410" title="Permanent link">&para;</a></h3>
 <p>Easyconfig file in YAML syntax for the goolf v1.4.10 toolchain.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">_internal_variables_</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;version</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.4.10</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">_internal_variables_</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;version</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.4.10</span>
 
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;comp_name</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GCC</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;comp_version</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4.7.2</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;comp</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">*comp_name</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*comp_version</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;comp_name</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GCC</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;comp_version</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4.7.2</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;comp</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">*comp_name</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*comp_version</span><span class="p p-Indicator">]</span>
 
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;blaslib</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OpenBLAS</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;blasver</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.2.6</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;blas</span><span class="w"> </span><span class="kt">!join</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">*blaslib</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">-</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*blasver</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;blas_suff</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-LAPACK-3.4.2</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;blaslib</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OpenBLAS</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;blasver</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.2.6</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;blas</span><span class="w"> </span><span class="kt">!join</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">*blaslib</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">-</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*blasver</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;blas_suff</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-LAPACK-3.4.2</span>
 
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;comp_mpi_tc</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">gompi</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*version</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;comp_mpi_tc</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">gompi</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*version</span><span class="p p-Indicator">]</span>
 
 
-<span class="nt">easyblock</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Toolchain</span><span class="w"></span>
+<span class="nt">easyblock</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Toolchain</span>
 
-<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">goolf</span><span class="w"></span>
-<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="nv">*version</span><span class="w"></span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">goolf</span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="nv">*version</span>
 
-<span class="nt">homepage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(none)</span><span class="w"></span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
-<span class="w">    </span><span class="no">GNU Compiler Collection (GCC) based compiler toolchain, including</span><span class="w"></span>
-<span class="w">    </span><span class="no">OpenMPI for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.</span><span class="w"></span>
+<span class="nt">homepage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">(none)</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">    </span><span class="no">GNU Compiler Collection (GCC) based compiler toolchain, including</span>
+<span class="w">    </span><span class="no">OpenMPI for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.</span>
 
-<span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="nv">system</span><span class="p p-Indicator">,</span><span class="nt"> version</span><span class="p">:</span><span class="w"> </span><span class="nv">system</span><span class="p p-Indicator">}</span><span class="w"></span>
+<span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="nv">system</span><span class="p p-Indicator">,</span><span class="nt"> version</span><span class="p">:</span><span class="w"> </span><span class="nv">system</span><span class="p p-Indicator">}</span>
 
-<span class="c1"># compiler toolchain dependencies</span><span class="w"></span>
-<span class="c1"># we need GCC and OpenMPI as explicit dependencies instead of gompi toolchain</span><span class="w"></span>
-<span class="c1"># because of toolchain preparation functions</span><span class="w"></span>
-<span class="w">    </span><span class="nt">dependencies</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">*comp_name</span><span class="p">:</span><span class="w"> </span><span class="nv">*comp_version</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">OpenMPI</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.6.4</span><span class="w"></span>
-<span class="w">          </span><span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="nv">*comp</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">*blaslib</span><span class="p">:</span><span class="w"> </span><span class="nv">*blasver</span><span class="w"></span>
-<span class="w">          </span><span class="nt">versionsuffix</span><span class="p">:</span><span class="w"> </span><span class="nv">*blas_suff</span><span class="w"></span>
-<span class="w">          </span><span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="nv">*comp_mpi_tc</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">FFTW</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.3.3</span><span class="w"></span>
-<span class="w">          </span><span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="nv">*comp_mpi_tc</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ScaLAPACK</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.0.2</span><span class="w"></span>
-<span class="w">          </span><span class="nt">versionsuffix</span><span class="p">:</span><span class="w"> </span><span class="kt">!join</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">-</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*blas</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*blas_suff</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="w">          </span><span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="nv">*comp_mpi_tc</span><span class="w"></span>
+<span class="c1"># compiler toolchain dependencies</span>
+<span class="c1"># we need GCC and OpenMPI as explicit dependencies instead of gompi toolchain</span>
+<span class="c1"># because of toolchain preparation functions</span>
+<span class="w">    </span><span class="nt">dependencies</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">*comp_name</span><span class="p">:</span><span class="w"> </span><span class="nv">*comp_version</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">OpenMPI</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.6.4</span>
+<span class="w">          </span><span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="nv">*comp</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">*blaslib</span><span class="p">:</span><span class="w"> </span><span class="nv">*blasver</span>
+<span class="w">          </span><span class="nt">versionsuffix</span><span class="p">:</span><span class="w"> </span><span class="nv">*blas_suff</span>
+<span class="w">          </span><span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="nv">*comp_mpi_tc</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">FFTW</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.3.3</span>
+<span class="w">          </span><span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="nv">*comp_mpi_tc</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ScaLAPACK</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.0.2</span>
+<span class="w">          </span><span class="nt">versionsuffix</span><span class="p">:</span><span class="w"> </span><span class="kt">!join</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">-</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*blas</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*blas_suff</span><span class="p p-Indicator">]</span>
+<span class="w">          </span><span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="nv">*comp_mpi_tc</span>
 
-<span class="nt">moduleclass</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">toolchain</span><span class="w"></span>
+<span class="nt">moduleclass</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">toolchain</span>
 </code></pre></div>
 <h3 id="python-2710-intel-2015byeb">Python-2.7.10-intel-2015b.yeb<a class="headerlink" href="#python-2710-intel-2015byeb" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nt">_internal_variables_</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;numpyversion</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.9.2</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;scipyversion</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.15.1</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="nt">_internal_variables_</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;numpyversion</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.9.2</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nl">&amp;scipyversion</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.15.1</span>
 
-<span class="nt">easyblock</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConfigureMake</span><span class="w"></span>
+<span class="nt">easyblock</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConfigureMake</span>
 
-<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Python</span><span class="w"></span>
-<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.7.10</span><span class="w"></span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Python</span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.7.10</span>
 
-<span class="nt">homepage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://python.org/</span><span class="w"></span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
-<span class="w">    </span><span class="no">Python is a programming language that lets you work more quickly and integrate your systems</span><span class="w"></span>
-<span class="w">    </span><span class="no">more effectively.</span><span class="w"></span>
+<span class="nt">homepage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://python.org/</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">    </span><span class="no">Python is a programming language that lets you work more quickly and integrate your systems</span>
+<span class="w">    </span><span class="no">more effectively.</span>
 
-<span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">intel, 2015b</span><span class="w"></span>
-<span class="nt">toolchainopts</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">pic</span><span class="p">:</span><span class="w"> </span><span class="nv">True</span><span class="p p-Indicator">,</span><span class="nt"> opt</span><span class="p">:</span><span class="w"> </span><span class="nv">True</span><span class="p p-Indicator">,</span><span class="nt"> optarch</span><span class="p">:</span><span class="w"> </span><span class="nv">True</span><span class="p p-Indicator">}</span><span class="w"></span>
+<span class="nt">toolchain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">intel, 2015b</span>
+<span class="nt">toolchainopts</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">pic</span><span class="p">:</span><span class="w"> </span><span class="nv">True</span><span class="p p-Indicator">,</span><span class="nt"> opt</span><span class="p">:</span><span class="w"> </span><span class="nv">True</span><span class="p p-Indicator">,</span><span class="nt"> optarch</span><span class="p">:</span><span class="w"> </span><span class="nv">True</span><span class="p p-Indicator">}</span>
 
-<span class="nt">source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;http://www.python.org/ftp/python/%(version)s/&#39;</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="nt">sources</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">*SOURCE_TGZ</span><span class="p p-Indicator">]</span><span class="w"></span>
+<span class="nt">source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;http://www.python.org/ftp/python/%(version)s/&#39;</span><span class="p p-Indicator">]</span>
+<span class="nt">sources</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">*SOURCE_TGZ</span><span class="p p-Indicator">]</span>
 
-<span class="c1"># python needs bzip2 to build the bz2 package</span><span class="w"></span>
-<span class="nt">dependencies</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"></span>
-<span class="w">    </span><span class="nv">- bzip2</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="nv">1.0.6</span><span class="w"></span>
-<span class="w">    </span><span class="nv">- zlib</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="nv">1.2.8</span><span class="w"></span>
-<span class="w">    </span><span class="nv">- libreadline</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="nv">6.3</span><span class="w"></span>
-<span class="w">    </span><span class="nv">- ncurses</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="nv">5.9</span><span class="w"></span>
-<span class="w">    </span><span class="nv">- SQLite</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="nv">3.8.10.2</span><span class="w"></span>
-<span class="w">    </span><span class="nv">- Tk</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="nv">8.4.6</span><span class="w"></span>
-<span class="w">      </span><span class="nv">versionsuffix</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="nv">-no-X11</span><span class="w"></span>
-<span class="w">  </span><span class="c1"># - OpenSSL: 1.0.1m</span><span class="w"></span>
-<span class="w">  </span><span class="c1">#   OS dependency should be preferred if the os version is more recent then this version, its</span><span class="w"></span>
-<span class="w">  </span><span class="c1">#   nice to have an up to date openssl for security reasons</span><span class="w"></span>
-<span class="p p-Indicator">]</span><span class="w"></span>
+<span class="c1"># python needs bzip2 to build the bz2 package</span>
+<span class="nt">dependencies</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span>
+<span class="w">    </span><span class="nv">- bzip2</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="nv">1.0.6</span>
+<span class="w">    </span><span class="nv">- zlib</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="nv">1.2.8</span>
+<span class="w">    </span><span class="nv">- libreadline</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="nv">6.3</span>
+<span class="w">    </span><span class="nv">- ncurses</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="nv">5.9</span>
+<span class="w">    </span><span class="nv">- SQLite</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="nv">3.8.10.2</span>
+<span class="w">    </span><span class="nv">- Tk</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="nv">8.4.6</span>
+<span class="w">      </span><span class="nv">versionsuffix</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="nv">-no-X11</span>
+<span class="w">  </span><span class="c1"># - OpenSSL: 1.0.1m</span>
+<span class="w">  </span><span class="c1">#   OS dependency should be preferred if the os version is more recent then this version, its</span>
+<span class="w">  </span><span class="c1">#   nice to have an up to date openssl for security reasons</span>
+<span class="p p-Indicator">]</span>
 
-<span class="nt">osdependencies</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[[</span><span class="nv">openssl-devel</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">libssl-dev</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">libopenssl-devel</span><span class="p p-Indicator">]]</span><span class="w"></span>
+<span class="nt">osdependencies</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[[</span><span class="nv">openssl-devel</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">libssl-dev</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">libopenssl-devel</span><span class="p p-Indicator">]]</span>
 
-<span class="c1"># order is important!</span><span class="w"></span>
-<span class="c1"># package versions updated May 28th 2015</span><span class="w"></span>
-<span class="nt">exts_list</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">setuptools</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;16.0&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/s/setuptools/&quot;</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">pip</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">7.0.1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/p/pip/&quot;</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">nose</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.3.6</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/n/nose/&quot;</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">numpy</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*numpyversion</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"></span>
-<span class="w">            </span><span class="p p-Indicator">[</span><span class="kt">!join</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;http://sourceforge.net/projects/numpy/files/NumPy/&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*numpyversion</span><span class="p p-Indicator">],</span><span class="w"> </span><span class="nv">download</span><span class="p p-Indicator">]</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="nt">        patches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"></span>
-<span class="w">            </span><span class="nv">numpy-1.8.0-mkl.patch</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="c1"># % numpyversion,</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">scipy</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*scipyversion</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"></span>
-<span class="w">            </span><span class="p p-Indicator">[</span><span class="kt">!join</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;http://sourceforge.net/projects/scipy/files/scipy/&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*scipyversion</span><span class="p p-Indicator">],</span><span class="w"> </span><span class="nv">download</span><span class="p p-Indicator">]],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">blist</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.3.6</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/b/blist/&quot;</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">mpi4py</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.3.1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;http://bitbucket.org/mpi4py/mpi4py/downloads/&quot;</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">paycheck</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.0.2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/p/paycheck/&quot;</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">argparse</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.3.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/a/argparse/&quot;</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">pbr</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.0.1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/p/pbr/&quot;</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">lockfile</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.10.2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/l/lockfile/&quot;</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">Cython</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;0.22&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;http://www.cython.org/release/&quot;</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">six</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.9.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/s/six/&quot;</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">dateutil</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2.4.2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        source_tmpl</span><span class="p">:</span><span class="w"> </span><span class="nv">python-%(name)s-%(version)s.tar.gz</span><span class="p p-Indicator">,</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/p/python-dateutil/&quot;</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">deap</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.0.2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="w">        </span><span class="c1"># escaped with quotes because yaml values can&#39;t start with %</span><span class="w"></span>
-<span class="nt">        source_tmpl</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;%(name)s-%(version)s.post2.tar.gz&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/d/deap/&quot;</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">decorator</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">3.4.2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/d/decorator/&quot;</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">arff</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2.0.2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        source_tmpl</span><span class="p">:</span><span class="w"> </span><span class="nv">liac-%(name)s-%(version)s.zip</span><span class="p p-Indicator">,</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/l/liac-arff/&quot;</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">pycrypto</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2.6.1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        modulename</span><span class="p">:</span><span class="w"> </span><span class="nv">Crypto</span><span class="p p-Indicator">,</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;http://ftp.dlitz.net/pub/dlitz/crypto/pycrypto/&quot;</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">ecdsa</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;0.13&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/e/ecdsa/&quot;</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">paramiko</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.15.2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/p/paramiko/&quot;</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">pyparsing</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2.0.3</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/p/pyparsing/&quot;</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">netifaces</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.10.4</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/n/netifaces&quot;</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">netaddr</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.7.14</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/n/netaddr&quot;</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">mock</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.0.1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/m/mock&quot;</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">pytz</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;2015.4&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/p/pytz&quot;</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">pandas</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.16.1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/p/pandas&quot;</span><span class="p p-Indicator">],</span><span class="w"></span>
-<span class="w">    </span><span class="p p-Indicator">}],</span><span class="w"></span>
-<span class="p p-Indicator">]</span><span class="w"></span>
+<span class="c1"># order is important!</span>
+<span class="c1"># package versions updated May 28th 2015</span>
+<span class="nt">exts_list</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">setuptools</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;16.0&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/s/setuptools/&quot;</span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">pip</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">7.0.1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/p/pip/&quot;</span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">nose</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.3.6</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/n/nose/&quot;</span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">numpy</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*numpyversion</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span>
+<span class="w">            </span><span class="p p-Indicator">[</span><span class="kt">!join</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;http://sourceforge.net/projects/numpy/files/NumPy/&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*numpyversion</span><span class="p p-Indicator">],</span><span class="w"> </span><span class="nv">download</span><span class="p p-Indicator">]</span>
+<span class="w">        </span><span class="p p-Indicator">],</span>
+<span class="nt">        patches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span>
+<span class="w">            </span><span class="nv">numpy-1.8.0-mkl.patch</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="c1"># % numpyversion,</span>
+<span class="w">        </span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">scipy</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*scipyversion</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span>
+<span class="w">            </span><span class="p p-Indicator">[</span><span class="kt">!join</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;http://sourceforge.net/projects/scipy/files/scipy/&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">*scipyversion</span><span class="p p-Indicator">],</span><span class="w"> </span><span class="nv">download</span><span class="p p-Indicator">]],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">blist</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.3.6</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/b/blist/&quot;</span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">mpi4py</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.3.1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;http://bitbucket.org/mpi4py/mpi4py/downloads/&quot;</span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">paycheck</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.0.2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/p/paycheck/&quot;</span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">argparse</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.3.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/a/argparse/&quot;</span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">pbr</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.0.1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/p/pbr/&quot;</span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">lockfile</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.10.2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/l/lockfile/&quot;</span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">Cython</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;0.22&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;http://www.cython.org/release/&quot;</span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">six</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.9.0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/s/six/&quot;</span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">dateutil</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2.4.2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        source_tmpl</span><span class="p">:</span><span class="w"> </span><span class="nv">python-%(name)s-%(version)s.tar.gz</span><span class="p p-Indicator">,</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/p/python-dateutil/&quot;</span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">deap</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.0.2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="w">        </span><span class="c1"># escaped with quotes because yaml values can&#39;t start with %</span>
+<span class="nt">        source_tmpl</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;%(name)s-%(version)s.post2.tar.gz&quot;</span><span class="p p-Indicator">,</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/d/deap/&quot;</span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">decorator</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">3.4.2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/d/decorator/&quot;</span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">arff</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2.0.2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        source_tmpl</span><span class="p">:</span><span class="w"> </span><span class="nv">liac-%(name)s-%(version)s.zip</span><span class="p p-Indicator">,</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/l/liac-arff/&quot;</span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">pycrypto</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2.6.1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        modulename</span><span class="p">:</span><span class="w"> </span><span class="nv">Crypto</span><span class="p p-Indicator">,</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;http://ftp.dlitz.net/pub/dlitz/crypto/pycrypto/&quot;</span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">ecdsa</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;0.13&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/e/ecdsa/&quot;</span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">paramiko</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.15.2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/p/paramiko/&quot;</span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">pyparsing</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2.0.3</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/p/pyparsing/&quot;</span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">netifaces</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.10.4</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/n/netifaces&quot;</span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">netaddr</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.7.14</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/n/netaddr&quot;</span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">mock</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1.0.1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/m/mock&quot;</span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">pytz</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;2015.4&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/p/pytz&quot;</span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="w">    </span><span class="p p-Indicator">[</span><span class="nv">pandas</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0.16.1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">        source_urls</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;https://pypi.python.org/packages/source/p/pandas&quot;</span><span class="p p-Indicator">],</span>
+<span class="w">    </span><span class="p p-Indicator">}],</span>
+<span class="p p-Indicator">]</span>
 
-<span class="nt">moduleclass</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lang</span><span class="w"></span>
+<span class="nt">moduleclass</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lang</span>
 </code></pre></div>
 
   <hr>
@@ -895,14 +895,13 @@ the .yeb format, this can be done much easier by just using <code>name, version<
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

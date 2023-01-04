@@ -10,8 +10,10 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/version-specific/easyconfig-templates/">
       
+      
+      
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -364,33 +365,486 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/version-specific/easyconfig-templates.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="avail_easyconfig_templates">Available template values for easyconfigs<a class="headerlink" href="#avail_easyconfig_templates" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/version-specific/easyconfig_templates.html">https://docs.easybuild.io/en/latest/version-specific/easyconfig_templates.html</a>.</p>
-<p><strong>
-It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
-and you can help with that!
-</strong></p>
+<h2 id="template-namesvalues-derived-from-easyconfig-instance">Template names/values derived from easyconfig instance<a class="headerlink" href="#template-namesvalues-derived-from-easyconfig-instance" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Template name</th>
+<th>Template value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%(module_name)s</code></td>
+<td>Module name</td>
+</tr>
+<tr>
+<td><code>%(nameletter)s</code></td>
+<td>First letter of software name</td>
+</tr>
+<tr>
+<td><code>%(toolchain_name)s</code></td>
+<td>Toolchain name</td>
+</tr>
+<tr>
+<td><code>%(toolchain_version)s</code></td>
+<td>Toolchain version</td>
+</tr>
+<tr>
+<td><code>%(version_major_minor)s</code></td>
+<td>Major.Minor version</td>
+</tr>
+<tr>
+<td><code>%(version_major)s</code></td>
+<td>Major version</td>
+</tr>
+<tr>
+<td><code>%(version_minor)s</code></td>
+<td>Minor version</td>
+</tr>
+</tbody>
+</table>
+<h2 id="template-namesvalues-for-short-software-versions">Template names/values for (short) software versions<a class="headerlink" href="#template-namesvalues-for-short-software-versions" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Template name</th>
+<th>Template value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%(cudashortver)s</code></td>
+<td>short version for CUDA (<major>.<minor>)</td>
+</tr>
+<tr>
+<td><code>%(cudaver)s</code></td>
+<td>full version for CUDA</td>
+</tr>
+<tr>
+<td><code>%(cudashortver)s</code></td>
+<td>short version for CUDAcore (<major>.<minor>)</td>
+</tr>
+<tr>
+<td><code>%(cudaver)s</code></td>
+<td>full version for CUDAcore</td>
+</tr>
+<tr>
+<td><code>%(javashortver)s</code></td>
+<td>short version for Java (<major>.<minor>)</td>
+</tr>
+<tr>
+<td><code>%(javaver)s</code></td>
+<td>full version for Java</td>
+</tr>
+<tr>
+<td><code>%(perlshortver)s</code></td>
+<td>short version for Perl (<major>.<minor>)</td>
+</tr>
+<tr>
+<td><code>%(perlver)s</code></td>
+<td>full version for Perl</td>
+</tr>
+<tr>
+<td><code>%(pyshortver)s</code></td>
+<td>short version for Python (<major>.<minor>)</td>
+</tr>
+<tr>
+<td><code>%(pyver)s</code></td>
+<td>full version for Python</td>
+</tr>
+<tr>
+<td><code>%(rshortver)s</code></td>
+<td>short version for R (<major>.<minor>)</td>
+</tr>
+<tr>
+<td><code>%(rver)s</code></td>
+<td>full version for R</td>
+</tr>
+</tbody>
+</table>
+<h2 id="template-namesvalues-as-set-in-easyconfig">Template names/values as set in easyconfig<a class="headerlink" href="#template-namesvalues-as-set-in-easyconfig" title="Permanent link">&para;</a></h2>
 <ul>
-<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/version-specific/easyconfig_templates.rst"><code>docs/version-specific/easyconfig_templates.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
-<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/version-specific/easyconfig-templates.md"><code>docs/version-specific/easyconfig-templates.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
+<li><code>%(bitbucket_account)s</code></li>
+<li><code>%(github_account)s</code></li>
+<li><code>%(name)s</code></li>
+<li><code>%(parallel)s</code></li>
+<li><code>%(version)s</code></li>
+<li><code>%(versionsuffix)s</code></li>
+<li><code>%(versionprefix)s</code></li>
 </ul>
-<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
-</div>
+<h2 id="lowercase-values-of-template-values">Lowercase values of template values<a class="headerlink" href="#lowercase-values-of-template-values" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Template name</th>
+<th>Template value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%(namelower)s</code></td>
+<td>lower case of value of name</td>
+</tr>
+<tr>
+<td><code>%(nameletterlower)s</code></td>
+<td>lower case of value of nameletter</td>
+</tr>
+</tbody>
+</table>
+<h2 id="template-values-set-outside-easyblock-runstep">Template values set outside EasyBlock runstep<a class="headerlink" href="#template-values-set-outside-easyblock-runstep" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Template name</th>
+<th>Template value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%(builddir)s</code></td>
+<td>Build directory</td>
+</tr>
+<tr>
+<td><code>%(installdir)s</code></td>
+<td>Installation directory</td>
+</tr>
+</tbody>
+</table>
+<h2 id="template-values-which-are-defined-dynamically">Template values which are defined dynamically<a class="headerlink" href="#template-values-which-are-defined-dynamically" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Template name</th>
+<th>Template value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%(arch)s</code></td>
+<td>System architecture (e.g. x86_64, aarch64, ppc64le, ...)</td>
+</tr>
+<tr>
+<td><code>%(mpi_cmd_prefix)s</code></td>
+<td>Prefix command for running MPI programs (with default number of ranks)</td>
+</tr>
+<tr>
+<td><code>%(cuda_compute_capabilities)s</code></td>
+<td>Comma-separated list of CUDA compute capabilities, as specified via --cuda-compute-capabilities configuration option or via cuda_compute_capabilities easyconfig parameter</td>
+</tr>
+<tr>
+<td><code>%(cuda_cc_cmake)s</code></td>
+<td>List of CUDA compute capabilities suitable for use with $CUDAARCHS in CMake 3.18+</td>
+</tr>
+<tr>
+<td><code>%(cuda_cc_space_sep)s</code></td>
+<td>Space-separated list of CUDA compute capabilities</td>
+</tr>
+<tr>
+<td><code>%(cuda_cc_semicolon_sep)s</code></td>
+<td>Semicolon-separated list of CUDA compute capabilities</td>
+</tr>
+<tr>
+<td><code>%(cuda_sm_comma_sep)s</code></td>
+<td>Comma-separated list of sm_* values that correspond with CUDA compute capabilities</td>
+</tr>
+<tr>
+<td><code>%(cuda_sm_space_sep)s</code></td>
+<td>Space-separated list of sm_* values that correspond with CUDA compute capabilities</td>
+</tr>
+</tbody>
+</table>
+<h2 id="template-constants-that-can-be-used-in-easyconfigs">Template constants that can be used in easyconfigs<a class="headerlink" href="#template-constants-that-can-be-used-in-easyconfigs" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Constant</th>
+<th>Template value</th>
+<th>Template name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>APACHE_SOURCE</code></td>
+<td>apache.org source url</td>
+<td><code>https://archive.apache.org/dist/%(namelower)s</code></td>
+</tr>
+<tr>
+<td><code>BITBUCKET_SOURCE</code></td>
+<td>bitbucket.org source url (namelower is used if bitbucket_account easyconfig parameter is not specified)</td>
+<td><code>https://bitbucket.org/%(bitbucket_account)s/%(namelower)s/get</code></td>
+</tr>
+<tr>
+<td><code>BITBUCKET_DOWNLOADS</code></td>
+<td>bitbucket.org downloads url (namelower is used if bitbucket_account easyconfig parameter is not specified)</td>
+<td><code>https://bitbucket.org/%(bitbucket_account)s/%(namelower)s/downloads</code></td>
+</tr>
+<tr>
+<td><code>CRAN_SOURCE</code></td>
+<td>CRAN (contrib) source url</td>
+<td><code>https://cran.r-project.org/src/contrib</code></td>
+</tr>
+<tr>
+<td><code>FTPGNOME_SOURCE</code></td>
+<td>http download for gnome ftp server</td>
+<td><code>https://ftp.gnome.org/pub/GNOME/sources/%(namelower)s/%(version_major_minor)s</code></td>
+</tr>
+<tr>
+<td><code>GITHUB_SOURCE</code></td>
+<td>GitHub source URL (namelower is used if github_account easyconfig parameter is not specified)</td>
+<td><code>https://github.com/%(github_account)s/%(name)s/archive</code></td>
+</tr>
+<tr>
+<td><code>GITHUB_LOWER_SOURCE</code></td>
+<td>GitHub source URL (lowercase name, namelower is used if github_account easyconfig parameter is not specified)</td>
+<td><code>https://github.com/%(github_account)s/%(namelower)s/archive</code></td>
+</tr>
+<tr>
+<td><code>GITHUB_RELEASE</code></td>
+<td>GitHub release URL (namelower is used if github_account easyconfig parameter is not specified)</td>
+<td><code>https://github.com/%(github_account)s/%(name)s/releases/download/v%(version)s</code></td>
+</tr>
+<tr>
+<td><code>GITHUB_LOWER_RELEASE</code></td>
+<td>GitHub release URL (namelower is used if github_account easyconfig parameter is not specified)</td>
+<td><code>https://github.com/%(github_account)s/%(namelower)s/releases/download/v%(version)s</code></td>
+</tr>
+<tr>
+<td><code>GNU_SAVANNAH_SOURCE</code></td>
+<td>download.savannah.gnu.org source url</td>
+<td><code>https://download-mirror.savannah.gnu.org/releases/%(namelower)s</code></td>
+</tr>
+<tr>
+<td><code>GNU_SOURCE</code></td>
+<td>gnu.org source url</td>
+<td><code>https://ftpmirror.gnu.org/gnu/%(namelower)s</code></td>
+</tr>
+<tr>
+<td><code>GOOGLECODE_SOURCE</code></td>
+<td>googlecode.com source url</td>
+<td><code>http://%(namelower)s.googlecode.com/files</code></td>
+</tr>
+<tr>
+<td><code>LAUNCHPAD_SOURCE</code></td>
+<td>launchpad.net source url</td>
+<td><code>https://launchpad.net/%(namelower)s/%(version_major_minor)s.x/%(version)s/+download/</code></td>
+</tr>
+<tr>
+<td><code>PYPI_SOURCE</code></td>
+<td>pypi source url</td>
+<td><code>https://pypi.python.org/packages/source/%(nameletter)s/%(name)s</code></td>
+</tr>
+<tr>
+<td><code>PYPI_LOWER_SOURCE</code></td>
+<td>pypi source url (lowercase name)</td>
+<td><code>https://pypi.python.org/packages/source/%(nameletterlower)s/%(namelower)s</code></td>
+</tr>
+<tr>
+<td><code>R_SOURCE</code></td>
+<td>cran.r-project.org (base) source url</td>
+<td><code>https://cran.r-project.org/src/base/R-%(version_major)s</code></td>
+</tr>
+<tr>
+<td><code>SOURCEFORGE_SOURCE</code></td>
+<td>sourceforge.net source url</td>
+<td><code>https://download.sourceforge.net/%(namelower)s</code></td>
+</tr>
+<tr>
+<td><code>XORG_DATA_SOURCE</code></td>
+<td>xorg data source url</td>
+<td><code>https://xorg.freedesktop.org/archive/individual/data/</code></td>
+</tr>
+<tr>
+<td><code>XORG_LIB_SOURCE</code></td>
+<td>xorg lib source url</td>
+<td><code>https://xorg.freedesktop.org/archive/individual/lib/</code></td>
+</tr>
+<tr>
+<td><code>XORG_PROTO_SOURCE</code></td>
+<td>xorg proto source url</td>
+<td><code>https://xorg.freedesktop.org/archive/individual/proto/</code></td>
+</tr>
+<tr>
+<td><code>XORG_UTIL_SOURCE</code></td>
+<td>xorg util source url</td>
+<td><code>https://xorg.freedesktop.org/archive/individual/util/</code></td>
+</tr>
+<tr>
+<td><code>XORG_XCB_SOURCE</code></td>
+<td>xorg xcb source url</td>
+<td><code>https://xorg.freedesktop.org/archive/individual/xcb/</code></td>
+</tr>
+<tr>
+<td><code>SHLIB_EXT</code></td>
+<td>extension for shared libraries</td>
+<td><code>dylib</code></td>
+</tr>
+<tr>
+<td><code>SOURCE_TAR_GZ</code></td>
+<td>Source .tar.gz bundle</td>
+<td><code>%(name)s-%(version)s.tar.gz</code></td>
+</tr>
+<tr>
+<td><code>SOURCELOWER_TAR_GZ</code></td>
+<td>Source .tar.gz bundle with lowercase name</td>
+<td><code>%(namelower)s-%(version)s.tar.gz</code></td>
+</tr>
+<tr>
+<td><code>SOURCE_TAR_XZ</code></td>
+<td>Source .tar.xz bundle</td>
+<td><code>%(name)s-%(version)s.tar.xz</code></td>
+</tr>
+<tr>
+<td><code>SOURCELOWER_TAR_XZ</code></td>
+<td>Source .tar.xz bundle with lowercase name</td>
+<td><code>%(namelower)s-%(version)s.tar.xz</code></td>
+</tr>
+<tr>
+<td><code>SOURCE_TAR_BZ2</code></td>
+<td>Source .tar.bz2 bundle</td>
+<td><code>%(name)s-%(version)s.tar.bz2</code></td>
+</tr>
+<tr>
+<td><code>SOURCELOWER_TAR_BZ2</code></td>
+<td>Source .tar.bz2 bundle with lowercase name</td>
+<td><code>%(namelower)s-%(version)s.tar.bz2</code></td>
+</tr>
+<tr>
+<td><code>SOURCE_TGZ</code></td>
+<td>Source .tgz bundle</td>
+<td><code>%(name)s-%(version)s.tgz</code></td>
+</tr>
+<tr>
+<td><code>SOURCELOWER_TGZ</code></td>
+<td>Source .tgz bundle with lowercase name</td>
+<td><code>%(namelower)s-%(version)s.tgz</code></td>
+</tr>
+<tr>
+<td><code>SOURCE_TXZ</code></td>
+<td>Source .txz bundle</td>
+<td><code>%(name)s-%(version)s.txz</code></td>
+</tr>
+<tr>
+<td><code>SOURCELOWER_TXZ</code></td>
+<td>Source .txz bundle with lowercase name</td>
+<td><code>%(namelower)s-%(version)s.txz</code></td>
+</tr>
+<tr>
+<td><code>SOURCE_TBZ2</code></td>
+<td>Source .tbz2 bundle</td>
+<td><code>%(name)s-%(version)s.tbz2</code></td>
+</tr>
+<tr>
+<td><code>SOURCELOWER_TBZ2</code></td>
+<td>Source .tbz2 bundle with lowercase name</td>
+<td><code>%(namelower)s-%(version)s.tbz2</code></td>
+</tr>
+<tr>
+<td><code>SOURCE_TB2</code></td>
+<td>Source .tb2 bundle</td>
+<td><code>%(name)s-%(version)s.tb2</code></td>
+</tr>
+<tr>
+<td><code>SOURCELOWER_TB2</code></td>
+<td>Source .tb2 bundle with lowercase name</td>
+<td><code>%(namelower)s-%(version)s.tb2</code></td>
+</tr>
+<tr>
+<td><code>SOURCE_GTGZ</code></td>
+<td>Source .gtgz bundle</td>
+<td><code>%(name)s-%(version)s.gtgz</code></td>
+</tr>
+<tr>
+<td><code>SOURCELOWER_GTGZ</code></td>
+<td>Source .gtgz bundle with lowercase name</td>
+<td><code>%(namelower)s-%(version)s.gtgz</code></td>
+</tr>
+<tr>
+<td><code>SOURCE_ZIP</code></td>
+<td>Source .zip bundle</td>
+<td><code>%(name)s-%(version)s.zip</code></td>
+</tr>
+<tr>
+<td><code>SOURCELOWER_ZIP</code></td>
+<td>Source .zip bundle with lowercase name</td>
+<td><code>%(namelower)s-%(version)s.zip</code></td>
+</tr>
+<tr>
+<td><code>SOURCE_TAR</code></td>
+<td>Source .tar bundle</td>
+<td><code>%(name)s-%(version)s.tar</code></td>
+</tr>
+<tr>
+<td><code>SOURCELOWER_TAR</code></td>
+<td>Source .tar bundle with lowercase name</td>
+<td><code>%(namelower)s-%(version)s.tar</code></td>
+</tr>
+<tr>
+<td><code>SOURCE_XZ</code></td>
+<td>Source .xz bundle</td>
+<td><code>%(name)s-%(version)s.xz</code></td>
+</tr>
+<tr>
+<td><code>SOURCELOWER_XZ</code></td>
+<td>Source .xz bundle with lowercase name</td>
+<td><code>%(namelower)s-%(version)s.xz</code></td>
+</tr>
+<tr>
+<td><code>SOURCE_TAR_Z</code></td>
+<td>Source .tar.Z bundle</td>
+<td><code>%(name)s-%(version)s.tar.Z</code></td>
+</tr>
+<tr>
+<td><code>SOURCELOWER_TAR_Z</code></td>
+<td>Source .tar.Z bundle with lowercase name</td>
+<td><code>%(namelower)s-%(version)s.tar.Z</code></td>
+</tr>
+<tr>
+<td><code>SOURCE_WHL</code></td>
+<td>Generic (non-compiled) Python 2 &amp; Python 3 wheel package</td>
+<td><code>%(name)s-%(version)s-py2.py3-none-any.whl</code></td>
+</tr>
+<tr>
+<td><code>SOURCELOWER_WHL</code></td>
+<td>Generic (non-compiled) Python 2 &amp; Python 3 wheel package with lowercase name</td>
+<td><code>%(namelower)s-%(version)s-py2.py3-none-any.whl</code></td>
+</tr>
+<tr>
+<td><code>SOURCE_PY2_WHL</code></td>
+<td>Generic (non-compiled) Python 2 wheel package</td>
+<td><code>%(name)s-%(version)s-py2-none-any.whl</code></td>
+</tr>
+<tr>
+<td><code>SOURCELOWER_PY2_WHL</code></td>
+<td>Generic (non-compiled) Python 2 wheel package with lowercase name</td>
+<td><code>%(namelower)s-%(version)s-py2-none-any.whl</code></td>
+</tr>
+<tr>
+<td><code>SOURCE_PY3_WHL</code></td>
+<td>Generic (non-compiled) Python 3 wheel package</td>
+<td><code>%(name)s-%(version)s-py3-none-any.whl</code></td>
+</tr>
+<tr>
+<td><code>SOURCELOWER_PY3_WHL</code></td>
+<td>Generic (non-compiled) Python 3 wheel package with lowercase name</td>
+<td><code>%(namelower)s-%(version)s-py3-none-any.whl</code></td>
+</tr>
+</tbody>
+</table>
+<p><em>(see also</em> <code>eb --avail-easyconfig-templates</code> <em>)</em></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 13, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 3, 2023</span>
       
     
   </small>
@@ -470,14 +924,13 @@ and you can help with that!
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

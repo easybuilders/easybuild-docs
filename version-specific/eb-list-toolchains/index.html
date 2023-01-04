@@ -10,20 +10,21 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/version-specific/eb-list-toolchains/">
       
+      
+      
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
-        <title>Output of `eb --list-toolchains` {: #toolchains_table } - EasyBuild - building software with ease</title>
+        <title>List of known toolchains {: #toolchains_table } - EasyBuild - building software with ease</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -112,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Output of `eb --list-toolchains` {: #toolchains_table }
+              List of known toolchains {: #toolchains_table }
             
           </span>
         </div>
@@ -364,48 +365,656 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/version-specific/eb-list-toolchains.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
 
 
-<h1 id="toolchains_table">Output of <code>eb --list-toolchains</code><a class="headerlink" href="#toolchains_table" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/eb_list_toolchains.html">https://docs.easybuild.io/en/latest/eb_list_toolchains.html</a>.</p>
-<p><strong>
-It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
-and you can help with that!
-</strong></p>
-<ul>
-<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/eb_list_toolchains.rst"><code>docs/eb_list_toolchains.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
-<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/version-specific/eb-list-toolchains.md"><code>docs/version-specific/eb-list-toolchains.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
-</ul>
-<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="p">..</span> <span class="nt">_toolchains_table:</span>
 
-<span class="gh">List of known toolchains</span>
-<span class="gh">========================</span>
-
-The list of known toolchains can easily be obtained with<span class="se">::</span>
-
-<span class="s">  $ eb --list-toolchains</span>
-<span class="s">  List of known toolchains (toolchainname: module[,module...]):</span>
-<span class="s">  [...]</span>
-
-An up-to-date overview of known toolchains is available at <span class="na">:ref:</span><span class="nv">`vsd_list_toolchains`</span>.
-
-<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> The <span class="nv">`system`</span> toolchain is a special case, see <span class="na">:ref:</span><span class="nv">`system_toolchain`</span>.
-</code></pre></div>
+<h1 id="toolchains_table">List of known toolchains<a class="headerlink" href="#toolchains_table" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Compiler(s)</th>
+<th>MPI</th>
+<th>Linear algebra</th>
+<th>FFT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>cgmpich</strong></td>
+<td>Clang, GCC</td>
+<td>MPICH</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>cgmpolf</strong></td>
+<td>Clang, GCC</td>
+<td>MPICH</td>
+<td>OpenBLAS, ScaLAPACK</td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>cgmvapich2</strong></td>
+<td>Clang, GCC</td>
+<td>MVAPICH2</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>cgmvolf</strong></td>
+<td>Clang, GCC</td>
+<td>MVAPICH2</td>
+<td>OpenBLAS, ScaLAPACK</td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>cgompi</strong></td>
+<td>Clang, GCC</td>
+<td>OpenMPI</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>cgoolf</strong></td>
+<td>Clang, GCC</td>
+<td>OpenMPI</td>
+<td>OpenBLAS, ScaLAPACK</td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>ClangGCC</strong></td>
+<td>Clang, GCC</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>CrayCCE</strong></td>
+<td>PrgEnv-cray</td>
+<td>cray-mpich</td>
+<td>cray-libsci</td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>CrayGNU</strong></td>
+<td>PrgEnv-gnu</td>
+<td>cray-mpich</td>
+<td>cray-libsci</td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>CrayIntel</strong></td>
+<td>PrgEnv-intel</td>
+<td>cray-mpich</td>
+<td>cray-libsci</td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>CrayPGI</strong></td>
+<td>PrgEnv-pgi</td>
+<td>cray-mpich</td>
+<td>cray-libsci</td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>FCC</strong></td>
+<td>lang</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>ffmpi</strong></td>
+<td>FCC</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>foss</strong></td>
+<td>GCC</td>
+<td>OpenMPI</td>
+<td>OpenBLAS, ScaLAPACK</td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>fosscuda</strong></td>
+<td>GCC, CUDA</td>
+<td>OpenMPI</td>
+<td>OpenBLAS, ScaLAPACK</td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>Fujitsu</strong></td>
+<td>FCC</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>GCC</strong></td>
+<td>GCC</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>GCCcore</strong></td>
+<td>GCCcore</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>gcccuda</strong></td>
+<td>GCC, CUDA</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>gfbf</strong></td>
+<td>GCC</td>
+<td><em>(none)</em></td>
+<td>FlexiBLAS</td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>gimkl</strong></td>
+<td>GCC</td>
+<td>impi</td>
+<td>imkl</td>
+<td>imkl</td>
+</tr>
+<tr>
+<td><strong>gimpi</strong></td>
+<td>GCC</td>
+<td>impi</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>gimpic</strong></td>
+<td>GCC, CUDA</td>
+<td>impi</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>giolf</strong></td>
+<td>GCC</td>
+<td>impi</td>
+<td>OpenBLAS, ScaLAPACK</td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>giolfc</strong></td>
+<td>GCC, CUDA</td>
+<td>impi</td>
+<td>OpenBLAS, ScaLAPACK</td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>gmacml</strong></td>
+<td>GCC</td>
+<td>MVAPICH2</td>
+<td>ACML, ScaLAPACK</td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>gmkl</strong></td>
+<td>GCC</td>
+<td><em>(none)</em></td>
+<td>imkl</td>
+<td>imkl</td>
+</tr>
+<tr>
+<td><strong>gmklc</strong></td>
+<td>GCC, CUDA</td>
+<td><em>(none)</em></td>
+<td>imkl</td>
+<td>imkl</td>
+</tr>
+<tr>
+<td><strong>gmpich</strong></td>
+<td>GCC</td>
+<td>MPICH</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>gmpich2</strong></td>
+<td>GCC</td>
+<td>MPICH2</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>gmpit</strong></td>
+<td>GCC</td>
+<td>MPItrampoline</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>gmpolf</strong></td>
+<td>GCC</td>
+<td>MPICH</td>
+<td>OpenBLAS, ScaLAPACK</td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>gmvapich2</strong></td>
+<td>GCC</td>
+<td>MVAPICH2</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>gmvolf</strong></td>
+<td>GCC</td>
+<td>MVAPICH2</td>
+<td>OpenBLAS, ScaLAPACK</td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>GNU</strong></td>
+<td>GCC</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>goalf</strong></td>
+<td>GCC</td>
+<td>OpenMPI</td>
+<td>ATLAS, ScaLAPACK</td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>gobff</strong></td>
+<td>GCC</td>
+<td>OpenMPI</td>
+<td>BLIS, libFLAME, ScaLAPACK</td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>goblf</strong></td>
+<td>GCC</td>
+<td>OpenMPI</td>
+<td>BLIS, LAPACK, ScaLAPACK</td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>gofbf</strong></td>
+<td>GCC</td>
+<td>OpenMPI</td>
+<td>FlexiBLAS, ScaLAPACK</td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>golf</strong></td>
+<td>GCC</td>
+<td><em>(none)</em></td>
+<td>OpenBLAS</td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>golfc</strong></td>
+<td>GCC, CUDA</td>
+<td><em>(none)</em></td>
+<td>OpenBLAS</td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>gomkl</strong></td>
+<td>GCC</td>
+<td>OpenMPI</td>
+<td>imkl</td>
+<td>imkl</td>
+</tr>
+<tr>
+<td><strong>gomklc</strong></td>
+<td>GCC, CUDA</td>
+<td>OpenMPI</td>
+<td>imkl</td>
+<td>imkl</td>
+</tr>
+<tr>
+<td><strong>gompi</strong></td>
+<td>GCC</td>
+<td>OpenMPI</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>gompic</strong></td>
+<td>GCC, CUDA</td>
+<td>OpenMPI</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>goolf</strong></td>
+<td>GCC</td>
+<td>OpenMPI</td>
+<td>OpenBLAS, ScaLAPACK</td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>goolfc</strong></td>
+<td>GCC, CUDA</td>
+<td>OpenMPI</td>
+<td>OpenBLAS, ScaLAPACK</td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>gpsmpi</strong></td>
+<td>GCC</td>
+<td>psmpi</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>gpsolf</strong></td>
+<td>GCC</td>
+<td>psmpi</td>
+<td>OpenBLAS, ScaLAPACK</td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>gqacml</strong></td>
+<td>GCC</td>
+<td>QLogicMPI</td>
+<td>ACML, ScaLAPACK</td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>gsmpi</strong></td>
+<td>GCC</td>
+<td>SpectrumMPI</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>gsolf</strong></td>
+<td>GCC</td>
+<td>SpectrumMPI</td>
+<td>OpenBLAS, ScaLAPACK</td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>iccifort</strong></td>
+<td>icc, ifort</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>iccifortcuda</strong></td>
+<td>icc, ifort, CUDA</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>ictce</strong></td>
+<td>icc, ifort</td>
+<td>impi</td>
+<td>imkl</td>
+<td>imkl</td>
+</tr>
+<tr>
+<td><strong>iibff</strong></td>
+<td>icc, ifort</td>
+<td>impi</td>
+<td>BLIS, libFLAME, ScaLAPACK</td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>iimkl</strong></td>
+<td>icc, ifort</td>
+<td><em>(none)</em></td>
+<td>imkl</td>
+<td>imkl</td>
+</tr>
+<tr>
+<td><strong>iimklc</strong></td>
+<td>icc, ifort</td>
+<td><em>(none)</em></td>
+<td>imkl</td>
+<td>imkl</td>
+</tr>
+<tr>
+<td><strong>iimpi</strong></td>
+<td>icc, ifort</td>
+<td>impi</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>iimpic</strong></td>
+<td>icc, ifort, CUDA</td>
+<td>impi</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>iiqmpi</strong></td>
+<td>icc, ifort</td>
+<td>QLogicMPI</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>impich</strong></td>
+<td>icc, ifort</td>
+<td>MPICH</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>impmkl</strong></td>
+<td>icc, ifort</td>
+<td>MPICH</td>
+<td>imkl</td>
+<td>imkl</td>
+</tr>
+<tr>
+<td><strong>intel</strong></td>
+<td>icc, ifort</td>
+<td>impi</td>
+<td>imkl</td>
+<td>imkl</td>
+</tr>
+<tr>
+<td><strong>intel-compilers</strong></td>
+<td>intel-compilers</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>intel-para</strong></td>
+<td>icc, ifort</td>
+<td>psmpi</td>
+<td>imkl</td>
+<td>imkl</td>
+</tr>
+<tr>
+<td><strong>intelcuda</strong></td>
+<td>icc, ifort, CUDA</td>
+<td>impi</td>
+<td>imkl</td>
+<td>imkl</td>
+</tr>
+<tr>
+<td><strong>iomkl</strong></td>
+<td>icc, ifort</td>
+<td>OpenMPI</td>
+<td>imkl</td>
+<td>imkl</td>
+</tr>
+<tr>
+<td><strong>iomklc</strong></td>
+<td>icc, ifort, CUDA</td>
+<td>OpenMPI</td>
+<td>imkl</td>
+<td>imkl</td>
+</tr>
+<tr>
+<td><strong>iompi</strong></td>
+<td>icc, ifort</td>
+<td>OpenMPI</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>iompic</strong></td>
+<td>icc, ifort, CUDA</td>
+<td>OpenMPI</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>ipsmpi</strong></td>
+<td>icc, ifort</td>
+<td>psmpi</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>iqacml</strong></td>
+<td>icc, ifort</td>
+<td>QLogicMPI</td>
+<td>ACML, ScaLAPACK</td>
+<td>FFTW</td>
+</tr>
+<tr>
+<td><strong>ismkl</strong></td>
+<td>icc, ifort</td>
+<td>MPICH2</td>
+<td>imkl</td>
+<td>imkl</td>
+</tr>
+<tr>
+<td><strong>NVHPC</strong></td>
+<td>NVHPC</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>nvompi</strong></td>
+<td>NVHPC</td>
+<td>OpenMPI</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>nvompic</strong></td>
+<td>NVHPC</td>
+<td>OpenMPI</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>nvpsmpi</strong></td>
+<td>NVHPC</td>
+<td>psmpi</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>nvpsmpic</strong></td>
+<td>NVHPC</td>
+<td>psmpi</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>PGI</strong></td>
+<td>PGI</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>pmkl</strong></td>
+<td>PGI</td>
+<td><em>(none)</em></td>
+<td>imkl</td>
+<td>imkl</td>
+</tr>
+<tr>
+<td><strong>pomkl</strong></td>
+<td>PGI</td>
+<td>OpenMPI</td>
+<td>imkl</td>
+<td>imkl</td>
+</tr>
+<tr>
+<td><strong>pompi</strong></td>
+<td>PGI</td>
+<td>OpenMPI</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>system</strong></td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>xlcxlf</strong></td>
+<td>xlc, xlf</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>xlmpich</strong></td>
+<td>xlc, xlf</td>
+<td>MPICH</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>xlmpich2</strong></td>
+<td>xlc, xlf</td>
+<td>MPICH2</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>xlmvapich2</strong></td>
+<td>xlc, xlf</td>
+<td>MVAPICH2</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+<tr>
+<td><strong>xlompi</strong></td>
+<td>xlc, xlf</td>
+<td>OpenMPI</td>
+<td><em>(none)</em></td>
+<td><em>(none)</em></td>
+</tr>
+</tbody>
+</table>
+<p><em>(see also</em> <code>eb --list-toolchains</code> <em>)</em></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 17, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 3, 2023</span>
       
     
   </small>
@@ -485,14 +1094,13 @@ An up-to-date overview of known toolchains is available at <span class="na">:ref
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

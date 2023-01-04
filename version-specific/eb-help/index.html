@@ -10,20 +10,21 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/version-specific/eb-help/">
       
+      
+      
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
-        <title>Output of `eb --help` {: #basic_usage_help } - EasyBuild - building software with ease</title>
+        <title>EasyBuild configuration options {: #basic_usage_help } - EasyBuild - building software with ease</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -112,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Output of `eb --help` {: #basic_usage_help }
+              EasyBuild configuration options {: #basic_usage_help }
             
           </span>
         </div>
@@ -364,33 +365,1299 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/version-specific/eb-help.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
 
 
-<h1 id="basic_usage_help">Output of <code>eb --help</code><a class="headerlink" href="#basic_usage_help" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/eb_help.html">https://docs.easybuild.io/en/latest/eb_help.html</a>.</p>
-<p><strong>
-It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
-and you can help with that!
-</strong></p>
-<ul>
-<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/eb_help.rst"><code>docs/eb_help.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
-<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/version-specific/eb-help.md"><code>docs/version-specific/eb-help.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
-</ul>
-<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
-</div>
+
+<h1 id="basic_usage_help">EasyBuild configuration options<a class="headerlink" href="#basic_usage_help" title="Permanent link">&para;</a></h1>
+<p><em>(corresponds with output of</em> <code>eb --help</code> <em>)</em></p>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<p><code>eb [options] easyconfig [...]</code></p>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<p>Builds software based on easyconfig (or parse a directory).
+Provide one or more easyconfigs or directories, use -H or --help more information.</p>
+<h2 id="help-options">Help options<a class="headerlink" href="#help-options" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option flag</th>
+<th>Option description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--version</code></td>
+<td>show program's version number and exit</td>
+</tr>
+<tr>
+<td><code>-h, --shorthelp</code></td>
+<td>show short help message and exit</td>
+</tr>
+<tr>
+<td><code>-H OUTPUT_FORMAT, --help=OUTPUT_FORMAT</code></td>
+<td>show full help message and exit</td>
+</tr>
+<tr>
+<td><code>--confighelp</code></td>
+<td>show help as annotated configfile</td>
+</tr>
+</tbody>
+</table>
+<h2 id="debug-and-logging-options-configfile-section-main">Debug and logging options (configfile section MAIN)<a class="headerlink" href="#debug-and-logging-options-configfile-section-main" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option flag</th>
+<th>Option description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-d, --debug</code></td>
+<td>Enable debug log mode (default: False)</td>
+</tr>
+<tr>
+<td><code>--info</code></td>
+<td>Enable info log mode (default: False)</td>
+</tr>
+<tr>
+<td><code>--quiet</code></td>
+<td>Enable quiet/warning log mode (default: False)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="configfile-options">Configfile options<a class="headerlink" href="#configfile-options" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option flag</th>
+<th>Option description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--configfiles=CONFIGFILES</code></td>
+<td>Parse (additional) configfiles (type comma-separated list; default: )</td>
+</tr>
+<tr>
+<td><code>--ignoreconfigfiles=IGNORECONFIGFILES</code></td>
+<td>Ignore configfiles (type comma-separated list)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="basic-options">Basic options<a class="headerlink" href="#basic-options" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option flag</th>
+<th>Option description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--dry-run</code></td>
+<td>Print build overview incl. dependencies (full paths) (default: False)</td>
+</tr>
+<tr>
+<td><code>-D, --dry-run-short</code></td>
+<td>Print build overview incl. dependencies (short paths) (default: False)</td>
+</tr>
+<tr>
+<td><code>-x, --extended-dry-run</code></td>
+<td>Print build environment and (expected) build procedure that will be performed (default: False)</td>
+</tr>
+<tr>
+<td><code>--extended-dry-run-ignore-errors</code></td>
+<td>Ignore errors that occur during dry run (default: True; disable with --disable-extended-dry-run-ignore-errors)</td>
+</tr>
+<tr>
+<td><code>-f, --force</code></td>
+<td>Force to rebuild software even if it's already installed (i.e. if it can be found as module), and skipping check for OS dependencies (default: False)</td>
+</tr>
+<tr>
+<td><code>--ignore-locks</code></td>
+<td>Ignore locks that prevent two identical installations running in parallel (default: False)</td>
+</tr>
+<tr>
+<td><code>--job</code></td>
+<td>Submit the build as a job (default: False)</td>
+</tr>
+<tr>
+<td><code>--locks-dir=LOCKS-DIR</code></td>
+<td>Directory to store lock files (should be on a shared filesystem); None implies .locks subdirectory of software installation directory</td>
+</tr>
+<tr>
+<td><code>-l, --logtostdout</code></td>
+<td>Redirect main log to stdout (default: False)</td>
+</tr>
+<tr>
+<td><code>-M, --missing-modules</code></td>
+<td>Print list of missing modules for dependencies of specified easyconfigs (default: False)</td>
+</tr>
+<tr>
+<td><code>-b BLOCKS, --only-blocks=BLOCKS</code></td>
+<td>Only build listed blocks (type comma-separated list)</td>
+</tr>
+<tr>
+<td><code>--rebuild</code></td>
+<td>Rebuild software, even if module already exists (don't skip OS dependencies checks) (default: False)</td>
+</tr>
+<tr>
+<td><code>-r PATH[:PATH], --robot=PATH[:PATH]</code></td>
+<td>Enable dependency resolution, using easyconfigs in specified paths (type pathsep-separated list; default: )</td>
+</tr>
+<tr>
+<td><code>--robot-paths=PATH[:PATH]</code></td>
+<td>Additional paths to consider by robot for easyconfigs (--robot paths get priority) (type pathsep-separated list; default: /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs)</td>
+</tr>
+<tr>
+<td><code>--search-paths=PATH[:PATH]</code></td>
+<td>Additional locations to consider in --search (next to --robot and --robot-paths paths) (type pathsep-separated list; default: )</td>
+</tr>
+<tr>
+<td><code>-k, --skip</code></td>
+<td>Skip existing software (useful for installing additional packages) (default: False)</td>
+</tr>
+<tr>
+<td><code>-s STOP, --stop=STOP</code></td>
+<td>Stop the installation after certain step (type choice; default: source) (choices: fetch, ready, source, patch, prepare, configure, build, test, install, extensions, postiter, postproc, sanitycheck, cleanup, module, permissions, package, testcases)</td>
+</tr>
+<tr>
+<td><code>--strict=STRICT</code></td>
+<td>Set strictness level (type choice; default: warn) (choices: ignore, warn, error)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="configuration-options">Configuration options<a class="headerlink" href="#configuration-options" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option flag</th>
+<th>Option description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--avail-module-naming-schemes</code></td>
+<td>Show all supported module naming schemes (default: False)</td>
+</tr>
+<tr>
+<td><code>--avail-modules-tools</code></td>
+<td>Show all supported module tools (default: False)</td>
+</tr>
+<tr>
+<td><code>--avail-repositories</code></td>
+<td>Show all repository types (incl. non-usable) (default: False)</td>
+</tr>
+<tr>
+<td><code>--buildpath=BUILDPATH</code></td>
+<td>Temporary build path (default: /home/example/.local/easybuild/build)</td>
+</tr>
+<tr>
+<td><code>--containerpath=CONTAINERPATH</code></td>
+<td>Location where container recipe &amp; image will be stored (default: /home/example/.local/easybuild/containers)</td>
+</tr>
+<tr>
+<td><code>--envvars-user-modules=ENVVARS-USER-MODULES</code></td>
+<td>List of environment variables that hold the base paths for which user-specific modules will be installed relative to (type comma-separated list; default: HOME)</td>
+</tr>
+<tr>
+<td><code>--external-modules-metadata=EXTERNAL-MODULES-METADATA</code></td>
+<td>List of (glob patterns for) paths to files specifying metadata for external modules (INI format) (type comma-separated list)</td>
+</tr>
+<tr>
+<td><code>--hooks=HOOKS</code></td>
+<td>Location of Python module with hook implementations (type str)</td>
+</tr>
+<tr>
+<td><code>--ignore-dirs=IGNORE-DIRS</code></td>
+<td>Directory names to ignore when searching for files/dirs (type comma-separated list; default: .git,.svn)</td>
+</tr>
+<tr>
+<td><code>--include-easyblocks=INCLUDE-EASYBLOCKS</code></td>
+<td>Location(s) of extra or customized easyblocks (type comma-separated list; default: )</td>
+</tr>
+<tr>
+<td><code>--include-module-naming-schemes=INCLUDE-MODULE-NAMING-SCHEMES</code></td>
+<td>Location(s) of extra or customized module naming schemes (type comma-separated list; default: )</td>
+</tr>
+<tr>
+<td><code>--include-toolchains=INCLUDE-TOOLCHAINS</code></td>
+<td>Location(s) of extra or customized toolchains or toolchain components (type comma-separated list; default: )</td>
+</tr>
+<tr>
+<td><code>--installpath=INSTALLPATH</code></td>
+<td>Install path for software and modules (default: /home/example/.local/easybuild)</td>
+</tr>
+<tr>
+<td><code>--installpath-modules=INSTALLPATH-MODULES</code></td>
+<td>Install path for modules (if None, combine --installpath and --subdir-modules)</td>
+</tr>
+<tr>
+<td><code>--installpath-software=INSTALLPATH-SOFTWARE</code></td>
+<td>Install path for software (if None, combine --installpath and --subdir-software)</td>
+</tr>
+<tr>
+<td><code>--job-backend=JOB-BACKEND</code></td>
+<td>Backend to use for submitting jobs (type choice; default: GC3Pie) (choices: GC3Pie, PbsPython, Slurm)</td>
+</tr>
+<tr>
+<td><code>--logfile-format=DIR,FORMAT</code></td>
+<td>Directory name and format of the log file (type comma-separated tuple; default: easybuild,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log)</td>
+</tr>
+<tr>
+<td><code>--module-depends-on</code></td>
+<td>Use depends_on (Lmod 7.6.1+) for dependencies in all generated modules (implies recursive unloading of modules). (default: False)</td>
+</tr>
+<tr>
+<td><code>--module-extensions</code></td>
+<td>Include 'extensions' statement in generated module file (Lua syntax only) (default: False)</td>
+</tr>
+<tr>
+<td><code>--module-naming-scheme=MODULE-NAMING-SCHEME</code></td>
+<td>Module naming scheme to use (default: EasyBuildMNS)</td>
+</tr>
+<tr>
+<td><code>--module-syntax=MODULE-SYNTAX</code></td>
+<td>Syntax to be used for module files (type choice; default: Lua) (choices: Lua, Tcl)</td>
+</tr>
+<tr>
+<td><code>--moduleclasses=MODULECLASSES</code></td>
+<td>Extend supported module classes (For more info on the default classes, use --show-default-moduleclasses) (type comma-separated list; default: base,ai,astro,bio,cae,chem,compiler,data,debugger,devel,geo,ide,lang,lib,math,mpi,numlib,perf,quantum,phys,system,toolchain,tools,vis)</td>
+</tr>
+<tr>
+<td><code>--modules-footer=PATH</code></td>
+<td>Path to file containing footer to be added to all generated module files</td>
+</tr>
+<tr>
+<td><code>--modules-header=PATH</code></td>
+<td>Path to file containing header to be added to all generated module files</td>
+</tr>
+<tr>
+<td><code>--modules-tool=MODULES-TOOL</code></td>
+<td>Modules tool to use (type choice; default: Lmod) (choices: EnvironmentModules, EnvironmentModulesC, EnvironmentModulesTcl, Lmod)</td>
+</tr>
+<tr>
+<td><code>--package-naming-scheme=PACKAGE-NAMING-SCHEME</code></td>
+<td>Packaging naming scheme choice (type choice; default: EasyBuildPNS) (choices: EasyBuildPNS)</td>
+</tr>
+<tr>
+<td><code>--packagepath=PACKAGEPATH</code></td>
+<td>The destination path for the packages built by package-tool (default: /home/example/.local/easybuild/packages)</td>
+</tr>
+<tr>
+<td><code>--prefix=PREFIX</code></td>
+<td>Change prefix for buildpath, installpath, sourcepath and repositorypath (used prefix for defaults /home/example/.local/easybuild)</td>
+</tr>
+<tr>
+<td><code>--recursive-module-unload</code></td>
+<td>Enable generating of modules that unload recursively. (default: False)</td>
+</tr>
+<tr>
+<td><code>--repository=REPOSITORY</code></td>
+<td>Repository type, using repositorypath (type choice; default: FileRepository) (choices: FileRepository, GitRepository)</td>
+</tr>
+<tr>
+<td><code>--repositorypath=REPOSITORYPATH</code></td>
+<td>Repository path, used by repository (is passed as list of arguments to create the repository instance). For more info, use --avail-repositories. (type comma-separated list; default: /home/example/.local/easybuild/ebfiles_repo)</td>
+</tr>
+<tr>
+<td><code>--sourcepath=SOURCEPATH</code></td>
+<td>Path(s) to where sources should be downloaded (string, colon-separated) (default: /home/example/.local/easybuild/sources)</td>
+</tr>
+<tr>
+<td><code>--subdir-modules=SUBDIR-MODULES</code></td>
+<td>Installpath subdir for modules (default: modules)</td>
+</tr>
+<tr>
+<td><code>--subdir-software=SUBDIR-SOFTWARE</code></td>
+<td>Installpath subdir for software (default: software)</td>
+</tr>
+<tr>
+<td><code>--subdir-user-modules=SUBDIR-USER-MODULES</code></td>
+<td>Base path of user-specific modules relative to --envvars-user-modules</td>
+</tr>
+<tr>
+<td><code>--suffix-modules-path=SUFFIX-MODULES-PATH</code></td>
+<td>Suffix for module files install path (default: all)</td>
+</tr>
+<tr>
+<td><code>--testoutput=TESTOUTPUT</code></td>
+<td>Path to where a job should place the output (to be set within jobscript)</td>
+</tr>
+<tr>
+<td><code>--tmp-logdir=TMP-LOGDIR</code></td>
+<td>Log directory where temporary log files are stored</td>
+</tr>
+<tr>
+<td><code>--tmpdir=TMPDIR</code></td>
+<td>Directory to use for temporary storage</td>
+</tr>
+</tbody>
+</table>
+<h2 id="container-options">Container options<a class="headerlink" href="#container-options" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option flag</th>
+<th>Option description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--container-build-image</code></td>
+<td>Build container image (requires sudo privileges!) (default: False)</td>
+</tr>
+<tr>
+<td><code>--container-config=CONFIG</code></td>
+<td>Configuration for container image (type <class 'str'>)</td>
+</tr>
+<tr>
+<td><code>--container-image-format=IMAGE-FORMAT</code></td>
+<td>Container image format (type choice) (choices: ext3, sandbox, sif, squashfs)</td>
+</tr>
+<tr>
+<td><code>--container-image-name=IMAGE-NAME</code></td>
+<td>Custom name for container image (defaults to name of easyconfig)</td>
+</tr>
+<tr>
+<td><code>--container-template-recipe=TEMPLATE-RECIPE</code></td>
+<td>Template recipe for container image (type <class 'str'>)</td>
+</tr>
+<tr>
+<td><code>--container-tmpdir=TMPDIR</code></td>
+<td>Temporary directory where container image is built</td>
+</tr>
+<tr>
+<td><code>--container-type=TYPE</code></td>
+<td>Type of container recipe/image to create (type choice; default: singularity) (choices: docker, singularity)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="options-for-easyconfigs">Options for Easyconfigs<a class="headerlink" href="#options-for-easyconfigs" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option flag</th>
+<th>Option description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--create-index=CREATE-INDEX</code></td>
+<td>Create index for files in specified directory</td>
+</tr>
+<tr>
+<td><code>--fix-deprecated-easyconfigs</code></td>
+<td>Fix use of deprecated functionality in specified easyconfig files. (default: False)</td>
+</tr>
+<tr>
+<td><code>--ignore-index</code></td>
+<td>Ignore index when searching for files (default: False)</td>
+</tr>
+<tr>
+<td><code>--index-max-age=INDEX-MAX-AGE</code></td>
+<td>Maximum age for index before it is considered stale (in seconds) (type <class 'int'>; default: 604800)</td>
+</tr>
+<tr>
+<td><code>--inject-checksums=INJECT-CHECKSUMS</code></td>
+<td>Inject checksums of specified type for sources/patches into easyconfig file(s) (type choice; default: sha256) (choices: adler32, crc32, md5, sha1, sha256, sha512, size)</td>
+</tr>
+<tr>
+<td><code>--inject-checksums-to-json=INJECT-CHECKSUMS-TO-JSON</code></td>
+<td>Inject checksums of specified type for sources/patches into checksums.json (type choice; default: sha256) (choices: adler32, crc32, md5, sha1, sha256, sha512, size)</td>
+</tr>
+<tr>
+<td><code>--local-var-naming-check=LOCAL-VAR-NAMING-CHECK</code></td>
+<td>Mode to use when checking whether local variables follow the recommended naming scheme ('log': only log warnings (no printed messages); 'warn': print warnings; 'error': fail with an error) (type choice; default: warn) (choices: error, log, warn)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="github-integration-options">GitHub integration options<a class="headerlink" href="#github-integration-options" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option flag</th>
+<th>Option description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--add-pr-labels=PR#</code></td>
+<td>Try to add labels to PR based on files changed (type <class 'int'>)</td>
+</tr>
+<tr>
+<td><code>--check-contrib</code></td>
+<td>Runs checks to see whether the given easyconfigs are ready to be contributed back (default: False)</td>
+</tr>
+<tr>
+<td><code>--check-github</code></td>
+<td>Check status of GitHub integration, and report back (default: False)</td>
+</tr>
+<tr>
+<td><code>--check-style</code></td>
+<td>Run a style check on the given easyconfigs (default: False)</td>
+</tr>
+<tr>
+<td><code>--cleanup-easyconfigs</code></td>
+<td>Clean up easyconfig files for pull request (default: True; disable with --disable-cleanup-easyconfigs)</td>
+</tr>
+<tr>
+<td><code>--close-pr=PR#</code></td>
+<td>Close pull request (type <class 'int'>)</td>
+</tr>
+<tr>
+<td><code>--close-pr-msg=CLOSE-PR-MSG</code></td>
+<td>Custom close message for pull request closed with --close-pr;  (type <class 'str'>)</td>
+</tr>
+<tr>
+<td><code>--close-pr-reasons=CLOSE-PR-REASONS</code></td>
+<td>Close reason for pull request closed with --close-pr; supported values: archived, inactive, obsolete, retest (type <class 'str'>)</td>
+</tr>
+<tr>
+<td><code>--dump-test-report=DUMP-TEST-REPORT</code></td>
+<td>Dump test report to specified path (default: test_report.md)</td>
+</tr>
+<tr>
+<td><code>--from-pr=PR#</code></td>
+<td>Obtain easyconfigs from specified PR (type comma-separated list; default: )</td>
+</tr>
+<tr>
+<td><code>--git-working-dirs-path=GIT-WORKING-DIRS-PATH</code></td>
+<td>Path to Git working directories for EasyBuild repositories (type <class 'str'>)</td>
+</tr>
+<tr>
+<td><code>--github-org=GITHUB-ORG</code></td>
+<td>GitHub organization (type <class 'str'>)</td>
+</tr>
+<tr>
+<td><code>--github-user=GITHUB-USER</code></td>
+<td>GitHub username (type <class 'str'>)</td>
+</tr>
+<tr>
+<td><code>--include-easyblocks-from-pr=PR#</code></td>
+<td>Include easyblocks from specified PR (type comma-separated list; default: )</td>
+</tr>
+<tr>
+<td><code>--install-github-token</code></td>
+<td>Install GitHub token (requires --github-user) (default: False)</td>
+</tr>
+<tr>
+<td><code>--list-prs=STATE,ORDER,DIRECTION</code></td>
+<td>List pull requests (type <class 'str'>; default: open,created,desc)</td>
+</tr>
+<tr>
+<td><code>--merge-pr=PR#</code></td>
+<td>Merge pull request (type <class 'int'>)</td>
+</tr>
+<tr>
+<td><code>--new-branch-github</code></td>
+<td>Create new branch in GitHub in preparation for a PR (default: False)</td>
+</tr>
+<tr>
+<td><code>--new-pr</code></td>
+<td>Open a new pull request (default: False)</td>
+</tr>
+<tr>
+<td><code>--new-pr-from-branch=NEW-PR-FROM-BRANCH</code></td>
+<td>Open a new pull request from branch in GitHub (type <class 'str'>)</td>
+</tr>
+<tr>
+<td><code>--pr-branch-name=PR-BRANCH-NAME</code></td>
+<td>Branch name to use for new PRs; '<timestamp><em>new_pr</em><name><version>' if unspecified (type <class 'str'>)</td>
+</tr>
+<tr>
+<td><code>--pr-commit-msg=PR-COMMIT-MSG</code></td>
+<td>Commit message for new/updated pull request created with --new-pr (type <class 'str'>)</td>
+</tr>
+<tr>
+<td><code>--pr-descr=PR-DESCR</code></td>
+<td>Description for new pull request created with --new-pr (type <class 'str'>)</td>
+</tr>
+<tr>
+<td><code>--pr-target-account=PR-TARGET-ACCOUNT</code></td>
+<td>Target account for new PRs (type <class 'str'>; default: easybuilders)</td>
+</tr>
+<tr>
+<td><code>--pr-target-branch=PR-TARGET-BRANCH</code></td>
+<td>Target branch for new PRs (type <class 'str'>; default: develop)</td>
+</tr>
+<tr>
+<td><code>--pr-target-repo=PR-TARGET-REPO</code></td>
+<td>Target repository for new/updating PRs (default: auto-detect based on provided files) (type <class 'str'>)</td>
+</tr>
+<tr>
+<td><code>--pr-title=PR-TITLE</code></td>
+<td>Title for new pull request created with --new-pr (type <class 'str'>)</td>
+</tr>
+<tr>
+<td><code>--preview-pr</code></td>
+<td>Preview a new pull request (default: False)</td>
+</tr>
+<tr>
+<td><code>--review-pr=PR#</code></td>
+<td>Review specified pull request (type <class 'int'>)</td>
+</tr>
+<tr>
+<td><code>--review-pr-filter=REVIEW-PR-FILTER</code></td>
+<td>Regex used to filter out easyconfigs to diff against in --review-pr</td>
+</tr>
+<tr>
+<td><code>--review-pr-max=REVIEW-PR-MAX</code></td>
+<td>Maximum number of easyconfigs to diff against in --review-pr (type <class 'int'>)</td>
+</tr>
+<tr>
+<td><code>--sync-branch-with-develop=SYNC-BRANCH-WITH-DEVELOP</code></td>
+<td>Sync branch with current 'develop' branch (type <class 'str'>)</td>
+</tr>
+<tr>
+<td><code>--sync-pr-with-develop=PR#</code></td>
+<td>Sync pull request with current 'develop' branch (type <class 'int'>)</td>
+</tr>
+<tr>
+<td><code>--test-report-env-filter=TEST-REPORT-ENV-FILTER</code></td>
+<td>Regex used to filter out variables in environment dump of test report</td>
+</tr>
+<tr>
+<td><code>--update-branch-github=UPDATE-BRANCH-GITHUB</code></td>
+<td>Update specified branch in GitHub (type <class 'str'>)</td>
+</tr>
+<tr>
+<td><code>--update-pr=PR#</code></td>
+<td>Update an existing pull request (type <class 'int'>)</td>
+</tr>
+<tr>
+<td><code>-u, --upload-test-report</code></td>
+<td>Upload full test report as a gist on GitHub (default: False)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="informative-options">Informative options<a class="headerlink" href="#informative-options" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option flag</th>
+<th>Option description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--avail-cfgfile-constants</code></td>
+<td>Show all constants that can be used in configuration files (default: False)</td>
+</tr>
+<tr>
+<td><code>--avail-easyconfig-constants</code></td>
+<td>Show all constants that can be used in easyconfigs (default: False)</td>
+</tr>
+<tr>
+<td><code>--avail-easyconfig-licenses</code></td>
+<td>Show all license constants that can be used in easyconfigs (default: False)</td>
+</tr>
+<tr>
+<td><code>-a, --avail-easyconfig-params</code></td>
+<td>Show all easyconfig parameters (include easyblock-specific ones by using -e) (default: False)</td>
+</tr>
+<tr>
+<td><code>--avail-easyconfig-templates</code></td>
+<td>Show all template names and template constants that can be used in easyconfigs. (default: False)</td>
+</tr>
+<tr>
+<td><code>--avail-hooks</code></td>
+<td>Show list of known hooks (default: False)</td>
+</tr>
+<tr>
+<td><code>--avail-toolchain-opts=AVAIL-TOOLCHAIN-OPTS</code></td>
+<td>Show options for toolchain (type str)</td>
+</tr>
+<tr>
+<td><code>--check-conflicts</code></td>
+<td>Check for version conflicts in dependency graphs (default: False)</td>
+</tr>
+<tr>
+<td><code>--check-eb-deps</code></td>
+<td>Check presence and version of (required and optional) EasyBuild dependencies (default: False)</td>
+</tr>
+<tr>
+<td><code>--dep-graph=depgraph.&lt;ext&gt;</code></td>
+<td>Create dependency graph</td>
+</tr>
+<tr>
+<td><code>--dump-env-script</code></td>
+<td>Dump source script to set up build environment based on toolchain/dependencies (default: False)</td>
+</tr>
+<tr>
+<td><code>--easystack=EASYSTACK</code></td>
+<td>Path to easystack file in YAML format, specifying details of a software stack</td>
+</tr>
+<tr>
+<td><code>--last-log</code></td>
+<td>Print location to EasyBuild log file of last (failed) session (default: False)</td>
+</tr>
+<tr>
+<td><code>--list-easyblocks=LIST-EASYBLOCKS</code></td>
+<td>Show list of available easyblocks (type choice; default: simple) (choices: simple, detailed)</td>
+</tr>
+<tr>
+<td><code>--list-installed-software=LIST-INSTALLED-SOFTWARE</code></td>
+<td>Show list of installed software (type choice; default: simple) (choices: simple, detailed)</td>
+</tr>
+<tr>
+<td><code>--list-software=LIST-SOFTWARE</code></td>
+<td>Show list of supported software (type choice; default: simple) (choices: simple, detailed)</td>
+</tr>
+<tr>
+<td><code>--list-toolchains</code></td>
+<td>Show list of known toolchains (default: False)</td>
+</tr>
+<tr>
+<td><code>--search=REGEX</code></td>
+<td>Search for easyconfig files in the robot search path, print full paths</td>
+</tr>
+<tr>
+<td><code>--search-filename=REGEX</code></td>
+<td>Search for easyconfig files in the robot search path, print only filenames</td>
+</tr>
+<tr>
+<td><code>-S REGEX, --search-short=REGEX</code></td>
+<td>Search for easyconfig files in the robot search path, print short paths</td>
+</tr>
+<tr>
+<td><code>--show-config</code></td>
+<td>Show current EasyBuild configuration (only non-default + selected settings) (default: False)</td>
+</tr>
+<tr>
+<td><code>--show-default-configfiles</code></td>
+<td>Show list of default config files (default: False)</td>
+</tr>
+<tr>
+<td><code>--show-default-moduleclasses</code></td>
+<td>Show default module classes with description (default: False)</td>
+</tr>
+<tr>
+<td><code>--show-ec</code></td>
+<td>Show contents of specified easyconfig(s) (default: False)</td>
+</tr>
+<tr>
+<td><code>--show-full-config</code></td>
+<td>Show current EasyBuild configuration (all settings) (default: False)</td>
+</tr>
+<tr>
+<td><code>--show-system-info</code></td>
+<td>Show system information relevant to EasyBuild (default: False)</td>
+</tr>
+<tr>
+<td><code>--terse</code></td>
+<td>Terse output (machine-readable) (default: False)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="options-for-job-backend">Options for job backend<a class="headerlink" href="#options-for-job-backend" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option flag</th>
+<th>Option description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--job-backend-config=BACKEND-CONFIG</code></td>
+<td>Configuration file for job backend</td>
+</tr>
+<tr>
+<td><code>--job-cores=CORES</code></td>
+<td>Number of cores to request per job (type int)</td>
+</tr>
+<tr>
+<td><code>--job-deps-type=DEPS-TYPE</code></td>
+<td>Type of dependency to set between jobs (default depends on job backend) (type choice) (choices: abort_on_error, always_run)</td>
+</tr>
+<tr>
+<td><code>--job-eb-cmd=EB-CMD</code></td>
+<td>EasyBuild command to use in jobs (type str; default: eb)</td>
+</tr>
+<tr>
+<td><code>--job-max-jobs=MAX-JOBS</code></td>
+<td>Maximum number of concurrent jobs (queued and running, 0 = unlimited) (type int; default: 0)</td>
+</tr>
+<tr>
+<td><code>--job-max-walltime=MAX-WALLTIME</code></td>
+<td>Maximum walltime for jobs (in hours) (type int; default: 24)</td>
+</tr>
+<tr>
+<td><code>--job-output-dir=OUTPUT-DIR</code></td>
+<td>Output directory for jobs (default: current directory) (default: /Volumes/work/easybuild-docs/docs/version-specific)</td>
+</tr>
+<tr>
+<td><code>--job-polling-interval=POLLING-INTERVAL</code></td>
+<td>Interval between polls for status of jobs (in seconds) (type <class 'float'>; default: 30.0)</td>
+</tr>
+<tr>
+<td><code>--job-target-resource=TARGET-RESOURCE</code></td>
+<td>Target resource for jobs</td>
+</tr>
+</tbody>
+</table>
+<h2 id="override-options">Override options<a class="headerlink" href="#override-options" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option flag</th>
+<th>Option description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--accept-eula=ACCEPT-EULA</code></td>
+<td>Accept EULA for specified software [DEPRECATED, use --accept-eula-for instead!] (type comma-separated list; default: )</td>
+</tr>
+<tr>
+<td><code>--accept-eula-for=ACCEPT-EULA-FOR</code></td>
+<td>Accept EULA for specified software (type comma-separated list; default: )</td>
+</tr>
+<tr>
+<td><code>--add-dummy-to-minimal-toolchains</code></td>
+<td>Include dummy toolchain in minimal toolchain searches [DEPRECATED, use --add-system-to-minimal-toolchains instead!) (default: False)</td>
+</tr>
+<tr>
+<td><code>--add-system-to-minimal-toolchains</code></td>
+<td>Include system toolchain in minimal toolchain searches (default: False)</td>
+</tr>
+<tr>
+<td><code>--allow-loaded-modules=ALLOW-LOADED-MODULES</code></td>
+<td>List of software names for which to allow loaded modules in initial environment (type comma-separated list; default: EasyBuild)</td>
+</tr>
+<tr>
+<td><code>--allow-modules-tool-mismatch</code></td>
+<td>Allow mismatch of modules tool and definition of 'module' function (default: False)</td>
+</tr>
+<tr>
+<td><code>--allow-use-as-root-and-accept-consequences</code></td>
+<td>Allow using of EasyBuild as root (NOT RECOMMENDED!) (default: False)</td>
+</tr>
+<tr>
+<td><code>--backup-modules</code></td>
+<td>Back up an existing module file, if any. Only works when using --module-only</td>
+</tr>
+<tr>
+<td><code>--backup-patched-files</code></td>
+<td>Create a backup (*.orig) file when applying a patch (default: False)</td>
+</tr>
+<tr>
+<td><code>--banned-linked-shared-libs=BANNED-LINKED-SHARED-LIBS</code></td>
+<td>Comma-separated list of shared libraries (names, file names, or paths) which are not allowed to be linked in any installed binary/library (type comma-separated list)</td>
+</tr>
+<tr>
+<td><code>--check-ebroot-env-vars=CHECK-EBROOT-ENV-VARS</code></td>
+<td>Action to take when defined $EBROOT* environment variables are found for which there is no matching loaded module; supported values: error, ignore, unset, warn (default: warn)</td>
+</tr>
+<tr>
+<td><code>--checksum-priority=CHECKSUM-PRIORITY</code></td>
+<td>When checksums are found in both the EasyConfig and the checksums.json fileDefine which one to use.  (type choice; default: easyconfig) (choices: json, easyconfig)</td>
+</tr>
+<tr>
+<td><code>--cleanup-builddir</code></td>
+<td>Cleanup build dir after successful installation. (default: True; disable with --disable-cleanup-builddir)</td>
+</tr>
+<tr>
+<td><code>--cleanup-tmpdir</code></td>
+<td>Cleanup tmp dir after successful run. (default: True; disable with --disable-cleanup-tmpdir)</td>
+</tr>
+<tr>
+<td><code>--color=WHEN</code></td>
+<td>Colorize output (type choice; default: auto) (choices: auto, always, never)</td>
+</tr>
+<tr>
+<td><code>--consider-archived-easyconfigs</code></td>
+<td>Also consider archived easyconfigs (default: False)</td>
+</tr>
+<tr>
+<td><code>-C, --containerize</code></td>
+<td>Generate container recipe/image (default: False)</td>
+</tr>
+<tr>
+<td><code>--copy-ec</code></td>
+<td>Copy specified easyconfig(s) to specified location (default: False)</td>
+</tr>
+<tr>
+<td><code>--cuda-cache-dir=PATH</code></td>
+<td>Path to CUDA cache dir to use if enabled. Defaults to a path inside the build dir. (type <class 'str'>)</td>
+</tr>
+<tr>
+<td><code>--cuda-cache-maxsize=CUDA-CACHE-MAXSIZE</code></td>
+<td>Maximum size of the CUDA cache (in MiB) used for JIT compilation of PTX code. Leave value empty to let EasyBuild choose a value or '0' to disable the cache (type <class 'int'>)</td>
+</tr>
+<tr>
+<td><code>--cuda-compute-capabilities=CUDA-COMPUTE-CAPABILITIES</code></td>
+<td>List of CUDA compute capabilities to use when building GPU software; values should be specified as digits separated by a dot, for example: 3.5,5.0,7.2 (type comma-separated list)</td>
+</tr>
+<tr>
+<td><code>--debug-lmod</code></td>
+<td>Run Lmod modules tool commands in debug module (default: False)</td>
+</tr>
+<tr>
+<td><code>--default-opt-level=DEFAULT-OPT-LEVEL</code></td>
+<td>Specify default optimisation level (type choice; default: defaultopt) (choices: noopt, lowopt, defaultopt, opt)</td>
+</tr>
+<tr>
+<td><code>--deprecated=DEPRECATED</code></td>
+<td>Run pretending to be (future) version, to test removal of deprecated code.</td>
+</tr>
+<tr>
+<td><code>--detect-loaded-modules=DETECT-LOADED-MODULES</code></td>
+<td>Detect loaded EasyBuild-generated modules, act accordingly; supported values: error, ignore, purge, unload, warn (default: warn)</td>
+</tr>
+<tr>
+<td><code>--devel</code></td>
+<td>Enable including of development log messages (default: False)</td>
+</tr>
+<tr>
+<td><code>--download-timeout=DOWNLOAD-TIMEOUT</code></td>
+<td>Timeout for initiating downloads (in seconds) (type <class 'float'>)</td>
+</tr>
+<tr>
+<td><code>--dump-autopep8</code></td>
+<td>Reformat easyconfigs using autopep8 when dumping them (default: False)</td>
+</tr>
+<tr>
+<td><code>-e CLASS, --easyblock=CLASS</code></td>
+<td>easyblock to use for processing the spec file or dumping the options</td>
+</tr>
+<tr>
+<td><code>--enforce-checksums</code></td>
+<td>Enforce availability of checksums for all sources/patches, so they can be verified (default: False)</td>
+</tr>
+<tr>
+<td><code>--env-for-shebang=ENV-FOR-SHEBANG</code></td>
+<td>Define the env command to use when fixing shebangs (default: /usr/bin/env)</td>
+</tr>
+<tr>
+<td><code>--experimental</code></td>
+<td>Allow experimental code (with behaviour that can be changed/removed at any given time). (default: False)</td>
+</tr>
+<tr>
+<td><code>--extra-modules=EXTRA-MODULES</code></td>
+<td>List of extra modules to load after setting up the build environment (type comma-separated list)</td>
+</tr>
+<tr>
+<td><code>--fetch</code></td>
+<td>Allow downloading sources ignoring OS and modules tool dependencies, implies --stop=fetch, --ignore-osdeps and ignore modules tool (default: False)</td>
+</tr>
+<tr>
+<td><code>--filter-deps=FILTER-DEPS</code></td>
+<td>List of dependencies that you do <em>not</em> want to install with EasyBuild, because equivalent OS packages are installed. (e.g. --filter-deps=zlib,ncurses) (type comma-separated list)</td>
+</tr>
+<tr>
+<td><code>--filter-ecs=FILTER-ECS</code></td>
+<td>List of easyconfigs (given as glob patterns) to <em>ignore</em> when given on command line or auto-selected when building with --from-pr. (e.g. --filter-ecs=<em>intel</em>) (type comma-separated list)</td>
+</tr>
+<tr>
+<td><code>--filter-env-vars=FILTER-ENV-VARS</code></td>
+<td>List of names of environment variables that should <em>not</em> be defined/updated by module files generated by EasyBuild (type comma-separated list)</td>
+</tr>
+<tr>
+<td><code>--filter-rpath-sanity-libs=FILTER-RPATH-SANITY-LIBS</code></td>
+<td>List of libraries that should be ignored by the RPATH sanity check. I.e. if these libraries are not RPATH-ed, that will be accepted by the RPATH sanity check. Note that you'll need to provide the exact library name, as it is returned by 'ldd', including any version  (type comma-separated list; default: libcuda.so,libcuda.so.1,libnvidia-ml.so,libnvidia-ml.so.1)</td>
+</tr>
+<tr>
+<td><code>--fixed-installdir-naming-scheme</code></td>
+<td>Use fixed naming scheme for installation directories (default: True; disable with --disable-fixed-installdir-naming-scheme)</td>
+</tr>
+<tr>
+<td><code>--force-download=FORCE-DOWNLOAD</code></td>
+<td>Force re-downloading of sources and/or patches, even if they are available already in source path (type choice; default: sources) (choices: all, patches, sources)</td>
+</tr>
+<tr>
+<td><code>--generate-devel-module</code></td>
+<td>Generate a develop module file, implies --force if disabled (default: True; disable with --disable-generate-devel-module)</td>
+</tr>
+<tr>
+<td><code>--group=GROUP</code></td>
+<td>Group to be used for software installations (only verified, not set)</td>
+</tr>
+<tr>
+<td><code>--group-writable-installdir</code></td>
+<td>Enable group write permissions on installation directory after installation (default: False)</td>
+</tr>
+<tr>
+<td><code>--hidden</code></td>
+<td>Install 'hidden' module file(s) by prefixing their version with '.' (default: False)</td>
+</tr>
+<tr>
+<td><code>--hide-deps=HIDE-DEPS</code></td>
+<td>Comma separated list of dependencies that you want automatically hidden, (e.g. --hide-deps=zlib,ncurses) (type comma-separated list)</td>
+</tr>
+<tr>
+<td><code>--hide-toolchains=HIDE-TOOLCHAINS</code></td>
+<td>Comma separated list of toolchains that you want automatically hidden, (e.g. --hide-toolchains=GCCcore) (type comma-separated list)</td>
+</tr>
+<tr>
+<td><code>--http-header-fields-urlpat=[URLPAT::][HEADER:]FILE|FIELD</code></td>
+<td>Set extra HTTP header FIELDs when downloading files from URL PATterns. To not log sensitive values, specify a file containing newline separated FIELDs. e.g. "^https://www.example.com::/path/to/headers.txt" or "client[A-z0-9]*.example.com': ['Authorization: Basic token']".</td>
+</tr>
+<tr>
+<td><code>--ignore-checksums</code></td>
+<td>Ignore failing checksum verification (default: False)</td>
+</tr>
+<tr>
+<td><code>--ignore-osdeps</code></td>
+<td>Ignore any listed OS dependencies (default: False)</td>
+</tr>
+<tr>
+<td><code>--ignore-test-failure</code></td>
+<td>Ignore a failing test step (default: False)</td>
+</tr>
+<tr>
+<td><code>--insecure-download</code></td>
+<td>Don't check the server certificate against the available certificate authorities. (default: False)</td>
+</tr>
+<tr>
+<td><code>--install-latest-eb-release</code></td>
+<td>Install latest known version of easybuild (default: False)</td>
+</tr>
+<tr>
+<td><code>--lib-lib64-symlink</code></td>
+<td>Automatically create symlinks for lib/ pointing to lib64/ if the former is missing (default: True; disable with --disable-lib-lib64-symlink)</td>
+</tr>
+<tr>
+<td><code>--lib64-fallback-sanity-check</code></td>
+<td>Fallback in sanity check to lib64/ equivalent for missing libraries (default: True; disable with --disable-lib64-fallback-sanity-check)</td>
+</tr>
+<tr>
+<td><code>--lib64-lib-symlink</code></td>
+<td>Automatically create symlinks for lib64/ pointing to lib/ if the former is missing (default: True; disable with --disable-lib64-lib-symlink)</td>
+</tr>
+<tr>
+<td><code>--max-fail-ratio-adjust-permissions=MAX-FAIL-RATIO-ADJUST-PERMISSIONS</code></td>
+<td>Maximum ratio for failures to allow when adjusting permissions (type float; default: 0.5)</td>
+</tr>
+<tr>
+<td><code>--minimal-build-env=MINIMAL-BUILD-ENV</code></td>
+<td>Minimal build environment to define when using system toolchain, specified as a comma-separated list that defines a mapping between name of environment variable and its value separated by a colon (':') (default: CC:gcc,CXX:g++)</td>
+</tr>
+<tr>
+<td><code>--minimal-toolchains</code></td>
+<td>Use minimal toolchain when resolving dependencies (default: False)</td>
+</tr>
+<tr>
+<td><code>--module-only</code></td>
+<td>Only generate module file(s); skip all steps except for module, prepare, ready, postiter, sanitycheck (default: False)</td>
+</tr>
+<tr>
+<td><code>--modules-tool-version-check</code></td>
+<td>Check version of modules tool being used (default: True; disable with --disable-modules-tool-version-check)</td>
+</tr>
+<tr>
+<td><code>--mpi-cmd-template=MPI-CMD-TEMPLATE</code></td>
+<td>Template for MPI commands (template keys: %(nr_ranks)s, %(cmd)s)</td>
+</tr>
+<tr>
+<td><code>--mpi-tests</code></td>
+<td>Run MPI tests (when relevant) (default: True; disable with --disable-mpi-tests)</td>
+</tr>
+<tr>
+<td><code>--optarch=OPTARCH</code></td>
+<td>Set architecture optimization, overriding native architecture optimizations</td>
+</tr>
+<tr>
+<td><code>--output-format=OUTPUT-FORMAT</code></td>
+<td>Set output format (type choice; default: txt) (choices: md, rst, txt)</td>
+</tr>
+<tr>
+<td><code>--output-style=OUTPUT-STYLE</code></td>
+<td>Control output style; auto implies using Rich if available to produce rich output, with fallback to basic colored output (type choice; default: auto) (choices: auto, basic, no_color, rich)</td>
+</tr>
+<tr>
+<td><code>--parallel=PARALLEL</code></td>
+<td>Specify (maximum) level of parallellism used during build procedure (type int)</td>
+</tr>
+<tr>
+<td><code>--parallel-extensions-install</code></td>
+<td>Install list of extensions in parallel (if supported) (default: False)</td>
+</tr>
+<tr>
+<td><code>--pre-create-installdir</code></td>
+<td>Create installation directory before submitting build jobs (default: True; disable with --disable-pre-create-installdir)</td>
+</tr>
+<tr>
+<td><code>-p, --pretend</code></td>
+<td>Does the build/installation in a test directory located in $HOME/easybuildinstall (default: False)</td>
+</tr>
+<tr>
+<td><code>--read-only-installdir</code></td>
+<td>Set read-only permissions on installation directory after installation (default: False)</td>
+</tr>
+<tr>
+<td><code>--remove-ghost-install-dirs</code></td>
+<td>Remove ghost installation directories when --force or --rebuild is used, rather than just warning about them (default: False)</td>
+</tr>
+<tr>
+<td><code>--required-linked-shared-libs=REQUIRED-LINKED-SHARED-LIBS</code></td>
+<td>Comma-separated list of shared libraries (names, file names, or paths) which must be linked in all installed binaries/libraries (type comma-separated list)</td>
+</tr>
+<tr>
+<td><code>--rpath</code></td>
+<td>Enable use of RPATH for linking with libraries (default: False)</td>
+</tr>
+<tr>
+<td><code>--rpath-filter=RPATH-FILTER</code></td>
+<td>List of regex patterns to use for filtering out RPATH paths (type comma-separated list)</td>
+</tr>
+<tr>
+<td><code>--rpath-override-dirs=RPATH-OVERRIDE-DIRS</code></td>
+<td>Path(s) to be prepended when linking with RPATH (string, colon-separated)</td>
+</tr>
+<tr>
+<td><code>--sanity-check-only</code></td>
+<td>Only run sanity check (module is expected to be installed already (default: False)</td>
+</tr>
+<tr>
+<td><code>--set-default-module</code></td>
+<td>Set the generated module as default (default: False)</td>
+</tr>
+<tr>
+<td><code>--set-gid-bit</code></td>
+<td>Set group ID bit on newly created directories (default: False)</td>
+</tr>
+<tr>
+<td><code>--show-progress-bar</code></td>
+<td>Show progress bar in terminal output (default: True; disable with --disable-show-progress-bar)</td>
+</tr>
+<tr>
+<td><code>--silence-deprecation-warnings=SILENCE-DEPRECATION-WARNINGS</code></td>
+<td>Silence specified deprecation warnings (type comma-separated list)</td>
+</tr>
+<tr>
+<td><code>--skip-extensions</code></td>
+<td>Skip installation of extensions (default: False)</td>
+</tr>
+<tr>
+<td><code>-t, --skip-test-cases</code></td>
+<td>Skip running test cases (default: False)</td>
+</tr>
+<tr>
+<td><code>--skip-test-step</code></td>
+<td>Skip running the test step (e.g. unit tests) (default: False)</td>
+</tr>
+<tr>
+<td><code>--sticky-bit</code></td>
+<td>Set sticky bit on newly created directories (default: False)</td>
+</tr>
+<tr>
+<td><code>--sysroot=SYSROOT</code></td>
+<td>Location root directory of system, prefix for standard paths like /usr/lib and /usr/include</td>
+</tr>
+<tr>
+<td><code>-T, --trace</code></td>
+<td>Provide more information in output to stdout on progress (default: False)</td>
+</tr>
+<tr>
+<td><code>--umask=UMASK</code></td>
+<td>umask to use (e.g. '022'); non-user write permissions on install directories are removed</td>
+</tr>
+<tr>
+<td><code>--unit-testing-mode</code></td>
+<td>Run in unit test mode (default: False)</td>
+</tr>
+<tr>
+<td><code>--update-modules-tool-cache</code></td>
+<td>Update modules tool cache file(s) after generating module file (default: False)</td>
+</tr>
+<tr>
+<td><code>--use-ccache=PATH</code></td>
+<td>Enable use of ccache to speed up compilation, with specified cache dir (type <class 'str'>; default: False)</td>
+</tr>
+<tr>
+<td><code>--use-existing-modules</code></td>
+<td>Use existing modules when resolving dependencies with minimal toolchains (default: False)</td>
+</tr>
+<tr>
+<td><code>--use-f90cache=PATH</code></td>
+<td>Enable use of f90cache to speed up compilation, with specified cache dir (type <class 'str'>; default: False)</td>
+</tr>
+<tr>
+<td><code>--verify-easyconfig-filenames</code></td>
+<td>Verify whether filename of specified easyconfigs matches with contents (default: False)</td>
+</tr>
+<tr>
+<td><code>--wait-on-lock=WAIT-ON-LOCK</code></td>
+<td>Wait for lock to be released; 0 implies no waiting (exit with an error if the lock already exists), non-zero value specified waiting interval [DEPRECATED: use --wait-on-lock-interval and --wait-on-lock-limit instead] (type <class 'int'>)</td>
+</tr>
+<tr>
+<td><code>--wait-on-lock-interval=WAIT-ON-LOCK-INTERVAL</code></td>
+<td>Wait interval (in seconds) to use when waiting for existing lock to be removed (type <class 'int'>; default: 60)</td>
+</tr>
+<tr>
+<td><code>--wait-on-lock-limit=WAIT-ON-LOCK-LIMIT</code></td>
+<td>Maximum amount of time (in seconds) to wait until lock is released (0 means no waiting at all, exit with error; -1 means no waiting limit, keep waiting) (type <class 'int'>; default: 0)</td>
+</tr>
+<tr>
+<td><code>--zip-logs=ZIP-LOGS</code></td>
+<td>Zip logs that are copied to install directory, using specified command (default: gzip)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="package-options">Package options<a class="headerlink" href="#package-options" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option flag</th>
+<th>Option description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--package</code></td>
+<td>Enabling packaging (default: False)</td>
+</tr>
+<tr>
+<td><code>--package-release=PACKAGE-RELEASE</code></td>
+<td>Package release iteration number (default: 1)</td>
+</tr>
+<tr>
+<td><code>--package-tool=PACKAGE-TOOL</code></td>
+<td>Packaging tool to use (default: fpm)</td>
+</tr>
+<tr>
+<td><code>--package-tool-options=PACKAGE-TOOL-OPTIONS</code></td>
+<td>Extra options for packaging tool (default: '')</td>
+</tr>
+<tr>
+<td><code>--package-type=PACKAGE-TYPE</code></td>
+<td>Type of package to generate (default: rpm)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="regression-test-options">Regression test options<a class="headerlink" href="#regression-test-options" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option flag</th>
+<th>Option description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--aggregate-regtest=DIR</code></td>
+<td>Collect all the xmls inside the given directory and generate a single file</td>
+</tr>
+<tr>
+<td><code>--regtest</code></td>
+<td>Enable regression test mode (default: False)</td>
+</tr>
+<tr>
+<td><code>--regtest-output-dir=DIR</code></td>
+<td>Set output directory for test-run</td>
+</tr>
+<tr>
+<td><code>--sequential</code></td>
+<td>Specify this option if you want to prevent parallel build (default: False)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="software-search-and-build-options">Software search and build options<a class="headerlink" href="#software-search-and-build-options" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option flag</th>
+<th>Option description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--amend=VAR=VALUE[,VALUE]</code></td>
+<td>Specify additional search and build parameters (can be used multiple times); for example: versionprefix=foo or patches=one.patch,two.patch)</td>
+</tr>
+<tr>
+<td><code>--map-toolchains</code></td>
+<td>Enable mapping of (sub)toolchains when --try-toolchain(-version) is used (default: True; disable with --disable-map-toolchains)</td>
+</tr>
+<tr>
+<td><code>--software=NAME,VERSION</code></td>
+<td>Search and build software with given name and version (type comma-separated list)</td>
+</tr>
+<tr>
+<td><code>--software-name=NAME</code></td>
+<td>Search and build software with given name</td>
+</tr>
+<tr>
+<td><code>--software-version=VERSION</code></td>
+<td>Search and build software with given version</td>
+</tr>
+<tr>
+<td><code>--toolchain=NAME,VERSION</code></td>
+<td>Search and build with given toolchain (name and version) (type comma-separated list)</td>
+</tr>
+<tr>
+<td><code>--toolchain-name=NAME</code></td>
+<td>Search and build with given toolchain name</td>
+</tr>
+<tr>
+<td><code>--toolchain-version=VERSION</code></td>
+<td>Search and build with given toolchain version</td>
+</tr>
+<tr>
+<td><code>--try-amend=VAR=VALUE[,VALUE]</code></td>
+<td>Try to specify additional search and build parameters (can be used multiple times); for example: versionprefix=foo or patches=one.patch,two.patch) (USE WITH CARE!)</td>
+</tr>
+<tr>
+<td><code>--try-ignore-versionsuffixes</code></td>
+<td>Ignore versionsuffix differences when --try-update-deps is used (default: False)</td>
+</tr>
+<tr>
+<td><code>--try-software=NAME,VERSION</code></td>
+<td>Try to search and build software with given name and version (USE WITH CARE!) (type comma-separated list)</td>
+</tr>
+<tr>
+<td><code>--try-software-name=NAME</code></td>
+<td>Try to search and build software with given name (USE WITH CARE!)</td>
+</tr>
+<tr>
+<td><code>--try-software-version=VERSION</code></td>
+<td>Try to search and build software with given version (USE WITH CARE!)</td>
+</tr>
+<tr>
+<td><code>--try-toolchain=NAME,VERSION</code></td>
+<td>Try to search and build with given toolchain (name and version) (USE WITH CARE!) (type comma-separated list)</td>
+</tr>
+<tr>
+<td><code>--try-toolchain-name=NAME</code></td>
+<td>Try to search and build with given toolchain name (USE WITH CARE!)</td>
+</tr>
+<tr>
+<td><code>--try-toolchain-version=VERSION</code></td>
+<td>Try to search and build with given toolchain version (USE WITH CARE!)</td>
+</tr>
+<tr>
+<td><code>--try-update-deps</code></td>
+<td>Try to update versions of the dependencies of an easyconfig based on what is available in the robot path (default: False)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="unittest-options">Unittest options<a class="headerlink" href="#unittest-options" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option flag</th>
+<th>Option description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--unittest-file=FILE</code></td>
+<td>Log to this file in unittest mode</td>
+</tr>
+</tbody>
+</table>
+<p><em>(see also</em> <code>eb --help</code> <em>)</em></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 25, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 3, 2023</span>
       
     
   </small>
@@ -470,14 +1737,13 @@ and you can help with that!
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

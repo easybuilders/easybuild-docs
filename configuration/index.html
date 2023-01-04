@@ -10,8 +10,14 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/configuration/">
       
+      
+        <link rel="prev" href="../installation/">
+      
+      
+        <link rel="next" href="../using-easybuild/">
+      
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -657,10 +662,9 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/configuration.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="configuring_easybuild">Configuring EasyBuild<a class="headerlink" href="#configuring_easybuild" title="Permanent link">&para;</a></h1>
@@ -689,21 +693,21 @@ is even fairly common).</p>
 <ul>
 <li>configuration file entry (key-value assignment):</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">[config]</span><span class="w"></span>
-<span class="na">modules-tool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Lmod</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">[config]</span>
+<span class="na">modules-tool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">Lmod</span>
 </code></pre></div>
 <ul>
 <li>environment variable (upper case, <code>EASYBUILD_</code> prefix, <code>-</code>'s becomes <code>_</code>'s):</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">EASYBUILD_MODULES_TOOL</span><span class="o">=</span>Lmod
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_MODULES_TOOL</span><span class="o">=</span>Lmod
 </code></pre></div>
 <ul>
 <li>command line argument (long options preceded by <code>--</code> and (optionally) using <code>=</code>):</li>
 </ul>
-<div class="highlight"><pre><span></span><code>eb --modules-tool<span class="o">=</span>Lmod
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--modules-tool<span class="o">=</span>Lmod
 </code></pre></div>
 <p>or</p>
-<div class="highlight"><pre><span></span><code>$ eb --modules-tool Lmod
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>eb<span class="w"> </span>--modules-tool<span class="w"> </span>Lmod
 </code></pre></div>
 <p>For more details w.r.t. each of the supported configuration types, see below.</p>
 <h3 id="configuration_file">Configuration file(s)<a class="headerlink" href="#configuration_file" title="Permanent link">&para;</a></h3>
@@ -727,7 +731,7 @@ configuration files at <code>/etc/easybuild.d/*.cfg</code> and <code>$HOME/.conf
 such that user-defined configuration settings have preference over system defaults.</p>
 <p>A detailed overview of the list of default configuration files is available via <code>eb --show-default-configfiles</code>
 (available since EasyBuild v2.1.0). For example::</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nv">XDG_CONFIG_DIRS</span><span class="o">=</span>/tmp/etc:/tmp/moreetc eb --show-default-configfiles
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nv">XDG_CONFIG_DIRS</span><span class="o">=</span>/tmp/etc:/tmp/moreetc<span class="w"> </span>eb<span class="w"> </span>--show-default-configfiles
 <span class="go">efault list of configuration files:</span>
 
 <span class="go">[with $XDG_CONFIG_HOME: (not set), $XDG_CONFIG_DIRS: /tmp/etc:/tmp/moreetc]</span>
@@ -801,29 +805,29 @@ configuration file, or a non-existing one for a particular default value, will r
 <p>To include both the (custom) location for the easyconfigs archive repository and the default list of robot search
 paths in the active robot search path, the following configuration file entry can be used, featuring the template
 for the <code>repositorypath</code> configuration option and the provided <code>DEFAULT_ROBOT_PATHS</code> constant::</p>
-<div class="highlight"><pre><span></span><code><span class="k">[basic]</span><span class="w"></span>
-<span class="na">repositorypath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/home/example/easybuild/easyconfigs_archive</span><span class="w"></span>
-<span class="na">robot-paths</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">%(repositorypath)s:%(DEFAULT_ROBOT_PATHS)s</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">[basic]</span>
+<span class="na">repositorypath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/home/example/easybuild/easyconfigs_archive</span>
+<span class="na">robot-paths</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">%(repositorypath)s:%(DEFAULT_ROBOT_PATHS)s</span>
 </code></pre></div>
 <p>See also <a class="autorefs autorefs-internal" href="../using-easybuild/#controlling_robot_search_path">Controlling the robot search path</a>.</p>
 <h4 id="generating-a-template-configuration-file">Generating a template configuration file<a class="headerlink" href="#generating-a-template-configuration-file" title="Permanent link">&para;</a></h4>
 <p>Since EasyBuild v1.10, a command line option <code>--confighelp</code> is
 available that prints out the help text as an annotated configuration
 file. This can be used as an empty template configuration file:</p>
-<div class="highlight"><pre><span></span><code>mkdir -p <span class="nv">$HOME</span>/.config/easybuild
-eb --confighelp &gt; <span class="nv">$HOME</span>/.config/easybuild/config.cfg
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$HOME</span>/.config/easybuild
+eb<span class="w"> </span>--confighelp<span class="w"> </span>&gt;<span class="w"> </span><span class="nv">$HOME</span>/.config/easybuild/config.cfg
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>head <span class="nv">$HOME</span>/.easybuild/config.cfg
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>head<span class="w"> </span><span class="nv">$HOME</span>/.easybuild/config.cfg
 <span class="go">[MAIN]</span>
-<span class="gp"># </span>Enable debug log mode <span class="o">(</span>def False<span class="o">)</span>
+<span class="gp"># </span>Enable<span class="w"> </span>debug<span class="w"> </span>log<span class="w"> </span>mode<span class="w"> </span><span class="o">(</span>def<span class="w"> </span>False<span class="o">)</span>
 <span class="gp">#</span><span class="nv">debug</span><span class="o">=</span>
-<span class="gp"># </span>Enable info log mode <span class="o">(</span>def False<span class="o">)</span>
+<span class="gp"># </span>Enable<span class="w"> </span>info<span class="w"> </span>log<span class="w"> </span>mode<span class="w"> </span><span class="o">(</span>def<span class="w"> </span>False<span class="o">)</span>
 <span class="gp">#</span><span class="nv">info</span><span class="o">=</span>
-<span class="gp"># </span>Enable info quiet/warning mode <span class="o">(</span>def False<span class="o">)</span>
+<span class="gp"># </span>Enable<span class="w"> </span>info<span class="w"> </span>quiet/warning<span class="w"> </span>mode<span class="w"> </span><span class="o">(</span>def<span class="w"> </span>False<span class="o">)</span>
 <span class="gp">#</span><span class="nv">quiet</span><span class="o">=</span>
 
 <span class="go">[basic]</span>
-<span class="gp"># </span>Print build overview incl. dependencies <span class="o">(</span>full paths<span class="o">)</span> <span class="o">(</span>def False<span class="o">)</span>
+<span class="gp"># </span>Print<span class="w"> </span>build<span class="w"> </span>overview<span class="w"> </span>incl.<span class="w"> </span>dependencies<span class="w"> </span><span class="o">(</span>full<span class="w"> </span>paths<span class="o">)</span><span class="w"> </span><span class="o">(</span>def<span class="w"> </span>False<span class="o">)</span>
 </code></pre></div>
 <h3 id="configuration_env_vars">Environment variables<a class="headerlink" href="#configuration_env_vars" title="Permanent link">&para;</a></h3>
 <p>All configuration settings listed as long options in <code>eb --help</code> can
@@ -831,7 +835,7 @@ also be specified via <code>EASYBUILD_</code>-prefixed environment variables.</p
 <p>Configuration settings specified this way always override the
 corresponding setting specified in a configuration file.</p>
 <p>For example, to enable debug logging using an environment variable:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">EASYBUILD_DEBUG</span><span class="o">=</span><span class="m">1</span>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_DEBUG</span><span class="o">=</span><span class="m">1</span>
 </code></pre></div>
 <p>More examples of using environment variables to configure EasyBuild are
 shown in the sections below.</p>
@@ -858,12 +862,12 @@ or via an environment variable (<code>$EASYBUILD_&lt;LONGOPTION&gt;</code>).</p>
 <ul>
 <li>enable debug logging (long option) and logging to stdout (short option)</li>
 </ul>
-<div class="highlight"><pre><span></span><code>eb --debug -l ...
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--debug<span class="w"> </span>-l<span class="w"> </span>...
 </code></pre></div>
 <ul>
 <li>use <code>/dev/shm</code> as build path, install to temporary install path, disable debug logging</li>
 </ul>
-<div class="highlight"><pre><span></span><code>eb --buildpath<span class="o">=</span>/dev/shm --installpath<span class="o">=</span>/tmp/<span class="nv">$USER</span> --disable-debug ...
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--buildpath<span class="o">=</span>/dev/shm<span class="w"> </span>--installpath<span class="o">=</span>/tmp/<span class="nv">$USER</span><span class="w"> </span>--disable-debug<span class="w"> </span>...
 </code></pre></div>
 <h2 id="configuration_show_config">Overview of current configuration<a class="headerlink" href="#configuration_show_config" title="Permanent link">&para;</a></h2>
 <p><em>(<code>--show-config</code>, <code>--show-full-config</code>)</em></p>
@@ -886,17 +890,17 @@ you can use <code>eb --show-config</code>.</p>
 </li>
 </ul>
 <p>Example output</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>cat <span class="nv">$HOME</span>/.config/easybuild/config.cfg
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>cat<span class="w"> </span><span class="nv">$HOME</span>/.config/easybuild/config.cfg
 <span class="go">[config]</span>
 <span class="go">buildpath = /tmp/eb-build</span>
 
-<span class="gp">$ </span><span class="nb">export</span> <span class="nv">EASYBUILD_MODULES_TOOL</span><span class="o">=</span>Lmod
-<span class="gp">$ </span><span class="nb">export</span> <span class="nv">EASYBUILD_OPTARCH</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_MODULES_TOOL</span><span class="o">=</span>Lmod
+<span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_OPTARCH</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
 
-<span class="gp">$ </span>eb --show-config --installpath<span class="o">=</span><span class="nv">$HOME</span>/apps --job-cores<span class="o">=</span><span class="m">4</span>
+<span class="gp">$ </span>eb<span class="w"> </span>--show-config<span class="w"> </span>--installpath<span class="o">=</span><span class="nv">$HOME</span>/apps<span class="w"> </span>--job-cores<span class="o">=</span><span class="m">4</span>
 <span class="gp">#</span>
-<span class="gp"># </span>Current EasyBuild configuration
-<span class="gp"># </span><span class="o">(</span>C: <span class="nb">command</span> line argument, D: default value, E: environment variable, F: configuration file<span class="o">)</span>
+<span class="gp"># </span>Current<span class="w"> </span>EasyBuild<span class="w"> </span>configuration
+<span class="gp"># </span><span class="o">(</span>C:<span class="w"> </span><span class="nb">command</span><span class="w"> </span>line<span class="w"> </span>argument,<span class="w"> </span>D:<span class="w"> </span>default<span class="w"> </span>value,<span class="w"> </span>E:<span class="w"> </span>environment<span class="w"> </span>variable,<span class="w"> </span>F:<span class="w"> </span>configuration<span class="w"> </span>file<span class="o">)</span>
 <span class="gp">#</span>
 <span class="go">buildpath      (F) = /tmp/eb-build</span>
 <span class="go">installpath    (C) = /Users/example/apps</span>
@@ -1011,8 +1015,8 @@ named according to the value of the <code>moduleclass</code> easyconfig paramete
 to include the modules install path.</p>
 <p>The recommended way to do this is to use the <code>module use</code> command.
 For example:</p>
-<div class="highlight"><pre><span></span><code>eb --installpath<span class="o">=</span><span class="nv">$HOME</span>/easybuild
-module use <span class="nv">$HOME</span>/easybuild/modules/all
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--installpath<span class="o">=</span><span class="nv">$HOME</span>/easybuild
+module<span class="w"> </span>use<span class="w"> </span><span class="nv">$HOME</span>/easybuild/modules/all
 </code></pre></div>
 <p>It is probably a good idea to add this to your (favourite) shell
 <code>.rc</code> file, e.g., <code>~/.bashrc</code>, and/or the <code>~/.profile</code> login scripts,
@@ -1050,8 +1054,8 @@ corresponding <code>.eb</code> file is uploaded to a repository defined by the
 <span class="n">repositorypath</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span>
 </code></pre></div>
 <p>Or, optionally an extra argument representing a subdirectory can be specified, e.g.:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">EASYBUILD_REPOSITORY</span><span class="o">=</span>GitRepository
-<span class="nb">export</span> <span class="nv">EASYBUILD_REPOSITORYPATH</span><span class="o">=</span>&lt;path&gt;,&lt;subdir&gt;
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_REPOSITORY</span><span class="o">=</span>GitRepository
+<span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_REPOSITORYPATH</span><span class="o">=</span>&lt;path&gt;,&lt;subdir&gt;
 </code></pre></div>
 <p>You do not have to worry about importing these classes,
 EasyBuild will make them available to the configuration file.</p>
@@ -1085,14 +1089,14 @@ substitution</code> will be thrown by <code>ConfigParser</code>.</p>
 </div>
 <p>For example, configuring EasyBuild to generate a log file mentioning only the software name in a directory named
 <code>easybuild</code> can be done via the <code>--logfile-format</code> command line option:</p>
-<div class="highlight"><pre><span></span><code>eb --logfile-format<span class="o">=</span><span class="s2">&quot;easybuild,easybuild-%(name)s.log&quot;</span> ...
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--logfile-format<span class="o">=</span><span class="s2">&quot;easybuild,easybuild-%(name)s.log&quot;</span><span class="w"> </span>...
 </code></pre></div>
 <p>or the <code>$EASYBUILD_LOGFILE_FORMAT</code> environment variable:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">EASYBUILD_LOGFILE_FORMAT</span><span class="o">=</span><span class="s2">&quot;easybuild,easybuild-%(name)s.log&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_LOGFILE_FORMAT</span><span class="o">=</span><span class="s2">&quot;easybuild,easybuild-%(name)s.log&quot;</span>
 </code></pre></div>
 <p>or by including the following in an EasyBuild configuration file (note the use of '<code>%%</code>' to escape the <code>name</code>
 template value here):</p>
-<div class="highlight"><pre><span></span><code><span class="na">logfile-format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">easybuild,easybuild-%%(name)s.log</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="na">logfile-format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">easybuild,easybuild-%%(name)s.log</span>
 </code></pre></div>
 <h3 id="configuration_optional_settings">Optional configuration settings<a class="headerlink" href="#configuration_optional_settings" title="Permanent link">&para;</a></h3>
 <p>The subsections below discuss a couple of commonly used optional configuration settings.</p>
@@ -1119,8 +1123,8 @@ template value here):</p>
 <p>The subdirectories for the software and modules install paths (relative to <code>--installpath</code>, see <a class="autorefs autorefs-internal" href="#installpath">install path</a>)
 can be specified using the corresponding dedicated configuration options (available since EasyBuild v1.14.0).</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">EASYBUILD_SUBDIR_SOFTWARE</span><span class="o">=</span>installs
-eb --installpath<span class="o">=</span><span class="nv">$HOME</span>/easybuild --subdir-modules<span class="o">=</span>module_files ...
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_SUBDIR_SOFTWARE</span><span class="o">=</span>installs
+eb<span class="w"> </span>--installpath<span class="o">=</span><span class="nv">$HOME</span>/easybuild<span class="w"> </span>--subdir-modules<span class="o">=</span>module_files<span class="w"> </span>...
 </code></pre></div>
 <h4 id="modules_tool">Modules tool (<code>--modules-tool</code>)<a class="headerlink" href="#modules_tool" title="Permanent link">&para;</a></h4>
 <p><em>default</em>: <code>Lmod</code></p>
@@ -1140,13 +1144,13 @@ output of <code>type -f module</code> (in a <code>bash</code> shell), or <code>a
 <code>lmod</code>, ...) must be available via <code>$PATH</code> (which is not standard), except when using Lmod
 (in that case the <code>lmod</code> binary can also be located via <code>$LMOD_CMD</code>).</p>
 <p>For example, to indicate that EasyBuild should be using <code>Lmod</code> as modules tool:</p>
-<div class="highlight"><pre><span></span><code>eb --modules-tool<span class="o">=</span>Lmod ...
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--modules-tool<span class="o">=</span>Lmod<span class="w"> </span>...
 </code></pre></div>
 <h4 id="module_naming_scheme">Active module naming scheme (<code>--module-naming-scheme</code>)<a class="headerlink" href="#module_naming_scheme" title="Permanent link">&para;</a></h4>
 <p><em>default</em>: <code>EasyBuildModuleNamingScheme</code></p>
 <p>The module naming scheme that should be used by EasyBuild can be
 specified using the <code>module-naming-scheme</code> configuration setting.</p>
-<div class="highlight"><pre><span></span><code>eb --module-naming-scheme<span class="o">=</span>HierarchicalMNS ...
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--module-naming-scheme<span class="o">=</span>HierarchicalMNS<span class="w"> </span>...
 </code></pre></div>
 <p>For more details, see the dedicated page on
 <a href="https://github.com/easybuilders/easybuild/wiki/Using-a-custom-module-naming-scheme">using a custom module naming scheme</a>.</p>
@@ -1218,42 +1222,6 @@ evaluates positively when Lmod is consuming the module file, i.e.
       
         <footer class="md-footer">
   
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../installation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Installation" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Installation
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../using-easybuild/" class="md-footer__link md-footer__link--next" aria-label="Next: Using EasyBuild" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Using EasyBuild
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -1306,14 +1274,13 @@ evaluates positively when Lmod is consuming the module file, i.e.
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

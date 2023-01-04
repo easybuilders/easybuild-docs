@@ -10,8 +10,10 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/version-specific/config-file-constants/">
       
+      
+      
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -364,33 +365,52 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/version-specific/config-file-constants.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="avail_cfgfile_constants">Constants available (only) in configuration files<a class="headerlink" href="#avail_cfgfile_constants" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page will soon replace <a href="https://docs.easybuild.io/en/latest/version-specific/config_file_constants.html">https://docs.easybuild.io/en/latest/version-specific/config_file_constants.html</a>.</p>
-<p><strong>
-It still needs to be ported from <em>reStructuredText</em> (.rst) to <em>MarkDown</em> (.md),<br />
-and you can help with that!
-</strong></p>
-<ul>
-<li>source: <a href="https://raw.githubusercontent.com/easybuilders/easybuild/develop/docs/version-specific/config_file_constants.rst"><code>docs/version-specific/config_file_constants.rst</code> in <code>easybuilders/easybuild</code> repo</a></li>
-<li>target: <a href="https://github.com/easybuilders/easybuild-docs/tree/main/docs/version-specific/config-file-constants.md"><code>docs/version-specific/config-file-constants.md</code> in <code>easybuilders/easybuild-docs</code> repo</a></li>
-</ul>
-<p>See <a href="https://github.com/easybuilders/easybuild-docs">https://github.com/easybuilders/easybuild-docs</a> for more information.</p>
-</div>
+<h3 id="only-in-default-section">Only in 'DEFAULT' section:<a class="headerlink" href="#only-in-default-section" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Constant name</th>
+<th>Constant help</th>
+<th>Constant value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DEFAULT_REPOSITORYPATH</code></td>
+<td>Default easyconfigs repository path</td>
+<td><code>/home/example/.local/easybuild/ebfiles_repo</code></td>
+</tr>
+<tr>
+<td><code>DEFAULT_ROBOT_PATHS</code></td>
+<td>List of default robot paths (':'-separated)</td>
+<td><code>/home/example/work/easybuild-easyconfigs/easybuild/easyconfigs</code></td>
+</tr>
+<tr>
+<td><code>HOME</code></td>
+<td>Current user's home directory, expanded '~'</td>
+<td><code>/home/example</code></td>
+</tr>
+<tr>
+<td><code>USER</code></td>
+<td>Current username, translated uid from password file</td>
+<td><code>example</code></td>
+</tr>
+</tbody>
+</table>
+<p><em>(see also</em> <code>eb --avail-cfgfile-constants</code> <em>)</em></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 13, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 3, 2023</span>
       
     
   </small>
@@ -470,14 +490,13 @@ and you can help with that!
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

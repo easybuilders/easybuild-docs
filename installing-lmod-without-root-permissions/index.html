@@ -10,8 +10,10 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/installing-lmod-without-root-permissions/">
       
+      
+      
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -364,10 +365,9 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/installing-lmod-without-root-permissions.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="installing_lmod">Installing Lmod without root permissions<a class="headerlink" href="#installing_lmod" title="Permanent link">&para;</a></h1>
@@ -386,15 +386,15 @@ prefix (e.g. <code>$HOME/lua</code>) and specify to statically link libraries
 (i.e. <code>libreadline</code> and <code>ncurses</code>), to avoid problems when modules
 that provide these libraries are being loaded. Then build and install
 via <code>make</code>:</p>
-<div class="highlight"><pre><span></span><code>./configure --with-static<span class="o">=</span>yes --prefix<span class="o">=</span><span class="nv">$HOME</span>/lua <span class="o">&amp;&amp;</span> make <span class="o">&amp;&amp;</span> make install
+<div class="highlight"><pre><span></span><code>./configure<span class="w"> </span>--with-static<span class="o">=</span>yes<span class="w"> </span>--prefix<span class="o">=</span><span class="nv">$HOME</span>/lua<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>install
 </code></pre></div>
 <p><strong>Step 3</strong>: Make sure the <code>lua</code> binary is available in your <code>$PATH</code>
 (only required when building Lmod, see below):</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$HOME</span>/lua/bin:<span class="nv">$PATH</span>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$HOME</span>/lua/bin:<span class="nv">$PATH</span>
 </code></pre></div>
 <p>Optionally, check whether the <code>lua</code> binary indeed doesn’t link to any
 unexpected <code>readline</code> or <code>ncurses</code> libraries:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>ldd <span class="nv">$HOME</span>/lua/bin/lua
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>ldd<span class="w"> </span><span class="nv">$HOME</span>/lua/bin/lua
 <span class="go">        linux-vdso.so.1 (0x00007fffad7ff000)</span>
 <span class="go">        libm.so.6 =&gt; /lib64/libm.so.6 (0x00007ff9914db000)</span>
 <span class="go">        libdl.so.2 =&gt; /lib64/libdl.so.2 (0x00007ff9912d7000)</span>
@@ -405,25 +405,25 @@ unexpected <code>readline</code> or <code>ncurses</code> libraries:</p>
 <p>Dependencies: building Lmod using the steps below requires tcl, tcl-dev(el), make and bzip2</p>
 <p><strong>Step 1</strong>: Download and unpack the latest available Lmod version,
 <a href="https://sourceforge.net/projects/lmod/files/Lmod-8.4.tar.bz2/download">Lmod-8.4.tar.bz2</a> at the time of writing.</p>
-<div class="highlight"><pre><span></span><code>tar xfvj Lmod-8.4.tar.bz2 <span class="o">&amp;&amp;</span> <span class="nb">cd</span> Lmod-8.4
+<div class="highlight"><pre><span></span><code>tar<span class="w"> </span>xfvj<span class="w"> </span>Lmod-8.4.tar.bz2<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>Lmod-8.4
 </code></pre></div>
 <p><strong>Step 2</strong>: Configure, build and install Lmod build, in a custom prefix:</p>
-<div class="highlight"><pre><span></span><code>./configure --prefix<span class="o">=</span><span class="nv">$HOME</span> <span class="o">&amp;&amp;</span> make install
+<div class="highlight"><pre><span></span><code>./configure<span class="w"> </span>--prefix<span class="o">=</span><span class="nv">$HOME</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>install
 </code></pre></div>
 <p><strong>Step 3</strong>: Update <code>$PATH</code> so <code>lmod</code> is available (put this in your
 <code>.bashrc</code>):</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$HOME</span>/lmod/8.4/libexec:<span class="nv">$PATH</span>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$HOME</span>/lmod/8.4/libexec:<span class="nv">$PATH</span>
 </code></pre></div>
 <p>Optionally, give it a spin:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>lmod --version
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>lmod<span class="w"> </span>--version
 
 <span class="go">Modules based on Lua: Version 8.4  2020-07-31 12:25 -05:00</span>
 <span class="go">    by Robert McLay mclay@tacc.utexas.edu</span>
 </code></pre></div>
 <p><strong>Step 4</strong>: Define <code>module</code> function to use <code>lmod</code> (optional for use
 with EasyBuild):</p>
-<div class="highlight"><pre><span></span><code><span class="nb">source</span> <span class="nv">$HOME</span>/lmod/8.4/init/bash
-<span class="nb">export</span> <span class="nv">LMOD_CMD</span><span class="o">=</span><span class="nv">$HOME</span>/lmod/8.4/libexec/lmod
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span><span class="nv">$HOME</span>/lmod/8.4/init/bash
+<span class="nb">export</span><span class="w"> </span><span class="nv">LMOD_CMD</span><span class="o">=</span><span class="nv">$HOME</span>/lmod/8.4/libexec/lmod
 </code></pre></div>
 
   <hr>
@@ -511,14 +511,13 @@ with EasyBuild):</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

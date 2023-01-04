@@ -10,8 +10,10 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/typical-workflow-example-with-wrf/">
       
+      
+      
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -364,10 +365,9 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/typical-workflow-example-with-wrf.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="typical_workflow">Typical workflow example: building and installing WRF<a class="headerlink" href="#typical_workflow" title="Permanent link">&para;</a></h1>
@@ -384,7 +384,7 @@ and using <code>--robot</code> (see <a class="autorefs autorefs-internal" href="
 <p>Searching for build specification for a particular software package can be done using the
 <code>--search</code>/<code>-S</code> command line options (see <a class="autorefs autorefs-internal" href="../using-easybuild/#searching_for_easyconfigs">Searching for easyconfigs, <code>--search</code> / <code>-S</code></a>);
 for example, to get a list of available easyconfig files for WRF:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb -S WRF
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>-S<span class="w"> </span>WRF
 <span class="go">CFGS1=/home/example/.local/easybuild/software/EasyBuild/4.1.1/easybuild/easyconfigs</span>
 <span class="go"> * $CFGS1/w/WPS/WPS-4.0.1_find-wrfdir.patch</span>
 <span class="go"> * $CFGS1/w/WPS/WPS-4.0.2_find-wrfdir.patch</span>
@@ -411,7 +411,7 @@ that will be used, together with the module files that will be installed,
 as well as their current availability (<code>[x]</code> marks available modules).</p>
 <p>Note that EasyBuild will take care of all of the dependencies of WRF as well,
 and can even install the compiler toolchain as well if the corresponding modules are not available yet:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb WRF-4.0.2-foss-2018b-dmpar.eb -Dr
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>WRF-4.0.2-foss-2018b-dmpar.eb<span class="w"> </span>-Dr
 <span class="go">== temporary log file in case of crash /tmp/eb-eEnBF5/easybuild-pvrvNP.log</span>
 <span class="go">Dry run: printing build status of easyconfigs and dependencies</span>
 <span class="go">CFGS=/home/example/.local/easybuild/software/EasyBuild/4.1.1/easybuild/easyconfigs</span>
@@ -468,7 +468,7 @@ and can even install the compiler toolchain as well if the corresponding modules
 <p>To make EasyBuild build and install WRF, including all of its dependencies, a <strong>single command</strong> is sufficient.</p>
 <p>By using the <code>--robot</code>/<code>-r</code> (see <a class="autorefs autorefs-internal" href="../using-easybuild/#use_robot">Enabling dependency resolution, <code>--robot</code> / <code>-r</code> and <code>--robot-paths</code></a>) command line option,
 we enable dependency resolution such that the entire software stack is handled:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb WRF-4.0.2-foss-2018b-dmpar.eb --robot
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>WRF-4.0.2-foss-2018b-dmpar.eb<span class="w"> </span>--robot
 <span class="go">== temporary log file in case of crash /tmp/eb-LfQa8b/easybuild-TBXLTy.log</span>
 <span class="go">== resolving dependencies ...</span>
 <span class="go">== processing EasyBuild easyconfig /home/example/.local/easybuild/software/EasyBuild/4.1.1/easybuild/easyconfigs/n/ncurses/ncurses-6.1-GCCcore-7.3.0.eb</span>
@@ -501,9 +501,9 @@ we enable dependency resolution such that the entire software stack is handled:<
 <span class="go">== Temporary directory /tmp/eb-LfQa8b has been removed.</span>
 </code></pre></div>
 <p>Once the installation has succeeded, modules will be available for WRF and all of its dependencies:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>module load WRF
-<span class="gp">$ </span>module list
-<span class="gp">$ </span>module list
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>WRF
+<span class="gp">$ </span>module<span class="w"> </span>list
+<span class="gp">$ </span>module<span class="w"> </span>list
 
 <span class="go">Currently Loaded Modules:</span>
 <span class="go">  1) EasyBuild/4.1.1                  13) gompi/2018b</span>
@@ -606,14 +606,13 @@ we enable dependency resolution such that the entire software stack is handled:<
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

@@ -10,8 +10,10 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/integration-with-github/">
       
+      
+      
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -364,10 +365,9 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/integration-with-github.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="integration_with_github">Integration with GitHub<a class="headerlink" href="#integration_with_github" title="Permanent link">&para;</a></h1>
@@ -482,7 +482,7 @@ authenticated access to your GitHub account!</p>
 </div>
 <p>You can install the GitHub token in your keyring using EasyBuild, so it
 can pick it up when it needs to, using <code>eb --install-github-token</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb --github-user example --install-github-token
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--github-user<span class="w"> </span>example<span class="w"> </span>--install-github-token
 <span class="go">Token: &lt;copy-paste-your-40-character-token-here&gt;</span>
 <span class="go">Validating token...</span>
 <span class="go">Token seems to be valid, installing it.</span>
@@ -523,7 +523,7 @@ report back on what the test results mean for the different GitHub
 integration features.</p>
 <p>If all requirements are taken care of in your setup, you should see
 output like this:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb --check-github
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--check-github
 
 <span class="go">== temporary log file in case of crash /tmp/eb-xWCpWl/easybuild-hGnKS5.log</span>
 
@@ -571,7 +571,7 @@ processing them.</p>
 <p>For example, to use the GCC v4.9.2 easyconfigs contributed via
 <a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/1177">easyconfigs pull request
 #1177</a>:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb --from-pr <span class="m">1177</span> --dry-run
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--from-pr<span class="w"> </span><span class="m">1177</span><span class="w"> </span>--dry-run
 <span class="go">== temporary log file in case of crash /tmp/eb-88quZc/easybuild-62fFdo.log</span>
 <span class="go">Dry run: printing build status of easyconfigs and dependencies</span>
 <span class="go"> * [ ] /tmp/eb-88quZc/files_pr1177/GCC-4.9.2-CLooG-multilib.eb (module: GCC/4.9.2-CLooG-multilib)</span>
@@ -648,7 +648,7 @@ files that are available in the robot search path are preferred over the
 <p>For example, to build and install <code>HPL</code> with the <code>intel/2015a</code>
 toolchain, both of which are contributed via <a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/1238">easyconfigs pull request
 #1238</a>:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb --from-pr <span class="m">1238</span> --dry-run --robot <span class="nv">$HOME</span>/easyconfigs
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--from-pr<span class="w"> </span><span class="m">1238</span><span class="w"> </span>--dry-run<span class="w"> </span>--robot<span class="w"> </span><span class="nv">$HOME</span>/easyconfigs
 <span class="go">== temporary log file in case of crash /tmp/eb-A1fRvw/easybuild-Eqc8Oi.log</span>
 <span class="go">Dry run: printing build status of easyconfigs and dependencies</span>
 <span class="go"> * [x] /home/example/easyconfigs/g/GCC/GCC-4.9.2.eb (module: GCC/4.9.2)</span>
@@ -676,7 +676,7 @@ pull request
 #1330</a>,
 and ignore the other easyconfigs being contributed in that same pull
 request for netCDF, WRF, ...:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb --from-pr <span class="m">1330</span> CMake-3.0.0-intel-2015a.eb --dry-run --robot <span class="nv">$HOME</span>/easyconfigs
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--from-pr<span class="w"> </span><span class="m">1330</span><span class="w"> </span>CMake-3.0.0-intel-2015a.eb<span class="w"> </span>--dry-run<span class="w"> </span>--robot<span class="w"> </span><span class="nv">$HOME</span>/easyconfigs
 <span class="go">== temporary log file in case of crash /tmp/eb-QhM_qc/easybuild-TPvMkJ.log</span>
 <span class="go">Dry run: printing build status of easyconfigs and dependencies</span>
 <span class="go"> * [x] /home/example/easyconfigs/g/GCC/GCC-4.9.2.eb (module: GCC/4.9.2)</span>
@@ -714,7 +714,7 @@ pull request
 together with the LAMMPS v7Aug2019 easyconfigs contributed via
 <a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/9884">easyconfigs pull request
 #9884</a>:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb --from-pr <span class="m">9884</span> --include-easyblocks-from-pr <span class="m">1964</span> --list-easyblocks<span class="o">=</span>detailed
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--from-pr<span class="w"> </span><span class="m">9884</span><span class="w"> </span>--include-easyblocks-from-pr<span class="w"> </span><span class="m">1964</span><span class="w"> </span>--list-easyblocks<span class="o">=</span>detailed
 <span class="go">== temporary log file in case of crash /tmp/eb-Eq2zsJ/easybuild-1AaWf8.log</span>
 <span class="go">EasyBlock (easybuild.framework.easyblock)</span>
 <span class="go">...</span>
@@ -759,7 +759,7 @@ testing contributions.</p>
 to GitHub, use <code>--dump-test-report</code>.</p>
 </div>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb --from-pr <span class="m">3153</span> --rebuild --upload-test-report
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--from-pr<span class="w"> </span><span class="m">3153</span><span class="w"> </span>--rebuild<span class="w"> </span>--upload-test-report
 <span class="go">== temporary log file in case of crash /tmp/eb-aqk20q/easybuild-wuyZBV.log</span>
 <span class="go">== processing EasyBuild easyconfig /tmp/eb-aqk20q/files_pr3153/EasyBuild/EasyBuild-2.8.1.eb</span>
 <span class="go">== building and installing EasyBuild/2.8.1...</span>
@@ -789,7 +789,7 @@ determine which environment variables can be included in the test report
 <em>matches</em> the specified regular expression will <em>not</em> be included in the
 test report.</p>
 <p>An example of a typical setting:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">EASYBUILD_TEST_REPORT_ENV_FILTER</span><span class="o">=</span><span class="s1">&#39;^SSH|USER|HOSTNAME|UID|.*COOKIE.*&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_TEST_REPORT_ENV_FILTER</span><span class="o">=</span><span class="s1">&#39;^SSH|USER|HOSTNAME|UID|.*COOKIE.*&#39;</span>
 </code></pre></div>
 <h2 id="github_review_pr">Reviewing easyconfig pull requests<a class="headerlink" href="#github_review_pr" title="Permanent link">&para;</a></h2>
 <p><em>(<code>--review-pr</code>)</em></p>
@@ -841,7 +841,7 @@ via <code>eb --merge-pr</code>, which will first verify whether the pull request
 meets the prescribed requirements (at least the ones that can be
 verified automatically).</p>
 <p>For example, for a pull request that is not eligible for merging yet:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb --merge-pr <span class="m">4725</span>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--merge-pr<span class="w"> </span><span class="m">4725</span>
 <span class="go">== temporary log file in case of crash /tmp/eb-ba7rVp/easybuild-fBfcwN.log</span>
 
 <span class="go">easybuilders/easybuild-easyconfigs PR #4725 was submitted by vanzod, you are using GitHub account &#39;example&#39;</span>
@@ -857,7 +857,7 @@ verified automatically).</p>
 </code></pre></div>
 <p>When a PR is considered eligible for merging, EasyBuild will go ahead
 and merge it:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb --merge-pr <span class="m">4829</span>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--merge-pr<span class="w"> </span><span class="m">4829</span>
 <span class="go">== temporary log file in case of crash /tmp/eb-F9a3oB/easybuild-3B2wdq.log</span>
 
 <span class="go">easybuilders/easybuild-easyconfigs PR #4829 was submitted by SethosII, you are using GitHub account &#39;example&#39;</span>
@@ -880,7 +880,7 @@ and merge it:</p>
 <code>--dry-run</code>, <code>-D</code>, <code>--extended-dry-run</code>, <code>-x</code>.</p>
 <p>This results in the same checks being performed but skips the actual
 merging of the pull request, resulting in messages like:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb --merge-pr <span class="m">4829</span> --dry-run
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--merge-pr<span class="w"> </span><span class="m">4829</span><span class="w"> </span>--dry-run
 
 <span class="go">...</span>
 
@@ -911,7 +911,7 @@ preview that output before submitting a PR, eventually fixing any
 inconsistencies in advance.</p>
 <p>To preview a PR before submitting, simply use <code>--preview-pr</code> with the
 list of files to submit:</p>
-<div class="highlight"><pre><span></span><code>eb --preview-pr example.eb example.patch 
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--preview-pr<span class="w"> </span>example.eb<span class="w"> </span>example.patch<span class="w"> </span>
 </code></pre></div>
 <p>Besides accepting local files instead of a PR number, <code>--preview-pr</code>
 works the same as <code>--review-pr</code>, as described in <a class="autorefs autorefs-internal" href="../contributing/#contributing_review_process_review_pr">Comparing with existing easyconfigs</a>.</p>
@@ -927,7 +927,7 @@ used, provided that the necessary requirements are fulfilled (see
 <a class="autorefs autorefs-internal" href="#github_requirements">Requirements</a>).</p>
 <p>In its simplest form, you just provide the location of the file(s) that
 you want to include in the pull request:</p>
-<div class="highlight"><pre><span></span><code>eb --new-pr test.eb
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--new-pr<span class="w"> </span>test.eb
 </code></pre></div>
 <p>This takes care of all the steps required to make a contribution, i.e.:</p>
 <ul>
@@ -963,7 +963,7 @@ you <em>must</em> specify a (meaningful) commit message using
 <h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
 <p>For example, to create a pull request for a new version of, let's say,
 EasyBuild:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb --new-pr example.eb
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--new-pr<span class="w"> </span>example.eb
 <span class="go">== temporary log file in case of crash /tmp/eb-mWKR9u/easybuild-cTpf2W.log</span>
 <span class="go">== copying /home/example/git-working-dirs/easybuild-easyconfigs...</span>
 <span class="go">== fetching branch &#39;develop&#39; from https://github.com/easybuilders/easybuild-easyconfigs.git...</span>
@@ -996,7 +996,7 @@ easily updated using <code>eb --update-pr</code> (regardless of whether or not t
 were created with <code>--new-pr</code>).</p>
 <p>The usage is equally simple, for example to update pull request <code>#1234</code>
 just list the changed/new file(s):</p>
-<div class="highlight"><pre><span></span><code>eb --update-pr <span class="m">1234</span> example.eb
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--update-pr<span class="w"> </span><span class="m">1234</span><span class="w"> </span>example.eb
 </code></pre></div>
 <p>Again, this take care of the whole procedure required to update an
 existing pull request:</p>
@@ -1025,7 +1025,7 @@ via <code>--pr-commit-msg</code>, see <a class="autorefs autorefs-internal" href
 <h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h4>
 <p>For example, to update pull request #3153 with a changed easyconfig
 file:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb --update-pr <span class="m">3153</span> example.eb
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--update-pr<span class="w"> </span><span class="m">3153</span><span class="w"> </span>example.eb
 <span class="go">== temporary log file in case of crash /tmp/eb-gO2wJu/easybuild-37Oo2z.log</span>
 <span class="go">== Determined branch name corresponding to easybuilders/easybuild-easyconfigs PR #3153: 20160530131447_new_pr_EasyBuild281</span>
 <span class="go">== copying /home/example/git-working-dirs/easybuild-easyconfigs...</span>
@@ -1045,7 +1045,7 @@ located (i.e. in the same directory as the easyconfig files that require
 that patch file), by scanning the provided easyconfigs (or, if needed,
 scanning <em>all</em> existing easyconfig files).</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>eb --new-pr example.eb example.patch --pr-commit-msg <span class="s2">&quot;just an example&quot;</span>
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--new-pr<span class="w"> </span>example.eb<span class="w"> </span>example.patch<span class="w"> </span>--pr-commit-msg<span class="w"> </span><span class="s2">&quot;just an example&quot;</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1058,7 +1058,7 @@ metadata</span>.</p>
 you can also specify to <em>delete</em> particular files, by including a colon
 character <code>:</code> before the name of the file.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>eb --new-pr :example-1.0.eb --pr-commit-msg <span class="s2">&quot;delete example-1.0.eb easyconfig file&quot;</span>
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--new-pr<span class="w"> </span>:example-1.0.eb<span class="w"> </span>--pr-commit-msg<span class="w"> </span><span class="s2">&quot;delete example-1.0.eb easyconfig file&quot;</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1146,7 +1146,7 @@ you can combine them with either <code>--dry-run</code>/<code>-D-</code> or
 <code>--extended-dry-run</code>/<code>-x</code> to preview the pull request they would
 create/update without actually doing so.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb --new-pr EasyBuild-2.9.0.eb -D
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--new-pr<span class="w"> </span>EasyBuild-2.9.0.eb<span class="w"> </span>-D
 <span class="go">== temporary log file in case of crash /tmp/eb-1ny69k/easybuild-UR1Wr4.log</span>
 <span class="go">== copying /home/example/git-working-dirs/easybuild-easyconfigs...</span>
 <span class="go">== fetching branch &#39;develop&#39; from https://github.com/easybuilders/easybuild-easyconfigs.git...</span>
@@ -1254,14 +1254,13 @@ is that the latter will show the full diff of the changes (equivalent to
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

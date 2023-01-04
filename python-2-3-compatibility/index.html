@@ -10,8 +10,10 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/python-2-3-compatibility/">
       
+      
+      
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -364,10 +365,9 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/python-2-3-compatibility.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="py2_py3_compatibility">Compatibility with Python 2 and Python 3<a class="headerlink" href="#py2_py3_compatibility" title="Permanent link">&para;</a></h1>
@@ -386,8 +386,8 @@ following Python versions are currently supported:</p>
 <p>To determine which Python version is being used to run EasyBuild, you
 can define the <code>$EB_VERBOSE</code> environment variable.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span> <span class="nv">EB_VERBOSE</span><span class="o">=</span><span class="m">1</span>
-<span class="gp">$ </span>eb --version
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">EB_VERBOSE</span><span class="o">=</span><span class="m">1</span>
+<span class="gp">$ </span>eb<span class="w"> </span>--version
 <span class="go">&gt;&gt; Considering &#39;python&#39;...</span>
 <span class="go">&gt;&gt; No &#39;python&#39; found in $PATH, skipping...</span>
 <span class="go">&gt;&gt; Considering &#39;python3&#39;...</span>
@@ -409,9 +409,9 @@ The commands considered are (in order):</p>
 name specified via the <code>$EB_PYTHON</code> environment variable (if defined),
 so you can always control which Python version is being used if desired.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span> <span class="nv">EB_PYTHON</span><span class="o">=</span>python3.7
-<span class="gp">$ </span><span class="nb">export</span> <span class="nv">EB_VERBOSE</span><span class="o">=</span><span class="m">1</span>
-<span class="gp">$ </span>eb --version
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">EB_PYTHON</span><span class="o">=</span>python3.7
+<span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">EB_VERBOSE</span><span class="o">=</span><span class="m">1</span>
+<span class="gp">$ </span>eb<span class="w"> </span>--version
 <span class="go">&gt;&gt; Considering &#39;python3.7&#39;...</span>
 <span class="go">&gt;&gt; &#39;python3.7&#39; version: 3.7.2, which matches Python 3 version requirement (&gt;= 3.5)</span>
 <span class="go">&gt;&gt; Selected Python command: python3.7 (/usr/local/bin/python3.7)</span>
@@ -628,14 +628,13 @@ implemented in a way that is compatible with both Python 2 and 3.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

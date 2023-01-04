@@ -10,8 +10,10 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/submitting-jobs/">
       
+      
+      
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -364,10 +365,9 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/submitting-jobs.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="submitting_jobs">Submitting jobs using <code>--job</code><a class="headerlink" href="#submitting_jobs" title="Permanent link">&para;</a></h1>
@@ -515,70 +515,70 @@ As such, it is advised to run the <code>eb</code> process in a screen/tmux sessi
 This section includes a couple of examples of GC3Pie configuration files (see also
 <a href="https://gc3pie.readthedocs.org/en/latest/users/configuration.html">https://gc3pie.readthedocs.org/en/latest/users/configuration.html</a>).</p>
 <h4 id="example-gc3pie-configuration-for-local-system">Example GC3Pie configuration for local system<a class="headerlink" href="#example-gc3pie-configuration-for-local-system" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="k">[resource/localhost]</span><span class="w"></span>
-<span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span><span class="w"></span>
-<span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">shellcmd</span><span class="w"></span>
-<span class="na">frontend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">localhost</span><span class="w"></span>
-<span class="na">transport</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">local</span><span class="w"></span>
-<span class="na">max_memory_per_core</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">10GiB</span><span class="w"></span>
-<span class="na">max_walltime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">100 hours</span><span class="w"></span>
-<span class="c1"># max # jobs ~= max_cores / max_cores_per_job</span><span class="w"></span>
-<span class="na">max_cores_per_job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span><span class="w"></span>
-<span class="na">max_cores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">4</span><span class="w"></span>
-<span class="na">architecture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">x86_64</span><span class="w"></span>
-<span class="na">auth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">none</span><span class="w"></span>
-<span class="na">override</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">no</span><span class="w"></span>
-<span class="na">resourcedir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/tmp/gc3pie</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">[resource/localhost]</span>
+<span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
+<span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">shellcmd</span>
+<span class="na">frontend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">localhost</span>
+<span class="na">transport</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">local</span>
+<span class="na">max_memory_per_core</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">10GiB</span>
+<span class="na">max_walltime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">100 hours</span>
+<span class="c1"># max # jobs ~= max_cores / max_cores_per_job</span>
+<span class="na">max_cores_per_job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span>
+<span class="na">max_cores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">4</span>
+<span class="na">architecture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">x86_64</span>
+<span class="na">auth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">none</span>
+<span class="na">override</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">no</span>
+<span class="na">resourcedir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/tmp/gc3pie</span>
 </code></pre></div>
 <h4 id="example-gc3pie-configuration-for-torquepbs">Example GC3Pie configuration for TORQUE/PBS<a class="headerlink" href="#example-gc3pie-configuration-for-torquepbs" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="k">[resource/pbs]</span><span class="w"></span>
-<span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span><span class="w"></span>
-<span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">pbs</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">[resource/pbs]</span>
+<span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
+<span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">pbs</span>
 
-<span class="c1"># use settings below when running GC3Pie on the cluster front-end node</span><span class="w"></span>
-<span class="na">frontend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">localhost</span><span class="w"></span>
-<span class="na">transport</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">local</span><span class="w"></span>
-<span class="na">auth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">none</span><span class="w"></span>
+<span class="c1"># use settings below when running GC3Pie on the cluster front-end node</span>
+<span class="na">frontend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">localhost</span>
+<span class="na">transport</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">local</span>
+<span class="na">auth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">none</span>
 
-<span class="na">max_walltime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2 days</span><span class="w"></span>
-<span class="c1"># max # jobs ~= max_cores / max_cores_per_job</span><span class="w"></span>
-<span class="na">max_cores_per_job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">16</span><span class="w"></span>
-<span class="na">max_cores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1024</span><span class="w"></span>
-<span class="na">max_memory_per_core</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2 GiB</span><span class="w"></span>
-<span class="na">architecture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">x86_64</span><span class="w"></span>
+<span class="na">max_walltime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2 days</span>
+<span class="c1"># max # jobs ~= max_cores / max_cores_per_job</span>
+<span class="na">max_cores_per_job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">16</span>
+<span class="na">max_cores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1024</span>
+<span class="na">max_memory_per_core</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2 GiB</span>
+<span class="na">architecture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">x86_64</span>
 
-<span class="c1"># to add non-std options or use TORQUE/PBS tools located outside of</span><span class="w"></span>
-<span class="c1"># the default PATH, use the following:</span><span class="w"></span>
-<span class="c1">#qsub = /usr/local/bin/qsub -q my-special-queue</span><span class="w"></span>
+<span class="c1"># to add non-std options or use TORQUE/PBS tools located outside of</span>
+<span class="c1"># the default PATH, use the following:</span>
+<span class="c1">#qsub = /usr/local/bin/qsub -q my-special-queue</span>
 </code></pre></div>
 <h4 id="example-gc3pie-configuration-for-slurm">Example GC3Pie configuration for SLURM<a class="headerlink" href="#example-gc3pie-configuration-for-slurm" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="k">[resource/slurm]</span><span class="w"></span>
-<span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span><span class="w"></span>
-<span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">slurm</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">[resource/slurm]</span>
+<span class="na">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">yes</span>
+<span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">slurm</span>
 
-<span class="c1"># use settings below when running GC3Pie on the cluster front-end node</span><span class="w"></span>
-<span class="na">frontend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">localhost</span><span class="w"></span>
-<span class="na">transport</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">local</span><span class="w"></span>
-<span class="na">auth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">none</span><span class="w"></span>
+<span class="c1"># use settings below when running GC3Pie on the cluster front-end node</span>
+<span class="na">frontend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">localhost</span>
+<span class="na">transport</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">local</span>
+<span class="na">auth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">none</span>
 
-<span class="na">max_walltime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2 days</span><span class="w"></span>
-<span class="c1"># max # jobs ~= max_cores / max_cores_per_job</span><span class="w"></span>
-<span class="na">max_cores_per_job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">16</span><span class="w"></span>
-<span class="na">max_cores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1024</span><span class="w"></span>
-<span class="na">max_memory_per_core</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2 GiB</span><span class="w"></span>
-<span class="na">architecture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">x86_64</span><span class="w"></span>
+<span class="na">max_walltime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2 days</span>
+<span class="c1"># max # jobs ~= max_cores / max_cores_per_job</span>
+<span class="na">max_cores_per_job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">16</span>
+<span class="na">max_cores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1024</span>
+<span class="na">max_memory_per_core</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2 GiB</span>
+<span class="na">architecture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">x86_64</span>
 
-<span class="c1"># to add non-std options or use SLURM tools located outside of</span><span class="w"></span>
-<span class="c1"># the default PATH, use the following:</span><span class="w"></span>
-<span class="c1">#sbatch = /usr/bin/sbatch --mail-type=ALL</span><span class="w"></span>
+<span class="c1"># to add non-std options or use SLURM tools located outside of</span>
+<span class="c1"># the default PATH, use the following:</span>
+<span class="c1">#sbatch = /usr/bin/sbatch --mail-type=ALL</span>
 </code></pre></div>
 <h3 id="submitting_jobs_examples_gc3pie_backend">Example: submitting installations to SLURM via GC3Pie<a class="headerlink" href="#submitting_jobs_examples_gc3pie_backend" title="Permanent link">&para;</a></h3>
 <p>When submitting jobs to the <code>GC3Pie</code> job backend, the <code>eb</code> process will not exit until all tasks have been
 completed. A job overview will be printed every N seconds (see <a class="autorefs autorefs-internal" href="#submitting_jobs_cfg_job_polling_interval">Job polling interval (<code>--job-polling-interval</code>)</a>).</p>
 <p>Jobs are only submitted to the resource manager (SLURM, in this case) when all task dependencies have been resolved.</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span> <span class="nv">EASYBUILD_JOB_BACKEND</span><span class="o">=</span>GC3Pie
-<span class="gp">$ </span><span class="nb">export</span> <span class="nv">EASYBUILD_JOB_BACKEND_CONFIG</span><span class="o">=</span><span class="nv">$PWD</span>/gc3pie.cfg
-<span class="gp">$ </span>eb GCC-4.6.0.eb OpenMPI-1.8.4-GCC-4.9.2.eb --robot --job --job-cores<span class="o">=</span><span class="m">16</span> --job-max-walltime<span class="o">=</span><span class="m">10</span>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_JOB_BACKEND</span><span class="o">=</span>GC3Pie
+<span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_JOB_BACKEND_CONFIG</span><span class="o">=</span><span class="nv">$PWD</span>/gc3pie.cfg
+<span class="gp">$ </span>eb<span class="w"> </span>GCC-4.6.0.eb<span class="w"> </span>OpenMPI-1.8.4-GCC-4.9.2.eb<span class="w"> </span>--robot<span class="w"> </span>--job<span class="w"> </span>--job-cores<span class="o">=</span><span class="m">16</span><span class="w"> </span>--job-max-walltime<span class="o">=</span><span class="m">10</span>
 <span class="go">== temporary log file in case of crash /tmp/eb-ivAiwD/easybuild-PCgmCB.log</span>
 <span class="go">== resolving dependencies ...</span>
 <span class="go">== GC3Pie job overview: 2 submitted (total: 9)</span>
@@ -599,23 +599,23 @@ completed. A job overview will be printed every N seconds (see <a class="autoref
 </code></pre></div>
 <p>Checking which jobs have been submitted to SLURM at regular intervals reveals that indeed only tasks for which all
 dependencies have been processed are actually submitted as jobs::</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>squeue -u <span class="nv">$USER</span>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>squeue<span class="w"> </span>-u<span class="w"> </span><span class="nv">$USER</span>
 <span class="go">JOBID       USER       ACCOUNT           NAME     REASON   START_TIME     END_TIME  TIME_LEFT NODES CPUS   PRIORITY</span>
 <span class="go">6161545     easybuild  example      GCC-4.9.2       None 2015-07-01T1 2015-07-01T2    9:58:55     1 16       1242</span>
 <span class="go">6161546     easybuild  example      GCC-4.6.0       None 2015-07-01T1 2015-07-01T2    9:58:55     1 16       1242</span>
 
-<span class="gp">$ </span>squeue -u <span class="nv">$USER</span>
+<span class="gp">$ </span>squeue<span class="w"> </span>-u<span class="w"> </span><span class="nv">$USER</span>
 <span class="go">JOBID       USER       ACCOUNT           NAME     REASON   START_TIME     END_TIME  TIME_LEFT NODES CPUS   PRIORITY</span>
 <span class="go">6174527     easybuild  example Automake-1.15-  Resources          N/A          N/A   10:00:00     1 16       1120</span>
 
-<span class="gp">$ </span>squeue -u <span class="nv">$USER</span>
+<span class="gp">$ </span>squeue<span class="w"> </span>-u<span class="w"> </span><span class="nv">$USER</span>
 <span class="go">JOBID       USER       ACCOUNT           NAME     REASON   START_TIME     END_TIME  TIME_LEFT NODES CPUS   PRIORITY</span>
 <span class="go">6174533     easybuild  example OpenMPI-1.8.4-       None 2015-07-03T0 2015-07-03T1    9:55:59     1 16       1119</span>
 </code></pre></div>
 <h3 id="submitting_jobs_examples_pbs_python_backend">Example: submitting installations to TORQUE via pbs_python<a class="headerlink" href="#submitting_jobs_examples_pbs_python_backend" title="Permanent link">&para;</a></h3>
 <p>Using the <code>PbsPython</code> job backend, <code>eb</code> submits jobs directly to TORQUE for processing, and exits as soon as all
 jobs have been submitted::</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb GCC-4.6.0.eb OpenMPI-1.8.4-GCC-4.9.2.eb --robot --job
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>GCC-4.6.0.eb<span class="w"> </span>OpenMPI-1.8.4-GCC-4.9.2.eb<span class="w"> </span>--robot<span class="w"> </span>--job
 <span class="go">== temporary log file in case of crash /tmp/eb-OMNQAV/easybuild-9fTuJA.log</span>
 <span class="go">== resolving dependencies ...</span>
 <span class="go">== List of submitted jobs (9): GCC-4.6.0 (GCC/4.6.0): 508023.example.pbs; GCC-4.9.2 (GCC/4.9.2): 508024.example.pbs;</span>
@@ -628,7 +628,7 @@ jobs have been submitted::</p>
 <span class="go">== temporary log file(s) /tmp/eb-OMNQAV/easybuild-9fTuJA.log* have been removed.</span>
 <span class="go">== temporary directory /tmp/eb-OMNQAV has been removed.</span>
 
-<span class="gp">$ </span>qstat -a
+<span class="gp">$ </span>qstat<span class="w"> </span>-a
 
 <span class="go">example.pbs:</span>
 <span class="go">                                                                              Req&#39;d    Req&#39;d       Elap</span>
@@ -646,7 +646,7 @@ jobs have been submitted::</p>
 </code></pre></div>
 <p>Holds are put in place to ensure that the jobs run in the order dictated by the dependency graph(s).
 These holds are released by the TORQUE server as soon as they jobs on which they depend have completed::</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>qstat -a
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>qstat<span class="w"> </span>-a
 
 <span class="go">example.pbs:</span>
 <span class="go">                                                                              Req&#39;d    Req&#39;d       Elap</span>
@@ -662,7 +662,7 @@ These holds are released by the TORQUE server as soon as they jobs on which they
 
 <span class="go">...</span>
 
-<span class="gp">$ </span>qstat -a
+<span class="gp">$ </span>qstat<span class="w"> </span>-a
 
 <span class="go">example.pbs:</span>
 <span class="go">                                                                              Req&#39;d    Req&#39;d       Elap</span>
@@ -756,14 +756,13 @@ These holds are released by the TORQUE server as soon as they jobs on which they
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

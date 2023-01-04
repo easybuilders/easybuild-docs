@@ -10,8 +10,10 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/contributing/">
       
+      
+      
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -364,10 +365,9 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/contributing.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permanent link">&para;</a></h1>
@@ -538,7 +538,7 @@ a local <em>working copy</em> of the repository. This is basically a local
 checkout of the repository where you can track the changes you are
 making.</p>
 <p>First, <em>clone</em> your fork of the repository:</p>
-<div class="highlight"><pre><span></span><code>git clone git@github.com:EXAMPLE/easybuild-framework.git
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:EXAMPLE/easybuild-framework.git
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -546,11 +546,11 @@ making.</p>
 </div>
 <p>If that worked as expected, you should have a new directory named
 <code>easybuild-framework</code>. Move into the <code>easybuild-framework</code> directory:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> easybuild-framework
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>easybuild-framework
 </code></pre></div>
 <p>Finally, we recommended to also check out the <code>develop</code> branch, which
 will be used as the base for your own branches:</p>
-<div class="highlight"><pre><span></span><code>git checkout -b develop origin/develop
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>develop<span class="w"> </span>origin/develop
 </code></pre></div>
 <p>With this in place, you are all set to open pull requests for your
 contributions.</p>
@@ -560,7 +560,7 @@ sync with the upstream repository in the GitHub <code>easybuilders</code>
 organization.</p>
 <p>For this, you need to add the upstream repository as a '<em>remote</em>'
 repository:</p>
-<div class="highlight"><pre><span></span><code>git remote add upstream git@github.com:easybuilders/easybuild-framework.git
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>upstream<span class="w"> </span>git@github.com:easybuilders/easybuild-framework.git
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -574,8 +574,8 @@ should have been created via <code>git clone</code> (see the output of
 </div>
 <p>To sync your <code>develop</code> branch, use <code>git pull upstream develop</code> after
 making sure you have the <code>develop</code> branch checked out:</p>
-<div class="highlight"><pre><span></span><code>git checkout develop
-git pull upstream develop
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>develop
+git<span class="w"> </span>pull<span class="w"> </span>upstream<span class="w"> </span>develop
 </code></pre></div>
 <h3 id="contributing_creating_pull_requests">Opening a new pull request<a class="headerlink" href="#contributing_creating_pull_requests" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
@@ -605,13 +605,13 @@ or after making the changes that you would like to contribute, but we
 recommend to create a new branch before making any changes.</p>
 <p>Make sure you have the <code>develop</code> branch checked out before creating your
 branch:</p>
-<div class="highlight"><pre><span></span><code>git checkout develop
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>develop
 </code></pre></div>
 <p>To create a new branch, you should use <code>git branch &lt;branch_name&gt;</code>
 followed by <code>git checkout &lt;branch_name&gt;</code>, or equivalently
 <code>git checkout -b &lt;branch_name&gt;</code>.</p>
 <p>For example, to create a new branch named <code>mybranch</code>:</p>
-<div class="highlight"><pre><span></span><code>git checkout -b mybranch
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>mybranch
 </code></pre></div>
 <p>You can choose the branch name freely, but make it sufficiently
 descriptive – your future self will thank you.</p>
@@ -622,7 +622,7 @@ branch you created. We recommended making separate commits for different
 <p>First, make sure you have checked out the branch were you want to commit
 the changes to. For example, to prepare for committing changes to the
 <code>mybranch</code> branch:</p>
-<div class="highlight"><pre><span></span><code>git checkout mybranch
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>mybranch
 </code></pre></div>
 <p>To check which branch is currently checked out, use <code>git branch</code>.</p>
 <p>To get a high-level overview of the changes before committing them, you
@@ -633,9 +633,9 @@ can use <code>git status</code>.</p>
 the actual commit.</p>
 <p>For example, to commit the changes that were made to
 <code>easybuild/tools/filetools.py</code>:</p>
-<div class="highlight"><pre><span></span><code>git add easybuild/tools/filetools.py
-git status  <span class="c1"># check which files are staged for commit</span>
-git commit -m <span class="s2">&quot;example commit message for changes to filetools.py&quot;</span>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>easybuild/tools/filetools.py
+git<span class="w"> </span>status<span class="w">  </span><span class="c1"># check which files are staged for commit</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;example commit message for changes to filetools.py&quot;</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -656,7 +656,7 @@ branch to your fork of the GitHub repository using <code>git push</code>.</p>
 <p>For example, to push the <code>mybranch</code> branch to your fork of the GitHub
 repository (via the <code>origin</code> remote, see
 <a class="autorefs autorefs-internal" href="#contributing_pull_request_setup_working_copy">Creating a working copy</a>):</p>
-<div class="highlight"><pre><span></span><code>git push origin mybranch
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>mybranch
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -671,7 +671,7 @@ repository), or by copy-pasting the URL to the pull request.</p>
 <p>For pull requests to the easyconfig repository, we recommend using this
 format for the pull request title when contributing new easyconfig
 files:</p>
-<div class="highlight"><pre><span></span><code><span class="o">{</span>&lt;moduleclass&gt;<span class="o">}[</span>&lt;toolchain&gt;<span class="o">]</span> &lt;software name&gt; &lt;software version&gt; &lt;extra info&gt;
+<div class="highlight"><pre><span></span><code><span class="o">{</span>&lt;moduleclass&gt;<span class="o">}[</span>&lt;toolchain&gt;<span class="o">]</span><span class="w"> </span>&lt;software<span class="w"> </span>name&gt;<span class="w"> </span>&lt;software<span class="w"> </span>version&gt;<span class="w"> </span>&lt;extra<span class="w"> </span>info&gt;
 </code></pre></div>
 <p>For example:</p>
 <ul>
@@ -723,11 +723,11 @@ branch that was used for opening the pull request, and pushing the
 updated branch to GitHub.</p>
 <p>For example, to update the pull request that was created using the
 <code>mybranch</code> branch:</p>
-<div class="highlight"><pre><span></span><code>git checkout mybranch
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>mybranch
 <span class="c1"># make changes...</span>
-git add &lt;paths to changed files&gt;
-git commit -m <span class="s2">&quot;example commit message for additional changes&quot;</span>
-git push origin mybranch
+git<span class="w"> </span>add<span class="w"> </span>&lt;paths<span class="w"> </span>to<span class="w"> </span>changed<span class="w"> </span>files&gt;
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;example commit message for additional changes&quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>mybranch
 </code></pre></div>
 <p>Updating a pull request will trigger GitHub Actions to re-test your
 contribution, and a notification will be sent out to whoever is
@@ -1010,14 +1010,13 @@ is still relevant.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

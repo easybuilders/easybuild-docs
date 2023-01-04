@@ -10,8 +10,10 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/detecting-loaded-modules/">
       
+      
+      
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -364,10 +365,9 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/detecting-loaded-modules.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="detecting_loaded_modules">Detection of loaded modules<a class="headerlink" href="#detecting_loaded_modules" title="Permanent link">&para;</a></h1>
@@ -427,7 +427,7 @@ match a loaded modules, action is taken as well; see
 will print a clear error and stop when any (non-allowed) loaded modules
 are detected.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb example.eb --detect-loaded-modules<span class="o">=</span>error
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>example.eb<span class="w"> </span>--detect-loaded-modules<span class="o">=</span>error
 <span class="go">== temporary log file in case of crash /tmp/eb-UlKMRN/easybuild-MgfEHi.log</span>
 <span class="go">ERROR: Found one or more non-allowed loaded (EasyBuild-generated) modules in current environment:</span>
 <span class="go">* Spack/0.10.0</span>
@@ -453,8 +453,8 @@ restore the environment to a clean state before starting software
 installations.</p>
 <p>A short warning message is printed in case <code>module purge</code> was used to
 clean up the environment:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span> <span class="nv">EASYBUILD_DETECT_LOADED_MODULES</span><span class="o">=</span>purge
-<span class="gp">$ </span>eb example.eb
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_DETECT_LOADED_MODULES</span><span class="o">=</span>purge
+<span class="gp">$ </span>eb<span class="w"> </span>example.eb
 <span class="go">== temporary log file in case of crash /tmp/eb-QLTV9v/easybuild-6mOmIN.log</span>
 
 <span class="go">WARNING: Found non-allowed loaded (EasyBuild-generated) modules (Spack/0.10.0), running &#39;module purge&#39;</span>
@@ -479,7 +479,7 @@ first.</p>
 <p>This is an alternative to using <code>module purge</code>, in case some other
 (allowed) modules are loaded and should remain loaded.</p>
 <p>A short warning message is printed when loaded modules are unloaded:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb example.eb --detect-loaded-modules<span class="o">=</span>unload
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>example.eb<span class="w"> </span>--detect-loaded-modules<span class="o">=</span>unload
 <span class="go">== temporary log file in case of crash /tmp/eb-JyyaEF/easybuild-WyGqZs.log</span>
 
 <span class="go">WARNING: Unloading non-allowed loaded (EasyBuild-generated) modules: Spack/0.10.0</span>
@@ -493,8 +493,8 @@ EasyBuild will print a warning mentioning that one or more loaded
 <p>The warning is intended to make the user aware that the environment in
 which EasyBuild is being run is not clean.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span> <span class="nv">EASYBUILD_DETECT_LOADED_MODULES</span><span class="o">=</span>warn
-<span class="gp">$ </span>eb example.eb
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_DETECT_LOADED_MODULES</span><span class="o">=</span>warn
+<span class="gp">$ </span>eb<span class="w"> </span>example.eb
 <span class="go">== temporary log file in case of crash /tmp/eb-9HD20m/easybuild-WAYzK2.log</span>
 
 <span class="go">WARNING: Found one or more non-allowed loaded (EasyBuild-generated) modules in current environment:</span>
@@ -517,12 +517,12 @@ which EasyBuild is being run is not clean.</p>
 <code>--allow-loaded-modules</code>, by specifying a comma-separated list of
 software names.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span> <span class="nv">EASYBUILD_DETECT_LOADED_MODULES</span><span class="o">=</span>error
-<span class="gp">$ </span><span class="nb">export</span> <span class="nv">EASYBUILD_ALLOW_LOADED_MODULES</span><span class="o">=</span>EasyBuild,GC3Pie
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_DETECT_LOADED_MODULES</span><span class="o">=</span>error
+<span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_ALLOW_LOADED_MODULES</span><span class="o">=</span>EasyBuild,GC3Pie
 
-<span class="gp">$ </span>module load EasyBuild
-<span class="gp">$ </span>module load GC3Pie
-<span class="gp">$ </span>eb example.eb
+<span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>EasyBuild
+<span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>GC3Pie
+<span class="gp">$ </span>eb<span class="w"> </span>example.eb
 <span class="go">...</span>
 </code></pre></div>
 <p>When <code>--allow-loaded-modules</code> is used, the EasyBuild module is no more
@@ -547,9 +547,9 @@ specified to <code>--check-ebroot-env-vars</code>:</p>
 <p>When configured with <code>--check-ebroot-env-vars=error</code>, EasyBuild will
 stop with a clear error message when it discovers one or more <code>$EBROOT*</code>
 environment variables that do not correspond to a loaded module:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span> <span class="nv">EBROOTUNKNOWN</span><span class="o">=</span>just_an_example
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">EBROOTUNKNOWN</span><span class="o">=</span>just_an_example
 
-<span class="gp">$ </span>eb example.eb --check-ebroot-env-vars<span class="o">=</span>error
+<span class="gp">$ </span>eb<span class="w"> </span>example.eb<span class="w"> </span>--check-ebroot-env-vars<span class="o">=</span>error
 
 <span class="go">== temporary log file in case of crash /tmp/eb-cNqOzG/easybuild-xmV8vc.log</span>
 <span class="go">ERROR: Found defined $EBROOT* environment variables without matching loaded module: $EBROOTUNKNOWN</span>
@@ -565,9 +565,9 @@ for which no matching loaded module was found are harmless, you can
 specify that EasyBuild should clean up the environment by unsetting
 them, before continuing. A clear warning message will be printed
 whenever this occurs:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span> <span class="nv">EBROOTUNKNOWN</span><span class="o">=</span>just_an_example
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">EBROOTUNKNOWN</span><span class="o">=</span>just_an_example
 
-<span class="gp">$ </span>eb bzip2-1.0.6.eb --check-ebroot-env-vars<span class="o">=</span><span class="nb">unset</span>
+<span class="gp">$ </span>eb<span class="w"> </span>bzip2-1.0.6.eb<span class="w"> </span>--check-ebroot-env-vars<span class="o">=</span><span class="nb">unset</span>
 
 <span class="go">== temporary log file in case of crash /tmp/eb-IvXik8/easybuild-cjHjhs.log</span>
 
@@ -583,10 +583,10 @@ of the running EasyBuild session, not in the current session in which
 warning will be printed when one or more defined <code>$EBROOT*</code> environment
 variables are encountered for which no corresponding loaded module was
 found:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span> <span class="nv">EBROOTUNKNOWN</span><span class="o">=</span>just_an_example
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">EBROOTUNKNOWN</span><span class="o">=</span>just_an_example
 
-<span class="gp">$ </span><span class="nb">export</span> <span class="nv">EASYBUILD_CHECK_EBROOT_ENV_VARS</span><span class="o">=</span>warn
-<span class="gp">$ </span>eb example.eb
+<span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_CHECK_EBROOT_ENV_VARS</span><span class="o">=</span>warn
+<span class="gp">$ </span>eb<span class="w"> </span>example.eb
 
 <span class="go">== temporary log file in case of crash /tmp/eb-1h_LQ9/easybuild-BHrPk4.log</span>
 <span class="go">WARNING: Found defined $EBROOT* environment variables without matching loaded module: $EBROOTUNKNOWN</span>
@@ -684,14 +684,13 @@ found:</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

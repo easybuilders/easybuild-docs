@@ -10,8 +10,10 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/manipulating-dependencies/">
       
+      
+      
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -364,10 +365,9 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/manipulating-dependencies.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="manipulating_dependencies">Manipulating dependencies<a class="headerlink" href="#manipulating_dependencies" title="Permanent link">&para;</a></h1>
@@ -384,7 +384,7 @@ and should not be reinstalled as modules by EasyBuild.</p>
 <ul>
 <li>
 <p>overview of dependencies of HDF5:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb HDF5-1.8.13-intel-2015a.eb -D
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>HDF5-1.8.13-intel-2015a.eb<span class="w"> </span>-D
 <span class="go">...</span>
 <span class="go">* [ ] $CFGS/i/intel/intel-2015a.eb (module: intel/2015a)</span>
 <span class="go">* [ ] $CFGS/z/zlib/zlib-1.2.8-intel-2015a.eb (module: zlib/1.2.8-intel-2015a)</span>
@@ -394,7 +394,7 @@ and should not be reinstalled as modules by EasyBuild.</p>
 </li>
 <li>
 <p>overview of dependencies of HDF5, with zlib and Szip excluded:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb HDF5-1.8.13-intel-2015a.eb --filter-deps<span class="o">=</span>zlib,Szip -D
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>HDF5-1.8.13-intel-2015a.eb<span class="w"> </span>--filter-deps<span class="o">=</span>zlib,Szip<span class="w"> </span>-D
 <span class="go">...</span>
 <span class="go">* [ ] $CFGS/i/intel/intel-2015a.eb (module: intel/2015a)</span>
 <span class="go">* [ ] $CFGS/h/HDF5/HDF5-1.8.13-intel-2015a.eb (module: HDF5/1.8.13-intel-2015a)</span>
@@ -432,7 +432,7 @@ In other words, the version range can be open ended. The <code>:</code> separato
 '<code>module avail</code>', but can be loaded) whenever they are included as a dependency, via the <code>--hide-deps</code>
 configuration option.</p>
 <p>For example (note the preceding '<code>.</code>' in the last part of the module names for zlib and Szip):</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb HDF5-1.8.13-intel-2015a.eb --hide-deps<span class="o">=</span>zlib,Szip -D
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>HDF5-1.8.13-intel-2015a.eb<span class="w"> </span>--hide-deps<span class="o">=</span>zlib,Szip<span class="w"> </span>-D
 <span class="go">...</span>
 <span class="go">* [ ] $CFGS/i/intel/intel-2015a.eb (module: intel/2015a)</span>
 <span class="go">* [ ] $CFGS/z/zlib/zlib-1.2.8-intel-2015a.eb (module: zlib/.1.2.8-intel-2015a)</span>
@@ -444,12 +444,12 @@ configuration option.</p>
 <p>Using Lmod (version &gt;= 5.7.5), hidden modules can be made visible in the output of '<code>module avail</code>' using the
 <code>--show-hidden</code> option.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>module avail bzip2
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>module<span class="w"> </span>avail<span class="w"> </span>bzip2
 
 <span class="go">Use &quot;module spider&quot; to find all possible modules.</span>
 <span class="go">Use &quot;module keyword key1 key2 ...&quot; to search for all possible modules matching any of the &quot;keys&quot;.</span>
 
-<span class="gp">$ </span>module --show-hidden avail bzip2
+<span class="gp">$ </span>module<span class="w"> </span>--show-hidden<span class="w"> </span>avail<span class="w"> </span>bzip2
 <span class="go">----- /home/example/.local/easybuild/modules/all -----</span>
 <span class="go">bzip2/.1.0.6</span>
 
@@ -604,14 +604,13 @@ when determining the toolchain to use for dependencies.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

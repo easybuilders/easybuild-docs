@@ -10,8 +10,10 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/cray-support/">
       
+      
+      
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -364,10 +365,9 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/cray-support.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="cray_support">EasyBuild on Cray<a class="headerlink" href="#cray_support" title="Permanent link">&para;</a></h1>
@@ -432,10 +432,10 @@ see <a href="https://github.com/eth-cscs/production/tree/master/jenkins-builds">
 <li>Piz Daint, Dora, Swan, Santis, Brisi: system-provided environment modules 3.2.10 </li>
 </ul>
 <p>Example for environment modules 3.2.10:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">source</span> /opt/modules/3.2.10.3/init/bash
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/opt/modules/3.2.10.3/bin/:<span class="nv">$PATH</span>
-<span class="nb">export</span> <span class="nv">EASYBUILD_MODULES_TOOL</span><span class="o">=</span>EnvironmentModulesC
-<span class="nb">export</span> <span class="nv">EASYBUILD_MODULE_SYNTAX</span><span class="o">=</span>Tcl
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>/opt/modules/3.2.10.3/init/bash
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/opt/modules/3.2.10.3/bin/:<span class="nv">$PATH</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_MODULES_TOOL</span><span class="o">=</span>EnvironmentModulesC
+<span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_MODULE_SYNTAX</span><span class="o">=</span>Tcl
 </code></pre></div>
 <h3 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h3>
 <ul>
@@ -445,7 +445,7 @@ see <a href="https://github.com/eth-cscs/production/tree/master/jenkins-builds">
 </li>
 </ul>
 <p>You can also export this option as a shell variable. Example for <code>sandybridge</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">EASYBUILD_OPTARCH</span><span class="o">=</span>sandybridge
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_OPTARCH</span><span class="o">=</span>sandybridge
 </code></pre></div>
 <h3 id="metadata-for-cray-provided-modules">Metadata for Cray-provided modules<a class="headerlink" href="#metadata-for-cray-provided-modules" title="Permanent link">&para;</a></h3>
 <ul>
@@ -463,30 +463,30 @@ For more details see <a class="autorefs autorefs-internal" href="../using-extern
 <li><a href="https://www.cp2k.org">https://www.cp2k.org</a></li>
 <li>version(s): 2.6.0</li>
 </ul>
-<div class="highlight"><pre><span></span><code>eb CP2K-2.6.0-CrayGNU-2015.06.eb -dr
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>CP2K-2.6.0-CrayGNU-2015.06.eb<span class="w"> </span>-dr
 </code></pre></div>
 <h3 id="gromacs">GROMACS<a class="headerlink" href="#gromacs" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://www.gromacs.org">https://www.gromacs.org</a></li>
 <li>version(s): 4.6.7</li>
 </ul>
-<div class="highlight"><pre><span></span><code>eb GROMACS-4.6.7-CrayGNU-2015.06-mpi.eb -dr
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>GROMACS-4.6.7-CrayGNU-2015.06-mpi.eb<span class="w"> </span>-dr
 </code></pre></div>
 <h3 id="hpl">HPL<a class="headerlink" href="#hpl" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://www.netlib.org/benchmark/hpl">https://www.netlib.org/benchmark/hpl</a></li>
 <li>version(s): 2.1</li>
 </ul>
-<div class="highlight"><pre><span></span><code>eb HPL-2.1-CrayCCE-2015.06.eb -dr
-eb HPL-2.1-CrayGNU-2015.06.eb -dr 
-eb HPL-2.1-CrayIntel-2015.06.eb -dr 
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>HPL-2.1-CrayCCE-2015.06.eb<span class="w"> </span>-dr
+eb<span class="w"> </span>HPL-2.1-CrayGNU-2015.06.eb<span class="w"> </span>-dr<span class="w"> </span>
+eb<span class="w"> </span>HPL-2.1-CrayIntel-2015.06.eb<span class="w"> </span>-dr<span class="w"> </span>
 </code></pre></div>
 <h3 id="python-numpyscipy">Python + numpy/scipy<a class="headerlink" href="#python-numpyscipy" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://python.org">https://python.org</a>, <a href="https://www.numpy.org">https://www.numpy.org</a>, <a href="https://www.scipy.org">https://www.scipy.org</a></li>
 <li>version(s): Python 2.7.9, numpy 1.9.2, scipy 0.15.1</li>
 </ul>
-<div class="highlight"><pre><span></span><code>eb Python-2.7.9-CrayGNU-2015.06.eb -dr 
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>Python-2.7.9-CrayGNU-2015.06.eb<span class="w"> </span>-dr<span class="w"> </span>
 <span class="c1"># includes a few python packages (such as mpi4py, numpy and scipy)</span>
 </code></pre></div>
 <h3 id="wrf">WRF<a class="headerlink" href="#wrf" title="Permanent link">&para;</a></h3>
@@ -494,7 +494,7 @@ eb HPL-2.1-CrayIntel-2015.06.eb -dr
 <li><a href="https://www2.mmm.ucar.edu/wrf/users/">https://www2.mmm.ucar.edu/wrf/users/</a></li>
 <li>version(s): 3.6.1</li>
 </ul>
-<div class="highlight"><pre><span></span><code>eb WRF-3.6.1-CrayGNU-2015.06-dmpar.eb --dr
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>WRF-3.6.1-CrayGNU-2015.06-dmpar.eb<span class="w"> </span>--dr
 </code></pre></div>
 
   <hr>
@@ -582,14 +582,13 @@ eb HPL-2.1-CrayIntel-2015.06.eb -dr
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

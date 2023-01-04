@@ -10,8 +10,10 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/installation-alternative/">
       
+      
+      
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -364,10 +365,9 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/installation-alternative.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="alt_inst_methods">Alternative installation methods<a class="headerlink" href="#alt_inst_methods" title="Permanent link">&para;</a></h1>
@@ -397,7 +397,7 @@ can use one of the following simple commands:</p>
 <ul>
 <li>
 <p>using <code>easy_install</code> (old tool, but still works):</p>
-<div class="highlight"><pre><span></span><code>easy_install --prefix <span class="nv">$HOME</span>/EasyBuild easybuild
+<div class="highlight"><pre><span></span><code>easy_install<span class="w"> </span>--prefix<span class="w"> </span><span class="nv">$HOME</span>/EasyBuild<span class="w"> </span>easybuild
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -407,7 +407,7 @@ can use one of the following simple commands:</p>
 <li>
 <p>using <code>pip</code> (more recent and better installation tool for Python
     software):</p>
-<div class="highlight"><pre><span></span><code>pip install --install-option <span class="s2">&quot;--prefix=</span><span class="nv">$HOME</span><span class="s2">/EasyBuild&quot;</span> easybuild
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>--install-option<span class="w"> </span><span class="s2">&quot;--prefix=</span><span class="nv">$HOME</span><span class="s2">/EasyBuild&quot;</span><span class="w"> </span>easybuild
 </code></pre></div>
 <p>The <code>--prefix $HOME/EasyBuild</code> part in these commands allows you to
 install EasyBuild without admin rights into <code>$HOME/EasyBuild</code>.</p>
@@ -423,15 +423,15 @@ install EasyBuild without admin rights into <code>$HOME/EasyBuild</code>.</p>
 this, you will need to update the <code>$PATH</code> and <code>$PYTHONPATH</code> environment
 variable to make sure the system can find the main EasyBuild command
 <code>eb</code>. On (most) Linux distributions, the command for doing this is:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$HOME</span>/EasyBuild/bin:<span class="nv">$PATH</span>
-<span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$HOME</span>/EasyBuild/lib/python2.7/site-packages:<span class="nv">$PYTHONPATH</span>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$HOME</span>/EasyBuild/bin:<span class="nv">$PATH</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$HOME</span>/EasyBuild/lib/python2.7/site-packages:<span class="nv">$PYTHONPATH</span>
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>To determine the path that should be added to the <code>$PYTHONPATH</code>
 environment variable for a given installation prefix, you can use the
 following command:</p>
-<div class="highlight"><pre><span></span><code>python -c <span class="s2">&quot;import distutils.sysconfig; print distutils.sysconfig.get_python_lib(prefix=&#39;</span><span class="nv">$HOME</span><span class="s2">/EasyBuild/&#39;);&quot;</span>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import distutils.sysconfig; print distutils.sysconfig.get_python_lib(prefix=&#39;</span><span class="nv">$HOME</span><span class="s2">/EasyBuild/&#39;);&quot;</span>
 </code></pre></div>
 </div>
 <h3 id="install-with-admin-rights">Install with admin rights<a class="headerlink" href="#install-with-admin-rights" title="Permanent link">&para;</a></h3>
@@ -446,8 +446,8 @@ can specify that EasyBuild should be installed in your <code>$HOME</code> direct
 using the <code>--user</code> option.</p>
 <p>The full list of commands to install EasyBuild in your <code>$HOME</code> directory
 using <code>pip</code> would be:</p>
-<div class="highlight"><pre><span></span><code>pip install --user easybuild
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$HOME</span>/.local/bin:<span class="nv">$PATH</span>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>easybuild
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$HOME</span>/.local/bin:<span class="nv">$PATH</span>
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -460,9 +460,9 @@ other Python software).</p>
 </div>
 <h3 id="installing-the-easybuild-packages-separately">Installing the EasyBuild packages separately<a class="headerlink" href="#installing-the-easybuild-packages-separately" title="Permanent link">&para;</a></h3>
 <p>Each of the EasyBuild packages can also be installed separately:</p>
-<div class="highlight"><pre><span></span><code>pip install --install-option <span class="s2">&quot;--prefix=</span><span class="nv">$HOME</span><span class="s2">/EasyBuild&quot;</span> easybuild-framework
-pip install --install-option <span class="s2">&quot;--prefix=</span><span class="nv">$HOME</span><span class="s2">/EasyBuild&quot;</span> easybuild-easyblocks
-pip install --install-option <span class="s2">&quot;--prefix=</span><span class="nv">$HOME</span><span class="s2">/EasyBuild&quot;</span> easybuild-easyconfigs
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>--install-option<span class="w"> </span><span class="s2">&quot;--prefix=</span><span class="nv">$HOME</span><span class="s2">/EasyBuild&quot;</span><span class="w"> </span>easybuild-framework
+pip<span class="w"> </span>install<span class="w"> </span>--install-option<span class="w"> </span><span class="s2">&quot;--prefix=</span><span class="nv">$HOME</span><span class="s2">/EasyBuild&quot;</span><span class="w"> </span>easybuild-easyblocks
+pip<span class="w"> </span>install<span class="w"> </span>--install-option<span class="w"> </span><span class="s2">&quot;--prefix=</span><span class="nv">$HOME</span><span class="s2">/EasyBuild&quot;</span><span class="w"> </span>easybuild-easyconfigs
 </code></pre></div>
 <p>This is the exact same sequence of steps as they will be performed when
 running
@@ -470,9 +470,9 @@ running
 <h2 id="installation-from-downloaded-sources">Installation from downloaded sources<a class="headerlink" href="#installation-from-downloaded-sources" title="Permanent link">&para;</a></h2>
 <p>To install one of the EasyBuild packages from a downloaded source
 tarball, use the following steps:</p>
-<div class="highlight"><pre><span></span><code>tar xfvz easybuild-framework-1.0.tar.gz
-<span class="nb">cd</span> easybuild-framework-1.0
-pip install --install-option <span class="s2">&quot;--prefix=</span><span class="nv">$HOME</span><span class="s2">/EasyBuild&quot;</span> .
+<div class="highlight"><pre><span></span><code>tar<span class="w"> </span>xfvz<span class="w"> </span>easybuild-framework-1.0.tar.gz
+<span class="nb">cd</span><span class="w"> </span>easybuild-framework-1.0
+pip<span class="w"> </span>install<span class="w"> </span>--install-option<span class="w"> </span><span class="s2">&quot;--prefix=</span><span class="nv">$HOME</span><span class="s2">/EasyBuild&quot;</span><span class="w"> </span>.
 </code></pre></div>
 <p>Do note that when an EasyBuild package is being installed without having
 the EasyBuild packages that it depends upon available, both
@@ -485,12 +485,12 @@ depends on the framework package; the easyconfigs package depends on
 both the framework and easyblocks packages.</p>
 <p>If you do not have <code>pip</code> or <code>easy_install</code> available, you can also fall
 back to using the <code>setup.py</code> script directly:</p>
-<div class="highlight"><pre><span></span><code>python setup.py --prefix <span class="nv">$HOME</span>/EasyBuild install
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>setup.py<span class="w"> </span>--prefix<span class="w"> </span><span class="nv">$HOME</span>/EasyBuild<span class="w"> </span>install
 </code></pre></div>
 <h2 id="installation-of-latest-release-from-github">Installation of latest release from GitHub<a class="headerlink" href="#installation-of-latest-release-from-github" title="Permanent link">&para;</a></h2>
 <p>To install the latest (stable) release of an EasyBuild package directly
 from GitHub, use the following command:</p>
-<div class="highlight"><pre><span></span><code>pip install --install-option <span class="s2">&quot;--prefix=</span><span class="nv">$HOME</span><span class="s2">/EasyBuild&quot;</span> https://github.com/easybuilders/easybuild-framework/archive/main.tar.gz
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>--install-option<span class="w"> </span><span class="s2">&quot;--prefix=</span><span class="nv">$HOME</span><span class="s2">/EasyBuild&quot;</span><span class="w"> </span>https://github.com/easybuilders/easybuild-framework/archive/main.tar.gz
 </code></pre></div>
 <p>Again, the order in which the EasyBuild packages are installed is
 important to have full control over the installation process, see
@@ -500,7 +500,7 @@ previous section.</p>
 GitHub, you can simply adjust the command from the previous section to
 install from the <code>develop</code> branch (or any of the available feature
 branches in any EasyBuild repository for that matter):</p>
-<div class="highlight"><pre><span></span><code>pip install --install-option <span class="s2">&quot;--prefix=</span><span class="nv">$HOME</span><span class="s2">/EasyBuild&quot;</span> https://github.com/easybuilders/easybuild-framework/archive/develop.tar.gz
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>--install-option<span class="w"> </span><span class="s2">&quot;--prefix=</span><span class="nv">$HOME</span><span class="s2">/EasyBuild&quot;</span><span class="w"> </span>https://github.com/easybuilders/easybuild-framework/archive/develop.tar.gz
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -528,15 +528,15 @@ vsc-base), you can set up a development version of EasyBuild using the
 </ul>
 <p>It can be used as follows:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># pick an installation prefix (adjust as you like)</span>
-<span class="nv">INSTALL_PREFIX</span><span class="o">=</span><span class="k">$(</span>mktemp -d <span class="nv">$HOME</span>/EasyBuild-XXXXXX<span class="k">)</span>
+<span class="nv">INSTALL_PREFIX</span><span class="o">=</span><span class="k">$(</span>mktemp<span class="w"> </span>-d<span class="w"> </span><span class="nv">$HOME</span>/EasyBuild-XXXXXX<span class="k">)</span>
 <span class="c1"># download script</span>
-curl -O https://raw.githubusercontent.com/easybuilders/easybuild-framework/main/easybuild/scripts/install-EasyBuild-develop.sh
+curl<span class="w"> </span>-O<span class="w"> </span>https://raw.githubusercontent.com/easybuilders/easybuild-framework/main/easybuild/scripts/install-EasyBuild-develop.sh
 <span class="c1"># run downloaded script, specifying *your* GitHub username and the installation prefix</span>
-bash install-EasyBuild-develop.sh GITHUB_USERNAME <span class="nv">$INSTALL_PREFIX</span>
+bash<span class="w"> </span>install-EasyBuild-develop.sh<span class="w"> </span>GITHUB_USERNAME<span class="w"> </span><span class="nv">$INSTALL_PREFIX</span>
 <span class="c1"># update $MODULEPATH via &#39;module use&#39;, and load the module</span>
-module use <span class="nv">$INSTALL_PREFIX</span>/modules
-module load EasyBuild-develop
-eb --version  <span class="c1">## This should ensure you have a reasonable instance of EasyBuild</span>
+module<span class="w"> </span>use<span class="w"> </span><span class="nv">$INSTALL_PREFIX</span>/modules
+module<span class="w"> </span>load<span class="w"> </span>EasyBuild-develop
+eb<span class="w"> </span>--version<span class="w">  </span><span class="c1">## This should ensure you have a reasonable instance of EasyBuild</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -632,14 +632,13 @@ otherwise save your changes, if you intend to use them later.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

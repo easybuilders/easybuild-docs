@@ -10,8 +10,10 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/partial-installations/">
       
+      
+      
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -364,10 +365,9 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/partial-installations.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="partial_installations">Partial installations<a class="headerlink" href="#partial_installations" title="Permanent link">&para;</a></h1>
@@ -382,7 +382,7 @@ command line option can be used; the name of the step must be supplied as an arg
 <code>prepare</code>, <code>configure</code>, <code>build</code>, <code>test</code>, <code>install</code>, <code>extensions</code>, <code>package</code>, <code>postproc</code>,
 <code>sanitycheck</code>, <code>cleanup</code>, <code>module</code>, <code>testcases</code>.</p>
 <p>Example usage:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb GCC-4.9.2.eb --stop configure
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>GCC-4.9.2.eb<span class="w"> </span>--stop<span class="w"> </span>configure
 <span class="go">== temporary log file in case of crash /tmp/eb-X2Z0b7/easybuild-mGxmNb.log</span>
 <span class="go">== processing EasyBuild easyconfig /home/example/GCC-4.9.2.eb</span>
 <span class="go">== building and installing GCC/4.9.2...</span>
@@ -402,7 +402,7 @@ command line option can be used; the name of the step must be supplied as an arg
 <p>It may be useful to be able to batch-download sources on a machine where no modules tool is installed. The
 <code>--fetch</code> option, which is equivalent with <code>--stop fetch --ignore-osdeps</code>, addresses this requirement.</p>
 <p>Example usage:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb GCCcore-6.2.0.eb --fetch
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>GCCcore-6.2.0.eb<span class="w"> </span>--fetch
 <span class="go">== temporary log file in case of crash /tmp/eb-1ZZX2b/easybuild-NSmm5P.log</span>
 <span class="go">== processing EasyBuild easyconfig /home/example/GCCcore-6.2.0.eb</span>
 <span class="go">== building and installing GCCcore/6.2.0...</span>
@@ -439,13 +439,13 @@ iv) install the missing extensions;
 v) run the sanity check (which includes checking that all extensions are available)
 vi) regenerate the module file (since it contains a list of installed extensions)</p>
 <p>Example usage:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb Python-2.7.9-intel-2015a.eb --skip
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>Python-2.7.9-intel-2015a.eb<span class="w"> </span>--skip
 <span class="go">...</span>
 <span class="go">== Python/2.7.9-intel-2015a is already installed (module found), skipping</span>
 <span class="go">== No easyconfigs left to be built.</span>
 <span class="go">== Build succeeded for 0 out of 0</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb Python-2.7.9-intel-2015a.eb --skip --rebuild
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>Python-2.7.9-intel-2015a.eb<span class="w"> </span>--skip<span class="w"> </span>--rebuild
 <span class="go">...</span>
 <span class="go">== building and installing Python/2.7.9-intel-2015a...</span>
 <span class="go">...</span>
@@ -510,11 +510,11 @@ according to the modules tool.</p>
 <ul>
 <li>
 <p>only generate module file:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>module avail GCC
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>module<span class="w"> </span>avail<span class="w"> </span>GCC
 <span class="go">---------------------------- /home/example/.local/modules/all ----------------------------</span>
 <span class="go">GCC/4.8.2</span>
 
-<span class="gp">$ </span>eb GCC-5.1.0.eb --module-only --rebuild
+<span class="gp">$ </span>eb<span class="w"> </span>GCC-5.1.0.eb<span class="w"> </span>--module-only<span class="w"> </span>--rebuild
 <span class="go">...</span>
 <span class="go">== building and installing GCC/5.1.0...</span>
 <span class="go">== fetching files [skipped]</span>
@@ -530,7 +530,7 @@ according to the modules tool.</p>
 <span class="go">== COMPLETED: Installation ended successfully</span>
 <span class="go">...</span>
 
-<span class="gp">$ </span>module avail GCC
+<span class="gp">$ </span>module<span class="w"> </span>avail<span class="w"> </span>GCC
 
 <span class="go">---------------------------- /home/example/.local/modules/all ----------------------------</span>
 <span class="go">GCC/4.8.2     GCC/5.1.0</span>
@@ -538,15 +538,15 @@ according to the modules tool.</p>
 </li>
 <li>
 <p>regenerate existing module file:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>module avail GCC/4.8.2
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>module<span class="w"> </span>avail<span class="w"> </span>GCC/4.8.2
 
 <span class="go">---------------------------- /home/example/.local/modules/all ----------------------------</span>
 <span class="go">GCC/4.8.2</span>
 
-<span class="gp">$ </span>ls -l /home/example/.local/modules/all/GCC/4.8.2
+<span class="gp">$ </span>ls<span class="w"> </span>-l<span class="w"> </span>/home/example/.local/modules/all/GCC/4.8.2
 <span class="go">-rw-rw-r-- 1 example example 1002 Jan 11 17:19 /home/example/.local/modules/all/GCC/4.8.2</span>
 
-<span class="gp">$ </span>eb GCC-4.8.2.eb --module-only --rebuild
+<span class="gp">$ </span>eb<span class="w"> </span>GCC-4.8.2.eb<span class="w"> </span>--module-only<span class="w"> </span>--rebuild
 <span class="go">...</span>
 <span class="go">== building and installing GCC/4.8.2...</span>
 <span class="go">...</span>
@@ -555,7 +555,7 @@ according to the modules tool.</p>
 <span class="go">== COMPLETED: Installation ended successfully</span>
 <span class="go">...</span>
 
-<span class="gp">$ </span>ls -l /home/example/.local/modules/all/GCC/4.8.2
+<span class="gp">$ </span>ls<span class="w"> </span>-l<span class="w"> </span>/home/example/.local/modules/all/GCC/4.8.2
 <span class="go">-rw-rw-r-- 1 example example 1064 Apr 30 10:54 /home/example/.local/modules/all/GCC/4.8.2</span>
 </code></pre></div>
 </li>
@@ -568,15 +568,15 @@ combining <code>--module-only</code> with additional configuration options that 
 <li>
 <p>to generate a module file in Lua syntax, next to an already existing module file in Tcl syntax,
   <code>--module-only --module-syntax=Lua</code> can be used:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>module avail GCC/4.8.2
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>module<span class="w"> </span>avail<span class="w"> </span>GCC/4.8.2
 
 <span class="go">---------------------------- /home/example/.local/modules/all ----------------------------</span>
 <span class="go">GCC/4.8.2</span>
 
-<span class="gp">$ </span>ls -l /home/example/.local/modules/all/GCC/4.8.2*
+<span class="gp">$ </span>ls<span class="w"> </span>-l<span class="w"> </span>/home/example/.local/modules/all/GCC/4.8.2*
 <span class="go">-rw-rw-r-- 1 example example 1064 Apr 30 10:54 /home/example/.local/modules/all/GCC/4.8.2</span>
 
-<span class="gp">$ </span>eb GCC-4.8.2.eb --modules-tool<span class="o">=</span>Lmod --module-only --module-syntax<span class="o">=</span>Lua --rebuild
+<span class="gp">$ </span>eb<span class="w"> </span>GCC-4.8.2.eb<span class="w"> </span>--modules-tool<span class="o">=</span>Lmod<span class="w"> </span>--module-only<span class="w"> </span>--module-syntax<span class="o">=</span>Lua<span class="w"> </span>--rebuild
 <span class="go">...</span>
 <span class="go">== building and installing GCC/4.8.2...</span>
 <span class="go">...</span>
@@ -585,7 +585,7 @@ combining <code>--module-only</code> with additional configuration options that 
 <span class="go">== COMPLETED: Installation ended successfully</span>
 <span class="go">...</span>
 
-<span class="gp">$ </span>ls -l /home/example/.local/modules/all/GCC/4.8.2*
+<span class="gp">$ </span>ls<span class="w"> </span>-l<span class="w"> </span>/home/example/.local/modules/all/GCC/4.8.2*
 <span class="go">-rw-rw-r-- 1 example example 1064 Apr 30 10:54 /home/example/.local/modules/all/GCC/4.8.2</span>
 <span class="go">-rw-rw-r-- 1 example example 1249 Apr 30 11:56 /home/example/.local/modules/all/GCC/4.8.2.lua</span>
 </code></pre></div>
@@ -600,7 +600,7 @@ report the module as being available. Hence, <code>--rebuild</code> must be used
 <li>
 <p>to generate a module file using a different naming scheme, <code>--module-only</code> can be combined with
   <code>--module-naming-scheme</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb --installpath-modules<span class="o">=</span><span class="nv">$HOME</span>/test/modules --module-only --module-naming-scheme<span class="o">=</span>HierarchicalMNS --rebuild
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--installpath-modules<span class="o">=</span><span class="nv">$HOME</span>/test/modules<span class="w"> </span>--module-only<span class="w"> </span>--module-naming-scheme<span class="o">=</span>HierarchicalMNS<span class="w"> </span>--rebuild
 <span class="go">...</span>
 <span class="go">== building and installing Core/GCC/4.8.2...</span>
 <span class="go">...</span>
@@ -608,9 +608,9 @@ report the module as being available. Hence, <code>--rebuild</code> must be used
 <span class="go">== creating module...</span>
 <span class="go">== COMPLETED: Installation ended successfully</span>
 
-<span class="gp">$ </span>module unuse <span class="nv">$HOME</span>/.local/modules/all
-<span class="gp">$ </span>module use <span class="nv">$HOME</span>/test/modules/all
-<span class="gp">$ </span>module avail
+<span class="gp">$ </span>module<span class="w"> </span>unuse<span class="w"> </span><span class="nv">$HOME</span>/.local/modules/all
+<span class="gp">$ </span>module<span class="w"> </span>use<span class="w"> </span><span class="nv">$HOME</span>/test/modules/all
+<span class="gp">$ </span>module<span class="w"> </span>avail
 
 <span class="go">---------------------------- /home/example/test/modules/all ----------------------------</span>
 <span class="go">Core/GCC/4.8.2</span>
@@ -726,14 +726,13 @@ The <code>MigrateFromEBToHMNS</code> module naming scheme is available since Eas
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>

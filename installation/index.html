@@ -10,8 +10,14 @@
       
         <link rel="canonical" href="https://docs.easybuild.io/installation/">
       
+      
+        <link rel="prev" href="../terminology/">
+      
+      
+        <link rel="next" href="../configuration/">
+      
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
     
     
       
@@ -19,11 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f56500e0.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -628,15 +633,14 @@
                 
                   
 
-  <a href="https://github.com/easybuilders/easybuild-docs/easybuild-docs/edit/main/docs/installation.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="installation">Installing EasyBuild<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
 <p>EasyBuild is Python software, so there are a couple of ways to install it.</p>
-<p>We recommend installing EasyBuild using <code>pip</code>. This method is described at <a class="autorefs autorefs-internal" href="#pip">Using pip to Install EasyBuild</a>.</p>
+<p>We recommend installing EasyBuild using <code>pip</code>. This method is described at <a class="autorefs autorefs-internal" href="../version-specific/supported-software/#pip">Using pip to Install EasyBuild</a>.</p>
 <p>It is also possible to install EasyBuild as a module. To do this, 
 use the 3-step procedure outlined at <a class="autorefs autorefs-internal" href="#eb_as_module">Installing EasyBuild with EasyBuild</a>.</p>
 <p>Do take into account the required and optional dependencies (see <a class="autorefs autorefs-internal" href="#requirements">Requirements</a> and <a class="autorefs autorefs-internal" href="#dependencies">Dependencies</a>).</p>
@@ -668,7 +672,7 @@ use the 3-step procedure outlined at <a class="autorefs autorefs-internal" href=
 <p>Since EasyBuild is released as a <a href="https://pypi.org/project/easybuild">Python package on PyPI</a>
 you can install it using <code>pip</code>, the most commonly used tool for installing Python packages.</p>
 <p>Install EasyBuild with:</p>
-<div class="highlight"><pre><span></span><code>pip install easybuild
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>easybuild
 </code></pre></div>
 <p>You may need to tweak this command a bit, depending on your setup, see <a class="autorefs autorefs-internal" href="#more_pip">Additional pip install options</a>.</p>
 <div class="admonition note">
@@ -680,13 +684,13 @@ instead to install EasyBuild.</p>
 <h3 id="sanity-check">Sanity check<a class="headerlink" href="#sanity-check" title="Permanent link">&para;</a></h3>
 <p>Compare the version of <code>eb</code>, the main EasyBuild command, with the version of the EasyBuild module that was installed.
 For example::</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>module load EasyBuild
-<span class="gp">$ </span>module list
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>EasyBuild
+<span class="gp">$ </span>module<span class="w"> </span>list
 
 <span class="go">Currently Loaded Modules:</span>
 <span class="go">  1) EasyBuild/4.4.0</span>
 
-<span class="gp">$ </span>eb --version
+<span class="gp">$ </span>eb<span class="w"> </span>--version
 <span class="go">This is EasyBuild 4.4.0 (framework: 4.4.0, easyblocks: 4.4.0) on host example.local</span>
 </code></pre></div>
 <div class="admonition tip">
@@ -709,18 +713,18 @@ or run<code>eb --show-config</code> to see the default EasyBuild configuration (
 <ul>
 <li>
 <p>to install EasyBuild <em>system-wide</em>, you can use <code>sudo</code> (if you have admin privileges):</p>
-<div class="highlight"><pre><span></span><code>sudo pip install easybuild
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>easybuild
 </code></pre></div>
 </li>
 <li>
 <p>To install EasyBuild <em>in your personal home directory</em>, you can use the <code>--user</code> option:</p>
-<div class="highlight"><pre><span></span><code>pip install --user easybuild
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>easybuild
 </code></pre></div>
 <p>This will result in an EasyBuild installation in <code>$HOME/.local/</code>.</p>
 </li>
 <li>
 <p>To install EasyBuild in a <em>specific directory</em> you can use the <code>--prefix</code> option:</p>
-<div class="highlight"><pre><span></span><code>pip install --prefix _PREFIX_ easybuild
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>--prefix<span class="w"> </span>_PREFIX_<span class="w"> </span>easybuild
 </code></pre></div>
 <p>In this command, you should replace '<code>_PREFIX_</code>' with the location where you want to have EasyBuild installed
 (for example, <code>$HOME/tools</code> or <code>/tmp/$USER</code>).</p>
@@ -734,11 +738,11 @@ available. Or maybe <code>pip</code> is not available at all, and only "versione
 available.</p>
 <p>If you (only) have <code>pip3</code> available, you can replace <code>pip</code> with <code>pip3</code> in any of the <code>pip install</code> commands
 above:</p>
-<div class="highlight"><pre><span></span><code>pip3 install easybuild
+<div class="highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>easybuild
 </code></pre></div>
 <p>If you want to ensure that you are using the <code>pip</code> installation that corresponds to the Python 3 installation
 that you intend to use, you can use <code>python3 -m pip</code> rather than <code>pip3</code>.</p>
-<div class="highlight"><pre><span></span><code>python3.6 -m pip install easybuild
+<div class="highlight"><pre><span></span><code>python3.6<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>easybuild
 </code></pre></div>
 <p>Note that you may also need to instruct the <code>eb</code> command to use the correct Python version at runtime,
 via <code>$EB_PYTHON</code> (see <a class="autorefs autorefs-internal" href="#more_pip_env_EB_PYTHON">Setting <code>$EB_PYTHON</code></a>).</p>
@@ -754,7 +758,7 @@ To avoid this, you can update one of the shell startup scripts in your home dire
 </div>
 <h3 id="more_pip_env_PATH">Updating <code>$PATH</code><a class="headerlink" href="#more_pip_env_PATH" title="Permanent link">&para;</a></h3>
 <p>Update the <code>$PATH</code> environment variable to make sure the <code>eb</code> command is available::</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>_PREFIX_/bin:<span class="nv">$PATH</span>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>_PREFIX_/bin:<span class="nv">$PATH</span>
 </code></pre></div>
 <p><strong>Replace</strong> <code>_PREFIX_</code> <strong>in this command</strong> with the directory path where EasyBuild was installed into
 (use <code>$HOME/.local</code> if you used <code>pip install --user</code>).</p>
@@ -768,7 +772,7 @@ it can find the EasyBuild Python packages.</p>
 <code>$HOME/.local</code> when searching for installed Python packages, or if you installed EasyBuild in a standard
 system-wide location.</p>
 <p>Update <code>$PYTHONPATH</code> by running a command like::</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span>_PREFIX_/lib/pythonX.Y/site-packages:<span class="nv">$PYTHONPATH</span>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span>_PREFIX_/lib/pythonX.Y/site-packages:<span class="nv">$PYTHONPATH</span>
 </code></pre></div>
 <p>Here, you need to replace the <code>X</code> and <code>Y</code> with the major and minor version of your Python installation,
 which you can determine by running <code>python -V</code>.
@@ -777,7 +781,7 @@ For example, if you are using Python 3.6, make sure you are using <code>/python3
 into.</p>
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># update $PYTHONPATH if EasyBuild was installed in $HOME/tools with Python 3.6</span>
-<span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$HOME</span>/tools/lib/python3.6/site-packages:<span class="nv">$PYTHONPATH</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$HOME</span>/tools/lib/python3.6/site-packages:<span class="nv">$PYTHONPATH</span>
 </code></pre></div>
 <h3 id="more_pip_env_EB_PYTHON">Setting <code>$EB_PYTHON</code><a class="headerlink" href="#more_pip_env_EB_PYTHON" title="Permanent link">&para;</a></h3>
 <p>If you want to control which Python version is used to run EasyBuild,
@@ -786,12 +790,12 @@ via the <code>$EB_PYTHON</code> environment variable.</p>
 <p>This may be required when you installing EasyBuild with a version of <code>pip</code> that does not correspond
 with the default Python version.</p>
 <p>For example, to ensure that <code>eb</code> uses <code>python3.6</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">EB_PYTHON</span><span class="o">=</span>python3.6
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">EB_PYTHON</span><span class="o">=</span>python3.6
 </code></pre></div>
 <h3 id="more_pip_env_EB_VERBOSE">Setting <code>$EB_VERBOSE</code><a class="headerlink" href="#more_pip_env_EB_VERBOSE" title="Permanent link">&para;</a></h3>
 <p>To determine which <code>python</code> commands are being considered by the <code>eb</code> command,
 you can define the <code>$EB_VERBOSE</code> environment variable. For example:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nv">EB_VERBOSE</span><span class="o">=</span><span class="m">1</span> eb --version
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nv">EB_VERBOSE</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>eb<span class="w"> </span>--version
 <span class="go">&gt;&gt; Considering &#39;python3.6&#39;...</span>
 <span class="go">&gt;&gt; &#39;python3&#39; version: 3.6.8, which matches Python 3 version requirement (&gt;= 3.5)</span>
 <span class="go">&gt;&gt; Selected Python command: python3 (/usr/bin/python3.6)</span>
@@ -808,16 +812,16 @@ you can consider installing EasyBuild with EasyBuild. This can be done in 3 step
 </ul>
 <h3 id="eb_as_module_step1">Step 1: Installing EasyBuild into a temporary location<a class="headerlink" href="#eb_as_module_step1" title="Permanent link">&para;</a></h3>
 <p>If you don't have EasyBuild installed yet, you need to install it in a temporary location first.
-The recommended way of doing this is <a class="autorefs autorefs-internal" href="#pip">using pip to install EasyBuild</a>.</p>
+The recommended way of doing this is <a class="autorefs autorefs-internal" href="../version-specific/supported-software/#pip">using pip to install EasyBuild</a>.</p>
 <p>For example, to install EasyBuild into a subdirectory <code>/tmp/$USER</code> using the default Python 3 version:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># pick installation prefix, and install EasyBuild into it</span>
-<span class="nb">export</span> <span class="nv">EB_TMPDIR</span><span class="o">=</span>/tmp/<span class="nv">$USER</span>/eb_tmp
-python3 -m pip install --ignore-installed --prefix <span class="nv">$EB_TMPDIR</span> easybuild
+<span class="nb">export</span><span class="w"> </span><span class="nv">EB_TMPDIR</span><span class="o">=</span>/tmp/<span class="nv">$USER</span>/eb_tmp
+python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--ignore-installed<span class="w"> </span>--prefix<span class="w"> </span><span class="nv">$EB_TMPDIR</span><span class="w"> </span>easybuild
 
 <span class="c1"># update environment to use this temporary EasyBuild installation</span>
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$EB_TMPDIR</span>/bin:<span class="nv">$PATH</span>
-<span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="k">$(</span>/bin/ls -rtd -1 <span class="nv">$EB_TMPDIR</span>/lib*/python*/site-packages <span class="p">|</span> tail -1<span class="k">)</span>:<span class="nv">$PYTHONPATH</span>
-<span class="nb">export</span> <span class="nv">EB_PYTHON</span><span class="o">=</span>python3
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$EB_TMPDIR</span>/bin:<span class="nv">$PATH</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="k">$(</span>/bin/ls<span class="w"> </span>-rtd<span class="w"> </span>-1<span class="w"> </span><span class="nv">$EB_TMPDIR</span>/lib*/python*/site-packages<span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-1<span class="k">)</span>:<span class="nv">$PYTHONPATH</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">EB_PYTHON</span><span class="o">=</span>python3
 </code></pre></div>
 <h3 id="eb_as_module_step2">Step 2: Using EasyBuild to install EasyBuild<a class="headerlink" href="#eb_as_module_step2" title="Permanent link">&para;</a></h3>
 <p>Once you have a working (recent) temporary EasyBuild installation, you can use it to
@@ -826,7 +830,7 @@ like to install other software too.</p>
 <p>You can use the <code>eb --install-latest-eb-release</code> command for this,
 combined with the <code>--prefix</code> option to control which directories are used by EasyBuild for the installation.</p>
 <p>For example, to install the latest version of EasyBuild as a module into <code>$HOME/easybuild</code>:</p>
-<div class="highlight"><pre><span></span><code>eb --install-latest-eb-release --prefix <span class="nv">$HOME</span>/easybuild
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--install-latest-eb-release<span class="w"> </span>--prefix<span class="w"> </span><span class="nv">$HOME</span>/easybuild
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -838,12 +842,12 @@ load the module that was generated alongside the EasyBuild installation. You wil
 you start a new shell session.</p>
 <p>First, make the module available by running the following command (which will update the module search path
 environment variable <code>$MODULEPATH</code>):</p>
-<div class="highlight"><pre><span></span><code>module use _PREFIX_/modules/all
+<div class="highlight"><pre><span></span><code>module<span class="w"> </span>use<span class="w"> </span>_PREFIX_/modules/all
 </code></pre></div>
 <p><strong>Replace</strong> <code>_PREFIX_</code> with the path to the directory that you used when running <a class="autorefs autorefs-internal" href="#eb_as_module_step2">Step 2: Using EasyBuild to install EasyBuild</a>
 (for example, <code>$HOME/easybuild</code>).</p>
 <p>Then, load the EasyBuild module to update your environment and make EasyBuild available for use:</p>
-<div class="highlight"><pre><span></span><code>module load EasyBuild
+<div class="highlight"><pre><span></span><code>module<span class="w"> </span>load<span class="w"> </span>EasyBuild
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1025,13 +1029,13 @@ to report the problems you're running into.</p>
 you are using the bootstrap script, please copy-paste the commands below
 and provide the output in your problem report.
 <strong>Do not worry if some of these commands fail or spit out error messages.</strong></p>
-<div class="highlight"><pre><span></span><code>python -V
-<span class="nb">type</span> module
-<span class="nb">type</span> -f module
-module --version
-module av EasyBuild
-which -a eb
-eb --version
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-V
+<span class="nb">type</span><span class="w"> </span>module
+<span class="nb">type</span><span class="w"> </span>-f<span class="w"> </span>module
+module<span class="w"> </span>--version
+module<span class="w"> </span>av<span class="w"> </span>EasyBuild
+which<span class="w"> </span>-a<span class="w"> </span>eb
+eb<span class="w"> </span>--version
 </code></pre></div>
 
   <hr>
@@ -1066,42 +1070,6 @@ eb --version
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../terminology/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Terminology" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Terminology
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../configuration/" class="md-footer__link md-footer__link--next" aria-label="Next: Configuration" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Configuration
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1155,14 +1123,13 @@ eb --version
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "navigation.top", "toc.integrate"], "search": "../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cf534bf.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
-    
     
   </body>
 </html>
