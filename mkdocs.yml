@@ -70,7 +70,7 @@ plugins:
           options:
             docstring_style: sphinx
             docstring_section_style: spacy
-            show_source: true
+            show_source: false
   - gen-files:
       scripts:
         - docs/gen_ref_pages.py
@@ -221,7 +221,6 @@ plugins:
         en/latest/api/easybuild.toolchains.crayintel.html: api/easybuild/toolchains/crayintel.md
         en/latest/api/easybuild.toolchains.craypgi.html: api/easybuild/toolchains/craypgi.md
         en/latest/api/easybuild.toolchains.dummy.html: api/easybuild/toolchains/dummy.md
-        # en/latest/api/easybuild.toolchains.fft.crayfftw.html: ???
         en/latest/api/easybuild.toolchains.fft.fftw.html: api/easybuild/toolchains/fft/fftw.md
         en/latest/api/easybuild.toolchains.fft.intelfftw.html: api/easybuild/toolchains/fft/intelfftw.md
         en/latest/api/easybuild.toolchains.fft.html: api/easybuild/toolchains/fft/index.md
@@ -350,7 +349,6 @@ plugins:
         en/latest/api/easybuild.tools.modules.html: api/easybuild/tools/modules.md
         en/latest/api/easybuild.tools.multidiff.html: api/easybuild/tools/multidiff.md
         en/latest/api/easybuild.tools.options.html: api/easybuild/tools/options.md
-        # en/latest/api/easybuild.tools.ordereddict.html: ???
         en/latest/api/easybuild.tools.package.package_naming_scheme.easybuild_pns.html: api/easybuild/tools/package/package_naming_scheme/easybuild_pns.md
         en/latest/api/easybuild.tools.package.package_naming_scheme.pns.html: api/easybuild/tools/package/package_naming_scheme/pns.md
         en/latest/api/easybuild.tools.package.package_naming_scheme.html: api/easybuild/tools/package/package_naming_scheme/index.md
@@ -410,4 +408,4 @@ plugins:
         en/latest/api/framework.extensioneasyblock.html: api/easybuild/framework/extensioneasyblock.md
         en/latest/api/framework.html: api/easybuild/framework/index.md
         en/latest/api/index.html: api/index.md
-        # en/latest/api/modules.html: ???
+        en/latest/api/modules.html: api/summary.md
