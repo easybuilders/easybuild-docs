@@ -20,7 +20,7 @@ jobs:
           check_filenames: true
           ignore_words_list: atleast,ninjs,simpy,proovread,namd,precice
           # filter out version-specific/* for now, until we fix all issues that mdl trips over
-          exclude_file: 'docs/js/asciinema-player-2.6.1.js|docs/version-specific/*'
+          skip: './docs/js/asciinema-player-2.6.1.js,./docs/version-specific'
 
       - name: check internal links
         run: |
