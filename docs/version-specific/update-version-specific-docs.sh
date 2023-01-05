@@ -122,11 +122,11 @@ do
 done
 
 tcname=`cat $temp_tc | head -1`
-echo -n "<a href='#${tcname}'>${tcname}</a>" >> toolchain-opts.md
+echo -n "[${tcname}](#${tcname})" >> toolchain-opts.md
 
 cat $temp_tc | sed 1d | while read tcname
 do
-    echo -n " - <a href='#${tcname}'>${tcname}</a>" >> toolchain-opts.md
+    echo -n " - [${tcname}](#${tcname})" >> toolchain-opts.md
 done
 echo >> toolchain-opts.md
 
