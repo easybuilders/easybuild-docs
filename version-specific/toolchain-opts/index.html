@@ -2880,6 +2880,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api/easybuild/toolchains/nvofbf/" class="md-nav__link">
+        nvofbf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api/easybuild/toolchains/nvompi/" class="md-nav__link">
         nvompi
       </a>
@@ -4387,2143 +4401,7 @@
 
 <h1 id="avail_toolchain_opts">Available toolchain options (by toolchain)<a class="headerlink" href="#avail_toolchain_opts" title="Permanent link">&para;</a></h1>
 <p><em>(see also</em> <code>eb --avail-toolchain-opts &lt;tcname&gt;</code> <em>)</em></p>
-<p><a href='#ClangGCC'>ClangGCC</a> - <a href='#CrayCCE'>CrayCCE</a> - <a href='#CrayGNU'>CrayGNU</a> - <a href='#CrayIntel'>CrayIntel</a> - <a href='#CrayPGI'>CrayPGI</a> - <a href='#FCC'>FCC</a> - <a href='#Fujitsu'>Fujitsu</a> - <a href='#GCC'>GCC</a> - <a href='#GCCcore'>GCCcore</a> - <a href='#GNU'>GNU</a> - <a href='#NVHPC'>NVHPC</a> - <a href='#PGI'>PGI</a> - <a href='#cgmpich'>cgmpich</a> - <a href='#cgmpolf'>cgmpolf</a> - <a href='#cgmvapich2'>cgmvapich2</a> - <a href='#cgmvolf'>cgmvolf</a> - <a href='#cgompi'>cgompi</a> - <a href='#cgoolf'>cgoolf</a> - <a href='#ffmpi'>ffmpi</a> - <a href='#foss'>foss</a> - <a href='#fosscuda'>fosscuda</a> - <a href='#gcccuda'>gcccuda</a> - <a href='#gfbf'>gfbf</a> - <a href='#gimkl'>gimkl</a> - <a href='#gimpi'>gimpi</a> - <a href='#gimpic'>gimpic</a> - <a href='#giolf'>giolf</a> - <a href='#giolfc'>giolfc</a> - <a href='#gmacml'>gmacml</a> - <a href='#gmkl'>gmkl</a> - <a href='#gmklc'>gmklc</a> - <a href='#gmpich2'>gmpich2</a> - <a href='#gmpich'>gmpich</a> - <a href='#gmpit'>gmpit</a> - <a href='#gmpolf'>gmpolf</a> - <a href='#gmvapich2'>gmvapich2</a> - <a href='#gmvolf'>gmvolf</a> - <a href='#goalf'>goalf</a> - <a href='#gobff'>gobff</a> - <a href='#goblf'>goblf</a> - <a href='#gofbf'>gofbf</a> - <a href='#golf'>golf</a> - <a href='#golfc'>golfc</a> - <a href='#gomkl'>gomkl</a> - <a href='#gomklc'>gomklc</a> - <a href='#gompi'>gompi</a> - <a href='#gompic'>gompic</a> - <a href='#goolf'>goolf</a> - <a href='#goolfc'>goolfc</a> - <a href='#gpsmpi'>gpsmpi</a> - <a href='#gpsolf'>gpsolf</a> - <a href='#gqacml'>gqacml</a> - <a href='#gsmpi'>gsmpi</a> - <a href='#gsolf'>gsolf</a> - <a href='#iccifort'>iccifort</a> - <a href='#iccifortcuda'>iccifortcuda</a> - <a href='#ictce'>ictce</a> - <a href='#iibff'>iibff</a> - <a href='#iimkl'>iimkl</a> - <a href='#iimklc'>iimklc</a> - <a href='#iimpi'>iimpi</a> - <a href='#iimpic'>iimpic</a> - <a href='#iiqmpi'>iiqmpi</a> - <a href='#impich'>impich</a> - <a href='#impmkl'>impmkl</a> - <a href='#intel-compilers'>intel-compilers</a> - <a href='#intel-para'>intel-para</a> - <a href='#intel'>intel</a> - <a href='#intelcuda'>intelcuda</a> - <a href='#iomkl'>iomkl</a> - <a href='#iomklc'>iomklc</a> - <a href='#iompi'>iompi</a> - <a href='#iompic'>iompic</a> - <a href='#ipsmpi'>ipsmpi</a> - <a href='#iqacml'>iqacml</a> - <a href='#ismkl'>ismkl</a> - <a href='#nvompi'>nvompi</a> - <a href='#nvompic'>nvompic</a> - <a href='#nvpsmpi'>nvpsmpi</a> - <a href='#nvpsmpic'>nvpsmpic</a> - <a href='#pmkl'>pmkl</a> - <a href='#pomkl'>pomkl</a> - <a href='#pompi'>pompi</a> - <a href='#system'>system</a> - <a href='#xlcxlf'>xlcxlf</a> - <a href='#xlmpich2'>xlmpich2</a> - <a href='#xlmpich'>xlmpich</a> - <a href='#xlmvapich2'>xlmvapich2</a> - <a href='#xlompi'>xlompi</a></p>
-<h2 id="clanggcc">ClangGCC<a class="headerlink" href="#clanggcc" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-clanggcc-toolchain">Available options for ClangGCC toolchain<a class="headerlink" href="#available-options-for-clanggcc-toolchain" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>option</th>
-<th>description</th>
-<th>default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>32bit</code></td>
-<td>Compile 32bit target</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>basic-block-vectorize</code></td>
-<td>Basic block vectorization</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cciscxx</code></td>
-<td>Use CC as CXX</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cstd</code></td>
-<td>Specify C standard</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>debug</code></td>
-<td>Enable debug</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultopt</code></td>
-<td>Default compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultprec</code></td>
-<td>Default precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>extra_cflags</code></td>
-<td>Specify extra CFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_cxxflags</code></td>
-<td>Specify extra CXXFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_f90flags</code></td>
-<td>Specify extra F90FLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fcflags</code></td>
-<td>Specify extra FCFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fflags</code></td>
-<td>Specify extra FFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>i8</code></td>
-<td>Integers are 8 byte integers</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>ieee</code></td>
-<td>Adhere to IEEE-754 rules</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>loop-vectorize</code></td>
-<td>Loop vectorization</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>loose</code></td>
-<td>Loose precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>lowopt</code></td>
-<td>Low compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>noopt</code></td>
-<td>Disable compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>openmp</code></td>
-<td>Enable OpenMP</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>opt</code></td>
-<td>High compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>optarch</code></td>
-<td>Enable architecture optimizations</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>packed-linker-options</code></td>
-<td>Pack the linker options as comma separated list</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>pic</code></td>
-<td>Use PIC</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>precise</code></td>
-<td>High precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>r8</code></td>
-<td>Real is 8 byte real</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>rpath</code></td>
-<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>shared</code></td>
-<td>Build shared library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>static</code></td>
-<td>Build static library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>strict</code></td>
-<td>Strict (highest) precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>unroll</code></td>
-<td>Unroll loops</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>vectorize</code></td>
-<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>verbose</code></td>
-<td>Verbose output</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>veryloose</code></td>
-<td>Very loose precision</td>
-<td><code>False</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="craycce">CrayCCE<a class="headerlink" href="#craycce" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-craycce-toolchain">Available options for CrayCCE toolchain<a class="headerlink" href="#available-options-for-craycce-toolchain" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>option</th>
-<th>description</th>
-<th>default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>32bit</code></td>
-<td>Compile 32bit target</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cciscxx</code></td>
-<td>Use CC as CXX</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cstd</code></td>
-<td>Specify C standard</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>debug</code></td>
-<td>Enable debug</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultopt</code></td>
-<td>Default compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultprec</code></td>
-<td>Default precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>dynamic</code></td>
-<td>Generate dynamically linked executable</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>extra_cflags</code></td>
-<td>Specify extra CFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_cxxflags</code></td>
-<td>Specify extra CXXFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_f90flags</code></td>
-<td>Specify extra F90FLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fcflags</code></td>
-<td>Specify extra FCFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fflags</code></td>
-<td>Specify extra FFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>i8</code></td>
-<td>Integers are 8 byte integers</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>ieee</code></td>
-<td>Adhere to IEEE-754 rules</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>loose</code></td>
-<td>Loose precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>lowopt</code></td>
-<td>Low compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>mpich-mt</code></td>
-<td>Directs the driver to link in an alternate version of the Cray-MPICH library which                              provides fine-grained multi-threading support to applications that perform                              MPI operations within threaded regions.</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>noopt</code></td>
-<td>Disable compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>openmp</code></td>
-<td>Enable OpenMP</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>opt</code></td>
-<td>High compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>optarch</code></td>
-<td>Enable architecture optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>packed-linker-options</code></td>
-<td>Pack the linker options as comma separated list</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>pic</code></td>
-<td>Use PIC</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>precise</code></td>
-<td>High precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>r8</code></td>
-<td>Real is 8 byte real</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>rpath</code></td>
-<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>shared</code></td>
-<td>Build shared library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>static</code></td>
-<td>Build static library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>strict</code></td>
-<td>Strict (highest) precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>unroll</code></td>
-<td>Unroll loops</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>usempi</code></td>
-<td>Use MPI compiler as default compiler</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>vectorize</code></td>
-<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>verbose</code></td>
-<td>Verbose output</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>veryloose</code></td>
-<td>Very loose precision</td>
-<td><code>False</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="craygnu">CrayGNU<a class="headerlink" href="#craygnu" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-craygnu-toolchain">Available options for CrayGNU toolchain<a class="headerlink" href="#available-options-for-craygnu-toolchain" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>option</th>
-<th>description</th>
-<th>default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>32bit</code></td>
-<td>Compile 32bit target</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cciscxx</code></td>
-<td>Use CC as CXX</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cstd</code></td>
-<td>Specify C standard</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>debug</code></td>
-<td>Enable debug</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultopt</code></td>
-<td>Default compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultprec</code></td>
-<td>Default precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>dynamic</code></td>
-<td>Generate dynamically linked executable</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>extra_cflags</code></td>
-<td>Specify extra CFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_cxxflags</code></td>
-<td>Specify extra CXXFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_f90flags</code></td>
-<td>Specify extra F90FLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fcflags</code></td>
-<td>Specify extra FCFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fflags</code></td>
-<td>Specify extra FFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>i8</code></td>
-<td>Integers are 8 byte integers</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>ieee</code></td>
-<td>Adhere to IEEE-754 rules</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>loose</code></td>
-<td>Loose precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>lowopt</code></td>
-<td>Low compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>mpich-mt</code></td>
-<td>Directs the driver to link in an alternate version of the Cray-MPICH library which                              provides fine-grained multi-threading support to applications that perform                              MPI operations within threaded regions.</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>noopt</code></td>
-<td>Disable compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>openmp</code></td>
-<td>Enable OpenMP</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>opt</code></td>
-<td>High compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>optarch</code></td>
-<td>Enable architecture optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>packed-linker-options</code></td>
-<td>Pack the linker options as comma separated list</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>pic</code></td>
-<td>Use PIC</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>precise</code></td>
-<td>High precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>r8</code></td>
-<td>Real is 8 byte real</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>rpath</code></td>
-<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>shared</code></td>
-<td>Build shared library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>static</code></td>
-<td>Build static library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>strict</code></td>
-<td>Strict (highest) precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>unroll</code></td>
-<td>Unroll loops</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>usempi</code></td>
-<td>Use MPI compiler as default compiler</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>vectorize</code></td>
-<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>verbose</code></td>
-<td>Verbose output</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>veryloose</code></td>
-<td>Very loose precision</td>
-<td><code>False</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="crayintel">CrayIntel<a class="headerlink" href="#crayintel" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-crayintel-toolchain">Available options for CrayIntel toolchain<a class="headerlink" href="#available-options-for-crayintel-toolchain" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>option</th>
-<th>description</th>
-<th>default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>32bit</code></td>
-<td>Compile 32bit target</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cciscxx</code></td>
-<td>Use CC as CXX</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cstd</code></td>
-<td>Specify C standard</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>debug</code></td>
-<td>Enable debug</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultopt</code></td>
-<td>Default compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultprec</code></td>
-<td>Default precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>dynamic</code></td>
-<td>Generate dynamically linked executable</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>extra_cflags</code></td>
-<td>Specify extra CFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_cxxflags</code></td>
-<td>Specify extra CXXFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_f90flags</code></td>
-<td>Specify extra F90FLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fcflags</code></td>
-<td>Specify extra FCFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fflags</code></td>
-<td>Specify extra FFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>i8</code></td>
-<td>Integers are 8 byte integers</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>ieee</code></td>
-<td>Adhere to IEEE-754 rules</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>loose</code></td>
-<td>Loose precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>lowopt</code></td>
-<td>Low compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>mpich-mt</code></td>
-<td>Directs the driver to link in an alternate version of the Cray-MPICH library which                              provides fine-grained multi-threading support to applications that perform                              MPI operations within threaded regions.</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>noopt</code></td>
-<td>Disable compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>openmp</code></td>
-<td>Enable OpenMP</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>opt</code></td>
-<td>High compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>optarch</code></td>
-<td>Enable architecture optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>packed-linker-options</code></td>
-<td>Pack the linker options as comma separated list</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>pic</code></td>
-<td>Use PIC</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>precise</code></td>
-<td>High precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>r8</code></td>
-<td>Real is 8 byte real</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>rpath</code></td>
-<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>shared</code></td>
-<td>Build shared library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>static</code></td>
-<td>Build static library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>strict</code></td>
-<td>Strict (highest) precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>unroll</code></td>
-<td>Unroll loops</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>usempi</code></td>
-<td>Use MPI compiler as default compiler</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>vectorize</code></td>
-<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>verbose</code></td>
-<td>Verbose output</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>veryloose</code></td>
-<td>Very loose precision</td>
-<td><code>False</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="craypgi">CrayPGI<a class="headerlink" href="#craypgi" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-craypgi-toolchain">Available options for CrayPGI toolchain<a class="headerlink" href="#available-options-for-craypgi-toolchain" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>option</th>
-<th>description</th>
-<th>default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>32bit</code></td>
-<td>Compile 32bit target</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cciscxx</code></td>
-<td>Use CC as CXX</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cstd</code></td>
-<td>Specify C standard</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>debug</code></td>
-<td>Enable debug</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultopt</code></td>
-<td>Default compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultprec</code></td>
-<td>Default precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>dynamic</code></td>
-<td>Generate dynamically linked executable</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>extra_cflags</code></td>
-<td>Specify extra CFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_cxxflags</code></td>
-<td>Specify extra CXXFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_f90flags</code></td>
-<td>Specify extra F90FLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fcflags</code></td>
-<td>Specify extra FCFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fflags</code></td>
-<td>Specify extra FFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>i8</code></td>
-<td>Integers are 8 byte integers</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>ieee</code></td>
-<td>Adhere to IEEE-754 rules</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>loose</code></td>
-<td>Loose precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>lowopt</code></td>
-<td>Low compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>mpich-mt</code></td>
-<td>Directs the driver to link in an alternate version of the Cray-MPICH library which                              provides fine-grained multi-threading support to applications that perform                              MPI operations within threaded regions.</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>noopt</code></td>
-<td>Disable compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>openmp</code></td>
-<td>Enable OpenMP</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>opt</code></td>
-<td>High compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>optarch</code></td>
-<td>Enable architecture optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>packed-linker-options</code></td>
-<td>Pack the linker options as comma separated list</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>pic</code></td>
-<td>Use PIC</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>precise</code></td>
-<td>High precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>r8</code></td>
-<td>Real is 8 byte real</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>rpath</code></td>
-<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>shared</code></td>
-<td>Build shared library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>static</code></td>
-<td>Build static library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>strict</code></td>
-<td>Strict (highest) precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>unroll</code></td>
-<td>Unroll loops</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>usempi</code></td>
-<td>Use MPI compiler as default compiler</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>vectorize</code></td>
-<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>verbose</code></td>
-<td>Verbose output</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>veryloose</code></td>
-<td>Very loose precision</td>
-<td><code>False</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="fcc">FCC<a class="headerlink" href="#fcc" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-fcc-toolchain">Available options for FCC toolchain<a class="headerlink" href="#available-options-for-fcc-toolchain" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>option</th>
-<th>description</th>
-<th>default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>32bit</code></td>
-<td>Compile 32bit target</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cciscxx</code></td>
-<td>Use CC as CXX</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cstd</code></td>
-<td>Specify C standard</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>debug</code></td>
-<td>Enable debug</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultopt</code></td>
-<td>Default compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultprec</code></td>
-<td>Default precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>extra_cflags</code></td>
-<td>Specify extra CFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_cxxflags</code></td>
-<td>Specify extra CXXFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_f90flags</code></td>
-<td>Specify extra F90FLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fcflags</code></td>
-<td>Specify extra FCFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fflags</code></td>
-<td>Specify extra FFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>i8</code></td>
-<td>Integers are 8 byte integers</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>ieee</code></td>
-<td>Adhere to IEEE-754 rules</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>loose</code></td>
-<td>Loose precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>lowopt</code></td>
-<td>Low compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>noopt</code></td>
-<td>Disable compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>openmp</code></td>
-<td>Enable OpenMP</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>opt</code></td>
-<td>High compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>optarch</code></td>
-<td>Enable architecture optimizations</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>packed-linker-options</code></td>
-<td>Pack the linker options as comma separated list</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>pic</code></td>
-<td>Use PIC</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>precise</code></td>
-<td>High precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>r8</code></td>
-<td>Real is 8 byte real</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>rpath</code></td>
-<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>shared</code></td>
-<td>Build shared library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>static</code></td>
-<td>Build static library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>strict</code></td>
-<td>Strict (highest) precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>unroll</code></td>
-<td>Unroll loops</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>vectorize</code></td>
-<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>verbose</code></td>
-<td>Verbose output</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>veryloose</code></td>
-<td>Very loose precision</td>
-<td><code>False</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="fujitsu">Fujitsu<a class="headerlink" href="#fujitsu" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-fujitsu-toolchain">Available options for Fujitsu toolchain<a class="headerlink" href="#available-options-for-fujitsu-toolchain" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>option</th>
-<th>description</th>
-<th>default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>32bit</code></td>
-<td>Compile 32bit target</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cciscxx</code></td>
-<td>Use CC as CXX</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cstd</code></td>
-<td>Specify C standard</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>debug</code></td>
-<td>Enable debug</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultopt</code></td>
-<td>Default compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultprec</code></td>
-<td>Default precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>extra_cflags</code></td>
-<td>Specify extra CFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_cxxflags</code></td>
-<td>Specify extra CXXFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_f90flags</code></td>
-<td>Specify extra F90FLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fcflags</code></td>
-<td>Specify extra FCFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fflags</code></td>
-<td>Specify extra FFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>i8</code></td>
-<td>Integers are 8 byte integers</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>ieee</code></td>
-<td>Adhere to IEEE-754 rules</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>loose</code></td>
-<td>Loose precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>lowopt</code></td>
-<td>Low compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>noopt</code></td>
-<td>Disable compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>openmp</code></td>
-<td>Enable OpenMP</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>opt</code></td>
-<td>High compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>optarch</code></td>
-<td>Enable architecture optimizations</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>packed-linker-options</code></td>
-<td>Pack the linker options as comma separated list</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>pic</code></td>
-<td>Use PIC</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>precise</code></td>
-<td>High precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>r8</code></td>
-<td>Real is 8 byte real</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>rpath</code></td>
-<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>shared</code></td>
-<td>Build shared library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>static</code></td>
-<td>Build static library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>strict</code></td>
-<td>Strict (highest) precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>unroll</code></td>
-<td>Unroll loops</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>usempi</code></td>
-<td>Use MPI compiler as default compiler</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>vectorize</code></td>
-<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>verbose</code></td>
-<td>Verbose output</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>veryloose</code></td>
-<td>Very loose precision</td>
-<td><code>False</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="gcc">GCC<a class="headerlink" href="#gcc" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-gcc-toolchain">Available options for GCC toolchain<a class="headerlink" href="#available-options-for-gcc-toolchain" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>option</th>
-<th>description</th>
-<th>default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>32bit</code></td>
-<td>Compile 32bit target</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cciscxx</code></td>
-<td>Use CC as CXX</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cstd</code></td>
-<td>Specify C standard</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>debug</code></td>
-<td>Enable debug</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultopt</code></td>
-<td>Default compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultprec</code></td>
-<td>Default precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>extra_cflags</code></td>
-<td>Specify extra CFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_cxxflags</code></td>
-<td>Specify extra CXXFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_f90flags</code></td>
-<td>Specify extra F90FLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fcflags</code></td>
-<td>Specify extra FCFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fflags</code></td>
-<td>Specify extra FFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>f2c</code></td>
-<td>Generate code compatible with f2c and f77</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>i8</code></td>
-<td>Integers are 8 byte integers</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>ieee</code></td>
-<td>Adhere to IEEE-754 rules</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>loop</code></td>
-<td>Automatic loop parallellisation</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>loose</code></td>
-<td>Loose precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>lowopt</code></td>
-<td>Low compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>lto</code></td>
-<td>Enable Link Time Optimization</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>noopt</code></td>
-<td>Disable compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>openmp</code></td>
-<td>Enable OpenMP</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>opt</code></td>
-<td>High compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>optarch</code></td>
-<td>Enable architecture optimizations</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>packed-linker-options</code></td>
-<td>Pack the linker options as comma separated list</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>pic</code></td>
-<td>Use PIC</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>precise</code></td>
-<td>High precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>r8</code></td>
-<td>Real is 8 byte real</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>rpath</code></td>
-<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>shared</code></td>
-<td>Build shared library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>static</code></td>
-<td>Build static library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>strict</code></td>
-<td>Strict (highest) precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>unroll</code></td>
-<td>Unroll loops</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>vectorize</code></td>
-<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>verbose</code></td>
-<td>Verbose output</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>veryloose</code></td>
-<td>Very loose precision</td>
-<td><code>False</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="gcccore">GCCcore<a class="headerlink" href="#gcccore" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-gcccore-toolchain">Available options for GCCcore toolchain<a class="headerlink" href="#available-options-for-gcccore-toolchain" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>option</th>
-<th>description</th>
-<th>default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>32bit</code></td>
-<td>Compile 32bit target</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cciscxx</code></td>
-<td>Use CC as CXX</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cstd</code></td>
-<td>Specify C standard</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>debug</code></td>
-<td>Enable debug</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultopt</code></td>
-<td>Default compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultprec</code></td>
-<td>Default precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>extra_cflags</code></td>
-<td>Specify extra CFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_cxxflags</code></td>
-<td>Specify extra CXXFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_f90flags</code></td>
-<td>Specify extra F90FLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fcflags</code></td>
-<td>Specify extra FCFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fflags</code></td>
-<td>Specify extra FFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>f2c</code></td>
-<td>Generate code compatible with f2c and f77</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>i8</code></td>
-<td>Integers are 8 byte integers</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>ieee</code></td>
-<td>Adhere to IEEE-754 rules</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>loop</code></td>
-<td>Automatic loop parallellisation</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>loose</code></td>
-<td>Loose precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>lowopt</code></td>
-<td>Low compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>lto</code></td>
-<td>Enable Link Time Optimization</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>noopt</code></td>
-<td>Disable compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>openmp</code></td>
-<td>Enable OpenMP</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>opt</code></td>
-<td>High compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>optarch</code></td>
-<td>Enable architecture optimizations</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>packed-linker-options</code></td>
-<td>Pack the linker options as comma separated list</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>pic</code></td>
-<td>Use PIC</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>precise</code></td>
-<td>High precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>r8</code></td>
-<td>Real is 8 byte real</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>rpath</code></td>
-<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>shared</code></td>
-<td>Build shared library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>static</code></td>
-<td>Build static library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>strict</code></td>
-<td>Strict (highest) precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>unroll</code></td>
-<td>Unroll loops</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>vectorize</code></td>
-<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>verbose</code></td>
-<td>Verbose output</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>veryloose</code></td>
-<td>Very loose precision</td>
-<td><code>False</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="gnu">GNU<a class="headerlink" href="#gnu" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-gnu-toolchain">Available options for GNU toolchain<a class="headerlink" href="#available-options-for-gnu-toolchain" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>option</th>
-<th>description</th>
-<th>default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>32bit</code></td>
-<td>Compile 32bit target</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cciscxx</code></td>
-<td>Use CC as CXX</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cstd</code></td>
-<td>Specify C standard</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>debug</code></td>
-<td>Enable debug</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultopt</code></td>
-<td>Default compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultprec</code></td>
-<td>Default precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>extra_cflags</code></td>
-<td>Specify extra CFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_cxxflags</code></td>
-<td>Specify extra CXXFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_f90flags</code></td>
-<td>Specify extra F90FLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fcflags</code></td>
-<td>Specify extra FCFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fflags</code></td>
-<td>Specify extra FFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>f2c</code></td>
-<td>Generate code compatible with f2c and f77</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>i8</code></td>
-<td>Integers are 8 byte integers</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>ieee</code></td>
-<td>Adhere to IEEE-754 rules</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>loop</code></td>
-<td>Automatic loop parallellisation</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>loose</code></td>
-<td>Loose precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>lowopt</code></td>
-<td>Low compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>lto</code></td>
-<td>Enable Link Time Optimization</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>noopt</code></td>
-<td>Disable compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>openmp</code></td>
-<td>Enable OpenMP</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>opt</code></td>
-<td>High compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>optarch</code></td>
-<td>Enable architecture optimizations</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>packed-linker-options</code></td>
-<td>Pack the linker options as comma separated list</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>pic</code></td>
-<td>Use PIC</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>precise</code></td>
-<td>High precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>r8</code></td>
-<td>Real is 8 byte real</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>rpath</code></td>
-<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>shared</code></td>
-<td>Build shared library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>static</code></td>
-<td>Build static library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>strict</code></td>
-<td>Strict (highest) precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>unroll</code></td>
-<td>Unroll loops</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>vectorize</code></td>
-<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>verbose</code></td>
-<td>Verbose output</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>veryloose</code></td>
-<td>Very loose precision</td>
-<td><code>False</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="nvhpc">NVHPC<a class="headerlink" href="#nvhpc" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-nvhpc-toolchain">Available options for NVHPC toolchain<a class="headerlink" href="#available-options-for-nvhpc-toolchain" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>option</th>
-<th>description</th>
-<th>default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>32bit</code></td>
-<td>Compile 32bit target</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cciscxx</code></td>
-<td>Use CC as CXX</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cstd</code></td>
-<td>Specify C standard</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>debug</code></td>
-<td>Enable debug</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultopt</code></td>
-<td>Default compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultprec</code></td>
-<td>Default precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>extra_cflags</code></td>
-<td>Specify extra CFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_cxxflags</code></td>
-<td>Specify extra CXXFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_f90flags</code></td>
-<td>Specify extra F90FLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fcflags</code></td>
-<td>Specify extra FCFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fflags</code></td>
-<td>Specify extra FFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>i8</code></td>
-<td>Integers are 8 byte integers</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>ieee</code></td>
-<td>Adhere to IEEE-754 rules</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>loose</code></td>
-<td>Loose precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>lowopt</code></td>
-<td>Low compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>noopt</code></td>
-<td>Disable compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>openmp</code></td>
-<td>Enable OpenMP</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>opt</code></td>
-<td>High compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>optarch</code></td>
-<td>Enable architecture optimizations</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>packed-linker-options</code></td>
-<td>Pack the linker options as comma separated list</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>pic</code></td>
-<td>Use PIC</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>precise</code></td>
-<td>High precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>r8</code></td>
-<td>Real is 8 byte real</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>rpath</code></td>
-<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>shared</code></td>
-<td>Build shared library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>static</code></td>
-<td>Build static library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>strict</code></td>
-<td>Strict (highest) precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>unroll</code></td>
-<td>Unroll loops</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>vectorize</code></td>
-<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>verbose</code></td>
-<td>Verbose output</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>veryloose</code></td>
-<td>Very loose precision</td>
-<td><code>False</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="pgi">PGI<a class="headerlink" href="#pgi" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-pgi-toolchain">Available options for PGI toolchain<a class="headerlink" href="#available-options-for-pgi-toolchain" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>option</th>
-<th>description</th>
-<th>default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>32bit</code></td>
-<td>Compile 32bit target</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cciscxx</code></td>
-<td>Use CC as CXX</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cstd</code></td>
-<td>Specify C standard</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>debug</code></td>
-<td>Enable debug</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultopt</code></td>
-<td>Default compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultprec</code></td>
-<td>Default precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>extra_cflags</code></td>
-<td>Specify extra CFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_cxxflags</code></td>
-<td>Specify extra CXXFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_f90flags</code></td>
-<td>Specify extra F90FLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fcflags</code></td>
-<td>Specify extra FCFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fflags</code></td>
-<td>Specify extra FFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>i8</code></td>
-<td>Integers are 8 byte integers</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>ieee</code></td>
-<td>Adhere to IEEE-754 rules</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>loose</code></td>
-<td>Loose precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>lowopt</code></td>
-<td>Low compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>noopt</code></td>
-<td>Disable compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>openmp</code></td>
-<td>Enable OpenMP</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>opt</code></td>
-<td>High compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>optarch</code></td>
-<td>Enable architecture optimizations</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>packed-linker-options</code></td>
-<td>Pack the linker options as comma separated list</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>pic</code></td>
-<td>Use PIC</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>precise</code></td>
-<td>High precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>r8</code></td>
-<td>Real is 8 byte real</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>rpath</code></td>
-<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>shared</code></td>
-<td>Build shared library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>static</code></td>
-<td>Build static library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>strict</code></td>
-<td>Strict (highest) precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>unroll</code></td>
-<td>Unroll loops</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>vectorize</code></td>
-<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>verbose</code></td>
-<td>Verbose output</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>veryloose</code></td>
-<td>Very loose precision</td>
-<td><code>False</code></td>
-</tr>
-</tbody>
-</table>
+<p><a href="#cgmpich">cgmpich</a> - <a href="#cgmpolf">cgmpolf</a> - <a href="#cgmvapich2">cgmvapich2</a> - <a href="#cgmvolf">cgmvolf</a> - <a href="#cgompi">cgompi</a> - <a href="#cgoolf">cgoolf</a> - <a href="#ClangGCC">ClangGCC</a> - <a href="#CrayCCE">CrayCCE</a> - <a href="#CrayGNU">CrayGNU</a> - <a href="#CrayIntel">CrayIntel</a> - <a href="#CrayPGI">CrayPGI</a> - <a href="#FCC">FCC</a> - <a href="#ffmpi">ffmpi</a> - <a href="#foss">foss</a> - <a href="#fosscuda">fosscuda</a> - <a href="#Fujitsu">Fujitsu</a> - <a href="#GCCcore">GCCcore</a> - <a href="#gcccuda">gcccuda</a> - <a href="#GCC">GCC</a> - <a href="#gfbf">gfbf</a> - <a href="#gimkl">gimkl</a> - <a href="#gimpic">gimpic</a> - <a href="#gimpi">gimpi</a> - <a href="#giolf">giolf</a> - <a href="#giolfc">giolfc</a> - <a href="#gmacml">gmacml</a> - <a href="#gmklc">gmklc</a> - <a href="#gmkl">gmkl</a> - <a href="#gmpich2">gmpich2</a> - <a href="#gmpich">gmpich</a> - <a href="#gmpit">gmpit</a> - <a href="#gmpolf">gmpolf</a> - <a href="#gmvapich2">gmvapich2</a> - <a href="#gmvolf">gmvolf</a> - <a href="#GNU">GNU</a> - <a href="#goalf">goalf</a> - <a href="#gobff">gobff</a> - <a href="#goblf">goblf</a> - <a href="#gofbf">gofbf</a> - <a href="#golfc">golfc</a> - <a href="#golf">golf</a> - <a href="#gomklc">gomklc</a> - <a href="#gomkl">gomkl</a> - <a href="#gompic">gompic</a> - <a href="#gompi">gompi</a> - <a href="#goolf">goolf</a> - <a href="#goolfc">goolfc</a> - <a href="#gpsmpi">gpsmpi</a> - <a href="#gpsolf">gpsolf</a> - <a href="#gqacml">gqacml</a> - <a href="#gsmpi">gsmpi</a> - <a href="#gsolf">gsolf</a> - <a href="#iccifortcuda">iccifortcuda</a> - <a href="#iccifort">iccifort</a> - <a href="#ictce">ictce</a> - <a href="#iibff">iibff</a> - <a href="#iimklc">iimklc</a> - <a href="#iimkl">iimkl</a> - <a href="#iimpic">iimpic</a> - <a href="#iimpi">iimpi</a> - <a href="#iiqmpi">iiqmpi</a> - <a href="#impich">impich</a> - <a href="#impmkl">impmkl</a> - <a href="#intel-compilers">intel-compilers</a> - <a href="#intelcuda">intelcuda</a> - <a href="#intel">intel</a> - <a href="#intel-para">intel-para</a> - <a href="#iomklc">iomklc</a> - <a href="#iomkl">iomkl</a> - <a href="#iompic">iompic</a> - <a href="#iompi">iompi</a> - <a href="#ipsmpi">ipsmpi</a> - <a href="#iqacml">iqacml</a> - <a href="#ismkl">ismkl</a> - <a href="#NVHPC">NVHPC</a> - <a href="#nvofbf">nvofbf</a> - <a href="#nvompic">nvompic</a> - <a href="#nvompi">nvompi</a> - <a href="#nvpsmpic">nvpsmpic</a> - <a href="#nvpsmpi">nvpsmpi</a> - <a href="#PGI">PGI</a> - <a href="#pmkl">pmkl</a> - <a href="#pomkl">pomkl</a> - <a href="#pompi">pompi</a> - <a href="#system">system</a> - <a href="#xlcxlf">xlcxlf</a> - <a href="#xlmpich2">xlmpich2</a> - <a href="#xlmpich">xlmpich</a> - <a href="#xlmvapich2">xlmvapich2</a> - <a href="#xlompi">xlompi</a></p>
 <h2 id="cgmpich">cgmpich<a class="headerlink" href="#cgmpich" title="Permanent link">&para;</a></h2>
 <h3 id="available-options-for-cgmpich-toolchain">Available options for cgmpich toolchain<a class="headerlink" href="#available-options-for-cgmpich-toolchain" title="Permanent link">&para;</a></h3>
 <table>
@@ -7622,6 +5500,1084 @@
 </tr>
 </tbody>
 </table>
+<h2 id="clanggcc">ClangGCC<a class="headerlink" href="#clanggcc" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-clanggcc-toolchain">Available options for ClangGCC toolchain<a class="headerlink" href="#available-options-for-clanggcc-toolchain" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>description</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>32bit</code></td>
+<td>Compile 32bit target</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>basic-block-vectorize</code></td>
+<td>Basic block vectorization</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cciscxx</code></td>
+<td>Use CC as CXX</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cstd</code></td>
+<td>Specify C standard</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>debug</code></td>
+<td>Enable debug</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultopt</code></td>
+<td>Default compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultprec</code></td>
+<td>Default precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>extra_cflags</code></td>
+<td>Specify extra CFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_cxxflags</code></td>
+<td>Specify extra CXXFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_f90flags</code></td>
+<td>Specify extra F90FLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fcflags</code></td>
+<td>Specify extra FCFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fflags</code></td>
+<td>Specify extra FFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>i8</code></td>
+<td>Integers are 8 byte integers</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>ieee</code></td>
+<td>Adhere to IEEE-754 rules</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>loop-vectorize</code></td>
+<td>Loop vectorization</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>loose</code></td>
+<td>Loose precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>lowopt</code></td>
+<td>Low compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>noopt</code></td>
+<td>Disable compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>openmp</code></td>
+<td>Enable OpenMP</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>opt</code></td>
+<td>High compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>optarch</code></td>
+<td>Enable architecture optimizations</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>packed-linker-options</code></td>
+<td>Pack the linker options as comma separated list</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>pic</code></td>
+<td>Use PIC</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>precise</code></td>
+<td>High precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>r8</code></td>
+<td>Real is 8 byte real</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>rpath</code></td>
+<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>shared</code></td>
+<td>Build shared library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>static</code></td>
+<td>Build static library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>strict</code></td>
+<td>Strict (highest) precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>unroll</code></td>
+<td>Unroll loops</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>vectorize</code></td>
+<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>verbose</code></td>
+<td>Verbose output</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>veryloose</code></td>
+<td>Very loose precision</td>
+<td><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="craycce">CrayCCE<a class="headerlink" href="#craycce" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-craycce-toolchain">Available options for CrayCCE toolchain<a class="headerlink" href="#available-options-for-craycce-toolchain" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>description</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>32bit</code></td>
+<td>Compile 32bit target</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cciscxx</code></td>
+<td>Use CC as CXX</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cstd</code></td>
+<td>Specify C standard</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>debug</code></td>
+<td>Enable debug</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultopt</code></td>
+<td>Default compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultprec</code></td>
+<td>Default precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>dynamic</code></td>
+<td>Generate dynamically linked executable</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>extra_cflags</code></td>
+<td>Specify extra CFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_cxxflags</code></td>
+<td>Specify extra CXXFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_f90flags</code></td>
+<td>Specify extra F90FLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fcflags</code></td>
+<td>Specify extra FCFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fflags</code></td>
+<td>Specify extra FFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>i8</code></td>
+<td>Integers are 8 byte integers</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>ieee</code></td>
+<td>Adhere to IEEE-754 rules</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>loose</code></td>
+<td>Loose precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>lowopt</code></td>
+<td>Low compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>mpich-mt</code></td>
+<td>Directs the driver to link in an alternate version of the Cray-MPICH library which                              provides fine-grained multi-threading support to applications that perform                              MPI operations within threaded regions.</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>noopt</code></td>
+<td>Disable compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>openmp</code></td>
+<td>Enable OpenMP</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>opt</code></td>
+<td>High compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>optarch</code></td>
+<td>Enable architecture optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>packed-linker-options</code></td>
+<td>Pack the linker options as comma separated list</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>pic</code></td>
+<td>Use PIC</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>precise</code></td>
+<td>High precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>r8</code></td>
+<td>Real is 8 byte real</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>rpath</code></td>
+<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>shared</code></td>
+<td>Build shared library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>static</code></td>
+<td>Build static library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>strict</code></td>
+<td>Strict (highest) precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>unroll</code></td>
+<td>Unroll loops</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>usempi</code></td>
+<td>Use MPI compiler as default compiler</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>vectorize</code></td>
+<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>verbose</code></td>
+<td>Verbose output</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>veryloose</code></td>
+<td>Very loose precision</td>
+<td><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="craygnu">CrayGNU<a class="headerlink" href="#craygnu" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-craygnu-toolchain">Available options for CrayGNU toolchain<a class="headerlink" href="#available-options-for-craygnu-toolchain" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>description</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>32bit</code></td>
+<td>Compile 32bit target</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cciscxx</code></td>
+<td>Use CC as CXX</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cstd</code></td>
+<td>Specify C standard</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>debug</code></td>
+<td>Enable debug</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultopt</code></td>
+<td>Default compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultprec</code></td>
+<td>Default precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>dynamic</code></td>
+<td>Generate dynamically linked executable</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>extra_cflags</code></td>
+<td>Specify extra CFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_cxxflags</code></td>
+<td>Specify extra CXXFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_f90flags</code></td>
+<td>Specify extra F90FLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fcflags</code></td>
+<td>Specify extra FCFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fflags</code></td>
+<td>Specify extra FFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>i8</code></td>
+<td>Integers are 8 byte integers</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>ieee</code></td>
+<td>Adhere to IEEE-754 rules</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>loose</code></td>
+<td>Loose precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>lowopt</code></td>
+<td>Low compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>mpich-mt</code></td>
+<td>Directs the driver to link in an alternate version of the Cray-MPICH library which                              provides fine-grained multi-threading support to applications that perform                              MPI operations within threaded regions.</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>noopt</code></td>
+<td>Disable compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>openmp</code></td>
+<td>Enable OpenMP</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>opt</code></td>
+<td>High compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>optarch</code></td>
+<td>Enable architecture optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>packed-linker-options</code></td>
+<td>Pack the linker options as comma separated list</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>pic</code></td>
+<td>Use PIC</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>precise</code></td>
+<td>High precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>r8</code></td>
+<td>Real is 8 byte real</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>rpath</code></td>
+<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>shared</code></td>
+<td>Build shared library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>static</code></td>
+<td>Build static library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>strict</code></td>
+<td>Strict (highest) precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>unroll</code></td>
+<td>Unroll loops</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>usempi</code></td>
+<td>Use MPI compiler as default compiler</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>vectorize</code></td>
+<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>verbose</code></td>
+<td>Verbose output</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>veryloose</code></td>
+<td>Very loose precision</td>
+<td><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="crayintel">CrayIntel<a class="headerlink" href="#crayintel" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-crayintel-toolchain">Available options for CrayIntel toolchain<a class="headerlink" href="#available-options-for-crayintel-toolchain" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>description</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>32bit</code></td>
+<td>Compile 32bit target</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cciscxx</code></td>
+<td>Use CC as CXX</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cstd</code></td>
+<td>Specify C standard</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>debug</code></td>
+<td>Enable debug</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultopt</code></td>
+<td>Default compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultprec</code></td>
+<td>Default precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>dynamic</code></td>
+<td>Generate dynamically linked executable</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>extra_cflags</code></td>
+<td>Specify extra CFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_cxxflags</code></td>
+<td>Specify extra CXXFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_f90flags</code></td>
+<td>Specify extra F90FLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fcflags</code></td>
+<td>Specify extra FCFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fflags</code></td>
+<td>Specify extra FFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>i8</code></td>
+<td>Integers are 8 byte integers</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>ieee</code></td>
+<td>Adhere to IEEE-754 rules</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>loose</code></td>
+<td>Loose precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>lowopt</code></td>
+<td>Low compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>mpich-mt</code></td>
+<td>Directs the driver to link in an alternate version of the Cray-MPICH library which                              provides fine-grained multi-threading support to applications that perform                              MPI operations within threaded regions.</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>noopt</code></td>
+<td>Disable compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>openmp</code></td>
+<td>Enable OpenMP</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>opt</code></td>
+<td>High compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>optarch</code></td>
+<td>Enable architecture optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>packed-linker-options</code></td>
+<td>Pack the linker options as comma separated list</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>pic</code></td>
+<td>Use PIC</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>precise</code></td>
+<td>High precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>r8</code></td>
+<td>Real is 8 byte real</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>rpath</code></td>
+<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>shared</code></td>
+<td>Build shared library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>static</code></td>
+<td>Build static library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>strict</code></td>
+<td>Strict (highest) precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>unroll</code></td>
+<td>Unroll loops</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>usempi</code></td>
+<td>Use MPI compiler as default compiler</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>vectorize</code></td>
+<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>verbose</code></td>
+<td>Verbose output</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>veryloose</code></td>
+<td>Very loose precision</td>
+<td><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="craypgi">CrayPGI<a class="headerlink" href="#craypgi" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-craypgi-toolchain">Available options for CrayPGI toolchain<a class="headerlink" href="#available-options-for-craypgi-toolchain" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>description</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>32bit</code></td>
+<td>Compile 32bit target</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cciscxx</code></td>
+<td>Use CC as CXX</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cstd</code></td>
+<td>Specify C standard</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>debug</code></td>
+<td>Enable debug</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultopt</code></td>
+<td>Default compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultprec</code></td>
+<td>Default precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>dynamic</code></td>
+<td>Generate dynamically linked executable</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>extra_cflags</code></td>
+<td>Specify extra CFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_cxxflags</code></td>
+<td>Specify extra CXXFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_f90flags</code></td>
+<td>Specify extra F90FLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fcflags</code></td>
+<td>Specify extra FCFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fflags</code></td>
+<td>Specify extra FFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>i8</code></td>
+<td>Integers are 8 byte integers</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>ieee</code></td>
+<td>Adhere to IEEE-754 rules</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>loose</code></td>
+<td>Loose precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>lowopt</code></td>
+<td>Low compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>mpich-mt</code></td>
+<td>Directs the driver to link in an alternate version of the Cray-MPICH library which                              provides fine-grained multi-threading support to applications that perform                              MPI operations within threaded regions.</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>noopt</code></td>
+<td>Disable compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>openmp</code></td>
+<td>Enable OpenMP</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>opt</code></td>
+<td>High compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>optarch</code></td>
+<td>Enable architecture optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>packed-linker-options</code></td>
+<td>Pack the linker options as comma separated list</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>pic</code></td>
+<td>Use PIC</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>precise</code></td>
+<td>High precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>r8</code></td>
+<td>Real is 8 byte real</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>rpath</code></td>
+<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>shared</code></td>
+<td>Build shared library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>static</code></td>
+<td>Build static library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>strict</code></td>
+<td>Strict (highest) precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>unroll</code></td>
+<td>Unroll loops</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>usempi</code></td>
+<td>Use MPI compiler as default compiler</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>vectorize</code></td>
+<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>verbose</code></td>
+<td>Verbose output</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>veryloose</code></td>
+<td>Very loose precision</td>
+<td><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="fcc">FCC<a class="headerlink" href="#fcc" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-fcc-toolchain">Available options for FCC toolchain<a class="headerlink" href="#available-options-for-fcc-toolchain" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>description</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>32bit</code></td>
+<td>Compile 32bit target</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cciscxx</code></td>
+<td>Use CC as CXX</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cstd</code></td>
+<td>Specify C standard</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>debug</code></td>
+<td>Enable debug</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultopt</code></td>
+<td>Default compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultprec</code></td>
+<td>Default precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>extra_cflags</code></td>
+<td>Specify extra CFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_cxxflags</code></td>
+<td>Specify extra CXXFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_f90flags</code></td>
+<td>Specify extra F90FLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fcflags</code></td>
+<td>Specify extra FCFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fflags</code></td>
+<td>Specify extra FFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>i8</code></td>
+<td>Integers are 8 byte integers</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>ieee</code></td>
+<td>Adhere to IEEE-754 rules</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>loose</code></td>
+<td>Loose precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>lowopt</code></td>
+<td>Low compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>noopt</code></td>
+<td>Disable compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>openmp</code></td>
+<td>Enable OpenMP</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>opt</code></td>
+<td>High compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>optarch</code></td>
+<td>Enable architecture optimizations</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>packed-linker-options</code></td>
+<td>Pack the linker options as comma separated list</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>pic</code></td>
+<td>Use PIC</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>precise</code></td>
+<td>High precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>r8</code></td>
+<td>Real is 8 byte real</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>rpath</code></td>
+<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>shared</code></td>
+<td>Build shared library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>static</code></td>
+<td>Build static library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>strict</code></td>
+<td>Strict (highest) precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>unroll</code></td>
+<td>Unroll loops</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>vectorize</code></td>
+<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>verbose</code></td>
+<td>Verbose output</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>veryloose</code></td>
+<td>Very loose precision</td>
+<td><code>False</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="ffmpi">ffmpi<a class="headerlink" href="#ffmpi" title="Permanent link">&para;</a></h2>
 <h3 id="available-options-for-ffmpi-toolchain">Available options for ffmpi toolchain<a class="headerlink" href="#available-options-for-ffmpi-toolchain" title="Permanent link">&para;</a></h3>
 <table>
@@ -8171,8 +7127,547 @@
 </tr>
 </tbody>
 </table>
+<h2 id="fujitsu">Fujitsu<a class="headerlink" href="#fujitsu" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-fujitsu-toolchain">Available options for Fujitsu toolchain<a class="headerlink" href="#available-options-for-fujitsu-toolchain" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>description</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>32bit</code></td>
+<td>Compile 32bit target</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cciscxx</code></td>
+<td>Use CC as CXX</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cstd</code></td>
+<td>Specify C standard</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>debug</code></td>
+<td>Enable debug</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultopt</code></td>
+<td>Default compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultprec</code></td>
+<td>Default precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>extra_cflags</code></td>
+<td>Specify extra CFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_cxxflags</code></td>
+<td>Specify extra CXXFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_f90flags</code></td>
+<td>Specify extra F90FLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fcflags</code></td>
+<td>Specify extra FCFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fflags</code></td>
+<td>Specify extra FFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>i8</code></td>
+<td>Integers are 8 byte integers</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>ieee</code></td>
+<td>Adhere to IEEE-754 rules</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>loose</code></td>
+<td>Loose precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>lowopt</code></td>
+<td>Low compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>noopt</code></td>
+<td>Disable compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>openmp</code></td>
+<td>Enable OpenMP</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>opt</code></td>
+<td>High compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>optarch</code></td>
+<td>Enable architecture optimizations</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>packed-linker-options</code></td>
+<td>Pack the linker options as comma separated list</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>pic</code></td>
+<td>Use PIC</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>precise</code></td>
+<td>High precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>r8</code></td>
+<td>Real is 8 byte real</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>rpath</code></td>
+<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>shared</code></td>
+<td>Build shared library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>static</code></td>
+<td>Build static library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>strict</code></td>
+<td>Strict (highest) precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>unroll</code></td>
+<td>Unroll loops</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>usempi</code></td>
+<td>Use MPI compiler as default compiler</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>vectorize</code></td>
+<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>verbose</code></td>
+<td>Verbose output</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>veryloose</code></td>
+<td>Very loose precision</td>
+<td><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="gcccore">GCCcore<a class="headerlink" href="#gcccore" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-gcccore-toolchain">Available options for GCCcore toolchain<a class="headerlink" href="#available-options-for-gcccore-toolchain" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>description</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>32bit</code></td>
+<td>Compile 32bit target</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cciscxx</code></td>
+<td>Use CC as CXX</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cstd</code></td>
+<td>Specify C standard</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>debug</code></td>
+<td>Enable debug</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultopt</code></td>
+<td>Default compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultprec</code></td>
+<td>Default precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>extra_cflags</code></td>
+<td>Specify extra CFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_cxxflags</code></td>
+<td>Specify extra CXXFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_f90flags</code></td>
+<td>Specify extra F90FLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fcflags</code></td>
+<td>Specify extra FCFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fflags</code></td>
+<td>Specify extra FFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>f2c</code></td>
+<td>Generate code compatible with f2c and f77</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>i8</code></td>
+<td>Integers are 8 byte integers</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>ieee</code></td>
+<td>Adhere to IEEE-754 rules</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>loop</code></td>
+<td>Automatic loop parallellisation</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>loose</code></td>
+<td>Loose precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>lowopt</code></td>
+<td>Low compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>lto</code></td>
+<td>Enable Link Time Optimization</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>noopt</code></td>
+<td>Disable compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>openmp</code></td>
+<td>Enable OpenMP</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>opt</code></td>
+<td>High compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>optarch</code></td>
+<td>Enable architecture optimizations</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>packed-linker-options</code></td>
+<td>Pack the linker options as comma separated list</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>pic</code></td>
+<td>Use PIC</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>precise</code></td>
+<td>High precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>r8</code></td>
+<td>Real is 8 byte real</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>rpath</code></td>
+<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>shared</code></td>
+<td>Build shared library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>static</code></td>
+<td>Build static library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>strict</code></td>
+<td>Strict (highest) precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>unroll</code></td>
+<td>Unroll loops</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>vectorize</code></td>
+<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>verbose</code></td>
+<td>Verbose output</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>veryloose</code></td>
+<td>Very loose precision</td>
+<td><code>False</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="gcccuda">gcccuda<a class="headerlink" href="#gcccuda" title="Permanent link">&para;</a></h2>
 <h3 id="available-options-for-gcccuda-toolchain">Available options for gcccuda toolchain<a class="headerlink" href="#available-options-for-gcccuda-toolchain" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>description</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>32bit</code></td>
+<td>Compile 32bit target</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cciscxx</code></td>
+<td>Use CC as CXX</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cstd</code></td>
+<td>Specify C standard</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>debug</code></td>
+<td>Enable debug</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultopt</code></td>
+<td>Default compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultprec</code></td>
+<td>Default precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>extra_cflags</code></td>
+<td>Specify extra CFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_cxxflags</code></td>
+<td>Specify extra CXXFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_f90flags</code></td>
+<td>Specify extra F90FLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fcflags</code></td>
+<td>Specify extra FCFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fflags</code></td>
+<td>Specify extra FFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>f2c</code></td>
+<td>Generate code compatible with f2c and f77</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>i8</code></td>
+<td>Integers are 8 byte integers</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>ieee</code></td>
+<td>Adhere to IEEE-754 rules</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>loop</code></td>
+<td>Automatic loop parallellisation</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>loose</code></td>
+<td>Loose precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>lowopt</code></td>
+<td>Low compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>lto</code></td>
+<td>Enable Link Time Optimization</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>noopt</code></td>
+<td>Disable compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>openmp</code></td>
+<td>Enable OpenMP</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>opt</code></td>
+<td>High compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>optarch</code></td>
+<td>Enable architecture optimizations</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>packed-linker-options</code></td>
+<td>Pack the linker options as comma separated list</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>pic</code></td>
+<td>Use PIC</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>precise</code></td>
+<td>High precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>r8</code></td>
+<td>Real is 8 byte real</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>rpath</code></td>
+<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>shared</code></td>
+<td>Build shared library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>static</code></td>
+<td>Build static library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>strict</code></td>
+<td>Strict (highest) precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>unroll</code></td>
+<td>Unroll loops</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>vectorize</code></td>
+<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>verbose</code></td>
+<td>Verbose output</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>veryloose</code></td>
+<td>Very loose precision</td>
+<td><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="gcc">GCC<a class="headerlink" href="#gcc" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-gcc-toolchain">Available options for GCC toolchain<a class="headerlink" href="#available-options-for-gcc-toolchain" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -8725,8 +8220,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="gimpi">gimpi<a class="headerlink" href="#gimpi" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-gimpi-toolchain">Available options for gimpi toolchain<a class="headerlink" href="#available-options-for-gimpi-toolchain" title="Permanent link">&para;</a></h3>
+<h2 id="gimpic">gimpic<a class="headerlink" href="#gimpic" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-gimpic-toolchain">Available options for gimpic toolchain<a class="headerlink" href="#available-options-for-gimpic-toolchain" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -8913,8 +8408,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="gimpic">gimpic<a class="headerlink" href="#gimpic" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-gimpic-toolchain">Available options for gimpic toolchain<a class="headerlink" href="#available-options-for-gimpic-toolchain" title="Permanent link">&para;</a></h3>
+<h2 id="gimpi">gimpi<a class="headerlink" href="#gimpi" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-gimpi-toolchain">Available options for gimpi toolchain<a class="headerlink" href="#available-options-for-gimpi-toolchain" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -9665,8 +9160,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="gmkl">gmkl<a class="headerlink" href="#gmkl" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-gmkl-toolchain">Available options for gmkl toolchain<a class="headerlink" href="#available-options-for-gmkl-toolchain" title="Permanent link">&para;</a></h3>
+<h2 id="gmklc">gmklc<a class="headerlink" href="#gmklc" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-gmklc-toolchain">Available options for gmklc toolchain<a class="headerlink" href="#available-options-for-gmklc-toolchain" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -9848,8 +9343,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="gmklc">gmklc<a class="headerlink" href="#gmklc" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-gmklc-toolchain">Available options for gmklc toolchain<a class="headerlink" href="#available-options-for-gmklc-toolchain" title="Permanent link">&para;</a></h3>
+<h2 id="gmkl">gmkl<a class="headerlink" href="#gmkl" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-gmkl-toolchain">Available options for gmkl toolchain<a class="headerlink" href="#available-options-for-gmkl-toolchain" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -11159,6 +10654,189 @@
 </tr>
 </tbody>
 </table>
+<h2 id="gnu">GNU<a class="headerlink" href="#gnu" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-gnu-toolchain">Available options for GNU toolchain<a class="headerlink" href="#available-options-for-gnu-toolchain" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>description</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>32bit</code></td>
+<td>Compile 32bit target</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cciscxx</code></td>
+<td>Use CC as CXX</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cstd</code></td>
+<td>Specify C standard</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>debug</code></td>
+<td>Enable debug</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultopt</code></td>
+<td>Default compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultprec</code></td>
+<td>Default precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>extra_cflags</code></td>
+<td>Specify extra CFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_cxxflags</code></td>
+<td>Specify extra CXXFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_f90flags</code></td>
+<td>Specify extra F90FLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fcflags</code></td>
+<td>Specify extra FCFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fflags</code></td>
+<td>Specify extra FFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>f2c</code></td>
+<td>Generate code compatible with f2c and f77</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>i8</code></td>
+<td>Integers are 8 byte integers</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>ieee</code></td>
+<td>Adhere to IEEE-754 rules</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>loop</code></td>
+<td>Automatic loop parallellisation</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>loose</code></td>
+<td>Loose precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>lowopt</code></td>
+<td>Low compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>lto</code></td>
+<td>Enable Link Time Optimization</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>noopt</code></td>
+<td>Disable compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>openmp</code></td>
+<td>Enable OpenMP</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>opt</code></td>
+<td>High compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>optarch</code></td>
+<td>Enable architecture optimizations</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>packed-linker-options</code></td>
+<td>Pack the linker options as comma separated list</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>pic</code></td>
+<td>Use PIC</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>precise</code></td>
+<td>High precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>r8</code></td>
+<td>Real is 8 byte real</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>rpath</code></td>
+<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>shared</code></td>
+<td>Build shared library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>static</code></td>
+<td>Build static library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>strict</code></td>
+<td>Strict (highest) precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>unroll</code></td>
+<td>Unroll loops</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>vectorize</code></td>
+<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>verbose</code></td>
+<td>Verbose output</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>veryloose</code></td>
+<td>Very loose precision</td>
+<td><code>False</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="goalf">goalf<a class="headerlink" href="#goalf" title="Permanent link">&para;</a></h2>
 <h3 id="available-options-for-goalf-toolchain">Available options for goalf toolchain<a class="headerlink" href="#available-options-for-goalf-toolchain" title="Permanent link">&para;</a></h3>
 <table>
@@ -11911,189 +11589,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="golf">golf<a class="headerlink" href="#golf" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-golf-toolchain">Available options for golf toolchain<a class="headerlink" href="#available-options-for-golf-toolchain" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>option</th>
-<th>description</th>
-<th>default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>32bit</code></td>
-<td>Compile 32bit target</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cciscxx</code></td>
-<td>Use CC as CXX</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cstd</code></td>
-<td>Specify C standard</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>debug</code></td>
-<td>Enable debug</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultopt</code></td>
-<td>Default compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultprec</code></td>
-<td>Default precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>extra_cflags</code></td>
-<td>Specify extra CFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_cxxflags</code></td>
-<td>Specify extra CXXFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_f90flags</code></td>
-<td>Specify extra F90FLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fcflags</code></td>
-<td>Specify extra FCFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fflags</code></td>
-<td>Specify extra FFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>f2c</code></td>
-<td>Generate code compatible with f2c and f77</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>i8</code></td>
-<td>Integers are 8 byte integers</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>ieee</code></td>
-<td>Adhere to IEEE-754 rules</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>loop</code></td>
-<td>Automatic loop parallellisation</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>loose</code></td>
-<td>Loose precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>lowopt</code></td>
-<td>Low compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>lto</code></td>
-<td>Enable Link Time Optimization</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>noopt</code></td>
-<td>Disable compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>openmp</code></td>
-<td>Enable OpenMP</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>opt</code></td>
-<td>High compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>optarch</code></td>
-<td>Enable architecture optimizations</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>packed-linker-options</code></td>
-<td>Pack the linker options as comma separated list</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>pic</code></td>
-<td>Use PIC</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>precise</code></td>
-<td>High precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>r8</code></td>
-<td>Real is 8 byte real</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>rpath</code></td>
-<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>shared</code></td>
-<td>Build shared library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>static</code></td>
-<td>Build static library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>strict</code></td>
-<td>Strict (highest) precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>unroll</code></td>
-<td>Unroll loops</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>vectorize</code></td>
-<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>verbose</code></td>
-<td>Verbose output</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>veryloose</code></td>
-<td>Very loose precision</td>
-<td><code>False</code></td>
-</tr>
-</tbody>
-</table>
 <h2 id="golfc">golfc<a class="headerlink" href="#golfc" title="Permanent link">&para;</a></h2>
 <h3 id="available-options-for-golfc-toolchain">Available options for golfc toolchain<a class="headerlink" href="#available-options-for-golfc-toolchain" title="Permanent link">&para;</a></h3>
 <table>
@@ -12277,8 +11772,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="gomkl">gomkl<a class="headerlink" href="#gomkl" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-gomkl-toolchain">Available options for gomkl toolchain<a class="headerlink" href="#available-options-for-gomkl-toolchain" title="Permanent link">&para;</a></h3>
+<h2 id="golf">golf<a class="headerlink" href="#golf" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-golf-toolchain">Available options for golf toolchain<a class="headerlink" href="#available-options-for-golf-toolchain" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -12441,11 +11936,6 @@
 <tr>
 <td><code>unroll</code></td>
 <td>Unroll loops</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>usempi</code></td>
-<td>Use MPI compiler as default compiler</td>
 <td><code>False</code></td>
 </tr>
 <tr>
@@ -12653,8 +12143,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="gompi">gompi<a class="headerlink" href="#gompi" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-gompi-toolchain">Available options for gompi toolchain<a class="headerlink" href="#available-options-for-gompi-toolchain" title="Permanent link">&para;</a></h3>
+<h2 id="gomkl">gomkl<a class="headerlink" href="#gomkl" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-gomkl-toolchain">Available options for gomkl toolchain<a class="headerlink" href="#available-options-for-gomkl-toolchain" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -12843,6 +12333,194 @@
 </table>
 <h2 id="gompic">gompic<a class="headerlink" href="#gompic" title="Permanent link">&para;</a></h2>
 <h3 id="available-options-for-gompic-toolchain">Available options for gompic toolchain<a class="headerlink" href="#available-options-for-gompic-toolchain" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>description</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>32bit</code></td>
+<td>Compile 32bit target</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cciscxx</code></td>
+<td>Use CC as CXX</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cstd</code></td>
+<td>Specify C standard</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>debug</code></td>
+<td>Enable debug</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultopt</code></td>
+<td>Default compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultprec</code></td>
+<td>Default precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>extra_cflags</code></td>
+<td>Specify extra CFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_cxxflags</code></td>
+<td>Specify extra CXXFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_f90flags</code></td>
+<td>Specify extra F90FLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fcflags</code></td>
+<td>Specify extra FCFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fflags</code></td>
+<td>Specify extra FFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>f2c</code></td>
+<td>Generate code compatible with f2c and f77</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>i8</code></td>
+<td>Integers are 8 byte integers</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>ieee</code></td>
+<td>Adhere to IEEE-754 rules</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>loop</code></td>
+<td>Automatic loop parallellisation</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>loose</code></td>
+<td>Loose precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>lowopt</code></td>
+<td>Low compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>lto</code></td>
+<td>Enable Link Time Optimization</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>noopt</code></td>
+<td>Disable compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>openmp</code></td>
+<td>Enable OpenMP</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>opt</code></td>
+<td>High compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>optarch</code></td>
+<td>Enable architecture optimizations</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>packed-linker-options</code></td>
+<td>Pack the linker options as comma separated list</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>pic</code></td>
+<td>Use PIC</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>precise</code></td>
+<td>High precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>r8</code></td>
+<td>Real is 8 byte real</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>rpath</code></td>
+<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>shared</code></td>
+<td>Build shared library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>static</code></td>
+<td>Build static library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>strict</code></td>
+<td>Strict (highest) precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>unroll</code></td>
+<td>Unroll loops</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>usempi</code></td>
+<td>Use MPI compiler as default compiler</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>vectorize</code></td>
+<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>verbose</code></td>
+<td>Verbose output</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>veryloose</code></td>
+<td>Very loose precision</td>
+<td><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="gompi">gompi<a class="headerlink" href="#gompi" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-gompi-toolchain">Available options for gompi toolchain<a class="headerlink" href="#available-options-for-gompi-toolchain" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -14345,8 +14023,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="iccifort">iccifort<a class="headerlink" href="#iccifort" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-iccifort-toolchain">Available options for iccifort toolchain<a class="headerlink" href="#available-options-for-iccifort-toolchain" title="Permanent link">&para;</a></h3>
+<h2 id="iccifortcuda">iccifortcuda<a class="headerlink" href="#iccifortcuda" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-iccifortcuda-toolchain">Available options for iccifortcuda toolchain<a class="headerlink" href="#available-options-for-iccifortcuda-toolchain" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -14528,8 +14206,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="iccifortcuda">iccifortcuda<a class="headerlink" href="#iccifortcuda" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-iccifortcuda-toolchain">Available options for iccifortcuda toolchain<a class="headerlink" href="#available-options-for-iccifortcuda-toolchain" title="Permanent link">&para;</a></h3>
+<h2 id="iccifort">iccifort<a class="headerlink" href="#iccifort" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-iccifort-toolchain">Available options for iccifort toolchain<a class="headerlink" href="#available-options-for-iccifort-toolchain" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -15117,204 +14795,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="iimkl">iimkl<a class="headerlink" href="#iimkl" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-iimkl-toolchain">Available options for iimkl toolchain<a class="headerlink" href="#available-options-for-iimkl-toolchain" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>option</th>
-<th>description</th>
-<th>default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>32bit</code></td>
-<td>Compile 32bit target</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cciscxx</code></td>
-<td>Use CC as CXX</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cstd</code></td>
-<td>Specify C standard</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>debug</code></td>
-<td>Enable debug</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultopt</code></td>
-<td>Default compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultprec</code></td>
-<td>Default precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>error-unknown-option</code></td>
-<td>Error instead of warning for unknown options</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>extra_cflags</code></td>
-<td>Specify extra CFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_cxxflags</code></td>
-<td>Specify extra CXXFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_f90flags</code></td>
-<td>Specify extra F90FLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fcflags</code></td>
-<td>Specify extra FCFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fflags</code></td>
-<td>Specify extra FFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>i8</code></td>
-<td>Integers are 8 byte integers</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>ieee</code></td>
-<td>Adhere to IEEE-754 rules</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>intel-static</code></td>
-<td>Link Intel provided libraries statically</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>loose</code></td>
-<td>Loose precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>lowopt</code></td>
-<td>Low compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>no-icc</code></td>
-<td>Don't set Intel specific macros</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>noopt</code></td>
-<td>Disable compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>oneapi</code></td>
-<td>Use oneAPI compilers icx/icpx/ifx instead of classic compilers</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>oneapi_c_cxx</code></td>
-<td>Use oneAPI C/C++ compilers icx/icpx instead of classic Intel C/C++ compilers (auto-enabled for Intel compilers version 2022.2.0, or newer)</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>oneapi_fortran</code></td>
-<td>Use oneAPI Fortran compiler ifx instead of classic Intel Fortran compiler</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>openmp</code></td>
-<td>Enable OpenMP</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>opt</code></td>
-<td>High compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>optarch</code></td>
-<td>Enable architecture optimizations</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>packed-linker-options</code></td>
-<td>Pack the linker options as comma separated list</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>pic</code></td>
-<td>Use PIC</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>precise</code></td>
-<td>High precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>r8</code></td>
-<td>Real is 8 byte real</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>rpath</code></td>
-<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>shared</code></td>
-<td>Build shared library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>static</code></td>
-<td>Build static library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>strict</code></td>
-<td>Strict (highest) precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>unroll</code></td>
-<td>Unroll loops</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>vectorize</code></td>
-<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>verbose</code></td>
-<td>Verbose output</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>veryloose</code></td>
-<td>Very loose precision</td>
-<td><code>False</code></td>
-</tr>
-</tbody>
-</table>
 <h2 id="iimklc">iimklc<a class="headerlink" href="#iimklc" title="Permanent link">&para;</a></h2>
 <h3 id="available-options-for-iimklc-toolchain">Available options for iimklc toolchain<a class="headerlink" href="#available-options-for-iimklc-toolchain" title="Permanent link">&para;</a></h3>
 <table>
@@ -15513,8 +14993,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="iimpi">iimpi<a class="headerlink" href="#iimpi" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-iimpi-toolchain">Available options for iimpi toolchain<a class="headerlink" href="#available-options-for-iimpi-toolchain" title="Permanent link">&para;</a></h3>
+<h2 id="iimkl">iimkl<a class="headerlink" href="#iimkl" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-iimkl-toolchain">Available options for iimkl toolchain<a class="headerlink" href="#available-options-for-iimkl-toolchain" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -15695,11 +15175,6 @@
 <td><code>False</code></td>
 </tr>
 <tr>
-<td><code>usempi</code></td>
-<td>Use MPI compiler as default compiler</td>
-<td><code>False</code></td>
-</tr>
-<tr>
 <td><code>vectorize</code></td>
 <td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
 <td><code>None</code></td>
@@ -15820,6 +15295,209 @@
 <tr>
 <td><code>noopt</code></td>
 <td>Disable compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>openmp</code></td>
+<td>Enable OpenMP</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>opt</code></td>
+<td>High compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>optarch</code></td>
+<td>Enable architecture optimizations</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>packed-linker-options</code></td>
+<td>Pack the linker options as comma separated list</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>pic</code></td>
+<td>Use PIC</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>precise</code></td>
+<td>High precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>r8</code></td>
+<td>Real is 8 byte real</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>rpath</code></td>
+<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>shared</code></td>
+<td>Build shared library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>static</code></td>
+<td>Build static library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>strict</code></td>
+<td>Strict (highest) precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>unroll</code></td>
+<td>Unroll loops</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>usempi</code></td>
+<td>Use MPI compiler as default compiler</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>vectorize</code></td>
+<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>verbose</code></td>
+<td>Verbose output</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>veryloose</code></td>
+<td>Very loose precision</td>
+<td><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="iimpi">iimpi<a class="headerlink" href="#iimpi" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-iimpi-toolchain">Available options for iimpi toolchain<a class="headerlink" href="#available-options-for-iimpi-toolchain" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>description</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>32bit</code></td>
+<td>Compile 32bit target</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cciscxx</code></td>
+<td>Use CC as CXX</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cstd</code></td>
+<td>Specify C standard</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>debug</code></td>
+<td>Enable debug</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultopt</code></td>
+<td>Default compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultprec</code></td>
+<td>Default precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>error-unknown-option</code></td>
+<td>Error instead of warning for unknown options</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>extra_cflags</code></td>
+<td>Specify extra CFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_cxxflags</code></td>
+<td>Specify extra CXXFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_f90flags</code></td>
+<td>Specify extra F90FLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fcflags</code></td>
+<td>Specify extra FCFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fflags</code></td>
+<td>Specify extra FFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>i8</code></td>
+<td>Integers are 8 byte integers</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>ieee</code></td>
+<td>Adhere to IEEE-754 rules</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>intel-static</code></td>
+<td>Link Intel provided libraries statically</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>loose</code></td>
+<td>Loose precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>lowopt</code></td>
+<td>Low compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>no-icc</code></td>
+<td>Don't set Intel specific macros</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>noopt</code></td>
+<td>Disable compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>oneapi</code></td>
+<td>Use oneAPI compilers icx/icpx/ifx instead of classic compilers</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>oneapi_c_cxx</code></td>
+<td>Use oneAPI C/C++ compilers icx/icpx instead of classic Intel C/C++ compilers (auto-enabled for Intel compilers version 2022.2.0, or newer)</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>oneapi_fortran</code></td>
+<td>Use oneAPI Fortran compiler ifx instead of classic Intel Fortran compiler</td>
 <td><code>False</code></td>
 </tr>
 <tr>
@@ -16666,8 +16344,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="intel-para">intel-para<a class="headerlink" href="#intel-para" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-intel-para-toolchain">Available options for intel-para toolchain<a class="headerlink" href="#available-options-for-intel-para-toolchain" title="Permanent link">&para;</a></h3>
+<h2 id="intelcuda">intelcuda<a class="headerlink" href="#intelcuda" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-intelcuda-toolchain">Available options for intelcuda toolchain<a class="headerlink" href="#available-options-for-intelcuda-toolchain" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -17057,8 +16735,196 @@
 </tr>
 </tbody>
 </table>
-<h2 id="intelcuda">intelcuda<a class="headerlink" href="#intelcuda" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-intelcuda-toolchain">Available options for intelcuda toolchain<a class="headerlink" href="#available-options-for-intelcuda-toolchain" title="Permanent link">&para;</a></h3>
+<h2 id="intel-para">intel-para<a class="headerlink" href="#intel-para" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-intel-para-toolchain">Available options for intel-para toolchain<a class="headerlink" href="#available-options-for-intel-para-toolchain" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>description</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>32bit</code></td>
+<td>Compile 32bit target</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cciscxx</code></td>
+<td>Use CC as CXX</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cstd</code></td>
+<td>Specify C standard</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>debug</code></td>
+<td>Enable debug</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultopt</code></td>
+<td>Default compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultprec</code></td>
+<td>Default precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>error-unknown-option</code></td>
+<td>Error instead of warning for unknown options</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>extra_cflags</code></td>
+<td>Specify extra CFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_cxxflags</code></td>
+<td>Specify extra CXXFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_f90flags</code></td>
+<td>Specify extra F90FLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fcflags</code></td>
+<td>Specify extra FCFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fflags</code></td>
+<td>Specify extra FFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>i8</code></td>
+<td>Integers are 8 byte integers</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>ieee</code></td>
+<td>Adhere to IEEE-754 rules</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>intel-static</code></td>
+<td>Link Intel provided libraries statically</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>loose</code></td>
+<td>Loose precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>lowopt</code></td>
+<td>Low compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>no-icc</code></td>
+<td>Don't set Intel specific macros</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>noopt</code></td>
+<td>Disable compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>openmp</code></td>
+<td>Enable OpenMP</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>opt</code></td>
+<td>High compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>optarch</code></td>
+<td>Enable architecture optimizations</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>packed-linker-options</code></td>
+<td>Pack the linker options as comma separated list</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>pic</code></td>
+<td>Use PIC</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>precise</code></td>
+<td>High precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>r8</code></td>
+<td>Real is 8 byte real</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>rpath</code></td>
+<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>shared</code></td>
+<td>Build shared library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>static</code></td>
+<td>Build static library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>strict</code></td>
+<td>Strict (highest) precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>unroll</code></td>
+<td>Unroll loops</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>usempi</code></td>
+<td>Use MPI compiler as default compiler</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>vectorize</code></td>
+<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>verbose</code></td>
+<td>Verbose output</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>veryloose</code></td>
+<td>Very loose precision</td>
+<td><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="iomklc">iomklc<a class="headerlink" href="#iomklc" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-iomklc-toolchain">Available options for iomklc toolchain<a class="headerlink" href="#available-options-for-iomklc-toolchain" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -17448,8 +17314,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="iomklc">iomklc<a class="headerlink" href="#iomklc" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-iomklc-toolchain">Available options for iomklc toolchain<a class="headerlink" href="#available-options-for-iomklc-toolchain" title="Permanent link">&para;</a></h3>
+<h2 id="iompic">iompic<a class="headerlink" href="#iompic" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-iompic-toolchain">Available options for iompic toolchain<a class="headerlink" href="#available-options-for-iompic-toolchain" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -17755,194 +17621,6 @@
 <tr>
 <td><code>oneapi_fortran</code></td>
 <td>Use oneAPI Fortran compiler ifx instead of classic Intel Fortran compiler</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>openmp</code></td>
-<td>Enable OpenMP</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>opt</code></td>
-<td>High compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>optarch</code></td>
-<td>Enable architecture optimizations</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>packed-linker-options</code></td>
-<td>Pack the linker options as comma separated list</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>pic</code></td>
-<td>Use PIC</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>precise</code></td>
-<td>High precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>r8</code></td>
-<td>Real is 8 byte real</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>rpath</code></td>
-<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
-<td><code>True</code></td>
-</tr>
-<tr>
-<td><code>shared</code></td>
-<td>Build shared library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>static</code></td>
-<td>Build static library</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>strict</code></td>
-<td>Strict (highest) precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>unroll</code></td>
-<td>Unroll loops</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>usempi</code></td>
-<td>Use MPI compiler as default compiler</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>vectorize</code></td>
-<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>verbose</code></td>
-<td>Verbose output</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>veryloose</code></td>
-<td>Very loose precision</td>
-<td><code>False</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="iompic">iompic<a class="headerlink" href="#iompic" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-iompic-toolchain">Available options for iompic toolchain<a class="headerlink" href="#available-options-for-iompic-toolchain" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>option</th>
-<th>description</th>
-<th>default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>32bit</code></td>
-<td>Compile 32bit target</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cciscxx</code></td>
-<td>Use CC as CXX</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>cstd</code></td>
-<td>Specify C standard</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>debug</code></td>
-<td>Enable debug</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultopt</code></td>
-<td>Default compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>defaultprec</code></td>
-<td>Default precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>error-unknown-option</code></td>
-<td>Error instead of warning for unknown options</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>extra_cflags</code></td>
-<td>Specify extra CFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_cxxflags</code></td>
-<td>Specify extra CXXFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_f90flags</code></td>
-<td>Specify extra F90FLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fcflags</code></td>
-<td>Specify extra FCFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>extra_fflags</code></td>
-<td>Specify extra FFLAGS options.</td>
-<td><code>None</code></td>
-</tr>
-<tr>
-<td><code>i8</code></td>
-<td>Integers are 8 byte integers</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>ieee</code></td>
-<td>Adhere to IEEE-754 rules</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>intel-static</code></td>
-<td>Link Intel provided libraries statically</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>loose</code></td>
-<td>Loose precision</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>lowopt</code></td>
-<td>Low compiler optimizations</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>no-icc</code></td>
-<td>Don't set Intel specific macros</td>
-<td><code>False</code></td>
-</tr>
-<tr>
-<td><code>noopt</code></td>
-<td>Disable compiler optimizations</td>
 <td><code>False</code></td>
 </tr>
 <tr>
@@ -18591,8 +18269,176 @@
 </tr>
 </tbody>
 </table>
-<h2 id="nvompi">nvompi<a class="headerlink" href="#nvompi" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-nvompi-toolchain">Available options for nvompi toolchain<a class="headerlink" href="#available-options-for-nvompi-toolchain" title="Permanent link">&para;</a></h3>
+<h2 id="nvhpc">NVHPC<a class="headerlink" href="#nvhpc" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-nvhpc-toolchain">Available options for NVHPC toolchain<a class="headerlink" href="#available-options-for-nvhpc-toolchain" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>description</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>32bit</code></td>
+<td>Compile 32bit target</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cciscxx</code></td>
+<td>Use CC as CXX</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cstd</code></td>
+<td>Specify C standard</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>debug</code></td>
+<td>Enable debug</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultopt</code></td>
+<td>Default compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultprec</code></td>
+<td>Default precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>extra_cflags</code></td>
+<td>Specify extra CFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_cxxflags</code></td>
+<td>Specify extra CXXFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_f90flags</code></td>
+<td>Specify extra F90FLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fcflags</code></td>
+<td>Specify extra FCFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fflags</code></td>
+<td>Specify extra FFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>i8</code></td>
+<td>Integers are 8 byte integers</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>ieee</code></td>
+<td>Adhere to IEEE-754 rules</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>loose</code></td>
+<td>Loose precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>lowopt</code></td>
+<td>Low compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>noopt</code></td>
+<td>Disable compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>openmp</code></td>
+<td>Enable OpenMP</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>opt</code></td>
+<td>High compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>optarch</code></td>
+<td>Enable architecture optimizations</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>packed-linker-options</code></td>
+<td>Pack the linker options as comma separated list</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>pic</code></td>
+<td>Use PIC</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>precise</code></td>
+<td>High precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>r8</code></td>
+<td>Real is 8 byte real</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>rpath</code></td>
+<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>shared</code></td>
+<td>Build shared library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>static</code></td>
+<td>Build static library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>strict</code></td>
+<td>Strict (highest) precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>unroll</code></td>
+<td>Unroll loops</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>vectorize</code></td>
+<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>verbose</code></td>
+<td>Verbose output</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>veryloose</code></td>
+<td>Very loose precision</td>
+<td><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="nvofbf">nvofbf<a class="headerlink" href="#nvofbf" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-nvofbf-toolchain">Available options for nvofbf toolchain<a class="headerlink" href="#available-options-for-nvofbf-toolchain" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -18937,8 +18783,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="nvpsmpi">nvpsmpi<a class="headerlink" href="#nvpsmpi" title="Permanent link">&para;</a></h2>
-<h3 id="available-options-for-nvpsmpi-toolchain">Available options for nvpsmpi toolchain<a class="headerlink" href="#available-options-for-nvpsmpi-toolchain" title="Permanent link">&para;</a></h3>
+<h2 id="nvompi">nvompi<a class="headerlink" href="#nvompi" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-nvompi-toolchain">Available options for nvompi toolchain<a class="headerlink" href="#available-options-for-nvompi-toolchain" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -19264,6 +19110,347 @@
 <tr>
 <td><code>usempi</code></td>
 <td>Use MPI compiler as default compiler</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>vectorize</code></td>
+<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>verbose</code></td>
+<td>Verbose output</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>veryloose</code></td>
+<td>Very loose precision</td>
+<td><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="nvpsmpi">nvpsmpi<a class="headerlink" href="#nvpsmpi" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-nvpsmpi-toolchain">Available options for nvpsmpi toolchain<a class="headerlink" href="#available-options-for-nvpsmpi-toolchain" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>description</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>32bit</code></td>
+<td>Compile 32bit target</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cciscxx</code></td>
+<td>Use CC as CXX</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cstd</code></td>
+<td>Specify C standard</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>debug</code></td>
+<td>Enable debug</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultopt</code></td>
+<td>Default compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultprec</code></td>
+<td>Default precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>extra_cflags</code></td>
+<td>Specify extra CFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_cxxflags</code></td>
+<td>Specify extra CXXFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_f90flags</code></td>
+<td>Specify extra F90FLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fcflags</code></td>
+<td>Specify extra FCFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fflags</code></td>
+<td>Specify extra FFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>i8</code></td>
+<td>Integers are 8 byte integers</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>ieee</code></td>
+<td>Adhere to IEEE-754 rules</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>loose</code></td>
+<td>Loose precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>lowopt</code></td>
+<td>Low compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>noopt</code></td>
+<td>Disable compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>openmp</code></td>
+<td>Enable OpenMP</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>opt</code></td>
+<td>High compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>optarch</code></td>
+<td>Enable architecture optimizations</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>packed-linker-options</code></td>
+<td>Pack the linker options as comma separated list</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>pic</code></td>
+<td>Use PIC</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>precise</code></td>
+<td>High precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>r8</code></td>
+<td>Real is 8 byte real</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>rpath</code></td>
+<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>shared</code></td>
+<td>Build shared library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>static</code></td>
+<td>Build static library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>strict</code></td>
+<td>Strict (highest) precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>unroll</code></td>
+<td>Unroll loops</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>usempi</code></td>
+<td>Use MPI compiler as default compiler</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>vectorize</code></td>
+<td>Enable compiler auto-vectorization, default except for noopt and lowopt</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>verbose</code></td>
+<td>Verbose output</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>veryloose</code></td>
+<td>Very loose precision</td>
+<td><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="pgi">PGI<a class="headerlink" href="#pgi" title="Permanent link">&para;</a></h2>
+<h3 id="available-options-for-pgi-toolchain">Available options for PGI toolchain<a class="headerlink" href="#available-options-for-pgi-toolchain" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>option</th>
+<th>description</th>
+<th>default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>32bit</code></td>
+<td>Compile 32bit target</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cciscxx</code></td>
+<td>Use CC as CXX</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>cstd</code></td>
+<td>Specify C standard</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>debug</code></td>
+<td>Enable debug</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultopt</code></td>
+<td>Default compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>defaultprec</code></td>
+<td>Default precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>extra_cflags</code></td>
+<td>Specify extra CFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_cxxflags</code></td>
+<td>Specify extra CXXFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_f90flags</code></td>
+<td>Specify extra F90FLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fcflags</code></td>
+<td>Specify extra FCFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>extra_fflags</code></td>
+<td>Specify extra FFLAGS options.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>i8</code></td>
+<td>Integers are 8 byte integers</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>ieee</code></td>
+<td>Adhere to IEEE-754 rules</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>loose</code></td>
+<td>Loose precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>lowopt</code></td>
+<td>Low compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>noopt</code></td>
+<td>Disable compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>openmp</code></td>
+<td>Enable OpenMP</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>opt</code></td>
+<td>High compiler optimizations</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>optarch</code></td>
+<td>Enable architecture optimizations</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>packed-linker-options</code></td>
+<td>Pack the linker options as comma separated list</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>pic</code></td>
+<td>Use PIC</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>precise</code></td>
+<td>High precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>r8</code></td>
+<td>Real is 8 byte real</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>rpath</code></td>
+<td>Use RPATH wrappers when --rpath is enabled in EasyBuild configuration</td>
+<td><code>True</code></td>
+</tr>
+<tr>
+<td><code>shared</code></td>
+<td>Build shared library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>static</code></td>
+<td>Build static library</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>strict</code></td>
+<td>Strict (highest) precision</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>unroll</code></td>
+<td>Unroll loops</td>
 <td><code>False</code></td>
 </tr>
 <tr>
@@ -20881,7 +21068,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 3, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 6, 2023</span>
       
     
   </small>

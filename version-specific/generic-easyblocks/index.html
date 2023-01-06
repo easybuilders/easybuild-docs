@@ -2880,6 +2880,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api/easybuild/toolchains/nvofbf/" class="md-nav__link">
+        nvofbf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api/easybuild/toolchains/nvompi/" class="md-nav__link">
         nvompi
       </a>
@@ -4394,7 +4408,7 @@
 <h1 id="generic_easyblocks">Overview of generic easyblocks<a class="headerlink" href="#generic_easyblocks" title="Permanent link">&para;</a></h1>
 <p><a href="#binariestarball">BinariesTarball</a> - <a href="#binary">Binary</a> - <a href="#buildenv">BuildEnv</a> - <a href="#bundle">Bundle</a> - <a href="#cmakemake">CMakeMake</a> - <a href="#cmakemakecp">CMakeMakeCp</a> - <a href="#cmakeninja">CMakeNinja</a> - <a href="#cmakepythonpackage">CMakePythonPackage</a> - <a href="#cmdcp">CmdCp</a> - <a href="#conda">Conda</a> - <a href="#configuremake">ConfigureMake</a> - <a href="#configuremakepythonpackage">ConfigureMakePythonPackage</a> - <a href="#craytoolchain">CrayToolchain</a> - <a href="#fortranpythonpackage">FortranPythonPackage</a> - <a href="#gopackage">GoPackage</a> - <a href="#intelbase">IntelBase</a> - <a href="#jar">JAR</a> - <a href="#juliabundle">JuliaBundle</a> - <a href="#juliapackage">JuliaPackage</a> - <a href="#makecp">MakeCp</a> - <a href="#mesonninja">MesonNinja</a> - <a href="#modulerc">ModuleRC</a> - <a href="#ocamlpackage">OCamlPackage</a> - <a href="#octavepackage">OctavePackage</a> - <a href="#packedbinary">PackedBinary</a> - <a href="#perlmodule">PerlModule</a> - <a href="#pythonbundle">PythonBundle</a> - <a href="#pythonpackage">PythonPackage</a> - <a href="#rpackage">RPackage</a> - <a href="#rpm">Rpm</a> - <a href="#rubygem">RubyGem</a> - <a href="#scons">SCons</a> - <a href="#systemcompiler">SystemCompiler</a> - <a href="#systemmpi">SystemMPI</a> - <a href="#tarball">Tarball</a> - <a href="#toolchain">Toolchain</a> - <a href="#vscpythonpackage">VSCPythonPackage</a> - <a href="#versionindependentpythonpackage">VersionIndependentPythonPackage</a> - <a href="#waf">Waf</a></p>
 <h2 id="binariestarball"><code>BinariesTarball</code><a class="headerlink" href="#binariestarball" title="Permanent link">&para;</a></h2>
-<p>(derives from <a href='#tarball'><code>Tarball</code></a>)</p>
+<p>(derives from <a href="#tarball"><code>Tarball</code></a>)</p>
 <p>Support for installing a tarball of binaries</p>
 <h3 id="extra-easyconfig-parameters-specific-to-binariestarball-easyblock">Extra easyconfig parameters specific to <code>BinariesTarball</code> easyblock<a class="headerlink" href="#extra-easyconfig-parameters-specific-to-binariestarball-easyblock" title="Permanent link">&para;</a></h3>
 <table>
@@ -4499,7 +4513,7 @@ Just copy the sources to the install dir, or use the specified install command.<
 <span class="n">moduleclass</span> <span class="o">=</span> <span class="s1">&#39;bio&#39;</span>
 </code></pre></div>
 <h2 id="buildenv"><code>BuildEnv</code><a class="headerlink" href="#buildenv" title="Permanent link">&para;</a></h2>
-<p>(derives from <a href='#bundle'><code>Bundle</code></a>)</p>
+<p>(derives from <a href="#bundle"><code>Bundle</code></a>)</p>
 <p>Build environment of toolchain: only generate module file</p>
 <h3 id="extra-easyconfig-parameters-specific-to-buildenv-easyblock">Extra easyconfig parameters specific to <code>BuildEnv</code> easyblock<a class="headerlink" href="#extra-easyconfig-parameters-specific-to-buildenv-easyblock" title="Permanent link">&para;</a></h3>
 <table>
@@ -4630,7 +4644,7 @@ Just copy the sources to the install dir, or use the specified install command.<
 <span class="n">moduleclass</span> <span class="o">=</span> <span class="s1">&#39;devel&#39;</span>
 </code></pre></div>
 <h2 id="cmakemake"><code>CMakeMake</code><a class="headerlink" href="#cmakemake" title="Permanent link">&para;</a></h2>
-<p>(derives from <a href='#configuremake'><code>ConfigureMake</code></a>)</p>
+<p>(derives from <a href="#configuremake"><code>ConfigureMake</code></a>)</p>
 <p>Support for configuring build with CMake instead of traditional configure script</p>
 <h3 id="extra-easyconfig-parameters-specific-to-cmakemake-easyblock">Extra easyconfig parameters specific to <code>CMakeMake</code> easyblock<a class="headerlink" href="#extra-easyconfig-parameters-specific-to-cmakemake-easyblock" title="Permanent link">&para;</a></h3>
 <table>
@@ -4776,7 +4790,7 @@ Just copy the sources to the install dir, or use the specified install command.<
 <span class="n">moduleclass</span> <span class="o">=</span> <span class="s1">&#39;data&#39;</span>
 </code></pre></div>
 <h2 id="cmakemakecp"><code>CMakeMakeCp</code><a class="headerlink" href="#cmakemakecp" title="Permanent link">&para;</a></h2>
-<p>(derives from <a href='#cmakemake'><code>CMakeMake</code></a>, <a href='#makecp'><code>MakeCp</code></a>)</p>
+<p>(derives from <a href="#cmakemake"><code>CMakeMake</code></a>, <a href="#makecp"><code>MakeCp</code></a>)</p>
 <p>Software configured with CMake but without 'make install' step</p>
 <p>We use the default CMakeMake implementation, and use install_step from MakeCp.</p>
 <h3 id="extra-easyconfig-parameters-specific-to-cmakemakecp-easyblock">Extra easyconfig parameters specific to <code>CMakeMakeCp</code> easyblock<a class="headerlink" href="#extra-easyconfig-parameters-specific-to-cmakemakecp-easyblock" title="Permanent link">&para;</a></h3>
@@ -4901,7 +4915,7 @@ Just copy the sources to the install dir, or use the specified install command.<
 </li>
 </ul>
 <h2 id="cmakeninja"><code>CMakeNinja</code><a class="headerlink" href="#cmakeninja" title="Permanent link">&para;</a></h2>
-<p>(derives from <a href='#cmakemake'><code>CMakeMake</code></a>, <a href='#mesonninja'><code>MesonNinja</code></a>)</p>
+<p>(derives from <a href="#cmakemake"><code>CMakeMake</code></a>, <a href="#mesonninja"><code>MesonNinja</code></a>)</p>
 <p>Support for configuring with CMake, building and installing with MesonNinja.</p>
 <h3 id="extra-easyconfig-parameters-specific-to-cmakeninja-easyblock">Extra easyconfig parameters specific to <code>CMakeNinja</code> easyblock<a class="headerlink" href="#extra-easyconfig-parameters-specific-to-cmakeninja-easyblock" title="Permanent link">&para;</a></h3>
 <table>
@@ -5018,7 +5032,7 @@ Just copy the sources to the install dir, or use the specified install command.<
 </li>
 </ul>
 <h2 id="cmakepythonpackage"><code>CMakePythonPackage</code><a class="headerlink" href="#cmakepythonpackage" title="Permanent link">&para;</a></h2>
-<p>(derives from <a href='#cmakemake'><code>CMakeMake</code></a>, <a href='#pythonpackage'><code>PythonPackage</code></a>)</p>
+<p>(derives from <a href="#cmakemake"><code>CMakeMake</code></a>, <a href="#pythonpackage"><code>PythonPackage</code></a>)</p>
 <p>Build a Python package and module with cmake.</p>
 <p>Some packages use cmake to first build and install C Python packages
 and then put the Python package in lib/pythonX.Y/site-packages.</p>
@@ -5241,7 +5255,7 @@ to generate a module file which sets the PYTHONPATH.</p>
 </li>
 </ul>
 <h2 id="cmdcp"><code>CmdCp</code><a class="headerlink" href="#cmdcp" title="Permanent link">&para;</a></h2>
-<p>(derives from <a href='#makecp'><code>MakeCp</code></a>)</p>
+<p>(derives from <a href="#makecp"><code>MakeCp</code></a>)</p>
 <p>Software with no configure, no make, and no make install step.
 Just run the specified command for all sources, and copy specified files to the install dir</p>
 <h3 id="extra-easyconfig-parameters-specific-to-cmdcp-easyblock">Extra easyconfig parameters specific to <code>CmdCp</code> easyblock<a class="headerlink" href="#extra-easyconfig-parameters-specific-to-cmdcp-easyblock" title="Permanent link">&para;</a></h3>
@@ -5339,7 +5353,7 @@ Just run the specified command for all sources, and copy specified files to the 
 </li>
 </ul>
 <h2 id="conda"><code>Conda</code><a class="headerlink" href="#conda" title="Permanent link">&para;</a></h2>
-<p>(derives from <a href='#binary'><code>Binary</code></a>)</p>
+<p>(derives from <a href="#binary"><code>Binary</code></a>)</p>
 <p>Support for installing software using 'conda'.</p>
 <h3 id="extra-easyconfig-parameters-specific-to-conda-easyblock">Extra easyconfig parameters specific to <code>Conda</code> easyblock<a class="headerlink" href="#extra-easyconfig-parameters-specific-to-conda-easyblock" title="Permanent link">&para;</a></h3>
 <table>
@@ -5527,12 +5541,14 @@ Just run the specified command for all sources, and copy specified files to the 
 <span class="n">moduleclass</span> <span class="o">=</span> <span class="s1">&#39;tools&#39;</span>
 </code></pre></div>
 <h2 id="configuremakepythonpackage"><code>ConfigureMakePythonPackage</code><a class="headerlink" href="#configuremakepythonpackage" title="Permanent link">&para;</a></h2>
-<p>(derives from <a href='#configuremake'><code>ConfigureMake</code></a>, <a href='#pythonpackage'><code>PythonPackage</code></a>)</p>
-<p>Build a Python package and module with 'python configure/make/make install'.</p>
-<p>Implemented by using:
-- a custom implementation of configure_step
-- using the build_step and install_step from ConfigureMake
-- using the sanity_check_step and make_module_extra from PythonPackage</p>
+<p>(derives from <a href="#configuremake"><code>ConfigureMake</code></a>, <a href="#pythonpackage"><code>PythonPackage</code></a>)</p>
+<p>Build a Python package and module with <code>python configure</code>/<code>make</code>/<code>make install</code>.</p>
+<p>Implemented by using:</p>
+<ul>
+<li>a custom implementation of configure_step</li>
+<li>using the build_step and install_step from ConfigureMake</li>
+<li>using the sanity_check_step and make_module_extra from PythonPackage</li>
+</ul>
 <h3 id="extra-easyconfig-parameters-specific-to-configuremakepythonpackage-easyblock">Extra easyconfig parameters specific to <code>ConfigureMakePythonPackage</code> easyblock<a class="headerlink" href="#extra-easyconfig-parameters-specific-to-configuremakepythonpackage-easyblock" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -5708,13 +5724,13 @@ Just run the specified command for all sources, and copy specified files to the 
 <h3 id="customised-steps-in-configuremakepythonpackage-easyblock">Customised steps in <code>ConfigureMakePythonPackage</code> easyblock<a class="headerlink" href="#customised-steps-in-configuremakepythonpackage-easyblock" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p><code>build_step</code> - Build Python package with 'make'.</p>
+<p><code>build_step</code> - Build Python package with <code>make</code>.</p>
 </li>
 <li>
-<p><code>configure_step</code> - Configure build using 'python configure'.</p>
+<p><code>configure_step</code> - Configure build using <code>python configure</code>.</p>
 </li>
 <li>
-<p><code>install_step</code> - Install with 'make install'.</p>
+<p><code>install_step</code> - Install with <code>make install</code>.</p>
 </li>
 </ul>
 <h3 id="example-easyconfig-for-configuremakepythonpackage-easyblock">Example easyconfig for <code>ConfigureMakePythonPackage</code> easyblock<a class="headerlink" href="#example-easyconfig-for-configuremakepythonpackage-easyblock" title="Permanent link">&para;</a></h3>
@@ -5749,7 +5765,7 @@ Just run the specified command for all sources, and copy specified files to the 
 <span class="n">moduleclass</span> <span class="o">=</span> <span class="s1">&#39;vis&#39;</span>
 </code></pre></div>
 <h2 id="craytoolchain"><code>CrayToolchain</code><a class="headerlink" href="#craytoolchain" title="Permanent link">&para;</a></h2>
-<p>(derives from <a href='#bundle'><code>Bundle</code></a>)</p>
+<p>(derives from <a href="#bundle"><code>Bundle</code></a>)</p>
 <p>Compiler toolchain: generate module file only, nothing to build/install</p>
 <h3 id="extra-easyconfig-parameters-specific-to-craytoolchain-easyblock">Extra easyconfig parameters specific to <code>CrayToolchain</code> easyblock<a class="headerlink" href="#extra-easyconfig-parameters-specific-to-craytoolchain-easyblock" title="Permanent link">&para;</a></h3>
 <table>
@@ -5799,7 +5815,7 @@ Just run the specified command for all sources, and copy specified files to the 
 </tbody>
 </table>
 <h2 id="fortranpythonpackage"><code>FortranPythonPackage</code><a class="headerlink" href="#fortranpythonpackage" title="Permanent link">&para;</a></h2>
-<p>(derives from <a href='#pythonpackage'><code>PythonPackage</code></a>)</p>
+<p>(derives from <a href="#pythonpackage"><code>PythonPackage</code></a>)</p>
 <p>Extends PythonPackage to add a Fortran compiler to the make call</p>
 <h3 id="extra-easyconfig-parameters-specific-to-fortranpythonpackage-easyblock">Extra easyconfig parameters specific to <code>FortranPythonPackage</code> easyblock<a class="headerlink" href="#extra-easyconfig-parameters-specific-to-fortranpythonpackage-easyblock" title="Permanent link">&para;</a></h3>
 <table>
@@ -5969,9 +5985,11 @@ Just run the specified command for all sources, and copy specified files to the 
 </ul>
 <h2 id="intelbase"><code>IntelBase</code><a class="headerlink" href="#intelbase" title="Permanent link">&para;</a></h2>
 <p>(derives from <code>EasyBlock</code>)</p>
-<p>Base class for Intel software
-- no configure/make : binary release
-- add license_file variable</p>
+<p>Base class for Intel software</p>
+<ul>
+<li>no configure/make : binary release</li>
+<li>add license_file variable</li>
+</ul>
 <h3 id="extra-easyconfig-parameters-specific-to-intelbase-easyblock">Extra easyconfig parameters specific to <code>IntelBase</code> easyblock<a class="headerlink" href="#extra-easyconfig-parameters-specific-to-intelbase-easyblock" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -6027,7 +6045,7 @@ Just run the specified command for all sources, and copy specified files to the 
 </li>
 </ul>
 <h2 id="jar"><code>JAR</code><a class="headerlink" href="#jar" title="Permanent link">&para;</a></h2>
-<p>(derives from <a href='#binary'><code>Binary</code></a>)</p>
+<p>(derives from <a href="#binary"><code>Binary</code></a>)</p>
 <p>Support for installing JAR files.</p>
 <h3 id="extra-easyconfig-parameters-specific-to-jar-easyblock">Extra easyconfig parameters specific to <code>JAR</code> easyblock<a class="headerlink" href="#extra-easyconfig-parameters-specific-to-jar-easyblock" title="Permanent link">&para;</a></h3>
 <table>
@@ -6062,7 +6080,7 @@ Just run the specified command for all sources, and copy specified files to the 
 </tbody>
 </table>
 <h2 id="juliabundle"><code>JuliaBundle</code><a class="headerlink" href="#juliabundle" title="Permanent link">&para;</a></h2>
-<p>(derives from <a href='#bundle'><code>Bundle</code></a>)</p>
+<p>(derives from <a href="#bundle"><code>Bundle</code></a>)</p>
 <p>Bundle of JuliaPackages: install Julia packages as extensions in a bundle
 Defines custom sanity checks and module environment</p>
 <h3 id="extra-easyconfig-parameters-specific-to-juliabundle-easyblock">Extra easyconfig parameters specific to <code>JuliaBundle</code> easyblock<a class="headerlink" href="#extra-easyconfig-parameters-specific-to-juliabundle-easyblock" title="Permanent link">&para;</a></h3>
@@ -6160,7 +6178,7 @@ Defines custom sanity checks and module environment</p>
 </li>
 </ul>
 <h2 id="makecp"><code>MakeCp</code><a class="headerlink" href="#makecp" title="Permanent link">&para;</a></h2>
-<p>(derives from <a href='#configuremake'><code>ConfigureMake</code></a>)</p>
+<p>(derives from <a href="#configuremake"><code>ConfigureMake</code></a>)</p>
 <p>Software with no configure and no make install step.</p>
 <h3 id="extra-easyconfig-parameters-specific-to-makecp-easyblock">Extra easyconfig parameters specific to <code>MakeCp</code> easyblock<a class="headerlink" href="#extra-easyconfig-parameters-specific-to-makecp-easyblock" title="Permanent link">&para;</a></h3>
 <table>
@@ -6354,7 +6372,7 @@ Defines custom sanity checks and module environment</p>
 </li>
 </ul>
 <h2 id="packedbinary"><code>PackedBinary</code><a class="headerlink" href="#packedbinary" title="Permanent link">&para;</a></h2>
-<p>(derives from <a href='#binary'><code>Binary</code></a>, <code>EasyBlock</code>)</p>
+<p>(derives from <a href="#binary"><code>Binary</code></a>, <code>EasyBlock</code>)</p>
 <p>Support for installing packed binary software.
 Just unpack the sources in the install dir</p>
 <h3 id="extra-easyconfig-parameters-specific-to-packedbinary-easyblock">Extra easyconfig parameters specific to <code>PackedBinary</code> easyblock<a class="headerlink" href="#extra-easyconfig-parameters-specific-to-packedbinary-easyblock" title="Permanent link">&para;</a></h3>
@@ -6394,7 +6412,7 @@ Just unpack the sources in the install dir</p>
 <li><code>install_step</code> - Copy all unpacked source directories to install directory, one-by-one.</li>
 </ul>
 <h2 id="perlmodule"><code>PerlModule</code><a class="headerlink" href="#perlmodule" title="Permanent link">&para;</a></h2>
-<p>(derives from <code>ExtensionEasyBlock</code>, <a href='#configuremake'><code>ConfigureMake</code></a>)</p>
+<p>(derives from <code>ExtensionEasyBlock</code>, <a href="#configuremake"><code>ConfigureMake</code></a>)</p>
 <p>Builds and installs a Perl module, and can provide a dedicated module file.</p>
 <h3 id="extra-easyconfig-parameters-specific-to-perlmodule-easyblock">Extra easyconfig parameters specific to <code>PerlModule</code> easyblock<a class="headerlink" href="#extra-easyconfig-parameters-specific-to-perlmodule-easyblock" title="Permanent link">&para;</a></h3>
 <table>
@@ -6431,7 +6449,7 @@ Just unpack the sources in the install dir</p>
 </li>
 </ul>
 <h2 id="pythonbundle"><code>PythonBundle</code><a class="headerlink" href="#pythonbundle" title="Permanent link">&para;</a></h2>
-<p>(derives from <a href='#bundle'><code>Bundle</code></a>)</p>
+<p>(derives from <a href="#bundle"><code>Bundle</code></a>)</p>
 <p>Bundle of PythonPackages: install Python packages as extensions in a bundle
 Defines custom sanity checks and module environment</p>
 <h3 id="extra-easyconfig-parameters-specific-to-pythonbundle-easyblock">Extra easyconfig parameters specific to <code>PythonBundle</code> easyblock<a class="headerlink" href="#extra-easyconfig-parameters-specific-to-pythonbundle-easyblock" title="Permanent link">&para;</a></h3>
@@ -6761,10 +6779,12 @@ Defines custom sanity checks and module environment</p>
 </li>
 </ul>
 <h2 id="rpm"><code>Rpm</code><a class="headerlink" href="#rpm" title="Permanent link">&para;</a></h2>
-<p>(derives from <a href='#binary'><code>Binary</code></a>)</p>
-<p>Support for installing RPM files.
-- sources is a list of rpms
-- installation is with --nodeps (so the sources list has to be complete)</p>
+<p>(derives from <a href="#binary"><code>Binary</code></a>)</p>
+<p>Support for installing RPM files.</p>
+<ul>
+<li>sources is a list of rpms</li>
+<li>installation is with --nodeps (so the sources list has to be complete)</li>
+</ul>
 <h3 id="extra-easyconfig-parameters-specific-to-rpm-easyblock">Extra easyconfig parameters specific to <code>Rpm</code> easyblock<a class="headerlink" href="#extra-easyconfig-parameters-specific-to-rpm-easyblock" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -6896,7 +6916,7 @@ Defines custom sanity checks and module environment</p>
 </li>
 </ul>
 <h2 id="systemcompiler"><code>SystemCompiler</code><a class="headerlink" href="#systemcompiler" title="Permanent link">&para;</a></h2>
-<p>(derives from <a href='#bundle'><code>Bundle</code></a>, <code>EB_GCC</code>, <code>EB_ifort</code>)</p>
+<p>(derives from <a href="#bundle"><code>Bundle</code></a>, <code>EB_GCC</code>, <code>EB_ifort</code>)</p>
 <p>Support for generating a module file for the system compiler with specified name.</p>
 <p>The compiler is expected to be available in $PATH, required libraries are assumed to be readily available.</p>
 <p>Specifying 'system' as a version leads to using the derived compiler version in the generated module;
@@ -7109,7 +7129,7 @@ if an actual version is specified, it is checked against the derived version of 
 </tbody>
 </table>
 <h2 id="systemmpi"><code>SystemMPI</code><a class="headerlink" href="#systemmpi" title="Permanent link">&para;</a></h2>
-<p>(derives from <a href='#bundle'><code>Bundle</code></a>, <a href='#configuremake'><code>ConfigureMake</code></a>, <code>EB_impi</code>)</p>
+<p>(derives from <a href="#bundle"><code>Bundle</code></a>, <a href="#configuremake"><code>ConfigureMake</code></a>, <code>EB_impi</code>)</p>
 <p>Support for generating a module file for the system mpi with specified name.</p>
 <p>The mpi compiler is expected to be available in $PATH, required libraries are assumed to be readily available.</p>
 <p>Specifying 'system' as a version leads to using the derived mpi version in the generated module;
@@ -7283,8 +7303,7 @@ if an actual version is specified, it is checked against the derived version of 
 </table>
 <h2 id="tarball"><code>Tarball</code><a class="headerlink" href="#tarball" title="Permanent link">&para;</a></h2>
 <p>(derives from <code>ExtensionEasyBlock</code>)</p>
-<p>Precompiled software supplied as a tarball:
-- will unpack binary and copy it to the install dir</p>
+<p>Precompiled software supplied as a tarball: will unpack binary and copy it to the install dir</p>
 <h3 id="extra-easyconfig-parameters-specific-to-tarball-easyblock">Extra easyconfig parameters specific to <code>Tarball</code> easyblock<a class="headerlink" href="#extra-easyconfig-parameters-specific-to-tarball-easyblock" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -7325,7 +7344,7 @@ if an actual version is specified, it is checked against the derived version of 
 </li>
 </ul>
 <h2 id="toolchain"><code>Toolchain</code><a class="headerlink" href="#toolchain" title="Permanent link">&para;</a></h2>
-<p>(derives from <a href='#bundle'><code>Bundle</code></a>)</p>
+<p>(derives from <a href="#bundle"><code>Bundle</code></a>)</p>
 <p>Compiler toolchain easyblock: nothing to install, just generate module file.</p>
 <h3 id="extra-easyconfig-parameters-specific-to-toolchain-easyblock">Extra easyconfig parameters specific to <code>Toolchain</code> easyblock<a class="headerlink" href="#extra-easyconfig-parameters-specific-to-toolchain-easyblock" title="Permanent link">&para;</a></h3>
 <table>
@@ -7380,7 +7399,7 @@ if an actual version is specified, it is checked against the derived version of 
 </tbody>
 </table>
 <h2 id="vscpythonpackage"><code>VSCPythonPackage</code><a class="headerlink" href="#vscpythonpackage" title="Permanent link">&para;</a></h2>
-<p>(derives from <a href='#versionindependentpythonpackage'><code>VersionIndependentPythonPackage</code></a>)</p>
+<p>(derives from <a href="#versionindependentpythonpackage"><code>VersionIndependentPythonPackage</code></a>)</p>
 <p>Support for install VSC Python packages.</p>
 <h3 id="extra-easyconfig-parameters-specific-to-vscpythonpackage-easyblock">Extra easyconfig parameters specific to <code>VSCPythonPackage</code> easyblock<a class="headerlink" href="#extra-easyconfig-parameters-specific-to-vscpythonpackage-easyblock" title="Permanent link">&para;</a></h3>
 <table>
@@ -7500,7 +7519,7 @@ if an actual version is specified, it is checked against the derived version of 
 </tbody>
 </table>
 <h2 id="versionindependentpythonpackage"><code>VersionIndependentPythonPackage</code><a class="headerlink" href="#versionindependentpythonpackage" title="Permanent link">&para;</a></h2>
-<p>(derives from <a href='#pythonpackage'><code>PythonPackage</code></a>)</p>
+<p>(derives from <a href="#pythonpackage"><code>PythonPackage</code></a>)</p>
 <p>Support for building/installing python packages without requiring a specific python package.</p>
 <h3 id="extra-easyconfig-parameters-specific-to-versionindependentpythonpackage-easyblock">Extra easyconfig parameters specific to <code>VersionIndependentPythonPackage</code> easyblock<a class="headerlink" href="#extra-easyconfig-parameters-specific-to-versionindependentpythonpackage-easyblock" title="Permanent link">&para;</a></h3>
 <table>
@@ -7652,7 +7671,7 @@ if an actual version is specified, it is checked against the derived version of 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 4, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 6, 2023</span>
       
     
   </small>
