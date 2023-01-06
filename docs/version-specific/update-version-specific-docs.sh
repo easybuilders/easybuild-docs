@@ -115,7 +115,7 @@ echo >> toolchain-opts.md
 temp_tc="$(mktemp)"
 
 IFS=$'\n'
-for line in `eb --list-toolchains | sed 1d | sort`
+for line in `eb --list-toolchains | sed 1d | sort --ignore-case`
 do
     tc=`echo $line | cut -d ':' -f1`
     echo "${tc//[[:blank:]]/}" >> $temp_tc
