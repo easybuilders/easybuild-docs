@@ -10,7 +10,7 @@
 
 ## ``BinariesTarball``
 
-(derives from <a href='#tarball'>``Tarball``</a>)
+(derives from [``Tarball``](#tarball))
 
 
 Support for installing a tarball of binaries
@@ -85,7 +85,7 @@ moduleclass = 'bio'
 
 ## ``BuildEnv``
 
-(derives from <a href='#bundle'>``Bundle``</a>)
+(derives from [``Bundle``](#bundle))
 
 
 Build environment of toolchain: only generate module file
@@ -157,7 +157,7 @@ moduleclass = 'devel'
 
 ## ``CMakeMake``
 
-(derives from <a href='#configuremake'>``ConfigureMake``</a>)
+(derives from [``ConfigureMake``](#configuremake))
 
 Support for configuring build with CMake instead of traditional configure script
 
@@ -229,7 +229,7 @@ moduleclass = 'data'
 
 ## ``CMakeMakeCp``
 
-(derives from <a href='#cmakemake'>``CMakeMake``</a>, <a href='#makecp'>``MakeCp``</a>)
+(derives from [``CMakeMake``](#cmakemake), [``MakeCp``](#makecp))
 
 Software configured with CMake but without 'make install' step
 
@@ -270,7 +270,7 @@ easyconfig parameter            |description                                    
 
 ## ``CMakeNinja``
 
-(derives from <a href='#cmakemake'>``CMakeMake``</a>, <a href='#mesonninja'>``MesonNinja``</a>)
+(derives from [``CMakeMake``](#cmakemake), [``MesonNinja``](#mesonninja))
 
 Support for configuring with CMake, building and installing with MesonNinja.
 
@@ -308,7 +308,7 @@ easyconfig parameter            |description                                    
 
 ## ``CMakePythonPackage``
 
-(derives from <a href='#cmakemake'>``CMakeMake``</a>, <a href='#pythonpackage'>``PythonPackage``</a>)
+(derives from [``CMakeMake``](#cmakemake), [``PythonPackage``](#pythonpackage))
 
 Build a Python package and module with cmake.
 
@@ -372,7 +372,7 @@ easyconfig parameter            |description                                    
 
 ## ``CmdCp``
 
-(derives from <a href='#makecp'>``MakeCp``</a>)
+(derives from [``MakeCp``](#makecp))
 
 
 Software with no configure, no make, and no make install step.
@@ -409,7 +409,7 @@ easyconfig parameter            |description                                    
 
 ## ``Conda``
 
-(derives from <a href='#binary'>``Binary``</a>)
+(derives from [``Binary``](#binary))
 
 Support for installing software using 'conda'.
 
@@ -502,12 +502,13 @@ moduleclass = 'tools'
 
 ## ``ConfigureMakePythonPackage``
 
-(derives from <a href='#configuremake'>``ConfigureMake``</a>, <a href='#pythonpackage'>``PythonPackage``</a>)
+(derives from [``ConfigureMake``](#configuremake), [``PythonPackage``](#pythonpackage))
 
 
-Build a Python package and module with 'python configure/make/make install'.
+Build a Python package and module with ``python configure``/``make``/``make install``.
 
 Implemented by using:
+
 - a custom implementation of configure_step
 - using the build_step and install_step from ConfigureMake
 - using the sanity_check_step and make_module_extra from PythonPackage
@@ -552,11 +553,11 @@ easyconfig parameter            |description                                    
 
 ### Customised steps in ``ConfigureMakePythonPackage`` easyblock
 
-* ``build_step`` - Build Python package with 'make'.
+* ``build_step`` - Build Python package with ``make``.
 
-* ``configure_step`` - Configure build using 'python configure'.
+* ``configure_step`` - Configure build using ``python configure``.
 
-* ``install_step`` - Install with 'make install'.
+* ``install_step`` - Install with ``make install``.
 
 
 ### Example easyconfig for ``ConfigureMakePythonPackage`` easyblock
@@ -596,7 +597,7 @@ moduleclass = 'vis'
 
 ## ``CrayToolchain``
 
-(derives from <a href='#bundle'>``Bundle``</a>)
+(derives from [``Bundle``](#bundle))
 
 
 Compiler toolchain: generate module file only, nothing to build/install
@@ -616,7 +617,7 @@ easyconfig parameter           |description                                     
 
 ## ``FortranPythonPackage``
 
-(derives from <a href='#pythonpackage'>``PythonPackage``</a>)
+(derives from [``PythonPackage``](#pythonpackage))
 
 Extends PythonPackage to add a Fortran compiler to the make call
 
@@ -683,6 +684,7 @@ easyconfig parameter|description                                                
 
 
 Base class for Intel software
+
 - no configure/make : binary release
 - add license_file variable
 
@@ -709,7 +711,7 @@ easyconfig parameter        |description                                        
 
 ## ``JAR``
 
-(derives from <a href='#binary'>``Binary``</a>)
+(derives from [``Binary``](#binary))
 
 Support for installing JAR files.
 
@@ -724,7 +726,7 @@ easyconfig parameter|description                                                
 
 ## ``JuliaBundle``
 
-(derives from <a href='#bundle'>``Bundle``</a>)
+(derives from [``Bundle``](#bundle))
 
 
 Bundle of JuliaPackages: install Julia packages as extensions in a bundle
@@ -769,7 +771,7 @@ easyconfig parameter |description                                               
 
 ## ``MakeCp``
 
-(derives from <a href='#configuremake'>``ConfigureMake``</a>)
+(derives from [``ConfigureMake``](#configuremake))
 
 
 Software with no configure and no make install step.
@@ -880,7 +882,7 @@ easyconfig parameter|description                       |default value
 
 ## ``PackedBinary``
 
-(derives from <a href='#binary'>``Binary``</a>, ``EasyBlock``)
+(derives from [``Binary``](#binary), ``EasyBlock``)
 
 Support for installing packed binary software.
 Just unpack the sources in the install dir
@@ -902,7 +904,7 @@ easyconfig parameter|description                                                
 
 ## ``PerlModule``
 
-(derives from ``ExtensionEasyBlock``, <a href='#configuremake'>``ConfigureMake``</a>)
+(derives from ``ExtensionEasyBlock``, [``ConfigureMake``](#configuremake))
 
 Builds and installs a Perl module, and can provide a dedicated module file.
 
@@ -924,7 +926,7 @@ easyconfig parameter|description                       |default value
 
 ## ``PythonBundle``
 
-(derives from <a href='#bundle'>``Bundle``</a>)
+(derives from [``Bundle``](#bundle))
 
 
 Bundle of PythonPackages: install Python packages as extensions in a bundle
@@ -1032,10 +1034,11 @@ easyconfig parameter|description                                             |de
 
 ## ``Rpm``
 
-(derives from <a href='#binary'>``Binary``</a>)
+(derives from [``Binary``](#binary))
 
 
 Support for installing RPM files.
+
 - sources is a list of rpms
 - installation is with --nodeps (so the sources list has to be complete)
 
@@ -1105,7 +1108,7 @@ easyconfig parameter|description                              |default value
 
 ## ``SystemCompiler``
 
-(derives from <a href='#bundle'>``Bundle``</a>, ``EB_GCC``, ``EB_ifort``)
+(derives from [``Bundle``](#bundle), ``EB_GCC``, ``EB_ifort``)
 
 
 Support for generating a module file for the system compiler with specified name.
@@ -1162,7 +1165,7 @@ easyconfig parameter            |description                                    
 
 ## ``SystemMPI``
 
-(derives from <a href='#bundle'>``Bundle``</a>, <a href='#configuremake'>``ConfigureMake``</a>, ``EB_impi``)
+(derives from [``Bundle``](#bundle), [``ConfigureMake``](#configuremake), ``EB_impi``)
 
 
 Support for generating a module file for the system mpi with specified name.
@@ -1214,8 +1217,7 @@ easyconfig parameter             |description                                   
 (derives from ``ExtensionEasyBlock``)
 
 
-Precompiled software supplied as a tarball:
-- will unpack binary and copy it to the install dir
+Precompiled software supplied as a tarball: will unpack binary and copy it to the install dir
 
 
 ### Extra easyconfig parameters specific to ``Tarball`` easyblock
@@ -1237,7 +1239,7 @@ easyconfig parameter|description                                                
 
 ## ``Toolchain``
 
-(derives from <a href='#bundle'>``Bundle``</a>)
+(derives from [``Bundle``](#bundle))
 
 Compiler toolchain easyblock: nothing to install, just generate module file.
 
@@ -1256,7 +1258,7 @@ easyconfig parameter           |description                                     
 
 ## ``VSCPythonPackage``
 
-(derives from <a href='#versionindependentpythonpackage'>``VersionIndependentPythonPackage``</a>)
+(derives from [``VersionIndependentPythonPackage``](#versionindependentpythonpackage))
 
 Support for install VSC Python packages.
 
@@ -1288,7 +1290,7 @@ easyconfig parameter    |description                                            
 
 ## ``VersionIndependentPythonPackage``
 
-(derives from <a href='#pythonpackage'>``PythonPackage``</a>)
+(derives from [``PythonPackage``](#pythonpackage))
 
 Support for building/installing python packages without requiring a specific python package.
 
