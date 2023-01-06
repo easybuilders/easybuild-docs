@@ -1,11 +1,11 @@
 # List of supported software {: #list_software }
 
-EasyBuild supports 2901 different software packages (incl. toolchains, bundles):
+EasyBuild supports 2906 different software packages (incl. toolchains, bundles):
 
 [a](#a) - [b](#b) - [c](#c) - [d](#d) - [e](#e) - [f](#f) - [g](#g) - [h](#h) - [i](#i) - [j](#j) - [k](#k) - [l](#l) - [m](#m) - [n](#n) - [o](#o) - [p](#p) - [q](#q) - [r](#r) - [s](#s) - [t](#t) - [u](#u) - [v](#v) - [w](#w) - [x](#x) - [y](#y) - [z](#z)
 
 
-### 3
+## 3
 
 
 [3to2](#3to2)
@@ -22,7 +22,7 @@ version  |versionsuffix     |toolchain
 ``1.1.1``|``-Python-2.7.12``|``foss/2016b``, ``intel/2016b``
 ``1.1.1``|``-Python-2.7.13``|``intel/2017a``
 
-### 4
+## 4
 
 
 [4ti2](#4ti2)
@@ -38,7 +38,7 @@ version  |toolchain
 ---------|-------------------------------------
 ``1.6.9``|``GCC/8.2.0-2.31.1``, ``intel/2018b``
 
-### A
+## A
 
 
 [ABAQUS](#abaqus) - [ABINIT](#abinit) - [ABRA2](#abra2) - [ABRicate](#abricate) - [Abseil](#abseil) - [abTEM](#abtem) - [ABySS](#abyss) - [ack](#ack) - [ACT](#act) - [ACTC](#actc) - [ada](#ada) - [AdapterRemoval](#adapterremoval) - [ADDA](#adda) - [ADF](#adf) - [ADIOS](#adios) - [adjustText](#adjusttext) - [ADMIXTURE](#admixture) - [ADOL-C](#adol-c) - [Advisor](#advisor) - [AFNI](#afni) - [AGAT](#agat) - [AGFusion](#agfusion) - [aiohttp](#aiohttp) - [ALADIN](#aladin) - [Albacore](#albacore) - [Albumentations](#albumentations) - [alevin-fry](#alevin-fry) - [ALFA](#alfa) - [Alfred](#alfred) - [alleleCount](#allelecount) - [Allinea](#allinea) - [ALLPATHS-LG](#allpaths-lg) - [almosthere](#almosthere) - [Alpha](#alpha) - [AlphaFold](#alphafold) - [ALPS](#alps) - [alsa-lib](#alsa-lib) - [AMAPVox](#amapvox) - [Amara](#amara) - [amask](#amask) - [Amber](#amber) - [AmberMini](#ambermini) - [AmberTools](#ambertools) - [AMD-LibM](#amd-libm) - [AMD-RNG](#amd-rng) - [AMD-SecureRNG](#amd-securerng) - [AMD-uProf](#amd-uprof) - [AMOS](#amos) - [AMPHORA2](#amphora2) - [AMPL-MP](#ampl-mp) - [amplimap](#amplimap) - [AMPtk](#amptk) - [AmrPlusPlus](#amrplusplus) - [AMS](#ams) - [Anaconda2](#anaconda2) - [Anaconda3](#anaconda3) - [aNCI](#anci) - [andi](#andi) - [ANGEL](#angel) - [angsd](#angsd) - [ANIcalculator](#anicalculator) - [Annif](#annif) - [annovar](#annovar) - [ANSYS](#ansys) - [ANSYS_CFD](#ansys_cfd) - [ant](#ant) - [antiSMASH](#antismash) - [ANTLR](#antlr) - [ANTs](#ants) - [anvio](#anvio) - [any2fasta](#any2fasta) - [AOCC](#aocc) - [AOMP](#aomp) - [APBS](#apbs) - [apex](#apex) - [APR](#apr) - [APR-util](#apr-util) - [AptaSUITE](#aptasuite) - [ARAGORN](#aragorn) - [Arb](#arb) - [Arcade-Learning-Environment](#arcade-learning-environment) - [arcasHLA](#arcashla) - [ARCH](#arch) - [Archive-Zip](#archive-zip) - [ArchR](#archr) - [archspec](#archspec) - [ARGoS](#argos) - [argtable](#argtable) - [aria2](#aria2) - [Arlequin](#arlequin) - [Armadillo](#armadillo) - [arosics](#arosics) - [ARPACK++](#arpack++) - [arpack-ng](#arpack-ng) - [ArrayFire](#arrayfire) - [Arriba](#arriba) - [Arrow](#arrow) - [arrow-R](#arrow-r) - [ART](#art) - [artic-ncov2019](#artic-ncov2019) - [ARTS](#arts) - [ArviZ](#arviz) - [ARWEN](#arwen) - [ASAP](#asap) - [ASAP3](#asap3) - [ASE](#ase) - [ASHS](#ashs) - [Aspera-CLI](#aspera-cli) - [Aspera-Connect](#aspera-connect) - [assimp](#assimp) - [Assimulo](#assimulo) - [ASTRID](#astrid) - [astropy](#astropy) - [at-spi2-atk](#at-spi2-atk) - [at-spi2-core](#at-spi2-core) - [ATK](#atk) - [ATLAS](#atlas) - [atomate](#atomate) - [AtomPAW](#atompaw) - [atools](#atools) - [atropos](#atropos) - [ATSAS](#atsas) - [attr](#attr) - [attrdict](#attrdict) - [attrdict3](#attrdict3) - [augur](#augur) - [AUGUSTUS](#augustus) - [Austin](#austin) - [AUTO-07p](#auto-07p) - [Autoconf](#autoconf) - [Autoconf-archive](#autoconf-archive) - [AutoDock](#autodock) - [AutoDock-GPU](#autodock-gpu) - [AutoDock-Vina](#autodock-vina) - [AutoGeneS](#autogenes) - [AutoGrid](#autogrid) - [Automake](#automake) - [AutoMap](#automap) - [autopep8](#autopep8) - [Autotools](#autotools) - [Avogadro2](#avogadro2) - [awscli](#awscli)
@@ -70,7 +70,7 @@ ABINIT is a package whose main program allows one to find the total energy, char
 *homepage*: <https://www.abinit.org/>
 
 version   |versionsuffix           |toolchain
-----------|------------------------|------------------------------------------------
+----------|------------------------|-----------------------------------------------------------------
 ``7.0.3`` |``-x86_64_linux_gnu4.5``|``system``
 ``7.0.5`` |``-x86_64_linux_gnu4.5``|``system``
 ``7.2.1`` |``-x86_64_linux_gnu4.5``|``system``
@@ -86,7 +86,7 @@ version   |versionsuffix           |toolchain
 ``9.2.1`` |                        |``intel/2020a``
 ``9.4.1`` |                        |``foss/2020b``, ``intel/2020a``, ``intel/2020b``
 ``9.4.2`` |                        |``foss/2021a``, ``intel/2021a``
-``9.6.2`` |                        |``intel/2021a``, ``intel/2021b``
+``9.6.2`` |                        |``foss/2022a``, ``intel/2021a``, ``intel/2021b``, ``intel/2022a``
 
 ### ABRA2
 
@@ -545,6 +545,7 @@ version  |versionsuffix                                    |toolchain
 ``20.11``|``-AmberTools-20.15-Python-3.8.2``               |``foss/2020a``, ``fosscuda/2020a``
 ``20.11``|``-AmberTools-21.3``                             |``foss/2020b``, ``fosscuda/2020b``
 ``22.0`` |``-AmberTools-22.3``                             |``foss/2021b``
+``22.0`` |``-AmberTools-22.3-CUDA-11.4.1``                 |``foss/2021b``
 
 ### AmberMini
 
@@ -1795,7 +1796,7 @@ version     |versionsuffix     |toolchain
 ``1.18.89`` |``-Python-3.8.2`` |``GCCcore/9.3.0``
 ``2.0.55``  |``-Python-3.8.2`` |``GCCcore/9.3.0``
 
-### B
+## B
 
 
 [BabelStream](#babelstream) - [babl](#babl) - [Bader](#bader) - [BAGEL](#bagel) - [BAli-Phy](#bali-phy) - [bam-readcount](#bam-readcount) - [Bambi](#bambi) - [bamFilters](#bamfilters) - [BAMM](#bamm) - [BamM](#bamm) - [BAMSurgeon](#bamsurgeon) - [bamtofastq](#bamtofastq) - [BamTools](#bamtools) - [BamUtil](#bamutil) - [Bandage](#bandage) - [barrnap](#barrnap) - [basemap](#basemap) - [Bash](#bash) - [bashplotlib](#bashplotlib) - [bat](#bat) - [BatMeth2](#batmeth2) - [BayesAss](#bayesass) - [BayeScan](#bayescan) - [BayeScEnv](#bayescenv) - [BayesTraits](#bayestraits) - [Bazel](#bazel) - [bbcp](#bbcp) - [bbFTP](#bbftp) - [BBMap](#bbmap) - [bc](#bc) - [BCALM](#bcalm) - [bcbio-gff](#bcbio-gff) - [BCEL](#bcel) - [BCFtools](#bcftools) - [bcgTree](#bcgtree) - [bcl-convert](#bcl-convert) - [bcl2fastq2](#bcl2fastq2) - [bcolz](#bcolz) - [BDBag](#bdbag) - [Beagle](#beagle) - [beagle-lib](#beagle-lib) - [Beast](#beast) - [BeautifulSoup](#beautifulsoup) - [BEDOPS](#bedops) - [BEDTools](#bedtools) - [BEEF](#beef) - [behave](#behave) - [BerkeleyGW](#berkeleygw) - [BFAST](#bfast) - [BFC](#bfc) - [bgen](#bgen) - [bgen-reader](#bgen-reader) - [bibtexparser](#bibtexparser) - [BiG-SCAPE](#big-scape) - [BigDFT](#bigdft) - [BinSanity](#binsanity) - [binutils](#binutils) - [Bio-DB-HTS](#bio-db-hts) - [Bio-EUtilities](#bio-eutilities) - [Bio-SamTools](#bio-samtools) - [Bio-SearchIO-hmmer](#bio-searchio-hmmer) - [bioawk](#bioawk) - [biobambam2](#biobambam2) - [biogeme](#biogeme) - [biom-format](#biom-format) - [biomart-perl](#biomart-perl) - [BioPerl](#bioperl) - [BioPP](#biopp) - [Biopython](#biopython) - [BioServices](#bioservices) - [BirdNET](#birdnet) - [biscuit](#biscuit) - [Bismark](#bismark) - [Bison](#bison) - [bitarray](#bitarray) - [BLACS](#blacs) - [BLASR](#blasr) - [blasr_libcpp](#blasr_libcpp) - [BLAST](#blast) - [BLAST+](#blast+) - [BLAT](#blat) - [Blender](#blender) - [BLIS](#blis) - [Blitz++](#blitz++) - [BlobTools](#blobtools) - [Blosc](#blosc) - [Blosc2](#blosc2) - [BLT](#blt) - [bmtagger](#bmtagger) - [bnpy](#bnpy) - [BOINC](#boinc) - [bokeh](#bokeh) - [BoltzTraP](#boltztrap) - [Bonito](#bonito) - [Bonmin](#bonmin) - [Bonnie++](#bonnie++) - [Boost](#boost) - [Boost.MPI](#boost.mpi) - [Boost.Python](#boost.python) - [boost_histogram](#boost_histogram) - [boto3](#boto3) - [Bottleneck](#bottleneck) - [Bowtie](#bowtie) - [Bowtie2](#bowtie2) - [Bpipe](#bpipe) - [bpp](#bpp) - [bpytop](#bpytop) - [Bracken](#bracken) - [BRAKER](#braker) - [BreakDancer](#breakdancer) - [breseq](#breseq) - [Brotli](#brotli) - [Brotli-python](#brotli-python) - [Brunsli](#brunsli) - [bsddb3](#bsddb3) - [BSMAPz](#bsmapz) - [Bsoft](#bsoft) - [BSseeker2](#bsseeker2) - [BuDDy](#buddy) - [BUFRLIB](#bufrlib) - [buildenv](#buildenv) - [buildingspy](#buildingspy) - [Bullet](#bullet) - [BUSCO](#busco) - [BUStools](#bustools) - [BWA](#bwa) - [bwa-meth](#bwa-meth) - [bwakit](#bwakit) - [bwidget](#bwidget) - [BWISE](#bwise) - [bx-python](#bx-python) - [BXH_XCEDE_TOOLS](#bxh_xcede_tools) - [byacc](#byacc) - [byobu](#byobu) - [bzip2](#bzip2)
@@ -3507,10 +3508,10 @@ version  |toolchain
 ``1.0.6``|``GCC/4.8.1``, ``GCC/4.8.2``, ``GCC/4.8.4``, ``GCC/4.9.2``, ``GCC/4.9.3-2.25``, ``GCC/5.4.0-2.26``, ``GCCcore/4.9.3``, ``GCCcore/5.4.0``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``, ``GNU/4.9.3-2.25``, ``foss/2016.04``, ``foss/2016a``, ``foss/2016b``, ``gimkl/2.11.5``, ``gimkl/2017a``, ``intel/2016.02-GCC-4.9``, ``intel/2016a``, ``intel/2016b``, ``iomkl/2016.07``, ``iomkl/2016.09-GCC-4.9.3-2.25``, ``system``
 ``1.0.8``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``, ``system``
 
-### C
+## C
 
 
-[c-ares](#c-ares) - [C3D](#c3d) - [cadaver](#cadaver) - [CaDiCaL](#cadical) - [CAFE5](#cafe5) - [Caffe](#caffe) - [cairo](#cairo) - [cairomm](#cairomm) - [Calcam](#calcam) - [Calendrical](#calendrical) - [Calib](#calib) - [CAMPARI](#campari) - [Cantera](#cantera) - [canu](#canu) - [Canvas](#canvas) - [CAP3](#cap3) - [CapnProto](#capnproto) - [captum](#captum) - [Cargo](#cargo) - [Carma](#carma) - [carputils](#carputils) - [Cartopy](#cartopy) - [CaSpER](#casper) - [CASTEP](#castep) - [CastXML](#castxml) - [CAT-BAT](#cat-bat) - [Catch2](#catch2) - [category_encoders](#category_encoders) - [CatMAP](#catmap) - [causallift](#causallift) - [causalml](#causalml) - [CaVEMan](#caveman) - [CAVIAR](#caviar) - [Cbc](#cbc) - [CBLAS](#cblas) - [ccache](#ccache) - [CCfits](#ccfits) - [CCL](#ccl) - [cclib](#cclib) - [cctools](#cctools) - [CD-HIT](#cd-hit) - [CDAT](#cdat) - [cdbfasta](#cdbfasta) - [CDBtools](#cdbtools) - [cddlib](#cddlib) - [cDNA_Cupcake](#cdna_cupcake) - [CDO](#cdo) - [cdo-bindings](#cdo-bindings) - [cdsapi](#cdsapi) - [cell2location](#cell2location) - [CellMix](#cellmix) - [CellRanger](#cellranger) - [CellRanger-ARC](#cellranger-arc) - [CellRanger-ATAC](#cellranger-atac) - [CellRank](#cellrank) - [CellTypist](#celltypist) - [Centrifuge](#centrifuge) - [Cereal](#cereal) - [CESM-deps](#cesm-deps) - [CFDEMcoupling](#cfdemcoupling) - [CFITSIO](#cfitsio) - [cftime](#cftime) - [CGAL](#cgal) - [cget](#cget) - [Cgl](#cgl) - [CGmapTools](#cgmaptools) - [CGNS](#cgns) - [CharLS](#charls) - [CHARMM](#charmm) - [charmm](#charmm) - [CHASE](#chase) - [Check](#check) - [check](#check) - [CheckM](#checkm) - [Cheetah](#cheetah) - [Chemaxon-Marvin](#chemaxon-marvin) - [CheMPS2](#chemps2) - [CHERAB](#cherab) - [chewBBACA](#chewbbaca) - [chi2comb](#chi2comb) - [Chimera](#chimera) - [ChimPipe](#chimpipe) - [Chromaprint](#chromaprint) - [cicero](#cicero) - [CIF2Cell](#cif2cell) - [CIRCexplorer](#circexplorer) - [CIRCexplorer2](#circexplorer2) - [Circos](#circos) - [CIRI](#ciri) - [CIRI-long](#ciri-long) - [cisTEM](#cistem) - [CITE-seq-Count](#cite-seq-count) - [Clang](#clang) - [Clang-AOMP](#clang-aomp) - [Clang-Python-bindings](#clang-python-bindings) - [CLAPACK](#clapack) - [CLEASE](#clease) - [CLHEP](#clhep) - [CliMetLab](#climetlab) - [CLISP](#clisp) - [ClonalFrameML](#clonalframeml) - [CLooG](#cloog) - [CloudCompare](#cloudcompare) - [Clp](#clp) - [Clustal-Omega](#clustal-omega) - [ClustalW2](#clustalw2) - [Cluster-Buster](#cluster-buster) - [ClusterShell](#clustershell) - [CMake](#cmake) - [CMAverse](#cmaverse) - [CmdStanR](#cmdstanr) - [cmocean](#cmocean) - [CMSeq](#cmseq) - [CNT-ILP](#cnt-ilp) - [CNVkit](#cnvkit) - [CNVnator](#cnvnator) - [Co-phylog](#co-phylog) - [COBRApy](#cobrapy) - [CoCoALib](#cocoalib) - [CodAn](#codan) - [code-server](#code-server) - [CODEX2](#codex2) - [Cogent](#cogent) - [Coin](#coin) - [CoinUtils](#coinutils) - [colossalai](#colossalai) - [Commet](#commet) - [CompareM](#comparem) - [Compress-Raw-Zlib](#compress-raw-zlib) - [COMSOL](#comsol) - [Con3F](#con3f) - [CONCOCT](#concoct) - [configparser](#configparser) - [configurable-http-proxy](#configurable-http-proxy) - [CONN](#conn) - [ConnectomeWorkbench](#connectomeworkbench) - [Control-FREEC](#control-freec) - [CoordgenLibs](#coordgenlibs) - [Coot](#coot) - [core-counter](#core-counter) - [Coreutils](#coreutils) - [corner](#corner) - [coverage](#coverage) - [cowsay](#cowsay) - [CP2K](#cp2k) - [CPB](#cpb) - [CPLEX](#cplex) - [CPPE](#cppe) - [CppUnit](#cppunit) - [cppy](#cppy) - [cpu_features](#cpu_features) - [cram](#cram) - [cramtools](#cramtools) - [CrayCCE](#craycce) - [CrayGNU](#craygnu) - [CrayIntel](#crayintel) - [CrayPGI](#craypgi) - [crb-blast](#crb-blast) - [CREST](#crest) - [CRF++](#crf++) - [CRISPR-DAV](#crispr-dav) - [CRISPResso2](#crispresso2) - [cromwell](#cromwell) - [CrossMap](#crossmap) - [CrossTalkZ](#crosstalkz) - [CRPropa](#crpropa) - [Crumble](#crumble) - [cryoCARE](#cryocare) - [cryoDRGN](#cryodrgn) - [CryptoMiniSat](#cryptominisat) - [CrystFEL](#crystfel) - [CSB](#csb) - [CSBDeep](#csbdeep) - [CSBLAST](#csblast) - [cscope](#cscope) - [csvkit](#csvkit) - [ctags](#ctags) - [ctffind](#ctffind) - [CTPL](#ctpl) - [Cube](#cube) - [CubeGUI](#cubegui) - [CubeLib](#cubelib) - [CubeWriter](#cubewriter) - [CUDA](#cuda) - [CUDA-Samples](#cuda-samples) - [CUDAcompat](#cudacompat) - [CUDAcore](#cudacore) - [cuDNN](#cudnn) - [Cufflinks](#cufflinks) - [CUnit](#cunit) - [CuPy](#cupy) - [cURL](#curl) - [custodian](#custodian) - [cutadapt](#cutadapt) - [cuTENSOR](#cutensor) - [CVS](#cvs) - [CVXOPT](#cvxopt) - [CVXPY](#cvxpy) - [CWIPI](#cwipi) - [cwltool](#cwltool) - [cxxopts](#cxxopts) - [cysignals](#cysignals) - [Cython](#cython) - [cytoolz](#cytoolz) - [Cytoscape](#cytoscape) - [cytosim](#cytosim) - [cyvcf2](#cyvcf2)
+[c-ares](#c-ares) - [C3D](#c3d) - [cadaver](#cadaver) - [CaDiCaL](#cadical) - [CAFE5](#cafe5) - [Caffe](#caffe) - [cairo](#cairo) - [cairomm](#cairomm) - [Calcam](#calcam) - [Calendrical](#calendrical) - [Calib](#calib) - [CAMPARI](#campari) - [Cantera](#cantera) - [canu](#canu) - [Canvas](#canvas) - [CAP3](#cap3) - [CapnProto](#capnproto) - [captum](#captum) - [Cargo](#cargo) - [Carma](#carma) - [carputils](#carputils) - [Cartopy](#cartopy) - [CaSpER](#casper) - [CASTEP](#castep) - [CastXML](#castxml) - [CAT-BAT](#cat-bat) - [Catch2](#catch2) - [category_encoders](#category_encoders) - [CatMAP](#catmap) - [causallift](#causallift) - [causalml](#causalml) - [CaVEMan](#caveman) - [CAVIAR](#caviar) - [Cbc](#cbc) - [CBLAS](#cblas) - [ccache](#ccache) - [CCfits](#ccfits) - [CCL](#ccl) - [cclib](#cclib) - [cctools](#cctools) - [CD-HIT](#cd-hit) - [CDAT](#cdat) - [cdbfasta](#cdbfasta) - [CDBtools](#cdbtools) - [cddlib](#cddlib) - [cDNA_Cupcake](#cdna_cupcake) - [CDO](#cdo) - [cdo-bindings](#cdo-bindings) - [cdsapi](#cdsapi) - [cell2location](#cell2location) - [CellMix](#cellmix) - [CellRanger](#cellranger) - [CellRanger-ARC](#cellranger-arc) - [CellRanger-ATAC](#cellranger-atac) - [CellRank](#cellrank) - [CellTypist](#celltypist) - [Centrifuge](#centrifuge) - [Cereal](#cereal) - [CESM-deps](#cesm-deps) - [CFDEMcoupling](#cfdemcoupling) - [CFITSIO](#cfitsio) - [cftime](#cftime) - [CGAL](#cgal) - [cget](#cget) - [Cgl](#cgl) - [CGmapTools](#cgmaptools) - [CGNS](#cgns) - [CharLS](#charls) - [CHARMM](#charmm) - [charmm](#charmm) - [CHASE](#chase) - [Check](#check) - [check](#check) - [CheckM](#checkm) - [Cheetah](#cheetah) - [Chemaxon-Marvin](#chemaxon-marvin) - [CheMPS2](#chemps2) - [CHERAB](#cherab) - [chewBBACA](#chewbbaca) - [chi2comb](#chi2comb) - [Chimera](#chimera) - [ChimPipe](#chimpipe) - [Chromaprint](#chromaprint) - [cicero](#cicero) - [CIF2Cell](#cif2cell) - [CIRCexplorer](#circexplorer) - [CIRCexplorer2](#circexplorer2) - [Circos](#circos) - [CIRI](#ciri) - [CIRI-long](#ciri-long) - [cisTEM](#cistem) - [CITE-seq-Count](#cite-seq-count) - [Clang](#clang) - [Clang-AOMP](#clang-aomp) - [Clang-Python-bindings](#clang-python-bindings) - [CLAPACK](#clapack) - [CLEASE](#clease) - [CLHEP](#clhep) - [CliMetLab](#climetlab) - [CLISP](#clisp) - [ClonalFrameML](#clonalframeml) - [CLooG](#cloog) - [CloudCompare](#cloudcompare) - [Clp](#clp) - [Clustal-Omega](#clustal-omega) - [ClustalW2](#clustalw2) - [Cluster-Buster](#cluster-buster) - [ClusterShell](#clustershell) - [CMake](#cmake) - [CMAverse](#cmaverse) - [CmdStanR](#cmdstanr) - [cmocean](#cmocean) - [CMSeq](#cmseq) - [CNT-ILP](#cnt-ilp) - [CNVkit](#cnvkit) - [CNVnator](#cnvnator) - [Co-phylog](#co-phylog) - [COBRApy](#cobrapy) - [CoCoALib](#cocoalib) - [CodAn](#codan) - [code-server](#code-server) - [CODEX2](#codex2) - [Cogent](#cogent) - [Coin](#coin) - [CoinUtils](#coinutils) - [colossalai](#colossalai) - [Commet](#commet) - [CompareM](#comparem) - [Compress-Raw-Zlib](#compress-raw-zlib) - [COMSOL](#comsol) - [Con3F](#con3f) - [CONCOCT](#concoct) - [configparser](#configparser) - [configurable-http-proxy](#configurable-http-proxy) - [CONN](#conn) - [ConnectomeWorkbench](#connectomeworkbench) - [Control-FREEC](#control-freec) - [CoordgenLibs](#coordgenlibs) - [Coot](#coot) - [core-counter](#core-counter) - [Coreutils](#coreutils) - [corner](#corner) - [CoSymLib](#cosymlib) - [coverage](#coverage) - [cowsay](#cowsay) - [CP2K](#cp2k) - [CPB](#cpb) - [CPLEX](#cplex) - [CPPE](#cppe) - [CppUnit](#cppunit) - [cppy](#cppy) - [cpu_features](#cpu_features) - [cram](#cram) - [cramtools](#cramtools) - [CrayCCE](#craycce) - [CrayGNU](#craygnu) - [CrayIntel](#crayintel) - [CrayPGI](#craypgi) - [crb-blast](#crb-blast) - [CREST](#crest) - [CRF++](#crf++) - [CRISPR-DAV](#crispr-dav) - [CRISPResso2](#crispresso2) - [cromwell](#cromwell) - [CrossMap](#crossmap) - [CrossTalkZ](#crosstalkz) - [CRPropa](#crpropa) - [Crumble](#crumble) - [cryoCARE](#cryocare) - [cryoDRGN](#cryodrgn) - [CryptoMiniSat](#cryptominisat) - [CrystFEL](#crystfel) - [CSB](#csb) - [CSBDeep](#csbdeep) - [CSBLAST](#csblast) - [cscope](#cscope) - [csvkit](#csvkit) - [ctags](#ctags) - [ctffind](#ctffind) - [CTPL](#ctpl) - [Cube](#cube) - [CubeGUI](#cubegui) - [CubeLib](#cubelib) - [CubeWriter](#cubewriter) - [CUDA](#cuda) - [CUDA-Samples](#cuda-samples) - [CUDAcompat](#cudacompat) - [CUDAcore](#cudacore) - [cuDNN](#cudnn) - [Cufflinks](#cufflinks) - [CUnit](#cunit) - [CuPy](#cupy) - [cURL](#curl) - [custodian](#custodian) - [cutadapt](#cutadapt) - [cuTENSOR](#cutensor) - [CVS](#cvs) - [CVXOPT](#cvxopt) - [CVXPY](#cvxpy) - [CWIPI](#cwipi) - [cwltool](#cwltool) - [cxxopts](#cxxopts) - [cysignals](#cysignals) - [Cython](#cython) - [cytoolz](#cytoolz) - [Cytoscape](#cytoscape) - [cytosim](#cytosim) - [cyvcf2](#cyvcf2)
 
 
 ### c-ares
@@ -5185,6 +5186,16 @@ version  |versionsuffix     |toolchain
 ``2.0.1``|``-Python-2.7.15``|``foss/2019a``
 ``2.0.1``|``-Python-3.7.2`` |``foss/2019a``
 
+### CoSymLib
+
+Cosymlib is a python library for computing continuous symmetry & shape measures (CSMs & CShMs). Although its main aim is to provide simple and ready-to-use tools for the analysis of the symmetry & shape of molecules, many of the procedures contained in cosymlib can be easily applied to any finite geometrical object defined by a set of vertices or a by mass distribution function.
+
+*homepage*: <https://cosymlib.readthedocs.io>
+
+version   |toolchain
+----------|--------------
+``0.10.9``|``foss/2022a``
+
 ### coverage
 
 Coverage.py is a tool for measuring code coverage of Python programs.  It monitors your program, noting which parts of the code have been executed,  then analyzes the source to identify code that could have been executed but was not. 
@@ -5598,6 +5609,7 @@ version  |toolchain
 ---------|--------------------------------------
 ``4.4.4``|``GCCcore/8.2.0``, ``GCCcore/9.3.0``
 ``4.6``  |``GCCcore/10.2.0``, ``GCCcore/10.3.0``
+``4.8``  |``GCCcore/11.3.0``
 
 ### CubeLib
 
@@ -5609,6 +5621,7 @@ version  |toolchain
 ---------|-------------------------------------------------------
 ``4.4.4``|``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 ``4.6``  |``GCCcore/10.2.0``, ``GCCcore/10.3.0``
+``4.8``  |``GCCcore/11.3.0``
 
 ### CubeWriter
 
@@ -5620,6 +5633,7 @@ version  |toolchain
 ---------|---------------------------------------------------------------------------
 ``4.4.3``|``GCCcore/10.2.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 ``4.6``  |``GCCcore/10.2.0``, ``GCCcore/10.3.0``
+``4.8``  |``GCCcore/11.3.0``
 
 ### CUDA
 
@@ -5992,7 +6006,7 @@ version    |versionsuffix    |toolchain
 ``0.10.10``|``-Python-3.6.6``|``foss/2018b``
 ``0.11.5`` |                 |``foss/2019a``, ``intel/2019a``
 
-### D
+## D
 
 
 [dadi](#dadi) - [dagitty](#dagitty) - [Dakota](#dakota) - [Dalton](#dalton) - [damageproto](#damageproto) - [dammit](#dammit) - [DANPOS2](#danpos2) - [DAS_Tool](#das_tool) - [dask](#dask) - [datamash](#datamash) - [davix](#davix) - [DB](#db) - [DB_File](#db_file) - [DBD-mysql](#dbd-mysql) - [DBG2OLC](#dbg2olc) - [DBus](#dbus) - [dbus-glib](#dbus-glib) - [dcm2niix](#dcm2niix) - [DCMTK](#dcmtk) - [dd](#dd) - [deal.II](#deal.ii) - [deap](#deap) - [decona](#decona) - [deconf](#deconf) - [DeconICA](#deconica) - [deepdiff](#deepdiff) - [DeepLabCut](#deeplabcut) - [deepmedic](#deepmedic) - [DeepMod2](#deepmod2) - [DeepSurv](#deepsurv) - [deepTools](#deeptools) - [Delly](#delly) - [DeMixT](#demixt) - [DendroPy](#dendropy) - [destiny](#destiny) - [Detectron2](#detectron2) - [detonate](#detonate) - [Devito](#devito) - [DFA](#dfa) - [DFT-D3](#dft-d3) - [DFT-D4](#dft-d4) - [DFTB+](#dftb+) - [dftd3-lib](#dftd3-lib) - [DGL](#dgl) - [DIAL](#dial) - [DIAMOND](#diamond) - [Dice](#dice) - [dicom2nifti](#dicom2nifti) - [DicomBrowser](#dicombrowser) - [Diffutils](#diffutils) - [dijitso](#dijitso) - [dill](#dill) - [DIRAC](#dirac) - [distributed](#distributed) - [DistributedStream](#distributedstream) - [DL_POLY_4](#dl_poly_4) - [DL_POLY_Classic](#dl_poly_classic) - [dlb](#dlb) - [dlib](#dlib) - [dm-reverb](#dm-reverb) - [dm-tree](#dm-tree) - [DMCfun](#dmcfun) - [DMTCP](#dmtcp) - [DOLFIN](#dolfin) - [Doris](#doris) - [DosageConvertor](#dosageconvertor) - [dotNET-Core-Runtime](#dotnet-core-runtime) - [dotNET-SDK](#dotnet-sdk) - [double-conversion](#double-conversion) - [DoubletFinder](#doubletfinder) - [Doxygen](#doxygen) - [DRAGMAP](#dragmap) - [Drake](#drake) - [dRep](#drep) - [DROP](#drop) - [dropEst](#dropest) - [DSA](#dsa) - [dSFMT](#dsfmt) - [DSRC](#dsrc) - [Dsuite](#dsuite) - [dtcmp](#dtcmp) - [dtcwt](#dtcwt) - [DualSPHysics](#dualsphysics) - [DUBStepR](#dubstepr) - [dune-core](#dune-core) - [dune-fem](#dune-fem) - [dxpy](#dxpy) - [DyMat](#dymat)
@@ -7019,7 +7033,7 @@ version|versionsuffix  |toolchain
 -------|---------------|--------------
 ``0.7``|``-2020-12-12``|``foss/2021b``
 
-### E
+## E
 
 
 [E-ANTIC](#e-antic) - [ea-utils](#ea-utils) - [earthengine-api](#earthengine-api) - [EasyBuild](#easybuild) - [EasyQC](#easyqc) - [ecBuild](#ecbuild) - [ecCodes](#eccodes) - [eccodes-python](#eccodes-python) - [ED2](#ed2) - [edlib](#edlib) - [EggLib](#egglib) - [eggnog-mapper](#eggnog-mapper) - [EGTtools](#egttools) - [eht-imaging](#eht-imaging) - [Eigen](#eigen) - [EigenExa](#eigenexa) - [EIGENSOFT](#eigensoft) - [einops](#einops) - [elastix](#elastix) - [elbencho](#elbencho) - [ELFIO](#elfio) - [elfutils](#elfutils) - [Elk](#elk) - [ELPA](#elpa) - [ELPH](#elph) - [elprep](#elprep) - [ELSI](#elsi) - [ELSI-RCI](#elsi-rci) - [Emacs](#emacs) - [EMAN2](#eman2) - [EMBOSS](#emboss) - [Embree](#embree) - [emcee](#emcee) - [EMU](#emu) - [enaBrowserTool](#enabrowsertool) - [enchant](#enchant) - [enchant-2](#enchant-2) - [EnsEMBLCoreAPI](#ensemblcoreapi) - [entrypoints](#entrypoints) - [EPD](#epd) - [EPIC](#epic) - [epiScanpy](#episcanpy) - [EricScript](#ericscript) - [ESL-Bundle](#esl-bundle) - [ESM-2](#esm-2) - [ESMF](#esmf) - [ESMPy](#esmpy) - [ESMValTool](#esmvaltool) - [eSpeak-NG](#espeak-ng) - [Essentia](#essentia) - [ETE](#ete) - [ETSF_IO](#etsf_io) - [eudev](#eudev) - [EvidentialGene](#evidentialgene) - [evmix](#evmix) - [ExaBayes](#exabayes) - [ExaML](#examl) - [Excel-Writer-XLSX](#excel-writer-xlsx) - [ExifTool](#exiftool) - [exiv2](#exiv2) - [Exonerate](#exonerate) - [expat](#expat) - [expect](#expect) - [expecttest](#expecttest) - [eXpress](#express) - [Extrae](#extrae)
@@ -7891,7 +7905,7 @@ version  |toolchain
 ``3.8.0``|``gompi/2020b``
 ``3.8.3``|``gompi/2021a``
 
-### F
+## F
 
 
 [f90cache](#f90cache) - [f90wrap](#f90wrap) - [Faber](#faber) - [FabIO](#fabio) - [faceswap](#faceswap) - [FALCON](#falcon) - [FANN](#fann) - [fast5](#fast5) - [FASTA](#fasta) - [fastahack](#fastahack) - [FastaIndex](#fastaindex) - [FastANI](#fastani) - [Fastaq](#fastaq) - [FastFold](#fastfold) - [FastME](#fastme) - [fastp](#fastp) - [fastparquet](#fastparquet) - [fastPHASE](#fastphase) - [fastq-pair](#fastq-pair) - [fastq-tools](#fastq-tools) - [FastQ_Screen](#fastq_screen) - [FastQC](#fastqc) - [fastqsplitter](#fastqsplitter) - [FastQTL](#fastqtl) - [fastqz](#fastqz) - [FastRFS](#fastrfs) - [fastStructure](#faststructure) - [FastTree](#fasttree) - [FastViromeExplorer](#fastviromeexplorer) - [FASTX-Toolkit](#fastx-toolkit) - [fatslim](#fatslim) - [fbm](#fbm) - [FBPIC](#fbpic) - [FCC](#fcc) - [FCM](#fcm) - [fdict](#fdict) - [FDS](#fds) - [fdstools](#fdstools) - [FDTD_Solutions](#fdtd_solutions) - [feh](#feh) - [FEniCS](#fenics) - [fermi-lite](#fermi-lite) - [Ferret](#ferret) - [festival](#festival) - [fetchMG](#fetchmg) - [FFC](#ffc) - [FFLAS-FFPACK](#fflas-ffpack) - [FFmpeg](#ffmpeg) - [ffmpi](#ffmpi) - [ffnet](#ffnet) - [fftlib](#fftlib) - [FFTW](#fftw) - [FFTW.MPI](#fftw.mpi) - [fgbio](#fgbio) - [FGSL](#fgsl) - [FHI-aims](#fhi-aims) - [FIAT](#fiat) - [FIGARO](#figaro) - [FigureGen](#figuregen) - [Fiji](#fiji) - [file](#file) - [filevercmp](#filevercmp) - [Filtlong](#filtlong) - [find_circ](#find_circ) - [findhap](#findhap) - [findutils](#findutils) - [fineRADstructure](#fineradstructure) - [fineSTRUCTURE](#finestructure) - [fio](#fio) - [Fiona](#fiona) - [Firefox](#firefox) - [FIRESTARTER](#firestarter) - [FireWorks](#fireworks) - [FIt-SNE](#fit-sne) - [FIX](#fix) - [fixesproto](#fixesproto) - [FLAC](#flac) - [FLAIR](#flair) - [flair-NLP](#flair-nlp) - [FLANN](#flann) - [FLASH](#flash) - [Flask](#flask) - [flatbuffers](#flatbuffers) - [flatbuffers-python](#flatbuffers-python) - [FLEUR](#fleur) - [flex](#flex) - [Flexbar](#flexbar) - [FlexiBLAS](#flexiblas) - [FlexiDot](#flexidot) - [Flink](#flink) - [FLINT](#flint) - [flook](#flook) - [FLTK](#fltk) - [FLUENT](#fluent) - [Flye](#flye) - [FMILibrary](#fmilibrary) - [FMM3D](#fmm3d) - [FMPy](#fmpy) - [FMRIprep](#fmriprep) - [FMS](#fms) - [fmt](#fmt) - [FoBiS](#fobis) - [FoldX](#foldx) - [fontconfig](#fontconfig) - [fontsproto](#fontsproto) - [FORD](#ford) - [foss](#foss) - [fosscuda](#fosscuda) - [FoX](#fox) - [FOX-Toolkit](#fox-toolkit) - [FPM](#fpm) - [fpocket](#fpocket) - [fqtrim](#fqtrim) - [fqzcomp](#fqzcomp) - [FragGeneScan](#fraggenescan) - [FRANz](#franz) - [FreeBarcodes](#freebarcodes) - [freebayes](#freebayes) - [FreeFEM](#freefem) - [FreeFem++](#freefem++) - [freeglut](#freeglut) - [FreeImage](#freeimage) - [FreeSASA](#freesasa) - [FreeSurfer](#freesurfer) - [FreeTDS](#freetds) - [freetype](#freetype) - [freetype-py](#freetype-py) - [FreeXL](#freexl) - [freud-analysis](#freud-analysis) - [FriBidi](#fribidi) - [FRUIT](#fruit) - [FRUIT_processor](#fruit_processor) - [FSL](#fsl) - [FSLeyes](#fsleyes) - [fsom](#fsom) - [FSON](#fson) - [FTGL](#ftgl) - [Fujitsu](#fujitsu) - [fullrmc](#fullrmc) - [fumi_tools](#fumi_tools) - [FUNWAVE-TVD](#funwave-tvd) - [FUSE](#fuse) - [FuSeq](#fuseq) - [FusionCatcher](#fusioncatcher) - [futhark](#futhark) - [futile](#futile) - [future](#future) - [fxtract](#fxtract)
@@ -8491,7 +8505,7 @@ version   |versionsuffix|toolchain
 ``3.3.8`` |``-amd``     |``gompi/2020a``
 ``3.3.8`` |``-serial``  |``GCC/9.3.0``
 ``3.3.9`` |             |``gompi/2021a``, ``intel/2021a``
-``3.3.10``|             |``GCC/11.3.0``, ``GCC/12.2.0``, ``gompi/2021b``, ``iimpi/2021b``, ``iimpi/2022a``
+``3.3.10``|             |``GCC/11.3.0``, ``GCC/12.2.0``, ``NVHPC/22.7-CUDA-11.7.0``, ``gompi/2021b``, ``iimpi/2021b``, ``iimpi/2022a``
 
 ### FFTW.MPI
 
@@ -8500,8 +8514,8 @@ FFTW is a C subroutine library for computing the discrete Fourier transform (DFT
 *homepage*: <https://www.fftw.org>
 
 version   |toolchain
-----------|----------------------------------------------------------------------
-``3.3.10``|``gompi/2022.05``, ``gompi/2022.10``, ``gompi/2022a``, ``gompi/2022b``
+----------|------------------------------------------------------------------------------------------
+``3.3.10``|``gompi/2022.05``, ``gompi/2022.10``, ``gompi/2022a``, ``gompi/2022b``, ``nvompi/2022.07``
 
 ### fgbio
 
@@ -8895,10 +8909,10 @@ FlexiBLAS is a wrapper library that enables the exchange of the BLAS and LAPACK 
 *homepage*: <https://gitlab.mpi-magdeburg.mpg.de/software/flexiblas-release>
 
 version  |toolchain
----------|------------------------------
+---------|------------------------------------------
 ``3.0.4``|``GCC/10.3.0``, ``GCC/11.2.0``
 ``3.1.3``|``GCC/11.2.0``
-``3.2.0``|``GCC/11.3.0``
+``3.2.0``|``GCC/11.3.0``, ``NVHPC/22.7-CUDA-11.7.0``
 ``3.2.1``|``GCC/12.2.0``
 
 ### FlexiDot
@@ -9636,7 +9650,7 @@ version|toolchain
 -------|-----------------
 ``2.3``|``GCCcore/8.2.0``
 
-### G
+## G
 
 
 [G-PhoCS](#g-phocs) - [g2clib](#g2clib) - [g2lib](#g2lib) - [g2log](#g2log) - [Gaia](#gaia) - [GAMESS-US](#gamess-us) - [gap](#gap) - [GapCloser](#gapcloser) - [GapFiller](#gapfiller) - [gappa](#gappa) - [GARLI](#garli) - [garnett](#garnett) - [GAT](#gat) - [GATE](#gate) - [GATK](#gatk) - [Gaussian](#gaussian) - [gawk](#gawk) - [Gblocks](#gblocks) - [GBprocesS](#gbprocess) - [gbs2ploidy](#gbs2ploidy) - [gc](#gc) - [GC3Pie](#gc3pie) - [GCC](#gcc) - [GCCcore](#gcccore) - [gcccuda](#gcccuda) - [gcloud](#gcloud) - [GConf](#gconf) - [GCTA](#gcta) - [Gctf](#gctf) - [GD](#gd) - [GDAL](#gdal) - [GDB](#gdb) - [gdbgui](#gdbgui) - [gdbm](#gdbm) - [gdc-client](#gdc-client) - [GDCHART](#gdchart) - [GDCM](#gdcm) - [GDGraph](#gdgraph) - [gdist](#gdist) - [Gdk-Pixbuf](#gdk-pixbuf) - [GDRCopy](#gdrcopy) - [Geant4](#geant4) - [Geant4-data](#geant4-data) - [gearshifft](#gearshifft) - [GEGL](#gegl) - [GEM-library](#gem-library) - [GEMMA](#gemma) - [gemmi](#gemmi) - [gencore_variant_detection](#gencore_variant_detection) - [GeneMark-ET](#genemark-et) - [gengetopt](#gengetopt) - [Genome_Profiler](#genome_profiler) - [GenomeMapper](#genomemapper) - [GenomeTester4](#genometester4) - [GenomeThreader](#genomethreader) - [GenomeTools](#genometools) - [GenomeWorks](#genomeworks) - [GenotypeHarmonizer](#genotypeharmonizer) - [genozip](#genozip) - [gensim](#gensim) - [geocube](#geocube) - [geopandas](#geopandas) - [geopy](#geopy) - [georges](#georges) - [GEOS](#geos) - [Gerris](#gerris) - [GETORB](#getorb) - [GetOrganelle](#getorganelle) - [gettext](#gettext) - [gexiv2](#gexiv2) - [gfbf](#gfbf) - [GffCompare](#gffcompare) - [gffread](#gffread) - [gflags](#gflags) - [GFOLD](#gfold) - [gh](#gh) - [GHC](#ghc) - [Ghostscript](#ghostscript) - [Gibbs2](#gibbs2) - [giflib](#giflib) - [gifsicle](#gifsicle) - [GIMIC](#gimic) - [gimkl](#gimkl) - [GIMP](#gimp) - [gimpi](#gimpi) - [gimpic](#gimpic) - [GIMPS](#gimps) - [giolf](#giolf) - [giolfc](#giolfc) - [git](#git) - [git-extras](#git-extras) - [git-lfs](#git-lfs) - [GitPython](#gitpython) - [Givaro](#givaro) - [Giza](#giza) - [GL2PS](#gl2ps) - [Glade](#glade) - [glew](#glew) - [GLFW](#glfw) - [GLib](#glib) - [glib-networking](#glib-networking) - [glibc](#glibc) - [GLibmm](#glibmm) - [GLIMMER](#glimmer) - [GlimmerHMM](#glimmerhmm) - [GLM](#glm) - [GLM-AED](#glm-aed) - [GlobalArrays](#globalarrays) - [Globus-CLI](#globus-cli) - [GlobusConnectPersonal](#globusconnectpersonal) - [glog](#glog) - [GLPK](#glpk) - [glproto](#glproto) - [Glucose](#glucose) - [GMAP-GSNAP](#gmap-gsnap) - [GMP](#gmp) - [gmpich](#gmpich) - [gmpolf](#gmpolf) - [gmpy2](#gmpy2) - [gmsh](#gmsh) - [GMT](#gmt) - [gmvapich2](#gmvapich2) - [gmvolf](#gmvolf) - [GNU](#gnu) - [gnuplot](#gnuplot) - [GnuTLS](#gnutls) - [Go](#go) - [goalign](#goalign) - [GOATOOLS](#goatools) - [gobff](#gobff) - [GObject-Introspection](#gobject-introspection) - [goblf](#goblf) - [Godon](#godon) - [gofasta](#gofasta) - [golf](#golf) - [gomkl](#gomkl) - [gompi](#gompi) - [gompic](#gompic) - [google-java-format](#google-java-format) - [googletest](#googletest) - [gotree](#gotree) - [GP2C](#gp2c) - [GPAW](#gpaw) - [GPAW-setups](#gpaw-setups) - [gperf](#gperf) - [gperftools](#gperftools) - [gpustat](#gpustat) - [GPy](#gpy) - [GPyOpt](#gpyopt) - [GPyTorch](#gpytorch) - [Grace](#grace) - [Gradle](#gradle) - [gradunwarp](#gradunwarp) - [graph-tool](#graph-tool) - [Graphene](#graphene) - [GraphicsMagick](#graphicsmagick) - [graphite2](#graphite2) - [GraPhlAn](#graphlan) - [GraphMap](#graphmap) - [GraphMap2](#graphmap2) - [Graphviz](#graphviz) - [graphviz](#graphviz) - [GRASP](#grasp) - [GRASS](#grass) - [Greenlet](#greenlet) - [Grep](#grep) - [gretl](#gretl) - [grib_api](#grib_api) - [GRIT](#grit) - [GRNBoost](#grnboost) - [groff](#groff) - [GroIMP](#groimp) - [GROMACS](#gromacs) - [GromacsWrapper](#gromacswrapper) - [GroopM](#groopm) - [Groovy](#groovy) - [gRPC](#grpc) - [GSEA](#gsea) - [gsettings-desktop-schemas](#gsettings-desktop-schemas) - [GSL](#gsl) - [gSOAP](#gsoap) - [gsport](#gsport) - [GST-plugins-bad](#gst-plugins-bad) - [GST-plugins-base](#gst-plugins-base) - [GStreamer](#gstreamer) - [gsutil](#gsutil) - [gsw](#gsw) - [GTDB-Tk](#gtdb-tk) - [GTK+](#gtk+) - [GTK2](#gtk2) - [GTK3](#gtk3) - [GTK4](#gtk4) - [GtkSourceView](#gtksourceview) - [GTOOL](#gtool) - [GTS](#gts) - [gubbins](#gubbins) - [guenomu](#guenomu) - [Guile](#guile) - [GULP](#gulp) - [Gurobi](#gurobi) - [gzip](#gzip)
@@ -10226,13 +10240,14 @@ Grassroots DICOM: Cross-platform DICOM implementation
 
 *homepage*: <https://sourceforge.net/projects/gdcm>
 
-version  |toolchain
----------|-------------------------------------
-``2.8.8``|``GCCcore/6.4.0``
-``2.8.9``|``GCCcore/7.3.0``
-``3.0.4``|``GCCcore/8.2.0``
-``3.0.5``|``GCCcore/8.3.0``
-``3.0.8``|``GCCcore/10.2.0``, ``GCCcore/9.3.0``
+version   |toolchain
+----------|-------------------------------------
+``2.8.8`` |``GCCcore/6.4.0``
+``2.8.9`` |``GCCcore/7.3.0``
+``3.0.4`` |``GCCcore/8.2.0``
+``3.0.5`` |``GCCcore/8.3.0``
+``3.0.8`` |``GCCcore/10.2.0``, ``GCCcore/9.3.0``
+``3.0.20``|``GCCcore/11.3.0``
 
 ### GDGraph
 
@@ -12355,7 +12370,7 @@ version |toolchain
 ``1.10``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 ``1.12``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``
 
-### H
+## H
 
 
 [h4toh5](#h4toh5) - [H5hut](#h5hut) - [h5py](#h5py) - [Hadoop](#hadoop) - [HAL](#hal) - [hanythingondemand](#hanythingondemand) - [HAPGEN2](#hapgen2) - [HarfBuzz](#harfbuzz) - [Harminv](#harminv) - [harmony](#harmony) - [HBase](#hbase) - [HDBSCAN](#hdbscan) - [HDDM](#hddm) - [HDF](#hdf) - [HDF-EOS](#hdf-eos) - [HDF-EOS5](#hdf-eos5) - [HDF5](#hdf5) - [hdf5storage](#hdf5storage) - [HDFView](#hdfview) - [HEALPix](#healpix) - [heaptrack](#heaptrack) - [hector](#hector) - [HeFFTe](#heffte) - [Hello](#hello) - [help2man](#help2man) - [HH-suite](#hh-suite) - [HiC-Pro](#hic-pro) - [HiCExplorer](#hicexplorer) - [hierfstat](#hierfstat) - [hifiasm](#hifiasm) - [HighFive](#highfive) - [Highway](#highway) - [HIP](#hip) - [hipify-clang](#hipify-clang) - [HIPS](#hips) - [hipSYCL](#hipsycl) - [hiredis](#hiredis) - [HISAT2](#hisat2) - [histolab](#histolab) - [hivtrace](#hivtrace) - [hl7apy](#hl7apy) - [HLAminer](#hlaminer) - [HMMER](#hmmer) - [HMMER2](#hmmer2) - [hmmlearn](#hmmlearn) - [HOME](#home) - [Horovod](#horovod) - [horton](#horton) - [how_are_we_stranded_here](#how_are_we_stranded_here) - [HPCG](#hpcg) - [HPCX](#hpcx) - [HPDBSCAN](#hpdbscan) - [HPL](#hpl) - [htop](#htop) - [HTSeq](#htseq) - [HTSlib](#htslib) - [hub](#hub) - [humann](#humann) - [hunspell](#hunspell) - [hwloc](#hwloc) - [Hydra](#hydra) - [Hyperopt](#hyperopt) - [HyperQueue](#hyperqueue) - [hyperspy](#hyperspy) - [HyPhy](#hyphy) - [HyPo](#hypo) - [hypothesis](#hypothesis) - [Hypre](#hypre)
@@ -13278,7 +13293,7 @@ version   |toolchain
 ``2.24.0``|``intel/2021b``
 ``2.25.0``|``foss/2022a``
 
-### I
+## I
 
 
 [i-cisTarget](#i-cistarget) - [i-PI](#i-pi) - [I-TASSER](#i-tasser) - [i7z](#i7z) - [ICA-AROMA](#ica-aroma) - [icc](#icc) - [iccifort](#iccifort) - [iccifortcuda](#iccifortcuda) - [ichorCNA](#ichorcna) - [icmake](#icmake) - [iCount](#icount) - [ICU](#icu) - [IDBA-UD](#idba-ud) - [idemux](#idemux) - [ieeg-cli](#ieeg-cli) - [ifort](#ifort) - [IgBLAST](#igblast) - [IGMPlot](#igmplot) - [igraph](#igraph) - [IGV](#igv) - [igv-reports](#igv-reports) - [IGVTools](#igvtools) - [iibff](#iibff) - [iimkl](#iimkl) - [iimpi](#iimpi) - [iimpic](#iimpic) - [IJulia](#ijulia) - [ILAMB](#ilamb) - [IMa2](#ima2) - [IMa2p](#ima2p) - [imagecodecs](#imagecodecs) - [imageio](#imageio) - [ImageJ](#imagej) - [ImageMagick](#imagemagick) - [imake](#imake) - [Imath](#imath) - [IMB](#imb) - [imbalanced-learn](#imbalanced-learn) - [imgaug](#imgaug) - [imkl](#imkl) - [imkl-FFTW](#imkl-fftw) - [Imlib2](#imlib2) - [immunedeconv](#immunedeconv) - [IMOD](#imod) - [impi](#impi) - [IMPUTE2](#impute2) - [InChI](#inchi) - [indicators](#indicators) - [Inelastica](#inelastica) - [inferCNV](#infercnv) - [infercnvpy](#infercnvpy) - [Infernal](#infernal) - [Infomap](#infomap) - [inline](#inline) - [InParanoid](#inparanoid) - [inputproto](#inputproto) - [Inspector](#inspector) - [IntaRNA](#intarna) - [INTEGRATE](#integrate) - [INTEGRATE-Neo](#integrate-neo) - [intel](#intel) - [intel-compilers](#intel-compilers) - [IntelClusterChecker](#intelclusterchecker) - [intelcuda](#intelcuda) - [IntelDAAL](#inteldaal) - [IntelPython](#intelpython) - [InterProScan](#interproscan) - [InterProScan_data](#interproscan_data) - [intervaltree](#intervaltree) - [intervaltree-python](#intervaltree-python) - [intltool](#intltool) - [io_lib](#io_lib) - [ioapi](#ioapi) - [iomkl](#iomkl) - [iompi](#iompi) - [IOR](#ior) - [IOzone](#iozone) - [IPM](#ipm) - [Ipopt](#ipopt) - [ipp](#ipp) - [IPy](#ipy) - [ipyparallel](#ipyparallel) - [ipyrad](#ipyrad) - [IPython](#ipython) - [IQ-TREE](#iq-tree) - [Iris](#iris) - [IRkernel](#irkernel) - [IronPython](#ironpython) - [ISA-L](#isa-l) - [ISL](#isl) - [isoCirc](#isocirc) - [IsoNet](#isonet) - [ispc](#ispc) - [itac](#itac) - [ITK](#itk) - [itpp](#itpp) - [ITSTool](#itstool) - [ITSx](#itsx) - [iVar](#ivar)
@@ -14742,7 +14757,7 @@ version  |toolchain
 ``1.0.1``|``foss/2018b``
 ``1.3.1``|``GCC/10.2.0``, ``GCC/9.3.0``
 
-### J
+## J
 
 
 [JAGS](#jags) - [Jansson](#jansson) - [Jasmine](#jasmine) - [JasPer](#jasper) - [Java](#java) - [JavaFX](#javafx) - [jax](#jax) - [JAXFrontCE](#jaxfrontce) - [jbigkit](#jbigkit) - [Jellyfish](#jellyfish) - [jemalloc](#jemalloc) - [jhbuild](#jhbuild) - [JiTCODE](#jitcode) - [jModelTest](#jmodeltest) - [Jorg](#jorg) - [joypy](#joypy) - [jq](#jq) - [json-c](#json-c) - [json-fortran](#json-fortran) - [JSON-GLib](#json-glib) - [JsonCpp](#jsoncpp) - [JUBE](#jube) - [Judy](#judy) - [Julia](#julia) - [JUnit](#junit) - [jupyter-matlab-proxy](#jupyter-matlab-proxy) - [jupyter-resource-usage](#jupyter-resource-usage) - [jupyter-server](#jupyter-server) - [jupyter-server-proxy](#jupyter-server-proxy) - [JupyterHub](#jupyterhub) - [JupyterLab](#jupyterlab) - [JWM](#jwm) - [jxrlib](#jxrlib)
@@ -15227,7 +15242,7 @@ version|toolchain
 -------|--------------------------------------
 ``1.1``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``
 
-### K
+## K
 
 
 [KaHIP](#kahip) - [Kaiju](#kaiju) - [Kaleido](#kaleido) - [Kalign](#kalign) - [kallisto](#kallisto) - [KAT](#kat) - [kbproto](#kbproto) - [kedro](#kedro) - [Kent_tools](#kent_tools) - [Keras](#keras) - [khmer](#khmer) - [kim-api](#kim-api) - [king](#king) - [KITE](#kite) - [kma](#kma) - [KMC](#kmc) - [KmerGenie](#kmergenie) - [KNIME](#knime) - [kpcalg](#kpcalg) - [Kraken](#kraken) - [Kraken2](#kraken2) - [Kratos](#kratos) - [KronaTools](#kronatools) - [kwant](#kwant) - [KWIML](#kwiml) - [kWIP](#kwip) - [KyotoCabinet](#kyotocabinet)
@@ -15522,11 +15537,11 @@ Krona Tools is a set of scripts to create Krona charts from  several Bioinformat
 *homepage*: <https://github.com/marbl/Krona/wiki/KronaTools>
 
 version  |toolchain
----------|----------------------------------
+---------|--------------------------------------
 ``2.7``  |``GCCcore/7.3.0``
 ``2.7.1``|``GCCcore/8.2.0``
 ``2.8``  |``GCC/10.3.0``, ``GCCcore/10.2.0``
-``2.8.1``|``GCCcore/11.2.0``
+``2.8.1``|``GCCcore/11.2.0``, ``GCCcore/11.3.0``
 
 ### kwant
 
@@ -15568,7 +15583,7 @@ version   |toolchain
 ----------|------------------------------------
 ``1.2.77``|``GCCcore/7.3.0``, ``GCCcore/8.2.0``
 
-### L
+## L
 
 
 [L_RNA_scaffolder](#l_rna_scaffolder) - [LADR](#ladr) - [lagrangian-filtering](#lagrangian-filtering) - [LAME](#lame) - [LAMMPS](#lammps) - [lancet](#lancet) - [LAPACK](#lapack) - [LAST](#last) - [LASTZ](#lastz) - [lavaan](#lavaan) - [LBFGS++](#lbfgs++) - [LCov](#lcov) - [LDC](#ldc) - [lDDT](#lddt) - [LeadIT](#leadit) - [leidenalg](#leidenalg) - [LEMON](#lemon) - [Leptonica](#leptonica) - [LERC](#lerc) - [less](#less) - [LevelDB](#leveldb) - [lftp](#lftp) - [LHAPDF](#lhapdf) - [libaec](#libaec) - [libaio](#libaio) - [libarchive](#libarchive) - [libav](#libav) - [libavif](#libavif) - [libBigWig](#libbigwig) - [libbitmask](#libbitmask) - [libcdms](#libcdms) - [libcerf](#libcerf) - [libcint](#libcint) - [libcircle](#libcircle) - [libcmaes](#libcmaes) - [libconfig](#libconfig) - [libcpuset](#libcpuset) - [libcroco](#libcroco) - [libctl](#libctl) - [libdap](#libdap) - [libde265](#libde265) - [libdeflate](#libdeflate) - [libdivsufsort](#libdivsufsort) - [libdrm](#libdrm) - [libdrs](#libdrs) - [libdwarf](#libdwarf) - [libedit](#libedit) - [libelf](#libelf) - [libepoxy](#libepoxy) - [libev](#libev) - [libevent](#libevent) - [libexif](#libexif) - [libfabric](#libfabric) - [libfdf](#libfdf) - [libffcall](#libffcall) - [libffi](#libffi) - [libFLAME](#libflame) - [libfontenc](#libfontenc) - [libgcrypt](#libgcrypt) - [libgd](#libgd) - [libgdiplus](#libgdiplus) - [libGDSII](#libgdsii) - [libgeotiff](#libgeotiff) - [libgit2](#libgit2) - [libglade](#libglade) - [libGLU](#libglu) - [libglvnd](#libglvnd) - [libgpg-error](#libgpg-error) - [libgpuarray](#libgpuarray) - [libGridXC](#libgridxc) - [libgtextutils](#libgtextutils) - [libharu](#libharu) - [libheif](#libheif) - [libibmad](#libibmad) - [libibumad](#libibumad) - [libICE](#libice) - [libiconv](#libiconv) - [libidn](#libidn) - [libidn2](#libidn2) - [Libint](#libint) - [LiBis](#libis) - [libjpeg-turbo](#libjpeg-turbo) - [libjxl](#libjxl) - [LibLZF](#liblzf) - [libmad](#libmad) - [libmatheval](#libmatheval) - [libmaus2](#libmaus2) - [libmbd](#libmbd) - [libMemcached](#libmemcached) - [libmicrohttpd](#libmicrohttpd) - [libmo_unpack](#libmo_unpack) - [libmypaint](#libmypaint) - [libnsl](#libnsl) - [libobjcryst](#libobjcryst) - [libogg](#libogg) - [libopus](#libopus) - [libosmium](#libosmium) - [libpci](#libpci) - [libpciaccess](#libpciaccess) - [libplinkio](#libplinkio) - [libpng](#libpng) - [libpsl](#libpsl) - [libPSML](#libpsml) - [libpsml](#libpsml) - [libpsortb](#libpsortb) - [libpspio](#libpspio) - [libpthread-stubs](#libpthread-stubs) - [libQGLViewer](#libqglviewer) - [libreadline](#libreadline) - [libRmath](#librmath) - [librosa](#librosa) - [librsb](#librsb) - [librsvg](#librsvg) - [librttopo](#librttopo) - [libsamplerate](#libsamplerate) - [libSBML](#libsbml) - [libsigc++](#libsigc++) - [libsigsegv](#libsigsegv) - [libSM](#libsm) - [libsndfile](#libsndfile) - [libsodium](#libsodium) - [LibSoup](#libsoup) - [libspatialindex](#libspatialindex) - [libspatialite](#libspatialite) - [libssh](#libssh) - [libStatGen](#libstatgen) - [LIBSVM](#libsvm) - [libtar](#libtar) - [libtasn1](#libtasn1) - [libtecla](#libtecla) - [LibTIFF](#libtiff) - [libtirpc](#libtirpc) - [libtool](#libtool) - [libtree](#libtree) - [libunistring](#libunistring) - [libunwind](#libunwind) - [libutempter](#libutempter) - [LibUUID](#libuuid) - [libuv](#libuv) - [libvdwxc](#libvdwxc) - [libvorbis](#libvorbis) - [libwebp](#libwebp) - [libwpe](#libwpe) - [libX11](#libx11) - [libXau](#libxau) - [libxc](#libxc) - [libxcb](#libxcb) - [libXcursor](#libxcursor) - [libXdamage](#libxdamage) - [libXdmcp](#libxdmcp) - [libXext](#libxext) - [libXfixes](#libxfixes) - [libXfont](#libxfont) - [libXft](#libxft) - [libXi](#libxi) - [libXinerama](#libxinerama) - [libxkbcommon](#libxkbcommon) - [libxml++](#libxml++) - [libxml2](#libxml2) - [libxml2-python](#libxml2-python) - [libXmu](#libxmu) - [libXp](#libxp) - [libXpm](#libxpm) - [libXrandr](#libxrandr) - [libXrender](#libxrender) - [libxslt](#libxslt) - [libxsmm](#libxsmm) - [libXt](#libxt) - [libXxf86vm](#libxxf86vm) - [libyaml](#libyaml) - [libzeep](#libzeep) - [libzip](#libzip) - [lie_learn](#lie_learn) - [lifelines](#lifelines) - [Lighter](#lighter) - [liknorm](#liknorm) - [likwid](#likwid) - [limix](#limix) - [LinBox](#linbox) - [line_profiler](#line_profiler) - [Lingeling](#lingeling) - [LittleCMS](#littlecms) - [LLDB](#lldb) - [LLVM](#llvm) - [LMDB](#lmdb) - [LMfit](#lmfit) - [Lmod](#lmod) - [LncLOOM](#lncloom) - [LocARNA](#locarna) - [LoFreq](#lofreq) - [Log-Log4perl](#log-log4perl) - [logaddexp](#logaddexp) - [LOHHLA](#lohhla) - [Loki](#loki) - [longestrunsubsequence](#longestrunsubsequence) - [longread_umi](#longread_umi) - [Longshot](#longshot) - [loompy](#loompy) - [LPeg](#lpeg) - [LPJmL](#lpjml) - [lpsolve](#lpsolve) - [lrslib](#lrslib) - [LS-PrePost](#ls-prepost) - [LSD2](#lsd2) - [LSMS](#lsms) - [LTR_retriever](#ltr_retriever) - [LtrDetector](#ltrdetector) - [Lua](#lua) - [LuaJIT](#luajit) - [LuaJIT2-OpenResty](#luajit2-openresty) - [Lucene-Geo-Gazetteer](#lucene-geo-gazetteer) - [LUMPY](#lumpy) - [LUSCUS](#luscus) - [lwgrp](#lwgrp) - [lxml](#lxml) - [lynx](#lynx) - [lz4](#lz4) - [LZO](#lzo)
@@ -18199,7 +18214,7 @@ version |toolchain
 ``2.09``|``intel/2016b``, ``intel/2017b``
 ``2.10``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``, ``foss/2016a``, ``foss/2016b``, ``foss/2017a``, ``foss/2018a``, ``foss/2018b``, ``fosscuda/2018b``, ``intel/2017a``
 
-### M
+## M
 
 
 [M1QN3](#m1qn3) - [M4](#m4) - [MACH](#mach) - [MACS2](#macs2) - [MACSE](#macse) - [maeparser](#maeparser) - [MAFFT](#mafft) - [MAGeCK](#mageck) - [magick](#magick) - [Magics](#magics) - [MAGMA](#magma) - [magma](#magma) - [MagresPython](#magrespython) - [mahotas](#mahotas) - [MAJIQ](#majiq) - [make](#make) - [makedepend](#makedepend) - [makedepf90](#makedepf90) - [makeinfo](#makeinfo) - [Mako](#mako) - [Mamba](#mamba) - [manta](#manta) - [mapDamage](#mapdamage) - [Maple](#maple) - [MapSplice](#mapsplice) - [Maq](#maq) - [MariaDB](#mariadb) - [MariaDB-connector-c](#mariadb-connector-c) - [MARS](#mars) - [Mash](#mash) - [MaSuRCA](#masurca) - [Mathematica](#mathematica) - [MathGL](#mathgl) - [MATIO](#matio) - [MATLAB](#matlab) - [MATLAB-Engine](#matlab-engine) - [matlab-proxy](#matlab-proxy) - [matplotlib](#matplotlib) - [matplotlib-inline](#matplotlib-inline) - [MATSim](#matsim) - [Maude](#maude) - [mauveAligner](#mauvealigner) - [Maven](#maven) - [mawk](#mawk) - [MaxBin](#maxbin) - [MaxQuant](#maxquant) - [mayavi](#mayavi) - [maze](#maze) - [MbedTLS](#mbedtls) - [MBROLA](#mbrola) - [mbuffer](#mbuffer) - [mc](#mc) - [MCL](#mcl) - [MCR](#mcr) - [mcu](#mcu) - [MDAnalysis](#mdanalysis) - [MDBM](#mdbm) - [MDSplus](#mdsplus) - [MDSplus-Java](#mdsplus-java) - [MDSplus-Python](#mdsplus-python) - [mdtest](#mdtest) - [MDTraj](#mdtraj) - [medaka](#medaka) - [medImgProc](#medimgproc) - [MedPy](#medpy) - [Meep](#meep) - [MEGA](#mega) - [MEGACC](#megacc) - [MEGAHIT](#megahit) - [Megalodon](#megalodon) - [MEGAN](#megan) - [Meld](#meld) - [MEM](#mem) - [MEME](#meme) - [memkind](#memkind) - [memory-profiler](#memory-profiler) - [MEMOTE](#memote) - [memtester](#memtester) - [meRanTK](#merantk) - [MERCKX](#merckx) - [Mercurial](#mercurial) - [Mesa](#mesa) - [Mesa-demos](#mesa-demos) - [meshalyzer](#meshalyzer) - [meshio](#meshio) - [meshtool](#meshtool) - [Meson](#meson) - [meson-python](#meson-python) - [Mesquite](#mesquite) - [MESS](#mess) - [MetaBAT](#metabat) - [MetaboAnalystR](#metaboanalystr) - [metaerg](#metaerg) - [MetaEuk](#metaeuk) - [MetaGeneAnnotator](#metageneannotator) - [Metagenome-Atlas](#metagenome-atlas) - [Metal](#metal) - [MetaMorpheus](#metamorpheus) - [MetaPhlAn](#metaphlan) - [MetaPhlAn2](#metaphlan2) - [metaWRAP](#metawrap) - [Metaxa2](#metaxa2) - [MethylDackel](#methyldackel) - [methylpy](#methylpy) - [METIS](#metis) - [mgltools](#mgltools) - [mhcflurry](#mhcflurry) - [mhcnuggets](#mhcnuggets) - [MicrobeAnnotator](#microbeannotator) - [microctools](#microctools) - [MiGEC](#migec) - [MIGRATE-N](#migrate-n) - [Miller](#miller) - [mimalloc](#mimalloc) - [MINC](#minc) - [MinCED](#minced) - [Mini-XML](#mini-xml) - [miniasm](#miniasm) - [minibar](#minibar) - [MiniCARD](#minicard) - [Miniconda2](#miniconda2) - [Miniconda3](#miniconda3) - [minieigen](#minieigen) - [Minimac4](#minimac4) - [minimap2](#minimap2) - [Minipolish](#minipolish) - [MiniSat](#minisat) - [minizip](#minizip) - [MINPACK](#minpack) - [MinPath](#minpath) - [MIRA](#mira) - [miRDeep2](#mirdeep2) - [Mish-Cuda](#mish-cuda) - [misha](#misha) - [MITgcmutils](#mitgcmutils) - [MITObim](#mitobim) - [MitoZ](#mitoz) - [MiXCR](#mixcr) - [MixMHC2pred](#mixmhc2pred) - [mkl-dnn](#mkl-dnn) - [mkl-service](#mkl-service) - [mkl_fft](#mkl_fft) - [MLC](#mlc) - [MLxtend](#mlxtend) - [mm-common](#mm-common) - [Mmg](#mmg) - [MMSEQ](#mmseq) - [MMseqs2](#mmseqs2) - [mmtf-cpp](#mmtf-cpp) - [MNE-Python](#mne-python) - [MOABS](#moabs) - [ModelTest-NG](#modeltest-ng) - [modred](#modred) - [Molcas](#molcas) - [mold](#mold) - [Molden](#molden) - [Molekel](#molekel) - [molmod](#molmod) - [Molpro](#molpro) - [MONA](#mona) - [MONAI](#monai) - [mongolite](#mongolite) - [Mono](#mono) - [Monocle3](#monocle3) - [moonjit](#moonjit) - [MOOSE](#moose) - [mordecai](#mordecai) - [MoreRONN](#moreronn) - [mosdepth](#mosdepth) - [Mothur](#mothur) - [motif](#motif) - [MotionCor2](#motioncor2) - [motionSegmentation](#motionsegmentation) - [MoviePy](#moviepy) - [MPB](#mpb) - [MPC](#mpc) - [MPFR](#mpfr) - [mpi4py](#mpi4py) - [MPICH](#mpich) - [MPICH2](#mpich2) - [mpifileutils](#mpifileutils) - [mpiP](#mpip) - [MPJ-Express](#mpj-express) - [mpmath](#mpmath) - [MrBayes](#mrbayes) - [mrcfile](#mrcfile) - [MRChem](#mrchem) - [MRCPP](#mrcpp) - [MRIcron](#mricron) - [MRtrix](#mrtrix) - [msgpack-c](#msgpack-c) - [MSM](#msm) - [MSPC](#mspc) - [msprime](#msprime) - [mstore](#mstore) - [MTL4](#mtl4) - [MuJoCo](#mujoco) - [mujoco-py](#mujoco-py) - [multichoose](#multichoose) - [MultilevelEstimators](#multilevelestimators) - [MultiNest](#multinest) - [MultiQC](#multiqc) - [Multiwfn](#multiwfn) - [muMerge](#mumerge) - [MUMmer](#mummer) - [MUMPS](#mumps) - [muParser](#muparser) - [muparserx](#muparserx) - [MuPeXI](#mupexi) - [MUSCLE](#muscle) - [MuSiC](#music) - [MUST](#must) - [MuTect](#mutect) - [mutil](#mutil) - [MVAPICH2](#mvapich2) - [mxml](#mxml) - [mxmlplus](#mxmlplus) - [MXNet](#mxnet) - [MyCC](#mycc) - [mygene](#mygene) - [MyMediaLite](#mymedialite) - [mympingpong](#mympingpong) - [Myokit](#myokit) - [mypy](#mypy) - [MySQL](#mysql) - [MySQL-python](#mysql-python) - [mysqlclient](#mysqlclient)
@@ -20936,10 +20951,10 @@ version  |versionsuffix     |toolchain
 ---------|------------------|-------------------------------
 ``1.3.7``|``-Python-2.7.11``|``foss/2016a``, ``intel/2016a``
 
-### N
+## N
 
 
-[n2v](#n2v) - [NAG](#nag) - [NAGfor](#nagfor) - [NAMD](#namd) - [namedlist](#namedlist) - [nano](#nano) - [NanoComp](#nanocomp) - [nanocompore](#nanocompore) - [NanoFilt](#nanofilt) - [nanofilt](#nanofilt) - [nanoget](#nanoget) - [NanoLyse](#nanolyse) - [nanomath](#nanomath) - [nanomax-analysis-utils](#nanomax-analysis-utils) - [nanonet](#nanonet) - [NanoPlot](#nanoplot) - [nanopolish](#nanopolish) - [NanopolishComp](#nanopolishcomp) - [napari](#napari) - [NASM](#nasm) - [nauty](#nauty) - [NBO](#nbo) - [NCBI-Toolkit](#ncbi-toolkit) - [ncbi-vdb](#ncbi-vdb) - [NCCL](#nccl) - [NCCL-tests](#nccl-tests) - [ncdf4](#ncdf4) - [ncdu](#ncdu) - [NCIPLOT](#nciplot) - [NCL](#ncl) - [ncl](#ncl) - [NCO](#nco) - [ncompress](#ncompress) - [ncurses](#ncurses) - [ncview](#ncview) - [nd2reader](#nd2reader) - [ne](#ne) - [NECI](#neci) - [NEdit](#nedit) - [Nek5000](#nek5000) - [Nektar++](#nektar++) - [neon](#neon) - [neptune-client](#neptune-client) - [Net-core](#net-core) - [netCDF](#netcdf) - [netCDF-C++](#netcdf-c++) - [netCDF-C++4](#netcdf-c++4) - [netCDF-Fortran](#netcdf-fortran) - [netcdf4-python](#netcdf4-python) - [netloc](#netloc) - [NetLogo](#netlogo) - [netMHC](#netmhc) - [netMHCIIpan](#netmhciipan) - [netMHCpan](#netmhcpan) - [NetPIPE](#netpipe) - [NetPyNE](#netpyne) - [nettle](#nettle) - [networkTools](#networktools) - [networkx](#networkx) - [NeuroKit](#neurokit) - [NEURON](#neuron) - [NewHybrids](#newhybrids) - [Nextflow](#nextflow) - [NextGenMap](#nextgenmap) - [nf-core-mag](#nf-core-mag) - [NFFT](#nfft) - [nghttp2](#nghttp2) - [nghttp3](#nghttp3) - [NGLess](#ngless) - [nglview](#nglview) - [NGS](#ngs) - [NGS-Python](#ngs-python) - [NGSadmix](#ngsadmix) - [NGSpeciesID](#ngspeciesid) - [ngspice](#ngspice) - [ngtcp2](#ngtcp2) - [NiBabel](#nibabel) - [NIfTI](#nifti) - [nifti2dicom](#nifti2dicom) - [Nilearn](#nilearn) - [Nim](#nim) - [NIMBLE](#nimble) - [Ninja](#ninja) - [Nipype](#nipype) - [NLMpy](#nlmpy) - [nlohmann_json](#nlohmann_json) - [NLopt](#nlopt) - [NLTK](#nltk) - [nnU-Net](#nnu-net) - [Node-RED](#node-red) - [nodejs](#nodejs) - [Normaliz](#normaliz) - [nose-parameterized](#nose-parameterized) - [novoalign](#novoalign) - [NOVOPlasty](#novoplasty) - [npstat](#npstat) - [NRGLjubljana](#nrgljubljana) - [Nsight-Compute](#nsight-compute) - [Nsight-Systems](#nsight-systems) - [NSPR](#nspr) - [NSS](#nss) - [nsync](#nsync) - [ntCard](#ntcard) - [ntEdit](#ntedit) - [ntHits](#nthits) - [NTL](#ntl) - [NTPoly](#ntpoly) - [num2words](#num2words) - [numactl](#numactl) - [numba](#numba) - [numdiff](#numdiff) - [numexpr](#numexpr) - [numpy](#numpy) - [NVHPC](#nvhpc) - [NVSHMEM](#nvshmem) - [nvtop](#nvtop) - [NWChem](#nwchem) - [NxTrim](#nxtrim)
+[n2v](#n2v) - [NAG](#nag) - [NAGfor](#nagfor) - [NAMD](#namd) - [namedlist](#namedlist) - [nano](#nano) - [NanoComp](#nanocomp) - [nanocompore](#nanocompore) - [NanoFilt](#nanofilt) - [nanofilt](#nanofilt) - [nanoget](#nanoget) - [NanoLyse](#nanolyse) - [nanomath](#nanomath) - [nanomax-analysis-utils](#nanomax-analysis-utils) - [nanonet](#nanonet) - [NanoPlot](#nanoplot) - [nanopolish](#nanopolish) - [NanopolishComp](#nanopolishcomp) - [napari](#napari) - [NASM](#nasm) - [nauty](#nauty) - [NBO](#nbo) - [NCBI-Toolkit](#ncbi-toolkit) - [ncbi-vdb](#ncbi-vdb) - [NCCL](#nccl) - [NCCL-tests](#nccl-tests) - [ncdf4](#ncdf4) - [ncdu](#ncdu) - [NCIPLOT](#nciplot) - [NCL](#ncl) - [ncl](#ncl) - [NCO](#nco) - [ncompress](#ncompress) - [ncurses](#ncurses) - [ncview](#ncview) - [nd2reader](#nd2reader) - [ne](#ne) - [NECI](#neci) - [NEdit](#nedit) - [Nek5000](#nek5000) - [Nektar++](#nektar++) - [neon](#neon) - [neptune-client](#neptune-client) - [Net-core](#net-core) - [netCDF](#netcdf) - [netCDF-C++](#netcdf-c++) - [netCDF-C++4](#netcdf-c++4) - [netCDF-Fortran](#netcdf-fortran) - [netcdf4-python](#netcdf4-python) - [netloc](#netloc) - [NetLogo](#netlogo) - [netMHC](#netmhc) - [netMHCIIpan](#netmhciipan) - [netMHCpan](#netmhcpan) - [NetPIPE](#netpipe) - [NetPyNE](#netpyne) - [nettle](#nettle) - [networkTools](#networktools) - [networkx](#networkx) - [NeuroKit](#neurokit) - [NEURON](#neuron) - [NewHybrids](#newhybrids) - [Nextflow](#nextflow) - [NextGenMap](#nextgenmap) - [nf-core-mag](#nf-core-mag) - [NFFT](#nfft) - [nghttp2](#nghttp2) - [nghttp3](#nghttp3) - [NGLess](#ngless) - [nglview](#nglview) - [NGS](#ngs) - [NGS-Python](#ngs-python) - [NGSadmix](#ngsadmix) - [NGSpeciesID](#ngspeciesid) - [ngspice](#ngspice) - [ngtcp2](#ngtcp2) - [NiBabel](#nibabel) - [NIfTI](#nifti) - [nifti2dicom](#nifti2dicom) - [Nilearn](#nilearn) - [Nim](#nim) - [NIMBLE](#nimble) - [Ninja](#ninja) - [Nipype](#nipype) - [NLMpy](#nlmpy) - [nlohmann_json](#nlohmann_json) - [NLopt](#nlopt) - [NLTK](#nltk) - [nnU-Net](#nnu-net) - [Node-RED](#node-red) - [nodejs](#nodejs) - [Normaliz](#normaliz) - [nose-parameterized](#nose-parameterized) - [novoalign](#novoalign) - [NOVOPlasty](#novoplasty) - [npstat](#npstat) - [NRGLjubljana](#nrgljubljana) - [Nsight-Compute](#nsight-compute) - [Nsight-Systems](#nsight-systems) - [NSPR](#nspr) - [NSS](#nss) - [nsync](#nsync) - [ntCard](#ntcard) - [ntEdit](#ntedit) - [ntHits](#nthits) - [NTL](#ntl) - [NTPoly](#ntpoly) - [num2words](#num2words) - [numactl](#numactl) - [numba](#numba) - [numdiff](#numdiff) - [numexpr](#numexpr) - [numpy](#numpy) - [NVHPC](#nvhpc) - [nvofbf](#nvofbf) - [nvompi](#nvompi) - [NVSHMEM](#nvshmem) - [nvtop](#nvtop) - [NWChem](#nwchem) - [NxTrim](#nxtrim)
 
 
 ### n2v
@@ -22392,17 +22407,38 @@ C, C++ and Fortran compilers included with the NVIDIA HPC SDK (previously: PGI)
 
 *homepage*: <https://developer.nvidia.com/hpc-sdk/>
 
-version  |toolchain
----------|----------
-``20.7`` |``system``
-``20.9`` |``system``
-``20.11``|``system``
-``21.2`` |``system``
-``21.3`` |``system``
-``21.5`` |``system``
-``21.7`` |``system``
-``21.9`` |``system``
-``21.11``|``system``
+version  |versionsuffix   |toolchain
+---------|----------------|----------
+``20.7`` |                |``system``
+``20.9`` |                |``system``
+``20.11``|                |``system``
+``21.2`` |                |``system``
+``21.3`` |                |``system``
+``21.5`` |                |``system``
+``21.7`` |                |``system``
+``21.9`` |                |``system``
+``21.11``|                |``system``
+``22.7`` |``-CUDA-11.7.0``|``system``
+
+### nvofbf
+
+NVHPC based toolchain, including OpenMPI for MPI support, OpenBLAS (via FlexiBLAS for BLAS and LAPACK support), FFTW and ScaLAPACK.
+
+*homepage*: <(none)>
+
+version    |toolchain
+-----------|----------
+``2022.07``|``system``
+
+### nvompi
+
+NVHPC based compiler toolchain, including OpenMPI for MPI support.
+
+*homepage*: <(none)>
+
+version    |toolchain
+-----------|----------
+``2022.07``|``system``
 
 ### NVSHMEM
 
@@ -22455,7 +22491,7 @@ version  |toolchain
 ---------|--------------
 ``0.4.3``|``foss/2018a``
 
-### O
+## O
 
 
 [Oases](#oases) - [OBITools](#obitools) - [OBITools3](#obitools3) - [OCaml](#ocaml) - [occt](#occt) - [oceanspy](#oceanspy) - [OCNet](#ocnet) - [Octave](#octave) - [Octopus-vcf](#octopus-vcf) - [OGDF](#ogdf) - [olaFlow](#olaflow) - [olego](#olego) - [OMA](#oma) - [OmegaFold](#omegafold) - [onedrive](#onedrive) - [ONNX](#onnx) - [ONNX-Runtime](#onnx-runtime) - [ont-fast5-api](#ont-fast5-api) - [ont-remora](#ont-remora) - [OOMPA](#oompa) - [OPARI2](#opari2) - [Open-Data-Cube-Core](#open-data-cube-core) - [OpenAI-Gym](#openai-gym) - [OpenBabel](#openbabel) - [OpenBLAS](#openblas) - [openCARP](#opencarp) - [OpenCensus-python](#opencensus-python) - [OpenCoarrays](#opencoarrays) - [OpenColorIO](#opencolorio) - [OpenCV](#opencv) - [OpenEXR](#openexr) - [OpenFace](#openface) - [OpenFAST](#openfast) - [OpenFOAM](#openfoam) - [OpenFOAM-Extend](#openfoam-extend) - [OpenFold](#openfold) - [OpenForceField](#openforcefield) - [OpenImageIO](#openimageio) - [OpenJPEG](#openjpeg) - [OpenKIM-API](#openkim-api) - [openkim-models](#openkim-models) - [OpenMM](#openmm) - [OpenMM-PLUMED](#openmm-plumed) - [OpenMMTools](#openmmtools) - [OpenMolcas](#openmolcas) - [OpenMPI](#openmpi) - [OpenMS](#openms) - [OpenNLP](#opennlp) - [OpenPGM](#openpgm) - [OpenPIV](#openpiv) - [openpyxl](#openpyxl) - [OpenRefine](#openrefine) - [OpenSceneGraph](#openscenegraph) - [OpenSees](#opensees) - [OpenSlide](#openslide) - [openslide-python](#openslide-python) - [OpenSSL](#openssl) - [OpenStackClient](#openstackclient) - [OPERA](#opera) - [OPERA-MS](#opera-ms) - [OptiType](#optitype) - [OptiX](#optix) - [Optuna](#optuna) - [OR-Tools](#or-tools) - [ORCA](#orca) - [ORFfinder](#orffinder) - [OrfM](#orfm) - [OrthoFinder](#orthofinder) - [OrthoMCL](#orthomcl) - [Osi](#osi) - [OSPRay](#ospray) - [OSU-Micro-Benchmarks](#osu-micro-benchmarks) - [OTF2](#otf2) - [OVITO](#ovito) - [ownCloud](#owncloud) - [oxford_asl](#oxford_asl)
@@ -22693,6 +22729,7 @@ version  |toolchain
 ``2.0``  |``foss/2016a``
 ``2.0.5``|``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 ``2.0.6``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``
+``2.0.7``|``GCCcore/11.3.0``
 
 ### Open-Data-Cube-Core
 
@@ -22764,7 +22801,7 @@ version   |versionsuffix    |toolchain
 ``0.3.15``|                 |``GCC/10.3.0``
 ``0.3.17``|                 |``GCC/10.3.0``, ``GCC/11.2.0``
 ``0.3.18``|                 |``GCC/11.2.0``
-``0.3.20``|                 |``GCC/11.2.0``, ``GCC/11.3.0``
+``0.3.20``|                 |``GCC/11.2.0``, ``GCC/11.3.0``, ``NVHPC/22.7-CUDA-11.7.0``
 ``0.3.21``|                 |``GCC/12.2.0``
 
 ### openCARP
@@ -23110,7 +23147,7 @@ version   |versionsuffix   |toolchain
 ``4.1.0`` |                |``GCC/10.2.0``
 ``4.1.1`` |                |``GCC/10.3.0``, ``GCC/11.2.0``, ``intel-compilers/2021.2.0``
 ``4.1.2`` |                |``GCC/10.2.0``, ``GCC/11.2.0``
-``4.1.4`` |                |``GCC/11.3.0``, ``GCC/12.2.0``
+``4.1.4`` |                |``GCC/11.3.0``, ``GCC/12.2.0``, ``NVHPC/22.7-CUDA-11.7.0``
 ``system``|                |``GCC/system-2.29``
 
 ### OpenMS
@@ -23436,6 +23473,7 @@ version  |versionsuffix   |toolchain
 ``5.9``  |``-CUDA-11.3.1``|``gompi/2021a``
 ``5.9``  |``-CUDA-11.4.1``|``gompi/2021b``
 ``5.9``  |``-CUDA-11.7.0``|``gompi/2022a``
+``5.9``  |``-ROCm-4.5.0`` |``gompi/2021b``
 ``6.2``  |                |``gompi/2022.10``, ``gompi/2022b``
 
 ### OTF2
@@ -23444,12 +23482,13 @@ The Open Trace Format 2 is a highly scalable, memory efficient event trace  data
 
 *homepage*: <https://www.score-p.org>
 
-version|toolchain
--------|-------------------------------------------------------
-``2.0``|``foss/2016a``, ``foss/2017a``
-``2.2``|``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
-``2.3``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``
-``3.0``|``GCCcore/11.3.0``
+version  |toolchain
+---------|-------------------------------------------------------
+``2.0``  |``foss/2016a``, ``foss/2017a``
+``2.2``  |``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
+``2.3``  |``GCCcore/10.2.0``, ``GCCcore/10.3.0``
+``3.0``  |``GCCcore/11.3.0``
+``3.0.2``|``GCCcore/11.3.0``
 
 ### OVITO
 
@@ -23482,7 +23521,7 @@ version  |versionsuffix             |toolchain
 ---------|--------------------------|---------------
 ``3.9.6``|``-centos7-Python-2.7.13``|``intel/2017a``
 
-### P
+## P
 
 
 [p11-kit](#p11-kit) - [p4-phylogenetics](#p4-phylogenetics) - [p4est](#p4est) - [p4vasp](#p4vasp) - [p7zip](#p7zip) - [packmol](#packmol) - [pagmo](#pagmo) - [pairsnp](#pairsnp) - [PAL2NAL](#pal2nal) - [paladin](#paladin) - [PAML](#paml) - [panaroo](#panaroo) - [pandapower](#pandapower) - [pandas](#pandas) - [pandas-datareader](#pandas-datareader) - [PANDAseq](#pandaseq) - [Pandoc](#pandoc) - [Panedr](#panedr) - [Pango](#pango) - [pangolin](#pangolin) - [panito](#panito) - [PAPI](#papi) - [parallel](#parallel) - [parallel-fastq-dump](#parallel-fastq-dump) - [ParallelIO](#parallelio) - [parameterized](#parameterized) - [parasail](#parasail) - [Paraver](#paraver) - [ParaView](#paraview) - [Parcels](#parcels) - [PARI-GP](#pari-gp) - [ParmEd](#parmed) - [ParMETIS](#parmetis) - [ParMGridGen](#parmgridgen) - [PartitionFinder](#partitionfinder) - [pasta](#pasta) - [PaStiX](#pastix) - [patch](#patch) - [patchelf](#patchelf) - [path.py](#path.py) - [PAUP](#paup) - [pauvre](#pauvre) - [pbbam](#pbbam) - [pbcopper](#pbcopper) - [pbdagcon](#pbdagcon) - [pbmm2](#pbmm2) - [pbs_python](#pbs_python) - [PBSuite](#pbsuite) - [PCAngsd](#pcangsd) - [PCC](#pcc) - [PCL](#pcl) - [PCMSolver](#pcmsolver) - [PCRaster](#pcraster) - [PCRE](#pcre) - [PCRE2](#pcre2) - [PDT](#pdt) - [PEAR](#pear) - [PennCNV](#penncnv) - [PEPT](#pept) - [Percolator](#percolator) - [Perl](#perl) - [perl-app-cpanminus](#perl-app-cpanminus) - [Perl4-CoreLibs](#perl4-corelibs) - [PEST++](#pest++) - [PETSc](#petsc) - [petsc4py](#petsc4py) - [pfind](#pfind) - [pftoolsV3](#pftoolsv3) - [pFUnit](#pfunit) - [PGDSpider](#pgdspider) - [PGI](#pgi) - [PHANOTATE](#phanotate) - [Phantompeakqualtools](#phantompeakqualtools) - [PHASE](#phase) - [PHAST](#phast) - [PheWAS](#phewas) - [PhiPack](#phipack) - [PHLAT](#phlat) - [phonemizer](#phonemizer) - [phono3py](#phono3py) - [phonopy](#phonopy) - [photontorch](#photontorch) - [phototonic](#phototonic) - [PHYLIP](#phylip) - [PhyloBayes-MPI](#phylobayes-mpi) - [phylokit](#phylokit) - [phylonaut](#phylonaut) - [PhyloPhlAn](#phylophlan) - [PhyML](#phyml) - [phyx](#phyx) - [picard](#picard) - [pigz](#pigz) - [PIL](#pil) - [PileOMeth](#pileometh) - [Pillow](#pillow) - [Pillow-SIMD](#pillow-simd) - [Pilon](#pilon) - [PIMS](#pims) - [Pindel](#pindel) - [Pingouin](#pingouin) - [Pint](#pint) - [pip](#pip) - [PIPITS](#pipits) - [pIRS](#pirs) - [Pisces](#pisces) - [piSvM](#pisvm) - [piSvM-JSC](#pisvm-jsc) - [pixman](#pixman) - [pizzly](#pizzly) - [pkg-config](#pkg-config) - [pkgconf](#pkgconf) - [pkgconfig](#pkgconfig) - [plantcv](#plantcv) - [PlaScope](#plascope) - [PlasmaPy](#plasmapy) - [PLAST](#plast) - [Platanus](#platanus) - [Platypus](#platypus) - [plc](#plc) - [PLINK](#plink) - [plinkQC](#plinkqc) - [PLINKSEQ](#plinkseq) - [Ploticus](#ploticus) - [plotly](#plotly) - [plotly-orca](#plotly-orca) - [plotly.py](#plotly.py) - [PLplot](#plplot) - [PLUMED](#plumed) - [PLY](#ply) - [PMIx](#pmix) - [pmx](#pmx) - [PnetCDF](#pnetcdf) - [pocl](#pocl) - [poetry](#poetry) - [polars](#polars) - [polymake](#polymake) - [pomkl](#pomkl) - [pompi](#pompi) - [poppler](#poppler) - [popscle](#popscle) - [popt](#popt) - [Porechop](#porechop) - [porefoam](#porefoam) - [poretools](#poretools) - [Portcullis](#portcullis) - [Postgres-XL](#postgres-xl) - [PostgreSQL](#postgresql) - [POT](#pot) - [POV-Ray](#pov-ray) - [PPanGGOLiN](#ppanggolin) - [PPfold](#ppfold) - [ppl](#ppl) - [pplacer](#pplacer) - [pplpy](#pplpy) - [PRANK](#prank) - [PRC](#prc) - [preCICE](#precice) - [PREQUAL](#prequal) - [preseq](#preseq) - [presto](#presto) - [pretty-yaml](#pretty-yaml) - [Primer3](#primer3) - [PRINSEQ](#prinseq) - [printproto](#printproto) - [PRISMS-PF](#prisms-pf) - [ProbABEL](#probabel) - [prodigal](#prodigal) - [ProFit](#profit) - [PROJ](#proj) - [ProjectQ](#projectq) - [prokka](#prokka) - [prompt-toolkit](#prompt-toolkit) - [proovread](#proovread) - [propy](#propy) - [Proteinortho](#proteinortho) - [ProtHint](#prothint) - [protobuf](#protobuf) - [protobuf-python](#protobuf-python) - [protozero](#protozero) - [PRSice](#prsice) - [pscom](#pscom) - [PSI](#psi) - [PSI4](#psi4) - [PsiCLASS](#psiclass) - [PSIPRED](#psipred) - [psmc](#psmc) - [psmpi](#psmpi) - [psmpi2](#psmpi2) - [PSolver](#psolver) - [PSORTb](#psortb) - [psrecord](#psrecord) - [pstoedit](#pstoedit) - [psutil](#psutil) - [psycopg2](#psycopg2) - [ptemcee](#ptemcee) - [PTESFinder](#ptesfinder) - [pubtcrs](#pubtcrs) - [pugixml](#pugixml) - [pullseq](#pullseq) - [PuLP](#pulp) - [purge_dups](#purge_dups) - [py](#py) - [py-aiger](#py-aiger) - [py-aiger-bdd](#py-aiger-bdd) - [py-cpuinfo](#py-cpuinfo) - [pyABC](#pyabc) - [PyAMG](#pyamg) - [PyAPS3](#pyaps3) - [pybedtools](#pybedtools) - [PyBerny](#pyberny) - [pyBigWig](#pybigwig) - [pybind11](#pybind11) - [PyCairo](#pycairo) - [PyCalib](#pycalib) - [pyccel](#pyccel) - [PyCharm](#pycharm) - [PyCheMPS2](#pychemps2) - [PyCifRW](#pycifrw) - [PyClone](#pyclone) - [pycma](#pycma) - [pycocotools](#pycocotools) - [pycodestyle](#pycodestyle) - [PyCogent](#pycogent) - [pycoQC](#pycoqc) - [PyCUDA](#pycuda) - [PycURL](#pycurl) - [PyDamage](#pydamage) - [pydantic](#pydantic) - [PyDatastream](#pydatastream) - [pydicom](#pydicom) - [pydlpoly](#pydlpoly) - [pydot](#pydot) - [pyEGA3](#pyega3) - [pyenchant](#pyenchant) - [PyEVTK](#pyevtk) - [pyFAI](#pyfai) - [pyfaidx](#pyfaidx) - [pyfasta](#pyfasta) - [PyFFmpeg](#pyffmpeg) - [pyFFTW](#pyfftw) - [pyfits](#pyfits) - [PyFMI](#pyfmi) - [PyFoam](#pyfoam) - [PyFR](#pyfr) - [PyFrag](#pyfrag) - [pygccxml](#pygccxml) - [pyGenomeTracks](#pygenometracks) - [PyGEOS](#pygeos) - [pyGIMLi](#pygimli) - [Pygments](#pygments) - [pygmo](#pygmo) - [PyGObject](#pygobject) - [pygraphviz](#pygraphviz) - [pygrib](#pygrib) - [PyGTK](#pygtk) - [PyGTS](#pygts) - [PyGWAS](#pygwas) - [pyhdf](#pyhdf) - [PyImageJ](#pyimagej) - [pyiron](#pyiron) - [Pyke3](#pyke3) - [pylift](#pylift) - [Pylint](#pylint) - [pymatgen](#pymatgen) - [pymatgen-db](#pymatgen-db) - [pymbar](#pymbar) - [PyMC3](#pymc3) - [pymca](#pymca) - [pymemcache](#pymemcache) - [PyMOL](#pymol) - [PyNAST](#pynast) - [pyobjcryst](#pyobjcryst) - [PyOD](#pyod) - [Pyomo](#pyomo) - [PyOpenCL](#pyopencl) - [PyOpenGL](#pyopengl) - [pyparsing](#pyparsing) - [pyplusplus](#pyplusplus) - [PYPOWER](#pypower) - [pyproj](#pyproj) - [PyPSA](#pypsa) - [pyqstem](#pyqstem) - [PyQt](#pyqt) - [PyQt5](#pyqt5) - [PyQtGraph](#pyqtgraph) - [pyradiomics](#pyradiomics) - [PyRe](#pyre) - [PyRETIS](#pyretis) - [pyringe](#pyringe) - [pyro-api](#pyro-api) - [pyro-ppl](#pyro-ppl) - [Pyro4](#pyro4) - [PyRosetta](#pyrosetta) - [Pysam](#pysam) - [pysamstats](#pysamstats) - [PySAT](#pysat) - [pyScaf](#pyscaf) - [pySCENIC](#pyscenic) - [PySCF](#pyscf) - [pysheds](#pysheds) - [pyshp](#pyshp) - [PySide2](#pyside2) - [pysndfx](#pysndfx) - [Pysolar](#pysolar) - [pyspoa](#pyspoa) - [pysqlite](#pysqlite) - [PyStan](#pystan) - [pysteps](#pysteps) - [pystran](#pystran) - [PyTables](#pytables) - [pytest](#pytest) - [pytest-benchmark](#pytest-benchmark) - [pytest-xdist](#pytest-xdist) - [PYTHIA](#pythia) - [Python](#python) - [python-docx](#python-docx) - [python-hl7](#python-hl7) - [python-igraph](#python-igraph) - [python-irodsclient](#python-irodsclient) - [python-isal](#python-isal) - [python-Levenshtein](#python-levenshtein) - [python-libsbml](#python-libsbml) - [python-parasail](#python-parasail) - [python-telegram-bot](#python-telegram-bot) - [python-weka-wrapper3](#python-weka-wrapper3) - [pythran](#pythran) - [PyTorch](#pytorch) - [PyTorch-Geometric](#pytorch-geometric) - [PyTorch-Lightning](#pytorch-lightning) - [PyTorch3D](#pytorch3d) - [PyVCF](#pyvcf) - [pyWannier90](#pywannier90) - [PyWavelets](#pywavelets) - [PyYAML](#pyyaml) - [PyZMQ](#pyzmq)
@@ -23758,6 +23797,7 @@ version    |toolchain
 ``5.7.0``  |``GCCcore/7.3.0``, ``GCCcore/8.2.0``
 ``6.0.0``  |``GCCcore/10.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 ``6.0.0.1``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``
+``7.0.0``  |``GCCcore/11.3.0``
 
 ### parallel
 
@@ -24170,10 +24210,10 @@ Program Database Toolkit (PDT) is a framework for analyzing source code  written
 *homepage*: <https://www.cs.uoregon.edu/research/pdt/>
 
 version   |toolchain
-----------|--------------------------------------------------------
+----------|---------------------------------------------------------
 ``3.22``  |``foss/2016a``
 ``3.25``  |``GCCcore/10.2.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``
-``3.25.1``|``GCCcore/10.3.0``, ``GCCcore/9.3.0``
+``3.25.1``|``GCCcore/10.3.0``, ``GCCcore/11.3.0``, ``GCCcore/9.3.0``
 
 ### PEAR
 
@@ -27537,6 +27577,8 @@ version   |versionsuffix                |toolchain
 ``1.12.1``|                             |``foss/2021a``, ``foss/2022a``
 ``1.12.1``|``-CUDA-11.3.1``             |``foss/2021a``
 ``1.12.1``|``-CUDA-11.7.0``             |``foss/2022a``
+``1.13.1``|                             |``foss/2022a``
+``1.13.1``|``-CUDA-11.7.0``             |``foss/2022a``
 
 ### PyTorch-Geometric
 
@@ -27659,7 +27701,7 @@ version   |versionsuffix          |toolchain
 ``18.1.1``|``-Python-3.7.4``      |``GCCcore/8.3.0``
 ``22.3.0``|                       |``GCCcore/10.3.0``
 
-### Q
+## Q
 
 
 [Q6](#q6) - [QCA](#qca) - [qcat](#qcat) - [QCG-PilotJob](#qcg-pilotjob) - [qcint](#qcint) - [QCxMS](#qcxms) - [QD](#qd) - [QDD](#qdd) - [QEMU](#qemu) - [QGIS](#qgis) - [Qhull](#qhull) - [QIIME](#qiime) - [QIIME2](#qiime2) - [Qiskit](#qiskit) - [QJson](#qjson) - [QML](#qml) - [qpth](#qpth) - [qrupdate](#qrupdate) - [QScintilla](#qscintilla) - [Qt](#qt) - [Qt5](#qt5) - [Qt5Webkit](#qt5webkit) - [Qtconsole](#qtconsole) - [QtKeychain](#qtkeychain) - [QTLtools](#qtltools) - [qtop](#qtop) - [QtPy](#qtpy) - [Qualimap](#qualimap) - [Quandl](#quandl) - [QuantumESPRESSO](#quantumespresso) - [QUAST](#quast) - [QuaZIP](#quazip) - [QuickFF](#quickff) - [QuickPIC](#quickpic) - [Quip](#quip) - [Quorum](#quorum) - [QuTiP](#qutip) - [Qwt](#qwt) - [QwtPolar](#qwtpolar)
@@ -28133,7 +28175,7 @@ version  |toolchain
 ---------|----------------------------------------------------------------------
 ``1.1.1``|``GCCcore/10.2.0``, ``GCCcore/8.2.0``, ``foss/2016b``, ``intel/2016b``
 
-### R
+## R
 
 
 [R](#r) - [R-bundle-Bioconductor](#r-bundle-bioconductor) - [R-INLA](#r-inla) - [R-keras](#r-keras) - [R-opencv](#r-opencv) - [R-tesseract](#r-tesseract) - [Racon](#racon) - [radeontop](#radeontop) - [RaGOO](#ragoo) - [Ragout](#ragout) - [RagTag](#ragtag) - [rampart](#rampart) - [randfold](#randfold) - [randrproto](#randrproto) - [RapidJSON](#rapidjson) - [rapidtide](#rapidtide) - [RAPSearch2](#rapsearch2) - [Rascaf](#rascaf) - [RASPA2](#raspa2) - [rasterio](#rasterio) - [rasterstats](#rasterstats) - [Ratatosk](#ratatosk) - [RAxML](#raxml) - [RAxML-NG](#raxml-ng) - [Ray-assembler](#ray-assembler) - [Ray-project](#ray-project) - [Raysect](#raysect) - [RBFOpt](#rbfopt) - [rclone](#rclone) - [Rcorrector](#rcorrector) - [RcppGSL](#rcppgsl) - [rCUDA](#rcuda) - [RDFlib](#rdflib) - [RDKit](#rdkit) - [RDP-Classifier](#rdp-classifier) - [RE2](#re2) - [re2c](#re2c) - [Reads2snp](#reads2snp) - [Reapr](#reapr) - [RECON](#recon) - [Red](#red) - [Redis](#redis) - [redis-py](#redis-py) - [Redundans](#redundans) - [ReFrame](#reframe) - [regionmask](#regionmask) - [RegTools](#regtools) - [Relate](#relate) - [RELION](#relion) - [ReMatCh](#rematch) - [REMORA](#remora) - [renderproto](#renderproto) - [RepastHPC](#repasthpc) - [RepeatMasker](#repeatmasker) - [RepeatModeler](#repeatmodeler) - [RepeatScout](#repeatscout) - [request](#request) - [requests](#requests) - [RERconverge](#rerconverge) - [resolos](#resolos) - [retworkx](#retworkx) - [RevBayes](#revbayes) - [rgdal](#rgdal) - [rgeos](#rgeos) - [Rgurobi](#rgurobi) - [rhdf5](#rhdf5) - [RheoTool](#rheotool) - [rickflow](#rickflow) - [RInChI](#rinchi) - [rioxarray](#rioxarray) - [rising](#rising) - [rjags](#rjags) - [RLCard](#rlcard) - [Rmath](#rmath) - [rMATS-turbo](#rmats-turbo) - [RMBlast](#rmblast) - [RNA-Bloom](#rna-bloom) - [RNA-SeQC](#rna-seqc) - [RNAclust](#rnaclust) - [RNAcode](#rnacode) - [RNAIndel](#rnaindel) - [RNAmmer](#rnammer) - [rnaQUAST](#rnaquast) - [RNAz](#rnaz) - [RnBeads](#rnbeads) - [Roary](#roary) - [ROCm](#rocm) - [rocm-cmake](#rocm-cmake) - [ROCm-CompilerSupport](#rocm-compilersupport) - [rocm-smi](#rocm-smi) - [rocminfo](#rocminfo) - [ROCR-Runtime](#rocr-runtime) - [ROCT-Thunk-Interface](#roct-thunk-interface) - [ROI_PAC](#roi_pac) - [ROME](#rome) - [ROOT](#root) - [root_numpy](#root_numpy) - [rootpy](#rootpy) - [Rosetta](#rosetta) - [rpmrebuild](#rpmrebuild) - [rpy2](#rpy2) - [RQGIS3](#rqgis3) - [RSEM](#rsem) - [RSeQC](#rseqc) - [RStan](#rstan) - [rstanarm](#rstanarm) - [RStudio-Server](#rstudio-server) - [RTG-Tools](#rtg-tools) - [Rtree](#rtree) - [ruamel.yaml](#ruamel.yaml) - [Ruby](#ruby) - [Ruby-Tk](#ruby-tk) - [ruffus](#ruffus) - [Rust](#rust)
@@ -29509,7 +29551,7 @@ version   |toolchain
 ``1.60.0``|``GCCcore/10.3.0``, ``GCCcore/11.3.0``
 ``1.65.0``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``
 
-### S
+## S
 
 
 [S-Lang](#s-lang) - [S4](#s4) - [SAGE](#sage) - [Sailfish](#sailfish) - [SALib](#salib) - [Salmon](#salmon) - [SALMON-TDDFT](#salmon-tddft) - [Sambamba](#sambamba) - [samblaster](#samblaster) - [Samcef](#samcef) - [samclip](#samclip) - [samplot](#samplot) - [SAMtools](#samtools) - [sansa](#sansa) - [SAP](#sap) - [SAS](#sas) - [Satsuma2](#satsuma2) - [savvy](#savvy) - [Saxon-HE](#saxon-he) - [SBCL](#sbcl) - [sbt](#sbt) - [ScaFaCoS](#scafacos) - [ScaLAPACK](#scalapack) - [Scalasca](#scalasca) - [SCALCE](#scalce) - [scanpy](#scanpy) - [SCENIC](#scenic) - [scGeneFit](#scgenefit) - [SCGid](#scgid) - [Schrodinger](#schrodinger) - [sciClone](#sciclone) - [ScientificPython](#scientificpython) - [scikit-allel](#scikit-allel) - [scikit-bio](#scikit-bio) - [scikit-build](#scikit-build) - [scikit-cuda](#scikit-cuda) - [scikit-image](#scikit-image) - [scikit-learn](#scikit-learn) - [scikit-misc](#scikit-misc) - [scikit-multilearn](#scikit-multilearn) - [scikit-optimize](#scikit-optimize) - [scikit-uplift](#scikit-uplift) - [SCIPhI](#sciphi) - [scipy](#scipy) - [SciPy-bundle](#scipy-bundle) - [SCnorm](#scnorm) - [Scoary](#scoary) - [SCons](#scons) - [SCOOP](#scoop) - [SCopeLoomR](#scopeloomr) - [Score-P](#score-p) - [SCOTCH](#scotch) - [scp](#scp) - [scPred](#scpred) - [Scrappie](#scrappie) - [scVelo](#scvelo) - [scvi-tools](#scvi-tools) - [Scythe](#scythe) - [SDCC](#sdcc) - [SDL](#sdl) - [SDL2](#sdl2) - [SDL2_image](#sdl2_image) - [SDL_image](#sdl_image) - [SDSL](#sdsl) - [Seaborn](#seaborn) - [SearchGUI](#searchgui) - [SECAPR](#secapr) - [Seeder](#seeder) - [segemehl](#segemehl) - [segmentation-models](#segmentation-models) - [SeisSol](#seissol) - [SelEstim](#selestim) - [SELFIES](#selfies) - [SentencePiece](#sentencepiece) - [sep](#sep) - [SEPP](#sepp) - [Seq-Gen](#seq-gen) - [seq2HLA](#seq2hla) - [SeqAn](#seqan) - [SeqAn3](#seqan3) - [SeqKit](#seqkit) - [SeqLib](#seqlib) - [Seqmagick](#seqmagick) - [SeqPrep](#seqprep) - [seqtk](#seqtk) - [Serf](#serf) - [setuptools](#setuptools) - [Seurat](#seurat) - [SeuratData](#seuratdata) - [SeuratDisk](#seuratdisk) - [SeuratWrappers](#seuratwrappers) - [sf](#sf) - [sfftk](#sfftk) - [Shannon](#shannon) - [SHAP](#shap) - [shapAAR](#shapaar) - [SHAPEIT](#shapeit) - [SHAPEIT4](#shapeit4) - [Shapely](#shapely) - [sharutils](#sharutils) - [Shasta](#shasta) - [ShengBTE](#shengbte) - [shift](#shift) - [SHORE](#shore) - [Short-Pair](#short-pair) - [shovill](#shovill) - [shrinkwrap](#shrinkwrap) - [SHTns](#shtns) - [Sibelia](#sibelia) - [SICER2](#sicer2) - [sickle](#sickle) - [Siesta](#siesta) - [SignalP](#signalp) - [silx](#silx) - [simint](#simint) - [SimNIBS](#simnibs) - [SimPEG](#simpeg) - [SIMPLE](#simple) - [SimpleElastix](#simpleelastix) - [SimpleITK](#simpleitk) - [simpy](#simpy) - [SimVascular](#simvascular) - [SingleM](#singlem) - [Singular](#singular) - [SiNVICT](#sinvict) - [SIONlib](#sionlib) - [SIP](#sip) - [SISSO](#sisso) - [SISSO++](#sisso++) - [SKESA](#skesa) - [sketchmap](#sketchmap) - [skewer](#skewer) - [sklearn-pandas](#sklearn-pandas) - [sklearn-som](#sklearn-som) - [skorch](#skorch) - [SlamDunk](#slamdunk) - [slamdunk](#slamdunk) - [SLATEC](#slatec) - [SLEPc](#slepc) - [slepc4py](#slepc4py) - [sleuth](#sleuth) - [slidingwindow](#slidingwindow) - [SLiM](#slim) - [slow5tools](#slow5tools) - [smafa](#smafa) - [smallgenomeutilities](#smallgenomeutilities) - [SMARTdenovo](#smartdenovo) - [SMC++](#smc++) - [smithwaterman](#smithwaterman) - [Smoldyn](#smoldyn) - [smooth-topk](#smooth-topk) - [SMRT-Link](#smrt-link) - [SMV](#smv) - [snakemake](#snakemake) - [SNAP](#snap) - [SNAP-HMM](#snap-hmm) - [SNAPE-pooled](#snape-pooled) - [snaphu](#snaphu) - [snappy](#snappy) - [snippy](#snippy) - [snp-sites](#snp-sites) - [snpEff](#snpeff) - [SNPhylo](#snphylo) - [SNPomatic](#snpomatic) - [SOAPaligner](#soapaligner) - [SOAPdenovo-Trans](#soapdenovo-trans) - [SOAPdenovo2](#soapdenovo2) - [SOAPfuse](#soapfuse) - [socat](#socat) - [SOCI](#soci) - [SolexaQA++](#solexaqa++) - [sonic](#sonic) - [SoQt](#soqt) - [SortMeRNA](#sortmerna) - [SoX](#sox) - [SoXt](#soxt) - [SpaceRanger](#spaceranger) - [Spack](#spack) - [spaCy](#spacy) - [SPAdes](#spades) - [spaln](#spaln) - [Spark](#spark) - [sparsehash](#sparsehash) - [spatialreg](#spatialreg) - [spdlog](#spdlog) - [SpectrA](#spectra) - [spectral.methods](#spectral.methods) - [speech_tools](#speech_tools) - [spglib](#spglib) - [spglib-python](#spglib-python) - [Sphinx](#sphinx) - [Sphinx-RTD-Theme](#sphinx-rtd-theme) - [SpiceyPy](#spiceypy) - [SpiecEasi](#spieceasi) - [SplAdder](#spladder) - [SPLASH](#splash) - [SpliceMap](#splicemap) - [split-seq](#split-seq) - [splitRef](#splitref) - [SPM](#spm) - [spoa](#spoa) - [SPOOLES](#spooles) - [SPOTPY](#spotpy) - [SPRNG](#sprng) - [Spyder](#spyder) - [SQLite](#sqlite) - [SqueezeMeta](#squeezemeta) - [Squidpy](#squidpy) - [SRA-Toolkit](#sra-toolkit) - [SRPRISM](#srprism) - [SRST2](#srst2) - [SSAHA2](#ssaha2) - [SSN](#ssn) - [SSPACE_Basic](#sspace_basic) - [SSW](#ssw) - [STACEY](#stacey) - [Stack](#stack) - [Stacks](#stacks) - [STAMP](#stamp) - [StaMPS](#stamps) - [Stampy](#stampy) - [STAR](#star) - [STAR-CCM+](#star-ccm+) - [STAR-Fusion](#star-fusion) - [stars](#stars) - [Stata](#stata) - [Statistics-R](#statistics-r) - [statsmodels](#statsmodels) - [STEAK](#steak) - [STIR](#stir) - [stpipeline](#stpipeline) - [STREAM](#stream) - [strelka](#strelka) - [StringTie](#stringtie) - [stripy](#stripy) - [STRique](#strique) - [Structure](#structure) - [STRUMPACK](#strumpack) - [suave](#suave) - [Subread](#subread) - [Subversion](#subversion) - [suds](#suds) - [SuiteSparse](#suitesparse) - [SUMACLUST](#sumaclust) - [SUMATRA](#sumatra) - [SUMO](#sumo) - [SUNDIALS](#sundials) - [SunPy](#sunpy) - [SuperLU](#superlu) - [SuperLU_DIST](#superlu_dist) - [supermagic](#supermagic) - [supernova](#supernova) - [SURVIVOR](#survivor) - [SVDetect](#svdetect) - [SVDquest](#svdquest) - [SVG](#svg) - [svist4get](#svist4get) - [swarm](#swarm) - [SWASH](#swash) - [SWAT+](#swat+) - [swifter](#swifter) - [SWIG](#swig) - [SWIPE](#swipe) - [swissknife](#swissknife) - [SymEngine](#symengine) - [SymEngine-python](#symengine-python) - [SYMPHONY](#symphony) - [sympy](#sympy) - [SyRI](#syri) - [Szip](#szip)
@@ -29802,7 +29844,7 @@ version  |versionsuffix                    |toolchain
 ``2.1.0``|``-bl``                          |``gompi/2020b``
 ``2.1.0``|``-fb``                          |``gompi/2021a``, ``gompi/2021b``
 ``2.2``  |``-amd``                         |``gompi/2020a``
-``2.2.0``|``-fb``                          |``gompi/2022.05``, ``gompi/2022.10``, ``gompi/2022a``, ``gompi/2022b``
+``2.2.0``|``-fb``                          |``gompi/2022.05``, ``gompi/2022.10``, ``gompi/2022a``, ``gompi/2022b``, ``nvompi/2022.07``
 
 ### Scalasca
 
@@ -30190,6 +30232,7 @@ version  |versionsuffix   |toolchain
 ``6.0``  |                |``gompi/2019a``, ``gompi/2020a``, ``gompic/2019b``
 ``7.0``  |                |``gompi/2021a``, ``gompic/2020b``
 ``7.1``  |``-CUDA-11.3.1``|``gompi/2021a``
+``8.0``  |                |``gompi/2022a``
 
 ### SCOTCH
 
@@ -32797,10 +32840,10 @@ version  |toolchain
 ``2.1``  |``GCC/4.8.1``, ``GCCcore/5.4.0``, ``foss/2016a``, ``foss/2016b``, ``foss/2017a``, ``gimkl/2.11.5``, ``gimkl/2017a``, ``gmpolf/2017.10``, ``intel/2016.02-GCC-4.9``, ``intel/2016a``, ``intel/2016b``, ``intel/2017.01``, ``intel/2017a``, ``iomkl/2016.07``, ``iomkl/2016.09-GCC-4.9.3-2.25``
 ``2.1.1``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 
-### T
+## T
 
 
-[tabix](#tabix) - [tabixpp](#tabixpp) - [taco](#taco) - [TagDust](#tagdust) - [TagLib](#taglib) - [Taiyaki](#taiyaki) - [TALON](#talon) - [TALYS](#talys) - [TAMkin](#tamkin) - [taxator-tk](#taxator-tk) - [TBA](#tba) - [tbb](#tbb) - [tbl2asn](#tbl2asn) - [TCC](#tcc) - [Tcl](#tcl) - [TCLAP](#tclap) - [tcsh](#tcsh) - [tecplot360ex](#tecplot360ex) - [TELEMAC-MASCARET](#telemac-mascaret) - [Telescope](#telescope) - [Teneto](#teneto) - [tensorboard](#tensorboard) - [tensorboardX](#tensorboardx) - [TensorFlow](#tensorflow) - [TensorFlow-Datasets](#tensorflow-datasets) - [tensorflow-probability](#tensorflow-probability) - [TensorRT](#tensorrt) - [terastructure](#terastructure) - [termcolor](#termcolor) - [Tesla-Deployment-Kit](#tesla-deployment-kit) - [tesseract](#tesseract) - [testpath](#testpath) - [TetGen](#tetgen) - [TEToolkit](#tetoolkit) - [TEtranscripts](#tetranscripts) - [texinfo](#texinfo) - [texlive](#texlive) - [Text-CSV](#text-csv) - [TFEA](#tfea) - [Theano](#theano) - [ThemisPy](#themispy) - [THetA](#theta) - [thurstonianIRT](#thurstonianirt) - [TiCCutils](#ticcutils) - [tidybayes](#tidybayes) - [tidymodels](#tidymodels) - [Tika](#tika) - [TiMBL](#timbl) - [time](#time) - [TINKER](#tinker) - [TinyDB](#tinydb) - [TinyXML](#tinyxml) - [Tk](#tk) - [Tkinter](#tkinter) - [TM-align](#tm-align) - [tMAE](#tmae) - [tmap](#tmap) - [tmux](#tmux) - [TN93](#tn93) - [TOBIAS](#tobias) - [ToFu](#tofu) - [Togl](#togl) - [tokenizers](#tokenizers) - [Tombo](#tombo) - [TOML-Fortran](#toml-fortran) - [topaz](#topaz) - [TopHat](#tophat) - [torchaudio](#torchaudio) - [torchdata](#torchdata) - [torchinfo](#torchinfo) - [torchsampler](#torchsampler) - [torchtext](#torchtext) - [torchvision](#torchvision) - [TotalView](#totalview) - [tqdm](#tqdm) - [Tracer](#tracer) - [TranscriptClean](#transcriptclean) - [TransDecoder](#transdecoder) - [Transformers](#transformers) - [Transrate](#transrate) - [travis](#travis) - [TRAVIS-Analyzer](#travis-analyzer) - [treatSens](#treatsens) - [TreeMix](#treemix) - [TreeShrink](#treeshrink) - [TRF](#trf) - [Triangle](#triangle) - [Trilinos](#trilinos) - [Trim_Galore](#trim_galore) - [trimAl](#trimal) - [trimesh](#trimesh) - [Trimmomatic](#trimmomatic) - [Trinity](#trinity) - [TRIQS](#triqs) - [TRIQS-cthyb](#triqs-cthyb) - [TRIQS-dft_tools](#triqs-dft_tools) - [TRIQS-tprf](#triqs-tprf) - [TRUST](#trust) - [TRUST4](#trust4) - [Trycycler](#trycycler) - [tsne](#tsne) - [TurboVNC](#turbovnc) - [TVB](#tvb) - [tvb-data](#tvb-data) - [TVB-deps](#tvb-deps) - [tvb-framework](#tvb-framework) - [tvb-library](#tvb-library) - [TWL-NINJA](#twl-ninja) - [typing-extensions](#typing-extensions)
+[tabix](#tabix) - [tabixpp](#tabixpp) - [taco](#taco) - [TagDust](#tagdust) - [TagLib](#taglib) - [Taiyaki](#taiyaki) - [TALON](#talon) - [TALYS](#talys) - [TAMkin](#tamkin) - [task-spooler](#task-spooler) - [taxator-tk](#taxator-tk) - [TBA](#tba) - [tbb](#tbb) - [tbl2asn](#tbl2asn) - [TCC](#tcc) - [Tcl](#tcl) - [TCLAP](#tclap) - [tcsh](#tcsh) - [tecplot360ex](#tecplot360ex) - [TELEMAC-MASCARET](#telemac-mascaret) - [Telescope](#telescope) - [Teneto](#teneto) - [tensorboard](#tensorboard) - [tensorboardX](#tensorboardx) - [TensorFlow](#tensorflow) - [TensorFlow-Datasets](#tensorflow-datasets) - [tensorflow-probability](#tensorflow-probability) - [TensorRT](#tensorrt) - [terastructure](#terastructure) - [termcolor](#termcolor) - [Tesla-Deployment-Kit](#tesla-deployment-kit) - [tesseract](#tesseract) - [testpath](#testpath) - [TetGen](#tetgen) - [TEToolkit](#tetoolkit) - [TEtranscripts](#tetranscripts) - [texinfo](#texinfo) - [texlive](#texlive) - [Text-CSV](#text-csv) - [TFEA](#tfea) - [Theano](#theano) - [ThemisPy](#themispy) - [THetA](#theta) - [thurstonianIRT](#thurstonianirt) - [TiCCutils](#ticcutils) - [tidybayes](#tidybayes) - [tidymodels](#tidymodels) - [Tika](#tika) - [TiMBL](#timbl) - [time](#time) - [TINKER](#tinker) - [TinyDB](#tinydb) - [TinyXML](#tinyxml) - [Tk](#tk) - [Tkinter](#tkinter) - [TM-align](#tm-align) - [tMAE](#tmae) - [tmap](#tmap) - [tmux](#tmux) - [TN93](#tn93) - [TOBIAS](#tobias) - [ToFu](#tofu) - [Togl](#togl) - [tokenizers](#tokenizers) - [Tombo](#tombo) - [TOML-Fortran](#toml-fortran) - [topaz](#topaz) - [TopHat](#tophat) - [torchaudio](#torchaudio) - [torchdata](#torchdata) - [torchinfo](#torchinfo) - [torchsampler](#torchsampler) - [torchtext](#torchtext) - [torchvision](#torchvision) - [TotalView](#totalview) - [tqdm](#tqdm) - [Tracer](#tracer) - [TranscriptClean](#transcriptclean) - [TransDecoder](#transdecoder) - [Transformers](#transformers) - [Transrate](#transrate) - [travis](#travis) - [TRAVIS-Analyzer](#travis-analyzer) - [treatSens](#treatsens) - [TreeMix](#treemix) - [TreeShrink](#treeshrink) - [TRF](#trf) - [Triangle](#triangle) - [Trilinos](#trilinos) - [Trim_Galore](#trim_galore) - [trimAl](#trimal) - [trimesh](#trimesh) - [Trimmomatic](#trimmomatic) - [Trinity](#trinity) - [TRIQS](#triqs) - [TRIQS-cthyb](#triqs-cthyb) - [TRIQS-dft_tools](#triqs-dft_tools) - [TRIQS-tprf](#triqs-tprf) - [TRUST](#trust) - [TRUST4](#trust4) - [Trycycler](#trycycler) - [tsne](#tsne) - [TurboVNC](#turbovnc) - [TVB](#tvb) - [tvb-data](#tvb-data) - [TVB-deps](#tvb-deps) - [tvb-framework](#tvb-framework) - [tvb-library](#tvb-library) - [TWL-NINJA](#twl-ninja) - [typing-extensions](#typing-extensions)
 
 
 ### tabix
@@ -32895,6 +32938,16 @@ version  |versionsuffix     |toolchain
 ``1.2.4``|``-Python-2.7.14``|``intel/2017b``
 ``1.2.6``|``-Python-3.7.2`` |``intel/2019a``
 ``1.2.6``|``-Python-3.8.2`` |``intel/2020a``
+
+### task-spooler
+
+task spooler is a Unix batch system where the tasks spooled run one after the other.
+
+*homepage*: <http://viric.name/soft/ts/>
+
+version  |toolchain
+---------|------------------
+``1.0.2``|``GCCcore/11.3.0``
 
 ### taxator-tk
 
@@ -34181,10 +34234,10 @@ version     |versionsuffix    |toolchain
 ``4.3.0``   |                 |``GCCcore/11.3.0``
 ``4.4.0``   |                 |``GCCcore/10.3.0``
 
-### U
+## U
 
 
-[UCC](#ucc) - [UCC-CUDA](#ucc-cuda) - [UCLUST](#uclust) - [UCX](#ucx) - [UCX-CUDA](#ucx-cuda) - [ucx-py](#ucx-py) - [udocker](#udocker) - [UDUNITS](#udunits) - [UFL](#ufl) - [umap-learn](#umap-learn) - [UMI-tools](#umi-tools) - [umi4cPackage](#umi4cpackage) - [umis](#umis) - [UNAFold](#unafold) - [uncertainty-calibration](#uncertainty-calibration) - [Unicycler](#unicycler) - [Unidecode](#unidecode) - [unimap](#unimap) - [units](#units) - [unixODBC](#unixodbc) - [unrar](#unrar) - [UnZip](#unzip) - [UQTk](#uqtk) - [USEARCH](#usearch) - [UShER](#usher) - [USPEX](#uspex) - [utf8proc](#utf8proc) - [util-linux](#util-linux)
+[UCC](#ucc) - [UCC-CUDA](#ucc-cuda) - [UCLUST](#uclust) - [UCX](#ucx) - [UCX-CUDA](#ucx-cuda) - [ucx-py](#ucx-py) - [UCX-ROCm](#ucx-rocm) - [udocker](#udocker) - [UDUNITS](#udunits) - [UFL](#ufl) - [umap-learn](#umap-learn) - [UMI-tools](#umi-tools) - [umi4cPackage](#umi4cpackage) - [umis](#umis) - [UNAFold](#unafold) - [uncertainty-calibration](#uncertainty-calibration) - [Unicycler](#unicycler) - [Unidecode](#unidecode) - [unimap](#unimap) - [units](#units) - [unixODBC](#unixodbc) - [unrar](#unrar) - [UnZip](#unzip) - [UQTk](#uqtk) - [USEARCH](#usearch) - [UShER](#usher) - [USPEX](#uspex) - [utf8proc](#utf8proc) - [util-linux](#util-linux)
 
 
 ### UCC
@@ -34265,6 +34318,16 @@ UCX-Py is the Python interface for UCX, a low-level high-performance networking 
 version   |toolchain
 ----------|--------------
 ``0.21.0``|``foss/2020b``
+
+### UCX-ROCm
+
+Unified Communication X An open-source production grade communication framework for data centric and high-performance applications  This module adds the UCX ROCm support. 
+
+*homepage*: <http://www.openucx.org/>
+
+version   |versionsuffix  |toolchain
+----------|---------------|------------------
+``1.11.2``|``-ROCm-4.5.0``|``GCCcore/11.2.0``
 
 ### udocker
 
@@ -34525,7 +34588,7 @@ version   |toolchain
 ``2.38``  |``GCCcore/11.3.0``
 ``2.38.1``|``GCCcore/12.2.0``
 
-### V
+## V
 
 
 [V8](#v8) - [Vala](#vala) - [Valgrind](#valgrind) - [Vampir](#vampir) - [Vampire](#vampire) - [VarDict](#vardict) - [variant_tools](#variant_tools) - [VariantMetaCaller](#variantmetacaller) - [VarScan](#varscan) - [vartools](#vartools) - [VASP](#vasp) - [VAtools](#vatools) - [vawk](#vawk) - [VBZ-Compression](#vbz-compression) - [VCF-kit](#vcf-kit) - [vcflib](#vcflib) - [vcfnp](#vcfnp) - [VCFtools](#vcftools) - [VEGAS](#vegas) - [velocyto](#velocyto) - [Velvet](#velvet) - [VEP](#vep) - [verifyBamID](#verifybamid) - [VERSE](#verse) - [VESTA](#vesta) - [ViennaRNA](#viennarna) - [Vim](#vim) - [VirSorter](#virsorter) - [VirtualGL](#virtualgl) - [Virtuoso-opensource](#virtuoso-opensource) - [VisPy](#vispy) - [VMD](#vmd) - [VMTK](#vmtk) - [voltools](#voltools) - [vorbis-tools](#vorbis-tools) - [Voro++](#voro++) - [vsc-base](#vsc-base) - [vsc-install](#vsc-install) - [vsc-mympirun](#vsc-mympirun) - [vsc-mympirun-scoop](#vsc-mympirun-scoop) - [vsc-processcontrol](#vsc-processcontrol) - [VSEARCH](#vsearch) - [vt](#vt) - [VTK](#vtk) - [VTune](#vtune) - [VV](#vv) - [VXL](#vxl)
@@ -35141,7 +35204,7 @@ version   |toolchain
 ----------|--------------
 ``1.18.0``|``foss/2018a``
 
-### W
+## W
 
 
 [wandb](#wandb) - [Wannier90](#wannier90) - [WannierTools](#wanniertools) - [Wayland](#wayland) - [Waylandpp](#waylandpp) - [WCT](#wct) - [wcwidth](#wcwidth) - [webin-cli](#webin-cli) - [WebKitGTK+](#webkitgtk+) - [WebSocket++](#websocket++) - [WEKA](#weka) - [wget](#wget) - [wgsim](#wgsim) - [WHAM](#wham) - [WhatsHap](#whatshap) - [wheel](#wheel) - [WIEN2k](#wien2k) - [WildMagic](#wildmagic) - [Winnowmap](#winnowmap) - [WisecondorX](#wisecondorx) - [WISExome](#wisexome) - [wkhtmltopdf](#wkhtmltopdf) - [worker](#worker) - [wpebackend-fdo](#wpebackend-fdo) - [WPS](#wps) - [WRF](#wrf) - [WRF-Fire](#wrf-fire) - [wrf-python](#wrf-python) - [wtdbg2](#wtdbg2) - [wxPropertyGrid](#wxpropertygrid) - [wxPython](#wxpython) - [wxWidgets](#wxwidgets)
@@ -35545,7 +35608,7 @@ version  |toolchain
 ``3.2.0``|``GCC/11.2.0``
 ``3.2.1``|``GCC/11.3.0``
 
-### X
+## X
 
 
 [X11](#x11) - [x13as](#x13as) - [x264](#x264) - [x265](#x265) - [XALT](#xalt) - [xarray](#xarray) - [xbitmaps](#xbitmaps) - [xcb-proto](#xcb-proto) - [xcb-util](#xcb-util) - [xcb-util-image](#xcb-util-image) - [xcb-util-keysyms](#xcb-util-keysyms) - [xcb-util-renderutil](#xcb-util-renderutil) - [xcb-util-wm](#xcb-util-wm) - [xCell](#xcell) - [XCFun](#xcfun) - [XCrySDen](#xcrysden) - [Xerces-C++](#xerces-c++) - [xESMF](#xesmf) - [xextproto](#xextproto) - [xf86vidmodeproto](#xf86vidmodeproto) - [XGBoost](#xgboost) - [XGrafix](#xgrafix) - [xineramaproto](#xineramaproto) - [XKeyboardConfig](#xkeyboardconfig) - [XlsxWriter](#xlsxwriter) - [XMDS2](#xmds2) - [Xmipp](#xmipp) - [xmitgcm](#xmitgcm) - [XML-Compile](#xml-compile) - [XML-LibXML](#xml-libxml) - [XML-Parser](#xml-parser) - [xmlf90](#xmlf90) - [XMLSec](#xmlsec) - [XMLStarlet](#xmlstarlet) - [xonsh](#xonsh) - [xorg-macros](#xorg-macros) - [XPLOR-NIH](#xplor-nih) - [xprop](#xprop) - [xproto](#xproto) - [XSD](#xsd) - [XTandem](#xtandem) - [xtb](#xtb) - [xtensor](#xtensor) - [xtrans](#xtrans) - [Xvfb](#xvfb) - [xxd](#xxd) - [xxHash](#xxhash) - [XZ](#xz)
@@ -36147,7 +36210,7 @@ version  |versionsuffix      |toolchain
 ``5.2.5``|                   |``GCCcore/10.1.0``, ``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/9.3.0``
 ``5.2.7``|                   |``GCCcore/12.2.0``
 
-### Y
+## Y
 
 
 [YACS](#yacs) - [Yade](#yade) - [yaff](#yaff) - [Yambo](#yambo) - [yaml-cpp](#yaml-cpp) - [YANK](#yank) - [YAPS](#yaps) - [Yasm](#yasm) - [YAXT](#yaxt) - [Yices](#yices)
@@ -36276,7 +36339,7 @@ version  |toolchain
 ---------|------------------
 ``2.6.2``|``GCCcore/10.2.0``
 
-### Z
+## Z
 
 
 [Z3](#z3) - [zarr](#zarr) - [ZeroMQ](#zeromq) - [zfp](#zfp) - [Zgoubi](#zgoubi) - [zingeR](#zinger) - [Zip](#zip) - [zlib](#zlib) - [zlib-ng](#zlib-ng) - [zlibbioc](#zlibbioc) - [Zopfli](#zopfli) - [ZPAQ](#zpaq) - [zsh](#zsh) - [zstd](#zstd)
