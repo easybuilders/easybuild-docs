@@ -1,6 +1,6 @@
 # Constants available (only) in configuration files {: #avail_cfgfile_constants }
 
-### Only in 'DEFAULT' section:
+## Only in 'DEFAULT' section:
 
 Constant name             |Constant help                                      |Constant value
 --------------------------|---------------------------------------------------|-------------------------------------------------------------------

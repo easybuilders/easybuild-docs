@@ -29,8 +29,7 @@ Template name       |Template value
 ``%(rshortver)s``   |short version for R (<major>.<minor>)
 ``%(rver)s``        |full version for R
 
-Template names/values as set in easyconfig
-------------------------------------------
+## Template names/values as set in easyconfig
 
 * ``%(bitbucket_account)s``
 * ``%(github_account)s``
