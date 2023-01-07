@@ -54,7 +54,7 @@
 `required_linked_shared_libs`|List of shared libraries (names, file names, or paths) which must be linked in all installed binaries/libraries                          |`[]`
 `runtest`                    |Indicates if a test should be run after make; should specify argument after make (for e.g.,"test" for make test)                         |`None`
 `sanity_check_commands`      |format: [(name, options)] e.g. [('gzip','-h')]. Using a non-tuple is equivalent to (name, '-h')                                          |`[]`
-`sanity_check_paths`         |List of files and directories to check (format: {'files':<list>, 'dirs':<list>})                                                         |`{}`
+`sanity_check_paths`         |List of files and directories to check (format: {'files':[list], 'dirs':[list]})                                                         |`{}`
 `skip`                       |Skip existing software                                                                                                                   |`False`
 `skipsteps`                  |Skip these steps                                                                                                                         |`[]`
 `source_urls`                |List of URLs for source files                                                                                                            |`[]`
@@ -83,7 +83,7 @@
 
 **Parameter name**       |**Description**                                                      |**Default value**
 -------------------------|---------------------------------------------------------------------|-----------------
-`allow_system_deps`      |Allow listed system dependencies (format: (<name>, <version>))       |`[]`
+`allow_system_deps`      |Allow listed system dependencies (format: ([name], [version]))       |`[]`
 `builddependencies`      |List of build dependencies                                           |`[]`
 `dependencies`           |List of dependencies                                                 |`[]`
 `hiddendependencies`     |List of dependencies available as hidden modules                     |`[]`
