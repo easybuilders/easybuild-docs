@@ -15,18 +15,18 @@ Template name              |Template value
 ## Template names/values for (short) software versions
 
 Template name       |Template value
---------------------|--------------------------------------------
-``%(cudashortver)s``|short version for CUDA (<major>.<minor>)
+--------------------|------------------------------------------------
+``%(cudashortver)s``|short version for CUDA (``<major>.<minor>``)
 ``%(cudaver)s``     |full version for CUDA
-``%(cudashortver)s``|short version for CUDAcore (<major>.<minor>)
+``%(cudashortver)s``|short version for CUDAcore (``<major>.<minor>``)
 ``%(cudaver)s``     |full version for CUDAcore
-``%(javashortver)s``|short version for Java (<major>.<minor>)
+``%(javashortver)s``|short version for Java (``<major>.<minor>``)
 ``%(javaver)s``     |full version for Java
-``%(perlshortver)s``|short version for Perl (<major>.<minor>)
+``%(perlshortver)s``|short version for Perl (``<major>.<minor>``)
 ``%(perlver)s``     |full version for Perl
-``%(pyshortver)s``  |short version for Python (<major>.<minor>)
+``%(pyshortver)s``  |short version for Python (``<major>.<minor>``)
 ``%(pyver)s``       |full version for Python
-``%(rshortver)s``   |short version for R (<major>.<minor>)
+``%(rshortver)s``   |short version for R (``<major>.<minor>``)
 ``%(rver)s``        |full version for R
 
 ## Template names/values as set in easyconfig
