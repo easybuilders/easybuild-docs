@@ -8,17 +8,27 @@ from pathlib import Path
 import mkdocs_gen_files
 
 
-# remove the problematic py2.py and symlink the py3.py in its place
-Path("src/easybuild/tools/py2vs3/py2.py").unlink(missing_ok=True)
-Path("src/easybuild/tools/py2vs3/py2.py").symlink_to(Path("py3.py"))
+EB_FRAMEWORK = "src/easybuild-framework"
+
+if not Path(f"{EB_FRAMEWORK}/easybuild").is_dir():
+    print("WARNING  -  EasyBuild Framework is not available. API documentation will not be generated.")
+    exit(0)
+
+
+try:
+    # remove the problematic py2.py and symlink the py3.py in its place
+    Path(f"{EB_FRAMEWORK}/easybuild/tools/py2vs3/py2.py").unlink(missing_ok=True)
+    Path(f"{EB_FRAMEWORK}/easybuild/tools/py2vs3/py2.py").symlink_to(Path("py3.py"))
+except FileNotFoundError:
+    print("WARNING  -  Unable to create py2.py -> py3.py symlink")
 
 # build a navigation for the menu and a dictionary of navigations for each section
 menu_nav = mkdocs_gen_files.Nav()
 navs = {}
 
-for path in sorted(Path("src/easybuild/").rglob("*.py")):
-    module_path = path.relative_to("src").with_suffix("")
-    doc_path = path.relative_to("src").with_suffix(".md")
+for path in sorted(Path(f"{EB_FRAMEWORK}/easybuild/").rglob("*.py")):
+    module_path = path.relative_to(EB_FRAMEWORK).with_suffix("")
+    doc_path = path.relative_to(EB_FRAMEWORK).with_suffix(".md")
     full_doc_path = Path("api", doc_path)
 
     parts = list(module_path.parts)
