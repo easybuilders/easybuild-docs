@@ -12,4 +12,4 @@ jobs:
       - name: MarkdownLint mdl Action
         uses: actionshub/markdownlint@v2.1.2
         with:
-          filesToIgnoreRegex: "(docs\\/demos\\/.*)"
+          filesToIgnoreRegex: "(docs\\/demos\\/.*|docs\\/version-specific\\/(supported-software|generic-easyblocks).md)"
