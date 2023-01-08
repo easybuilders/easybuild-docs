@@ -122,11 +122,13 @@ do
 done
 
 tcname=`cat $temp_tc | head -1`
-echo -n "[${tcname}](#${tcname})" >> toolchain-opts.md
+tcnamelower=$(echo $tcname | tr '[:upper:]' '[:lower:]')
+echo -n "[${tcname}](#${tcnamelower})" >> toolchain-opts.md
 
 cat $temp_tc | sed 1d | while read tcname
 do
-    echo -n " - [${tcname}](#${tcname})" >> toolchain-opts.md
+    tcnamelower=$(echo $tcname | tr '[:upper:]' '[:lower:]')
+    echo -n " - [${tcname}](#${tcnamelower})" >> toolchain-opts.md
 done
 echo >> toolchain-opts.md
 
