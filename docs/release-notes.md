@@ -103,7 +103,7 @@ feature release
 
 - added easyconfigs for `foss/2022b`, `intel/2022b` common toolchains ([#16961](https://github.com/easybuilders/easybuild-easyconfigs/pull/16961) and [#16962](https://github.com/easybuilders/easybuild-easyconfigs/pull/16962))
 
-    - see also https://docs.easybuild.io/en/latest/Common-toolchains.html
+    - see also <https://docs.easybuild.io/en/latest/Common-toolchains.html>
 
 - added easyconfigs for NVHPC-based toolchains `nvompi/2022.07` and `nvofbf/2022.07` ([#16724](https://github.com/easybuilders/easybuild-easyconfigs/pull/16724))
 
