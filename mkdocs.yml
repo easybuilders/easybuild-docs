@@ -123,6 +123,8 @@ extra:
   analytics:
     provider: google
     property: G-BLVCH6991S
+  easybuild:
+    version: 4.7.0
   # add links in bottom right
   social:
     - icon: fontawesome/brands/twitter
@@ -150,6 +152,7 @@ plugins:
         - docs/gen_ref_pages.py
   - literate-nav:
       nav_file: summary.md
+  - macros
   - section-index
   # show revision date at bottom of each page
   - git-revision-date-localized:
