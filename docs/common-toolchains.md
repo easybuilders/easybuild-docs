@@ -207,7 +207,7 @@ installation the toolchain.
 
 ## More information about toolchains
 
-Please see the [List of known toolchains](version-specific/eb-list-toolchains.md) for how to obtain a listing of
+Please see the [List of known toolchains](version-specific/toolchains.md) for how to obtain a listing of
 the currently known toolchains.
 
 For a detailed listing of the compiler options available with each
