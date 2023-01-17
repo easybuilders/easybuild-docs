@@ -1606,16 +1606,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.easybuild.io/version-specific/eb-list-easyblocks/</loc>
-         <lastmod>2023-01-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.easybuild.io/version-specific/eb-list-toolchains/</loc>
-         <lastmod>2023-01-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.easybuild.io/version-specific/generic-easyblocks/</loc>
          <lastmod>2023-01-17</lastmod>
          <changefreq>daily</changefreq>
@@ -1631,7 +1621,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.easybuild.io/version-specific/toolchain/</loc>
+         <loc>https://docs.easybuild.io/version-specific/toolchains/</loc>
          <lastmod>2023-01-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
