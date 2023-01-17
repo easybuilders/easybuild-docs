@@ -23,6 +23,7 @@ jobs:
         with:
           repository: easybuilders/easybuild-framework
           path: src/easybuild-framework
+          ref: main
 
       - name: install mkdocs
         run: |
