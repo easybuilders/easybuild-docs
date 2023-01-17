@@ -4,7 +4,7 @@
 
 Welcome to the documentation of **[EasyBuild](https://easybuild.io) (version {{ easybuild.version }})**.
 
-Use the menu to navigate, or use the search box (top right).
+Use the menu to navigate, or use the search feature (top right).
 
 See also the [EasyBuild tutorial](https://easybuilders.github.io/easybuild-tutorial) (separate website).
 
