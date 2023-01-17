@@ -160,6 +160,7 @@ plugins:
       exclude:
         - api/easybuild/*
         - api/summary.md
+        - index.md
   # necessary for search to work
   - search
   # redirects for original EasyBuild documentation to avoid broken URLs
