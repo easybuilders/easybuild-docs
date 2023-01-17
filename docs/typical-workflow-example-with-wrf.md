@@ -155,8 +155,7 @@ $ eb WRF-4.0.2-foss-2018b-dmpar.eb --robot
 Once the installation has succeeded, modules will be available for WRF and all of its dependencies:
 
 ``` console
-$ module load WRF
-$ module list
+$ module load WRF/4.0.2-foss-2018b-dmpar
 $ module list
 
 Currently Loaded Modules:
@@ -174,5 +173,4 @@ Currently Loaded Modules:
  12) OpenBLAS/0.3.1-GCC-7.3.0-2.30
 ```
 
-For more information, see the other topics discussed in the documentation (see [Introductory topics][contents]).
-
+For more information, see also [Using EasyBuild](using-easybuild.md).

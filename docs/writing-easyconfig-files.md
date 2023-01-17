@@ -89,7 +89,7 @@ A handful of easyconfig parameters are *mandatory*:
     - format: dictionary with name/version keys, e.g.,
         `{'name': 'foo', 'version': '1.2.3'}`
     - a list of supported toolchains can be found
-        [here][vsd_list_toolchains]
+        [here](version-specific/toolchains.md)
 
 Remarks:
 
@@ -974,7 +974,7 @@ sources = [SOURCELOWER_TAR_GZ]  # gcc-4.8.3.tar.gz
 - [License constants available for easyconfig files][avail_easyconfig_licenses]
 - [List of available easyblocks][vsd_list_easyblocks]
 - [List of available toolchain options][avail_toolchain_opts]
-- [List of known toolchains][vsd_list_toolchains]
+- [List of known toolchains](version-specific/toolchains.md)
 - [List of supported software][list_software]
 - [Overview of generic easyblocks][generic_easyblocks]
 - [Templates available for easyconfig files][avail_easyconfig_templates]

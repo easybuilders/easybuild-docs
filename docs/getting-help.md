@@ -1,6 +1,6 @@
 # Getting help {: #getting_help }
 
-Having trouble? We would like to help!
+Having trouble with EasyBuild? The EasyBuild community would like to help!
 
 * Search this documentation using the search box on top;
 * Search for information in the [archives of the EasyBuild mailing list](https://lists.ugent.be/wws/arc/easybuild);
@@ -8,8 +8,9 @@ Having trouble? We would like to help!
 * Check the output of ``eb --help``;
 * Ask a question in the [EasyBuild Slack channel](https://easybuild.io/join-slack);
 * Consider participating in an [EasyBuild conference call](https://github.com/easybuilders/easybuild/wiki/Conference-calls);
-* Report issues with EasyBuild framework in the [``easybuild-framework``](https://github.com/easybuilders/easybuild-framework/issues) GitHub repository;
-* Report issues with easyblocks in the [``easybuild-easyblocks``](https://github.com/easybuilders/easybuild-easyblocks/issues) GitHub repository;
-* Report issues with easyconfigs in the [``easybuild-easyconfigs``](https://github.com/easybuilders/easybuild-easyconfigs/issues) GitHub repository;
-* Report issues with the EasyBuild documentation in the [``easybuild-docs``](https://github.com/easybuilders/easybuild-docs/issues) GitHub repository;
-* Report issues on other aspects in the general [``easybuild``](https://github.com/easybuilders/easybuild/issues) GitHub repository;
+* Ask a question or report a problem:
+    * for EasyBuild framework in the [`easybuilders/easybuild-framework` GitHub repository](https://github.com/easybuilders/easybuild-framework/issues)
+    * for easyblocks in the [`easybuilders/easybuild-easyblocks` GitHub repository](https://github.com/easybuilders/easybuild-easyblocks/issues)
+    * for easyconfigs in the [`easybuilders/easybuild-easyconfigs` GitHub repository](https://github.com/easybuilders/easybuild-easyconfigs/issues)
+    * for EasyBuild in general in the [`easybuilders/easybuild` GitHub repository](https://github.com/easybuilders/easybuild/issues)
+    * for the EasyBuild documentation in the [`easybuilders/easybuild-docs` GitHub repository](https://github.com/easybuilders/easybuild-docs/issues)

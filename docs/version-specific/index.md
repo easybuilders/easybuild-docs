@@ -7,7 +7,7 @@
 * [License constants available for easyconfig files](easyconfig-license-constants.md)
 * [List of available easyblocks](easyblocks.md)
 * [List of available toolchain options](toolchain-opts.md)
-* [List of known toolchains](eb-list-toolchains.md)
+* [List of known toolchains](toolchains.md)
 * [List of supported software](supported-software.md)
 * [Overview of EasyBuild configuration options](eb-help.md)
 * [Overview of generic easyblocks](generic-easyblocks.md)
