@@ -17,8 +17,8 @@ extra_css:
 extra_javascript:
   - js/asciinema-player-2.6.1.js
 repo_name: EasyBuild @ GitHub
-repo_url: https://github.com/easybuilders/easybuild-docs
-edit_uri: easybuild-docs/edit/main/docs
+repo_url: https://github.com/easybuilders/easybuild
+edit_uri: https://github.com/easybuilders/easybuild-docs/blob/main/docs
 
 nav:
   - Home: index.md
