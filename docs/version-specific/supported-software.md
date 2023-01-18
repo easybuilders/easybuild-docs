@@ -1,4 +1,9 @@
-# List of supported software {: #list_software }
+# List of supported software
+
+!!! note
+
+    This page contains a lot of information, it may take a while to load.
+
 
 EasyBuild supports 2906 different software packages (incl. toolchains, bundles):
 
@@ -27577,8 +27582,6 @@ version   |versionsuffix                |toolchain
 ``1.12.1``|                             |``foss/2021a``, ``foss/2022a``
 ``1.12.1``|``-CUDA-11.3.1``             |``foss/2021a``
 ``1.12.1``|``-CUDA-11.7.0``             |``foss/2022a``
-``1.13.1``|                             |``foss/2022a``
-``1.13.1``|``-CUDA-11.7.0``             |``foss/2022a``
 
 ### PyTorch-Geometric
 
