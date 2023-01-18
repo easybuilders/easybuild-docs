@@ -147,17 +147,23 @@ echo "* [List of available toolchain options](toolchain-opts.md)" >> $overview
 
 #  list-toolchain doc
 echo "eb --list-toolchains"
-eb --list-toolchains --output-format md | sed 's/^\(# .*\)/\1 {: #toolchains_table }/g' > eb-list-toolchains.md
-echo >> eb-list-toolchains.md
-echo "*(see also* \`\`eb --list-toolchains\`\` *)*" >> eb-list-toolchains.md
+eb --list-toolchains --output-format md | sed 's/^\(# .*\)/\1 {: #toolchains_table }/g' > toolchains.md
+echo >> toolchains.md
+echo "*(see also* \`\`eb --list-toolchains\`\` *)*" >> toolchains.md
 
-echo "* [List of known toolchains](eb-list-toolchains.md)" >> $overview
+echo "* [List of known toolchains](toolchains.md)" >> $overview
 
 ###################################################################################################
 
 echo "eb --list-software=detailed"
-skip_lines='Temporary log file|Processed.*easyconfigs|Found.*different software packages'
-eb --list-software=detailed --output-format=md | egrep -v $skip_lines | sed 's/^\(# .*\)/\1 {: #list_software }/g' > supported-software.md
+skip_lines='Temporary log file|Processed.*easyconfigs|Found.*different software packages|^# List of supported software'
+echo "# List of supported software" > supported-software.md
+echo >> supported-software.md
+echo "!!! note" >> supported-software.md
+echo >> supported-software.md
+echo "    This page contains a lot of information, it may take a while to load." >> supported-software.md
+echo >> supported-software.md
+eb --list-software=detailed --output-format=md | egrep -v $skip_lines >> supported-software.md
 
 echo "* [List of supported software](supported-software.md)" >> $overview
 
