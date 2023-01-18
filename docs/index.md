@@ -1,4 +1,4 @@
-# EasyBuild documentation
+# EasyBuild Documentation
 
 ![EasyBuild logo](img/easybuild_logo_2022_vertical_dark_bg_transparent.png){: align=left style="height:455px;width:400px"}
 
