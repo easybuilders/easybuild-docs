@@ -2,1627 +2,1627 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.easybuild.io/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/archived-easyconfigs/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/backup-modules/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/changelog-docs/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/code-style/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/common-toolchains/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/configuration/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/containers/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/contributing/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/controlling-compiler-optimization-flags/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/cray-support/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/deprecated-easyconfigs/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/deprecated-functionality/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/detecting-loaded-modules/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/easyconfig-files-local-variables/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/easyconfigs-search-index/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/easystack-files/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/experimental-features/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/extended-dry-run/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/getting-help/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/hooks/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/implementing-easyblocks/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/including-additional-python-modules/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/installation-alternative/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/installation/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/installing-environment-modules-without-root-permissions/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/installing-extensions-in-parallel/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/installing-lmod-without-root-permissions/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/integration-with-github/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/locks/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/log-files/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/maintainers/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/manipulating-dependencies/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/packaging-support/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/partial-installations/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/progress-bars/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/python-2-3-compatibility/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/release-notes/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/removed-functionality/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/rpath-support/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/submitting-jobs/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/system-toolchain/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/terminology/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/tracing-progress/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/typical-workflow-example-with-wrf/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/unit-tests/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/useful-scripts/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/using-easybuild/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/using-external-modules/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/what-is-easybuild/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/wrapping-dependencies/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/writing-easyconfig-files/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/writing-yeb-easyconfig-files/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>None</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/main/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/base/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/base/exceptions/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/base/fancylogger/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/base/frozendict/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/base/generaloption/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/base/optcomplete/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/base/rest/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/base/testing/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/base/wrapper/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/framework/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/framework/easyblock/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/framework/easystack/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/framework/extension/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/framework/extensioneasyblock/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/framework/easyconfig/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/framework/easyconfig/constants/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/framework/easyconfig/default/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/framework/easyconfig/easyconfig/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/framework/easyconfig/licenses/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/framework/easyconfig/parser/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/framework/easyconfig/style/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/framework/easyconfig/templates/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/framework/easyconfig/tools/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/framework/easyconfig/tweak/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/framework/easyconfig/types/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/framework/easyconfig/format/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/framework/easyconfig/format/convert/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/framework/easyconfig/format/format/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/framework/easyconfig/format/one/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/framework/easyconfig/format/pyheaderconfigobj/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/framework/easyconfig/format/two/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/framework/easyconfig/format/version/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/framework/easyconfig/format/yeb/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/scripts/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/scripts/bootstrap_eb/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/scripts/clean_gists/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/scripts/findPythonDeps/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/scripts/fix_docs/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/scripts/mk_tmpl_easyblock_for/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/scripts/rpath_args/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/cgmpich/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/cgmpolf/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/cgmvapich2/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/cgmvolf/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/cgompi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/cgoolf/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/clanggcc/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/craycce/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/craygnu/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/crayintel/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/craypgi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/dummy/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/fcc/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/ffmpi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/foss/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/fosscuda/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/fujitsu/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gcc/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gcccore/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gcccuda/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gfbf/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gimkl/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gimpi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gimpic/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/giolf/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/giolfc/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gmacml/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gmkl/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gmklc/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gmpich/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gmpich2/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gmpit/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gmpolf/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gmvapich2/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gmvolf/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gnu/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/goalf/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gobff/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/goblf/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gofbf/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/golf/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/golfc/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gomkl/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gomklc/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gompi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gompic/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/goolf/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/goolfc/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gpsmpi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gpsolf/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gqacml/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gsmpi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/gsolf/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/iccifort/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/iccifortcuda/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/ictce/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/iibff/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/iimkl/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/iimklc/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/iimpi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/iimpic/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/iiqmpi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/impich/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/impmkl/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/intel-para/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/intel/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/intel_compilers/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/intelcuda/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/iomkl/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/iomklc/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/iompi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/iompic/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/ipsmpi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/iqacml/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/ismkl/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/nvhpc/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/nvofbf/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/nvompi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/nvompic/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/nvpsmpi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/nvpsmpic/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/pgi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/pmkl/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/pomkl/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/pompi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/system/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/xlcxlf/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/xlmpich/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/xlmpich2/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/xlmvapich2/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/xlompi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/compiler/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/compiler/clang/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/compiler/craype/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/compiler/cuda/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/compiler/dummycompiler/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/compiler/fujitsu/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/compiler/gcc/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/compiler/ibmxl/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/compiler/intel_compilers/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/compiler/inteliccifort/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/compiler/nvhpc/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/compiler/pgi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/compiler/systemcompiler/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/fft/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/fft/fftw/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/fft/fujitsufftw/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/fft/intelfftw/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/linalg/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/linalg/acml/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/linalg/atlas/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/linalg/blacs/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/linalg/blis/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/linalg/flame/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/linalg/flexiblas/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/linalg/fujitsussl/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/linalg/gotoblas/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/linalg/intelmkl/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/linalg/lapack/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/linalg/libsci/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/linalg/openblas/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/linalg/scalapack/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/mpi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/mpi/craympich/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/mpi/fujitsumpi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/mpi/intelmpi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/mpi/mpich/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/mpi/mpich2/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/mpi/mpitrampoline/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/mpi/mvapich2/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/mpi/openmpi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/mpi/psmpi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/mpi/qlogicmpi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/toolchains/mpi/spectrummpi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/asyncprocess/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/build_details/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/build_log/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/config/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/configobj/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/convert/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/docs/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/environment/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/filetools/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/github/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/hooks/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/include/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/jenkins/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/loose_version/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/module_generator/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/modules/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/multidiff/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/options/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/output/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/parallelbuild/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/robot/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/run/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/systemtools/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/testing/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/utilities/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/variables/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/version/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/containers/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/containers/base/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/containers/common/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/containers/docker/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/containers/singularity/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/containers/utils/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/deprecated/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/job/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/job/backend/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/job/gc3pie/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/job/pbs_python/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/job/slurm/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/module_naming_scheme/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/module_naming_scheme/categorized_hmns/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/module_naming_scheme/categorized_mns/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/module_naming_scheme/easybuild_mns/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/module_naming_scheme/hierarchical_mns/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/module_naming_scheme/migrate_from_eb_to_hmns/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/module_naming_scheme/mns/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/module_naming_scheme/toolchain/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/module_naming_scheme/utilities/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/package/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/package/utilities/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/package/package_naming_scheme/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/package/package_naming_scheme/easybuild_pns/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/package/package_naming_scheme/pns/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/py2vs3/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/py2vs3/py2/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/py2vs3/py3/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/repository/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/repository/filerepo/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/repository/gitrepo/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/repository/hgrepo/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/repository/repository/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/repository/svnrepo/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/toolchain/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/toolchain/compiler/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/toolchain/constants/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/toolchain/fft/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/toolchain/linalg/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/toolchain/mpi/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/toolchain/options/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/toolchain/toolchain/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/toolchain/toolchainvariables/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/toolchain/utilities/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/api/easybuild/tools/toolchain/variables/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/demos/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/demos/configuring/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/demos/review-pr/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/easybuild-v4/overview-of-changes/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/easybuild-v4/overview-relocated-functions-constants/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/legacy/configuration/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/version-specific/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/version-specific/config-file-constants/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/version-specific/easyblocks/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/version-specific/easyconfig-constants/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/version-specific/easyconfig-license-constants/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/version-specific/easyconfig-parameters/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/version-specific/easyconfig-templates/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/version-specific/eb-a-wrf/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/version-specific/eb-help/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/version-specific/generic-easyblocks/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/version-specific/supported-software/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/version-specific/toolchain-opts/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.easybuild.io/version-specific/toolchains/</loc>
-         <lastmod>2023-01-17</lastmod>
+         <lastmod>2023-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
