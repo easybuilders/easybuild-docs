@@ -59,13 +59,13 @@ For example:
 ``` yaml
 easyconfigs:
   - PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb:
-    options:
-      from-pr: 15924
-      debug: True
+      options:
+        from-pr: 15924
+        debug: True
   - Hypre-2.25.0-foss-2022a.eb:
   - OpenFOAM-v2206-foss-2022a.eb:
-    options:
-      installpath: /my/custom/installpath
+      options:
+        installpath: /my/custom/installpath
 ```
 
 !!! note
@@ -97,8 +97,8 @@ Specifying short options in an easystack file is allowed, for example:
 ``` yaml
 easyconfigs:
   - OpenFOAM-v2206-foss-2022a.eb:
-    options:
-      D: True
+      options:
+        D: True
 ```
 
 This is not recommended however, as short options are more difficult to interpret by humans.
@@ -113,9 +113,9 @@ These apply to *all* items in the easystack file. For example, if you have an ea
 ``` yaml
 easyconfigs:
   - PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb:
-    options:
-      from-pr: 15924
-      debug: True
+      options:
+        from-pr: 15924
+        debug: True
   - OpenFOAM-v2206-foss-2022a.eb:
 ```
 
