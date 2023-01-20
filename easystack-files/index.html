@@ -5777,13 +5777,13 @@ which will only apply to the installation of a particular easyconfig file.</p>
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">easyconfigs</span><span class="p">:</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">options</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">from-pr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15924</span>
-<span class="w">      </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
+<span class="w">      </span><span class="nt">options</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">from-pr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15924</span>
+<span class="w">        </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Hypre-2.25.0-foss-2022a.eb</span><span class="p">:</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">OpenFOAM-v2206-foss-2022a.eb</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">options</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">installpath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/my/custom/installpath</span>
+<span class="w">      </span><span class="nt">options</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">installpath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/my/custom/installpath</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -5808,8 +5808,8 @@ you are still allowed to use '<code>:</code>' after the easyconfig filename: the
 <p>Specifying short options in an easystack file is allowed, for example:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">easyconfigs</span><span class="p">:</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">OpenFOAM-v2206-foss-2022a.eb</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">options</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">D</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
+<span class="w">      </span><span class="nt">options</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">D</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
 </code></pre></div>
 <p>This is not recommended however, as short options are more difficult to interpret by humans.</p>
 <h2 id="easystack_combining_options">Combining command line options with options in an easystack file<a class="headerlink" href="#easystack_combining_options" title="Permanent link">&para;</a></h2>
@@ -5818,9 +5818,9 @@ These apply to <em>all</em> items in the easystack file. For example, if you hav
 <code>my_easystack.yaml</code></p>
 <div class="highlight"><pre><span></span><code><span class="nt">easyconfigs</span><span class="p">:</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">options</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">from-pr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15924</span>
-<span class="w">      </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
+<span class="w">      </span><span class="nt">options</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">from-pr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15924</span>
+<span class="w">        </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">OpenFOAM-v2206-foss-2022a.eb</span><span class="p">:</span>
 </code></pre></div>
 <p>and you run with</p>
@@ -5868,7 +5868,7 @@ one could easily choose to <em>not</em> build anything labeled <code>gpu</code> 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 23, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 20, 2023</span>
       
     
   </small>
