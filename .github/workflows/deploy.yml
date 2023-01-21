@@ -4,8 +4,10 @@ name: deploy EasyBuild documentation (only on push to main branch)
 on:  # yamllint disable-line rule:truthy
   push:
     branches: main
+permissions:
+  contents: write # to fetch code (actions/checkout) + deploy docs to GitHub Pages (gh-pages branch)
 jobs:
-  build:
+  build-docs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -30,8 +32,11 @@ jobs:
             pip install -r requirements.txt
             mkdocs --version
 
-      - name: build tutorial
+      - name: build docs
         # can't use --strict due to warnings being produced by mkdocs-redirect plugin
         # because we are re-directing .html pages
-        # run: mkdocs build --strict && mkdocs gh-deploy --force
-        run: mkdocs build && mkdocs gh-deploy --force
+        # run: mkdocs build --strict
+        run: mkdocs build
+
+      - name: deploy docs
+        run: mkdocs gh-deploy --force
