@@ -6,9 +6,15 @@ theme:
   logo: img/easybuild_logo.png
   favicon: favicon.ico
   features:
-    - instant
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/
+    - navigation.instant
     - navigation.top
+    - navigation.tracking
+    - toc.follow
     - toc.integrate
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search
+    - search.highlight
+    - search.suggest
   palette:
     scheme: easybuild
 extra_css:
