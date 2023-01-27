@@ -22,6 +22,25 @@ Useful links:
 - The Markdown Guide: <https://www.markdownguide.org>
 - Reference guide for Material for MkDocs: <https://squidfunk.github.io/mkdocs-material/reference>
 
+### Writing
+
+When writing content for the EasyBuild documentation, it is useful to get a live preview of how things will look.
+
+Next to the letting `mkdocs` serve a local copy of the full EasyBuild documentation so you can view it in your browser
+(see below), you can also use online services for this. This will allow you to see a live version of standard
+Markdown, but it will not give you a live preview of the MkDocs specific Markdown extensions.
+
+At <https://markdownlivepreview.com> you can see a live preview while editing content in MarkDown format.
+
+[HackMD (https://hackmd.io)](https://hackmd.io) is a MarkDown note service which provides live previewing of
+the rendered note while you edit in MarkDown format, and *collaborative editing* of content.
+
+Create a new note via <https://hackmd.io/new> to preview your content while editing it in MarkDown,
+and share the note URL with others if you would like to work together on some content.
+
+To save work-in-progress notes and get back to them later, create a dedicated HackMD account,
+or sign in using your GitHub/Google/... account, via <https://hackmd.io/login>.
+
 ## Publishing
 
 The documentation is automatically built and published to <https://docs.easybuild.io> on every push to the `main` branch of this repository.
