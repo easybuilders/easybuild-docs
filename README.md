@@ -27,7 +27,8 @@ Useful links:
 When writing content for the EasyBuild documentation, it is useful to get a live preview of how things will look.
 
 Next to the letting `mkdocs` serve a local copy of the full EasyBuild documentation so you can view it in your browser
-(see below), you can also use online services for this.
+(see below), you can also use online services for this. This will allow you to see a live version of standard
+Markdown, but it will not give you a live preview of the MkDocs specific Markdown extensions.
 
 At <https://markdownlivepreview.com> you can see a live preview while editing content in MarkDown format.
 
