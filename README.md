@@ -2,14 +2,6 @@
 
 This repository contains the *sources* of the EasyBuild documentation, which is hosted at <https://docs.easybuild.io>.
 
-> **Warning**
-> 
-> The sources of the EasyBuild documentation currently still reside at <https://github.com/easybuilders/easybuild/tree/main/docs>.
->
-> We are actively porting the sources from [reStructuredText](https://en.wikipedia.org/wiki/ReStructuredText) format
-> to [MarkDown](https://daringfireball.net/projects/markdown) format.
-
-
 ## Format
 
 The documentation sources are located in the [docs subdirectory](https://github.com/easybuilders/easybuild-docs/tree/main/docs).
