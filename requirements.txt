@@ -1,5 +1,5 @@
 mkdocs
-mkdocs-material==9.0.6
+mkdocs-material
 mkdocs-redirects
 mkdocs-git-revision-date-localized-plugin
 mkdocs-autorefs
