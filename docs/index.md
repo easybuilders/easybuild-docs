@@ -1,6 +1,7 @@
 # EasyBuild Documentation
 
-![EasyBuild logo](img/easybuild_logo_2022_vertical_dark_bg_transparent.png){: align=left style="height:455px;width:400px"}
+![EasyBuild logo](img/easybuild_logo_2022_vertical_dark_bg_transparent.png#only-dark){: align=left style="height:455px;width:400px"}
+![EasyBuild logo](img/easybuild_logo_2022_vertical_light_bg_transparent.png#only-light){: align=left style="height:455px;width:400px"}
 
 Welcome to the documentation of **[EasyBuild](https://easybuild.io) (version {{ easybuild.version }})**.
 
