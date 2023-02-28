@@ -258,7 +258,7 @@ checksums = [('sha512', 'f962008105639f58e9a4455c8057933ab0a5e2f43db8340ae1e1afe
 
 It is also possible to specify alternative checksums using a tuple of
 checksum elements where any match is sufficient (logical OR).
-This is helpful when the release was updated but can still be used
+This is helpful when the release was updated with changes that don't affect the behavior of the software in any way
 (e.g. only doc changes).
 
 ``` python
@@ -270,12 +270,13 @@ A list instead of a tuple denotes that **all** checksums must match (logical AND
 In both cases each element can also be a type-value-tuple:
 
 ``` python
-checksums = [[('size', 42), 'sha256checksum')]  # Placeholder used
+checksums = [[('size', 42), 'sha256checksum']]  # Placeholder used
 ```
 
-Finally a checksum can be specified as a dictionary mapping filenames to checksums.
-This is useful when the source file is specified using e.g. the `%(arch)s` template.
-Again elements (values) can be strings or type-value-tuples.
+Finally, a checksum can be specified as a dictionary mapping filenames to checksums, removing any ambiguity.
+This style is used by Easybuild with `eb --inject-checksums` when 2 or more source files are specified.
+This style is also useful when the source file is specified using e.g. the `%(arch)s` template.
+Again, elements (values) can be strings or type-value-tuples.
 For example:
 ``` python
 checksums = [{
@@ -293,7 +294,7 @@ checksums = [{
 ```
 
 When the checksum cannot be specified for a file
-(e.g. when using a git clone instead of an archive)
+(e.g. when using a git clone instead of an archive),
 a value of `None` can be used to skip the checksum check.
 This is possible in the list of checksums as well as as a value in a dictionary, e.g.:
 ``` python
