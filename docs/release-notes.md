@@ -7708,7 +7708,7 @@ feature release
         in trace output of `run_cmd`
         ([#3168](https://github.com/easybuilders/easybuild-framework/pull/3168))
     - probe external modules for missing metadata that is not provided
-        via extermal module metadata file
+        via external module metadata file
         ([#3174](https://github.com/easybuilders/easybuild-framework/pull/3174))
     - also update `$CMAKE_PREFIX_PATH` and `$CMAKE_LIBRARY_PATH` in
         generated module file
@@ -9144,7 +9144,7 @@ bugfix/update release
         ([#9362](https://github.com/easybuilders/easybuild-easyconfigs/pull/9362))
     - fix linker errors when linking with libhts.a for MetaBAT 2.12.1
         ([#9379](https://github.com/easybuilders/easybuild-easyconfigs/pull/9379))
-    - add egg-info file via patch in VTK v8.2.0, for Pytho 2.7.15,
+    - add egg-info file via patch in VTK v8.2.0, for Python 2.7.15,
         3.7.2, 3.7.4
         ([#9386](https://github.com/easybuilders/easybuild-easyconfigs/pull/9386))
     - promote binutils to a runtime dependency for Python in GCCcore
