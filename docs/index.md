@@ -1,5 +1,27 @@
 # EasyBuild Documentation
 
+---
+
+## Please fill out the EasyBuild User Survey!
+
+![Sampling bias cartoon](img/sampling-bias.png){: align=left style="height:266;width:313px"}
+
+By annual tradition, we are doing a survey to get a better view on the community.
+
+**Please take ~15 min of your time to fill it out:**
+
+<https://www.surveymonkey.com/r/6th_easybuild_user_survey>
+
+**The survey will be closed on Fri 31 March 2023.**
+
+Results will be made public shortly after, and will also be discussed during the *"EasyBuild State of the Union"* talk
+at the next [EasyBuild User Meeting](https://easybuild.io/eum23).
+
+Please consider sharing the survey link with friends or colleagues!
+
+---
+
+
 ![EasyBuild logo](img/easybuild_logo_2022_vertical_dark_bg_transparent.png#only-dark){: align=left style="height:455px;width:400px"}
 ![EasyBuild logo](img/easybuild_logo_2022_vertical_light_bg_transparent.png#only-light){: align=left style="height:455px;width:400px"}
 
