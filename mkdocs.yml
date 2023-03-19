@@ -16,7 +16,16 @@ theme:
     - search.highlight
     - search.suggest
   palette:
-    scheme: easybuild
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 extra_css:
   - stylesheets/extra.css
   - stylesheets/asciinema-player-2.6.1.css
