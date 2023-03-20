@@ -49,9 +49,10 @@ Template name          |Template value
 ## Template values set outside EasyBlock runstep
 
 Template name     |Template value
-------------------|----------------------
+------------------|-------------------------------------------
 ``%(builddir)s``  |Build directory
 ``%(installdir)s``|Installation directory
+``%(start_dir)s`` |Directory in which the build process begins
 
 ## Template values which are defined dynamically
 

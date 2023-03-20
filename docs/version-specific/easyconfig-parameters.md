@@ -54,7 +54,7 @@
 `required_linked_shared_libs`|List of shared libraries (names, file names, or paths) which must be linked in all installed binaries/libraries                          |`[]`
 `runtest`                    |Indicates if a test should be run after make; should specify argument after make (for e.g.,"test" for make test)                         |`None`
 `sanity_check_commands`      |format: [(name, options)] e.g. [('gzip','-h')]. Using a non-tuple is equivalent to (name, '-h')                                          |`[]`
-`sanity_check_paths`         |List of files and directories to check (format: {'files':&lt;list&gt;, 'dirs':&lt;list&gt;})                                                         |`{}`
+`sanity_check_paths`         |List of files and directories to check (format: {'files':&lt;list&gt;, 'dirs':&lt;list&gt;})                                             |`{}`
 `skip`                       |Skip existing software                                                                                                                   |`False`
 `skipsteps`                  |Skip these steps                                                                                                                         |`[]`
 `source_urls`                |List of URLs for source files                                                                                                            |`[]`
@@ -81,16 +81,16 @@
 
 ## Dependencies parameters
 
-**Parameter name**       |**Description**                                                      |**Default value**
--------------------------|---------------------------------------------------------------------|-----------------
-`allow_system_deps`      |Allow listed system dependencies (format: (&lt;name&gt;, &lt;version&gt;))       |`[]`
-`builddependencies`      |List of build dependencies                                           |`[]`
-`dependencies`           |List of dependencies                                                 |`[]`
-`hiddendependencies`     |List of dependencies available as hidden modules                     |`[]`
-`moddependpaths`         |Absolute path(s) to prepend to MODULEPATH before loading dependencies|`None`
-`multi_deps`             |Dict of lists of dependency versions over which to iterate           |`{}`
-`multi_deps_load_default`|Load module for first version listed in multi_deps by default        |`True`
-`osdependencies`         |OS dependencies that should be present on the system                 |`[]`
+**Parameter name**       |**Description**                                                           |**Default value**
+-------------------------|--------------------------------------------------------------------------|-----------------
+`allow_system_deps`      |Allow listed system dependencies (format: (&lt;name&gt;, &lt;version&gt;))|`[]`
+`builddependencies`      |List of build dependencies                                                |`[]`
+`dependencies`           |List of dependencies                                                      |`[]`
+`hiddendependencies`     |List of dependencies available as hidden modules                          |`[]`
+`moddependpaths`         |Absolute path(s) to prepend to MODULEPATH before loading dependencies     |`None`
+`multi_deps`             |Dict of lists of dependency versions over which to iterate                |`{}`
+`multi_deps_load_default`|Load module for first version listed in multi_deps by default             |`True`
+`osdependencies`         |OS dependencies that should be present on the system                      |`[]`
 
 ## License parameters
 
@@ -134,6 +134,7 @@
 `moduleclass`               |Module class to be used for this software                                                                                                                                         |`"base"`
 `moduleforceunload`         |Force unload of all modules when loading the extension                                                                                                                            |`False`
 `moduleloadnoconflict`      |Don't check for conflicts, unload other versions instead                                                                                                                          |`False`
+`modunloadmsg`              |Message that should be printed when generated module is unloaded                                                                                                                  |`{}`
 `recursive_module_unload`   |Recursive unload of all dependencies when unloading module (True/False to hard enable/disable; None implies honoring the --recursive-module-unload EasyBuild configuration setting|`None`
 `site_contacts`             |String/list of strings with site contacts for the software                                                                                                                        |`None`
 `upstream_contacts`         |String/list of strings with upstream contact addresses (e.g., support e-mail, mailing list, bugtracker)                                                                           |`None`
