@@ -5859,6 +5859,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api/easybuild/tools/package/package_naming_scheme/easybuild_deb_friendly_pns/" class="md-nav__link">
+        easybuild_deb_friendly_pns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api/easybuild/tools/package/package_naming_scheme/easybuild_pns/" class="md-nav__link">
         easybuild_pns
       </a>
@@ -7551,6 +7565,11 @@ to generate a module file which sets the PYTHONPATH.</p>
 <td><code>"make"</code></td>
 </tr>
 <tr>
+<td><code>testinstall</code></td>
+<td>Install into temporary directory prior to running the tests.</td>
+<td><code>False</code></td>
+</tr>
+<tr>
 <td><code>unpack_sources</code></td>
 <td>Unpack sources prior to build/install. Defaults to 'True' except for whl files</td>
 <td><code>None</code></td>
@@ -8027,6 +8046,11 @@ Just run the specified command for all sources, and copy specified files to the 
 <td><code>"make"</code></td>
 </tr>
 <tr>
+<td><code>testinstall</code></td>
+<td>Install into temporary directory prior to running the tests.</td>
+<td><code>False</code></td>
+</tr>
+<tr>
 <td><code>unpack_sources</code></td>
 <td>Unpack sources prior to build/install. Defaults to 'True' except for whl files</td>
 <td><code>None</code></td>
@@ -8238,6 +8262,11 @@ Just run the specified command for all sources, and copy specified files to the 
 <td><code>source_urls</code></td>
 <td>List of URLs for source files</td>
 <td><code>['https://pypi.python.org/packages/source/%(nameletter)s/%(name)s']</code></td>
+</tr>
+<tr>
+<td><code>testinstall</code></td>
+<td>Install into temporary directory prior to running the tests.</td>
+<td><code>False</code></td>
 </tr>
 <tr>
 <td><code>unpack_sources</code></td>
@@ -8627,6 +8656,11 @@ Defines custom sanity checks and module environment</p>
 </thead>
 <tbody>
 <tr>
+<td><code>configure_cmd</code></td>
+<td>Configure command to use</td>
+<td><code>"meson"</code></td>
+</tr>
+<tr>
 <td><code>separate_build_dir</code></td>
 <td>Perform build in a separate directory</td>
 <td><code>True</code></td>
@@ -8910,6 +8944,11 @@ Defines custom sanity checks and module environment</p>
 <td><code>['https://pypi.python.org/packages/source/%(nameletter)s/%(name)s']</code></td>
 </tr>
 <tr>
+<td><code>testinstall</code></td>
+<td>Install into temporary directory prior to running the tests.</td>
+<td><code>False</code></td>
+</tr>
+<tr>
 <td><code>unpack_sources</code></td>
 <td>Unpack sources prior to build/install. Defaults to 'True' except for whl files</td>
 <td><code>None</code></td>
@@ -9028,6 +9067,11 @@ Defines custom sanity checks and module environment</p>
 <td><code>source_urls</code></td>
 <td>List of URLs for source files</td>
 <td><code>['https://pypi.python.org/packages/source/%(nameletter)s/%(name)s']</code></td>
+</tr>
+<tr>
+<td><code>testinstall</code></td>
+<td>Install into temporary directory prior to running the tests.</td>
+<td><code>False</code></td>
 </tr>
 <tr>
 <td><code>unpack_sources</code></td>
@@ -9824,6 +9868,11 @@ if an actual version is specified, it is checked against the derived version of 
 <td><code>['https://pypi.python.org/packages/source/%(nameletter)s/%(name)s']</code></td>
 </tr>
 <tr>
+<td><code>testinstall</code></td>
+<td>Install into temporary directory prior to running the tests.</td>
+<td><code>False</code></td>
+</tr>
+<tr>
 <td><code>unpack_sources</code></td>
 <td>Unpack sources prior to build/install. Defaults to 'True' except for whl files</td>
 <td><code>None</code></td>
@@ -9944,6 +9993,11 @@ if an actual version is specified, it is checked against the derived version of 
 <td><code>['https://pypi.python.org/packages/source/%(nameletter)s/%(name)s']</code></td>
 </tr>
 <tr>
+<td><code>testinstall</code></td>
+<td>Install into temporary directory prior to running the tests.</td>
+<td><code>False</code></td>
+</tr>
+<tr>
 <td><code>unpack_sources</code></td>
 <td>Unpack sources prior to build/install. Defaults to 'True' except for whl files</td>
 <td><code>None</code></td>
@@ -10018,7 +10072,7 @@ if an actual version is specified, it is checked against the derived version of 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 6, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 20, 2023</span>
       
     
   </small>

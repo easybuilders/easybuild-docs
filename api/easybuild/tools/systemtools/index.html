@@ -4811,6 +4811,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../package/package_naming_scheme/easybuild_deb_friendly_pns/" class="md-nav__link">
+        easybuild_deb_friendly_pns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../package/package_naming_scheme/easybuild_pns/" class="md-nav__link">
         easybuild_pns
       </a>
@@ -5350,6 +5364,13 @@
         <li class="md-nav__item">
   <a href="#easybuild.tools.systemtools.pick_dep_version" class="md-nav__link">
     pick_dep_version()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.pick_system_specific_value" class="md-nav__link">
+    pick_system_specific_value()
   </a>
   
 </li>
@@ -6746,7 +6767,64 @@ Based on https://stackoverflow.com/a/35683698</p>
 Input can either be:
 * a string value (or None)
 * a dict with options to choose from</p>
-<p>Return value is the version to use.</p>
+<p>Return value is the version to use or False to skip this dependency.</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.tools.systemtools.pick_system_specific_value" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">pick_system_specific_value</span><span class="p">(</span><span class="n">description</span><span class="p">,</span> <span class="n">options_or_value</span><span class="p">,</span> <span class="n">allow_none</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.systemtools.pick_system_specific_value" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Pick an entry for the current system when the input has multiple options</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b>DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>description</code></td>
+          <td class="doc-param-details">
+            <p>Descriptive string about the value to be retrieved. Used for logging.</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>options_or_value</code></td>
+          <td class="doc-param-details">
+            <p>Either a dictionary with options to choose from or a value of any other type</p>
+            <p>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><code>allow_none</code></td>
+          <td class="doc-param-details">
+            <p>When True and no matching arch key was found, return None instead of an error</p>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>False</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
 
   </div>
 

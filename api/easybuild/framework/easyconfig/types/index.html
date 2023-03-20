@@ -2010,6 +2010,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#easybuild.framework.easyconfig.types.to_sanity_check_paths_entry" class="md-nav__link">
+    to_sanity_check_paths_entry()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#easybuild.framework.easyconfig.types.to_toolchain_dict" class="md-nav__link">
     to_toolchain_dict()
   </a>
@@ -4976,6 +4983,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../tools/package/package_naming_scheme/easybuild_deb_friendly_pns/" class="md-nav__link">
+        easybuild_deb_friendly_pns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../tools/package/package_naming_scheme/easybuild_pns/" class="md-nav__link">
         easybuild_pns
       </a>
@@ -6352,6 +6373,28 @@ to a list of dependencies in the correct format</p>
 <p _dirs_:="'dirs':" _file1_="['file1'," _file2a_="('file2a'," _file2b_="'file2b')]," _files_:="'files':" _foo_bar_="['foo/bar']">Example:
     {'files': ['file1', ['file2a', 'file2b]], 'dirs': ['foo/bar']}
     to</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="easybuild.framework.easyconfig.types.to_sanity_check_paths_entry" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">to_sanity_check_paths_entry</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyconfig.types.to_sanity_check_paths_entry" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Convert a 'list of lists and strings' to a 'list of tuples and strings' while allowing dicts of lists or strings</p>
+<p>Example:
+    ['foo', ['bar', 'baz'], {'f42': ['a', 'b']}]
+    to
+    ['foo', ('bar', 'baz'), {'f42': ('a', 'b')}]</p>
 
   </div>
 

@@ -4960,6 +4960,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api/easybuild/tools/package/package_naming_scheme/easybuild_deb_friendly_pns/" class="md-nav__link">
+        easybuild_deb_friendly_pns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api/easybuild/tools/package/package_naming_scheme/easybuild_pns/" class="md-nav__link">
         easybuild_pns
       </a>
@@ -5915,7 +5929,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 <tbody>
 <tr>
 <td><code>--configfiles=CONFIGFILES</code></td>
-<td>Parse (additional) configfiles (type comma-separated list; default: )</td>
+<td>Parse (additional) configfiles (type comma-separated list)</td>
 </tr>
 <tr>
 <td><code>--ignoreconfigfiles=IGNORECONFIGFILES</code></td>
@@ -5982,7 +5996,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>-r PATH[:PATH], --robot=PATH[:PATH]</code></td>
-<td>Enable dependency resolution, using easyconfigs in specified paths (type pathsep-separated list; default: )</td>
+<td>Enable dependency resolution, using easyconfigs in specified paths (type pathsep-separated list)</td>
 </tr>
 <tr>
 <td><code>--robot-paths=PATH[:PATH]</code></td>
@@ -5990,7 +6004,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--search-paths=PATH[:PATH]</code></td>
-<td>Additional locations to consider in --search (next to --robot and --robot-paths paths) (type pathsep-separated list; default: )</td>
+<td>Additional locations to consider in --search (next to --robot and --robot-paths paths) (type pathsep-separated list)</td>
 </tr>
 <tr>
 <td><code>-k, --skip</code></td>
@@ -6053,15 +6067,15 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--include-easyblocks=INCLUDE-EASYBLOCKS</code></td>
-<td>Location(s) of extra or customized easyblocks (type comma-separated list; default: )</td>
+<td>Location(s) of extra or customized easyblocks (type comma-separated list)</td>
 </tr>
 <tr>
 <td><code>--include-module-naming-schemes=INCLUDE-MODULE-NAMING-SCHEMES</code></td>
-<td>Location(s) of extra or customized module naming schemes (type comma-separated list; default: )</td>
+<td>Location(s) of extra or customized module naming schemes (type comma-separated list)</td>
 </tr>
 <tr>
 <td><code>--include-toolchains=INCLUDE-TOOLCHAINS</code></td>
-<td>Location(s) of extra or customized toolchains or toolchain components (type comma-separated list; default: )</td>
+<td>Location(s) of extra or customized toolchains or toolchain components (type comma-separated list)</td>
 </tr>
 <tr>
 <td><code>--installpath=INSTALLPATH</code></td>
@@ -6117,7 +6131,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--package-naming-scheme=PACKAGE-NAMING-SCHEME</code></td>
-<td>Packaging naming scheme choice (type choice; default: EasyBuildPNS) (choices: EasyBuildPNS)</td>
+<td>Packaging naming scheme choice (type choice; default: EasyBuildPNS) (choices: EasyBuildDebFriendlyPNS, EasyBuildPNS)</td>
 </tr>
 <tr>
 <td><code>--packagepath=PACKAGEPATH</code></td>
@@ -6298,7 +6312,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--from-pr=PR#</code></td>
-<td>Obtain easyconfigs from specified PR (type comma-separated list; default: )</td>
+<td>Obtain easyconfigs from specified PR (type comma-separated list)</td>
 </tr>
 <tr>
 <td><code>--git-working-dirs-path=GIT-WORKING-DIRS-PATH</code></td>
@@ -6314,7 +6328,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--include-easyblocks-from-pr=PR#</code></td>
-<td>Include easyblocks from specified PR (type comma-separated list; default: )</td>
+<td>Include easyblocks from specified PR (type comma-separated list)</td>
 </tr>
 <tr>
 <td><code>--install-github-token</code></td>
@@ -6587,11 +6601,11 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 <tbody>
 <tr>
 <td><code>--accept-eula=ACCEPT-EULA</code></td>
-<td>Accept EULA for specified software [DEPRECATED, use --accept-eula-for instead!] (type comma-separated list; default: )</td>
+<td>Accept EULA for specified software [DEPRECATED, use --accept-eula-for instead!] (type comma-separated list)</td>
 </tr>
 <tr>
 <td><code>--accept-eula-for=ACCEPT-EULA-FOR</code></td>
-<td>Accept EULA for specified software (type comma-separated list; default: )</td>
+<td>Accept EULA for specified software (type comma-separated list)</td>
 </tr>
 <tr>
 <td><code>--add-dummy-to-minimal-toolchains</code></td>
@@ -6903,7 +6917,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--silence-deprecation-warnings=SILENCE-DEPRECATION-WARNINGS</code></td>
-<td>Silence specified deprecation warnings (type comma-separated list)</td>
+<td>Silence specified deprecation warnings out of (python2, Lmod6, easyconfig, toolchain) (type comma-separated list)</td>
 </tr>
 <tr>
 <td><code>--skip-extensions</code></td>
@@ -7134,7 +7148,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 7, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 20, 2023</span>
       
     
   </small>
