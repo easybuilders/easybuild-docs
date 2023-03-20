@@ -2,6 +2,9 @@
 
 (for EasyBuild release notes, see [EasyBuild release notes][release_notes])
 
+- **release 20230320.01** (*20 Mar 2023*): update
+    release notes for EasyBuild v4.7.1 (see
+    [EasyBuild v4.7.1 (20 March 2023)][release_notes_eb471])
 - **release 20230109.01** (*Jan 9th 2023*): update
     release notes for EasyBuild v4.7.0 (see
     [EasyBuild v4.7.0 (January 9th 2023)][release_notes_eb470])
