@@ -31,8 +31,8 @@ Option flag    |Option description
 ## Configfile options
 
 Option flag                              |Option description
------------------------------------------|---------------------------------------------------------------------
-``--configfiles=CONFIGFILES``            |Parse (additional) configfiles (type comma-separated list; default: )
+-----------------------------------------|----------------------------------------------------------
+``--configfiles=CONFIGFILES``            |Parse (additional) configfiles (type comma-separated list)
 ``--ignoreconfigfiles=IGNORECONFIGFILES``|Ignore configfiles (type comma-separated list)
 
 ## Basic options
@@ -51,9 +51,9 @@ Option flag                            |Option description
 ``-M, --missing-modules``              |Print list of missing modules for dependencies of specified easyconfigs (default: False)
 ``-b BLOCKS, --only-blocks=BLOCKS``    |Only build listed blocks (type comma-separated list)
 ``--rebuild``                          |Rebuild software, even if module already exists (don't skip OS dependencies checks) (default: False)
-``-r PATH[:PATH], --robot=PATH[:PATH]``|Enable dependency resolution, using easyconfigs in specified paths (type pathsep-separated list; default: )
+``-r PATH[:PATH], --robot=PATH[:PATH]``|Enable dependency resolution, using easyconfigs in specified paths (type pathsep-separated list)
 ``--robot-paths=PATH[:PATH]``          |Additional paths to consider by robot for easyconfigs (--robot paths get priority) (type pathsep-separated list; default: /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs)
-``--search-paths=PATH[:PATH]``         |Additional locations to consider in --search (next to --robot and --robot-paths paths) (type pathsep-separated list; default: )
+``--search-paths=PATH[:PATH]``         |Additional locations to consider in --search (next to --robot and --robot-paths paths) (type pathsep-separated list)
 ``-k, --skip``                         |Skip existing software (useful for installing additional packages) (default: False)
 ``-s STOP, --stop=STOP``               |Stop the installation after certain step (type choice; default: source) (choices: fetch, ready, source, patch, prepare, configure, build, test, install, extensions, postiter, postproc, sanitycheck, cleanup, module, permissions, package, testcases)
 ``--strict=STRICT``                    |Set strictness level (type choice; default: warn) (choices: ignore, warn, error)
@@ -71,9 +71,9 @@ Option flag                                                      |Option descrip
 ``--external-modules-metadata=EXTERNAL-MODULES-METADATA``        |List of (glob patterns for) paths to files specifying metadata for external modules (INI format) (type comma-separated list)
 ``--hooks=HOOKS``                                                |Location of Python module with hook implementations (type str)
 ``--ignore-dirs=IGNORE-DIRS``                                    |Directory names to ignore when searching for files/dirs (type comma-separated list; default: .git,.svn)
-``--include-easyblocks=INCLUDE-EASYBLOCKS``                      |Location(s) of extra or customized easyblocks (type comma-separated list; default: )
-``--include-module-naming-schemes=INCLUDE-MODULE-NAMING-SCHEMES``|Location(s) of extra or customized module naming schemes (type comma-separated list; default: )
-``--include-toolchains=INCLUDE-TOOLCHAINS``                      |Location(s) of extra or customized toolchains or toolchain components (type comma-separated list; default: )
+``--include-easyblocks=INCLUDE-EASYBLOCKS``                      |Location(s) of extra or customized easyblocks (type comma-separated list)
+``--include-module-naming-schemes=INCLUDE-MODULE-NAMING-SCHEMES``|Location(s) of extra or customized module naming schemes (type comma-separated list)
+``--include-toolchains=INCLUDE-TOOLCHAINS``                      |Location(s) of extra or customized toolchains or toolchain components (type comma-separated list)
 ``--installpath=INSTALLPATH``                                    |Install path for software and modules (default: /home/example/.local/easybuild)
 ``--installpath-modules=INSTALLPATH-MODULES``                    |Install path for modules (if None, combine --installpath and --subdir-modules)
 ``--installpath-software=INSTALLPATH-SOFTWARE``                  |Install path for software (if None, combine --installpath and --subdir-software)
@@ -87,7 +87,7 @@ Option flag                                                      |Option descrip
 ``--modules-footer=PATH``                                        |Path to file containing footer to be added to all generated module files
 ``--modules-header=PATH``                                        |Path to file containing header to be added to all generated module files
 ``--modules-tool=MODULES-TOOL``                                  |Modules tool to use (type choice; default: Lmod) (choices: EnvironmentModules, EnvironmentModulesC, EnvironmentModulesTcl, Lmod)
-``--package-naming-scheme=PACKAGE-NAMING-SCHEME``                |Packaging naming scheme choice (type choice; default: EasyBuildPNS) (choices: EasyBuildPNS)
+``--package-naming-scheme=PACKAGE-NAMING-SCHEME``                |Packaging naming scheme choice (type choice; default: EasyBuildPNS) (choices: EasyBuildDebFriendlyPNS, EasyBuildPNS)
 ``--packagepath=PACKAGEPATH``                                    |The destination path for the packages built by package-tool (default: /home/example/.local/easybuild/packages)
 ``--prefix=PREFIX``                                              |Change prefix for buildpath, installpath, sourcepath and repositorypath (used prefix for defaults /home/example/.local/easybuild)
 ``--recursive-module-unload``                                    |Enable generating of modules that unload recursively. (default: False)
@@ -139,11 +139,11 @@ Option flag                                            |Option description
 ``--close-pr-msg=CLOSE-PR-MSG``                        |Custom close message for pull request closed with --close-pr;  (type <class 'str'>)
 ``--close-pr-reasons=CLOSE-PR-REASONS``                |Close reason for pull request closed with --close-pr; supported values: archived, inactive, obsolete, retest (type <class 'str'>)
 ``--dump-test-report=DUMP-TEST-REPORT``                |Dump test report to specified path (default: test_report.md)
-``--from-pr=PR#``                                      |Obtain easyconfigs from specified PR (type comma-separated list; default: )
+``--from-pr=PR#``                                      |Obtain easyconfigs from specified PR (type comma-separated list)
 ``--git-working-dirs-path=GIT-WORKING-DIRS-PATH``      |Path to Git working directories for EasyBuild repositories (type <class 'str'>)
 ``--github-org=GITHUB-ORG``                            |GitHub organization (type <class 'str'>)
 ``--github-user=GITHUB-USER``                          |GitHub username (type <class 'str'>)
-``--include-easyblocks-from-pr=PR#``                   |Include easyblocks from specified PR (type comma-separated list; default: )
+``--include-easyblocks-from-pr=PR#``                   |Include easyblocks from specified PR (type comma-separated list)
 ``--install-github-token``                             |Install GitHub token (requires --github-user) (default: False)
 ``--list-prs=STATE,ORDER,DIRECTION``                   |List pull requests (type <class 'str'>; default: open,created,desc)
 ``--merge-pr=PR#``                                     |Merge pull request (type <class 'int'>)
@@ -218,8 +218,8 @@ Option flag                                |Option description
 
 Option flag                                                              |Option description
 -------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-``--accept-eula=ACCEPT-EULA``                                            |Accept EULA for specified software [DEPRECATED, use --accept-eula-for instead!] (type comma-separated list; default: )
-``--accept-eula-for=ACCEPT-EULA-FOR``                                    |Accept EULA for specified software (type comma-separated list; default: )
+``--accept-eula=ACCEPT-EULA``                                            |Accept EULA for specified software [DEPRECATED, use --accept-eula-for instead!] (type comma-separated list)
+``--accept-eula-for=ACCEPT-EULA-FOR``                                    |Accept EULA for specified software (type comma-separated list)
 ``--add-dummy-to-minimal-toolchains``                                    |Include dummy toolchain in minimal toolchain searches [DEPRECATED, use --add-system-to-minimal-toolchains instead!] (default: False)
 ``--add-system-to-minimal-toolchains``                                   |Include system toolchain in minimal toolchain searches (default: False)
 ``--allow-loaded-modules=ALLOW-LOADED-MODULES``                          |List of software names for which to allow loaded modules in initial environment (type comma-separated list; default: EasyBuild)
@@ -297,7 +297,7 @@ Option flag                                                              |Option
 ``--set-default-module``                                                 |Set the generated module as default (default: False)
 ``--set-gid-bit``                                                        |Set group ID bit on newly created directories (default: False)
 ``--show-progress-bar``                                                  |Show progress bar in terminal output (default: True; disable with --disable-show-progress-bar)
-``--silence-deprecation-warnings=SILENCE-DEPRECATION-WARNINGS``          |Silence specified deprecation warnings (type comma-separated list)
+``--silence-deprecation-warnings=SILENCE-DEPRECATION-WARNINGS``          |Silence specified deprecation warnings out of (python2, Lmod6, easyconfig, toolchain) (type comma-separated list)
 ``--skip-extensions``                                                    |Skip installation of extensions (default: False)
 ``-t, --skip-test-cases``                                                |Skip running test cases (default: False)
 ``--skip-test-step``                                                     |Skip running the test step (e.g. unit tests) (default: False)

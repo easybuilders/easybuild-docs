@@ -258,6 +258,7 @@
       - EB_python_minus_meep
       - EB_PyTorch
       - EB_PyZMQ
+      - EB_scipy
       - EB_SEPP
       - EB_TensorFlow
       - EB_TensorRT
@@ -314,6 +315,7 @@
   - MesonNinja
     - CMakeNinja
     - EB_Mesa
+    - EB_scipy
   - ModuleRC
   - PackedBinary
     - EB_ANSYS
@@ -367,6 +369,7 @@
       - EB_python_minus_meep
       - EB_PyTorch
       - EB_PyZMQ
+      - EB_scipy
       - EB_SEPP
       - EB_TensorFlow
       - EB_TensorRT
