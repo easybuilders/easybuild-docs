@@ -432,7 +432,7 @@ from the Python Package Index (PyPi):
   these easyconfigs will be well tested with the latest compatible
   versions of the easybuild-framework and easybuild-easyblocks packages
 * [easybuild-docs](https://github.com/easybuilders/easybuild-docs) - a repository containing the sources
-  of the EasyBuild documentation, which is hosted at https://docs.easybuild.io.
+  of the EasyBuild documentation, which is hosted at <https://docs.easybuild.io>.
 
 Next to these packages, a meta-package named [easybuild](https://pypi.python.org/pypi/easybuild) is also
 available on PyPi, in order to easily install the full EasyBuild
