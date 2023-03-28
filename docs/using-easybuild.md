@@ -7,7 +7,7 @@ if you are new to EasyBuild.
 and hereby the most common command line options are being documented.
 
 
-## Specifying what to install {: #specifying_easyconfigs }
+## Specifying what to install {: #specifying_easyconfigs s}
 
 To instruct EasyBuild which software packages it should build/install and which build parameters it should use,
 one or more [*easyconfig files*][easyconfig_files] must be specified.
