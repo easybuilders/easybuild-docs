@@ -91,6 +91,10 @@ This is a crucial design aspect, since the dependency resolution mechanism (see 
     in order to redefine the build/install/source path prefix to be used; default value is: `$HOME/.local/easybuild`;
     see [Configuration][configuring_easybuild]
 
+!!! note
+
+    If you are not familiar with LMOD (`module` command), see [Overview of basic LMOD commands][lmod_overview]
+
 
 ### Via command line options {: #specifying_easyconfigs_command_line }
 
@@ -721,6 +725,7 @@ a matching `--try-X` command line options is available:
 * `--try-amend` to try tweaking a different easyconfig parameter
     * format: `--try-amend=<param>=<value>`
     * only supports string and list-of-strings value types
+    * example: `--try-amend=sources '["<source_url>"]'`
 
 For example, to build and install BWA and its dependencies with a different toolchain version:
 
@@ -752,3 +757,19 @@ Dry run: printing build status of easyconfigs and dependencies
 
     Modifying the software version does **not** trickle down the entire software stack, even when combined with `--robot`,
     since a software version is tied to a particular software package.
+
+## Overview of basic LMOD commands  {: #lmod_overview }
+
+In case you are not familiar with using modules, here is a simple cheatsheet of most common LMOD commands used in combination with Easybuild:
+
+*(`module avail`)* - list available modules for the current compiler/MPI 
+
+*(`module load foss/2022a`)* - load a module
+
+*(`module list`)* - list currently loaded modules
+
+*(`module show foss/2022a`)* - see contents of a module (show the module functions instead of executing them)
+
+*(`module unload foss/2022a`)* - unload a module
+
+*(`module purge`)* - unload all modules
