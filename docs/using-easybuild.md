@@ -93,7 +93,7 @@ This is a crucial design aspect, since the dependency resolution mechanism (see 
 
 !!! note
 
-    If you are not familiar with LMOD (`module` command), see [Overview of basic LMOD commands][lmod_overview]
+    If you are not familiar with modules (`module` command), see [Overview of basic module commands][module_cmds_overview]
 
 
 ### Via command line options {: #specifying_easyconfigs_command_line }
@@ -758,9 +758,9 @@ Dry run: printing build status of easyconfigs and dependencies
     Modifying the software version does **not** trickle down the entire software stack, even when combined with `--robot`,
     since a software version is tied to a particular software package.
 
-## Overview of basic LMOD commands  {: #lmod_overview }
+## Overview of basic module commands  {: #module_cmds_overview }
 
-In case you are not familiar with using modules, here is a simple cheatsheet of most common LMOD commands used in combination with Easybuild:
+In case you are not familiar with using modules, here is a simple cheatsheet of most common module commands used in combination with Easybuild:
 
 *(`module avail`)* - list available modules for the current compiler/MPI 
 
