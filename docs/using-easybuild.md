@@ -725,7 +725,7 @@ a matching `--try-X` command line options is available:
 * `--try-amend` to try tweaking a different easyconfig parameter
     * format: `--try-amend=<param>=<value>`
     * only supports string and list-of-strings value types
-    * example: `--try-amend=sources '["<source_url>"]'`
+    * example: `--try-amend=sources='["<source_url>"]'`
 
 For example, to build and install BWA and its dependencies with a different toolchain version:
 
