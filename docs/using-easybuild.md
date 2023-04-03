@@ -772,4 +772,4 @@ In case you are not familiar with using modules, here is a simple cheatsheet of 
 
 *(`module unload foss/2022a`)* - unload a module
 
-*(`module purge`)* - unload all modules
+*(`module purge`)* - unload all currently loaded modules
