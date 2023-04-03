@@ -764,7 +764,7 @@ In case you are not familiar with using modules, here is a simple cheatsheet of 
 
 *(`module avail`)* - list the modules that are currently available to load 
 
-*(`module load foss/2022a`)* - load a module
+*(`module load foss/2022a`)* - load the module `foss/2022a`
 
 *(`module list`)* - list currently loaded modules
 
