@@ -762,7 +762,7 @@ Dry run: printing build status of easyconfigs and dependencies
 
 In case you are not familiar with using modules, here is a simple cheatsheet of most common module commands used in combination with Easybuild:
 
-*(`module avail`)* - list available modules for the current compiler/MPI 
+*(`module avail`)* - list the modules that are currently available to load 
 
 *(`module load foss/2022a`)* - load a module
 
