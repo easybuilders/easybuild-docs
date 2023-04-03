@@ -768,7 +768,7 @@ In case you are not familiar with using modules, here is a simple cheatsheet of 
 
 *(`module list`)* - list currently loaded modules
 
-*(`module show foss/2022a`)* - see contents of a module (show the module functions instead of executing them)
+*(`module show foss/2022a`)* - see contents of the module `foss/2022a` (shows the module functions instead of executing them)
 
 *(`module unload foss/2022a`)* - unload the module `foss/2022a`
 
