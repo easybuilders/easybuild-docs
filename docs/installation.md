@@ -16,20 +16,21 @@ Notes on other ways of installing EasyBuild are available under section [Alterna
 
 The only strict requirements are:
 
-* a **GNU/Linux distribution** as operating system
-* **Python**:
-    * Python 2.7, or Python 3.x (>= 3.5). Since [Python 2 is end-of-life](https://www.python.org/doc/sunset-python-2/) we recommend
-      using Python 3 if it is available
-    * **note**: only EasyBuild v4.0 (or newer) is compatible with Python 3, earlier EasyBuild releases require Python 2
-    * no Python packages other than the ones included in the Python standard library are strictly required
-        * **note**: only EasyBuild versions prior to v4.0 require `vsc-base` (& `vsc-install`),
-          see also [Required Python packages for older EasyBuild versions][required_python_packages_eb3]
-    * for some specific features, additional Python packages are needed though, see [Optional Python packages][optional_python_packages]
+* a **GNU/Linux** distribution as operating system
+    * some common shell tools are expected to be available, see [Required shell tools][required_shell_tools]
+* [Python](https://python.org):
+    * Python 2.7, or Python 3.x (>= 3.5);
+    * since [Python 2 is end-of-life](https://www.python.org/doc/sunset-python-2/) we strongly recommend
+      using Python 3 if it is available;
+    * EasyBuild 5.0 will require Python >= 3.6;
+    * no third-party Python packages are strictly required (the Python standard library is sufficient);
+    * for some *specific* EasyBuild features additional Python packages are required however, see [Optional Python packages][optional_python_packages];
 * a **modules tool**: Tcl(/C) environment modules or Lmod
-    * the actual module command/script (`modulecmd`, `modulecmd.tcl` or `lmod`) *must* be available via `$PATH`
-    * see [Required modules tool][required_modules_tool] for more details
+    * the actual modules tool *must* be available via `$PATH`, see [Required modules tool][required_modules_tool]
+* a C/C++ compiler (e.g., `gcc` and `g++`)
+    * only required to build and install GCC with, or as a dependency for the Intel compilers, for example
 
-For more information on (optional) dependencies, see [Dependencies][dependencies].
+For more information on dependencies, see [Dependencies][dependencies].
 
 
 ## Using pip to Install EasyBuild {: #pip }
@@ -307,23 +308,8 @@ module load EasyBuild
 
 ## Dependencies {: #dependencies }
 
-EasyBuild has a couple of dependencies, some are optional.
-
-
-### Required dependencies {: #required_dependencies }
-
-* a **GNU/Linux** distribution as operating system
-    * some common shell tools are expected to be available, see [Required shell tools][required_shell_tools]
-* [Python](https://python.org):
-    * Python 2.7, or Python 3.x (>= 3.5);
-    * since [Python 2 is end-of-life](https://www.python.org/doc/sunset-python-2/) we strongly recommend
-      using Python 3 if it is available;
-    * no third-party Python packages are strictly required (the Python standard library is sufficient);
-    * for some *specific* EasyBuild features additional Python packages are required however, see [Optional Python packages][optional_python_packages];
-* a **modules tool**: Tcl(/C) environment modules or Lmod
-    * the actual modules tool *must* be available via `$PATH`, see [Required modules tool][required_modules_tool]
-* a C/C++ compiler (e.g., `gcc` and `g++`)
-    * only required to build and install GCC with, or as a dependency for the Intel compilers, for example
+EasyBuild has a some [required dependencies][requirements] and some optional ones. This section gives additional
+information on the dependencies.
 
 
 #### Required shell tools {: #required_shell_tools }
