@@ -17,7 +17,7 @@
         <link rel="next" href="../configuration/">
       
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.c4a75a56.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.7a7fce14.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -549,19 +549,6 @@
   <a href="#required_python_packages" class="md-nav__link">
     Required Python packages
   </a>
-  
-    <nav class="md-nav" aria-label="Required Python packages">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#required_python_packages_eb3" class="md-nav__link">
-    Required Python packages for older EasyBuild versions
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -5987,11 +5974,7 @@ use the 3-step procedure outlined at <a class="autorefs autorefs-internal" href=
 <li>Python 2.7, or Python 3.x (&gt;= 3.5). Since <a href="https://www.python.org/doc/sunset-python-2/">Python 2 is end-of-life</a> we recommend
   using Python 3 if it is available</li>
 <li><strong>note</strong>: only EasyBuild v4.0 (or newer) is compatible with Python 3, earlier EasyBuild releases require Python 2</li>
-<li>no Python packages other than the ones included in the Python standard library are strictly required<ul>
-<li><strong>note</strong>: only EasyBuild versions prior to v4.0 require <code>vsc-base</code> (&amp; <code>vsc-install</code>),
-  see also <a class="autorefs autorefs-internal" href="#required_python_packages_eb3">Required Python packages for older EasyBuild versions</a></li>
-</ul>
-</li>
+<li>no Python packages other than the ones included in the Python standard library are strictly required</li>
 <li>for some specific features, additional Python packages are needed though, see <a class="autorefs autorefs-internal" href="#optional_python_packages">Optional Python packages</a></li>
 </ul>
 </li>
@@ -6022,10 +6005,10 @@ For example::</p>
 <span class="gp">$ </span>module<span class="w"> </span>list
 
 <span class="go">Currently Loaded Modules:</span>
-<span class="go">  1) EasyBuild/4.4.0</span>
+<span class="go">  1) EasyBuild/4.7.1</span>
 
 <span class="gp">$ </span>eb<span class="w"> </span>--version
-<span class="go">This is EasyBuild 4.4.0 (framework: 4.4.0, easyblocks: 4.4.0) on host example.local</span>
+<span class="go">This is EasyBuild 4.7.1 (framework: 4.7.1, easyblocks: 4.7.1) on host example.local</span>
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -6121,7 +6104,7 @@ into.</p>
 <p>If you want to control which Python version is used to run EasyBuild,
 you can specify the name or the full path to the <code>python</code> command that should be used by the <code>eb</code> command
 via the <code>$EB_PYTHON</code> environment variable.</p>
-<p>This may be required when you installing EasyBuild with a version of <code>pip</code> that does not correspond
+<p>This may be required when you are installing EasyBuild with a version of <code>pip</code> that does not correspond
 with the default Python version.</p>
 <p>For example, to ensure that <code>eb</code> uses <code>python3.6</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">EB_PYTHON</span><span class="o">=</span>python3.6
@@ -6134,7 +6117,7 @@ you can define the <code>$EB_VERBOSE</code> environment variable. For example:</
 <span class="go">&gt;&gt; &#39;python3&#39; version: 3.6.8, which matches Python 3 version requirement (&gt;= 3.5)</span>
 <span class="go">&gt;&gt; Selected Python command: python3 (/usr/bin/python3.6)</span>
 <span class="go">&gt;&gt; python3.6 -m easybuild.main --version</span>
-<span class="go">This is EasyBuild 4.3.3 (framework: 4.3.3, easyblocks: 4.3.3) on host example</span>
+<span class="go">This is EasyBuild 4.7.1 (framework: 4.7.1, easyblocks: 4.7.1) on host example</span>
 </code></pre></div>
 <h2 id="eb_as_module">Installing EasyBuild with EasyBuild<a class="headerlink" href="#eb_as_module" title="Permanent link">&para;</a></h2>
 <p>If you prefer having EasyBuild available through an environment module file,
@@ -6280,41 +6263,13 @@ environment variable, in case <code>lmod</code> is not available in <code>$PATH<
 </ul>
 <h4 id="required_python_packages">Required Python packages<a class="headerlink" href="#required_python_packages" title="Permanent link">&para;</a></h4>
 <p>Since EasyBuild v4.0, <em>no</em> Python packages outside of the Python standard library are required.</p>
-<h5 id="required_python_packages_eb3">Required Python packages for older EasyBuild versions<a class="headerlink" href="#required_python_packages_eb3" title="Permanent link">&para;</a></h5>
-<p>For EasyBuild versions prior to version 4.0, a couple of additional Python packages are required:</p>
-<ul>
-<li><code>setuptools</code>: used to define the <code>easybuild</code> namespace across different directories<ul>
-<li>available at <a href="https://pypi.python.org/pypi/setuptools">https://pypi.python.org/pypi/setuptools</a></li>
-<li>must be version 0.6 or more recent</li>
-<li>strictly required since EasyBuild v2.7.0</li>
-</ul>
-</li>
-<li><code>vsc-install</code>: provides setuptools functions and support for unit test suites for Python tools<ul>
-<li>also required to install <code>vsc-base</code> (see below)</li>
-<li>available at <a href="https://pypi.python.org/pypi/vsc-install">https://pypi.python.org/pypi/vsc-install</a></li>
-<li>the required version depends primarily on the <code>vsc-base</code> version</li>
-</ul>
-</li>
-<li><code>vsc-base</code>: a Python library providing the <code>fancylogger</code> and <code>generaloption</code> Python modules<ul>
-<li>available at <a href="https://pypi.python.org/pypi/vsc-base">https://pypi.python.org/pypi/vsc-base</a> and <a href="https://github.com/hpcugent/vsc-base">https://github.com/hpcugent/vsc-base</a></li>
-<li>the required version of <code>vsc-base</code> depends on the EasyBuild version</li>
-</ul>
-</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code>vsc-base</code> is installed automatically along with EasyBuild 3.x, if an installation procedure is used that
-consumes the <code>setup.py</code> script that comes with the EasyBuild framework (e.g., EasyBuild or the EasyBuild
-bootstrap script, <code>pip</code>, <code>easy_install</code>, ...)</p>
-</div>
-<p>Other Python packages are optional dependencies, see <a class="autorefs autorefs-internal" href="#optional_python_packages">Optional Python packages</a>.</p>
 <h3 id="optional-dependencies">Optional dependencies<a class="headerlink" href="#optional-dependencies" title="Permanent link">&para;</a></h3>
 <p>Some dependencies are optional and are only required to support certain features.</p>
 <h4 id="optional_python_packages">Optional Python packages<a class="headerlink" href="#optional_python_packages" title="Permanent link">&para;</a></h4>
 <ul>
 <li><a href="https://pypi.org/project/gc3pie">GC3Pie</a>, only needed when using <code>GC3Pie</code> as a backend for <code>--job</code>,
   see also <a class="autorefs autorefs-internal" href="../submitting-jobs/#submitting_jobs">Submitting jobs using --job</a>;</li>
-<li><a href="http://gitorious.org/git-python">GitPython</a>, only needed if
+<li><a href="https://github.com/gitpython-developers/GitPython">GitPython</a>, only needed if
   EasyBuild is hosted in a git repository or if you’re using a git
   repository for easyconfig files (.eb);</li>
 <li><a href="https://pypi.python.org/pypi/graphviz">graphviz for Python</a>,
@@ -6323,8 +6278,6 @@ bootstrap script, <code>pip</code>, <code>easy_install</code>, ...)</p>
   (see <a class="autorefs autorefs-internal" href="../integration-with-github/#integration_with_github">Integration with GitHub</a>);</li>
 <li><a href="https://pypi.org/project/pycodestyle">pycodestyle</a>,
   only required for <code>--check-style</code> and <code>--check-contrib</code>;</li>
-<li><a href="http://pysvn.tigris.org/">pysvn</a>, only needed if you’re using an
-  SVN repository for easyconfig files;</li>
 <li><a href="https://pypi.python.org/pypi/python-graph-dot/">python-graph-dot</a>,
   only needed for building nice-looking dependency graphs using <code>--dep-graph *.dot</code></li>
 <li><a href="https://pypi.org/project/rich/">Rich</a>,
@@ -6344,6 +6297,8 @@ from the Python Package Index (PyPi):</p>
   that specify which software to build, and using which build options;
   these easyconfigs will be well tested with the latest compatible
   versions of the easybuild-framework and easybuild-easyblocks packages</li>
+<li><a href="https://github.com/easybuilders/easybuild-docs">easybuild-docs</a> - a repository containing the sources
+  of the EasyBuild documentation, which is hosted at <a href="https://docs.easybuild.io">https://docs.easybuild.io</a>.</li>
 </ul>
 <p>Next to these packages, a meta-package named <a href="https://pypi.python.org/pypi/easybuild">easybuild</a> is also
 available on PyPi, in order to easily install the full EasyBuild
@@ -6377,7 +6332,7 @@ eb<span class="w"> </span>--version
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 6, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 24, 2023</span>
       
     
   </small>
@@ -6466,7 +6421,7 @@ eb<span class="w"> </span>--version
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
+      <script src="../assets/javascripts/bundle.407015b8.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
