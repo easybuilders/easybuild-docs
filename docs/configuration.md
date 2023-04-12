@@ -119,7 +119,7 @@ On top of this, the `--ignoreconfigfiles` configuration option allows to specify
 
 The EasyBuild configuration file follows the default Python
 configuration format as parsed by the `configparser` module
-(see `http://docs.python.org/2/library/configparser.html`_).
+(see <https://docs.python.org/3/library/configparser.html>).
 
 Configuration files are organized in sections, the section name for a
 particular configuration setting is indicated in the output of `eb --help`.
@@ -396,7 +396,7 @@ There are several ways in which the software and modules install path used by Ea
 
 * using the direct configuration options `--installpath-software` and `--installpath-modules` (see below)
 * via the parent install path configuration option `--installpath` (see below)
-* via the overall prefix path configuration option `--prefix` (see Overall prefix path (`--prefix`)][prefix])
+* via the overall prefix path configuration option `--prefix` (see [Overall prefix path (`--prefix`)][prefix])
 
 
 ##### Direct options {: #installpath_direct_options }
@@ -466,7 +466,7 @@ so you do not need to adjust `$MODULEPATH` every time you start a new session.
 #### Easyconfigs repository (`--repository`, `--repositorypath`) {: #easyconfigs_repo }
 
 *default*: `FileRepository` at `$HOME/.local/easybuild/ebfiles_repo`
-(determined via Overall prefix path (`--prefix`)][prefix])
+(determined via [Overall prefix path (`--prefix`)][prefix])
 
 EasyBuild has support for archiving (tested) `.eb` easyconfig files.
 After successfully installing a software package using EasyBuild, the

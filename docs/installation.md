@@ -22,6 +22,7 @@ The only strict requirements are:
     * Python 2.7, or Python 3.x (>= 3.5);
     * since [Python 2 is end-of-life](https://www.python.org/doc/sunset-python-2/) we strongly recommend
       using Python 3 if it is available;
+    * only EasyBuild v4.0 (or newer) is compatible with Python 3, earlier EasyBuild releases require Python 2
     * EasyBuild 5.0 will require Python >= 3.6;
     * no third-party Python packages are strictly required (the Python standard library is sufficient);
     * for some *specific* EasyBuild features additional Python packages are required however, see [Optional Python packages][optional_python_packages];
@@ -61,10 +62,10 @@ $ module load EasyBuild
 $ module list
 
 Currently Loaded Modules:
-  1) EasyBuild/4.4.0
+  1) EasyBuild/4.7.1
 
 $ eb --version
-This is EasyBuild 4.4.0 (framework: 4.4.0, easyblocks: 4.4.0) on host example.local
+This is EasyBuild 4.7.1 (framework: 4.7.1, easyblocks: 4.7.1) on host example.local
 ```
 
 !!! tip
@@ -206,7 +207,7 @@ If you want to control which Python version is used to run EasyBuild,
 you can specify the name or the full path to the `python` command that should be used by the `eb` command
 via the `$EB_PYTHON` environment variable.
 
-This may be required when you installing EasyBuild with a version of `pip` that does not correspond
+This may be required when you are installing EasyBuild with a version of `pip` that does not correspond
 with the default Python version.
 
 For example, to ensure that `eb` uses `python3.6`:
@@ -227,7 +228,7 @@ $ EB_VERBOSE=1 eb --version
 >> 'python3' version: 3.6.8, which matches Python 3 version requirement (>= 3.5)
 >> Selected Python command: python3 (/usr/bin/python3.6)
 >> python3.6 -m easybuild.main --version
-This is EasyBuild 4.3.3 (framework: 4.3.3, easyblocks: 4.3.3) on host example
+This is EasyBuild 4.7.1 (framework: 4.7.1, easyblocks: 4.7.1) on host example
 ```
 
 
@@ -379,30 +380,6 @@ Additional notes:
 
 Since EasyBuild v4.0, *no* Python packages outside of the Python standard library are required.
 
-
-#### Required Python packages for older EasyBuild versions {: #required_python_packages_eb3 }
-
-For EasyBuild versions prior to version 4.0, a couple of additional Python packages are required:
-
-* `setuptools`: used to define the `easybuild` namespace across different directories
-    * available at <https://pypi.python.org/pypi/setuptools>
-    * must be version 0.6 or more recent
-    * strictly required since EasyBuild v2.7.0
-* `vsc-install`: provides setuptools functions and support for unit test suites for Python tools
-    * also required to install `vsc-base` (see below)
-    * available at <https://pypi.python.org/pypi/vsc-install>
-    * the required version depends primarily on the `vsc-base` version
-* `vsc-base`: a Python library providing the `fancylogger` and `generaloption` Python modules
-    * available at <https://pypi.python.org/pypi/vsc-base> and <https://github.com/hpcugent/vsc-base>
-    * the required version of `vsc-base` depends on the EasyBuild version
-
-!!! note
-    `vsc-base` is installed automatically along with EasyBuild 3.x, if an installation procedure is used that
-    consumes the `setup.py` script that comes with the EasyBuild framework (e.g., EasyBuild or the EasyBuild
-    bootstrap script, `pip`, `easy_install`, ...)
-
-Other Python packages are optional dependencies, see [Optional Python packages][optional_python_packages].
-
 ## Optional dependencies
 
 Some dependencies are optional and are only required to support certain features.
@@ -412,7 +389,7 @@ Some dependencies are optional and are only required to support certain features
 
 * [GC3Pie](https://pypi.org/project/gc3pie), only needed when using `GC3Pie` as a backend for `--job`,
   see also [Submitting jobs using --job][submitting_jobs];
-* [GitPython](http://gitorious.org/git-python), only needed if
+* [GitPython](https://github.com/gitpython-developers/GitPython), only needed if
   EasyBuild is hosted in a git repository or if you’re using a git
   repository for easyconfig files (.eb);
 * [graphviz for Python](https://pypi.python.org/pypi/graphviz),
@@ -421,8 +398,6 @@ Some dependencies are optional and are only required to support certain features
   (see [Integration with GitHub][integration_with_github]);
 * [pycodestyle](https://pypi.org/project/pycodestyle),
   only required for `--check-style` and `--check-contrib`;
-* [pysvn](http://pysvn.tigris.org/), only needed if you’re using an
-  SVN repository for easyconfig files;
 * [python-graph-dot](https://pypi.python.org/pypi/python-graph-dot/),
   only needed for building nice-looking dependency graphs using `--dep-graph *.dot`
 * [Rich](https://pypi.org/project/rich/),
@@ -443,6 +418,8 @@ from the Python Package Index (PyPi):
   that specify which software to build, and using which build options;
   these easyconfigs will be well tested with the latest compatible
   versions of the easybuild-framework and easybuild-easyblocks packages
+* [easybuild-docs](https://github.com/easybuilders/easybuild-docs) - a repository containing the sources
+  of the EasyBuild documentation, which is hosted at <https://docs.easybuild.io>.
 
 Next to these packages, a meta-package named [easybuild](https://pypi.python.org/pypi/easybuild) is also
 available on PyPi, in order to easily install the full EasyBuild
