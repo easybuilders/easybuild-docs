@@ -22,7 +22,7 @@ The only strict requirements are:
     * Python 2.7, or Python 3.x (>= 3.5);
     * since [Python 2 is end-of-life](https://www.python.org/doc/sunset-python-2/) we strongly recommend
       using Python 3 if it is available;
-    * only EasyBuild v4.0 (or newer) is compatible with Python 3, earlier EasyBuild releases require Python 2
+    * only EasyBuild v4.0 (or newer) is compatible with Python 3, earlier EasyBuild releases require Python 2;
     * EasyBuild 5.0 will require Python >= 3.6;
     * no third-party Python packages are strictly required (the Python standard library is sufficient);
     * for some *specific* EasyBuild features additional Python packages are required however, see [Optional Python packages][optional_python_packages];
