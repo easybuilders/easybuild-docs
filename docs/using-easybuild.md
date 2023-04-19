@@ -762,14 +762,14 @@ Dry run: printing build status of easyconfigs and dependencies
 
 In case you are not familiar with using modules, here is a simple cheatsheet of most common module commands used in combination with Easybuild:
 
-*(`module avail`)* - list the modules that are currently available to load 
+*`module avail`* - list the modules that are currently available to load 
 
-*(`module load foss/2022a`)* - load the module `foss/2022a`
+*`module load foss/2022a`* - load the module `foss/2022a`
 
-*(`module list`)* - list currently loaded modules
+*`module list`* - list currently loaded modules
 
-*(`module show foss/2022a`)* - see contents of the module `foss/2022a` (shows the module functions instead of executing them)
+*`module show foss/2022a`* - see contents of the module `foss/2022a` (shows the module functions instead of executing them)
 
-*(`module unload foss/2022a`)* - unload the module `foss/2022a`
+*`module unload foss/2022a`* - unload the module `foss/2022a`
 
-*(`module purge`)* - unload all currently loaded modules
+*`module purge`* - unload all currently loaded modules
