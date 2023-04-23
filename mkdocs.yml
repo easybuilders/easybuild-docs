@@ -102,6 +102,7 @@ nav:
   - API: api/
   - List of supported software: version-specific/supported-software.md
   - Getting help: getting-help.md
+  - User survey: user-survey/index.md
   - Other topics:
       - Alternative installation methods: installation-alternative.md
       - Configuration (legacy): legacy/configuration.md
