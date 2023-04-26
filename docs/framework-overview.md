@@ -387,9 +387,9 @@ through its `set_up_configuration()` method, which is called in the
 
 Once all options are parsed, those options listed in `easybuild.tools.config`
 will be gathered in a singleton `BuildOptions` class. This class is the
-centralized locations of configuration options for the current build. The
-method `build_option()` in `easybuild.tools.config` provides a simple interface
-to it:
+centralized locations of configuration options for the current EasyBuild
+session. The method `build_option()` in `easybuild.tools.config` provides a
+simple interface to it:
 
 ```python
 if build_option('ignore_test_failure'):
