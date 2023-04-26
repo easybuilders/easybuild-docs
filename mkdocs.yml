@@ -78,6 +78,7 @@ nav:
       - Implementing easyblocks: implementing-easyblocks.md
       - Local variables in easyconfigs: easyconfig-files-local-variables.md
       - Unit tests: unit-tests.md
+      - Framework Overview: framework-overview.md
   - Experimental features:
       - (overview): experimental-features.md
       - Creating container images/recipes: containers.md
@@ -125,8 +126,14 @@ markdown_extensions:
   - attr_list
   # notes, warnings, hints, ...
   - admonition
+  # markdown in HTML (image captions, ...)
+  - md_in_html
   # code blocks with syntax highlighting, graphs
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   # clickable details
   - pymdownx.details
   # tabbed contents
