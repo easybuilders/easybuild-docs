@@ -17,7 +17,7 @@
         <link rel="next" href="../typical-workflow-example-with-wrf/">
       
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.7">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.8">
     
     
       
@@ -132,29 +132,31 @@
       </div>
     </div>
     
-      <form class="md-header__option" data-md-component="palette">
-        
+      
+        <form class="md-header__option" data-md-component="palette">
           
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
           
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
-          
-            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
-            </label>
-          
-        
-          
-          
-          
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
-          
-            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
-            </label>
-          
-        
-      </form>
+        </form>
+      
     
     
     
@@ -611,6 +613,13 @@
         <li class="md-nav__item">
   <a href="#tweaking_easyconfigs_using_try" class="md-nav__link">
     Tweaking existing easyconfig files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module_cmds_overview" class="md-nav__link">
+    Overview of basic module commands
   </a>
   
 </li>
@@ -1157,6 +1166,20 @@
     <li class="md-nav__item">
       <a href="../unit-tests/" class="md-nav__link">
         Unit tests
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../framework-overview/" class="md-nav__link">
+        Framework Overview
       </a>
     </li>
   
@@ -6021,6 +6044,10 @@ EasyBuild will (try and) locate the easyconfig file, and perform the installatio
 in order to redefine the build/install/source path prefix to be used; default value is: <code>$HOME/.local/easybuild</code>;
 see <a class="autorefs autorefs-internal" href="../configuration/#configuring_easybuild">Configuration</a></p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are not familiar with modules (<code>module</code> command), see <a class="autorefs autorefs-internal" href="#module_cmds_overview">Overview of basic module commands</a></p>
+</div>
 <h3 id="specifying_easyconfigs_command_line">Via command line options<a class="headerlink" href="#specifying_easyconfigs_command_line" title="Permanent link">&para;</a></h3>
 <p>An alternative approach is to only use command line options to specify which software to build.
 Refer to the <code>Software search and build options</code> section in the <code>eb --help</code> output for an overview
@@ -6526,6 +6553,7 @@ a matching <code>--try-X</code> command line options is available:</p>
 <ul>
 <li>format: <code>--try-amend=&lt;param&gt;=&lt;value&gt;</code></li>
 <li>only supports string and list-of-strings value types</li>
+<li>example: <code>--try-amend=sources='["&lt;source_url&gt;"]'</code></li>
 </ul>
 </li>
 </ul>
@@ -6556,13 +6584,21 @@ This makes for a particularly powerful combo for rebuilding entire software stac
 <p>Modifying the software version does <strong>not</strong> trickle down the entire software stack, even when combined with <code>--robot</code>,
 since a software version is tied to a particular software package.</p>
 </div>
+<h2 id="module_cmds_overview">Overview of basic module commands<a class="headerlink" href="#module_cmds_overview" title="Permanent link">&para;</a></h2>
+<p>In case you are not familiar with using modules, here is a simple cheatsheet of most common module commands used in combination with Easybuild:</p>
+<p><em><code>module avail</code></em> - list the modules that are currently available to load </p>
+<p><em><code>module load foss/2022a</code></em> - load the module <code>foss/2022a</code></p>
+<p><em><code>module list</code></em> - list currently loaded modules</p>
+<p><em><code>module show foss/2022a</code></em> - see contents of the module <code>foss/2022a</code> (shows the module functions instead of executing them)</p>
+<p><em><code>module unload foss/2022a</code></em> - unload the module <code>foss/2022a</code></p>
+<p><em><code>module purge</code></em> - unload all currently loaded modules</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 1, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 19, 2023</span>
       
     
   </small>
