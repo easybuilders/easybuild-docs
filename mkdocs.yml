@@ -125,6 +125,8 @@ markdown_extensions:
   - attr_list
   # notes, warnings, hints, ...
   - admonition
+  # markdown in HTML (image captions, ...)
+  - md_in_html
   # code blocks with syntax highlighting, graphs
   - pymdownx.superfences
   # clickable details
