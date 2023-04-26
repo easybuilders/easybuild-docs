@@ -401,8 +401,9 @@ else:
 Therefore, adding a new option to `eb` and making that options available
 through `build_option()` is a two step process. First the option has to be
 added to `EasyBuildOptions` in `easybuild.tools.options` and then also listed
-in `easybuild.tools.config`.
-
+in `easybuild.tools.config`. As an example, you can check
+[easybuild-framework#4226](https://github.com/easybuilders/easybuild-framework/pull/4226)
+which is a PR adding the `download_timeout` option to EasyBuild.
 
 ## Features in easybuild.tools
 
