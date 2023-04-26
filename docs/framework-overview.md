@@ -47,7 +47,7 @@ stateDiagram-v2
 
     state "build_and_install_software( )" as build_install
     
-    state "easybuild.framework.easyblock" as easyblock {
+    state "easybuild.framework.easyblock" as easyblock{
         [*] --> build_install_one
         build_install_one --> get_easyblock
         get_easyblock --> easyblock_class
