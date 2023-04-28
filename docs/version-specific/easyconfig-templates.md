@@ -76,10 +76,10 @@ Constant                |Template value                                         
 ``BITBUCKET_DOWNLOADS`` |bitbucket.org downloads url (namelower is used if bitbucket_account easyconfig parameter is not specified)   |``https://bitbucket.org/%(bitbucket_account)s/%(namelower)s/downloads``
 ``CRAN_SOURCE``         |CRAN (contrib) source url                                                                                    |``https://cran.r-project.org/src/contrib``
 ``FTPGNOME_SOURCE``     |http download for gnome ftp server                                                                           |``https://ftp.gnome.org/pub/GNOME/sources/%(namelower)s/%(version_major_minor)s``
-``GITHUB_SOURCE``       |GitHub source URL (namelower is used if github_account easyconfig parameter is not specified)                |``https://github.com/%(github_account)s/%(name)s/archive``
-``GITHUB_LOWER_SOURCE`` |GitHub source URL (lowercase name, namelower is used if github_account easyconfig parameter is not specified)|``https://github.com/%(github_account)s/%(namelower)s/archive``
-``GITHUB_RELEASE``      |GitHub release URL (namelower is used if github_account easyconfig parameter is not specified)               |``https://github.com/%(github_account)s/%(name)s/releases/download/v%(version)s``
-``GITHUB_LOWER_RELEASE``|GitHub release URL (namelower is used if github_account easyconfig parameter is not specified)               |``https://github.com/%(github_account)s/%(namelower)s/releases/download/v%(version)s``
+``GITHUB_SOURCE``       |GitHub source URL (if github_account easyconfig parameter is not specified, namelower is used in its place)  |``https://github.com/%(github_account)s/%(name)s/archive``
+``GITHUB_LOWER_SOURCE`` |GitHub source URL (if github_account easyconfig parameter is not specified, namelower is used in its place)  |``https://github.com/%(github_account)s/%(namelower)s/archive``
+``GITHUB_RELEASE``      |GitHub release URL (if github_account easyconfig parameter is not specified, namelower is used in its place) |``https://github.com/%(github_account)s/%(name)s/releases/download/v%(version)s``
+``GITHUB_LOWER_RELEASE``|GitHub release URL (if github_account easyconfig parameter is not specified, namelower is used in its place) |``https://github.com/%(github_account)s/%(namelower)s/releases/download/v%(version)s``
 ``GNU_SAVANNAH_SOURCE`` |download.savannah.gnu.org source url                                                                         |``https://download-mirror.savannah.gnu.org/releases/%(namelower)s``
 ``GNU_SOURCE``          |gnu.org source url                                                                                           |``https://ftpmirror.gnu.org/gnu/%(namelower)s``
 ``GOOGLECODE_SOURCE``   |googlecode.com source url                                                                                    |``http://%(namelower)s.googlecode.com/files``
