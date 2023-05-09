@@ -41,11 +41,9 @@ purpose of this example:
 
 ``` console
 $ ls -la $EASYBUILD_PREFIX/modules/all/bzip2
-total 16
-drwxr-xr-x  2 example  example   136 Aug 24 10:20 .
-drwxr-xr-x  3 example  example   102 Aug 24 10:18 ..
--rw-r--r--  1 example  example  1256 Aug 24 10:19 1.0.6
--rw-r--r--  1 example  example  1303 Aug 24 10:18 1.0.6.lua
+drwxrwsr-x  2 example example 4096 May  9 09:12 .
+drwxrwsr-x 17 example example 4096 May  9 09:12 ..
+-rw-rw-r--  1 example example 1637 May  9 09:12 1.0.8-GCCcore-12.2.0.lua
 ```
 
 Using `--force` and `--backup-modules`, we can reinstall the
@@ -55,23 +53,24 @@ To reinstall the `bzip2/1.0.6` module in Lua syntax while retaining a
 backup of the existing module:
 
 ``` console
-$ eb bzip2-1.0.6.eb --module-syntax=Lua --force --backup-modules
+$ eb bzip2-1.0.8-GCCcore-12.2.0.eb --module-syntax=Lua --force --backup-modules
 ...
 == creating build dir, resetting environment...
-== backup of existing module file stored at /example/modules/all/bzip2/1.0.6.lua.bak_20170824102603
+== backup of existing module file stored at /example/modules/all/bzip2/1.0.8-GCCcore-12.2.0.lua.bak_20230509091972_3578923
 ...
 == creating module...
-== comparing module file with backup /example/modules/all/bzip2/1.0.6.lua.bak_20170824102603; diff is:
---- /example/modules/all/bzip2/1.0.6.lua.bak_20170824102603
-+++ /example/modules/all/bzip2/1.0.6.lua
+  >> generating module file @ /example/modules/all/bzip2/1.0.8-GCCcore-12.2.0.lua
+== comparing module file with backup /example/modules/all/bzip2/1.0.8-GCCcore-12.2.0.lua.bak_20230509091972_3578923; diff is:
+--- /example/modules/all/bzip2/1.0.8-GCCcore-12.2.0.lua.bak_20230509091972_3578923
++++ /example/modules/all/bzip2/1.0.8-GCCcore-12.2.0.lua
 @@ -25,9 +25,10 @@
  prepend_path("LD_LIBRARY_PATH", pathJoin(root, "lib"))
  prepend_path("LIBRARY_PATH", pathJoin(root, "lib"))
  prepend_path("MANPATH", pathJoin(root, "man"))
 +prepend_path("PATH", pathJoin(root, "bin"))
  setenv("EBROOTBZIP2", root)
- setenv("EBVERSIONBZIP2", "1.0.6")
- setenv("EBDEVELBZIP2", pathJoin(root, "easybuild/bzip2-1.0.6-easybuild-devel"))
+ setenv("EBVERSIONBZIP2", "1.0.8")
+ setenv("EBDEVELBZIP2", pathJoin(root, "easybuild/bzip2-1.0.8-GCCcore-12.2.0-easybuild-devel"))
 
 ...
 ```
@@ -87,13 +86,13 @@ place:
 
 ``` console
 $ ls -la $EASYBUILD_PREFIX/modules/all/bzip2
-total 32
-drwxr-xr-x  2 example  example   204 Aug 24 10:26 .
-drwxr-xr-x  3 example  example   102 Jul 11 10:18 ..
--rw-r--r--  1 example  example  1227 Aug 24 10:24 .1.0.6.bak_20170824102412
--rw-r--r--  1 example  example  1256 Jul 11 01:24 1.0.6
--rw-r--r--  1 example  example  1303 Jul 11 01:26 1.0.6.lua
--rw-r--r--  1 example  example  1259 Aug 24 10:26 1.0.6.lua.bak_20170824102603
+total 4
+drwxrwsr-x  2 example example 4096 May  9 09:29 .
+drwxrwsr-x 17 example example 4096 May  9 09:12 ..
+-rw-rw-r--  1 example example 1559 May  9 09:29 1.0.8-GCCcore-12.2.0
+-rw-rw-r--  1 example example 1637 May  9 09:12 1.0.8-GCCcore-12.2.0.bak_20230509091754_3383740
+-rw-rw-r--  1 example example 1681 May  9 09:18 1.0.8-GCCcore-12.2.0.lua
+-rw-rw-r--  1 example example 1637 May  9 09:12 1.0.8-GCCcore-12.2.0.lua.bak_20230509091972_3578923
 ```
 
 Cleaning up the backup module files can be done with the following
@@ -101,6 +100,6 @@ command (for example):
 
 ``` console
 $ find $EASYBUILD_PREFIX/modules/all/bzip2 -name '*.bak*' | xargs rm -v
-/example/modules/all/bzip2/.1.0.6.bak_20170824102412
-/example/modules/all/bzip2/1.0.6.lua.bak_20170824102603
+removed 'example/modules/all/bzip2/1.0.8-GCCcore-12.2.0.bak_20230509091754_3383740'
+removed 'example/modules/all/bzip2/1.0.8-GCCcore-12.2.0.lua.bak_20230509091972_3578923'
 ```
