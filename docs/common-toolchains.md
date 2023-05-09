@@ -37,6 +37,7 @@ and `intel`; see below for more details, and also
 
 To be more helpful in understanding the differences between these families, **here is a diagram** that explains what is added in
 each additional layer:
+
 ``` mermaid
 
 graph LR
@@ -48,9 +49,11 @@ graph LR
   E --> |Blas, FFTW, Lapack libs| G[foss];
   F --> |Blas, FFTW, Lapack libs| H[intel];
 ```
+
 Keep in mind that when creating an Easyconfig, you need to use the highest (most complex) toolchain from the family
 you are using (or higher). For example, if a dependency is using the `foss` toolchain, you need to use the `foss` 
 toolchain, and not the `GCC` toolchain.
+
 ### `foss` toolchain {: #common_toolchains_foss }
 
 The `foss` common compiler toolchain consists entirely of open source
