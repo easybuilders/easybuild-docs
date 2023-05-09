@@ -31,10 +31,26 @@ The intention is to revise/update the definitions of the common
 toolchains regularly (see [Update cycle for common toolchains][common_toolchains_update_cycle]), which again
 can be a joint effort that benefits many HPC sites.
 
-Currently, two different common toolchains are being maintained: `foss`
+Currently, two different families of common toolchains are being maintained: `foss`
 and `intel`; see below for more details, and also
 [Overview of common toolchains][common_toolchains_overview].
 
+To be more helpful in understanding the differences between these families, **here is a diagram** that explains what is added in
+each additional layer:
+``` mermaid
+
+graph LR
+  A[GCCCore] --> |binutils| B[GCC];
+  A --> |binutils| C[iccifort]
+  B --> |MPI libs| E[gompi];
+  C --> |MPI libs| F[iimpi];
+  B --> |Blas, FFTW| D[gfbf];
+  E --> |Blas, FFTW, Lapack libs| G[foss];
+  F --> |Blas, FFTW, Lapack libs| H[intel];
+```
+Keep in mind that when creating an Easyconfig, you need to use the highest (most complex) toolchain from the family
+you are using (or higher). For example, if a dependency is using the `foss` toolchain, you need to use the `foss` 
+toolchain, and not the `GCC` toolchain.
 ### `foss` toolchain {: #common_toolchains_foss }
 
 The `foss` common compiler toolchain consists entirely of open source
@@ -93,8 +109,8 @@ whether the toolchain was defined at the start of the year ('`a`') or
 halfway through the year ('`b`'); in short, the common toolchains are
 versioned as `<year>{a,b}`.
 
-For example, `foss/2016b` is a revision of the `foss` that was composed
-mid-2016.
+For example, `foss/2021b` is a revision of the `foss` that was composed
+mid-2021.
 
 A full historic overview of the `foss` and `intel` common toolchains is
 available in [Overview of common toolchains][common_toolchains_overview].
