@@ -48,7 +48,7 @@ nav:
       - Installation: installation.md
       - Configuration: configuration.md
       - Basic usage: using-easybuild.md
-      - Typical workflow with WRF: typical-workflow-example-with-wrf.md
+      - Typical workflow example: typical-workflow-example.md
   - Using EasyBuild:
       - Backing up existing modules: backup-modules.md
       - Common toolchains: common-toolchains.md
