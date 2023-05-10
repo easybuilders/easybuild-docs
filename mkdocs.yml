@@ -241,6 +241,7 @@ plugins:
         en/latest/System_toolchain.html: system-toolchain.md
         en/latest/Tracing_progress.html: tracing-progress.md
         en/latest/Typical_workflow_example_with_WRF.html: typical-workflow-example-with-wrf.md
+        typical-workflow-example-with-wrf.md: typical-workflow-example.md
         en/latest/Unit-tests.html: unit-tests.md
         en/latest/Useful_links.html: index.md
         en/latest/Useful-scripts.html: useful-scripts.md
