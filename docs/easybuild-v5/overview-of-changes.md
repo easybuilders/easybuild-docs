@@ -11,7 +11,7 @@ which can be categorized as:
 
 * [Significant enhancements][significant_enhancements]
 * [Backward-incompatible changes][backwards_incompatible]
-* [Deprecated functionality][deprecated]
+* [Deprecated functionality][deprecated_v5]
 
 For in-depth details on a particular change, see the pull requests that are linked from each of the subsections below.
 
@@ -70,7 +70,7 @@ Running EasyBuild with Python 2.7 or a Python 3 version older than Python 3.6 is
 
 Trying to run EasyBuild with a Python version that is too old will result in an error:
 
-```
+```log
 ERROR: No compatible 'python' command found via $PATH (EasyBuild requires Python 3.6+)
 ```
 
@@ -108,7 +108,7 @@ format and little suggestion that anyone was using it.
 
 ---
 
-## Deprecated functionality in EasyBuild v5.0 {: #deprecated }
+## Deprecated functionality in EasyBuild v5.0 {: #deprecated_v5 }
 
 Some functionality is being deprecated in EasyBuild v5.0, and will no longer be supported in EasyBuild v6.0:
 
