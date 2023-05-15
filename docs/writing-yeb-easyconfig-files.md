@@ -1,12 +1,7 @@
-# Writing easyconfig files in YAML syntax (`.yeb` format) **[IN DEVELOPMENT]** {: #easyconfig_yeb_format }
+# Writing easyconfig files in YAML syntax (`.yeb` format) **Deprecated** {: #easyconfig_yeb_format }
 
-!!! note
-    Because support for easyconfig files in YAML syntax (a.k.a. `.yeb` files) is still *in development*,
-    using them currently requires enabling the use of experimental features (`--experimental`),
-    see also [Experimental features][experimental_features].
-
-    An up-to-date overview of current progress on support for `.yeb` easyconfigs is available at
-    <https://github.com/easybuilders/easybuild-framework/issues/1407>.
+!!! warning
+    Use of `.yeb` easyconfigs is deprecated and [will be removed in EasyBuild v5.0][yeb].
 
 Useful links:
 
