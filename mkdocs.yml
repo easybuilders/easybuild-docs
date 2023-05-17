@@ -18,11 +18,15 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -78,6 +82,7 @@ nav:
       - Implementing easyblocks: implementing-easyblocks.md
       - Local variables in easyconfigs: easyconfig-files-local-variables.md
       - Unit tests: unit-tests.md
+      - Framework Overview: framework-overview.md
   - Experimental features:
       - (overview): experimental-features.md
       - Creating container images/recipes: containers.md
@@ -102,6 +107,7 @@ nav:
   - API: api/
   - List of supported software: version-specific/supported-software.md
   - Getting help: getting-help.md
+  - User survey: user-survey/index.md
   - Other topics:
       - Alternative installation methods: installation-alternative.md
       - Configuration (legacy): legacy/configuration.md
@@ -125,8 +131,14 @@ markdown_extensions:
   - attr_list
   # notes, warnings, hints, ...
   - admonition
+  # markdown in HTML (image captions, ...)
+  - md_in_html
   # code blocks with syntax highlighting, graphs
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   # clickable details
   - pymdownx.details
   # tabbed contents
