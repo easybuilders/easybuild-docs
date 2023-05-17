@@ -38,8 +38,8 @@ See [Easyconfig files][easyconfig_files].
 <!-- XXX - UPDATE BY VERSION FIXME -->
 
 In EasyBuild version {{ easybuild.version }} the framework source code consists of about 31,500 lines of code,
-organized across about 125 Python modules in roughly a dozen Python package directories,
-next to almost 7000 lines of code for tests. This provides some notion of the size of the
+organized across about 225 Python modules in roughly 20 Python package directories,
+next to about 27,000 lines of code for tests. This provides some notion of the size of the
 EasyBuild framework and the amount of supporting functionality it has to offer.
 
 
