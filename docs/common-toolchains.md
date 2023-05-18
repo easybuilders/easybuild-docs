@@ -39,10 +39,11 @@ and `intel`; see below for more details, and also
 
 To be more helpful in understanding the differences between these families, here is a diagram that explains what is added in
 each additional layer.
+
 Note: because there have been a few changes in toolchains, there are notes below the diagram
 that explain the differences between the generations going back to `2021a`.
 
-### Newest generations (`2022b` and later):
+#### Newest generations (`2022b` and later):
 
 ``` mermaid
 graph LR
@@ -57,10 +58,13 @@ graph LR
   C --> |imkl| H[iimkl];
   H --> |impi| Z[intel];
 ```
+
 Note: following notes apply for the generations listed and those older than it:
+
 - `2022a` - `iimkl` not present yet
 - `2021b` - `gfbf` not present yet
 - `2020b` - `foss` uses OpenBLAS instead of FlexiBLAS, `iccifort` is used instead of `intel-compilers`
+
 
 Keep in mind that when creating an Easyconfig, you need to look at what toolchain "level" (e.g. `foss` vs `GCC`) your
 dependencies are using and choose the highest of them (or higher if needed) for your easyconfig.
