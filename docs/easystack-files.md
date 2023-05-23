@@ -66,6 +66,7 @@ easyconfigs:
   - OpenFOAM-v2206-foss-2022a.eb:
       options:
         installpath: /my/custom/installpath
+        parallel: "1"
 ```
 
 !!! note
@@ -73,6 +74,9 @@ easyconfigs:
 
     If the specified value definitely must be a string value, you should use quotes (`'...'`) to avoid
     that the YAML parser automatically converts the value to be of a specific type.
+    
+    If you wish to use _1_ (the number one), such as for the value to `parallel` option in the example
+    above, then this should be quoted, to avoid it being treated as the boolean `True`.
 
     In other cases, the automatic conversion is useful, like for the `True` used above,
     since `debug` is a boolean configuration option.
