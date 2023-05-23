@@ -17,7 +17,7 @@
         <link rel="next" href="../writing-yeb-easyconfig-files/">
       
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
@@ -411,8 +411,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../typical-workflow-example-with-wrf/" class="md-nav__link">
-        Typical workflow with WRF
+      <a href="../typical-workflow-example/" class="md-nav__link">
+        Typical workflow example
       </a>
     </li>
   
@@ -5860,12 +5860,15 @@ which will only apply to the installation of a particular easyconfig file.</p>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">OpenFOAM-v2206-foss-2022a.eb</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">options</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">installpath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/my/custom/installpath</span>
+<span class="w">        </span><span class="nt">parallel</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1&quot;</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You need to take care with some values in YAML, especially integers, booleans, etc.</p>
 <p>If the specified value definitely must be a string value, you should use quotes (<code>'...'</code>) to avoid
 that the YAML parser automatically converts the value to be of a specific type.</p>
+<p>If you wish to use <em>1</em> (the number one), such as for the value to <code>parallel</code> option in the example
+above, then this should be quoted, to avoid it being treated as the boolean <code>True</code>.</p>
 <p>In other cases, the automatic conversion is useful, like for the <code>True</code> used above,
 since <code>debug</code> is a boolean configuration option.</p>
 </div>
@@ -5944,7 +5947,7 @@ one could easily choose to <em>not</em> build anything labeled <code>gpu</code> 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 20, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 15, 2023</span>
       
     
   </small>
@@ -6033,7 +6036,7 @@ one could easily choose to <em>not</em> build anything labeled <code>gpu</code> 
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       

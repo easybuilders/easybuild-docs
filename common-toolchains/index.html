@@ -17,7 +17,7 @@
         <link rel="next" href="../controlling-compiler-optimization-flags/">
       
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
@@ -411,8 +411,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../typical-workflow-example-with-wrf/" class="md-nav__link">
-        Typical workflow with WRF
+      <a href="../typical-workflow-example/" class="md-nav__link">
+        Typical workflow example
       </a>
     </li>
   
@@ -516,6 +516,26 @@
   
     <nav class="md-nav" aria-label="Definition and motivation">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toolchains_diagram" class="md-nav__link">
+    Toolchain diagram
+  </a>
+  
+    <nav class="md-nav" aria-label="Toolchain diagram">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#newest-generations-2022b-and-later" class="md-nav__link">
+    Newest generations (2022b and later):
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#common_toolchains_foss" class="md-nav__link">
@@ -5912,9 +5932,36 @@ the common toolchains.</p>
 <p>The intention is to revise/update the definitions of the common
 toolchains regularly (see <a class="autorefs autorefs-internal" href="#common_toolchains_update_cycle">Update cycle for common toolchains</a>), which again
 can be a joint effort that benefits many HPC sites.</p>
-<p>Currently, two different common toolchains are being maintained: <code>foss</code>
+<p>Currently, two different families of common toolchains are being maintained: <code>foss</code>
 and <code>intel</code>; see below for more details, and also
 <a class="autorefs autorefs-internal" href="#common_toolchains_overview">Overview of common toolchains</a>.</p>
+<h3 id="toolchains_diagram">Toolchain diagram<a class="headerlink" href="#toolchains_diagram" title="Permanent link">&para;</a></h3>
+<p>To be more helpful in understanding the differences between these families, here is a diagram that explains what is added in
+each additional layer.</p>
+<p>Note: because there have been a few changes in toolchains, there are notes below the diagram
+that explain the differences between the generations going back to the <code>2020b</code> version of the <code>foss</code> and <code>intel</code> toolchains.</p>
+<h4 id="newest-generations-2022b-and-later">Newest generations (<code>2022b</code> and later):<a class="headerlink" href="#newest-generations-2022b-and-later" title="Permanent link">&para;</a></h4>
+<pre class="mermaid"><code>graph LR
+  A[GCCCore] --&gt; |binutils| B[GCC];
+  A --&gt; |binutils| C[intel-compilers];
+  B --&gt; |OpenMPI| E[gompi];
+  C --&gt; |impi| F[iimpi];
+  B --&gt; |FlexiBLAS + FFTW + ScaLAPACK| D[gfbf];
+  D --&gt; |OpenMPI| G[foss];
+  E --&gt; |FlexiBLAS + FFTW + ScaLAPACK| G[foss];
+  F --&gt; |imkl| Z[intel];
+  C --&gt; |imkl| H[iimkl];
+  H --&gt; |impi| Z[intel];</code></pre>
+<p>Note: following notes apply for the generations listed and those older than it:</p>
+<ul>
+<li><code>2022a</code> - <code>iimkl</code> not present yet</li>
+<li><code>2021b</code> - <code>gfbf</code> not present yet</li>
+<li><code>2020b</code> - <code>foss</code> uses OpenBLAS instead of FlexiBLAS, <code>iccifort</code> is used instead of <code>intel-compilers</code></li>
+</ul>
+<p>Keep in mind that when creating an Easyconfig, you need to look at what toolchain "level" (e.g. <code>foss</code> vs <code>GCC</code>) your
+dependencies are using and choose the highest of them (or higher if needed) for your easyconfig.
+For example, if one of your dependencies is using the <code>foss</code> toolchain, you need to use the <code>foss</code> 
+toolchain, and not the <code>GCC</code> toolchain.</p>
 <h3 id="common_toolchains_foss"><code>foss</code> toolchain<a class="headerlink" href="#common_toolchains_foss" title="Permanent link">&para;</a></h3>
 <p>The <code>foss</code> common compiler toolchain consists entirely of open source
 software (hence the name, derived from the common term 'FOSS', which is
@@ -5967,8 +6014,8 @@ which it was defined, plus an additional '<code>a</code>' or '<code>b</code>' to
 whether the toolchain was defined at the start of the year ('<code>a</code>') or
 halfway through the year ('<code>b</code>'); in short, the common toolchains are
 versioned as <code>&lt;year&gt;{a,b}</code>.</p>
-<p>For example, <code>foss/2016b</code> is a revision of the <code>foss</code> that was composed
-mid-2016.</p>
+<p>For example, <code>foss/2021b</code> is a revision of the <code>foss</code> that was composed
+mid-2021.</p>
 <p>A full historic overview of the <code>foss</code> and <code>intel</code> common toolchains is
 available in <a class="autorefs autorefs-internal" href="#common_toolchains_overview">Overview of common toolchains</a>.</p>
 <div class="admonition note">
@@ -6448,7 +6495,7 @@ toolchain, please see <a href="../version-specific/toolchain-opts/">Available to
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 23, 2023</span>
       
     
   </small>
@@ -6537,7 +6584,7 @@ toolchain, please see <a href="../version-specific/toolchain-opts/">Available to
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       

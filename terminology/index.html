@@ -17,7 +17,7 @@
         <link rel="next" href="../installation/">
       
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
@@ -509,8 +509,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../typical-workflow-example-with-wrf/" class="md-nav__link">
-        Typical workflow with WRF
+      <a href="../typical-workflow-example/" class="md-nav__link">
+        Typical workflow example
       </a>
     </li>
   
@@ -5871,9 +5871,9 @@ either obtained from the provided specification files or set to reasonable defau
 See <a class="autorefs autorefs-internal" href="#easyconfig_files">Easyconfig files</a>.</p>
 <!-- XXX - UPDATE BY VERSION FIXME -->
 
-<p>In EasyBuild version |version| the framework source code consists of about 19000 lines of code,
-organized across about 125 Python modules in roughly a dozen Python package directories,
-next to almost 7000 lines of code for tests. This provides some notion of the size of the
+<p>In EasyBuild version 4.7.1 the framework source code consists of about 31,500 lines of code,
+organized across about 225 Python modules in roughly 20 Python package directories,
+next to about 27,000 lines of code for tests. This provides some notion of the size of the
 EasyBuild framework and the amount of supporting functionality it has to offer.</p>
 <h2 id="easyblocks">Easyblocks<a class="headerlink" href="#easyblocks" title="Permanent link">&para;</a></h2>
 <p>The implementation of a particular software build and install procedure is done in a Python module,
@@ -5894,14 +5894,6 @@ should be used, based on the name of the software package or the value of the <c
 specification parameter (see <a class="autorefs autorefs-internal" href="../writing-easyconfig-files/#writing_easyconfigs_easyblock_spec">Easyblock specification</a>).
 Since EasyBuild v2.0, an easyblock <em>must</em> be specified in case no matching easyblock is found based on the
 software name (cfr. <a class="autorefs autorefs-internal" href="../removed-functionality/#depr_ConfigureMake_fallback_eb1">Automagic fallback to ConfigureMake</a>).</p>
-<!-- XXX - UPDATE BY VERSION FIXME -->
-
-<p>EasyBuild version 2.4.0 includes 154 software-specific easyblocks and 28 generic
-easyblocks (see also <a class="autorefs autorefs-internal" href="../version-specific/easyblocks/#vsd_list_easyblocks">List of easyblocks</a>), providing support for automatically installing a wide range
-of software packages. Examples range from fairly easy-to-build programs like gzip, other basic tools
-like compilers, various MPI stacks and commonly used libraries, primarily for x86_64 architecture systems,
-to large scientific software packages that are notorious for their involved and tedious install procedures, such as:
-<code>CP2K</code>, <code>NWChem</code>, <code>OpenFOAM</code>, <code>QuantumESPRESSO</code>, <code>WRF</code>.</p>
 <h2 id="toolchains">Toolchains<a class="headerlink" href="#toolchains" title="Permanent link">&para;</a></h2>
 <p>EasyBuild employs so-called <strong>compiler toolchains</strong> or, simply <code>toolchains</code> for short,
 which are a major concept in handling the build and installation processes.</p>
@@ -5966,7 +5958,7 @@ installation prefix, or in a separate location.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 1, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 17, 2023</span>
       
     
   </small>
@@ -6055,7 +6047,7 @@ installation prefix, or in a separate location.</p>
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       

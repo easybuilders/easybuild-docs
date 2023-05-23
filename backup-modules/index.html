@@ -11,13 +11,13 @@
         <link rel="canonical" href="https://docs.easybuild.io/backup-modules/">
       
       
-        <link rel="prev" href="../typical-workflow-example-with-wrf/">
+        <link rel="prev" href="../typical-workflow-example/">
       
       
         <link rel="next" href="../common-toolchains/">
       
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
@@ -411,8 +411,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../typical-workflow-example-with-wrf/" class="md-nav__link">
-        Typical workflow with WRF
+      <a href="../typical-workflow-example/" class="md-nav__link">
+        Typical workflow example
       </a>
     </li>
   
@@ -5823,33 +5823,32 @@ is enabled automatically.</p>
 because the <code>/bin</code> subdirectory was missing in the installation, for the
 purpose of this example:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>ls<span class="w"> </span>-la<span class="w"> </span><span class="nv">$EASYBUILD_PREFIX</span>/modules/all/bzip2
-<span class="go">total 16</span>
-<span class="go">drwxr-xr-x  2 example  example   136 Aug 24 10:20 .</span>
-<span class="go">drwxr-xr-x  3 example  example   102 Aug 24 10:18 ..</span>
-<span class="go">-rw-r--r--  1 example  example  1256 Aug 24 10:19 1.0.6</span>
-<span class="go">-rw-r--r--  1 example  example  1303 Aug 24 10:18 1.0.6.lua</span>
+<span class="go">drwxrwsr-x  2 example example 4096 May  9 09:12 .</span>
+<span class="go">drwxrwsr-x 17 example example 4096 May  9 09:12 ..</span>
+<span class="go">-rw-rw-r--  1 example example 1637 May  9 09:12 1.0.8-GCCcore-12.2.0.lua</span>
 </code></pre></div>
 <p>Using <code>--force</code> and <code>--backup-modules</code>, we can reinstall the
 <code>bzip2/1.0.6</code> modules and get a clear view on what has changed.</p>
 <p>To reinstall the <code>bzip2/1.0.6</code> module in Lua syntax while retaining a
 backup of the existing module:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>bzip2-1.0.6.eb<span class="w"> </span>--module-syntax<span class="o">=</span>Lua<span class="w"> </span>--force<span class="w"> </span>--backup-modules
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>bzip2-1.0.8-GCCcore-12.2.0.eb<span class="w"> </span>--module-syntax<span class="o">=</span>Lua<span class="w"> </span>--force<span class="w"> </span>--backup-modules
 <span class="go">...</span>
 <span class="go">== creating build dir, resetting environment...</span>
-<span class="go">== backup of existing module file stored at /example/modules/all/bzip2/1.0.6.lua.bak_20170824102603</span>
+<span class="go">== backup of existing module file stored at /example/modules/all/bzip2/1.0.8-GCCcore-12.2.0.lua.bak_20230509091972_3578923</span>
 <span class="go">...</span>
 <span class="go">== creating module...</span>
-<span class="go">== comparing module file with backup /example/modules/all/bzip2/1.0.6.lua.bak_20170824102603; diff is:</span>
-<span class="go">--- /example/modules/all/bzip2/1.0.6.lua.bak_20170824102603</span>
-<span class="go">+++ /example/modules/all/bzip2/1.0.6.lua</span>
+<span class="go">  &gt;&gt; generating module file @ /example/modules/all/bzip2/1.0.8-GCCcore-12.2.0.lua</span>
+<span class="go">== comparing module file with backup /example/modules/all/bzip2/1.0.8-GCCcore-12.2.0.lua.bak_20230509091972_3578923; diff is:</span>
+<span class="go">--- /example/modules/all/bzip2/1.0.8-GCCcore-12.2.0.lua.bak_20230509091972_3578923</span>
+<span class="go">+++ /example/modules/all/bzip2/1.0.8-GCCcore-12.2.0.lua</span>
 <span class="go">@@ -25,9 +25,10 @@</span>
 <span class="go"> prepend_path(&quot;LD_LIBRARY_PATH&quot;, pathJoin(root, &quot;lib&quot;))</span>
 <span class="go"> prepend_path(&quot;LIBRARY_PATH&quot;, pathJoin(root, &quot;lib&quot;))</span>
 <span class="go"> prepend_path(&quot;MANPATH&quot;, pathJoin(root, &quot;man&quot;))</span>
 <span class="go">+prepend_path(&quot;PATH&quot;, pathJoin(root, &quot;bin&quot;))</span>
 <span class="go"> setenv(&quot;EBROOTBZIP2&quot;, root)</span>
-<span class="go"> setenv(&quot;EBVERSIONBZIP2&quot;, &quot;1.0.6&quot;)</span>
-<span class="go"> setenv(&quot;EBDEVELBZIP2&quot;, pathJoin(root, &quot;easybuild/bzip2-1.0.6-easybuild-devel&quot;))</span>
+<span class="go"> setenv(&quot;EBVERSIONBZIP2&quot;, &quot;1.0.8&quot;)</span>
+<span class="go"> setenv(&quot;EBDEVELBZIP2&quot;, pathJoin(root, &quot;easybuild/bzip2-1.0.8-GCCcore-12.2.0-easybuild-devel&quot;))</span>
 
 <span class="go">...</span>
 </code></pre></div>
@@ -5859,19 +5858,19 @@ backup of the existing module:</p>
 <p>Afterwards, both the newly generated modules and the backups are in
 place:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>ls<span class="w"> </span>-la<span class="w"> </span><span class="nv">$EASYBUILD_PREFIX</span>/modules/all/bzip2
-<span class="go">total 32</span>
-<span class="go">drwxr-xr-x  2 example  example   204 Aug 24 10:26 .</span>
-<span class="go">drwxr-xr-x  3 example  example   102 Jul 11 10:18 ..</span>
-<span class="go">-rw-r--r--  1 example  example  1227 Aug 24 10:24 .1.0.6.bak_20170824102412</span>
-<span class="go">-rw-r--r--  1 example  example  1256 Jul 11 01:24 1.0.6</span>
-<span class="go">-rw-r--r--  1 example  example  1303 Jul 11 01:26 1.0.6.lua</span>
-<span class="go">-rw-r--r--  1 example  example  1259 Aug 24 10:26 1.0.6.lua.bak_20170824102603</span>
+<span class="go">total 4</span>
+<span class="go">drwxrwsr-x  2 example example 4096 May  9 09:29 .</span>
+<span class="go">drwxrwsr-x 17 example example 4096 May  9 09:12 ..</span>
+<span class="go">-rw-rw-r--  1 example example 1559 May  9 09:29 1.0.8-GCCcore-12.2.0</span>
+<span class="go">-rw-rw-r--  1 example example 1637 May  9 09:12 1.0.8-GCCcore-12.2.0.bak_20230509091754_3383740</span>
+<span class="go">-rw-rw-r--  1 example example 1681 May  9 09:18 1.0.8-GCCcore-12.2.0.lua</span>
+<span class="go">-rw-rw-r--  1 example example 1637 May  9 09:12 1.0.8-GCCcore-12.2.0.lua.bak_20230509091972_3578923</span>
 </code></pre></div>
 <p>Cleaning up the backup module files can be done with the following
 command (for example):</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>find<span class="w"> </span><span class="nv">$EASYBUILD_PREFIX</span>/modules/all/bzip2<span class="w"> </span>-name<span class="w"> </span><span class="s1">&#39;*.bak*&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>rm<span class="w"> </span>-v
-<span class="go">/example/modules/all/bzip2/.1.0.6.bak_20170824102412</span>
-<span class="go">/example/modules/all/bzip2/1.0.6.lua.bak_20170824102603</span>
+<span class="go">removed &#39;example/modules/all/bzip2/1.0.8-GCCcore-12.2.0.bak_20230509091754_3383740&#39;</span>
+<span class="go">removed &#39;example/modules/all/bzip2/1.0.8-GCCcore-12.2.0.lua.bak_20230509091972_3578923&#39;</span>
 </code></pre></div>
 
   <hr>
@@ -5879,7 +5878,7 @@ command (for example):</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 4, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 9, 2023</span>
       
     
   </small>
@@ -5968,7 +5967,7 @@ command (for example):</p>
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
       
         <script src="../js/asciinema-player-2.6.1.js"></script>
       
