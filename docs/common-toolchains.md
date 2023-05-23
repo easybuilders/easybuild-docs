@@ -41,7 +41,7 @@ To be more helpful in understanding the differences between these families, here
 each additional layer.
 
 Note: because there have been a few changes in toolchains, there are notes below the diagram
-that explain the differences between the generations going back to `2021a`.
+that explain the differences between the generations going back to the `2020b` version of the `foss` and `intel` toolchains.
 
 #### Newest generations (`2022b` and later):
 
