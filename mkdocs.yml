@@ -48,7 +48,7 @@ nav:
       - Installation: installation.md
       - Configuration: configuration.md
       - Basic usage: using-easybuild.md
-      - Typical workflow with WRF: typical-workflow-example-with-wrf.md
+      - Typical workflow example: typical-workflow-example.md
   - Using EasyBuild:
       - Backing up existing modules: backup-modules.md
       - Common toolchains: common-toolchains.md
@@ -245,6 +245,7 @@ plugins:
         en/latest/System_toolchain.html: system-toolchain.md
         en/latest/Tracing_progress.html: tracing-progress.md
         en/latest/Typical_workflow_example_with_WRF.html: typical-workflow-example-with-wrf.md
+        typical-workflow-example-with-wrf.md: typical-workflow-example.md
         en/latest/Unit-tests.html: unit-tests.md
         en/latest/Useful_links.html: index.md
         en/latest/Useful-scripts.html: useful-scripts.md
