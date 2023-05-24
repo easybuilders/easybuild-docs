@@ -19,7 +19,7 @@ For in-depth details on a particular change, see the pull requests that are link
 
 ## Planned and proposed changes for EasyBuild v5.0 {: #eb5_changes }
 
-At the [EasyBuild User Meetin](https://easybuild.io/eum23), Simon Branford set out the
+At the [EasyBuild User Meeting](https://easybuild.io/eum23), Simon Branford set out the
 [roadmap for EasyBuild v5.0](https://easybuild.io/eum23/#easybuild5).
 
 ### Proposed changes for EasyBuild v5.0 {: #eb5_proposals }
