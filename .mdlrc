@@ -1,1 +1,3 @@
 style "#{File.dirname(__FILE__)}/.mdl.rb"
+
+ignore_front_matter true
