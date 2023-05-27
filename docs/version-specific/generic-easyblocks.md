@@ -6,7 +6,7 @@
 
 # Overview of generic easyblocks {: #generic_easyblocks }
 
-[BinariesTarball](#binariestarball) - [Binary](#binary) - [BuildEnv](#buildenv) - [Bundle](#bundle) - [CMakeMake](#cmakemake) - [CMakeMakeCp](#cmakemakecp) - [CMakeNinja](#cmakeninja) - [CMakePythonPackage](#cmakepythonpackage) - [CmdCp](#cmdcp) - [Conda](#conda) - [ConfigureMake](#configuremake) - [ConfigureMakePythonPackage](#configuremakepythonpackage) - [CrayToolchain](#craytoolchain) - [FortranPythonPackage](#fortranpythonpackage) - [GoPackage](#gopackage) - [IntelBase](#intelbase) - [JAR](#jar) - [JuliaBundle](#juliabundle) - [JuliaPackage](#juliapackage) - [MakeCp](#makecp) - [MesonNinja](#mesonninja) - [ModuleRC](#modulerc) - [OCamlPackage](#ocamlpackage) - [OctavePackage](#octavepackage) - [PackedBinary](#packedbinary) - [PerlModule](#perlmodule) - [PythonBundle](#pythonbundle) - [PythonPackage](#pythonpackage) - [RPackage](#rpackage) - [Rpm](#rpm) - [RubyGem](#rubygem) - [SCons](#scons) - [SystemCompiler](#systemcompiler) - [SystemMPI](#systemmpi) - [Tarball](#tarball) - [Toolchain](#toolchain) - [VSCPythonPackage](#vscpythonpackage) - [VersionIndependentPythonPackage](#versionindependentpythonpackage) - [Waf](#waf)
+[BinariesTarball](#binariestarball) - [Binary](#binary) - [BuildEnv](#buildenv) - [Bundle](#bundle) - [CMakeMake](#cmakemake) - [CMakeMakeCp](#cmakemakecp) - [CMakeNinja](#cmakeninja) - [CMakePythonPackage](#cmakepythonpackage) - [Cargo](#cargo) - [CargoPythonPackage](#cargopythonpackage) - [CmdCp](#cmdcp) - [Conda](#conda) - [ConfigureMake](#configuremake) - [ConfigureMakePythonPackage](#configuremakepythonpackage) - [CrayToolchain](#craytoolchain) - [FortranPythonPackage](#fortranpythonpackage) - [GoPackage](#gopackage) - [IntelBase](#intelbase) - [JAR](#jar) - [JuliaBundle](#juliabundle) - [JuliaPackage](#juliapackage) - [MakeCp](#makecp) - [MesonNinja](#mesonninja) - [ModuleRC](#modulerc) - [OCamlPackage](#ocamlpackage) - [OctavePackage](#octavepackage) - [PackedBinary](#packedbinary) - [PerlModule](#perlmodule) - [PythonBundle](#pythonbundle) - [PythonPackage](#pythonpackage) - [RPackage](#rpackage) - [Rpm](#rpm) - [RubyGem](#rubygem) - [SCons](#scons) - [SystemCompiler](#systemcompiler) - [SystemMPI](#systemmpi) - [Tarball](#tarball) - [Toolchain](#toolchain) - [VSCPythonPackage](#vscpythonpackage) - [VersionIndependentPythonPackage](#versionindependentpythonpackage) - [Waf](#waf)
 
 ## ``BinariesTarball``
 
@@ -370,6 +370,72 @@ easyconfig parameter            |description                                    
 
 * ``install_step`` - Main configuration using cmake
 
+
+## ``Cargo``
+
+(derives from ``ExtensionEasyBlock``)
+
+Support for installing Cargo packages (Rust)
+
+### Extra easyconfig parameters specific to ``Cargo`` easyblock
+
+easyconfig parameter|description                                        |default value
+--------------------|---------------------------------------------------|-------------
+``crates``          |List of (crate, version, [repo, rev]) tuples to use|``[]``
+``enable_tests``    |Enable building of tests                           |``True``
+``lto``             |Override default LTO flag ('fat', 'thin', 'off')   |``None``
+``offline``         |Build offline                                      |``True``
+``options``         |Dictionary with extension options.                 |``{}``
+
+### Customised steps in ``Cargo`` easyblock
+
+* ``build_step`` - Build with cargo
+
+* ``configure_step`` - Empty configuration step.
+
+* ``install_step`` - Install with cargo
+
+
+## ``CargoPythonPackage``
+
+(derives from [``PythonPackage``](#pythonpackage), [``Cargo``](#cargo))
+
+Build a Python package with setup from Cargo but build/install step from PythonPackage
+
+The cargo init step will set up the environment variables for rustc and vendor sources
+but all the build steps are triggered via normal PythonPackage steps like normal.
+
+
+### Extra easyconfig parameters specific to ``CargoPythonPackage`` easyblock
+
+easyconfig parameter    |description                                                                                                                                                                                                                                                                                                             |default value
+------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------
+``buildcmd``            |Command for building the package (e.g. for custom builds resulting in a whl file). When using setup.py this will be passed to setup.py and defaults to 'build'. Otherwise it will be used as-is. A value of None then skips the build step. The template %(python)s will be replace by the currently used Python binary.|``None``
+``check_ldshared``      |Check Python value of $LDSHARED, correct if needed to "$CC -shared"                                                                                                                                                                                                                                                     |``None``
+``crates``              |List of (crate, version, [repo, rev]) tuples to use                                                                                                                                                                                                                                                                     |``[]``
+``download_dep_fail``   |Fail if downloaded dependencies are detected                                                                                                                                                                                                                                                                            |``None``
+``enable_tests``        |Enable building of tests                                                                                                                                                                                                                                                                                                |``True``
+``install_src``         |Source path to pass to the install command (e.g. a whl file).Defaults to '.' for unpacked sources or the first source file specified                                                                                                                                                                                    |``None``
+``install_target``      |Option to pass to setup.py                                                                                                                                                                                                                                                                                              |``"install"``
+``lto``                 |Override default LTO flag ('fat', 'thin', 'off')                                                                                                                                                                                                                                                                        |``None``
+``offline``             |Build offline                                                                                                                                                                                                                                                                                                           |``True``
+``options``             |Dictionary with extension options.                                                                                                                                                                                                                                                                                      |``{}``
+``pip_ignore_installed``|Let pip ignore installed Python packages (i.e. don't remove them)                                                                                                                                                                                                                                                       |``True``
+``pip_no_index``        |Pass --no-index to pip to disable connecting to PyPi entirely which also disables the pip version check. Enabled by default when pip_ignore_installed=True                                                                                                                                                              |``None``
+``req_py_majver``       |Required major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
+``req_py_minver``       |Required minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
+``runtest``             |Run unit tests.                                                                                                                                                                                                                                                                                                         |``True``
+``sanity_pip_check``    |Run 'python -m pip check' to ensure all required Python packages are installed and check for any package with an invalid (0.0.0) version.                                                                                                                                                                               |``False``
+``source_urls``         |List of URLs for source files                                                                                                                                                                                                                                                                                           |``['https://pypi.python.org/packages/source/%(nameletter)s/%(name)s']``
+``testinstall``         |Install into temporary directory prior to running the tests.                                                                                                                                                                                                                                                            |``False``
+``unpack_sources``      |Unpack sources prior to build/install. Defaults to 'True' except for whl files                                                                                                                                                                                                                                          |``None``
+``unversioned_packages``|List of packages that don't have a version at all, i.e. show 0.0.0                                                                                                                                                                                                                                                      |``[]``
+``use_pip``             |Install using '%(python)s -m pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                                                                                                                   |``None``
+``use_pip_editable``    |Install using 'pip install --editable'                                                                                                                                                                                                                                                                                  |``False``
+``use_pip_extras``      |String with comma-separated list of 'extras' to install via pip                                                                                                                                                                                                                                                         |``None``
+``use_pip_for_deps``    |Install dependencies using '%(python)s -m pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                                                                                                      |``False``
+``use_pip_requirement`` |Install using 'python -m pip install --requirement'. The sources is expected to be the requirements file.                                                                                                                                                                                                               |``False``
+``zipped_egg``          |Install as a zipped eggs                                                                                                                                                                                                                                                                                                |``False``
 
 ## ``CmdCp``
 
