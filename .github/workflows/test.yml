@@ -22,7 +22,7 @@ jobs:
         uses: codespell-project/actions-codespell@master
         with:
           check_filenames: true
-          ignore_words_list: atleast,ninjs,simpy,proovread,namd,precice
+          ignore_words_list: atleast,ninjs,simpy,proovread,namd,precice,crate
           # filter out
           #   docs/js/asciinema-player-2.6.1.js as it is not markdown
           #   version-specific/supported-software.md as the software descriptions have spelling errors
