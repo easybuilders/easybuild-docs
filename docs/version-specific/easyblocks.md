@@ -233,12 +233,15 @@
   - EB_WRF
   - EB_WRF_minus_Fire
   - ExtensionEasyBlock
+    - Cargo
+      - CargoPythonPackage
     - EB_Scipion
     - JuliaPackage
     - OCamlPackage
     - OctavePackage
     - PerlModule
     - PythonPackage
+      - CargoPythonPackage
       - CMakePythonPackage
         - EB_DOLFIN
         - EB_pybind11
@@ -344,12 +347,15 @@
   - Waf
 - **Extension**
   - ExtensionEasyBlock
+    - Cargo
+      - CargoPythonPackage
     - EB_Scipion
     - JuliaPackage
     - OCamlPackage
     - OctavePackage
     - PerlModule
     - PythonPackage
+      - CargoPythonPackage
       - CMakePythonPackage
         - EB_DOLFIN
         - EB_pybind11
