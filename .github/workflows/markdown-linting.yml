@@ -16,6 +16,6 @@ jobs:
         with:
           # all markdown, except filter out {demos,version-specific}/* for now, until we fix issues in those sections
           globs: |
-            "**/*.md"
-            "#docs/demos"
-            "#docs/version-specific"
+            **/*.md
+            #docs/demos
+            #docs/version-specific
