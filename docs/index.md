@@ -29,4 +29,4 @@ To contribute to this documentation, [open a pull request](https://github.com/ea
 
 ---
 
-*(last update: {{ page.update_date }} - [easybuild-docs commit {{ git.short_commit}}](https://github.com/easybuilders/easybuild-docs/commits/{{ git.short_commit }}))*
+*(last update: {{ page.update_date }} - [easybuild-docs commit {{ git.short_commit}}](<https://github.com/easybuilders/easybuild-docs/commits/{{ git.short_commit }}>))*

@@ -14,8 +14,8 @@ jobs:
       - name: MarkdownLint
         uses: DavidAnson/markdownlint-cli2-action@v10
         with:
+          # all markdown, except filter out {demos,version-specific}/* for now, until we fix issues in those sections
           globs: |
-            **/*.md
-            # filter out version-specific/* for now, until we fix all issues that mdl trips over
-            !docs/demos/*.md
-            !docs/version-specific/*.md
+            "**/*.md"
+            "#docs/demos"
+            "#docs/version-specific"
