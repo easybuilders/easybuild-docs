@@ -11,8 +11,11 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
 
-      - name: MarkdownLint mdl Action
-        uses: actionshub/markdownlint@v2.1.2
+      - name: MarkdownLint
+        uses: DavidAnson/markdownlint-cli2-action@v10
         with:
-          # filter out version-specific/* for now, until we fix all issues that mdl trips over
-          filesToIgnoreRegex: "(docs\\/demos\\/.*|docs\\/version-specific\\/.*)"
+          # all markdown, except filter out {demos,version-specific}/* for now, until we fix issues in those sections
+          globs: |
+            **/*.md
+            #docs/demos
+            #docs/version-specific

@@ -387,9 +387,9 @@ through its `set_up_configuration()` method, which is called in the
 
 Once all options are parsed, those options listed in `easybuild.tools.config`
 will be gathered in a singleton `BuildOptions` class. This class is the
-centralized locations of configuration options for the current build. The
-method `build_option()` in `easybuild.tools.config` provides a simple interface
-to it:
+centralized location of configuration options for the current EasyBuild
+session. The method `build_option()` in `easybuild.tools.config` provides a
+simple interface to it:
 
 ```python
 if build_option('ignore_test_failure'):
@@ -401,8 +401,9 @@ else:
 Therefore, adding a new option to `eb` and making that options available
 through `build_option()` is a two step process. First the option has to be
 added to `EasyBuildOptions` in `easybuild.tools.options` and then also listed
-in `easybuild.tools.config`.
-
+in `easybuild.tools.config`. As an example, you can check
+[easybuild-framework#4226](https://github.com/easybuilders/easybuild-framework/pull/4226)
+which is a PR adding the `download_timeout` option to EasyBuild.
 
 ## Features in easybuild.tools
 

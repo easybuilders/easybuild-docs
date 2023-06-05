@@ -105,14 +105,14 @@ Option flag                                                      |Option descrip
 ## Container options
 
 Option flag                                    |Option description
------------------------------------------------|-----------------------------------------------------------------------------------------------------------
+-----------------------------------------------|----------------------------------------------------------------------------------------------------------------------
 ``--container-build-image``                    |Build container image (requires sudo privileges!) (default: False)
 ``--container-config=CONFIG``                  |Configuration for container image (type <class 'str'>)
 ``--container-image-format=IMAGE-FORMAT``      |Container image format (type choice) (choices: ext3, sandbox, sif, squashfs)
 ``--container-image-name=IMAGE-NAME``          |Custom name for container image (defaults to name of easyconfig)
 ``--container-template-recipe=TEMPLATE-RECIPE``|Template recipe for container image (type <class 'str'>)
 ``--container-tmpdir=TMPDIR``                  |Temporary directory where container image is built
-``--container-type=TYPE``                      |Type of container recipe/image to create (type choice; default: singularity) (choices: docker, singularity)
+``--container-type=TYPE``                      |Type of container recipe/image to create (type choice; default: singularity) (choices: apptainer, docker, singularity)
 
 ## Options for Easyconfigs
 
@@ -244,7 +244,7 @@ Option flag                                                              |Option
 ``--deprecated=DEPRECATED``                                              |Run pretending to be (future) version, to test removal of deprecated code.
 ``--detect-loaded-modules=DETECT-LOADED-MODULES``                        |Detect loaded EasyBuild-generated modules, act accordingly; supported values: error, ignore, purge, unload, warn (default: warn)
 ``--devel``                                                              |Enable including of development log messages (default: False)
-``--download-timeout=DOWNLOAD-TIMEOUT``                                  |Timeout for initiating downloads (in seconds) (type <class 'float'>)
+``--download-timeout=DOWNLOAD-TIMEOUT``                                  |Timeout for initiating downloads (in seconds) (type <class 'float'>; default: 10)
 ``--dump-autopep8``                                                      |Reformat easyconfigs using autopep8 when dumping them (default: False)
 ``-e CLASS, --easyblock=CLASS``                                          |easyblock to use for processing the spec file or dumping the options
 ``--enforce-checksums``                                                  |Enforce availability of checksums for all sources/patches, so they can be verified (default: False)

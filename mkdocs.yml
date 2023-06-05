@@ -18,11 +18,15 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -44,7 +48,7 @@ nav:
       - Installation: installation.md
       - Configuration: configuration.md
       - Basic usage: using-easybuild.md
-      - Typical workflow with WRF: typical-workflow-example-with-wrf.md
+      - Typical workflow example: typical-workflow-example.md
   - Using EasyBuild:
       - Backing up existing modules: backup-modules.md
       - Common toolchains: common-toolchains.md
@@ -103,6 +107,7 @@ nav:
   - API: api/
   - List of supported software: version-specific/supported-software.md
   - Getting help: getting-help.md
+  - User survey: user-survey/index.md
   - Other topics:
       - Alternative installation methods: installation-alternative.md
       - Configuration (legacy): legacy/configuration.md
@@ -150,7 +155,7 @@ extra:
     provider: google
     property: G-BLVCH6991S
   easybuild:
-    version: 4.7.1
+    version: 4.7.2
   # add links in bottom right
   social:
     - icon: fontawesome/brands/twitter
@@ -240,6 +245,7 @@ plugins:
         en/latest/System_toolchain.html: system-toolchain.md
         en/latest/Tracing_progress.html: tracing-progress.md
         en/latest/Typical_workflow_example_with_WRF.html: typical-workflow-example-with-wrf.md
+        typical-workflow-example-with-wrf.md: typical-workflow-example.md
         en/latest/Unit-tests.html: unit-tests.md
         en/latest/Useful_links.html: index.md
         en/latest/Useful-scripts.html: useful-scripts.md

@@ -1,0 +1,17 @@
+---
+# Enable all rules by default
+"default": true
+
+# https://github.com/markdownlint/markdownlint/blob/main/docs/RULES.md
+"MD007": false # list indent
+"MD009": false # trailing spaces
+"MD010": false # Hard tabs
+"MD012": false # multiple blank lines
+"MD013": false # line length
+"MD026": false # Trailing punctuation in header
+"MD036": false # Emphasis instead of header
+"MD046": false # Code block style. Doesn't like MkDocs admonitions or content tabs
+"MD052": false # defined ref links. Doesn't like mkdocs-autorefs
+
+"MD024":
+  "allow_different_nesting": true

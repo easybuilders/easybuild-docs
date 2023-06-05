@@ -37,9 +37,9 @@ See [Easyconfig files][easyconfig_files].
 
 <!-- XXX - UPDATE BY VERSION FIXME -->
 
-In EasyBuild version |version| the framework source code consists of about 19000 lines of code,
-organized across about 125 Python modules in roughly a dozen Python package directories,
-next to almost 7000 lines of code for tests. This provides some notion of the size of the
+In EasyBuild version {{ easybuild.version }} the framework source code consists of about 31,500 lines of code,
+organized across about 225 Python modules in roughly 20 Python package directories,
+next to about 27,000 lines of code for tests. This provides some notion of the size of the
 EasyBuild framework and the amount of supporting functionality it has to offer.
 
 
@@ -66,15 +66,6 @@ should be used, based on the name of the software package or the value of the `e
 specification parameter (see [Easyblock specification][writing_easyconfigs_easyblock_spec]).
 Since EasyBuild v2.0, an easyblock *must* be specified in case no matching easyblock is found based on the
 software name (cfr. [Automagic fallback to ConfigureMake][depr_ConfigureMake_fallback_eb1]).
-
-<!-- XXX - UPDATE BY VERSION FIXME -->
-
-EasyBuild version 2.4.0 includes 154 software-specific easyblocks and 28 generic
-easyblocks (see also [List of easyblocks][vsd_list_easyblocks]), providing support for automatically installing a wide range
-of software packages. Examples range from fairly easy-to-build programs like gzip, other basic tools
-like compilers, various MPI stacks and commonly used libraries, primarily for x86_64 architecture systems,
-to large scientific software packages that are notorious for their involved and tedious install procedures, such as:
-`CP2K`, `NWChem`, `OpenFOAM`, `QuantumESPRESSO`, `WRF`.
 
 
 ## Toolchains {: #toolchains }
