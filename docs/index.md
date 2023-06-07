@@ -24,7 +24,7 @@ To contribute to this documentation, [open a pull request](https://github.com/ea
 - [Generic easyblocks](version-specific/generic-easyblocks.md)
 - List of [common toolchains](common-toolchains.md) and [supported software](version-specific/supported-software)
 - [Contributing to EasyBuild](contributing.md) - [GitHub integration features](integration-with-github.md)
-- [EasyBuild release notes](release-notes.md)
+- [EasyBuild release notes](release-notes.md) - [EasyBuild v5.0](easybuild-v5/index.md)
 - [Getting help](getting-help.md): [mailing list](https://lists.ugent.be/wws/info/easybuild) - [Slack](https://easybuild.io/join-slack) - [conference calls](https://github.com/easybuilders/easybuild/wiki/Conference-calls) - [GitHub](https://github.com/easybuilders)
 
 ---
