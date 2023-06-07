@@ -62,10 +62,10 @@ $ module load EasyBuild
 $ module list
 
 Currently Loaded Modules:
-  1) EasyBuild/4.7.1
+  1) EasyBuild/4.7.2
 
 $ eb --version
-This is EasyBuild 4.7.1 (framework: 4.7.1, easyblocks: 4.7.1) on host example.local
+This is EasyBuild 4.7.2 (framework: 4.7.2, easyblocks: 4.7.2) on host example.local
 ```
 
 !!! tip
@@ -228,7 +228,7 @@ $ EB_VERBOSE=1 eb --version
 >> 'python3' version: 3.6.8, which matches Python 3 version requirement (>= 3.5)
 >> Selected Python command: python3 (/usr/bin/python3.6)
 >> python3.6 -m easybuild.main --version
-This is EasyBuild 4.7.1 (framework: 4.7.1, easyblocks: 4.7.1) on host example
+This is EasyBuild 4.7.2 (framework: 4.7.2, easyblocks: 4.7.2) on host example
 ```
 
 
