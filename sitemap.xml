@@ -1566,6 +1566,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.easybuild.io/easybuild-v5/</loc>
+         <lastmod>2023-06-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.easybuild.io/easybuild-v5/overview-of-changes/</loc>
          <lastmod>2023-06-07</lastmod>
          <changefreq>daily</changefreq>
