@@ -9,6 +9,11 @@ import mkdocs_gen_files
 
 
 EB_FRAMEWORK = "src/easybuild-framework"
+MKDOCS_SEARCH_PRIORITY = """---
+search:
+  boost: 0.5
+---
+"""
 
 if not Path(f"{EB_FRAMEWORK}/easybuild").is_dir():
     print("WARNING  -  EasyBuild Framework is not available. API documentation will not be generated.")
@@ -53,6 +58,7 @@ for path in sorted(Path(f"{EB_FRAMEWORK}/easybuild/").rglob("*.py")):
         navs[nav_tuple][parts] = doc_path_relative_to_nav
 
     with mkdocs_gen_files.open(full_doc_path, "w") as fd:
+        fd.write(MKDOCS_SEARCH_PRIORITY)
         identifier = ".".join(parts)
         fd.write(f"::: {identifier}\n")
 
@@ -60,10 +66,17 @@ for path in sorted(Path(f"{EB_FRAMEWORK}/easybuild/").rglob("*.py")):
 
 # Generate the menu navigation file
 with mkdocs_gen_files.open("api/summary.md", "w") as nav_file:
+    nav_file.write(MKDOCS_SEARCH_PRIORITY)
     nav_file.writelines(menu_nav.build_literate_nav())
 
 # Generate the section navigation files, appending to any existing API content
 for key, nav in navs.items():
     fp = '/'.join(key)
-    with mkdocs_gen_files.open(f"api/{fp}/index.md", "a") as nav_file:
+    filename = f"api/{fp}/index.md"
+
+    if not Path(filename).is_file():
+        with mkdocs_gen_files.open(filename, "w") as nav_file:
+            nav_file.write(MKDOCS_SEARCH_PRIORITY)
+
+    with mkdocs_gen_files.open(filename, "a") as nav_file:
         nav_file.writelines(nav.build_literate_nav())
