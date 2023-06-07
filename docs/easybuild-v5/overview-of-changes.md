@@ -27,8 +27,8 @@ At the [EasyBuild User Meeting](https://easybuild.io/eum23), Simon Branford set 
 There are several proposed changes where the EasyBuild maintainers are seeking community feedback. If you wish to provide
 feedback then please comment in the GitHub issue for the proposal.
 
-* Minimum supported Lmod Version: _proposal forthcoming_
-* Toolchain Support Policy: _proposal forthcoming_
+* [Minimum supported Lmod Version](https://github.com/easybuilders/easybuild/issues/871)
+* [Toolchain Support Policy](https://github.com/easybuilders/easybuild/issues/872)
 
 ### Planned changes for EasyBuild v5.0 {: #eb5_plans }
 
