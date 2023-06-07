@@ -17,7 +17,7 @@
         <link rel="next" href="../yeb/">
       
       <link rel="icon" href="../../../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
     
     
       
@@ -25,10 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -4540,6 +4540,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../tools/containers/apptainer/" class="md-nav__link">
+        apptainer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../tools/containers/base/" class="md-nav__link">
         base
       </a>
@@ -6258,7 +6272,9 @@ it will update the data (if not None) (and not raise an error)</p>
         <tr>
           <td><code>versop_new</code></td>
           <td class="doc-param-details">
-            <p>VersionOperator instance (or will be converted into one if type string)</p>
+            <div class="doc-md-description">
+              <p>VersionOperator instance (or will be converted into one if type string)</p>
+            </div>
             <p>
             </p>
           </td>
@@ -6266,7 +6282,9 @@ it will update the data (if not None) (and not raise an error)</p>
         <tr>
           <td><code>data</code></td>
           <td class="doc-param-details">
-            <p>additional data for supplied version operator to be stored</p>
+            <div class="doc-md-description">
+              <p>additional data for supplied version operator to be stored</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -6278,7 +6296,9 @@ it will update the data (if not None) (and not raise an error)</p>
         <tr>
           <td><code>update</code></td>
           <td class="doc-param-details">
-            <p>if versop_new already exist and has data set, try to update the existing data with the new data; instead of overriding the existing data with the new data (method used for updating is .update)</p>
+            <div class="doc-md-description">
+              <p>if versop_new already exist and has data set, try to update the existing data with the new data; instead of overriding the existing data with the new data (method used for updating is .update)</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -6395,7 +6415,9 @@ it will update the data (if not None) (and not raise an error)</p>
         <tr>
           <td><code>tcversop_str</code></td>
           <td class="doc-param-details">
-            <p>intialise with toolchain version operator string</p>
+            <div class="doc-md-description">
+              <p>intialise with toolchain version operator string</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -6530,7 +6552,9 @@ Returns None in case of failure (e.g. if supplied string doesn't parse), True in
         <tr>
           <td><code>name</code></td>
           <td class="doc-param-details">
-            <p>toolchain name</p>
+            <div class="doc-md-description">
+              <p>toolchain name</p>
+            </div>
             <p>
             </p>
           </td>
@@ -6538,7 +6562,9 @@ Returns None in case of failure (e.g. if supplied string doesn't parse), True in
         <tr>
           <td><code>version</code></td>
           <td class="doc-param-details">
-            <p>a version string or EasyVersion instance</p>
+            <div class="doc-md-description">
+              <p>a version string or EasyVersion instance</p>
+            </div>
             <p>
             </p>
           </td>
@@ -6672,7 +6698,9 @@ Returns None in case of conflict.</p>
         <tr>
           <td><code>versop_other</code></td>
           <td class="doc-param-details">
-            <p>a VersionOperator instance  Examples: '&gt; 2' &gt; '&gt; 1' : True, order by strictness equals order by boundaries for &gt;, &gt;= '&lt; 8' &gt; '&lt; 10': True, order by strictness equals inversed order by boundaries for &lt;, &lt;= '== 4' &gt; '&gt; 3' : equality is more strict than inequality, but this order by boundaries '&gt; 3' &gt; '== 2' : there is no overlap, so just order the intervals according their boundaries '&gt; 1' &gt; '== 1' &gt; '&lt; 1' : no overlap, same boundaries, order by operator suffix: '&gt; 2' &gt; '&gt; 1': both equal (both None), ordering like above '&gt; 2 suffix:-x1' &gt; '&gt; 1 suffix:-x1': both equal (both -x1), ordering like above '&gt; 2 suffix:-x1' &gt; '&gt; 1 suffix:-x2': not equal, conflict</p>
+            <div class="doc-md-description">
+              <p>a VersionOperator instance  Examples: '&gt; 2' &gt; '&gt; 1' : True, order by strictness equals order by boundaries for &gt;, &gt;= '&lt; 8' &gt; '&lt; 10': True, order by strictness equals inversed order by boundaries for &lt;, &lt;= '== 4' &gt; '&gt; 3' : equality is more strict than inequality, but this order by boundaries '&gt; 3' &gt; '== 2' : there is no overlap, so just order the intervals according their boundaries '&gt; 1' &gt; '== 1' &gt; '&lt; 1' : no overlap, same boundaries, order by operator suffix: '&gt; 2' &gt; '&gt; 1': both equal (both None), ordering like above '&gt; 2 suffix:-x1' &gt; '&gt; 1 suffix:-x1': both equal (both -x1), ordering like above '&gt; 2 suffix:-x1' &gt; '&gt; 1 suffix:-x2': not equal, conflict</p>
+            </div>
             <p>
             </p>
           </td>
@@ -6727,7 +6755,9 @@ Returns None in case of conflict.</p>
         <tr>
           <td><code>versop_str</code></td>
           <td class="doc-param-details">
-            <p>intialise with version operator string</p>
+            <div class="doc-md-description">
+              <p>intialise with version operator string</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -6739,7 +6769,9 @@ Returns None in case of conflict.</p>
         <tr>
           <td><code>error_on_parse_failure</code></td>
           <td class="doc-param-details">
-            <p>raise EasyBuildError in case of parse error</p>
+            <div class="doc-md-description">
+              <p>raise EasyBuildError in case of parse error</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -6888,7 +6920,9 @@ Returns None in case of conflict.</p>
         <tr>
           <td><code>versop_str</code></td>
           <td class="doc-param-details">
-            <p>the string to parse</p>
+            <div class="doc-md-description">
+              <p>the string to parse</p>
+            </div>
             <p>
             </p>
           </td>
@@ -6896,7 +6930,9 @@ Returns None in case of conflict.</p>
         <tr>
           <td><code>versop_dict</code></td>
           <td class="doc-param-details">
-            <p>advanced usage: pass intialised versop_dict (eg for ToolchainVersionOperator)</p>
+            <div class="doc-md-description">
+              <p>advanced usage: pass intialised versop_dict (eg for ToolchainVersionOperator)</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -6957,7 +6993,9 @@ Returns True in case of success, throws an error in case of parsing failure.</p>
         <tr>
           <td><code>test_version</code></td>
           <td class="doc-param-details">
-            <p>a version string or EasyVersion instance</p>
+            <div class="doc-md-description">
+              <p>a version string or EasyVersion instance</p>
+            </div>
             <p>
             </p>
           </td>
@@ -6995,7 +7033,9 @@ Returns True in case of success, throws an error in case of parsing failure.</p>
         <tr>
           <td><code>versop_other</code></td>
           <td class="doc-param-details">
-            <p>a VersionOperator instance  Examples: '&gt; 3' and '&gt; 3' : equal, and thus overlap (no conflict) '&gt; 3' and '&lt; 2' : no overlap '&lt; 3' and '&gt; 2' : overlap, and conflict (region between 2 and 3 is ambiguous) '&gt; 3' and '== 3' : no overlap '&gt;= 3' and '== 3' : overlap, and conflict (boundary 3 is ambigous) '&gt; 3' and '&gt;= 3' : overlap, no conflict ('&gt; 3' is more strict then '&gt;= 3')  # suffix '&gt; 2 suffix:-x1' &gt; '&gt; 1 suffix:-x2': suffix not equal, conflict</p>
+            <div class="doc-md-description">
+              <p>a VersionOperator instance  Examples: '&gt; 3' and '&gt; 3' : equal, and thus overlap (no conflict) '&gt; 3' and '&lt; 2' : no overlap '&lt; 3' and '&gt; 2' : overlap, and conflict (region between 2 and 3 is ambiguous) '&gt; 3' and '== 3' : no overlap '&gt;= 3' and '== 3' : overlap, and conflict (boundary 3 is ambigous) '&gt; 3' and '&gt;= 3' : overlap, no conflict ('&gt; 3' is more strict then '&gt;= 3')  # suffix '&gt; 2 suffix:-x1' &gt; '&gt; 1 suffix:-x2': suffix not equal, conflict</p>
+            </div>
             <p>
             </p>
           </td>
@@ -7034,7 +7074,9 @@ or '&lt;= 1.2' (anything smaller than or equal to 1.2)</p>
         <tr>
           <td><code>begin_end</code></td>
           <td class="doc-param-details">
-            <p>boolean, create a regex with begin/end match</p>
+            <div class="doc-md-description">
+              <p>boolean, create a regex with begin/end match</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 

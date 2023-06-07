@@ -17,7 +17,7 @@
         <link rel="next" href="../easyconfig/">
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
     
     
       
@@ -25,10 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -1979,6 +1979,13 @@
           <li class="md-nav__item">
   <a href="#easybuild.framework.easyblock.EasyBlock.make_dir" class="md-nav__link">
     make_dir()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_extension_string" class="md-nav__link">
+    make_extension_string()
   </a>
   
 </li>
@@ -5022,6 +5029,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../tools/containers/apptainer/" class="md-nav__link">
+        apptainer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../tools/containers/base/" class="md-nav__link">
         base
       </a>
@@ -6801,7 +6822,9 @@ The EasyBlock class should serve as a base class for all easyblocks.</p>
         <tr>
           <td><code>ec</code></td>
           <td class="doc-param-details">
-            <p>a parsed easyconfig file (EasyConfig instance)</p>
+            <div class="doc-md-description">
+              <p>a parsed easyconfig file (EasyConfig instance)</p>
+            </div>
             <p>
             </p>
           </td>
@@ -6932,7 +6955,9 @@ This is used during the sanity check to check RPATH linking and banned/required 
           <td>
           </td>
           <td class="doc-returns-details">
-            <p>list of strings describing checksum issues (missing checksums, wrong checksum type, etc.)</p>
+            <div class="doc-md-description">
+              <p>list of strings describing checksum issues (missing checksums, wrong checksum type, etc.)</p>
+            </div>
           </td>
         </tr>
     </tbody>
@@ -7077,7 +7102,9 @@ cleanup_builddir is False, otherwise we remove the installation</p>
         <tr>
           <td><code>fetch_files</code></td>
           <td class="doc-param-details">
-            <p>whether or not to fetch files (if False, path to files will be missing from info)</p>
+            <div class="doc-md-description">
+              <p>whether or not to fetch files (if False, path to files will be missing from info)</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -7089,7 +7116,9 @@ cleanup_builddir is False, otherwise we remove the installation</p>
         <tr>
           <td><code>verify_checksums</code></td>
           <td class="doc-param-details">
-            <p>whether or not to verify checksums</p>
+            <div class="doc-md-description">
+              <p>whether or not to verify checksums</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -7113,7 +7142,9 @@ cleanup_builddir is False, otherwise we remove the installation</p>
           <td>
           </td>
           <td class="doc-returns-details">
-            <p>list of dict values, one per extension, with information on source/patch files.</p>
+            <div class="doc-md-description">
+              <p>list of dict values, one per extension, with information on source/patch files.</p>
+            </div>
           </td>
         </tr>
     </tbody>
@@ -7302,7 +7333,9 @@ Will be tested for existence or can be located</p>
         <tr>
           <td><code>source</code></td>
           <td class="doc-param-details">
-            <p>source to be found (single dictionary in 'sources' list, or filename)</p>
+            <div class="doc-md-description">
+              <p>source to be found (single dictionary in 'sources' list, or filename)</p>
+            </div>
             <p>
             </p>
           </td>
@@ -7310,7 +7343,9 @@ Will be tested for existence or can be located</p>
         <tr>
           <td><code>checksum</code></td>
           <td class="doc-param-details">
-            <p>checksum corresponding to source</p>
+            <div class="doc-md-description">
+              <p>checksum corresponding to source</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -7322,7 +7357,9 @@ Will be tested for existence or can be located</p>
         <tr>
           <td><code>extension</code></td>
           <td class="doc-param-details">
-            <p>flag if being called from collect_exts_file_info()</p>
+            <div class="doc-md-description">
+              <p>flag if being called from collect_exts_file_info()</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -7364,7 +7401,9 @@ All source files will be checked if a file exists (or can be located)</p>
         <tr>
           <td><code>sources</code></td>
           <td class="doc-param-details">
-            <p>list of sources to fetch (if None, use 'sources' easyconfig parameter)</p>
+            <div class="doc-md-description">
+              <p>list of sources to fetch (if None, use 'sources' easyconfig parameter)</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -7376,7 +7415,9 @@ All source files will be checked if a file exists (or can be located)</p>
         <tr>
           <td><code>checksums</code></td>
           <td class="doc-param-details">
-            <p>list of checksums for sources</p>
+            <div class="doc-md-description">
+              <p>list of checksums for sources</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -7489,7 +7530,9 @@ All source files will be checked if a file exists (or can be located)</p>
         <tr>
           <td><code>checksums</code></td>
           <td class="doc-param-details">
-            <p>a list or tuple of checksums (or None)</p>
+            <div class="doc-md-description">
+              <p>a list or tuple of checksums (or None)</p>
+            </div>
             <p>
             </p>
           </td>
@@ -7497,7 +7540,9 @@ All source files will be checked if a file exists (or can be located)</p>
         <tr>
           <td><code>filename</code></td>
           <td class="doc-param-details">
-            <p>name of the file to obtain checksum for</p>
+            <div class="doc-md-description">
+              <p>name of the file to obtain checksum for</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -7509,7 +7554,9 @@ All source files will be checked if a file exists (or can be located)</p>
         <tr>
           <td><code>index</code></td>
           <td class="doc-param-details">
-            <p>index of file in list</p>
+            <div class="doc-md-description">
+              <p>index of file in list</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -7550,7 +7597,9 @@ All source files will be checked if a file exists (or can be located)</p>
         <tr>
           <td><code>always_read</code></td>
           <td class="doc-param-details">
-            <p>always read the checksums.json file, even if it has been read before</p>
+            <div class="doc-md-description">
+              <p>always read the checksums.json file, even if it has been read before</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -7689,7 +7738,9 @@ All source files will be checked if a file exists (or can be located)</p>
         <tr>
           <td><code>install</code></td>
           <td class="doc-param-details">
-            <p>actually install extensions, don't just prepare environment for installing</p>
+            <div class="doc-md-description">
+              <p>actually install extensions, don't just prepare environment for installing</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -7730,7 +7781,9 @@ All source files will be checked if a file exists (or can be located)</p>
         <tr>
           <td><code>install</code></td>
           <td class="doc-param-details">
-            <p>actually install extensions, don't just prepare environment for installing</p>
+            <div class="doc-md-description">
+              <p>actually install extensions, don't just prepare environment for installing</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -7771,7 +7824,9 @@ All source files will be checked if a file exists (or can be located)</p>
         <tr>
           <td><code>install</code></td>
           <td class="doc-param-details">
-            <p>actually install extensions, don't just prepare environment for installing</p>
+            <div class="doc-md-description">
+              <p>actually install extensions, don't just prepare environment for installing</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -7866,7 +7921,9 @@ All source files will be checked if a file exists (or can be located)</p>
         <tr>
           <td><code>purge</code></td>
           <td class="doc-param-details">
-            <p>boolean indicating whether or not to purge currently loaded modules first</p>
+            <div class="doc-md-description">
+              <p>boolean indicating whether or not to purge currently loaded modules first</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -7878,7 +7935,9 @@ All source files will be checked if a file exists (or can be located)</p>
         <tr>
           <td><code>extra_modules</code></td>
           <td class="doc-param-details">
-            <p>list of extra modules to load (these are loaded <em>before</em> loading the 'self' module)</p>
+            <div class="doc-md-description">
+              <p>list of extra modules to load (these are loaded <em>before</em> loading the 'self' module)</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -7919,7 +7978,9 @@ All source files will be checked if a file exists (or can be located)</p>
         <tr>
           <td><code>mod_paths</code></td>
           <td class="doc-param-details">
-            <p>list of (additional) module paths to take into account</p>
+            <div class="doc-md-description">
+              <p>list of (additional) module paths to take into account</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -7931,7 +7992,9 @@ All source files will be checked if a file exists (or can be located)</p>
         <tr>
           <td><code>purge</code></td>
           <td class="doc-param-details">
-            <p>boolean indicating whether or not to purge currently loaded modules first</p>
+            <div class="doc-md-description">
+              <p>boolean indicating whether or not to purge currently loaded modules first</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -7943,7 +8006,9 @@ All source files will be checked if a file exists (or can be located)</p>
         <tr>
           <td><code>extra_modules</code></td>
           <td class="doc-param-details">
-            <p>list of extra modules to load (these are loaded <em>before</em> loading the 'self' module)</p>
+            <div class="doc-md-description">
+              <p>list of extra modules to load (these are loaded <em>before</em> loading the 'self' module)</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -7955,7 +8020,9 @@ All source files will be checked if a file exists (or can be located)</p>
         <tr>
           <td><code>verbose</code></td>
           <td class="doc-param-details">
-            <p>print modules being loaded when trace mode is enabled</p>
+            <div class="doc-md-description">
+              <p>print modules being loaded when trace mode is enabled</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -8032,6 +8099,25 @@ to the devel module file. So now you can module load $EBDEVELNAME.</p>
 
 
 
+<h3 id="easybuild.framework.easyblock.EasyBlock.make_extension_string" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">make_extension_string</span><span class="p">(</span><span class="n">name_version_sep</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">ext_sep</span><span class="o">=</span><span class="s1">&#39;, &#39;</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.make_extension_string" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Generate a string with a list of extensions.</p>
+<p>The name and version are separated by name_version_sep and each extension is separated by ext_sep</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
 <h3 id="easybuild.framework.easyblock.EasyBlock.make_installdir" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">make_installdir</span><span class="p">(</span><span class="n">dontcreate</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
@@ -8071,7 +8157,9 @@ to the devel module file. So now you can module load $EBDEVELNAME.</p>
         <tr>
           <td><code>unload_info</code></td>
           <td class="doc-param-details">
-            <p>dictionary with full module names as keys and module name to unload first as corr. value</p>
+            <div class="doc-md-description">
+              <p>dictionary with full module names as keys and module name to unload first as corr. value</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -8167,7 +8255,9 @@ dependencies outside the end user's MODULEPATH.</p>
         <tr>
           <td><code>altroot</code></td>
           <td class="doc-param-details">
-            <p>path to use to define $EBROOT*</p>
+            <div class="doc-md-description">
+              <p>path to use to define $EBROOT*</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -8179,7 +8269,9 @@ dependencies outside the end user's MODULEPATH.</p>
         <tr>
           <td><code>altversion</code></td>
           <td class="doc-param-details">
-            <p>version to use to define $EBVERSION*</p>
+            <div class="doc-md-description">
+              <p>version to use to define $EBVERSION*</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -8310,7 +8402,9 @@ dependencies outside the end user's MODULEPATH.</p>
         <tr>
           <td><code>fake</code></td>
           <td class="doc-param-details">
-            <p>generate 'fake' module in temporary location, rather than actual module file</p>
+            <div class="doc-md-description">
+              <p>generate 'fake' module in temporary location, rather than actual module file</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -8353,7 +8447,9 @@ dependencies outside the end user's MODULEPATH.</p>
         <tr>
           <td><code>filename</code></td>
           <td class="doc-param-details">
-            <p>filename of source</p>
+            <div class="doc-md-description">
+              <p>filename of source</p>
+            </div>
             <p>
             </p>
           </td>
@@ -8361,7 +8457,9 @@ dependencies outside the end user's MODULEPATH.</p>
         <tr>
           <td><code>extension</code></td>
           <td class="doc-param-details">
-            <p>indicates whether locations for extension sources should also be considered</p>
+            <div class="doc-md-description">
+              <p>indicates whether locations for extension sources should also be considered</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -8373,7 +8471,9 @@ dependencies outside the end user's MODULEPATH.</p>
         <tr>
           <td><code>urls</code></td>
           <td class="doc-param-details">
-            <p>list of source URLs where this file may be available</p>
+            <div class="doc-md-description">
+              <p>list of source URLs where this file may be available</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -8385,7 +8485,9 @@ dependencies outside the end user's MODULEPATH.</p>
         <tr>
           <td><code>download_filename</code></td>
           <td class="doc-param-details">
-            <p>filename with which the file should be downloaded, and then renamed to <filename></p>
+            <div class="doc-md-description">
+              <p>filename with which the file should be downloaded, and then renamed to <filename></p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -8397,7 +8499,9 @@ dependencies outside the end user's MODULEPATH.</p>
         <tr>
           <td><code>force_download</code></td>
           <td class="doc-param-details">
-            <p>always try to download file, even if it's already available in source path</p>
+            <div class="doc-md-description">
+              <p>always try to download file, even if it's already available in source path</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -8409,7 +8513,9 @@ dependencies outside the end user's MODULEPATH.</p>
         <tr>
           <td><code>git_config</code></td>
           <td class="doc-param-details">
-            <p>dictionary to define how to download a git repository</p>
+            <div class="doc-md-description">
+              <p>dictionary to define how to download a git repository</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -8421,7 +8527,9 @@ dependencies outside the end user's MODULEPATH.</p>
         <tr>
           <td><code>no_download</code></td>
           <td class="doc-param-details">
-            <p>do not try to download the file</p>
+            <div class="doc-md-description">
+              <p>do not try to download the file</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -8433,7 +8541,9 @@ dependencies outside the end user's MODULEPATH.</p>
         <tr>
           <td><code>download_instructions</code></td>
           <td class="doc-param-details">
-            <p>instructions to manually add source (used for complex cases)</p>
+            <div class="doc-md-description">
+              <p>instructions to manually add source (used for complex cases)</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -8445,7 +8555,9 @@ dependencies outside the end user's MODULEPATH.</p>
         <tr>
           <td><code>alt_location</code></td>
           <td class="doc-param-details">
-            <p>alternative location to use instead of self.name</p>
+            <div class="doc-md-description">
+              <p>alternative location to use instead of self.name</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -8614,7 +8726,9 @@ Installing user must be member of the group that it is changed to.</p>
         <tr>
           <td><code>start_dir</code></td>
           <td class="doc-param-details">
-            <p>guess start directory based on unpacked sources</p>
+            <div class="doc-md-description">
+              <p>guess start directory based on unpacked sources</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -8626,7 +8740,9 @@ Installing user must be member of the group that it is changed to.</p>
         <tr>
           <td><code>load_tc_deps_modules</code></td>
           <td class="doc-param-details">
-            <p>load modules for toolchain and dependencies in build environment</p>
+            <div class="doc-md-description">
+              <p>load modules for toolchain and dependencies in build environment</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -8703,7 +8819,9 @@ Installing user must be member of the group that it is changed to.</p>
         <tr>
           <td><code>msg_or_error</code></td>
           <td class="doc-param-details">
-            <p>failure description (string value or an EasyBuildError instance)</p>
+            <div class="doc-md-description">
+              <p>failure description (string value or an EasyBuildError instance)</p>
+            </div>
             <p>
             </p>
           </td>
@@ -8852,7 +8970,7 @@ run_test_cases (bool): run tests after building (e.g.: make test)</p>
 
 
 <h3 id="easybuild.framework.easyblock.EasyBlock.sanity_check_rpath" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">sanity_check_rpath</span><span class="p">(</span><span class="n">rpath_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">sanity_check_rpath</span><span class="p">(</span><span class="n">rpath_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">check_readelf_rpath</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyblock.EasyBlock.sanity_check_rpath" class="headerlink" title="Permanent link">&para;</a></h3>
 
@@ -9145,7 +9263,9 @@ by removing them from list of Extension instances to install (self.ext_instances
         <tr>
           <td><code>ecdict</code></td>
           <td class="doc-param-details">
-            <p>dictionary contaning parsed easyconfig + metadata</p>
+            <div class="doc-md-description">
+              <p>dictionary contaning parsed easyconfig + metadata</p>
+            </div>
             <p>
             </p>
           </td>
@@ -9153,7 +9273,9 @@ by removing them from list of Extension instances to install (self.ext_instances
         <tr>
           <td><code>init_env</code></td>
           <td class="doc-param-details">
-            <p>original environment (used to reset environment)</p>
+            <div class="doc-md-description">
+              <p>original environment (used to reset environment)</p>
+            </div>
             <p>
             </p>
           </td>
@@ -9208,7 +9330,9 @@ by removing them from list of Extension instances to install (self.ext_instances
         <tr>
           <td><code>ecdict</code></td>
           <td class="doc-param-details">
-            <p>parsed easyconfig (EasyConfig instance)  returns an instance of EasyBlock (or subclass thereof)</p>
+            <div class="doc-md-description">
+              <p>parsed easyconfig (EasyConfig instance)  returns an instance of EasyBlock (or subclass thereof)</p>
+            </div>
             <p>
             </p>
           </td>
@@ -9245,7 +9369,9 @@ by removing them from list of Extension instances to install (self.ext_instances
         <tr>
           <td><code>ecs</code></td>
           <td class="doc-param-details">
-            <p>list of EasyConfig instances to inject checksums into corresponding files</p>
+            <div class="doc-md-description">
+              <p>list of EasyConfig instances to inject checksums into corresponding files</p>
+            </div>
             <p>
             </p>
           </td>
@@ -9253,7 +9379,9 @@ by removing them from list of Extension instances to install (self.ext_instances
         <tr>
           <td><code>checksum_type</code></td>
           <td class="doc-param-details">
-            <p>type of checksum to use</p>
+            <div class="doc-md-description">
+              <p>type of checksum to use</p>
+            </div>
             <p>
             </p>
           </td>
@@ -9290,7 +9418,9 @@ by removing them from list of Extension instances to install (self.ext_instances
         <tr>
           <td><code>ecs</code></td>
           <td class="doc-param-details">
-            <p>list of EasyConfig instances to calculate checksums and inject them into checksums.json</p>
+            <div class="doc-md-description">
+              <p>list of EasyConfig instances to calculate checksums and inject them into checksums.json</p>
+            </div>
             <p>
             </p>
           </td>
@@ -9298,7 +9428,9 @@ by removing them from list of Extension instances to install (self.ext_instances
         <tr>
           <td><code>checksum_type</code></td>
           <td class="doc-param-details">
-            <p>type of checksum to use</p>
+            <div class="doc-md-description">
+              <p>type of checksum to use</p>
+            </div>
             <p>
             </p>
           </td>
@@ -9353,7 +9485,9 @@ by removing them from list of Extension instances to install (self.ext_instances
         <tr>
           <td><code>app</code></td>
           <td class="doc-param-details">
-            <p>easyblock class instance</p>
+            <div class="doc-md-description">
+              <p>easyblock class instance</p>
+            </div>
             <p>
             </p>
           </td>
@@ -9361,7 +9495,9 @@ by removing them from list of Extension instances to install (self.ext_instances
         <tr>
           <td><code>reprod_dir_root</code></td>
           <td class="doc-param-details">
-            <p>root directory in which to create the 'reprod' directory</p>
+            <div class="doc-md-description">
+              <p>root directory in which to create the 'reprod' directory</p>
+            </div>
             <p>
             </p>
           </td>
@@ -9381,7 +9517,9 @@ by removing them from list of Extension instances to install (self.ext_instances
           <td>
           </td>
           <td class="doc-returns-details">
-            <p>reprod_dir directory containing reproducibility files</p>
+            <div class="doc-md-description">
+              <p>reprod_dir directory containing reproducibility files</p>
+            </div>
           </td>
         </tr>
     </tbody>

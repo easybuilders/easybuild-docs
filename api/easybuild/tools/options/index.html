@@ -17,7 +17,7 @@
         <link rel="next" href="../output/">
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
     
     
       
@@ -25,10 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -4230,6 +4230,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../containers/apptainer/" class="md-nav__link">
+        apptainer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../containers/base/" class="md-nav__link">
         base
       </a>
@@ -6316,7 +6330,9 @@
         <tr>
           <td><code>allow_use_as_root</code></td>
           <td class="doc-param-details">
-            <p>allow use of EasyBuild as root (but do print a warning when doing so)</p>
+            <div class="doc-md-description">
+              <p>allow use of EasyBuild as root (but do print a warning when doing so)</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -6357,7 +6373,9 @@
         <tr>
           <td><code>tmpdir</code></td>
           <td class="doc-param-details">
-            <p>path to temporary directory to clean up</p>
+            <div class="doc-md-description">
+              <p>path to temporary directory to clean up</p>
+            </div>
             <p>
             </p>
           </td>
@@ -6396,7 +6414,9 @@ that can be fed into the EasyBuild option parser</p>
         <tr>
           <td><code>args_dict</code></td>
           <td class="doc-param-details">
-            <p>dictionary with configuration option values</p>
+            <div class="doc-md-description">
+              <p>dictionary with configuration option values</p>
+            </div>
             <p>
             </p>
           </td>
@@ -6416,7 +6436,9 @@ that can be fed into the EasyBuild option parser</p>
           <td>
           </td>
           <td class="doc-returns-details">
-            <p>a list of strings representing command-line options for the 'eb' command</p>
+            <div class="doc-md-description">
+              <p>a list of strings representing command-line options for the 'eb' command</p>
+            </div>
           </td>
         </tr>
     </tbody>
@@ -6451,7 +6473,9 @@ that can be fed into the EasyBuild option parser</p>
         <tr>
           <td><code>cfgs</code></td>
           <td class="doc-param-details">
-            <p>list of (glob patterns for) paths to config files providing metadata for external modules</p>
+            <div class="doc-md-description">
+              <p>list of (glob patterns for) paths to config files providing metadata for external modules</p>
+            </div>
             <p>
             </p>
           </td>
@@ -6471,7 +6495,9 @@ that can be fed into the EasyBuild option parser</p>
           <td>
           </td>
           <td class="doc-returns-details">
-            <p>parsed metadata for external modules</p>
+            <div class="doc-md-description">
+              <p>parsed metadata for external modules</p>
+            </div>
           </td>
         </tr>
     </tbody>
@@ -6524,7 +6550,9 @@ that can be fed into the EasyBuild option parser</p>
         <tr>
           <td><code>opts_dict</code></td>
           <td class="doc-param-details">
-            <p>dictionary with option names as keys, and (value, location) tuples as values</p>
+            <div class="doc-md-description">
+              <p>dictionary with option names as keys, and (value, location) tuples as values</p>
+            </div>
             <p>
             </p>
           </td>
@@ -6598,7 +6626,9 @@ The options arguments should be a parsed option list (as delivered by parse_opti
         <tr>
           <td><code>args</code></td>
           <td class="doc-param-details">
-            <p>command line arguments to take into account when parsing the EasyBuild configuration settings</p>
+            <div class="doc-md-description">
+              <p>command line arguments to take into account when parsing the EasyBuild configuration settings</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -6610,7 +6640,9 @@ The options arguments should be a parsed option list (as delivered by parse_opti
         <tr>
           <td><code>logfile</code></td>
           <td class="doc-param-details">
-            <p>log file to use</p>
+            <div class="doc-md-description">
+              <p>log file to use</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -6622,7 +6654,9 @@ The options arguments should be a parsed option list (as delivered by parse_opti
         <tr>
           <td><code>testing</code></td>
           <td class="doc-param-details">
-            <p>enable testing mode</p>
+            <div class="doc-md-description">
+              <p>enable testing mode</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -6634,7 +6668,9 @@ The options arguments should be a parsed option list (as delivered by parse_opti
         <tr>
           <td><code>silent</code></td>
           <td class="doc-param-details">
-            <p>stay silent (no printing)</p>
+            <div class="doc-md-description">
+              <p>stay silent (no printing)</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
@@ -6646,7 +6682,9 @@ The options arguments should be a parsed option list (as delivered by parse_opti
         <tr>
           <td><code>reconfigure</code></td>
           <td class="doc-param-details">
-            <p>reconfigure singletons that hold configuration dictionaries. Use with care: normally, configuration shouldn't be changed during a run. Exceptions are when looping over items in EasyStack files</p>
+            <div class="doc-md-description">
+              <p>reconfigure singletons that hold configuration dictionaries. Use with care: normally, configuration shouldn't be changed during a run. Exceptions are when looping over items in EasyStack files</p>
+            </div>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
