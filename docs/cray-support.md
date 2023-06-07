@@ -6,9 +6,9 @@ This page provides an overview of the current status.
 
 For more information about this, contact:
 
-* Guilherme Peretti-Pezzi (CSCS, Switzerland, peretti@cscs.ch)
-* Kenneth Hoste (HPC-UGent, Belgium; kenneth.hoste@ugent.be)
-* Petar Forai (IMBA/IMP, Austria; petar.forai@imp.ac.at).
+* Guilherme Peretti-Pezzi (CSCS, Switzerland, <peretti@cscs.ch>)
+* Kenneth Hoste (HPC-UGent, Belgium; <kenneth.hoste@ugent.be>)
+* Petar Forai (IMBA/IMP, Austria; <petar.forai@imp.ac.at>).
 
 Thanks to:
 

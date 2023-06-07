@@ -52,7 +52,7 @@ For example: to configure EasyBuild to use Lmod as modules tool, the following a
   or
 
    ``` shell
-   $ eb --modules-tool Lmod
+   eb --modules-tool Lmod
    ```
 
 For more details w.r.t. each of the supported configuration types, see below.
