@@ -1,3 +1,8 @@
+---
+search:
+  boost: 0.5
+---
+
 # Changelog for EasyBuild documentation {: #changelog }
 
 (for EasyBuild release notes, see [EasyBuild release notes][release_notes])
