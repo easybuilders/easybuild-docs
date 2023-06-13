@@ -17,10 +17,10 @@ The following step names are recognized (listed in execution order): `fetch`, `r
 Example usage:
 
 ``` console
-$ eb GCC-4.9.2.eb --stop configure
+$ eb GCC-11.3.0.eb --stop configure
 == temporary log file in case of crash /tmp/eb-X2Z0b7/easybuild-mGxmNb.log
-== processing EasyBuild easyconfig /home/example/GCC-4.9.2.eb
-== building and installing GCC/4.9.2...
+== processing EasyBuild easyconfig /home/example/GCC-11.3.0.eb
+== building and installing GCC/11.3.0...
 == fetching files...
 == creating build dir, resetting environment...
 == unpacking...
@@ -28,7 +28,7 @@ $ eb GCC-4.9.2.eb --stop configure
 == preparing...
 == configuring...
 == COMPLETED: Installation STOPPED successfully
-== Results of the build can be found in the log file /dev/shm/example/GCC/4.9.2/dummy-dummy/easybuild/easybuild-GCC-4.9.2-20150430.091644.log
+== Results of the build can be found in the log file /dev/shm/example/GCC/11.3.0/dummy-dummy/easybuild/easybuild-GCC-11.3.0-20230613.091644.log
 == Build succeeded for 1 out of 1
 == temporary log file(s) /tmp/eb-X2Z0b7/easybuild-mGxmNb.log* have been removed.
 == temporary directory /tmp/eb-X2Z0b7 has been removed.
@@ -44,15 +44,15 @@ Example usage:
 
 ``` console
 $ eb GCCcore-6.2.0.eb --fetch
-== temporary log file in case of crash /tmp/eb-1ZZX2b/easybuild-NSmm5P.log
-== processing EasyBuild easyconfig /home/example/GCCcore-6.2.0.eb
-== building and installing GCCcore/6.2.0...
+== Temporary log file in case of crash /tmp/eb-23iu2fpm/easybuild-ss0wcidi.log
+== processing EasyBuild easyconfig /home/example/GCCcore-11.3.0.eb
+== building and installing GCCcore/11.3.0...
 == fetching files...
-== COMPLETED: Installation STOPPED successfully
-== Results of the build can be found in the log file(s) /dev/shm/example/GCC/4.9.2/dummy-dummy/easybuild/easybuild-GCCcore-6.2.0-20180330.170523.log
+== COMPLETED: Installation STOPPED successfully (took 1 secs)
+== Results of the build can be found in the log file(s) /tmp/example/easybuild/build/GCCcore/11.3.0/system-system/easybuild/easybuild-GCCcore-11.3.0-20230613.090338.log
 == Build succeeded for 1 out of 1
-== Temporary log file(s) /tmp/eb-1ZZX2b/easybuild-NSmm5P.log* have been removed.
-== Temporary directory /tmp/eb-1ZZX2b has been removed.
+== Temporary log file(s) /tmp/example/eb-23iu2fpm/easybuild-ss0wcidi.log* have been removed.
+== Temporary directory /tmp/example/eb-23iu2fpm has been removed.
 ```
 
 !!! note
@@ -87,17 +87,17 @@ vi) regenerate the module file (since it contains a list of installed extensions
 Example usage:
 
 ``` console
-$ eb Python-2.7.9-intel-2015a.eb --skip
+$ eb Python-3.10.4-GCCcore-11.3.0.eb --skip
 ...
-== Python/2.7.9-intel-2015a is already installed (module found), skipping
+== Python/3.10.4-GCCcore-11.3.0 is already installed (module found), skipping
 == No easyconfigs left to be built.
 == Build succeeded for 0 out of 0
 ```
 
 ``` console
-$ eb Python-2.7.9-intel-2015a.eb --skip --rebuild
+$ eb Python-3.10.4-GCCcore-11.3.0.eb --skip --rebuild
 ...
-== building and installing Python/2.7.9-intel-2015a...
+== building and installing Python/3.10.4-GCCcore-11.3.0...
 ...
 == configuring [skipped]
 == building [skipped]
@@ -168,11 +168,11 @@ Example usage:
      ``` console
      $ module avail GCC
      ---------------------------- /home/example/.local/modules/all ----------------------------
-     GCC/4.8.2
+     GCC/11.2.0
    
-     $ eb GCC-5.1.0.eb --module-only --rebuild
+     $ eb GCC-11.3.0.eb --module-only --rebuild
      ...
-     == building and installing GCC/5.1.0...
+     == building and installing GCC/11.3.0...
      == fetching files [skipped]
      ...
      == configuring [skipped]
@@ -189,31 +189,31 @@ Example usage:
      $ module avail GCC
 
      ---------------------------- /home/example/.local/modules/all ----------------------------
-     GCC/4.8.2     GCC/5.1.0
+     GCC/11.2.0     GCC/11.3.0
      ```
 
 * regenerate existing module file:
 
      ``` console
-     $ module avail GCC/4.8.2
+     $ module avail GCC/11.3.0
 
      ---------------------------- /home/example/.local/modules/all ----------------------------
-     GCC/4.8.2
+     GCC/11.3.0
 
-     $ ls -l /home/example/.local/modules/all/GCC/4.8.2
-     -rw-rw-r-- 1 example example 1002 Jan 11 17:19 /home/example/.local/modules/all/GCC/4.8.2
+     $ ls -l /home/example/.local/modules/all/GCC/11.3.0
+     -rw-rw-r-- 1 example example 1002 Jun 13 08:35 /home/example/.local/modules/all/GCC/11.3.0
 
-     $ eb GCC-4.8.2.eb --module-only --rebuild
+     $ eb GCC-11.3.0.eb --module-only --rebuild
      ...
-     == building and installing GCC/4.8.2...
+     == building and installing GCC/11.3.0...
      ...
      == sanity checking [skipped]
      == creating module...
      == COMPLETED: Installation ended successfully
      ...
 
-     $ ls -l /home/example/.local/modules/all/GCC/4.8.2
-     -rw-rw-r-- 1 example example 1064 Apr 30 10:54 /home/example/.local/modules/all/GCC/4.8.2
+     $ ls -l /home/example/.local/modules/all/GCC/11.3.0
+     -rw-rw-r-- 1 example example 1064 Jun 13 10:54 /home/example/.local/modules/all/GCC/11.3.0
      ```
 
 
@@ -228,26 +228,26 @@ Examples:
   `--module-only --module-syntax=Lua` can be used:
 
      ``` console
-     $ module avail GCC/4.8.2
+     $ module avail GCC/11.3.0
 
      ---------------------------- /home/example/.local/modules/all ----------------------------
-     GCC/4.8.2
+     GCC/11.3.0
 
-     $ ls -l /home/example/.local/modules/all/GCC/4.8.2*
-     -rw-rw-r-- 1 example example 1064 Apr 30 10:54 /home/example/.local/modules/all/GCC/4.8.2
+     $ ls -l /home/example/.local/modules/all/GCC/11.3.0*
+     -rw-rw-r-- 1 example example 1064 Jun 13 08:54 /home/example/.local/modules/all/GCC/11.3.0
 
-     $ eb GCC-4.8.2.eb --modules-tool=Lmod --module-only --module-syntax=Lua --rebuild
+     $ eb GCC-11.3.0.eb --modules-tool=Lmod --module-only --module-syntax=Lua --rebuild
      ...
-     == building and installing GCC/4.8.2...
+     == building and installing GCC/11.3.0...
      ...
      == sanity checking [skipped]
      == creating module...
      == COMPLETED: Installation ended successfully
      ...
 
-     $ ls -l /home/example/.local/modules/all/GCC/4.8.2*
-     -rw-rw-r-- 1 example example 1064 Apr 30 10:54 /home/example/.local/modules/all/GCC/4.8.2
-     -rw-rw-r-- 1 example example 1249 Apr 30 11:56 /home/example/.local/modules/all/GCC/4.8.2.lua
+     $ ls -l /home/example/.local/modules/all/GCC/11.3.0*
+     -rw-rw-r-- 1 example example 1064 Jun 13 08:54 /home/example/.local/modules/all/GCC/11.3.0
+     -rw-rw-r-- 1 example example 1249 Jun 13 08:56 /home/example/.local/modules/all/GCC/11.3.0.lua
      ```
 
     !!! note
@@ -263,7 +263,7 @@ Examples:
      ``` console
      $ eb --installpath-modules=$HOME/test/modules --module-only --module-naming-scheme=HierarchicalMNS --rebuild
      ...
-     == building and installing Core/GCC/4.8.2...
+     == building and installing Core/GCC/11.3.0...
      ...
      == sanity checking [skipped]
      == creating module...
@@ -274,7 +274,7 @@ Examples:
      $ module avail
 
      ---------------------------- /home/example/test/modules/all ----------------------------
-     Core/GCC/4.8.2
+     Core/GCC/11.3.0
      ```
 
     !!! note
