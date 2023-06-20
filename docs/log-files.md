@@ -17,7 +17,7 @@ file is copied to the install directory for future reference.
 
 By default, the application log file is copied to a subdirectory of the
 installation prefix named `easybuild`, and has a filename like
-`easybuild-HPL-2.0-20141103.104412.log` for example, which corresponds
+`easybuild-WRF-4.4.1-20230426.143346.log` for example, which corresponds
 to the filename template
 `easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log`. This aspect can
 be tweaked via the `--logfile-format` configuration option.
@@ -25,16 +25,16 @@ be tweaked via the `--logfile-format` configuration option.
 Example:
 
 ``` console
-$ eb HPL-2.0-goolf-1.4.10.eb
-== temporary log file in case of crash /tmp/easybuild-rHHgBu/easybuild-XD0Ae_.log
+$ eb WRF-4.4.1-foss-2022b-dmpar.eb
+== Temporary log file in case of crash /tmp/eb-1zbqix6e/easybuild-1ixy86r2.log
 [...]
-== building and installing HPL/2.0-goolf-1.4.10...
+== building and installing WRF/4.4.1-foss-2022b-dmpar...
 [...]
 == COMPLETED: Installation ended successfully
-== Results of the build can be found in the log file /home/example/.local/easybuild/software/HPL/2.0-goolf-1.4.10/easybuild/easybuild-HPL-2.0-20141103.104412.log
+== Results of the build can be found in the log file(s) /home/example/.local/easybuild/software/WRF/4.4.1-foss-2022b-dmpar/easybuild/easybuild-WRF-4.4.1-20230531.181321.log
 == Build succeeded for 1 out of 1
-== temporary log file /tmp/easybuild-rHHgBu/easybuild-XD0Ae_.log has been removed.
-== temporary directory /tmp/easybuild-rHHgBu has been removed.
+== temporary log file /tmp/eb-1zbqix6e/easybuild-1ixy86r2.log* has been removed.
+== temporary directory /tmp/eb-1zbqix6e has been removed.
 ```
 
 !!! note
@@ -63,16 +63,16 @@ Each log message as emitted by EasyBuild follows a well-defined format.
 Example:
 
 ``` console
-== 2014-11-03 13:34:31,906 main.EB_HPL INFO This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host example.
+== 2023-05-31 16:11:21,044 easyblock.py:313 INFO This is EasyBuild 4.7.3 (framework: 4.7.3, easyblocks: 4.7.3) on host example.
 ```
 
 Each log line consists of the following parts:
 
 - a prefix label `==`, which is useful to discriminate between
     EasyBuild log messages and the output of executed shell commands;
-- date and time information (e.g., `2014-11-03 13:34:31,906`);
+- date and time information (e.g., `2023-05-31 16:11:21,044`);
 - the Python module/class/function that is responsible for the log
-    message (e.g., `main.EB_HPL`);
+    message (e.g., `easyblock.py:313`);
 - the log level (e.g., `INFO`);
 - and a string with the actual log message at the end
 
@@ -88,10 +88,10 @@ For each step performed in the build and installation process,
 corresponding log messages is emitted. For example:
 
 ``` console
-== 2014-11-03 13:34:48,816 main.EB_HPL INFO configuring...
-== 2014-11-03 13:34:48,817 main.EB_HPL INFO Starting configure step
+== 2023-05-31 16:11:44,977 build_log.py:267 INFO configuring...
+== 2023-05-31 16:11:44,981 easyblock.py:3926 INFO Starting configure step
 [...]
-== 2014-11-03 13:34:48,823 main.EB_HPL INFO Running method configure_step part of step configure
+== 2023-05-31 16:11:44,982 easyblock.py:3934 INFO Running method configure_step part of step configure
 ```
 
 This allows you to navigate a log file step by step, for example using
@@ -104,9 +104,10 @@ command line, the location where the command was executed and the
 command's output and exit code. For example:
 
 ``` console
-== 2014-11-03 13:34:48,823 main.run DEBUG run_cmd: running cmd /bin/bash make_generic (in /tmp/user/easybuild_build/HPL/2.0/goolf-1.4.10/hpl-2.0/setup)
-== 2014-11-03 13:34:48,823 main.run DEBUG run_cmd: Command output will be logged to /tmp/easybuild-W85p4r/easybuild-run_cmd-XoJwMY.log
-== 2014-11-03 13:34:48,849 main.run INFO cmd "/bin/bash make_generic" exited with exitcode 0 and output:
+== 2023-05-31 18:59:24,222 run.py:176 DEBUG run_cmd: Output of "/home/example/.local/easybuild/software/WRF/4.4.1-foss-2022b-dmpar/WRF-4.4.1/compile -j 8 wrf" will be logged to /tmp/eb-1zbqix6e/easybuild-run_cmd-ueqo5bn0.log
+== 2023-05-31 18:59:24,225 run.py:217 DEBUG run_cmd: running cmd /home/example/.local/easybuild/software//WRF/4.4.1-foss-2022b-dmpar/WRF-4.4.1/compile -j 8 wrf (in /home/example/.local/easybuild/software//WRF/4.4.1-foss-2022b-dmpar/WRF-4.4.1)
+[...]
+== 2023-05-31 20:06:35,979 run.py:650 DEBUG cmd "/home/example/.local/easybuild/software/WRF/4.4.1-foss-2022b-dmpar/WRF-4.4.1/compile -j 8 wrf" exited with exit code 0 and output:
 ```
 
 If you are primarily interested in the different commands as they were
