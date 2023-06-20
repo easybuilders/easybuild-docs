@@ -75,6 +75,9 @@ Using the `--wait-on-lock` configuration option, you can change how EasyBuild de
 how frequently EasyBuild should check whether an existing lock was removed. By specifying a non-zero value `secs`, you
 can indicate how many seconds EasyBuild should wait before checking again whether the lock is still in place.
 
+!!! warning
+    The `--wait-on-lock` configuration option is deprecated, please use `--wait-on-lock-interval` and `--wait-on-lock-limit` instead!
+
 !!! note
     If the lock is never removed, the EasyBuild session will never terminate; it will keep checking every `S` seconds whether the lock is still in place.
 
