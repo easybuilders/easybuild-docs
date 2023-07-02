@@ -32,8 +32,6 @@ feedback then please comment in the GitHub issue for the proposal.
 
 ### Planned changes for EasyBuild v5.0 {: #eb5_plans }
 
-* [enable `--trace` by default](https://github.com/easybuilders/easybuild-framework/pull/4250)
-
 !!! note
     This list is the major planned changes. It is not intended to be a complete list of all changes that are
     planned for EasyBuild v5.0.
@@ -48,7 +46,12 @@ feedback then please comment in the GitHub issue for the proposal.
 
 Various significant enhancements are included in EasyBuild v5.0, including:
 
-* *(no significant enhancements implemented so far in the `5.0.x` branches)*
+* [enable `--trace` by default][eb5_trace]
+
+### `--trace` enabled by default {: #eb5_trace }
+
+The [`--trace` option is enabled by default](https://github.com/easybuilders/easybuild-framework/pull/4250). This makes
+the steps and commands that EasyBuild is running clearer to the user.
 
 ---
 
