@@ -3,12 +3,6 @@
 To trace the progress of EasyBuild while it is installing software, you
 can use `eb --trace`.
 
-!!! note
-    Tracing support was added as an experimental feature in EasyBuild v3.4.0, and thus required
-    using `--experimental`. Since EasyBuild v3.4.1, `--trace` is
-    considered stable and no longer requires the use of
-    `--experimental`.
-
 ## Trace output {: #trace_output }
 
 When `eb --trace` is used, EasyBuild will print additional output on top
