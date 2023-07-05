@@ -53,7 +53,15 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 The [`--trace` option][trace] is enabled by default (see [easybuild-framework PR #4250](https://github.com/easybuilders/easybuild-framework/pull/4250)).
 This makes the output produced by the `eb` command more informative, by providing more information about what's going on in the background.
 
-Use `--disable-trace` to remove this extra information.
+To disable trace output, either:
+
+* Use the `--disable-trace` command line option;
+* Set the `$EASYBUILD_DISABLE_TRACE` environment variable;
+* Disable trace mode in a [configuration file][configuration_file]:
+    ``` ini
+    [override]
+    trace=0
+    ```
 
 ---
 
