@@ -50,8 +50,8 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 
 ### `--trace` enabled by default {: #eb5_trace }
 
-The [`--trace` option is enabled by default](https://github.com/easybuilders/easybuild-framework/pull/4250). This makes
-the [steps and commands that EasyBuild is running clearer][trace] to the user.
+The [`--trace` option][trace] is enabled by default (see [easybuild-framework PR #4250](https://github.com/easybuilders/easybuild-framework/pull/4250)).
+This makes the output produced by the `eb` command more informative, by providing more information about what's going on in the background.
 
 Use `--disable-trace` to remove this extra information.
 
