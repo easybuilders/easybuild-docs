@@ -58,6 +58,7 @@ To disable trace output, either:
 * Use the `--disable-trace` command line option;
 * Set the `$EASYBUILD_DISABLE_TRACE` environment variable;
 * Disable trace mode in a [configuration file][configuration_file]:
+
     ``` ini
     [override]
     trace=0
