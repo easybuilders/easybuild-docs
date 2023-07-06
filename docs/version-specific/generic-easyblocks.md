@@ -6,7 +6,7 @@
 
 # Overview of generic easyblocks {: #generic_easyblocks }
 
-[BinariesTarball](#binariestarball) - [Binary](#binary) - [BuildEnv](#buildenv) - [Bundle](#bundle) - [CMakeMake](#cmakemake) - [CMakeMakeCp](#cmakemakecp) - [CMakeNinja](#cmakeninja) - [CMakePythonPackage](#cmakepythonpackage) - [Cargo](#cargo) - [CargoPythonPackage](#cargopythonpackage) - [CmdCp](#cmdcp) - [Conda](#conda) - [ConfigureMake](#configuremake) - [ConfigureMakePythonPackage](#configuremakepythonpackage) - [CrayToolchain](#craytoolchain) - [FortranPythonPackage](#fortranpythonpackage) - [GoPackage](#gopackage) - [IntelBase](#intelbase) - [JAR](#jar) - [JuliaBundle](#juliabundle) - [JuliaPackage](#juliapackage) - [MakeCp](#makecp) - [MesonNinja](#mesonninja) - [ModuleRC](#modulerc) - [OCamlPackage](#ocamlpackage) - [OctavePackage](#octavepackage) - [PackedBinary](#packedbinary) - [PerlModule](#perlmodule) - [PythonBundle](#pythonbundle) - [PythonPackage](#pythonpackage) - [RPackage](#rpackage) - [Rpm](#rpm) - [RubyGem](#rubygem) - [SCons](#scons) - [SystemCompiler](#systemcompiler) - [SystemMPI](#systemmpi) - [Tarball](#tarball) - [Toolchain](#toolchain) - [VSCPythonPackage](#vscpythonpackage) - [VersionIndependentPythonPackage](#versionindependentpythonpackage) - [Waf](#waf)
+[BinariesTarball](#binariestarball) - [Binary](#binary) - [BuildEnv](#buildenv) - [Bundle](#bundle) - [CMakeMake](#cmakemake) - [CMakeMakeCp](#cmakemakecp) - [CMakeNinja](#cmakeninja) - [CMakePythonPackage](#cmakepythonpackage) - [Cargo](#cargo) - [CargoPythonPackage](#cargopythonpackage) - [CmdCp](#cmdcp) - [Conda](#conda) - [ConfigureMake](#configuremake) - [ConfigureMakePythonPackage](#configuremakepythonpackage) - [CrayToolchain](#craytoolchain) - [FortranPythonPackage](#fortranpythonpackage) - [GoPackage](#gopackage) - [IntelBase](#intelbase) - [JAR](#jar) - [JuliaBundle](#juliabundle) - [JuliaPackage](#juliapackage) - [MakeCp](#makecp) - [MesonNinja](#mesonninja) - [ModuleRC](#modulerc) - [OCamlPackage](#ocamlpackage) - [OctavePackage](#octavepackage) - [PackedBinary](#packedbinary) - [PerlBundle](#perlbundle) - [PerlModule](#perlmodule) - [PythonBundle](#pythonbundle) - [PythonPackage](#pythonpackage) - [RPackage](#rpackage) - [Rpm](#rpm) - [RubyGem](#rubygem) - [SCons](#scons) - [SystemCompiler](#systemcompiler) - [SystemMPI](#systemmpi) - [Tarball](#tarball) - [Toolchain](#toolchain) - [VSCPythonPackage](#vscpythonpackage) - [VersionIndependentPythonPackage](#versionindependentpythonpackage) - [Waf](#waf)
 
 ## ``BinariesTarball``
 
@@ -44,6 +44,7 @@ easyconfig parameter|description                                                
 --------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|-------------
 ``extract_sources`` |Whether or not to extract sources                                                                                                              |``False``
 ``install_cmd``     |Install command to be used.                                                                                                                    |``None``
+``install_cmds``    |List of install commands to be used.                                                                                                           |``None``
 ``prepend_to_path`` |Prepend the given directories (relative to install-dir) to the environment variable PATH in the module file. Default is the install-dir itself.|``['']``
 ``staged_install``  |Perform staged installation via subdirectory of build directory                                                                                |``False``
 
@@ -488,6 +489,7 @@ easyconfig parameter  |description                                              
 ``environment_file``  |Conda environment.yml file to use with 'conda env create'                                                                                      |``None``
 ``extract_sources``   |Whether or not to extract sources                                                                                                              |``False``
 ``install_cmd``       |Install command to be used.                                                                                                                    |``None``
+``install_cmds``      |List of install commands to be used.                                                                                                           |``None``
 ``prepend_to_path``   |Prepend the given directories (relative to install-dir) to the environment variable PATH in the module file. Default is the install-dir itself.|``['']``
 ``remote_environment``|Remote conda environment to use with 'conda env create'                                                                                        |``None``
 ``requirements``      |Requirements specification to pass to 'conda install'                                                                                          |``None``
@@ -790,6 +792,7 @@ easyconfig parameter|description                                                
 --------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|-------------
 ``extract_sources`` |Whether or not to extract sources                                                                                                              |``False``
 ``install_cmd``     |Install command to be used.                                                                                                                    |``None``
+``install_cmds``    |List of install commands to be used.                                                                                                           |``None``
 ``prepend_to_path`` |Prepend the given directories (relative to install-dir) to the environment variable PATH in the module file. Default is the install-dir itself.|``['']``
 ``staged_install``  |Perform staged installation via subdirectory of build directory                                                                                |``False``
 
@@ -964,6 +967,7 @@ easyconfig parameter|description                                                
 --------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|-------------
 ``extract_sources`` |Whether or not to extract sources                                                                                                              |``False``
 ``install_cmd``     |Install command to be used.                                                                                                                    |``None``
+``install_cmds``    |List of install commands to be used.                                                                                                           |``None``
 ``prepend_to_path`` |Prepend the given directories (relative to install-dir) to the environment variable PATH in the module file. Default is the install-dir itself.|``['']``
 ``staged_install``  |Perform staged installation via subdirectory of build directory                                                                                |``False``
 
@@ -971,6 +975,28 @@ easyconfig parameter|description                                                
 
 * ``install_step`` - Copy all unpacked source directories to install directory, one-by-one.
 
+
+## ``PerlBundle``
+
+(derives from [``Bundle``](#bundle))
+
+
+Bundle of perl modules
+
+
+### Extra easyconfig parameters specific to ``PerlBundle`` easyblock
+
+easyconfig parameter           |description                                                                |default value
+-------------------------------|---------------------------------------------------------------------------|-------------
+``altroot``                    |Software name of dependency to use to define $EBROOT for this bundle       |``None``
+``altversion``                 |Software name of dependency to use to define $EBVERSION for this bundle    |``None``
+``components``                 |List of components to install: tuples w/ name, version and easyblock to use|``()``
+``default_component_specs``    |Default specs to use for every component                                   |``{}``
+``default_easyblock``          |Default easyblock to use for components                                    |``None``
+``options``                    |Dictionary with extension options.                                         |``{}``
+``runtest``                    |Run unit tests.                                                            |``"test"``
+``sanity_check_all_components``|Enable sanity checks for all components                                    |``False``
+``sanity_check_components``    |List of components for which to run sanity checks                          |``[]``
 
 ## ``PerlModule``
 
@@ -1122,6 +1148,7 @@ easyconfig parameter|description                                                
 ``extract_sources`` |Whether or not to extract sources                                                                                                              |``False``
 ``force``           |Use force                                                                                                                                      |``False``
 ``install_cmd``     |Install command to be used.                                                                                                                    |``None``
+``install_cmds``    |List of install commands to be used.                                                                                                           |``None``
 ``makesymlinks``    |Create symlinks for listed paths                                                                                                               |``[]``
 ``postinstall``     |Enable post install                                                                                                                            |``False``
 ``preinstall``      |Enable pre install                                                                                                                             |``False``
