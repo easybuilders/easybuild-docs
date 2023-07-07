@@ -7,6 +7,9 @@ search:
 
 (for EasyBuild release notes, see [EasyBuild release notes][release_notes])
 
+- **release 20230707.01** (*7 July 2023*): update
+    release notes for EasyBuild v4.8.0 (see
+    [EasyBuild v4.8.0 (7 July 2023)][release_notes_eb480])
 - **release 20230527.01** (*27 May 2023*): update
     release notes for EasyBuild v4.7.2 (see
     [EasyBuild v4.7.2 (27 May 2023)][release_notes_eb472])

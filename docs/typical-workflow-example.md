@@ -146,7 +146,7 @@ we enable dependency resolution such that the entire software stack is handled:
 $ eb WRF-4.4.1-foss-2022b-dmpar.eb --robot
 == temporary log file in case of crash /tmp/eb-LfQa8b/easybuild-TBXLTy.log
 == resolving dependencies ...
-== processing EasyBuild easyconfig /home/example/.local/easybuild/software/EasyBuild/4.7.2/easybuild/easyconfigs/w/WRF/WRF-4.4.1-foss-2022b-dmpar.eb
+== processing EasyBuild easyconfig /home/example/.local/easybuild/software/EasyBuild/4.8.0/easybuild/easyconfigs/w/WRF/WRF-4.4.1-foss-2022b-dmpar.eb
 == building and installing ncurses/6.3-GCCcore-12.2.0...
 [...]
 == building and installing tcsh/6.20.00-GCCcore-12.2.0...
@@ -183,7 +183,7 @@ $ module load WRF/4.4.1-foss-2022b-dmpar
 $ module list
 
 Currently Loaded Modules:
-  1) EasyBuild/4.7.2                    18) OpenBLAS/0.3.21-GCC-12.2.0
+  1) EasyBuild/4.8.0                    18) OpenBLAS/0.3.21-GCC-12.2.0
   2) GCCcore/12.2.0                     19) FlexiBLAS/3.2.1-GCC-12.2.0
   3) zlib/1.2.12-GCCcore-12.2.0         20) FFTW/3.3.10-GCC-12.2.0 foss/2018b
   4) binutils/2.39-GCCcore-12.2.0       21) gompi/2022b
