@@ -17,7 +17,7 @@
         <link rel="next" href="../manipulating-dependencies/">
       
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
@@ -5870,7 +5870,7 @@ dashes (<code>-</code>) replaced by underscores (<code>_</code>), and with an ad
 <p>Locks are created in the <a class="autorefs autorefs-internal" href="#locks_dir">locks directory</a>.</p>
 <p>The lock created by EasyBuild is an empty directory (rather than a file),
 because that can be created more atomically on modern filesystems.</p>
-<p>For example, if <code>OpenFOAM-7-foss-2019b.eb</code> is being installed to <code>/apps/easybuild/software</code>,
+<p>For example, if <code>OpenFOAM-v2206-foss-2022a.eb</code> is being installed to <code>/apps/easybuild/software</code>,
 an empty directory that serves as a lock for this installation will be created at
 <code>/apps/easybuild/software/.locks/_apps_easybuild_software_OpenFOAM_7_foss_2019b.lock</code>
 (assuming the default <a class="autorefs autorefs-internal" href="#locks_dir">locks directory</a> is used).</p>
@@ -5892,18 +5892,25 @@ Locks that exist are left untouched, even if the installation completes successf
 <p><strong>Use this with caution, since installations may be (partially) overwritten if another EasyBuild session is also
 performing those installations!</strong></p>
 <h4 id="locks_wait">Waiting for locks to be removed<a class="headerlink" href="#locks_wait" title="Permanent link">&para;</a></h4>
-<p><em>(<code>--wait-on-lock</code>)</em></p>
-<p>Using the <code>--wait-on-lock</code> configuration option, you can change how EasyBuild deals with existing locks,
-by specifying how frequently EasyBuild should check whether an existing lock was removed. By specifying a non-zero value <code>S</code>,
-you can indicate how many seconds EasyBuild should wait before checking again whether the lock is still in place.</p>
+<p><em>(<code>--wait-on-lock-interval</code>)</em></p>
+<p>Wait interval (in seconds) to use when waiting for existing lock to be removed</p>
+<p><em>(<code>--wait-on-lock-limit</code>)</em></p>
+<p>Maximum amount of time (in seconds) to wait until lock is released (0 means no waiting at all, exit with error;
+-1 means no waiting limit, keep waiting).</p>
+<p><em>(<code>--wait-on-lock &lt;secs&gt;</code>)</em> (DEPRECATED)</p>
+<p>Using the <code>--wait-on-lock</code> configuration option, you can change how EasyBuild deals with existing locks, by specifying
+how frequently EasyBuild should check whether an existing lock was removed. By specifying a non-zero value <code>secs</code>, you
+can indicate how many seconds EasyBuild should wait before checking again whether the lock is still in place.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <code>--wait-on-lock</code> configuration option is deprecated, please use <code>--wait-on-lock-interval</code> and <code>--wait-on-lock-limit</code> instead!</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>EasyBuild will wait indefinitely for an existing lock to be removed if <code>--wait-on-lock</code> is set to a non-zero value...</p>
 <p>If the lock is never removed, the EasyBuild session will never terminate; it will keep checking every <code>S</code> seconds whether the lock is still in place.</p>
 </div>
 <p>By default, EasyBuild will <em>abort</em> the installation with an error like "<code>Lock ... already exists, aborting!</code>"
-if a corresponding lock already exists, which is equivalent to setting <code>--wait-on-lock</code> to zero (<code>0</code>),
-implying that no waiting should be done at all.</p>
+if a corresponding lock already exists.</p>
 <h3 id="locks_dir">Locks directory<a class="headerlink" href="#locks_dir" title="Permanent link">&para;</a></h3>
 <p>If desired, an alternate location where locks should be created and checked for can be specified via the <code>--locks-dir</code> configuration option.</p>
 <div class="admonition note">
@@ -5917,7 +5924,7 @@ implying that no waiting should be done at all.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 2, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 20, 2023</span>
       
     
   </small>
@@ -6003,12 +6010,14 @@ implying that no waiting should be done at all.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
       
-        <script src="../js/asciinema-player-2.6.1.js"></script>
+        
+          <script src="../js/asciinema-player-2.6.1.js"></script>
+        
       
     
   </body>

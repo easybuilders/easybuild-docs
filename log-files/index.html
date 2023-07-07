@@ -17,7 +17,7 @@
         <link rel="next" href="../extended-dry-run/">
       
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
@@ -5859,21 +5859,21 @@ is performed. After each successful installation, this application log
 file is copied to the install directory for future reference.</p>
 <p>By default, the application log file is copied to a subdirectory of the
 installation prefix named <code>easybuild</code>, and has a filename like
-<code>easybuild-HPL-2.0-20141103.104412.log</code> for example, which corresponds
+<code>easybuild-WRF-4.4.1-20230426.143346.log</code> for example, which corresponds
 to the filename template
 <code>easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log</code>. This aspect can
 be tweaked via the <code>--logfile-format</code> configuration option.</p>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>HPL-2.0-goolf-1.4.10.eb
-<span class="go">== temporary log file in case of crash /tmp/easybuild-rHHgBu/easybuild-XD0Ae_.log</span>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>WRF-4.4.1-foss-2022b-dmpar.eb
+<span class="go">== Temporary log file in case of crash /tmp/eb-1zbqix6e/easybuild-1ixy86r2.log</span>
 <span class="go">[...]</span>
-<span class="go">== building and installing HPL/2.0-goolf-1.4.10...</span>
+<span class="go">== building and installing WRF/4.4.1-foss-2022b-dmpar...</span>
 <span class="go">[...]</span>
 <span class="go">== COMPLETED: Installation ended successfully</span>
-<span class="go">== Results of the build can be found in the log file /home/example/.local/easybuild/software/HPL/2.0-goolf-1.4.10/easybuild/easybuild-HPL-2.0-20141103.104412.log</span>
+<span class="go">== Results of the build can be found in the log file(s) /home/example/.local/easybuild/software/WRF/4.4.1-foss-2022b-dmpar/easybuild/easybuild-WRF-4.4.1-20230531.181321.log</span>
 <span class="go">== Build succeeded for 1 out of 1</span>
-<span class="go">== temporary log file /tmp/easybuild-rHHgBu/easybuild-XD0Ae_.log has been removed.</span>
-<span class="go">== temporary directory /tmp/easybuild-rHHgBu has been removed.</span>
+<span class="go">== temporary log file /tmp/eb-1zbqix6e/easybuild-1ixy86r2.log* has been removed.</span>
+<span class="go">== temporary directory /tmp/eb-1zbqix6e has been removed.</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -5898,15 +5898,15 @@ and guidelines in this section should make navigating logs less scary.</p>
 <h3 id="log-message-format">Log message format<a class="headerlink" href="#log-message-format" title="Permanent link">&para;</a></h3>
 <p>Each log message as emitted by EasyBuild follows a well-defined format.
 Example:</p>
-<div class="highlight"><pre><span></span><code><span class="go">== 2014-11-03 13:34:31,906 main.EB_HPL INFO This is EasyBuild 1.15.2 (framework: 1.15.2, easyblocks: 1.15.2) on host example.</span>
+<div class="highlight"><pre><span></span><code><span class="go">== 2023-05-31 16:11:21,044 easyblock.py:313 INFO This is EasyBuild 4.7.3 (framework: 4.7.3, easyblocks: 4.7.3) on host example.</span>
 </code></pre></div>
 <p>Each log line consists of the following parts:</p>
 <ul>
 <li>a prefix label <code>==</code>, which is useful to discriminate between
     EasyBuild log messages and the output of executed shell commands;</li>
-<li>date and time information (e.g., <code>2014-11-03 13:34:31,906</code>);</li>
+<li>date and time information (e.g., <code>2023-05-31 16:11:21,044</code>);</li>
 <li>the Python module/class/function that is responsible for the log
-    message (e.g., <code>main.EB_HPL</code>);</li>
+    message (e.g., <code>easyblock.py:313</code>);</li>
 <li>the log level (e.g., <code>INFO</code>);</li>
 <li>and a string with the actual log message at the end</li>
 </ul>
@@ -5917,10 +5917,10 @@ files.</p>
 <h4 id="step-markers">Step markers<a class="headerlink" href="#step-markers" title="Permanent link">&para;</a></h4>
 <p>For each step performed in the build and installation process,
 corresponding log messages is emitted. For example:</p>
-<div class="highlight"><pre><span></span><code><span class="go">== 2014-11-03 13:34:48,816 main.EB_HPL INFO configuring...</span>
-<span class="go">== 2014-11-03 13:34:48,817 main.EB_HPL INFO Starting configure step</span>
+<div class="highlight"><pre><span></span><code><span class="go">== 2023-05-31 16:11:44,977 build_log.py:267 INFO configuring...</span>
+<span class="go">== 2023-05-31 16:11:44,981 easyblock.py:3926 INFO Starting configure step</span>
 <span class="go">[...]</span>
-<span class="go">== 2014-11-03 13:34:48,823 main.EB_HPL INFO Running method configure_step part of step configure</span>
+<span class="go">== 2023-05-31 16:11:44,982 easyblock.py:3934 INFO Running method configure_step part of step configure</span>
 </code></pre></div>
 <p>This allows you to navigate a log file step by step, for example using
 the <code>_step</code> search pattern.</p>
@@ -5928,9 +5928,10 @@ the <code>_step</code> search pattern.</p>
 <p>For each executed shell command, log messages are included with the full
 command line, the location where the command was executed and the
 command's output and exit code. For example:</p>
-<div class="highlight"><pre><span></span><code><span class="go">== 2014-11-03 13:34:48,823 main.run DEBUG run_cmd: running cmd /bin/bash make_generic (in /tmp/user/easybuild_build/HPL/2.0/goolf-1.4.10/hpl-2.0/setup)</span>
-<span class="go">== 2014-11-03 13:34:48,823 main.run DEBUG run_cmd: Command output will be logged to /tmp/easybuild-W85p4r/easybuild-run_cmd-XoJwMY.log</span>
-<span class="go">== 2014-11-03 13:34:48,849 main.run INFO cmd &quot;/bin/bash make_generic&quot; exited with exitcode 0 and output:</span>
+<div class="highlight"><pre><span></span><code><span class="go">== 2023-05-31 18:59:24,222 run.py:176 DEBUG run_cmd: Output of &quot;/home/example/.local/easybuild/software/WRF/4.4.1-foss-2022b-dmpar/WRF-4.4.1/compile -j 8 wrf&quot; will be logged to /tmp/eb-1zbqix6e/easybuild-run_cmd-ueqo5bn0.log</span>
+<span class="go">== 2023-05-31 18:59:24,225 run.py:217 DEBUG run_cmd: running cmd /home/example/.local/easybuild/software//WRF/4.4.1-foss-2022b-dmpar/WRF-4.4.1/compile -j 8 wrf (in /home/example/.local/easybuild/software//WRF/4.4.1-foss-2022b-dmpar/WRF-4.4.1)</span>
+<span class="go">[...]</span>
+<span class="go">== 2023-05-31 20:06:35,979 run.py:650 DEBUG cmd &quot;/home/example/.local/easybuild/software/WRF/4.4.1-foss-2022b-dmpar/WRF-4.4.1/compile -j 8 wrf&quot; exited with exit code 0 and output:</span>
 </code></pre></div>
 <p>If you are primarily interested in the different commands as they were
 executed by EasyBuild, you can use <code>INFO cmd</code> (or <code>run_cmd</code>, in debug
@@ -5948,7 +5949,7 @@ executing a dozen or so different shell commands, minimally.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 26, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 31, 2023</span>
       
     
   </small>
@@ -6034,12 +6035,14 @@ executing a dozen or so different shell commands, minimally.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
       
-        <script src="../js/asciinema-player-2.6.1.js"></script>
+        
+          <script src="../js/asciinema-player-2.6.1.js"></script>
+        
       
     
   </body>
