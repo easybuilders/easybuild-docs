@@ -32,72 +32,171 @@ printed, to allow determining how long the command has been running.
 ## Example {: #trace_example }
 
 ``` console
-$ eb HDF5-1.10.1-intel-2017a.eb -df --trace --experimental
-== temporary log file in case of crash /tmp/eb-ieEeg3/easybuild-Ouw3jV.log
-== processing EasyBuild easyconfig /home/example/HDF5/HDF5-1.10.1-intel-2017a.eb
-== building and installing HDF5/1.10.1-intel-2017a...
-  >> installation prefix: /prefix/software/HDF5/1.10.1-intel-2017a
+$ eb DBD-mysql-4.050-GCC-11.3.0.eb -df --trace
+== Temporary log file in case of crash /tmp/vsc43810/eb-0hlic_jz/easybuild-r15wx134.log
+== processing EasyBuild easyconfig /user/gent/438/vsc43810/easybuild/easybuild-easyconfigs/easybuild/easyconfigs/d/DBD-mysql/DBD-mysql-4.050-GCC-11.3.0.eb
+== building and installing DBD-mysql/4.050-GCC-11.3.0...
+  >> installation prefix: /scratch/gent/vo/001/gvo00117/easybuild/RHEL8/cascadelake-ampere-ib/software/DBD-mysql/4.050-GCC-11.3.0
 == fetching files...
   >> sources:
-  >> /prefix/sources/h/HDF5/hdf5-1.10.1.tar.gz [SHA256: 048a9d149fb99aaa1680a712963f5a78e9c43b588d0e79d55e06760ec377c172]
+  >> /apps/gent/sources/d/DBD-mysql/DBD-mysql-4.050.tar.gz [SHA256: 4f48541ff15a0a7405f76adc10f81627c33996fbf56c95c26c094444c0928d78]
+== ... (took < 1 sec)
 == creating build dir, resetting environment...
-  >> build dir: /tmp/HDF5/1.10.1/intel-2017a
+  >> build dir: /tmp/vsc43810/easybuild/build/DBDmysql/4.050/GCC-11.3.0
+== ... (took < 1 sec)
 == unpacking...
-  >> running command 'tar xzf /prefix/sources/h/HDF5/hdf5-1.10.1.tar.gz' (output in /tmp/eb-ieEeg3/easybuild-run_cmd-P9kf6c.log) [started at: 2017-09-06 08:28:42]
+  >> running command:
+        [started at: 2023-07-10 15:50:37]
+        [working dir: /tmp/vsc43810/easybuild/build/DBDmysql/4.050/GCC-11.3.0]
+        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-lb_c_n28.log]
+        tar xzf /apps/gent/sources/d/DBD-mysql/DBD-mysql-4.050.tar.gz
+  >> command completed: exit 0, ran in < 1s
+== ... (took < 1 sec)
 == patching...
+== ... (took < 1 sec)
 == preparing...
-  >> loading toolchain module: intel/2017a
+  >> loading toolchain module: GCC/11.3.0
   >> (no build dependencies specified)
   >> loading modules for (runtime) dependencies:
-  >>  * zlib/1.2.11-GCCcore-6.3.0
-  >>  * Szip/2.1-intel-2017a
-  >> defining build environment for intel/2017a toolchain
+  >>  * Perl/5.34.1-GCCcore-11.3.0
+  >>  * MariaDB/10.9.3-GCC-11.3.0
+  >>  * zlib/1.2.12-GCCcore-11.3.0
+  >>  * OpenSSL/1.1
+  >> defining build environment for GCC/11.3.0 toolchain
+== ... (took 20 secs)
 == configuring...
-  >> running command './configure --prefix=/prefix/software/HDF5/1.10.1-intel-2017a  --with-szlib=/prefix/software/Szip/2.1-intel-2017a  --with-zlib=/prefix/software/zlib/1.2.11-GCCcore-6.3.0  --with-pic --with-pthread --enable-shared  --enable-cxx --enable-fortran FC="mpiifort"  --enable-unsupported --enable-parallel' (output in /tmp/eb-ieEeg3/easybuild-run_cmd-dPat3D.log) [started at: 2017-09-06 08:28:44]
+== ... (took < 1 sec)
 == building...
-  >> running command 'make -j 24  CXXFLAGS="$CXXFLAGS -DMPICH_IGNORE_CXX_SEEK"  FC="mpiifort"' (output in /tmp/eb-ieEeg3/easybuild-run_cmd-25vKdK.log) [started at: 2017-09-06 08:31:01]
+== ... (took < 1 sec)
 == testing...
+== ... (took < 1 sec)
 == installing...
-  >> running command 'make install' (output in /tmp/eb-ieEeg3/easybuild-run_cmd-BepE8P.log) [started at: 2017-09-06 08:34:09]
+  >> running command:
+        [started at: 2023-07-10 15:50:58]
+        [working dir: /tmp/vsc43810/easybuild/build/DBDmysql/4.050/GCC-11.3.0/DBD-mysql-4.050]
+        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-28s6zzlb.log]
+        perl Makefile.PL PREFIX=/scratch/gent/vo/001/gvo00117/easybuild/RHEL8/cascadelake-ampere-ib/software/DBD-mysql/4.050-GCC-11.3.0
+  >> command completed: exit 0, ran in 00h00m05s
+  >> running command:
+        [started at: 2023-07-10 15:51:03]
+        [working dir: /tmp/vsc43810/easybuild/build/DBDmysql/4.050/GCC-11.3.0/DBD-mysql-4.050]
+        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-vawy0_q0.log]
+        make  -j 8
+  >> command completed: exit 0, ran in 00h00m02s
+  >> running command:
+        [started at: 2023-07-10 15:51:06]
+        [working dir: /tmp/vsc43810/easybuild/build/DBDmysql/4.050/GCC-11.3.0/DBD-mysql-4.050]
+        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-szr0wujz.log]
+        make test
+  >> command completed: exit 0, ran in 00h00m06s
+  >> running command:
+        [started at: 2023-07-10 15:51:12]
+        [working dir: /tmp/vsc43810/easybuild/build/DBDmysql/4.050/GCC-11.3.0/DBD-mysql-4.050]
+        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-u7n5p0oq.log]
+        make install
+  >> command completed: exit 0, ran in < 1s
+== ... (took 14 secs)
 == taking care of extensions...
+== ... (took < 1 sec)
+== restore after iterating...
+== ... (took < 1 sec)
 == postprocessing...
+== ... (took < 1 sec)
 == sanity checking...
-  >> file 'bin/h52gif' found: OK
-  >> file 'bin/h5c++' found: OK
-  >> file 'bin/h5copy' found: OK
-  >> file 'bin/h5debug' found: OK
-  >> file 'bin/h5diff' found: OK
-  >> file 'bin/h5dump' found: OK
-  >> file 'bin/h5import' found: OK
-  >> file 'bin/h5jam' found: OK
-  >> file 'bin/h5ls' found: OK
-  >> file 'bin/h5mkgrp' found: OK
-  >> file 'bin/h5perf_serial' found: OK
-  >> file 'bin/h5redeploy' found: OK
-  >> file 'bin/h5repack' found: OK
-  >> file 'bin/h5repart' found: OK
-  >> file 'bin/h5stat' found: OK
-  >> file 'bin/h5unjam' found: OK
-  >> file 'bin/gif2h5' found: OK
-  >> file 'bin/h5perf' found: OK
-  >> file 'bin/h5pcc' found: OK
-  >> file 'bin/h5pfc' found: OK
-  >> file 'bin/ph5diff' found: OK
-  >> file 'lib/libhdf5.so' found: OK
-  >> file 'lib/libhdf5_cpp.so' found: OK
-  >> file 'lib/libhdf5_fortran.so' found: OK
-  >> file 'lib/libhdf5_hl_cpp.so' found: OK
-  >> file 'lib/libhdf5_hl.so' found: OK
-  >> file 'lib/libhdf5hl_fortran.so' found: OK
-  >> (non-empty) directory 'include' found: OK
+  >> running command:
+        [started at: 2023-07-10 15:51:12]
+        [working dir: /tmp/vsc43810/easybuild/build/DBDmysql/4.050/GCC-11.3.0/DBD-mysql-4.050]
+        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-1ovlnqgj.log]
+        perl -MConfig -e 'print $Config::Config{PERL_API_REVISION}'
+  >> command completed: exit 0, ran in < 1s
+  >> running command:
+        [started at: 2023-07-10 15:51:12]
+        [working dir: /tmp/vsc43810/easybuild/build/DBDmysql/4.050/GCC-11.3.0/DBD-mysql-4.050]
+        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-gu5r14nn.log]
+        perl -MConfig -e 'my $a = $Config::Config{"sitearch"}; $a =~ s/($Config::Config{"siteprefix"})//; print $a'
+  >> command completed: exit 0, ran in < 1s
+  >> running command:
+        [started at: 2023-07-10 15:51:12]
+        [working dir: /tmp/vsc43810/easybuild/build/DBDmysql/4.050/GCC-11.3.0/DBD-mysql-4.050]
+        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-nnk7n5w8.log]
+        perl -MConfig -e 'my $a = $Config::Config{"sitelib"}; $a =~ s/($Config::Config{"siteprefix"})//; print $a'
+  >> command completed: exit 0, ran in < 1s
+  >> running command:
+        [started at: 2023-07-10 15:51:20]
+        [working dir: /kyukon/scratch/gent/vo/001/gvo00117/easybuild/RHEL8/cascadelake-ampere-ib/software/DBD-mysql/4.050-GCC-11.3.0]
+        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-bo0su7a0.log]
+        perldoc -lm DBD::mysql
+  >> command completed: exit 0, ran in < 1s
+  >> file 'lib/perl5/site_perl/5.34.1/x86_64-linux-thread-multi/DBD/mysql.pm' found: OK
+  >> (non-empty) directory 'lib/perl5/site_perl/5.34.1/x86_64-linux-thread-multi/DBD/mysql' found: OK
+  >> running command:
+        [started at: 2023-07-10 15:51:25]
+        [working dir: /kyukon/scratch/gent/vo/001/gvo00117/easybuild/RHEL8/cascadelake-ampere-ib/software/DBD-mysql/4.050-GCC-11.3.0]
+        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-69mrzxwx.log]
+        perl -MConfig -e 'print $Config::Config{PERL_API_REVISION}'
+  >> command completed: exit 0, ran in < 1s
+  >> running command:
+        [started at: 2023-07-10 15:51:25]
+        [working dir: /kyukon/scratch/gent/vo/001/gvo00117/easybuild/RHEL8/cascadelake-ampere-ib/software/DBD-mysql/4.050-GCC-11.3.0]
+        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-1y9q6bb9.log]
+        perl -MConfig -e 'my $a = $Config::Config{"sitearch"}; $a =~ s/($Config::Config{"siteprefix"})//; print $a'
+  >> command completed: exit 0, ran in < 1s
+  >> running command:
+        [started at: 2023-07-10 15:51:25]
+        [working dir: /kyukon/scratch/gent/vo/001/gvo00117/easybuild/RHEL8/cascadelake-ampere-ib/software/DBD-mysql/4.050-GCC-11.3.0]
+        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-a1yiis3i.log]
+        perl -MConfig -e 'my $a = $Config::Config{"sitelib"}; $a =~ s/($Config::Config{"siteprefix"})//; print $a'
+  >> command completed: exit 0, ran in < 1s
+  >> loading modules: DBD-mysql/4.050-GCC-11.3.0...
+== ... (took 22 secs)
 == cleaning up...
+== ... (took < 1 sec)
 == creating module...
-  >> generating module file @ /prefix/modules/all/HDF5/1.10.1-intel-2017a.lua
+  >> generating module file @ /scratch/gent/vo/001/gvo00117/easybuild/RHEL8/cascadelake-ampere-ib/modules/all/DBD-mysql/4.050-GCC-11.3.0.lua
+  >> running command:
+        [started at: 2023-07-10 15:51:35]
+        [working dir: /kyukon/home/gent/438/vsc43810]
+        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-t70ouz_f.log]
+        perl -MConfig -e 'print $Config::Config{PERL_API_REVISION}'
+  >> command completed: exit 0, ran in < 1s
+  >> running command:
+        [started at: 2023-07-10 15:51:35]
+        [working dir: /kyukon/home/gent/438/vsc43810]
+        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-pvoshtmb.log]
+        perl -MConfig -e 'my $a = $Config::Config{"sitearch"}; $a =~ s/($Config::Config{"siteprefix"})//; print $a'
+  >> command completed: exit 0, ran in < 1s
+  >> running command:
+        [started at: 2023-07-10 15:51:35]
+        [working dir: /kyukon/home/gent/438/vsc43810]
+        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-hhuo5ew4.log]
+        perl -MConfig -e 'my $a = $Config::Config{"sitelib"}; $a =~ s/($Config::Config{"siteprefix"})//; print $a'
+  >> command completed: exit 0, ran in < 1s
+  >> running command:
+        [started at: 2023-07-10 15:51:36]
+        [working dir: /kyukon/home/gent/438/vsc43810]
+        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-i48pnde3.log]
+        perl -MConfig -e 'print $Config::Config{PERL_API_REVISION}'
+  >> command completed: exit 0, ran in < 1s
+  >> running command:
+        [started at: 2023-07-10 15:51:36]
+        [working dir: /kyukon/home/gent/438/vsc43810]
+        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-nvi8om1l.log]
+        perl -MConfig -e 'my $a = $Config::Config{"sitearch"}; $a =~ s/($Config::Config{"siteprefix"})//; print $a'
+  >> command completed: exit 0, ran in < 1s
+  >> running command:
+        [started at: 2023-07-10 15:51:36]
+        [working dir: /kyukon/home/gent/438/vsc43810]
+        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-mir66d85.log]
+        perl -MConfig -e 'my $a = $Config::Config{"sitelib"}; $a =~ s/($Config::Config{"siteprefix"})//; print $a'
+  >> command completed: exit 0, ran in < 1s
+== ... (took 11 secs)
 == permissions...
+== ... (took < 1 sec)
 == packaging...
-== COMPLETED: Installation ended successfully
-== Results of the build can be found in the log file(s) /prefix/software/HDF5/1.10.1-intel-2017a/easybuild/easybuild-HDF5-1.10.1-20170906.083425.log
+== ... (took < 1 sec)
+== COMPLETED: Installation ended successfully (took 1 min 9 secs)
+== Results of the build can be found in the log file(s) /scratch/gent/vo/001/gvo00117/easybuild/RHEL8/cascadelake-ampere-ib/software/DBD-mysql/4.050-GCC-11.3.0/easybuild/easybuild-DBD-mysql-4.050-20230710.155146.log
 == Build succeeded for 1 out of 1
-== Temporary log file(s) /tmp/eb-ieEeg3/easybuild-Ouw3jV.log* have been removed.
-== Temporary directory /tmp/eb-ieEeg3 has been removed.
+== Temporary log file(s) /tmp/vsc43810/eb-0hlic_jz/easybuild-r15wx134.log* have been removed.
+== Temporary directory /tmp/vsc43810/eb-0hlic_jz has been removed.
 ```
