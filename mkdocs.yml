@@ -1,9 +1,9 @@
 ---
-site_name: EasyBuild - building software with ease
-site_url: https://docs.easybuild.io
+site_name: SimpleBuild - building software with ease
+site_url: https://docs.simplebuild.io
 theme:
   name: material
-  logo: img/easybuild_logo.png
+  logo: img/simplebuild_logo.png
   favicon: favicon.ico
   features:
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/
@@ -35,75 +35,75 @@ extra_css:
   - stylesheets/asciinema-player-2.6.1.css
 extra_javascript:
   - js/asciinema-player-2.6.1.js
-repo_name: EasyBuild @ GitHub
-repo_url: https://github.com/easybuilders/easybuild-easyconfigs
-edit_uri: https://github.com/easybuilders/easybuild-docs/blob/main/docs
+repo_name: SimpleBuild @ GitHub
+repo_url: https://github.com/simplebuilders/simplebuild-simpleconfigs
+edit_uri: https://github.com/simplebuilders/simplebuild-docs/blob/main/docs
 
 nav:
   - Home: index.md
   - Basic info:
-      - What is EasyBuild?: what-is-easybuild.md
+      - What is SimpleBuild?: what-is-simplebuild.md
       - Terminology: terminology.md
-  - Getting started with EasyBuild:
+  - Getting started with SimpleBuild:
       - Installation: installation.md
       - Configuration: configuration.md
-      - Basic usage: using-easybuild.md
+      - Basic usage: using-simplebuild.md
       - Typical workflow example: typical-workflow-example.md
-  - Using EasyBuild:
+  - Using SimpleBuild:
       - Backing up existing modules: backup-modules.md
       - Common toolchains: common-toolchains.md
       - Controlling optimization flags: controlling-compiler-optimization-flags.md
       - Detecting loaded modules: detecting-loaded-modules.md
-      - EasyBuild log files: log-files.md
+      - SimpleBuild log files: log-files.md
       - Extended dry run: extended-dry-run.md
       - Locks: locks.md
       - Manipulating dependencies: manipulating-dependencies.md
       - Partial installations: partial-installations.md
       - Compatibility with Python 2 + 3: python-2-3-compatibility.md
       - Progress bars: progress-bars.md
-      - Search index for easyconfigs: easyconfigs-search-index.md
+      - Search index for simpleconfigs: simpleconfigs-search-index.md
       - System toolchain: system-toolchain.md
       - Submitting installations as jobs: submitting-jobs.md
       - Tracing installation progress: tracing-progress.md
-      - Writing easyconfig files: writing-easyconfig-files.md
+      - Writing simpleconfig files: writing-simpleconfig-files.md
   - Advanced topics:
       - Cray support: cray-support.md
-      - Customizing EasyBuild via hooks: hooks.md
+      - Customizing SimpleBuild via hooks: hooks.md
       - Including Python modules: including-additional-python-modules.md
       - Packaging support: packaging-support.md
       - RPATH support: rpath-support.md
       - Using external modules: using-external-modules.md
       - Wrapping dependencies: wrapping-dependencies.md
   - For developers/contributors:
-      - Archived easyconfigs: archived-easyconfigs.md
+      - Archived simpleconfigs: archived-simpleconfigs.md
       - Code style: code-style.md
-      - Contributing to EasyBuild: contributing.md
+      - Contributing to SimpleBuild: contributing.md
       - GitHub integration: integration-with-github.md
-      - Implementing easyblocks: implementing-easyblocks.md
-      - Local variables in easyconfigs: easyconfig-files-local-variables.md
+      - Implementing simpleblocks: implementing-simpleblocks.md
+      - Local variables in simpleconfigs: simpleconfig-files-local-variables.md
       - Unit tests: unit-tests.md
       - Framework Overview: framework-overview.md
   - Experimental features:
       - (overview): experimental-features.md
       - Creating container images/recipes: containers.md
-      - Easystack files: easystack-files.md
-      - Easyconfig files in YAML syntax: writing-yeb-easyconfig-files.md
+      - Simplestack files: simplestack-files.md
+      - Simpleconfig files in YAML syntax: writing-yeb-simpleconfig-files.md
       - Installing extensions in parallel: installing-extensions-in-parallel.md
   - Version-specific info:
       - (overview): version-specific/index.md
       - Constants for config files: version-specific/config-file-constants.md
-      - Constants for easyconfigs: version-specific/easyconfig-constants.md
-      - Easyblocks: version-specific/easyblocks.md
-      - EasyBuild configuration options: version-specific/eb-help.md
-      - Easyconfig parameters: version-specific/easyconfig-parameters.md
-      - Easyconfig parameters for WRF: version-specific/eb-a-wrf.md
-      - Generic easyblocks: version-specific/generic-easyblocks.md
-      - License constants for easyconfigs: version-specific/easyconfig-license-constants.md
-      - Templates for easyconfigs: version-specific/easyconfig-templates.md
+      - Constants for simpleconfigs: version-specific/simpleconfig-constants.md
+      - Simpleblocks: version-specific/simpleblocks.md
+      - SimpleBuild configuration options: version-specific/eb-help.md
+      - Simpleconfig parameters: version-specific/simpleconfig-parameters.md
+      - Simpleconfig parameters for WRF: version-specific/eb-a-wrf.md
+      - Generic simpleblocks: version-specific/generic-simpleblocks.md
+      - License constants for simpleconfigs: version-specific/simpleconfig-license-constants.md
+      - Templates for simpleconfigs: version-specific/simpleconfig-templates.md
       - Toolchain options: version-specific/toolchain-opts.md
       - Toolchains: version-specific/toolchains.md
-  - EasyBuild release notes: release-notes.md
-  - EasyBuild maintainers: maintainers.md
+  - SimpleBuild release notes: release-notes.md
+  - SimpleBuild maintainers: maintainers.md
   - API: api/
   - List of supported software: version-specific/supported-software.md
   - Getting help: getting-help.md
@@ -113,14 +113,14 @@ nav:
       - Configuration (legacy): legacy/configuration.md
       - Demos:
           - (overview): demos/index.md
-          - Configuring EasyBuild: demos/configuring.md
+          - Configuring SimpleBuild: demos/configuring.md
           - eb --review-pr: demos/review-pr.md
-      - Deprecated easyconfigs: deprecated-easyconfigs.md
+      - Deprecated simpleconfigs: deprecated-simpleconfigs.md
       - Deprecated functionality: deprecated-functionality.md
       - Documentation changelog: changelog-docs.md
-      - EasyBuild v4:
-          - Overview of changes: easybuild-v4/overview-of-changes.md
-          - Overview of relocated functions/constants: easybuild-v4/overview-relocated-functions-constants.md
+      - SimpleBuild v4:
+          - Overview of changes: simplebuild-v4/overview-of-changes.md
+          - Overview of relocated functions/constants: simplebuild-v4/overview-relocated-functions-constants.md
       - Installing Environment Modules: installing-environment-modules-without-root-permissions.md
       - Installing Lmod: installing-lmod-without-root-permissions.md
       - Removed functionality: removed-functionality.md
@@ -154,16 +154,16 @@ extra:
   analytics:
     provider: google
     property: G-BLVCH6991S
-  easybuild:
+  simplebuild:
     version: 4.8.0
   # add links in bottom right
   social:
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/easy_build
+      link: https://twitter.com/simple_build
     - icon: fontawesome/brands/youtube
-      link: https://www.youtube.com/c/easybuilders
+      link: https://www.youtube.com/c/simplebuilders
     - icon: fontawesome/solid/book
-      link: https://docs.easybuild.io
+      link: https://docs.simplebuild.io
 
 plugins:
   # autolinks across pages
@@ -173,7 +173,7 @@ plugins:
       default_handler: python
       handlers:
         python:
-          paths: [src/easybuild-framework]
+          paths: [src/simplebuild-framework]
           options:
             docstring_style: sphinx
             docstring_section_style: spacy
@@ -189,15 +189,15 @@ plugins:
   - git-revision-date-localized:
       fallback_to_build_date: true
       exclude:
-        - api/easybuild/*
+        - api/simplebuild/*
         - api/summary.md
         - index.md
   # necessary for search to work
   - search
-  # redirects for original EasyBuild documentation to avoid broken URLs
+  # redirects for original SimpleBuild documentation to avoid broken URLs
   - redirects:
       redirect_maps:
-        en/latest/Archived-easyconfigs.html: archived-easyconfigs.md
+        en/latest/Archived-simpleconfigs.html: archived-simpleconfigs.md
         en/latest/Backup_modules.html: backup-modules.md
         en/latest/Changelog.html: changelog-docs.md
         en/latest/Code_style.html: code-style.md
@@ -209,19 +209,19 @@ plugins:
         en/latest/Contributing.html: contributing.md
         en/latest/Controlling_compiler_optimization_flags.html: controlling-compiler-optimization-flags.md
         en/latest/Cray-support.html: cray-support.md
-        en/latest/Deprecated-easyconfigs.html: deprecated-easyconfigs.md
+        en/latest/Deprecated-simpleconfigs.html: deprecated-simpleconfigs.md
         en/latest/Deprecated-functionality.html: deprecated-functionality.md
         en/latest/Detecting_loaded_modules.html: detecting-loaded-modules.md
-        en/latest/EasyBuild4-overview-of-changes.html: easybuild-v4/overview-of-changes.md
-        en/latest/EasyBuild4-overview-relocated-functions-constants.html: easybuild-v4/overview-relocated-functions-constants.md
-        en/latest/Easyconfig-files-local-variables.html: easyconfig-files-local-variables.md
-        en/latest/Easyconfigs_index.html: easyconfigs-search-index.md
-        en/latest/Easystack-files.html: easystack-files.md
+        en/latest/SimpleBuild4-overview-of-changes.html: simplebuild-v4/overview-of-changes.md
+        en/latest/SimpleBuild4-overview-relocated-functions-constants.html: simplebuild-v4/overview-relocated-functions-constants.md
+        en/latest/Simpleconfig-files-local-variables.html: simpleconfig-files-local-variables.md
+        en/latest/Simpleconfigs_index.html: simpleconfigs-search-index.md
+        en/latest/Simplestack-files.html: simplestack-files.md
         en/latest/Experimental_features.html: experimental-features.md
         en/latest/Extended_dry_run.html: extended-dry-run.md
         en/latest/Extended_dry_run_examples.html: extended-dry-run.md#extended_dry_run_examples
         en/latest/Hooks.html: hooks.md
-        en/latest/Implementing-easyblocks.html: implementing-easyblocks.md
+        en/latest/Implementing-simpleblocks.html: implementing-simpleblocks.md
         en/latest/Including_additional_Python_modules.html: including-additional-python-modules.md
         en/latest/Installation.html: installation.md
         en/latest/Installation_Alternative.html: installation-alternative.md
@@ -229,7 +229,7 @@ plugins:
         en/latest/Installing-environment-modules-without-root-permissions.html: installing-environment-modules-without-root-permissions.md
         en/latest/Installing_extensions_in_parallel.html: installing-extensions-in-parallel.md
         en/latest/Integration_with_GitHub.html: integration-with-github.md
-        en/latest/Introduction.html: what-is-easybuild.md
+        en/latest/Introduction.html: what-is-simplebuild.md
         en/latest/Locks.html: locks.md
         en/latest/Logfiles.html: log-files.md
         en/latest/Maintainers.html: maintainers.md
@@ -250,273 +250,273 @@ plugins:
         en/latest/Useful_links.html: index.md
         en/latest/Useful-scripts.html: useful-scripts.md
         en/latest/Using_external_modules.html: using-external-modules.md
-        en/latest/Using_the_EasyBuild_command_line.html: using-easybuild.md
+        en/latest/Using_the_SimpleBuild_command_line.html: using-simplebuild.md
         en/latest/Wrapping_dependencies.html: wrapping-dependencies.md
-        en/latest/Writing_easyconfig_files.html: writing-easyconfig-files.md
-        en/latest/Writing_yeb_easyconfig_files.html: writing-yeb-easyconfig-files.md
+        en/latest/Writing_simpleconfig_files.html: writing-simpleconfig-files.md
+        en/latest/Writing_yeb_simpleconfig_files.html: writing-yeb-simpleconfig-files.md
         en/latest/demos/bootstrapping.html: installation.md
         en/latest/demos/configuring.html: demos/configuring.md
         en/latest/demos/index.html: demos/index.md
         en/latest/demos/review_pr.html: demos/review-pr.md
-        en/latest/eb_a.html: using-easybuild.md#all-available-easyconfig-parameters
-        en/latest/eb_a_e_EB_WRF.html: using-easybuild.md#eb_a_e_EB_WRF
+        en/latest/eb_a.html: using-simplebuild.md#all-available-simpleconfig-parameters
+        en/latest/eb_a_e_EB_WRF.html: using-simplebuild.md#eb_a_e_EB_WRF
         en/latest/eb_help.html: version-specific/eb-help.md
-        en/latest/eb_list_easyblocks.html: version-specific/easyblocks.md
+        en/latest/eb_list_simpleblocks.html: version-specific/simpleblocks.md
         en/latest/eb_list_toolchains.html: version-specific/toolchains.md
         en/latest/index.html: index.md
         en/latest/version-specific/Supported_software.html: version-specific/supported-software.md
         en/latest/version-specific/config_file_constants.html: version-specific/config-file-constants.md
-        en/latest/version-specific/easyblocks.html: version-specific/easyblocks.md
-        en/latest/version-specific/easyconfig_constants.html: version-specific/easyconfig-constants.md
-        en/latest/version-specific/easyconfig_license_constants.html: version-specific/easyconfig-license-constants.md
-        en/latest/version-specific/easyconfig_parameters.html: version-specific/easyconfig-parameters.md
-        en/latest/version-specific/easyconfig_templates.html: version-specific/easyconfig-templates.md
-        en/latest/version-specific/generic_easyblocks.html: version-specific/generic-easyblocks.md
+        en/latest/version-specific/simpleblocks.html: version-specific/simpleblocks.md
+        en/latest/version-specific/simpleconfig_constants.html: version-specific/simpleconfig-constants.md
+        en/latest/version-specific/simpleconfig_license_constants.html: version-specific/simpleconfig-license-constants.md
+        en/latest/version-specific/simpleconfig_parameters.html: version-specific/simpleconfig-parameters.md
+        en/latest/version-specific/simpleconfig_templates.html: version-specific/simpleconfig-templates.md
+        en/latest/version-specific/generic_simpleblocks.html: version-specific/generic-simpleblocks.md
         en/latest/version-specific/help.html: version-specific/eb-help.md
         en/latest/version-specific/index.html: version-specific/index.md
         en/latest/version-specific/toolchain_opts.html: version-specific/toolchain-opts.md
         en/latest/version-specific/toolchains.html: version-specific/toolchains.md
-        en/latest/api/easybuild.base.exceptions.html: api/easybuild/base/exceptions.md
-        en/latest/api/easybuild.base.fancylogger.html: api/easybuild/base/fancylogger.md
-        en/latest/api/easybuild.base.frozendict.html: api/easybuild/base/frozendict.md
-        en/latest/api/easybuild.base.generaloption.html: api/easybuild/base/generaloption.md
-        en/latest/api/easybuild.base.optcomplete.html: api/easybuild/base/optcomplete.md
-        en/latest/api/easybuild.base.rest.html: api/easybuild/base/rest.md
-        en/latest/api/easybuild.base.html: api/easybuild/base/index.md
-        en/latest/api/easybuild.base.testing.html: api/easybuild/base/testing.md
-        en/latest/api/easybuild.base.wrapper.html: api/easybuild/base/wrapper.md
-        en/latest/api/easybuild.framework.easyblock.html: api/easybuild/framework/easyblock.md
-        en/latest/api/easybuild.framework.easyconfig.constants.html: api/easybuild/framework/easyconfig/constants.md
-        en/latest/api/easybuild.framework.easyconfig.default.html: api/easybuild/framework/easyconfig/default.md
-        en/latest/api/easybuild.framework.easyconfig.easyconfig.html: api/easybuild/framework/easyconfig/easyconfig.md
-        en/latest/api/easybuild.framework.easyconfig.format.convert.html: api/easybuild/framework/easyconfig/format/convert.md
-        en/latest/api/easybuild.framework.easyconfig.format.format.html: api/easybuild/framework/easyconfig/format/format.md
-        en/latest/api/easybuild.framework.easyconfig.format.one.html: api/easybuild/framework/easyconfig/format/one.md
-        en/latest/api/easybuild.framework.easyconfig.format.pyheaderconfigobj.html: api/easybuild/framework/easyconfig/format/pyheaderconfigobj.md
-        en/latest/api/easybuild.framework.easyconfig.format.html: api/easybuild/framework/easyconfig/format/index.md
-        en/latest/api/easybuild.framework.easyconfig.format.two.html: api/easybuild/framework/easyconfig/format/two.md
-        en/latest/api/easybuild.framework.easyconfig.format.version.html: api/easybuild/framework/easyconfig/format/version.md
-        en/latest/api/easybuild.framework.easyconfig.format.yeb.html: api/easybuild/framework/easyconfig/format/yeb.md
-        en/latest/api/easybuild.framework.easyconfig.licenses.html: api/easybuild/framework/easyconfig/licenses.md
-        en/latest/api/easybuild.framework.easyconfig.parser.html: api/easybuild/framework/easyconfig/parser.md
-        en/latest/api/easybuild.framework.easyconfig.html: api/easybuild/framework/easyconfig/index.md
-        en/latest/api/easybuild.framework.easyconfig.style.html: api/easybuild/framework/easyconfig/style.md
-        en/latest/api/easybuild.framework.easyconfig.templates.html: api/easybuild/framework/easyconfig/templates.md
-        en/latest/api/easybuild.framework.easyconfig.tools.html: api/easybuild/framework/easyconfig/tools.md
-        en/latest/api/easybuild.framework.easyconfig.tweak.html: api/easybuild/framework/easyconfig/tweak.md
-        en/latest/api/easybuild.framework.easyconfig.types.html: api/easybuild/framework/easyconfig/types.md
-        en/latest/api/easybuild.framework.extension.html: api/easybuild/framework/extension.md
-        en/latest/api/easybuild.framework.extensioneasyblock.html: api/easybuild/framework/extensioneasyblock.md
-        en/latest/api/easybuild.framework.html: api/easybuild/framework/index.md
-        en/latest/api/easybuild.main.html: api/easybuild/main.md
-        en/latest/api/easybuild.html: api/easybuild/index.md
-        en/latest/api/easybuild.toolchains.cgmpich.html: api/easybuild/toolchains/cgmpich.md
-        en/latest/api/easybuild.toolchains.cgmpolf.html: api/easybuild/toolchains/cgmpolf.md
-        en/latest/api/easybuild.toolchains.cgmvapich2.html: api/easybuild/toolchains/cgmvapich2.md
-        en/latest/api/easybuild.toolchains.cgmvolf.html: api/easybuild/toolchains/cgmvolf.md
-        en/latest/api/easybuild.toolchains.cgompi.html: api/easybuild/toolchains/cgompi.md
-        en/latest/api/easybuild.toolchains.cgoolf.html: api/easybuild/toolchains/cgoolf.md
-        en/latest/api/easybuild.toolchains.clanggcc.html: api/easybuild/toolchains/clanggcc.md
-        en/latest/api/easybuild.toolchains.compiler.clang.html: api/easybuild/toolchains/compiler/clang.md
-        en/latest/api/easybuild.toolchains.compiler.craype.html: api/easybuild/toolchains/compiler/craype.md
-        en/latest/api/easybuild.toolchains.compiler.cuda.html: api/easybuild/toolchains/compiler/cuda.md
-        en/latest/api/easybuild.toolchains.compiler.dummycompiler.html: api/easybuild/toolchains/compiler/dummycompiler.md
-        en/latest/api/easybuild.toolchains.compiler.gcc.html: api/easybuild/toolchains/compiler/gcc.md
-        en/latest/api/easybuild.toolchains.compiler.ibmxl.html: api/easybuild/toolchains/compiler/ibmxl.md
-        en/latest/api/easybuild.toolchains.compiler.inteliccifort.html: api/easybuild/toolchains/compiler/inteliccifort.md
-        en/latest/api/easybuild.toolchains.compiler.pgi.html: api/easybuild/toolchains/compiler/pgi.md
-        en/latest/api/easybuild.toolchains.compiler.html: api/easybuild/toolchains/compiler/index.md
-        en/latest/api/easybuild.toolchains.compiler.systemcompiler.html: api/easybuild/toolchains/compiler/systemcompiler.md
-        en/latest/api/easybuild.toolchains.craycce.html: api/easybuild/toolchains/craycce.md
-        en/latest/api/easybuild.toolchains.craygnu.html: api/easybuild/toolchains/craygnu.md
-        en/latest/api/easybuild.toolchains.crayintel.html: api/easybuild/toolchains/crayintel.md
-        en/latest/api/easybuild.toolchains.craypgi.html: api/easybuild/toolchains/craypgi.md
-        en/latest/api/easybuild.toolchains.dummy.html: api/easybuild/toolchains/dummy.md
-        en/latest/api/easybuild.toolchains.fft.fftw.html: api/easybuild/toolchains/fft/fftw.md
-        en/latest/api/easybuild.toolchains.fft.intelfftw.html: api/easybuild/toolchains/fft/intelfftw.md
-        en/latest/api/easybuild.toolchains.fft.html: api/easybuild/toolchains/fft/index.md
-        en/latest/api/easybuild.toolchains.foss.html: api/easybuild/toolchains/foss.md
-        en/latest/api/easybuild.toolchains.fosscuda.html: api/easybuild/toolchains/fosscuda.md
-        en/latest/api/easybuild.toolchains.gcc.html: api/easybuild/toolchains/gcc.md
-        en/latest/api/easybuild.toolchains.gcccore.html: api/easybuild/toolchains/gcccore.md
-        en/latest/api/easybuild.toolchains.gcccuda.html: api/easybuild/toolchains/gcccuda.md
-        en/latest/api/easybuild.toolchains.gimkl.html: api/easybuild/toolchains/gimkl.md
-        en/latest/api/easybuild.toolchains.gimpi.html: api/easybuild/toolchains/gimpi.md
-        en/latest/api/easybuild.toolchains.gimpic.html: api/easybuild/toolchains/gimpic.md
-        en/latest/api/easybuild.toolchains.giolf.html: api/easybuild/toolchains/giolf.md
-        en/latest/api/easybuild.toolchains.giolfc.html: api/easybuild/toolchains/giolfc.md
-        en/latest/api/easybuild.toolchains.gmacml.html: api/easybuild/toolchains/gmacml.md
-        en/latest/api/easybuild.toolchains.gmkl.html: api/easybuild/toolchains/gmkl.md
-        en/latest/api/easybuild.toolchains.gmklc.html: api/easybuild/toolchains/gmklc.md
-        en/latest/api/easybuild.toolchains.gmpich.html: api/easybuild/toolchains/gmpich.md
-        en/latest/api/easybuild.toolchains.gmpich2.html: api/easybuild/toolchains/gmpich2.md
-        en/latest/api/easybuild.toolchains.gmpolf.html: api/easybuild/toolchains/gmpolf.md
-        en/latest/api/easybuild.toolchains.gmvapich2.html: api/easybuild/toolchains/gmvapich2.md
-        en/latest/api/easybuild.toolchains.gmvolf.html: api/easybuild/toolchains/gmvolf.md
-        en/latest/api/easybuild.toolchains.gnu.html: api/easybuild/toolchains/gnu.md
-        en/latest/api/easybuild.toolchains.goalf.html: api/easybuild/toolchains/goalf.md
-        en/latest/api/easybuild.toolchains.goblf.html: api/easybuild/toolchains/goblf.md
-        en/latest/api/easybuild.toolchains.golf.html: api/easybuild/toolchains/golf.md
-        en/latest/api/easybuild.toolchains.golfc.html: api/easybuild/toolchains/golfc.md
-        en/latest/api/easybuild.toolchains.gomkl.html: api/easybuild/toolchains/gomkl.md
-        en/latest/api/easybuild.toolchains.gomklc.html: api/easybuild/toolchains/gomklc.md
-        en/latest/api/easybuild.toolchains.gompi.html: api/easybuild/toolchains/gompi.md
-        en/latest/api/easybuild.toolchains.gompic.html: api/easybuild/toolchains/gompic.md
-        en/latest/api/easybuild.toolchains.goolf.html: api/easybuild/toolchains/goolf.md
-        en/latest/api/easybuild.toolchains.goolfc.html: api/easybuild/toolchains/goolfc.md
-        en/latest/api/easybuild.toolchains.gpsmpi.html: api/easybuild/toolchains/gpsmpi.md
-        en/latest/api/easybuild.toolchains.gpsolf.html: api/easybuild/toolchains/gpsolf.md
-        en/latest/api/easybuild.toolchains.gqacml.html: api/easybuild/toolchains/gqacml.md
-        en/latest/api/easybuild.toolchains.gsmpi.html: api/easybuild/toolchains/gsmpi.md
-        en/latest/api/easybuild.toolchains.gsolf.html: api/easybuild/toolchains/gsolf.md
-        en/latest/api/easybuild.toolchains.iccifort.html: api/easybuild/toolchains/iccifort.md
-        en/latest/api/easybuild.toolchains.iccifortcuda.html: api/easybuild/toolchains/iccifortcuda.md
-        en/latest/api/easybuild.toolchains.ictce.html: api/easybuild/toolchains/ictce.md
-        en/latest/api/easybuild.toolchains.iimkl.html: api/easybuild/toolchains/iimkl.md
-        en/latest/api/easybuild.toolchains.iimklc.html: api/easybuild/toolchains/iimklc.md
-        en/latest/api/easybuild.toolchains.iimpi.html: api/easybuild/toolchains/iimpi.md
-        en/latest/api/easybuild.toolchains.iimpic.html: api/easybuild/toolchains/iimpic.md
-        en/latest/api/easybuild.toolchains.iiqmpi.html: api/easybuild/toolchains/iiqmpi.md
-        en/latest/api/easybuild.toolchains.impich.html: api/easybuild/toolchains/impich.md
-        en/latest/api/easybuild.toolchains.impmkl.html: api/easybuild/toolchains/impmkl.md
-        en/latest/api/easybuild.toolchains.intel-para.html: api/easybuild/toolchains/intel-para.md
-        en/latest/api/easybuild.toolchains.intel.html: api/easybuild/toolchains/intel.md
-        en/latest/api/easybuild.toolchains.intelcuda.html: api/easybuild/toolchains/intelcuda.md
-        en/latest/api/easybuild.toolchains.iomkl.html: api/easybuild/toolchains/iomkl.md
-        en/latest/api/easybuild.toolchains.iomklc.html: api/easybuild/toolchains/iomklc.md
-        en/latest/api/easybuild.toolchains.iompi.html: api/easybuild/toolchains/iompi.md
-        en/latest/api/easybuild.toolchains.iompic.html: api/easybuild/toolchains/iompic.md
-        en/latest/api/easybuild.toolchains.ipsmpi.html: api/easybuild/toolchains/ipsmpi.md
-        en/latest/api/easybuild.toolchains.iqacml.html: api/easybuild/toolchains/iqacml.md
-        en/latest/api/easybuild.toolchains.ismkl.html: api/easybuild/toolchains/ismkl.md
-        en/latest/api/easybuild.toolchains.linalg.acml.html: api/easybuild/toolchains/linalg/acml.md
-        en/latest/api/easybuild.toolchains.linalg.atlas.html: api/easybuild/toolchains/linalg/atlas.md
-        en/latest/api/easybuild.toolchains.linalg.blacs.html: api/easybuild/toolchains/linalg/blacs.md
-        en/latest/api/easybuild.toolchains.linalg.blis.html: api/easybuild/toolchains/linalg/blis.md
-        en/latest/api/easybuild.toolchains.linalg.flame.html: api/easybuild/toolchains/linalg/flame.md
-        en/latest/api/easybuild.toolchains.linalg.gotoblas.html: api/easybuild/toolchains/linalg/gotoblas.md
-        en/latest/api/easybuild.toolchains.linalg.intelmkl.html: api/easybuild/toolchains/linalg/intelmkl.md
-        en/latest/api/easybuild.toolchains.linalg.lapack.html: api/easybuild/toolchains/linalg/lapack.md
-        en/latest/api/easybuild.toolchains.linalg.libsci.html: api/easybuild/toolchains/linalg/libsci.md
-        en/latest/api/easybuild.toolchains.linalg.openblas.html: api/easybuild/toolchains/linalg/openblas.md
-        en/latest/api/easybuild.toolchains.linalg.html: api/easybuild/toolchains/linalg/index.md
-        en/latest/api/easybuild.toolchains.linalg.scalapack.html: api/easybuild/toolchains/linalg/scalapack.md
-        en/latest/api/easybuild.toolchains.mpi.craympich.html: api/easybuild/toolchains/mpi/craympich.md
-        en/latest/api/easybuild.toolchains.mpi.intelmpi.html: api/easybuild/toolchains/mpi/intelmpi.md
-        en/latest/api/easybuild.toolchains.mpi.mpich.html: api/easybuild/toolchains/mpi/mpich.md
-        en/latest/api/easybuild.toolchains.mpi.mpich2.html: api/easybuild/toolchains/mpi/mpich2.md
-        en/latest/api/easybuild.toolchains.mpi.mvapich2.html: api/easybuild/toolchains/mpi/mvapich2.md
-        en/latest/api/easybuild.toolchains.mpi.openmpi.html: api/easybuild/toolchains/mpi/openmpi.md
-        en/latest/api/easybuild.toolchains.mpi.psmpi.html: api/easybuild/toolchains/mpi/psmpi.md
-        en/latest/api/easybuild.toolchains.mpi.qlogicmpi.html: api/easybuild/toolchains/mpi/qlogicmpi.md
-        en/latest/api/easybuild.toolchains.mpi.html: api/easybuild/toolchains/mpi/index.md
-        en/latest/api/easybuild.toolchains.mpi.spectrummpi.html: api/easybuild/toolchains/mpi/spectrummpi.md
-        en/latest/api/easybuild.toolchains.pgi.html: api/easybuild/toolchains/pgi.md
-        en/latest/api/easybuild.toolchains.pmkl.html: api/easybuild/toolchains/pmkl.md
-        en/latest/api/easybuild.toolchains.pomkl.html: api/easybuild/toolchains/pomkl.md
-        en/latest/api/easybuild.toolchains.pompi.html: api/easybuild/toolchains/pompi.md
-        en/latest/api/easybuild.toolchains.html: api/easybuild/toolchains/index.md
-        en/latest/api/easybuild.toolchains.system.html: api/easybuild/toolchains/system.md
-        en/latest/api/easybuild.toolchains.xlcxlf.html: api/easybuild/toolchains/xlcxlf.md
-        en/latest/api/easybuild.toolchains.xlmpich.html: api/easybuild/toolchains/xlmpich.md
-        en/latest/api/easybuild.toolchains.xlmpich2.html: api/easybuild/toolchains/xlmpich2.md
-        en/latest/api/easybuild.toolchains.xlmvapich2.html: api/easybuild/toolchains/xlmvapich2.md
-        en/latest/api/easybuild.toolchains.xlompi.html: api/easybuild/toolchains/xlompi.md
-        en/latest/api/easybuild.tools.asyncprocess.html: api/easybuild/tools/asyncprocess.md
-        en/latest/api/easybuild.tools.build_details.html: api/easybuild/tools/build_details.md
-        en/latest/api/easybuild.tools.build_log.html: api/easybuild/tools/build_log.md
-        en/latest/api/easybuild.tools.config.html: api/easybuild/tools/config.md
-        en/latest/api/easybuild.tools.configobj.html: api/easybuild/tools/configobj.md
-        en/latest/api/easybuild.tools.containers.base.html: api/easybuild/tools/containers/base.md
-        en/latest/api/easybuild.tools.containers.common.html: api/easybuild/tools/containers/common.md
-        en/latest/api/easybuild.tools.containers.docker.html: api/easybuild/tools/containers/docker.md
-        en/latest/api/easybuild.tools.containers.html: api/easybuild/tools/containers/index.md
-        en/latest/api/easybuild.tools.containers.singularity.html: api/easybuild/tools/containers/singularity.md
-        en/latest/api/easybuild.tools.containers.utils.html: api/easybuild/tools/containers/utils.md
-        en/latest/api/easybuild.tools.convert.html: api/easybuild/tools/convert.md
-        en/latest/api/easybuild.tools.deprecated.html: api/easybuild/tools/deprecated/index.md
-        en/latest/api/easybuild.tools.docs.html: api/easybuild/tools/docs.md
-        en/latest/api/easybuild.tools.environment.html: api/easybuild/tools/environment.md
-        en/latest/api/easybuild.tools.filetools.html: api/easybuild/tools/filetools.md
-        en/latest/api/easybuild.tools.github.html: api/easybuild/tools/github.md
-        en/latest/api/easybuild.tools.hooks.html: api/easybuild/tools/hooks.md
-        en/latest/api/easybuild.tools.include.html: api/easybuild/tools/include.md
-        en/latest/api/easybuild.tools.jenkins.html: api/easybuild/tools/jenkins.md
-        en/latest/api/easybuild.tools.job.backend.html: api/easybuild/tools/job/backend.md
-        en/latest/api/easybuild.tools.job.gc3pie.html: api/easybuild/tools/job/gc3pie.md
-        en/latest/api/easybuild.tools.job.pbs_python.html: api/easybuild/tools/job/pbs_python.md
-        en/latest/api/easybuild.tools.job.html: api/easybuild/tools/job/index.md
-        en/latest/api/easybuild.tools.job.slurm.html: api/easybuild/tools/job/slurm.md
-        en/latest/api/easybuild.tools.module_generator.html: api/easybuild/tools/module_generator.md
-        en/latest/api/easybuild.tools.module_naming_scheme.categorized_hmns.html: api/easybuild/tools/module_naming_scheme/categorized_hmns.md
-        en/latest/api/easybuild.tools.module_naming_scheme.categorized_mns.html: api/easybuild/tools/module_naming_scheme/categorized_mns.md
-        en/latest/api/easybuild.tools.module_naming_scheme.easybuild_mns.html: api/easybuild/tools/module_naming_scheme/easybuild_mns.md
-        en/latest/api/easybuild.tools.module_naming_scheme.hierarchical_mns.html: api/easybuild/tools/module_naming_scheme/hierarchical_mns.md
-        en/latest/api/easybuild.tools.module_naming_scheme.migrate_from_eb_to_hmns.html: api/easybuild/tools/module_naming_scheme/migrate_from_eb_to_hmns.md
-        en/latest/api/easybuild.tools.module_naming_scheme.mns.html: api/easybuild/tools/module_naming_scheme/mns.md
-        en/latest/api/easybuild.tools.module_naming_scheme.html: api/easybuild/tools/module_naming_scheme/index.md
-        en/latest/api/easybuild.tools.module_naming_scheme.toolchain.html: api/easybuild/tools/module_naming_scheme/toolchain.md
-        en/latest/api/easybuild.tools.module_naming_scheme.utilities.html: api/easybuild/tools/module_naming_scheme/utilities.md
-        en/latest/api/easybuild.tools.modules.html: api/easybuild/tools/modules.md
-        en/latest/api/easybuild.tools.multidiff.html: api/easybuild/tools/multidiff.md
-        en/latest/api/easybuild.tools.options.html: api/easybuild/tools/options.md
-        en/latest/api/easybuild.tools.package.package_naming_scheme.easybuild_pns.html: api/easybuild/tools/package/package_naming_scheme/easybuild_pns.md
-        en/latest/api/easybuild.tools.package.package_naming_scheme.pns.html: api/easybuild/tools/package/package_naming_scheme/pns.md
-        en/latest/api/easybuild.tools.package.package_naming_scheme.html: api/easybuild/tools/package/package_naming_scheme/index.md
-        en/latest/api/easybuild.tools.package.html: api/easybuild/tools/package/index.md
-        en/latest/api/easybuild.tools.package.utilities.html: api/easybuild/tools/package/utilities.md
-        en/latest/api/easybuild.tools.parallelbuild.html: api/easybuild/tools/parallelbuild.md
-        en/latest/api/easybuild.tools.py2vs3.py2.html: api/easybuild/tools/py2vs3/py2.md
-        en/latest/api/easybuild.tools.py2vs3.py3.html: api/easybuild/tools/py2vs3/py3.md
-        en/latest/api/easybuild.tools.py2vs3.html: api/easybuild/tools/py2vs3/index.md
-        en/latest/api/easybuild.tools.repository.filerepo.html: api/easybuild/tools/repository/filerepo.md
-        en/latest/api/easybuild.tools.repository.gitrepo.html: api/easybuild/tools/repository/gitrepo.md
-        en/latest/api/easybuild.tools.repository.hgrepo.html: api/easybuild/tools/repository/hgrepo.md
-        en/latest/api/easybuild.tools.repository.repository.html: api/easybuild/tools/repository/repository.md
-        en/latest/api/easybuild.tools.repository.html: api/easybuild/tools/repository/index.md
-        en/latest/api/easybuild.tools.repository.svnrepo.html: api/easybuild/tools/repository/svnrepo.md
-        en/latest/api/easybuild.tools.robot.html: api/easybuild/tools/robot.md
-        en/latest/api/easybuild.tools.html: api/easybuild/tools/index.md
-        en/latest/api/easybuild.tools.run.html: api/easybuild/tools/run.md
-        en/latest/api/easybuild.tools.systemtools.html: api/easybuild/tools/systemtools.md
-        en/latest/api/easybuild.tools.testing.html: api/easybuild/tools/testing.md
-        en/latest/api/easybuild.tools.toolchain.compiler.html: api/easybuild/tools/toolchain/compiler.md
-        en/latest/api/easybuild.tools.toolchain.constants.html: api/easybuild/tools/toolchain/constants.md
-        en/latest/api/easybuild.tools.toolchain.fft.html: api/easybuild/tools/toolchain/fft.md
-        en/latest/api/easybuild.tools.toolchain.linalg.html: api/easybuild/tools/toolchain/linalg.md
-        en/latest/api/easybuild.tools.toolchain.mpi.html: api/easybuild/tools/toolchain/mpi.md
-        en/latest/api/easybuild.tools.toolchain.options.html: api/easybuild/tools/toolchain/options.md
-        en/latest/api/easybuild.tools.toolchain.html: api/easybuild/tools/toolchain/index.md
-        en/latest/api/easybuild.tools.toolchain.toolchain.html: api/easybuild/tools/toolchain/toolchain.md
-        en/latest/api/easybuild.tools.toolchain.toolchainvariables.html: api/easybuild/tools/toolchain/toolchainvariables.md
-        en/latest/api/easybuild.tools.toolchain.utilities.html: api/easybuild/tools/toolchain/utilities.md
-        en/latest/api/easybuild.tools.toolchain.variables.html: api/easybuild/tools/toolchain/variables.md
-        en/latest/api/easybuild.tools.utilities.html: api/easybuild/tools/utilities.md
-        en/latest/api/easybuild.tools.variables.html: api/easybuild/tools/variables.md
-        en/latest/api/easybuild.tools.version.html: api/easybuild/tools/version.md
-        en/latest/api/framework.easyblock.html: api/easybuild/framework/easyblock.md
-        en/latest/api/framework.easyconfig.constants.html: api/easybuild/framework/easyconfig/constants.md
-        en/latest/api/framework.easyconfig.default.html: api/easybuild/framework/easyconfig/default.md
-        en/latest/api/framework.easyconfig.easyconfig.html: api/easybuild/framework/easyconfig/easyconfig.md
-        en/latest/api/framework.easyconfig.format.convert.html: api/easybuild/framework/easyconfig/format/convert.md
-        en/latest/api/framework.easyconfig.format.format.html: api/easybuild/framework/easyconfig/format/format.md
-        en/latest/api/framework.easyconfig.format.one.html: api/easybuild/framework/easyconfig/format/one.md
-        en/latest/api/framework.easyconfig.format.pyheaderconfigobj.html: api/easybuild/framework/easyconfig/format/pyheaderconfigobj.md
-        en/latest/api/framework.easyconfig.format.html: api/easybuild/framework/easyconfig/format/index.md
-        en/latest/api/framework.easyconfig.format.two.html: api/easybuild/framework/easyconfig/format/two.md
-        en/latest/api/framework.easyconfig.format.version.html: api/easybuild/framework/easyconfig/format/version.md
-        en/latest/api/framework.easyconfig.format.yeb.html: api/easybuild/framework/easyconfig/format/yeb.md
-        en/latest/api/framework.easyconfig.licenses.html: api/easybuild/framework/easyconfig/licenses.md
-        en/latest/api/framework.easyconfig.parser.html: api/easybuild/framework/easyconfig/parser.md
-        en/latest/api/framework.easyconfig.html: api/easybuild/framework/easyconfig/index.md
-        en/latest/api/framework.easyconfig.style.html: api/easybuild/framework/easyconfig/style.md
-        en/latest/api/framework.easyconfig.templates.html: api/easybuild/framework/easyconfig/templates.md
-        en/latest/api/framework.easyconfig.tools.html: api/easybuild/framework/easyconfig/tools.md
-        en/latest/api/framework.easyconfig.tweak.html: api/easybuild/framework/easyconfig/tweak.md
-        en/latest/api/framework.easyconfig.types.html: api/easybuild/framework/easyconfig/types.md
-        en/latest/api/framework.easystack.html: api/easybuild/framework/easystack.md
-        en/latest/api/framework.extension.html: api/easybuild/framework/extension.md
-        en/latest/api/framework.extensioneasyblock.html: api/easybuild/framework/extensioneasyblock.md
-        en/latest/api/framework.html: api/easybuild/framework/index.md
+        en/latest/api/simplebuild.base.exceptions.html: api/simplebuild/base/exceptions.md
+        en/latest/api/simplebuild.base.fancylogger.html: api/simplebuild/base/fancylogger.md
+        en/latest/api/simplebuild.base.frozendict.html: api/simplebuild/base/frozendict.md
+        en/latest/api/simplebuild.base.generaloption.html: api/simplebuild/base/generaloption.md
+        en/latest/api/simplebuild.base.optcomplete.html: api/simplebuild/base/optcomplete.md
+        en/latest/api/simplebuild.base.rest.html: api/simplebuild/base/rest.md
+        en/latest/api/simplebuild.base.html: api/simplebuild/base/index.md
+        en/latest/api/simplebuild.base.testing.html: api/simplebuild/base/testing.md
+        en/latest/api/simplebuild.base.wrapper.html: api/simplebuild/base/wrapper.md
+        en/latest/api/simplebuild.framework.simpleblock.html: api/simplebuild/framework/simpleblock.md
+        en/latest/api/simplebuild.framework.simpleconfig.constants.html: api/simplebuild/framework/simpleconfig/constants.md
+        en/latest/api/simplebuild.framework.simpleconfig.default.html: api/simplebuild/framework/simpleconfig/default.md
+        en/latest/api/simplebuild.framework.simpleconfig.simpleconfig.html: api/simplebuild/framework/simpleconfig/simpleconfig.md
+        en/latest/api/simplebuild.framework.simpleconfig.format.convert.html: api/simplebuild/framework/simpleconfig/format/convert.md
+        en/latest/api/simplebuild.framework.simpleconfig.format.format.html: api/simplebuild/framework/simpleconfig/format/format.md
+        en/latest/api/simplebuild.framework.simpleconfig.format.one.html: api/simplebuild/framework/simpleconfig/format/one.md
+        en/latest/api/simplebuild.framework.simpleconfig.format.pyheaderconfigobj.html: api/simplebuild/framework/simpleconfig/format/pyheaderconfigobj.md
+        en/latest/api/simplebuild.framework.simpleconfig.format.html: api/simplebuild/framework/simpleconfig/format/index.md
+        en/latest/api/simplebuild.framework.simpleconfig.format.two.html: api/simplebuild/framework/simpleconfig/format/two.md
+        en/latest/api/simplebuild.framework.simpleconfig.format.version.html: api/simplebuild/framework/simpleconfig/format/version.md
+        en/latest/api/simplebuild.framework.simpleconfig.format.yeb.html: api/simplebuild/framework/simpleconfig/format/yeb.md
+        en/latest/api/simplebuild.framework.simpleconfig.licenses.html: api/simplebuild/framework/simpleconfig/licenses.md
+        en/latest/api/simplebuild.framework.simpleconfig.parser.html: api/simplebuild/framework/simpleconfig/parser.md
+        en/latest/api/simplebuild.framework.simpleconfig.html: api/simplebuild/framework/simpleconfig/index.md
+        en/latest/api/simplebuild.framework.simpleconfig.style.html: api/simplebuild/framework/simpleconfig/style.md
+        en/latest/api/simplebuild.framework.simpleconfig.templates.html: api/simplebuild/framework/simpleconfig/templates.md
+        en/latest/api/simplebuild.framework.simpleconfig.tools.html: api/simplebuild/framework/simpleconfig/tools.md
+        en/latest/api/simplebuild.framework.simpleconfig.tweak.html: api/simplebuild/framework/simpleconfig/tweak.md
+        en/latest/api/simplebuild.framework.simpleconfig.types.html: api/simplebuild/framework/simpleconfig/types.md
+        en/latest/api/simplebuild.framework.extension.html: api/simplebuild/framework/extension.md
+        en/latest/api/simplebuild.framework.extensionsimpleblock.html: api/simplebuild/framework/extensionsimpleblock.md
+        en/latest/api/simplebuild.framework.html: api/simplebuild/framework/index.md
+        en/latest/api/simplebuild.main.html: api/simplebuild/main.md
+        en/latest/api/simplebuild.html: api/simplebuild/index.md
+        en/latest/api/simplebuild.toolchains.cgmpich.html: api/simplebuild/toolchains/cgmpich.md
+        en/latest/api/simplebuild.toolchains.cgmpolf.html: api/simplebuild/toolchains/cgmpolf.md
+        en/latest/api/simplebuild.toolchains.cgmvapich2.html: api/simplebuild/toolchains/cgmvapich2.md
+        en/latest/api/simplebuild.toolchains.cgmvolf.html: api/simplebuild/toolchains/cgmvolf.md
+        en/latest/api/simplebuild.toolchains.cgompi.html: api/simplebuild/toolchains/cgompi.md
+        en/latest/api/simplebuild.toolchains.cgoolf.html: api/simplebuild/toolchains/cgoolf.md
+        en/latest/api/simplebuild.toolchains.clanggcc.html: api/simplebuild/toolchains/clanggcc.md
+        en/latest/api/simplebuild.toolchains.compiler.clang.html: api/simplebuild/toolchains/compiler/clang.md
+        en/latest/api/simplebuild.toolchains.compiler.craype.html: api/simplebuild/toolchains/compiler/craype.md
+        en/latest/api/simplebuild.toolchains.compiler.cuda.html: api/simplebuild/toolchains/compiler/cuda.md
+        en/latest/api/simplebuild.toolchains.compiler.dummycompiler.html: api/simplebuild/toolchains/compiler/dummycompiler.md
+        en/latest/api/simplebuild.toolchains.compiler.gcc.html: api/simplebuild/toolchains/compiler/gcc.md
+        en/latest/api/simplebuild.toolchains.compiler.ibmxl.html: api/simplebuild/toolchains/compiler/ibmxl.md
+        en/latest/api/simplebuild.toolchains.compiler.inteliccifort.html: api/simplebuild/toolchains/compiler/inteliccifort.md
+        en/latest/api/simplebuild.toolchains.compiler.pgi.html: api/simplebuild/toolchains/compiler/pgi.md
+        en/latest/api/simplebuild.toolchains.compiler.html: api/simplebuild/toolchains/compiler/index.md
+        en/latest/api/simplebuild.toolchains.compiler.systemcompiler.html: api/simplebuild/toolchains/compiler/systemcompiler.md
+        en/latest/api/simplebuild.toolchains.craycce.html: api/simplebuild/toolchains/craycce.md
+        en/latest/api/simplebuild.toolchains.craygnu.html: api/simplebuild/toolchains/craygnu.md
+        en/latest/api/simplebuild.toolchains.crayintel.html: api/simplebuild/toolchains/crayintel.md
+        en/latest/api/simplebuild.toolchains.craypgi.html: api/simplebuild/toolchains/craypgi.md
+        en/latest/api/simplebuild.toolchains.dummy.html: api/simplebuild/toolchains/dummy.md
+        en/latest/api/simplebuild.toolchains.fft.fftw.html: api/simplebuild/toolchains/fft/fftw.md
+        en/latest/api/simplebuild.toolchains.fft.intelfftw.html: api/simplebuild/toolchains/fft/intelfftw.md
+        en/latest/api/simplebuild.toolchains.fft.html: api/simplebuild/toolchains/fft/index.md
+        en/latest/api/simplebuild.toolchains.foss.html: api/simplebuild/toolchains/foss.md
+        en/latest/api/simplebuild.toolchains.fosscuda.html: api/simplebuild/toolchains/fosscuda.md
+        en/latest/api/simplebuild.toolchains.gcc.html: api/simplebuild/toolchains/gcc.md
+        en/latest/api/simplebuild.toolchains.gcccore.html: api/simplebuild/toolchains/gcccore.md
+        en/latest/api/simplebuild.toolchains.gcccuda.html: api/simplebuild/toolchains/gcccuda.md
+        en/latest/api/simplebuild.toolchains.gimkl.html: api/simplebuild/toolchains/gimkl.md
+        en/latest/api/simplebuild.toolchains.gimpi.html: api/simplebuild/toolchains/gimpi.md
+        en/latest/api/simplebuild.toolchains.gimpic.html: api/simplebuild/toolchains/gimpic.md
+        en/latest/api/simplebuild.toolchains.giolf.html: api/simplebuild/toolchains/giolf.md
+        en/latest/api/simplebuild.toolchains.giolfc.html: api/simplebuild/toolchains/giolfc.md
+        en/latest/api/simplebuild.toolchains.gmacml.html: api/simplebuild/toolchains/gmacml.md
+        en/latest/api/simplebuild.toolchains.gmkl.html: api/simplebuild/toolchains/gmkl.md
+        en/latest/api/simplebuild.toolchains.gmklc.html: api/simplebuild/toolchains/gmklc.md
+        en/latest/api/simplebuild.toolchains.gmpich.html: api/simplebuild/toolchains/gmpich.md
+        en/latest/api/simplebuild.toolchains.gmpich2.html: api/simplebuild/toolchains/gmpich2.md
+        en/latest/api/simplebuild.toolchains.gmpolf.html: api/simplebuild/toolchains/gmpolf.md
+        en/latest/api/simplebuild.toolchains.gmvapich2.html: api/simplebuild/toolchains/gmvapich2.md
+        en/latest/api/simplebuild.toolchains.gmvolf.html: api/simplebuild/toolchains/gmvolf.md
+        en/latest/api/simplebuild.toolchains.gnu.html: api/simplebuild/toolchains/gnu.md
+        en/latest/api/simplebuild.toolchains.goalf.html: api/simplebuild/toolchains/goalf.md
+        en/latest/api/simplebuild.toolchains.goblf.html: api/simplebuild/toolchains/goblf.md
+        en/latest/api/simplebuild.toolchains.golf.html: api/simplebuild/toolchains/golf.md
+        en/latest/api/simplebuild.toolchains.golfc.html: api/simplebuild/toolchains/golfc.md
+        en/latest/api/simplebuild.toolchains.gomkl.html: api/simplebuild/toolchains/gomkl.md
+        en/latest/api/simplebuild.toolchains.gomklc.html: api/simplebuild/toolchains/gomklc.md
+        en/latest/api/simplebuild.toolchains.gompi.html: api/simplebuild/toolchains/gompi.md
+        en/latest/api/simplebuild.toolchains.gompic.html: api/simplebuild/toolchains/gompic.md
+        en/latest/api/simplebuild.toolchains.goolf.html: api/simplebuild/toolchains/goolf.md
+        en/latest/api/simplebuild.toolchains.goolfc.html: api/simplebuild/toolchains/goolfc.md
+        en/latest/api/simplebuild.toolchains.gpsmpi.html: api/simplebuild/toolchains/gpsmpi.md
+        en/latest/api/simplebuild.toolchains.gpsolf.html: api/simplebuild/toolchains/gpsolf.md
+        en/latest/api/simplebuild.toolchains.gqacml.html: api/simplebuild/toolchains/gqacml.md
+        en/latest/api/simplebuild.toolchains.gsmpi.html: api/simplebuild/toolchains/gsmpi.md
+        en/latest/api/simplebuild.toolchains.gsolf.html: api/simplebuild/toolchains/gsolf.md
+        en/latest/api/simplebuild.toolchains.iccifort.html: api/simplebuild/toolchains/iccifort.md
+        en/latest/api/simplebuild.toolchains.iccifortcuda.html: api/simplebuild/toolchains/iccifortcuda.md
+        en/latest/api/simplebuild.toolchains.ictce.html: api/simplebuild/toolchains/ictce.md
+        en/latest/api/simplebuild.toolchains.iimkl.html: api/simplebuild/toolchains/iimkl.md
+        en/latest/api/simplebuild.toolchains.iimklc.html: api/simplebuild/toolchains/iimklc.md
+        en/latest/api/simplebuild.toolchains.iimpi.html: api/simplebuild/toolchains/iimpi.md
+        en/latest/api/simplebuild.toolchains.iimpic.html: api/simplebuild/toolchains/iimpic.md
+        en/latest/api/simplebuild.toolchains.iiqmpi.html: api/simplebuild/toolchains/iiqmpi.md
+        en/latest/api/simplebuild.toolchains.impich.html: api/simplebuild/toolchains/impich.md
+        en/latest/api/simplebuild.toolchains.impmkl.html: api/simplebuild/toolchains/impmkl.md
+        en/latest/api/simplebuild.toolchains.intel-para.html: api/simplebuild/toolchains/intel-para.md
+        en/latest/api/simplebuild.toolchains.intel.html: api/simplebuild/toolchains/intel.md
+        en/latest/api/simplebuild.toolchains.intelcuda.html: api/simplebuild/toolchains/intelcuda.md
+        en/latest/api/simplebuild.toolchains.iomkl.html: api/simplebuild/toolchains/iomkl.md
+        en/latest/api/simplebuild.toolchains.iomklc.html: api/simplebuild/toolchains/iomklc.md
+        en/latest/api/simplebuild.toolchains.iompi.html: api/simplebuild/toolchains/iompi.md
+        en/latest/api/simplebuild.toolchains.iompic.html: api/simplebuild/toolchains/iompic.md
+        en/latest/api/simplebuild.toolchains.ipsmpi.html: api/simplebuild/toolchains/ipsmpi.md
+        en/latest/api/simplebuild.toolchains.iqacml.html: api/simplebuild/toolchains/iqacml.md
+        en/latest/api/simplebuild.toolchains.ismkl.html: api/simplebuild/toolchains/ismkl.md
+        en/latest/api/simplebuild.toolchains.linalg.acml.html: api/simplebuild/toolchains/linalg/acml.md
+        en/latest/api/simplebuild.toolchains.linalg.atlas.html: api/simplebuild/toolchains/linalg/atlas.md
+        en/latest/api/simplebuild.toolchains.linalg.blacs.html: api/simplebuild/toolchains/linalg/blacs.md
+        en/latest/api/simplebuild.toolchains.linalg.blis.html: api/simplebuild/toolchains/linalg/blis.md
+        en/latest/api/simplebuild.toolchains.linalg.flame.html: api/simplebuild/toolchains/linalg/flame.md
+        en/latest/api/simplebuild.toolchains.linalg.gotoblas.html: api/simplebuild/toolchains/linalg/gotoblas.md
+        en/latest/api/simplebuild.toolchains.linalg.intelmkl.html: api/simplebuild/toolchains/linalg/intelmkl.md
+        en/latest/api/simplebuild.toolchains.linalg.lapack.html: api/simplebuild/toolchains/linalg/lapack.md
+        en/latest/api/simplebuild.toolchains.linalg.libsci.html: api/simplebuild/toolchains/linalg/libsci.md
+        en/latest/api/simplebuild.toolchains.linalg.openblas.html: api/simplebuild/toolchains/linalg/openblas.md
+        en/latest/api/simplebuild.toolchains.linalg.html: api/simplebuild/toolchains/linalg/index.md
+        en/latest/api/simplebuild.toolchains.linalg.scalapack.html: api/simplebuild/toolchains/linalg/scalapack.md
+        en/latest/api/simplebuild.toolchains.mpi.craympich.html: api/simplebuild/toolchains/mpi/craympich.md
+        en/latest/api/simplebuild.toolchains.mpi.intelmpi.html: api/simplebuild/toolchains/mpi/intelmpi.md
+        en/latest/api/simplebuild.toolchains.mpi.mpich.html: api/simplebuild/toolchains/mpi/mpich.md
+        en/latest/api/simplebuild.toolchains.mpi.mpich2.html: api/simplebuild/toolchains/mpi/mpich2.md
+        en/latest/api/simplebuild.toolchains.mpi.mvapich2.html: api/simplebuild/toolchains/mpi/mvapich2.md
+        en/latest/api/simplebuild.toolchains.mpi.openmpi.html: api/simplebuild/toolchains/mpi/openmpi.md
+        en/latest/api/simplebuild.toolchains.mpi.psmpi.html: api/simplebuild/toolchains/mpi/psmpi.md
+        en/latest/api/simplebuild.toolchains.mpi.qlogicmpi.html: api/simplebuild/toolchains/mpi/qlogicmpi.md
+        en/latest/api/simplebuild.toolchains.mpi.html: api/simplebuild/toolchains/mpi/index.md
+        en/latest/api/simplebuild.toolchains.mpi.spectrummpi.html: api/simplebuild/toolchains/mpi/spectrummpi.md
+        en/latest/api/simplebuild.toolchains.pgi.html: api/simplebuild/toolchains/pgi.md
+        en/latest/api/simplebuild.toolchains.pmkl.html: api/simplebuild/toolchains/pmkl.md
+        en/latest/api/simplebuild.toolchains.pomkl.html: api/simplebuild/toolchains/pomkl.md
+        en/latest/api/simplebuild.toolchains.pompi.html: api/simplebuild/toolchains/pompi.md
+        en/latest/api/simplebuild.toolchains.html: api/simplebuild/toolchains/index.md
+        en/latest/api/simplebuild.toolchains.system.html: api/simplebuild/toolchains/system.md
+        en/latest/api/simplebuild.toolchains.xlcxlf.html: api/simplebuild/toolchains/xlcxlf.md
+        en/latest/api/simplebuild.toolchains.xlmpich.html: api/simplebuild/toolchains/xlmpich.md
+        en/latest/api/simplebuild.toolchains.xlmpich2.html: api/simplebuild/toolchains/xlmpich2.md
+        en/latest/api/simplebuild.toolchains.xlmvapich2.html: api/simplebuild/toolchains/xlmvapich2.md
+        en/latest/api/simplebuild.toolchains.xlompi.html: api/simplebuild/toolchains/xlompi.md
+        en/latest/api/simplebuild.tools.asyncprocess.html: api/simplebuild/tools/asyncprocess.md
+        en/latest/api/simplebuild.tools.build_details.html: api/simplebuild/tools/build_details.md
+        en/latest/api/simplebuild.tools.build_log.html: api/simplebuild/tools/build_log.md
+        en/latest/api/simplebuild.tools.config.html: api/simplebuild/tools/config.md
+        en/latest/api/simplebuild.tools.configobj.html: api/simplebuild/tools/configobj.md
+        en/latest/api/simplebuild.tools.containers.base.html: api/simplebuild/tools/containers/base.md
+        en/latest/api/simplebuild.tools.containers.common.html: api/simplebuild/tools/containers/common.md
+        en/latest/api/simplebuild.tools.containers.docker.html: api/simplebuild/tools/containers/docker.md
+        en/latest/api/simplebuild.tools.containers.html: api/simplebuild/tools/containers/index.md
+        en/latest/api/simplebuild.tools.containers.singularity.html: api/simplebuild/tools/containers/singularity.md
+        en/latest/api/simplebuild.tools.containers.utils.html: api/simplebuild/tools/containers/utils.md
+        en/latest/api/simplebuild.tools.convert.html: api/simplebuild/tools/convert.md
+        en/latest/api/simplebuild.tools.deprecated.html: api/simplebuild/tools/deprecated/index.md
+        en/latest/api/simplebuild.tools.docs.html: api/simplebuild/tools/docs.md
+        en/latest/api/simplebuild.tools.environment.html: api/simplebuild/tools/environment.md
+        en/latest/api/simplebuild.tools.filetools.html: api/simplebuild/tools/filetools.md
+        en/latest/api/simplebuild.tools.github.html: api/simplebuild/tools/github.md
+        en/latest/api/simplebuild.tools.hooks.html: api/simplebuild/tools/hooks.md
+        en/latest/api/simplebuild.tools.include.html: api/simplebuild/tools/include.md
+        en/latest/api/simplebuild.tools.jenkins.html: api/simplebuild/tools/jenkins.md
+        en/latest/api/simplebuild.tools.job.backend.html: api/simplebuild/tools/job/backend.md
+        en/latest/api/simplebuild.tools.job.gc3pie.html: api/simplebuild/tools/job/gc3pie.md
+        en/latest/api/simplebuild.tools.job.pbs_python.html: api/simplebuild/tools/job/pbs_python.md
+        en/latest/api/simplebuild.tools.job.html: api/simplebuild/tools/job/index.md
+        en/latest/api/simplebuild.tools.job.slurm.html: api/simplebuild/tools/job/slurm.md
+        en/latest/api/simplebuild.tools.module_generator.html: api/simplebuild/tools/module_generator.md
+        en/latest/api/simplebuild.tools.module_naming_scheme.categorized_hmns.html: api/simplebuild/tools/module_naming_scheme/categorized_hmns.md
+        en/latest/api/simplebuild.tools.module_naming_scheme.categorized_mns.html: api/simplebuild/tools/module_naming_scheme/categorized_mns.md
+        en/latest/api/simplebuild.tools.module_naming_scheme.simplebuild_mns.html: api/simplebuild/tools/module_naming_scheme/simplebuild_mns.md
+        en/latest/api/simplebuild.tools.module_naming_scheme.hierarchical_mns.html: api/simplebuild/tools/module_naming_scheme/hierarchical_mns.md
+        en/latest/api/simplebuild.tools.module_naming_scheme.migrate_from_eb_to_hmns.html: api/simplebuild/tools/module_naming_scheme/migrate_from_eb_to_hmns.md
+        en/latest/api/simplebuild.tools.module_naming_scheme.mns.html: api/simplebuild/tools/module_naming_scheme/mns.md
+        en/latest/api/simplebuild.tools.module_naming_scheme.html: api/simplebuild/tools/module_naming_scheme/index.md
+        en/latest/api/simplebuild.tools.module_naming_scheme.toolchain.html: api/simplebuild/tools/module_naming_scheme/toolchain.md
+        en/latest/api/simplebuild.tools.module_naming_scheme.utilities.html: api/simplebuild/tools/module_naming_scheme/utilities.md
+        en/latest/api/simplebuild.tools.modules.html: api/simplebuild/tools/modules.md
+        en/latest/api/simplebuild.tools.multidiff.html: api/simplebuild/tools/multidiff.md
+        en/latest/api/simplebuild.tools.options.html: api/simplebuild/tools/options.md
+        en/latest/api/simplebuild.tools.package.package_naming_scheme.simplebuild_pns.html: api/simplebuild/tools/package/package_naming_scheme/simplebuild_pns.md
+        en/latest/api/simplebuild.tools.package.package_naming_scheme.pns.html: api/simplebuild/tools/package/package_naming_scheme/pns.md
+        en/latest/api/simplebuild.tools.package.package_naming_scheme.html: api/simplebuild/tools/package/package_naming_scheme/index.md
+        en/latest/api/simplebuild.tools.package.html: api/simplebuild/tools/package/index.md
+        en/latest/api/simplebuild.tools.package.utilities.html: api/simplebuild/tools/package/utilities.md
+        en/latest/api/simplebuild.tools.parallelbuild.html: api/simplebuild/tools/parallelbuild.md
+        en/latest/api/simplebuild.tools.py2vs3.py2.html: api/simplebuild/tools/py2vs3/py2.md
+        en/latest/api/simplebuild.tools.py2vs3.py3.html: api/simplebuild/tools/py2vs3/py3.md
+        en/latest/api/simplebuild.tools.py2vs3.html: api/simplebuild/tools/py2vs3/index.md
+        en/latest/api/simplebuild.tools.repository.filerepo.html: api/simplebuild/tools/repository/filerepo.md
+        en/latest/api/simplebuild.tools.repository.gitrepo.html: api/simplebuild/tools/repository/gitrepo.md
+        en/latest/api/simplebuild.tools.repository.hgrepo.html: api/simplebuild/tools/repository/hgrepo.md
+        en/latest/api/simplebuild.tools.repository.repository.html: api/simplebuild/tools/repository/repository.md
+        en/latest/api/simplebuild.tools.repository.html: api/simplebuild/tools/repository/index.md
+        en/latest/api/simplebuild.tools.repository.svnrepo.html: api/simplebuild/tools/repository/svnrepo.md
+        en/latest/api/simplebuild.tools.robot.html: api/simplebuild/tools/robot.md
+        en/latest/api/simplebuild.tools.html: api/simplebuild/tools/index.md
+        en/latest/api/simplebuild.tools.run.html: api/simplebuild/tools/run.md
+        en/latest/api/simplebuild.tools.systemtools.html: api/simplebuild/tools/systemtools.md
+        en/latest/api/simplebuild.tools.testing.html: api/simplebuild/tools/testing.md
+        en/latest/api/simplebuild.tools.toolchain.compiler.html: api/simplebuild/tools/toolchain/compiler.md
+        en/latest/api/simplebuild.tools.toolchain.constants.html: api/simplebuild/tools/toolchain/constants.md
+        en/latest/api/simplebuild.tools.toolchain.fft.html: api/simplebuild/tools/toolchain/fft.md
+        en/latest/api/simplebuild.tools.toolchain.linalg.html: api/simplebuild/tools/toolchain/linalg.md
+        en/latest/api/simplebuild.tools.toolchain.mpi.html: api/simplebuild/tools/toolchain/mpi.md
+        en/latest/api/simplebuild.tools.toolchain.options.html: api/simplebuild/tools/toolchain/options.md
+        en/latest/api/simplebuild.tools.toolchain.html: api/simplebuild/tools/toolchain/index.md
+        en/latest/api/simplebuild.tools.toolchain.toolchain.html: api/simplebuild/tools/toolchain/toolchain.md
+        en/latest/api/simplebuild.tools.toolchain.toolchainvariables.html: api/simplebuild/tools/toolchain/toolchainvariables.md
+        en/latest/api/simplebuild.tools.toolchain.utilities.html: api/simplebuild/tools/toolchain/utilities.md
+        en/latest/api/simplebuild.tools.toolchain.variables.html: api/simplebuild/tools/toolchain/variables.md
+        en/latest/api/simplebuild.tools.utilities.html: api/simplebuild/tools/utilities.md
+        en/latest/api/simplebuild.tools.variables.html: api/simplebuild/tools/variables.md
+        en/latest/api/simplebuild.tools.version.html: api/simplebuild/tools/version.md
+        en/latest/api/framework.simpleblock.html: api/simplebuild/framework/simpleblock.md
+        en/latest/api/framework.simpleconfig.constants.html: api/simplebuild/framework/simpleconfig/constants.md
+        en/latest/api/framework.simpleconfig.default.html: api/simplebuild/framework/simpleconfig/default.md
+        en/latest/api/framework.simpleconfig.simpleconfig.html: api/simplebuild/framework/simpleconfig/simpleconfig.md
+        en/latest/api/framework.simpleconfig.format.convert.html: api/simplebuild/framework/simpleconfig/format/convert.md
+        en/latest/api/framework.simpleconfig.format.format.html: api/simplebuild/framework/simpleconfig/format/format.md
+        en/latest/api/framework.simpleconfig.format.one.html: api/simplebuild/framework/simpleconfig/format/one.md
+        en/latest/api/framework.simpleconfig.format.pyheaderconfigobj.html: api/simplebuild/framework/simpleconfig/format/pyheaderconfigobj.md
+        en/latest/api/framework.simpleconfig.format.html: api/simplebuild/framework/simpleconfig/format/index.md
+        en/latest/api/framework.simpleconfig.format.two.html: api/simplebuild/framework/simpleconfig/format/two.md
+        en/latest/api/framework.simpleconfig.format.version.html: api/simplebuild/framework/simpleconfig/format/version.md
+        en/latest/api/framework.simpleconfig.format.yeb.html: api/simplebuild/framework/simpleconfig/format/yeb.md
+        en/latest/api/framework.simpleconfig.licenses.html: api/simplebuild/framework/simpleconfig/licenses.md
+        en/latest/api/framework.simpleconfig.parser.html: api/simplebuild/framework/simpleconfig/parser.md
+        en/latest/api/framework.simpleconfig.html: api/simplebuild/framework/simpleconfig/index.md
+        en/latest/api/framework.simpleconfig.style.html: api/simplebuild/framework/simpleconfig/style.md
+        en/latest/api/framework.simpleconfig.templates.html: api/simplebuild/framework/simpleconfig/templates.md
+        en/latest/api/framework.simpleconfig.tools.html: api/simplebuild/framework/simpleconfig/tools.md
+        en/latest/api/framework.simpleconfig.tweak.html: api/simplebuild/framework/simpleconfig/tweak.md
+        en/latest/api/framework.simpleconfig.types.html: api/simplebuild/framework/simpleconfig/types.md
+        en/latest/api/framework.simplestack.html: api/simplebuild/framework/simplestack.md
+        en/latest/api/framework.extension.html: api/simplebuild/framework/extension.md
+        en/latest/api/framework.extensionsimpleblock.html: api/simplebuild/framework/extensionsimpleblock.md
+        en/latest/api/framework.html: api/simplebuild/framework/index.md
         en/latest/api/index.html: api/index.md
         en/latest/api/modules.html: api/summary.md

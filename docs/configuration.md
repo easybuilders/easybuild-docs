@@ -1,16 +1,16 @@
-# Configuring EasyBuild {: #configuring_easybuild }
+# Configuring SimpleBuild {: #configuring_simplebuild }
 
 This page discusses the recommended style of configuring
-EasyBuild, which is supported since EasyBuild v1.3.0.
+SimpleBuild, which is supported since SimpleBuild v1.3.0.
 
-See [a demo on configuring EasyBuild][demo_configuring].
+See [a demo on configuring SimpleBuild][demo_configuring].
 
 ## Supported configuration types {: #configuration_types }
 
-Configuring EasyBuild can be done by:
+Configuring SimpleBuild can be done by:
 
 * using `eb` with **command line arguments**
-* setting **environment variables** (`$EASYBUILD_...`)
+* setting **environment variables** (`$SIMPLEBUILD_...`)
 * providing one or more **configuration files**
 
 Of course, combining any of these types of configuration works too (and
@@ -28,7 +28,7 @@ The order of preference for the different configuration types is as listed above
 Note that the various available configuration options are handled
 **consistently** across the supported configuration types.
 
-For example: to configure EasyBuild to use Lmod as modules tool, the following alternatives are available:
+For example: to configure SimpleBuild to use Lmod as modules tool, the following alternatives are available:
 
 * configuration file entry (key-value assignment):
 
@@ -37,10 +37,10 @@ For example: to configure EasyBuild to use Lmod as modules tool, the following a
    modules-tool = Lmod
    ```
 
-* environment variable (upper case, `EASYBUILD_` prefix, `-`'s becomes `_`'s):
+* environment variable (upper case, `SIMPLEBUILD_` prefix, `-`'s becomes `_`'s):
 
    ``` shell
-   export EASYBUILD_MODULES_TOOL=Lmod
+   export SIMPLEBUILD_MODULES_TOOL=Lmod
    ```
 
 * command line argument (long options preceded by `--` and (optionally) using `=`):
@@ -62,28 +62,28 @@ For more details w.r.t. each of the supported configuration types, see below.
 
 #### List of used configuration files {: #list_of_configuration_files }
 
-The list of configuration files that will be used by EasyBuild is determined in the following order of preference:
+The list of configuration files that will be used by SimpleBuild is determined in the following order of preference:
 
 * the path(s) specified via the **command line argument** `--configfiles`
-* the path(s) specified via the `$EASYBUILD_CONFIGFILES` **environment variable**
-* the **default paths** for EasyBuild configuration files
+* the path(s) specified via the `$SIMPLEBUILD_CONFIGFILES` **environment variable**
+* the **default paths** for SimpleBuild configuration files
 
 #### Default configuration files {: #default_configuration_files }
 
-By default, EasyBuild will use existing configuration files at the following paths:
+By default, SimpleBuild will use existing configuration files at the following paths:
 
-* `$dir/easybuild.d/*.cfg`, for each directory `$dir` listed in `$XDG_CONFIG_DIRS` (where `$XDG_CONFIG_DIRS`
+* `$dir/simplebuild.d/*.cfg`, for each directory `$dir` listed in `$XDG_CONFIG_DIRS` (where `$XDG_CONFIG_DIRS`
   defaults to `/etc`)
-* `$XDG_CONFIG_HOME/easybuild/config.cfg` (where `$XDG_CONFIG_HOME` defaults to `$HOME/.config`)
+* `$XDG_CONFIG_HOME/simplebuild/config.cfg` (where `$XDG_CONFIG_HOME` defaults to `$HOME/.config`)
 
-Hence, if `$XDG_CONFIG_HOME` and `$XDG_CONFIG_DIRS` are not defined, EasyBuild will only consider default
-configuration files at `/etc/easybuild.d/*.cfg` and `$HOME/.config/easybuild/config.cfg`.
+Hence, if `$XDG_CONFIG_HOME` and `$XDG_CONFIG_DIRS` are not defined, SimpleBuild will only consider default
+configuration files at `/etc/simplebuild.d/*.cfg` and `$HOME/.config/simplebuild/config.cfg`.
 
 The configuration file located in `$XDG_CONFIG_HOME` will be listed *after* the ones obtained via `$XDG_CONFIG_DIRS`,
 such that user-defined configuration settings have preference over system defaults.
 
 A detailed overview of the list of default configuration files is available via `eb --show-default-configfiles`
-(available since EasyBuild v2.1.0). For example::
+(available since SimpleBuild v2.1.0). For example::
 
 ``` console
 $ XDG_CONFIG_DIRS=/tmp/etc:/tmp/moreetc eb --show-default-configfiles
@@ -91,12 +91,12 @@ efault list of configuration files:
 
 [with $XDG_CONFIG_HOME: (not set), $XDG_CONFIG_DIRS: /tmp/etc:/tmp/moreetc]
 
-* user-level: ${XDG_CONFIG_HOME:-$HOME/.config}/easybuild/config.cfg
-  -> /home/example/.config/easybuild/config.cfg => found
-* system-level: ${XDG_CONFIG_DIRS:-/etc}/easybuild.d/*.cfg
-  -> {/tmp/etc, /tmp/moreetc}/easybuild.d/*.cfg => /tmp/etc/easybuild.d/config.cfg, /tmp/moreetc/easybuild.d/bar.cfg, /tmp/moreetc/easybuild.d/foo.cfg
+* user-level: ${XDG_CONFIG_HOME:-$HOME/.config}/simplebuild/config.cfg
+  -> /home/example/.config/simplebuild/config.cfg => found
+* system-level: ${XDG_CONFIG_DIRS:-/etc}/simplebuild.d/*.cfg
+  -> {/tmp/etc, /tmp/moreetc}/simplebuild.d/*.cfg => /tmp/etc/simplebuild.d/config.cfg, /tmp/moreetc/simplebuild.d/bar.cfg, /tmp/moreetc/simplebuild.d/foo.cfg
 
-Default list of existing configuration files (4): /tmp/etc/easybuild.d/config.cfg, /tmp/moreetc/easybuild.d/bar.cfg, /tmp/moreetc/easybuild.d/foo.cfg, /home/example/.config/easybuild/config.cfg
+Default list of existing configuration files (4): /tmp/etc/simplebuild.d/config.cfg, /tmp/moreetc/simplebuild.d/bar.cfg, /tmp/moreetc/simplebuild.d/foo.cfg, /home/example/.config/simplebuild/config.cfg
 ```
 
 #### Multiple configuration files
@@ -106,18 +106,18 @@ configuration file have preference over the others.
 
 Each available configuration file will be used, and the configuration settings specified in these files
 will be retained according to the order of preference as indicated above: settings in configuration files specified via
-`--configfiles` override those in configuration files specified via `$EASYBUILD_CONFIGFILES`, which in turns override
+`--configfiles` override those in configuration files specified via `$SIMPLEBUILD_CONFIGFILES`, which in turns override
 settings in default configuration files.
 
 #### Ignored configuration files
 
 On top of this, the `--ignoreconfigfiles` configuration option allows to specify configuration files that should be
-*ignored* by EasyBuild (regardless of whether they are specified via any of the options above).
+*ignored* by SimpleBuild (regardless of whether they are specified via any of the options above).
 
 
 ### Configuration file format
 
-The EasyBuild configuration file follows the default Python
+The SimpleBuild configuration file follows the default Python
 configuration format as parsed by the `configparser` module
 (see <https://docs.python.org/3/library/configparser.html>).
 
@@ -146,7 +146,7 @@ logtostdout = true
 # use Lmod as modules tool
 modules-tool: Lmod
 # use different default installation path
-prefix=/home/you/work/easybuild/
+prefix=/home/you/work/simplebuild/
 ```
 
 #### Templates and constants supported in configuration files {: #configuration_file_templates_constants }
@@ -170,13 +170,13 @@ Two types of template values `%(...)s` are supported in configuration files:
 
 #### Example
 
-To include both the (custom) location for the easyconfigs archive repository and the default list of robot search
+To include both the (custom) location for the simpleconfigs archive repository and the default list of robot search
 paths in the active robot search path, the following configuration file entry can be used, featuring the template
 for the `repositorypath` configuration option and the provided `DEFAULT_ROBOT_PATHS` constant::
 
 ``` ini
 [basic]
-repositorypath = /home/example/easybuild/easyconfigs_archive
+repositorypath = /home/example/simplebuild/simpleconfigs_archive
 robot-paths = %(repositorypath)s:%(DEFAULT_ROBOT_PATHS)s
 ```
 
@@ -184,17 +184,17 @@ See also [Controlling the robot search path][controlling_robot_search_path].
 
 #### Generating a template configuration file
 
-Since EasyBuild v1.10, a command line option `--confighelp` is
+Since SimpleBuild v1.10, a command line option `--confighelp` is
 available that prints out the help text as an annotated configuration
 file. This can be used as an empty template configuration file:
 
 ``` shell
-mkdir -p $HOME/.config/easybuild
-eb --confighelp > $HOME/.config/easybuild/config.cfg
+mkdir -p $HOME/.config/simplebuild
+eb --confighelp > $HOME/.config/simplebuild/config.cfg
 ```
 
 ``` console
-$ head $HOME/.easybuild/config.cfg
+$ head $HOME/.simplebuild/config.cfg
 [MAIN]
 # Enable debug log mode (def False)
 #debug=
@@ -210,7 +210,7 @@ $ head $HOME/.easybuild/config.cfg
 ### Environment variables {: #configuration_env_vars }
 
 All configuration settings listed as long options in `eb --help` can
-also be specified via `EASYBUILD_`-prefixed environment variables.
+also be specified via `SIMPLEBUILD_`-prefixed environment variables.
 
 Configuration settings specified this way always override the
 corresponding setting specified in a configuration file.
@@ -218,19 +218,19 @@ corresponding setting specified in a configuration file.
 For example, to enable debug logging using an environment variable:
 
 ``` shell
-export EASYBUILD_DEBUG=1
+export SIMPLEBUILD_DEBUG=1
 ```
 
-More examples of using environment variables to configure EasyBuild are
+More examples of using environment variables to configure SimpleBuild are
 shown in the sections below.
 
 !!! tip
-    Any configuration option of EasyBuild which can be tuned by command line
+    Any configuration option of SimpleBuild which can be tuned by command line
     or via the configuration file, can also be tuned via a corresponding environment variable.
 
 !!! note
-    If any `$EASYBUILD`-prefixed environment variables are defined that do not correspond to a known
-    configuration option, EasyBuild will report an error message and exit.
+    If any `$SIMPLEBUILD`-prefixed environment variables are defined that do not correspond to a known
+    configuration option, SimpleBuild will report an error message and exit.
 
 
 ### Command line arguments {: #configuration_cmdline }
@@ -241,7 +241,7 @@ command line arguments, which override settings specified through environment va
 For some configuration options, both short and long command line
 arguments are available (see `eb --help`); the long options indicate
 how the configuration setting should be specified in a configuration file
-or via an environment variable (`$EASYBUILD_<LONGOPTION>`).
+or via an environment variable (`$SIMPLEBUILD_<LONGOPTION>`).
 
 For boolean configuration settings, both the `--<option>` and
 `--disable-<option>` variants are always available.
@@ -264,7 +264,7 @@ Examples (more below):
 
 *(`--show-config`, `--show-full-config`)*
 
-To get an overview of the current EasyBuild configuration across all configuration types,
+To get an overview of the current SimpleBuild configuration across all configuration types,
 you can use `eb --show-config`.
 
 The output will specify:
@@ -273,7 +273,7 @@ The output will specify:
 * a couple of selected important configuration settings (even if they are still set to the default value), i.e.:
     * [build path][buildpath]
     * [install path][installpath]
-    * [path to easyconfigs repository][easyconfigs_repo]
+    * [path to simpleconfigs repository][simpleconfigs_repo]
     * [the robot search path][robot_search_path]
     * [source path][sourcepath]
 * through which configuration type each setting was defined
@@ -282,16 +282,16 @@ The output will specify:
 Example output
 
 ``` console
-$ cat $HOME/.config/easybuild/config.cfg
+$ cat $HOME/.config/simplebuild/config.cfg
 [config]
 buildpath = /tmp/eb-build
     
-$ export EASYBUILD_MODULES_TOOL=Lmod
-$ export EASYBUILD_OPTARCH=''
+$ export SIMPLEBUILD_MODULES_TOOL=Lmod
+$ export SIMPLEBUILD_OPTARCH=''
 
 $ eb --show-config --installpath=$HOME/apps --job-cores=4
 #
-# Current EasyBuild configuration
+# Current SimpleBuild configuration
 # (C: command line argument, D: default value, E: environment variable, F: configuration file)
 #
 buildpath      (F) = /tmp/eb-build
@@ -299,9 +299,9 @@ installpath    (C) = /Users/example/apps
 job-cores      (C) = 4
 modules-tool   (E) = Lmod
 optarch        (E) = ''
-repositorypath (D) = /Users/example/.local/easybuild/ebfiles_repo
-robot-paths    (D) = /Users/example/easybuild-easyconfigs/easybuild/easyconfigs
-sourcepath     (D) = /Users/example/.local/easybuild/sources
+repositorypath (D) = /Users/example/.local/simplebuild/ebfiles_repo
+robot-paths    (D) = /Users/example/simplebuild-simpleconfigs/simplebuild/simpleconfigs
+sourcepath     (D) = /Users/example/.local/simplebuild/sources
 ```
 
 For a full overview of the current configuration, including *all* configuration settings,
@@ -327,11 +327,11 @@ The following configuration settings are currently mandatory
 * [Source path (--sourcepath)][sourcepath]
 * [Build path (--buildpath)][buildpath]
 * [Software and modules install path (--installpath, --installpath-software, --installpath-modules)][installpath]
-* [Easyconfigs repository (--repository, --repositorypath)][easyconfigs_repo]
+* [Simpleconfigs repository (--repository, --repositorypath)][simpleconfigs_repo]
 * [Logfile format (--logfile-format)][logfile_format]
 
 
-If any of these configuration settings is not provided in one way or another, EasyBuild will complain and exit.
+If any of these configuration settings is not provided in one way or another, SimpleBuild will complain and exit.
 
 In practice, all of these have reasonable defaults (see `eb --help` for the default settings).
 
@@ -341,44 +341,44 @@ In practice, all of these have reasonable defaults (see `eb --help` for the defa
 
 #### Source path (`--sourcepath`) {: #sourcepath }
 
-*default*: `$HOME/.local/easybuild/sources/` (determined via [Overall prefix path (`--prefix`)][prefix])
+*default*: `$HOME/.local/simplebuild/sources/` (determined via [Overall prefix path (`--prefix`)][prefix])
 
 The `sourcepath` configuration setting specifies the parent path of
-the directory in which EasyBuild looks for software source and install files.
+the directory in which SimpleBuild looks for software source and install files.
 
 Looking for the files specified via the `sources` parameter in the .eb
-easyconfig file is done in the following order of preference:
+simpleconfig file is done in the following order of preference:
 
 * `<sourcepath>/<name>`: a subdirectory determined by the name of the software package
-* `<sourcepath>/<letter>/<name>`:  in the style of the `easyblocks`/`easyconfigs` directories: in a
+* `<sourcepath>/<letter>/<name>`:  in the style of the `simpleblocks`/`simpleconfigs` directories: in a
   subdirectory determined by the first letter (in lower case) of the software package and by its full `name`
 * `<sourcepath>`: directly in the source path
 
-Note that these locations are also used when EasyBuild looks for patch
-files in addition to the various `easybuild/easyconfigs` directories that are listed in the $PYTHONPATH.
+Note that these locations are also used when SimpleBuild looks for patch
+files in addition to the various `simplebuild/simpleconfigs` directories that are listed in the $PYTHONPATH.
 
-You can specify multiple paths, separated with `:`, in which EasyBuild will look for sources, but only the first one
+You can specify multiple paths, separated with `:`, in which SimpleBuild will look for sources, but only the first one
 will be used for downloading, so one needs to make sure at least the first path is writable by the user invoking `eb`.
 
 
 #### Build path (`--buildpath`) {: #buildpath }
 
-*default*: `$HOME/.local/easybuild/build/` (determined via [Overall prefix path (`--prefix`)][prefix])
+*default*: `$HOME/.local/simplebuild/build/` (determined via [Overall prefix path (`--prefix`)][prefix])
 
 The `buildpath` configuration setting specifies the parent path of the
-(temporary) directories in which EasyBuild builds its software packages.
+(temporary) directories in which SimpleBuild builds its software packages.
 
 Each software package is (by default) built in a subdirectory of the
 specified `buildpath` under
 `<name>/<version>/<toolchain><versionsuffix>`.
 
-Note that the build directories are emptied and removed by EasyBuild
+Note that the build directories are emptied and removed by SimpleBuild
 when the installation is completed (by default).
 
 !!! tip
     Using `/dev/shm` as build path can significantly speed up builds,
     if it is available and provides a sufficient amount of space. Setting up
-    the variable `EASYBUILD_BUILDPATH` in your shell startup files makes this default.
+    the variable `SIMPLEBUILD_BUILDPATH` in your shell startup files makes this default.
     However be aware that, fi., two parallel GCC builds may fill up `/dev/shm` !
 
 
@@ -388,11 +388,11 @@ when the installation is completed (by default).
 
 defaults:
 
-* *software install path:* `$HOME/.local/easybuild/software`  (determined via [Overall prefix path (`--prefix`)][prefix] and `--subdir-software`)
-* *modules install path:* `$HOME/.local/easybuild/modules/all`  (determined via [Overall prefix path (`--prefix`)][prefix],
+* *software install path:* `$HOME/.local/simplebuild/software`  (determined via [Overall prefix path (`--prefix`)][prefix] and `--subdir-software`)
+* *modules install path:* `$HOME/.local/simplebuild/modules/all`  (determined via [Overall prefix path (`--prefix`)][prefix],
   `--subdir-modules` and `--suffix-modules-path`)
 
-There are several ways in which the software and modules install path used by EasyBuild can be configured:
+There are several ways in which the software and modules install path used by SimpleBuild can be configured:
 
 * using the direct configuration options `--installpath-software` and `--installpath-modules` (see below)
 * via the parent install path configuration option `--installpath` (see below)
@@ -405,7 +405,7 @@ There are several ways in which the software and modules install path used by Ea
 
 *default*: *(no default specified)*
 
-The `--installpath-software` and `--installpath-modules` configuration options (available since EasyBuild v2.1.0)
+The `--installpath-software` and `--installpath-modules` configuration options (available since SimpleBuild v2.1.0)
 allow to directly specify the software and modules install paths, respectively.
 
 These configuration options have precedence over all of the other configuration options that relate to specifying the
@@ -417,7 +417,7 @@ install path for software and/or modules (see below).
 *default*: *(no default specified)*
 
 The `--installpath` configuration option specifies the *parent* path of
-the directories in which EasyBuild should install software packages and the
+the directories in which SimpleBuild should install software packages and the
 corresponding module files.
 
 The install path for software and modules specifically is determined by combining `--installpath` with
@@ -430,28 +430,28 @@ For more information on these companion configuration options, see
 ##### Full install path for software and module file
 
 The full software and module install paths for a particular software package are determined by the active
-module naming scheme along with the general software and modules install paths specified by the EasyBuild configuration.
+module naming scheme along with the general software and modules install paths specified by the SimpleBuild configuration.
 
 Both the software itself and the corresponding module file will be installed in a subdirectory of the corresponding
 install path named according to the active module naming scheme (default format:
 `<name>/<version>-<toolchain><versionsuffix>`).
 Additionally, symlinks to the actual module file are installed in a subdirectory of the modules install path
-named according to the value of the `moduleclass` easyconfig parameter.
+named according to the value of the `moduleclass` simpleconfig parameter.
 
-For more information on the module naming scheme used by EasyBuild, see
+For more information on the module naming scheme used by SimpleBuild, see
 [Active module naming scheme (`--module-naming-scheme`)][module_naming_scheme].
 
 ##### Updating `$MODULEPATH`
 
-To make the modules generated by EasyBuild available, the `$MODULEPATH` environment variable must be updated
+To make the modules generated by SimpleBuild available, the `$MODULEPATH` environment variable must be updated
 to include the modules install path.
 
 The recommended way to do this is to use the `module use` command.
 For example:
 
 ``` shell
-eb --installpath=$HOME/easybuild
-module use $HOME/easybuild/modules/all
+eb --installpath=$HOME/simplebuild
+module use $HOME/simplebuild/modules/all
 ```
 
 It is probably a good idea to add this to your (favourite) shell
@@ -459,21 +459,21 @@ It is probably a good idea to add this to your (favourite) shell
 so you do not need to adjust `$MODULEPATH` every time you start a new session.
 
 !!! note
-    Updating `$MODULEPATH` is not required for EasyBuild itself, since `eb` updates `$MODULEPATH` itself at
+    Updating `$MODULEPATH` is not required for SimpleBuild itself, since `eb` updates `$MODULEPATH` itself at
     runtime according to the modules install path it is configured with.
 
 
-#### Easyconfigs repository (`--repository`, `--repositorypath`) {: #easyconfigs_repo }
+#### Simpleconfigs repository (`--repository`, `--repositorypath`) {: #simpleconfigs_repo }
 
-*default*: `FileRepository` at `$HOME/.local/easybuild/ebfiles_repo`
+*default*: `FileRepository` at `$HOME/.local/simplebuild/ebfiles_repo`
 (determined via [Overall prefix path (`--prefix`)][prefix])
 
-EasyBuild has support for archiving (tested) `.eb` easyconfig files.
-After successfully installing a software package using EasyBuild, the
+SimpleBuild has support for archiving (tested) `.eb` simpleconfig files.
+After successfully installing a software package using SimpleBuild, the
 corresponding `.eb` file is uploaded to a repository defined by the
 `repository` and `repositorypath` configuration settings.
 
-Currently, EasyBuild supports the following repository types (see also
+Currently, SimpleBuild supports the following repository types (see also
 `eb --avail-repositories`):
 
 * `FileRepository('path', 'subdir')`: a plain flat file repository;
@@ -499,27 +499,27 @@ repositorypath = <path>
 Or, optionally an extra argument representing a subdirectory can be specified, e.g.:
 
 ``` shell
-export EASYBUILD_REPOSITORY=GitRepository
-export EASYBUILD_REPOSITORYPATH=<path>,<subdir>
+export SIMPLEBUILD_REPOSITORY=GitRepository
+export SIMPLEBUILD_REPOSITORYPATH=<path>,<subdir>
 ```
 
 You do not have to worry about importing these classes,
-EasyBuild will make them available to the configuration file.
+SimpleBuild will make them available to the configuration file.
 
 Using `git` requires the `GitPython` Python modules, using `svn`
 requires the `pysvn` Python module (see [Dependencies][dependencies]).
 
-If access to the easyconfigs repository fails for some reason
-(e.g., no network or a missing required Python module), EasyBuild will
+If access to the simpleconfigs repository fails for some reason
+(e.g., no network or a missing required Python module), SimpleBuild will
 issue a warning. The software package will still be installed, but the
-(successful) easyconfig will not be automatically added to the archive
+(successful) simpleconfig will not be automatically added to the archive
 (i.e., it is not considered a fatal error).
 
 
 #### Logfile format (`--logfile-format`) {: #logfile_format }
 
 *default*:
-`easybuild, easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log`
+`simplebuild, simplebuild-%(name)s-%(version)s-%(date)s.%(time)s.log`
 
 The `logfile format` configuration setting contains a tuple
 specifying a log directory name and a template log file name.
@@ -538,24 +538,24 @@ is supported:
     e.g., '`%%(name)s`'. Without escaping, an error like `InterpolationMissingOptionError: Bad value
     substitution` will be thrown by `ConfigParser`.
 
-For example, configuring EasyBuild to generate a log file mentioning only the software name in a directory named
-`easybuild` can be done via the `--logfile-format` command line option:
+For example, configuring SimpleBuild to generate a log file mentioning only the software name in a directory named
+`simplebuild` can be done via the `--logfile-format` command line option:
 
 ``` shell
-eb --logfile-format="easybuild,easybuild-%(name)s.log" ...
+eb --logfile-format="simplebuild,simplebuild-%(name)s.log" ...
 ```
 
-or the `$EASYBUILD_LOGFILE_FORMAT` environment variable:
+or the `$SIMPLEBUILD_LOGFILE_FORMAT` environment variable:
 
 ``` shell
-export EASYBUILD_LOGFILE_FORMAT="easybuild,easybuild-%(name)s.log"
+export SIMPLEBUILD_LOGFILE_FORMAT="simplebuild,simplebuild-%(name)s.log"
 ```
 
-or by including the following in an EasyBuild configuration file (note the use of '`%%`' to escape the `name`
+or by including the following in an SimpleBuild configuration file (note the use of '`%%`' to escape the `name`
 template value here):
 
 ``` ini
-logfile-format = easybuild,easybuild-%%(name)s.log
+logfile-format = simplebuild,simplebuild-%%(name)s.log
 ```
 
 
@@ -565,16 +565,16 @@ The subsections below discuss a couple of commonly used optional configuration s
 
 #### Overall prefix path (`--prefix`) {: #prefix }
 
-*default:* `$HOME/.local/easybuild`
+*default:* `$HOME/.local/simplebuild`
 
-The overall prefix path used by EasyBuild can be specified using the `--prefix` configuration option.
+The overall prefix path used by SimpleBuild can be specified using the `--prefix` configuration option.
 
 This affects the default value of several configuration options:
 
 * [source path][sourcepath]
 * [build path][buildpath]
 * [software and modules install path][installpath]
-* [easyconfigs repository path][easyconfigs_repo]
+* [simpleconfigs repository path][simpleconfigs_repo]
 * [package path][packaging_config]
 * [container path][containers_cfg_path]
 
@@ -590,13 +590,13 @@ This affects the default value of several configuration options:
 * *modules install path suffix* (`--suffix-modules-path`): `all`
 
 The subdirectories for the software and modules install paths (relative to `--installpath`, see [install path][installpath])
-can be specified using the corresponding dedicated configuration options (available since EasyBuild v1.14.0).
+can be specified using the corresponding dedicated configuration options (available since SimpleBuild v1.14.0).
 
 For example:
 
 ``` shell
-export EASYBUILD_SUBDIR_SOFTWARE=installs
-eb --installpath=$HOME/easybuild --subdir-modules=module_files ...
+export SIMPLEBUILD_SUBDIR_SOFTWARE=installs
+eb --installpath=$HOME/simplebuild --subdir-modules=module_files ...
 ```
 
 
@@ -604,7 +604,7 @@ eb --installpath=$HOME/easybuild --subdir-modules=module_files ...
 
 *default*: `Lmod`
 
-Specifying the modules tool that should be used by EasyBuild can be
+Specifying the modules tool that should be used by SimpleBuild can be
 done using the `modules-tool` configuration setting.
 A list of supported modules tools can be obtained using `eb --avail-modules-tools`.
 
@@ -622,7 +622,7 @@ The actual module command (i.e., `modulecmd`, `modulecmd.tcl`,
 `lmod`, ...) must be available via `$PATH` (which is not standard), except when using Lmod
 (in that case the `lmod` binary can also be located via `$LMOD_CMD`).
 
-For example, to indicate that EasyBuild should be using `Lmod` as modules tool:
+For example, to indicate that SimpleBuild should be using `Lmod` as modules tool:
 
 ``` shell
 eb --modules-tool=Lmod ...
@@ -631,9 +631,9 @@ eb --modules-tool=Lmod ...
 
 #### Active module naming scheme (`--module-naming-scheme`) {: #module_naming_scheme }
 
-*default*: `EasyBuildModuleNamingScheme`
+*default*: `SimpleBuildModuleNamingScheme`
 
-The module naming scheme that should be used by EasyBuild can be
+The module naming scheme that should be used by SimpleBuild can be
 specified using the `module-naming-scheme` configuration setting.
 
 ``` shell
@@ -641,14 +641,14 @@ eb --module-naming-scheme=HierarchicalMNS ...
 ```
 
 For more details, see the dedicated page on
-[using a custom module naming scheme](https://github.com/easybuilders/easybuild/wiki/Using-a-custom-module-naming-scheme).
+[using a custom module naming scheme](https://github.com/simplebuilders/simplebuild/wiki/Using-a-custom-module-naming-scheme).
 
 
 #### Module files syntax (`--module-syntax`) {: #module_syntax }
 
 *default*: `Lua`
 
-*supported since*: EasyBuild v2.1
+*supported since*: SimpleBuild v2.1
 
 The syntax to use for generated module files can be specified using the `--module-syntax` configuration setting.
 
@@ -671,7 +671,7 @@ Possible values are:
     Using module files in Lua syntax has the advantage that Lmod does not need to translate from Lua to Tcl internally
     when processing the module files, which benefits responsiveness of Lmod when used interactively by users. In terms
     of Lmod-specific aspects of module files, the syntax of the module file does *not* matter; Lmod-specific statements
-    supported by EasyBuild can be included in Tcl module files as well, by guarding them by a condition that only
+    supported by SimpleBuild can be included in Tcl module files as well, by guarding them by a condition that only
     evaluates positively when Lmod is consuming the module file, i.e.
     '`if { [ string match "*tcl2lua.tcl" $env(_) ] } { ... }`'. Only conditional load statements like
     '`load(atleast("gcc","4.8"))`' can only be used in Lua module files.

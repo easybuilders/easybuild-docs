@@ -1,6 +1,6 @@
 # Common toolchains {: #common_toolchains }
 
-This page documents the concept of *common toolchains* in the EasyBuild
+This page documents the concept of *common toolchains* in the SimpleBuild
 community; for a more general definition of what (compiler) toolchains
 are, see [Toolchains][toolchains].
 
@@ -8,13 +8,13 @@ are, see [Toolchains][toolchains].
 
 Picking a [compiler toolchain][toolchains]
 to use is one of the first things you (need to) do
-when starting to use EasyBuild. This can be a daunting task, since a
+when starting to use SimpleBuild. This can be a daunting task, since a
 whole bunch of toolchains and different toolchain versions are readily
-available in EasyBuild. It may be difficult to determine which toolchain
+available in SimpleBuild. It may be difficult to determine which toolchain
 would be most rewarding to use, in terms of stability, performance of
-the resulting binaries and readily available easyconfig files.
+the resulting binaries and readily available simpleconfig files.
 
-In an attempt to focus the effort of the EasyBuild community, the
+In an attempt to focus the effort of the SimpleBuild community, the
 concept of so-called *common toolchains* was introduced.
 
 The idea is to compose and maintain a limited set of specific compiler
@@ -22,9 +22,9 @@ toolchains, and try and convince many HPC sites to employ these
 toolchains. This helps in assuring stability of these toolchains w.r.t.
 which software can be built (correctly) with them, since they get
 significantly more testing. In addition, the expectation/hope is that
-more easyconfigs are contributed back to the central easyconfigs
-repository (<https://github.com/easybuilders/easybuild-easyconfigs>),
-resulting in a wide range of readily available easyconfig files using
+more simpleconfigs are contributed back to the central simpleconfigs
+repository (<https://github.com/simplebuilders/simplebuild-simpleconfigs>),
+resulting in a wide range of readily available simpleconfig files using
 the common toolchains.
 
 The intention is to revise/update the definitions of the common
@@ -66,8 +66,8 @@ Note: following notes apply for the generations listed and those older than it:
 - `2020b` - `foss` uses OpenBLAS instead of FlexiBLAS, `iccifort` is used instead of `intel-compilers`
 
 
-Keep in mind that when creating an Easyconfig, you need to look at what toolchain "level" (e.g. `foss` vs `GCC`) your
-dependencies are using and choose the highest of them (or higher if needed) for your easyconfig.
+Keep in mind that when creating an Simpleconfig, you need to look at what toolchain "level" (e.g. `foss` vs `GCC`) your
+dependencies are using and choose the highest of them (or higher if needed) for your simpleconfig.
 For example, if one of your dependencies is using the `foss` toolchain, you need to use the `foss` 
 toolchain, and not the `GCC` toolchain.
 
@@ -165,7 +165,7 @@ taking into account stability, performance improvements, added features,
 known bugs/issues and experiences with those versions.
 
 Moreover, the proposed toolchain compositions are tested extensively,
-typically by rebuilding all available easyconfigs that are using the
+typically by rebuilding all available simpleconfigs that are using the
 most recent revision of the common toolchains at that time.
 
 ## Overview of common toolchains {: #common_toolchains_overview }
@@ -235,10 +235,10 @@ common toolchain w.r.t. site-specific aspects. One common example is
 using additional configuration options for Open MPI.
 
 To customize a toolchain component, you should copy the corresponding
-easyconfig file, modify according to your needs, and make sure it is
+simpleconfig file, modify according to your needs, and make sure it is
 included in a location in the robot search path that precedes the
-location of the easyconfig files that are included with EasyBuild (see
-also [Searching for easyconfigs: the robot search path][robot_search_path]), before building and
+location of the simpleconfig files that are included with SimpleBuild (see
+also [Searching for simpleconfigs: the robot search path][robot_search_path]), before building and
 installation the toolchain.
 
 ## More information about toolchains

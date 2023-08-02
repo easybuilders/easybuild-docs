@@ -1,32 +1,32 @@
-# EasyBuild Documentation
+# SimpleBuild Documentation
 
 ---
 
 
-![EasyBuild logo](img/easybuild_logo_2022_vertical_dark_bg_transparent.png#only-dark){: align=left style="height:455px;width:400px"}
-![EasyBuild logo](img/easybuild_logo_2022_vertical_light_bg_transparent.png#only-light){: align=left style="height:455px;width:400px"}
+![SimpleBuild logo](img/simplebuild_logo_2022_vertical_dark_bg_transparent.png#only-dark){: align=left style="height:455px;width:400px"}
+![SimpleBuild logo](img/simplebuild_logo_2022_vertical_light_bg_transparent.png#only-light){: align=left style="height:455px;width:400px"}
 
-Welcome to the documentation of **[EasyBuild](https://easybuild.io) (version {{ easybuild.version }})**.
+Welcome to the documentation of **[SimpleBuild](https://simplebuild.io) (version {{ simplebuild.version }})**.
 
 Use the menu to navigate, or use the search feature (top right).
 
-See also the [EasyBuild tutorial](https://easybuilders.github.io/easybuild-tutorial) (separate website).
+See also the [SimpleBuild tutorial](https://simplebuilders.github.io/simplebuild-tutorial) (separate website).
 
-To contribute to this documentation, [open a pull request](https://github.com/easybuilders/easybuild-docs).
+To contribute to this documentation, [open a pull request](https://github.com/simplebuilders/simplebuild-docs).
 
 ---
 
 **Quick links**
 
-- [What is EasyBuild?](what-is-easybuild.md) - [terminology](terminology.md)
-- [Installing](installation.md), [configuring](configuration.md), and [using](using-easybuild.md) EasyBuild
-- [Writing easyconfig files](writing-easyconfig-files.md) - [available easyconfig parameters](version-specific/easyconfig-parameters.md)
-- [Generic easyblocks](version-specific/generic-easyblocks.md)
+- [What is SimpleBuild?](what-is-simplebuild.md) - [terminology](terminology.md)
+- [Installing](installation.md), [configuring](configuration.md), and [using](using-simplebuild.md) SimpleBuild
+- [Writing simpleconfig files](writing-simpleconfig-files.md) - [available simpleconfig parameters](version-specific/simpleconfig-parameters.md)
+- [Generic simpleblocks](version-specific/generic-simpleblocks.md)
 - List of [common toolchains](common-toolchains.md) and [supported software](version-specific/supported-software)
-- [Contributing to EasyBuild](contributing.md) - [GitHub integration features](integration-with-github.md)
-- [EasyBuild release notes](release-notes.md) - [EasyBuild v5.0](easybuild-v5/index.md)
-- [Getting help](getting-help.md): [mailing list](https://lists.ugent.be/wws/info/easybuild) - [Slack](https://easybuild.io/join-slack) - [conference calls](https://github.com/easybuilders/easybuild/wiki/Conference-calls) - [GitHub](https://github.com/easybuilders)
+- [Contributing to SimpleBuild](contributing.md) - [GitHub integration features](integration-with-github.md)
+- [SimpleBuild release notes](release-notes.md) - [SimpleBuild v5.0](simplebuild-v5/index.md)
+- [Getting help](getting-help.md): [mailing list](https://lists.ugent.be/wws/info/simplebuild) - [Slack](https://simplebuild.io/join-slack) - [conference calls](https://github.com/simplebuilders/simplebuild/wiki/Conference-calls) - [GitHub](https://github.com/simplebuilders)
 
 ---
 
-*(last update: {{ page.update_date }} - [easybuild-docs commit {{ git.short_commit}}](<https://github.com/easybuilders/easybuild-docs/commits/{{ git.short_commit }}>))*
+*(last update: {{ page.update_date }} - [simplebuild-docs commit {{ git.short_commit}}](<https://github.com/simplebuilders/simplebuild-docs/commits/{{ git.short_commit }}>))*

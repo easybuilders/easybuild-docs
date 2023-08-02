@@ -1,4 +1,4 @@
-# License constants that can be used in easyconfigs {: #avail_easyconfig_licenses }
+# License constants that can be used in simpleconfigs {: #avail_simpleconfig_licenses }
 
 License name       |License description                                                                                                                                                                                                          |Version
 -------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------
@@ -10,4 +10,4 @@ License name       |License description                                         
 ``Unknown``        |None                                                                                                                                                                                                                         |``None``
 ``VeryRestrictive``|None                                                                                                                                                                                                                         |``None``
 
-*(see also* ``eb --avail-easyconfig-licenses`` *)*
+*(see also* ``eb --avail-simpleconfig-licenses`` *)*

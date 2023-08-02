@@ -1,17 +1,17 @@
-# EasyBuild maintainers {: #maintainers}
+# SimpleBuild maintainers {: #maintainers}
 
 
 ## Criteria {: #maintainers_criteria }
 
-EasyBuild maintainers should meet the following criteria:
+SimpleBuild maintainers should meet the following criteria:
 
 * being sufficiently familiar with the contribution procedure (see [Contributing][contributing])
-* frequently contributing to the EasyBuild GitHub repositories
-* being an active member of the EasyBuild community for a significant amount of time, i.e.:
-    * following the EasyBuild mailing list and participating in discussions (see [Getting help][getting_help])
-    * actively participating in the EasyBuild IRC or Slack channel (see [Getting help][getting_help]);
-    * (occasionally) joining in on the EasyBuild conference calls (see <https://github.com/easybuilders/easybuild/wiki/Conference-calls>)
-* having access to a working setup for submitting test reports (see [Test reports for easyconfig contributions (`--upload-test-report`)][contributing_review_process_test_reports])
+* frequently contributing to the SimpleBuild GitHub repositories
+* being an active member of the SimpleBuild community for a significant amount of time, i.e.:
+    * following the SimpleBuild mailing list and participating in discussions (see [Getting help][getting_help])
+    * actively participating in the SimpleBuild IRC or Slack channel (see [Getting help][getting_help]);
+    * (occasionally) joining in on the SimpleBuild conference calls (see <https://github.com/simplebuilders/simplebuild/wiki/Conference-calls>)
+* having access to a working setup for submitting test reports (see [Test reports for simpleconfig contributions (`--upload-test-report`)][contributing_review_process_test_reports])
 
 
 ## Roles {: #maintainers_roles }
@@ -19,11 +19,11 @@ EasyBuild maintainers should meet the following criteria:
 
 ### Release managers {: #maintainers_release_manager }
 
-The release managers are responsible for releasing new stable EasyBuild versions on a regular basis,
-with the help of the other EasyBuild maintainers.
+The release managers are responsible for releasing new stable SimpleBuild versions on a regular basis,
+with the help of the other SimpleBuild maintainers.
 
-Sebastian, Miguel & Kenneth have been working together to get EasyBuild releases out the door on a regular basis
-(about once every 6 weeks, see <https://pypi.org/project/easybuild/#history>).
+Sebastian, Miguel & Kenneth have been working together to get SimpleBuild releases out the door on a regular basis
+(about once every 6 weeks, see <https://pypi.org/project/simplebuild/#history>).
 
 * **Sebastian Achilles** ([JSC](https://www.fz-juelich.de/ias/jsc/EN))
     * GitHub: [@SebastianAchilles](https://github.com/SebastianAchilles) - e-mail: `s.achilles (at) fz-juelich.de` - IRC/Slack: `Sebastian Achilles`
@@ -34,14 +34,14 @@ Sebastian, Miguel & Kenneth have been working together to get EasyBuild releases
 
 
 
-### Maintainers {: #maintainers_easybuild_repo }
+### Maintainers {: #maintainers_simplebuild_repo }
 
-The EasyBuild maintainers all have admin access to the different EasyBuild GitHub repositories:
+The SimpleBuild maintainers all have admin access to the different SimpleBuild GitHub repositories:
 
-* <https://github.com/easybuilders/easybuild> (documentation (<https://easybuild.readthedocs.io>), EasyBuild website, `easybuild` metapackage)
-* <https://github.com/easybuilders/easybuild-framework> (EasyBuild framework)
-* <https://github.com/easybuilders/easybuild-easyblocks> (central repository for easyblocks)
-* <https://github.com/easybuilders/easybuild-easyconfigs> (central repository for easyconfigs)
+* <https://github.com/simplebuilders/simplebuild> (documentation (<https://simplebuild.readthedocs.io>), SimpleBuild website, `simplebuild` metapackage)
+* <https://github.com/simplebuilders/simplebuild-framework> (SimpleBuild framework)
+* <https://github.com/simplebuilders/simplebuild-simpleblocks> (central repository for simpleblocks)
+* <https://github.com/simplebuilders/simplebuild-simpleconfigs> (central repository for simpleconfigs)
 
 (maintainers are listed in alphabetical order, by last name)
 

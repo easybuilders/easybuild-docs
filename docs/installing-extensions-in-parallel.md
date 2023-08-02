@@ -1,6 +1,6 @@
 # Installing extensions in parallel *(experimental!)* {: #installing_extensions_in_parallel }
 
-Since EasyBuild v4.5.0 (initial) support is available for installing
+Since SimpleBuild v4.5.0 (initial) support is available for installing
 extensions in parallel, that is to run the installation command for
 multiple extensions that are ready to install at the same time in the
 background, to exploit the availability of multiple cores.
@@ -11,7 +11,7 @@ change or be prone to errors.**
 
 ## Configuration {: #installing_extensions_in_parallel_configuration }
 
-To let EasyBuild install extensions in parallel, the
+To let SimpleBuild install extensions in parallel, the
 `parallel-extensions-install` configuration option must be enabled.
 
 In addition, since the support for installing extensions in parallel is
@@ -23,29 +23,29 @@ same time is controlled by the `parallel` configuration option.
 
 ## Requirements {: #installing_extensions_in_parallel_requirements }
 
-For EasyBuild to be able to install a list of extensions in parallel,
+For SimpleBuild to be able to install a list of extensions in parallel,
 two requirements must be met:
 
-- The easyblock(s) that are used for installing the extensions must
+- The simpleblock(s) that are used for installing the extensions must
     have support for determining which installed extensions are required
     to fulfil the dependencies for a particular extension. This is done
     via the `required_deps` property method.
-- EasyBuild must be able to start a single shell command
+- SimpleBuild must be able to start a single shell command
     (asynchronously, so it runs in the background) to perform the
     installation of the extension via the `run_async` method, and check
     whether the command has completed via the `async_cmd_check` method.
 
 For an example of how `required_deps`, `run_async`, and
 `async_cmd_check` can be implemented, see the
-[RPackage](https://github.com/easybuilders/easybuild-easyblocks/blob/main/easybuild/easyblocks/generic/rpackage.py)
-easyblock.
+[RPackage](https://github.com/simplebuilders/simplebuild-simpleblocks/blob/main/simplebuild/simpleblocks/generic/rpackage.py)
+simpleblock.
 
 ## Caveats and Known issues {: #installing_extensions_in_parallel_caveats_known_issues }
 
-*(last update: EasyBuild v4.5.0)*
+*(last update: SimpleBuild v4.5.0)*
 
 There are a couple of caveats and known issues with installing
-extensions in parallel, which we hope to resolve in future EasyBuild
+extensions in parallel, which we hope to resolve in future SimpleBuild
 releases.
 
 This is also why the support for installing extensions in parallel is
@@ -54,27 +54,27 @@ currently marked as an experimental feature.
 ### Only works for R extensions {: #installing_extensions_in_parallel_caveats_known_issues_only_r }
 
 The support for installing extensions in parallel currently only works
-for R extensions, since only the `RPackage` easyblock (which is used to
+for R extensions, since only the `RPackage` simpleblock (which is used to
 install R packages as extensions) implements the necessary methods (see
 [Requirements][installing_extensions_in_parallel_requirements]).
 
 Supporting other types of extensions (Python, Perl, etc.) requires that
-the corresponding easyblocks that are used to install those extensions
+the corresponding simpleblocks that are used to install those extensions
 (like `PythonPackage`, `PerlModule`) are enhanced to support determining
 required dependencies and starting the installation command
 asynchronously.
 
 ### List of extensions must be self-contained {: #installing_extensions_in_parallel_caveats_known_issues_exts_list }
 
-The EasyBuild framework currently enforces that all required
+The SimpleBuild framework currently enforces that all required
 dependencies for a particular extension are included in the list of
 extensions that is being installed (specified via the `exts_list`
-easyconfig parameter). Extensions provided by dependencies are not taken
+simpleconfig parameter). Extensions provided by dependencies are not taken
 into account (yet).
 
 As a result, trying to install an
-[R-bundle-Bioconductor](https://github.com/easybuilders/easybuild-easyconfigs/tree/main/easybuild/easyconfigs/r/R-bundle-Bioconductor)
-easyconfig with `parallel-extensions-install` enabled will result in an
+[R-bundle-Bioconductor](https://github.com/simplebuilders/simplebuild-simpleconfigs/tree/main/simplebuild/simpleconfigs/r/R-bundle-Bioconductor)
+simpleconfig with `parallel-extensions-install` enabled will result in an
 error reporting missing required dependencies.
 
 ### Skipping of installed extensions is still done sequentially {: #installing_extensions_in_parallel_caveats_known_issues_skip }
@@ -85,7 +85,7 @@ installation can be skipped when `--skip` (see
 is still done sequentially.
 
 Additional work is needed to also run these checks in parallel across
-the cores that are available to EasyBuild.
+the cores that are available to SimpleBuild.
 
 ### Sanity check for extensions is still run sequentially {: #installing_extensions_in_parallel_caveats_known_issues_sanity_check }
 
@@ -93,4 +93,4 @@ The sanity checks that are done for each extension are still done
 through a sequential loop over the list of extensions.
 
 Additional work is needed to also run these checks in parallel across
-the cores that are available to EasyBuild.
+the cores that are available to SimpleBuild.

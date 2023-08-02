@@ -1,6 +1,6 @@
-# Available template values for easyconfigs {: #avail_easyconfig_templates }
+# Available template values for simpleconfigs {: #avail_simpleconfig_templates }
 
-## Template names/values derived from easyconfig instance
+## Template names/values derived from simpleconfig instance
 
 Template name              |Template value
 ---------------------------|-----------------------------
@@ -29,7 +29,7 @@ Template name       |Template value
 ``%(rshortver)s``   |short version for R (``<major>.<minor>``)
 ``%(rver)s``        |full version for R
 
-## Template names/values as set in easyconfig
+## Template names/values as set in simpleconfig
 
 * ``%(bitbucket_account)s``
 * ``%(github_account)s``
@@ -46,7 +46,7 @@ Template name          |Template value
 ``%(namelower)s``      |lower case of value of name
 ``%(nameletterlower)s``|lower case of value of nameletter
 
-## Template values set outside EasyBlock runstep
+## Template values set outside SimpleBlock runstep
 
 Template name     |Template value
 ------------------|-------------------------------------------
@@ -60,26 +60,26 @@ Template name                    |Template value
 ---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ``%(arch)s``                     |System architecture (e.g. x86_64, aarch64, ppc64le, ...)
 ``%(mpi_cmd_prefix)s``           |Prefix command for running MPI programs (with default number of ranks)
-``%(cuda_compute_capabilities)s``|Comma-separated list of CUDA compute capabilities, as specified via --cuda-compute-capabilities configuration option or via cuda_compute_capabilities easyconfig parameter
+``%(cuda_compute_capabilities)s``|Comma-separated list of CUDA compute capabilities, as specified via --cuda-compute-capabilities configuration option or via cuda_compute_capabilities simpleconfig parameter
 ``%(cuda_cc_cmake)s``            |List of CUDA compute capabilities suitable for use with $CUDAARCHS in CMake 3.18+
 ``%(cuda_cc_space_sep)s``        |Space-separated list of CUDA compute capabilities
 ``%(cuda_cc_semicolon_sep)s``    |Semicolon-separated list of CUDA compute capabilities
 ``%(cuda_sm_comma_sep)s``        |Comma-separated list of sm_* values that correspond with CUDA compute capabilities
 ``%(cuda_sm_space_sep)s``        |Space-separated list of sm_* values that correspond with CUDA compute capabilities
 
-## Template constants that can be used in easyconfigs
+## Template constants that can be used in simpleconfigs
 
 Constant                |Template value                                                                                                                  |Template name
 ------------------------|--------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------
 ``APACHE_SOURCE``       |apache.org source url                                                                                                           |``https://archive.apache.org/dist/%(namelower)s``
-``BITBUCKET_SOURCE``    |bitbucket.org source url (namelower is used if bitbucket_account easyconfig parameter is not specified)                         |``https://bitbucket.org/%(bitbucket_account)s/%(namelower)s/get``
-``BITBUCKET_DOWNLOADS`` |bitbucket.org downloads url (namelower is used if bitbucket_account easyconfig parameter is not specified)                      |``https://bitbucket.org/%(bitbucket_account)s/%(namelower)s/downloads``
+``BITBUCKET_SOURCE``    |bitbucket.org source url (namelower is used if bitbucket_account simpleconfig parameter is not specified)                         |``https://bitbucket.org/%(bitbucket_account)s/%(namelower)s/get``
+``BITBUCKET_DOWNLOADS`` |bitbucket.org downloads url (namelower is used if bitbucket_account simpleconfig parameter is not specified)                      |``https://bitbucket.org/%(bitbucket_account)s/%(namelower)s/downloads``
 ``CRAN_SOURCE``         |CRAN (contrib) source url                                                                                                       |``https://cran.r-project.org/src/contrib``
 ``FTPGNOME_SOURCE``     |http download for gnome ftp server                                                                                              |``https://ftp.gnome.org/pub/GNOME/sources/%(namelower)s/%(version_major_minor)s``
-``GITHUB_SOURCE``       |GitHub source URL (if github_account easyconfig parameter is not specified, namelower is used in its place)                     |``https://github.com/%(github_account)s/%(name)s/archive``
-``GITHUB_LOWER_SOURCE`` |GitHub source URL with lowercase name (if github_account easyconfig parameter is not specified, namelower is used in its place) |``https://github.com/%(github_account)s/%(namelower)s/archive``
-``GITHUB_RELEASE``      |GitHub release URL (if github_account easyconfig parameter is not specified, namelower is used in its place)                    |``https://github.com/%(github_account)s/%(name)s/releases/download/v%(version)s``
-``GITHUB_LOWER_RELEASE``|GitHub release URL with lowercase name (if github_account easyconfig parameter is not specified, namelower is used in its place)|``https://github.com/%(github_account)s/%(namelower)s/releases/download/v%(version)s``
+``GITHUB_SOURCE``       |GitHub source URL (if github_account simpleconfig parameter is not specified, namelower is used in its place)                     |``https://github.com/%(github_account)s/%(name)s/archive``
+``GITHUB_LOWER_SOURCE`` |GitHub source URL with lowercase name (if github_account simpleconfig parameter is not specified, namelower is used in its place) |``https://github.com/%(github_account)s/%(namelower)s/archive``
+``GITHUB_RELEASE``      |GitHub release URL (if github_account simpleconfig parameter is not specified, namelower is used in its place)                    |``https://github.com/%(github_account)s/%(name)s/releases/download/v%(version)s``
+``GITHUB_LOWER_RELEASE``|GitHub release URL with lowercase name (if github_account simpleconfig parameter is not specified, namelower is used in its place)|``https://github.com/%(github_account)s/%(namelower)s/releases/download/v%(version)s``
 ``GNU_SAVANNAH_SOURCE`` |download.savannah.gnu.org source url                                                                                            |``https://download-mirror.savannah.gnu.org/releases/%(namelower)s``
 ``GNU_SOURCE``          |gnu.org source url                                                                                                              |``https://ftpmirror.gnu.org/gnu/%(namelower)s``
 ``GOOGLECODE_SOURCE``   |googlecode.com source url                                                                                                       |``http://%(namelower)s.googlecode.com/files``
@@ -125,4 +125,4 @@ Constant                |Template value                                         
 ``SOURCE_PY3_WHL``      |Generic (non-compiled) Python 3 wheel package                                                                                   |``%(name)s-%(version)s-py3-none-any.whl``
 ``SOURCELOWER_PY3_WHL`` |Generic (non-compiled) Python 3 wheel package with lowercase name                                                               |``%(namelower)s-%(version)s-py3-none-any.whl``
 
-*(see also* ``eb --avail-easyconfig-templates`` *)*
+*(see also* ``eb --avail-simpleconfig-templates`` *)*

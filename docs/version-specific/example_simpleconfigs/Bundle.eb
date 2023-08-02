@@ -1,4 +1,4 @@
-easyblock = 'Bundle'
+simpleblock = 'Bundle'
 
 name = 'Autotools'
 version = '20150119' # date of the most recent change

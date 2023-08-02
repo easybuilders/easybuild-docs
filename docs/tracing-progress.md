@@ -1,17 +1,17 @@
 # Tracing progress {: #trace }
 
-To trace the progress of EasyBuild while it is installing software, you
+To trace the progress of SimpleBuild while it is installing software, you
 can use `eb --trace`.
 
 !!! note
-    Tracing support was added as an experimental feature in EasyBuild v3.4.0, and thus required
-    using `--experimental`. Since EasyBuild v3.4.1, `--trace` is
+    Tracing support was added as an experimental feature in SimpleBuild v3.4.0, and thus required
+    using `--experimental`. Since SimpleBuild v3.4.1, `--trace` is
     considered stable and no longer requires the use of
     `--experimental`.
 
 ## Trace output {: #trace_output }
 
-When `eb --trace` is used, EasyBuild will print additional output on top
+When `eb --trace` is used, SimpleBuild will print additional output on top
 of the standard output, which only mentions which step of the
 installation procedure is being executed (without any further details).
 
@@ -33,8 +33,8 @@ printed, to allow determining how long the command has been running.
 
 ``` console
 $ eb HDF5-1.10.1-intel-2017a.eb -df --trace --experimental
-== temporary log file in case of crash /tmp/eb-ieEeg3/easybuild-Ouw3jV.log
-== processing EasyBuild easyconfig /home/example/HDF5/HDF5-1.10.1-intel-2017a.eb
+== temporary log file in case of crash /tmp/eb-ieEeg3/simplebuild-Ouw3jV.log
+== processing SimpleBuild simpleconfig /home/example/HDF5/HDF5-1.10.1-intel-2017a.eb
 == building and installing HDF5/1.10.1-intel-2017a...
   >> installation prefix: /prefix/software/HDF5/1.10.1-intel-2017a
 == fetching files...
@@ -43,7 +43,7 @@ $ eb HDF5-1.10.1-intel-2017a.eb -df --trace --experimental
 == creating build dir, resetting environment...
   >> build dir: /tmp/HDF5/1.10.1/intel-2017a
 == unpacking...
-  >> running command 'tar xzf /prefix/sources/h/HDF5/hdf5-1.10.1.tar.gz' (output in /tmp/eb-ieEeg3/easybuild-run_cmd-P9kf6c.log) [started at: 2017-09-06 08:28:42]
+  >> running command 'tar xzf /prefix/sources/h/HDF5/hdf5-1.10.1.tar.gz' (output in /tmp/eb-ieEeg3/simplebuild-run_cmd-P9kf6c.log) [started at: 2017-09-06 08:28:42]
 == patching...
 == preparing...
   >> loading toolchain module: intel/2017a
@@ -53,12 +53,12 @@ $ eb HDF5-1.10.1-intel-2017a.eb -df --trace --experimental
   >>  * Szip/2.1-intel-2017a
   >> defining build environment for intel/2017a toolchain
 == configuring...
-  >> running command './configure --prefix=/prefix/software/HDF5/1.10.1-intel-2017a  --with-szlib=/prefix/software/Szip/2.1-intel-2017a  --with-zlib=/prefix/software/zlib/1.2.11-GCCcore-6.3.0  --with-pic --with-pthread --enable-shared  --enable-cxx --enable-fortran FC="mpiifort"  --enable-unsupported --enable-parallel' (output in /tmp/eb-ieEeg3/easybuild-run_cmd-dPat3D.log) [started at: 2017-09-06 08:28:44]
+  >> running command './configure --prefix=/prefix/software/HDF5/1.10.1-intel-2017a  --with-szlib=/prefix/software/Szip/2.1-intel-2017a  --with-zlib=/prefix/software/zlib/1.2.11-GCCcore-6.3.0  --with-pic --with-pthread --enable-shared  --enable-cxx --enable-fortran FC="mpiifort"  --enable-unsupported --enable-parallel' (output in /tmp/eb-ieEeg3/simplebuild-run_cmd-dPat3D.log) [started at: 2017-09-06 08:28:44]
 == building...
-  >> running command 'make -j 24  CXXFLAGS="$CXXFLAGS -DMPICH_IGNORE_CXX_SEEK"  FC="mpiifort"' (output in /tmp/eb-ieEeg3/easybuild-run_cmd-25vKdK.log) [started at: 2017-09-06 08:31:01]
+  >> running command 'make -j 24  CXXFLAGS="$CXXFLAGS -DMPICH_IGNORE_CXX_SEEK"  FC="mpiifort"' (output in /tmp/eb-ieEeg3/simplebuild-run_cmd-25vKdK.log) [started at: 2017-09-06 08:31:01]
 == testing...
 == installing...
-  >> running command 'make install' (output in /tmp/eb-ieEeg3/easybuild-run_cmd-BepE8P.log) [started at: 2017-09-06 08:34:09]
+  >> running command 'make install' (output in /tmp/eb-ieEeg3/simplebuild-run_cmd-BepE8P.log) [started at: 2017-09-06 08:34:09]
 == taking care of extensions...
 == postprocessing...
 == sanity checking...
@@ -96,8 +96,8 @@ $ eb HDF5-1.10.1-intel-2017a.eb -df --trace --experimental
 == permissions...
 == packaging...
 == COMPLETED: Installation ended successfully
-== Results of the build can be found in the log file(s) /prefix/software/HDF5/1.10.1-intel-2017a/easybuild/easybuild-HDF5-1.10.1-20170906.083425.log
+== Results of the build can be found in the log file(s) /prefix/software/HDF5/1.10.1-intel-2017a/simplebuild/simplebuild-HDF5-1.10.1-20170906.083425.log
 == Build succeeded for 1 out of 1
-== Temporary log file(s) /tmp/eb-ieEeg3/easybuild-Ouw3jV.log* have been removed.
+== Temporary log file(s) /tmp/eb-ieEeg3/simplebuild-Ouw3jV.log* have been removed.
 == Temporary directory /tmp/eb-ieEeg3 has been removed.
 ```

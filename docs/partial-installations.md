@@ -1,8 +1,8 @@
 # Partial installations {: #partial_installations }
 
 Several ways of performing partial installations are supported. These may be useful when debugging a particular issue
-with the installation procedure being performed by EasyBuild, updating existing software installations or module files,
-or after changing the EasyBuild configuration (e.g., switching to module files in Lua syntax or a different module
+with the installation procedure being performed by SimpleBuild, updating existing software installations or module files,
+or after changing the SimpleBuild configuration (e.g., switching to module files in Lua syntax or a different module
 naming scheme).
 
 ## Stopping the installation procedure *after* a step using `-s`/`--stop` {: #partial_installation_stop }
@@ -18,8 +18,8 @@ Example usage:
 
 ``` console
 $ eb GCC-4.9.2.eb --stop configure
-== temporary log file in case of crash /tmp/eb-X2Z0b7/easybuild-mGxmNb.log
-== processing EasyBuild easyconfig /home/example/GCC-4.9.2.eb
+== temporary log file in case of crash /tmp/eb-X2Z0b7/simplebuild-mGxmNb.log
+== processing SimpleBuild simpleconfig /home/example/GCC-4.9.2.eb
 == building and installing GCC/4.9.2...
 == fetching files...
 == creating build dir, resetting environment...
@@ -28,9 +28,9 @@ $ eb GCC-4.9.2.eb --stop configure
 == preparing...
 == configuring...
 == COMPLETED: Installation STOPPED successfully
-== Results of the build can be found in the log file /dev/shm/example/GCC/4.9.2/dummy-dummy/easybuild/easybuild-GCC-4.9.2-20150430.091644.log
+== Results of the build can be found in the log file /dev/shm/example/GCC/4.9.2/dummy-dummy/simplebuild/simplebuild-GCC-4.9.2-20150430.091644.log
 == Build succeeded for 1 out of 1
-== temporary log file(s) /tmp/eb-X2Z0b7/easybuild-mGxmNb.log* have been removed.
+== temporary log file(s) /tmp/eb-X2Z0b7/simplebuild-mGxmNb.log* have been removed.
 == temporary directory /tmp/eb-X2Z0b7 has been removed.
 ```
 
@@ -44,24 +44,24 @@ Example usage:
 
 ``` console
 $ eb GCCcore-6.2.0.eb --fetch
-== temporary log file in case of crash /tmp/eb-1ZZX2b/easybuild-NSmm5P.log
-== processing EasyBuild easyconfig /home/example/GCCcore-6.2.0.eb
+== temporary log file in case of crash /tmp/eb-1ZZX2b/simplebuild-NSmm5P.log
+== processing SimpleBuild simpleconfig /home/example/GCCcore-6.2.0.eb
 == building and installing GCCcore/6.2.0...
 == fetching files...
 == COMPLETED: Installation STOPPED successfully
-== Results of the build can be found in the log file(s) /dev/shm/example/GCC/4.9.2/dummy-dummy/easybuild/easybuild-GCCcore-6.2.0-20180330.170523.log
+== Results of the build can be found in the log file(s) /dev/shm/example/GCC/4.9.2/dummy-dummy/simplebuild/simplebuild-GCCcore-6.2.0-20180330.170523.log
 == Build succeeded for 1 out of 1
-== Temporary log file(s) /tmp/eb-1ZZX2b/easybuild-NSmm5P.log* have been removed.
+== Temporary log file(s) /tmp/eb-1ZZX2b/simplebuild-NSmm5P.log* have been removed.
 == Temporary directory /tmp/eb-1ZZX2b has been removed.
 ```
 
 !!! note
     `--fetch` can be used in conjunction with the `--robot` and `--robot-path` options to download sources of
-    the whole dependency tree of an easyconfig (see [Enabling dependency resolution, `--robot` / `-r` and `--robot-paths`][use_robot]).
+    the whole dependency tree of an simpleconfig (see [Enabling dependency resolution, `--robot` / `-r` and `--robot-paths`][use_robot]).
 
 !!! note
     Sources will be downloaded in the default location (see [Source path (`--sourcepath`)][sourcepath]),
-    unless EasyBuild is configured via the `--sourcepath` option.
+    unless SimpleBuild is configured via the `--sourcepath` option.
 
 
 ## Installing additional extensions using `-k`/`-skip` {: #partial_installation_skip }
@@ -75,7 +75,7 @@ available already; if not, the installation procedure will be performed from scr
 To trigger the installation of missing extensions, `--rebuild` ( or `--force`, see [Forced reinstallation][force_option]) must be used as well; without it, the installation
 procedure will be skipped as a whole (since the module is already available).
 
-When `--skip` is combined with `--rebuild`, EasyBuild will:
+When `--skip` is combined with `--rebuild`, SimpleBuild will:
 
 i) ensure that all (extension) sources are available (and try to fetch them if needed);
 ii) prepare the build environment;
@@ -90,7 +90,7 @@ Example usage:
 $ eb Python-2.7.9-intel-2015a.eb --skip
 ...
 == Python/2.7.9-intel-2015a is already installed (module found), skipping
-== No easyconfigs left to be built.
+== No simpleconfigs left to be built.
 == Build succeeded for 0 out of 0
 ```
 
@@ -116,7 +116,7 @@ $ eb Python-2.7.9-intel-2015a.eb --skip --rebuild
     are checked for availability, i.e. the extensions filter, is (usually) version-agnogstic.
 
 !!! note
-    The '`skipsteps`' easyconfig parameter has a different purpose, i.e. to specify which installation steps should
+    The '`skipsteps`' simpleconfig parameter has a different purpose, i.e. to specify which installation steps should
     *always* be skipped when the installation of a particular software package is performed, no matter whether the
     software or corresponding module is already available or not.
 
@@ -127,8 +127,8 @@ $ eb Python-2.7.9-intel-2015a.eb --skip --rebuild
 
 ## Only (re)generating (additional) module files using --module-only {: #module_only }
 
-Since EasyBuild v2.1, it is possible to only (re)generate the module file that matches the specifications in the
-easyconfig file, using `--module-only`. Depending on the use case, additional options should be supplied.
+Since SimpleBuild v2.1, it is possible to only (re)generate the module file that matches the specifications in the
+simpleconfig file, using `--module-only`. Depending on the use case, additional options should be supplied.
 
 Usually `--rebuild` is also required, either to ignore the existing module file (if the module is available under the
 same name as the one being (re)generated), or to skip the sanity check that verifies the software installation (if no
@@ -138,7 +138,7 @@ Combining `--module-only` with `--installpath-modules` is also a common use case
 a (test) location other than the software installation prefix (see [Software and modules install path (--installpath, --installpath-software, --installpath-modules)][installpath]).
 
 !!! note
-    Although `--module-only` was already supported in EasyBuild v2.1.0, we strongly recommend to use EasyBuild
+    Although `--module-only` was already supported in SimpleBuild v2.1.0, we strongly recommend to use SimpleBuild
     v2.1.1 or a more recent version, because of some critical bug fixes with respect to `--module-only`.
 
 Use cases:
@@ -158,7 +158,7 @@ existing module file, `--module-only` can be used.
 
 In the former case, enabling `--rebuild` is required because the sanity check step that verifies whether the
 installation produced the expected files and/or directories is not skipped unless forced.
-In the latter case, `--rebuild` must be used to make EasyBuild ignore that the module is already available
+In the latter case, `--rebuild` must be used to make SimpleBuild ignore that the module is already available
 according to the modules tool.
 
 Example usage:
@@ -298,6 +298,6 @@ Examples:
 
         An example of such a module naming scheme is `MigrateFromEBToHMNS`, which allows to generate module files
         using the hierarchical module naming scheme implemented by `HierarchicalMNS` for the software installed
-        in subdirectories following the default EasyBuild module naming scheme `EasyBuildMNS`.
-        The `MigrateFromEBToHMNS` module naming scheme is available since EasyBuild v2.2.0.
+        in subdirectories following the default SimpleBuild module naming scheme `SimpleBuildMNS`.
+        The `MigrateFromEBToHMNS` module naming scheme is available since SimpleBuild v2.2.0.
 

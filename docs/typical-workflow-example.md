@@ -3,27 +3,27 @@
 This section shows an example case of building
 [Weather Research and Forecasting (WRF)](https://www.mmm.ucar.edu/models/wrf) scientific software application,
 which is a notoriously complex software application to build and install.
-With EasyBuild however, WRF can be installed quite easily and here is how.
+With SimpleBuild however, WRF can be installed quite easily and here is how.
 
 
-First, you search which easyconfigs are available for WRF, using `--search` (see [Searching for easyconfigs, `--search` / `-S`][searching_for_easyconfigs])
+First, you search which simpleconfigs are available for WRF, using `--search` (see [Searching for simpleconfigs, `--search` / `-S`][searching_for_simpleconfigs])
 and you select one based on the software version, toolchain, etc.
 
-Using the selected easyconfig file, you can get an overview of the planned installations using `--dry-run` (see [Getting an overview of planned installations `--dry-run` / `-D`][get_an_overview]).
+Using the selected simpleconfig file, you can get an overview of the planned installations using `--dry-run` (see [Getting an overview of planned installations `--dry-run` / `-D`][get_an_overview]).
 
-Finally, building and installing WRF is done by specifying the matching easyconfig file in the eb command line,
+Finally, building and installing WRF is done by specifying the matching simpleconfig file in the eb command line,
 and using `--robot` (see [Enabling dependency resolution, `--robot` / `-r` and `--robot-paths`][use_robot]) to enable dependency resolution. That way WRF and all of its dependencies are installed with **a single command**!
 
 
-## Searching for available easyconfigs files
+## Searching for available simpleconfigs files
 
 Searching for build specification for a particular software package can be done using the
-`--search`/`-S` command line options (see [Searching for easyconfigs, `--search` / `-S`][searching_for_easyconfigs]);
-for example, to get a list of available easyconfig files for WRF:
+`--search`/`-S` command line options (see [Searching for simpleconfigs, `--search` / `-S`][searching_for_simpleconfigs]);
+for example, to get a list of available simpleconfig files for WRF:
 
 ``` console
 $ eb -S WRF
-CFGS1=/user/gent/445/vsc44588/easybuild/easybuild-easyconfigs/easybuild/easyconfigs
+CFGS1=/user/gent/445/vsc44588/simplebuild/simplebuild-simpleconfigs/simplebuild/simpleconfigs
  * $CFGS1/w/WPS/WPS-4.0.1_find-wrfdir.patch
  * $CFGS1/w/WPS/WPS-4.0.2_find-wrfdir.patch
  [ . . . ]
@@ -31,14 +31,14 @@ CFGS1=/user/gent/445/vsc44588/easybuild/easybuild-easyconfigs/easybuild/easyconf
  * $CFGS1/w/WRF/WRF-4.4.1-foss-2022b-dmpar.eb
  [ . . . ]
 
-Note: 16 matching archived easyconfig(s) found, use --consider-archived-easyconfigs to see them
+Note: 16 matching archived simpleconfig(s) found, use --consider-archived-simpleconfigs to see them
 ```
 
-Various easyconfig files are found: for different versions of WRF (e.g., v4.4 and v4.4.1),
+Various simpleconfig files are found: for different versions of WRF (e.g., v4.4 and v4.4.1),
 for different (versions of) compiler toolchains (e.g., foss 2022a, foss 2022b), etc.
 
 For the remainder of this example, we will use the available
-`WRF-4.4.1-foss-2022b-dmpar.eb` easyconfig file to specify to EasyBuild
+`WRF-4.4.1-foss-2022b-dmpar.eb` simpleconfig file to specify to SimpleBuild
 to build and install WRF v4.4.1 using version 2022b of the `foss`
 toolchain, which is one of the [Common toolchains][common_toolchains].  The `foss`
 toolchain stands for `GCC, OpenMPI, OpenBLAS/LAPACK, ScaLAPACK, and FFTW`.
@@ -46,20 +46,20 @@ See [List of known toolchains][toolchains_table] for a list of all available too
 
 ## Getting an overview of planned installations
 
-To get an overview of the software that EasyBuild is going to build and install
+To get an overview of the software that SimpleBuild is going to build and install
 we can use the `--dry-run`/`-D` (see [Getting an overview of planned installations `--dry-run` / `-D`][get_an_overview]) command line option.
-This will show a list of easyconfig files
+This will show a list of simpleconfig files
 that will be used, together with the module files that will be installed,
 as well as their current availability (`[x]` marks available modules).
 
-Note that EasyBuild will take care of all of the dependencies of WRF as well,
+Note that SimpleBuild will take care of all of the dependencies of WRF as well,
 and can even install the compiler toolchain as well if the corresponding modules are not available yet:
 
 ``` console
 $ eb WRF-4.4.1-foss-2022b-dmpar.eb -Dr
-== Temporary log file in case of crash /tmp/vsc44588/eb-n67uls6o/easybuild-2r30g117.log
-Dry run: printing build status of easyconfigs and dependencies
-CFGS=/user/gent/445/vsc44588/easybuild/easybuild-easyconfigs/easybuild/easyconfigs
+== Temporary log file in case of crash /tmp/vsc44588/eb-n67uls6o/simplebuild-2r30g117.log
+Dry run: printing build status of simpleconfigs and dependencies
+CFGS=/user/gent/445/vsc44588/simplebuild/simplebuild-simpleconfigs/simplebuild/simpleconfigs
  * [x] $CFGS/m/M4/M4-1.4.19.eb (module: M4/1.4.19)
  * [x] $CFGS/b/Bison/Bison-3.8.2.eb (module: Bison/3.8.2)
  * [x] $CFGS/f/flex/flex-2.6.4.eb (module: flex/2.6.4)
@@ -130,23 +130,23 @@ CFGS=/user/gent/445/vsc44588/easybuild/easybuild-easyconfigs/easybuild/easyconfi
  * [ ] $CFGS/n/netCDF/netCDF-4.9.0-gompi-2022b.eb (module: netCDF/4.9.0-gompi-2022b)
  * [ ] $CFGS/n/netCDF-Fortran/netCDF-Fortran-4.6.0-gompi-2022b.eb (module: netCDF-Fortran/4.6.0-gompi-2022b)
  * [ ] $CFGS/w/WRF/WRF-4.4.1-foss-2022b-dmpar.eb (module: WRF/4.4.1-foss-2022b-dmpar)
-== Temporary log file(s) /tmp/eb-n67uls6o/easybuild-2r30g117.log* have been removed.
+== Temporary log file(s) /tmp/eb-n67uls6o/simplebuild-2r30g117.log* have been removed.
 == Temporary directory /tmp/eb-n67uls6o has been removed.
 ```
 
 
 ## Installing a software stack
 
-To make EasyBuild build and install WRF, including all of its dependencies, a **single command** is sufficient.
+To make SimpleBuild build and install WRF, including all of its dependencies, a **single command** is sufficient.
 
 By using the `--robot`/`-r` (see [Enabling dependency resolution, `--robot` / `-r` and `--robot-paths`][use_robot]) command line option,
 we enable dependency resolution such that the entire software stack is handled:
 
 ``` console
 $ eb WRF-4.4.1-foss-2022b-dmpar.eb --robot
-== temporary log file in case of crash /tmp/eb-LfQa8b/easybuild-TBXLTy.log
+== temporary log file in case of crash /tmp/eb-LfQa8b/simplebuild-TBXLTy.log
 == resolving dependencies ...
-== processing EasyBuild easyconfig /home/example/.local/easybuild/software/EasyBuild/4.8.0/easybuild/easyconfigs/w/WRF/WRF-4.4.1-foss-2022b-dmpar.eb
+== processing SimpleBuild simpleconfig /home/example/.local/simplebuild/software/SimpleBuild/4.8.0/simplebuild/simpleconfigs/w/WRF/WRF-4.4.1-foss-2022b-dmpar.eb
 == building and installing ncurses/6.3-GCCcore-12.2.0...
 [...]
 == building and installing tcsh/6.20.00-GCCcore-12.2.0...
@@ -172,7 +172,7 @@ $ eb WRF-4.4.1-foss-2022b-dmpar.eb --robot
 == building and installing WRF/4.4.1-foss-2022b-dmpar...
 [...]
 == Build succeeded for 12 out of 12
-== Temporary log file(s) /tmp/eb-LfQa8b/easybuild-TBXLTy.log* have been removed.
+== Temporary log file(s) /tmp/eb-LfQa8b/simplebuild-TBXLTy.log* have been removed.
 == Temporary directory /tmp/eb-LfQa8b has been removed.
 ```
 
@@ -183,7 +183,7 @@ $ module load WRF/4.4.1-foss-2022b-dmpar
 $ module list
 
 Currently Loaded Modules:
-  1) EasyBuild/4.8.0                    18) OpenBLAS/0.3.21-GCC-12.2.0
+  1) SimpleBuild/4.8.0                    18) OpenBLAS/0.3.21-GCC-12.2.0
   2) GCCcore/12.2.0                     19) FlexiBLAS/3.2.1-GCC-12.2.0
   3) zlib/1.2.12-GCCcore-12.2.0         20) FFTW/3.3.10-GCC-12.2.0 foss/2018b
   4) binutils/2.39-GCCcore-12.2.0       21) gompi/2022b
@@ -202,4 +202,4 @@ Currently Loaded Modules:
  17) OpenMPI/4.1.4-GCC-12.2.0           34) WRF/4.4.1-foss-2022b-dmpar
 ```
 
-For more information, see also [Using EasyBuild](using-easybuild.md).
+For more information, see also [Using SimpleBuild](using-simplebuild.md).

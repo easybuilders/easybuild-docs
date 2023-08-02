@@ -10,11 +10,11 @@
     ],
     [
       0.000187,
-      "# EasyBuild is a build and installation framework for (scientific) software on HPC systems\r\n# http://hpcugent.github.io/easybuild/ - http://easybuild.readthedocs.io/\r\n\r\n# author: Kenneth Hoste (a.k.a. boegel) -- kenneth.hoste@ugent.be\r\n# date: Oct 8th 2016 (EasyBuild v2.9.0)\r\n\r\n"
+      "# SimpleBuild is a build and installation framework for (scientific) software on HPC systems\r\n# http://hpcugent.github.io/simplebuild/ - http://simplebuild.readthedocs.io/\r\n\r\n# author: Kenneth Hoste (a.k.a. boegel) -- kenneth.hoste@ugent.be\r\n# date: Oct 8th 2016 (SimpleBuild v2.9.0)\r\n\r\n"
     ],
     [
       0.129939,
-      "\r\n#\r\n# Configuring EasyBuild\r\n# *********************\r\n#\r\n"
+      "\r\n#\r\n# Configuring SimpleBuild\r\n# *********************\r\n#\r\n"
     ],
     [
       0.00019,
@@ -366,7 +366,7 @@
     ],
     [
       0.044811,
-      "http://easybuild.readthedocs.io/en/latest/Configuration.html"
+      "http://simplebuild.readthedocs.io/en/latest/Configuration.html"
     ],
     [
       0.057686,
@@ -386,7 +386,7 @@
     ],
     [
       6.3e-05,
-      "# Configuring EasyBuild -- http://easybuild.readthedocs.io/en/latest/Configuration.html\r\n"
+      "# Configuring SimpleBuild -- http://simplebuild.readthedocs.io/en/latest/Configuration.html\r\n"
     ],
     [
       3.1e-05,
@@ -798,11 +798,11 @@
     ],
     [
       0.38597,
-      "Usage: eb [options] easyconfig [...]\r\n\r\nBuilds software based on easyconfig (or parse a directory). Provide one or\r\nmore easyconfigs or directories, use -H or --help more information.\r\n\r\nOptions:\r\n  --version             show program's version number and exit\r\n  -h, --shorthelp       show short help message and exit\r\n  -H OUTPUT_FORMAT, --help=OUTPUT_FORMAT\r\n                        show full help message and exit\r\n  --confighelp          show help as annotated configfile\r\n\r\n  Debug and logging options (configfile section MAIN):\r\n    -d, --debug         Enable debug log mode (def False)\r\n    --info              Enable info log mode (def False)\r\n    --quiet             Enable quiet/warning log mode (def False)\r\n\r\n  Configfile options:\r\n    --configfiles=CONFIGFILES\r\n                        Parse (additional) configfiles (type comma-separated\r\n                        list; def )\r\n    --ignoreconfigfiles=IGNORECONFIGFILES\r\n                        Ignore configfiles (type comma-separated list)\r\n\r\n  Basic options:\r"
+      "Usage: eb [options] simpleconfig [...]\r\n\r\nBuilds software based on simpleconfig (or parse a directory). Provide one or\r\nmore simpleconfigs or directories, use -H or --help more information.\r\n\r\nOptions:\r\n  --version             show program's version number and exit\r\n  -h, --shorthelp       show short help message and exit\r\n  -H OUTPUT_FORMAT, --help=OUTPUT_FORMAT\r\n                        show full help message and exit\r\n  --confighelp          show help as annotated configfile\r\n\r\n  Debug and logging options (configfile section MAIN):\r\n    -d, --debug         Enable debug log mode (def False)\r\n    --info              Enable info log mode (def False)\r\n    --quiet             Enable quiet/warning log mode (def False)\r\n\r\n  Configfile options:\r\n    --configfiles=CONFIGFILES\r\n                        Parse (additional) configfiles (type comma-separated\r\n                        list; def )\r\n    --ignoreconfigfiles=IGNORECONFIGFILES\r\n                        Ignore configfiles (type comma-separated list)\r\n\r\n  Basic options:\r"
     ],
     [
       6e-05,
-      "\r\n    Basic runtime options for EasyBuild. (configfile section basic)\r\n\r\n    --dry-run           Print build overview incl. dependencies (full paths)\r\n                        (def False)\r\n    -D, --dry-run-short\r\n"
+      "\r\n    Basic runtime options for SimpleBuild. (configfile section basic)\r\n\r\n    --dry-run           Print build overview incl. dependencies (full paths)\r\n                        (def False)\r\n    -D, --dry-run-short\r\n"
     ],
     [
       0.015149,
@@ -1442,7 +1442,7 @@
     ],
     [
       4e-05,
-      "# Configuring EasyBuild -- http://easybuild.readthedocs.io/en/latest/Configuration.html\r\n"
+      "# Configuring SimpleBuild -- http://simplebuild.readthedocs.io/en/latest/Configuration.html\r\n"
     ],
     [
       1.6e-05,
@@ -2466,7 +2466,7 @@
     ],
     [
       0.542842,
-      "#\r\n# Current EasyBuild configuration\r\n# (C: command line argument, D: default value, E: environment variable, F: configuration file)\r\n#\r\nadd-dummy-to-minimal-toolchains (D) = False\r\naggregate-regtest               (D) = None\r\nallow-modules-tool-mismatch     (D) = False\r\namend                           (D) = None\r\navail-cfgfile-constants         (D) = False\r\navail-easyconfig-constants      (D) = False\r\navail-easyconfig-licenses       (D) = False\r\navail-easyconfig-params         (D) = False\r\navail-easyconfig-templates      (D) = False\r\navail-module-naming-schemes     (D) = False\r\navail-modules-tools             (D) = False\r\navail-repositories              (D) = False\r\navail-toolchain-opts            (D) = None\r\nbuildpath                       (D) = /Users/kehoste/.local/easybuild/build\r\ncheck-conflicts                 (D) = False\r\ncheck-github                    (D) = False\r\ncleanup-builddir                (D) = True\r\ncleanup-tmpdir                  (D) = True\r\ncolor                           (D) = auto\r\nconfig"
+      "#\r\n# Current SimpleBuild configuration\r\n# (C: command line argument, D: default value, E: environment variable, F: configuration file)\r\n#\r\nadd-dummy-to-minimal-toolchains (D) = False\r\naggregate-regtest               (D) = None\r\nallow-modules-tool-mismatch     (D) = False\r\namend                           (D) = None\r\navail-cfgfile-constants         (D) = False\r\navail-simpleconfig-constants      (D) = False\r\navail-simpleconfig-licenses       (D) = False\r\navail-simpleconfig-params         (D) = False\r\navail-simpleconfig-templates      (D) = False\r\navail-module-naming-schemes     (D) = False\r\navail-modules-tools             (D) = False\r\navail-repositories              (D) = False\r\navail-toolchain-opts            (D) = None\r\nbuildpath                       (D) = /Users/kehoste/.local/simplebuild/build\r\ncheck-conflicts                 (D) = False\r\ncheck-github                    (D) = False\r\ncleanup-builddir                (D) = True\r\ncleanup-tmpdir                  (D) = True\r\ncolor                           (D) = auto\r\nconfig"
     ],
     [
       5.3e-05,
@@ -2830,7 +2830,7 @@
     ],
     [
       4.2e-05,
-      "# Configuring EasyBuild -- http://easybuild.readthedocs.io/en/latest/Configuration.html\r\n"
+      "# Configuring SimpleBuild -- http://simplebuild.readthedocs.io/en/latest/Configuration.html\r\n"
     ],
     [
       1.8e-05,
@@ -3614,7 +3614,7 @@
     ],
     [
       0.561146,
-      "#\r\n# Current EasyBuild configuration\r\n# (C: command line argument, D: default value, E: environment variable, F: configuration file)\r\n#\r\nbuildpath      (D) = /Users/kehoste/.local/easybuild/build\r\ninstallpath    (D) = /Users/kehoste/.local/easybuild\r\nrepositorypath (D) = /Users/kehoste/.local/easybuild/ebfiles_repo\r\nrobot-paths    (D) = /Users/kehoste/EasyBuild/software/EasyBuild/2.9.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.9.0-py2.7.egg/easybuild/easyconfigs\r\nsourcepath     (D) = /Users/kehoste/.local/easybuild/sources\r\n"
+      "#\r\n# Current SimpleBuild configuration\r\n# (C: command line argument, D: default value, E: environment variable, F: configuration file)\r\n#\r\nbuildpath      (D) = /Users/kehoste/.local/simplebuild/build\r\ninstallpath    (D) = /Users/kehoste/.local/simplebuild\r\nrepositorypath (D) = /Users/kehoste/.local/simplebuild/ebfiles_repo\r\nrobot-paths    (D) = /Users/kehoste/SimpleBuild/software/SimpleBuild/2.9.0/lib/python2.7/site-packages/simplebuild_simpleconfigs-2.9.0-py2.7.egg/simplebuild/simpleconfigs\r\nsourcepath     (D) = /Users/kehoste/.local/simplebuild/sources\r\n"
     ],
     [
       0.018795,
@@ -5706,7 +5706,7 @@
     ],
     [
       0.000114,
-      "# Configuring EasyBuild -- http://easybuild.readthedocs.io/en/latest/Configuration.html\r\n#\r\n"
+      "# Configuring SimpleBuild -- http://simplebuild.readthedocs.io/en/latest/Configuration.html\r\n#\r\n"
     ],
     [
       2.6e-05,
@@ -9374,7 +9374,7 @@
     ],
     [
       0.547444,
-      "#\r\n# Current EasyBuild configuration\r\n# (C: command line argument, D: default value, E: environment variable, F: configuration file)\r\n#\r\nbuildpath      (F) = /tmp/eb_prefix_via_cfgfile/build\r\ninstallpath    (F) = /tmp/eb_prefix_via_cfgfile\r\npackagepath    (F) = /tmp/eb_prefix_via_cfgfile/packages\r\nprefix         (F) = /tmp/eb_prefix_via_cfgfile\r\nrepositorypath (F) = /tmp/eb_prefix_via_cfgfile/ebfiles_repo\r\nrobot-paths    (D) = /Users/kehoste/EasyBuild/software/EasyBuild/2.9.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.9.0-py2.7.egg/easybuild/easyconfigs\r\nsourcepath     (F) = /tmp/eb_prefix_via_cfgfile/sources\r\n"
+      "#\r\n# Current SimpleBuild configuration\r\n# (C: command line argument, D: default value, E: environment variable, F: configuration file)\r\n#\r\nbuildpath      (F) = /tmp/eb_prefix_via_cfgfile/build\r\ninstallpath    (F) = /tmp/eb_prefix_via_cfgfile\r\npackagepath    (F) = /tmp/eb_prefix_via_cfgfile/packages\r\nprefix         (F) = /tmp/eb_prefix_via_cfgfile\r\nrepositorypath (F) = /tmp/eb_prefix_via_cfgfile/ebfiles_repo\r\nrobot-paths    (D) = /Users/kehoste/SimpleBuild/software/SimpleBuild/2.9.0/lib/python2.7/site-packages/simplebuild_simpleconfigs-2.9.0-py2.7.egg/simplebuild/simpleconfigs\r\nsourcepath     (F) = /tmp/eb_prefix_via_cfgfile/sources\r\n"
     ],
     [
       0.01937,
@@ -9786,7 +9786,7 @@
     ],
     [
       0.000159,
-      "# Configuring EasyBuild -- http://easybuild.readthedocs.io/en/latest/Configuration.html\r\n"
+      "# Configuring SimpleBuild -- http://simplebuild.readthedocs.io/en/latest/Configuration.html\r\n"
     ],
     [
       2.7e-05,
@@ -9798,7 +9798,7 @@
     ],
     [
       7.1e-05,
-      "# There are 3 different configuration levels supported in EasyBuild:\r\n"
+      "# There are 3 different configuration levels supported in SimpleBuild:\r\n"
     ],
     [
       3.2e-05,
@@ -9850,7 +9850,7 @@
     ],
     [
       5.7e-05,
-      "# - define $EASYBUILD_PREFIX in the environment\r\n"
+      "# - define $SIMPLEBUILD_PREFIX in the environment\r\n"
     ],
     [
       2.9e-05,
@@ -10582,7 +10582,7 @@
     ],
     [
       0.558758,
-      "#\r\n# Current EasyBuild configuration\r\n# (C: command line argument, D: default value, E: environment variable, F: configuration file)\r\n#\r\nbuildpath      (E) = /tmp/eb_prefix_via_envvar/build\r\ninstallpath    (E) = /tmp/eb_prefix_via_envvar\r\npackagepath    (E) = /tmp/eb_prefix_via_envvar/packages\r\nprefix         (E) = /tmp/eb_prefix_via_envvar\r\nrepositorypath (E) = /tmp/eb_prefix_via_envvar/ebfiles_repo\r\nrobot-paths    (D) = /Users/kehoste/EasyBuild/software/EasyBuild/2.9.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.9.0-py2.7.egg/easybuild/easyconfigs\r\nsourcepath     (E) = /tmp/eb_prefix_via_envvar/sources\r\n"
+      "#\r\n# Current SimpleBuild configuration\r\n# (C: command line argument, D: default value, E: environment variable, F: configuration file)\r\n#\r\nbuildpath      (E) = /tmp/eb_prefix_via_envvar/build\r\ninstallpath    (E) = /tmp/eb_prefix_via_envvar\r\npackagepath    (E) = /tmp/eb_prefix_via_envvar/packages\r\nprefix         (E) = /tmp/eb_prefix_via_envvar\r\nrepositorypath (E) = /tmp/eb_prefix_via_envvar/ebfiles_repo\r\nrobot-paths    (D) = /Users/kehoste/SimpleBuild/software/SimpleBuild/2.9.0/lib/python2.7/site-packages/simplebuild_simpleconfigs-2.9.0-py2.7.egg/simplebuild/simpleconfigs\r\nsourcepath     (E) = /tmp/eb_prefix_via_envvar/sources\r\n"
     ],
     [
       0.020032,
@@ -10934,7 +10934,7 @@
     ],
     [
       0.001302,
-      "#\r\n# Configuring EasyBuild -- http://easybuild.readthedocs.io/en/latest/Configuration.html\r\n#\r\n\r\n# There are 3 different configuration levels supported in EasyBuild:\r\n# - configuration file(s)\r\n# - environment variables\r\n# - command line options\r\n\r\n# These different configuration levels are considered in order; that is:\r\n# - command line options override environment variables\r\n# - environment variables override configuration files\r\n#\r\n# Each configuration option is always supported on all 3 configuration levels, no exceptions!\r\n\r\n# For example, to specify the 'prefix' configuration option, you can either:\r\n# - specify a value for 'prefix' in a configuration file\r\n# - define $EASYBUILD_PREFIX in the environment\r\n# - use the --prefix command line option\r\n\r\n\r\n#"
+      "#\r\n# Configuring SimpleBuild -- http://simplebuild.readthedocs.io/en/latest/Configuration.html\r\n#\r\n\r\n# There are 3 different configuration levels supported in SimpleBuild:\r\n# - configuration file(s)\r\n# - environment variables\r\n# - command line options\r\n\r\n# These different configuration levels are considered in order; that is:\r\n# - command line options override environment variables\r\n# - environment variables override configuration files\r\n#\r\n# Each configuration option is always supported on all 3 configuration levels, no exceptions!\r\n\r\n# For example, to specify the 'prefix' configuration option, you can either:\r\n# - specify a value for 'prefix' in a configuration file\r\n# - define $SIMPLEBUILD_PREFIX in the environment\r\n# - use the --prefix command line option\r\n\r\n\r\n#"
     ],
     [
       0.034208,
@@ -11442,7 +11442,7 @@
     ],
     [
       0.526842,
-      "#\r\n# Current EasyBuild configuration\r\n# (C: command line argument, D: default value, E: environment variable, F: configuration file)\r\n#\r\nbuildpath      (C) = /tmp/eb_prefix_via_cmdline/build\r\ninstallpath    (C) = /tmp/eb_prefix_via_cmdline\r\npackagepath    (C) = /tmp/eb_prefix_via_cmdline/packages\r\nprefix         (C) = /tmp/eb_prefix_via_cmdline\r\nrepositorypath (C) = /tmp/eb_prefix_via_cmdline/ebfiles_repo\r\nrobot-paths    (D) = /Users/kehoste/EasyBuild/software/EasyBuild/2.9.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.9.0-py2.7.egg/easybuild/easyconfigs\r\nsourcepath     (C) = /tmp/eb_prefix_via_cmdline/sources\r\n"
+      "#\r\n# Current SimpleBuild configuration\r\n# (C: command line argument, D: default value, E: environment variable, F: configuration file)\r\n#\r\nbuildpath      (C) = /tmp/eb_prefix_via_cmdline/build\r\ninstallpath    (C) = /tmp/eb_prefix_via_cmdline\r\npackagepath    (C) = /tmp/eb_prefix_via_cmdline/packages\r\nprefix         (C) = /tmp/eb_prefix_via_cmdline\r\nrepositorypath (C) = /tmp/eb_prefix_via_cmdline/ebfiles_repo\r\nrobot-paths    (D) = /Users/kehoste/SimpleBuild/software/SimpleBuild/2.9.0/lib/python2.7/site-packages/simplebuild_simpleconfigs-2.9.0-py2.7.egg/simplebuild/simpleconfigs\r\nsourcepath     (C) = /tmp/eb_prefix_via_cmdline/sources\r\n"
     ],
     [
       0.019119,
@@ -11818,7 +11818,7 @@
     ],
     [
       0.000106,
-      "# Configuring EasyBuild -- http://easybuild.readthedocs.io/en/latest/Configuration.html\r\n#\r\n"
+      "# Configuring SimpleBuild -- http://simplebuild.readthedocs.io/en/latest/Configuration.html\r\n#\r\n"
     ],
     [
       2.6e-05,
@@ -14242,7 +14242,7 @@
     ],
     [
       0.594253,
-      "#\r\n# Current EasyBuild configuration\r\n# (C: command line argument, D: default value, E: environment variable, F: configuration file)\r\n#\r\nbuildpath      (C) = /dev/shm/kehoste\r\ninstallpath    (C) = /tmp/kehoste\r\nmodule-syntax  (F) = Lua\r\nmodules-tool   (F) = Lmod\r\npackagepath    (E) = /Users/kehoste/EasyBuild/packages\r\nprefix         (E) = /Users/kehoste/EasyBuild\r\nrepositorypath (E) = /Users/kehoste/EasyBuild/ebfiles_repo\r\nrobot-paths    (D) = /Users/kehoste/EasyBuild/software/EasyBuild/2.9.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.9.0-py2.7.egg/easybuild/easyconfigs\r\nsourcepath     (E) = /Users/kehoste/EasyBuild/sources\r\n"
+      "#\r\n# Current SimpleBuild configuration\r\n# (C: command line argument, D: default value, E: environment variable, F: configuration file)\r\n#\r\nbuildpath      (C) = /dev/shm/kehoste\r\ninstallpath    (C) = /tmp/kehoste\r\nmodule-syntax  (F) = Lua\r\nmodules-tool   (F) = Lmod\r\npackagepath    (E) = /Users/kehoste/SimpleBuild/packages\r\nprefix         (E) = /Users/kehoste/SimpleBuild\r\nrepositorypath (E) = /Users/kehoste/SimpleBuild/ebfiles_repo\r\nrobot-paths    (D) = /Users/kehoste/SimpleBuild/software/SimpleBuild/2.9.0/lib/python2.7/site-packages/simplebuild_simpleconfigs-2.9.0-py2.7.egg/simplebuild/simpleconfigs\r\nsourcepath     (E) = /Users/kehoste/SimpleBuild/sources\r\n"
     ],
     [
       0.018853,
@@ -15074,7 +15074,7 @@
     ],
     [
       0.000121,
-      "# Configuring EasyBuild -- http://easybuild.readthedocs.io/en/latest/Configuration.html\r\n#\r\n"
+      "# Configuring SimpleBuild -- http://simplebuild.readthedocs.io/en/latest/Configuration.html\r\n#\r\n"
     ],
     [
       3.4e-05,
@@ -16774,7 +16774,7 @@
     ],
     [
       0.012196,
-      "# Install path for software and modules (def /Users/kehoste/.local/easybuild)\r\n#installpath=\r\n--\r\n# Install path for modules (if None, combine --installpath and --subdir-modules)\r\n#installpath-modules=\r\n--\r\n# Install path for software (if None, combine --installpath and --subdir-software)\r\n#installpath-software=\r\n"
+      "# Install path for software and modules (def /Users/kehoste/.local/simplebuild)\r\n#installpath=\r\n--\r\n# Install path for modules (if None, combine --installpath and --subdir-modules)\r\n#installpath-modules=\r\n--\r\n# Install path for software (if None, combine --installpath and --subdir-software)\r\n#installpath-software=\r\n"
     ],
     [
       0.000841,
@@ -16790,7 +16790,7 @@
     ],
     [
       8.7e-05,
-      "# Configuring EasyBuild -- http://easybuild.readthedocs.io/en/latest/Configuration.html\r\n"
+      "# Configuring SimpleBuild -- http://simplebuild.readthedocs.io/en/latest/Configuration.html\r\n"
     ],
     [
       3.5e-05,
@@ -18694,7 +18694,7 @@
     ],
     [
       0.401085,
-      "Default list of configuration files:\r\n\r\n[with $XDG_CONFIG_HOME: (not set), $XDG_CONFIG_DIRS: (not set)]\r\n\r\n* user-level: ${XDG_CONFIG_HOME:-$HOME/.config}/easybuild/config.cfg\r\n  -> /Users/kehoste/.config/easybuild/config.cfg => found\r\n* system-level: ${XDG_CONFIG_DIRS:-/etc}/easybuild.d/*.cfg\r\n  -> {/etc}/easybuild.d/*.cfg => (no matches)\r\n\r\nDefault list of existing configuration files (1): /Users/kehoste/.config/easybuild/config.cfg\r\n"
+      "Default list of configuration files:\r\n\r\n[with $XDG_CONFIG_HOME: (not set), $XDG_CONFIG_DIRS: (not set)]\r\n\r\n* user-level: ${XDG_CONFIG_HOME:-$HOME/.config}/simplebuild/config.cfg\r\n  -> /Users/kehoste/.config/simplebuild/config.cfg => found\r\n* system-level: ${XDG_CONFIG_DIRS:-/etc}/simplebuild.d/*.cfg\r\n  -> {/etc}/simplebuild.d/*.cfg => (no matches)\r\n\r\nDefault list of existing configuration files (1): /Users/kehoste/.config/simplebuild/config.cfg\r\n"
     ],
     [
       0.01647,
@@ -18710,7 +18710,7 @@
     ],
     [
       8e-05,
-      "# Configuring EasyBuild -- http://easybuild.readthedocs.io/en/latest/Configuration.html\r\n"
+      "# Configuring SimpleBuild -- http://simplebuild.readthedocs.io/en/latest/Configuration.html\r\n"
     ],
     [
       3.1e-05,
@@ -19502,7 +19502,7 @@
     ],
     [
       0.574857,
-      "#\r\n# Current EasyBuild configuration\r\n# (C: command line argument, D: default value, E: environment variable, F: configuration file)\r\n#\r\nbuildpath      (D) = /Users/kehoste/.local/easybuild/build\r\ninstallpath    (D) = /Users/kehoste/.local/easybuild\r\nrepositorypath (D) = /Users/kehoste/.local/easybuild/ebfiles_repo\r\nrobot-paths    (D) = /Users/kehoste/EasyBuild/software/EasyBuild/2.9.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.9.0-py2.7.egg/easybuild/easyconfigs\r\nsourcepath     (D) = /Users/kehoste/.local/easybuild/sources\r\n"
+      "#\r\n# Current SimpleBuild configuration\r\n# (C: command line argument, D: default value, E: environment variable, F: configuration file)\r\n#\r\nbuildpath      (D) = /Users/kehoste/.local/simplebuild/build\r\ninstallpath    (D) = /Users/kehoste/.local/simplebuild\r\nrepositorypath (D) = /Users/kehoste/.local/simplebuild/ebfiles_repo\r\nrobot-paths    (D) = /Users/kehoste/SimpleBuild/software/SimpleBuild/2.9.0/lib/python2.7/site-packages/simplebuild_simpleconfigs-2.9.0-py2.7.egg/simplebuild/simpleconfigs\r\nsourcepath     (D) = /Users/kehoste/.local/simplebuild/sources\r\n"
     ],
     [
       0.020052,
@@ -20038,7 +20038,7 @@
     ],
     [
       0.546724,
-      "#\r\n# Current EasyBuild configuration\r\n# (C: command line argument, D: default value, E: environment variable, F: configuration file)\r\n#\r\nbuildpath      (F) = /tmp/eb_prefix_via_cfgfile/build\r\nconfigfiles    (C) = /Users/kehoste/.config/easybuild/config.cfg, /Users/kehoste/work/eb-asciinema/my_eb_settings.cfg\r\ninstallpath    (F) = /tmp/eb_prefix_via_cfgfile\r\npackagepath    (F) = /tmp/eb_prefix_via_cfgfile/packages\r\nprefix         (F) = /tmp/eb_prefix_via_cfgfile\r\nrepositorypath (F) = /tmp/eb_prefix_via_cfgfile/ebfiles_repo\r\nrobot-paths    (D) = /Users/kehoste/EasyBuild/software/EasyBuild/2.9.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.9.0-py2.7.egg/easybuild/easyconfigs\r\nsourcepath     (F) = /tmp/eb_prefix_via_cfgfile/sources\r\n"
+      "#\r\n# Current SimpleBuild configuration\r\n# (C: command line argument, D: default value, E: environment variable, F: configuration file)\r\n#\r\nbuildpath      (F) = /tmp/eb_prefix_via_cfgfile/build\r\nconfigfiles    (C) = /Users/kehoste/.config/simplebuild/config.cfg, /Users/kehoste/work/eb-asciinema/my_eb_settings.cfg\r\ninstallpath    (F) = /tmp/eb_prefix_via_cfgfile\r\npackagepath    (F) = /tmp/eb_prefix_via_cfgfile/packages\r\nprefix         (F) = /tmp/eb_prefix_via_cfgfile\r\nrepositorypath (F) = /tmp/eb_prefix_via_cfgfile/ebfiles_repo\r\nrobot-paths    (D) = /Users/kehoste/SimpleBuild/software/SimpleBuild/2.9.0/lib/python2.7/site-packages/simplebuild_simpleconfigs-2.9.0-py2.7.egg/simplebuild/simpleconfigs\r\nsourcepath     (F) = /tmp/eb_prefix_via_cfgfile/sources\r\n"
     ]
   ],
   "width": 100,

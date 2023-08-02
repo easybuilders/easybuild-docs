@@ -1,6 +1,6 @@
-# List of easyblocks {: #vsd_list_easyblocks }
+# List of simpleblocks {: #vsd_list_simpleblocks }
 
-- **EasyBlock**
+- **SimpleBlock**
   - Binary
     - Conda
     - EB_ABAQUS
@@ -234,7 +234,7 @@
   - EB_WPS
   - EB_WRF
   - EB_WRF_minus_Fire
-  - ExtensionEasyBlock
+  - ExtensionSimpleBlock
     - Cargo
       - CargoPythonPackage
     - EB_Scipion
@@ -251,7 +251,7 @@
       - ConfigureMakePythonPackage
       - EB_cryptography
       - EB_dm_minus_reverb
-      - EB_EasyBuildMeta
+      - EB_SimpleBuildMeta
       - EB_EggLib
       - EB_jaxlib
       - EB_libxml2
@@ -348,7 +348,7 @@
     - EB_Xmipp
   - Waf
 - **Extension**
-  - ExtensionEasyBlock
+  - ExtensionSimpleBlock
     - Cargo
       - CargoPythonPackage
     - EB_Scipion
@@ -365,7 +365,7 @@
       - ConfigureMakePythonPackage
       - EB_cryptography
       - EB_dm_minus_reverb
-      - EB_EasyBuildMeta
+      - EB_SimpleBuildMeta
       - EB_EggLib
       - EB_jaxlib
       - EB_libxml2
@@ -410,4 +410,4 @@
       - EB_RepeatMasker
       - EB_RepeatModeler
 
-*(see also* ``eb --list-easyblocks`` and* [*overview of generic easyblocks*][generic_easyblocks] *)*
+*(see also* ``eb --list-simpleblocks`` and* [*overview of generic simpleblocks*][generic_simpleblocks] *)*

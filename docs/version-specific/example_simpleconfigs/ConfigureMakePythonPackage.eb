@@ -1,4 +1,4 @@
-easyblock = 'ConfigureMakePythonPackage'
+simpleblock = 'ConfigureMakePythonPackage'
 
 name = 'PyQt'
 version = '4.11.3'

@@ -1,85 +1,85 @@
-# Configuration Legacy {: #configuring_easybuild_legacy }
+# Configuration Legacy {: #configuring_simplebuild_legacy }
 
 Legacy configuration is currently **deprecated!**
 
-If you are a new user of EasyBuild you can safely ignore everything
-below this line, refer instead to [Configuring EasyBuild][configuring_easybuild].
+If you are a new user of SimpleBuild you can safely ignore everything
+below this line, refer instead to [Configuring SimpleBuild][configuring_simplebuild].
 
 ---
 
 ## Porting from legacy configuration style
 
-In EasyBuild v1.x, a couple of configuration options, other than the
+In SimpleBuild v1.x, a couple of configuration options, other than the
 standard ones aligned with variables, are available that follow the
 **legacy configuration style**, including:
 
 - the `-C` and `--config` command line arguments ( **use**
     `--configfiles` **instead** )
-- the `$EASYBUILDCONFIG` environment variable ( **use**
-    `$EASYBUILD_CONFIGFILES` **instead** )
-- the default path `$HOME/.easybuild/config.py` ( **new-style default
-    path is** `$XDG_CONFIG_HOME/easybuild/config.cfg`)
+- the `$SIMPLEBUILDCONFIG` environment variable ( **use**
+    `$SIMPLEBUILD_CONFIGFILES` **instead** )
+- the default path `$HOME/.simplebuild/config.py` ( **new-style default
+    path is** `$XDG_CONFIG_HOME/simplebuild/config.cfg`)
 - the legacy fallback path
-    `<installpath>/easybuild/easybuild_config.py` ( **only
-    default/fallback path is** `$XDG_CONFIG_HOME/easybuild/config.cfg`)
+    `<installpath>/simplebuild/simplebuild_config.py` ( **only
+    default/fallback path is** `$XDG_CONFIG_HOME/simplebuild/config.cfg`)
 
 Likewise, the following legacy environment variables allowed to override
 selected configuration settings:
 
-- `$EASYBUILDBUILDPATH`: build path to be used by EasyBuild ( **use**
-    `$EASYBUILD_BUILDPATH` **instead** )
-- `$EASYBUILDINSTALLPATH`: install path to be used by EasyBuild (
-    **use** `$EASYBUILD_INSTALLPATH` **instead** )
-- `$EASYBUILDSOURCEPATH`: source path to be used by EasyBuild (
-    **use** `$EASYBUILD_SOURCEPATH` **instead** )
-- `$EASYBUILDPREFIX`: build/install/source path prefix to be used (
-    **use** `$EASYBUILD_PREFIX` **instead** )
+- `$SIMPLEBUILDBUILDPATH`: build path to be used by SimpleBuild ( **use**
+    `$SIMPLEBUILD_BUILDPATH` **instead** )
+- `$SIMPLEBUILDINSTALLPATH`: install path to be used by SimpleBuild (
+    **use** `$SIMPLEBUILD_INSTALLPATH` **instead** )
+- `$SIMPLEBUILDSOURCEPATH`: source path to be used by SimpleBuild (
+    **use** `$SIMPLEBUILD_SOURCEPATH` **instead** )
+- `$SIMPLEBUILDPREFIX`: build/install/source path prefix to be used (
+    **use** `$SIMPLEBUILD_PREFIX` **instead** )
 
-We *strongly* advise to switch to the new way of configuring EasyBuild
+We *strongly* advise to switch to the new way of configuring SimpleBuild
 as soon as possible, since the legacy configuration style will no longer
-be supported in EasyBuild v2.x.
+be supported in SimpleBuild v2.x.
 
-## How EasyBuild used to be configured in the early days
+## How SimpleBuild used to be configured in the early days
 
-Configuring *EasyBuild* is done by providing a configuration
+Configuring *SimpleBuild* is done by providing a configuration
 file.
 
-EasyBuild expects the configuration file to contain valid Python code,
+SimpleBuild expects the configuration file to contain valid Python code,
 because it executes its contents (using `exec`). The rationale is that
-this approach provides a lot of flexibility for configuring EasyBuild.
+this approach provides a lot of flexibility for configuring SimpleBuild.
 
-EasyBuild will use the file that is provided by the path/filename in the
+SimpleBuild will use the file that is provided by the path/filename in the
 following order of preference:
 
-- path/filename specified on the EasyBuild command line (using
+- path/filename specified on the SimpleBuild command line (using
     `--config`),
 - path/filename obtained from the environment variable
-    `EASYBUILDCONFIG` (if it is defined)
-- `$HOME/.easybuild/config.py` (as of EasyBuild v1.1)
+    `SIMPLEBUILDCONFIG` (if it is defined)
+- `$HOME/.simplebuild/config.py` (as of SimpleBuild v1.1)
 - the (default) configuration file at
-    `<path where EasyBuild was installed>/easybuild/easybuild_config.py`
+    `<path where SimpleBuild was installed>/simplebuild/simplebuild_config.py`
 
 ### Configuration variables
 
 The configuration file must define the following five variables:
 `build_path`, `install_path`, `source_path`, `repository`, and
-`log_format`. If one of them is not defined, EasyBuild will complain and
+`log_format`. If one of them is not defined, SimpleBuild will complain and
 exit.
 
 #### Build path (required)
 
-The `build_path` variable specifies the directory in which EasyBuild
+The `build_path` variable specifies the directory in which SimpleBuild
 builds its software packages.
 
 Each software package is (by default) built in a subdirectory of the
 `build_path` under `<name>/<version>/<toolchain><versionsuffix>`.
 
-Note that the build directories are emptied by EasyBuild when the
+Note that the build directories are emptied by SimpleBuild when the
 installation is completed (by default).
 
 #### Install path (required)
 
-The `install_path` variable specifies the directory in which EasyBuild
+The `install_path` variable specifies the directory in which SimpleBuild
 installs software packages and the corresponding module files.
 
 The packages themselves are installed under `install_path/software` in
@@ -105,21 +105,21 @@ session.
 
 #### Source path (required)
 
-The `source_path` variable specifies the directory in which EasyBuild
+The `source_path` variable specifies the directory in which SimpleBuild
 looks for software source and install files.
 
-Similarly to the configuration file lookup, EasyBuild looks for the
+Similarly to the configuration file lookup, SimpleBuild looks for the
 installation files as given by the `sources` variable in the .eb
-easyconfig file, in the following order of preference:
+simpleconfig file, in the following order of preference:
 
 - `<source_path>/<name>`: a subdirectory determined by the name of the
     software package
 - `<source_path>/<letter>/<name>`: in the style of the
-    `easyblocks`/`easyconfigs` directories: in a subdirectory determined
+    `simpleblocks`/`simpleconfigs` directories: in a subdirectory determined
     by the first letter (in lower case) of the software package and by
     its full `name`
 - `<source_path>`: directly in the source path
 
-Note that these locations are also used when EasyBuild looks for patch
-files in addition to the various `easybuild/easyconfigs` directories
+Note that these locations are also used when SimpleBuild looks for patch
+files in addition to the various `simplebuild/simpleconfigs` directories
 that are listed in the `$PYTHONPATH`.

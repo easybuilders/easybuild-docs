@@ -10,11 +10,11 @@ Topics:
 
 ## Quick introduction to `--job` {: #submitting_jobs_quick_intro }
 
-Using the `--job` command line option, you can instruct EasyBuild to submit jobs for the installations that should
+Using the `--job` command line option, you can instruct SimpleBuild to submit jobs for the installations that should
 be performed, rather than performing the installations locally on the system you are on.
 
 If dependency resolution is enabled using `--robot` (see also [Enabling dependency resolution, `--robot` / `-r` and `--robot-paths`][use_robot]),
-EasyBuild will submit separate jobs and set dependencies between them to ensure they are run in the order dictated
+SimpleBuild will submit separate jobs and set dependencies between them to ensure they are run in the order dictated
 by the software dependency graph(s).
 
 
@@ -22,18 +22,18 @@ by the software dependency graph(s).
 
 ### Selecting the job backend (`--job-backend`)
 
-The job backend to be used can be specified using the `--job-backend` EasyBuild configuration option.
+The job backend to be used can be specified using the `--job-backend` SimpleBuild configuration option.
 
-Since EasyBuild 3.8.0, three backends are supported:
+Since SimpleBuild 3.8.0, three backends are supported:
 
-* `GC3Pie` *(default)* (supported since EasyBuild 2.2.0)
+* `GC3Pie` *(default)* (supported since SimpleBuild 2.2.0)
     * `GC3Pie` version 2.5.0 (or more recent) required (<https://gc3pie.readthedocs.org>)
     * works with different resource managers and job schedulers, including TORQUE/PBS, Slurm, etc.
     * **note**: requires that a GC3Pie configuration file is provided, see [Configuring the job backend][submitting_jobs_cfg_job_backend_config]
 * `PbsPython`
     * `pbs_python` version 4.1.0 (or more recent) required (<https://oss.trac.surfsara.nl/pbs_python>)
     * **note**: requires TORQUE resource manager (<https://adaptivecomputing.com/cherry-services/torque-resource-manager>)
-* `Slurm` (supported since EasyBuild 3.8.0)
+* `Slurm` (supported since SimpleBuild 3.8.0)
     * requires Slurm version 17.0 (or more recent), (<https://slurm.schedmd.com/>)
 
 
@@ -66,7 +66,7 @@ which job backend is being used:
 
 ### Job dependency type (`-job-deps-type`) {: #submitting_jobs_job_dependency_type }
 
-The type of dependency that is set by EasyBuild when submitting a job that depends on one or more other jobs
+The type of dependency that is set by SimpleBuild when submitting a job that depends on one or more other jobs
 can be specified via the `--job-deps-type` configuration setting:
 
 * with `--job-deps-type=abort_on_error`, job dependencies will be set such that a job that depends on other jobs
@@ -89,9 +89,9 @@ The default value for `-job-deps-type` depends on the job backend being used
 An integer value specifying the maximum walltime for jobs (in hours) can be specified via `--job-max-walltime`
 (default: 24).
 
-For easyconfigs for which a reference required walltime is available via the `build_stats` parameter in a matching
-easyconfig file from the easyconfig repository (see [Easyconfigs repository (`--repository`, `--repositorypath`)][easyconfigs_repo]),
-EasyBuild will set the walltime of the corresponding job to twice that value (unless the resulting value is higher
+For simpleconfigs for which a reference required walltime is available via the `build_stats` parameter in a matching
+simpleconfig file from the simpleconfig repository (see [Simpleconfigs repository (`--repository`, `--repositorypath`)][simpleconfigs_repo]),
+SimpleBuild will set the walltime of the corresponding job to twice that value (unless the resulting value is higher
 than the maximum walltime for jobs).
 
 If no such reference walltime is available, the maximum walltime is used.
@@ -124,7 +124,7 @@ The target resource that should be used by the job backend can be specified usin
 
 ## Usage of `--job` {: #submitting_jobs_usage }
 
-To make EasyBuild submit jobs to the job backend rather than performing the installations directly, the `--job`
+To make SimpleBuild submit jobs to the job backend rather than performing the installations directly, the `--job`
 command line option can be used.
 
 This following assumes that the required configuration settings w.r.t. the job backend to use are in place, see
@@ -133,7 +133,7 @@ This following assumes that the required configuration settings w.r.t. the job b
 
 ### Submitting jobs to a `PbsPython` or `Slurm` backend {: #submitting_jobs_usage_pbs_python }
 
-When using the `PbsPython` or `Slurm` backend, EasyBuild will submit separate jobs for each installation
+When using the `PbsPython` or `Slurm` backend, SimpleBuild will submit separate jobs for each installation
 to be performed, and then exit reporting a list of submitted jobs.
 
 To ensure that the installations are performed in the order dictated by the software dependency graph, dependencies
@@ -149,7 +149,7 @@ See also [Example: submitting installations to TORQUE via pbs_python][submitting
 
 ### Submitting jobs to a `GC3Pie` backend {: #submitting_jobs_usage_gc3pie }
 
-When using the `GC3Pie` backend, EasyBuild will create separate tasks for each installation to be performed and
+When using the `GC3Pie` backend, SimpleBuild will create separate tasks for each installation to be performed and
 supply them to GC3Pie, which will then take over and pass the installations through as jobs to the available
 resource(s) (see also [Configuring the job backend][submitting_jobs_cfg_job_backend_config]).
 
@@ -157,7 +157,7 @@ To ensure that the installations are performed in the order dictated by the soft
 between installations are specified to GC3Pie as inter-task dependencies. GC3Pie will then gradually feed the
 installations to its available resources as their dependencies have been satisfied.
 
-Any log messages produced by GC3Pie are included in the EasyBuild log file, and are tagged with `gc3pie`.
+Any log messages produced by GC3Pie are included in the SimpleBuild log file, and are tagged with `gc3pie`.
 
 See also [Example: submitting installations to SLURM via GC3Pie][submitting_jobs_examples_gc3pie_backend].
 
@@ -254,10 +254,10 @@ completed. A job overview will be printed every N seconds (see [Job polling inte
 Jobs are only submitted to the resource manager (SLURM, in this case) when all task dependencies have been resolved.
 
 ``` console
-$ export EASYBUILD_JOB_BACKEND=GC3Pie
-$ export EASYBUILD_JOB_BACKEND_CONFIG=$PWD/gc3pie.cfg
+$ export SIMPLEBUILD_JOB_BACKEND=GC3Pie
+$ export SIMPLEBUILD_JOB_BACKEND_CONFIG=$PWD/gc3pie.cfg
 $ eb GCC-4.6.0.eb OpenMPI-1.8.4-GCC-4.9.2.eb --robot --job --job-cores=16 --job-max-walltime=10
-== temporary log file in case of crash /tmp/eb-ivAiwD/easybuild-PCgmCB.log
+== temporary log file in case of crash /tmp/eb-ivAiwD/simplebuild-PCgmCB.log
 == resolving dependencies ...
 == GC3Pie job overview: 2 submitted (total: 9)
 == GC3Pie job overview: 2 running (total: 9)
@@ -272,7 +272,7 @@ $ eb GCC-4.6.0.eb OpenMPI-1.8.4-GCC-4.9.2.eb --robot --job --job-cores=16 --job-
 == Done processing jobs
 == GC3Pie job overview: 9 terminated, 9 ok (total: 9)
 == Submitted parallel build jobs, exiting now
-== temporary log file(s) /tmp/eb-ivAiwD/easybuild-PCgmCB.log* have been removed.
+== temporary log file(s) /tmp/eb-ivAiwD/simplebuild-PCgmCB.log* have been removed.
 == temporary directory /tmp/eb-ivAiwD has been removed.
 ```
 
@@ -282,16 +282,16 @@ dependencies have been processed are actually submitted as jobs::
 ``` console
 $ squeue -u $USER
 JOBID       USER       ACCOUNT           NAME     REASON   START_TIME     END_TIME  TIME_LEFT NODES CPUS   PRIORITY
-6161545     easybuild  example      GCC-4.9.2       None 2015-07-01T1 2015-07-01T2    9:58:55     1 16       1242
-6161546     easybuild  example      GCC-4.6.0       None 2015-07-01T1 2015-07-01T2    9:58:55     1 16       1242
+6161545     simplebuild  example      GCC-4.9.2       None 2015-07-01T1 2015-07-01T2    9:58:55     1 16       1242
+6161546     simplebuild  example      GCC-4.6.0       None 2015-07-01T1 2015-07-01T2    9:58:55     1 16       1242
 
 $ squeue -u $USER
 JOBID       USER       ACCOUNT           NAME     REASON   START_TIME     END_TIME  TIME_LEFT NODES CPUS   PRIORITY
-6174527     easybuild  example Automake-1.15-  Resources          N/A          N/A   10:00:00     1 16       1120
+6174527     simplebuild  example Automake-1.15-  Resources          N/A          N/A   10:00:00     1 16       1120
 
 $ squeue -u $USER
 JOBID       USER       ACCOUNT           NAME     REASON   START_TIME     END_TIME  TIME_LEFT NODES CPUS   PRIORITY
-6174533     easybuild  example OpenMPI-1.8.4-       None 2015-07-03T0 2015-07-03T1    9:55:59     1 16       1119
+6174533     simplebuild  example OpenMPI-1.8.4-       None 2015-07-03T0 2015-07-03T1    9:55:59     1 16       1119
 ```
 
 
@@ -302,7 +302,7 @@ jobs have been submitted::
 
 ``` console
 $ eb GCC-4.6.0.eb OpenMPI-1.8.4-GCC-4.9.2.eb --robot --job
-== temporary log file in case of crash /tmp/eb-OMNQAV/easybuild-9fTuJA.log
+== temporary log file in case of crash /tmp/eb-OMNQAV/simplebuild-9fTuJA.log
 == resolving dependencies ...
 == List of submitted jobs (9): GCC-4.6.0 (GCC/4.6.0): 508023.example.pbs; GCC-4.9.2 (GCC/4.9.2): 508024.example.pbs;
 libtool-2.4.2-GCC-4.9.2 (libtool/2.4.2-GCC-4.9.2): 508025.example.pbs; M4-1.4.17-GCC-4.9.2 (M4/1.4.17-GCC-4.9.2): 50
@@ -311,7 +311,7 @@ tomake/1.15-GCC-4.9.2): 508028.example.pbs; numactl-2.0.10-GCC-4.9.2 (numactl/2.
 hwloc-1.10.0-GCC-4.9.2 (hwloc/1.10.0-GCC-4.9.2): 508030.example.pbs; OpenMPI-1.8.4-GCC-4.9.2 (OpenMPI/1.8.4-GCC-4.9.
 2): 508031.example.pbs
 == Submitted parallel build jobs, exiting now
-== temporary log file(s) /tmp/eb-OMNQAV/easybuild-9fTuJA.log* have been removed.
+== temporary log file(s) /tmp/eb-OMNQAV/simplebuild-9fTuJA.log* have been removed.
 == temporary directory /tmp/eb-OMNQAV has been removed.
 
 $ qstat -a
@@ -320,15 +320,15 @@ example.pbs:
                                                                               Req'd    Req'd       Elap
 Job ID              Username    Queue    Jobname          SessID  NDS   TSK   Memory   Time    S   Time
 ------------------- ----------- -------- ---------------- ------ ----- ------ ------ --------- - ---------
-508023.example.pbs  easybuild   batch    GCC-4.6.0           --      1     16    --   24:00:00 R  00:02:16 
-508024.example.pbs  easybuild   batch    GCC-4.9.2           --      1     16    --   24:00:00 Q       -- 
-508025.example.pbs  easybuild   batch    libtool-2.4.2-GC    --      1     16    --   24:00:00 H       -- 
-508026.example.pbs  easybuild   batch    M4-1.4.17-GCC-4.    --      1     16    --   24:00:00 H       -- 
-508027.example.pbs  easybuild   batch    Autoconf-2.69-GC    --      1     16    --   24:00:00 H       -- 
-508028.example.pbs  easybuild   batch    Automake-1.15-GC    --      1     16    --   24:00:00 H       -- 
-508029.example.pbs  easybuild   batch    numactl-2.0.10-G    --      1     16    --   24:00:00 H       -- 
-508030.example.pbs  easybuild   batch    hwloc-1.10.0-GCC    --      1     16    --   24:00:00 H       -- 
-508031.example.pbs  easybuild   batch    OpenMPI-1.8.4-GC    --      1     16    --   24:00:00 H       -- 
+508023.example.pbs  simplebuild   batch    GCC-4.6.0           --      1     16    --   24:00:00 R  00:02:16 
+508024.example.pbs  simplebuild   batch    GCC-4.9.2           --      1     16    --   24:00:00 Q       -- 
+508025.example.pbs  simplebuild   batch    libtool-2.4.2-GC    --      1     16    --   24:00:00 H       -- 
+508026.example.pbs  simplebuild   batch    M4-1.4.17-GCC-4.    --      1     16    --   24:00:00 H       -- 
+508027.example.pbs  simplebuild   batch    Autoconf-2.69-GC    --      1     16    --   24:00:00 H       -- 
+508028.example.pbs  simplebuild   batch    Automake-1.15-GC    --      1     16    --   24:00:00 H       -- 
+508029.example.pbs  simplebuild   batch    numactl-2.0.10-G    --      1     16    --   24:00:00 H       -- 
+508030.example.pbs  simplebuild   batch    hwloc-1.10.0-GCC    --      1     16    --   24:00:00 H       -- 
+508031.example.pbs  simplebuild   batch    OpenMPI-1.8.4-GC    --      1     16    --   24:00:00 H       -- 
 ```
 
 
@@ -342,13 +342,13 @@ example.pbs:
                                                                               Req'd    Req'd       Elap
 Job ID              Username    Queue    Jobname          SessID  NDS   TSK   Memory   Time    S   Time
 ------------------- ----------- -------- ---------------- ------ ----- ------ ------ --------- - ---------
-508025.example.pbs  easybuild   batch    libtool-2.4.2-GC    --      1     16    --   24:00:00 Q       -- 
-508026.example.pbs  easybuild   batch    M4-1.4.17-GCC-4.    --      1     16    --   24:00:00 Q       -- 
-508027.example.pbs  easybuild   batch    Autoconf-2.69-GC    --      1     16    --   24:00:00 H       -- 
-508028.example.pbs  easybuild   batch    Automake-1.15-GC    --      1     16    --   24:00:00 H       -- 
-508029.example.pbs  easybuild   batch    numactl-2.0.10-G    --      1     16    --   24:00:00 H       -- 
-508030.example.pbs  easybuild   batch    hwloc-1.10.0-GCC    --      1     16    --   24:00:00 H       -- 
-508031.example.pbs  easybuild   batch    OpenMPI-1.8.4-GC    --      1     16    --   24:00:00 H       -- 
+508025.example.pbs  simplebuild   batch    libtool-2.4.2-GC    --      1     16    --   24:00:00 Q       -- 
+508026.example.pbs  simplebuild   batch    M4-1.4.17-GCC-4.    --      1     16    --   24:00:00 Q       -- 
+508027.example.pbs  simplebuild   batch    Autoconf-2.69-GC    --      1     16    --   24:00:00 H       -- 
+508028.example.pbs  simplebuild   batch    Automake-1.15-GC    --      1     16    --   24:00:00 H       -- 
+508029.example.pbs  simplebuild   batch    numactl-2.0.10-G    --      1     16    --   24:00:00 H       -- 
+508030.example.pbs  simplebuild   batch    hwloc-1.10.0-GCC    --      1     16    --   24:00:00 H       -- 
+508031.example.pbs  simplebuild   batch    OpenMPI-1.8.4-GC    --      1     16    --   24:00:00 H       -- 
 
 ...
 
@@ -358,5 +358,5 @@ example.pbs:
                                                                               Req'd    Req'd       Elap
 Job ID              Username    Queue    Jobname          SessID  NDS   TSK   Memory   Time    S   Time
 ------------------- ----------- -------- ---------------- ------ ----- ------ ------ --------- - ---------
-508031.example.pbs  easybuild   batch    OpenMPI-1.8.4-GC    --      1     16    --   24:00:00 R  00:03:46
+508031.example.pbs  simplebuild   batch    OpenMPI-1.8.4-GC    --      1     16    --   24:00:00 R  00:03:46
 ```

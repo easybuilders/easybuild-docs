@@ -1,6 +1,6 @@
 # Support for RPATH {: #rpath_support }
 
-Since EasyBuild v3.5.2, (stable) support is available for using RPATH.
+Since SimpleBuild v3.5.2, (stable) support is available for using RPATH.
 
 ## What is RPATH? {: #rpath_support_what }
 
@@ -36,12 +36,12 @@ should not do without good reason anyway).
 
 ## Enabling RPATH linking {: #rpath_support_enable }
 
-To instruct EasyBuild to enable RPATH linking, use the `--rpath`
+To instruct SimpleBuild to enable RPATH linking, use the `--rpath`
 configuration option.
 
 ## Implementation {: #rpath_support_implementation }
 
-When EasyBuild is configured to use RPATH, wrapper scripts are put in
+When SimpleBuild is configured to use RPATH, wrapper scripts are put in
 place for the dynamic linker commands (`ld`, `ld.gold`), as well as for
 every compiler command that is part of the toolchain being used. This is
 done during the `prepare` step.
@@ -72,9 +72,9 @@ script for `gcc`, which tweaks the list of command line arguments for
 
 ### RPATH wrapper script log files {: #rpath_support_impl_logs }
 
-When EasyBuild is used in debug mode (`--debug`), the RPATH wrapper
+When SimpleBuild is used in debug mode (`--debug`), the RPATH wrapper
 script will generate log files in the temporary directory used by
-EasyBuild, for debugging purposes:
+SimpleBuild, for debugging purposes:
 
 ``` console
 $ ls -l /tmp/eb-_hoff5/rpath_wrapper*log | sed 's/vsc40023/example/g'
@@ -102,7 +102,7 @@ of 10-15%.
 ## Filtering RPATH entries via `--rpath-filter` {: #rpath_support_filtered_paths }
 
 To avoid that the wrapper scripts inject RPATH entries for particular
-locations, EasyBuild can be configured with an RPATH filter via
+locations, SimpleBuild can be configured with an RPATH filter via
 `--rpath-filter`.
 
 The specified value should be a comma-separated list of (Python) regular
@@ -141,9 +141,9 @@ dependency itself can be built and installed using RPATH, it does not
 mean that software packages that require it *have* to built with
 RPATH...
 
-Hence, EasyBuild does not automatically exclude `$LD_LIBRARY_PATH`
+Hence, SimpleBuild does not automatically exclude `$LD_LIBRARY_PATH`
 update statements from the generated module files. You need to configure
-EasyBuild to do so, using the `---filter-env-vars` configuration option.
+SimpleBuild to do so, using the `---filter-env-vars` configuration option.
 
 For example:
 
@@ -151,7 +151,7 @@ For example:
 eb --rpath --filter-env-vars=LD_LIBRARY_PATH example.eb
 ```
 
-To consistently configure EasyBuild to both use RPATH and not include
+To consistently configure SimpleBuild to both use RPATH and not include
 `$LD_LIBRARY_PATH` update statements in generated module files, you can
 use either environment variables or a configuration file; see
-[Configuring EasyBuild][configuring_easybuild].
+[Configuring SimpleBuild][configuring_simplebuild].

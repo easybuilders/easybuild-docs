@@ -1,6 +1,6 @@
 ---
 # documentation: https://help.github.com/en/articles/workflow-syntax-for-github-actions
-name: test building of EasyBuild documentation
+name: test building of SimpleBuild documentation
 on: [push, pull_request]  # yamllint disable-line rule:truthy
 permissions:
   contents: read # to fetch code (actions/checkout)
@@ -31,11 +31,11 @@ jobs:
       - name: check internal links
         run: python ./.github/workflows/link_check.py
 
-      - name: checkout easybuild framework
+      - name: checkout simplebuild framework
         uses: actions/checkout@v3
         with:
-          repository: easybuilders/easybuild-framework
-          path: src/easybuild-framework
+          repository: simplebuilders/simplebuild-framework
+          path: src/simplebuild-framework
           ref: main
 
       - name: install mkdocs

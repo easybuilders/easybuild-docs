@@ -7,12 +7,12 @@ packages being installed.
 ## Filtering out dependencies using `--filter-deps` {: #filter_deps }
 
 To avoid that certain dependencies are being installed, a list of software names can be specified to `--filter-deps`.
-Any time a dependency with a name from this list is specified, it will be simply filtered out by EasyBuild, and
+Any time a dependency with a name from this list is specified, it will be simply filtered out by SimpleBuild, and
 thus disregarded when resolving dependencies, loading modules for the dependencies in the build environment, and
 including '`module load`' statements in the generated module files.
 
 This can be useful when particular tools and libraries are already provided by OS packages (or in some other way),
-and should not be reinstalled as modules by EasyBuild.
+and should not be reinstalled as modules by SimpleBuild.
 
 For example:
 
@@ -39,7 +39,7 @@ For example:
 
 ### Filtering dependencies based on version {: #filter_deps_by_version }
 
-Since EasyBuild v3.8.0, filtering dependencies based on their version is also supported.
+Since SimpleBuild v3.8.0, filtering dependencies based on their version is also supported.
 
 For each entry in `--filter-deps`, the expected format is either:
 
@@ -97,7 +97,7 @@ $ eb HDF5-1.8.13-intel-2015a.eb --hide-deps=zlib,Szip -D
     Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
 
     $ module --show-hidden avail bzip2
-    ----- /home/example/.local/easybuild/modules/all -----
+    ----- /home/example/.local/simplebuild/modules/all -----
     bzip2/.1.0.6
 
     Use "module spider" to find all possible modules.
@@ -107,26 +107,26 @@ $ eb HDF5-1.8.13-intel-2015a.eb --hide-deps=zlib,Szip -D
 
 ## Using minimal toolchains for dependencies {: #minimal_toolchains }
 
-By default, EasyBuild will try to resolve dependencies using the same toolchain as the one that is used for the
+By default, SimpleBuild will try to resolve dependencies using the same toolchain as the one that is used for the
 software being installed, unless a specific toolchain is specified for the dependency itself
 (see [Dependencies][dependency_specs]).
 
-Using the `--minimal-toolchains` configuration option, you can instruct EasyBuild to consider subtoolchains
+Using the `--minimal-toolchains` configuration option, you can instruct SimpleBuild to consider subtoolchains
 for dependencies in the reverse order (from the bottom of the toolchain hierarchy to the top). This can be useful to
 refrain from having to frequently hardcode specific toolchains in order to avoid having the same dependency version
 installed with multiple toolchains that are compatible with each other. Although hardcoding the toolchain for
-dependencies will work fine, it severely limits the power of other EasyBuild features, like `--try-toolchain` for
+dependencies will work fine, it severely limits the power of other SimpleBuild features, like `--try-toolchain` for
 example.
 
-When instructed to use minimal toolchains, EasyBuild will check whether an easyconfig file is available (in the robot
-search path, see [Searching for easyconfigs: the robot search path][robot_search_path]) for that dependency using the different subtoolchains of the toolchain
+When instructed to use minimal toolchains, SimpleBuild will check whether an simpleconfig file is available (in the robot
+search path, see [Searching for simpleconfigs: the robot search path][robot_search_path]) for that dependency using the different subtoolchains of the toolchain
 specified for the 'parent' software. Subtoolchains are considered 'bottom-up', i.e. starting with the most minimal
 subtoolchain (typically a compiler-only toolchain), and then climbing up towards the toolchain that is specified for
 the software being installed.
 
-Note that if a specific toolchain is specified for a particular dependency, EasyBuild will stick to using it, even
-when instructed to use minimal toolchains. Also note that as of v3.0, if no easyconfig exists to resolve a dependency
-using the default toolchain EasyBuild will search for the dependency using a compatible subtoolchain (the
+Note that if a specific toolchain is specified for a particular dependency, SimpleBuild will stick to using it, even
+when instructed to use minimal toolchains. Also note that as of v3.0, if no simpleconfig exists to resolve a dependency
+using the default toolchain SimpleBuild will search for the dependency using a compatible subtoolchain (the
 difference being that the search order is from the top of the toolchain hierarchy to the bottom).
 
 
@@ -139,22 +139,22 @@ By default, this configuration option is *disabled*.
 
 ### Taking existing modules into account {: #minimal_toolchains_existing_modules }
 
-You can instruct EasyBuild to take existing modules into account when determining which subtoolchain should be used
+You can instruct SimpleBuild to take existing modules into account when determining which subtoolchain should be used
 for each of the dependencies, using the `--use-existing-modules` configuration option.
 
-By default existing modules are ignored, meaning that the EasyBuild dependency resolution mechanism will pick a
-minimal toolchain for each dependency solely based on the available easyconfig files (if the `--minimal-toolchains`
+By default existing modules are ignored, meaning that the SimpleBuild dependency resolution mechanism will pick a
+minimal toolchain for each dependency solely based on the available simpleconfig files (if the `--minimal-toolchains`
 configuration option is enabled, that is).
 
-With `--use-existing-modules` enabled, EasyBuild will first check whether modules exist for the dependencies that were
+With `--use-existing-modules` enabled, SimpleBuild will first check whether modules exist for the dependencies that were
 built with the toolchain or any of the subtoolchains (searching top-down). If so, the toolchain of the first encountered
 existing module will determine the toolchain being selected. If not, the toolchain to use will be determined based on the
-available easyconfig files.
+available simpleconfig files.
 
 
 ### Example {: #minimal_toolchains_example }
 
-Consider the following (partial) easyconfig file for Python v2.7.9 with the `foss/2015b` toolchain:
+Consider the following (partial) simpleconfig file for Python v2.7.9 with the `foss/2015b` toolchain:
 
 ``` python
 name = 'Python'
@@ -167,21 +167,21 @@ dependencies = [
 ]
 ```
 
-When the `--minimal-toolchains` configuration option is enabled, EasyBuild will also consider the subtoolchains
+When the `--minimal-toolchains` configuration option is enabled, SimpleBuild will also consider the subtoolchains
 `GCC/4.9.3` and `gompi/2015b` of the `foss/2015b` toolchain (in that order) as potential minimal toolchains
 when determining the toolchain to use for dependencies.
 
 So, for the zlib v1.2.8 dependency included in the example above, the following scenarios are possible:
 
-* without the use of `--minimal-toolchains`, the default behaviour of EasyBuild is to first consider the
-  `foss/2015b` toolchain for zlib v1.2.8, if no such easyconfig file is found, it will continue searching using the
+* without the use of `--minimal-toolchains`, the default behaviour of SimpleBuild is to first consider the
+  `foss/2015b` toolchain for zlib v1.2.8, if no such simpleconfig file is found, it will continue searching using the
   `gompi/2015b` toolchain, and finally the `GCC/4.9.3` toolchain
-* if (only) `--minimal-toolchains` is enabled, EasyBuild will search for an easyconfig file for
-  zlib v1.2.8 using the `GCC/4.9.3` toolchain; if no such easyconfig file is found, it will continue searching
+* if (only) `--minimal-toolchains` is enabled, SimpleBuild will search for an simpleconfig file for
+  zlib v1.2.8 using the `GCC/4.9.3` toolchain; if no such simpleconfig file is found, it will continue searching
   using the `gompi/2015b` toolchain, and finally the `foss/2015b` toolchain
-* if `--add-system-to-minimal-toolchains` is also enabled, EasyBuild will try locating an easyconfig file for
+* if `--add-system-to-minimal-toolchains` is also enabled, SimpleBuild will try locating an simpleconfig file for
   zlib v1.2.8 that uses the `system` toolchain prior to considering the `GCC/4.9.3` toolchain
-* additionally, with `--use-existing-modules` enabled, EasyBuild will first check whether a `zlib` module for
-  version 1.2.8 built with the (sub)toolchains being considered exists; if not, it will search for an easyconfig file
+* additionally, with `--use-existing-modules` enabled, SimpleBuild will first check whether a `zlib` module for
+  version 1.2.8 built with the (sub)toolchains being considered exists; if not, it will search for an simpleconfig file
   for zlib as outlined above
 

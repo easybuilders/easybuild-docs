@@ -1,15 +1,15 @@
 # Generating container recipes & images {: #containers }
 
-EasyBuild has support for generating Singularity and Docker *container
-recipes* which will use EasyBuild to build and install a specified
-software stack. In addition, EasyBuild can (optionally) leverage the
+SimpleBuild has support for generating Singularity and Docker *container
+recipes* which will use SimpleBuild to build and install a specified
+software stack. In addition, SimpleBuild can (optionally) leverage the
 build tool provided by the container software of choice to create
 *container images*.
 
 !!! note
-    The features documented here have been available since EasyBuild v3.6.0 but are still *experimental*,  
+    The features documented here have been available since SimpleBuild v3.6.0 but are still *experimental*,  
     which implies they are subject to change in upcoming versions of
-    EasyBuild.
+    SimpleBuild.
 
     **You will need to enable the** `--experimental` **configuration option
     in order to use them.**
@@ -17,12 +17,12 @@ build tool provided by the container software of choice to create
     See [Experimental features][experimental_features] for
     more information.
 
-Initially (since EasyBuild v3.6.0), only Singularity
-(<https://www.sylabs.io/singularity>) was supported. Since EasyBuild
+Initially (since SimpleBuild v3.6.0), only Singularity
+(<https://www.sylabs.io/singularity>) was supported. Since SimpleBuild
 v3.6.2, generating (recipes for) Docker (<https://www.docker.com/>)
 containers is also supported.
 
-In EasyBuild v3.9.2 the support for generating Singularity container
+In SimpleBuild v3.9.2 the support for generating Singularity container
 recipes/images was enhanced significantly.
 
 ## Requirements {: #containers_req }
@@ -40,13 +40,13 @@ recipes/images was enhanced significantly.
 To generate container recipes, use `eb --containerize`, or `eb -C` for
 short.
 
-The resulting container recipe will, in turn, leverage EasyBuild to
-build and install the software that corresponds to the easyconfig files
+The resulting container recipe will, in turn, leverage SimpleBuild to
+build and install the software that corresponds to the simpleconfig files
 that are specified as arguments to the `eb` command (and all required
 dependencies, if needed).
 
 !!! note
-    EasyBuild will refuse to overwrite existing container recipes.
+    SimpleBuild will refuse to overwrite existing container recipes.
 
     To re-generate an already existing recipe file, use the `--force`
     command line option.
@@ -56,17 +56,17 @@ dependencies, if needed).
 *(`--container-template-recipe`)*
 
 Via the `--container-template-recipe` configuration option, you can
-specify a specific container template recipe that EasyBuild should use
+specify a specific container template recipe that SimpleBuild should use
 to generate container recipes.
 
 This gives you control over a variety of aspects, including:
 
 - the operating system (version) used in the container image
-- the location where EasyBuild installs software within the container
-- how EasyBuild is configured when installing software in the container
+- the location where SimpleBuild installs software within the container
+- how SimpleBuild is configured when installing software in the container
 - etc.
 
-When generating container recipes, EasyBuild will replace the following
+When generating container recipes, SimpleBuild will replace the following
 template values:
 
 - `%(bootstrap)s`: bootstrap agent to use
@@ -74,13 +74,13 @@ template values:
 - `%(bootstrap_config)s`: configuration for the bootstrap agent
     - this is expected to include lines that specify `From:`, `MirrorURL:`, etc.
     - for more information, see [Container configuration][containers_usage_config]
-- `%(easyconfigs)s`: (list of) easyconfig file name(s)/path(s) to pass to `eb` command
+- `%(simpleconfigs)s`: (list of) simpleconfig file name(s)/path(s) to pass to `eb` command
 - `%(eb_args)s`: additional arguments for 'eb' command
 - `%(include)s`: list of additional OS packages to include
     - see also [include keyword: OS packages to include][container_bootstrap_agent_linux_distro_include]
-- `%(install_eb)s`: list of commands to install EasyBuild
+- `%(install_eb)s`: list of commands to install SimpleBuild
 - `%(install_os_deps)s`: list of commands to install required OS packages (for example `yum install -y openssl`)
-    - incl. `osdependencies` specified in easyconfig files
+    - incl. `osdependencies` specified in simpleconfig files
 - `%(mirrorurl)`: URI to use to download OS
     - see also [mirrorurl keyword: mirror URL to use to download OS][container_bootstrap_agent_linux_distro_mirrorurl]
 - `%(modname)s`: module name(s) to load in environment
@@ -113,7 +113,7 @@ Currently supported keywords include:
     - for more details, see [Image-based bootstrap agents][container_bootstrap_agent_image_based]
 - `include`: list of additional OS packages to include
     - see also [include keyword: OS packages to include][container_bootstrap_agent_linux_distro_include]
-- `install_eb`: commands to install EasyBuild
+- `install_eb`: commands to install SimpleBuild
 - `mirrorurl`: URI to use to download OS
     - see also [mirrorurl keyword: mirror URL to use to download OS][container_bootstrap_agent_linux_distro_mirrorurl]
 - `osversion`: OS version to use
@@ -167,7 +167,7 @@ For more details, see
 There are a couple of specific requirements for the base container
 image:
 
-- all dependencies of EasyBuild must be installed, including:
+- all dependencies of SimpleBuild must be installed, including:
     - Python 2.7 or 3.6+
     - Lmod
     - standard tools & utilities like `make`, `patch`, `tar`, etc.
@@ -176,14 +176,14 @@ image:
 See also [Requirements][requirements]
 
 Each generated container recipe will include commands to create the
-`easybuild` user if it doesn't exist yet, as well as commands to create
-the `/app` and `/scratch` directories and give the `easybuild` user
+`simplebuild` user if it doesn't exist yet, as well as commands to create
+the `/app` and `/scratch` directories and give the `simplebuild` user
 write permissions to those locations.
 
 !!! note
     The generated container recipe currently hardcodes some of this.  
     We intend to make this more configurable in a future version of
-    EasyBuild.
+    SimpleBuild.
 
 #### Linux distro bootstrap agents {: #container_bootstrap_agent_linux_distro }
 
@@ -230,7 +230,7 @@ when downloading the corresponding OS.
 You can specify a value using the `mirrorurl` keyword. For example:
 "`bootstrap=yum,mirrorurl=https://example.com`".
 
-EasyBuild will use a default value for `mirrorurl` if no other value is
+SimpleBuild will use a default value for `mirrorurl` if no other value is
 specified:
 
 - `busybox`:
@@ -255,31 +255,31 @@ For example: "`bootstrap=yum,osversion=7`".
 
 *(`--container-build-image`)*
 
-To instruct EasyBuild to also build a container image from the generated
+To instruct SimpleBuild to also build a container image from the generated
 container recipe, use `--container-build-image` (in combination with
 `-C` or `--containerize`).
 
-EasyBuild will leverage functionality provided by the container software
+SimpleBuild will leverage functionality provided by the container software
 of choice (see [Type of container recipe/image to generate][containers_cfg_type]) to build the
 container image.
 
-For example, in the case of Singularity, EasyBuild will run
+For example, in the case of Singularity, SimpleBuild will run
 `sudo /path/to/singularity build` on the generated container recipe.
 
 !!! note
     In order to leverage the image building functionality of the container software, admin privileges are  
-    typically required. Therefore, EasyBuild will run the command to build
+    typically required. Therefore, SimpleBuild will run the command to build
     the container image with `sudo`. You may need to enter your password to
     let the command execute.
 
-    EasyBuild will only run the actual container image build command with
+    SimpleBuild will only run the actual container image build command with
     `sudo`. It will not use elevated privileges for anything else.
 
     In case of doubt, you can use `--extended-dry-run` or `-x` do perform a
     dry run, so you can evaluate which commands will be executed (see also
     [Extended dry run][extended_dry_run].
 
-    If you're not comfortable with this, you can just let EasyBuild generate
+    If you're not comfortable with this, you can just let SimpleBuild generate
     the container recipe, and then use that to build the actual container
     images yourself, either locally or through Singularity Hub
     (<https://singularity-hub.org>).
@@ -298,7 +298,7 @@ next to the generated container recipe that was used to build the image.
     image.
 
 !!! note
-    EasyBuild will refuse to overwrite existing container images.
+    SimpleBuild will refuse to overwrite existing container images.
 
     To re-generate an already existing image file, use the `--force`
     command line option.
@@ -308,7 +308,7 @@ next to the generated container recipe that was used to build the image.
 In this example, we will use a pre-built base container image located at
 `example.sif` (see also [Image-based bootstrap agents][container_bootstrap_agent_image_based]).
 
-To let EasyBuild generate a container recipe for GCC 6.4.0 + binutils
+To let SimpleBuild generate a container recipe for GCC 6.4.0 + binutils
 2.28:
 
 ``` shell
@@ -318,13 +318,13 @@ eb GCC-6.4.0-2.28.eb --containerize --container-config bootstrap=localimage,from
 With other configuration options left to default (see output of
 `eb --show-config`), this will result in a Singularity container recipe
 using `example.sif` as base image, which will be stored in
-`$HOME/.local/easybuild/containers`:
+`$HOME/.local/simplebuild/containers`:
 
 ``` console
 $ eb GCC-6.4.0-2.28.eb --containerize --container-config bootstrap=localimage,from=example.sif --experimental
-== temporary log file in case of crash /tmp/eb-dLZTNF/easybuild-LPLeG0.log
-== Singularity definition file created at /home/example/.local/easybuild/containers/Singularity.GCC-6.4.0-2.28
-== Temporary log file(s) /tmp/eb-dLZTNF/easybuild-LPLeG0.log* have been removed.
+== temporary log file in case of crash /tmp/eb-dLZTNF/simplebuild-LPLeG0.log
+== Singularity definition file created at /home/example/.local/simplebuild/containers/Singularity.GCC-6.4.0-2.28
+== Temporary log file(s) /tmp/eb-dLZTNF/simplebuild-LPLeG0.log* have been removed.
 == Temporary directory /tmp/eb-dLZTNF has been removed.
 ```
 
@@ -339,7 +339,7 @@ eb  --containerize --container-type=docker --experimental --container-config=cen
 #### Example of a generated container recipe {: #containers_example_recipe }
 
 Below is an example of container recipe for that was generated by
-EasyBuild, using the following command:
+SimpleBuild, using the following command:
 
 ``` shell
 eb Python-3.6.4-foss-2018a.eb -C --container-config bootstrap=yum,osversion=7 --experimental
@@ -365,17 +365,17 @@ yum install --quiet --assumeyes perl-Thread-Queue
 yum --skip-broken --quiet --assumeyes install libibverbs-dev libibverbs-devel rdma-core-devel
 yum --skip-broken --quiet --assumeyes install openssl-devel libssl-dev libopenssl-devel
 
-# install EasyBuild using pip
+# install SimpleBuild using pip
 pip install -U setuptools
 pip install 'vsc-install<0.11.4' 'vsc-base<2.9.0'
-pip install easybuild
+pip install simplebuild
 
-# create 'easybuild' user (if missing)
-id easybuild || useradd easybuild
+# create 'simplebuild' user (if missing)
+id simplebuild || useradd simplebuild
 
 # create /app software installation prefix + /scratch sandbox directory
-if [ ! -d /app ]; then mkdir -p /app; chown easybuild:easybuild -R /app; fi
-if [ ! -d /scratch ]; then mkdir -p /scratch; chown easybuild:easybuild -R /scratch; fi
+if [ ! -d /app ]; then mkdir -p /app; chown simplebuild:simplebuild -R /app; fi
+if [ ! -d /scratch ]; then mkdir -p /scratch; chown simplebuild:simplebuild -R /scratch; fi
 
 # install Lmod RC file
 cat > /etc/lmodrc.lua << EOF
@@ -387,35 +387,35 @@ scDescriptT = {
 }
 EOF
 
-# change to 'easybuild' user
-su - easybuild
+# change to 'simplebuild' user
+su - simplebuild
 
 # verbose commands, exit on first error
 set -ve
 
-# configure EasyBuild
+# configure SimpleBuild
 
 # use /scratch as general prefix, used for sources, build directories, etc.
-export EASYBUILD_PREFIX=/scratch
+export SIMPLEBUILD_PREFIX=/scratch
 
 # also use /scratch for temporary directories
-export EASYBUILD_TMPDIR=/scratch/tmp
+export SIMPLEBUILD_TMPDIR=/scratch/tmp
 
-# download sources to /scratch/sources, but also consider files located in /tmp/easybuild/sources;
+# download sources to /scratch/sources, but also consider files located in /tmp/simplebuild/sources;
 # that way, source files that can not be downloaded can be seeded in
-export EASYBUILD_SOURCEPATH=/scratch/sources:/tmp/easybuild/sources
+export SIMPLEBUILD_SOURCEPATH=/scratch/sources:/tmp/simplebuild/sources
 
 # install software & modules into /app
-export EASYBUILD_INSTALLPATH=/app
+export SIMPLEBUILD_INSTALLPATH=/app
 
-# use EasyBuild to install specified software
+# use SimpleBuild to install specified software
 eb Python-3.6.4-foss-2018a.eb --robot
 
 # update Lmod cache
 mkdir -p /app/lmodcache
 $LMOD_DIR/update_lmod_system_cache_files -d /app/lmodcache -t /app/lmodcache/timestamp /app/modules/all
 
-# exit from 'easybuild' user
+# exit from 'simplebuild' user
 exit
 
 # cleanup, everything in /scratch is assumed to be temporary
@@ -443,20 +443,20 @@ module load Python/3.6.4-foss-2018a
 
 The generated container recipe includes a bunch of `yum install`
 commands to install additional required/useful OS packages,
-`pip install` commands to install EasyBuild (if it's not installed yet),
-commands to create the `easybuild` user and provide write access to the
+`pip install` commands to install SimpleBuild (if it's not installed yet),
+commands to create the `simplebuild` user and provide write access to the
 `/app` and `/scratch` directories, and to configure Lmod and update the
-Lmod cache after software was installed with EasyBuild.
+Lmod cache after software was installed with SimpleBuild.
 
 In addition, the generated module files will follow the default module
-naming scheme (`EasyBuildMNS`). The modules that correspond to the
-easyconfig files that were specified on the command line will be loaded
+naming scheme (`SimpleBuildMNS`). The modules that correspond to the
+simpleconfig files that were specified on the command line will be loaded
 automatically, see the statements in the `%environment` section of the
 generated container recipe.
 
 #### Example of building container image {: #containers_example_build_image }
 
-You can instruct EasyBuild to also build the container image by also
+You can instruct SimpleBuild to also build the container image by also
 using `--container-build-image`.
 
 Note that you will need to enter your `sudo` password (unless you
@@ -464,17 +464,17 @@ recently executed a `sudo` command in the same shell session):
 
 ``` console
 $ eb GCC-6.4.0-2.28.eb --containerize --container-config bootstrap=localimage,from=/tmp/example.sif --container-build-image --experimental
-== temporary log file in case of crash /tmp/eb-aYXYC8/easybuild-8uXhvu.log
+== temporary log file in case of crash /tmp/eb-aYXYC8/simplebuild-8uXhvu.log
 == Singularity tool found at /usr/bin/singularity
 == Singularity version '2.4.6' is 2.4 or higher ... OK
-== Singularity definition file created at /home/example/.local/easybuild/containers/Singularity.GCC-6.4.0-2.28
-== Running 'sudo /usr/bin/singularity build  /home/example/.local/easybuild/containers/GCC-6.4.0-2.28.sif /home/example/.local/easybuild/containers/Singularity.GCC-6.4.0-2.28', you may need to enter your 'sudo' password...
-== (streaming) output for command 'sudo /usr/bin/singularity build  /home/example/.local/easybuild/containers/GCC-6.4.0-2.28.sif /home/example/.local/easybuild/containers/Singularity.GCC-6.4.0-2.28':
-Using container recipe deffile: /home/example/.local/easybuild/containers/Singularity.GCC-6.4.0-2.28
+== Singularity definition file created at /home/example/.local/simplebuild/containers/Singularity.GCC-6.4.0-2.28
+== Running 'sudo /usr/bin/singularity build  /home/example/.local/simplebuild/containers/GCC-6.4.0-2.28.sif /home/example/.local/simplebuild/containers/Singularity.GCC-6.4.0-2.28', you may need to enter your 'sudo' password...
+== (streaming) output for command 'sudo /usr/bin/singularity build  /home/example/.local/simplebuild/containers/GCC-6.4.0-2.28.sif /home/example/.local/simplebuild/containers/Singularity.GCC-6.4.0-2.28':
+Using container recipe deffile: /home/example/.local/simplebuild/containers/Singularity.GCC-6.4.0-2.28
 Sanitizing environment
 Adding base Singularity environment to container
 ...
-== temporary log file in case of crash /scratch/tmp/eb-WnmCI_/easybuild-GcKyY9.log
+== temporary log file in case of crash /scratch/tmp/eb-WnmCI_/simplebuild-GcKyY9.log
 == resolving dependencies ...
 ...
 == building and installing GCCcore/6.4.0...
@@ -484,14 +484,14 @@ Adding base Singularity environment to container
 == building and installing GCC/6.4.0-2.28...
 ...
 == COMPLETED: Installation ended successfully
-== Results of the build can be found in the log file(s) /app/software/GCC/6.4.0-2.28/easybuild/easybuild-GCC-6.4.0-20180424.084946.log
+== Results of the build can be found in the log file(s) /app/software/GCC/6.4.0-2.28/simplebuild/simplebuild-GCC-6.4.0-20180424.084946.log
 == Build succeeded for 15 out of 15
 ...
 Building Singularity image...
-Singularity container built: /home/example/.local/easybuild/containers/GCC-6.4.0-2.28.sif
+Singularity container built: /home/example/.local/simplebuild/containers/GCC-6.4.0-2.28.sif
 Cleaning up...
-== Singularity image created at /home/example/.local/easybuild/containers/GCC-6.4.0-2.28.sif
-== Temporary log file(s) /tmp/eb-aYXYC8/easybuild-8uXhvu.log* have been removed.
+== Singularity image created at /home/example/.local/simplebuild/containers/GCC-6.4.0-2.28.sif
+== Temporary log file(s) /tmp/eb-aYXYC8/simplebuild-8uXhvu.log* have been removed.
 == Temporary directory /tmp/eb-aYXYC8 has been removed.
 ```
 
@@ -499,7 +499,7 @@ The inspect the container image, you can use `singularity shell` to
 start a shell session *in* the container:
 
 ``` console
-$ singularity shell --shell "/bin/bash --norc" $HOME/.local/easybuild/containers/GCC-6.4.0-2.28.sif
+$ singularity shell --shell "/bin/bash --norc" $HOME/.local/simplebuild/containers/GCC-6.4.0-2.28.sif
 
 Singularity GCC-6.4.0-2.28.sif:~> module list
 
@@ -548,21 +548,21 @@ gcc (GCC) 6.4.0
 
 !!! note
     You can specify each of these configuration options either as options to the `eb` command,  
-    via the equivalent `$EASYBUILD_CONTAINER*` environment variable, or via
-    an EasyBuild configuration file; see [Supported configuration types][configuration_types].
+    via the equivalent `$SIMPLEBUILD_CONTAINER*` environment variable, or via
+    an SimpleBuild configuration file; see [Supported configuration types][configuration_types].
 
 ### Location for generated container recipes & images {: #containers_cfg_path }
 
 *(`--containerpath`)*
 
-To control the location where EasyBuild will put generated container
+To control the location where SimpleBuild will put generated container
 recipes & images, use the `--containerpath` configuration setting. Next
 to providing this as an option to the `eb` command, you can also define
-the `$EASYBUILD_CONTAINERPATH` environment variable or specify
-`containerpath` in an EasyBuild configuration file.
+the `$SIMPLEBUILD_CONTAINERPATH` environment variable or specify
+`containerpath` in an SimpleBuild configuration file.
 
 The default value for this location is
-`$HOME/.local/easybuild/containers`, unless the `--prefix` configuration
+`$HOME/.local/simplebuild/containers`, unless the `--prefix` configuration
 setting was provided, in which case it becomes `<prefix>/containers`
 (see [Overall prefix path][prefix]).
 
@@ -578,7 +578,7 @@ currently active setting.
     the value for `--container-image-format` is ignored when creating Docker
     container images.
 
-The format for container images that EasyBuild is produces via the
+The format for container images that SimpleBuild is produces via the
 functionality provided by the container software can be controlled via
 the `--container-image-format` configuration setting.
 
@@ -601,7 +601,7 @@ See also
 
 *(`--container-image-name`)*
 
-By default, EasyBuild will use the name of the first easyconfig file
+By default, SimpleBuild will use the name of the first simpleconfig file
 (without the `.eb` suffix) as a name for both the container recipe and
 image.
 
@@ -628,11 +628,11 @@ the value for `<extension>` depends on the image format (see
 
 *(`--container-tmpdir`)*
 
-The container software that EasyBuild leverages to build container
+The container software that SimpleBuild leverages to build container
 images may be using a temporary directory in a location that doesn't
 have sufficient free space.
 
-You can instruct EasyBuild to pass an alternate location via the
+You can instruct SimpleBuild to pass an alternate location via the
 `--container-tmpdir` configuration setting.
 
 For Singularity, the default is to use `/tmp`, see
@@ -646,11 +646,11 @@ that location instead.
 *(`--container-type`)*
 
 With the `--container-type` configuration option, you can specify what
-type of container recipe/image EasyBuild should generated. Possible
+type of container recipe/image SimpleBuild should generated. Possible
 values are:
 
 - `docker`: Docker (<https://docs.docker.com/>) container recipe &
-  images (supported since EasyBuild v3.6.2)
+  images (supported since SimpleBuild v3.6.2)
 - `singularity` *(default)*: Singularity
   (<https://www.sylabs.io/singularity>) container recipes & images
 
@@ -669,7 +669,7 @@ For example, to build a container image for Python 3.6.4 built with the
 $ cd /tmp
 
 # use current directory as location for generated container recipes & images
-$ export EASYBUILD_CONTAINERPATH=$PWD
+$ export SIMPLEBUILD_CONTAINERPATH=$PWD
 
 # build base container image for OpenMPI + GCC parts of foss/2018a toolchain, on top of CentOS 7.4 base image
 $ eb -C --container-build-image OpenMPI-2.1.2-GCC-6.4.0-2.28.eb --container-config bootstrap=yum,osversion=7 --experimental
@@ -713,9 +713,9 @@ files into the container build environment, because the sources can not
 be downloaded automatically.
 
 As shown in [Example of a generated container recipe][containers_example_recipe], the container recipe
-generated by EasyBuild includes `/tmp/easybuild/sources/` as a fallback
-directory in the list of locations considered by EasyBuild when looking
+generated by SimpleBuild includes `/tmp/simplebuild/sources/` as a fallback
+directory in the list of locations considered by SimpleBuild when looking
 for sources/patches (see also [Source path][sourcepath]).
 
 That way, you can copy source files that should be available when
-building the container image into `/tmp/easybuild/sources/`.
+building the container image into `/tmp/simplebuild/sources/`.

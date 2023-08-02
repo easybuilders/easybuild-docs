@@ -1,4 +1,4 @@
-# Constants that can be used in easyconfigs {: #avail_easyconfig_constants }
+# Constants that can be used in simpleconfigs {: #avail_simpleconfig_constants }
 
 Constant name         |Constant value                                               |Description
 ----------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------
@@ -16,4 +16,4 @@ Constant name         |Constant value                                           
 ``SYSTEM``            |``{'name': 'system', 'version': 'system'}``                  |System toolchain
 ``SYS_PYTHON_VERSION``|``3.9.6``                                                    |System Python version (platform.python_version())
 
-*(see also* ``eb --avail-easyconfig-constants`` *)*
+*(see also* ``eb --avail-simpleconfig-constants`` *)*

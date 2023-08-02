@@ -1,8 +1,8 @@
 # Extended dry run {: #extended_dry_run }
 
-Using `--extended-dry-run` or `-x` (supported since EasyBuild v2.4.0,
-see release notes for [EasyBuild v2.4.0 (November 10th 2015)][release_notes_eb240]), a detailed overview of the build and install procedure
-that EasyBuild is going to execute can be obtained almost instantly.
+Using `--extended-dry-run` or `-x` (supported since SimpleBuild v2.4.0,
+see release notes for [SimpleBuild v2.4.0 (November 10th 2015)][release_notes_eb240]), a detailed overview of the build and install procedure
+that SimpleBuild is going to execute can be obtained almost instantly.
 
 All time-consuming operations, including executing commands to
 configure/build/install the software, are only *reported* rather than
@@ -20,7 +20,7 @@ There are a couple of things you should be aware of when using
 
 The actual build and install procedure may (slightly) differ from the
 one reported by `--extended-dry-run`, due to conditional checks in the
-easyblock being used.
+simpleblock being used.
 
 For example, expressions that are conditional on the presence of certain
 files or directories in the build directory will always be false, since
@@ -43,7 +43,7 @@ run output for that particular step. Subsequent steps will still be run
 (in dry run mode), however.
 
 Since it's possible that these errors occur due to a bug in the
-easyblock being used, it's important to pay attention to these ignored
+simpleblock being used, it's important to pay attention to these ignored
 errors.
 
 Ignored errors are reported as follows, for example:
@@ -75,12 +75,12 @@ can be disabled using the configuration option that is available for it,
 i.e. by:
 
 - the `--disable-extended-dry-run-ignore-errors` command line option
-- by defining the `$EASYBUILD_DISABLE_EXTENDED_DRY_RUN_IGNORE_ERRORS`
+- by defining the `$SIMPLEBUILD_DISABLE_EXTENDED_DRY_RUN_IGNORE_ERRORS`
     environment variable
 - or by defining `disable-extended-dry-run-ignore-errors` in an
-    EasyBuild configuration file
+    SimpleBuild configuration file
 
-(see also [Configuring EasyBuild][configuring_easybuild])
+(see also [Configuring SimpleBuild][configuring_simplebuild])
 
 ## Overview of dry run mechanism {: #extended_dry_run_overview }
 
@@ -91,15 +91,15 @@ The sections below give a detailed overview of the dry run mechanism.
 
 ### Temporary directories as build/install directories {: #extended_dry_run_overview_build_install_dirs }
 
-To make very sure that EasyBuild does not touch any files or directories
+To make very sure that SimpleBuild does not touch any files or directories
 during the dry run, the build and (software/module) install directories
 are replaced by subdirectories of the temporary directory used by that
-particular EasyBuild session.
+particular SimpleBuild session.
 
 In the background, the values for `self.builddir`, `self.installdir` and
-`self.installdir_mod` are changed in the `EasyBlock` instance(s) being
+`self.installdir_mod` are changed in the `SimpleBlock` instance(s) being
 used; this also affects the use of the `%(builddir)s` and
-`$(installdir)s` values in easyconfig files.
+`$(installdir)s` values in simpleconfig files.
 
 Although the build and install directories are effectively temporary
 directories during a dry run (under a prefix like
@@ -109,16 +109,16 @@ corresponding original value in the dry run output. For example:
 
 ``` console
 [extract_step method]
-  running command "tar xzf /home/example/easybuild/sources/b/bzip2/bzip2-1.0.6.tar.gz"
+  running command "tar xzf /home/example/simplebuild/sources/b/bzip2/bzip2-1.0.6.tar.gz"
   (in /tmp/example/eb_build/bzip2/1.0.6/GCC-4.9.2)
 ```
 
 #### Note on build directory in dry run mode {: #extended_dry_run_overview_build_dir_guess }
 
-The build (sub)directory used during an actual (non-dry run) EasyBuild
+The build (sub)directory used during an actual (non-dry run) SimpleBuild
 session may be different than the one mentioned in the dry run output.
 
-This is because during a dry run, EasyBuild will *guess* the name of the
+This is because during a dry run, SimpleBuild will *guess* the name of the
 subdirectory that is created by unpacking the first source file in the
 build directory as being `<name>-<version>`. Although this is a common
 pattern, it is not always 100% correct.
@@ -146,7 +146,7 @@ which path) or not; the exact output for files that were not found
 depends on whether or not source URLs are available.
 
 For example: if the required source file for `bzip2` is not available
-yet, it is indicated where EasyBuild will try to download it to:
+yet, it is indicated where SimpleBuild will try to download it to:
 
 ``` console
 [fetch_step method]
@@ -154,18 +154,18 @@ Available download URLs for sources/patches:
   * http://www.bzip.org/1.0.6/$source
 
 List of sources:
-  * bzip2-1.0.6.tar.gz downloaded to /home/example/easybuild/sources/b/bzip2/bzip2-1.0.6.tar.gz
+  * bzip2-1.0.6.tar.gz downloaded to /home/example/simplebuild/sources/b/bzip2/bzip2-1.0.6.tar.gz
 
 List of patches:
 (none)
 ```
 
 If the source file is already available in the source path that
-EasyBuild was configured with, it is indicated as such:
+SimpleBuild was configured with, it is indicated as such:
 
 ``` console
 List of sources:
-  * bzip2-1.0.6.tar.gz found at /home/example/easybuild/sources/b/bzip2/bzip2-1.0.6.tar.gz
+  * bzip2-1.0.6.tar.gz found at /home/example/simplebuild/sources/b/bzip2/bzip2-1.0.6.tar.gz
 ```
 
 In case no source URLs are available and required files are missing,
@@ -211,7 +211,7 @@ available anyway.
 This has a number of implications:
 
 - files or directories that may be expected to be there are not, which
-    may lead to (ignored) errors if the used easyblock does not take
+    may lead to (ignored) errors if the used simpleblock does not take
     this into account (see also
     [Errors are ignored (by default) during dry run][extended_dry_run_notes_ignored_errors])
 - the build directory in which commands are executed may be incorrect
@@ -237,20 +237,20 @@ with where they are found and how they are applied:
 ``` console
 [patch_step method]
 * applying patch file WRF_parallel_build_fix.patch
-  running command "patch -b -p<derived> -i /home/example/easybuild/sources/w/WRF/WRF_parallel_build_fix.patch"
-  (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+  running command "patch -b -p<derived> -i /home/example/simplebuild/sources/w/WRF/WRF_parallel_build_fix.patch"
+  (in /home/example/simplebuild/simplebuild/software/WRF/3.6.1-intel-2015a-dmpar)
 * applying patch file WRF-3.6.1_known_problems.patch
-  running command "patch -b -p<derived> -i /home/example/easybuild/sources/w/WRF/WRF-3.6.1_known_problems.patch"
-  (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)
+  running command "patch -b -p<derived> -i /home/example/simplebuild/sources/w/WRF/WRF-3.6.1_known_problems.patch"
+  (in /home/example/simplebuild/simplebuild/software/WRF/3.6.1-intel-2015a-dmpar)
 ```
 
-Likewise, runtime patching performed by the easyblock itself can not
+Likewise, runtime patching performed by the simpleblock itself can not
 work either. If the `apply_regex_substitutions` function (available from
-`easybuild.tools.filetools`) is used, a clear overview is included in
+`simplebuild.tools.filetools`) is used, a clear overview is included in
 the dry run output (see also
-[Runtime patching of files][extended_dry_run_guidelines_easyblocks_framework_functions_runtime_patching]).
+[Runtime patching of files][extended_dry_run_guidelines_simpleblocks_framework_functions_runtime_patching]).
 
-For example, in the `configure` step of the WRF easyblock when using the
+For example, in the `configure` step of the WRF simpleblock when using the
 Intel compilers, this yields:
 
 ``` console
@@ -263,7 +263,7 @@ applying regex substitutions to file configure.wrf
 
 If the `apply_regex_substitutions` function provided for runtime
 patching is not used (and `fileinput` is used directly, for example),
-runtime patching performed by the easyblock will most likely result in
+runtime patching performed by the simpleblock will most likely result in
 an error, leading to the step in which it is being performed being
 aborted (see [Errors are ignored (by default) during dry run][extended_dry_run_notes_ignored_errors]).
 
@@ -337,7 +337,7 @@ For dependencies, simulating a `module load` statement basically (only)
 entails defining the `$EBROOT*` and `$EBVERSION*` environment variables
 (the full variable names are determined by the software name), which are
 picked up by resp. the `get_software_root` and `get_software_version`
-functions often used in easyblocks.
+functions often used in simpleblocks.
 
 The `$EBVERSION*` environment variable is defined with the actual
 software version of the dependency.
@@ -350,7 +350,7 @@ variable `$EBROOTGCC` is defined as the string value `'$EBROOTGCC'`
 (literally).
 
 This results in sensible output when this value is picked up via
-`get_software_root` by the easyblock.
+`get_software_root` by the simpleblock.
 
 For example, for netCDF used as a dependency for WRF the following is
 included in the module file contents included in the dry run output:
@@ -417,16 +417,16 @@ effect of changing toolchain options.
 
 The output is deliberately formatted such that is can be easily
 copy-pasted, which can be useful to mimic the environment in which
-EasyBuild will perform the build and install procedure.
+SimpleBuild will perform the build and install procedure.
 
 ### Shell commands are not executed {: #extended_dry_run_overview_run_cmd }
 
 Any shell commands that are executed via the `run_cmd` and `run_cmd_qa`
-functions that are provided by the EasyBuild framework via the
-`easybuild.tools.run` are *not* executed, only reported (see also
-[Executing commands][extended_dry_run_guidelines_easyblocks_framework_functions_run_cmd]).
+functions that are provided by the SimpleBuild framework via the
+`simplebuild.tools.run` are *not* executed, only reported (see also
+[Executing commands][extended_dry_run_guidelines_simpleblocks_framework_functions_run_cmd]).
 
-This typically includes the commands that are defined in the easyblock
+This typically includes the commands that are defined in the simpleblock
 to be run as a part of the configure/build/install steps.
 
 For example:
@@ -458,10 +458,10 @@ installing... [DRY RUN]
 ```
 
 There are a couple of minor exceptions though. Some (light-weight)
-commands are always run by the EasyBuild framework, even in dry run
-mode, and an easyblock can specify that particular commands *must*
+commands are always run by the SimpleBuild framework, even in dry run
+mode, and an simpleblock can specify that particular commands *must*
 always be run (see also
-[Executing commands][extended_dry_run_guidelines_easyblocks_framework_functions_run_cmd]).
+[Executing commands][extended_dry_run_guidelines_simpleblocks_framework_functions_run_cmd]).
 
 ### Sanity check paths/commands are not checked {: #extended_dry_run_overview_sanity_check }
 
@@ -532,17 +532,17 @@ Generating module file /home/example/eb/modules/all/make/3.82-GCC-4.8.2, with co
 
     setenv  EBROOTMAKE      "$root"
     setenv  EBVERSIONMAKE       "3.82"
-    setenv  EBDEVELMAKE     "$root/easybuild/make-3.82-GCC-4.8.2-easybuild-devel"
+    setenv  EBDEVELMAKE     "$root/simplebuild/make-3.82-GCC-4.8.2-simplebuild-devel"
 
-    # Built with EasyBuild version 2.4.0
+    # Built with SimpleBuild version 2.4.0
 ```
 
 Note that there is no `prepend-path PATH` statement for the `bin`
 subdirectory, for example.
 
-## Guidelines for easyblocks {: #extended_dry_run_guidelines_easyblocks }
+## Guidelines for simpleblocks {: #extended_dry_run_guidelines_simpleblocks }
 
-To ensure useful output under `--extended-dry-run`, easyblocks should be
+To ensure useful output under `--extended-dry-run`, simpleblocks should be
 implemented keeping in mind that some operations are possible not
 performed, to avoid generating errors in dry run mode.
 
@@ -551,9 +551,9 @@ basis, they may hide subsequent operations and useful information for
 the remainder of the step (see also
 [Errors are ignored (by default) during dry run][extended_dry_run_notes_ignored_errors]).
 
-### Detecting dry run mode and enhancing the dry run output {: #extended_dry_run_guidelines_easyblocks_detect_dry_run }
+### Detecting dry run mode and enhancing the dry run output {: #extended_dry_run_guidelines_simpleblocks_detect_dry_run }
 
-To detect whether an easyblock is being used in dry run mode, it
+To detect whether an simpleblock is being used in dry run mode, it
 suffices to check the `self.dry_run` class variable.
 
 Additional messages can be included in the dry run output using the
@@ -562,7 +562,7 @@ Additional messages can be included in the dry run output using the
 For example:
 
 ``` python
-class Example(EasyBlock):
+class Example(SimpleBlock):
 
     def configure_step(self):
 
@@ -574,12 +574,12 @@ class Example(EasyBlock):
 ### Check whether files/directories exist before accessing them {: #extended_dry_run_guidelines_files_dirs_checks }
 
 Rather than assuming that particular files or directories will be there,
-easyblocks should take into that they may not be, for example because
-EasyBuild is being run in dry run mode.
+simpleblocks should take into that they may not be, for example because
+SimpleBuild is being run in dry run mode.
 
 For example, instead of simply assuming that a directory named
 '`test`' will be there, the existence should be checked first. If not,
-an appropriate error should be produced, but only when the easyblock is
+an appropriate error should be produced, but only when the simpleblock is
 *not* being used in dry run mode.
 
 **Bad** example:
@@ -589,7 +589,7 @@ an appropriate error should be produced, but only when the easyblock is
 try:
     testcases = os.listdir('test')
 except OSError as err:
-    raise EasyBuildError("Unexpected error when determining list of test cases: %s", err)
+    raise SimpleBuildError("Unexpected error when determining list of test cases: %s", err)
 ```
 
 Good example:
@@ -600,14 +600,14 @@ if os.path.exists('test'):
     try:
         testcases = os.listdir('test')
     except OSError as err:
-        raise EasyBuildError("Unexpected error when determining list of test cases: %s", err)
+        raise SimpleBuildError("Unexpected error when determining list of test cases: %s", err)
 
 # only raise an error if we're not in dry run mode
 elif not self.dry_run:
-    raise EasyBuildError("Test directory not found, failed to determine list of test cases")
+    raise SimpleBuildError("Test directory not found, failed to determine list of test cases")
 ```
 
-Easyblocks that do not take this into account are likely to result in
+Simpleblocks that do not take this into account are likely to result in
 ignored errors during a dry run (see also
 [Errors are ignored (by default) during dry run][extended_dry_run_notes_ignored_errors]).
 For example, for the bad example shown above:
@@ -618,25 +618,25 @@ For example, for the bad example shown above:
 !!!
 ```
 
-### Use functions provided by the EasyBuild framework {: #extended_dry_run_guidelines_easyblocks_framework_functions }
+### Use functions provided by the SimpleBuild framework {: #extended_dry_run_guidelines_simpleblocks_framework_functions }
 
-The EasyBuild framework provides a bunch of functions that are "*dry
-run-aware*", and which can significantly help in keeping easyblocks
+The SimpleBuild framework provides a bunch of functions that are "*dry
+run-aware*", and which can significantly help in keeping simpleblocks
 free from conditional statements checking `self.dry_run`:
 
-- [Defining environment variables][extended_dry_run_guidelines_easyblocks_framework_functions_setvar]
-- [Writing or appending to files][extended_dry_run_guidelines_easyblocks_framework_functions_write_file]
-- [Runtime patching of files][extended_dry_run_guidelines_easyblocks_framework_functions_runtime_patching]
-- [Executing commands][extended_dry_run_guidelines_easyblocks_framework_functions_run_cmd]
+- [Defining environment variables][extended_dry_run_guidelines_simpleblocks_framework_functions_setvar]
+- [Writing or appending to files][extended_dry_run_guidelines_simpleblocks_framework_functions_write_file]
+- [Runtime patching of files][extended_dry_run_guidelines_simpleblocks_framework_functions_runtime_patching]
+- [Executing commands][extended_dry_run_guidelines_simpleblocks_framework_functions_run_cmd]
 
-#### Defining environment variables {: #extended_dry_run_guidelines_easyblocks_framework_functions_setvar }
+#### Defining environment variables {: #extended_dry_run_guidelines_simpleblocks_framework_functions_setvar }
 
 *(`setvar`)*
 
 For defining environment variables, the `setvar` function available in
-the `easybuild.tools.environment` module should be used.
+the `simplebuild.tools.environment` module should be used.
 
-For example, from the WRF easyblock:
+For example, from the WRF simpleblock:
 
 ``` python
 jasper = get_software_root('JasPer')
@@ -661,9 +661,9 @@ The `setvar` function also supports defining environment variables
 *silently*, i.e. without producing a corresponding dry run message, via
 the named argument `verbose`.
 
-This is used in a couple of places in the EasyBuild framework, to avoid
+This is used in a couple of places in the SimpleBuild framework, to avoid
 some environment variables being defined cluttering the dry run output
-without added value. It can be used for similar reasons in easyblocks.
+without added value. It can be used for similar reasons in simpleblocks.
 
 For example, the `PythonPackage` uses it in the *install* step, to
 modify `$PYTHONPATH` as required by the `python setup.py install`
@@ -674,12 +674,12 @@ output, since it's a technicality):
 env.setvar('PYTHONPATH', new_pythonpath, verbose=False)
 ```
 
-#### Writing or appending to files {: #extended_dry_run_guidelines_easyblocks_framework_functions_write_file }
+#### Writing or appending to files {: #extended_dry_run_guidelines_simpleblocks_framework_functions_write_file }
 
 *(`write_file`)*
 
-For writing and appending to files, the EasyBuild framework provides the
-`write_file` function (available from the `easybuild.tools.filetools`
+For writing and appending to files, the SimpleBuild framework provides the
+`write_file` function (available from the `simplebuild.tools.filetools`
 module).
 
 Using it is straightforward, for example:
@@ -701,14 +701,14 @@ For example:
 file written: /tmp/eb-ksVC07/tmp.conf
 ```
 
-#### Runtime patching of files {: #extended_dry_run_guidelines_easyblocks_framework_functions_runtime_patching }
+#### Runtime patching of files {: #extended_dry_run_guidelines_simpleblocks_framework_functions_runtime_patching }
 
 *(`apply_regex_substitutions`)*
 
-To make runtime patching of files in easyblocks easier, and to do it
+To make runtime patching of files in simpleblocks easier, and to do it
 with taking the possibility of being in dry run module into account, the
-EasyBuild framework provides the `apply_regex_substitutions` function
-(available from the `easybuild.tools.filetools` module, since EasyBuild
+SimpleBuild framework provides the `apply_regex_substitutions` function
+(available from the `simplebuild.tools.filetools` module, since SimpleBuild
 v2.4.0).
 
 This function takes two arguments: a path to the file that should be
@@ -730,12 +730,12 @@ applying regex substitutions to file config.mk
   * regex pattern '^(CPLUSPLUS\s*=\s).*', replacement string '\1 g++'
 ```
 
-#### Executing commands {: #extended_dry_run_guidelines_easyblocks_framework_functions_run_cmd }
+#### Executing commands {: #extended_dry_run_guidelines_simpleblocks_framework_functions_run_cmd }
 
 *(`run_cmd` and `run_cmd_qa`)*
 
 To execute shell commands, the `run_cmd` and `run_cmd_qa` functions are
-provided by the EasyBuild framework in the `easybuild.tools.run` module,
+provided by the SimpleBuild framework in the `simplebuild.tools.run` module,
 with the latter providing support for running interactive commands.
 
 In their simplest form, they simply take the command to execute as a
@@ -774,15 +774,15 @@ run_cmd("ulimit -v", verbose=False)
 
 Sometimes, it can be required that specific (light-weight) commands are
 *always* executed, because they have side-effects that are assumed to
-have taken place later in the easyblock.
+have taken place later in the simpleblock.
 
 For this, the `run_cmd` function support another named argument, i.e.
 `force_in_dry_run`. When set to `True`, the specified command will
 always be executed, even when in dry run mode.
 
-This is mainly intended for use in the EasyBuild framework itself, where
+This is mainly intended for use in the SimpleBuild framework itself, where
 commands that verify certain things must be executed, but it can also be
-useful for easyblocks (if used correctly).
+useful for simpleblocks (if used correctly).
 
 For example:
 
@@ -801,17 +801,17 @@ Output examples for `eb --extended-dry-run`/`eb -x`:
 
 ``` console
 $ eb make-3.82-GCC-4.8.2.eb -x
-== temporary log file in case of crash /tmp/eb-ksVC07/easybuild-MmAugb.log
+== temporary log file in case of crash /tmp/eb-ksVC07/simplebuild-MmAugb.log
 
-== processing EasyBuild easyconfig /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/m/make/make-3.82-GCC-4.8.2.eb
+== processing SimpleBuild simpleconfig /home/example/eb/simplebuild-simpleconfigs/simplebuild/simpleconfigs/m/make/make-3.82-GCC-4.8.2.eb
 
 Important note: the actual build & install procedure that will be performed may diverge
-(slightly) from what is outlined below, due to conditions in the easyblock which are
+(slightly) from what is outlined below, due to conditions in the simpleblock which are
 incorrectly handled in a dry run.
 Any errors that may occur are ignored and reported as warnings, on a per-step basis.
 Please be aware of this, and only use the information below for quick debugging purposes.
 
-*** DRY RUN using 'ConfigureMake' easyblock (easybuild.easyblocks.generic.configuremake @ /home/example/eb/easybuild-easyblocks/easybuild/easyblocks/generic/configuremake.pyc) ***
+*** DRY RUN using 'ConfigureMake' simpleblock (simplebuild.simpleblocks.generic.configuremake @ /home/example/eb/simplebuild-simpleblocks/simplebuild/simpleblocks/generic/configuremake.pyc) ***
 
 == building and installing make/3.82-GCC-4.8.2...
 fetching files... [DRY RUN]
@@ -951,9 +951,9 @@ Generating module file /home/example/eb/modules/all/make/3.82-GCC-4.8.2, with co
 
     setenv  EBROOTMAKE      "$root"
     setenv  EBVERSIONMAKE       "3.82"
-    setenv  EBDEVELMAKE     "$root/easybuild/make-3.82-GCC-4.8.2-easybuild-devel"
+    setenv  EBDEVELMAKE     "$root/simplebuild/make-3.82-GCC-4.8.2-simplebuild-devel"
 
-    # Built with EasyBuild version 2.4.0
+    # Built with SimpleBuild version 2.4.0
 
 
 permissions... [DRY RUN]
@@ -967,7 +967,7 @@ packaging... [DRY RUN]
 == COMPLETED: Installation ended successfully
 
 Important note: the actual build & install procedure that will be performed may diverge
-(slightly) from what is outlined above, due to conditions in the easyblock which are
+(slightly) from what is outlined above, due to conditions in the simpleblock which are
 incorrectly handled in a dry run.
 Any errors that may occur are ignored and reported as warnings, on a per-step basis.
 Please be aware of this, and only use the information above for quick debugging purposes.
@@ -975,7 +975,7 @@ Please be aware of this, and only use the information above for quick debugging 
 (no ignored errors during dry run)
 
 == Build succeeded for 1 out of 1
-== Temporary log file(s) /tmp/eb-ksVC07/easybuild-MmAugb.log* have been removed.
+== Temporary log file(s) /tmp/eb-ksVC07/simplebuild-MmAugb.log* have been removed.
 == Temporary directory /tmp/eb-ksVC07 has been removed.
 ```
 
@@ -983,17 +983,17 @@ Please be aware of this, and only use the information above for quick debugging 
 
 ``` console
 $ eb WRF-3.6.1-intel-2015a-dmpar.eb -x
-== temporary log file in case of crash /tmp/eb-Dh1wOp/easybuild-0bu9u9.log
+== temporary log file in case of crash /tmp/eb-Dh1wOp/simplebuild-0bu9u9.log
 
-== processing EasyBuild easyconfig /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1-intel-2015a-dmpar.eb
+== processing SimpleBuild simpleconfig /home/example/eb/simplebuild-simpleconfigs/simplebuild/simpleconfigs/w/WRF/WRF-3.6.1-intel-2015a-dmpar.eb
 
 Important note: the actual build & install procedure that will be performed may diverge
-(slightly) from what is outlined below, due to conditions in the easyblock which are
+(slightly) from what is outlined below, due to conditions in the simpleblock which are
 incorrectly handled in a dry run.
 Any errors that may occur are ignored and reported as warnings, on a per-step basis.
 Please be aware of this, and only use the information below for quick debugging purposes.
 
-*** DRY RUN using 'EB_WRF' easyblock (easybuild.easyblocks.wrf @ /home/example/eb/easybuild-easyblocks/easybuild/easyblocks/w/wrf.py) ***
+*** DRY RUN using 'EB_WRF' simpleblock (simplebuild.simpleblocks.wrf @ /home/example/eb/simplebuild-simpleblocks/simplebuild/simpleblocks/w/wrf.py) ***
 
 == building and installing WRF/3.6.1-intel-2015a-dmpar...
 fetching files... [DRY RUN]
@@ -1007,10 +1007,10 @@ List of sources:
   * WRFV3.6.1.TAR.gz will be downloaded to /home/example/eb/sources/w/WRF/WRFV3.6.1.TAR.gz
 
 List of patches:
-  * WRF_parallel_build_fix.patch found at /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_parallel_build_fix.patch
-  * WRF-3.6.1_netCDF-Fortran_separate_path.patch found at /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_netCDF-Fortran_separate_path.patch
-  * WRF-3.6.1_known_problems.patch found at /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_known_problems.patch
-  * WRF_tests_limit-runtimes.patch found at /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_tests_limit-runtimes.patch
+  * WRF_parallel_build_fix.patch found at /home/example/eb/simplebuild-simpleconfigs/simplebuild/simpleconfigs/w/WRF/WRF_parallel_build_fix.patch
+  * WRF-3.6.1_netCDF-Fortran_separate_path.patch found at /home/example/eb/simplebuild-simpleconfigs/simplebuild/simpleconfigs/w/WRF/WRF-3.6.1_netCDF-Fortran_separate_path.patch
+  * WRF-3.6.1_known_problems.patch found at /home/example/eb/simplebuild-simpleconfigs/simplebuild/simpleconfigs/w/WRF/WRF-3.6.1_known_problems.patch
+  * WRF_tests_limit-runtimes.patch found at /home/example/eb/simplebuild-simpleconfigs/simplebuild/simpleconfigs/w/WRF/WRF_tests_limit-runtimes.patch
 
 creating build dir, resetting environment... [DRY RUN]
 
@@ -1039,16 +1039,16 @@ patching... [DRY RUN]
 
 [patch_step method]
 * applying patch file WRF_parallel_build_fix.patch
-  running command "patch -b -p<derived> -i /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_parallel_build_fix.patch"
+  running command "patch -b -p<derived> -i /home/example/eb/simplebuild-simpleconfigs/simplebuild/simpleconfigs/w/WRF/WRF_parallel_build_fix.patch"
   (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar)
 * applying patch file WRF-3.6.1_netCDF-Fortran_separate_path.patch
-  running command "patch -b -p<derived> -i /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_netCDF-Fortran_separate_path.patch"
+  running command "patch -b -p<derived> -i /home/example/eb/simplebuild-simpleconfigs/simplebuild/simpleconfigs/w/WRF/WRF-3.6.1_netCDF-Fortran_separate_path.patch"
   (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar)
 * applying patch file WRF-3.6.1_known_problems.patch
-  running command "patch -b -p<derived> -i /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_known_problems.patch"
+  running command "patch -b -p<derived> -i /home/example/eb/simplebuild-simpleconfigs/simplebuild/simpleconfigs/w/WRF/WRF-3.6.1_known_problems.patch"
   (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar)
 * applying patch file WRF_tests_limit-runtimes.patch
-  running command "patch -b -p<derived> -i /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_tests_limit-runtimes.patch"
+  running command "patch -b -p<derived> -i /home/example/eb/simplebuild-simpleconfigs/simplebuild/simpleconfigs/w/WRF/WRF_tests_limit-runtimes.patch"
   (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar)
 
 preparing... [DRY RUN]
@@ -1271,11 +1271,11 @@ Generating module file /home/example/eb/modules/all/WRF/3.6.1-intel-2015a-dmpar,
 
     setenv  EBROOTWRF       "$root"
     setenv  EBVERSIONWRF        "3.6.1"
-    setenv  EBDEVELWRF      "$root/easybuild/WRF-3.6.1-intel-2015a-dmpar-easybuild-devel"
+    setenv  EBDEVELWRF      "$root/simplebuild/WRF-3.6.1-intel-2015a-dmpar-simplebuild-devel"
 
     setenv  NETCDF      "$EBROOTNETCDF"
     setenv  NETCDFF     "$EBROOTNETCDFMINFORTRAN"
-    # Built with EasyBuild version 2.4.0
+    # Built with SimpleBuild version 2.4.0
 
 
 permissions... [DRY RUN]
@@ -1289,7 +1289,7 @@ packaging... [DRY RUN]
 == COMPLETED: Installation ended successfully
 
 Important note: the actual build & install procedure that will be performed may diverge
-(slightly) from what is outlined above, due to conditions in the easyblock which are
+(slightly) from what is outlined above, due to conditions in the simpleblock which are
 incorrectly handled in a dry run.
 Any errors that may occur are ignored and reported as warnings, on a per-step basis.
 Please be aware of this, and only use the information above for quick debugging purposes.
@@ -1297,6 +1297,6 @@ Please be aware of this, and only use the information above for quick debugging 
 (no ignored errors during dry run)
 
 == Build succeeded for 1 out of 1
-== Temporary log file(s) /tmp/eb-Dh1wOp/easybuild-0bu9u9.log* have been removed.
+== Temporary log file(s) /tmp/eb-Dh1wOp/simplebuild-0bu9u9.log* have been removed.
 == Temporary directory /tmp/eb-Dh1wOp has been removed.
 ```

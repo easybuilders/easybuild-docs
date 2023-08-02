@@ -78,7 +78,7 @@ Modules based on Lua: Version 8.4  2020-07-31 12:25 -05:00
 ```
 
 **Step 4**: Define `module` function to use `lmod` (optional for use
-with EasyBuild):
+with SimpleBuild):
 
 ``` bash
 source $HOME/lmod/8.4/init/bash

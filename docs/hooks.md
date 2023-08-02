@@ -1,31 +1,31 @@
 # Hooks
 
-Since v3.5.0, EasyBuild supports *hooks* that can be used
-to customise the behaviour of EasyBuild according to site policies if needed,
-without having to change the EasyBuild framework or the existing easyblocks.
+Since v3.5.0, SimpleBuild supports *hooks* that can be used
+to customise the behaviour of SimpleBuild according to site policies if needed,
+without having to change the SimpleBuild framework or the existing simpleblocks.
 
 ## What are hooks?
 
-*Hooks* are user-defined functions that are called by the EasyBuild framework at specific times during
+*Hooks* are user-defined functions that are called by the SimpleBuild framework at specific times during
 the installation procedure. They can be leveraged to alter or augment the installation procedure.
 
 This is usually done to conform with site-specific policies that are difficult to enforce otherwise,
 but it can also be (ab)used to fix specific problems or inject self-implemented enhancements
 (before you flesh them out in a proper contribution, for example).
 
-Both the `EasyBlock` instance and the parsed easyconfig file that are being used
+Both the `SimpleBlock` instance and the parsed simpleconfig file that are being used
 are fully accessible (and modifiable) from within hook implementations. Hence, this mechanism
-provides a lot of flexibility to change the EasyBuild functionality should you require it,
-without having to modify the codebase of EasyBuild itself.
+provides a lot of flexibility to change the SimpleBuild functionality should you require it,
+without having to modify the codebase of SimpleBuild itself.
 
-## Configuring EasyBuild to use your hook implementations
+## Configuring SimpleBuild to use your hook implementations
 
-To instruct EasyBuild to use your hook implementations,
+To instruct SimpleBuild to use your hook implementations,
 you only need to specify the location of the Python module (`*.py`) that implements them.
 
 This is done via the `--hooks` configuration option
-(or equivalently via the `$EASYBUILD_HOOKS` environment variable, or via `hooks = ...`
-in an EasyBuild configuration file, see also [Configuring EasyBuild][configuring_easybuild]).
+(or equivalently via the `$SIMPLEBUILD_HOOKS` environment variable, or via `hooks = ...`
+in an SimpleBuild configuration file, see also [Configuring SimpleBuild][configuring_simplebuild]).
 
 For example:
 
@@ -36,18 +36,18 @@ eb --hooks=$HOME/my_eb_hooks.py ...
 or:
 
 ```shell
-export EASYBUILD_HOOKS=$HOME/my_eb_hooks.py
+export SIMPLEBUILD_HOOKS=$HOME/my_eb_hooks.py
 eb ...
 ```
 
 
 ## Available hooks
 
-Currently (since EasyBuild v3.7.0), three types of hooks are supported:
+Currently (since SimpleBuild v3.7.0), three types of hooks are supported:
 
 * `start_hook` and `end_hook`, which are triggered *once* before starting software installations,
   and *once* right after completing all installations, respectively
-* `parse_hook`, which is triggered when an easyconfig file is being parsed
+* `parse_hook`, which is triggered when an simpleconfig file is being parsed
 * `module_write_hook`, which is triggered right before a module file is written.
   This includes the temporary module file used when installing extensions and during the sanity check,
   as well as the devel module.
@@ -57,8 +57,8 @@ Currently (since EasyBuild v3.7.0), three types of hooks are supported:
 The list of currently available hooks in order of execution,
 which can also be consulted using `eb --avail-hooks`, is:
 
-* `start_hook` *(only called once in an EasyBuild session)*
-* `parse_hook` *(available since EasyBuild v3.7.0)*
+* `start_hook` *(only called once in an SimpleBuild session)*
+* `parse_hook` *(available since SimpleBuild v3.7.0)*
 * `pre_fetch_hook`, `post_fetch_hook`
 * `pre_ready_hook`, `post_ready_hook`
 * `pre_source_hook`, `post_source_hook`
@@ -76,19 +76,19 @@ which can also be consulted using `eb --avail-hooks`, is:
 * `pre_permissions_hook`, `post_permissions_hook`
 * `pre_package_hook`, `post_package_hook`
 * `pre_testcases_hook`, `post_testcases_hook`
-* `end_hook` *(only called once in an EasyBuild session)*
-* `module_write_hook` *(called multiple times per installation, available since EasyBuild v4.4.1)*
+* `end_hook` *(only called once in an SimpleBuild session)*
+* `module_write_hook` *(called multiple times per installation, available since SimpleBuild v4.4.1)*
 
 All functions implemented in the provided Python module for which the name ends with `_hook` are considered.
 
 If any `*_hook` functions are encountered that do not match any of the available hooks, an error is reported.
-EasyBuild will try to provide suggestions for available hooks that closely match the encountered unknown hook.
+SimpleBuild will try to provide suggestions for available hooks that closely match the encountered unknown hook.
 
 For example:
 
 ```console
 $ eb --hooks wrong_hooks.py example.eb
-== temporary log file in case of crash /tmp/eb-nMawy1/easybuild-Gu2ZP6.log
+== temporary log file in case of crash /tmp/eb-nMawy1/simplebuild-Gu2ZP6.log
 ERROR: Found one or more unknown hooks:
 * stat_hook (did you mean 'start_hook'?)
 * this_is_not_a_hook
@@ -105,21 +105,21 @@ each named after an available hook.
 Do take into account the following:
 
 * for `start_hook` and `end_hook`, no arguments are provided
-* for `parse_hook`, one argument is provided: the `EasyConfig` instance
-  that corresponds to the easyconfig file being parsed (usually referred to as `ec`)
+* for `parse_hook`, one argument is provided: the `SimpleConfig` instance
+  that corresponds to the simpleconfig file being parsed (usually referred to as `ec`)
 * for `module_write_hook`, 3 arguments are provided:
-   * the `EasyBlock` instance used to perform the installation (usually referred to as `self`)
+   * the `SimpleBlock` instance used to perform the installation (usually referred to as `self`)
    * the filepath of the module that will be written
    * the module text as a string
   The return value of this hook, when set, will replace the original text that is then written to the module file.
 * for the step hooks, one argument is provided:
-  the `EasyBlock` instance used to perform the installation (usually referred to as `self`)
-* the parsed easyconfig file can be accessed in the step hooks via the `EasyBlock` instance,
+  the `SimpleBlock` instance used to perform the installation (usually referred to as `self`)
+* the parsed simpleconfig file can be accessed in the step hooks via the `SimpleBlock` instance,
   i.e., via `self.cfg`
 
 It is recommended to anticipate possible changes in the provided (named) arguments,
 using the `*args` and `**kwargs` mechanism commonly used in Python. This
-avoids that your hook implementations may break when updating to future EasyBuild versions. For example:
+avoids that your hook implementations may break when updating to future SimpleBuild versions. For example:
 
 ```py
 # example pre-configure hook that anticipates changes in provided arguments
@@ -127,61 +127,61 @@ def pre_configure_hook(self, *args, **kwargs):
     ...
 ```
 
-In hooks you have access to the full functionality provided by the EasyBuild framework,
-so do `import` from `easybuild.tools.*` (or other `easybuild.*` namespaces) to leverage
+In hooks you have access to the full functionality provided by the SimpleBuild framework,
+so do `import` from `simplebuild.tools.*` (or other `simplebuild.*` namespaces) to leverage
 those functions.
 
 ### Parse hook specifics
 
-`parse_hook` is triggered right *after* reading the easyconfig file,
-before further parsing of some easyconfig parameters (like `*dependencies`) into
+`parse_hook` is triggered right *after* reading the simpleconfig file,
+before further parsing of some simpleconfig parameters (like `*dependencies`) into
 custom data structures is done.
 
-This is important since it allows to dynamically modify easyconfig files
-while they are still "raw", i.e. when the easyconfig parameter values are
+This is important since it allows to dynamically modify simpleconfig files
+while they are still "raw", i.e. when the simpleconfig parameter values are
 still basic Python data structures like lists, dictionaries, etc.
-that are easy to manipulate (see also [Manipulating easyconfig parameters](#manipulating-easyconfig-parameters)).
+that are simple to manipulate (see also [Manipulating simpleconfig parameters](#manipulating-simpleconfig-parameters)).
 
-In `parse_hook` easyconfig parameters can be accessed and/or modified in a straightforward way,
+In `parse_hook` simpleconfig parameters can be accessed and/or modified in a straightforward way,
 see [Example hook to inject a custom patch file](#inject-a-custom-patch-file).
 
 
 ## Caveats
 
-Due to internal details of the EasyBuild framework, you may run into some surprises when
+Due to internal details of the SimpleBuild framework, you may run into some surprises when
 implementing hooks.
 Here are some things to take into account:
 
 
 ### Resolving of template values
 
-In all *step* hooks, template values in easyconfig parameters will be resolved whenever they are accessed.
+In all *step* hooks, template values in simpleconfig parameters will be resolved whenever they are accessed.
 
-That is, if the `%(version)` template is used in for example the `sources` easyconfig parameter,
-it will be replaced with the actual value of the `version` easyconfig parameter whenever the
+That is, if the `%(version)` template is used in for example the `sources` simpleconfig parameter,
+it will be replaced with the actual value of the `version` simpleconfig parameter whenever the
 `sources` value is used.
 This can be avoided by temporarily disabling templating by wrapping the code in `with self.cfg.disable_templating:`.
 
 There is one notable exception to this:
-Templates in easyconfig parameters are *not* resolved in `parse_hook`,
+Templates in simpleconfig parameters are *not* resolved in `parse_hook`,
 because templating has been disabled explicitly before `parse_hook` is called;
-this helps significantly to simplify manipulating of easyconfig parameter values
-(see also [Manipulating easyconfig parameters](#manipulating-easyconfig-parameters)).
+this helps significantly to simplify manipulating of simpleconfig parameter values
+(see also [Manipulating simpleconfig parameters](#manipulating-simpleconfig-parameters)).
 
 
-### Manipulating easyconfig parameters
+### Manipulating simpleconfig parameters
 
-You may run into surprises when trying to manipulate easyconfig parameters, for various reasons.
+You may run into surprises when trying to manipulate simpleconfig parameters, for various reasons.
 
-First of all, the original easyconfig parameters may already be processed in another data structure
-which does not resemble the original format in which the parameter was defined in the easyconfig file.
+First of all, the original simpleconfig parameters may already be processed in another data structure
+which does not resemble the original format in which the parameter was defined in the simpleconfig file.
 
-Moreover, this processing could be done either "in place" by replacing the original easyconfig parameter value,
-or in a separate variable, which effectively means that any changes to the original easyconfig parameter value
+Moreover, this processing could be done either "in place" by replacing the original simpleconfig parameter value,
+or in a separate variable, which effectively means that any changes to the original simpleconfig parameter value
 are simply ignored.
 
-In addition, because of how the templating mechanism for easyconfig parameter works,
-changes to easyconfig parameters with non-string values (i.e. lists, dictionaries, etc.) will go up
+In addition, because of how the templating mechanism for simpleconfig parameter works,
+changes to simpleconfig parameters with non-string values (i.e. lists, dictionaries, etc.) will go up
 in smoke if not done correctly.
 
 More specifically, the following approach will *not* work in any of the (step) hooks, except for `parse_hook`:
@@ -194,7 +194,7 @@ def pre_fetch_hook(self):
 ```
 
 The problem here is that the value obtained via `self.cfg['patches']` is not a reference
-to the actual easyconfig parameter value but a reference to a temporary copy thereof;
+to the actual simpleconfig parameter value but a reference to a temporary copy thereof;
 hence any updates on the copy are effectively lost immediately.
 
 To achieve the intended effect, you can either:
@@ -204,7 +204,7 @@ To achieve the intended effect, you can either:
     ```py
     def pre_fetch_hook(self):
         "Example of pre-fetch hook to manipulate list of patches."
-        # temporarily disable templating, so changes to 'patches' easyconfig parameter are picked up
+        # temporarily disable templating, so changes to 'patches' simpleconfig parameter are picked up
         with self.cfg.disable_templating:
             # add patch
             self.cfg['patches'].append('example.patch')
@@ -219,27 +219,27 @@ To achieve the intended effect, you can either:
         self.cfg['patches'] = self.cfg['patches'] + ['example.patch']
     ```
 
-A better approach for manipulating easyconfig parameters is to use the `parse_hook` that
-was introduced in EasyBuild v3.7.0 (see [Parse hook specifics](#parse-hook-specifics)),
+A better approach for manipulating simpleconfig parameters is to use the `parse_hook` that
+was introduced in SimpleBuild v3.7.0 (see [Parse hook specifics](#parse-hook-specifics)),
 where these kind of surprises will not occur (because templating is automatically disabled
 before `parse_hook` is called and restored immediately afterwards).
 See also [Example hook to inject a custom patch file](#inject-a-custom-patch-file).
 
-### Archived easyconfig file vs hooks
+### Archived simpleconfig file vs hooks
 
-EasyBuild archives the easyconfig file that was used for a particular installation:
-A copy is stored both in the `easybuild` subdirectory of the software installation
-directory and in the easyconfigs repository (see [Easyconfigs repository][easyconfigs_repo]).
+SimpleBuild archives the simpleconfig file that was used for a particular installation:
+A copy is stored both in the `simplebuild` subdirectory of the software installation
+directory and in the simpleconfigs repository (see [Simpleconfigs repository][simpleconfigs_repo]).
 
-If any changes were made to the easyconfig file via hooks, these changes will *not* be
+If any changes were made to the simpleconfig file via hooks, these changes will *not* be
 reflected in these copies.
 The assumption here is that the hooks will also be in place for future (re-)installations.
 
-EasyBuild does however store an additional copy of the easyconfig file which includes
+SimpleBuild does however store an additional copy of the simpleconfig file which includes
 any modifications that were done dynamically, for example by hooks.
 If subtoolchains were used to resolve dependencies, they will also be hardwired in this copy.
 
-This "*reproducible easyconfig*" is stored in the `easybuild/reprod` subdirectory
+This "*reproducible simpleconfig*" is stored in the `simplebuild/reprod` subdirectory
 of the software installation directory.
 
 

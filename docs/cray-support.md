@@ -1,6 +1,6 @@
-# EasyBuild on Cray {: #cray_support }
+# SimpleBuild on Cray {: #cray_support }
 
-As of EasyBuild v2.7.0, the support for using EasyBuild on Cray systems is considered stable.
+As of SimpleBuild v2.7.0, the support for using SimpleBuild on Cray systems is considered stable.
 Tt enables building/installing software using the `PrgEnv` modules provided by Cray.
 This page provides an overview of the current status.
 
@@ -27,7 +27,7 @@ for providing us access to Cray systems, for their support and for testing and c
 * Swan (TDS) @ Cray
 * Blue Waters @ NCSA
 
-## EasyBuild toolchains
+## SimpleBuild toolchains
 
 * `CrayCCE`: `PrgEnv-cray` with pinned versions of `cce`, `cray-libsci` and `cray-mpich`
 * `CrayGNU`: `PrgEnv-gnu` with pinned versions of `gcc`, `cray-libsci` and `cray-mpich`
@@ -58,7 +58,7 @@ versions:
 An up-to-date list of software applications built on Cray systems at CSCS can be found <https://github.com/eth-cscs/production/>,
 see <https://github.com/eth-cscs/production/tree/master/jenkins-builds>.
 
-## Required EasyBuild configuration
+## Required SimpleBuild configuration
 
 
 ### Modules tool 
@@ -71,30 +71,30 @@ Example for environment modules 3.2.10:
 ``` shell
 source /opt/modules/3.2.10.3/init/bash
 export PATH=/opt/modules/3.2.10.3/bin/:$PATH
-export EASYBUILD_MODULES_TOOL=EnvironmentModulesC
-export EASYBUILD_MODULE_SYNTAX=Tcl
+export SIMPLEBUILD_MODULES_TOOL=EnvironmentModulesC
+export SIMPLEBUILD_MODULE_SYNTAX=Tcl
 ```
 
 ### Architecture 
 
 * the `craype-<target>` module to load must be specified using `--optarch`
-    * e.g., `--optarch=sandybridge` results in `craype-sandybridge` being loaded in the build environment used by EasyBuild 
+    * e.g., `--optarch=sandybridge` results in `craype-sandybridge` being loaded in the build environment used by SimpleBuild 
 
 You can also export this option as a shell variable. Example for `sandybridge`:
 
 ``` shell
-export EASYBUILD_OPTARCH=sandybridge
+export SIMPLEBUILD_OPTARCH=sandybridge
 ```
 
 ### Metadata for Cray-provided modules
 
-* Easybuild provides a sample metadata file in order to use modules provided by Cray:
+* Simplebuild provides a sample metadata file in order to use modules provided by Cray:
 
 ``` shell
-easybuild-framework/etc/cray_external_modules_metadata.cfg
+simplebuild-framework/etc/cray_external_modules_metadata.cfg
 ```
 
-This file is loaded by default and contains enough information to build the easyconfig files shipped with EasyBuild.
+This file is loaded by default and contains enough information to build the simpleconfig files shipped with SimpleBuild.
 
 If you need to use a customized file, it can be specified using `--external-modules-metadata`.
 For more details see [Metadata for external modules][using_external_modules_metadata].

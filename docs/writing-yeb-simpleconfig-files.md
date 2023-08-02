@@ -1,28 +1,28 @@
-# Writing easyconfig files in YAML syntax (`.yeb` format) **Deprecated** {: #easyconfig_yeb_format }
+# Writing simpleconfig files in YAML syntax (`.yeb` format) **Deprecated** {: #simpleconfig_yeb_format }
 
 !!! warning
-    Use of `.yeb` easyconfigs is deprecated and [will be removed in EasyBuild v5.0][yeb].
+    Use of `.yeb` simpleconfigs is deprecated and [will be removed in SimpleBuild v5.0][yeb].
 
 Useful links:
 
 * YAML syntax specification: <https://www.yaml.org/spec/1.2/spec.html>
 
 
-## Requirements {: #easyconfig_yeb_format_requirements }
+## Requirements {: #simpleconfig_yeb_format_requirements }
 
-To use `.yeb` easyconfigs, you need to have:
+To use `.yeb` simpleconfigs, you need to have:
 
-* an EasyBuild (development) version which is aware of the `.yeb` format (i.e., version 2.3.0dev or higher)
+* an SimpleBuild (development) version which is aware of the `.yeb` format (i.e., version 2.3.0dev or higher)
 * [PyYAML](https://pypi.python.org/pypi/PyYAML) installed and available in your Python search path
   (via `$PYTHONPATH` for example), such that `import yaml` works
 
 
-## Syntax {: #easyconfig_yeb_format_syntax }
+## Syntax {: #simpleconfig_yeb_format_syntax }
 
 
-### YAML header (optional) {: #easyconfig_yeb_format_syntax_YAML_header }
+### YAML header (optional) {: #simpleconfig_yeb_format_syntax_YAML_header }
 
-Easyconfig files in YAML syntax can start with a standard YAML header.
+Simpleconfig files in YAML syntax can start with a standard YAML header.
 
 It consists of two lines:
 
@@ -41,7 +41,7 @@ This header is optional, but we recommend including it; one advantage is that ed
 highlighting for YAML when the `%YAML` directory is included.
 
 
-### Comments {: #easyconfig_yeb_format_syntax_comments }
+### Comments {: #simpleconfig_yeb_format_syntax_comments }
 
 Comments can be included anywhere, and are prefixed with a hash character `#`:
 
@@ -50,16 +50,16 @@ Comments can be included anywhere, and are prefixed with a hash character `#`:
 ```
 
 
-### Internal variables {: #easyconfig_yeb_format_syntax_internal_variables }
+### Internal variables {: #simpleconfig_yeb_format_syntax_internal_variables }
 
-To define and use temporary/internal variables in easyconfig files, which can be useful to avoid hardcoding (partial)
-easyconfig parameter values, the YAML anchor/alias functionality can be used
+To define and use temporary/internal variables in simpleconfig files, which can be useful to avoid hardcoding (partial)
+simpleconfig parameter values, the YAML anchor/alias functionality can be used
 (see also <https://www.yaml.org/spec/1.2/spec.html#id2765878>).
 
 A value can be marked for future reference via an *anchor*, using the ampersand character '`&`'.
 Referring to it later is done using an asterisk character '`*`'.
 
-Typically, internal variables are defined at the top of the `.yeb` easyconfig file using a list named
+Typically, internal variables are defined at the top of the `.yeb` simpleconfig file using a list named
 `_internal_variables_`, but this is just a matter of style; anchors can be defined throughout the entire file if
 desired.
 
@@ -76,17 +76,17 @@ dependencies:
 ```
 
 In this example, the `!join` is used to concatenate two string values,
-see also [Concatenating strings and/or variables][easyconfig_yeb_format_syntax_string_concatenation].
+see also [Concatenating strings and/or variables][simpleconfig_yeb_format_syntax_string_concatenation].
 
-A more elaborate example of this is the [`goolf-1.4.10.yeb`][easyconfig_yeb_format_examples_goolf1410] example easyconfig.
+A more elaborate example of this is the [`goolf-1.4.10.yeb`][simpleconfig_yeb_format_examples_goolf1410] example simpleconfig.
 
 
 
-### Concatenating strings and/or variables {: #easyconfig_yeb_format_syntax_string_concatenation }
+### Concatenating strings and/or variables {: #simpleconfig_yeb_format_syntax_string_concatenation }
 
 The standard YAML format does not support the notion of string concatenation.
 
-Since concatenating string values is a common pattern in easyconfig files, the EasyBuild framework
+Since concatenating string values is a common pattern in simpleconfig files, the SimpleBuild framework
 defines the `!join` operator to support this.
 
 For example, defining a `versionsuffix` that contains the Python version being used (which may be referred to
@@ -101,7 +101,7 @@ versionsuffix: !join [-Python-, *pyver]
 
 
 
-### Escaping string values with single or double quotes {: #easyconfig_yeb_format_syntax_escaping }
+### Escaping string values with single or double quotes {: #simpleconfig_yeb_format_syntax_escaping }
 
 Strings in YAML can be unquoted. However, when they contain special characters they need to be escaped by either single-
 or double-quoting the string.
@@ -113,23 +113,23 @@ If the string contains control characters such as `\n`, it must be escaped with 
 
 
 
-### Easyconfig parameter values {: #easyconfig_yeb_format_syntax_easyconfig_parameters }
+### Simpleconfig parameter values {: #simpleconfig_yeb_format_syntax_simpleconfig_parameters }
 
-To define an easyconfig parameter, simply use `<key>: <value>` (i.e., use a colon `:` as a separator).
+To define an simpleconfig parameter, simply use `<key>: <value>` (i.e., use a colon `:` as a separator).
 
-In YAML terminology, an easyconfig file is expressed as a *mapping*, with easyconfig parameters as keys.
+In YAML terminology, an simpleconfig file is expressed as a *mapping*, with simpleconfig parameters as keys.
 
 Three types of values (*nodes*) are supported: *scalars* (strings, integers), *sequences* (lists) and *mappings*
 (dictionaries).
 
 
-#### Scalar values {: #easyconfig_yeb_format_syntax_scalars }
+#### Scalar values {: #simpleconfig_yeb_format_syntax_scalars }
 
 Using scalar values is straight-forward, no special syntax is required.
 
 For string values, no quotes must be used (in general).
 However, quotes are sometimes required to escape characters that have special meaning in YAML (like '`:`').
-(Also see: [Escaping string values with single or double quotes][easyconfig_yeb_format_syntax_escaping])
+(Also see: [Escaping string values with single or double quotes][simpleconfig_yeb_format_syntax_escaping])
 It's worth noting that there's a subtle difference between using single and double quotes, see
 [Flow Scalar Styles](https://www.yaml.org/spec/1.2/spec.html#id2786942).
 
@@ -154,7 +154,7 @@ description:
 ```
 
 
-#### Sequences {: #easyconfig_yeb_format_syntax_sequences }
+#### Sequences {: #simpleconfig_yeb_format_syntax_sequences }
 
 Sequence values (a.k.a. lists) can be expressed in different ways, depending on their size.
 
@@ -182,7 +182,7 @@ source_urls:
 ```
 
 
-#### Mappings {: #easyconfig_yeb_format_syntax_mappings }
+#### Mappings {: #simpleconfig_yeb_format_syntax_mappings }
 
 Mapping values (a.k.a. dictionaries) are expressed using a colon '`:`' and space as key-value separator,
 a comma '`,`' to key-value pairs, and curly braces '`{`' '`}`' to mark the start/end.
@@ -194,7 +194,7 @@ For example:
 ```
 
 
-#### Nesting {: #easyconfig_yeb_format_syntax_nesting }
+#### Nesting {: #simpleconfig_yeb_format_syntax_nesting }
 
 Different types of values can be nested.
 
@@ -217,11 +217,11 @@ osdependencies
 
 
 
-### Templates values and constants {: #easyconfig_yeb_format_syntax_template_values_constants }
+### Templates values and constants {: #simpleconfig_yeb_format_syntax_template_values_constants }
 
 Template values can be specified as a part of string values, using `%(template_name)`.
 
-Template constants are injected by the easyconfig `.yeb` parser as *node anchors*,
+Template constants are injected by the simpleconfig `.yeb` parser as *node anchors*,
 and can be referred to with an *alias node*, i.e. using an asterisk `*`.
 
 For example:
@@ -231,12 +231,12 @@ For example:
     sources: ['%(name)s-%(version)s.tar.gz']  # equivalent with [*SOURCE_TAR_GZ]
 ```
 
-See also [Dynamic values for easyconfig parameters][easyconfig_param_templates].
+See also [Dynamic values for simpleconfig parameters][simpleconfig_param_templates].
 
 
-### Dependencies {: #easyconfig_yeb_format_syntax_dependencies }
+### Dependencies {: #simpleconfig_yeb_format_syntax_dependencies }
 
-We updated the way dependencies are specified to match with the new toolchain format ([OS dependencies and sanity check paths][easyconfig_yeb_format_new])
+We updated the way dependencies are specified to match with the new toolchain format ([OS dependencies and sanity check paths][simpleconfig_yeb_format_new])
 The format is a bit more verbose than before, but easier to read. Each dependency is a list entry, indicated by a dash
 and space (`- item`). Each entry can specify a `name: version` key-value pair, and a `versionsuffix` and `toolchain`.
 Only the `name: version` pair is required.
@@ -260,9 +260,9 @@ builddependencies:
       toolchain: GCC, 4.9.2
 ```
 
-A more complicated example from a toolchain easyconfig, where also the `!join` operator
-(see [Concatenating strings and/or variables][easyconfig_yeb_format_syntax_string_concatenation]) and internal variables
-(see [Internal variables][easyconfig_yeb_format_syntax_internal_variables]) are used:
+A more complicated example from a toolchain simpleconfig, where also the `!join` operator
+(see [Concatenating strings and/or variables][simpleconfig_yeb_format_syntax_string_concatenation]) and internal variables
+(see [Internal variables][simpleconfig_yeb_format_syntax_internal_variables]) are used:
 
 ``` yaml
 _internal_variables_:
@@ -291,11 +291,11 @@ dependencies:
       toolchain: *comp_mpi_tc
 ```
 
-For the full version of this easyconfig file, see the example `.yeb` easyconfig
-[`goolf-1.4.10.yeb`][easyconfig_yeb_format_examples_goolf1410].
+For the full version of this simpleconfig file, see the example `.yeb` simpleconfig
+[`goolf-1.4.10.yeb`][simpleconfig_yeb_format_examples_goolf1410].
 
 
-### OS dependencies and sanity check paths {: #easyconfig_yeb_format_new }
+### OS dependencies and sanity check paths {: #simpleconfig_yeb_format_new }
 
 To specify parameters that used to contain tuples such as `osdependencies` and `sanity_check_paths`, simply use
 lists (sequences) instead of tuples.
@@ -333,11 +333,11 @@ sanity_check_paths: {
 ```
 
 
-### Shorthands for common easyconfig parameters
+### Shorthands for common simpleconfig parameters
 
 #### Toolchain format
 
-The easyconfig parameter `toolchain` in .eb files is defined as a dictionary `{'name':'foo', 'version':'bar'}`. In
+The simpleconfig parameter `toolchain` in .eb files is defined as a dictionary `{'name':'foo', 'version':'bar'}`. In
 the .yeb format, this can be done much easier by just using `name, version`. E.g:
 
 ``` python
@@ -352,17 +352,17 @@ toolchain: intel, 2015b
 ```
 
 
-## Examples {: #easyconfig_yeb_format_examples }
+## Examples {: #simpleconfig_yeb_format_examples }
 
 
-### gzip-1.6-GCC-4.9.2.yeb {: #easyconfig_yeb_format_examples_gzip16_GCC492 }
+### gzip-1.6-GCC-4.9.2.yeb {: #simpleconfig_yeb_format_examples_gzip16_GCC492 }
 
-Example easyconfig for gzip v1.6 using the `GCC/4.9.2` toolchain.
+Example simpleconfig for gzip v1.6 using the `GCC/4.9.2` toolchain.
 
 ``` yaml
 %YAML 1.2
 ---
-easyblock: ConfigureMake
+simpleblock: ConfigureMake
 
 name: gzip
 version: 1.6
@@ -388,9 +388,9 @@ moduleclass: tools
 ```
 
 
-### goolf-1.4.10.yeb {: #easyconfig_yeb_format_examples_goolf1410 }
+### goolf-1.4.10.yeb {: #simpleconfig_yeb_format_examples_goolf1410 }
 
-Easyconfig file in YAML syntax for the goolf v1.4.10 toolchain.
+Simpleconfig file in YAML syntax for the goolf v1.4.10 toolchain.
 
 ``` yaml
 _internal_variables_:
@@ -408,7 +408,7 @@ _internal_variables_:
     - &comp_mpi_tc [gompi, *version]
 
 
-easyblock: Toolchain
+simpleblock: Toolchain
 
 name: goolf
 version: *version
@@ -447,7 +447,7 @@ _internal_variables_:
     - &numpyversion 1.9.2
     - &scipyversion 0.15.1
 
-easyblock: ConfigureMake
+simpleblock: ConfigureMake
 
 name: Python
 version: 2.7.10

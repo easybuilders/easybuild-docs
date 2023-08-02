@@ -1,22 +1,22 @@
 # Compatibility with Python 2 and Python 3 {: #py2_py3_compatibility }
 
-Starting with EasyBuild v4.0, the EasyBuild framework and easyblocks are
+Starting with SimpleBuild v4.0, the SimpleBuild framework and simpleblocks are
 compatible with both Python versions 2 and 3. More specifically, the
 following Python versions are currently supported:
 
-- Python 2.6.x (support was removed in EasyBuild v4.4.0)
+- Python 2.6.x (support was removed in SimpleBuild v4.4.0)
 - Python 2.7.x
 - Python 3.5.x
 - Python 3.6.x
 - Python 3.7.x
-- Python 3.8.x (requires EasyBuild v4.1.0)
-- Python 3.9.x (requires EasyBuild v4.3.1)
-- Python 3.10.x (requires EasyBuild v4.5.2)
-- Python 3.11.x (requires EasyBuild v4.5.2)
+- Python 3.8.x (requires SimpleBuild v4.1.0)
+- Python 3.9.x (requires SimpleBuild v4.3.1)
+- Python 3.10.x (requires SimpleBuild v4.5.2)
+- Python 3.11.x (requires SimpleBuild v4.5.2)
 
-## Determining which Python version EasyBuild is using via `$EB_VERBOSE` {: #py2_py3_compatibility_EB_VERBOSE }
+## Determining which Python version SimpleBuild is using via `$EB_VERBOSE` {: #py2_py3_compatibility_EB_VERBOSE }
 
-To determine which Python version is being used to run EasyBuild, you
+To determine which Python version is being used to run SimpleBuild, you
 can define the `$EB_VERBOSE` environment variable.
 
 For example:
@@ -29,11 +29,11 @@ $ eb --version
 >> Considering 'python3'...
 >> 'python3' version: 3.6.9, which matches Python 3 version requirement (>= 3.5)
 >> Selected Python command: python3 (/usr/local/bin/python3)
->> python3 -m easybuild.main --version
-This is EasyBuild 4.0.0 (framework: 4.0.0, easyblocks: 4.0.0) on host example.
+>> python3 -m simplebuild.main --version
+This is SimpleBuild 4.0.0 (framework: 4.0.0, simpleblocks: 4.0.0) on host example.
 ```
 
-## Controlling which `python` command EasyBuild will use via `$EB_PYTHON` {: #py2_py3_compatibility_EB_PYTHON }
+## Controlling which `python` command SimpleBuild will use via `$EB_PYTHON` {: #py2_py3_compatibility_EB_PYTHON }
 
 The `eb` command will consider different `python` commands, and check
 the Python version corresponding with the command before selecting one.
@@ -56,16 +56,16 @@ $ eb --version
 >> Considering 'python3.7'...
 >> 'python3.7' version: 3.7.2, which matches Python 3 version requirement (>= 3.5)
 >> Selected Python command: python3.7 (/usr/local/bin/python3.7)
->> python3.7 -m easybuild.main --version
-This is EasyBuild 4.0.0 (framework: 4.0.0, easyblocks: 4.0.0) on host example.
+>> python3.7 -m simplebuild.main --version
+This is SimpleBuild 4.0.0 (framework: 4.0.0, simpleblocks: 4.0.0) on host example.
 ```
 
-## The `easybuild.tools.py2vs3` package
+## The `simplebuild.tools.py2vs3` package
 
-To facilitate this, the `easybuild.tools.py2vs3` package was introduced
-in EasyBuild v4.0. When importing a function from this package, you will
+To facilitate this, the `simplebuild.tools.py2vs3` package was introduced
+in SimpleBuild v4.0. When importing a function from this package, you will
 automatically get a version of the function that is compatible with the
-Python version being used to run EasyBuild.
+Python version being used to run SimpleBuild.
 
 Through this approach we can hide subtle differences between Python 2
 and 3, while avoiding code duplication and Python version checks
@@ -73,7 +73,7 @@ throughout the codebase, as well as avoid requiring packages like `six`
 or `future` (which facilitate maintaining compatibility with Python 2
 and 3, but are also a bit of a burden).
 
-The `easybuild.tools.py2vs3` package provides two major classes of items
+The `simplebuild.tools.py2vs3` package provides two major classes of items
 (listed below in alphabetical order):
 
 - functions from the Python standard library which should be imported
@@ -135,7 +135,7 @@ implemented in a way that is compatible with both Python 2 and 3.
 
 ## `OrderedDict` {: #py2vs3_OrderedDict }
 
-- Python 2.6: corresponds to `easybuild.tools.ordereddict.OrderedDict`
+- Python 2.6: corresponds to `simplebuild.tools.ordereddict.OrderedDict`
 - Python 2.7: corresponds to `collections.OrderedDict`
 - Python 3: corresponds to `collections.OrderedDict`
 

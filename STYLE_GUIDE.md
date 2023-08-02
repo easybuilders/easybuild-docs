@@ -1,6 +1,6 @@
-# Style guide for EasyBuild documentation
+# Style guide for SimpleBuild documentation
 
-General guidance on the style of the EasyBuild documentation.
+General guidance on the style of the SimpleBuild documentation.
 
 ## Code Blocks
 
@@ -60,7 +60,7 @@ and to a section within the page with
 [link text](page.md#anchor)
 ```
 
-The EasyBuild docs uses [mkdocs-autorefs](https://github.com/mkdocstrings/autorefs). This allows internal links to be automatically linked by referring only to the anchor, e.g.
+The SimpleBuild docs uses [mkdocs-autorefs](https://github.com/mkdocstrings/autorefs). This allows internal links to be automatically linked by referring only to the anchor, e.g.
 
 ``` markdown
 [link text][anchor]

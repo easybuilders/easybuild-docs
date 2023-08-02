@@ -1,6 +1,6 @@
 # Code style {: #code_style }
 
-The code style we follow in the EasyBuild code repository is mainly dictated by the Python standard
+The code style we follow in the SimpleBuild code repository is mainly dictated by the Python standard
 [PEP8](https://www.python.org/dev/peps/pep-0008).
 
 Highlighted PEP8 code style rules:
@@ -18,7 +18,7 @@ The only (major) exception to PEP8 is our preference for longer line lengths: li
 
 ## Notes
 
-Code style in easyconfig files can be **automatically checked** using `--check-contrib`, 
+Code style in simpleconfig files can be **automatically checked** using `--check-contrib`, 
 for example: `eb --check-contrib sympy-1.3-intel-2018a-Python-2.7.14.eb` 
 (see [Code style review][contributing_review_process_code_style] for more details).
 

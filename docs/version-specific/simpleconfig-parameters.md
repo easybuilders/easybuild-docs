@@ -1,4 +1,4 @@
-# Available easyconfig parameters {: #vsd_avail_easyconfig_params }
+# Available simpleconfig parameters {: #vsd_avail_simpleconfig_params }
 
 ## Mandatory parameters
 
@@ -32,8 +32,8 @@
 `configopts`                 |Extra options passed to configure (default already has --prefix)                                                                         |`""`
 `cuda_compute_capabilities`  |List of CUDA compute capabilities to build with (if supported)                                                                           |`[]`
 `download_instructions`      |Specify steps to acquire necessary file, if obtaining it is difficult                                                                    |`""`
-`easyblock`                  |EasyBlock to use for building; if set to None, an easyblock is selected based on the software name                                       |`None`
-`easybuild_version`          |EasyBuild-version this spec-file was written for                                                                                         |`None`
+`simpleblock`                  |SimpleBlock to use for building; if set to None, an simpleblock is selected based on the software name                                       |`None`
+`simplebuild_version`          |SimpleBuild-version this spec-file was written for                                                                                         |`None`
 `enhance_sanity_check`       |Indicate that additional sanity check commands & paths should enhance the existing sanity check, not replace it                          |`False`
 `fix_bash_shebang_for`       |List of files for which Bash shebang should be fixed to '#!/usr/bin/env bash' (glob patterns supported)                                  |`None`
 `fix_perl_shebang_for`       |List of files for which Perl shebang should be fixed to '#!/usr/bin/env perl' (glob patterns supported)                                  |`None`
@@ -135,7 +135,7 @@
 `moduleforceunload`         |Force unload of all modules when loading the extension                                                                                                                            |`False`
 `moduleloadnoconflict`      |Don't check for conflicts, unload other versions instead                                                                                                                          |`False`
 `modunloadmsg`              |Message that should be printed when generated module is unloaded                                                                                                                  |`{}`
-`recursive_module_unload`   |Recursive unload of all dependencies when unloading module (True/False to hard enable/disable; None implies honoring the --recursive-module-unload EasyBuild configuration setting|`None`
+`recursive_module_unload`   |Recursive unload of all dependencies when unloading module (True/False to hard enable/disable; None implies honoring the --recursive-module-unload SimpleBuild configuration setting|`None`
 `site_contacts`             |String/list of strings with site contacts for the software                                                                                                                        |`None`
 `upstream_contacts`         |String/list of strings with upstream contact addresses (e.g., support e-mail, mailing list, bugtracker)                                                                           |`None`
 `usage`                     |Usage instructions for the software                                                                                                                                               |`None`
@@ -145,9 +145,9 @@
 
 **Parameter name**|**Description**                                                                                                            |**Default value**
 ------------------|---------------------------------------------------------------------------------------------------------------------------|-----------------
-`block`           |List of other 'block' sections on which this block depends (only relevant in easyconfigs with subblocks)                   |`None`
+`block`           |List of other 'block' sections on which this block depends (only relevant in simpleconfigs with subblocks)                   |`None`
 `buildstats`      |A list of dicts with build statistics                                                                                      |`None`
-`deprecated`      |String specifying reason why this easyconfig file is deprecated and will be archived in the next major release of EasyBuild|`False`
+`deprecated`      |String specifying reason why this simpleconfig file is deprecated and will be archived in the next major release of SimpleBuild|`False`
 
 
-*(see also* ``eb -a`` or ``eb --avail-easyconfig-params`` *)*
+*(see also* ``eb -a`` or ``eb --avail-simpleconfig-params`` *)*

@@ -1,6 +1,6 @@
 # Controlling compiler optimization flags {: #controlling_compiler_optimization_flags }
 
-This page provides an overview on the different ways in which compiler optimization flags used by EasyBuild
+This page provides an overview on the different ways in which compiler optimization flags used by SimpleBuild
 can be controlled.
 
 
@@ -9,7 +9,7 @@ can be controlled.
 
 ### Default behaviour {: #controlling_compiler_optimization_flags_optarch_default }
 
-By default, EasyBuild optimizes builds for the CPU architecture of the build host, by instructing the compiler to
+By default, SimpleBuild optimizes builds for the CPU architecture of the build host, by instructing the compiler to
 generate instructions for the highest instruction set supported by the process architecture of the build host processor.
 
 This is done by including specific compiler flags in `$CFLAGS`, `$CXXFLAGS`, `$FFLAGS`, `$F90FLAGS`, etc.
@@ -37,9 +37,9 @@ it will not run on a system with an older Intel Nehalem processor.
 One possible workaround for heterogeneous HPC clusters is to build as many copies of the software stack as you have
 processor generations in your cluster, and to configure your system so each compute node uses the right software stack
 matching its processor architecture type.
-Details for one way of doing this, using automounter/autofs are available at <https://easybuild.io/files/sciCORE-software-management_20150611.pdf>.
+Details for one way of doing this, using automounter/autofs are available at <https://simplebuild.io/files/sciCORE-software-management_20150611.pdf>.
 
-Another solution is to configure EasyBuild to not optimize for the processor architecture of the build host via
+Another solution is to configure SimpleBuild to not optimize for the processor architecture of the build host via
 `--optarch`, see below.
 
 
@@ -48,15 +48,15 @@ Another solution is to configure EasyBuild to not optimize for the processor arc
 Be aware that that using `--optarch` as described below does not provide hard guarantees that the build
 will be executed using the intended compiler flags.
 
-EasyBuild will define the appropriate environment variables (`$CFLAGS` and co) to use the compiler flags as
+SimpleBuild will define the appropriate environment variables (`$CFLAGS` and co) to use the compiler flags as
 specified, but some MakeFiles or build systems could have hardcoded values that have not been dealt with yet
 (for example, via a patch file or by specifying options to the `make` command).
 
 For example, the OpenBLAS build system will autodetect the processor architecture in the build host,
 and will optimize for that processor architecture by default.
 
-If you want a generic OpenBLAS build you will need to tweak the OpenBLAS easyconfig file to define
-the desired `TARGET` to use. For this you will need to modify the `buildopts` easyconfig parameter, for example:
+If you want a generic OpenBLAS build you will need to tweak the OpenBLAS simpleconfig file to define
+the desired `TARGET` to use. For this you will need to modify the `buildopts` simpleconfig parameter, for example:
 
 ``` py
 buildopts = 'TARGET=PRESCOTT BINARY=64 ' + threading + ' CC="$CC" FC="$F77"'
@@ -70,17 +70,17 @@ See these links for more details w.r.t. OpenBLAS:
 
 ### Specifying target architecture specific optimization flags to use via `--optarch=<flags>` {: #controlling_compiler_optimization_flags_optarch_flags }
 
-Using the `--optarch` EasyBuild configuration option, specific compiler flags can be provided that EasyBuild
+Using the `--optarch` SimpleBuild configuration option, specific compiler flags can be provided that SimpleBuild
 should use, rather than the ones used by default (depending on the compiler in the toolchain being used).
 
-Like any other configuration setting, this can also be specified via `$EASYBUILD_OPTARCH`, or by defining `optarch`
-in an EasyBuild configuration file (cfr. [Consistency across supported configuration types][configuration_consistency]).
+Like any other configuration setting, this can also be specified via `$SIMPLEBUILD_OPTARCH`, or by defining `optarch`
+in an SimpleBuild configuration file (cfr. [Consistency across supported configuration types][configuration_consistency]).
 
-For example, by specifying `--optarch=march=core2`, EasyBuild will use `-march=core2` rather than the default
+For example, by specifying `--optarch=march=core2`, SimpleBuild will use `-march=core2` rather than the default
 flag `--march=native` (when using GCC compilers).
 
 Likewise, to avoid using the default `-xHost` flag with the Intel compilers and using `-xSSSE3` instead,
-you can define `$EASYBUILD_OPTARCH` to be equal to `xSSSE3`.
+you can define `$SIMPLEBUILD_OPTARCH` to be equal to `xSSSE3`.
 
 !!! note
     The first dash (`-`) is added automagically to the value specified to `--optarch`,
@@ -94,15 +94,15 @@ the right flags depending on your specific processor architecture.
 
 ### Optimizing for a generic processor architecture via `--optarch=GENERIC` {: #controlling_compiler_optimization_flags_optarch_generic }
 
-To make EasyBuild optimize for a *generic* processor architecture, `--optarch` can be set to '`GENERIC`'.
+To make SimpleBuild optimize for a *generic* processor architecture, `--optarch` can be set to '`GENERIC`'.
 
-When this is the case, EasyBuild will use the right compiler flags to optimize for a generic processor
+When this is the case, SimpleBuild will use the right compiler flags to optimize for a generic processor
 architecture, i.e. avoid using machine instructions that are only supported by very recent processors.
 
-The `GENERIC` keyword for `--optarch` is recognized since EasyBuild v2.5.0, and is supported for GCC and Intel
+The `GENERIC` keyword for `--optarch` is recognized since SimpleBuild v2.5.0, and is supported for GCC and Intel
 compilers on x86-64 systems (Intel or AMD).
 For other compilers that can be used in toolchains and other system architectures,
-the necessary compiler flags will be defined in later EasyBuild versions.
+the necessary compiler flags will be defined in later SimpleBuild versions.
 
 Currently, using `--optarch=GENERIC` will result in the following target architecture optimization flags being used,
 (on a Linux x86-64 system):
@@ -115,13 +115,13 @@ On other systems or for other compilers, you can check which compiler flags will
 
 ### Setting architecture flags for different compilers via `--optarch=<compiler:flags>;<compiler:flags>` {: #controlling_compiler_optimization_flags_optarch_per_compiler }
 
-Starting with version 3.1.0, EasyBuild supports specifying architecture flags on a per-compiler basis. This enables to
+Starting with version 3.1.0, SimpleBuild supports specifying architecture flags on a per-compiler basis. This enables to
 "set and forget" the `--optarch` option for your compilers of interest, as opposed to change it depending on the
 compiler used on the packages to be installed.
 
 The syntax is `<compiler:flags>;<compiler:flags>`, where `:` separates the compiler name from the compiler flags,
 and `;` separates different compilers. This is an example for the Intel and GCC compilers:
-`--optarch='Intel:xHost;GCC:march=x86-64 -mtune=generic'`. As in the simple cases, EasyBuild adds one `-` to the
+`--optarch='Intel:xHost;GCC:march=x86-64 -mtune=generic'`. As in the simple cases, SimpleBuild adds one `-` to the
 flags specified, so the flags passed to the Intel and GCC compilers in this case are `-xHost` and
 `-march=x86-64 -mtune=generic`. Please note the quotes to escape the space in the GCC flags.
 
@@ -130,7 +130,7 @@ desired compilers. This is an example of this usage: `--optarch=Intel:xHost;GCC:
 supported just for compiler toolchains that recognize `GENERIC`.
 
 The options for each compiler are set independently. That means that if a GCC-based toolchain is used, but the only
-compiler specified is `Intel` (for example with `--optarch=Intel:xCORE-AVX2`), then EasyBuild will behave as if
+compiler specified is `Intel` (for example with `--optarch=Intel:xCORE-AVX2`), then SimpleBuild will behave as if
 `--optarch` was not specified for this toolchain.
 
 The compiler name corresponds to the value of the `COMPILER_FAMILY` constant of the toolchain. Two common examples

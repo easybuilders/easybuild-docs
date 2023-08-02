@@ -1,4 +1,4 @@
-easyblock = 'Binary'
+simpleblock = 'Binary'
 
 name = 'Platanus'
 version = '1.2.1'

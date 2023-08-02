@@ -1,6 +1,6 @@
 ---
 # documentation: https://help.github.com/en/articles/workflow-syntax-for-github-actions
-name: deploy EasyBuild documentation (only on push to main branch)
+name: deploy SimpleBuild documentation (only on push to main branch)
 on:  # yamllint disable-line rule:truthy
   push:
     branches: main
@@ -20,11 +20,11 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: checkout easybuild framework
+      - name: checkout simplebuild framework
         uses: actions/checkout@v3
         with:
-          repository: easybuilders/easybuild-framework
-          path: src/easybuild-framework
+          repository: simplebuilders/simplebuild-framework
+          path: src/simplebuild-framework
           ref: main
 
       - name: install mkdocs

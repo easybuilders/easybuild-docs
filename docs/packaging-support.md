@@ -1,24 +1,24 @@
 # Packaging support {: #packaging_support }
 
 !!! note
-    Packaging support was added as an experimental feature in EasyBuild
+    Packaging support was added as an experimental feature in SimpleBuild
     v2.2.0 (cfr. [Experimental features][experimental_features]).
-    Since EasyBuild v2.5.0, it is considered stable.
+    Since SimpleBuild v2.5.0, it is considered stable.
 
 ## Prerequisites {: #packaging_prereq }
 
-EasyBuild leverages [FPM](https://github.com/jordansissel/fpm) to create
+SimpleBuild leverages [FPM](https://github.com/jordansissel/fpm) to create
 binary packages (RPMs, Debian files, etc.).
 
 Hence, FPM must be available in some way or another. One way is via
-EasyBuild, for example by installing a module for FPM using one of the
-available easyconfig files.
+SimpleBuild, for example by installing a module for FPM using one of the
+available simpleconfig files.
 
-EasyBuild will also take care of installing Ruby for you (which is
+SimpleBuild will also take care of installing Ruby for you (which is
 required for FPM itself):
 
 ``` console
-$ export EASYBUILD_PREFIX=/home/example
+$ export SIMPLEBUILD_PREFIX=/home/example
 
 $ eb FPM-1.3.3-Ruby-2.1.6.eb --robot
 [...]
@@ -29,7 +29,7 @@ $ eb FPM-1.3.3-Ruby-2.1.6.eb --robot
 == building and installing FPM/1.3.3-Ruby-2.1.6...
 [...]
 == COMPLETED: Installation ended successfully
-== Results of the build can be found in the log file /home/example/software/FPM/1.3.3-Ruby-2.1.6/easybuild/easybuild-FPM-1.3.3-20150524.181859.log
+== Results of the build can be found in the log file /home/example/software/FPM/1.3.3-Ruby-2.1.6/simplebuild/simplebuild-FPM-1.3.3-20150524.181859.log
 == Build succeeded for 2 out of 2
 
 $ module load FPM/1.3.3-Ruby-2.1.6
@@ -56,7 +56,7 @@ available.
         <https://github.com/jordansissel/fpm/wiki#overview>)
 - `--package-naming-scheme=<PNS>`:
     - specifies which package naming scheme to use; default:
-        `EasyBuildPNS`
+        `SimpleBuildPNS`
 - `--packagepath`:
     - specifies destination path of packages being built
 - `--package-release`:
@@ -72,11 +72,11 @@ available.
 
 ## Usage {: #packaging_usage }
 
-To make EasyBuild generate packages, just use `--package`. By default,
-this will make EasyBuild leverage FPM to create RPMs:
+To make SimpleBuild generate packages, just use `--package`. By default,
+this will make SimpleBuild leverage FPM to create RPMs:
 
 ``` console
-$ export EASYBUILD_PREFIX=/home/example
+$ export SIMPLEBUILD_PREFIX=/home/example
 $ eb --package Perl-5.20.1-GCC-4.9.2-bare.eb --robot
 [...]
 == building and installing Perl/5.20.1-GCC-4.9.2-bare...
@@ -96,7 +96,7 @@ $ eb --package Perl-5.20.1-GCC-4.9.2-bare.eb --robot
 == creating module...
 == packaging...
 == COMPLETED: Installation ended successfully
-== Results of the build can be found in the log file /home/example/software/Perl/5.20.1-GCC-4.9.2-bare/easybuild/easybuild-Perl-5.20.1-20150527.023522.log
+== Results of the build can be found in the log file /home/example/software/Perl/5.20.1-GCC-4.9.2-bare/simplebuild/simplebuild-Perl-5.20.1-20150527.023522.log
 == Build succeeded for 1 out of 1
 ```
 
@@ -121,8 +121,8 @@ Source RPM  : Perl-5.20.1-GCC-4.9.2-bare.eb2.2.0-1.x86_64.src.rpm
 Build Date  : Tue 07 Jul 2015 11:27:54 PM EDT
 Build Host  : 59e46bbf1cd0
 Relocations : /
-Packager    : <easybuild@59e46bbf1cd0>
-Vendor      : easybuild@59e46bbf1cd0
+Packager    : <simplebuild@59e46bbf1cd0>
+Vendor      : simplebuild@59e46bbf1cd0
 URL         : http://example.com/no-uri-given
 Summary     : no description given
 Description :
@@ -139,7 +139,7 @@ Perl-5.20.1-GCC-4.9.2-bare(x86-64) = eb2.2.0-1
 ## Packaging existing installations {: #packaging_skip }
 
 To create packages for existing software installations (performed using
-EasyBuild), combine `--package` with `--skip --rebuild`:
+SimpleBuild), combine `--package` with `--skip --rebuild`:
 
 ``` console
 $ eb --package Perl-5.20.1-GCC-4.9.2-bare.eb --skip --rebuild
@@ -161,6 +161,6 @@ $ eb --package Perl-5.20.1-GCC-4.9.2-bare.eb --skip --rebuild
 == creating module...
 == packaging...
 == COMPLETED: Installation ended successfully
-== Results of the build can be found in the log file /home/example/software/Perl/5.20.1-GCC-4.9.2-bare/easybuild/easybuild-Perl-5.20.1-20150527.041734.log
+== Results of the build can be found in the log file /home/example/software/Perl/5.20.1-GCC-4.9.2-bare/simplebuild/simplebuild-Perl-5.20.1-20150527.041734.log
 == Build succeeded for 1 out of 1
 ```

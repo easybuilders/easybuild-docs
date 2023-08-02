@@ -8,15 +8,15 @@
     ],
     [
       0.000227,
-      "# EasyBuild is a build and installation framework for (scientific) software on HPC systems\r\n# http://hpcugent.github.io/easybuild/ - http://easybuild.readthedocs.io/\r\n\r\n# author: Kenneth Hoste (a.k.a. boegel) -- kenneth.hoste@ugent.be\r\n"
+      "# SimpleBuild is a build and installation framework for (scientific) software on HPC systems\r\n# http://hpcugent.github.io/simplebuild/ - http://simplebuild.readthedocs.io/\r\n\r\n# author: Kenneth Hoste (a.k.a. boegel) -- kenneth.hoste@ugent.be\r\n"
     ],
     [
       2.5e-05,
-      "# date: Feb 20th 2017 (EasyBuild v3.1.0)\r\n\r\n"
+      "# date: Feb 20th 2017 (SimpleBuild v3.1.0)\r\n\r\n"
     ],
     [
       0.129485,
-      "\r\n#\r\n# Reviewing easyconfig pull requests\r\n# **********************************\r\n#\r\n"
+      "\r\n#\r\n# Reviewing simpleconfig pull requests\r\n# **********************************\r\n#\r\n"
     ],
     [
       4.9e-05,
@@ -372,7 +372,7 @@
     ],
     [
       0.047988,
-      "http://easybuild.readthedocs.io/en/latest/Contributing-back.html#comparing-with-existing-easyconfigs-review-pr"
+      "http://simplebuild.readthedocs.io/en/latest/Contributing-back.html#comparing-with-existing-simpleconfigs-review-pr"
     ],
     [
       0.032015,
@@ -1076,7 +1076,7 @@
     ],
     [
       0.654289,
-      "== temporary log file in case of crash /tmp/eb-sDWrJz/easybuild-e4Q0oA.log\r\n"
+      "== temporary log file in case of crash /tmp/eb-sDWrJz/simplebuild-e4Q0oA.log\r\n"
     ],
     [
       0.804274,

@@ -1,16 +1,16 @@
 # Wrapping dependencies {: #wrapping_dependencies}
 
-Since EasyBuild v3.7.0 a special-purpose generic easyblock named `ModuleRC` is available,
+Since SimpleBuild v3.7.0 a special-purpose generic simpleblock named `ModuleRC` is available,
 which can be used to generate a (software-specific) `.modulerc` file
 (as opposed to generating an actual module file).
 
 !!! note
-    For compatibility with the different modules tools supported by EasyBuild (see [Modules tool (`--modules-tool`)][modules_tool]),
+    For compatibility with the different modules tools supported by SimpleBuild (see [Modules tool (`--modules-tool`)][modules_tool]),
     the `.modulerc` file is always generated in Tcl syntax (for now), regardless of the module syntax
     that is used for module files. Only Lmod 7.8 (or later) supports `.modulerc.lua` files
     in Lua syntax.
 
-The `ModuleRC` easyblock supports including `module-version` in the generated `.modulerc` file,
+The `ModuleRC` simpleblock supports including `module-version` in the generated `.modulerc` file,
 which defines a so-called *"symbolic version"*.
 
 This can be used to install a *"wrapper"* for a particular module, which can be useful in the context
@@ -36,6 +36,6 @@ This has a couple of advantages:
   actual installation and generating a module file); in addition, it doesn't require updating/re-generating existing
   module files that depend on the `Java` wrapper (since the version of the wrapper does not change)
 
-Since `ModuleRC` is a generic easyblock , it can also be employed to install module "wrappers" for dependencies
+Since `ModuleRC` is a generic simpleblock , it can also be employed to install module "wrappers" for dependencies
 other than `Java`.
 

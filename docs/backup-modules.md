@@ -40,7 +40,7 @@ because the `/bin` subdirectory was missing in the installation, for the
 purpose of this example:
 
 ``` console
-$ ls -la $EASYBUILD_PREFIX/modules/all/bzip2
+$ ls -la $SIMPLEBUILD_PREFIX/modules/all/bzip2
 drwxrwsr-x  2 example example 4096 May  9 09:12 .
 drwxrwsr-x 17 example example 4096 May  9 09:12 ..
 -rw-rw-r--  1 example example 1637 May  9 09:12 1.0.8-GCCcore-12.2.0.lua
@@ -70,7 +70,7 @@ $ eb bzip2-1.0.8-GCCcore-12.2.0.eb --module-syntax=Lua --force --backup-modules
 +prepend_path("PATH", pathJoin(root, "bin"))
  setenv("EBROOTBZIP2", root)
  setenv("EBVERSIONBZIP2", "1.0.8")
- setenv("EBDEVELBZIP2", pathJoin(root, "easybuild/bzip2-1.0.8-GCCcore-12.2.0-easybuild-devel"))
+ setenv("EBDEVELBZIP2", pathJoin(root, "simplebuild/bzip2-1.0.8-GCCcore-12.2.0-simplebuild-devel"))
 
 ...
 ```
@@ -85,7 +85,7 @@ Afterwards, both the newly generated modules and the backups are in
 place:
 
 ``` console
-$ ls -la $EASYBUILD_PREFIX/modules/all/bzip2
+$ ls -la $SIMPLEBUILD_PREFIX/modules/all/bzip2
 total 4
 drwxrwsr-x  2 example example 4096 May  9 09:29 .
 drwxrwsr-x 17 example example 4096 May  9 09:12 ..
@@ -99,7 +99,7 @@ Cleaning up the backup module files can be done with the following
 command (for example):
 
 ``` console
-$ find $EASYBUILD_PREFIX/modules/all/bzip2 -name '*.bak*' | xargs rm -v
+$ find $SIMPLEBUILD_PREFIX/modules/all/bzip2 -name '*.bak*' | xargs rm -v
 removed 'example/modules/all/bzip2/1.0.8-GCCcore-12.2.0.bak_20230509091754_3383740'
 removed 'example/modules/all/bzip2/1.0.8-GCCcore-12.2.0.lua.bak_20230509091972_3578923'
 ```

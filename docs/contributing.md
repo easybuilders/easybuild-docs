@@ -1,6 +1,6 @@
 # Contributing {: #contributing }
 
-This documentation explains how you can contribute to EasyBuild, and
+This documentation explains how you can contribute to SimpleBuild, and
 discusses the review process for contributions.
 
 ## How to contribute {: #contributing_how }
@@ -12,58 +12,58 @@ There are various ways to contribute, even if you don't have any
 experience with the programming language(s) being used by the project
 you are interested in.
 
-You can contribute to EasyBuild by:
+You can contribute to SimpleBuild by:
 
 - [Giving feedback][contributing_feedback]
 - [Reporting bugs][contributing_bugs]
 - [Submitting feature/change requests][contributing_requests]
 - [Helping others][contributing_helping_others]
-- [Contributing easyconfig files][contributing_easyconfigs]
+- [Contributing simpleconfig files][contributing_simpleconfigs]
 - [Contributing code changes][contributing_code]
 - [Writing documentation][contributing_docs]
 - [Joining the conversation][contributing_conversation]
 
 ### Giving feedback {: #contributing_feedback }
 
-An easy way to contribute to EasyBuild, even without having a lot of
+An simple way to contribute to SimpleBuild, even without having a lot of
 hands-on experience with it, is to **provide feedback** on your
 experiences.
 
-Feedback from people new to EasyBuild is valuable, since it provides a
+Feedback from people new to SimpleBuild is valuable, since it provides a
 perspective that is easily overlooked by more experienced users.
 
-You can contact the EasyBuild community via the EasyBuild mailing list
-(`easybuild@lists.ugent.be`), the `#easybuild` IRC channel (see also
+You can contact the SimpleBuild community via the SimpleBuild mailing list
+(`simplebuild@lists.ugent.be`), the `#simplebuild` IRC channel (see also
 [Getting help][getting_help]).
 
 ### Reporting bugs {: #contributing_bugs }
 
-If you run into unexpected problems when using EasyBuild, please **open
+If you run into unexpected problems when using SimpleBuild, please **open
 a bug report** in the issue tracker of the relevant GitHub repository:
 
-- <https://github.com/easybuilders/easybuild-framework/issues>: for
-    general problems with `eb`, the EasyBuild framework, etc.
-- <https://github.com/easybuilders/easybuild-easyblocks/issues>: for
+- <https://github.com/simplebuilders/simplebuild-framework/issues>: for
+    general problems with `eb`, the SimpleBuild framework, etc.
+- <https://github.com/simplebuilders/simplebuild-simpleblocks/issues>: for
     problems specific to a particular (generic or software-specific)
-    easyblock, etc.
-- <https://github.com/easybuilders/easybuild-easyconfigs/issues>: for
+    simpleblock, etc.
+- <https://github.com/simplebuilders/simplebuild-simpleconfigs/issues>: for
     problems specific to a particular software package, e.g., with
     building and installing a particular version of that software, or
     when using a particular toolchain, etc.
-- <https://github.com/easybuilders/easybuild/issues>: for problems
-    with the EasyBuild documentation, etc.
+- <https://github.com/simplebuilders/simplebuild/issues>: for problems
+    with the SimpleBuild documentation, etc.
 
 Please try and provide all relevant information, which may include:
 
-- the EasyBuild version you are using
+- the SimpleBuild version you are using
 - the specifics of the system you are using, incl. OS + version,
     Python version, modules tool & version, etc.
-- the active EasyBuild configuration; usually the output of
+- the active SimpleBuild configuration; usually the output of
     `eb --show-config` is sufficient
 - the full `eb` command line that was used
 - warning or error messages, or other relevant informative messages
-- filename or contents of easyconfig file(s) being used
-- EasyBuild log file (for example via <https://gist.github.com/>),
+- filename or contents of simpleconfig file(s) being used
+- SimpleBuild log file (for example via <https://gist.github.com/>),
     preferably collected with `eb --debug`
 
 ### Submitting feature/change requests {: #contributing_requests }
@@ -80,35 +80,35 @@ functionality.
 
 Try and **help others** based on your experience, or help them figure
 out an answer to their question or a solution to their problem using the
-EasyBuild documentation or by reaching out to someone else in the
-EasyBuild community that may know the answer.
+SimpleBuild documentation or by reaching out to someone else in the
+SimpleBuild community that may know the answer.
 
-The EasyBuild community is known to be very welcoming and helpful, and
+The SimpleBuild community is known to be very welcoming and helpful, and
 you too can be a part of that.
 
-### Contributing easyconfig files {: #contributing_easyconfigs }
+### Contributing simpleconfig files {: #contributing_simpleconfigs }
 
-Please **contribute easyconfig files** that are not included yet in (the
-`develop` branch of) the `easybuild-easyconfigs` GitHub repository at
-<https://github.com/easybuilders/easybuild-easyconfigs>.
+Please **contribute simpleconfig files** that are not included yet in (the
+`develop` branch of) the `simplebuild-simpleconfigs` GitHub repository at
+<https://github.com/simplebuilders/simplebuild-simpleconfigs>.
 
-This includes easyconfigs for software that is not supported yet by
-EasyBuild, as well as updates to existing easyconfigs (e.g., version
+This includes simpleconfigs for software that is not supported yet by
+SimpleBuild, as well as updates to existing simpleconfigs (e.g., version
 updates, using a different toolchain, etc.), even if you consider the
 updates to be trivial. Keep in mind that being able to use something
 that is known to work out-of-the-box can save quite a bit of time
-compared to having to tweak existing easyconfigs and validate the result
+compared to having to tweak existing simpleconfigs and validate the result
 installations.
 
 We highly recommend using the `--new-pr` and `--update-pr` command line
-options for contributing easyconfig files; see
+options for contributing simpleconfig files; see
 [Submitting new and updating pull requests][github_new_update_pr].
 
 ### Contributing code changes {: #contributing_code }
 
 Of course you can also **contribute code changes**, including bug fixes,
-enhancements or additional features in the EasyBuild framework, the
-easyblocks repository, the test suites or in related scripts.
+enhancements or additional features in the SimpleBuild framework, the
+simpleblocks repository, the test suites or in related scripts.
 
 Do keep in mind that this requires some experience with Python, although
 you should be able to go a long way by using the existing code base as
@@ -119,40 +119,40 @@ information on the practical aspects of contributing code.
 
 ### Writing documentation {: #contributing_docs }
 
-Another way to contribute to EasyBuild without having to implement
+Another way to contribute to SimpleBuild without having to implement
 Python code is by **writing documentation**, i.e. enhancing or updating
 existing documentation or documenting features that are not covered yet.
 
 To contribute to the documentation hosted at
-<https://docs.easybuild.io>, you should open a pull request to
-the `main` branch of the <https://github.com/easybuilders/easybuild-docs> repository;
+<https://docs.simplebuild.io>, you should open a pull request to
+the `main` branch of the <https://github.com/simplebuilders/simplebuild-docs> repository;
 see the `docs` subdirectory.
 
-The EasyBuild documentation is made with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material)
+The SimpleBuild documentation is made with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material)
 and written in [MarkDown](https://daringfireball.net/projects/markdown).
 
 ### Joining the conversation {: #contributing_conversation }
 
 Last but not least, you can actively **join the conversation** that
-arise on the EasyBuild mailing list, the `#easybuild` IRC channel and
-during the bi-weekly EasyBuild conference calls (see
-<https://github.com/easybuilders/easybuild/wiki/Conference-calls>).
+arise on the SimpleBuild mailing list, the `#simplebuild` IRC channel and
+during the bi-weekly SimpleBuild conference calls (see
+<https://github.com/simplebuilders/simplebuild/wiki/Conference-calls>).
 
-Engage with the EasyBuild community, and help steer EasyBuild
+Engage with the SimpleBuild community, and help steer SimpleBuild
 development by participating in the conversations regarding a variety of
 topics related to building and installing (scientific) software.
 
 ## Pull requests {: #contributing_pull_requests }
 
-To contribute to the EasyBuild framework, easyblocks, easyconfig files
-or the EasyBuild documentation, you will need to open a **pull request**
+To contribute to the SimpleBuild framework, simpleblocks, simpleconfig files
+or the SimpleBuild documentation, you will need to open a **pull request**
 to the corresponding GitHub repository:
 
-- EasyBuild framework:
-    <https://github.com/easybuilders/easybuild-framework>
-- easyblocks: <https://github.com/easybuilders/easybuild-easyblocks>
-- easyconfigs: <https://github.com/easybuilders/easybuild-easyconfigs>
-- documentation: <https://github.com/easybuilders/easybuild> (see
+- SimpleBuild framework:
+    <https://github.com/simplebuilders/simplebuild-framework>
+- simpleblocks: <https://github.com/simplebuilders/simplebuild-simpleblocks>
+- simpleconfigs: <https://github.com/simplebuilders/simplebuild-simpleconfigs>
+- documentation: <https://github.com/simplebuilders/simplebuild> (see
     `docs` subdirectory)
 
 Doing this the traditional way requires some knowledge about using `git`
@@ -160,7 +160,7 @@ Doing this the traditional way requires some knowledge about using `git`
 remote Git repositories, etc.), and being familiar with GitHub.
 
 **However, this can be largely circumvented by using the GitHub
-integration provided by EasyBuild, see**
+integration provided by SimpleBuild, see**
 [Integration with GitHub][integration_with_github] **.**
 
 ### Setting up {: #contributing_pull_request_setup }
@@ -179,23 +179,23 @@ integration provided by EasyBuild, see**
 Before you can open pull requests, you will need to **fork** the GitHub
 repository you are targeting, and create a local **working copy** of
 that repository. This only needs to be done *once* for every of the
-EasyBuild repositories.
+SimpleBuild repositories.
 
 !!! note
     For the purpose of this guide, we will be using the
-    `easybuild-framework` repository.
+    `simplebuild-framework` repository.
 
-    However, the instructions are equivalent for the other EasyBuild
+    However, the instructions are equivalent for the other SimpleBuild
     repositories.
 
 #### Forking the repository {: #contributing_pull_request_setup_fork_repo }
 
 First, create your own *fork* of the repository in your GitHub account
 using the `Fork` button on the top right at
-<https://github.com/easybuilders/easybuild-framework>.
+<https://github.com/simplebuilders/simplebuild-framework>.
 
-This will create a 'copy' of the `easybuild-framework` repository
-owned by the `easybuilders` GitHub organisation to your own personal
+This will create a 'copy' of the `simplebuild-framework` repository
+owned by the `simplebuilders` GitHub organisation to your own personal
 GitHub account.
 
 You will have to use this fork as a staging area for your work, to
@@ -211,17 +211,17 @@ making.
 First, *clone* your fork of the repository:
 
 ``` shell
-git clone git@github.com:EXAMPLE/easybuild-framework.git
+git clone git@github.com:EXAMPLE/simplebuild-framework.git
 ```
 
 !!! note
     Do not forget to replace `EXAMPLE` with your GitHub account name.
 
 If that worked as expected, you should have a new directory named
-`easybuild-framework`. Move into the `easybuild-framework` directory:
+`simplebuild-framework`. Move into the `simplebuild-framework` directory:
 
 ``` shell
-cd easybuild-framework
+cd simplebuild-framework
 ```
 
 Finally, we recommended to also check out the `develop` branch, which
@@ -237,20 +237,20 @@ contributions.
 ##### Keeping the `develop` branch in sync
 
 It is important to keep the `develop` branch in your working copy in
-sync with the upstream repository in the GitHub `easybuilders`
+sync with the upstream repository in the GitHub `simplebuilders`
 organization.
 
 For this, you need to add the upstream repository as a '*remote*'
 repository:
 
 ``` shell
-git remote add upstream git@github.com:easybuilders/easybuild-framework.git
+git remote add upstream git@github.com:simplebuilders/simplebuild-framework.git
 ```
 
 !!! note
     `upstream` is just a name that you give to the remote the central
 
-    `easybuilders` repository on GitHub; you can modify this to your
+    `simplebuilders` repository on GitHub; you can modify this to your
     liking if desired (but do take that into account for the further
     instructions if you do so).
 
@@ -277,7 +277,7 @@ git pull upstream develop
 
 !!! note
     We assume you are already located in your local working copy of
-    the repository you want to contribute to (e.g., `easybuild-framework`).
+    the repository you want to contribute to (e.g., `simplebuild-framework`).
 
 To open a pull request for your contribution, you must follow these
 steps:
@@ -340,10 +340,10 @@ To commit the changes you want to contribute, use `git add <files>` to
 the actual commit.
 
 For example, to commit the changes that were made to
-`easybuild/tools/filetools.py`:
+`simplebuild/tools/filetools.py`:
 
 ``` shell
-git add easybuild/tools/filetools.py
+git add simplebuild/tools/filetools.py
 git status  # check which files are staged for commit
 git commit -m "example commit message for changes to filetools.py"
 ```
@@ -385,8 +385,8 @@ If any other pull requests are required, refer to them in the
 description using `#<PR number>` (only for pull requests to the same
 repository), or by copy-pasting the URL to the pull request.
 
-For pull requests to the easyconfig repository, we recommend using this
-format for the pull request title when contributing new easyconfig
+For pull requests to the simpleconfig repository, we recommend using this
+format for the pull request title when contributing new simpleconfig
 files:
 
 ``` shell
@@ -395,7 +395,7 @@ files:
 
 For example:
 
-- `{tools}[dummy] EasyBuild v3.2.1`
+- `{tools}[dummy] SimpleBuild v3.2.1`
 - `{math}[intel/2017a] numpy 1.13.0 w/ Python 2.7.13`
 - `{math,numlib}[foss/2017a] METIS v5.1.0, ParMETIS v4.0.3, SuiteSparse v4.5.5, ...`
 
@@ -407,11 +407,11 @@ solicit feedback, tag it using `(WIP)`. in the pull request title.
 To open a pull request using the branch you pushed, you should use the
 GitHub interface, and follow the steps outlined below.
 
-1. visit <https://github.com/EXAMPLE/easybuild-framework>
+1. visit <https://github.com/EXAMPLE/simplebuild-framework>
 
     !!! note
         Replace `EXAMPLE` with your GitHub account name, and
-        `easybuild-framework` with the name of the target EasyBuild
+        `simplebuild-framework` with the name of the target SimpleBuild
         repository.
 
 1. switch to the branch that includes the changes you want to
@@ -464,12 +464,12 @@ Once your pull request has been given the green light by GitHub Actions
 and one or more people reviewing have approved the changes, it can be
 merged into the `develop` branch.
 
-**This can only be done by a member of the EasyBuild maintainers team.
+**This can only be done by a member of the SimpleBuild maintainers team.
 Only pull requests that meet the requirements are eligible for merging,
 see** [Requirements for pull requests][contributing_review_process_pr_requirements] **.**
 
 Merging a pull request usually implies that the changes will be part of
-the next EasyBuild release.
+the next SimpleBuild release.
 
 ## Review process for contributions {: #contributing_review_process }
 
@@ -488,21 +488,21 @@ to be merged:**
      a green light; see [Test suite (GitHub Actions)][contributing_review_process_github_actions]
 
     - *tests should be added or enhanced when appropriate*; see
-        [Adding tests][contributing_review_process_adding_tests], especially for PRs to the `easybuild-framework` repository
+        [Adding tests][contributing_review_process_adding_tests], especially for PRs to the `simplebuild-framework` repository
 
 - *backward compatibility should be retained*; see
       [Backward compatibility][contributing_review_process_backward_compatibility]
 - *code style must be kept consistent*; see
      [Code style review][contributing_review_process_code_style]
 
-    - *easyconfigs should be kept consistent across versions &
-        toolchains*; see [Comparing with existing easyconfigs][contributing_review_process_review_pr]
+    - *simpleconfigs should be kept consistent across versions &
+        toolchains*; see [Comparing with existing simpleconfigs][contributing_review_process_review_pr]
 
-- *(successful) test reports must be submitted for easyconfig PRs*;
-    see [Test reports for easyconfig contributions][contributing_review_process_test_reports]
+- *(successful) test reports must be submitted for simpleconfig PRs*;
+    see [Test reports for simpleconfig contributions][contributing_review_process_test_reports]
 
 - *the PR is approved by one or more maintainers of the repository*;
-     see [EasyBuild maintainers][maintainers]
+     see [SimpleBuild maintainers][maintainers]
 - *the PR should be merged by one of the maintainers, other than the
       author of the PR*; see
       [Pull requests are merged by a maintainer other than the author][contributing_review_process_do_not_merge_your_own_prs]
@@ -510,13 +510,13 @@ to be merged:**
 ### `develop` branch {: #contributing_review_process_develop_branch }
 
 **Pull requests are only merged in the** `develop` **branch** of the
-EasyBuild repositories, which contains the changes that will be included
-in the next EasyBuild release.
+SimpleBuild repositories, which contains the changes that will be included
+in the next SimpleBuild release.
 
-The `main` branch provides the latest stable release of EasyBuild at
-all times. Only the EasyBuild release manager should issue a pull
-request to the EasyBuild `main` branch, when preparing a new
-EasyBuild release.
+The `main` branch provides the latest stable release of SimpleBuild at
+all times. Only the SimpleBuild release manager should issue a pull
+request to the SimpleBuild `main` branch, when preparing a new
+SimpleBuild release.
 
 Occasionally, an additional version branch (e.g. `3.3.x`) may be
 introduced temporarily, in case an intermittent bugfix release is being
@@ -532,7 +532,7 @@ reported in the pull request.
 Actions are eligible for being merged!**
 
 Note that GitHub Actions will only run the *test suite* for that
-particular repository. That is, for easyconfig contributions it does
+particular repository. That is, for simpleconfig contributions it does
 *not* include actually building and installing software.
 
 For more information on the test suites, see [Unit tests][unit_tests].
@@ -540,7 +540,7 @@ For more information on the test suites, see [Unit tests][unit_tests].
 #### Adding tests {: #contributing_review_process_adding_tests }
 
 An implicit requirement for contributions, in particular contributions
-to the EasyBuild framework, is that they **must be accompanied by
+to the SimpleBuild framework, is that they **must be accompanied by
 additional tests or test cases**.
 
 For new features or enhancements, a dedicated test (case) must be added
@@ -564,19 +564,19 @@ retain backward compatibility can be made.
 One exception to this rule is *bug fixes*, where the whole point is
 usually to fix functionality that was implemented incorrectly.
 
-This also applies to existing easyconfig files; for example, the
+This also applies to existing simpleconfig files; for example, the
 versions of dependencies should *not* be altered. Adding dependencies
-that were missing or otherwise enhancing existing easyconfigs (e.g.,
+that were missing or otherwise enhancing existing simpleconfigs (e.g.,
 adding extra extensions, enabling additional features, etc.) are usually
 considered acceptable.
 
 Changes that break backward compatibility have to be motivated well with
-technical arguments, and must be approved by the EasyBuild maintainers.
+technical arguments, and must be approved by the SimpleBuild maintainers.
 
 ### Code style review {: #contributing_review_process_code_style }
 
 Next to functional evaluation of contributions, care is also taken to
-maintain a consistent code style across the EasyBuild code base (see
+maintain a consistent code style across the SimpleBuild code base (see
 also [Code style][code_style]); **contributions must
 take the (mostly PEP8) code style into account.**
 
@@ -585,35 +585,35 @@ an important aspect of the review process. A consistent code style is
 invaluable in a large code base that is constantly being updated by a
 worldwide community.
 
-This also applies to easyconfig files, where we try to maintain a strict
+This also applies to simpleconfig files, where we try to maintain a strict
 style that mostly matches the established PEP8 coding style for Python
-(since easyconfigs are written in Python syntax). However, also the
-grouping and ordering of easyconfig parameters is a part of the 'code'
+(since simpleconfigs are written in Python syntax). However, also the
+grouping and ordering of simpleconfig parameters is a part of the 'code'
 style we maintain.
 
-An automated (partial) check to see whether easyconfig files are ready
+An automated (partial) check to see whether simpleconfig files are ready
 to be contributed can be performed via `eb --check-contrib`. This will
 check:
 
-- style aspects for the specified easyconfig files
+- style aspects for the specified simpleconfig files
 - whether SHA256 checksums are included for all source files & patches
 
 This check is also a part of the test suite run by GitHub Actions for
-easyconfig PRs.
+simpleconfig PRs.
 
-#### Comparing with existing easyconfigs {: #contributing_review_process_review_pr }
+#### Comparing with existing simpleconfigs {: #contributing_review_process_review_pr }
 
 *(`--review-pr`)*
 
-We try to maintain **consistency across easyconfig files** for a
+We try to maintain **consistency across simpleconfig files** for a
 particular software package, across multiple software versions,
 toolchains and variants (with a different `versionsuffix`).
 
-Therefore, easyconfig contributions are also reviewed using
-`eb --review-pr <PR #>`, which compares the touched easyconfig files to
+Therefore, simpleconfig contributions are also reviewed using
+`eb --review-pr <PR #>`, which compares the touched simpleconfig files to
 those in the current `develop` branch that are most closely related.
 
-The easyconfig files to compare with are selected based on similarity,
+The simpleconfig files to compare with are selected based on similarity,
 by combining two criteria, in order.
 
 First, the software version is taken into account, using one of the
@@ -634,33 +634,33 @@ This is combined with one of the criteria below (in order):
 - no extra requirements (any versionsuffix, toolchain name/version)
 
 The first combination of one of the software version criteria with one
-of the other criteria that yields one or more matching easyconfig files
-is used. If none of the combinations match, no easyconfig files for that
+of the other criteria that yields one or more matching simpleconfig files
+is used. If none of the combinations match, no simpleconfig files for that
 particular software package are available yet, and no comparison is
 made.
 
 The output of `--review-pr` provides a 'multidiff' comparison, which
-highlights the differences between the easyconfig file in the pull
+highlights the differences between the simpleconfig file in the pull
 request and the most similar selected ones from the current `develop`
 branch.
-Interpreting this output is a quick and easy way to assess how different
-the contributed easyconfig files are from the existing easyconfigs,
+Interpreting this output is a quick and simple way to assess how different
+the contributed simpleconfig files are from the existing simpleconfigs,
 although it does require a bit of practice because of the density of the
 provided information.
 
-### Test reports for easyconfig contributions {: #contributing_review_process_test_reports }
+### Test reports for simpleconfig contributions {: #contributing_review_process_test_reports }
 
 *(`upload-test-report`)*
 
-For easyconfig contributions, one or more accompanying **test reports
-must be submitted** to confirm that the added and/or changed easyconfig
+For simpleconfig contributions, one or more accompanying **test reports
+must be submitted** to confirm that the added and/or changed simpleconfig
 files (still) work as expected.
 
-We recommend that you submit a test report for your own easyconfig pull
+We recommend that you submit a test report for your own simpleconfig pull
 requests. Other people can also submit test reports to confirm that your
 contribution works as expected on their system(s).
 
-With EasyBuild being properly configured (see
+With SimpleBuild being properly configured (see
 [GitHub: Configuration][github_configuration]), this should be as
 simple as running
 `eb --from-pr <PR#> --upload-test-report --force --robot`.

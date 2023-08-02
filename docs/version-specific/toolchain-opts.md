@@ -35,7 +35,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -76,7 +76,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -117,7 +117,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -158,7 +158,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -199,7 +199,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -240,7 +240,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -281,7 +281,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -321,7 +321,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                                                                                                                                                                                                        |``False``
 ``precise``              |High precision                                                                                                                                                                                                                                                 |``False``
 ``r8``                   |Real is 8 byte real                                                                                                                                                                                                                                            |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                                                                                                                                          |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration                                                                                                                                                                                          |``True``
 ``shared``               |Build shared library                                                                                                                                                                                                                                           |``False``
 ``static``               |Build static library                                                                                                                                                                                                                                           |``False``
 ``strict``               |Strict (highest) precision                                                                                                                                                                                                                                     |``False``
@@ -362,7 +362,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                                                                                                                                                                                                        |``False``
 ``precise``              |High precision                                                                                                                                                                                                                                                 |``False``
 ``r8``                   |Real is 8 byte real                                                                                                                                                                                                                                            |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                                                                                                                                          |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration                                                                                                                                                                                          |``True``
 ``shared``               |Build shared library                                                                                                                                                                                                                                           |``False``
 ``static``               |Build static library                                                                                                                                                                                                                                           |``False``
 ``strict``               |Strict (highest) precision                                                                                                                                                                                                                                     |``False``
@@ -403,7 +403,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                                                                                                                                                                                                        |``False``
 ``precise``              |High precision                                                                                                                                                                                                                                                 |``False``
 ``r8``                   |Real is 8 byte real                                                                                                                                                                                                                                            |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                                                                                                                                          |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration                                                                                                                                                                                          |``True``
 ``shared``               |Build shared library                                                                                                                                                                                                                                           |``False``
 ``static``               |Build static library                                                                                                                                                                                                                                           |``False``
 ``strict``               |Strict (highest) precision                                                                                                                                                                                                                                     |``False``
@@ -444,7 +444,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                                                                                                                                                                                                        |``False``
 ``precise``              |High precision                                                                                                                                                                                                                                                 |``False``
 ``r8``                   |Real is 8 byte real                                                                                                                                                                                                                                            |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                                                                                                                                          |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration                                                                                                                                                                                          |``True``
 ``shared``               |Build shared library                                                                                                                                                                                                                                           |``False``
 ``static``               |Build static library                                                                                                                                                                                                                                           |``False``
 ``strict``               |Strict (highest) precision                                                                                                                                                                                                                                     |``False``
@@ -483,7 +483,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -521,7 +521,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -563,7 +563,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -605,7 +605,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -644,7 +644,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -686,7 +686,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -727,7 +727,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -768,7 +768,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -809,7 +809,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -850,7 +850,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -892,7 +892,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -934,7 +934,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -976,7 +976,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -1018,7 +1018,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -1060,7 +1060,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -1102,7 +1102,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -1143,7 +1143,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -1184,7 +1184,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -1226,7 +1226,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -1268,7 +1268,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -1310,7 +1310,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -1352,7 +1352,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -1394,7 +1394,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -1436,7 +1436,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -1477,7 +1477,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -1519,7 +1519,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -1561,7 +1561,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -1603,7 +1603,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -1645,7 +1645,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -1686,7 +1686,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -1727,7 +1727,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -1769,7 +1769,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -1811,7 +1811,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -1853,7 +1853,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -1895,7 +1895,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -1937,7 +1937,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -1979,7 +1979,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -2021,7 +2021,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -2063,7 +2063,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -2105,7 +2105,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -2147,7 +2147,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -2189,7 +2189,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -2230,7 +2230,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -2274,7 +2274,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                                                                                   |``False``
 ``precise``              |High precision                                                                                                                            |``False``
 ``r8``                   |Real is 8 byte real                                                                                                                       |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                     |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration                                                                     |``True``
 ``shared``               |Build shared library                                                                                                                      |``False``
 ``static``               |Build static library                                                                                                                      |``False``
 ``strict``               |Strict (highest) precision                                                                                                                |``False``
@@ -2319,7 +2319,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                                                                                   |``False``
 ``precise``              |High precision                                                                                                                            |``False``
 ``r8``                   |Real is 8 byte real                                                                                                                       |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                     |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration                                                                     |``True``
 ``shared``               |Build shared library                                                                                                                      |``False``
 ``static``               |Build static library                                                                                                                      |``False``
 ``strict``               |Strict (highest) precision                                                                                                                |``False``
@@ -2364,7 +2364,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                                                                                   |``False``
 ``precise``              |High precision                                                                                                                            |``False``
 ``r8``                   |Real is 8 byte real                                                                                                                       |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                     |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration                                                                     |``True``
 ``shared``               |Build shared library                                                                                                                      |``False``
 ``static``               |Build static library                                                                                                                      |``False``
 ``strict``               |Strict (highest) precision                                                                                                                |``False``
@@ -2408,7 +2408,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                                                                                   |``False``
 ``precise``              |High precision                                                                                                                            |``False``
 ``r8``                   |Real is 8 byte real                                                                                                                       |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                     |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration                                                                     |``True``
 ``shared``               |Build shared library                                                                                                                      |``False``
 ``static``               |Build static library                                                                                                                      |``False``
 ``strict``               |Strict (highest) precision                                                                                                                |``False``
@@ -2452,7 +2452,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                                                                                   |``False``
 ``precise``              |High precision                                                                                                                            |``False``
 ``r8``                   |Real is 8 byte real                                                                                                                       |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                     |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration                                                                     |``True``
 ``shared``               |Build shared library                                                                                                                      |``False``
 ``static``               |Build static library                                                                                                                      |``False``
 ``strict``               |Strict (highest) precision                                                                                                                |``False``
@@ -2494,7 +2494,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -2536,7 +2536,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -2578,7 +2578,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -2620,7 +2620,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -2665,7 +2665,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                                                                                   |``False``
 ``precise``              |High precision                                                                                                                            |``False``
 ``r8``                   |Real is 8 byte real                                                                                                                       |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                     |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration                                                                     |``True``
 ``shared``               |Build shared library                                                                                                                      |``False``
 ``static``               |Build static library                                                                                                                      |``False``
 ``strict``               |Strict (highest) precision                                                                                                                |``False``
@@ -2706,7 +2706,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -2751,7 +2751,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                                                                                   |``False``
 ``precise``              |High precision                                                                                                                            |``False``
 ``r8``                   |Real is 8 byte real                                                                                                                       |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                     |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration                                                                     |``True``
 ``shared``               |Build shared library                                                                                                                      |``False``
 ``static``               |Build static library                                                                                                                      |``False``
 ``strict``               |Strict (highest) precision                                                                                                                |``False``
@@ -2793,7 +2793,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -2838,7 +2838,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                                                                                   |``False``
 ``precise``              |High precision                                                                                                                            |``False``
 ``r8``                   |Real is 8 byte real                                                                                                                       |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                     |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration                                                                     |``True``
 ``shared``               |Build shared library                                                                                                                      |``False``
 ``static``               |Build static library                                                                                                                      |``False``
 ``strict``               |Strict (highest) precision                                                                                                                |``False``
@@ -2880,7 +2880,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -2925,7 +2925,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                                                                                   |``False``
 ``precise``              |High precision                                                                                                                            |``False``
 ``r8``                   |Real is 8 byte real                                                                                                                       |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                                     |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration                                                                     |``True``
 ``shared``               |Build shared library                                                                                                                      |``False``
 ``static``               |Build static library                                                                                                                      |``False``
 ``strict``               |Strict (highest) precision                                                                                                                |``False``
@@ -2967,7 +2967,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -3009,7 +3009,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -3051,7 +3051,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -3093,7 +3093,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -3132,7 +3132,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -3170,7 +3170,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -3209,7 +3209,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -3248,7 +3248,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -3287,7 +3287,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -3326,7 +3326,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -3365,7 +3365,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -3403,7 +3403,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -3441,7 +3441,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -3480,7 +3480,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -3519,7 +3519,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -3559,7 +3559,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -3599,7 +3599,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -3640,7 +3640,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -3681,7 +3681,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``
@@ -3722,7 +3722,7 @@ option                   |description                                           
 ``pic``                  |Use PIC                                                                |``False``
 ``precise``              |High precision                                                         |``False``
 ``r8``                   |Real is 8 byte real                                                    |``False``
-``rpath``                |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration  |``True``
+``rpath``                |Use RPATH wrappers when --rpath is enabled in SimpleBuild configuration  |``True``
 ``shared``               |Build shared library                                                   |``False``
 ``static``               |Build static library                                                   |``False``
 ``strict``               |Strict (highest) precision                                             |``False``

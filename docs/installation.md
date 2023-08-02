@@ -1,15 +1,15 @@
-# Installing EasyBuild {: #installation }
+# Installing SimpleBuild {: #installation }
 
-EasyBuild is Python software, so there are a couple of ways to install it.
+SimpleBuild is Python software, so there are a couple of ways to install it.
 
-We recommend installing EasyBuild using `pip`. This method is described at [Using pip to Install EasyBuild][pip].
+We recommend installing SimpleBuild using `pip`. This method is described at [Using pip to Install SimpleBuild][pip].
 
-It is also possible to install EasyBuild as a module. To do this, 
-use the 3-step procedure outlined at [Installing EasyBuild with EasyBuild][eb_as_module].
+It is also possible to install SimpleBuild as a module. To do this, 
+use the 3-step procedure outlined at [Installing SimpleBuild with SimpleBuild][eb_as_module].
 
 Do take into account the required and optional dependencies (see [Requirements][requirements] and [Dependencies][dependencies]).
 
-Notes on other ways of installing EasyBuild are available under section [Alternative installation methods][alt_inst_methods].
+Notes on other ways of installing SimpleBuild are available under section [Alternative installation methods][alt_inst_methods].
 
 
 ## Requirements {: #requirements }
@@ -22,10 +22,10 @@ The only strict requirements are:
     * Python 2.7, or Python 3.x (>= 3.5);
     * since [Python 2 is end-of-life](https://www.python.org/doc/sunset-python-2/) we strongly recommend
       using Python 3 if it is available;
-    * only EasyBuild v4.0 (or newer) is compatible with Python 3, earlier EasyBuild releases require Python 2;
-    * EasyBuild 5.0 will require Python >= 3.6;
+    * only SimpleBuild v4.0 (or newer) is compatible with Python 3, earlier SimpleBuild releases require Python 2;
+    * SimpleBuild 5.0 will require Python >= 3.6;
     * no third-party Python packages are strictly required (the Python standard library is sufficient);
-    * for some *specific* EasyBuild features additional Python packages are required however, see [Optional Python packages][optional_python_packages];
+    * for some *specific* SimpleBuild features additional Python packages are required however, see [Optional Python packages][optional_python_packages];
 * a **modules tool**: Tcl(/C) environment modules or Lmod
     * the actual modules tool *must* be available via `$PATH`, see [Required modules tool][required_modules_tool]
 * a C/C++ compiler (e.g., `gcc` and `g++`)
@@ -34,15 +34,15 @@ The only strict requirements are:
 For more information on dependencies, see [Dependencies][dependencies].
 
 
-## Using pip to Install EasyBuild {: #pip }
+## Using pip to Install SimpleBuild {: #pip }
 
-Since EasyBuild is released as a [Python package on PyPI](https://pypi.org/project/easybuild)
+Since SimpleBuild is released as a [Python package on PyPI](https://pypi.org/project/simplebuild)
 you can install it using `pip`, the most commonly used tool for installing Python packages.
 
-Install EasyBuild with:
+Install SimpleBuild with:
 
 ``` shell
-pip install easybuild
+pip install simplebuild
 ```
 
 You may need to tweak this command a bit, depending on your setup, see [Additional pip install options][more_pip].
@@ -50,22 +50,22 @@ You may need to tweak this command a bit, depending on your setup, see [Addition
 !!! note
     There are various other ways of installing Python packages, which we won't cover here.
     If you are familiar with other tools like `virtualenv` or `pipenv`, feel free to use those
-    instead to install EasyBuild.
+    instead to install SimpleBuild.
 
 ### Sanity check
 
-Compare the version of `eb`, the main EasyBuild command, with the version of the EasyBuild module that was installed.
+Compare the version of `eb`, the main SimpleBuild command, with the version of the SimpleBuild module that was installed.
 For example::
 
 ``` console
-$ module load EasyBuild
+$ module load SimpleBuild
 $ module list
 
 Currently Loaded Modules:
-  1) EasyBuild/4.8.0
+  1) SimpleBuild/4.8.0
 
 $ eb --version
-This is EasyBuild 4.8.0 (framework: 4.8.0, easyblocks: 4.8.0) on host example.local
+This is SimpleBuild 4.8.0 (framework: 4.8.0, simpleblocks: 4.8.0) on host example.local
 ```
 
 !!! tip
@@ -75,42 +75,42 @@ This is EasyBuild 4.8.0 (framework: 4.8.0, easyblocks: 4.8.0) on host example.lo
     may make a big difference, if you have installed both versions 1.9.0 and 1.15.2,
     with respect to what is the version being loaded by default.
 
-You can also run `eb --show-system-info` to see system information relevant to EasyBuild,
-or run`eb --show-config` to see the default EasyBuild configuration (see also [Configuring EasyBuild][configuring_easybuild]).
+You can also run `eb --show-system-info` to see system information relevant to SimpleBuild,
+or run`eb --show-config` to see the default SimpleBuild configuration (see also [Configuring SimpleBuild][configuring_simplebuild]).
 
 
-### Updating an existing EasyBuild installation {: #updating }
+### Updating an existing SimpleBuild installation {: #updating }
 
-To upgrade to a newer EasyBuild version than the one currently installed:
+To upgrade to a newer SimpleBuild version than the one currently installed:
 
-* `pip install --upgrade easybuild` will upgrade EasyBuild to the latest release.
+* `pip install --upgrade simplebuild` will upgrade SimpleBuild to the latest release.
 
 
 ### Additional pip install options {: #more_pip }
 
 For the `pip` install, you may wish to slightly change this command depending on the context and your personal preferences:
 
-* to install EasyBuild *system-wide*, you can use `sudo` (if you have admin privileges):
+* to install SimpleBuild *system-wide*, you can use `sudo` (if you have admin privileges):
 
     ``` shell
-    sudo pip install easybuild
+    sudo pip install simplebuild
     ```
 
-* To install EasyBuild *in your personal home directory*, you can use the `--user` option:
+* To install SimpleBuild *in your personal home directory*, you can use the `--user` option:
 
     ``` shell
-    pip install --user easybuild
+    pip install --user simplebuild
     ```
 
-    This will result in an EasyBuild installation in `$HOME/.local/`.
+    This will result in an SimpleBuild installation in `$HOME/.local/`.
 
-* To install EasyBuild in a *specific directory* you can use the `--prefix` option:
+* To install SimpleBuild in a *specific directory* you can use the `--prefix` option:
 
     ``` shell
-    pip install --prefix _PREFIX_ easybuild
+    pip install --prefix _PREFIX_ simplebuild
     ```
 
-    In this command, you should replace '`_PREFIX_`' with the location where you want to have EasyBuild installed
+    In this command, you should replace '`_PREFIX_`' with the location where you want to have SimpleBuild installed
     (for example, `$HOME/tools` or `/tmp/$USER`).
 
 Keep in mind that you may need to update your environment too when using `--user` or `--prefix`,
@@ -128,14 +128,14 @@ If you (only) have `pip3` available, you can replace `pip` with `pip3` in any of
 above:
 
 ``` shell
-pip3 install easybuild
+pip3 install simplebuild
 ```
 
 If you want to ensure that you are using the `pip` installation that corresponds to the Python 3 installation
 that you intend to use, you can use `python3 -m pip` rather than `pip3`.
 
 ``` shell
-python3.6 -m pip install easybuild
+python3.6 -m pip install simplebuild
 ```
 
 Note that you may also need to instruct the `eb` command to use the correct Python version at runtime,
@@ -145,8 +145,8 @@ via `$EB_PYTHON` (see [Setting `$EB_PYTHON`][more_pip_env_EB_PYTHON]).
 ### Updating your environment {: #more_pip_env }
 
 If you used the `--user` or `--prefix` option in the `pip install` command,
-or if you installed EasyBuild with a `pip` version that does not correspond
-to your default Python installation, you will need to update your environment to make EasyBuild ready for use.
+or if you installed SimpleBuild with a `pip` version that does not correspond
+to your default Python installation, you will need to update your environment to make SimpleBuild ready for use.
 This is not required if you did a system-wide installation in a standard location with the default Python version.
 
 !!! note
@@ -162,22 +162,22 @@ Update the `$PATH` environment variable to make sure the `eb` command is availab
 export PATH=_PREFIX_/bin:$PATH
 ```
 
-**Replace** `_PREFIX_` **in this command** with the directory path where EasyBuild was installed into
+**Replace** `_PREFIX_` **in this command** with the directory path where SimpleBuild was installed into
 (use `$HOME/.local` if you used `pip install --user`).
 
-This is not required if you installing EasyBuild in a standard system location.
+This is not required if you installing SimpleBuild in a standard system location.
 
 You can check with the `which eb` command to determine whether or not you need to update the `$PATH` environment variable.
 
 
 ### Updating `$PYTHONPATH` {: #more_pip_env_PYTHONPATH }
 
-If you installed EasyBuild to a non-standard location using `pip install --prefix`,
+If you installed SimpleBuild to a non-standard location using `pip install --prefix`,
 you also need to update the Python search path environment variable `$PYTHONPATH` to instruct Python where
-it can find the EasyBuild Python packages.
+it can find the SimpleBuild Python packages.
 
 This is not required if you used the `--user` option, since Python will automatically consider
-`$HOME/.local` when searching for installed Python packages, or if you installed EasyBuild in a standard
+`$HOME/.local` when searching for installed Python packages, or if you installed SimpleBuild in a standard
 system-wide location.
 
 Update `$PYTHONPATH` by running a command like::
@@ -190,24 +190,24 @@ Here, you need to replace the `X` and `Y` with the major and minor version of yo
 which you can determine by running `python -V`.
 For example, if you are using Python 3.6, make sure you are using `/python3.6/` in the command to update `$PYTHONPATH`.
 
-And of course, you again need to **replace '`_PREFIX_`'** with the installation prefix where EasyBuild was installed
+And of course, you again need to **replace '`_PREFIX_`'** with the installation prefix where SimpleBuild was installed
 into.
 
 For example:
 
 ``` shell
-# update $PYTHONPATH if EasyBuild was installed in $HOME/tools with Python 3.6
+# update $PYTHONPATH if SimpleBuild was installed in $HOME/tools with Python 3.6
 export PYTHONPATH=$HOME/tools/lib/python3.6/site-packages:$PYTHONPATH
 ```
 
 
 ### Setting `$EB_PYTHON` {: #more_pip_env_EB_PYTHON }
 
-If you want to control which Python version is used to run EasyBuild,
+If you want to control which Python version is used to run SimpleBuild,
 you can specify the name or the full path to the `python` command that should be used by the `eb` command
 via the `$EB_PYTHON` environment variable.
 
-This may be required when you are installing EasyBuild with a version of `pip` that does not correspond
+This may be required when you are installing SimpleBuild with a version of `pip` that does not correspond
 with the default Python version.
 
 For example, to ensure that `eb` uses `python3.6`:
@@ -227,63 +227,63 @@ $ EB_VERBOSE=1 eb --version
 >> Considering 'python3.6'...
 >> 'python3' version: 3.6.8, which matches Python 3 version requirement (>= 3.5)
 >> Selected Python command: python3 (/usr/bin/python3.6)
->> python3.6 -m easybuild.main --version
-This is EasyBuild 4.8.0 (framework: 4.8.0, easyblocks: 4.8.0) on host example
+>> python3.6 -m simplebuild.main --version
+This is SimpleBuild 4.8.0 (framework: 4.8.0, simpleblocks: 4.8.0) on host example
 ```
 
 
-## Installing EasyBuild with EasyBuild {: #eb_as_module }
+## Installing SimpleBuild with SimpleBuild {: #eb_as_module }
 
-If you prefer having EasyBuild available through an environment module file,
-you can consider installing EasyBuild with EasyBuild. This can be done in 3 steps:
+If you prefer having SimpleBuild available through an environment module file,
+you can consider installing SimpleBuild with SimpleBuild. This can be done in 3 steps:
 
-* [Step 1][eb_as_module_step1]: Installing EasyBuild with `pip` into a temporary location (only needed if EasyBuild is not installed yet)
-* [Step 2][eb_as_module_step2]: Using EasyBuild to install EasyBuild as a module
-* [Step 3][eb_as_module_step3]: Loading the EasyBuild module
+* [Step 1][eb_as_module_step1]: Installing SimpleBuild with `pip` into a temporary location (only needed if SimpleBuild is not installed yet)
+* [Step 2][eb_as_module_step2]: Using SimpleBuild to install SimpleBuild as a module
+* [Step 3][eb_as_module_step3]: Loading the SimpleBuild module
 
 
-### Step 1: Installing EasyBuild into a temporary location {: #eb_as_module_step1 }
+### Step 1: Installing SimpleBuild into a temporary location {: #eb_as_module_step1 }
 
-If you don't have EasyBuild installed yet, you need to install it in a temporary location first.
-The recommended way of doing this is [using pip to install EasyBuild][pip].
+If you don't have SimpleBuild installed yet, you need to install it in a temporary location first.
+The recommended way of doing this is [using pip to install SimpleBuild][pip].
 
-For example, to install EasyBuild into a subdirectory `/tmp/$USER` using the default Python 3 version:
+For example, to install SimpleBuild into a subdirectory `/tmp/$USER` using the default Python 3 version:
 
 ``` shell
-# pick installation prefix, and install EasyBuild into it
+# pick installation prefix, and install SimpleBuild into it
 export EB_TMPDIR=/tmp/$USER/eb_tmp
-python3 -m pip install --ignore-installed --prefix $EB_TMPDIR easybuild
+python3 -m pip install --ignore-installed --prefix $EB_TMPDIR simplebuild
 
-# update environment to use this temporary EasyBuild installation
+# update environment to use this temporary SimpleBuild installation
 export PATH=$EB_TMPDIR/bin:$PATH
 export PYTHONPATH=$(/bin/ls -rtd -1 $EB_TMPDIR/lib*/python*/site-packages | tail -1):$PYTHONPATH
 export EB_PYTHON=python3
 ```
 
 
-### Step 2: Using EasyBuild to install EasyBuild {: #eb_as_module_step2 }
+### Step 2: Using SimpleBuild to install SimpleBuild {: #eb_as_module_step2 }
 
-Once you have a working (recent) temporary EasyBuild installation, you can use it to
-install EasyBuild as a module. Usually this is done in the location where you would
+Once you have a working (recent) temporary SimpleBuild installation, you can use it to
+install SimpleBuild as a module. Usually this is done in the location where you would
 like to install other software too.
 
 You can use the `eb --install-latest-eb-release` command for this,
-combined with the `--prefix` option to control which directories are used by EasyBuild for the installation.
+combined with the `--prefix` option to control which directories are used by SimpleBuild for the installation.
 
-For example, to install the latest version of EasyBuild as a module into `$HOME/easybuild`:
+For example, to install the latest version of SimpleBuild as a module into `$HOME/simplebuild`:
 
 ``` shell
-eb --install-latest-eb-release --prefix $HOME/easybuild
+eb --install-latest-eb-release --prefix $HOME/simplebuild
 ```
 
 !!! note
     You may see a harmless deprecation warning popping up when performing this installation, just ignore it.
 
 
-### Step 3: Loading the EasyBuild module {: #eb_as_module_step3 }
+### Step 3: Loading the SimpleBuild module {: #eb_as_module_step3 }
 
-Once [Step 2: Using EasyBuild to install EasyBuild][eb_as_module_step2] is completed, you should be able to
-load the module that was generated alongside the EasyBuild installation. You will need to do this every time
+Once [Step 2: Using SimpleBuild to install SimpleBuild][eb_as_module_step2] is completed, you should be able to
+load the module that was generated alongside the SimpleBuild installation. You will need to do this every time
 you start a new shell session.
 
 First, make the module available by running the following command (which will update the module search path
@@ -293,18 +293,18 @@ environment variable `$MODULEPATH`):
 module use _PREFIX_/modules/all
 ```
 
-**Replace** `_PREFIX_` with the path to the directory that you used when running [Step 2: Using EasyBuild to install EasyBuild][eb_as_module_step2]
-(for example, `$HOME/easybuild`).
+**Replace** `_PREFIX_` with the path to the directory that you used when running [Step 2: Using SimpleBuild to install SimpleBuild][eb_as_module_step2]
+(for example, `$HOME/simplebuild`).
 
-Then, load the EasyBuild module to update your environment and make EasyBuild available for use:
+Then, load the SimpleBuild module to update your environment and make SimpleBuild available for use:
 
 ``` shell
-module load EasyBuild
+module load SimpleBuild
 ```
 
 !!! note
-    Note that in this case, we don't need to make any changes to our environment for EasyBuild to work correctly.
-    The environment module file that was generated by EasyBuild specifies all changes that need to be made.
+    Note that in this case, we don't need to make any changes to our environment for SimpleBuild to work correctly.
+    The environment module file that was generated by SimpleBuild specifies all changes that need to be made.
 
 
 ## Required Dependencies {: #dependencies }
@@ -332,7 +332,7 @@ A couple of shell tools may be required, depending on the particular use case (i
 
 ### Required modules tool {: #required_modules_tool }
 
-EasyBuild not only generates module files to be used along with the software it installs,
+SimpleBuild not only generates module files to be used along with the software it installs,
 it also depends on the generated modules, mainly for resolving dependencies.
 Hence, a modules tool must be available to consume module files with.
 
@@ -346,7 +346,7 @@ Supported module tools:
 
 !!! note
     The path to the actual modules tool binary/script used *must* be included in `$PATH`,
-    to make it readily available to EasyBuild.
+    to make it readily available to SimpleBuild.
 
     * for Tcl/C environment modules: `modulecmd`
     * for Tcl-only environment modules: `modulecmd.tcl`
@@ -356,10 +356,10 @@ Supported module tools:
     the `module` function; for example, using `type module` or `type -f module`.
 
 !!! note
-    For Lmod specifically, EasyBuild will try to fall back to finding the `lmod` binary via the `$LMOD_CMD`
+    For Lmod specifically, SimpleBuild will try to fall back to finding the `lmod` binary via the `$LMOD_CMD`
     environment variable, in case `lmod` is not available in `$PATH`.
 
-    In EasyBuild versions *prior* to 2.1.1, the path specified by `$LMOD_CMD` was (erroneously) preferred over the
+    In SimpleBuild versions *prior* to 2.1.1, the path specified by `$LMOD_CMD` was (erroneously) preferred over the
     (first) `lmod` binary available via `$PATH`.
 
 
@@ -378,7 +378,7 @@ Additional notes:
 
 ### Required Python packages {: #required_python_packages }
 
-Since EasyBuild v4.0, *no* Python packages outside of the Python standard library are required.
+Since SimpleBuild v4.0, *no* Python packages outside of the Python standard library are required.
 
 ## Optional dependencies
 
@@ -390,8 +390,8 @@ Some dependencies are optional and are only required to support certain features
 * [GC3Pie](https://pypi.org/project/gc3pie), only needed when using `GC3Pie` as a backend for `--job`,
   see also [Submitting jobs using --job][submitting_jobs];
 * [GitPython](https://github.com/gitpython-developers/GitPython), only needed if
-  EasyBuild is hosted in a git repository or if you’re using a git
-  repository for easyconfig files (.eb);
+  SimpleBuild is hosted in a git repository or if you’re using a git
+  repository for simpleconfig files (.eb);
 * [graphviz for Python](https://pypi.python.org/pypi/graphviz),
   only needed for building nice-looking dependency graphs using `--dep-graph *.pdf / *.png`;
 * [keyring](https://pypi.org/project/keyring), only needed for securely storing a GitHub token
@@ -405,37 +405,37 @@ Some dependencies are optional and are only required to support certain features
 
 ## Sources
 
-EasyBuild is split up into three different packages, which are available
+SimpleBuild is split up into three different packages, which are available
 from the Python Package Index (PyPi):
 
-* [easybuild-framework](http://pypi.python.org/pypi/easybuild-framework) - the EasyBuild framework, which includes the
-  easybuild.framework and easybuild.tools Python packages that provide
+* [simplebuild-framework](http://pypi.python.org/pypi/simplebuild-framework) - the SimpleBuild framework, which includes the
+  simplebuild.framework and simplebuild.tools Python packages that provide
   general support for building and installing software
-* [easybuild-easyblocks](http://pypi.python.org/pypi/easybuild-easyblocks) - a collection of easyblocks that implement
+* [simplebuild-simpleblocks](http://pypi.python.org/pypi/simplebuild-simpleblocks) - a collection of simpleblocks that implement
   support for building and installing (collections of) software
   packages
-* [easybuild-easyconfigs](http://pypi.python.org/pypi/easybuild-easyconfigs) - a collection of example easyconfig files
+* [simplebuild-simpleconfigs](http://pypi.python.org/pypi/simplebuild-simpleconfigs) - a collection of example simpleconfig files
   that specify which software to build, and using which build options;
-  these easyconfigs will be well tested with the latest compatible
-  versions of the easybuild-framework and easybuild-easyblocks packages
-* [easybuild-docs](https://github.com/easybuilders/easybuild-docs) - a repository containing the sources
-  of the EasyBuild documentation, which is hosted at <https://docs.easybuild.io>.
+  these simpleconfigs will be well tested with the latest compatible
+  versions of the simplebuild-framework and simplebuild-simpleblocks packages
+* [simplebuild-docs](https://github.com/simplebuilders/simplebuild-docs) - a repository containing the sources
+  of the SimpleBuild documentation, which is hosted at <https://docs.simplebuild.io>.
 
-Next to these packages, a meta-package named [easybuild](https://pypi.python.org/pypi/easybuild) is also
-available on PyPi, in order to easily install the full EasyBuild
+Next to these packages, a meta-package named [simplebuild](https://pypi.python.org/pypi/simplebuild) is also
+available on PyPi, in order to easily install the full SimpleBuild
 distribution.
 
 The source code for these packages is also available on GitHub:
 
-* [easybuild-framework git repository](https://github.com/easybuilders/easybuild-framework)
-* [easybuild-easyblocks git repository](https://github.com/easybuilders/easybuild-easyblocks)
-* [easybuild-easyconfigs git repository](https://github.com/easybuilders/easybuild-easyconfigs)
-* the [main EasyBuild repository](https://github.com/easybuilders/easybuild)
+* [simplebuild-framework git repository](https://github.com/simplebuilders/simplebuild-framework)
+* [simplebuild-simpleblocks git repository](https://github.com/simplebuilders/simplebuild-simpleblocks)
+* [simplebuild-simpleconfigs git repository](https://github.com/simplebuilders/simplebuild-simpleconfigs)
+* the [main SimpleBuild repository](https://github.com/simplebuilders/simplebuild)
 
 
 ### In case of installation issues...
 
-Should the installation of EasyBuild fail for you, [please open an issue][getting_help]
+Should the installation of SimpleBuild fail for you, [please open an issue][getting_help]
 to report the problems you're running into.
 
 #### How to collect info in case sanity checks fail or there is another issue
@@ -450,7 +450,7 @@ python -V
 type module
 type -f module
 module --version
-module av EasyBuild
+module av SimpleBuild
 which -a eb
 eb --version
 ```

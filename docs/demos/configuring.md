@@ -1,5 +1,5 @@
-# Demo: configuring EasyBuild {: #demo_configuring}
+# Demo: configuring SimpleBuild {: #demo_configuring}
 
-(see also [Configuring EasyBuild][configuring_easybuild])
+(see also [Configuring SimpleBuild][configuring_simplebuild])
 
-<asciinema-player src="/ascii/configuring_easybuild.json" cols="100" rows="30" />
+<asciinema-player src="/ascii/configuring_simplebuild.json" cols="100" rows="30" />

@@ -5,7 +5,7 @@
     This page contains a lot of information, it may take a while to load.
 
 
-EasyBuild supports 3161 different software packages (incl. toolchains, bundles):
+SimpleBuild supports 3161 different software packages (incl. toolchains, bundles):
 
 [a](#a) - [b](#b) - [c](#c) - [d](#d) - [e](#e) - [f](#f) - [g](#g) - [h](#h) - [i](#i) - [j](#j) - [k](#k) - [l](#l) - [m](#m) - [n](#n) - [o](#o) - [p](#p) - [q](#q) - [r](#r) - [s](#s) - [t](#t) - [u](#u) - [v](#v) - [w](#w) - [x](#x) - [y](#y) - [z](#z)
 
@@ -291,7 +291,7 @@ version  |toolchain
 
 ### Advisor
 
-Vectorization Optimization and Thread Prototyping  - Vectorize & thread code or performance “dies”  - Easy workflow + data + tips = faster code faster  - Prioritize, Prototype & Predict performance gain  
+Vectorization Optimization and Thread Prototyping  - Vectorize & thread code or performance “dies”  - Simple workflow + data + tips = faster code faster  - Prioritize, Prototype & Predict performance gain  
 
 *homepage*: <https://software.intel.com/intel-advisor-xe>
 
@@ -364,7 +364,7 @@ version|versionsuffix    |toolchain
 
 ### AIMAll
 
-AIMAll is an easy to use, accurate, reliable and efficient quantum chemistry software package for performing comprehensive, quantitative and visual QTAIM analyses of molecular systems - starting from molecular wavefunction data.
+AIMAll is an simple to use, accurate, reliable and efficient quantum chemistry software package for performing comprehensive, quantitative and visual QTAIM analyses of molecular systems - starting from molecular wavefunction data.
 
 *homepage*: <http://aim.tkgristmill.com>
 
@@ -1063,7 +1063,7 @@ version|versionsuffix           |toolchain
 
 ### apex
 
-A PyTorch Extension: Tools for easy mixed precision and distributed training in Pytorch
+A PyTorch Extension: Tools for simple mixed precision and distributed training in Pytorch
 
 *homepage*: <https://github.com/nvidia/apex>
 
@@ -1405,7 +1405,7 @@ version  |toolchain
 
 ### ASAP
 
-ASAP focuses on fast and fluid image viewing with an easy-to-use interface  for making annotations. It consists of two main components: an IO library for reading and writing  multi-resolution images and a viewer component for visualizing such images.
+ASAP focuses on fast and fluid image viewing with an simple-to-use interface  for making annotations. It consists of two main components: an IO library for reading and writing  multi-resolution images and a viewer component for visualizing such images.
 
 *homepage*: <https://computationalpathologygroup.github.io/ASAP/>
 
@@ -2054,7 +2054,7 @@ version  |toolchain
 
 ### Bambi
 
-Bambi is a high-level Bayesian model-building interface written in Python. It works with the probabilistic programming frameworks PyMC3 and is designed to make it extremely easy to fit Bayesian mixed-effects models common in biology, social sciences and other disciplines.
+Bambi is a high-level Bayesian model-building interface written in Python. It works with the probabilistic programming frameworks PyMC3 and is designed to make it extremely simple to fit Bayesian mixed-effects models common in biology, social sciences and other disciplines.
 
 *homepage*: <https://bambinos.github.io/bambi>
 
@@ -2601,7 +2601,7 @@ version      |versionsuffix    |toolchain
 
 ### BFAST
 
-BFAST facilitates the fast and accurate mapping of short reads to reference sequences.  Some advantages of BFAST include:  1) Speed: enables billions of short reads to be mapped quickly.   2) Accuracy: A priori probabilities for mapping reads with defined set of variants.   3) An easy way to measurably tune accuracy at the expense of speed.
+BFAST facilitates the fast and accurate mapping of short reads to reference sequences.  Some advantages of BFAST include:  1) Speed: enables billions of short reads to be mapped quickly.   2) Accuracy: A priori probabilities for mapping reads with defined set of variants.   3) An simple way to measurably tune accuracy at the expense of speed.
 
 *homepage*: <http://bfast.sourceforge.net/>
 
@@ -2838,7 +2838,7 @@ version    |versionsuffix   |toolchain
 
 ### BioPP
 
-Bio++ is a set of C++ libraries for Bioinformatics, including sequence analysis, phylogenetics, molecular evolution and population genetics. Bio++ is Object Oriented and is designed to be both easy to use and computer efficient. Bio++ intends to help programmers to write computer expensive programs, by providing them a set of re-usable tools. 
+Bio++ is a set of C++ libraries for Bioinformatics, including sequence analysis, phylogenetics, molecular evolution and population genetics. Bio++ is Object Oriented and is designed to be both simple to use and computer efficient. Bio++ intends to help programmers to write computer expensive programs, by providing them a set of re-usable tools. 
 
 *homepage*: <https://github.com/BioPP/bpp-core>
 
@@ -3834,7 +3834,7 @@ version   |toolchain
 
 ### CaDiCaL
 
-CaDiCaL is a simplified satisfiability solver. The original goal of the development of CaDiCaL was to obtain a CDCL solver, which is easy to understand and change, while at the same time not being much slower than other state-of-the-art CDCL solvers.
+CaDiCaL is a simplified satisfiability solver. The original goal of the development of CaDiCaL was to obtain a CDCL solver, which is simple to understand and change, while at the same time not being much slower than other state-of-the-art CDCL solvers.
 
 *homepage*: <https://github.com/arminbiere/cadical>
 
@@ -4059,7 +4059,7 @@ version     |versionsuffix    |toolchain
 
 ### Cartopy
 
-Cartopy is a Python package designed to make drawing maps for data analysis and visualisation easy.
+Cartopy is a Python package designed to make drawing maps for data analysis and visualisation simple.
 
 *homepage*: <https://scitools.org.uk/cartopy/docs/latest/>
 
@@ -4114,7 +4114,7 @@ version|toolchain
 
 ### CASPR
 
-Running CASPR is extremely easy and convenient to analyze CRIPR-Cas9 screens using pgRNAs.
+Running CASPR is extremely simple and convenient to analyze CRIPR-Cas9 screens using pgRNAs.
 
 *homepage*: <https://judithbergada.github.io/CASPR>
 
@@ -4580,7 +4580,7 @@ version       |toolchain
 
 ### Cereal
 
-cereal is a header-only C++11 serialization library. cereal takes arbitrary data types and reversibly  turns them into different representations, such as compact binary encodings, XML, or JSON. cereal was designed to be fast, light-weight, and easy to extend - it has no external dependencies and can be easily bundled with other code or  used standalone.
+cereal is a header-only C++11 serialization library. cereal takes arbitrary data types and reversibly  turns them into different representations, such as compact binary encodings, XML, or JSON. cereal was designed to be fast, light-weight, and simple to extend - it has no external dependencies and can be easily bundled with other code or  used standalone.
 
 *homepage*: <https://uscilab.github.io/cereal/>
 
@@ -4641,7 +4641,7 @@ version    |versionsuffix     |toolchain
 
 ### CGAL
 
-The goal of the CGAL Open Source Project is to provide easy access to efficient  and reliable geometric algorithms in the form of a C++ library.
+The goal of the CGAL Open Source Project is to provide simple access to efficient  and reliable geometric algorithms in the form of a C++ library.
 
 *homepage*: <https://www.cgal.org/>
 
@@ -5766,7 +5766,7 @@ version   |versionsuffix    |toolchain
 
 ### CPPE
 
-CPPE is an open-source, light-weight C++ and Python library for Polarizable Embedding (PE)1,2 calculations. It provides an easy-to-use API to implement PE for ground-state self-consistent field (SCF) calculations and post-SCF methods. A convenient Python interface is also available.
+CPPE is an open-source, light-weight C++ and Python library for Polarizable Embedding (PE)1,2 calculations. It provides an simple-to-use API to implement PE for ground-state self-consistent field (SCF) calculations and post-SCF methods. A convenient Python interface is also available.
 
 *homepage*: <https://github.com/maxscheurer/cppe>
 
@@ -6344,7 +6344,7 @@ version   |versionsuffix    |toolchain
 
 ### cURL
 
-libcurl is a free and easy-to-use client-side URL transfer library,  supporting DICT, FILE, FTP, FTPS, Gopher, HTTP, HTTPS, IMAP, IMAPS, LDAP,  LDAPS, POP3, POP3S, RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, Telnet and TFTP.  libcurl supports SSL certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP  form based upload, proxies, cookies, user+password authentication (Basic,  Digest, NTLM, Negotiate, Kerberos), file transfer resume, http proxy tunneling  and more. 
+libcurl is a free and simple-to-use client-side URL transfer library,  supporting DICT, FILE, FTP, FTPS, Gopher, HTTP, HTTPS, IMAP, IMAPS, LDAP,  LDAPS, POP3, POP3S, RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, Telnet and TFTP.  libcurl supports SSL certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP  form based upload, proxies, cookies, user+password authentication (Basic,  Digest, NTLM, Negotiate, Kerberos), file transfer resume, http proxy tunneling  and more. 
 
 *homepage*: <https://curl.haxx.se>
 
@@ -7213,7 +7213,7 @@ version|toolchain
 
 ### DGL
 
-DGL is an easy-to-use, high performance and scalable Python package for deep learning on graphs. DGL is framework agnostic, meaning if a deep graph model is a component of an end-to-end application, the rest of the logics can be implemented in any major frameworks, such as PyTorch, Apache MXNet or TensorFlow.
+DGL is an simple-to-use, high performance and scalable Python package for deep learning on graphs. DGL is framework agnostic, meaning if a deep graph model is a component of an end-to-end application, the rest of the logics can be implemented in any major frameworks, such as PyTorch, Apache MXNet or TensorFlow.
 
 *homepage*: <https://www.dgl.ai>
 
@@ -7439,7 +7439,7 @@ version  |versionsuffix   |toolchain
 
 ### dm-reverb
 
-Reverb is an efficient and easy-to-use data storage and transport system designed for machine learning research. Reverb is primarily used as an experience replay system for distributed reinforcement learning algorithms but the system also supports multiple data structure representations such as FIFO, LIFO, and priority queues.
+Reverb is an efficient and simple-to-use data storage and transport system designed for machine learning research. Reverb is primarily used as an experience replay system for distributed reinforcement learning algorithms but the system also supports multiple data structure representations such as FIFO, LIFO, and priority queues.
 
 *homepage*: <https://github.com/deepmind/reverb>
 
@@ -7519,7 +7519,7 @@ version  |toolchain
 
 ### dorado
 
-Dorado is a high-performance, easy-to-use, open source basecaller for Oxford Nanopore reads.
+Dorado is a high-performance, simple-to-use, open source basecaller for Oxford Nanopore reads.
 
 *homepage*: <https://github.com/nanoporetech/dorado>
 
@@ -7824,7 +7824,7 @@ version|versionsuffix  |toolchain
 ## E
 
 
-[E-ANTIC](#e-antic) - [ea-utils](#ea-utils) - [earthengine-api](#earthengine-api) - [easel](#easel) - [EasyBuild](#easybuild) - [EasyQC](#easyqc) - [ecBuild](#ecbuild) - [ecCodes](#eccodes) - [eccodes-python](#eccodes-python) - [ecFlow](#ecflow) - [ED2](#ed2) - [EDirect](#edirect) - [edlib](#edlib) - [EggLib](#egglib) - [eggnog-mapper](#eggnog-mapper) - [EGTtools](#egttools) - [eht-imaging](#eht-imaging) - [Eigen](#eigen) - [EigenExa](#eigenexa) - [EIGENSOFT](#eigensoft) - [einops](#einops) - [elastix](#elastix) - [elbencho](#elbencho) - [ELFIO](#elfio) - [elfutils](#elfutils) - [Elk](#elk) - [ELPA](#elpa) - [ELPH](#elph) - [elprep](#elprep) - [ELSI](#elsi) - [ELSI-RCI](#elsi-rci) - [Emacs](#emacs) - [EMAN2](#eman2) - [EMBOSS](#emboss) - [Embree](#embree) - [emcee](#emcee) - [EMU](#emu) - [enaBrowserTool](#enabrowsertool) - [enchant](#enchant) - [enchant-2](#enchant-2) - [EnsEMBLCoreAPI](#ensemblcoreapi) - [entrypoints](#entrypoints) - [EPD](#epd) - [EPIC](#epic) - [epiScanpy](#episcanpy) - [eQuilibrator](#equilibrator) - [EricScript](#ericscript) - [ESL-Bundle](#esl-bundle) - [ESM-2](#esm-2) - [ESMF](#esmf) - [ESMPy](#esmpy) - [ESMValTool](#esmvaltool) - [eSpeak-NG](#espeak-ng) - [ESPResSo](#espresso) - [Essentia](#essentia) - [ETE](#ete) - [ETSF_IO](#etsf_io) - [eudev](#eudev) - [Evcxr-REPL](#evcxr-repl) - [EvidentialGene](#evidentialgene) - [evmix](#evmix) - [ExaBayes](#exabayes) - [ExaML](#examl) - [Excel-Writer-XLSX](#excel-writer-xlsx) - [ExifTool](#exiftool) - [exiv2](#exiv2) - [Exonerate](#exonerate) - [expat](#expat) - [expect](#expect) - [expecttest](#expecttest) - [eXpress](#express) - [Extrae](#extrae) - [EZC3D](#ezc3d)
+[E-ANTIC](#e-antic) - [ea-utils](#ea-utils) - [earthengine-api](#earthengine-api) - [easel](#easel) - [SimpleBuild](#simplebuild) - [SimpleQC](#simpleqc) - [ecBuild](#ecbuild) - [ecCodes](#eccodes) - [eccodes-python](#eccodes-python) - [ecFlow](#ecflow) - [ED2](#ed2) - [EDirect](#edirect) - [edlib](#edlib) - [EggLib](#egglib) - [eggnog-mapper](#eggnog-mapper) - [EGTtools](#egttools) - [eht-imaging](#eht-imaging) - [Eigen](#eigen) - [EigenExa](#eigenexa) - [EIGENSOFT](#eigensoft) - [einops](#einops) - [elastix](#elastix) - [elbencho](#elbencho) - [ELFIO](#elfio) - [elfutils](#elfutils) - [Elk](#elk) - [ELPA](#elpa) - [ELPH](#elph) - [elprep](#elprep) - [ELSI](#elsi) - [ELSI-RCI](#elsi-rci) - [Emacs](#emacs) - [EMAN2](#eman2) - [EMBOSS](#emboss) - [Embree](#embree) - [emcee](#emcee) - [EMU](#emu) - [enaBrowserTool](#enabrowsertool) - [enchant](#enchant) - [enchant-2](#enchant-2) - [EnsEMBLCoreAPI](#ensemblcoreapi) - [entrypoints](#entrypoints) - [EPD](#epd) - [EPIC](#epic) - [epiScanpy](#episcanpy) - [eQuilibrator](#equilibrator) - [EricScript](#ericscript) - [ESL-Bundle](#esl-bundle) - [ESM-2](#esm-2) - [ESMF](#esmf) - [ESMPy](#esmpy) - [ESMValTool](#esmvaltool) - [eSpeak-NG](#espeak-ng) - [ESPResSo](#espresso) - [Essentia](#essentia) - [ETE](#ete) - [ETSF_IO](#etsf_io) - [eudev](#eudev) - [Evcxr-REPL](#evcxr-repl) - [EvidentialGene](#evidentialgene) - [evmix](#evmix) - [ExaBayes](#exabayes) - [ExaML](#examl) - [Excel-Writer-XLSX](#excel-writer-xlsx) - [ExifTool](#exiftool) - [exiv2](#exiv2) - [Exonerate](#exonerate) - [expat](#expat) - [expect](#expect) - [expecttest](#expecttest) - [eXpress](#express) - [Extrae](#extrae) - [EZC3D](#ezc3d)
 
 
 ### E-ANTIC
@@ -7868,11 +7868,11 @@ version |toolchain
 --------|--------------
 ``0.48``|``GCC/12.2.0``
 
-### EasyBuild
+### SimpleBuild
 
-EasyBuild is a software build and installation framework  written in Python that allows you to install software in a structured,  repeatable and robust way.
+SimpleBuild is a software build and installation framework  written in Python that allows you to install software in a structured,  repeatable and robust way.
 
-*homepage*: <https://easybuilders.github.io/easybuild>
+*homepage*: <https://simplebuilders.github.io/simplebuild>
 
 version   |toolchain
 ----------|----------
@@ -7973,9 +7973,9 @@ version   |toolchain
 ``4.7.1`` |``system``
 ``4.7.2`` |``system``
 
-### EasyQC
+### SimpleQC
 
-EasyQC is an R-package that provides advanced functionality to  (1) perform file-level QC of single genome-wide association (GWA) data-sets  (2) conduct quality control across several GWA data-sets (meta-level QC)  (3) simplify data-handling of large-scale GWA data-sets.
+SimpleQC is an R-package that provides advanced functionality to  (1) perform file-level QC of single genome-wide association (GWA) data-sets  (2) conduct quality control across several GWA data-sets (meta-level QC)  (3) simplify data-handling of large-scale GWA data-sets.
 
 *homepage*: <http://www.uni-regensburg.de/medizin/epidemiologie-praeventivmedizin/genetische-epidemiologie/software/>
 
@@ -8771,7 +8771,7 @@ version  |toolchain
 
 ### EZC3D
 
-EZC3D is an easy to use reader, modifier and writer for C3D format files. It is written en C++ with proper binders for Python and MATLAB/Octave scripting langages.
+EZC3D is an simple to use reader, modifier and writer for C3D format files. It is written en C++ with proper binders for Python and MATLAB/Octave scripting langages.
 
 *homepage*: <https://pyomeca.github.io/Documentation/ezc3d/index.html>
 
@@ -9306,7 +9306,7 @@ version  |toolchain
 
 ### fetchMG
 
-The program “fetchMG” was written to extract the 40 MGs from genomes and metagenomes  in an easy and accurate manner.
+The program “fetchMG” was written to extract the 40 MGs from genomes and metagenomes  in an simple and accurate manner.
 
 *homepage*: <http://vm-lux.embl.de/~mende/fetchMG/about.html>
 
@@ -9764,7 +9764,7 @@ version   |toolchain
 
 ### Flask
 
-Flask is a lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications. This module includes the Flask extensions: Flask-Cors
+Flask is a lightweight WSGI web application framework. It is designed to make getting started quick and simple, with the ability to scale up to complex applications. This module includes the Flask extensions: Flask-Cors
 
 *homepage*: <https://www.palletsprojects.com/p/flask/>
 
@@ -10098,7 +10098,7 @@ version   |toolchain
 
 GNU Compiler Collection (GCC) based compiler toolchain, including  OpenMPI for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.
 
-*homepage*: <https://easybuild.readthedocs.io/en/master/Common-toolchains.html#foss-toolchain>
+*homepage*: <https://simplebuild.readthedocs.io/en/master/Common-toolchains.html#foss-toolchain>
 
 version    |toolchain
 -----------|----------
@@ -10293,7 +10293,7 @@ version  |versionsuffix   |toolchain
 
 ### FreeImage
 
-FreeImage is an Open Source library project for developers who would like to support popular graphics image formats like PNG, BMP, JPEG, TIFF and others as needed by today's multimedia applications. FreeImage is easy to use, fast, multithreading safe.
+FreeImage is an Open Source library project for developers who would like to support popular graphics image formats like PNG, BMP, JPEG, TIFF and others as needed by today's multimedia applications. FreeImage is simple to use, fast, multithreading safe.
 
 *homepage*: <http://freeimage.sourceforge.net>
 
@@ -11248,7 +11248,7 @@ version  |versionsuffix     |toolchain
 
 ### GDCHART
 
-Easy to use C API, high performance library to create charts  and graphs in PNG, GIF and WBMP format.
+Simple to use C API, high performance library to create charts  and graphs in PNG, GIF and WBMP format.
 
 *homepage*: <http://users.fred.net/brv/chart>
 
@@ -11558,7 +11558,7 @@ version      |toolchain
 
 ### GenotypeHarmonizer
 
-The Genotype Harmonizer is an easy to use command-line tool that allows harmonization of genotype data  stored using different file formats with different and potentially unknown strands.
+The Genotype Harmonizer is an simple to use command-line tool that allows harmonization of genotype data  stored using different file formats with different and potentially unknown strands.
 
 *homepage*: <https://github.com/molgenis/systemsgenetics/wiki/Genotype-Harmonizer>
 
@@ -11616,7 +11616,7 @@ version   |versionsuffix    |toolchain
 
 ### geopy
 
-geopy is a Python client for several popular geocoding web services. geopy makes it easy for Python developers to locate the coordinates of addresses, cities, countries, and landmarks across the globe using third-party geocoders and other data sources. 
+geopy is a Python client for several popular geocoding web services. geopy makes it simple for Python developers to locate the coordinates of addresses, cities, countries, and landmarks across the globe using third-party geocoders and other data sources. 
 
 *homepage*: <https://geopy.readthedocs.io/en/stable/>
 
@@ -11856,7 +11856,7 @@ version  |toolchain
 
 ### gifsicle
 
-Gifsicle is a command-line tool for creating, editing,  and getting information about GIF images and animations.   Making a GIF animation with gifsicle is easy.
+Gifsicle is a command-line tool for creating, editing,  and getting information about GIF images and animations.   Making a GIF animation with gifsicle is simple.
 
 *homepage*: <https://github.com/kohler/gifsicle>
 
@@ -12089,7 +12089,7 @@ version  |versionsuffix   |toolchain
 
 ### Glade
 
-Glade is a RAD tool to enable quick & easy development of user interfaces for the GTK+ toolkit  and the GNOME desktop environment.
+Glade is a RAD tool to enable quick & simple development of user interfaces for the GTK+ toolkit  and the GNOME desktop environment.
 
 *homepage*: <https://glade.gnome.org/>
 
@@ -12516,7 +12516,7 @@ version   |toolchain
 
 ### Go
 
-Go is an open source programming language that makes it easy to build  simple, reliable, and efficient software.
+Go is an open source programming language that makes it simple to build  simple, reliable, and efficient software.
 
 *homepage*: <http://www.golang.org>
 
@@ -13212,7 +13212,7 @@ version  |versionsuffix    |toolchain
 
 ### Groovy
 
-Groovy is a powerful, optionally typed and dynamic language, with static-typing and static compilation capabilities, for the Java platform aimed at improving developer productivity thanks to a concise, familiar and easy to learn syntax.
+Groovy is a powerful, optionally typed and dynamic language, with static-typing and static compilation capabilities, for the Java platform aimed at improving developer productivity thanks to a concise, familiar and simple to learn syntax.
 
 *homepage*: <https://groovy-lang.org>
 
@@ -13270,7 +13270,7 @@ version  |toolchain
 
 ### gSOAP
 
-The gSOAP toolkit is a C and C++ software development toolkit for  SOAP and REST XML Web services and generic C/C++ XML data bindings.  The toolkit analyzes WSDLs and XML schemas (separately or as a combined set) and maps the XML schema types  and the SOAP/REST XML messaging protocols to easy-to-use and efficient C and C++ code.  It also supports exposing (legacy) C and C++ applications as XML Web services  by auto-generating XML serialization code and WSDL specifications.  Or you can simply use it to automatically convert XML to/from C and C++ data.  The toolkit supports options to generate pure ANSI C or C++ with or without STL.
+The gSOAP toolkit is a C and C++ software development toolkit for  SOAP and REST XML Web services and generic C/C++ XML data bindings.  The toolkit analyzes WSDLs and XML schemas (separately or as a combined set) and maps the XML schema types  and the SOAP/REST XML messaging protocols to simple-to-use and efficient C and C++ code.  It also supports exposing (legacy) C and C++ applications as XML Web services  by auto-generating XML serialization code and WSDL specifications.  Or you can simply use it to automatically convert XML to/from C and C++ data.  The toolkit supports options to generate pure ANSI C or C++ with or without STL.
 
 *homepage*: <http://www.cs.fsu.edu/~engelen/soap.html>
 
@@ -15048,7 +15048,7 @@ version      |toolchain
 
 ### imageio
 
-Imageio is a Python library that provides an easy interface to read and write a wide range of  image data, including animated images, video, volumetric data, and scientific formats.
+Imageio is a Python library that provides an simple interface to read and write a wide range of  image data, including animated images, video, volumetric data, and scientific formats.
 
 *homepage*: <https://imageio.github.io>
 
@@ -15503,7 +15503,7 @@ version  |versionsuffix    |toolchain
 
 Compiler toolchain including Intel compilers, Intel MPI and Intel Math Kernel Library (MKL).
 
-*homepage*: <https://easybuild.readthedocs.io/en/master/Common-toolchains.html#intel-toolchain>
+*homepage*: <https://simplebuild.readthedocs.io/en/master/Common-toolchains.html#intel-toolchain>
 
 version              |versionsuffix|toolchain
 ---------------------|-------------|----------
@@ -15693,7 +15693,7 @@ version   |toolchain
 
 ### ioapi
 
-The Models-3/EDSS Input/Output Applications Programming Interface (I/O API) provides the  environmental model developer with an easy-to-learn, easy-to-use programming library for data storage and  access, available from both Fortran and C. The same routines can be used for both file storage (using netCDF  files) and model coupling (using PVM mailboxes). It is the standard data access library for both the  NCSC/CMAS's EDSS project and EPA's Models-3, CMAQ, and SMOKE, as well as various other atmospheric and  hydrological modeling systems.
+The Models-3/EDSS Input/Output Applications Programming Interface (I/O API) provides the  environmental model developer with an simple-to-learn, simple-to-use programming library for data storage and  access, available from both Fortran and C. The same routines can be used for both file storage (using netCDF  files) and model coupling (using PVM mailboxes). It is the standard data access library for both the  NCSC/CMAS's EDSS project and EPA's Models-3, CMAQ, and SMOKE, as well as various other atmospheric and  hydrological modeling systems.
 
 *homepage*: <https://www.cmascenter.org/ioapi/>
 
@@ -15857,7 +15857,7 @@ version   |versionsuffix     |toolchain
 
 ### IPython
 
-IPython provides a rich architecture for interactive computing with:  Powerful interactive shells (terminal and Qt-based).  A browser-based notebook with support for code, text, mathematical expressions, inline plots and other rich media.  Support for interactive data visualization and use of GUI toolkits.  Flexible, embeddable interpreters to load into your own projects.  Easy to use, high performance tools for parallel computing.
+IPython provides a rich architecture for interactive computing with:  Powerful interactive shells (terminal and Qt-based).  A browser-based notebook with support for code, text, mathematical expressions, inline plots and other rich media.  Support for interactive data visualization and use of GUI toolkits.  Flexible, embeddable interpreters to load into your own projects.  Simple to use, high performance tools for parallel computing.
 
 *homepage*: <https://ipython.org/index.html>
 
@@ -16805,7 +16805,7 @@ version  |versionsuffix        |toolchain
 
 ### KerasTuner
 
-KerasTuner is an easy-to-use, scalable hyperparameter optimization framework that solves the pain points of hyperparameter search.
+KerasTuner is an simple-to-use, scalable hyperparameter optimization framework that solves the pain points of hyperparameter search.
 
 *homepage*: <https://keras.io/keras_tuner>
 
@@ -16826,7 +16826,7 @@ version  |versionsuffix     |toolchain
 
 ### kim-api
 
-Open Knowledgebase of Interatomic Models.  KIM is an API and OpenKIM is a collection of interatomic models (potentials) for atomistic simulations.  This is a library that can be used by simulation programs to get access to the models in the OpenKIM database.  This EasyBuild only installs the API, the models can be installed with the package openkim-models, or the user can install them manually by running     kim-api-collections-management install user MODELNAME or     kim-api-collections-management install user OpenKIM to install them all.  
+Open Knowledgebase of Interatomic Models.  KIM is an API and OpenKIM is a collection of interatomic models (potentials) for atomistic simulations.  This is a library that can be used by simulation programs to get access to the models in the OpenKIM database.  This SimpleBuild only installs the API, the models can be installed with the package openkim-models, or the user can install them manually by running     kim-api-collections-management install user MODELNAME or     kim-api-collections-management install user OpenKIM to install them all.  
 
 *homepage*: <https://openkim.org/>
 
@@ -17008,7 +17008,7 @@ version  |toolchain
 
 ### kwant
 
-Kwant is a free (open source), powerful, and easy to use Python package for   numerical calculations on tight-binding models with a strong focus on quantum transport.
+Kwant is a free (open source), powerful, and simple to use Python package for   numerical calculations on tight-binding models with a strong focus on quantum transport.
 
 *homepage*: <https://kwant-project.org/>
 
@@ -17106,7 +17106,7 @@ version   |toolchain
 
 ### LAMMPS
 
-LAMMPS is a classical molecular dynamics code, and an acronym for Large-scale Atomic/Molecular Massively Parallel Simulator. LAMMPS has potentials for solid-state materials (metals, semiconductors) and soft matter (biomolecules, polymers) and coarse-grained or mesoscopic systems. It can be used to model atoms or, more generically, as a parallel particle simulator at the atomic, meso, or continuum scale. LAMMPS runs on single processors or in parallel using message-passing techniques and a spatial-decomposition of the simulation domain. The code is designed to be easy to modify or extend with new functionality. 
+LAMMPS is a classical molecular dynamics code, and an acronym for Large-scale Atomic/Molecular Massively Parallel Simulator. LAMMPS has potentials for solid-state materials (metals, semiconductors) and soft matter (biomolecules, polymers) and coarse-grained or mesoscopic systems. It can be used to model atoms or, more generically, as a parallel particle simulator at the atomic, meso, or continuum scale. LAMMPS runs on single processors or in parallel using message-passing techniques and a spatial-decomposition of the simulation domain. The code is designed to be simple to modify or extend with new functionality. 
 
 *homepage*: <https://lammps.sandia.gov/>
 
@@ -18125,7 +18125,7 @@ version  |toolchain
 
 ### LibLZF
 
-LibLZF is a very small data compression library. It consists of only two .c and two .h files and is very easy to incorporate into your own programs. The compression algorithm is very, very fast, yet still written in portable C.
+LibLZF is a very small data compression library. It consists of only two .c and two .h files and is very simple to incorporate into your own programs. The compression algorithm is very, very fast, yet still written in portable C.
 
 *homepage*: <http://oldhome.schmorp.de/marc/liblzf.html>
 
@@ -18187,7 +18187,7 @@ version   |toolchain
 
 ### libmicrohttpd
 
-GNU libmicrohttpd is a small C library that is supposed to make it easy to run  an HTTP server as part of another application. 
+GNU libmicrohttpd is a small C library that is supposed to make it simple to run  an HTTP server as part of another application. 
 
 *homepage*: <https://www.gnu.org/software/libmicrohttpd/>
 
@@ -18262,7 +18262,7 @@ version  |toolchain
 
 ### libosmium
 
-A fast and flexible C++ library for working with OpenStreetMap data.  The Osmium Library has extensive support for all types of OSM entities:  nodes, ways, relations, and changesets.  It allows reading from and writing to OSM files in XML and PBF formats, including change files and full history files.  Osmium can store OSM data in memory and on disk in various formats and using various indexes.  Its easy to use handler interface allows you to quickly write data filtering and conversion functions.  Osmium can create WKT, WKB, OGR, GEOS and GeoJSON geometries for easy conversion into many GIS formats  and it can assemble multipolygons from ways and relations.
+A fast and flexible C++ library for working with OpenStreetMap data.  The Osmium Library has extensive support for all types of OSM entities:  nodes, ways, relations, and changesets.  It allows reading from and writing to OSM files in XML and PBF formats, including change files and full history files.  Osmium can store OSM data in memory and on disk in various formats and using various indexes.  Its simple to use handler interface allows you to quickly write data filtering and conversion functions.  Osmium can create WKT, WKB, OGR, GEOS and GeoJSON geometries for simple conversion into many GIS formats  and it can assemble multipolygons from ways and relations.
 
 *homepage*: <https://osmcode.org/libosmium/>
 
@@ -18548,7 +18548,7 @@ version   |toolchain
 
 ### libsodium
 
-Sodium is a modern, easy-to-use software library for encryption, decryption, signatures,  password hashing and more.
+Sodium is a modern, simple-to-use software library for encryption, decryption, signatures,  password hashing and more.
 
 *homepage*: <https://doc.libsodium.org/>
 
@@ -19173,7 +19173,7 @@ version  |toolchain
 
 ### libzeep
 
-Libzeep was originally developed to make it easy to create SOAP servers.
+Libzeep was originally developed to make it simple to create SOAP servers.
 
 *homepage*: <https://github.com/mhekkel/libzeep>
 
@@ -19238,7 +19238,7 @@ version  |toolchain
 
 ### likwid
 
-Likwid stands for Like I knew what I am doing. This project contributes easy to use command line tools for Linux to support programmers in developing high performance multi threaded programs. 
+Likwid stands for Like I knew what I am doing. This project contributes simple to use command line tools for Linux to support programmers in developing high performance multi threaded programs. 
 
 *homepage*: <https://github.com/RRZE-HPC/likwid>
 
@@ -19335,7 +19335,7 @@ version   |versionsuffix    |toolchain
 
 ### LLVM
 
-The LLVM Core libraries provide a modern source- and target-independent  optimizer, along with code generation support for many popular CPUs  (as well as some less common ones!) These libraries are built around a well  specified code representation known as the LLVM intermediate representation  ("LLVM IR"). The LLVM Core libraries are well documented, and it is  particularly easy to invent your own language (or port an existing compiler)  to use LLVM as an optimizer and code generator.
+The LLVM Core libraries provide a modern source- and target-independent  optimizer, along with code generation support for many popular CPUs  (as well as some less common ones!) These libraries are built around a well  specified code representation known as the LLVM intermediate representation  ("LLVM IR"). The LLVM Core libraries are well documented, and it is  particularly simple to invent your own language (or port an existing compiler)  to use LLVM as an optimizer and code generator.
 
 *homepage*: <https://llvm.org/>
 
@@ -20272,7 +20272,7 @@ version   |toolchain
 
 ### MathGL
 
-MathGL is ...  a library for making high-quality scientific graphics under Linux and Windows;  a library for the fast data plotting and data processing of large data arrays;  a library for working in window and console modes and for easy embedding into other programs;  a library with large and growing set of graphics. 
+MathGL is ...  a library for making high-quality scientific graphics under Linux and Windows;  a library for the fast data plotting and data processing of large data arrays;  a library for working in window and console modes and for simple embedding into other programs;  a library with large and growing set of graphics. 
 
 *homepage*: <http://mathgl.sourceforge.net/doc_en/Main.html>
 
@@ -20515,7 +20515,7 @@ version     |toolchain
 
 ### MbedTLS
 
-An open source, portable, easy to use, readable and flexible SSL library.
+An open source, portable, simple to use, readable and flexible SSL library.
 
 *homepage*: <https://tls.mbed.org/>
 
@@ -20912,7 +20912,7 @@ version     |versionsuffix     |toolchain
 
 ### Mercurial
 
-Mercurial is a free, distributed source control management tool. It efficiently handles projects of any size and offers an easy and intuitive interface. 
+Mercurial is a free, distributed source control management tool. It efficiently handles projects of any size and offers an simple and intuitive interface. 
 
 *homepage*: <https://www.mercurial-scm.org>
 
@@ -21107,7 +21107,7 @@ version     |versionsuffix|toolchain
 
 ### Metagenome-Atlas
 
-Metagenome-atlas is a easy-to-use metagenomic pipeline based on snakemake.  It handles all steps from QC, Assembly, Binning, to Annotation.
+Metagenome-atlas is a simple-to-use metagenomic pipeline based on snakemake.  It handles all steps from QC, Assembly, Binning, to Annotation.
 
 *homepage*: <https://github.com/metagenome-atlas/atlas>
 
@@ -21161,7 +21161,7 @@ version  |versionsuffix     |toolchain
 
 ### metaWRAP
 
-MetaWRAP aims to be an easy-to-use metagenomic wrapper suite that accomplishes the core tasks of metagenomic analysis from start to finish: read quality control, assembly, visualization, taxonomic profiling, extracting draft genomes (binning), and functional annotation.
+MetaWRAP aims to be an simple-to-use metagenomic wrapper suite that accomplishes the core tasks of metagenomic analysis from start to finish: read quality control, assembly, visualization, taxonomic profiling, extracting draft genomes (binning), and functional annotation.
 
 *homepage*: <https://github.com/bxlab/metaWRAP>
 
@@ -21259,7 +21259,7 @@ version|versionsuffix    |toolchain
 
 ### MicrobeAnnotator
 
-Easy-to-use pipeline for the comprehensive metabolic annotation of microbial genomes.
+Simple-to-use pipeline for the comprehensive metabolic annotation of microbial genomes.
 
 *homepage*: <https://github.com/cruizperez/MicrobeAnnotator>
 
@@ -21489,7 +21489,7 @@ version|toolchain
 
 ### MINPACK
 
-Minpack includes software for solving nonlinear equations and  nonlinear least squares problems.  Five algorithmic paths each include  a core subroutine and an easy-to-use driver.  The algorithms proceed  either from an analytic specification of the Jacobian matrix or  directly from the problem functions.  The paths include facilities for  systems of equations with a banded Jacobian matrix, for least squares  problems with a large amount of data, and for checking the consistency  of the Jacobian matrix with the functions. 
+Minpack includes software for solving nonlinear equations and  nonlinear least squares problems.  Five algorithmic paths each include  a core subroutine and an simple-to-use driver.  The algorithms proceed  either from an analytic specification of the Jacobian matrix or  directly from the problem functions.  The paths include facilities for  systems of equations with a banded Jacobian matrix, for least squares  problems with a large amount of data, and for checking the consistency  of the Jacobian matrix with the functions. 
 
 *homepage*: <https://www.netlib.org/minpack/>
 
@@ -22329,7 +22329,7 @@ version  |toolchain
 
 ### MTL4
 
-The Matrix Template Library 4 incorporates the most modern programming techniques  to provide an easy and intuitive interface to users while enabling optimal performance. The natural  mathematical notation in MTL4 empowers all engineers and scientists to implement their algorithms and  models in minimal time. All technical aspects are encapsulated in the library.
+The Matrix Template Library 4 incorporates the most modern programming techniques  to provide an simple and intuitive interface to users while enabling optimal performance. The natural  mathematical notation in MTL4 empowers all engineers and scientists to implement their algorithms and  models in minimal time. All technical aspects are encapsulated in the library.
 
 *homepage*: <http://www.simunova.com/mtl4>
 
@@ -23068,7 +23068,7 @@ version   |versionsuffix|toolchain
 
 ### ncdu
 
-Ncdu is a disk usage analyzer with an ncurses interface. It is designed to find space hogs on a  remote server where you don't have an entire graphical setup available, but it is a useful tool even on regular  desktop systems. Ncdu aims to be fast, simple and easy to use, and should be able to run in any minimal POSIX-like  environment with ncurses installed.
+Ncdu is a disk usage analyzer with an ncurses interface. It is designed to find space hogs on a  remote server where you don't have an entire graphical setup available, but it is a useful tool even on regular  desktop systems. Ncdu aims to be fast, simple and simple to use, and should be able to run in any minimal POSIX-like  environment with ncurses installed.
 
 *homepage*: <https://dev.yorhel.nl/ncdu>
 
@@ -23155,7 +23155,7 @@ version|toolchain
 
 ### ncview
 
-Ncview is a visual browser for netCDF format files.  Typically you would use ncview to get a quick and easy, push-button  look at your netCDF files. You can view simple movies of the data,  view along various dimensions, take a look at the actual data values,  change color maps, invert the data, etc.
+Ncview is a visual browser for netCDF format files.  Typically you would use ncview to get a quick and simple, push-button  look at your netCDF files. You can view simple movies of the data,  view along various dimensions, take a look at the actual data values,  change color maps, invert the data, etc.
 
 *homepage*: <http://meteora.ucsd.edu/~pierce/ncview_home_page.html>
 
@@ -23176,7 +23176,7 @@ version  |versionsuffix     |toolchain
 
 ### ne
 
-ne is a free (GPL'd) text editor based on the POSIX standard that runs (we hope) on almost any UN*X machine. ne is easy to use for the beginner, but powerful and fully configurable for the wizard, and most sparing in its resource usage.
+ne is a free (GPL'd) text editor based on the POSIX standard that runs (we hope) on almost any UN*X machine. ne is simple to use for the beginner, but powerful and fully configurable for the wizard, and most sparing in its resource usage.
 
 *homepage*: <http://ne.di.unimi.it/>
 
@@ -23196,7 +23196,7 @@ version     |toolchain
 
 ### NEdit
 
-NEdit is a multi-purpose text editor for the X Window System,  which combines a standard, easy to use, graphical user interface with the thorough  functionality and stability required by users who edit text eight hours a day.
+NEdit is a multi-purpose text editor for the X Window System,  which combines a standard, simple to use, graphical user interface with the thorough  functionality and stability required by users who edit text eight hours a day.
 
 *homepage*: <http://www.nedit.org>
 
@@ -23573,7 +23573,7 @@ version   |toolchain
 
 ### nf-core-mag
 
-The Nextflow pipeline 'mag' ported to EasyBuild/EESSI.
+The Nextflow pipeline 'mag' ported to SimpleBuild/EESSI.
 
 *homepage*: <https://nf-co.re/mag>
 
@@ -23765,7 +23765,7 @@ version   |toolchain
 
 ### Nilearn
 
-Nilearn is a Python module for fast and easy statistical learning on NeuroImaging data.
+Nilearn is a Python module for fast and simple statistical learning on NeuroImaging data.
 
 *homepage*: <https://nilearn.github.io/>
 
@@ -24862,7 +24862,7 @@ version  |toolchain
 
 ### OpenKIM-API
 
-Open Knowledgebase of Interatomic Models.  OpenKIM is an API and a collection of interatomic models (potentials) for atomistic simulations.  It is a library that can be used by simulation programs to get access to the models in the OpenKIM database.  This EasyBuild only installs the API, the models have to be installed by the user by running     kim-api-collections-management install user MODELNAME or     kim-api-collections-management install user OpenKIM to install them all.  
+Open Knowledgebase of Interatomic Models.  OpenKIM is an API and a collection of interatomic models (potentials) for atomistic simulations.  It is a library that can be used by simulation programs to get access to the models in the OpenKIM database.  This SimpleBuild only installs the API, the models have to be installed by the user by running     kim-api-collections-management install user MODELNAME or     kim-api-collections-management install user OpenKIM to install them all.  
 
 *homepage*: <https://openkim.org/>
 
@@ -24873,7 +24873,7 @@ version  |toolchain
 
 ### openkim-models
 
-Open Knowledgebase of Interatomic Models.  OpenKIM is an API and a collection of interatomic models (potentials) for atomistic simulations.  It is a library that can be used by simulation programs to get access to the models in the OpenKIM database.  This EasyBuild installs the models.  The API itself is in the kim-api package.  
+Open Knowledgebase of Interatomic Models.  OpenKIM is an API and a collection of interatomic models (potentials) for atomistic simulations.  It is a library that can be used by simulation programs to get access to the models in the OpenKIM database.  This SimpleBuild installs the models.  The API itself is in the kim-api package.  
 
 *homepage*: <https://openkim.org/>
 
@@ -25183,7 +25183,7 @@ version  |versionsuffix     |toolchain
 
 ### OptiX
 
-OptiX is NVIDIA SDK for easy ray tracing performance.  It provides a simple framework for accessing the GPU’s massive ray tracing  power using state-of-the-art GPU algorithms.
+OptiX is NVIDIA SDK for simple ray tracing performance.  It provides a simple framework for accessing the GPU’s massive ray tracing  power using state-of-the-art GPU algorithms.
 
 *homepage*: <https://developer.nvidia.com/optix>
 
@@ -25218,7 +25218,7 @@ version|versionsuffix    |toolchain
 
 ### ORCA
 
-ORCA is a flexible, efficient and easy-to-use general purpose tool for quantum chemistry with specific emphasis on spectroscopic properties of open-shell molecules. It features a wide variety of standard quantum chemical methods ranging from semiempirical methods to DFT to single- and multireference correlated ab initio methods. It can also treat environmental and relativistic effects.
+ORCA is a flexible, efficient and simple-to-use general purpose tool for quantum chemistry with specific emphasis on spectroscopic properties of open-shell molecules. It features a wide variety of standard quantum chemical methods ranging from semiempirical methods to DFT to single- and multireference correlated ab initio methods. It can also treat environmental and relativistic effects.
 
 *homepage*: <https://orcaforum.kofo.mpg.de>
 
@@ -25540,7 +25540,7 @@ version  |toolchain
 
 ### pandapower
 
-An easy to use open source tool for power system modeling, analysis and optimization with a high degree of automation
+An simple to use open source tool for power system modeling, analysis and optimization with a high degree of automation
 
 *homepage*: <http://www.pandapower.org/>
 
@@ -25550,7 +25550,7 @@ version  |toolchain
 
 ### pandas
 
-pandas is an open source, BSD-licensed library providing high-performance, easy-to-use data structures  and data analysis tools for the Python programming language.
+pandas is an open source, BSD-licensed library providing high-performance, simple-to-use data structures  and data analysis tools for the Python programming language.
 
 *homepage*: <https://pypi.python.org/pypi/pandas/>
 
@@ -25988,7 +25988,7 @@ version     |toolchain
 
 ### pbipa
 
-Improved Phased Assembler (IPA) is the official PacBio software for HiFi genome assembly. IPA was designed to utilize the accuracy of PacBio HiFi reads to produce high-quality phased genome assemblies. IPA is an end-to-end solution, starting with input reads and resulting in a polished assembly. IPA is fast, providing an easy to use local run mode or a distributed pipeline for a cluster.
+Improved Phased Assembler (IPA) is the official PacBio software for HiFi genome assembly. IPA was designed to utilize the accuracy of PacBio HiFi reads to produce high-quality phased genome assemblies. IPA is an end-to-end solution, starting with input reads and resulting in a polished assembly. IPA is fast, providing an simple to use local run mode or a distributed pipeline for a cluster.
 
 *homepage*: <https://github.com/PacificBiosciences/pbipa>
 
@@ -26596,7 +26596,7 @@ version     |toolchain
 
 ### PhyloPhlAn
 
-PhyloPhlAn is an integrated pipeline for large-scale phylogenetic profiling of genomes and metagenomes. PhyloPhlAn is an accurate, rapid, and easy-to-use method for large-scale microbial genome characterization and phylogenetic analysis at multiple levels of resolution. 
+PhyloPhlAn is an integrated pipeline for large-scale phylogenetic profiling of genomes and metagenomes. PhyloPhlAn is an accurate, rapid, and simple-to-use method for large-scale microbial genome characterization and phylogenetic analysis at multiple levels of resolution. 
 
 *homepage*: <https://github.com/biobakery/phylophlan>
 
@@ -27308,7 +27308,7 @@ version  |toolchain
 
 ### poetry
 
-Python packaging and dependency management made easy. Poetry helps you declare, manage and install  dependencies of Python projects, ensuring you have the right stack everywhere.
+Python packaging and dependency management made simple. Poetry helps you declare, manage and install  dependencies of Python projects, ensuring you have the right stack everywhere.
 
 *homepage*: <https://python-poetry.org>
 
@@ -28710,7 +28710,7 @@ version          |versionsuffix|toolchain
 
 ### pygccxml
 
-Python package for easy C++ declarations navigation.
+Python package for simple C++ declarations navigation.
 
 *homepage*: <https://pypi.python.org/pypi/pygccxml>
 
@@ -29520,7 +29520,7 @@ version       |versionsuffix     |toolchain
 
 ### PyTables
 
-PyTables is a package for managing hierarchical datasets and designed to efficiently and easily cope  with extremely large amounts of data. PyTables is built on top of the HDF5 library, using the Python language and the  NumPy package. It features an object-oriented interface that, combined with C extensions for the performance-critical  parts of the code (generated using Cython), makes it a fast, yet extremely easy to use tool for interactively browsing,  processing and searching very large amounts of data. One important feature of PyTables is that it optimizes memory and   disk resources so that data takes much less space (specially if on-flight compression is used) than other solutions   such as relational or object oriented databases.
+PyTables is a package for managing hierarchical datasets and designed to efficiently and easily cope  with extremely large amounts of data. PyTables is built on top of the HDF5 library, using the Python language and the  NumPy package. It features an object-oriented interface that, combined with C extensions for the performance-critical  parts of the code (generated using Cython), makes it a fast, yet extremely simple to use tool for interactively browsing,  processing and searching very large amounts of data. One important feature of PyTables is that it optimizes memory and   disk resources so that data takes much less space (specially if on-flight compression is used) than other solutions   such as relational or object oriented databases.
 
 *homepage*: <https://www.pytables.org>
 
@@ -29558,7 +29558,7 @@ version   |toolchain
 
 ### pytest
 
-The pytest framework makes it easy to write small, readable tests, and can scale to support complex functional testing for applications and libraries.
+The pytest framework makes it simple to write small, readable tests, and can scale to support complex functional testing for applications and libraries.
 
 *homepage*: <https://docs.pytest.org/en/latest/>
 
@@ -29620,7 +29620,7 @@ version |toolchain
 
 ### pytest-shard
 
-pytest plugin to support parallelism across multiple machines.  Shards tests based on a hash of their test name enabling easy parallelism across machines, suitable for a wide variety of continuous integration services. Tests are split at the finest level of granularity, individual test cases, enabling parallelism even if all of your tests are in a single file (or even single parameterized test method). 
+pytest plugin to support parallelism across multiple machines.  Shards tests based on a hash of their test name enabling simple parallelism across machines, suitable for a wide variety of continuous integration services. Tests are split at the finest level of granularity, individual test cases, enabling parallelism even if all of your tests are in a single file (or even single parameterized test method). 
 
 *homepage*: <https://github.com/AdamGleave/pytest-shard>
 
@@ -29705,7 +29705,7 @@ version   |versionsuffix    |toolchain
 
 Python distribution with a number of widely used  extensions incl. NumPy, SciPy, Matplotlib, JupyterLab, MPI4PY, ... 
 
-*homepage*: <https://easybuild.io/>
+*homepage*: <https://simplebuild.io/>
 
 version   |toolchain
 ----------|--------------
@@ -30133,7 +30133,7 @@ version  |versionsuffix    |toolchain
 
 ### QCG-PilotJob
 
-A python service for easy execution of many tasks inside a single allocation.
+A python service for simple execution of many tasks inside a single allocation.
 
 *homepage*: <https://qcg-pilotjob.readthedocs.org>
 
@@ -30395,7 +30395,7 @@ version   |toolchain
 
 ### QTLtools
 
-QTLtools is a tool set for molecular QTL discovery and analysis. It allows to go from the raw sequence data to collection of molecular Quantitative Trait Loci (QTLs)  in few easy-to-perform steps.
+QTLtools is a tool set for molecular QTL discovery and analysis. It allows to go from the raw sequence data to collection of molecular Quantitative Trait Loci (QTLs)  in few simple-to-perform steps.
 
 *homepage*: <https://qtltools.github.io/qtltools/>
 
@@ -30812,7 +30812,7 @@ version  |toolchain
 
 ### rapidcsv
 
-Rapidcsv is a C++ header-only library for CSV parsing.  While the name admittedly was inspired by the rapidjson project,  the objectives are not the same. The goal of rapidcsv is to be  an easy-to-use CSV library enabling rapid development.  For optimal performance (be it CPU or memory usage) a CSV parser  implemented for the specific use-case is likely to be more performant. 
+Rapidcsv is a C++ header-only library for CSV parsing.  While the name admittedly was inspired by the rapidjson project,  the objectives are not the same. The goal of rapidcsv is to be  an simple-to-use CSV library enabling rapid development.  For optimal performance (be it CPU or memory usage) a CSV parser  implemented for the specific use-case is likely to be more performant. 
 
 *homepage*: <https://github.com/d99kris/rapidcsv>
 
@@ -31027,7 +31027,7 @@ version  |toolchain
 
 ### RcppGSL
 
-The 'RcppGSL' package provides an easy-to-use interface  between 'GSL' data structures and R using concepts from 'Rcpp' which is itself  a package that eases the interfaces between R and C++.
+The 'RcppGSL' package provides an simple-to-use interface  between 'GSL' data structures and R using concepts from 'Rcpp' which is itself  a package that eases the interfaces between R and C++.
 
 *homepage*: <https://cran.r-project.org/web/packages/RcppGSL>
 
@@ -32028,7 +32028,7 @@ version    |toolchain
 
 ### Ruby
 
-Ruby is a dynamic, open source programming language with  a focus on simplicity and productivity. It has an elegant syntax that is  natural to read and easy to write.
+Ruby is a dynamic, open source programming language with  a focus on simplicity and productivity. It has an elegant syntax that is  natural to read and simple to write.
 
 *homepage*: <https://www.ruby-lang.org>
 
@@ -32109,7 +32109,7 @@ version   |toolchain
 ## S
 
 
-[S-Lang](#s-lang) - [S4](#s4) - [Safetensors](#safetensors) - [SAGE](#sage) - [Sailfish](#sailfish) - [SALib](#salib) - [Salmon](#salmon) - [SALMON-TDDFT](#salmon-tddft) - [Sambamba](#sambamba) - [samblaster](#samblaster) - [Samcef](#samcef) - [samclip](#samclip) - [samplot](#samplot) - [SAMtools](#samtools) - [sansa](#sansa) - [SAP](#sap) - [SAS](#sas) - [Satsuma2](#satsuma2) - [savvy](#savvy) - [Saxon-HE](#saxon-he) - [SBCL](#sbcl) - [sbt](#sbt) - [ScaFaCoS](#scafacos) - [ScaLAPACK](#scalapack) - [Scalasca](#scalasca) - [SCALCE](#scalce) - [Scalene](#scalene) - [scanpy](#scanpy) - [scArches](#scarches) - [sceasy](#sceasy) - [SCENIC](#scenic) - [scGeneFit](#scgenefit) - [SCGid](#scgid) - [scHiCExplorer](#schicexplorer) - [Schrodinger](#schrodinger) - [scib](#scib) - [sciClone](#sciclone) - [ScientificPython](#scientificpython) - [scikit-allel](#scikit-allel) - [scikit-bio](#scikit-bio) - [scikit-build](#scikit-build) - [scikit-cuda](#scikit-cuda) - [scikit-image](#scikit-image) - [scikit-learn](#scikit-learn) - [scikit-misc](#scikit-misc) - [scikit-multilearn](#scikit-multilearn) - [scikit-optimize](#scikit-optimize) - [scikit-uplift](#scikit-uplift) - [SCIP](#scip) - [SCIPhI](#sciphi) - [scipy](#scipy) - [SciPy-bundle](#scipy-bundle) - [SCnorm](#scnorm) - [Scoary](#scoary) - [SCons](#scons) - [SCOOP](#scoop) - [SCopeLoomR](#scopeloomr) - [Score-P](#score-p) - [SCOTCH](#scotch) - [scp](#scp) - [scPred](#scpred) - [Scrappie](#scrappie) - [scVelo](#scvelo) - [scvi-tools](#scvi-tools) - [Scythe](#scythe) - [SDCC](#sdcc) - [SDL](#sdl) - [SDL2](#sdl2) - [SDL2_image](#sdl2_image) - [SDL_image](#sdl_image) - [SDSL](#sdsl) - [Seaborn](#seaborn) - [SearchGUI](#searchgui) - [SeaView](#seaview) - [SECAPR](#secapr) - [Seeder](#seeder) - [segemehl](#segemehl) - [segmentation-models](#segmentation-models) - [SeisSol](#seissol) - [SelEstim](#selestim) - [SELFIES](#selfies) - [SentencePiece](#sentencepiece) - [sep](#sep) - [SEPP](#sepp) - [Seq-Gen](#seq-gen) - [seq2HLA](#seq2hla) - [SeqAn](#seqan) - [SeqAn3](#seqan3) - [SeqKit](#seqkit) - [SeqLib](#seqlib) - [Seqmagick](#seqmagick) - [SeqPrep](#seqprep) - [seqtk](#seqtk) - [Serf](#serf) - [setuptools](#setuptools) - [Seurat](#seurat) - [SeuratData](#seuratdata) - [SeuratDisk](#seuratdisk) - [SeuratWrappers](#seuratwrappers) - [sf](#sf) - [sfftk](#sfftk) - [Shannon](#shannon) - [SHAP](#shap) - [shapAAR](#shapaar) - [SHAPEIT](#shapeit) - [SHAPEIT4](#shapeit4) - [Shapely](#shapely) - [sharutils](#sharutils) - [Shasta](#shasta) - [ShengBTE](#shengbte) - [shift](#shift) - [SHORE](#shore) - [Short-Pair](#short-pair) - [shovill](#shovill) - [shrinkwrap](#shrinkwrap) - [SHTns](#shtns) - [Sibelia](#sibelia) - [SICER2](#sicer2) - [sickle](#sickle) - [Siesta](#siesta) - [SignalP](#signalp) - [silhouetteRank](#silhouetterank) - [silx](#silx) - [simint](#simint) - [SimNIBS](#simnibs) - [SimPEG](#simpeg) - [SIMPLE](#simple) - [Simple-DFTD3](#simple-dftd3) - [SimpleElastix](#simpleelastix) - [SimpleITK](#simpleitk) - [simpy](#simpy) - [SimVascular](#simvascular) - [SingleM](#singlem) - [Singular](#singular) - [SiNVICT](#sinvict) - [SIONlib](#sionlib) - [SIP](#sip) - [siscone](#siscone) - [SISSO](#sisso) - [SISSO++](#sisso++) - [SKESA](#skesa) - [sketchmap](#sketchmap) - [skewer](#skewer) - [sklearn-pandas](#sklearn-pandas) - [sklearn-som](#sklearn-som) - [skorch](#skorch) - [SlamDunk](#slamdunk) - [SLATEC](#slatec) - [SLEPc](#slepc) - [slepc4py](#slepc4py) - [sleuth](#sleuth) - [slidingwindow](#slidingwindow) - [SLiM](#slim) - [slow5tools](#slow5tools) - [smafa](#smafa) - [smallgenomeutilities](#smallgenomeutilities) - [SMAP](#smap) - [SMARTdenovo](#smartdenovo) - [SMC++](#smc++) - [smfishHmrf](#smfishhmrf) - [smithwaterman](#smithwaterman) - [Smoldyn](#smoldyn) - [smooth-topk](#smooth-topk) - [SMRT-Link](#smrt-link) - [SMV](#smv) - [snakemake](#snakemake) - [SNAP](#snap) - [SNAP-HMM](#snap-hmm) - [SNAPE-pooled](#snape-pooled) - [snaphu](#snaphu) - [snappy](#snappy) - [Sniffles](#sniffles) - [snippy](#snippy) - [snp-sites](#snp-sites) - [snpEff](#snpeff) - [SNPhylo](#snphylo) - [SNPomatic](#snpomatic) - [SOAPaligner](#soapaligner) - [SOAPdenovo-Trans](#soapdenovo-trans) - [SOAPdenovo2](#soapdenovo2) - [SOAPfuse](#soapfuse) - [socat](#socat) - [SOCI](#soci) - [SolexaQA++](#solexaqa++) - [sonic](#sonic) - [SoPlex](#soplex) - [SoQt](#soqt) - [SortMeRNA](#sortmerna) - [SoupX](#soupx) - [SoX](#sox) - [SoXt](#soxt) - [SpaceRanger](#spaceranger) - [Spack](#spack) - [spaCy](#spacy) - [SPAdes](#spades) - [spaln](#spaln) - [Spark](#spark) - [sparse-neighbors-search](#sparse-neighbors-search) - [sparsehash](#sparsehash) - [SpatialDE](#spatialde) - [spatialreg](#spatialreg) - [spdlog](#spdlog) - [SpectrA](#spectra) - [spectral.methods](#spectral.methods) - [speech_tools](#speech_tools) - [spektral](#spektral) - [spglib](#spglib) - [spglib-python](#spglib-python) - [Sphinx](#sphinx) - [Sphinx-RTD-Theme](#sphinx-rtd-theme) - [SpiceyPy](#spiceypy) - [SpiecEasi](#spieceasi) - [SplAdder](#spladder) - [SPLASH](#splash) - [SpliceMap](#splicemap) - [split-seq](#split-seq) - [splitRef](#splitref) - [SPM](#spm) - [spoa](#spoa) - [SPOOLES](#spooles) - [SPOTPY](#spotpy) - [SPRNG](#sprng) - [Spyder](#spyder) - [SQLite](#sqlite) - [SqueezeMeta](#squeezemeta) - [Squidpy](#squidpy) - [SRA-Toolkit](#sra-toolkit) - [sradownloader](#sradownloader) - [SRPRISM](#srprism) - [SRST2](#srst2) - [SSAHA2](#ssaha2) - [SSN](#ssn) - [SSPACE_Basic](#sspace_basic) - [SSW](#ssw) - [STACEY](#stacey) - [Stack](#stack) - [Stacks](#stacks) - [STAMP](#stamp) - [StaMPS](#stamps) - [Stampy](#stampy) - [STAR](#star) - [STAR-CCM+](#star-ccm+) - [STAR-Fusion](#star-fusion) - [stardist](#stardist) - [stars](#stars) - [Stata](#stata) - [Statistics-R](#statistics-r) - [statsmodels](#statsmodels) - [STEAK](#steak) - [STIR](#stir) - [stpipeline](#stpipeline) - [strace](#strace) - [Strainberry](#strainberry) - [STREAM](#stream) - [strelka](#strelka) - [StringTie](#stringtie) - [stripy](#stripy) - [STRique](#strique) - [Structure](#structure) - [Structure_threader](#structure_threader) - [STRUMPACK](#strumpack) - [suave](#suave) - [Subread](#subread) - [subset-bam](#subset-bam) - [Subversion](#subversion) - [suds](#suds) - [SuiteSparse](#suitesparse) - [SUMACLUST](#sumaclust) - [SUMATRA](#sumatra) - [SUMO](#sumo) - [SUNDIALS](#sundials) - [SunPy](#sunpy) - [SuperLU](#superlu) - [SuperLU_DIST](#superlu_dist) - [supermagic](#supermagic) - [supernova](#supernova) - [SURVIVOR](#survivor) - [SVclone](#svclone) - [SVDetect](#svdetect) - [SVDquest](#svdquest) - [SVG](#svg) - [SVIM](#svim) - [svist4get](#svist4get) - [swarm](#swarm) - [SWASH](#swash) - [SWAT+](#swat+) - [swifter](#swifter) - [SWIG](#swig) - [SWIPE](#swipe) - [swissknife](#swissknife) - [SymEngine](#symengine) - [SymEngine-python](#symengine-python) - [SYMPHONY](#symphony) - [sympy](#sympy) - [synthcity](#synthcity) - [SyRI](#syri) - [sysbench](#sysbench) - [Szip](#szip)
+[S-Lang](#s-lang) - [S4](#s4) - [Safetensors](#safetensors) - [SAGE](#sage) - [Sailfish](#sailfish) - [SALib](#salib) - [Salmon](#salmon) - [SALMON-TDDFT](#salmon-tddft) - [Sambamba](#sambamba) - [samblaster](#samblaster) - [Samcef](#samcef) - [samclip](#samclip) - [samplot](#samplot) - [SAMtools](#samtools) - [sansa](#sansa) - [SAP](#sap) - [SAS](#sas) - [Satsuma2](#satsuma2) - [savvy](#savvy) - [Saxon-HE](#saxon-he) - [SBCL](#sbcl) - [sbt](#sbt) - [ScaFaCoS](#scafacos) - [ScaLAPACK](#scalapack) - [Scalasca](#scalasca) - [SCALCE](#scalce) - [Scalene](#scalene) - [scanpy](#scanpy) - [scArches](#scarches) - [scsimple](#scsimple) - [SCENIC](#scenic) - [scGeneFit](#scgenefit) - [SCGid](#scgid) - [scHiCExplorer](#schicexplorer) - [Schrodinger](#schrodinger) - [scib](#scib) - [sciClone](#sciclone) - [ScientificPython](#scientificpython) - [scikit-allel](#scikit-allel) - [scikit-bio](#scikit-bio) - [scikit-build](#scikit-build) - [scikit-cuda](#scikit-cuda) - [scikit-image](#scikit-image) - [scikit-learn](#scikit-learn) - [scikit-misc](#scikit-misc) - [scikit-multilearn](#scikit-multilearn) - [scikit-optimize](#scikit-optimize) - [scikit-uplift](#scikit-uplift) - [SCIP](#scip) - [SCIPhI](#sciphi) - [scipy](#scipy) - [SciPy-bundle](#scipy-bundle) - [SCnorm](#scnorm) - [Scoary](#scoary) - [SCons](#scons) - [SCOOP](#scoop) - [SCopeLoomR](#scopeloomr) - [Score-P](#score-p) - [SCOTCH](#scotch) - [scp](#scp) - [scPred](#scpred) - [Scrappie](#scrappie) - [scVelo](#scvelo) - [scvi-tools](#scvi-tools) - [Scythe](#scythe) - [SDCC](#sdcc) - [SDL](#sdl) - [SDL2](#sdl2) - [SDL2_image](#sdl2_image) - [SDL_image](#sdl_image) - [SDSL](#sdsl) - [Seaborn](#seaborn) - [SearchGUI](#searchgui) - [SeaView](#seaview) - [SECAPR](#secapr) - [Seeder](#seeder) - [segemehl](#segemehl) - [segmentation-models](#segmentation-models) - [SeisSol](#seissol) - [SelEstim](#selestim) - [SELFIES](#selfies) - [SentencePiece](#sentencepiece) - [sep](#sep) - [SEPP](#sepp) - [Seq-Gen](#seq-gen) - [seq2HLA](#seq2hla) - [SeqAn](#seqan) - [SeqAn3](#seqan3) - [SeqKit](#seqkit) - [SeqLib](#seqlib) - [Seqmagick](#seqmagick) - [SeqPrep](#seqprep) - [seqtk](#seqtk) - [Serf](#serf) - [setuptools](#setuptools) - [Seurat](#seurat) - [SeuratData](#seuratdata) - [SeuratDisk](#seuratdisk) - [SeuratWrappers](#seuratwrappers) - [sf](#sf) - [sfftk](#sfftk) - [Shannon](#shannon) - [SHAP](#shap) - [shapAAR](#shapaar) - [SHAPEIT](#shapeit) - [SHAPEIT4](#shapeit4) - [Shapely](#shapely) - [sharutils](#sharutils) - [Shasta](#shasta) - [ShengBTE](#shengbte) - [shift](#shift) - [SHORE](#shore) - [Short-Pair](#short-pair) - [shovill](#shovill) - [shrinkwrap](#shrinkwrap) - [SHTns](#shtns) - [Sibelia](#sibelia) - [SICER2](#sicer2) - [sickle](#sickle) - [Siesta](#siesta) - [SignalP](#signalp) - [silhouetteRank](#silhouetterank) - [silx](#silx) - [simint](#simint) - [SimNIBS](#simnibs) - [SimPEG](#simpeg) - [SIMPLE](#simple) - [Simple-DFTD3](#simple-dftd3) - [SimpleElastix](#simpleelastix) - [SimpleITK](#simpleitk) - [simpy](#simpy) - [SimVascular](#simvascular) - [SingleM](#singlem) - [Singular](#singular) - [SiNVICT](#sinvict) - [SIONlib](#sionlib) - [SIP](#sip) - [siscone](#siscone) - [SISSO](#sisso) - [SISSO++](#sisso++) - [SKESA](#skesa) - [sketchmap](#sketchmap) - [skewer](#skewer) - [sklearn-pandas](#sklearn-pandas) - [sklearn-som](#sklearn-som) - [skorch](#skorch) - [SlamDunk](#slamdunk) - [SLATEC](#slatec) - [SLEPc](#slepc) - [slepc4py](#slepc4py) - [sleuth](#sleuth) - [slidingwindow](#slidingwindow) - [SLiM](#slim) - [slow5tools](#slow5tools) - [smafa](#smafa) - [smallgenomeutilities](#smallgenomeutilities) - [SMAP](#smap) - [SMARTdenovo](#smartdenovo) - [SMC++](#smc++) - [smfishHmrf](#smfishhmrf) - [smithwaterman](#smithwaterman) - [Smoldyn](#smoldyn) - [smooth-topk](#smooth-topk) - [SMRT-Link](#smrt-link) - [SMV](#smv) - [snakemake](#snakemake) - [SNAP](#snap) - [SNAP-HMM](#snap-hmm) - [SNAPE-pooled](#snape-pooled) - [snaphu](#snaphu) - [snappy](#snappy) - [Sniffles](#sniffles) - [snippy](#snippy) - [snp-sites](#snp-sites) - [snpEff](#snpeff) - [SNPhylo](#snphylo) - [SNPomatic](#snpomatic) - [SOAPaligner](#soapaligner) - [SOAPdenovo-Trans](#soapdenovo-trans) - [SOAPdenovo2](#soapdenovo2) - [SOAPfuse](#soapfuse) - [socat](#socat) - [SOCI](#soci) - [SolexaQA++](#solexaqa++) - [sonic](#sonic) - [SoPlex](#soplex) - [SoQt](#soqt) - [SortMeRNA](#sortmerna) - [SoupX](#soupx) - [SoX](#sox) - [SoXt](#soxt) - [SpaceRanger](#spaceranger) - [Spack](#spack) - [spaCy](#spacy) - [SPAdes](#spades) - [spaln](#spaln) - [Spark](#spark) - [sparse-neighbors-search](#sparse-neighbors-search) - [sparsehash](#sparsehash) - [SpatialDE](#spatialde) - [spatialreg](#spatialreg) - [spdlog](#spdlog) - [SpectrA](#spectra) - [spectral.methods](#spectral.methods) - [speech_tools](#speech_tools) - [spektral](#spektral) - [spglib](#spglib) - [spglib-python](#spglib-python) - [Sphinx](#sphinx) - [Sphinx-RTD-Theme](#sphinx-rtd-theme) - [SpiceyPy](#spiceypy) - [SpiecEasi](#spieceasi) - [SplAdder](#spladder) - [SPLASH](#splash) - [SpliceMap](#splicemap) - [split-seq](#split-seq) - [splitRef](#splitref) - [SPM](#spm) - [spoa](#spoa) - [SPOOLES](#spooles) - [SPOTPY](#spotpy) - [SPRNG](#sprng) - [Spyder](#spyder) - [SQLite](#sqlite) - [SqueezeMeta](#squeezemeta) - [Squidpy](#squidpy) - [SRA-Toolkit](#sra-toolkit) - [sradownloader](#sradownloader) - [SRPRISM](#srprism) - [SRST2](#srst2) - [SSAHA2](#ssaha2) - [SSN](#ssn) - [SSPACE_Basic](#sspace_basic) - [SSW](#ssw) - [STACEY](#stacey) - [Stack](#stack) - [Stacks](#stacks) - [STAMP](#stamp) - [StaMPS](#stamps) - [Stampy](#stampy) - [STAR](#star) - [STAR-CCM+](#star-ccm+) - [STAR-Fusion](#star-fusion) - [stardist](#stardist) - [stars](#stars) - [Stata](#stata) - [Statistics-R](#statistics-r) - [statsmodels](#statsmodels) - [STEAK](#steak) - [STIR](#stir) - [stpipeline](#stpipeline) - [strace](#strace) - [Strainberry](#strainberry) - [STREAM](#stream) - [strelka](#strelka) - [StringTie](#stringtie) - [stripy](#stripy) - [STRique](#strique) - [Structure](#structure) - [Structure_threader](#structure_threader) - [STRUMPACK](#strumpack) - [suave](#suave) - [Subread](#subread) - [subset-bam](#subset-bam) - [Subversion](#subversion) - [suds](#suds) - [SuiteSparse](#suitesparse) - [SUMACLUST](#sumaclust) - [SUMATRA](#sumatra) - [SUMO](#sumo) - [SUNDIALS](#sundials) - [SunPy](#sunpy) - [SuperLU](#superlu) - [SuperLU_DIST](#superlu_dist) - [supermagic](#supermagic) - [supernova](#supernova) - [SURVIVOR](#survivor) - [SVclone](#svclone) - [SVDetect](#svdetect) - [SVDquest](#svdquest) - [SVG](#svg) - [SVIM](#svim) - [svist4get](#svist4get) - [swarm](#swarm) - [SWASH](#swash) - [SWAT+](#swat+) - [swifter](#swifter) - [SWIG](#swig) - [SWIPE](#swipe) - [swissknife](#swissknife) - [SymEngine](#symengine) - [SymEngine-python](#symengine-python) - [SYMPHONY](#symphony) - [sympy](#sympy) - [synthcity](#synthcity) - [SyRI](#syri) - [sysbench](#sysbench) - [Szip](#szip)
 
 
 ### S-Lang
@@ -32472,11 +32472,11 @@ version  |versionsuffix   |toolchain
 ``0.5.6``|                |``foss/2021a``
 ``0.5.6``|``-CUDA-11.3.1``|``foss/2021a``
 
-### sceasy
+### scsimple
 
-sceasy is a package that helps easy conversion of different single-cell data formats to each other
+scsimple is a package that helps simple conversion of different single-cell data formats to each other
 
-*homepage*: <https://github.com/cellgeni/sceasy>
+*homepage*: <https://github.com/cellgeni/scsimple>
 
 version  |versionsuffix|toolchain
 ---------|-------------|--------------
@@ -32857,7 +32857,7 @@ version   |versionsuffix|toolchain
 
 ### Score-P
 
-The Score-P measurement infrastructure is a highly scalable and easy-to-use  tool suite for profiling, event tracing, and online analysis of HPC  applications. 
+The Score-P measurement infrastructure is a highly scalable and simple-to-use  tool suite for profiling, event tracing, and online analysis of HPC  applications. 
 
 *homepage*: <https://www.score-p.org>
 
@@ -33152,7 +33152,7 @@ version   |versionsuffix    |toolchain
 
 ### sep
 
-Python and C library for Source Extraction and Photometry.  (this easyconfig provides python library only)
+Python and C library for Source Extraction and Photometry.  (this simpleconfig provides python library only)
 
 *homepage*: <https://sep.readthedocs.io>
 
@@ -33209,7 +33209,7 @@ version  |versionsuffix|toolchain
 
 ### SeqAn3
 
-SeqAn is an open source C++ library   of efficient algorithms and data structures for the   analysis of sequences with the focus on biological   data. Our library applies a unique generic design   that guarantees high performance, generality,   extensibility, and integration with other libraries.   SeqAn is easy to use and simplifies the development   of new software tools with a minimal loss of   performance. 
+SeqAn is an open source C++ library   of efficient algorithms and data structures for the   analysis of sequences with the focus on biological   data. Our library applies a unique generic design   that guarantees high performance, generality,   extensibility, and integration with other libraries.   SeqAn is simple to use and simplifies the development   of new software tools with a minimal loss of   performance. 
 
 *homepage*: <https://github.com/seqan/seqan3>
 
@@ -33762,7 +33762,7 @@ version  |versionsuffix|toolchain
 
 ### SIP
 
-SIP is a tool that makes it very easy to create Python bindings for C and C++ libraries.
+SIP is a tool that makes it very simple to create Python bindings for C and C++ libraries.
 
 *homepage*: <http://www.riverbankcomputing.com/software/sip/>
 
@@ -34386,7 +34386,7 @@ version  |toolchain
 
 ### Spack
 
-Spack is a package manager for supercomputers, Linux, and macOS. It makes installing scientific  software easy. With Spack, you can build a package with multiple versions, configurations, platforms, and compilers,  and all of these builds can coexist on the same machine.
+Spack is a package manager for supercomputers, Linux, and macOS. It makes installing scientific  software simple. With Spack, you can build a package with multiple versions, configurations, platforms, and compilers,  and all of these builds can coexist on the same machine.
 
 *homepage*: <https://spack.io/>
 
@@ -34609,7 +34609,7 @@ version         |versionsuffix     |toolchain
 
 ### Sphinx
 
-Sphinx is a tool that makes it easy to create intelligent and beautiful documentation.  It was originally created for the new Python documentation, and it has excellent facilities for the   documentation of Python projects, but C/C++ is already supported as well, and it is planned to add   special support for other languages as well.
+Sphinx is a tool that makes it simple to create intelligent and beautiful documentation.  It was originally created for the new Python documentation, and it has excellent facilities for the   documentation of Python projects, but C/C++ is already supported as well, and it is planned to add   special support for other languages as well.
 
 *homepage*: <http://sphinx.pocoo.org/>
 
@@ -35931,7 +35931,7 @@ version   |toolchain
 
 ### Tcl
 
-Tcl (Tool Command Language) is a very powerful but easy to learn dynamic  programming language, suitable for a very wide range of uses, including web  and desktop applications, networking, administration, testing and many more. 
+Tcl (Tool Command Language) is a very powerful but simple to learn dynamic  programming language, suitable for a very wide range of uses, including web  and desktop applications, networking, administration, testing and many more. 
 
 *homepage*: <https://www.tcl.tk/>
 
@@ -36115,7 +36115,7 @@ version   |versionsuffix                |toolchain
 
 ### TensorFlow-Datasets
 
-TensorFlow Datasets is a collection of datasets ready to use, with TensorFlow or other Python ML frameworks, such as Jax. All datasets are exposed as tf.data.Datasets , enabling easy-to-use and high-performance input pipelines. 
+TensorFlow Datasets is a collection of datasets ready to use, with TensorFlow or other Python ML frameworks, such as Jax. All datasets are exposed as tf.data.Datasets , enabling simple-to-use and high-performance input pipelines. 
 
 *homepage*: <https://www.tensorflow.org/datasets>
 
@@ -36425,7 +36425,7 @@ version|toolchain
 
 ### timm
 
-timm is a library containing SOTA computer vision models, layers, utilities, optimizers, schedulers, data-loaders, augmentations, and training/evaluation scripts.  It comes packaged with >700 pretrained models, and is designed to be flexible and easy to use. 
+timm is a library containing SOTA computer vision models, layers, utilities, optimizers, schedulers, data-loaders, augmentations, and training/evaluation scripts.  It comes packaged with >700 pretrained models, and is designed to be flexible and simple to use. 
 
 *homepage*: <https://huggingface.co/docs/timm>
 
@@ -36610,7 +36610,7 @@ version|toolchain
 
 ### toil
 
-A scalable, efficient, cross-platform (Linux/macOS) and easy-to-use workflow engine in pure Python.
+A scalable, efficient, cross-platform (Linux/macOS) and simple-to-use workflow engine in pure Python.
 
 *homepage*: <https://github.com/DataBiosphere/toil>
 
@@ -36986,7 +36986,7 @@ version  |toolchain
 
 ### trimesh
 
-Trimesh is a Python (2.7- 3.3+) library for loading and using triangular meshes with an emphasis on watertight meshes. The goal of the library is to provide a fully featured Trimesh object which allows for easy manipulation and analysis, in the style of the excellent Polygon object in the Shapely library.
+Trimesh is a Python (2.7- 3.3+) library for loading and using triangular meshes with an emphasis on watertight meshes. The goal of the library is to provide a fully featured Trimesh object which allows for simple manipulation and analysis, in the style of the excellent Polygon object in the Shapely library.
 
 *homepage*: <https://trimsh.org/>
 
@@ -37397,7 +37397,7 @@ version     |versionsuffix    |toolchain
 
 ### Ultralytics
 
-Ultralytics YOLOv8 is a cutting-edge, state-of-the-art (SOTA) model that builds upon the success of previous YOLO versions and introduces new features and improvements to further boost performance and flexibility. YOLOv8 is designed to be fast, accurate, and easy to use, making it an excellent choice for a wide range of object detection and tracking, instance segmentation, image classification and pose estimation tasks.
+Ultralytics YOLOv8 is a cutting-edge, state-of-the-art (SOTA) model that builds upon the success of previous YOLO versions and introduces new features and improvements to further boost performance and flexibility. YOLOv8 is designed to be fast, accurate, and simple to use, making it an excellent choice for a wide range of object detection and tracking, instance segmentation, image classification and pose estimation tasks.
 
 *homepage*: <https://github.com/ultralytics/ultralytics>
 
@@ -37689,7 +37689,7 @@ version   |toolchain
 
 ### Vampir
 
-The Vampir software tool provides an easy-to-use framework that enables  developers to quickly display and analyze arbitrary program behavior at any level of detail.  The tool suite implements optimized event analysis algorithms and customizable displays that  enable fast and interactive rendering of very complex performance monitoring data.
+The Vampir software tool provides an simple-to-use framework that enables  developers to quickly display and analyze arbitrary program behavior at any level of detail.  The tool suite implements optimized event analysis algorithms and customizable displays that  enable fast and interactive rendering of very complex performance monitoring data.
 
 *homepage*: <http://www.vampir.eu>
 
@@ -38380,7 +38380,7 @@ version   |toolchain
 
 ### Waylandpp
 
-Wayland is an object oriented display protocol, which features request and events. Requests can be seen as method calls on certain objects, whereas events can be seen as signals of an object. This makes the Wayland protocol a perfect candidate for a C++ binding.  The goal of this library is to create such a C++ binding for Wayland using the most modern C++ technology currently available, providing an easy to use C++ API to Wayland.
+Wayland is an object oriented display protocol, which features request and events. Requests can be seen as method calls on certain objects, whereas events can be seen as signals of an object. This makes the Wayland protocol a perfect candidate for a C++ binding.  The goal of this library is to create such a C++ binding for Wayland using the most modern C++ technology currently available, providing an simple to use C++ API to Wayland.
 
 *homepage*: <https://github.com/NilsBrause/waylandpp>
 
@@ -39001,7 +39001,7 @@ version         |toolchain
 
 ### Xerces-C++
 
-Xerces-C++ is a validating XML parser written in a portable subset of C++. Xerces-C++ makes it easy to give your application the ability to read and write XML data. A shared library is provided for parsing, generating, manipulating, and validating XML documents using the DOM, SAX, and SAX2 APIs.
+Xerces-C++ is a validating XML parser written in a portable subset of C++. Xerces-C++ makes it simple to give your application the ability to read and write XML data. A shared library is provided for parsing, generating, manipulating, and validating XML documents using the DOM, SAX, and SAX2 APIs.
 
 *homepage*: <https://xerces.apache.org/xerces-c/>
 
