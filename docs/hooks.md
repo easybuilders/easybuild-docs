@@ -43,7 +43,7 @@ eb ...
 
 ## Available hooks
 
-Currently (since EasyBuild v3.7.0), three types of hooks are supported:
+Currently (since EasyBuild v3.7.0), five types of hooks are supported:
 
 * `start_hook` and `end_hook`, which are triggered *once* before starting software installations,
   and *once* right after completing all installations, respectively
@@ -59,6 +59,7 @@ which can also be consulted using `eb --avail-hooks`, is:
 
 * `start_hook` *(only called once in an EasyBuild session)*
 * `parse_hook` *(available since EasyBuild v3.7.0)*
+* `pre_build_and_install_loop`
 * `pre_fetch_hook`, `post_fetch_hook`
 * `pre_ready_hook`, `post_ready_hook`
 * `pre_source_hook`, `post_source_hook`
@@ -68,7 +69,9 @@ which can also be consulted using `eb --avail-hooks`, is:
 * `pre_build_hook`, `post_build_hook`
 * `pre_test_hook`, `post_test_hook`
 * `pre_install_hook`, `post_install_hook`
-* `pre_extensions_hook`, `post_extensions_hook`
+* `pre_extensions_hook`
+* `pre_single_extension_hook`, `post_single_extension_hook`
+* `post_extensions_hook`
 * `pre_postproc_hook`, `post_postproc_hook`
 * `pre_sanitycheck_hook`, `post_sanitycheck_hook`
 * `pre_cleanup_hook`, `post_cleanup_hook`
@@ -76,7 +79,11 @@ which can also be consulted using `eb --avail-hooks`, is:
 * `pre_permissions_hook`, `post_permissions_hook`
 * `pre_package_hook`, `post_package_hook`
 * `pre_testcases_hook`, `post_testcases_hook`
+* `post_build_and_install_loop`
 * `end_hook` *(only called once in an EasyBuild session)*
+* `fail_hook`
+* `cancel_hook`
+* `crash_hook`
 * `module_write_hook` *(called multiple times per installation, available since EasyBuild v4.4.1)*
 
 All functions implemented in the provided Python module for which the name ends with `_hook` are considered.
@@ -107,6 +114,8 @@ Do take into account the following:
 * for `start_hook` and `end_hook`, no arguments are provided
 * for `parse_hook`, one argument is provided: the `EasyConfig` instance
   that corresponds to the easyconfig file being parsed (usually referred to as `ec`)
+* for `pre_build_and_install_loop`, a list of easyconfigs is provided
+* for `post_build_and_install_loop`, a list of easyconfigs with build results is provided
 * for `module_write_hook`, 3 arguments are provided:
    * the `EasyBlock` instance used to perform the installation (usually referred to as `self`)
    * the filepath of the module that will be written
