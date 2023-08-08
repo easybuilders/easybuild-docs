@@ -45,14 +45,17 @@ eb ...
 
 Currently (since EasyBuild v3.7.0), five types of hooks are supported:
 
-* `start_hook` and `end_hook`, which are triggered *once* before starting software installations,
-  and *once* right after completing all installations, respectively
+* `start_hook`, `pre_build_and_install_loop`, `end_hook` and `post_build_and_install_loop` which are triggered *once* before starting software installations,
+  and *once* right after completing all installations, respectively.
 * `parse_hook`, which is triggered when an easyconfig file is being parsed
 * `module_write_hook`, which is triggered right before a module file is written.
   This includes the temporary module file used when installing extensions and during the sanity check,
   as well as the devel module.
 * "*step*" hooks that are triggered before and after every step of each installation procedure that is performed,
-  also aptly named '`pre`'- and '`post`'-hooks
+  also aptly named '`pre`'- and '`post`'- hooks.
+* "*failure*" hooks, `fail_hook`, `cancel_hook`, `crash_hook`, are triggered when an `EasyBuildError`, `KeyboardInterrupt` or `Exception` is 
+encountered, respectively. `crash_hook` functions as a "catch all" for Python exceptions, and won't be called if either `fail_hook` or `cancel_hook`
+is run.
 
 The list of currently available hooks in order of execution,
 which can also be consulted using `eb --avail-hooks`, is:
