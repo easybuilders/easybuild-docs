@@ -43,7 +43,7 @@ eb ...
 
 ## Available hooks
 
-Currently (since EasyBuild v3.7.0), five types of hooks are supported:
+Currently, five types of hooks are supported:
 
 * `start_hook`, `pre_build_and_install_loop`, `end_hook` and `post_build_and_install_loop` which are triggered *once* before starting software installations,
   and *once* right after completing all installations, respectively.
