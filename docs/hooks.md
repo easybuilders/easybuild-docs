@@ -118,7 +118,7 @@ Do take into account the following:
 
 * for `start_hook` and `end_hook`, no arguments are provided
 * for `fail_hook`, `cancel_hook` and `crash_hook`, the exception which caused the build to stop
-is provided
+  is provided
 * for `parse_hook`, one argument is provided: the `EasyConfig` instance
   that corresponds to the easyconfig file being parsed (usually referred to as `ec`)
 * for `pre_build_and_install_loop`, a list of easyconfigs is provided
