@@ -62,7 +62,7 @@ which can also be consulted using `eb --avail-hooks`, is:
 
 * `start_hook` *(only called once in an EasyBuild session)*
 * `parse_hook` *(available since EasyBuild v3.7.0)*
-* `pre_build_and_install_loop`
+* `pre_build_and_install_loop` *(available since EasyBuild v?)*
 * `pre_fetch_hook`, `post_fetch_hook`
 * `pre_ready_hook`, `post_ready_hook`
 * `pre_source_hook`, `post_source_hook`
@@ -73,8 +73,9 @@ which can also be consulted using `eb --avail-hooks`, is:
 * `pre_test_hook`, `post_test_hook`
 * `pre_install_hook`, `post_install_hook`
 * `pre_extensions_hook`
-* `pre_single_extension_hook`, `post_single_extension_hook`
+* `pre_single_extension_hook`, `post_single_extension_hook` *(available since EasyBuild v4.7.1)*
 * `post_extensions_hook`
+* `pre_postiter_step`, `post_postiter_step`
 * `pre_postproc_hook`, `post_postproc_hook`
 * `pre_sanitycheck_hook`, `post_sanitycheck_hook`
 * `pre_cleanup_hook`, `post_cleanup_hook`
@@ -82,11 +83,11 @@ which can also be consulted using `eb --avail-hooks`, is:
 * `pre_permissions_hook`, `post_permissions_hook`
 * `pre_package_hook`, `post_package_hook`
 * `pre_testcases_hook`, `post_testcases_hook`
-* `post_build_and_install_loop`
+* `post_build_and_install_loop` *(available since EasyBuild v?)*
 * `end_hook` *(only called once in an EasyBuild session)*
-* `fail_hook`
-* `cancel_hook`
-* `crash_hook`
+* `fail_hook` *(available since EasyBuild v?)*
+* `cancel_hook` *(available since EasyBuild v?)*
+* `crash_hook` *(available since EasyBuild v?)*
 * `module_write_hook` *(called multiple times per installation, available since EasyBuild v4.4.1)*
 
 All functions implemented in the provided Python module for which the name ends with `_hook` are considered.
