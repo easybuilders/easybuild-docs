@@ -75,6 +75,7 @@ which can also be consulted using `eb --avail-hooks`, is:
 * `pre_extensions_hook`
 * `pre_single_extension_hook`, `post_single_extension_hook` *(available since EasyBuild v4.7.1)*
 * `post_extensions_hook`
+* `pre_postiter_hook`, `post_postiter_hook` *(available since EasyBuild v?)*
 * `pre_postproc_hook`, `post_postproc_hook`
 * `pre_sanitycheck_hook`, `post_sanitycheck_hook`
 * `pre_cleanup_hook`, `post_cleanup_hook`
