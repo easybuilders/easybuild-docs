@@ -45,7 +45,8 @@ eb ...
 
 Currently, five types of hooks are supported:
 
-* `start_hook`, `pre_build_and_install_loop`, `end_hook` and `post_build_and_install_loop` which are triggered *once* before starting software installations,
+* `start_hook`, `pre_build_and_install_loop`, `post_build_and_install_loop` and `end_hook` which are triggered *once* before starting software
+  installations, *once* before looping over the easyconfigs to be built, *once* after completing the loop over the eayconfigs to be installed,
   and *once* right after completing all installations, respectively.
 * `parse_hook`, which is triggered when an easyconfig file is being parsed
 * `module_write_hook`, which is triggered right before a module file is written.
