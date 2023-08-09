@@ -55,8 +55,8 @@ Currently, five types of hooks are supported:
 * "*step*" hooks that are triggered before and after every step of each installation procedure that is performed,
   also aptly named '`pre`'- and '`post`'- hooks.
 * "*failure*" hooks, `fail_hook`, `cancel_hook`, `crash_hook`, are triggered when an `EasyBuildError`, `KeyboardInterrupt` or `Exception` is 
-encountered, respectively. `crash_hook` functions as a "catch all" for Python exceptions, and won't be called if either `fail_hook` or `cancel_hook`
-is run.
+  encountered, respectively. `crash_hook` functions as a "catch all" for Python exceptions, and won't be called if either `fail_hook`
+  or `cancel_hook` is run.
 
 The list of currently available hooks in order of execution,
 which can also be consulted using `eb --avail-hooks`, is:
