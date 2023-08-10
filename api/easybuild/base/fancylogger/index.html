@@ -17,7 +17,7 @@
         <link rel="next" href="../frozendict/">
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.eebd395e.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
@@ -6196,20 +6196,19 @@ logger.debug("warning")
 
 
 <h2 id="easybuild.base.fancylogger.FancyLogRecord" class="doc doc-heading">
-        <code>FancyLogRecord</code>
+          <code>FancyLogRecord</code>
 
 
 <a href="#easybuild.base.fancylogger.FancyLogRecord" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="logging.handlers">logging</span>.<span title="logging.handlers.LogRecord">LogRecord</span></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code>logging.<span title="logging.LogRecord">LogRecord</span></code></p>
 
   
       <p>This class defines a custom log record.
 Adding extra specifiers is as simple as adding attributes to the log record</p>
-
 
 
   
@@ -6237,15 +6236,15 @@ Adding extra specifiers is as simple as adding attributes to the log record</p>
 
 
 <h2 id="easybuild.base.fancylogger.FancyLogger" class="doc doc-heading">
-        <code>FancyLogger</code>
+          <code>FancyLogger</code>
 
 
 <a href="#easybuild.base.fancylogger.FancyLogger" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="logging.handlers">logging</span>.<span title="logging.handlers.getLoggerClass">getLoggerClass</span>()</code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code>logging.<span title="logging.getLoggerClass">getLoggerClass</span>()</code></p>
 
   
       <p>This is a custom Logger class that uses the FancyLogRecord
@@ -6253,10 +6252,10 @@ and has extra log methods raiseException and deprecated and
 streaming versions for debug,info,warning and error.</p>
 
 
-
   
 
   <div class="doc doc-children">
+
 
 
 
@@ -6284,6 +6283,7 @@ streaming versions for debug,info,warning and error.</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -6301,6 +6301,7 @@ streaming versions for debug,info,warning and error.</p>
   </div>
 
 </div>
+
 
 <div class="doc doc-object doc-function">
 
@@ -6321,6 +6322,7 @@ streaming versions for debug,info,warning and error.</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -6338,6 +6340,7 @@ streaming versions for debug,info,warning and error.</p>
   </div>
 
 </div>
+
 
 <div class="doc doc-object doc-function">
 
@@ -6357,6 +6360,7 @@ streaming versions for debug,info,warning and error.</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -6375,6 +6379,7 @@ streaming versions for debug,info,warning and error.</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -6390,11 +6395,13 @@ streaming versions for debug,info,warning and error.</p>
       <p>logs message and raises an exception (since it can be caught higher up and handled)
 and raises it afterwards</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
@@ -6433,6 +6440,7 @@ and raises it afterwards</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -6450,6 +6458,7 @@ and raises it afterwards</p>
   </div>
 
 </div>
+
 
 <div class="doc doc-object doc-function">
 
@@ -6469,6 +6478,7 @@ and raises it afterwards</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -6487,6 +6497,7 @@ and raises it afterwards</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -6504,6 +6515,7 @@ and raises it afterwards</p>
   </div>
 
 </div>
+
 
 <div class="doc doc-object doc-function">
 
@@ -6536,24 +6548,24 @@ and raises it afterwards</p>
 
 
 <h2 id="easybuild.base.fancylogger.FancyStreamHandler" class="doc doc-heading">
-        <code>FancyStreamHandler</code>
+          <code>FancyStreamHandler</code>
 
 
 <a href="#easybuild.base.fancylogger.FancyStreamHandler" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="logging.handlers">logging</span>.<span title="logging.handlers.StreamHandler">StreamHandler</span></code></p>
+          <p class="doc doc-class-bases">
+            Bases: <code>logging.<span title="logging.StreamHandler">StreamHandler</span></code></p>
 
   
       <p>The logging StreamHandler with uniform named arg in <strong>init</strong> for selecting the stream.</p>
 
 
-
   
 
   <div class="doc doc-children">
+
 
 
 
@@ -6592,6 +6604,7 @@ and raises it afterwards</p>
 </div>
 
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -6611,6 +6624,7 @@ and raises it afterwards</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -6629,6 +6643,7 @@ and raises it afterwards</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -6642,6 +6657,8 @@ and raises it afterwards</p>
   <div class="doc doc-contents ">
   
       
+
+
 
   <table>
     <thead>
@@ -6667,6 +6684,7 @@ and raises it afterwards</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -6685,6 +6703,7 @@ and raises it afterwards</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -6698,6 +6717,8 @@ and raises it afterwards</p>
   <div class="doc doc-contents ">
   
       
+
+
 
   <table>
     <thead>
@@ -6723,6 +6744,7 @@ and raises it afterwards</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -6737,11 +6759,13 @@ and raises it afterwards</p>
   
       <p>Return list of (name,loglevelname) pairs of existing loggers</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
@@ -6780,6 +6804,7 @@ and raises it afterwards</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -6797,6 +6822,7 @@ and raises it afterwards</p>
   </div>
 
 </div>
+
 
 <div class="doc doc-object doc-function">
 
@@ -6822,6 +6848,7 @@ module constant FANCYLOG_FANCYRECORD are also not set).</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -6841,6 +6868,7 @@ this is the module that is actually running everything and so doing the logging<
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -6859,6 +6887,7 @@ this is the module that is actually running everything and so doing the logging<
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -6876,6 +6905,7 @@ this is the module that is actually running everything and so doing the logging<
   </div>
 
 </div>
+
 
 <div class="doc doc-object doc-function">
 
@@ -6900,6 +6930,7 @@ saving the last BACKUPCOUNT files.</p>
   </div>
 
 </div>
+
 
 <div class="doc doc-object doc-function">
 
@@ -6929,6 +6960,7 @@ in the <code>colorize</code> parameter to function <code>_screenLogFormatterFact
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -6951,6 +6983,7 @@ and set boolean = False</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -6968,6 +7001,7 @@ and set boolean = False</p>
   </div>
 
 </div>
+
 
 <div class="doc doc-object doc-function">
 
@@ -6987,6 +7021,7 @@ and set boolean = False</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -7004,6 +7039,7 @@ and set boolean = False</p>
   </div>
 
 </div>
+
 
 <div class="doc doc-object doc-function">
 
@@ -7023,6 +7059,7 @@ and set boolean = False</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -7040,6 +7077,7 @@ and set boolean = False</p>
   </div>
 
 </div>
+
 
 <div class="doc doc-object doc-function">
 
@@ -7059,6 +7097,7 @@ and set boolean = False</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -7076,6 +7115,7 @@ and set boolean = False</p>
   </div>
 
 </div>
+
 
 <div class="doc doc-object doc-function">
 
@@ -7095,6 +7135,7 @@ and set boolean = False</p>
 
 </div>
 
+
 <div class="doc doc-object doc-function">
 
 
@@ -7110,11 +7151,13 @@ and set boolean = False</p>
       <p>Set a FancyLogger instance as the logging root logger
 with (effective)loglevel of current root FancyLogger</p>
 
+
+
   <table>
     <thead>
       <tr>
         <th><b>PARAMETER</b></th>
-        <th><b>DESCRIPTION</b></th>
+        <th><b> DESCRIPTION</b></th>
       </tr>
     </thead>
     <tbody>
@@ -7127,7 +7170,7 @@ with (effective)loglevel of current root FancyLogger</p>
             <p>
                 <span class="doc-param-default">
                   <b>DEFAULT:</b> 
-                    <code>FANCYLOG_FANCYRECORD</code>
+                    <code><span title="easybuild.base.fancylogger.FANCYLOG_FANCYRECORD">FANCYLOG_FANCYRECORD</span></code>
                 </span>
             </p>
           </td>
@@ -7138,6 +7181,7 @@ with (effective)loglevel of current root FancyLogger</p>
   </div>
 
 </div>
+
 
 <div class="doc doc-object doc-function">
 
