@@ -31,8 +31,8 @@ Option flag    |Option description
 ## Configfile options
 
 Option flag                              |Option description
------------------------------------------|----------------------------------------------------------
-``--configfiles=CONFIGFILES``            |Parse (additional) configfiles (type comma-separated list)
+-----------------------------------------|----------------------------------------------------------------------------------------------------------------
+``--configfiles=CONFIGFILES``            |Parse (additional) configfiles (type comma-separated list; default: /home/example/.config/easybuild/config.cfg)
 ``--ignoreconfigfiles=IGNORECONFIGFILES``|Ignore configfiles (type comma-separated list)
 
 ## Basic options
