@@ -5,7 +5,6 @@ compatible with both Python versions 2 and 3. More specifically, the
 following Python versions are currently supported:
 
 - Python 2.6.x (support was removed in EasyBuild v4.4.0)
-- Python 2.7.x (support will be removed in EasyBuild v5.0.0)
 - Python 2.7.x ([support will be removed in EasyBuild v5.0.0](easybuild-v5/overview-of-changes.md))
 - Python 3.5.x ([support will be removed in EasyBuild v5.0.0](easybuild-v5/overview-of-changes.md))
 - Python 3.6.x
