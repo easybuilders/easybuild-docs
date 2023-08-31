@@ -43,27 +43,26 @@ eb ...
 
 ## Available hooks
 
-Currently, five types of hooks are supported:
+Since EasyBuild v4.8.1, five different types of hooks are supported:
 
-* `start_hook`, `pre_build_and_install_loop`, `post_build_and_install_loop` and `end_hook` which are triggered *once* before starting software
-  installations, *once* before looping over the easyconfigs to be built, *once* after completing the loop over the eayconfigs to be installed,
-  and *once* right after completing all installations, respectively.
+* `start_hook`, `pre_build_and_install_loop_hook`, `post_build_and_install_loop_hook`, and `end_hook` which are triggered *once* right after
+  EasyBuild starts, *once* before looping over the easyconfigs to be built, *once* after completing the loop over the eayconfigs to be installed,
+  and *once* shortly before EasyBuild completes, respectively.
 * `parse_hook`, which is triggered when an easyconfig file is being parsed
 * `module_write_hook`, which is triggered right before a module file is written.
   This includes the temporary module file used when installing extensions and during the sanity check,
   as well as the devel module.
 * "*step*" hooks that are triggered before and after every step of each installation procedure that is performed,
-  also aptly named '`pre`'- and '`post`'- hooks.
-* "*failure*" hooks, `fail_hook`, `cancel_hook`, `crash_hook`, are triggered when an `EasyBuildError`, `KeyboardInterrupt` or `Exception` is 
-  encountered, respectively. `crash_hook` functions as a "catch all" for Python exceptions, and won't be called if either `fail_hook`
-  or `cancel_hook` is run.
+  also aptly named '`pre`'- and '`post`' hooks.
+* `cancel_hook` and `fail_hook` which are triggered when a `KeyboardInterrupt` or `EasyBuildError` is raised,
+  respectively.
 
 The list of currently available hooks in order of execution,
 which can also be consulted using `eb --avail-hooks`, is:
 
 * `start_hook` *(only called once in an EasyBuild session)*
 * `parse_hook` *(available since EasyBuild v3.7.0)*
-* `pre_build_and_install_loop` *(available since EasyBuild v?)*
+* `pre_build_and_install_loop` *(available since EasyBuild v4.8.1)*
 * `pre_fetch_hook`, `post_fetch_hook`
 * `pre_ready_hook`, `post_ready_hook`
 * `pre_source_hook`, `post_source_hook`
@@ -76,7 +75,7 @@ which can also be consulted using `eb --avail-hooks`, is:
 * `pre_extensions_hook`
 * `pre_single_extension_hook`, `post_single_extension_hook` *(available since EasyBuild v4.7.1)*
 * `post_extensions_hook`
-* `pre_postiter_hook`, `post_postiter_hook` *(available since EasyBuild v?)*
+* `pre_postiter_hook`, `post_postiter_hook` *(available since EasyBuild v4.8.1)*
 * `pre_postproc_hook`, `post_postproc_hook`
 * `pre_sanitycheck_hook`, `post_sanitycheck_hook`
 * `pre_cleanup_hook`, `post_cleanup_hook`
@@ -84,11 +83,10 @@ which can also be consulted using `eb --avail-hooks`, is:
 * `pre_permissions_hook`, `post_permissions_hook`
 * `pre_package_hook`, `post_package_hook`
 * `pre_testcases_hook`, `post_testcases_hook`
-* `post_build_and_install_loop` *(available since EasyBuild v?)*
+* `post_build_and_install_loop` *(available since EasyBuild v4.8.1)*
 * `end_hook` *(only called once in an EasyBuild session)*
-* `fail_hook` *(available since EasyBuild v?)*
-* `cancel_hook` *(available since EasyBuild v?)*
-* `crash_hook` *(available since EasyBuild v?)*
+* `cancel_hook` *(available since EasyBuild v4.8.1)*
+* `fail_hook` *(available since EasyBuild v4.8.1)*
 * `module_write_hook` *(called multiple times per installation, available since EasyBuild v4.4.1)*
 
 All functions implemented in the provided Python module for which the name ends with `_hook` are considered.
@@ -117,8 +115,7 @@ each named after an available hook.
 Do take into account the following:
 
 * for `start_hook` and `end_hook`, no arguments are provided
-* for `fail_hook`, `cancel_hook` and `crash_hook`, the exception which caused the build to stop
-  is provided
+* for `cancel_hook` and `fail_hook`, the `KeyboardInterrupt` or `EasyBuildError` exception that was raised is provided
 * for `parse_hook`, one argument is provided: the `EasyConfig` instance
   that corresponds to the easyconfig file being parsed (usually referred to as `ec`)
 * for `pre_build_and_install_loop`, a list of easyconfigs is provided
