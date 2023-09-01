@@ -274,7 +274,7 @@ To achieve the intended effect, you can either:
     ```
 
 A better approach for manipulating easyconfig parameters is to use the `parse_hook` that
-was introduced in EasyBuild v3.7.0 (see [Parse hook specifics](#parse-hook-specifics)),
+was introduced in EasyBuild v3.7.0 (see [Parse hook specifics][parse-hook-specifics]),
 where these kind of surprises will not occur (because templating is automatically disabled
 before `parse_hook` is called and restored immediately afterwards).
 See also [Example hook to inject a custom patch file](#inject-a-custom-patch-file).
