@@ -11,6 +11,7 @@
 "MD026": false # Trailing punctuation in header
 "MD036": false # Emphasis instead of header
 "MD046": false # Code block style. Doesn't like MkDocs admonitions or content tabs
+"MD051": false # Link fragments should be valid. Reports false negatives when using custom anchor for subsections.
 "MD052": false # defined ref links. Doesn't like mkdocs-autorefs
 
 "MD024":
