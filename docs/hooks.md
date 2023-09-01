@@ -43,7 +43,7 @@ eb ...
 
 ## Available hooks
 
-Since EasyBuild v4.8.1, five different types of hooks are supported:
+Since EasyBuild v4.8.1, six different types of hooks are supported:
 
 * `start_hook`, `pre_build_and_install_loop_hook`, `post_build_and_install_loop_hook`, and `end_hook` which are triggered *once* right after
   EasyBuild starts, *once* before looping over the easyconfigs to be built, *once* after completing the loop over the eayconfigs to be installed,
@@ -56,6 +56,8 @@ Since EasyBuild v4.8.1, five different types of hooks are supported:
   also aptly named '`pre`'- and '`post`' hooks.
 * `cancel_hook` and `fail_hook` which are triggered when a `KeyboardInterrupt` or `EasyBuildError` is raised,
   respectively.
+* `pre_run_shell_cmd_hook` and `post_run_shell_cmd_hook` which are triggered right before and after running
+  a shell command, respectively.
 
 The list of currently available hooks in order of execution,
 which can also be consulted using `eb --avail-hooks`, is:
@@ -79,7 +81,9 @@ which can also be consulted using `eb --avail-hooks`, is:
 * `pre_postproc_hook`, `post_postproc_hook`
 * `pre_sanitycheck_hook`, `post_sanitycheck_hook`
 * `pre_cleanup_hook`, `post_cleanup_hook`
-* `pre_module_hook`, `post_module_hook`
+* `pre_module_hook`
+* `module_write_hook` *(called multiple times per installation, available since EasyBuild v4.4.1)*
+* `post_module_hook`
 * `pre_permissions_hook`, `post_permissions_hook`
 * `pre_package_hook`, `post_package_hook`
 * `pre_testcases_hook`, `post_testcases_hook`
@@ -87,7 +91,10 @@ which can also be consulted using `eb --avail-hooks`, is:
 * `end_hook` *(only called once in an EasyBuild session)*
 * `cancel_hook` *(available since EasyBuild v4.8.1)*
 * `fail_hook` *(available since EasyBuild v4.8.1)*
-* `module_write_hook` *(called multiple times per installation, available since EasyBuild v4.4.1)*
+
+`pre_run_shell_cmd_hook` and `post_run_shell_cmd_hook` *(available since EasyBuild v4.8.1)* are not included in
+the list above because they can not be put in a particular order relative to other hooks, since these hooks
+are triggered several times throughout an EasyBuild session.
 
 All functions implemented in the provided Python module for which the name ends with `_hook` are considered.
 
@@ -112,23 +119,46 @@ Run 'eb --avail-hooks' to get an overview of known hooks
 To implement hooks, simply define one or more functions in a Python module (`*.py`),
 each named after an available hook.
 
+In hooks you have access to the full functionality provided by the EasyBuild framework,
+so do `import` from `easybuild.tools.*` (or other `easybuild.*` namespaces) to leverage
+those functions.
+
 Do take into account the following:
 
-* for `start_hook` and `end_hook`, no arguments are provided
-* for `cancel_hook` and `fail_hook`, the `KeyboardInterrupt` or `EasyBuildError` exception that was raised is provided
-* for `parse_hook`, one argument is provided: the `EasyConfig` instance
-  that corresponds to the easyconfig file being parsed (usually referred to as `ec`)
-* for `pre_build_and_install_loop`, a list of easyconfigs is provided
-* for `post_build_and_install_loop`, a list of easyconfigs with build results is provided
-* for `module_write_hook`, 3 arguments are provided:
-   * the `EasyBlock` instance used to perform the installation (usually referred to as `self`)
-   * the filepath of the module that will be written
-   * the module text as a string
-  The return value of this hook, when set, will replace the original text that is then written to the module file.
-* for the step hooks, one argument is provided:
-  the `EasyBlock` instance used to perform the installation (usually referred to as `self`)
-* the parsed easyconfig file can be accessed in the step hooks via the `EasyBlock` instance,
-  i.e., via `self.cfg`
+* [Hook arguments][hooks-arguments]
+* [Return value of hooks][hooks-return-value]
+* [Parse hook specifics][parse-hook-specifics]
+
+
+### Hook arguments {: #hooks-arguments }
+
+* For both `start_hook` and `end_hook` no arguments are provided.
+* For `cancel_hook` and `fail_hook` the `KeyboardInterrupt` or `EasyBuildError` exception that was raised
+  is provided as an argument.
+* For `parse_hook` the `EasyConfig` instance that corresponds to the easyconfig file being parsed
+  (usually referred to as `ec`) is passed as an argument.
+* For `pre_build_and_install_loop_hook` a list of easyconfigs is provided as an argument.
+* For `post_build_and_install_loop_hook` a list of easyconfigs with build results is provided as an argument.
+* For `pre_run_shell_cmd_hook`, multiple arguments are passed:
+    * An unnamed argument (often called `cmd`) that corresponds to the shell command that will be run,
+      which could be provided either as a string value (like `"echo hello"`) or a list value (like `['echo', 'hello']`).
+    * A named argument `work_dir` that specifies the path of the working directory in which the command will be run.
+    * For interactive commands (which are run via the `run_cmd_qa` function), an additional named argument
+      `interactive` is set to `True`.
+* For `post_run_shell_cmd_hook`, multiple arguments are passed:
+    * An unnamed argument (often called `cmd`) that corresponds to the shell command that was run,
+      which could be provided either as a string value (like `"echo hello"`) or a list value (like `['echo', 'hello']`).
+    * A named argument `work_dir` that specifies the working directory in which the shell command was run.
+    * A named argument `exit_code` that specifies the exit code of the shell command that was run.
+    * A named argument `output` that specifies the output of the shell command that was run.
+    * For interactive commands (which are run via the `run_cmd_qa` function), an additional named argument
+      `interactive` is set to `True`.
+* For `module_write_hook`, 3 arguments are provided:
+    * The `EasyBlock` instance used to perform the installation (usually referred to as `self`).
+    * The filepath of the module that will be written.
+    * The module text as a string.
+* For the step hooks, the `EasyBlock` instance used to perform the installation (usually referred to as `self`).
+  The parsed easyconfig file can be accessed in the step hooks via the `EasyBlock` instance, i.e., via `self.cfg`.
 
 It is recommended to anticipate possible changes in the provided (named) arguments,
 using the `*args` and `**kwargs` mechanism commonly used in Python. This
@@ -140,11 +170,22 @@ def pre_configure_hook(self, *args, **kwargs):
     ...
 ```
 
-In hooks you have access to the full functionality provided by the EasyBuild framework,
-so do `import` from `easybuild.tools.*` (or other `easybuild.*` namespaces) to leverage
-those functions.
 
-### Parse hook specifics
+### Return value of hooks {: #hooks-return-value }
+
+The return value of a hook is usually ignored by EasyBuild, except in particular cases:
+
+* If the `module_write_hook` returns a (string) value, it **replaces the original text that was going to be
+  written to the module file**. This way the `module_write_hook` can extend, change, or entirely replace the
+  module text that was provided as an argument.
+
+* If the `pre_run_shell_cmd_hook` returns a value, it **replaces the shell command that was going to be run**.
+  Hence, this hook can change or entirely replace particular shell commands right before they are executed.
+  Note that the value type of the return value of `pre_run_shell_cmd_hook` *must* match with the type of the
+  first (unnamed) argument that provides the shell command that would have been run originally.
+
+
+### Parse hook specifics {: #parse-hook-specifics }
 
 `parse_hook` is triggered right *after* reading the easyconfig file,
 before further parsing of some easyconfig parameters (like `*dependencies`) into
@@ -233,7 +274,7 @@ To achieve the intended effect, you can either:
     ```
 
 A better approach for manipulating easyconfig parameters is to use the `parse_hook` that
-was introduced in EasyBuild v3.7.0 (see [Parse hook specifics](#parse-hook-specifics)),
+was introduced in EasyBuild v3.7.0 (see [Parse hook specifics][parse-hook-specifics]),
 where these kind of surprises will not occur (because templating is automatically disabled
 before `parse_hook` is called and restored immediately afterwards).
 See also [Example hook to inject a custom patch file](#inject-a-custom-patch-file).
@@ -288,4 +329,31 @@ def module_write_hook(self, filepath, module_txt, *args, **kwargs):
         search = r'prepend_path\("PYTHONPATH", pathJoin\(root, "lib/python\d.\d/site-packages"\)\)'
         replace = 'prepend_path("EBPYTHONPREFIXES", root)'
         return re.sub(search, replace, module_txt)
+```
+
+### Log running of shell commands + prepend `make install` with `sudo`
+
+```py
+shell_cmds_log = '/tmp/eb_shell_cmds.log'
+
+def pre_run_shell_cmd_hook(cmd, work_dir=None, interactive=None):
+    """
+    Log shell commands before they are run,
+    and replace 'make install' with 'sudo make install'.
+    """
+    with open(shell_cmds_log, 'a') as fp:
+        cmd_type = 'interactive' if interactive else 'non-interactive'
+        fp.write("%s command '%s' will be run in %s ...\n" % (cmd_type, cmd, work_dir))
+
+    if cmd == "make install":
+        return "sudo make install"
+
+
+def post_run_shell_cmd_hook(cmd, work_dir=None, interactive=None, exit_code=None, output=None):
+    """
+    Log shell commands that were run.
+    """
+    with open(shell_cmds_log, 'a') as fp:
+        cmd_type = 'interactive' if interactive else 'non-interactive'
+        fp.write("%s command '%s' in %s exited with %s - output: %s\n" % (cmd_type, cmd, work_dir, exit_code, output))
 ```
