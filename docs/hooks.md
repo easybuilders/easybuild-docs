@@ -331,7 +331,7 @@ def module_write_hook(self, filepath, module_txt, *args, **kwargs):
         return re.sub(search, replace, module_txt)
 ```
 
-### Log running of shell commands + preprend `make install` with `sudo`
+### Log running of shell commands + prepend `make install` with `sudo`
 
 ```py
 shell_cmds_log = '/tmp/eb_shell_cmds.log'
