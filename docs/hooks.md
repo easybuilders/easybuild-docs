@@ -125,9 +125,9 @@ those functions.
 
 Do take into account the following:
 
-* [Hook arguments](#hooks-arguments)
-* [Return value of hooks](#hooks-return-value)
-* [Parse hook specifics](#parse-hook-specifics)
+* [Hook arguments][hooks-arguments]
+* [Return value of hooks][hooks-return-value]
+* [Parse hook specifics][parse-hook-specifics]
 
 
 ### Hook arguments {: #hooks-arguments }
