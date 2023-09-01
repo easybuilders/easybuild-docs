@@ -125,12 +125,12 @@ those functions.
 
 Do take into account the following:
 
-* [Hook arguments](#hooks_args)
-* [Return value of hooks](#hooks_return_value)
-* [Parse hook specifics](#hooks_parse_hook_specifics)
+* [Hook arguments](#hooks-arguments)
+* [Return value of hooks](#hooks-return-value)
+* [Parse hook specifics](#parse-hook-specifics)
 
 
-### Hook arguments { #hooks_args }
+### Hook arguments { #hooks-arguments }
 
 * For both `start_hook` and `end_hook` no arguments are provided.
 * For `cancel_hook` and `fail_hook` the `KeyboardInterrupt` or `EasyBuildError` exception that was raised
@@ -171,7 +171,7 @@ def pre_configure_hook(self, *args, **kwargs):
 ```
 
 
-### Return value of hooks { #hooks_return_value }
+### Return value of hooks { #hooks-return-value }
 
 The return value of a hook is usually ignored by EasyBuild, except in particular cases:
 
@@ -185,7 +185,7 @@ The return value of a hook is usually ignored by EasyBuild, except in particular
   first (unnamed) argument that provides the shell command that would have been run originally.
 
 
-### Parse hook specifics { #hooks_parse_hook_specifics }
+### Parse hook specifics { #parse-hook-specifics }
 
 `parse_hook` is triggered right *after* reading the easyconfig file,
 before further parsing of some easyconfig parameters (like `*dependencies`) into
