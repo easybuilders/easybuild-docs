@@ -57,6 +57,7 @@ Name               |Compiler(s)     |MPI          |Linear algebra           |FFT
 **iccifort**       |icc, ifort      |*(none)*     |*(none)*                 |*(none)*
 **iccifortcuda**   |icc, ifort, CUDA|*(none)*     |*(none)*                 |*(none)*
 **ictce**          |icc, ifort      |impi         |imkl                     |imkl
+**ifbf**           |intel-compilers |*(none)*     |FlexiBLAS                |FFTW
 **iibff**          |icc, ifort      |impi         |BLIS, libFLAME, ScaLAPACK|FFTW
 **iimkl**          |icc, ifort      |*(none)*     |imkl                     |imkl
 **iimklc**         |icc, ifort      |*(none)*     |imkl                     |imkl
@@ -69,6 +70,7 @@ Name               |Compiler(s)     |MPI          |Linear algebra           |FFT
 **intel-compilers**|intel-compilers |*(none)*     |*(none)*                 |*(none)*
 **intel-para**     |icc, ifort      |psmpi        |imkl                     |imkl
 **intelcuda**      |icc, ifort, CUDA|impi         |imkl                     |imkl
+**iofbf**          |icc, ifort      |OpenMPI      |FlexiBLAS, ScaLAPACK     |FFTW
 **iomkl**          |icc, ifort      |OpenMPI      |imkl                     |imkl
 **iomklc**         |icc, ifort, CUDA|OpenMPI      |imkl                     |imkl
 **iompi**          |icc, ifort      |OpenMPI      |*(none)*                 |*(none)*

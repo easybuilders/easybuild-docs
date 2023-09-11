@@ -5,7 +5,7 @@
     This page contains a lot of information, it may take a while to load.
 
 
-EasyBuild supports 3161 different software packages (incl. toolchains, bundles):
+EasyBuild supports 3244 different software packages (incl. toolchains, bundles):
 
 [a](#a) - [b](#b) - [c](#c) - [d](#d) - [e](#e) - [f](#f) - [g](#g) - [h](#h) - [i](#i) - [j](#j) - [k](#k) - [l](#l) - [m](#m) - [n](#n) - [o](#o) - [p](#p) - [q](#q) - [r](#r) - [s](#s) - [t](#t) - [u](#u) - [v](#v) - [w](#w) - [x](#x) - [y](#y) - [z](#z)
 
@@ -56,7 +56,7 @@ version  |toolchain
 ## A
 
 
-[ABAQUS](#abaqus) - [ABINIT](#abinit) - [ABRA2](#abra2) - [ABRicate](#abricate) - [Abseil](#abseil) - [abTEM](#abtem) - [ABySS](#abyss) - [ack](#ack) - [ACT](#act) - [ACTC](#actc) - [ada](#ada) - [AdapterRemoval](#adapterremoval) - [ADDA](#adda) - [ADF](#adf) - [ADIOS](#adios) - [adjustText](#adjusttext) - [ADMIXTURE](#admixture) - [ADOL-C](#adol-c) - [Advisor](#advisor) - [affinity](#affinity) - [AFNI](#afni) - [AGAT](#agat) - [AGeNT](#agent) - [AGFusion](#agfusion) - [AIMAll](#aimall) - [aiohttp](#aiohttp) - [ALADIN](#aladin) - [Albacore](#albacore) - [Albumentations](#albumentations) - [alevin-fry](#alevin-fry) - [ALFA](#alfa) - [Alfred](#alfred) - [alleleCount](#allelecount) - [alleleIntegrator](#alleleintegrator) - [Allinea](#allinea) - [ALLPATHS-LG](#allpaths-lg) - [almosthere](#almosthere) - [Alpha](#alpha) - [AlphaFold](#alphafold) - [AlphaPulldown](#alphapulldown) - [ALPS](#alps) - [alsa-lib](#alsa-lib) - [AMAPVox](#amapvox) - [Amara](#amara) - [amask](#amask) - [Amber](#amber) - [AmberMini](#ambermini) - [AmberTools](#ambertools) - [AMD-LibM](#amd-libm) - [AMD-RNG](#amd-rng) - [AMD-SecureRNG](#amd-securerng) - [AMD-uProf](#amd-uprof) - [AMOS](#amos) - [AMPHORA2](#amphora2) - [AMPL-MP](#ampl-mp) - [amplimap](#amplimap) - [AMPtk](#amptk) - [AmrPlusPlus](#amrplusplus) - [AMS](#ams) - [Anaconda2](#anaconda2) - [Anaconda3](#anaconda3) - [aNCI](#anci) - [andi](#andi) - [ANGEL](#angel) - [angsd](#angsd) - [ANIcalculator](#anicalculator) - [anndata](#anndata) - [Annif](#annif) - [Annocript](#annocript) - [annovar](#annovar) - [ANSYS](#ansys) - [ANSYS_CFD](#ansys_cfd) - [ant](#ant) - [antiSMASH](#antismash) - [ANTLR](#antlr) - [ANTs](#ants) - [anvio](#anvio) - [any2fasta](#any2fasta) - [AOCC](#aocc) - [AOMP](#aomp) - [APBS](#apbs) - [apex](#apex) - [APR](#apr) - [APR-util](#apr-util) - [AptaSUITE](#aptasuite) - [ARAGORN](#aragorn) - [Arb](#arb) - [Arcade-Learning-Environment](#arcade-learning-environment) - [arcasHLA](#arcashla) - [ARCH](#arch) - [Archive-Zip](#archive-zip) - [ArchR](#archr) - [archspec](#archspec) - [ARGoS](#argos) - [argtable](#argtable) - [aria2](#aria2) - [Arlequin](#arlequin) - [Armadillo](#armadillo) - [arosics](#arosics) - [ARPACK++](#arpack++) - [arpack-ng](#arpack-ng) - [ArrayFire](#arrayfire) - [Arriba](#arriba) - [Arrow](#arrow) - [arrow-R](#arrow-r) - [ART](#art) - [artic-ncov2019](#artic-ncov2019) - [ARTS](#arts) - [ArviZ](#arviz) - [ARWEN](#arwen) - [ASAP](#asap) - [ASAP3](#asap3) - [ASCAT](#ascat) - [ASE](#ase) - [ASF-SearchAPI](#asf-searchapi) - [ASHS](#ashs) - [Aspera-CLI](#aspera-cli) - [Aspera-Connect](#aspera-connect) - [assimp](#assimp) - [Assimulo](#assimulo) - [ASTRID](#astrid) - [astro-tulips](#astro-tulips) - [astropy](#astropy) - [at-spi2-atk](#at-spi2-atk) - [at-spi2-core](#at-spi2-core) - [ATAT](#atat) - [ATK](#atk) - [ATLAS](#atlas) - [atomate](#atomate) - [AtomPAW](#atompaw) - [atools](#atools) - [atropos](#atropos) - [ATSAS](#atsas) - [attr](#attr) - [attrdict](#attrdict) - [attrdict3](#attrdict3) - [augur](#augur) - [AUGUSTUS](#augustus) - [Austin](#austin) - [AUTO-07p](#auto-07p) - [Autoconf](#autoconf) - [Autoconf-archive](#autoconf-archive) - [AutoDock](#autodock) - [AutoDock-GPU](#autodock-gpu) - [AutoDock-Vina](#autodock-vina) - [AutoDockSuite](#autodocksuite) - [AutoGeneS](#autogenes) - [AutoGrid](#autogrid) - [Automake](#automake) - [AutoMap](#automap) - [autopep8](#autopep8) - [Autotools](#autotools) - [Avogadro2](#avogadro2) - [avro-cpp](#avro-cpp) - [awscli](#awscli) - [axel](#axel)
+[ABAQUS](#abaqus) - [ABINIT](#abinit) - [ABRA2](#abra2) - [ABRicate](#abricate) - [Abseil](#abseil) - [abTEM](#abtem) - [ABySS](#abyss) - [ack](#ack) - [ACT](#act) - [ACTC](#actc) - [ada](#ada) - [AdapterRemoval](#adapterremoval) - [ADDA](#adda) - [ADF](#adf) - [ADIOS](#adios) - [adjustText](#adjusttext) - [ADMIXTURE](#admixture) - [ADOL-C](#adol-c) - [Advisor](#advisor) - [affinity](#affinity) - [AFNI](#afni) - [AGAT](#agat) - [AGeNT](#agent) - [AGFusion](#agfusion) - [AIMAll](#aimall) - [aiohttp](#aiohttp) - [ALADIN](#aladin) - [ALAMODE](#alamode) - [Albacore](#albacore) - [Albumentations](#albumentations) - [alevin-fry](#alevin-fry) - [ALFA](#alfa) - [Alfred](#alfred) - [alleleCount](#allelecount) - [alleleIntegrator](#alleleintegrator) - [Allinea](#allinea) - [ALLPATHS-LG](#allpaths-lg) - [almosthere](#almosthere) - [Alpha](#alpha) - [AlphaFold](#alphafold) - [AlphaPulldown](#alphapulldown) - [ALPS](#alps) - [alsa-lib](#alsa-lib) - [AMAPVox](#amapvox) - [Amara](#amara) - [amask](#amask) - [Amber](#amber) - [AmberMini](#ambermini) - [AmberTools](#ambertools) - [AMD-LibM](#amd-libm) - [AMD-RNG](#amd-rng) - [AMD-SecureRNG](#amd-securerng) - [AMD-uProf](#amd-uprof) - [AMOS](#amos) - [AMPHORA2](#amphora2) - [AMPL-MP](#ampl-mp) - [amplimap](#amplimap) - [AMPtk](#amptk) - [AMRFinderPlus](#amrfinderplus) - [AmrPlusPlus](#amrplusplus) - [AMS](#ams) - [Anaconda2](#anaconda2) - [Anaconda3](#anaconda3) - [aNCI](#anci) - [andi](#andi) - [ANGEL](#angel) - [angsd](#angsd) - [ANIcalculator](#anicalculator) - [anndata](#anndata) - [Annif](#annif) - [Annocript](#annocript) - [annovar](#annovar) - [ANSYS](#ansys) - [ANSYS_CFD](#ansys_cfd) - [ant](#ant) - [antiSMASH](#antismash) - [ANTLR](#antlr) - [ANTs](#ants) - [anvio](#anvio) - [any2fasta](#any2fasta) - [AOCC](#aocc) - [AOMP](#aomp) - [APBS](#apbs) - [apex](#apex) - [APR](#apr) - [APR-util](#apr-util) - [AptaSUITE](#aptasuite) - [ARAGORN](#aragorn) - [Arb](#arb) - [Arcade-Learning-Environment](#arcade-learning-environment) - [arcasHLA](#arcashla) - [ARCH](#arch) - [Archive-Zip](#archive-zip) - [ArchR](#archr) - [archspec](#archspec) - [ARGoS](#argos) - [argtable](#argtable) - [aria2](#aria2) - [Arlequin](#arlequin) - [Armadillo](#armadillo) - [arosics](#arosics) - [ARPACK++](#arpack++) - [arpack-ng](#arpack-ng) - [ArrayFire](#arrayfire) - [Arriba](#arriba) - [Arrow](#arrow) - [arrow-R](#arrow-r) - [ART](#art) - [artic-ncov2019](#artic-ncov2019) - [ARTS](#arts) - [ArviZ](#arviz) - [ARWEN](#arwen) - [ASAP](#asap) - [ASAP3](#asap3) - [ASCAT](#ascat) - [ASE](#ase) - [ASF-SearchAPI](#asf-searchapi) - [ASHS](#ashs) - [Aspera-CLI](#aspera-cli) - [Aspera-Connect](#aspera-connect) - [assimp](#assimp) - [Assimulo](#assimulo) - [ASTRID](#astrid) - [astro-tulips](#astro-tulips) - [astropy](#astropy) - [at-spi2-atk](#at-spi2-atk) - [at-spi2-core](#at-spi2-core) - [ATAT](#atat) - [ATK](#atk) - [ATLAS](#atlas) - [atomate](#atomate) - [AtomPAW](#atompaw) - [atools](#atools) - [atropos](#atropos) - [ATSAS](#atsas) - [attr](#attr) - [attrdict](#attrdict) - [attrdict3](#attrdict3) - [augur](#augur) - [AUGUSTUS](#augustus) - [Austin](#austin) - [AUTO-07p](#auto-07p) - [Autoconf](#autoconf) - [Autoconf-archive](#autoconf-archive) - [AutoDock](#autodock) - [AutoDock-GPU](#autodock-gpu) - [AutoDock-Vina](#autodock-vina) - [AutoDockSuite](#autodocksuite) - [AutoGeneS](#autogenes) - [AutoGrid](#autogrid) - [Automake](#automake) - [AutoMap](#automap) - [autopep8](#autopep8) - [Autotools](#autotools) - [Avogadro2](#avogadro2) - [avro-cpp](#avro-cpp) - [awscli](#awscli) - [Ax](#ax) - [axel](#axel)
 
 
 ### ABAQUS
@@ -102,6 +102,7 @@ version   |versionsuffix           |toolchain
 ``9.4.1`` |                        |``foss/2020b``, ``intel/2020a``, ``intel/2020b``
 ``9.4.2`` |                        |``foss/2021a``, ``intel/2021a``
 ``9.6.2`` |                        |``foss/2022a``, ``intel/2021a``, ``intel/2021b``, ``intel/2022a``
+``9.10.3``|                        |``intel/2022a``
 
 ### ABRA2
 
@@ -307,6 +308,8 @@ version         |toolchain
 ``2021.2.0``    |``system``
 ``2021.4.0``    |``system``
 ``2022.1.0``    |``system``
+``2023.0.0``    |``system``
+``2023.2.0``    |``system``
 
 ### affinity
 
@@ -383,6 +386,7 @@ version  |versionsuffix    |toolchain
 ``3.5.4``|``-Python-3.6.6``|``foss/2018b``
 ``3.8.1``|                 |``GCCcore/10.3.0``, ``GCCcore/11.2.0``
 ``3.8.3``|                 |``GCCcore/11.3.0``
+``3.8.5``|                 |``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### ALADIN
 
@@ -393,6 +397,16 @@ ALADIN was entirely built on the notion of compatibility with its mother system,
 version        |toolchain
 ---------------|---------------
 ``36t1_op2bf1``|``intel/2016a``
+
+### ALAMODE
+
+ALAMODE is an open source software designed for analyzing lattice anharmonicity  and lattice thermal conductivity of solids. By using an external DFT package such as VASP and  Quantum ESPRESSO, you can extract harmonic and anharmonic force constants straightforwardly with ALAMODE.  Using the calculated anharmonic force constants, you can also estimate lattice thermal conductivity,  phonon linewidth, and other anharmonic phonon properties from first principles. 
+
+*homepage*: <http://alamode.readthedocs.io/en/latest/index.html>
+
+version  |toolchain
+---------|--------------
+``1.4.2``|``foss/2022b``
 
 ### Albacore
 
@@ -689,6 +703,7 @@ version    |toolchain
 -----------|----------
 ``3.4.502``|``system``
 ``3.5.671``|``system``
+``4.1.424``|``system``
 
 ### AMOS
 
@@ -739,6 +754,16 @@ AMPtk is a series of scripts to process NGS amplicon data using USEARCH and VSEA
 version  |toolchain
 ---------|--------------
 ``1.5.4``|``foss/2021b``
+
+### AMRFinderPlus
+
+This software and the accompanying database are designed to find acquired antimicrobial  resistance genes and some point mutations in protein or assembled nucleotide sequences.
+
+*homepage*: <https://github.com/ncbi/amr>
+
+version    |toolchain
+-----------|--------------------------------
+``3.11.18``|``gompi/2021b``, ``gompi/2022b``
 
 ### AmrPlusPlus
 
@@ -807,6 +832,7 @@ version      |toolchain
 ``2022.05``  |``system``
 ``2022.10``  |``system``
 ``2023.03-1``|``system``
+``2023.07-2``|``system``
 
 ### aNCI
 
@@ -872,6 +898,7 @@ anndata is a Python package for handling annotated data matrices in memory and o
 version  |toolchain
 ---------|--------------
 ``0.8.0``|``foss/2022a``
+``0.9.2``|``foss/2021a``
 
 ### Annif
 
@@ -1039,7 +1066,7 @@ version  |toolchain
 ``3.0.0``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``
 ``3.1.0``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``
 ``3.2.0``|``GCCcore/11.2.0``, ``GCCcore/11.3.0``
-``4.0.0``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+``4.0.0``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### AOMP
 
@@ -1082,16 +1109,18 @@ version  |toolchain
 ---------|--------------------------------------------------------------------------------------------------------------------
 ``1.6.3``|``GCCcore/6.4.0``, ``GCCcore/7.3.0``, ``iomkl/2018a``
 ``1.7.0``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/8.2.0``, ``GCCcore/9.3.0``
+``1.7.4``|``GCCcore/12.3.0``
 
 ### APR-util
 
 Apache Portable Runtime (APR) util libraries.
 
-*homepage*: <http://apr.apache.org/>
+*homepage*: <https://apr.apache.org/>
 
 version  |toolchain
 ---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ``1.6.1``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``, ``GCCcore/9.3.0``, ``iomkl/2018a``
+``1.6.3``|``GCCcore/12.3.0``
 
 ### AptaSUITE
 
@@ -1137,6 +1166,7 @@ The Arcade Learning Environment (ALE) is a simple framework that allows research
 version  |toolchain
 ---------|--------------
 ``0.7.3``|``foss/2021b``
+``0.8.1``|``foss/2022a``
 
 ### arcasHLA
 
@@ -1192,6 +1222,7 @@ version  |versionsuffix    |toolchain
 ``0.1.3``|                 |``GCCcore/11.2.0``
 ``0.1.4``|                 |``GCCcore/11.3.0``
 ``0.2.0``|                 |``GCCcore/12.2.0``
+``0.2.1``|                 |``GCCcore/12.3.0``
 
 ### ARGoS
 
@@ -1255,6 +1286,7 @@ version    |versionsuffix     |toolchain
 ``10.5.3`` |                  |``foss/2020b``
 ``10.7.5`` |                  |``foss/2021a``
 ``11.4.3`` |                  |``foss/2022a``, ``foss/2022b``
+``12.6.2`` |                  |``foss/2023a``
 
 ### arosics
 
@@ -1290,6 +1322,7 @@ version  |toolchain
 ``3.6.2``|``intel/2018a``
 ``3.7.0``|``foss/2019a``, ``foss/2019b``, ``foss/2020a``, ``intel/2019b``, ``intel/2020a``
 ``3.8.0``|``foss/2020b``, ``foss/2021a``, ``foss/2021b``, ``foss/2022a``, ``foss/2022b``
+``3.9.0``|``foss/2023a``
 
 ### ArrayFire
 
@@ -1527,8 +1560,9 @@ Open Asset Import Library (assimp) is a library to import and export various  3d
 *homepage*: <https://github.com/assimp/assimp>
 
 version  |toolchain
----------|-----------------
+---------|------------------
 ``5.0.1``|``GCCcore/8.3.0``
+``5.2.5``|``GCCcore/12.3.0``
 
 ### Assimulo
 
@@ -1585,12 +1619,12 @@ AT-SPI 2 toolkit bridge
 *homepage*: <https://wiki.gnome.org/Accessibility>
 
 version   |toolchain
-----------|--------------------------------------------------------------------------------------------------
+----------|----------------------------------------------------------------------------------------------------------------------
 ``2.26.3``|``fosscuda/2018b``
 ``2.32.0``|``GCCcore/8.2.0``
 ``2.34.1``|``GCCcore/8.3.0``
 ``2.34.2``|``GCCcore/9.3.0``
-``2.38.0``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+``2.38.0``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### at-spi2-core
 
@@ -1598,17 +1632,18 @@ Assistive Technology Service Provider Interface.
 
 *homepage*: <https://wiki.gnome.org/Accessibility>
 
-version   |toolchain
-----------|------------------
-``2.26.3``|``fosscuda/2018b``
-``2.32.0``|``GCCcore/8.2.0``
-``2.34.0``|``GCCcore/8.3.0``
-``2.36.0``|``GCCcore/9.3.0``
-``2.38.0``|``GCCcore/10.2.0``
-``2.40.2``|``GCCcore/10.3.0``
-``2.40.3``|``GCCcore/11.2.0``
-``2.44.1``|``GCCcore/11.3.0``
-``2.46.0``|``GCCcore/12.2.0``
+version    |toolchain
+-----------|------------------
+``2.26.3`` |``fosscuda/2018b``
+``2.32.0`` |``GCCcore/8.2.0``
+``2.34.0`` |``GCCcore/8.3.0``
+``2.36.0`` |``GCCcore/9.3.0``
+``2.38.0`` |``GCCcore/10.2.0``
+``2.40.2`` |``GCCcore/10.3.0``
+``2.40.3`` |``GCCcore/11.2.0``
+``2.44.1`` |``GCCcore/11.3.0``
+``2.46.0`` |``GCCcore/12.2.0``
+``2.49.91``|``GCCcore/12.3.0``
 
 ### ATAT
 
@@ -1638,7 +1673,7 @@ version   |toolchain
 ``2.32.0``|``GCCcore/8.2.0``
 ``2.34.1``|``GCCcore/8.3.0``
 ``2.36.0``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/9.3.0``
-``2.38.0``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+``2.38.0``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### ATLAS
 
@@ -1735,8 +1770,8 @@ AttrDict is a Python library that provides mapping objects that allow their elem
 *homepage*: <https://github.com/pirofti/AttrDict3>
 
 version  |toolchain
----------|------------------
-``2.0.2``|``GCCcore/11.2.0``
+---------|--------------------------------------
+``2.0.2``|``GCCcore/11.2.0``, ``GCCcore/11.3.0``
 
 ### augur
 
@@ -1796,7 +1831,7 @@ version |toolchain
 --------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ``2.68``|``foss/2016b``
 ``2.69``|``GCC/4.8.2``, ``GCC/4.8.4``, ``GCC/4.9.2``, ``GCC/4.9.3``, ``GCC/4.9.3-2.25``, ``GCC/5.2.0``, ``GCC/5.4.0-2.26``, ``GCCcore/10.2.0``, ``GCCcore/4.9.2``, ``GCCcore/4.9.3``, ``GCCcore/5.3.0``, ``GCCcore/5.4.0``, ``GCCcore/6.1.0``, ``GCCcore/6.2.0``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.2.0``, ``GCCcore/9.3.0``, ``GNU/4.9.2-2.25``, ``GNU/4.9.3-2.25``, ``GNU/5.1.0-2.25``, ``foss/2016.04``, ``foss/2016a``, ``foss/2016b``, ``gimkl/2.11.5``, ``intel/2016.02-GCC-4.9``, ``intel/2016a``, ``intel/2016b``, ``iomkl/2016.07``, ``iomkl/2016.09-GCC-4.9.3-2.25``, ``system``
-``2.71``|``FCC/4.5.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/13.1.0``, ``system``
+``2.71``|``FCC/4.5.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/13.1.0``, ``GCCcore/13.2.0``, ``system``
 
 ### Autoconf-archive
 
@@ -1889,7 +1924,7 @@ version   |toolchain
 ``1.16.2``|``GCCcore/10.2.0``
 ``1.16.3``|``FCC/4.5.0``, ``GCCcore/10.3.0``
 ``1.16.4``|``GCCcore/11.2.0``
-``1.16.5``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/13.1.0``, ``system``
+``1.16.5``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/13.1.0``, ``GCCcore/13.2.0``, ``system``
 
 ### AutoMap
 
@@ -1926,7 +1961,7 @@ version     |toolchain
 ``20200321``|``GCCcore/10.2.0``
 ``20210128``|``FCC/4.5.0``, ``GCCcore/10.3.0``
 ``20210726``|``GCCcore/11.2.0``
-``20220317``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/13.1.0``, ``system``
+``20220317``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/13.1.0``, ``GCCcore/13.2.0``, ``system``
 
 ### Avogadro2
 
@@ -1964,6 +1999,16 @@ version     |versionsuffix     |toolchain
 ``2.0.55``  |``-Python-3.8.2`` |``GCCcore/9.3.0``
 ``2.11.21`` |                  |``GCCcore/11.3.0``
 
+### Ax
+
+Ax is an accessible, general-purpose platform for understanding, managing, deploying, and  automating adaptive experiments. Adaptive experimentation is the machine-learning guided process of iteratively exploring  a (possibly infinite) parameter space in order to identify optimal configurations in a  resource-efficient manner. Ax currently supports Bayesian optimization and bandit  optimization as exploration strategies. Bayesian optimization in Ax is powered by  BoTorch, a modern library for Bayesian optimization research built on PyTorch. 
+
+*homepage*: <https://ax.dev/>
+
+version  |toolchain
+---------|--------------
+``0.3.3``|``foss/2022a``
+
 ### axel
 
 Lightweight CLI download accelerator 
@@ -1977,7 +2022,7 @@ version   |toolchain
 ## B
 
 
-[BA3-SNPS-autotune](#ba3-snps-autotune) - [BabelStream](#babelstream) - [babl](#babl) - [Bader](#bader) - [BAGEL](#bagel) - [BAli-Phy](#bali-phy) - [bam-readcount](#bam-readcount) - [Bambi](#bambi) - [bamFilters](#bamfilters) - [BAMM](#bamm) - [BAMSurgeon](#bamsurgeon) - [bamtofastq](#bamtofastq) - [BamTools](#bamtools) - [BamUtil](#bamutil) - [Bandage](#bandage) - [barrnap](#barrnap) - [basemap](#basemap) - [Bash](#bash) - [bashplotlib](#bashplotlib) - [bat](#bat) - [batchgenerators](#batchgenerators) - [BatMeth2](#batmeth2) - [BayesAss](#bayesass) - [BayesAss3-SNPs](#bayesass3-snps) - [BayeScan](#bayescan) - [BayeScEnv](#bayescenv) - [BayesPrism](#bayesprism) - [BayesTraits](#bayestraits) - [Bazel](#bazel) - [bbcp](#bbcp) - [bbFTP](#bbftp) - [BBMap](#bbmap) - [bc](#bc) - [BCALM](#bcalm) - [bcbio-gff](#bcbio-gff) - [BCEL](#bcel) - [BCFtools](#bcftools) - [bcgTree](#bcgtree) - [bcl-convert](#bcl-convert) - [bcl2fastq2](#bcl2fastq2) - [bcolz](#bcolz) - [BDBag](#bdbag) - [Beagle](#beagle) - [beagle-lib](#beagle-lib) - [Beast](#beast) - [BeautifulSoup](#beautifulsoup) - [BEDOPS](#bedops) - [BEDTools](#bedtools) - [BEEF](#beef) - [behave](#behave) - [BerkeleyGW](#berkeleygw) - [BFAST](#bfast) - [BFC](#bfc) - [BGC-Bayesian-genomic-clines](#bgc-bayesian-genomic-clines) - [bgen](#bgen) - [bgen-reader](#bgen-reader) - [bibtexparser](#bibtexparser) - [BiG-SCAPE](#big-scape) - [BigDFT](#bigdft) - [BinSanity](#binsanity) - [binutils](#binutils) - [Bio-DB-HTS](#bio-db-hts) - [Bio-EUtilities](#bio-eutilities) - [Bio-SamTools](#bio-samtools) - [Bio-SearchIO-hmmer](#bio-searchio-hmmer) - [bioawk](#bioawk) - [biobambam2](#biobambam2) - [biogeme](#biogeme) - [biom-format](#biom-format) - [biomart-perl](#biomart-perl) - [BioPerl](#bioperl) - [BioPP](#biopp) - [Biopython](#biopython) - [BioServices](#bioservices) - [BirdNET](#birdnet) - [biscuit](#biscuit) - [Bismark](#bismark) - [Bison](#bison) - [bitarray](#bitarray) - [BLACS](#blacs) - [BLASR](#blasr) - [blasr_libcpp](#blasr_libcpp) - [BLAST](#blast) - [BLAST+](#blast+) - [BLAT](#blat) - [Blender](#blender) - [BLIS](#blis) - [Blitz++](#blitz++) - [BlobTools](#blobtools) - [Block](#block) - [Blosc](#blosc) - [Blosc2](#blosc2) - [BLT](#blt) - [bmtagger](#bmtagger) - [bnpy](#bnpy) - [BOINC](#boinc) - [bokeh](#bokeh) - [BoltzTraP](#boltztrap) - [BoltzTraP2](#boltztrap2) - [Bonito](#bonito) - [Bonmin](#bonmin) - [Bonnie++](#bonnie++) - [Boost](#boost) - [Boost.MPI](#boost.mpi) - [Boost.Python](#boost.python) - [boost_histogram](#boost_histogram) - [boto3](#boto3) - [Bottleneck](#bottleneck) - [Bowtie](#bowtie) - [Bowtie2](#bowtie2) - [Bpipe](#bpipe) - [bpp](#bpp) - [bpytop](#bpytop) - [Bracken](#bracken) - [Braindecode](#braindecode) - [BRAKER](#braker) - [BreakDancer](#breakdancer) - [breseq](#breseq) - [Brotli](#brotli) - [Brotli-python](#brotli-python) - [Brunsli](#brunsli) - [bsddb3](#bsddb3) - [BSMAPz](#bsmapz) - [Bsoft](#bsoft) - [BSseeker2](#bsseeker2) - [BuDDy](#buddy) - [BUFRLIB](#bufrlib) - [build](#build) - [buildenv](#buildenv) - [buildingspy](#buildingspy) - [Bullet](#bullet) - [BUSCO](#busco) - [BUStools](#bustools) - [BWA](#bwa) - [bwa-meth](#bwa-meth) - [bwakit](#bwakit) - [bwidget](#bwidget) - [BWISE](#bwise) - [bx-python](#bx-python) - [BXH_XCEDE_TOOLS](#bxh_xcede_tools) - [byacc](#byacc) - [byobu](#byobu) - [bzip2](#bzip2)
+[BA3-SNPS-autotune](#ba3-snps-autotune) - [BabelStream](#babelstream) - [babl](#babl) - [Bader](#bader) - [BAGEL](#bagel) - [BAli-Phy](#bali-phy) - [bam-readcount](#bam-readcount) - [Bambi](#bambi) - [bamFilters](#bamfilters) - [BAMM](#bamm) - [BAMSurgeon](#bamsurgeon) - [bamtofastq](#bamtofastq) - [BamTools](#bamtools) - [BamUtil](#bamutil) - [Bandage](#bandage) - [barrnap](#barrnap) - [basemap](#basemap) - [Bash](#bash) - [bashplotlib](#bashplotlib) - [bat](#bat) - [batchgenerators](#batchgenerators) - [BatMeth2](#batmeth2) - [BayesAss](#bayesass) - [BayesAss3-SNPs](#bayesass3-snps) - [BayeScan](#bayescan) - [BayeScEnv](#bayescenv) - [BayesPrism](#bayesprism) - [BayesTraits](#bayestraits) - [Bazel](#bazel) - [bbcp](#bbcp) - [bbFTP](#bbftp) - [BBMap](#bbmap) - [bc](#bc) - [BCALM](#bcalm) - [bcbio-gff](#bcbio-gff) - [BCEL](#bcel) - [BCFtools](#bcftools) - [bcgTree](#bcgtree) - [bcl-convert](#bcl-convert) - [bcl2fastq2](#bcl2fastq2) - [bcolz](#bcolz) - [bcrypt](#bcrypt) - [BDBag](#bdbag) - [Beagle](#beagle) - [beagle-lib](#beagle-lib) - [Beast](#beast) - [BeautifulSoup](#beautifulsoup) - [BEDOPS](#bedops) - [BEDTools](#bedtools) - [BEEF](#beef) - [behave](#behave) - [bench](#bench) - [BerkeleyGW](#berkeleygw) - [BFAST](#bfast) - [BFC](#bfc) - [BGC-Bayesian-genomic-clines](#bgc-bayesian-genomic-clines) - [BgeeDB](#bgeedb) - [bgen](#bgen) - [bgen-reader](#bgen-reader) - [bibtexparser](#bibtexparser) - [BiG-SCAPE](#big-scape) - [BigDFT](#bigdft) - [BinSanity](#binsanity) - [binutils](#binutils) - [Bio-DB-HTS](#bio-db-hts) - [Bio-EUtilities](#bio-eutilities) - [Bio-SamTools](#bio-samtools) - [Bio-SearchIO-hmmer](#bio-searchio-hmmer) - [bioawk](#bioawk) - [biobambam2](#biobambam2) - [biogeme](#biogeme) - [biom-format](#biom-format) - [biomart-perl](#biomart-perl) - [BioPerl](#bioperl) - [BioPP](#biopp) - [Biopython](#biopython) - [BioServices](#bioservices) - [BirdNET](#birdnet) - [biscuit](#biscuit) - [Bismark](#bismark) - [Bison](#bison) - [bitarray](#bitarray) - [BLACS](#blacs) - [BLASR](#blasr) - [blasr_libcpp](#blasr_libcpp) - [BLAST](#blast) - [BLAST+](#blast+) - [BLAT](#blat) - [Blender](#blender) - [BLIS](#blis) - [Blitz++](#blitz++) - [BlobTools](#blobtools) - [Block](#block) - [Blosc](#blosc) - [Blosc2](#blosc2) - [BLT](#blt) - [bmtagger](#bmtagger) - [bnpy](#bnpy) - [BOINC](#boinc) - [bokeh](#bokeh) - [BoltzTraP](#boltztrap) - [BoltzTraP2](#boltztrap2) - [Bonito](#bonito) - [Bonmin](#bonmin) - [Bonnie++](#bonnie++) - [Boost](#boost) - [Boost.MPI](#boost.mpi) - [Boost.Python](#boost.python) - [Boost.Python-NumPy](#boost.python-numpy) - [boost_histogram](#boost_histogram) - [boto3](#boto3) - [Bottleneck](#bottleneck) - [Bowtie](#bowtie) - [Bowtie2](#bowtie2) - [Bpipe](#bpipe) - [bpp](#bpp) - [bpytop](#bpytop) - [Bracken](#bracken) - [Braindecode](#braindecode) - [BRAKER](#braker) - [BreakDancer](#breakdancer) - [breseq](#breseq) - [Brotli](#brotli) - [Brotli-python](#brotli-python) - [Brunsli](#brunsli) - [bsddb3](#bsddb3) - [BSMAPz](#bsmapz) - [Bsoft](#bsoft) - [BSseeker2](#bsseeker2) - [BuDDy](#buddy) - [BUFRLIB](#bufrlib) - [build](#build) - [buildenv](#buildenv) - [buildingspy](#buildingspy) - [Bullet](#bullet) - [BUSCO](#busco) - [BUStools](#bustools) - [BWA](#bwa) - [bwa-meth](#bwa-meth) - [bwakit](#bwakit) - [bwidget](#bwidget) - [BWISE](#bwise) - [bx-python](#bx-python) - [BXH_XCEDE_TOOLS](#bxh_xcede_tools) - [byacc](#byacc) - [byobu](#byobu) - [bzip2](#bzip2)
 
 
 ### BA3-SNPS-autotune
@@ -2024,13 +2069,14 @@ version |toolchain
 
 ### BAGEL
 
-BAGEL (Brilliantly Advanced General Electronic-structure Library) is a parallel electronic-structure program.
+BAGEL (Brilliantly Advanced General Electronic-structure Library) is a parallel electronic-structure program. 
 
 *homepage*: <http://www.nubakery.org>
 
 version  |toolchain
 ---------|---------------
 ``1.1.1``|``intel/2016b``
+``1.2.2``|``foss/2021a``
 
 ### BAli-Phy
 
@@ -2051,6 +2097,7 @@ Count DNA sequence reads in BAM files
 version  |toolchain
 ---------|---------------------------------------------
 ``0.8.0``|``GCC/11.2.0``, ``GCC/9.3.0``, ``foss/2018b``
+``1.0.1``|``GCC/12.2.0``
 
 ### Bambi
 
@@ -2114,7 +2161,7 @@ version  |toolchain
 ``2.4.1``|``intel/2017a``
 ``2.5.0``|``foss/2016b``, ``intel/2017b``
 ``2.5.1``|``GCC/10.2.0``, ``GCC/8.2.0-2.31.1``, ``GCC/8.3.0``, ``GCC/9.3.0``, ``foss/2017b``, ``foss/2018a``, ``foss/2018b``, ``iccifort/2019.1.144-GCC-8.2.0-2.31.1``, ``iccifort/2019.5.281``, ``iccifort/2020.4.304``, ``intel/2017b``, ``intel/2018b``
-``2.5.2``|``GCC/10.3.0``, ``GCC/11.2.0``, ``GCC/11.3.0``, ``GCC/12.2.0``
+``2.5.2``|``GCC/10.3.0``, ``GCC/11.2.0``, ``GCC/11.3.0``, ``GCC/12.2.0``, ``GCC/12.3.0``
 
 ### BamUtil
 
@@ -2305,6 +2352,7 @@ version   |versionsuffix|toolchain
 ``3.7.2`` |             |``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/8.3.0``
 ``4.2.2`` |             |``GCCcore/11.2.0``
 ``5.1.1`` |             |``GCCcore/11.3.0``
+``6.3.1`` |             |``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### bbcp
 
@@ -2333,14 +2381,14 @@ BBMap short read aligner, and other bioinformatic tools.
 *homepage*: <https://sourceforge.net/projects/bbmap/>
 
 version   |versionsuffix      |toolchain
-----------|-------------------|-------------------------------
+----------|-------------------|---------------------------------------------
 ``36.62`` |``-Java-1.8.0_112``|``intel/2016b``
 ``37.93`` |                   |``foss/2018a``, ``intel/2018a``
 ``38.26`` |                   |``foss/2018b``
 ``38.50b``|                   |``GCC/8.2.0-2.31.1``
 ``38.76`` |                   |``GCC/8.2.0-2.31.1``
 ``38.79`` |                   |``GCC/8.3.0``
-``38.87`` |                   |``iccifort/2020.1.217``
+``38.87`` |                   |``GCC/8.2.0-2.31.1``, ``iccifort/2020.1.217``
 ``38.90`` |                   |``GCC/10.2.0``, ``GCC/9.3.0``
 ``38.96`` |                   |``GCC/10.3.0``
 ``38.98`` |                   |``GCC/11.2.0``
@@ -2408,6 +2456,7 @@ version   |toolchain
 ``1.14``  |``GCC/11.2.0``
 ``1.15.1``|``GCC/11.3.0``
 ``1.17``  |``GCC/12.2.0``
+``1.18``  |``GCC/12.3.0``
 
 ### bcgTree
 
@@ -2437,9 +2486,9 @@ bcl2fastq Conversion Software both demultiplexes data and converts BCL files gen
 *homepage*: <https://support.illumina.com/sequencing/sequencing_software/bcl2fastq-conversion-software.html>
 
 version   |versionsuffix     |toolchain
-----------|------------------|-----------------------------------------------------------------------------------------------------------------------------
+----------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------
 ``2.19.1``|``-Python-2.7.12``|``foss/2016b``
-``2.20.0``|                  |``GCC/10.2.0``, ``GCC/10.3.0``, ``GCC/11.2.0``, ``GCC/11.3.0``, ``GCC/8.3.0``, ``GCC/9.3.0``, ``foss/2018b``, ``intel/2019a``
+``2.20.0``|                  |``GCC/10.2.0``, ``GCC/10.3.0``, ``GCC/11.2.0``, ``GCC/11.3.0``, ``GCC/12.2.0``, ``GCC/8.3.0``, ``GCC/9.3.0``, ``foss/2018b``, ``intel/2019a``
 ``2.20.0``|``-Python-2.7.12``|``foss/2016b``
 ``2.20.0``|``-Python-2.7.14``|``intel/2017b``
 
@@ -2454,6 +2503,16 @@ version  |versionsuffix     |toolchain
 ``1.1.1``|``-Python-2.7.13``|``foss/2017a``
 ``1.2.1``|                  |``foss/2020b``
 ``1.2.1``|``-Python-3.8.2`` |``foss/2020a``
+
+### bcrypt
+
+Acceptable password hashing for your software and your servers (but you should really use argon2id or scrypt) 
+
+*homepage*: <https://github.com/pyca/bcrypt/>
+
+version  |toolchain
+---------|------------------
+``4.0.1``|``GCCcore/12.3.0``
 
 ### BDBag
 
@@ -2530,6 +2589,7 @@ version   |versionsuffix    |toolchain
 ``4.9.3`` |                 |``GCCcore/10.2.0``
 ``4.10.0``|                 |``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``
 ``4.11.1``|                 |``GCCcore/12.2.0``
+``4.12.2``|                 |``GCCcore/12.3.0``
 
 ### BEDOPS
 
@@ -2562,6 +2622,7 @@ version   |toolchain
 ``2.28.0``|``GCC/8.2.0-2.31.1``, ``foss/2018b``, ``iccifort/2019.1.144-GCC-8.2.0-2.31.1``
 ``2.29.2``|``GCC/8.3.0``, ``GCC/9.3.0``
 ``2.30.0``|``GCC/10.2.0``, ``GCC/10.3.0``, ``GCC/11.2.0``, ``GCC/11.3.0``, ``GCC/12.2.0``, ``iccifort/2020.4.304``
+``2.31.0``|``GCC/12.3.0``
 
 ### BEEF
 
@@ -2583,6 +2644,16 @@ version  |versionsuffix     |toolchain
 ---------|------------------|---------------
 ``1.2.5``|``-Python-2.7.12``|``foss/2016b``
 ``1.2.6``|``-Python-3.6.4`` |``intel/2018a``
+
+### bench
+
+Tools to accurately benchmark and analyze execution times for R expressions.
+
+*homepage*: <https://cran.r-project.org/web/packages/bench/index.html>
+
+version  |versionsuffix|toolchain
+---------|-------------|--------------
+``1.1.2``|``-R-4.2.1`` |``foss/2022a``
 
 ### BerkeleyGW
 
@@ -2628,6 +2699,16 @@ Collection of code for Bayesian genomic cline analyses.
 version |toolchain
 --------|---------------
 ``1.03``|``gompi/2021a``
+
+### BgeeDB
+
+Annotation and gene expression data retrieval from Bgee database. TopAnat, an anatomical entities Enrichment Analysis tool for UBERON ontology.
+
+*homepage*: <https://github.com/BgeeDB/BgeeDB_R>
+
+version   |versionsuffix  |toolchain
+----------|---------------|--------------
+``2.26.0``|``-R-%(rver)s``|``foss/2021a``
 
 ### bgen
 
@@ -2714,7 +2795,7 @@ version   |toolchain
 ``2.37``  |``GCCcore/11.2.0``, ``system``
 ``2.38``  |``GCCcore/11.3.0``, ``GCCcore/12.1.0``, ``GCCcore/9.5.0``, ``system``
 ``2.39``  |``GCCcore/12.2.0``, ``system``
-``2.40``  |``GCCcore/11.4.0``, ``GCCcore/12.3.0``, ``GCCcore/13.1.0``, ``system``
+``2.40``  |``GCCcore/11.4.0``, ``GCCcore/12.3.0``, ``GCCcore/13.1.0``, ``GCCcore/13.2.0``, ``system``
 
 ### Bio-DB-HTS
 
@@ -2757,8 +2838,8 @@ Code to parse output from hmmsearch, hmmscan, phmmer and nhmmer, compatible with
 *homepage*: <https://metacpan.org/pod/Bio::SearchIO::hmmer3>
 
 version  |toolchain
----------|--------------------------------------------------------------
-``1.7.3``|``GCC/10.2.0``, ``GCC/10.3.0``, ``GCC/11.2.0``, ``GCC/11.3.0``
+---------|------------------------------------------------------------------------------
+``1.7.3``|``GCC/10.2.0``, ``GCC/10.3.0``, ``GCC/11.2.0``, ``GCC/11.3.0``, ``GCC/12.2.0``
 
 ### bioawk
 
@@ -2804,6 +2885,7 @@ version   |versionsuffix    |toolchain
 ``2.1.10``|``-Python-3.8.2``|``foss/2020a``
 ``2.1.12``|                 |``foss/2021b``
 ``2.1.14``|                 |``foss/2022a``
+``2.1.15``|                 |``foss/2022b``
 
 ### biomart-perl
 
@@ -2870,7 +2952,7 @@ version |versionsuffix     |toolchain
 ``1.74``|                  |``foss/2019a``
 ``1.75``|``-Python-2.7.16``|``foss/2019b``
 ``1.75``|``-Python-3.7.4`` |``foss/2019b``, ``fosscuda/2019b``, ``intel/2019b``
-``1.76``|``-Python-2.7.18``|``foss/2020b``
+``1.76``|``-Python-2.7.18``|``foss/2020b``, ``foss/2021b``
 ``1.78``|                  |``foss/2020b``, ``fosscuda/2020b``, ``intel/2020b``
 ``1.78``|``-Python-3.8.2`` |``foss/2020a``, ``intel/2020a``
 ``1.79``|                  |``foss/2021a``, ``foss/2021b``, ``foss/2022a``, ``intel/2021b``
@@ -2940,7 +3022,7 @@ version  |toolchain
 ``3.6.1``|``GCCcore/10.1.0``
 ``3.7.1``|``GCCcore/10.2.0``, ``system``
 ``3.7.6``|``FCC/4.5.0``, ``GCCcore/10.3.0``, ``GCCcore/11.1.0``, ``GCCcore/11.2.0``, ``GCCcore/9.4.0``, ``system``
-``3.8.2``|``GCCcore/11.3.0``, ``GCCcore/11.4.0``, ``GCCcore/12.1.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/13.1.0``, ``GCCcore/9.5.0``, ``system``
+``3.8.2``|``GCCcore/11.3.0``, ``GCCcore/11.4.0``, ``GCCcore/12.1.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/13.1.0``, ``GCCcore/13.2.0``, ``GCCcore/9.5.0``, ``system``
 
 ### bitarray
 
@@ -3196,6 +3278,7 @@ version    |versionsuffix     |toolchain
 ``2.4.1``  |                  |``foss/2021a``
 ``2.4.2``  |                  |``foss/2021b``
 ``2.4.3``  |                  |``foss/2022a``
+``3.2.1``  |                  |``foss/2022b``
 
 ### BoltzTraP
 
@@ -3311,6 +3394,7 @@ version   |versionsuffix     |toolchain
 ``1.77.0``|                  |``GCC/11.2.0``, ``intel-compilers/2021.4.0``
 ``1.79.0``|                  |``GCC/11.2.0``, ``GCC/11.3.0``
 ``1.81.0``|                  |``GCC/12.2.0``
+``1.82.0``|                  |``GCC/12.3.0``
 
 ### Boost.MPI
 
@@ -3345,6 +3429,16 @@ version   |versionsuffix     |toolchain
 ``1.76.0``|                  |``GCC/10.3.0``
 ``1.77.0``|                  |``GCC/11.2.0``
 ``1.79.0``|                  |``GCC/11.3.0``
+
+### Boost.Python-NumPy
+
+Boost.Python is a C++ library which enables seamless interoperability between C++  and the Python programming language.
+
+*homepage*: <https://boostorg.github.io/python>
+
+version   |toolchain
+----------|--------------
+``1.79.0``|``foss/2022a``
 
 ### boost_histogram
 
@@ -3798,7 +3892,7 @@ version  |toolchain
 ## C
 
 
-[c-ares](#c-ares) - [C3D](#c3d) - [cadaver](#cadaver) - [CaDiCaL](#cadical) - [CAFE5](#cafe5) - [Caffe](#caffe) - [cairo](#cairo) - [cairomm](#cairomm) - [Calcam](#calcam) - [CalculiX-CrunchiX](#calculix-crunchix) - [Calendrical](#calendrical) - [Calib](#calib) - [CAMPARI](#campari) - [Cantera](#cantera) - [canu](#canu) - [Canvas](#canvas) - [CAP3](#cap3) - [CapnProto](#capnproto) - [captum](#captum) - [Cargo](#cargo) - [Carma](#carma) - [carputils](#carputils) - [Cartopy](#cartopy) - [CASA](#casa) - [casacore](#casacore) - [Casanovo](#casanovo) - [CaSpER](#casper) - [CASPR](#caspr) - [CASTEP](#castep) - [CastXML](#castxml) - [CAT-BAT](#cat-bat) - [Catch2](#catch2) - [category_encoders](#category_encoders) - [CatLearn](#catlearn) - [CatMAP](#catmap) - [causallift](#causallift) - [causalml](#causalml) - [CaVEMan](#caveman) - [CAVIAR](#caviar) - [Cbc](#cbc) - [CBLAS](#cblas) - [ccache](#ccache) - [CCfits](#ccfits) - [CCL](#ccl) - [cclib](#cclib) - [cctbx-base](#cctbx-base) - [cctools](#cctools) - [CD-HIT](#cd-hit) - [CDAT](#cdat) - [cdbfasta](#cdbfasta) - [CDBtools](#cdbtools) - [cddlib](#cddlib) - [CDFlib](#cdflib) - [cDNA_Cupcake](#cdna_cupcake) - [CDO](#cdo) - [cdo-bindings](#cdo-bindings) - [cdsapi](#cdsapi) - [cell2location](#cell2location) - [CellChat](#cellchat) - [CellMix](#cellmix) - [CellOracle](#celloracle) - [Cellpose](#cellpose) - [CellRanger](#cellranger) - [CellRanger-ARC](#cellranger-arc) - [CellRanger-ATAC](#cellranger-atac) - [CellRank](#cellrank) - [CellTypist](#celltypist) - [Centrifuge](#centrifuge) - [Cereal](#cereal) - [CESM-deps](#cesm-deps) - [CFDEMcoupling](#cfdemcoupling) - [CFITSIO](#cfitsio) - [cftime](#cftime) - [CGAL](#cgal) - [cget](#cget) - [Cgl](#cgl) - [CGmapTools](#cgmaptools) - [CGNS](#cgns) - [CharLS](#charls) - [CHASE](#chase) - [Check](#check) - [CheckM](#checkm) - [CheckM-Database](#checkm-database) - [Cheetah](#cheetah) - [Chemaxon-Marvin](#chemaxon-marvin) - [chemprop](#chemprop) - [CheMPS2](#chemps2) - [CHERAB](#cherab) - [chewBBACA](#chewbbaca) - [chi2comb](#chi2comb) - [Chimera](#chimera) - [ChimPipe](#chimpipe) - [Chromaprint](#chromaprint) - [cicero](#cicero) - [CIF2Cell](#cif2cell) - [cimfomfa](#cimfomfa) - [CIRCexplorer](#circexplorer) - [CIRCexplorer2](#circexplorer2) - [Circos](#circos) - [Circuitscape](#circuitscape) - [CIRI](#ciri) - [CIRI-long](#ciri-long) - [cisTEM](#cistem) - [CITE-seq-Count](#cite-seq-count) - [Clang](#clang) - [Clang-AOMP](#clang-aomp) - [Clang-Python-bindings](#clang-python-bindings) - [CLAPACK](#clapack) - [CLEASE](#clease) - [CLHEP](#clhep) - [CliMetLab](#climetlab) - [CLIP](#clip) - [CLISP](#clisp) - [ClonalFrameML](#clonalframeml) - [CLooG](#cloog) - [CloudCompare](#cloudcompare) - [Clp](#clp) - [Clustal-Omega](#clustal-omega) - [ClustalW2](#clustalw2) - [Cluster-Buster](#cluster-buster) - [ClusterShell](#clustershell) - [CMake](#cmake) - [CMAverse](#cmaverse) - [CmdStanR](#cmdstanr) - [cmocean](#cmocean) - [CMSeq](#cmseq) - [CNT-ILP](#cnt-ilp) - [CNVkit](#cnvkit) - [CNVnator](#cnvnator) - [Co-phylog](#co-phylog) - [COBRApy](#cobrapy) - [CoCoALib](#cocoalib) - [CodAn](#codan) - [code-server](#code-server) - [CODEX2](#codex2) - [CodingQuarry](#codingquarry) - [Cogent](#cogent) - [Coin](#coin) - [CoinUtils](#coinutils) - [ColabFold](#colabfold) - [colossalai](#colossalai) - [Commet](#commet) - [CompareM](#comparem) - [Compress-Raw-Zlib](#compress-raw-zlib) - [COMSOL](#comsol) - [Con3F](#con3f) - [conan](#conan) - [CONCOCT](#concoct) - [configparser](#configparser) - [configurable-http-proxy](#configurable-http-proxy) - [CONN](#conn) - [ConnectomeWorkbench](#connectomeworkbench) - [Control-FREEC](#control-freec) - [cooler](#cooler) - [CoordgenLibs](#coordgenlibs) - [Coot](#coot) - [CopyKAT](#copykat) - [core-counter](#core-counter) - [Coreutils](#coreutils) - [corner](#corner) - [CoSymLib](#cosymlib) - [coverage](#coverage) - [cowsay](#cowsay) - [CP2K](#cp2k) - [CPB](#cpb) - [CPC2](#cpc2) - [CPLEX](#cplex) - [CPPE](#cppe) - [CppHeaderParser](#cppheaderparser) - [CppUnit](#cppunit) - [cppy](#cppy) - [cppzmq](#cppzmq) - [cpu_features](#cpu_features) - [cram](#cram) - [cramtools](#cramtools) - [CrayCCE](#craycce) - [CrayGNU](#craygnu) - [CrayIntel](#crayintel) - [CrayPGI](#craypgi) - [crb-blast](#crb-blast) - [CREST](#crest) - [CRF++](#crf++) - [CRISPR-DAV](#crispr-dav) - [CRISPResso2](#crispresso2) - [cromwell](#cromwell) - [crossguid](#crossguid) - [CrossMap](#crossmap) - [CrossTalkZ](#crosstalkz) - [CRPropa](#crpropa) - [Crumble](#crumble) - [cryoCARE](#cryocare) - [cryoDRGN](#cryodrgn) - [CryptoMiniSat](#cryptominisat) - [CrystFEL](#crystfel) - [CSB](#csb) - [CSBDeep](#csbdeep) - [CSBLAST](#csblast) - [cscope](#cscope) - [csvkit](#csvkit) - [ctags](#ctags) - [ctffind](#ctffind) - [CTPL](#ctpl) - [Cube](#cube) - [CubeGUI](#cubegui) - [CubeLib](#cubelib) - [CubeWriter](#cubewriter) - [CuCLARK](#cuclark) - [CUDA](#cuda) - [CUDA-Samples](#cuda-samples) - [CUDAcompat](#cudacompat) - [CUDAcore](#cudacore) - [cuDNN](#cudnn) - [Cufflinks](#cufflinks) - [CUnit](#cunit) - [CuPy](#cupy) - [cURL](#curl) - [cuSPARSELt](#cusparselt) - [custodian](#custodian) - [cutadapt](#cutadapt) - [cuTENSOR](#cutensor) - [cuteSV](#cutesv) - [CVS](#cvs) - [CVXOPT](#cvxopt) - [CVXPY](#cvxpy) - [CWIPI](#cwipi) - [cwltool](#cwltool) - [cxxopts](#cxxopts) - [cysignals](#cysignals) - [Cython](#cython) - [cython-blis](#cython-blis) - [cytoolz](#cytoolz) - [Cytoscape](#cytoscape) - [cytosim](#cytosim) - [cyvcf2](#cyvcf2)
+[c-ares](#c-ares) - [C3D](#c3d) - [cadaver](#cadaver) - [CaDiCaL](#cadical) - [CAFE5](#cafe5) - [Caffe](#caffe) - [cairo](#cairo) - [cairomm](#cairomm) - [Calcam](#calcam) - [CalculiX-CrunchiX](#calculix-crunchix) - [Calendrical](#calendrical) - [Calib](#calib) - [CAMPARI](#campari) - [Cantera](#cantera) - [canu](#canu) - [Canvas](#canvas) - [CAP3](#cap3) - [CapnProto](#capnproto) - [captum](#captum) - [Cargo](#cargo) - [Carma](#carma) - [carputils](#carputils) - [Cartopy](#cartopy) - [CASA](#casa) - [casacore](#casacore) - [Casanovo](#casanovo) - [CaSpER](#casper) - [CASPR](#caspr) - [CASTEP](#castep) - [CastXML](#castxml) - [CAT-BAT](#cat-bat) - [CatBoost](#catboost) - [Catch2](#catch2) - [category_encoders](#category_encoders) - [CatLearn](#catlearn) - [CatMAP](#catmap) - [causallift](#causallift) - [causalml](#causalml) - [CaVEMan](#caveman) - [CAVIAR](#caviar) - [Cbc](#cbc) - [CBLAS](#cblas) - [ccache](#ccache) - [CCfits](#ccfits) - [CCL](#ccl) - [cclib](#cclib) - [cctbx-base](#cctbx-base) - [cctools](#cctools) - [CD-HIT](#cd-hit) - [CDAT](#cdat) - [cdbfasta](#cdbfasta) - [CDBtools](#cdbtools) - [cddlib](#cddlib) - [CDFlib](#cdflib) - [cDNA_Cupcake](#cdna_cupcake) - [CDO](#cdo) - [cdo-bindings](#cdo-bindings) - [cdsapi](#cdsapi) - [cell2location](#cell2location) - [CellChat](#cellchat) - [CellMix](#cellmix) - [CellOracle](#celloracle) - [Cellpose](#cellpose) - [CellRanger](#cellranger) - [CellRanger-ARC](#cellranger-arc) - [CellRanger-ATAC](#cellranger-atac) - [CellRank](#cellrank) - [CellTypist](#celltypist) - [centerline](#centerline) - [Centrifuge](#centrifuge) - [Cereal](#cereal) - [CESM-deps](#cesm-deps) - [CFDEMcoupling](#cfdemcoupling) - [cffi](#cffi) - [CFITSIO](#cfitsio) - [cftime](#cftime) - [CGAL](#cgal) - [cget](#cget) - [Cgl](#cgl) - [CGmapTools](#cgmaptools) - [CGNS](#cgns) - [CharLS](#charls) - [CHASE](#chase) - [Check](#check) - [CheckM](#checkm) - [CheckM-Database](#checkm-database) - [Cheetah](#cheetah) - [Chemaxon-Marvin](#chemaxon-marvin) - [chemprop](#chemprop) - [CheMPS2](#chemps2) - [CHERAB](#cherab) - [chewBBACA](#chewbbaca) - [chi2comb](#chi2comb) - [Chimera](#chimera) - [ChimPipe](#chimpipe) - [ChIPseeker](#chipseeker) - [Chromaprint](#chromaprint) - [cicero](#cicero) - [CIF2Cell](#cif2cell) - [cimfomfa](#cimfomfa) - [CIRCexplorer](#circexplorer) - [CIRCexplorer2](#circexplorer2) - [Circos](#circos) - [Circuitscape](#circuitscape) - [CIRI](#ciri) - [CIRI-long](#ciri-long) - [cisTEM](#cistem) - [CITE-seq-Count](#cite-seq-count) - [Clang](#clang) - [Clang-AOMP](#clang-aomp) - [Clang-Python-bindings](#clang-python-bindings) - [CLAPACK](#clapack) - [CLEASE](#clease) - [CLHEP](#clhep) - [CliMetLab](#climetlab) - [CLIP](#clip) - [CLISP](#clisp) - [ClonalFrameML](#clonalframeml) - [CLooG](#cloog) - [CloudCompare](#cloudcompare) - [Clp](#clp) - [Clustal-Omega](#clustal-omega) - [ClustalW2](#clustalw2) - [Cluster-Buster](#cluster-buster) - [ClusterShell](#clustershell) - [CMake](#cmake) - [CMAverse](#cmaverse) - [CmdStanR](#cmdstanr) - [cmocean](#cmocean) - [CMSeq](#cmseq) - [CNT-ILP](#cnt-ilp) - [CNVkit](#cnvkit) - [CNVnator](#cnvnator) - [Co-phylog](#co-phylog) - [COBRApy](#cobrapy) - [CoCoALib](#cocoalib) - [CodAn](#codan) - [code-server](#code-server) - [CODEX2](#codex2) - [CodingQuarry](#codingquarry) - [Cogent](#cogent) - [Coin](#coin) - [CoinUtils](#coinutils) - [ColabFold](#colabfold) - [colossalai](#colossalai) - [Commet](#commet) - [CompareM](#comparem) - [Compress-Raw-Zlib](#compress-raw-zlib) - [COMSOL](#comsol) - [Con3F](#con3f) - [conan](#conan) - [CONCOCT](#concoct) - [configparser](#configparser) - [configurable-http-proxy](#configurable-http-proxy) - [CONN](#conn) - [connected-components-3d](#connected-components-3d) - [ConnectomeWorkbench](#connectomeworkbench) - [Control-FREEC](#control-freec) - [cooler](#cooler) - [CoordgenLibs](#coordgenlibs) - [Coot](#coot) - [CopyKAT](#copykat) - [core-counter](#core-counter) - [Coreutils](#coreutils) - [corner](#corner) - [CoSymLib](#cosymlib) - [coverage](#coverage) - [cowsay](#cowsay) - [CP2K](#cp2k) - [CPB](#cpb) - [CPC2](#cpc2) - [CPLEX](#cplex) - [CPPE](#cppe) - [CppHeaderParser](#cppheaderparser) - [CppUnit](#cppunit) - [cppy](#cppy) - [cppzmq](#cppzmq) - [cpu_features](#cpu_features) - [cram](#cram) - [cramtools](#cramtools) - [CrayCCE](#craycce) - [CrayGNU](#craygnu) - [CrayIntel](#crayintel) - [CrayPGI](#craypgi) - [crb-blast](#crb-blast) - [CREST](#crest) - [CRF++](#crf++) - [CRISPR-DAV](#crispr-dav) - [CRISPResso2](#crispresso2) - [cromwell](#cromwell) - [crossguid](#crossguid) - [CrossMap](#crossmap) - [CrossTalkZ](#crosstalkz) - [CRPropa](#crpropa) - [Crumble](#crumble) - [cryoCARE](#cryocare) - [cryoDRGN](#cryodrgn) - [cryptography](#cryptography) - [CryptoMiniSat](#cryptominisat) - [CrystFEL](#crystfel) - [CSB](#csb) - [CSBDeep](#csbdeep) - [CSBLAST](#csblast) - [cscope](#cscope) - [csvkit](#csvkit) - [ctags](#ctags) - [ctffind](#ctffind) - [CTPL](#ctpl) - [Cube](#cube) - [CubeGUI](#cubegui) - [CubeLib](#cubelib) - [CubeWriter](#cubewriter) - [CuCLARK](#cuclark) - [CUDA](#cuda) - [CUDA-Samples](#cuda-samples) - [CUDAcompat](#cudacompat) - [CUDAcore](#cudacore) - [cuDNN](#cudnn) - [Cufflinks](#cufflinks) - [CUnit](#cunit) - [CuPy](#cupy) - [cURL](#curl) - [cuSPARSELt](#cusparselt) - [custodian](#custodian) - [cutadapt](#cutadapt) - [cuTENSOR](#cutensor) - [cuteSV](#cutesv) - [CVglasso](#cvglasso) - [CVS](#cvs) - [CVXOPT](#cvxopt) - [CVXPY](#cvxpy) - [CWIPI](#cwipi) - [cwltool](#cwltool) - [cxxopts](#cxxopts) - [cysignals](#cysignals) - [Cython](#cython) - [cython-blis](#cython-blis) - [cytoolz](#cytoolz) - [Cytoscape](#cytoscape) - [cytosim](#cytosim) - [cyvcf2](#cyvcf2)
 
 
 ### c-ares
@@ -3811,6 +3905,7 @@ version   |toolchain
 ----------|--------------------------------------
 ``1.17.2``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``
 ``1.18.1``|``GCCcore/11.2.0``, ``GCCcore/11.3.0``
+``1.19.1``|``GCCcore/12.3.0``
 
 ### C3D
 
@@ -3880,6 +3975,7 @@ version    |versionsuffix   |toolchain
 ``1.14.12``|                |``GCCcore/6.4.0``, ``GCCcore/7.3.0``
 ``1.16.0`` |                |``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 ``1.17.4`` |                |``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+``1.17.8`` |                |``GCCcore/12.3.0``
 
 ### cairomm
 
@@ -3909,8 +4005,8 @@ A Free Software Three-Dimensional Structural Finite Element Program
 *homepage*: <http://www.calculix.de>
 
 version |toolchain
---------|--------------
-``2.20``|``foss/2021a``
+--------|------------------------------
+``2.20``|``foss/2021a``, ``foss/2022b``
 
 ### Calendrical
 
@@ -3966,7 +4062,7 @@ Canu is a fork of the Celera Assembler designed for high-noise single-molecule s
 *homepage*: <https://canu.readthedocs.io>
 
 version  |versionsuffix   |toolchain
----------|----------------|------------------------------------------------------------------------------
+---------|----------------|--------------------------------------------------------------------------
 ``1.4``  |                |``foss/2016b``
 ``1.7``  |                |``intel/2018a``
 ``1.8``  |``-Perl-5.26.0``|``foss/2017b``, ``intel/2017b``
@@ -3975,7 +4071,7 @@ version  |versionsuffix   |toolchain
 ``1.9``  |``-Java-11``    |``GCCcore/8.3.0``
 ``2.1.1``|                |``GCCcore/10.2.0``
 ``2.1.1``|``-Java-11``    |``GCCcore/9.3.0``
-``2.2``  |                |``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+``2.2``  |                |``GCC/12.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``
 ``2.2``  |``-Java-11``    |``GCCcore/10.3.0``
 
 ### Canvas
@@ -4155,6 +4251,16 @@ version  |toolchain
 ---------|--------------
 ``5.2.3``|``GCC/10.3.0``
 
+### CatBoost
+
+CatBoost is a high-performance open source library for gradient boosting on decision trees
+
+*homepage*: <https://catboost.ai>
+
+version|toolchain
+-------|--------------
+``1.2``|``gfbf/2023a``
+
 ### Catch2
 
 A modern, C++-native, header-only,   test framework for unit-tests, TDD and BDD   - using C++11, C++14, C++17 and later     (or C++03 on the Catch1.x branch) 
@@ -4246,9 +4352,9 @@ Cbc (Coin-or branch and cut) is an open-source mixed integer linear programming 
 *homepage*: <https://github.com/coin-or/Cbc>
 
 version   |toolchain
-----------|------------------------------
+----------|----------------------------------------------
 ``2.10.3``|``foss/2018b``
-``2.10.5``|``foss/2020b``, ``foss/2021a``
+``2.10.5``|``foss/2020b``, ``foss/2021a``, ``foss/2022b``
 
 ### CBLAS
 
@@ -4276,6 +4382,8 @@ version   |versionsuffix|toolchain
 ``4.2.1`` |             |``system``
 ``4.6.1`` |             |``GCCcore/11.2.0``
 ``4.6.3`` |             |``GCCcore/11.3.0``, ``system``
+``4.7.5`` |             |``system``
+``4.8.3`` |             |``system``
 
 ### CCfits
 
@@ -4425,6 +4533,7 @@ version   |toolchain
 ``2.0.5`` |``gompi/2021b``
 ``2.0.6`` |``gompi/2022a``
 ``2.1.1`` |``gompi/2021a``
+``2.2.2`` |``gompi/2023a``
 
 ### cdo-bindings
 
@@ -4566,6 +4675,16 @@ version  |toolchain
 ---------|--------------
 ``1.0.0``|``foss/2021b``
 
+### centerline
+
+Roads, rivers and similar linear structures are often represented by long and complex polygons.  Since one of the most important attributes of a linear structure is its length, extracting that  attribute from a polygon can prove to be more or less difficult. This library tries to solve this problem by creating the the polygon's centerline using the  Voronoi diagram. For more info on how to use this package, see the official documentation. 
+
+*homepage*: <https://github.com/fitodic/centerline>
+
+version  |toolchain
+---------|--------------
+``1.0.1``|``foss/2022a``
+
 ### Centrifuge
 
 Classifier for metagenomic sequences
@@ -4606,14 +4725,24 @@ CFDEMcoupling is an open source CFD-DEM engine. It provides the possibility to c
 *homepage*: <https://www.cfdem.com/cfdemrcoupling-open-source-cfd-dem-framework>
 
 version  |toolchain
----------|--------------
-``3.8.0``|``foss/2018a``
+---------|------------------------------
+``3.8.0``|``foss/2018a``, ``foss/2019b``
+
+### cffi
+
+C Foreign Function Interface for Python. Interact with almost any C code from Python, based on C-like declarations that you can often copy-paste from header files or documentation. 
+
+*homepage*: <https://cffi.readthedocs.io/en/latest/>
+
+version   |toolchain
+----------|------------------
+``1.15.1``|``GCCcore/12.3.0``
 
 ### CFITSIO
 
-CFITSIO is a library of C and Fortran subroutines for reading and writing data files in FITS (Flexible Image Transport System) data format.
+CFITSIO is a library of C and Fortran subroutines for reading and writing data files in FITS (Flexible Image Transport System) data format. 
 
-*homepage*: <https://heasarc.gsfc.nasa.gov/fitsio/>
+*homepage*: <http://heasarc.gsfc.nasa.gov/fitsio/>
 
 version  |toolchain
 ---------|----------------------------------------------------------
@@ -4625,6 +4754,7 @@ version  |toolchain
 ``3.48`` |``GCCcore/9.3.0``
 ``3.49`` |``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``
 ``4.2.0``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+``4.3.0``|``GCCcore/12.3.0``
 
 ### cftime
 
@@ -4660,10 +4790,12 @@ version   |versionsuffix     |toolchain
 ``4.11.1``|``-Python-3.6.4`` |``foss/2018a``
 ``4.11.1``|``-Python-3.6.6`` |``foss/2018b``
 ``4.14``  |``-Python-3.7.2`` |``foss/2019a``, ``intel/2019a``
+``4.14.1``|``-Python-2.7.16``|``foss/2019b``
 ``4.14.1``|``-Python-3.7.4`` |``foss/2019b``, ``intel/2019b``
 ``4.14.3``|                  |``gompi/2021a``, ``gompi/2021b``, ``gompi/2022a``, ``iimpi/2021a``
 ``4.14.3``|``-Python-3.8.2`` |``gompi/2020a``, ``iimpi/2020a``
 ``5.2``   |                  |``gompi/2020b``
+``5.5.2`` |                  |``GCCcore/12.2.0``
 
 ### cget
 
@@ -4685,6 +4817,7 @@ version   |toolchain
 ----------|------------------------------
 ``0.60.2``|``foss/2018b``
 ``0.60.3``|``foss/2020b``, ``foss/2021a``
+``0.60.7``|``foss/2022b``
 
 ### CGmapTools
 
@@ -4720,6 +4853,7 @@ version  |toolchain
 ``2.2.0``|``GCCcore/10.2.0``
 ``2.3.4``|``GCCcore/10.3.0``
 ``2.4.1``|``GCCcore/11.3.0``
+``2.4.2``|``GCCcore/12.2.0``
 
 ### CHASE
 
@@ -4873,6 +5007,16 @@ version  |versionsuffix     |toolchain
 ``0.9.5``|                  |``foss/2018b``
 ``0.9.5``|``-Python-2.7.12``|``foss/2016b``
 
+### ChIPseeker
+
+This package implements functions to retrieve the nearest genes around the peak,  annotate genomic region of the peak, statstical methods for estimate the significance of overlap  among ChIP peak data sets, and incorporate GEO database for user to compare the own dataset with  those deposited in database.
+
+*homepage*: <https://bioconductor.org/packages/release/bioc/html/ChIPseeker.html>
+
+version   |versionsuffix|toolchain
+----------|-------------|--------------
+``1.32.1``|``-R-4.2.1`` |``foss/2022a``
+
 ### Chromaprint
 
 Chromaprint is the core component of the AcoustID project. It's a client-side library  that implements a custom algorithm for extracting fingerprints from any audio source.
@@ -4892,6 +5036,7 @@ Cicero is an R package that provides tools for analyzing single-cell chromatin a
 version     |versionsuffix        |toolchain
 ------------|---------------------|--------------
 ``1.3.4.11``|``-R-4.0.3-Monocle3``|``foss/2020b``
+``1.3.8``   |``-R-4.2.1-Monocle3``|``foss/2022a``
 
 ### CIF2Cell
 
@@ -5037,6 +5182,8 @@ version   |versionsuffix     |toolchain
 ``13.0.1``|                  |``GCCcore/11.2.0``, ``GCCcore/11.3.0``
 ``13.0.1``|``-CUDA-11.4.1``  |``GCCcore/11.2.0``
 ``15.0.5``|                  |``GCCcore/11.3.0``
+``16.0.4``|                  |``GCCcore/12.2.0``
+``16.0.6``|                  |``GCCcore/12.3.0``
 
 ### Clang-AOMP
 
@@ -5173,6 +5320,7 @@ version   |toolchain
 ``1.17.3``|``foss/2018b``
 ``1.17.6``|``foss/2020b``, ``foss/2021a``
 ``1.17.7``|``foss/2021b``
+``1.17.8``|``foss/2022b``
 
 ### Clustal-Omega
 
@@ -5197,13 +5345,14 @@ version|toolchain
 
 ### Cluster-Buster
 
-Cluster-Buster: Finding dense clusters of motifs in DNA sequences
+Cluster-Buster is a program for finding interesting functional regions,  such as transcriptional enhancers, in DNA sequences.
 
-*homepage*: <https://github.com/weng-lab/cluster-buster/>
+*homepage*: <https://github.com/weng-lab/cluster-buster>
 
 version     |toolchain
 ------------|---------------
 ``20160106``|``intel/2016a``
+``20200507``|``GCC/12.2.0``
 
 ### ClusterShell
 
@@ -5251,7 +5400,7 @@ version   |toolchain
 ``3.10.2``|``GCCcore/6.4.0``, ``GCCcore/7.2.0``
 ``3.10.3``|``GCCcore/6.4.0``, ``GCCcore/7.2.0``
 ``3.11.1``|``GCCcore/6.4.0``
-``3.11.4``|``GCCcore/6.4.0``, ``GCCcore/7.3.0``
+``3.11.4``|``GCCcore/6.4.0``, ``GCCcore/7.3.0``, ``GCCcore/8.3.0``
 ``3.12.1``|``GCCcore/6.4.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``system``
 ``3.13.3``|``GCCcore/8.2.0``
 ``3.15.1``|``system``
@@ -5444,6 +5593,7 @@ version   |toolchain
 ``2.11.3``|``GCCcore/7.3.0``, ``foss/2018b``
 ``2.11.4``|``GCC/10.3.0``, ``GCCcore/10.2.0``
 ``2.11.6``|``GCC/11.2.0``
+``2.11.9``|``GCC/12.2.0``
 
 ### ColabFold
 
@@ -5526,6 +5676,7 @@ Decentralized, open-source (MIT), C/C++ package manager.
 version   |toolchain
 ----------|------------------
 ``1.58.0``|``GCCcore/11.3.0``
+``1.60.2``|``GCCcore/12.3.0``
 
 ### CONCOCT
 
@@ -5567,6 +5718,8 @@ version  |versionsuffix    |toolchain
 ``4.2.1``|                 |``GCCcore/10.2.0``
 ``4.4.0``|                 |``GCCcore/10.3.0``
 ``4.5.3``|                 |``GCCcore/11.3.0``
+``4.5.5``|                 |``GCCcore/12.2.0``
+``4.5.6``|                 |``GCCcore/12.3.0``
 
 ### CONN
 
@@ -5577,6 +5730,16 @@ CONN is an open-source Matlab/SPM-based cross-platform software  for the computa
 version|versionsuffix    |toolchain
 -------|-----------------|----------
 ``21a``|``-MATLAB-2021a``|``system``
+
+### connected-components-3d
+
+cc3d is an implementation of connected components in three dimensions using a 26, 18,  or 6-connected neighborhood in 3D or 4 and 8-connected in 2D.
+
+*homepage*: <https://github.com/seung-lab/connected-components-3d/>
+
+version   |toolchain
+----------|--------------
+``3.12.1``|``foss/2022b``
 
 ### ConnectomeWorkbench
 
@@ -5700,6 +5863,7 @@ version  |versionsuffix     |toolchain
 ``4.5.1``|``-Python-2.7.14``|``intel/2017b``
 ``5.5``  |                  |``GCCcore/10.2.0``, ``GCCcore/10.3.0``
 ``7.2.3``|                  |``GCCcore/12.2.0``
+``7.2.7``|                  |``GCCcore/11.3.0``
 
 ### cowsay
 
@@ -5731,6 +5895,7 @@ version   |versionsuffix|toolchain
 ``8.2``   |             |``foss/2021a``, ``intel/2021a``
 ``9.1``   |             |``foss/2022a``
 ``2022.1``|             |``foss/2022a``
+``2023.1``|             |``foss/2022b``
 
 ### CPB
 
@@ -5802,9 +5967,9 @@ A small C++ header library which makes it easier to write Python extension modul
 *homepage*: <https://github.com/nucleic/cppy>
 
 version  |toolchain
----------|--------------------------------------
+---------|----------------------------------------------------------
 ``1.1.0``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``
-``1.2.1``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+``1.2.1``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### cppzmq
 
@@ -6024,6 +6189,16 @@ version       |versionsuffix   |toolchain
 ``0.3.5``     |``-CUDA-11.3.1``|``foss/2021a``
 ``1.0.0-beta``|``-CUDA-11.3.1``|``foss/2021a``
 
+### cryptography
+
+cryptography is a package designed to expose cryptographic primitives and recipes to Python developers.
+
+*homepage*: <https://github.com/pyca/cryptography>
+
+version   |toolchain
+----------|------------------
+``41.0.1``|``GCCcore/12.3.0``
+
 ### CryptoMiniSat
 
 CryptoMiniSat is an advanced SAT solver
@@ -6161,6 +6336,7 @@ version  |toolchain
 ``4.4.4``|``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 ``4.6``  |``GCCcore/10.2.0``, ``GCCcore/10.3.0``
 ``4.8``  |``GCCcore/11.2.0``, ``GCCcore/11.3.0``
+``4.8.1``|``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### CubeWriter
 
@@ -6173,6 +6349,7 @@ version  |toolchain
 ``4.4.3``|``GCCcore/10.2.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 ``4.6``  |``GCCcore/10.2.0``, ``GCCcore/10.3.0``
 ``4.8``  |``GCCcore/11.2.0``, ``GCCcore/11.3.0``
+``4.8.1``|``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### CuCLARK
 
@@ -6224,6 +6401,7 @@ version          |toolchain
 ``12.1.0``       |``system``
 ``12.1.1``       |``system``
 ``12.2.0``       |``system``
+``12.2.2``       |``system``
 
 ### CUDA-Samples
 
@@ -6451,6 +6629,16 @@ version  |toolchain
 ---------|--------------
 ``2.0.3``|``foss/2022a``
 
+### CVglasso
+
+CVglasso is an R package that estimates a lasso-penalized  precision matrix via block-wise coordinate descent – also known as  the graphical lasso (glasso) algorithm.
+
+*homepage*: <https://github.com/MGallow/CVglasso>
+
+version|versionsuffix|toolchain
+-------|-------------|--------------
+``1.0``|``-R-4.2.1`` |``foss/2022a``
+
 ### CVS
 
 CVS is a version control system, an important component of  Source Configuration Management (SCM).
@@ -6604,7 +6792,7 @@ version    |versionsuffix    |toolchain
 ## D
 
 
-[dadi](#dadi) - [dagitty](#dagitty) - [Dakota](#dakota) - [DALI](#dali) - [DaliLite](#dalilite) - [Dalton](#dalton) - [damageproto](#damageproto) - [dammit](#dammit) - [DANPOS2](#danpos2) - [DAS_Tool](#das_tool) - [dask](#dask) - [dask-labextension](#dask-labextension) - [datamash](#datamash) - [davix](#davix) - [DB](#db) - [DB_File](#db_file) - [DBCSR](#dbcsr) - [DBD-mysql](#dbd-mysql) - [DBG2OLC](#dbg2olc) - [DBus](#dbus) - [dbus-glib](#dbus-glib) - [dclone](#dclone) - [dcm2niix](#dcm2niix) - [DCMTK](#dcmtk) - [dd](#dd) - [deal.II](#deal.ii) - [deap](#deap) - [decona](#decona) - [deconf](#deconf) - [DeconICA](#deconica) - [deepdiff](#deepdiff) - [DeepLabCut](#deeplabcut) - [deepmedic](#deepmedic) - [DeepMod2](#deepmod2) - [DeepSurv](#deepsurv) - [deepTools](#deeptools) - [DEICODE](#deicode) - [Delly](#delly) - [DeMixT](#demixt) - [DendroPy](#dendropy) - [DensPart](#denspart) - [Deprecated](#deprecated) - [destiny](#destiny) - [Detectron2](#detectron2) - [detonate](#detonate) - [Devito](#devito) - [DFA](#dfa) - [DFT-D3](#dft-d3) - [DFT-D4](#dft-d4) - [DFTB+](#dftb+) - [dftd3-lib](#dftd3-lib) - [DGL](#dgl) - [DIAL](#dial) - [DIALOGUE](#dialogue) - [DIAMOND](#diamond) - [Dice](#dice) - [DiCE-ML](#dice-ml) - [dicom2nifti](#dicom2nifti) - [DicomBrowser](#dicombrowser) - [Diffutils](#diffutils) - [dijitso](#dijitso) - [dill](#dill) - [DIRAC](#dirac) - [distributed](#distributed) - [DistributedStream](#distributedstream) - [DL_POLY_4](#dl_poly_4) - [DL_POLY_Classic](#dl_poly_classic) - [dlb](#dlb) - [dlib](#dlib) - [DLPack](#dlpack) - [dm-haiku](#dm-haiku) - [dm-reverb](#dm-reverb) - [dm-tree](#dm-tree) - [DMCfun](#dmcfun) - [DMLC-Core](#dmlc-core) - [DMTCP](#dmtcp) - [DOLFIN](#dolfin) - [dominate](#dominate) - [dorado](#dorado) - [Doris](#doris) - [DosageConvertor](#dosageconvertor) - [dotNET-Core-Runtime](#dotnet-core-runtime) - [dotNET-SDK](#dotnet-sdk) - [double-conversion](#double-conversion) - [DoubletFinder](#doubletfinder) - [Doxygen](#doxygen) - [DRAGMAP](#dragmap) - [Drake](#drake) - [dRep](#drep) - [DROP](#drop) - [dropEst](#dropest) - [DSA](#dsa) - [dSFMT](#dsfmt) - [DSRC](#dsrc) - [Dsuite](#dsuite) - [dtcmp](#dtcmp) - [dtcwt](#dtcwt) - [DualSPHysics](#dualsphysics) - [DUBStepR](#dubstepr) - [dune-core](#dune-core) - [dune-fem](#dune-fem) - [duplex-tools](#duplex-tools) - [dx-toolkit](#dx-toolkit) - [dxpy](#dxpy) - [DyMat](#dymat)
+[dadi](#dadi) - [dagitty](#dagitty) - [Dakota](#dakota) - [DALI](#dali) - [DaliLite](#dalilite) - [Dalton](#dalton) - [damageproto](#damageproto) - [dammit](#dammit) - [DANPOS2](#danpos2) - [DAS_Tool](#das_tool) - [dask](#dask) - [dask-labextension](#dask-labextension) - [datamash](#datamash) - [davix](#davix) - [DB](#db) - [DB_File](#db_file) - [DBCSR](#dbcsr) - [DBD-mysql](#dbd-mysql) - [DBG2OLC](#dbg2olc) - [DBus](#dbus) - [dbus-glib](#dbus-glib) - [dclone](#dclone) - [dcm2niix](#dcm2niix) - [DCMTK](#dcmtk) - [dd](#dd) - [deal.II](#deal.ii) - [deap](#deap) - [decona](#decona) - [deconf](#deconf) - [DeconICA](#deconica) - [deepdiff](#deepdiff) - [DeepLabCut](#deeplabcut) - [deepmedic](#deepmedic) - [DeepMod2](#deepmod2) - [DeepSurv](#deepsurv) - [deepTools](#deeptools) - [DEICODE](#deicode) - [Delly](#delly) - [DeMixT](#demixt) - [DendroPy](#dendropy) - [DensPart](#denspart) - [Deprecated](#deprecated) - [destiny](#destiny) - [Detectron2](#detectron2) - [detonate](#detonate) - [Devito](#devito) - [DFA](#dfa) - [DFT-D3](#dft-d3) - [DFT-D4](#dft-d4) - [DFTB+](#dftb+) - [dftd3-lib](#dftd3-lib) - [DGL](#dgl) - [DIAL](#dial) - [DIALOGUE](#dialogue) - [DIAMOND](#diamond) - [Dice](#dice) - [DiCE-ML](#dice-ml) - [dicom2nifti](#dicom2nifti) - [DicomBrowser](#dicombrowser) - [DiffBind](#diffbind) - [Diffutils](#diffutils) - [dijitso](#dijitso) - [dill](#dill) - [DIRAC](#dirac) - [distributed](#distributed) - [DistributedStream](#distributedstream) - [DL_POLY_4](#dl_poly_4) - [DL_POLY_Classic](#dl_poly_classic) - [dlb](#dlb) - [dlib](#dlib) - [DLPack](#dlpack) - [dm-haiku](#dm-haiku) - [dm-reverb](#dm-reverb) - [dm-tree](#dm-tree) - [DMCfun](#dmcfun) - [DMLC-Core](#dmlc-core) - [DMTCP](#dmtcp) - [DOLFIN](#dolfin) - [dominate](#dominate) - [dorado](#dorado) - [Doris](#doris) - [DosageConvertor](#dosageconvertor) - [dotNET-Core-Runtime](#dotnet-core-runtime) - [dotNET-SDK](#dotnet-sdk) - [double-conversion](#double-conversion) - [DoubletFinder](#doubletfinder) - [Doxygen](#doxygen) - [DRAGMAP](#dragmap) - [Drake](#drake) - [dRep](#drep) - [drmaa-python](#drmaa-python) - [DROP](#drop) - [dropEst](#dropest) - [DSA](#dsa) - [dSFMT](#dsfmt) - [DSRC](#dsrc) - [Dsuite](#dsuite) - [dtcmp](#dtcmp) - [dtcwt](#dtcwt) - [DualSPHysics](#dualsphysics) - [DUBStepR](#dubstepr) - [dune-core](#dune-core) - [dune-fem](#dune-fem) - [duplex-tools](#duplex-tools) - [dx-toolkit](#dx-toolkit) - [dxpy](#dxpy) - [DyMat](#dymat)
 
 
 ### dadi
@@ -6741,6 +6929,7 @@ version      |versionsuffix     |toolchain
 ``2021.9.1`` |                  |``foss/2021a``
 ``2022.1.0`` |                  |``foss/2021b``
 ``2022.10.0``|                  |``foss/2022a``
+``2023.7.1`` |                  |``foss/2022b``
 
 ### dask-labextension
 
@@ -6903,6 +7092,7 @@ version         |toolchain
 ``1.0.20201102``|``GCCcore/8.3.0``
 ``1.0.20211006``|``GCCcore/10.3.0``
 ``1.0.20220720``|``GCCcore/11.3.0``
+``1.0.20230411``|``GCCcore/12.2.0``
 
 ### DCMTK
 
@@ -7071,6 +7261,7 @@ version  |versionsuffix    |toolchain
 ``0.7.8``|``-linux_x86_64``|``system``
 ``0.8.7``|                 |``gompi/2020b``
 ``1.1.5``|                 |``GCC/11.3.0``
+``1.1.6``|                 |``GCC/12.2.0``
 
 ### DeMixT
 
@@ -7260,7 +7451,7 @@ version   |toolchain
 ``2.0.11``|``GCC/10.3.0``
 ``2.0.13``|``GCC/10.3.0``, ``GCC/11.2.0``
 ``2.1.0`` |``GCC/11.3.0``
-``2.1.8`` |``GCC/10.3.0``
+``2.1.8`` |``GCC/10.3.0``, ``GCC/12.2.0``
 
 ### Dice
 
@@ -7303,6 +7494,16 @@ version    |versionsuffix     |toolchain
 -----------|------------------|----------
 ``1.7.0b5``|``-Java-1.7.0_80``|``system``
 
+### DiffBind
+
+Compute differentially bound sites from multiple ChIP-seq experiments using  affinity (quantitative) data. Also enables occupancy (overlap) analysis and plotting functions.
+
+*homepage*: <https://bioconductor.org/packages/release/bioc/html/DiffBind.html>
+
+version  |versionsuffix|toolchain
+---------|-------------|--------------
+``3.6.5``|``-R-4.2.1`` |``foss/2022a``
+
 ### Diffutils
 
 Diffutils: GNU diff utilities - find the differences between files
@@ -7335,6 +7536,7 @@ version  |toolchain
 ``0.3.3``|``GCCcore/10.2.0``, ``GCCcore/8.3.0``
 ``0.3.4``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``
 ``0.3.6``|``GCCcore/11.3.0``
+``0.3.7``|``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### DIRAC
 
@@ -7435,6 +7637,7 @@ Haiku is a simple neural network library for JAX developed by some of the author
 
 version  |versionsuffix   |toolchain
 ---------|----------------|--------------
+``0.0.9``|                |``foss/2022a``
 ``0.0.9``|``-CUDA-11.3.1``|``foss/2021a``
 
 ### dm-reverb
@@ -7653,6 +7856,16 @@ version  |toolchain
 ``3.0.0``|``foss/2021a``
 ``3.4.2``|``foss/2022a``
 
+### drmaa-python
+
+Distributed Resource Management Application API (DRMAA) bindings for Python.
+
+*homepage*: <https://github.com/pygridtools/drmaa-python>
+
+version  |versionsuffix|toolchain
+---------|-------------|------------------
+``0.7.9``|``-slurm``   |``GCCcore/12.2.0``
+
 ### DROP
 
 Pipeline to find aberrant events in RNA-Seq data, useful for diagnosis of rare disorders
@@ -7824,7 +8037,7 @@ version|versionsuffix  |toolchain
 ## E
 
 
-[E-ANTIC](#e-antic) - [ea-utils](#ea-utils) - [earthengine-api](#earthengine-api) - [easel](#easel) - [EasyBuild](#easybuild) - [EasyQC](#easyqc) - [ecBuild](#ecbuild) - [ecCodes](#eccodes) - [eccodes-python](#eccodes-python) - [ecFlow](#ecflow) - [ED2](#ed2) - [EDirect](#edirect) - [edlib](#edlib) - [EggLib](#egglib) - [eggnog-mapper](#eggnog-mapper) - [EGTtools](#egttools) - [eht-imaging](#eht-imaging) - [Eigen](#eigen) - [EigenExa](#eigenexa) - [EIGENSOFT](#eigensoft) - [einops](#einops) - [elastix](#elastix) - [elbencho](#elbencho) - [ELFIO](#elfio) - [elfutils](#elfutils) - [Elk](#elk) - [ELPA](#elpa) - [ELPH](#elph) - [elprep](#elprep) - [ELSI](#elsi) - [ELSI-RCI](#elsi-rci) - [Emacs](#emacs) - [EMAN2](#eman2) - [EMBOSS](#emboss) - [Embree](#embree) - [emcee](#emcee) - [EMU](#emu) - [enaBrowserTool](#enabrowsertool) - [enchant](#enchant) - [enchant-2](#enchant-2) - [EnsEMBLCoreAPI](#ensemblcoreapi) - [entrypoints](#entrypoints) - [EPD](#epd) - [EPIC](#epic) - [epiScanpy](#episcanpy) - [eQuilibrator](#equilibrator) - [EricScript](#ericscript) - [ESL-Bundle](#esl-bundle) - [ESM-2](#esm-2) - [ESMF](#esmf) - [ESMPy](#esmpy) - [ESMValTool](#esmvaltool) - [eSpeak-NG](#espeak-ng) - [ESPResSo](#espresso) - [Essentia](#essentia) - [ETE](#ete) - [ETSF_IO](#etsf_io) - [eudev](#eudev) - [Evcxr-REPL](#evcxr-repl) - [EvidentialGene](#evidentialgene) - [evmix](#evmix) - [ExaBayes](#exabayes) - [ExaML](#examl) - [Excel-Writer-XLSX](#excel-writer-xlsx) - [ExifTool](#exiftool) - [exiv2](#exiv2) - [Exonerate](#exonerate) - [expat](#expat) - [expect](#expect) - [expecttest](#expecttest) - [eXpress](#express) - [Extrae](#extrae) - [EZC3D](#ezc3d)
+[E-ANTIC](#e-antic) - [e3nn](#e3nn) - [ea-utils](#ea-utils) - [earthengine-api](#earthengine-api) - [easel](#easel) - [EasyBuild](#easybuild) - [EasyQC](#easyqc) - [ecBuild](#ecbuild) - [ecCodes](#eccodes) - [eccodes-python](#eccodes-python) - [ecFlow](#ecflow) - [ED2](#ed2) - [EDirect](#edirect) - [edlib](#edlib) - [EggLib](#egglib) - [eggnog-mapper](#eggnog-mapper) - [EGTtools](#egttools) - [eht-imaging](#eht-imaging) - [Eigen](#eigen) - [EigenExa](#eigenexa) - [EIGENSOFT](#eigensoft) - [einops](#einops) - [elastix](#elastix) - [elbencho](#elbencho) - [ELFIO](#elfio) - [elfutils](#elfutils) - [Elk](#elk) - [ELPA](#elpa) - [ELPH](#elph) - [elprep](#elprep) - [ELSI](#elsi) - [ELSI-RCI](#elsi-rci) - [Emacs](#emacs) - [EMAN2](#eman2) - [EMBOSS](#emboss) - [Embree](#embree) - [emcee](#emcee) - [EMU](#emu) - [enaBrowserTool](#enabrowsertool) - [enchant](#enchant) - [enchant-2](#enchant-2) - [EnsEMBLCoreAPI](#ensemblcoreapi) - [entrypoints](#entrypoints) - [EPD](#epd) - [EPIC](#epic) - [epiScanpy](#episcanpy) - [eQuilibrator](#equilibrator) - [EricScript](#ericscript) - [ESL-Bundle](#esl-bundle) - [ESM-2](#esm-2) - [ESMF](#esmf) - [ESMPy](#esmpy) - [ESMValTool](#esmvaltool) - [eSpeak-NG](#espeak-ng) - [ESPResSo](#espresso) - [Essentia](#essentia) - [ETE](#ete) - [ETSF_IO](#etsf_io) - [eudev](#eudev) - [Evcxr-REPL](#evcxr-repl) - [EvidentialGene](#evidentialgene) - [evmix](#evmix) - [ExaBayes](#exabayes) - [ExaML](#examl) - [Excel-Writer-XLSX](#excel-writer-xlsx) - [ExifTool](#exiftool) - [exiv2](#exiv2) - [Exonerate](#exonerate) - [expat](#expat) - [expect](#expect) - [expecttest](#expecttest) - [eXpress](#express) - [Extrae](#extrae) - [EZC3D](#ezc3d)
 
 
 ### E-ANTIC
@@ -7837,6 +8050,16 @@ version  |toolchain
 ---------|--------------------
 ``0.1.2``|``GCC/8.2.0-2.31.1``
 ``0.1.5``|``GCC/8.3.0``
+
+### e3nn
+
+Euclidean neural networks (e3nn) is a python library based on pytorch to create equivariant  neural networks for the group O(3). 
+
+*homepage*: <https://e3nn.org/>
+
+version  |toolchain
+---------|--------------
+``0.3.3``|``foss/2022a``
 
 ### ea-utils
 
@@ -7972,6 +8195,7 @@ version   |toolchain
 ``4.7.0`` |``system``
 ``4.7.1`` |``system``
 ``4.7.2`` |``system``
+``4.8.0`` |``system``
 
 ### EasyQC
 
@@ -7992,6 +8216,7 @@ A CMake-based build system, consisting of a collection of CMake macros and funct
 version  |toolchain
 ---------|----------
 ``3.7.0``|``system``
+``3.8.0``|``system``
 
 ### ecCodes
 
@@ -8013,6 +8238,7 @@ version   |versionsuffix     |toolchain
 ``2.22.1``|                  |``gompi/2021a``
 ``2.24.2``|                  |``gompi/2021b``, ``iimpi/2021b``
 ``2.27.0``|                  |``gompi/2022a``
+``2.31.0``|                  |``gompi/2023a``
 
 ### eccodes-python
 
@@ -8256,6 +8482,7 @@ version            |versionsuffix   |toolchain
 ``2022.05.001``    |                |``foss/2022a``, ``foss/2022b``, ``intel/2022a``, ``intel/2022b``
 ``2022.05.001``    |``-CUDA-11.7.0``|``foss/2022a``
 ``2022.05.001``    |``-CUDA-12.0.0``|``foss/2022b``
+``2023.05.001``    |                |``foss/2023a``
 
 ### ELPH
 
@@ -8563,8 +8790,10 @@ A software package for performing and analyzing scientific Molecular Dynamics si
 *homepage*: <https://espressomd.org/wordpress>
 
 version  |versionsuffix   |toolchain
----------|----------------|--------------
+---------|----------------|------------------------------
+``4.2.1``|                |``foss/2021a``, ``foss/2022a``
 ``4.2.1``|``-CUDA-11.3.1``|``foss/2021a``
+``4.2.1``|``-CUDA-11.8.0``|``foss/2022a``
 
 ### Essentia
 
@@ -8685,14 +8914,15 @@ version  |toolchain
 
 ### exiv2
 
-Exiv2 is a Cross-platform C++ library and a command line utility to manage image metadata.
+Exiv2 is a C++ library and a command line utility to manage image metadata. It provides fast and easy read and write  access to the Exif, IPTC and XMP metadata of digital images in various formats. Exiv2 is available as free software and  with a commercial license, and is used in many projects. 
 
-*homepage*: <https://exiv2.org>
+*homepage*: <http://www.exiv2.org>
 
 version   |toolchain
 ----------|------------------
 ``0.27.4``|``GCCcore/10.3.0``
 ``0.27.5``|``GCCcore/11.2.0``
+``0.28.0``|``GCCcore/12.3.0``
 
 ### Exonerate
 
@@ -8742,8 +8972,9 @@ This library implements expect tests (also known as "golden" tests). Expect test
 *homepage*: <https://github.com/ezyang/expecttest>
 
 version  |toolchain
----------|------------------------------------------------------------------------------
-``0.1.3``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``
+---------|--------------------------------------------------------------------------------------------------
+``0.1.3``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+``0.1.5``|``GCCcore/12.3.0``
 
 ### eXpress
 
@@ -8782,7 +9013,7 @@ version  |toolchain
 ## F
 
 
-[f90cache](#f90cache) - [f90wrap](#f90wrap) - [Faber](#faber) - [FabIO](#fabio) - [faceswap](#faceswap) - [FALCON](#falcon) - [FANN](#fann) - [fast5](#fast5) - [FASTA](#fasta) - [fastahack](#fastahack) - [fastai](#fastai) - [FastaIndex](#fastaindex) - [FastANI](#fastani) - [Fastaq](#fastaq) - [FastFold](#fastfold) - [fastjet](#fastjet) - [fastjet-contrib](#fastjet-contrib) - [FastME](#fastme) - [fastp](#fastp) - [fastparquet](#fastparquet) - [fastPHASE](#fastphase) - [fastq-pair](#fastq-pair) - [fastq-tools](#fastq-tools) - [FastQ_Screen](#fastq_screen) - [FastQC](#fastqc) - [fastqsplitter](#fastqsplitter) - [FastQTL](#fastqtl) - [fastqz](#fastqz) - [FastRFS](#fastrfs) - [fastStructure](#faststructure) - [FastTree](#fasttree) - [FastViromeExplorer](#fastviromeexplorer) - [FASTX-Toolkit](#fastx-toolkit) - [fatslim](#fatslim) - [fbm](#fbm) - [FBPIC](#fbpic) - [FCC](#fcc) - [FCM](#fcm) - [fdict](#fdict) - [FDS](#fds) - [fdstools](#fdstools) - [FDTD_Solutions](#fdtd_solutions) - [feh](#feh) - [FEniCS](#fenics) - [fermi-lite](#fermi-lite) - [Ferret](#ferret) - [festival](#festival) - [fetchMG](#fetchmg) - [FFC](#ffc) - [FFLAS-FFPACK](#fflas-ffpack) - [FFmpeg](#ffmpeg) - [ffmpi](#ffmpi) - [ffnet](#ffnet) - [ffnvcodec](#ffnvcodec) - [fftlib](#fftlib) - [FFTW](#fftw) - [FFTW.MPI](#fftw.mpi) - [fgbio](#fgbio) - [FGSL](#fgsl) - [FHI-aims](#fhi-aims) - [FIAT](#fiat) - [FIGARO](#figaro) - [FigureGen](#figuregen) - [Fiji](#fiji) - [file](#file) - [filevercmp](#filevercmp) - [Filtlong](#filtlong) - [find_circ](#find_circ) - [finder](#finder) - [findhap](#findhap) - [findutils](#findutils) - [fineRADstructure](#fineradstructure) - [fineSTRUCTURE](#finestructure) - [fio](#fio) - [Fiona](#fiona) - [Firefox](#firefox) - [FIRESTARTER](#firestarter) - [FireWorks](#fireworks) - [FIt-SNE](#fit-sne) - [FIX](#fix) - [fixesproto](#fixesproto) - [FLAC](#flac) - [FLAIR](#flair) - [flair-NLP](#flair-nlp) - [FLANN](#flann) - [FLASH](#flash) - [Flask](#flask) - [flatbuffers](#flatbuffers) - [flatbuffers-python](#flatbuffers-python) - [FLEUR](#fleur) - [flex](#flex) - [Flexbar](#flexbar) - [FlexiBLAS](#flexiblas) - [FlexiDot](#flexidot) - [Flink](#flink) - [FLINT](#flint) - [flook](#flook) - [flowFDA](#flowfda) - [FLTK](#fltk) - [FLUENT](#fluent) - [Flye](#flye) - [FMILibrary](#fmilibrary) - [FMM3D](#fmm3d) - [FMPy](#fmpy) - [FMRIprep](#fmriprep) - [FMS](#fms) - [fmt](#fmt) - [FoBiS](#fobis) - [FoldX](#foldx) - [fontconfig](#fontconfig) - [fontsproto](#fontsproto) - [FORD](#ford) - [foss](#foss) - [fosscuda](#fosscuda) - [FoX](#fox) - [FOX-Toolkit](#fox-toolkit) - [FPM](#fpm) - [fpocket](#fpocket) - [fqtrim](#fqtrim) - [fqzcomp](#fqzcomp) - [FragGeneScan](#fraggenescan) - [FragPipe](#fragpipe) - [FRANz](#franz) - [FreeBarcodes](#freebarcodes) - [freebayes](#freebayes) - [FreeFEM](#freefem) - [FreeFem++](#freefem++) - [freeglut](#freeglut) - [FreeImage](#freeimage) - [FreeSASA](#freesasa) - [FreeSurfer](#freesurfer) - [FreeTDS](#freetds) - [freetype](#freetype) - [freetype-py](#freetype-py) - [FreeXL](#freexl) - [freud-analysis](#freud-analysis) - [FriBidi](#fribidi) - [FRUIT](#fruit) - [FRUIT_processor](#fruit_processor) - [FSL](#fsl) - [FSLeyes](#fsleyes) - [fsom](#fsom) - [FSON](#fson) - [FTGL](#ftgl) - [Fujitsu](#fujitsu) - [fullrmc](#fullrmc) - [fumi_tools](#fumi_tools) - [funannotate](#funannotate) - [FunGAP](#fungap) - [FUNWAVE-TVD](#funwave-tvd) - [FUSE](#fuse) - [FuSeq](#fuseq) - [FusionCatcher](#fusioncatcher) - [futhark](#futhark) - [futile](#futile) - [future](#future) - [fxtract](#fxtract)
+[f90cache](#f90cache) - [f90wrap](#f90wrap) - [Faber](#faber) - [FabIO](#fabio) - [faceswap](#faceswap) - [FALCON](#falcon) - [FANN](#fann) - [fast5](#fast5) - [FASTA](#fasta) - [fastahack](#fastahack) - [fastai](#fastai) - [FastaIndex](#fastaindex) - [FastANI](#fastani) - [Fastaq](#fastaq) - [FastFold](#fastfold) - [fastjet](#fastjet) - [fastjet-contrib](#fastjet-contrib) - [FastME](#fastme) - [fastp](#fastp) - [fastparquet](#fastparquet) - [fastPHASE](#fastphase) - [fastq-pair](#fastq-pair) - [fastq-tools](#fastq-tools) - [FastQ_Screen](#fastq_screen) - [FastQC](#fastqc) - [fastqsplitter](#fastqsplitter) - [FastQTL](#fastqtl) - [fastqz](#fastqz) - [FastRFS](#fastrfs) - [fastStructure](#faststructure) - [FastTree](#fasttree) - [FastViromeExplorer](#fastviromeexplorer) - [FASTX-Toolkit](#fastx-toolkit) - [fatslim](#fatslim) - [fbm](#fbm) - [FBPIC](#fbpic) - [FCC](#fcc) - [FCM](#fcm) - [fdict](#fdict) - [FDS](#fds) - [fdstools](#fdstools) - [FDTD_Solutions](#fdtd_solutions) - [feh](#feh) - [FEniCS](#fenics) - [fermi-lite](#fermi-lite) - [Ferret](#ferret) - [festival](#festival) - [fetchMG](#fetchmg) - [FFC](#ffc) - [FFLAS-FFPACK](#fflas-ffpack) - [FFmpeg](#ffmpeg) - [ffmpi](#ffmpi) - [ffnet](#ffnet) - [ffnvcodec](#ffnvcodec) - [fftlib](#fftlib) - [FFTW](#fftw) - [FFTW.MPI](#fftw.mpi) - [fgbio](#fgbio) - [FGSL](#fgsl) - [FHI-aims](#fhi-aims) - [FIAT](#fiat) - [FIGARO](#figaro) - [FigureGen](#figuregen) - [Fiji](#fiji) - [file](#file) - [filevercmp](#filevercmp) - [Filtlong](#filtlong) - [find_circ](#find_circ) - [finder](#finder) - [findhap](#findhap) - [findutils](#findutils) - [fineRADstructure](#fineradstructure) - [fineSTRUCTURE](#finestructure) - [fio](#fio) - [Fiona](#fiona) - [Firefox](#firefox) - [FIRESTARTER](#firestarter) - [FireWorks](#fireworks) - [FIt-SNE](#fit-sne) - [FIX](#fix) - [fixesproto](#fixesproto) - [FLAC](#flac) - [FLAIR](#flair) - [flair-NLP](#flair-nlp) - [FLANN](#flann) - [FLASH](#flash) - [Flask](#flask) - [flatbuffers](#flatbuffers) - [flatbuffers-python](#flatbuffers-python) - [FLEUR](#fleur) - [flex](#flex) - [Flexbar](#flexbar) - [FlexiBLAS](#flexiblas) - [FlexiDot](#flexidot) - [Flink](#flink) - [FLINT](#flint) - [flit](#flit) - [flook](#flook) - [flowFDA](#flowfda) - [FLTK](#fltk) - [FLUENT](#fluent) - [Flye](#flye) - [FMILibrary](#fmilibrary) - [FMM3D](#fmm3d) - [FMPy](#fmpy) - [FMRIprep](#fmriprep) - [FMS](#fms) - [fmt](#fmt) - [FoBiS](#fobis) - [FoldX](#foldx) - [fontconfig](#fontconfig) - [fontsproto](#fontsproto) - [FORD](#ford) - [foss](#foss) - [fosscuda](#fosscuda) - [FoX](#fox) - [FOX-Toolkit](#fox-toolkit) - [FPM](#fpm) - [fpocket](#fpocket) - [fqtrim](#fqtrim) - [fqzcomp](#fqzcomp) - [FragGeneScan](#fraggenescan) - [FragPipe](#fragpipe) - [FRANz](#franz) - [FreeBarcodes](#freebarcodes) - [freebayes](#freebayes) - [FreeFEM](#freefem) - [FreeFem++](#freefem++) - [freeglut](#freeglut) - [FreeImage](#freeimage) - [FreeSASA](#freesasa) - [FreeSurfer](#freesurfer) - [FreeTDS](#freetds) - [freetype](#freetype) - [freetype-py](#freetype-py) - [FreeXL](#freexl) - [freud-analysis](#freud-analysis) - [FriBidi](#fribidi) - [FRUIT](#fruit) - [FRUIT_processor](#fruit_processor) - [FSL](#fsl) - [FSLeyes](#fsleyes) - [fsom](#fsom) - [FSON](#fson) - [FTGL](#ftgl) - [Fujitsu](#fujitsu) - [fullrmc](#fullrmc) - [fumi_tools](#fumi_tools) - [funannotate](#funannotate) - [FunGAP](#fungap) - [FUNWAVE-TVD](#funwave-tvd) - [FUSE](#fuse) - [FuSeq](#fuseq) - [FusionCatcher](#fusioncatcher) - [futhark](#futhark) - [futile](#futile) - [future](#future) - [fxtract](#fxtract)
 
 
 ### f90cache
@@ -8886,8 +9117,8 @@ Utilities for indexing and sequence extraction from FASTA files.
 *homepage*: <https://github.com/ekg/fastahack>
 
 version  |toolchain
----------|-----------------------------------------------------------------------------
-``1.0.0``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/9.3.0``
+---------|-------------------------------------------------------------------------------------------------
+``1.0.0``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/9.3.0``
 
 ### fastai
 
@@ -8995,10 +9226,11 @@ fastparquet is a python implementation of the parquet format, aiming to integrat
 
 *homepage*: <https://fastparquet.readthedocs.io/>
 
-version  |toolchain
----------|--------------
-``0.7.2``|``foss/2021a``
-``0.8.0``|``foss/2021b``
+version     |toolchain
+------------|--------------
+``0.7.2``   |``foss/2021a``
+``0.8.0``   |``foss/2021b``
+``2023.4.0``|``gfbf/2022b``
 
 ### fastPHASE
 
@@ -9366,6 +9598,7 @@ version    |toolchain
 ``4.4.2``  |``GCCcore/11.3.0``
 ``5.0.1``  |``GCCcore/11.3.0``
 ``5.1.2``  |``GCCcore/12.2.0``
+``6.0``    |``GCCcore/12.3.0``
 
 ### ffmpi
 
@@ -9393,9 +9626,10 @@ FFmpeg nvidia headers. Adds support for nvenc and nvdec. Requires Nvidia GPU and
 
 *homepage*: <https://git.videolan.org/?p=ffmpeg/nv-codec-headers.git>
 
-version     |toolchain
-------------|----------
-``11.1.5.2``|``system``
+version      |toolchain
+-------------|----------
+``11.1.5.2`` |``system``
+``12.0.16.0``|``system``
 
 ### fftlib
 
@@ -9414,7 +9648,7 @@ FFTW is a C subroutine library for computing the discrete Fourier transform (DFT
 *homepage*: <https://www.fftw.org>
 
 version   |versionsuffix|toolchain
-----------|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ``1.0.0`` |``-fujitsu`` |``FCC/4.5.0``
 ``2.1.5`` |             |``intel/2016b``, ``intel/2017a``, ``intel/2018b``
 ``3.3.4`` |             |``gmpich/2016a``, ``gmvapich2/1.7.20``, ``gmvapich2/2016a``, ``gompi/2016.04``, ``gompi/2016.06``, ``gompi/2016.07``, ``gompi/2016a``, ``gompi/2016b``, ``intel/2016a``, ``intel/2016b``
@@ -9422,7 +9656,7 @@ version   |versionsuffix|toolchain
 ``3.3.6`` |             |``gimpi/2017b``, ``gimpic/2017b``, ``gompi/2017a``, ``gompi/2017b``, ``gompic/2017b``, ``intel/2016b``, ``intel/2017a``, ``intel/2017b``, ``intelcuda/2017b``
 ``3.3.7`` |             |``gimkl/2017a``, ``gimpi/2018a``, ``gmpich/2017.08``, ``gompi/2018a``, ``gompic/2018a``, ``intel/2017b``, ``intel/2018.00``, ``intel/2018.01``, ``intel/2018a``, ``iomkl/2018a``
 ``3.3.7`` |``-serial``  |``GCC/6.4.0-2.28``
-``3.3.8`` |             |``gompi/2018.08``, ``gompi/2018b``, ``gompi/2019a``, ``gompi/2019b``, ``gompi/2020a``, ``gompi/2020b``, ``gompic/2018b``, ``gompic/2019a``, ``gompic/2019b``, ``gompic/2020a``, ``gompic/2020b``, ``iimpi/2020b``, ``intel/2018b``, ``intel/2019a``, ``intel/2019b``, ``intel/2020a``, ``intel/2020b``, ``iomkl/2018b``, ``iomkl/2020b``
+``3.3.8`` |             |``gompi/2018.08``, ``gompi/2018b``, ``gompi/2019a``, ``gompi/2019b``, ``gompi/2020a``, ``gompi/2020b``, ``gompic/2018b``, ``gompic/2019a``, ``gompic/2019b``, ``gompic/2020a``, ``gompic/2020b``, ``iimpi/2020b``, ``intel/2018b``, ``intel/2019a``, ``intel/2019b``, ``intel/2020a``, ``intel/2020b``, ``iomkl/2018b``, ``iomkl/2020b``, ``iompi/2020b``
 ``3.3.8`` |``-amd``     |``gompi/2020a``
 ``3.3.8`` |``-serial``  |``GCC/9.3.0``
 ``3.3.9`` |             |``gompi/2021a``, ``intel/2021a``
@@ -9542,9 +9776,9 @@ filevercmp function as in sort --version-sort.
 *homepage*: <https://github.com/ekg/filevercmp>
 
 version     |toolchain
-------------|----------------------------------------------------------
+------------|------------------------------------------------------------------------------
 ``20141119``|``GCCcore/9.3.0``
-``20191210``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``
+``20191210``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``
 
 ### Filtlong
 
@@ -9785,12 +10019,13 @@ FlatBuffers: Memory Efficient Serialization Library
 
 *homepage*: <https://github.com/google/flatbuffers/>
 
-version   |toolchain
-----------|----------------------------------------------------------
-``1.12.0``|``GCCcore/10.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
-``2.0.0`` |``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``
-``2.0.7`` |``GCCcore/11.3.0``
-``23.1.4``|``GCCcore/12.2.0``
+version    |toolchain
+-----------|----------------------------------------------------------
+``1.12.0`` |``GCCcore/10.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
+``2.0.0``  |``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``
+``2.0.7``  |``GCCcore/11.3.0``
+``23.1.4`` |``GCCcore/12.2.0``
+``23.5.26``|``GCCcore/12.3.0``
 
 ### flatbuffers-python
 
@@ -9798,11 +10033,13 @@ Python Flatbuffers runtime library.
 
 *homepage*: <https://github.com/google/flatbuffers/>
 
-version |versionsuffix    |toolchain
---------|-----------------|----------------------------------------------------------
-``1.12``|                 |``GCCcore/10.2.0``
-``1.12``|``-Python-3.7.4``|``GCCcore/8.3.0``
-``2.0`` |                 |``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``
+version    |versionsuffix    |toolchain
+-----------|-----------------|----------------------------------------------------------
+``1.12``   |                 |``GCCcore/10.2.0``
+``1.12``   |``-Python-3.7.4``|``GCCcore/8.3.0``
+``2.0``    |                 |``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``
+``23.1.4`` |                 |``GCCcore/12.2.0``
+``23.5.26``|                 |``GCCcore/12.3.0``
 
 ### FLEUR
 
@@ -9821,14 +10058,14 @@ Flex (Fast Lexical Analyzer) is a tool for generating scanners. A scanner,  some
 *homepage*: <http://flex.sourceforge.net/>
 
 version   |toolchain
-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ``2.5.35``|``system``
 ``2.5.38``|``GCC/4.8.2``
 ``2.5.39``|``GCC/4.9.2``, ``GCC/4.9.2-binutils-2.25``, ``GCC/4.9.3``, ``GCC/4.9.3-binutils-2.25``, ``GCC/5.1.0-binutils-2.25``, ``GCCcore/4.9.2``, ``GCCcore/4.9.3``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GNU/4.9.3-2.25``, ``foss/2016a``, ``gimkl/2.11.5``, ``intel/2016.02-GCC-4.9``, ``intel/2016a``, ``intel/2016b``, ``system``
 ``2.6.0`` |``GCC/4.9.2``, ``GCCcore/4.9.3``, ``GCCcore/4.9.4``, ``GCCcore/5.3.0``, ``GCCcore/5.4.0``, ``GCCcore/6.1.0``, ``GCCcore/6.2.0``, ``foss/2016a``, ``foss/2016b``, ``gimkl/2.11.5``, ``intel/2016a``, ``intel/2016b``, ``iomkl/2016.07``, ``iomkl/2016.09-GCC-4.9.3-2.25``, ``system``
 ``2.6.2`` |``intel/2016b``
 ``2.6.3`` |``GCCcore/5.4.0``, ``GCCcore/6.3.0``, ``GCCcore/7.1.0``, ``gimkl/2017a``, ``system``
-``2.6.4`` |``FCC/4.5.0``, ``GCCcore/10.1.0``, ``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.1.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/11.4.0``, ``GCCcore/12.1.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/13.1.0``, ``GCCcore/5.5.0``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/7.4.0``, ``GCCcore/8.1.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/8.4.0``, ``GCCcore/9.1.0``, ``GCCcore/9.2.0``, ``GCCcore/9.3.0``, ``GCCcore/9.4.0``, ``GCCcore/9.5.0``, ``GCCcore/system``, ``system``
+``2.6.4`` |``FCC/4.5.0``, ``GCCcore/10.1.0``, ``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.1.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/11.4.0``, ``GCCcore/12.1.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/13.1.0``, ``GCCcore/13.2.0``, ``GCCcore/5.5.0``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/7.4.0``, ``GCCcore/8.1.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/8.4.0``, ``GCCcore/9.1.0``, ``GCCcore/9.2.0``, ``GCCcore/9.3.0``, ``GCCcore/9.4.0``, ``GCCcore/9.5.0``, ``GCCcore/system``, ``system``
 
 ### Flexbar
 
@@ -9887,6 +10124,16 @@ version  |toolchain
 ``2.8.4``|``foss/2021b``
 ``2.9.0``|``gfbf/2022a``
 
+### flit
+
+A simple packaging tool for simple packages.
+
+*homepage*: <https://github.com/pypa/flit>
+
+version  |toolchain
+---------|------------------
+``3.9.0``|``GCCcore/12.3.0``
+
 ### flook
 
 The fortran-Lua-hook library.
@@ -9920,7 +10167,7 @@ version  |toolchain
 ``1.3.5``|``GCC/8.2.0-2.31.1``, ``GCC/8.3.0``, ``GCCcore/10.2.0``, ``GCCcore/9.3.0``
 ``1.3.6``|``GCCcore/10.3.0``
 ``1.3.7``|``GCCcore/11.2.0``
-``1.3.8``|``GCCcore/11.3.0``
+``1.3.8``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``
 
 ### FLUENT
 
@@ -10298,8 +10545,8 @@ FreeImage is an Open Source library project for developers who would like to sup
 *homepage*: <http://freeimage.sourceforge.net>
 
 version   |toolchain
-----------|---------------------------------------------------------------------------------------------------------------------------------------
-``3.18.0``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/7.3.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
+----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------
+``3.18.0``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 
 ### FreeSASA
 
@@ -10334,6 +10581,10 @@ version  |versionsuffix      |toolchain
 ``7.4.0``|``-centos8_x86_64``|``system``
 ``7.4.0``|``-ubuntu20_amd64``|``system``
 ``7.4.0``|``-ubuntu22_amd64``|``system``
+``7.4.1``|``-centos7_x86_64``|``system``
+``7.4.1``|``-centos8_x86_64``|``system``
+``7.4.1``|``-ubuntu20_amd64``|``system``
+``7.4.1``|``-ubuntu22_amd64``|``system``
 
 ### FreeTDS
 
@@ -10416,7 +10667,7 @@ version   |toolchain
 ``1.0.5`` |``GCCcore/7.3.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``
 ``1.0.9`` |``GCCcore/9.3.0``
 ``1.0.10``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``
-``1.0.12``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+``1.0.12``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### FRUIT
 
@@ -10480,6 +10731,7 @@ A tiny C library for managing SOM (Self-Organizing Maps) neural networks.
 version     |toolchain
 ------------|-----------------------------------------------------------------------------
 ``20141119``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/9.3.0``
+``20151117``|``GCCcore/11.3.0``
 
 ### FSON
 
@@ -10643,7 +10895,7 @@ version|toolchain
 ## G
 
 
-[G-PhoCS](#g-phocs) - [g2clib](#g2clib) - [g2lib](#g2lib) - [g2log](#g2log) - [Gaia](#gaia) - [GAMESS-US](#gamess-us) - [gap](#gap) - [GapCloser](#gapcloser) - [GapFiller](#gapfiller) - [gappa](#gappa) - [GARLI](#garli) - [garnett](#garnett) - [GAT](#gat) - [GATB-Core](#gatb-core) - [GATE](#gate) - [GATK](#gatk) - [Gaussian](#gaussian) - [gawk](#gawk) - [gbasis](#gbasis) - [Gblocks](#gblocks) - [GBprocesS](#gbprocess) - [gbs2ploidy](#gbs2ploidy) - [gc](#gc) - [GC3Pie](#gc3pie) - [GCC](#gcc) - [GCCcore](#gcccore) - [gcccuda](#gcccuda) - [gcloud](#gcloud) - [GConf](#gconf) - [GCTA](#gcta) - [Gctf](#gctf) - [GD](#gd) - [GDAL](#gdal) - [GDB](#gdb) - [gdbgui](#gdbgui) - [gdbm](#gdbm) - [gdc-client](#gdc-client) - [GDCHART](#gdchart) - [GDCM](#gdcm) - [GDGraph](#gdgraph) - [gdist](#gdist) - [Gdk-Pixbuf](#gdk-pixbuf) - [GDRCopy](#gdrcopy) - [Geant4](#geant4) - [Geant4-data](#geant4-data) - [gearshifft](#gearshifft) - [GEGL](#gegl) - [GEM](#gem) - [GEM-library](#gem-library) - [gemelli](#gemelli) - [GEMMA](#gemma) - [gemmi](#gemmi) - [gencore_variant_detection](#gencore_variant_detection) - [GeneMark-ET](#genemark-et) - [gengetopt](#gengetopt) - [GenMap](#genmap) - [Genome_Profiler](#genome_profiler) - [GenomeMapper](#genomemapper) - [genomepy](#genomepy) - [GenomeTester4](#genometester4) - [GenomeThreader](#genomethreader) - [GenomeTools](#genometools) - [GenomeWorks](#genomeworks) - [GenotypeHarmonizer](#genotypeharmonizer) - [genozip](#genozip) - [gensim](#gensim) - [geocube](#geocube) - [geopandas](#geopandas) - [geopy](#geopy) - [georges](#georges) - [GEOS](#geos) - [Gerris](#gerris) - [GETORB](#getorb) - [GetOrganelle](#getorganelle) - [gettext](#gettext) - [gexiv2](#gexiv2) - [gfbf](#gfbf) - [GffCompare](#gffcompare) - [gffread](#gffread) - [gflags](#gflags) - [GFOLD](#gfold) - [gh](#gh) - [GHC](#ghc) - [Ghostscript](#ghostscript) - [Gibbs2](#gibbs2) - [giflib](#giflib) - [gifsicle](#gifsicle) - [GIMIC](#gimic) - [gimkl](#gimkl) - [GimmeMotifs](#gimmemotifs) - [GIMP](#gimp) - [gimpi](#gimpi) - [gimpic](#gimpic) - [GIMPS](#gimps) - [giolf](#giolf) - [giolfc](#giolfc) - [Giotto-Suite](#giotto-suite) - [git](#git) - [git-extras](#git-extras) - [git-lfs](#git-lfs) - [GitPython](#gitpython) - [Givaro](#givaro) - [Giza](#giza) - [GKeyll](#gkeyll) - [GL2PS](#gl2ps) - [Glade](#glade) - [glew](#glew) - [GLFW](#glfw) - [GLI](#gli) - [GLib](#glib) - [glib-networking](#glib-networking) - [glibc](#glibc) - [GLibmm](#glibmm) - [GLIMMER](#glimmer) - [GlimmerHMM](#glimmerhmm) - [GLIMPSE](#glimpse) - [GLM](#glm) - [GLM-AED](#glm-aed) - [GlobalArrays](#globalarrays) - [Globus-CLI](#globus-cli) - [GlobusConnectPersonal](#globusconnectpersonal) - [glog](#glog) - [GLPK](#glpk) - [glproto](#glproto) - [Glucose](#glucose) - [GMAP-GSNAP](#gmap-gsnap) - [GMP](#gmp) - [gmpich](#gmpich) - [gmpolf](#gmpolf) - [gmpy2](#gmpy2) - [gmsh](#gmsh) - [GMT](#gmt) - [gmvapich2](#gmvapich2) - [gmvolf](#gmvolf) - [GNU](#gnu) - [gnuplot](#gnuplot) - [GnuTLS](#gnutls) - [Go](#go) - [goalign](#goalign) - [GOATOOLS](#goatools) - [gobff](#gobff) - [GObject-Introspection](#gobject-introspection) - [goblf](#goblf) - [GOBNILP](#gobnilp) - [Godon](#godon) - [gofasta](#gofasta) - [golf](#golf) - [gomkl](#gomkl) - [gompi](#gompi) - [gompic](#gompic) - [google-java-format](#google-java-format) - [googletest](#googletest) - [gotree](#gotree) - [GP2C](#gp2c) - [GPAW](#gpaw) - [GPAW-setups](#gpaw-setups) - [gperf](#gperf) - [gperftools](#gperftools) - [gpustat](#gpustat) - [GPy](#gpy) - [GPyOpt](#gpyopt) - [GPyTorch](#gpytorch) - [Grace](#grace) - [Gradle](#gradle) - [gradunwarp](#gradunwarp) - [graph-tool](#graph-tool) - [GraphDB](#graphdb) - [Graphene](#graphene) - [GraphicsMagick](#graphicsmagick) - [graphite2](#graphite2) - [GraPhlAn](#graphlan) - [GraphMap](#graphmap) - [GraphMap2](#graphmap2) - [Graphviz](#graphviz) - [graphviz-python](#graphviz-python) - [GRASP](#grasp) - [GRASS](#grass) - [Greenlet](#greenlet) - [Grep](#grep) - [gretl](#gretl) - [grib_api](#grib_api) - [grid](#grid) - [GRIDSS](#gridss) - [GRIT](#grit) - [GRNBoost](#grnboost) - [groff](#groff) - [GroIMP](#groimp) - [GROMACS](#gromacs) - [GromacsWrapper](#gromacswrapper) - [Groovy](#groovy) - [gRPC](#grpc) - [GSEA](#gsea) - [gsettings-desktop-schemas](#gsettings-desktop-schemas) - [GSL](#gsl) - [gSOAP](#gsoap) - [gsport](#gsport) - [GST-plugins-bad](#gst-plugins-bad) - [GST-plugins-base](#gst-plugins-base) - [GStreamer](#gstreamer) - [gsutil](#gsutil) - [gsw](#gsw) - [GTDB-Tk](#gtdb-tk) - [GTK+](#gtk+) - [GTK2](#gtk2) - [GTK3](#gtk3) - [GTK4](#gtk4) - [GtkSourceView](#gtksourceview) - [GTOOL](#gtool) - [GTS](#gts) - [gubbins](#gubbins) - [guenomu](#guenomu) - [Guile](#guile) - [GULP](#gulp) - [Gurobi](#gurobi) - [GUSHR](#gushr) - [gzip](#gzip)
+[G-PhoCS](#g-phocs) - [g2clib](#g2clib) - [g2lib](#g2lib) - [g2log](#g2log) - [Gaia](#gaia) - [GAMESS-US](#gamess-us) - [gap](#gap) - [GapCloser](#gapcloser) - [GapFiller](#gapfiller) - [gappa](#gappa) - [GAPPadder](#gappadder) - [GARLI](#garli) - [garnett](#garnett) - [GAT](#gat) - [GATB-Core](#gatb-core) - [GATE](#gate) - [GATK](#gatk) - [Gaussian](#gaussian) - [gawk](#gawk) - [gbasis](#gbasis) - [Gblocks](#gblocks) - [GBprocesS](#gbprocess) - [gbs2ploidy](#gbs2ploidy) - [gc](#gc) - [GC3Pie](#gc3pie) - [GCC](#gcc) - [GCCcore](#gcccore) - [gcccuda](#gcccuda) - [gcloud](#gcloud) - [GConf](#gconf) - [GCTA](#gcta) - [Gctf](#gctf) - [GD](#gd) - [GDAL](#gdal) - [GDB](#gdb) - [gdbgui](#gdbgui) - [gdbm](#gdbm) - [gdc-client](#gdc-client) - [GDCHART](#gdchart) - [GDCM](#gdcm) - [GDGraph](#gdgraph) - [gdist](#gdist) - [Gdk-Pixbuf](#gdk-pixbuf) - [GDRCopy](#gdrcopy) - [Geant4](#geant4) - [Geant4-data](#geant4-data) - [gearshifft](#gearshifft) - [GEGL](#gegl) - [GEM](#gem) - [GEM-library](#gem-library) - [gemelli](#gemelli) - [GEMMA](#gemma) - [gemmi](#gemmi) - [gencore_variant_detection](#gencore_variant_detection) - [GeneMark-ET](#genemark-et) - [GenerativeModels](#generativemodels) - [gengetopt](#gengetopt) - [GenMap](#genmap) - [Genome_Profiler](#genome_profiler) - [GenomeMapper](#genomemapper) - [genomepy](#genomepy) - [GenomeTester4](#genometester4) - [GenomeThreader](#genomethreader) - [GenomeTools](#genometools) - [GenomeWorks](#genomeworks) - [GenotypeHarmonizer](#genotypeharmonizer) - [genozip](#genozip) - [gensim](#gensim) - [geocube](#geocube) - [geopandas](#geopandas) - [geopy](#geopy) - [georges](#georges) - [GEOS](#geos) - [geosphere](#geosphere) - [Gerris](#gerris) - [GETORB](#getorb) - [GetOrganelle](#getorganelle) - [gettext](#gettext) - [gexiv2](#gexiv2) - [gfbf](#gfbf) - [GffCompare](#gffcompare) - [gffread](#gffread) - [gffutils](#gffutils) - [gflags](#gflags) - [GFOLD](#gfold) - [gh](#gh) - [GHC](#ghc) - [Ghostscript](#ghostscript) - [Gibbs2](#gibbs2) - [giflib](#giflib) - [gifsicle](#gifsicle) - [GIMIC](#gimic) - [gimkl](#gimkl) - [GimmeMotifs](#gimmemotifs) - [GIMP](#gimp) - [gimpi](#gimpi) - [gimpic](#gimpic) - [GIMPS](#gimps) - [giolf](#giolf) - [giolfc](#giolfc) - [Giotto-Suite](#giotto-suite) - [git](#git) - [git-extras](#git-extras) - [git-lfs](#git-lfs) - [GitPython](#gitpython) - [Givaro](#givaro) - [Giza](#giza) - [GKeyll](#gkeyll) - [gkmSVM](#gkmsvm) - [GL2PS](#gl2ps) - [Glade](#glade) - [glew](#glew) - [GLFW](#glfw) - [GLI](#gli) - [GLib](#glib) - [glib-networking](#glib-networking) - [glibc](#glibc) - [GLibmm](#glibmm) - [GLIMMER](#glimmer) - [GlimmerHMM](#glimmerhmm) - [GLIMPSE](#glimpse) - [GLM](#glm) - [GLM-AED](#glm-aed) - [GlobalArrays](#globalarrays) - [Globus-CLI](#globus-cli) - [GlobusConnectPersonal](#globusconnectpersonal) - [glog](#glog) - [GLPK](#glpk) - [glproto](#glproto) - [Glucose](#glucose) - [GMAP-GSNAP](#gmap-gsnap) - [GMP](#gmp) - [gmpich](#gmpich) - [gmpolf](#gmpolf) - [gmpy2](#gmpy2) - [gmsh](#gmsh) - [GMT](#gmt) - [gmvapich2](#gmvapich2) - [gmvolf](#gmvolf) - [GNU](#gnu) - [gnuplot](#gnuplot) - [GnuTLS](#gnutls) - [Go](#go) - [goalign](#goalign) - [GOATOOLS](#goatools) - [gobff](#gobff) - [GObject-Introspection](#gobject-introspection) - [goblf](#goblf) - [GOBNILP](#gobnilp) - [Godon](#godon) - [gofasta](#gofasta) - [golf](#golf) - [gomkl](#gomkl) - [gompi](#gompi) - [gompic](#gompic) - [google-java-format](#google-java-format) - [googletest](#googletest) - [gotree](#gotree) - [GP2C](#gp2c) - [GPAW](#gpaw) - [GPAW-setups](#gpaw-setups) - [gperf](#gperf) - [gperftools](#gperftools) - [gpustat](#gpustat) - [GPy](#gpy) - [GPyOpt](#gpyopt) - [GPyTorch](#gpytorch) - [Grace](#grace) - [Gradle](#gradle) - [gradunwarp](#gradunwarp) - [graph-tool](#graph-tool) - [GraphDB](#graphdb) - [Graphene](#graphene) - [GraphicsMagick](#graphicsmagick) - [graphite2](#graphite2) - [GraPhlAn](#graphlan) - [GraphMap](#graphmap) - [GraphMap2](#graphmap2) - [Graphviz](#graphviz) - [graphviz-python](#graphviz-python) - [GRASP](#grasp) - [GRASS](#grass) - [Greenlet](#greenlet) - [Grep](#grep) - [gretl](#gretl) - [grib_api](#grib_api) - [grid](#grid) - [GRIDSS](#gridss) - [GRIT](#grit) - [GRNBoost](#grnboost) - [groff](#groff) - [GroIMP](#groimp) - [GROMACS](#gromacs) - [GromacsWrapper](#gromacswrapper) - [Groovy](#groovy) - [gRPC](#grpc) - [GSEA](#gsea) - [gsettings-desktop-schemas](#gsettings-desktop-schemas) - [GSL](#gsl) - [gSOAP](#gsoap) - [gsport](#gsport) - [GST-plugins-bad](#gst-plugins-bad) - [GST-plugins-base](#gst-plugins-base) - [GStreamer](#gstreamer) - [gsutil](#gsutil) - [gsw](#gsw) - [GTDB-Tk](#gtdb-tk) - [GTK+](#gtk+) - [GTK2](#gtk2) - [GTK3](#gtk3) - [GTK4](#gtk4) - [GtkSourceView](#gtksourceview) - [GTOOL](#gtool) - [GTS](#gts) - [gubbins](#gubbins) - [guenomu](#guenomu) - [Guile](#guile) - [GULP](#gulp) - [Gurobi](#gurobi) - [GUSHR](#gushr) - [gzip](#gzip)
 
 
 ### G-PhoCS
@@ -10755,6 +11007,16 @@ gappa is a collection of commands for working with phylogenetic data. Its main f
 version  |toolchain
 ---------|--------------
 ``0.7.1``|``GCC/10.3.0``
+
+### GAPPadder
+
+GAPPadder is tool for closing gaps on draft genomes with short sequencing data
+
+*homepage*: <https://github.com/simoncchu/GAPPadder>
+
+version     |versionsuffix     |toolchain
+------------|------------------|--------------
+``20170601``|``-Python-2.7.18``|``foss/2021b``
 
 ### GARLI
 
@@ -10944,6 +11206,7 @@ version   |toolchain
 ``8.0.4`` |``GCCcore/10.3.0``
 ``8.2.0`` |``GCCcore/11.2.0``
 ``8.2.2`` |``GCCcore/10.2.0``, ``GCCcore/11.3.0``
+``8.2.4`` |``GCCcore/12.3.0``
 
 ### GC3Pie
 
@@ -11029,6 +11292,7 @@ version   |versionsuffix      |toolchain
 ``12.2.0``|                   |``system``
 ``12.3.0``|                   |``system``
 ``13.1.0``|                   |``system``
+``13.2.0``|                   |``system``
 ``system``|                   |``system``
 ``system``|``-2.29``          |``system``
 
@@ -11075,6 +11339,7 @@ version   |toolchain
 ``12.2.0``|``system``
 ``12.3.0``|``system``
 ``13.1.0``|``system``
+``13.2.0``|``system``
 ``system``|``system``
 
 ### gcccuda
@@ -11111,8 +11376,8 @@ GConf is a system for storing application preferences.  It is intended for user 
 *homepage*: <https://projects.gnome.org/gconf/>
 
 version  |toolchain
----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-``3.2.6``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``foss/2016a``, ``foss/2018b``, ``intel/2016a``, ``intel/2016b``, ``intel/2017a``, ``intel/2017b``
+---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+``3.2.6``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``foss/2016a``, ``foss/2018b``, ``intel/2016a``, ``intel/2016b``, ``intel/2017a``, ``intel/2017b``
 
 ### GCTA
 
@@ -11211,6 +11476,7 @@ version   |versionsuffix     |toolchain
 ``10.2``  |``-Python-3.8.2`` |``GCCcore/9.3.0``
 ``11.1``  |                  |``GCCcore/11.2.0``
 ``12.1``  |                  |``GCCcore/11.3.0``
+``13.2``  |                  |``GCCcore/12.3.0``
 
 ### gdbgui
 
@@ -11314,7 +11580,7 @@ version    |toolchain
 ``2.40.0`` |``GCCcore/10.2.0``, ``GCCcore/9.3.0``
 ``2.42.6`` |``GCCcore/10.3.0``, ``GCCcore/11.2.0``
 ``2.42.8`` |``GCCcore/11.3.0``
-``2.42.10``|``GCCcore/12.2.0``
+``2.42.10``|``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### GDRCopy
 
@@ -11460,6 +11726,16 @@ version |toolchain
 ``4.57``|``GCCcore/8.3.0``
 ``4.65``|``GCCcore/10.2.0``
 ``4.71``|``GCCcore/11.2.0``, ``GCCcore/11.3.0``
+
+### GenerativeModels
+
+
+
+*homepage*: <https://monai.io/>
+
+version  |versionsuffix   |toolchain
+---------|----------------|--------------
+``0.2.1``|``-CUDA-11.7.0``|``foss/2022a``
 
 ### gengetopt
 
@@ -11663,6 +11939,17 @@ version   |versionsuffix     |toolchain
 ``3.9.1`` |                  |``GCC/10.2.0``, ``GCC/10.3.0``, ``GCC/11.2.0``, ``iccifort/2020.4.304``, ``intel-compilers/2021.4.0``
 ``3.10.3``|                  |``GCC/11.3.0``
 ``3.11.1``|                  |``GCC/12.2.0``
+``3.12.0``|                  |``GCC/12.3.0``
+
+### geosphere
+
+Spherical trigonometry for geographic applications.  That is, compute distances and related measures for angular (longitude/latitude) locations.
+
+*homepage*: <https://cran.r-project.org/web/packages/geosphere/index.html>
+
+version   |versionsuffix|toolchain
+----------|-------------|--------------
+``1.5-18``|``-R-4.2.1`` |``foss/2022a``
 
 ### Gerris
 
@@ -11716,6 +12003,7 @@ version     |versionsuffix     |toolchain
 ``0.20.1``  |                  |``GCCcore/8.3.0``, ``GCCcore/9.3.0``, ``system``
 ``0.21``    |                  |``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``system``
 ``0.21.1``  |                  |``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``system``
+``0.22``    |                  |``GCCcore/13.2.0``, ``system``
 
 ### gexiv2
 
@@ -11766,6 +12054,16 @@ version   |toolchain
 ``0.11.6``|``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 ``0.12.7``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/12.2.0``
 
+### gffutils
+
+Gffutils is a Python package for working with and manipulating  the GFF and GTF format files typically used for genomic annotations.
+
+*homepage*: <https://github.com/daler/gffutils>
+
+version |toolchain
+--------|--------------
+``0.12``|``foss/2022b``
+
 ### gflags
 
 The gflags package contains a C++ library that implements commandline flags processing.  It includes built-in support for standard types such as string and the ability to define flags in the source file in which they are used. 
@@ -11809,6 +12107,7 @@ version   |versionsuffix|toolchain
 ----------|-------------|----------
 ``6.12.3``|             |``system``
 ``8.6.5`` |``-x86_64``  |``system``
+``9.2.2`` |``-x86_64``  |``system``
 
 ### Ghostscript
 
@@ -11816,22 +12115,23 @@ Ghostscript is a versatile processor for PostScript data with the ability to ren
 
 *homepage*: <https://ghostscript.com>
 
-version   |versionsuffix     |toolchain
-----------|------------------|--------------------------------------------------
-``9.19``  |                  |``intel/2016a``, ``intel/2016b``
-``9.20``  |                  |``foss/2016b``, ``intel/2016b``
-``9.21``  |                  |``intel/2017a``
-``9.22``  |                  |``GCCcore/6.4.0``, ``foss/2017b``, ``intel/2017b``
-``9.22``  |``-cairo-1.14.12``|``GCCcore/6.4.0``
-``9.23``  |                  |``GCCcore/6.4.0``, ``GCCcore/7.3.0``
-``9.23``  |``-cairo-1.14.12``|``GCCcore/6.4.0``
-``9.27``  |                  |``GCCcore/8.2.0``
-``9.50``  |                  |``GCCcore/8.3.0``
-``9.52``  |                  |``GCCcore/9.3.0``
-``9.53.3``|                  |``GCCcore/10.2.0``
-``9.54.0``|                  |``GCCcore/10.3.0``, ``GCCcore/11.2.0``
-``9.56.1``|                  |``GCCcore/11.3.0``
-``10.0.0``|                  |``GCCcore/12.2.0``
+version    |versionsuffix     |toolchain
+-----------|------------------|--------------------------------------------------
+``9.19``   |                  |``intel/2016a``, ``intel/2016b``
+``9.20``   |                  |``foss/2016b``, ``intel/2016b``
+``9.21``   |                  |``intel/2017a``
+``9.22``   |                  |``GCCcore/6.4.0``, ``foss/2017b``, ``intel/2017b``
+``9.22``   |``-cairo-1.14.12``|``GCCcore/6.4.0``
+``9.23``   |                  |``GCCcore/6.4.0``, ``GCCcore/7.3.0``
+``9.23``   |``-cairo-1.14.12``|``GCCcore/6.4.0``
+``9.27``   |                  |``GCCcore/8.2.0``
+``9.50``   |                  |``GCCcore/8.3.0``
+``9.52``   |                  |``GCCcore/9.3.0``
+``9.53.3`` |                  |``GCCcore/10.2.0``
+``9.54.0`` |                  |``GCCcore/10.3.0``, ``GCCcore/11.2.0``
+``9.56.1`` |                  |``GCCcore/11.3.0``
+``10.0.0`` |                  |``GCCcore/12.2.0``
+``10.01.2``|                  |``GCCcore/12.3.0``
 
 ### Gibbs2
 
@@ -11850,9 +12150,9 @@ giflib is a library for reading and writing gif images. It is API and ABI compat
 *homepage*: <http://giflib.sourceforge.net/>
 
 version  |toolchain
----------|----------------------------------------------------------------------------------------------------------------------------------------
+---------|------------------------------------------------------------------------------------------------------------------------------------------------------------
 ``5.1.4``|``GCCcore/7.3.0``, ``GCCcore/8.2.0``
-``5.2.1``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
+``5.2.1``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 
 ### gifsicle
 
@@ -12074,6 +12374,16 @@ version     |versionsuffix    |toolchain
 ------------|-----------------|--------------
 ``20220803``|``-Python-3.8.2``|``foss/2020a``
 
+### gkmSVM
+
+Gapped-Kmer Support Vector Machine.
+
+*homepage*: <https://cran.r-project.org/web/packages/gkmSVM/index.html>
+
+version   |versionsuffix|toolchain
+----------|-------------|--------------
+``0.82.0``|``-R-4.2.1`` |``foss/2022a``
+
 ### GL2PS
 
 GL2PS: an OpenGL to PostScript printing library
@@ -12162,6 +12472,7 @@ version   |toolchain
 ``2.69.1``|``GCCcore/11.2.0``
 ``2.72.1``|``GCCcore/11.3.0``
 ``2.75.0``|``GCCcore/12.2.0``
+``2.77.1``|``GCCcore/12.3.0``
 
 ### glib-networking
 
@@ -12235,11 +12546,11 @@ OpenGL Mathematics (GLM) is a header only C++ mathematics library for graphics s
 *homepage*: <https://github.com/g-truc/glm>
 
 version    |toolchain
------------|-------------------------------------------------------------------------------------------------
+-----------|-----------------------------------------------------------------------------------------------------------------------------------------
 ``0.9.7.6``|``intel/2016a``
 ``0.9.8.3``|``GCCcore/5.4.0``, ``GCCcore/7.3.0``
 ``0.9.9.0``|``GCCcore/6.4.0``
-``0.9.9.8``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/8.3.0``
+``0.9.9.8``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/8.3.0``
 
 ### GLM-AED
 
@@ -12315,7 +12626,7 @@ version |toolchain
 ``4.60``|``GCCcore/5.4.0``, ``intel/2016b``
 ``4.61``|``intel/2017a``
 ``4.65``|``GCCcore/10.2.0``, ``GCCcore/6.4.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
-``5.0`` |``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+``5.0`` |``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### glproto
 
@@ -12403,7 +12714,7 @@ GMP/MPIR, MPFR, and MPC interface to Python 2.6+ and 3.x
 *homepage*: <https://github.com/aleaxit/gmpy>
 
 version    |versionsuffix     |toolchain
------------|------------------|----------------------------------------------------------------------
+-----------|------------------|------------------------------------------------------------------------------------------
 ``2.0.8``  |``-Python-2.7.13``|``intel/2017a``
 ``2.0.8``  |``-Python-2.7.14``|``foss/2017b``, ``intel/2017b``
 ``2.0.8``  |``-Python-3.6.3`` |``foss/2017b``, ``intel/2017b``
@@ -12411,7 +12722,8 @@ version    |versionsuffix     |toolchain
 ``2.1.0b1``|``-Python-3.6.3`` |``foss/2017b``, ``intel/2017b``
 ``2.1.0b4``|                  |``GCC/8.3.0``
 ``2.1.0b5``|                  |``GCC/10.2.0``, ``GCC/10.3.0``, ``GCC/9.3.0``, ``iccifort/2020.4.304``
-``2.1.2``  |                  |``GCC/11.2.0``, ``GCC/11.3.0``, ``intel-compilers/2022.1.0``
+``2.1.2``  |                  |``GCC/11.2.0``, ``GCC/11.3.0``, ``intel-compilers/2021.4.0``, ``intel-compilers/2022.1.0``
+``2.1.5``  |                  |``GCC/12.3.0``
 
 ### gmsh
 
@@ -12498,6 +12810,7 @@ version  |toolchain
 ``5.4.2``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``
 ``5.4.4``|``GCCcore/11.3.0``
 ``5.4.6``|``GCCcore/12.2.0``
+``5.4.8``|``GCCcore/12.3.0``
 
 ### GnuTLS
 
@@ -12601,6 +12914,7 @@ version   |versionsuffix     |toolchain
 ``1.68.0``|                  |``GCCcore/10.3.0``, ``GCCcore/11.2.0``
 ``1.72.0``|                  |``GCCcore/11.3.0``
 ``1.74.0``|                  |``GCCcore/12.2.0``
+``1.76.1``|                  |``GCCcore/12.3.0``
 
 ### goblf
 
@@ -12820,6 +13134,7 @@ version   |toolchain
 ``2.8``   |``GCCcore/9.3.0``
 ``2.9.1`` |``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``
 ``2.10``  |``GCCcore/11.3.0``
+``2.12``  |``GCCcore/12.3.0``
 
 ### gpustat
 
@@ -12929,9 +13244,9 @@ Graphene is a a thin layer of types for graphic libraries
 *homepage*: <https://ebassi.github.io/graphene/>
 
 version   |toolchain
-----------|--------------------------------------
+----------|----------------------------------------------------------
 ``1.6.0`` |``intel/2017a``
-``1.10.8``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+``1.10.8``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### GraphicsMagick
 
@@ -12995,7 +13310,7 @@ Graphviz is open source graph visualization software. Graph visualization  is a 
 *homepage*: <https://www.graphviz.org/>
 
 version   |versionsuffix            |toolchain
-----------|-------------------------|-------------------------------
+----------|-------------------------|--------------------------------------
 ``2.38.0``|                         |``foss/2016b``, ``intel/2016b``
 ``2.40.1``|                         |``foss/2018b``, ``intel/2018a``
 ``2.40.1``|``-Python-2.7.15``       |``foss/2018b``
@@ -13008,6 +13323,7 @@ version   |versionsuffix            |toolchain
 ``2.47.2``|                         |``GCCcore/10.3.0``
 ``2.50.0``|                         |``GCCcore/11.2.0``
 ``5.0.0`` |                         |``GCCcore/11.3.0``
+``8.1.0`` |                         |``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### graphviz-python
 
@@ -13016,11 +13332,11 @@ Simple Python interface for Graphviz
 *homepage*: <https://pypi.python.org/pypi/graphviz>
 
 version   |versionsuffix     |toolchain
-----------|------------------|-------------------------------
+----------|------------------|--------------------------------------
 ``0.5.1`` |``-Python-2.7.12``|``foss/2016b``, ``intel/2016b``
 ``0.5.1`` |``-Python-3.5.2`` |``intel/2016b``
 ``0.8.2`` |``-Python-3.6.4`` |``intel/2018a``
-``0.20.1``|                  |``GCCcore/11.3.0``
+``0.20.1``|                  |``GCCcore/11.3.0``, ``GCCcore/12.3.0``
 
 ### GRASP
 
@@ -13051,12 +13367,12 @@ The greenlet package is a spin-off of Stackless, a version of CPython that suppo
 *homepage*: <https://github.com/python-greenlet/greenlet>
 
 version   |versionsuffix     |toolchain
-----------|------------------|---------------
+----------|------------------|------------------------------
 ``0.4.9`` |``-Python-2.7.11``|``intel/2016a``
 ``0.4.9`` |``-Python-3.5.1`` |``intel/2016a``
 ``0.4.11``|``-Python-2.7.12``|``intel/2016b``
 ``0.4.12``|``-Python-2.7.14``|``intel/2017b``
-``2.0.2`` |                  |``foss/2022a``
+``2.0.2`` |                  |``foss/2022a``, ``foss/2022b``
 
 ### Grep
 
@@ -13230,6 +13546,7 @@ gRPC is a modern, open source, high-performance remote procedure call (RPC) fram
 version   |toolchain
 ----------|------------------
 ``1.44.0``|``GCCcore/11.2.0``
+``1.57.0``|``GCCcore/12.3.0``
 
 ### GSEA
 
@@ -13258,7 +13575,7 @@ The GNU Scientific Library (GSL) is a numerical library for C and C++ programmer
 *homepage*: <https://www.gnu.org/software/gsl/>
 
 version  |toolchain
----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------|------------------------------------------------------------------------------------------------------------------------------------------
 ``1.16`` |``foss/2016a``, ``intel/2016a``
 ``2.1``  |``GCC/5.4.0-2.26``, ``foss/2016a``, ``foss/2016b``, ``iccifort/2016.3.210-GCC-5.4.0-2.26``, ``intel/2016a``, ``intel/2016b``
 ``2.2.1``|``intel/2016a``, ``intel/2016b``
@@ -13266,7 +13583,7 @@ version  |toolchain
 ``2.4``  |``GCCcore/6.4.0``
 ``2.5``  |``GCC/7.3.0-2.30``, ``GCC/8.2.0-2.31.1``, ``iccifort/2018.3.222-GCC-7.3.0-2.30``, ``iccifort/2019.1.144-GCC-8.2.0-2.31.1``
 ``2.6``  |``GCC/10.2.0``, ``GCC/8.3.0``, ``GCC/9.3.0``, ``iccifort/2019.5.281``, ``iccifort/2020.1.217``, ``iccifort/2020.4.304``
-``2.7``  |``GCC/10.3.0``, ``GCC/11.2.0``, ``GCC/11.3.0``, ``GCC/12.2.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``intel-compilers/2021.2.0``, ``intel-compilers/2021.4.0``
+``2.7``  |``GCC/10.3.0``, ``GCC/11.2.0``, ``GCC/11.3.0``, ``GCC/12.2.0``, ``GCC/12.3.0``, ``intel-compilers/2021.2.0``, ``intel-compilers/2021.4.0``
 
 ### gSOAP
 
@@ -13298,6 +13615,7 @@ GStreamer is a library for constructing graphs of media-handling  components. Th
 version   |toolchain
 ----------|--------------
 ``1.20.2``|``GCC/11.3.0``
+``1.22.5``|``GCC/12.2.0``
 
 ### GST-plugins-base
 
@@ -13315,7 +13633,8 @@ version    |toolchain
 ``1.18.4`` |``GCC/10.2.0``, ``GCC/10.3.0``
 ``1.18.5`` |``GCC/11.2.0``
 ``1.20.2`` |``GCC/11.3.0``
-``1.22.1`` |``GCCcore/12.2.0``
+``1.22.1`` |``GCC/12.2.0``
+``1.22.5`` |``GCC/12.3.0``
 
 ### GStreamer
 
@@ -13334,7 +13653,8 @@ version    |toolchain
 ``1.18.4`` |``GCC/10.2.0``, ``GCC/10.3.0``
 ``1.18.5`` |``GCC/11.2.0``
 ``1.20.2`` |``GCC/11.3.0``
-``1.22.1`` |``GCCcore/12.2.0``
+``1.22.1`` |``GCC/12.2.0``
+``1.22.5`` |``GCC/12.3.0``
 
 ### gsutil
 
@@ -13414,6 +13734,7 @@ version    |toolchain
 ``3.24.31``|``GCCcore/11.2.0``
 ``3.24.33``|``GCCcore/11.3.0``
 ``3.24.35``|``GCCcore/12.2.0``
+``3.24.37``|``GCCcore/12.3.0``
 
 ### GTK4
 
@@ -13421,9 +13742,10 @@ GTK+ is the primary library used to construct user interfaces in GNOME. It  prov
 
 *homepage*: <https://docs.gtk.org/gtk4/>
 
-version  |toolchain
----------|--------------
-``4.7.0``|``GCC/11.3.0``
+version   |toolchain
+----------|--------------
+``4.7.0`` |``GCC/11.3.0``
+``4.11.3``|``GCC/12.2.0``
 
 ### GtkSourceView
 
@@ -13453,8 +13775,8 @@ GTS stands for the GNU Triangulated Surface Library.  It is an Open Source Free 
 *homepage*: <http://gts.sourceforge.net/>
 
 version     |toolchain
-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-``0.7.6``   |``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``, ``foss/2016a``, ``foss/2016b``, ``foss/2018b``, ``foss/2019b``, ``foss/2020a``, ``intel/2016a``, ``intel/2016b``, ``intel/2018a``
+------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+``0.7.6``   |``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``, ``foss/2016a``, ``foss/2016b``, ``foss/2018b``, ``foss/2019b``, ``foss/2020a``, ``intel/2016a``, ``intel/2016b``, ``intel/2018a``
 ``20121130``|``foss/2017b``
 
 ### gubbins
@@ -13492,7 +13814,7 @@ version   |toolchain
 ``2.2.7`` |``GCCcore/10.3.0``
 ``3.0.7`` |``GCCcore/11.2.0``
 ``3.0.8`` |``GCCcore/11.3.0``
-``3.0.9`` |``GCCcore/10.2.0``
+``3.0.9`` |``GCCcore/10.2.0``, ``GCCcore/12.3.0``
 
 ### GULP
 
@@ -13558,7 +13880,7 @@ version |toolchain
 ## H
 
 
-[h4toh5](#h4toh5) - [H5hut](#h5hut) - [h5netcdf](#h5netcdf) - [h5py](#h5py) - [Hadoop](#hadoop) - [HAL](#hal) - [hanythingondemand](#hanythingondemand) - [HAPGEN2](#hapgen2) - [HarfBuzz](#harfbuzz) - [Harminv](#harminv) - [harmony](#harmony) - [HBase](#hbase) - [HD-BET](#hd-bet) - [HDBSCAN](#hdbscan) - [HDDM](#hddm) - [HDF](#hdf) - [HDF-EOS](#hdf-eos) - [HDF-EOS5](#hdf-eos5) - [HDF5](#hdf5) - [hdf5storage](#hdf5storage) - [HDFView](#hdfview) - [HEALPix](#healpix) - [Health-GPS](#health-gps) - [heaptrack](#heaptrack) - [hector](#hector) - [HeFFTe](#heffte) - [Hello](#hello) - [help2man](#help2man) - [HepMC3](#hepmc3) - [HH-suite](#hh-suite) - [HiC-Pro](#hic-pro) - [HiCExplorer](#hicexplorer) - [HiCMatrix](#hicmatrix) - [hierfstat](#hierfstat) - [hifiasm](#hifiasm) - [HighFive](#highfive) - [Highway](#highway) - [HIP](#hip) - [hipify-clang](#hipify-clang) - [HIPS](#hips) - [hipSYCL](#hipsycl) - [hiredis](#hiredis) - [HISAT2](#hisat2) - [histolab](#histolab) - [hivtrace](#hivtrace) - [hl7apy](#hl7apy) - [HLAminer](#hlaminer) - [HMMER](#hmmer) - [HMMER2](#hmmer2) - [hmmlearn](#hmmlearn) - [HOME](#home) - [HOOMD-blue](#hoomd-blue) - [Horovod](#horovod) - [horton](#horton) - [how_are_we_stranded_here](#how_are_we_stranded_here) - [HPCG](#hpcg) - [HPCX](#hpcx) - [HPDBSCAN](#hpdbscan) - [HPL](#hpl) - [htop](#htop) - [HTSeq](#htseq) - [HTSlib](#htslib) - [HTSplotter](#htsplotter) - [hub](#hub) - [humann](#humann) - [hunspell](#hunspell) - [hwloc](#hwloc) - [Hydra](#hydra) - [Hyperopt](#hyperopt) - [HyperQueue](#hyperqueue) - [hyperspy](#hyperspy) - [HyPhy](#hyphy) - [HyPo](#hypo) - [hypothesis](#hypothesis) - [Hypre](#hypre)
+[h4toh5](#h4toh5) - [H5hut](#h5hut) - [h5netcdf](#h5netcdf) - [h5py](#h5py) - [Hadoop](#hadoop) - [HAL](#hal) - [hampel](#hampel) - [hanythingondemand](#hanythingondemand) - [HAPGEN2](#hapgen2) - [HarfBuzz](#harfbuzz) - [Harminv](#harminv) - [harmony](#harmony) - [hatchling](#hatchling) - [HBase](#hbase) - [HD-BET](#hd-bet) - [HDBSCAN](#hdbscan) - [HDDM](#hddm) - [HDF](#hdf) - [HDF-EOS](#hdf-eos) - [HDF-EOS2](#hdf-eos2) - [HDF-EOS5](#hdf-eos5) - [HDF5](#hdf5) - [hdf5storage](#hdf5storage) - [HDFView](#hdfview) - [HEALPix](#healpix) - [Health-GPS](#health-gps) - [heaptrack](#heaptrack) - [hector](#hector) - [HeFFTe](#heffte) - [Hello](#hello) - [help2man](#help2man) - [HepMC3](#hepmc3) - [HH-suite](#hh-suite) - [HiC-Pro](#hic-pro) - [HiCExplorer](#hicexplorer) - [HiCMatrix](#hicmatrix) - [hierfstat](#hierfstat) - [hifiasm](#hifiasm) - [HighFive](#highfive) - [Highway](#highway) - [HIP](#hip) - [hipify-clang](#hipify-clang) - [HIPS](#hips) - [hipSYCL](#hipsycl) - [hiredis](#hiredis) - [HISAT2](#hisat2) - [histolab](#histolab) - [hivtrace](#hivtrace) - [hl7apy](#hl7apy) - [HLAminer](#hlaminer) - [HMMER](#hmmer) - [HMMER2](#hmmer2) - [hmmlearn](#hmmlearn) - [HOME](#home) - [HOOMD-blue](#hoomd-blue) - [Horovod](#horovod) - [horton](#horton) - [how_are_we_stranded_here](#how_are_we_stranded_here) - [HPCG](#hpcg) - [HPCX](#hpcx) - [HPDBSCAN](#hpdbscan) - [HPL](#hpl) - [htop](#htop) - [HTSeq](#htseq) - [HTSlib](#htslib) - [HTSplotter](#htsplotter) - [hub](#hub) - [humann](#humann) - [hunspell](#hunspell) - [hwloc](#hwloc) - [Hybpiper](#hybpiper) - [Hydra](#hydra) - [Hyperopt](#hyperopt) - [HyperQueue](#hyperqueue) - [hyperspy](#hyperspy) - [HyPhy](#hyphy) - [HyPo](#hypo) - [hypothesis](#hypothesis) - [Hypre](#hypre)
 
 
 ### h4toh5
@@ -13571,6 +13893,7 @@ version  |versionsuffix           |toolchain
 ---------|------------------------|------------------------------------------------
 ``2.2.2``|``-linux-x86_64-static``|``system``
 ``2.2.3``|                        |``foss/2018b``, ``gompi/2019b``, ``gompi/2020b``
+``2.2.5``|                        |``gompi/2022a``
 
 ### H5hut
 
@@ -13591,6 +13914,7 @@ A Python interface for the netCDF4 file-format that reads and writes local or re
 version  |toolchain
 ---------|--------------
 ``1.1.0``|``foss/2021b``
+``1.2.0``|``foss/2022a``
 
 ### h5py
 
@@ -13637,6 +13961,7 @@ version   |versionsuffix                        |toolchain
 ``3.6.0`` |                                     |``foss/2021b``, ``intel/2021b``
 ``3.7.0`` |                                     |``foss/2022a``, ``intel/2022a``
 ``3.8.0`` |                                     |``foss/2022b``
+``3.9.0`` |                                     |``foss/2023a``
 
 ### Hadoop
 
@@ -13665,6 +13990,16 @@ HAL is a structure to efficiently store and index multiple genome alignments and
 version|toolchain
 -------|--------------
 ``2.1``|``foss/2020b``
+
+### hampel
+
+The Hampel filter is generally used to detect anomalies in data with a timeseries  structure. It basically consists of a sliding window of a parameterizable size. For each  window, each observation will be compared with the Median Absolute Deviation (MAD). The  observation will be considered an outlier in the case in which it exceeds the MAD by n  times (the parameter n is also parameterizable). 
+
+*homepage*: <https://github.com/MichaelisTrofficus/hampel_filter>
+
+version  |toolchain
+---------|--------------
+``0.0.5``|``foss/2022a``
 
 ### hanythingondemand
 
@@ -13726,7 +14061,7 @@ version  |toolchain
 ``2.8.1``|``GCCcore/10.3.0``
 ``2.8.2``|``GCCcore/11.2.0``
 ``4.2.1``|``GCCcore/11.3.0``
-``5.3.1``|``GCCcore/12.2.0``
+``5.3.1``|``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### Harminv
 
@@ -13749,6 +14084,16 @@ Harmony is a general-purpose R package with an efficient algorithm for integrati
 version           |versionsuffix|toolchain
 ------------------|-------------|--------------
 ``1.0.0-20200224``|``-R-4.0.0`` |``foss/2020a``
+
+### hatchling
+
+Extensible, standards compliant build backend used by Hatch, a modern, extensible Python project manager.
+
+*homepage*: <https://hatch.pypa.io>
+
+version   |toolchain
+----------|------------------
+``1.18.0``|``GCCcore/12.3.0``
 
 ### HBase
 
@@ -13820,6 +14165,16 @@ version |toolchain
 --------|--------------------------------------------------------
 ``2.20``|``GCCcore/10.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.3.0``
 
+### HDF-EOS2
+
+HDF-EOS libraries are software libraries built on HDF libraries.  It supports three data structures for remote sensing data: Grid, Point and Swath.
+
+*homepage*: <https://hdfeos.org/>
+
+version|toolchain
+-------|------------------
+``3.0``|``GCCcore/11.3.0``
+
 ### HDF-EOS5
 
 HDF-EOS libraries are software libraries built on HDF libraries.  It supports three data structures for remote sensing data: Grid, Point and Swath.
@@ -13864,7 +14219,7 @@ version          |versionsuffix|toolchain
 ``1.12.2``       |``-serial``  |``GCC/11.3.0``, ``NVHPC/22.7-CUDA-11.7.0``
 ``1.13.1``       |             |``gompi/2022a``, ``iimpi/2022a``
 ``1.13.1``       |``-serial``  |``GCC/11.3.0``
-``1.14.0``       |             |``gompi/2022b``, ``iimpi/2022b``
+``1.14.0``       |             |``gompi/2022b``, ``gompi/2023a``, ``iimpi/2022b``, ``iimpi/2023a``
 
 ### hdf5storage
 
@@ -13967,7 +14322,7 @@ version    |toolchain
 ``1.47.16``|``GCCcore/10.2.0``
 ``1.48.3`` |``FCC/4.5.0``, ``GCCcore/10.3.0``, ``GCCcore/11.1.0``, ``GCCcore/11.2.0``, ``GCCcore/9.4.0``
 ``1.49.2`` |``GCCcore/11.3.0``, ``GCCcore/12.1.0``, ``GCCcore/12.2.0``, ``GCCcore/9.5.0``
-``1.49.3`` |``GCCcore/11.4.0``, ``GCCcore/12.3.0``, ``GCCcore/13.1.0``
+``1.49.3`` |``GCCcore/11.4.0``, ``GCCcore/12.3.0``, ``GCCcore/13.1.0``, ``GCCcore/13.2.0``
 
 ### HepMC3
 
@@ -14116,6 +14471,7 @@ Hiredis is a minimalistic C client library for the Redis database.  It is minima
 version  |toolchain
 ---------|--------------------------------------
 ``1.0.2``|``GCCcore/11.2.0``, ``GCCcore/11.3.0``
+``1.2.0``|``GCCcore/12.3.0``
 
 ### HISAT2
 
@@ -14222,9 +14578,10 @@ HOOMD-blue is a general-purpose particle simulation toolkit, implementing molecu
 
 *homepage*: <https://bitbucket.org/glotzer/hoomd-blue>
 
-version  |toolchain
----------|--------------
-``4.0.1``|``foss/2022a``
+version  |versionsuffix   |toolchain
+---------|----------------|--------------
+``4.0.1``|                |``foss/2022a``
+``4.0.1``|``-CUDA-11.7.0``|``foss/2022a``
 
 ### Horovod
 
@@ -14248,12 +14605,23 @@ version   |versionsuffix                      |toolchain
 ``0.21.3``|``-PyTorch-1.7.1``                 |``fosscuda/2020b``
 ``0.21.3``|``-TensorFlow-2.3.1-Python-3.8.2`` |``foss/2020a``, ``fosscuda/2020a``
 ``0.22.0``|``-PyTorch-1.8.1``                 |``fosscuda/2020b``
+``0.22.1``|``-CUDA-11.3.1-TensorFlow-2.5.3``  |``foss/2021a``
 ``0.22.1``|``-CUDA-11.3.1-TensorFlow-2.6.0``  |``foss/2021a``
 ``0.22.1``|``-TensorFlow-2.5.0``              |``fosscuda/2020b``
 ``0.22.1``|``-TensorFlow-2.5.0-Python-3.7.4`` |``fosscuda/2019b``
 ``0.23.0``|``-CUDA-11.3.1-PyTorch-1.10.0``    |``foss/2021a``
 ``0.23.0``|``-TensorFlow-2.5.0``              |``fosscuda/2020b``
 ``0.25.0``|``-CUDA-11.3.1-PyTorch-1.10.0``    |``foss/2021a``
+``0.28.1``|``-CUDA-11.3.1-PyTorch-1.11.0``    |``foss/2021a``
+``0.28.1``|``-CUDA-11.3.1-PyTorch-1.12.1``    |``foss/2021a``
+``0.28.1``|``-CUDA-11.4.1-TensorFlow-2.7.1``  |``foss/2021b``
+``0.28.1``|``-CUDA-11.4.1-TensorFlow-2.8.4``  |``foss/2021b``
+``0.28.1``|``-CUDA-11.5.2-PyTorch-1.12.1``    |``foss/2021b``
+``0.28.1``|``-CUDA-11.7.0-PyTorch-1.12.0``    |``foss/2022a``
+``0.28.1``|``-CUDA-11.7.0-PyTorch-1.12.1``    |``foss/2022a``
+``0.28.1``|``-CUDA-11.7.0-TensorFlow-2.11.0`` |``foss/2022a``
+``0.28.1``|``-CUDA-11.7.0-TensorFlow-2.9.1``  |``foss/2022a``
+``0.28.1``|``-PyTorch-1.9.0``                 |``fosscuda/2020b``
 
 ### horton
 
@@ -14315,10 +14683,10 @@ HPL is a software package that solves a (random) dense linear system in double p
 *homepage*: <https://www.netlib.org/benchmark/hpl/>
 
 version|toolchain
--------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ``2.1``|``foss/2016.04``, ``foss/2016.06``, ``foss/2016a``, ``foss/2016b``, ``gimkl/2.11.5``, ``gmpolf/2016a``, ``gmvolf/1.7.20``, ``gmvolf/2016a``, ``intel/2016.00``, ``intel/2016.01``, ``intel/2016.02-GCC-4.9``, ``intel/2016.02-GCC-5.3``, ``intel/2016.03-GCC-4.9``, ``intel/2016.03-GCC-5.3``, ``intel/2016.03-GCC-5.4``, ``intel/2016a``, ``intel/2016b``, ``iomkl/2016.07``, ``pomkl/2016.03``, ``pomkl/2016.04``, ``pomkl/2016.09``
 ``2.2``|``foss/2016.07``, ``foss/2016.09``, ``foss/2017a``, ``foss/2017b``, ``foss/2018.08``, ``foss/2018a``, ``foss/2018b``, ``fosscuda/2017b``, ``fosscuda/2018a``, ``fosscuda/2018b``, ``gimkl/2018b``, ``giolf/2017b``, ``giolf/2018a``, ``giolfc/2017b``, ``gmpolf/2017.10``, ``goblf/2018b``, ``gomkl/2018b``, ``intel/2017.00``, ``intel/2017.01``, ``intel/2017.02``, ``intel/2017.09``, ``intel/2017a``, ``intel/2017b``, ``intel/2018.00``, ``intel/2018.01``, ``intel/2018.02``, ``intel/2018.04``, ``intel/2018a``, ``intel/2018b``, ``intel/2019.00``, ``intel/2019.01``, ``intelcuda/2016.10``, ``intelcuda/2017b``, ``iomkl/2016.09-GCC-4.9.3-2.25``, ``iomkl/2016.09-GCC-5.4.0-2.26``, ``iomkl/2017.01``, ``iomkl/2017a``, ``iomkl/2017b``, ``iomkl/2018.02``, ``iomkl/2018a``, ``iomkl/2018b``, ``pomkl/2016.09``
-``2.3``|``CrayCCE/19.06``, ``CrayGNU/19.06``, ``CrayIntel/19.06``, ``Fujitsu/21.05``, ``foss/2019a``, ``foss/2019b``, ``foss/2020a``, ``foss/2020b``, ``foss/2021a``, ``foss/2021b``, ``foss/2022.05``, ``foss/2022.10``, ``foss/2022a``, ``foss/2022b``, ``foss/2023a``, ``fosscuda/2019b``, ``fosscuda/2020a``, ``gobff/2020.06-amd``, ``gobff/2020.11``, ``gobff/2020b``, ``gobff/2021a``, ``goblf/2020b``, ``gomkl/2019a``, ``gomkl/2020b``, ``gomkl/2021a``, ``gomkl/2022a``, ``iibff/2020b``, ``intel/2019.02``, ``intel/2019.03``, ``intel/2019a``, ``intel/2019b``, ``intel/2020.00``, ``intel/2020.06-impi-18.5``, ``intel/2020.12``, ``intel/2020a``, ``intel/2020b``, ``intel/2021a``, ``intel/2021b``, ``intel/2022.00``, ``intel/2022.09``, ``intel/2022.11``, ``intel/2022.12``, ``intel/2022b``, ``intel/2023.03``, ``intel/2023a``, ``intelcuda/2019b``, ``intelcuda/2020a``, ``iomkl/2019.01``, ``iomkl/2021a``, ``iomkl/2021b``
+``2.3``|``CrayCCE/19.06``, ``CrayGNU/19.06``, ``CrayIntel/19.06``, ``Fujitsu/21.05``, ``foss/2019a``, ``foss/2019b``, ``foss/2020a``, ``foss/2020b``, ``foss/2021a``, ``foss/2021b``, ``foss/2022.05``, ``foss/2022.10``, ``foss/2022a``, ``foss/2022b``, ``foss/2023a``, ``fosscuda/2019b``, ``fosscuda/2020a``, ``gobff/2020.06-amd``, ``gobff/2020.11``, ``gobff/2020b``, ``gobff/2021a``, ``goblf/2020b``, ``gomkl/2019a``, ``gomkl/2020b``, ``gomkl/2021a``, ``gomkl/2022a``, ``iibff/2020b``, ``intel/2019.02``, ``intel/2019.03``, ``intel/2019a``, ``intel/2019b``, ``intel/2020.00``, ``intel/2020.06-impi-18.5``, ``intel/2020.12``, ``intel/2020a``, ``intel/2020b``, ``intel/2021a``, ``intel/2021b``, ``intel/2022.00``, ``intel/2022.09``, ``intel/2022.11``, ``intel/2022.12``, ``intel/2022a``, ``intel/2022b``, ``intel/2023.03``, ``intel/2023a``, ``intelcuda/2019b``, ``intelcuda/2020a``, ``iomkl/2019.01``, ``iomkl/2021a``, ``iomkl/2021b``
 
 ### htop
 
@@ -14327,10 +14695,11 @@ An interactive process viewer for Unix
 *homepage*: <https://htop.dev>
 
 version  |toolchain
----------|----------
+---------|------------------
 ``2.0.0``|``system``
 ``2.0.1``|``system``
 ``3.2.1``|``system``
+``3.2.2``|``GCCcore/11.3.0``
 
 ### HTSeq
 
@@ -14378,6 +14747,7 @@ version     |versionsuffix|toolchain
 ``1.14``    |             |``GCC/11.2.0``
 ``1.15.1``  |             |``GCC/11.3.0``
 ``1.17``    |             |``GCC/12.2.0``
+``1.18``    |             |``GCC/12.3.0``
 ``20160107``|``-PacBio``  |``intel/2017a``
 
 ### HTSplotter
@@ -14457,16 +14827,28 @@ version    |toolchain
 ``2.7.1``  |``GCCcore/11.3.0``
 ``2.8.0``  |``GCCcore/12.2.0``
 ``2.9.1``  |``GCCcore/12.3.0``
+``2.9.2``  |``GCCcore/13.2.0``
+
+### Hybpiper
+
+HybPiper was designed for targeted sequence capture,  in which DNA sequencing libraries are enriched for gene regions of interest,  especially for phylogenetics. HybPiper is a suite of Python scripts/modules  that wrap and connect bioinformatics tools in order to extract target  sequences from high-throughput DNA sequencing reads.
+
+*homepage*: <https://github.com/mossmatters/HybPiper>
+
+version  |toolchain
+---------|--------------
+``2.1.6``|``foss/2022b``
 
 ### Hydra
 
-Hydra is an open-source Python framework that simplifies the development of research and other complex applications. The key feature is the ability to dynamically create a hierarchical configuration by composition and override it through config files and the command line. The name Hydra comes from its ability to run multiple similar jobs - much like a Hydra with multiple heads.
+Hydra is an open-source Python framework that simplifies the development of research and other complex applications. The key feature is the ability to dynamically create a hierarchical configuration by composition and override it through config files and the command line. The name Hydra comes from its ability to run multiple similar jobs - much like a Hydra with multiple heads. 
 
 *homepage*: <https://hydra.cc/>
 
 version  |toolchain
 ---------|------------------
 ``1.1.1``|``GCCcore/10.3.0``
+``1.3.2``|``GCCcore/11.3.0``
 
 ### Hyperopt
 
@@ -14546,6 +14928,7 @@ version   |versionsuffix     |toolchain
 ``6.14.6``|                  |``GCCcore/11.2.0``
 ``6.46.7``|                  |``GCCcore/11.3.0``
 ``6.68.2``|                  |``GCCcore/12.2.0``
+``6.82.0``|                  |``GCCcore/12.3.0``
 
 ### Hypre
 
@@ -14564,11 +14947,12 @@ version   |toolchain
 ``2.24.0``|``intel/2021b``
 ``2.25.0``|``foss/2022a``
 ``2.27.0``|``foss/2022b``
+``2.29.0``|``foss/2023a``
 
 ## I
 
 
-[i-cisTarget](#i-cistarget) - [i-PI](#i-pi) - [I-TASSER](#i-tasser) - [i7z](#i7z) - [ICA-AROMA](#ica-aroma) - [icc](#icc) - [iccifort](#iccifort) - [iccifortcuda](#iccifortcuda) - [ichorCNA](#ichorcna) - [icmake](#icmake) - [iCount](#icount) - [ICU](#icu) - [IDBA-UD](#idba-ud) - [idemux](#idemux) - [ieeg-cli](#ieeg-cli) - [ifort](#ifort) - [IgBLAST](#igblast) - [IGMPlot](#igmplot) - [igraph](#igraph) - [IGV](#igv) - [igv-reports](#igv-reports) - [IGVTools](#igvtools) - [iibff](#iibff) - [iimkl](#iimkl) - [iimpi](#iimpi) - [iimpic](#iimpic) - [IJulia](#ijulia) - [ILAMB](#ilamb) - [IMa2](#ima2) - [IMa2p](#ima2p) - [imagecodecs](#imagecodecs) - [imageio](#imageio) - [ImageJ](#imagej) - [ImageMagick](#imagemagick) - [imake](#imake) - [Imath](#imath) - [IMB](#imb) - [imbalanced-learn](#imbalanced-learn) - [imgaug](#imgaug) - [imkl](#imkl) - [imkl-FFTW](#imkl-fftw) - [Imlib2](#imlib2) - [immunedeconv](#immunedeconv) - [IMOD](#imod) - [impi](#impi) - [IMPUTE2](#impute2) - [InChI](#inchi) - [indicators](#indicators) - [Inelastica](#inelastica) - [inferCNV](#infercnv) - [infercnvpy](#infercnvpy) - [Inferelator](#inferelator) - [Infernal](#infernal) - [Infomap](#infomap) - [inline](#inline) - [InParanoid](#inparanoid) - [inputproto](#inputproto) - [Inspector](#inspector) - [IntaRNA](#intarna) - [INTEGRATE](#integrate) - [INTEGRATE-Neo](#integrate-neo) - [intel](#intel) - [intel-compilers](#intel-compilers) - [IntelClusterChecker](#intelclusterchecker) - [intelcuda](#intelcuda) - [IntelDAAL](#inteldaal) - [IntelPython](#intelpython) - [InterProScan](#interproscan) - [InterProScan_data](#interproscan_data) - [intervaltree](#intervaltree) - [intervaltree-python](#intervaltree-python) - [intltool](#intltool) - [io_lib](#io_lib) - [ioapi](#ioapi) - [iodata](#iodata) - [iomkl](#iomkl) - [iompi](#iompi) - [IOR](#ior) - [IOzone](#iozone) - [IPM](#ipm) - [Ipopt](#ipopt) - [ipp](#ipp) - [IPy](#ipy) - [ipympl](#ipympl) - [ipyparallel](#ipyparallel) - [ipyrad](#ipyrad) - [IPython](#ipython) - [IQ-TREE](#iq-tree) - [Iris](#iris) - [IRkernel](#irkernel) - [irodsfs](#irodsfs) - [IronPython](#ironpython) - [ISA-L](#isa-l) - [ISL](#isl) - [isoCirc](#isocirc) - [IsoNet](#isonet) - [IsoSeq](#isoseq) - [ispc](#ispc) - [itac](#itac) - [ITK](#itk) - [itpp](#itpp) - [ITSTool](#itstool) - [ITSx](#itsx) - [iVar](#ivar)
+[i-cisTarget](#i-cistarget) - [i-PI](#i-pi) - [I-TASSER](#i-tasser) - [i7z](#i7z) - [ICA-AROMA](#ica-aroma) - [icc](#icc) - [iccifort](#iccifort) - [iccifortcuda](#iccifortcuda) - [ichorCNA](#ichorcna) - [icmake](#icmake) - [iCount](#icount) - [ICU](#icu) - [IDBA-UD](#idba-ud) - [idemux](#idemux) - [ieeg-cli](#ieeg-cli) - [ifort](#ifort) - [IgBLAST](#igblast) - [IGMPlot](#igmplot) - [igraph](#igraph) - [IGV](#igv) - [igv-reports](#igv-reports) - [IGVTools](#igvtools) - [iibff](#iibff) - [iimkl](#iimkl) - [iimpi](#iimpi) - [iimpic](#iimpic) - [IJulia](#ijulia) - [ILAMB](#ilamb) - [IMa2](#ima2) - [IMa2p](#ima2p) - [imagecodecs](#imagecodecs) - [imageio](#imageio) - [ImageJ](#imagej) - [ImageMagick](#imagemagick) - [imake](#imake) - [Imath](#imath) - [IMB](#imb) - [imbalanced-learn](#imbalanced-learn) - [imgaug](#imgaug) - [imkl](#imkl) - [imkl-FFTW](#imkl-fftw) - [Imlib2](#imlib2) - [immunedeconv](#immunedeconv) - [IMOD](#imod) - [impi](#impi) - [IMPUTE2](#impute2) - [InChI](#inchi) - [indicators](#indicators) - [Inelastica](#inelastica) - [inferCNV](#infercnv) - [infercnvpy](#infercnvpy) - [Inferelator](#inferelator) - [Infernal](#infernal) - [Infomap](#infomap) - [inih](#inih) - [inline](#inline) - [InParanoid](#inparanoid) - [inputproto](#inputproto) - [Inspector](#inspector) - [IntaRNA](#intarna) - [INTEGRATE](#integrate) - [INTEGRATE-Neo](#integrate-neo) - [intel](#intel) - [intel-compilers](#intel-compilers) - [IntelClusterChecker](#intelclusterchecker) - [intelcuda](#intelcuda) - [IntelDAAL](#inteldaal) - [IntelPython](#intelpython) - [InterProScan](#interproscan) - [InterProScan_data](#interproscan_data) - [intervaltree](#intervaltree) - [intervaltree-python](#intervaltree-python) - [intltool](#intltool) - [io_lib](#io_lib) - [ioapi](#ioapi) - [iodata](#iodata) - [iomkl](#iomkl) - [iompi](#iompi) - [IOR](#ior) - [IOzone](#iozone) - [IPM](#ipm) - [Ipopt](#ipopt) - [ipp](#ipp) - [IPy](#ipy) - [ipympl](#ipympl) - [ipyparallel](#ipyparallel) - [ipyrad](#ipyrad) - [IPython](#ipython) - [IQ-TREE](#iq-tree) - [Iris](#iris) - [IRkernel](#irkernel) - [irodsfs](#irodsfs) - [IronPython](#ironpython) - [ISA-L](#isa-l) - [ISL](#isl) - [isoCirc](#isocirc) - [IsoformSwitchAnalyzeR](#isoformswitchanalyzer) - [IsoNet](#isonet) - [IsoQuant](#isoquant) - [IsoSeq](#isoseq) - [ispc](#ispc) - [itac](#itac) - [ITK](#itk) - [itpp](#itpp) - [ITSTool](#itstool) - [ITSx](#itsx) - [iVar](#ivar)
 
 
 ### i-cisTarget
@@ -14759,6 +15143,7 @@ version |toolchain
 ``69.1``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``
 ``71.1``|``GCCcore/11.3.0``
 ``72.1``|``GCCcore/12.2.0``
+``73.2``|``GCCcore/12.3.0``
 
 ### IDBA-UD
 
@@ -14864,6 +15249,7 @@ version   |toolchain
 ``0.9.4`` |``foss/2021a``
 ``0.9.5`` |``foss/2021b``
 ``0.10.3``|``foss/2022a``
+``0.10.6``|``foss/2022b``
 
 ### IGV
 
@@ -14924,6 +15310,7 @@ version  |toolchain
 ---------|----------
 ``2018a``|``system``
 ``2022b``|``system``
+``2023a``|``system``
 
 ### iimpi
 
@@ -15061,6 +15448,7 @@ version   |versionsuffix    |toolchain
 ``2.10.5``|                 |``foss/2021a``
 ``2.13.5``|                 |``foss/2021b``
 ``2.22.2``|                 |``foss/2022a``
+``2.31.1``|                 |``foss/2022b``
 
 ### ImageJ
 
@@ -15106,6 +15494,7 @@ version      |versionsuffix                      |toolchain
 ``7.1.0-4``  |                                   |``GCCcore/11.2.0``
 ``7.1.0-37`` |                                   |``GCCcore/11.3.0``
 ``7.1.0-53`` |                                   |``GCCcore/12.2.0``
+``7.1.1-15`` |                                   |``GCCcore/12.3.0``
 
 ### imake
 
@@ -15373,6 +15762,8 @@ version   |versionsuffix            |toolchain
 ``1.3.3`` |                         |``foss/2020b``, ``foss/2021a``
 ``1.3.3`` |``-Python-3.8.2``        |``foss/2020a``
 ``1.10.1``|``-R-4.1.2``             |``foss/2021b``
+``1.12.0``|``-R-4.2.1``             |``foss/2022a``
+``1.14.2``|``-R-4.2.2``             |``foss/2022b``
 
 ### infercnvpy
 
@@ -15415,6 +15806,16 @@ Multi-level network clustering based on the Map equation.
 version     |toolchain
 ------------|--------------------
 ``20190308``|``GCC/8.2.0-2.31.1``
+
+### inih
+
+Direct Rendering Manager runtime library.
+
+*homepage*: <https://dri.freedesktop.org>
+
+version|toolchain
+-------|------------------
+``57`` |``GCCcore/12.3.0``
 
 ### inline
 
@@ -15650,8 +16051,8 @@ An interval tree can be used to efficiently find a set of numeric intervals  ove
 *homepage*: <https://github.com/ekg/intervaltree>
 
 version|toolchain
--------|-----------------------------------------------------------------------------
-``0.1``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/9.3.0``
+-------|-------------------------------------------------------------------------------------------------
+``0.1``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/9.3.0``
 
 ### intervaltree-python
 
@@ -15660,9 +16061,9 @@ A mutable, self-balancing interval tree. Queries may be by  point, by range over
 *homepage*: <https://github.com/chaimleib/intervaltree>
 
 version  |versionsuffix    |toolchain
----------|-----------------|--------------------------------------
+---------|-----------------|----------------------------------------------------------
 ``3.0.2``|``-Python-3.6.6``|``foss/2018b``
-``3.1.0``|                 |``GCCcore/10.3.0``, ``GCCcore/11.2.0``
+``3.1.0``|                 |``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``
 
 ### intltool
 
@@ -15888,6 +16289,7 @@ version   |versionsuffix     |toolchain
 ``7.25.0``|                  |``GCCcore/10.3.0``
 ``7.26.0``|                  |``GCCcore/11.2.0``
 ``8.5.0`` |                  |``GCCcore/11.3.0``
+``8.14.0``|                  |``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### IQ-TREE
 
@@ -15968,7 +16370,7 @@ version   |toolchain
 
 isl is a library for manipulating sets and relations of integer points bounded by linear constraints.
 
-*homepage*: <http://isl.gforge.inria.fr/>
+*homepage*: <https://libisl.sourceforge.io>
 
 version |toolchain
 --------|---------------------------------------------------------
@@ -15978,6 +16380,7 @@ version |toolchain
 ``0.17``|``foss/2016a``
 ``0.23``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/9.3.0``
 ``0.24``|``GCCcore/11.2.0``, ``GCCcore/11.3.0``
+``0.26``|``GCCcore/12.3.0``
 
 ### isoCirc
 
@@ -15989,6 +16392,16 @@ version  |toolchain
 ---------|--------------
 ``1.0.4``|``foss/2020b``
 
+### IsoformSwitchAnalyzeR
+
+Analysis of alternative splicing and isoform switches with predicted functional consequences  (e.g. gain/loss of protein domains etc.) from quantification of all types of RNASeq by tools such as  Kallisto, Salmon, StringTie, Cufflinks/Cuffdiff etc.
+
+*homepage*: <https://bioconductor.org/packages/release/bioc/html/IsoformSwitchAnalyzeR.html>
+
+version   |versionsuffix|toolchain
+----------|-------------|--------------
+``1.18.0``|``-R-4.2.1`` |``foss/2022a``
+
 ### IsoNet
 
 IsoNet stands for for ISOtropic reconstructioN of Electron Tomography. It trains deep convolutional neural networks to reconstruct meaningful contents in the mis sing wedge for electron tomography, and to increase signal-to-noise ratio,       using the information learned from the original tomogram. The software requires  tomograms as input. Observing at about 30A resolution, the IsoNet generated      tomograms are largely isotropic.
@@ -15998,6 +16411,16 @@ IsoNet stands for for ISOtropic reconstructioN of Electron Tomography. It trains
 version                    |toolchain
 ---------------------------|------------------
 ``0.1_20210822_04_674f67f``|``fosscuda/2020b``
+
+### IsoQuant
+
+IsoQuant is a tool for the genome-based analysis of long RNA reads,  such as PacBio or Oxford Nanopores. IsoQuant allows to reconstruct and quantify  transcript models with high precision and decent recall. If the reference annotation is given,  IsoQuant also assigns reads to the annotated isoforms based on their intron and exon structure.  IsoQuant further performs annotated gene, isoform, exon and intron quantification.  If reads are grouped (e.g. according to cell type), counts are reported according to the provided grouping.
+
+*homepage*: <https://github.com/ablab/IsoQuant>
+
+version  |toolchain
+---------|--------------
+``3.3.0``|``foss/2022b``
 
 ### IsoSeq
 
@@ -16113,7 +16536,7 @@ version  |toolchain
 ## J
 
 
-[JAGS](#jags) - [Jansson](#jansson) - [Jasmine](#jasmine) - [JasPer](#jasper) - [Java](#java) - [JavaFX](#javafx) - [jax](#jax) - [JAXFrontCE](#jaxfrontce) - [jbigkit](#jbigkit) - [Jellyfish](#jellyfish) - [jemalloc](#jemalloc) - [jhbuild](#jhbuild) - [JiTCODE](#jitcode) - [jModelTest](#jmodeltest) - [Jorg](#jorg) - [joypy](#joypy) - [jq](#jq) - [json-c](#json-c) - [json-fortran](#json-fortran) - [JSON-GLib](#json-glib) - [JsonCpp](#jsoncpp) - [JUBE](#jube) - [Judy](#judy) - [Julia](#julia) - [JUnit](#junit) - [jupyter-contrib-nbextensions](#jupyter-contrib-nbextensions) - [jupyter-matlab-proxy](#jupyter-matlab-proxy) - [jupyter-resource-usage](#jupyter-resource-usage) - [jupyter-server](#jupyter-server) - [jupyter-server-proxy](#jupyter-server-proxy) - [JupyterHub](#jupyterhub) - [JupyterLab](#jupyterlab) - [jupyterlab-lmod](#jupyterlab-lmod) - [jupyterlmod](#jupyterlmod) - [JWM](#jwm) - [jxrlib](#jxrlib)
+[JAGS](#jags) - [Jansson](#jansson) - [Jasmine](#jasmine) - [JasPer](#jasper) - [Java](#java) - [JavaFX](#javafx) - [jax](#jax) - [JAXFrontCE](#jaxfrontce) - [jbigkit](#jbigkit) - [Jellyfish](#jellyfish) - [jemalloc](#jemalloc) - [jhbuild](#jhbuild) - [JiTCODE](#jitcode) - [jModelTest](#jmodeltest) - [Jorg](#jorg) - [joypy](#joypy) - [jq](#jq) - [json-c](#json-c) - [json-fortran](#json-fortran) - [JSON-GLib](#json-glib) - [JsonCpp](#jsoncpp) - [JUBE](#jube) - [Judy](#judy) - [Julia](#julia) - [JUnit](#junit) - [Jupyter-bundle](#jupyter-bundle) - [jupyter-contrib-nbextensions](#jupyter-contrib-nbextensions) - [jupyter-matlab-proxy](#jupyter-matlab-proxy) - [jupyter-resource-usage](#jupyter-resource-usage) - [jupyter-server](#jupyter-server) - [jupyter-server-proxy](#jupyter-server-proxy) - [JupyterHub](#jupyterhub) - [JupyterLab](#jupyterlab) - [jupyterlab-lmod](#jupyterlab-lmod) - [jupyterlmod](#jupyterlmod) - [JupyterNotebook](#jupyternotebook) - [JWM](#jwm) - [jxrlib](#jxrlib)
 
 
 ### JAGS
@@ -16232,6 +16655,7 @@ version      |versionsuffix           |toolchain
 ``11.0.8``   |``-aarch64``            |``system``
 ``11.0.16``  |                        |``system``
 ``11.0.18``  |                        |``system``
+``11.0.20``  |                        |``system``
 ``13``       |                        |``system``
 ``13.0.2``   |                        |``system``
 ``15``       |                        |``system``
@@ -16387,9 +16811,9 @@ jq is a lightweight and flexible command-line JSON processor.
 *homepage*: <https://stedolan.github.io/jq/>
 
 version|toolchain
--------|----------------------------------------------------------
+-------|------------------------------------------------------------------------------
 ``1.5``|``GCCcore/10.2.0``, ``GCCcore/6.4.0``
-``1.6``|``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+``1.6``|``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### json-c
 
@@ -16409,8 +16833,8 @@ JSON-Fortran: A Modern Fortran JSON API
 *homepage*: <https://github.com/jacobwilliams/json-fortran>
 
 version  |toolchain
----------|------------------
-``8.3.0``|``GCCcore/11.2.0``
+---------|--------------------------------------
+``8.3.0``|``GCCcore/11.2.0``, ``GCCcore/11.3.0``
 
 ### JSON-GLib
 
@@ -16433,7 +16857,7 @@ version   |toolchain
 ``0.10.7``|``GCCcore/8.2.0``
 ``1.9.3`` |``GCCcore/8.3.0``
 ``1.9.4`` |``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/9.3.0``
-``1.9.5`` |``GCCcore/11.3.0``
+``1.9.5`` |``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### JUBE
 
@@ -16490,6 +16914,8 @@ version  |versionsuffix    |toolchain
 ``1.8.2``|``-linux-x86_64``|``system``
 ``1.8.5``|``-linux-x86_64``|``system``
 ``1.9.0``|``-linux-x86_64``|``system``
+``1.9.2``|``-linux-x86_64``|``system``
+``1.9.3``|``-linux-x86_64``|``system``
 
 ### JUnit
 
@@ -16517,6 +16943,16 @@ version |versionsuffix      |toolchain
 ``4.12``|``-Java-1.8.0_72`` |``system``
 ``4.12``|``-Java-1.8.0_77`` |``system``
 ``4.12``|``-Java-1.8.0_92`` |``system``
+
+### Jupyter-bundle
+
+This bundle collects a range of Jupyter interfaces (Lab, Notebook and nbclassic),   extensions (Jupyter Server Proxy, Jupyter Resource Monitor, Jupyter Lmod) and   the JupyterHub. 
+
+*homepage*: <https://jupyter.org/>
+
+version     |toolchain
+------------|------------------
+``20230823``|``GCCcore/12.3.0``
 
 ### jupyter-contrib-nbextensions
 
@@ -16550,6 +16986,7 @@ version  |toolchain
 ``0.6.1``|``GCCcore/10.3.0``
 ``0.6.2``|``GCCcore/10.3.0``
 ``0.6.3``|``GCCcore/11.3.0``
+``1.0.0``|``GCCcore/12.3.0``
 
 ### jupyter-server
 
@@ -16560,6 +16997,8 @@ The Jupyter Server provides the backend (i.e. the core services, APIs, and REST 
 version   |toolchain
 ----------|------------------
 ``1.21.0``|``GCCcore/11.3.0``
+``2.7.0`` |``GCCcore/12.2.0``
+``2.7.2`` |``GCCcore/12.3.0``
 
 ### jupyter-server-proxy
 
@@ -16568,9 +17007,10 @@ Jupyter Server Proxy lets you run arbitrary external processes (such as RStudio,
 *homepage*: <https://github.com/jupyterhub/jupyter-server-proxy>
 
 version  |toolchain
----------|------------------
+---------|--------------------------------------
 ``3.2.1``|``GCCcore/10.3.0``
-``3.2.2``|``GCCcore/11.3.0``
+``3.2.2``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+``4.0.0``|``GCCcore/12.3.0``
 
 ### JupyterHub
 
@@ -16585,6 +17025,8 @@ version  |versionsuffix    |toolchain
 ``1.1.0``|                 |``GCCcore/10.2.0``
 ``1.4.1``|                 |``GCCcore/10.3.0``
 ``3.0.0``|                 |``GCCcore/11.3.0``
+``4.0.1``|                 |``GCCcore/12.2.0``
+``4.0.2``|                 |``GCCcore/12.3.0``
 
 ### JupyterLab
 
@@ -16600,6 +17042,8 @@ version   |versionsuffix    |toolchain
 ``3.1.6`` |                 |``GCCcore/11.2.0``
 ``3.2.8`` |                 |``GCCcore/10.3.0``
 ``3.5.0`` |                 |``GCCcore/11.3.0``
+``4.0.3`` |                 |``GCCcore/12.2.0``
+``4.0.5`` |                 |``GCCcore/12.3.0``
 
 ### jupyterlab-lmod
 
@@ -16618,9 +17062,19 @@ Jupyter interactive notebook server extension that allows users to interact with
 *homepage*: <https://github.com/cmd-ntrf/jupyter-lmod>
 
 version  |toolchain
----------|------------------
+---------|--------------------------------------
 ``3.0.0``|``GCCcore/11.3.0``
-``4.0.3``|``GCCcore/11.3.0``
+``4.0.3``|``GCCcore/11.3.0``, ``GCCcore/12.3.0``
+
+### JupyterNotebook
+
+The Jupyter Notebook is the original web application for creating and  sharing computational documents. It offers a simple, streamlined, document-centric experience.
+
+*homepage*: <https://jupyter.org/>
+
+version  |toolchain
+---------|------------------
+``7.0.2``|``GCCcore/12.3.0``
 
 ### JWM
 
@@ -16731,8 +17185,8 @@ kallisto | bustools is a workflow for pre-processing single-cell RNA-seq data.  
 *homepage*: <https://www.kallistobus.tools/>
 
 version   |toolchain
-----------|--------------
-``0.27.3``|``foss/2021b``
+----------|------------------------------
+``0.27.3``|``foss/2021b``, ``foss/2022a``
 
 ### kbproto
 
@@ -16874,9 +17328,10 @@ KMA is a mapping method designed to map raw reads directly against redundant dat
 
 *homepage*: <https://bitbucket.org/genomicepidemiology/kma>
 
-version   |toolchain
-----------|---------------
-``1.2.22``|``intel/2019b``
+version    |toolchain
+-----------|---------------
+``1.2.22`` |``intel/2019b``
+``1.4.12a``|``GCC/12.2.0``
 
 ### KMC
 
@@ -16884,12 +17339,14 @@ KMC is a disk-based programm for counting k-mers from (possibly gzipped) FASTQ/F
 
 *homepage*: <http://sun.aei.polsl.pl/kmc>
 
-version     |versionsuffix    |toolchain
-------------|-----------------|------------------------------
-``3.1.0``   |                 |``foss/2018a``, ``foss/2018b``
-``3.1.1``   |``-Python-3.7.2``|``GCC/8.2.0-2.31.1``
-``3.1.2rc1``|``-Python-3.7.4``|``GCC/8.3.0``
-``3.2.1``   |                 |``GCC/11.2.0``
+version     |versionsuffix     |toolchain
+------------|------------------|------------------------------
+``3.1.0``   |                  |``foss/2018a``, ``foss/2018b``
+``3.1.1``   |``-Python-3.7.2`` |``GCC/8.2.0-2.31.1``
+``3.1.2rc1``|``-Python-3.7.4`` |``GCC/8.3.0``
+``3.2.1``   |                  |``GCC/11.2.0``
+``3.2.1``   |``-Python-2.7.18``|``GCC/11.2.0``
+``3.2.2``   |                  |``GCC/12.2.0``
 
 ### KMCP
 
@@ -17049,7 +17506,7 @@ version   |toolchain
 ## L
 
 
-[L_RNA_scaffolder](#l_rna_scaffolder) - [Lace](#lace) - [LADR](#ladr) - [lagrangian-filtering](#lagrangian-filtering) - [LAME](#lame) - [LAMMPS](#lammps) - [lancet](#lancet) - [LAPACK](#lapack) - [LASSO-Python](#lasso-python) - [LAST](#last) - [LASTZ](#lastz) - [lavaan](#lavaan) - [LayoutParser](#layoutparser) - [LBFGS++](#lbfgs++) - [LCov](#lcov) - [LDC](#ldc) - [lDDT](#lddt) - [LeadIT](#leadit) - [leidenalg](#leidenalg) - [LEMON](#lemon) - [Leptonica](#leptonica) - [LERC](#lerc) - [less](#less) - [LevelDB](#leveldb) - [lftp](#lftp) - [LHAPDF](#lhapdf) - [LIANA](#liana) - [libaec](#libaec) - [libaio](#libaio) - [libarchive](#libarchive) - [libav](#libav) - [libavif](#libavif) - [libBigWig](#libbigwig) - [libbitmask](#libbitmask) - [libcdms](#libcdms) - [libcerf](#libcerf) - [libcint](#libcint) - [libcircle](#libcircle) - [libcmaes](#libcmaes) - [libconfig](#libconfig) - [libcpuset](#libcpuset) - [libcroco](#libcroco) - [libctl](#libctl) - [libdap](#libdap) - [libde265](#libde265) - [libdeflate](#libdeflate) - [libdivsufsort](#libdivsufsort) - [libdrm](#libdrm) - [libdrs](#libdrs) - [libdwarf](#libdwarf) - [libedit](#libedit) - [libelf](#libelf) - [libemf](#libemf) - [libepoxy](#libepoxy) - [libev](#libev) - [libevent](#libevent) - [libexif](#libexif) - [libfabric](#libfabric) - [libfdf](#libfdf) - [libffcall](#libffcall) - [libffi](#libffi) - [libFLAME](#libflame) - [libfontenc](#libfontenc) - [libgcrypt](#libgcrypt) - [libgd](#libgd) - [libgdiplus](#libgdiplus) - [libGDSII](#libgdsii) - [libgeotiff](#libgeotiff) - [libgit2](#libgit2) - [libglade](#libglade) - [libGLU](#libglu) - [libglvnd](#libglvnd) - [libgpg-error](#libgpg-error) - [libgpuarray](#libgpuarray) - [libGridXC](#libgridxc) - [libgtextutils](#libgtextutils) - [libharu](#libharu) - [libheif](#libheif) - [libibmad](#libibmad) - [libibumad](#libibumad) - [libICE](#libice) - [libiconv](#libiconv) - [libidn](#libidn) - [libidn2](#libidn2) - [Libint](#libint) - [LiBis](#libis) - [libjpeg-turbo](#libjpeg-turbo) - [libjxl](#libjxl) - [LibLZF](#liblzf) - [libmad](#libmad) - [libmatheval](#libmatheval) - [libmaus2](#libmaus2) - [libmbd](#libmbd) - [libMemcached](#libmemcached) - [libmicrohttpd](#libmicrohttpd) - [libmo_unpack](#libmo_unpack) - [libmypaint](#libmypaint) - [libnsl](#libnsl) - [libobjcryst](#libobjcryst) - [libogg](#libogg) - [libopus](#libopus) - [libosmium](#libosmium) - [libpci](#libpci) - [libpciaccess](#libpciaccess) - [libplinkio](#libplinkio) - [libpng](#libpng) - [libpsl](#libpsl) - [libPSML](#libpsml) - [libpsortb](#libpsortb) - [libpspio](#libpspio) - [libpthread-stubs](#libpthread-stubs) - [libQGLViewer](#libqglviewer) - [libreadline](#libreadline) - [libRmath](#librmath) - [librosa](#librosa) - [librsb](#librsb) - [librsvg](#librsvg) - [librttopo](#librttopo) - [libsamplerate](#libsamplerate) - [libSBML](#libsbml) - [libsigc++](#libsigc++) - [libsigsegv](#libsigsegv) - [libSM](#libsm) - [libsndfile](#libsndfile) - [libsodium](#libsodium) - [LibSoup](#libsoup) - [libspatialindex](#libspatialindex) - [libspatialite](#libspatialite) - [libssh](#libssh) - [libStatGen](#libstatgen) - [LIBSVM](#libsvm) - [libtar](#libtar) - [libtasn1](#libtasn1) - [libtecla](#libtecla) - [LibTIFF](#libtiff) - [libtirpc](#libtirpc) - [libtool](#libtool) - [libtree](#libtree) - [libunistring](#libunistring) - [libunwind](#libunwind) - [libutempter](#libutempter) - [LibUUID](#libuuid) - [libuv](#libuv) - [libvdwxc](#libvdwxc) - [libvorbis](#libvorbis) - [libWallModelledLES](#libwallmodelledles) - [libwebp](#libwebp) - [libwpe](#libwpe) - [libX11](#libx11) - [libXau](#libxau) - [libxc](#libxc) - [libxcb](#libxcb) - [libXcursor](#libxcursor) - [libXdamage](#libxdamage) - [libXdmcp](#libxdmcp) - [libXext](#libxext) - [libXfixes](#libxfixes) - [libXfont](#libxfont) - [libXft](#libxft) - [libXi](#libxi) - [libXinerama](#libxinerama) - [libxkbcommon](#libxkbcommon) - [libxml++](#libxml++) - [libxml2](#libxml2) - [libxml2-python](#libxml2-python) - [libXmu](#libxmu) - [libXp](#libxp) - [libXpm](#libxpm) - [libXrandr](#libxrandr) - [libXrender](#libxrender) - [libxslt](#libxslt) - [libxsmm](#libxsmm) - [libXt](#libxt) - [libXxf86vm](#libxxf86vm) - [libyaml](#libyaml) - [libzeep](#libzeep) - [libzip](#libzip) - [lie_learn](#lie_learn) - [lifelines](#lifelines) - [Lighter](#lighter) - [liknorm](#liknorm) - [likwid](#likwid) - [limix](#limix) - [LinBox](#linbox) - [line_profiler](#line_profiler) - [Lingeling](#lingeling) - [LISFLOOD-FP](#lisflood-fp) - [LittleCMS](#littlecms) - [LLDB](#lldb) - [LLVM](#llvm) - [LMDB](#lmdb) - [LMfit](#lmfit) - [Lmod](#lmod) - [LncLOOM](#lncloom) - [LocARNA](#locarna) - [LoFreq](#lofreq) - [Log-Log4perl](#log-log4perl) - [logaddexp](#logaddexp) - [LOHHLA](#lohhla) - [Loki](#loki) - [longestrunsubsequence](#longestrunsubsequence) - [longread_umi](#longread_umi) - [Longshot](#longshot) - [loompy](#loompy) - [loomR](#loomr) - [LoRDEC](#lordec) - [LPeg](#lpeg) - [LPJmL](#lpjml) - [lpsolve](#lpsolve) - [lrslib](#lrslib) - [LS-PrePost](#ls-prepost) - [LSD2](#lsd2) - [LSMS](#lsms) - [LTR_retriever](#ltr_retriever) - [LtrDetector](#ltrdetector) - [Lua](#lua) - [LuaJIT](#luajit) - [LuaJIT2-OpenResty](#luajit2-openresty) - [LuaRocks](#luarocks) - [Lucene-Geo-Gazetteer](#lucene-geo-gazetteer) - [LUMPY](#lumpy) - [LUSCUS](#luscus) - [lwgrp](#lwgrp) - [lxml](#lxml) - [lynx](#lynx) - [lz4](#lz4) - [LZO](#lzo)
+[L_RNA_scaffolder](#l_rna_scaffolder) - [Lace](#lace) - [LADR](#ladr) - [lagrangian-filtering](#lagrangian-filtering) - [LAME](#lame) - [LAMMPS](#lammps) - [lancet](#lancet) - [LAPACK](#lapack) - [LASSO-Python](#lasso-python) - [LAST](#last) - [LASTZ](#lastz) - [lavaan](#lavaan) - [LayoutParser](#layoutparser) - [LBFGS++](#lbfgs++) - [LCov](#lcov) - [LDC](#ldc) - [lDDT](#lddt) - [LeadIT](#leadit) - [leafcutter](#leafcutter) - [leidenalg](#leidenalg) - [LEMON](#lemon) - [Leptonica](#leptonica) - [LERC](#lerc) - [less](#less) - [LevelDB](#leveldb) - [lftp](#lftp) - [LHAPDF](#lhapdf) - [LIANA](#liana) - [libaec](#libaec) - [libaio](#libaio) - [libarchive](#libarchive) - [libav](#libav) - [libavif](#libavif) - [libBigWig](#libbigwig) - [libbitmask](#libbitmask) - [libcdms](#libcdms) - [libcerf](#libcerf) - [libcint](#libcint) - [libcircle](#libcircle) - [libcmaes](#libcmaes) - [libconfig](#libconfig) - [libcpuset](#libcpuset) - [libcroco](#libcroco) - [libctl](#libctl) - [libdap](#libdap) - [libde265](#libde265) - [libdeflate](#libdeflate) - [libdivsufsort](#libdivsufsort) - [libdrm](#libdrm) - [libdrs](#libdrs) - [libdwarf](#libdwarf) - [libedit](#libedit) - [libelf](#libelf) - [libemf](#libemf) - [libepoxy](#libepoxy) - [libev](#libev) - [libevent](#libevent) - [libexif](#libexif) - [libfabric](#libfabric) - [libfdf](#libfdf) - [libffcall](#libffcall) - [libffi](#libffi) - [libFLAME](#libflame) - [libfontenc](#libfontenc) - [libgcrypt](#libgcrypt) - [libgd](#libgd) - [libgdiplus](#libgdiplus) - [libGDSII](#libgdsii) - [libgeotiff](#libgeotiff) - [libgit2](#libgit2) - [libglade](#libglade) - [libGLU](#libglu) - [libglvnd](#libglvnd) - [libgpg-error](#libgpg-error) - [libgpuarray](#libgpuarray) - [libGridXC](#libgridxc) - [libgtextutils](#libgtextutils) - [libharu](#libharu) - [libheif](#libheif) - [libibmad](#libibmad) - [libibumad](#libibumad) - [libICE](#libice) - [libiconv](#libiconv) - [libidn](#libidn) - [libidn2](#libidn2) - [Libint](#libint) - [LiBis](#libis) - [libjpeg-turbo](#libjpeg-turbo) - [libjxl](#libjxl) - [libleidenalg](#libleidenalg) - [LibLZF](#liblzf) - [libmad](#libmad) - [libmatheval](#libmatheval) - [libmaus2](#libmaus2) - [libmbd](#libmbd) - [libMemcached](#libmemcached) - [libmicrohttpd](#libmicrohttpd) - [libmo_unpack](#libmo_unpack) - [libmypaint](#libmypaint) - [libnsl](#libnsl) - [libobjcryst](#libobjcryst) - [libogg](#libogg) - [libopus](#libopus) - [libosmium](#libosmium) - [libpci](#libpci) - [libpciaccess](#libpciaccess) - [libplinkio](#libplinkio) - [libpng](#libpng) - [libpsl](#libpsl) - [libPSML](#libpsml) - [libpsortb](#libpsortb) - [libpspio](#libpspio) - [libpthread-stubs](#libpthread-stubs) - [libQGLViewer](#libqglviewer) - [libreadline](#libreadline) - [libRmath](#librmath) - [librosa](#librosa) - [librsb](#librsb) - [librsvg](#librsvg) - [librttopo](#librttopo) - [libsamplerate](#libsamplerate) - [libSBML](#libsbml) - [libsigc++](#libsigc++) - [libsigsegv](#libsigsegv) - [libSM](#libsm) - [libsndfile](#libsndfile) - [libsodium](#libsodium) - [LibSoup](#libsoup) - [libspatialindex](#libspatialindex) - [libspatialite](#libspatialite) - [libssh](#libssh) - [libStatGen](#libstatgen) - [LIBSVM](#libsvm) - [LIBSVM-Python](#libsvm-python) - [libtar](#libtar) - [libtasn1](#libtasn1) - [libtecla](#libtecla) - [LibTIFF](#libtiff) - [libtirpc](#libtirpc) - [libtool](#libtool) - [libtree](#libtree) - [libunistring](#libunistring) - [libunwind](#libunwind) - [libutempter](#libutempter) - [LibUUID](#libuuid) - [libuv](#libuv) - [libvdwxc](#libvdwxc) - [libvorbis](#libvorbis) - [libvori](#libvori) - [libWallModelledLES](#libwallmodelledles) - [libwebp](#libwebp) - [libwpe](#libwpe) - [libX11](#libx11) - [libXau](#libxau) - [libxc](#libxc) - [libxcb](#libxcb) - [libXcursor](#libxcursor) - [libXdamage](#libxdamage) - [libXdmcp](#libxdmcp) - [libXext](#libxext) - [libXfixes](#libxfixes) - [libXfont](#libxfont) - [libXft](#libxft) - [libXi](#libxi) - [libXinerama](#libxinerama) - [libxkbcommon](#libxkbcommon) - [libxml++](#libxml++) - [libxml2](#libxml2) - [libxml2-python](#libxml2-python) - [libXmu](#libxmu) - [libXp](#libxp) - [libXpm](#libxpm) - [libXrandr](#libxrandr) - [libXrender](#libxrender) - [libxslt](#libxslt) - [libxsmm](#libxsmm) - [libXt](#libxt) - [libXxf86vm](#libxxf86vm) - [libyaml](#libyaml) - [libzeep](#libzeep) - [libzip](#libzip) - [lie_learn](#lie_learn) - [lifelines](#lifelines) - [Lighter](#lighter) - [liknorm](#liknorm) - [likwid](#likwid) - [limix](#limix) - [LinBox](#linbox) - [line_profiler](#line_profiler) - [Lingeling](#lingeling) - [LISFLOOD-FP](#lisflood-fp) - [LittleCMS](#littlecms) - [LLDB](#lldb) - [LLVM](#llvm) - [LMDB](#lmdb) - [LMfit](#lmfit) - [Lmod](#lmod) - [LncLOOM](#lncloom) - [LocARNA](#locarna) - [LoFreq](#lofreq) - [Log-Log4perl](#log-log4perl) - [logaddexp](#logaddexp) - [LOHHLA](#lohhla) - [Loki](#loki) - [longestrunsubsequence](#longestrunsubsequence) - [longread_umi](#longread_umi) - [Longshot](#longshot) - [loompy](#loompy) - [loomR](#loomr) - [LoRDEC](#lordec) - [LPeg](#lpeg) - [LPJmL](#lpjml) - [lpsolve](#lpsolve) - [lrslib](#lrslib) - [LS-PrePost](#ls-prepost) - [LSD2](#lsd2) - [LSMS](#lsms) - [LTR_retriever](#ltr_retriever) - [LtrDetector](#ltrdetector) - [Lua](#lua) - [LuaJIT](#luajit) - [LuaJIT2-OpenResty](#luajit2-openresty) - [LuaRocks](#luarocks) - [Lucene-Geo-Gazetteer](#lucene-geo-gazetteer) - [LUMPY](#lumpy) - [LUSCUS](#luscus) - [lwgrp](#lwgrp) - [lxml](#lxml) - [lynx](#lynx) - [lz4](#lz4) - [LZO](#lzo)
 
 
 ### L_RNA_scaffolder
@@ -17100,9 +17557,9 @@ LAME is a high quality MPEG Audio Layer III (MP3) encoder licensed under the LGP
 *homepage*: <http://lame.sourceforge.net/>
 
 version   |toolchain
-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ``3.99.5``|``foss/2016b``, ``intel/2017a``
-``3.100`` |``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/6.4.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``, ``intel/2017b``
+``3.100`` |``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``, ``intel/2017b``
 
 ### LAMMPS
 
@@ -17253,19 +17710,30 @@ version  |toolchain
 ---------|----------
 ``2.1.9``|``system``
 
+### leafcutter
+
+Leafcutter quantifies RNA splicing variation using short-read RNA-seq data.   The core idea is to leverage spliced reads (reads that span an intron) to quantify (differential)   intron usage across samples. The advantages of this approach include: easy detection of novel introns,   modeling of more complex splicing events than exonic PSI, avoiding the challenge of isoform abundance   estimation, simple, computationally efficient algorithms scaling to 100s or even 1000s of samples.  For details please see our bioRxiv preprint and corresponding Nature Genetics publication. 
+
+*homepage*: <http://davidaknowles.github.io/leafcutter/index.html>
+
+version  |versionsuffix|toolchain
+---------|-------------|--------------
+``0.2.9``|``-R-4.2.2`` |``foss/2022b``
+
 ### leidenalg
 
 Implementation of the Leiden algorithm for various quality functions to be used with igraph in Python.
 
 *homepage*: <https://github.com/vtraag/leidenalg>
 
-version  |versionsuffix    |toolchain
----------|-----------------|----------------------------------
-``0.8.2``|``-Python-3.8.2``|``foss/2020a``
-``0.8.3``|                 |``foss/2020b``, ``fosscuda/2020b``
-``0.8.7``|                 |``foss/2021a``
-``0.8.8``|                 |``foss/2021b``
-``0.9.1``|                 |``foss/2022a``
+version   |versionsuffix    |toolchain
+----------|-----------------|----------------------------------
+``0.8.2`` |``-Python-3.8.2``|``foss/2020a``
+``0.8.3`` |                 |``foss/2020b``, ``fosscuda/2020b``
+``0.8.7`` |                 |``foss/2021a``
+``0.8.8`` |                 |``foss/2021b``
+``0.9.1`` |                 |``foss/2022a``
+``0.10.1``|                 |``foss/2022b``
 
 ### LEMON
 
@@ -17297,9 +17765,9 @@ LERC is an open-source image or raster format which supports rapid encoding and 
 *homepage*: <https://github.com/Esri/lerc>
 
 version  |toolchain
----------|--------------------------------------
+---------|----------------------------------------------------------
 ``3.0``  |``GCCcore/10.2.0``, ``GCCcore/10.3.0``
-``4.0.0``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+``4.0.0``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### less
 
@@ -17362,8 +17830,8 @@ Libaec provides fast lossless compression of 1 up to 32 bit wide signed or unsig
 *homepage*: <https://gitlab.dkrz.de/k202009/libaec>
 
 version  |toolchain
----------|------------------------------------------------------------------------------
-``1.0.6``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``
+---------|--------------------------------------------------------------------------------------------------
+``1.0.6``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.3.0``
 
 ### libaio
 
@@ -17375,7 +17843,7 @@ version    |toolchain
 -----------|------------------------------------------------------------------------------
 ``0.3.111``|``GCCcore/8.2.0``, ``GCCcore/8.3.0``
 ``0.3.112``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``
-``0.3.113``|``GCCcore/12.2.0``
+``0.3.113``|``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### libarchive
 
@@ -17409,9 +17877,9 @@ This library aims to be a friendly, portable C implementation of the AV1 Image F
 *homepage*: <https://github.com/AOMediaCodec/libavif>
 
 version   |toolchain
-----------|------------------------------
+----------|--------------------------------------------------
 ``0.9.0`` |``foss/2020b``
-``0.11.1``|``foss/2021a``, ``foss/2022a``
+``0.11.1``|``GCCcore/11.3.0``, ``foss/2021a``, ``foss/2022a``
 
 ### libBigWig
 
@@ -17461,7 +17929,7 @@ version |toolchain
 ``1.15``|``GCCcore/10.3.0``
 ``1.17``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``
 ``2.1`` |``GCCcore/11.3.0``
-``2.3`` |``GCCcore/12.2.0``
+``2.3`` |``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### libcint
 
@@ -17619,6 +18087,7 @@ version    |toolchain
 ``2.4.107``|``GCCcore/11.2.0``
 ``2.4.110``|``GCCcore/11.3.0``
 ``2.4.114``|``GCCcore/12.2.0``
+``2.4.115``|``GCCcore/12.3.0``
 
 ### libdrs
 
@@ -17639,6 +18108,7 @@ The DWARF Debugging Information Format is of interest to programmers working on 
 version     |toolchain
 ------------|---------------------------------------------------
 ``0.4.1``   |``GCCcore/11.3.0``
+``0.7.0``   |``GCCcore/12.3.0``
 ``20140805``|``GCC/4.9.2``
 ``20150310``|``GCC/4.9.2``, ``GCCcore/5.4.0``, ``GCCcore/6.3.0``
 ``20190529``|``GCCcore/8.2.0``
@@ -17686,12 +18156,12 @@ Epoxy is a library for handling OpenGL function pointer management for you
 *homepage*: <https://github.com/anholt/libepoxy>
 
 version   |toolchain
-----------|--------------------------------------------------------
+----------|----------------------------------------------------------
 ``1.5.2`` |``foss/2018a``
 ``1.5.3`` |``GCCcore/8.2.0``, ``fosscuda/2018b``
 ``1.5.4`` |``GCCcore/10.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 ``1.5.8`` |``GCCcore/10.3.0``, ``GCCcore/11.2.0``
-``1.5.10``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+``1.5.10``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### libev
 
@@ -17710,11 +18180,11 @@ The libevent API provides a mechanism to execute a callback function when a spec
 *homepage*: <http://libevent.org/>
 
 version   |toolchain
-----------|----------------------------------------------------------------------------------------------------------------------------------
+----------|------------------------------------------------------------------------------------------------------------------------------------------------------
 ``2.0.22``|``GCC/4.9.2``, ``GCC/5.4.0-2.26``, ``GCCcore/4.9.3``, ``GNU/4.9.3-2.25``
 ``2.1.8`` |``GCCcore/6.4.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``system``
 ``2.1.11``|``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
-``2.1.12``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``system``
+``2.1.12``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/13.2.0``, ``system``
 
 ### libexif
 
@@ -17744,6 +18214,7 @@ version   |toolchain
 ``1.15.1``|``GCCcore/11.3.0``
 ``1.16.1``|``GCCcore/12.2.0``
 ``1.18.0``|``GCCcore/12.3.0``
+``1.19.0``|``GCCcore/13.2.0``
 
 ### libfdf
 
@@ -17831,7 +18302,7 @@ version  |toolchain
 ``2.2.5``|``GCCcore/6.4.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``intel/2017b``, ``intel/2018a``
 ``2.3.0``|``GCCcore/10.2.0``, ``GCCcore/9.3.0``
 ``2.3.1``|``GCCcore/10.3.0``
-``2.3.3``|``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+``2.3.3``|``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### libgdiplus
 
@@ -17880,6 +18351,7 @@ version  |toolchain
 ``1.1.1``|``GCCcore/11.2.0``
 ``1.4.3``|``GCCcore/11.3.0``
 ``1.5.0``|``GCCcore/12.2.0``
+``1.7.1``|``GCCcore/12.3.0``
 
 ### libglade
 
@@ -17903,6 +18375,7 @@ version  |versionsuffix   |toolchain
 ``9.0.0``|``-Mesa-11.2.1``|``foss/2016a``, ``intel/2016a``
 ``9.0.1``|                |``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 ``9.0.2``|                |``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+``9.0.3``|                |``GCCcore/12.3.0``
 
 ### libglvnd
 
@@ -17916,7 +18389,7 @@ version  |toolchain
 ``1.3.2``|``GCCcore/10.2.0``
 ``1.3.3``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``
 ``1.4.0``|``GCCcore/11.3.0``
-``1.6.0``|``GCCcore/12.2.0``
+``1.6.0``|``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### libgpg-error
 
@@ -18075,7 +18548,7 @@ version  |versionsuffix   |toolchain
 ``2.4.2``|                |``intel/2018a``
 ``2.5.0``|                |``gompi/2019a``, ``iimpi/2019a``
 ``2.6.0``|``-lmax-6-cp2k``|``GCC/10.2.0``, ``GCC/10.3.0``, ``gompi/2020a``, ``iccifort/2020.4.304``, ``iimpi/2020a``, ``iimpi/2021a``
-``2.7.2``|``-lmax-6-cp2k``|``GCC/11.3.0``
+``2.7.2``|``-lmax-6-cp2k``|``GCC/11.3.0``, ``GCC/12.2.0``
 
 ### LiBis
 
@@ -18122,6 +18595,16 @@ version  |toolchain
 ``0.5``  |``GCCcore/10.3.0``
 ``0.6.1``|``GCCcore/10.2.0``
 ``0.8.1``|``foss/2022a``
+
+### libleidenalg
+
+Implements the Leiden algorithm in C++
+
+*homepage*: <https://github.com/vtraag/libleidenalg>
+
+version   |toolchain
+----------|--------------
+``0.11.1``|``foss/2022b``
 
 ### LibLZF
 
@@ -18223,9 +18706,9 @@ The libnsl package contains the public client interface for NIS(YP).
 *homepage*: <https://github.com/thkukuk/libnsl>
 
 version  |toolchain
----------|------------------
+---------|--------------------------------------
 ``1.3.0``|``GCCcore/10.3.0``
-``2.0.0``|``GCCcore/11.3.0``
+``2.0.0``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``
 
 ### libobjcryst
 
@@ -18292,7 +18775,7 @@ version   |toolchain
 ``0.13.4``|``foss/2016a``, ``foss/2016b``, ``gimkl/2.11.5``, ``intel/2016a``, ``intel/2016b``
 ``0.14``  |``GCCcore/6.4.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``
 ``0.16``  |``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/9.2.0``, ``GCCcore/9.3.0``
-``0.17``  |``GCCcore/12.2.0``, ``GCCcore/12.3.0``
+``0.17``  |``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/13.2.0``
 
 ### libplinkio
 
@@ -18545,6 +19028,7 @@ version   |toolchain
 ``1.0.31``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``
 ``1.1.0`` |``GCCcore/11.3.0``
 ``1.2.0`` |``GCCcore/12.2.0``
+``1.2.2`` |``GCCcore/12.3.0``
 
 ### libsodium
 
@@ -18553,7 +19037,7 @@ Sodium is a modern, easy-to-use software library for encryption, decryption, sig
 *homepage*: <https://doc.libsodium.org/>
 
 version   |toolchain
-----------|----------------------------------------------------------------------------------------------------------------------------------------
+----------|------------------------------------------------------------------------------------------------------------------------------------------------------------
 ``1.0.6`` |``intel/2016a``
 ``1.0.8`` |``foss/2016a``
 ``1.0.11``|``foss/2016b``, ``intel/2016b``
@@ -18561,7 +19045,7 @@ version   |toolchain
 ``1.0.13``|``GCCcore/6.4.0``, ``foss/2017a``
 ``1.0.16``|``GCCcore/6.4.0``, ``GCCcore/7.3.0``
 ``1.0.17``|``GCCcore/8.2.0``
-``1.0.18``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
+``1.0.18``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 
 ### LibSoup
 
@@ -18636,6 +19120,16 @@ version |toolchain
 ``3.24``|``GCCcore/9.3.0``
 ``3.25``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``
 ``3.30``|``GCCcore/11.3.0``
+
+### LIBSVM-Python
+
+This tool provides a simple Python interface to LIBSVM, a library for support    vector machines (http://www.csie.ntu.edu.tw/~cjlin/libsvm). The interface is     very easy to use as the usage is the same as that of LIBSVM. The interface is    developed with the built-in Python library "ctypes".
+
+*homepage*: <https://pypi.org/project/libsvm-official/>
+
+version |toolchain
+--------|--------------
+``3.30``|``foss/2022a``
 
 ### libtar
 
@@ -18717,7 +19211,7 @@ version  |toolchain
 ``2.4.2``|``GCC/4.8.2``, ``GCC/4.9.2``
 ``2.4.5``|``GCC/4.8.4``, ``GCC/4.9.2``
 ``2.4.6``|``FCC/4.5.0``, ``GCC/4.8.4``, ``GCC/4.9.2``, ``GCC/4.9.3``, ``GCC/4.9.3-2.25``, ``GCC/5.2.0``, ``GCC/5.4.0-2.26``, ``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/4.9.2``, ``GCCcore/4.9.3``, ``GCCcore/5.3.0``, ``GCCcore/5.4.0``, ``GCCcore/6.1.0``, ``GCCcore/6.2.0``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.2.0``, ``GCCcore/9.3.0``, ``GNU/4.9.2-2.25``, ``GNU/4.9.3-2.25``, ``GNU/5.1.0-2.25``, ``foss/2016.04``, ``foss/2016a``, ``foss/2016b``, ``gimkl/2.11.5``, ``intel/2016.02-GCC-4.9``, ``intel/2016a``, ``intel/2016b``, ``iomkl/2016.07``, ``iomkl/2016.09-GCC-4.9.3-2.25``, ``system``
-``2.4.7``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/13.1.0``, ``system``
+``2.4.7``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/13.1.0``, ``GCCcore/13.2.0``, ``system``
 
 ### libtree
 
@@ -18743,7 +19237,7 @@ version   |toolchain
 ``0.9.7`` |``GCCcore/6.4.0``
 ``0.9.10``|``GCCcore/10.3.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 ``1.0``   |``GCCcore/11.2.0``, ``GCCcore/11.3.0``
-``1.1``   |``GCCcore/10.2.0``
+``1.1``   |``GCCcore/10.2.0``, ``GCCcore/12.3.0``
 
 ### libunwind
 
@@ -18811,6 +19305,16 @@ version  |toolchain
 ---------|----------------------------------------------------------------------------------------------------------------------
 ``1.3.7``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
+### libvori
+
+C++ library implementing the Voronoi integration as well as the compressed bqb file format. The present version of libvori is a very early development version, which is hard-coded to work with the CP2k program package.
+
+*homepage*: <https://brehm-research.de/libvori.php>
+
+version   |toolchain
+----------|--------------------------------------
+``220621``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+
 ### libWallModelledLES
 
 libWallModelledLES is a library based on OpenFOAM® technology, extending the capabilities of OpenFOAM in the area of wall-modelled LES (WMLES). This is a turbulence modelling methodology, which allows to make LES cheaper by not resolving the inner region of turbulent boundary layers.
@@ -18834,6 +19338,7 @@ version  |toolchain
 ``1.1.0``|``GCCcore/10.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 ``1.2.0``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``
 ``1.2.4``|``GCCcore/11.3.0``
+``1.3.1``|``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### libwpe
 
@@ -18844,6 +19349,7 @@ WPE is the reference WebKit port for embedded and low-consumption computer devic
 version   |toolchain
 ----------|------------------
 ``1.13.3``|``GCCcore/11.2.0``
+``1.14.1``|``GCCcore/11.3.0``
 
 ### libX11
 
@@ -19037,6 +19543,7 @@ version   |versionsuffix     |toolchain
 ``2.9.13``|                  |``GCCcore/11.3.0``
 ``2.10.3``|                  |``GCCcore/12.2.0``
 ``2.11.4``|                  |``GCCcore/12.3.0``
+``2.11.5``|                  |``GCCcore/13.2.0``
 
 ### libxml2-python
 
@@ -19135,7 +19642,7 @@ version   |toolchain
 ``1.10``  |``GCC/8.2.0-2.31.1``, ``foss/2018b``, ``iccifort/2019.1.144-GCC-8.2.0-2.31.1``, ``intel/2018b``
 ``1.16.1``|``GCC/10.2.0``, ``GCC/9.3.0``, ``iccifort/2020.1.217``, ``iccifort/2020.4.304``
 ``1.16.2``|``GCC/10.3.0``, ``intel-compilers/2021.2.0``
-``1.17``  |``GCC/11.2.0``, ``GCC/11.3.0``
+``1.17``  |``GCC/11.2.0``, ``GCC/11.3.0``, ``GCC/12.2.0``
 
 ### libXt
 
@@ -19322,6 +19829,7 @@ version   |toolchain
 ``2.12``  |``GCCcore/10.3.0``, ``GCCcore/11.2.0``
 ``2.13.1``|``GCCcore/11.3.0``
 ``2.14``  |``GCCcore/12.2.0``
+``2.15``  |``GCCcore/12.3.0``
 
 ### LLDB
 
@@ -19363,6 +19871,7 @@ version   |toolchain
 ``12.0.1``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``
 ``14.0.3``|``GCCcore/11.3.0``
 ``15.0.5``|``GCCcore/12.2.0``
+``16.0.6``|``GCCcore/12.3.0``
 
 ### LMDB
 
@@ -19672,6 +20181,7 @@ version    |toolchain
 ``5.4.2``  |``GCCcore/10.2.0``
 ``5.4.3``  |``GCCcore/10.3.0``, ``GCCcore/11.2.0``
 ``5.4.4``  |``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+``5.4.6``  |``GCCcore/12.3.0``
 
 ### LuaJIT
 
@@ -19811,7 +20321,7 @@ version |toolchain
 ## M
 
 
-[M1QN3](#m1qn3) - [M3GNet](#m3gnet) - [M4](#m4) - [MACH](#mach) - [MACS2](#macs2) - [MACSE](#macse) - [maeparser](#maeparser) - [MAFFT](#mafft) - [MAGeCK](#mageck) - [magick](#magick) - [Magics](#magics) - [magma](#magma) - [MAGMA-gene-analysis](#magma-gene-analysis) - [MagresPython](#magrespython) - [mahotas](#mahotas) - [MAJIQ](#majiq) - [make](#make) - [makedepend](#makedepend) - [makedepf90](#makedepf90) - [makeinfo](#makeinfo) - [MAKER](#maker) - [Mako](#mako) - [Mamba](#mamba) - [mandrake](#mandrake) - [mannkendall](#mannkendall) - [manta](#manta) - [mapDamage](#mapdamage) - [Maple](#maple) - [MapSplice](#mapsplice) - [Maq](#maq) - [MariaDB](#mariadb) - [MariaDB-connector-c](#mariadb-connector-c) - [MARS](#mars) - [Mash](#mash) - [MaSuRCA](#masurca) - [Mathematica](#mathematica) - [MathGL](#mathgl) - [MATIO](#matio) - [MATLAB](#matlab) - [MATLAB-Engine](#matlab-engine) - [matlab-proxy](#matlab-proxy) - [matplotlib](#matplotlib) - [matplotlib-inline](#matplotlib-inline) - [MATSim](#matsim) - [Maude](#maude) - [mauveAligner](#mauvealigner) - [Maven](#maven) - [mawk](#mawk) - [MaxBin](#maxbin) - [MaxQuant](#maxquant) - [mayavi](#mayavi) - [maze](#maze) - [MbedTLS](#mbedtls) - [MBROLA](#mbrola) - [mbuffer](#mbuffer) - [mc](#mc) - [MCL](#mcl) - [MCR](#mcr) - [mctc-lib](#mctc-lib) - [mcu](#mcu) - [MDAnalysis](#mdanalysis) - [MDBM](#mdbm) - [MDSplus](#mdsplus) - [MDSplus-Java](#mdsplus-java) - [MDSplus-Python](#mdsplus-python) - [mdtest](#mdtest) - [MDTraj](#mdtraj) - [medaka](#medaka) - [medImgProc](#medimgproc) - [MedPy](#medpy) - [Meep](#meep) - [MEGA](#mega) - [MEGACC](#megacc) - [MEGAHIT](#megahit) - [Megalodon](#megalodon) - [MEGAN](#megan) - [Meld](#meld) - [MEM](#mem) - [MEME](#meme) - [memkind](#memkind) - [memory-profiler](#memory-profiler) - [MEMOTE](#memote) - [memtester](#memtester) - [meRanTK](#merantk) - [MERCKX](#merckx) - [Mercurial](#mercurial) - [Mesa](#mesa) - [Mesa-demos](#mesa-demos) - [meshalyzer](#meshalyzer) - [meshio](#meshio) - [meshtool](#meshtool) - [Meson](#meson) - [meson-python](#meson-python) - [Mesquite](#mesquite) - [MESS](#mess) - [MetaBAT](#metabat) - [MetaboAnalystR](#metaboanalystr) - [metaerg](#metaerg) - [MetaEuk](#metaeuk) - [MetaGeneAnnotator](#metageneannotator) - [Metagenome-Atlas](#metagenome-atlas) - [Metal](#metal) - [MetaMorpheus](#metamorpheus) - [MetaPhlAn](#metaphlan) - [MetaPhlAn2](#metaphlan2) - [metaWRAP](#metawrap) - [Metaxa2](#metaxa2) - [methylartist](#methylartist) - [MethylDackel](#methyldackel) - [methylpy](#methylpy) - [METIS](#metis) - [mgltools](#mgltools) - [mhcflurry](#mhcflurry) - [mhcnuggets](#mhcnuggets) - [MicrobeAnnotator](#microbeannotator) - [microctools](#microctools) - [MiGEC](#migec) - [MIGRATE-N](#migrate-n) - [Miller](#miller) - [mimalloc](#mimalloc) - [MINC](#minc) - [MinCED](#minced) - [Mini-XML](#mini-xml) - [miniasm](#miniasm) - [minibar](#minibar) - [MiniCARD](#minicard) - [Miniconda2](#miniconda2) - [Miniconda3](#miniconda3) - [minieigen](#minieigen) - [Minimac4](#minimac4) - [minimap2](#minimap2) - [Minipolish](#minipolish) - [MiniSat](#minisat) - [minizip](#minizip) - [MINPACK](#minpack) - [MinPath](#minpath) - [MIRA](#mira) - [miRDeep2](#mirdeep2) - [Mish-Cuda](#mish-cuda) - [misha](#misha) - [MITgcmutils](#mitgcmutils) - [MITObim](#mitobim) - [MitoZ](#mitoz) - [MiXCR](#mixcr) - [MixMHC2pred](#mixmhc2pred) - [mkl-dnn](#mkl-dnn) - [mkl-service](#mkl-service) - [mkl_fft](#mkl_fft) - [MLC](#mlc) - [MLxtend](#mlxtend) - [mm-common](#mm-common) - [Mmg](#mmg) - [MMSEQ](#mmseq) - [MMseqs2](#mmseqs2) - [mmtf-cpp](#mmtf-cpp) - [MNE-Python](#mne-python) - [MOABB](#moabb) - [MOABS](#moabs) - [MOB-suite](#mob-suite) - [ModelTest-NG](#modeltest-ng) - [modred](#modred) - [Molcas](#molcas) - [mold](#mold) - [Molden](#molden) - [molecularGSM](#moleculargsm) - [Molekel](#molekel) - [molmod](#molmod) - [Molpro](#molpro) - [MONA](#mona) - [MONAI](#monai) - [MONAI-Label](#monai-label) - [mongolite](#mongolite) - [Mono](#mono) - [Monocle3](#monocle3) - [moonjit](#moonjit) - [MOOSE](#moose) - [mordecai](#mordecai) - [MoreRONN](#moreronn) - [mosdepth](#mosdepth) - [Mothur](#mothur) - [motif](#motif) - [MotionCor2](#motioncor2) - [motionSegmentation](#motionsegmentation) - [MoviePy](#moviepy) - [MPB](#mpb) - [MPC](#mpc) - [MPFR](#mpfr) - [mpi4py](#mpi4py) - [MPICH](#mpich) - [MPICH2](#mpich2) - [mpifileutils](#mpifileutils) - [mpiP](#mpip) - [MPJ-Express](#mpj-express) - [mpmath](#mpmath) - [MrBayes](#mrbayes) - [mrcfile](#mrcfile) - [MRChem](#mrchem) - [MRCPP](#mrcpp) - [MRIcron](#mricron) - [MRPRESSO](#mrpresso) - [MRtrix](#mrtrix) - [msgpack-c](#msgpack-c) - [MSM](#msm) - [MSPC](#mspc) - [msprime](#msprime) - [mstore](#mstore) - [MTL4](#mtl4) - [MuJoCo](#mujoco) - [mujoco-py](#mujoco-py) - [multichoose](#multichoose) - [MultilevelEstimators](#multilevelestimators) - [MultiNest](#multinest) - [MultiQC](#multiqc) - [Multiwfn](#multiwfn) - [muMerge](#mumerge) - [MUMmer](#mummer) - [MUMPS](#mumps) - [muParser](#muparser) - [muparserx](#muparserx) - [MuPeXI](#mupexi) - [MUSCLE](#muscle) - [MuSiC](#music) - [MUST](#must) - [MuTect](#mutect) - [mutil](#mutil) - [MVAPICH2](#mvapich2) - [MView](#mview) - [mxml](#mxml) - [mxmlplus](#mxmlplus) - [MXNet](#mxnet) - [MyCC](#mycc) - [mygene](#mygene) - [MyMediaLite](#mymedialite) - [mympingpong](#mympingpong) - [Myokit](#myokit) - [mypy](#mypy) - [MySQL](#mysql) - [MySQL-python](#mysql-python) - [mysqlclient](#mysqlclient)
+[M1QN3](#m1qn3) - [M3GNet](#m3gnet) - [M4](#m4) - [MACH](#mach) - [MACS2](#macs2) - [MACSE](#macse) - [maeparser](#maeparser) - [MAFFT](#mafft) - [MAGeCK](#mageck) - [magick](#magick) - [Magics](#magics) - [magma](#magma) - [MAGMA-gene-analysis](#magma-gene-analysis) - [MagresPython](#magrespython) - [mahotas](#mahotas) - [MAJIQ](#majiq) - [make](#make) - [makedepend](#makedepend) - [makedepf90](#makedepf90) - [makeinfo](#makeinfo) - [MAKER](#maker) - [Mako](#mako) - [Mamba](#mamba) - [mandrake](#mandrake) - [mannkendall](#mannkendall) - [manta](#manta) - [mapDamage](#mapdamage) - [Maple](#maple) - [MapSplice](#mapsplice) - [Maq](#maq) - [MariaDB](#mariadb) - [MariaDB-connector-c](#mariadb-connector-c) - [MARS](#mars) - [Mash](#mash) - [MaSuRCA](#masurca) - [Mathematica](#mathematica) - [MathGL](#mathgl) - [MATIO](#matio) - [MATLAB](#matlab) - [MATLAB-Engine](#matlab-engine) - [matlab-proxy](#matlab-proxy) - [matplotlib](#matplotlib) - [matplotlib-inline](#matplotlib-inline) - [MATSim](#matsim) - [maturin](#maturin) - [Maude](#maude) - [mauveAligner](#mauvealigner) - [Maven](#maven) - [mawk](#mawk) - [MaxBin](#maxbin) - [MaxQuant](#maxquant) - [mayavi](#mayavi) - [maze](#maze) - [MbedTLS](#mbedtls) - [MBROLA](#mbrola) - [mbuffer](#mbuffer) - [mc](#mc) - [MCL](#mcl) - [MCR](#mcr) - [mctc-lib](#mctc-lib) - [mcu](#mcu) - [MDAnalysis](#mdanalysis) - [MDBM](#mdbm) - [MDSplus](#mdsplus) - [MDSplus-Java](#mdsplus-java) - [MDSplus-Python](#mdsplus-python) - [mdtest](#mdtest) - [MDTraj](#mdtraj) - [meboot](#meboot) - [medaka](#medaka) - [medImgProc](#medimgproc) - [MedPy](#medpy) - [Meep](#meep) - [MEGA](#mega) - [MEGACC](#megacc) - [MEGAHIT](#megahit) - [Megalodon](#megalodon) - [MEGAN](#megan) - [Meld](#meld) - [MEM](#mem) - [MEME](#meme) - [memkind](#memkind) - [memory-profiler](#memory-profiler) - [MEMOTE](#memote) - [memtester](#memtester) - [meRanTK](#merantk) - [MERCKX](#merckx) - [Mercurial](#mercurial) - [Mesa](#mesa) - [Mesa-demos](#mesa-demos) - [meshalyzer](#meshalyzer) - [meshio](#meshio) - [meshtool](#meshtool) - [Meson](#meson) - [meson-python](#meson-python) - [Mesquite](#mesquite) - [MESS](#mess) - [MetaBAT](#metabat) - [MetaboAnalystR](#metaboanalystr) - [metaerg](#metaerg) - [MetaEuk](#metaeuk) - [MetaGeneAnnotator](#metageneannotator) - [Metagenome-Atlas](#metagenome-atlas) - [Metal](#metal) - [MetaMorpheus](#metamorpheus) - [MetaPhlAn](#metaphlan) - [MetaPhlAn2](#metaphlan2) - [metaWRAP](#metawrap) - [Metaxa2](#metaxa2) - [methylartist](#methylartist) - [MethylDackel](#methyldackel) - [methylpy](#methylpy) - [METIS](#metis) - [mgen](#mgen) - [mgltools](#mgltools) - [mhcflurry](#mhcflurry) - [mhcnuggets](#mhcnuggets) - [MicrobeAnnotator](#microbeannotator) - [microctools](#microctools) - [MiGEC](#migec) - [MIGRATE-N](#migrate-n) - [Mikado](#mikado) - [Miller](#miller) - [mimalloc](#mimalloc) - [MINC](#minc) - [MinCED](#minced) - [Mini-XML](#mini-xml) - [miniasm](#miniasm) - [minibar](#minibar) - [MiniCARD](#minicard) - [Miniconda2](#miniconda2) - [Miniconda3](#miniconda3) - [minieigen](#minieigen) - [Minimac4](#minimac4) - [minimap2](#minimap2) - [Minipolish](#minipolish) - [MiniSat](#minisat) - [minizip](#minizip) - [MINPACK](#minpack) - [MinPath](#minpath) - [MIRA](#mira) - [miRDeep2](#mirdeep2) - [Mish-Cuda](#mish-cuda) - [misha](#misha) - [MITgcmutils](#mitgcmutils) - [MITObim](#mitobim) - [MitoZ](#mitoz) - [MiXCR](#mixcr) - [MixMHC2pred](#mixmhc2pred) - [mkl-dnn](#mkl-dnn) - [mkl-service](#mkl-service) - [mkl_fft](#mkl_fft) - [MLC](#mlc) - [MLxtend](#mlxtend) - [mm-common](#mm-common) - [Mmg](#mmg) - [MMSEQ](#mmseq) - [MMseqs2](#mmseqs2) - [mmtf-cpp](#mmtf-cpp) - [MNE-Python](#mne-python) - [MOABB](#moabb) - [MOABS](#moabs) - [MOB-suite](#mob-suite) - [ModelTest-NG](#modeltest-ng) - [modred](#modred) - [Molcas](#molcas) - [mold](#mold) - [Molden](#molden) - [molecularGSM](#moleculargsm) - [Molekel](#molekel) - [molmod](#molmod) - [Molpro](#molpro) - [MONA](#mona) - [MONAI](#monai) - [MONAI-Label](#monai-label) - [mongolite](#mongolite) - [Mono](#mono) - [Monocle3](#monocle3) - [moonjit](#moonjit) - [MOOSE](#moose) - [mordecai](#mordecai) - [MoreRONN](#moreronn) - [mosdepth](#mosdepth) - [Mothur](#mothur) - [motif](#motif) - [MotionCor2](#motioncor2) - [motionSegmentation](#motionsegmentation) - [MoviePy](#moviepy) - [MPB](#mpb) - [MPC](#mpc) - [MPFR](#mpfr) - [mpi4py](#mpi4py) - [MPICH](#mpich) - [MPICH2](#mpich2) - [mpifileutils](#mpifileutils) - [mpiP](#mpip) - [MPJ-Express](#mpj-express) - [mpmath](#mpmath) - [MrBayes](#mrbayes) - [mrcfile](#mrcfile) - [MRChem](#mrchem) - [MRCPP](#mrcpp) - [MRIcron](#mricron) - [MRPRESSO](#mrpresso) - [MRtrix](#mrtrix) - [msgpack-c](#msgpack-c) - [MSM](#msm) - [MSPC](#mspc) - [msprime](#msprime) - [mstore](#mstore) - [MTL4](#mtl4) - [MuJoCo](#mujoco) - [mujoco-py](#mujoco-py) - [multichoose](#multichoose) - [MultilevelEstimators](#multilevelestimators) - [MultiNest](#multinest) - [MultiQC](#multiqc) - [Multiwfn](#multiwfn) - [muMerge](#mumerge) - [MUMmer](#mummer) - [MUMPS](#mumps) - [muParser](#muparser) - [muparserx](#muparserx) - [MuPeXI](#mupexi) - [MUSCLE](#muscle) - [MuSiC](#music) - [MUST](#must) - [MuTect](#mutect) - [mutil](#mutil) - [MVAPICH2](#mvapich2) - [MView](#mview) - [mxml](#mxml) - [mxmlplus](#mxmlplus) - [MXNet](#mxnet) - [MyCC](#mycc) - [mygene](#mygene) - [MyMediaLite](#mymedialite) - [mympingpong](#mympingpong) - [Myokit](#myokit) - [mypy](#mypy) - [MySQL](#mysql) - [MySQL-python](#mysql-python) - [mysqlclient](#mysqlclient)
 
 
 ### M1QN3
@@ -19845,7 +20355,7 @@ version   |toolchain
 ``1.4.16``|``GCC/4.8.1``, ``GCC/4.8.2``, ``system``
 ``1.4.17``|``GCC/4.8.2``, ``GCC/4.8.4``, ``GCC/4.9.2``, ``GCC/4.9.2-binutils-2.25``, ``GCC/4.9.3``, ``GCC/4.9.3-2.25``, ``GCC/4.9.3-binutils-2.25``, ``GCC/5.1.0-binutils-2.25``, ``GCC/5.2.0``, ``GCC/5.4.0-2.26``, ``GCCcore/4.9.2``, ``GCCcore/4.9.3``, ``GCCcore/4.9.4``, ``GCCcore/5.3.0``, ``GCCcore/5.4.0``, ``GCCcore/6.1.0``, ``GCCcore/6.2.0``, ``GNU/4.9.2-2.25``, ``GNU/4.9.3-2.25``, ``GNU/5.1.0-2.25``, ``foss/2016.04``, ``foss/2016a``, ``foss/2016b``, ``gimkl/2.11.5``, ``intel/2016.02-GCC-4.9``, ``intel/2016a``, ``intel/2016b``, ``iomkl/2016.07``, ``iomkl/2016.09-GCC-4.9.3-2.25``, ``system``
 ``1.4.18``|``FCC/4.5.0``, ``GCCcore/10.1.0``, ``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.1.0``, ``GCCcore/5.3.0``, ``GCCcore/5.4.0``, ``GCCcore/5.5.0``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.1.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/7.4.0``, ``GCCcore/8.1.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/8.4.0``, ``GCCcore/9.1.0``, ``GCCcore/9.2.0``, ``GCCcore/9.3.0``, ``GCCcore/system``, ``system``
-``1.4.19``|``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/11.4.0``, ``GCCcore/12.1.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/13.1.0``, ``GCCcore/9.4.0``, ``GCCcore/9.5.0``, ``system``
+``1.4.19``|``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/11.4.0``, ``GCCcore/12.1.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/13.1.0``, ``GCCcore/13.2.0``, ``GCCcore/9.4.0``, ``GCCcore/9.5.0``, ``system``
 
 ### MACH
 
@@ -19870,6 +20380,7 @@ version           |versionsuffix     |toolchain
 ``2.1.2.1``       |``-Python-2.7.15``|``intel/2019a``
 ``2.2.5``         |``-Python-3.6.6`` |``foss/2018b``
 ``2.2.7.1``       |                  |``foss/2021b``
+``2.2.9.1``       |                  |``foss/2022b``
 
 ### MACSE
 
@@ -19961,6 +20472,7 @@ version  |versionsuffix   |toolchain
 ``2.6.2``|``-CUDA-11.4.1``|``foss/2021b``
 ``2.6.2``|``-CUDA-11.5.2``|``foss/2021b``
 ``2.6.2``|``-CUDA-11.7.0``|``foss/2022a``
+``2.7.1``|``-CUDA-12.0.0``|``foss/2022b``
 
 ### MAGMA-gene-analysis
 
@@ -19990,9 +20502,10 @@ Mahotas is a computer vision and image processing library for Python
 
 *homepage*: <https://mahotas.readthedocs.io/>
 
-version  |versionsuffix     |toolchain
----------|------------------|---------------
-``1.4.3``|``-Python-2.7.12``|``intel/2016b``
+version   |versionsuffix     |toolchain
+----------|------------------|---------------
+``1.4.3`` |``-Python-2.7.12``|``intel/2016b``
+``1.4.13``|                  |``foss/2022a``
 
 ### MAJIQ
 
@@ -20046,11 +20559,12 @@ makeinfo is part of the Texinfo project, the official documentation format of th
 
 *homepage*: <https://www.gnu.org/software/texinfo/>
 
-version|versionsuffix|toolchain
--------|-------------|-------------------------------------------------------------------------------------------
-``6.7``|             |``FCC/4.5.0``, ``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
-``6.7``|``-minimal`` |``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
-``6.8``|             |``GCCcore/11.2.0``, ``GCCcore/11.3.0``
+version  |versionsuffix|toolchain
+---------|-------------|-------------------------------------------------------------------------------------------
+``6.7``  |             |``FCC/4.5.0``, ``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
+``6.7``  |``-minimal`` |``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
+``6.8``  |             |``GCCcore/11.2.0``, ``GCCcore/11.3.0``
+``7.0.3``|             |``GCCcore/12.3.0``
 
 ### MAKER
 
@@ -20082,7 +20596,7 @@ version  |versionsuffix     |toolchain
 ``1.1.3``|                  |``GCCcore/10.2.0``
 ``1.1.4``|                  |``GCCcore/10.3.0``, ``GCCcore/11.2.0``
 ``1.2.0``|                  |``GCCcore/11.3.0``
-``1.2.4``|                  |``GCCcore/12.2.0``
+``1.2.4``|                  |``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### Mamba
 
@@ -20093,6 +20607,7 @@ Mamba is a fast, robust, and cross-platform package manager. It runs on Windows,
 version     |toolchain
 ------------|----------
 ``4.14.0-0``|``system``
+``23.1.0-4``|``system``
 
 ### mandrake
 
@@ -20287,14 +20802,14 @@ matio is an C library for reading and writing Matlab MAT files.
 *homepage*: <http://sourceforge.net/projects/matio/>
 
 version   |toolchain
-----------|------------------
+----------|--------------------------------------
 ``1.5.9`` |``GCCcore/5.4.0``
 ``1.5.11``|``foss/2017b``
 ``1.5.12``|``GCCcore/6.4.0``
 ``1.5.17``|``GCCcore/8.3.0``
 ``1.5.19``|``GCCcore/9.3.0``
 ``1.5.21``|``GCCcore/10.2.0``
-``1.5.23``|``GCCcore/11.3.0``
+``1.5.23``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``
 
 ### MATLAB
 
@@ -20395,6 +20910,7 @@ version  |versionsuffix                    |toolchain
 ``3.5.1``|                                 |``foss/2020b``, ``intel/2020b``
 ``3.5.2``|                                 |``foss/2021b``, ``foss/2022a``, ``intel/2022a``
 ``3.7.0``|                                 |``gfbf/2022b``
+``3.7.2``|                                 |``gfbf/2023a``
 
 ### matplotlib-inline
 
@@ -20416,6 +20932,16 @@ version  |versionsuffix      |toolchain
 ---------|-------------------|------------------------------
 ``0.8.1``|``-Java-1.8.0_112``|``intel/2016b``
 ``14.0`` |``-Java-11``       |``GCCcore/11.2.0``, ``system``
+
+### maturin
+
+This project is meant as a zero configuration replacement for setuptools-rust and milksnake. It supports building wheels for python 3.5+ on windows, linux, mac and freebsd, can upload them to pypi and has basic pypy and graalpy support.
+
+*homepage*: <https://github.com/pyo3/maturin>
+
+version  |toolchain
+---------|--------------------------------------
+``1.1.0``|``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### Maude
 
@@ -20700,6 +21226,16 @@ version  |versionsuffix    |toolchain
 ``1.9.5``|                 |``foss/2020b``, ``fosscuda/2020b``, ``intel/2020b``
 ``1.9.7``|                 |``foss/2021a``, ``foss/2022a``, ``intel/2021b``, ``intel/2022a``
 
+### meboot
+
+Maximum entropy density based dependent data bootstrap.  An algorithm is provided to create a population of time series (ensemble) without assuming stationarity.
+
+*homepage*: <https://cran.r-project.org/web/packages/meboot/index.html>
+
+version    |versionsuffix|toolchain
+-----------|-------------|--------------
+``1.4-9.2``|``-R-4.2.1`` |``foss/2022a``
+
 ### medaka
 
 medaka is a tool to create a consensus sequence from nanopore sequencing data.
@@ -20718,6 +21254,8 @@ version   |versionsuffix    |toolchain
 ``1.4.3`` |``-Python-3.7.4``|``foss/2019b``
 ``1.5.0`` |                 |``foss/2021a``
 ``1.6.0`` |                 |``foss/2021b``
+``1.8.1`` |                 |``foss/2022a``
+``1.9.1`` |                 |``foss/2022a``
 
 ### medImgProc
 
@@ -20923,6 +21461,7 @@ version  |versionsuffix     |toolchain
 ``5.7.1``|``-Python-3.8.2`` |``GCCcore/9.3.0``
 ``5.8``  |                  |``GCCcore/10.3.0``
 ``6.2``  |                  |``GCCcore/11.3.0``
+``6.4.5``|                  |``GCCcore/12.3.0``
 
 ### Mesa
 
@@ -20949,6 +21488,7 @@ version   |toolchain
 ``21.1.7``|``GCCcore/11.2.0``
 ``22.0.3``|``GCCcore/11.3.0``
 ``22.2.4``|``GCCcore/12.2.0``
+``23.1.4``|``GCCcore/12.3.0``
 
 ### Mesa-demos
 
@@ -21029,6 +21569,7 @@ Python build backend (PEP 517) for Meson projects
 version   |toolchain
 ----------|------------------
 ``0.11.0``|``GCCcore/12.2.0``
+``0.13.2``|``GCCcore/12.3.0``
 
 ### Mesquite
 
@@ -21226,6 +21767,16 @@ version  |versionsuffix|toolchain
 ``5.1.0``|             |``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``, ``foss/2016a``, ``foss/2016b``, ``foss/2017a``, ``foss/2018b``, ``gimkl/2.11.5``, ``intel/2016a``, ``intel/2016b``, ``intel/2017a``
 ``5.1.0``|``-32bitIDX``|``foss/2016a``, ``gimkl/2.11.5``, ``intel/2016a``
 
+### mgen
+
+Convenient matrix generation functions
+
+*homepage*: <https://github.com/NOhs/mgen/tree/master>
+
+version  |toolchain
+---------|--------------
+``1.2.1``|``foss/2022a``
+
 ### mgltools
 
 The MGLTools software suite can be used for visualization     and analysis of molecular structures and comprises     the Python Molecular Viewer (PMV, a general purpose molecular viewer),     AutoDockTools (ADT, a set of PMV commands specifically developed to support AutoDock users)     and Vision (a visual programming environment). 
@@ -21299,6 +21850,16 @@ version   |toolchain
 ``4.2.8`` |``foss/2016a``
 ``4.2.14``|``foss/2018a``
 ``5.0.4`` |``foss/2021b``
+
+### Mikado
+
+Mikado is a lightweight Python3 pipeline to identify  the most useful or “best” set of transcripts from multiple transcript  assemblies. Our approach leverages transcript assemblies generated  by multiple methods to define expressed loci, assign a representative  transcript and return a set of gene models that selects against transcripts  that are chimeric, fragmented or with short or disrupted CDS.
+
+*homepage*: <https://github.com/EI-CoreBioinformatics/mikado>
+
+version  |toolchain
+---------|--------------
+``2.3.4``|``foss/2022b``
 
 ### Miller
 
@@ -21412,6 +21973,7 @@ version      |toolchain
 ``4.9.2``    |``system``
 ``4.12.0``   |``system``
 ``22.11.1-1``|``system``
+``23.5.2-0`` |``system``
 
 ### minieigen
 
@@ -21950,6 +22512,7 @@ version  |versionsuffix            |toolchain
 ---------|-------------------------|--------------
 ``0.2.0``|``-Python-3.7.2-R-3.6.0``|``foss/2019a``
 ``0.2.3``|``-R-4.0.3``             |``foss/2020b``
+``1.3.1``|``-R-4.2.1``             |``foss/2022a``
 
 ### moonjit
 
@@ -22087,6 +22650,7 @@ version  |versionsuffix  |toolchain
 ``1.0.3``|``-MPFR-3.1.6``|``foss/2017b``, ``intel/2017b``
 ``1.1.0``|               |``GCC/8.3.0``, ``GCC/9.3.0``, ``GCCcore/9.3.0``
 ``1.2.1``|               |``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``
+``1.3.1``|               |``GCCcore/12.3.0``
 
 ### MPFR
 
@@ -22121,7 +22685,7 @@ version  |versionsuffix                    |toolchain
 ``3.0.0``|``-Python-3.6.3``                |``intel/2017b``
 ``3.0.1``|``-Python-3.6.6``                |``intel/2018b``
 ``3.0.2``|``-timed-pingpong``              |``gompi/2019a``, ``iimpi/2019a``
-``3.1.4``|                                 |``gompi/2022b``
+``3.1.4``|                                 |``gompi/2022b``, ``gompi/2023a``
 
 ### MPICH
 
@@ -22273,6 +22837,7 @@ version            |versionsuffix     |toolchain
 ``3.0-rc-20191217``|``-Python-3.7.4`` |``foss/2019b``
 ``3.0.0``          |``-Python-3.8.2`` |``foss/2020a``
 ``3.0.3``          |                  |``foss/2021a``
+``3.0.4``          |                  |``foss/2022b``
 ``3.0_RC2``        |``-Python-2.7.13``|``foss/2017a``
 ``3.0_RC3``        |``-Python-2.7.14``|``intel/2018a``
 
@@ -22366,8 +22931,8 @@ generate multiset combinations (n multichoose k).
 *homepage*: <https://github.com/ekg/multichoose>
 
 version  |toolchain
----------|-----------------------------------------------------------------------------
-``1.0.3``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/9.3.0``
+---------|-------------------------------------------------------------------------------------------------
+``1.0.3``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/9.3.0``
 
 ### MultilevelEstimators
 
@@ -22462,6 +23027,7 @@ version  |versionsuffix |toolchain
 ``5.4.1``|``-metis``    |``foss/2021b``, ``intel/2021b``
 ``5.5.0``|``-metis``    |``foss/2021a``
 ``5.5.1``|``-metis``    |``foss/2022a``
+``5.6.1``|``-metis``    |``foss/2022b``, ``foss/2023a``
 
 ### muParser
 
@@ -22607,6 +23173,7 @@ Flexible and Efficient Library for Deep Learning
 version  |versionsuffix             |toolchain
 ---------|--------------------------|--------------
 ``0.9.3``|``-Python-2.7.12-R-3.3.3``|``foss/2016b``
+``1.9.1``|                          |``foss/2022a``
 
 ### MyCC
 
@@ -22710,7 +23277,7 @@ version  |versionsuffix     |toolchain
 ## N
 
 
-[n2v](#n2v) - [NAG](#nag) - [NAGfor](#nagfor) - [NAMD](#namd) - [namedlist](#namedlist) - [nano](#nano) - [NanoComp](#nanocomp) - [nanocompore](#nanocompore) - [NanoFilt](#nanofilt) - [nanoflann](#nanoflann) - [nanoget](#nanoget) - [NanoLyse](#nanolyse) - [nanomath](#nanomath) - [nanomax-analysis-utils](#nanomax-analysis-utils) - [nanonet](#nanonet) - [NanoPlot](#nanoplot) - [nanopolish](#nanopolish) - [NanopolishComp](#nanopolishcomp) - [NanoStat](#nanostat) - [napari](#napari) - [NASM](#nasm) - [nauty](#nauty) - [NBO](#nbo) - [NCBI-Toolkit](#ncbi-toolkit) - [ncbi-vdb](#ncbi-vdb) - [NCCL](#nccl) - [NCCL-tests](#nccl-tests) - [ncdf4](#ncdf4) - [ncdu](#ncdu) - [NCIPLOT](#nciplot) - [NCL](#ncl) - [NCO](#nco) - [ncompress](#ncompress) - [ncurses](#ncurses) - [ncview](#ncview) - [nd2reader](#nd2reader) - [ne](#ne) - [NECI](#neci) - [NEdit](#nedit) - [Nek5000](#nek5000) - [Nektar++](#nektar++) - [neon](#neon) - [neptune-client](#neptune-client) - [Net-core](#net-core) - [netCDF](#netcdf) - [netCDF-C++](#netcdf-c++) - [netCDF-C++4](#netcdf-c++4) - [netCDF-Fortran](#netcdf-fortran) - [netcdf4-python](#netcdf4-python) - [netloc](#netloc) - [NetLogo](#netlogo) - [netMHC](#netmhc) - [netMHCII](#netmhcii) - [netMHCIIpan](#netmhciipan) - [netMHCpan](#netmhcpan) - [NetPIPE](#netpipe) - [NetPyNE](#netpyne) - [nettle](#nettle) - [networkTools](#networktools) - [networkx](#networkx) - [NeuroKit](#neurokit) - [NEURON](#neuron) - [NewHybrids](#newhybrids) - [Nextflow](#nextflow) - [NextGenMap](#nextgenmap) - [NEXUS-CL](#nexus-cl) - [nf-core-mag](#nf-core-mag) - [NFFT](#nfft) - [nghttp2](#nghttp2) - [nghttp3](#nghttp3) - [NGLess](#ngless) - [nglview](#nglview) - [NGS](#ngs) - [NGS-Python](#ngs-python) - [NGSadmix](#ngsadmix) - [NGSpeciesID](#ngspeciesid) - [ngspice](#ngspice) - [ngtcp2](#ngtcp2) - [NiBabel](#nibabel) - [nichenetr](#nichenetr) - [NIfTI](#nifti) - [nifti2dicom](#nifti2dicom) - [Nilearn](#nilearn) - [Nim](#nim) - [NIMBLE](#nimble) - [Ninja](#ninja) - [Nipype](#nipype) - [NLMpy](#nlmpy) - [nlohmann_json](#nlohmann_json) - [NLopt](#nlopt) - [NLTK](#nltk) - [nnU-Net](#nnu-net) - [Node-RED](#node-red) - [nodejs](#nodejs) - [Normaliz](#normaliz) - [nose-parameterized](#nose-parameterized) - [novoalign](#novoalign) - [NOVOPlasty](#novoplasty) - [npstat](#npstat) - [NRGLjubljana](#nrgljubljana) - [Nsight-Compute](#nsight-compute) - [Nsight-Systems](#nsight-systems) - [NSPR](#nspr) - [NSS](#nss) - [nsync](#nsync) - [ntCard](#ntcard) - [ntEdit](#ntedit) - [ntHits](#nthits) - [NTL](#ntl) - [NTPoly](#ntpoly) - [num2words](#num2words) - [numactl](#numactl) - [numba](#numba) - [numdiff](#numdiff) - [numexpr](#numexpr) - [numpy](#numpy) - [NVHPC](#nvhpc) - [nvofbf](#nvofbf) - [nvompi](#nvompi) - [NVSHMEM](#nvshmem) - [nvtop](#nvtop) - [NWChem](#nwchem) - [NxTrim](#nxtrim)
+[n2v](#n2v) - [NAG](#nag) - [NAGfor](#nagfor) - [NAMD](#namd) - [namedlist](#namedlist) - [nano](#nano) - [NanoCaller](#nanocaller) - [NanoComp](#nanocomp) - [nanocompore](#nanocompore) - [NanoFilt](#nanofilt) - [nanoflann](#nanoflann) - [nanoget](#nanoget) - [NanoLyse](#nanolyse) - [nanomath](#nanomath) - [nanomax-analysis-utils](#nanomax-analysis-utils) - [nanonet](#nanonet) - [NanoPlot](#nanoplot) - [nanopolish](#nanopolish) - [NanopolishComp](#nanopolishcomp) - [NanoStat](#nanostat) - [napari](#napari) - [NASM](#nasm) - [nauty](#nauty) - [nbclassic](#nbclassic) - [NBO](#nbo) - [NCBI-Toolkit](#ncbi-toolkit) - [ncbi-vdb](#ncbi-vdb) - [NCCL](#nccl) - [NCCL-tests](#nccl-tests) - [ncdf4](#ncdf4) - [ncdu](#ncdu) - [NCIPLOT](#nciplot) - [NCL](#ncl) - [NCO](#nco) - [ncolor](#ncolor) - [ncompress](#ncompress) - [ncurses](#ncurses) - [ncview](#ncview) - [nd2reader](#nd2reader) - [ne](#ne) - [NECI](#neci) - [NEdit](#nedit) - [Nek5000](#nek5000) - [Nektar++](#nektar++) - [neon](#neon) - [neptune-client](#neptune-client) - [Net-core](#net-core) - [netCDF](#netcdf) - [netCDF-C++](#netcdf-c++) - [netCDF-C++4](#netcdf-c++4) - [netCDF-Fortran](#netcdf-fortran) - [netcdf4-python](#netcdf4-python) - [netloc](#netloc) - [NetLogo](#netlogo) - [netMHC](#netmhc) - [netMHCII](#netmhcii) - [netMHCIIpan](#netmhciipan) - [netMHCpan](#netmhcpan) - [NetPIPE](#netpipe) - [NetPyNE](#netpyne) - [nettle](#nettle) - [networkTools](#networktools) - [networkx](#networkx) - [NeuroKit](#neurokit) - [NEURON](#neuron) - [NewHybrids](#newhybrids) - [Nextflow](#nextflow) - [NextGenMap](#nextgenmap) - [NEXUS-CL](#nexus-cl) - [nf-core-mag](#nf-core-mag) - [NFFT](#nfft) - [nghttp2](#nghttp2) - [nghttp3](#nghttp3) - [NGLess](#ngless) - [nglview](#nglview) - [NGS](#ngs) - [NGS-Python](#ngs-python) - [NGSadmix](#ngsadmix) - [NGSpeciesID](#ngspeciesid) - [ngspice](#ngspice) - [ngtcp2](#ngtcp2) - [NiBabel](#nibabel) - [nichenetr](#nichenetr) - [NIfTI](#nifti) - [nifti2dicom](#nifti2dicom) - [Nilearn](#nilearn) - [Nim](#nim) - [NIMBLE](#nimble) - [Ninja](#ninja) - [Nipype](#nipype) - [NLMpy](#nlmpy) - [nlohmann_json](#nlohmann_json) - [NLopt](#nlopt) - [NLTK](#nltk) - [nnU-Net](#nnu-net) - [Node-RED](#node-red) - [nodejs](#nodejs) - [Normaliz](#normaliz) - [nose-parameterized](#nose-parameterized) - [nose3](#nose3) - [novaSTA](#novasta) - [novoalign](#novoalign) - [NOVOPlasty](#novoplasty) - [npstat](#npstat) - [NRGLjubljana](#nrgljubljana) - [Nsight-Compute](#nsight-compute) - [Nsight-Systems](#nsight-systems) - [NSPR](#nspr) - [NSS](#nss) - [nsync](#nsync) - [ntCard](#ntcard) - [ntEdit](#ntedit) - [ntHits](#nthits) - [NTL](#ntl) - [NTPoly](#ntpoly) - [num2words](#num2words) - [numactl](#numactl) - [numba](#numba) - [numdiff](#numdiff) - [numexpr](#numexpr) - [numpy](#numpy) - [NVHPC](#nvhpc) - [nvofbf](#nvofbf) - [nvompi](#nvompi) - [NVSHMEM](#nvshmem) - [nvtop](#nvtop) - [NWChem](#nwchem) - [NxTrim](#nxtrim)
 
 
 ### n2v
@@ -22761,6 +23328,7 @@ version |versionsuffix   |toolchain
 ``2.13``|``-mpi``        |``foss/2018b``, ``foss/2019b``, ``intel/2018b``
 ``2.14``|                |``fosscuda/2019b``, ``fosscuda/2020b``
 ``2.14``|``-CUDA-11.3.1``|``foss/2021a``
+``2.14``|``-CUDA-11.7.0``|``foss/2022a``
 ``2.14``|``-mpi``        |``foss/2019b``, ``foss/2020a``, ``foss/2020b``, ``foss/2022a``, ``intel/2020a``
 
 ### namedlist
@@ -22785,6 +23353,16 @@ version|toolchain
 ``7.0``|``GCCcore/11.3.0``
 ``7.1``|``GCCcore/12.2.0``
 ``7.2``|``GCCcore/12.2.0``
+
+### NanoCaller
+
+NanoCaller is a computational method that integrates long reads in deep  convolutional neural network for the detection of SNPs/indels from long-read sequencing data.
+
+*homepage*: <https://github.com/WGLab/NanoCaller>
+
+version  |toolchain
+---------|--------------
+``3.4.1``|``foss/2022a``
 
 ### NanoComp
 
@@ -22941,6 +23519,7 @@ napari is a fast, interactive, multi-dimensional image viewer for Python. It's  
 version   |toolchain
 ----------|--------------
 ``0.4.15``|``foss/2021b``
+``0.4.18``|``foss/2022a``
 
 ### NASM
 
@@ -22970,6 +23549,16 @@ version   |toolchain
 ``2.6r12``|``GCC/8.2.0-2.31.1``
 ``2.7rc2``|``GCC/8.2.0-2.31.1``
 ``2.7rc5``|``GCC/8.3.0``
+
+### nbclassic
+
+NbClassic provides a backwards compatible Jupyter Notebook interface  that you can install side-by-side with the latest versions: That way, you can fearlessly  upgrade without worrying about your classic extensions and customizations breaking.
+
+*homepage*: <https://jupyter.org/>
+
+version  |toolchain
+---------|------------------
+``1.0.0``|``GCCcore/12.3.0``
 
 ### NBO
 
@@ -23079,6 +23668,7 @@ version   |toolchain
 ``1.15.1``|``GCCcore/9.3.0``
 ``1.16``  |``GCC/10.3.0``, ``GCC/11.2.0``
 ``1.17``  |``GCC/11.3.0``
+``1.18``  |``GCC/12.3.0``
 
 ### NCIPLOT
 
@@ -23128,6 +23718,16 @@ version  |toolchain
 ``5.1.0``|``foss/2022a``
 ``5.1.3``|``foss/2021a``, ``foss/2022a``
 
+### ncolor
+
+Fast remapping of instance labels 1,2,3,...,M to a smaller set of repeating, disjoint labels, 1,2,...,N.
+
+*homepage*: <https://github.com/kevinjohncutler/ncolor>
+
+version  |toolchain
+---------|--------------
+``1.2.1``|``foss/2022a``
+
 ### ncompress
 
 Compress is a fast, simple LZW file compressor. Compress does not have the  highest compression rate, but it is one of the fastest programs to compress  data. Compress is the defacto standard in the UNIX community for compressing  files. 
@@ -23151,7 +23751,7 @@ version|toolchain
 ``6.1``|``GCCcore/6.4.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``system``
 ``6.2``|``FCC/4.5.0``, ``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/9.3.0``, ``system``
 ``6.3``|``GCCcore/11.3.0``, ``GCCcore/12.1.0``, ``GCCcore/12.2.0``, ``system``
-``6.4``|``GCCcore/12.3.0``, ``GCCcore/13.1.0``, ``system``
+``6.4``|``GCCcore/12.3.0``, ``GCCcore/13.1.0``, ``GCCcore/13.2.0``, ``system``
 
 ### ncview
 
@@ -23162,7 +23762,7 @@ Ncview is a visual browser for netCDF format files.  Typically you would use ncv
 version  |toolchain
 ---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ``2.1.7``|``foss/2017b``, ``foss/2018b``, ``foss/2019b``, ``gompi/2019a``, ``intel/2016b``, ``intel/2017a``, ``intel/2017b``, ``intel/2018a``, ``intel/2018b``, ``intel/2019b``, ``iomkl/2018b``
-``2.1.8``|``gompi/2020a``, ``gompi/2021a``, ``gompi/2021b``, ``gompi/2022a``
+``2.1.8``|``gompi/2020a``, ``gompi/2021a``, ``gompi/2021b``, ``gompi/2022a``, ``gompi/2023a``
 
 ### nd2reader
 
@@ -23282,6 +23882,7 @@ version    |versionsuffix   |toolchain
 ``4.8.0``  |                |``gompi/2021a``, ``iimpi/2021a``
 ``4.8.1``  |                |``gompi/2021b``, ``iimpi/2021b``
 ``4.9.0``  |                |``gompi/2022a``, ``gompi/2022b``, ``iimpi/2022a``, ``iimpi/2022b``
+``4.9.2``  |                |``gompi/2023a``, ``iimpi/2023a``
 
 ### netCDF-C++
 
@@ -23300,11 +23901,11 @@ NetCDF (network Common Data Form) is a set of software libraries  and machine-in
 *homepage*: <https://www.unidata.ucar.edu/software/netcdf/>
 
 version  |versionsuffix   |toolchain
----------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ``4.3.0``|                |``foss/2018b``, ``gompi/2019a``, ``iimpi/2019a``, ``intel/2016a``, ``intel/2016b``, ``intel/2017a``, ``intel/2018a``, ``intel/2018b``, ``iomkl/2018b``
 ``4.3.0``|``-HDF5-1.8.18``|``intel/2017a``
 ``4.3.0``|``-HDF5-1.8.19``|``intel/2017b``
-``4.3.1``|                |``gompi/2019b``, ``gompi/2020a``, ``gompi/2020b``, ``gompi/2021a``, ``gompi/2021b``, ``gompi/2022a``, ``iimpi/2019b``, ``iimpi/2020a``, ``iimpi/2020b``, ``iimpi/2021a``, ``iimpi/2021b``, ``iimpi/2022a``
+``4.3.1``|                |``gompi/2019b``, ``gompi/2020a``, ``gompi/2020b``, ``gompi/2021a``, ``gompi/2021b``, ``gompi/2022a``, ``gompi/2023a``, ``iimpi/2019b``, ``iimpi/2020a``, ``iimpi/2020b``, ``iimpi/2021a``, ``iimpi/2021b``, ``iimpi/2022a``
 
 ### netCDF-Fortran
 
@@ -23324,6 +23925,7 @@ version  |versionsuffix   |toolchain
 ``4.5.2``|                |``gompi/2019b``, ``gompi/2020a``, ``gompic/2019b``, ``gompic/2020a``, ``iimpi/2019b``, ``iimpi/2020a``, ``iimpic/2019b``
 ``4.5.3``|                |``gompi/2020b``, ``gompi/2021a``, ``gompi/2021b``, ``gompic/2020b``, ``iimpi/2020b``, ``iimpi/2021a``, ``iimpi/2021b``
 ``4.6.0``|                |``gompi/2022a``, ``gompi/2022b``, ``iimpi/2022a``
+``4.6.1``|                |``gompi/2023a``
 
 ### netcdf4-python
 
@@ -23455,6 +24057,7 @@ version  |toolchain
 ``3.7.3``|``GCCcore/11.2.0``
 ``3.8``  |``GCCcore/11.3.0``
 ``3.8.1``|``GCCcore/12.2.0``
+``3.9.1``|``GCCcore/12.3.0``
 
 ### networkTools
 
@@ -23494,6 +24097,7 @@ version  |versionsuffix     |toolchain
 ``2.8.4``|                  |``foss/2022a``, ``intel/2022a``
 ``2.8.8``|                  |``gfbf/2022b``
 ``3.0``  |                  |``gfbf/2022b``
+``3.1``  |                  |``gfbf/2023a``
 
 ### NeuroKit
 
@@ -23865,7 +24469,7 @@ version  |toolchain
 ``2.6.1``|``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 ``2.6.2``|``GCCcore/10.2.0``
 ``2.7.0``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``
-``2.7.1``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+``2.7.1``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### NLTK
 
@@ -23922,6 +24526,7 @@ version    |toolchain
 ``14.17.6``|``GCCcore/11.2.0``
 ``16.15.1``|``GCCcore/11.3.0``
 ``18.12.1``|``GCCcore/12.2.0``
+``18.17.1``|``GCCcore/12.3.0``
 
 ### Normaliz
 
@@ -23947,6 +24552,26 @@ version  |versionsuffix     |toolchain
 ``0.5.0``|``-Python-3.5.1`` |``foss/2016a``
 ``0.5.0``|``-Python-3.5.2`` |``intel/2016b``
 ``0.6.0``|``-Python-3.6.1`` |``intel/2017a``
+
+### nose3
+
+Nose extends unittest to make testing easier.
+
+*homepage*: <https://nose.readthedocs.io/>
+
+version  |toolchain
+---------|------------------
+``1.3.8``|``GCCcore/11.3.0``
+
+### novaSTA
+
+C++ version of subtomogram averaging (SA) scripts from TOM/AV3 package           https://doi.org/10.1073/pnas.0409178102. Both CPU and GPU parallelization is     supported although the latter performs significantly worse in terms of           processing time (the code is not well optimized) and is thus not recommended for larger datasets. 
+
+*homepage*: <https://github.com/turonova/novaSTA>
+
+version|versionsuffix   |toolchain
+-------|----------------|--------------
+``1.1``|``-CUDA-11.7.0``|``foss/2022a``
 
 ### novoalign
 
@@ -24056,6 +24681,7 @@ version   |toolchain
 ----------|------------------------------------------------------------------------------------------------
 ``1.24.0``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 ``1.25.0``|``GCCcore/11.3.0``
+``1.26.0``|``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### ntCard
 
@@ -24134,7 +24760,7 @@ version   |toolchain
 ``2.0.12``|``GCCcore/8.2.0``, ``GCCcore/8.3.0``
 ``2.0.13``|``GCCcore/10.2.0``, ``GCCcore/9.2.0``, ``GCCcore/9.3.0``
 ``2.0.14``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``
-``2.0.16``|``GCCcore/12.2.0``, ``GCCcore/12.3.0``
+``2.0.16``|``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/13.2.0``
 
 ### numba
 
@@ -24237,6 +24863,7 @@ version  |versionsuffix   |toolchain
 ``22.9`` |``-CUDA-11.7.0``|``system``
 ``22.11``|``-CUDA-11.7.0``|``system``
 ``23.1`` |``-CUDA-12.0.0``|``system``
+``23.7`` |``-CUDA-12.1.1``|``system``
 
 ### nvofbf
 
@@ -24314,7 +24941,7 @@ version  |toolchain
 ## O
 
 
-[Oases](#oases) - [OBITools](#obitools) - [OBITools3](#obitools3) - [OCaml](#ocaml) - [occt](#occt) - [oceanspy](#oceanspy) - [OCNet](#ocnet) - [Octave](#octave) - [Octopus-vcf](#octopus-vcf) - [OGDF](#ogdf) - [olaFlow](#olaflow) - [olego](#olego) - [OMA](#oma) - [OmegaFold](#omegafold) - [onedrive](#onedrive) - [ONNX](#onnx) - [ONNX-Runtime](#onnx-runtime) - [ont-fast5-api](#ont-fast5-api) - [ont-guppy](#ont-guppy) - [ont-remora](#ont-remora) - [OOMPA](#oompa) - [OPARI2](#opari2) - [Open-Data-Cube-Core](#open-data-cube-core) - [OpenAI-Gym](#openai-gym) - [OpenBabel](#openbabel) - [OpenBLAS](#openblas) - [openCARP](#opencarp) - [OpenCensus-python](#opencensus-python) - [OpenCoarrays](#opencoarrays) - [OpenColorIO](#opencolorio) - [OpenCV](#opencv) - [OpenEXR](#openexr) - [OpenFace](#openface) - [OpenFAST](#openfast) - [OpenFOAM](#openfoam) - [OpenFOAM-Extend](#openfoam-extend) - [OpenFold](#openfold) - [OpenForceField](#openforcefield) - [OpenImageIO](#openimageio) - [OpenJPEG](#openjpeg) - [OpenKIM-API](#openkim-api) - [openkim-models](#openkim-models) - [OpenMM](#openmm) - [OpenMM-PLUMED](#openmm-plumed) - [OpenMMTools](#openmmtools) - [OpenMolcas](#openmolcas) - [OpenMPI](#openmpi) - [OpenMS](#openms) - [OpenNLP](#opennlp) - [OpenPGM](#openpgm) - [OpenPIV](#openpiv) - [openpyxl](#openpyxl) - [OpenRefine](#openrefine) - [OpenSceneGraph](#openscenegraph) - [OpenSees](#opensees) - [OpenSlide](#openslide) - [openslide-python](#openslide-python) - [OpenSSL](#openssl) - [OpenStackClient](#openstackclient) - [OPERA](#opera) - [OPERA-MS](#opera-ms) - [OptaDOS](#optados) - [OptiType](#optitype) - [OptiX](#optix) - [Optuna](#optuna) - [OR-Tools](#or-tools) - [ORCA](#orca) - [ORFfinder](#orffinder) - [OrfM](#orfm) - [OrthoFinder](#orthofinder) - [OrthoMCL](#orthomcl) - [Osi](#osi) - [OSPRay](#ospray) - [OSU-Micro-Benchmarks](#osu-micro-benchmarks) - [OTF2](#otf2) - [OVITO](#ovito) - [ownCloud](#owncloud) - [oxDNA](#oxdna) - [oxford_asl](#oxford_asl)
+[Oases](#oases) - [OBITools](#obitools) - [OBITools3](#obitools3) - [OCaml](#ocaml) - [occt](#occt) - [oceanspy](#oceanspy) - [OCNet](#ocnet) - [Octave](#octave) - [Octopus-vcf](#octopus-vcf) - [OGDF](#ogdf) - [olaFlow](#olaflow) - [olego](#olego) - [OMA](#oma) - [OmegaFold](#omegafold) - [Omnipose](#omnipose) - [onedrive](#onedrive) - [ONNX](#onnx) - [ONNX-Runtime](#onnx-runtime) - [ont-fast5-api](#ont-fast5-api) - [ont-guppy](#ont-guppy) - [ont-remora](#ont-remora) - [OOMPA](#oompa) - [OPARI2](#opari2) - [Open-Data-Cube-Core](#open-data-cube-core) - [OpenAI-Gym](#openai-gym) - [OpenBabel](#openbabel) - [OpenBLAS](#openblas) - [openCARP](#opencarp) - [OpenCensus-python](#opencensus-python) - [OpenCoarrays](#opencoarrays) - [OpenColorIO](#opencolorio) - [OpenCV](#opencv) - [OpenEXR](#openexr) - [OpenFace](#openface) - [OpenFAST](#openfast) - [OpenFOAM](#openfoam) - [OpenFOAM-Extend](#openfoam-extend) - [OpenFold](#openfold) - [OpenForceField](#openforcefield) - [OpenImageIO](#openimageio) - [OpenJPEG](#openjpeg) - [OpenKIM-API](#openkim-api) - [openkim-models](#openkim-models) - [OpenMM](#openmm) - [OpenMM-PLUMED](#openmm-plumed) - [OpenMMTools](#openmmtools) - [OpenMolcas](#openmolcas) - [OpenMPI](#openmpi) - [OpenMS](#openms) - [OpenNLP](#opennlp) - [OpenPGM](#openpgm) - [OpenPIV](#openpiv) - [openpyxl](#openpyxl) - [OpenRefine](#openrefine) - [OpenSceneGraph](#openscenegraph) - [OpenSees](#opensees) - [OpenSlide](#openslide) - [openslide-python](#openslide-python) - [OpenSSL](#openssl) - [OpenStackClient](#openstackclient) - [OPERA](#opera) - [OPERA-MS](#opera-ms) - [OptaDOS](#optados) - [Optax](#optax) - [OptiType](#optitype) - [OptiX](#optix) - [Optuna](#optuna) - [OR-Tools](#or-tools) - [ORCA](#orca) - [ORFfinder](#orffinder) - [OrfM](#orfm) - [OrthoFinder](#orthofinder) - [OrthoMCL](#orthomcl) - [Osi](#osi) - [OSPRay](#ospray) - [OSU-Micro-Benchmarks](#osu-micro-benchmarks) - [OTF2](#otf2) - [OVITO](#ovito) - [ownCloud](#owncloud) - [oxDNA](#oxdna) - [oxford_asl](#oxford_asl)
 
 
 ### Oases
@@ -24470,6 +25097,17 @@ version  |versionsuffix   |toolchain
 ---------|----------------|--------------
 ``1.1.0``|``-CUDA-11.7.0``|``foss/2022a``
 
+### Omnipose
+
+Omnipose is a general image segmentation tool that builds on Cellpose in a number of ways described in our paper. It works for both 2D and 3D images and on any imaging modality or cell shape, so long as you train it on representative images. 
+
+*homepage*: <https://omnipose.readthedocs.io>
+
+version  |versionsuffix   |toolchain
+---------|----------------|--------------
+``0.4.4``|                |``foss/2022a``
+``0.4.4``|``-CUDA-11.7.0``|``foss/2022a``
+
 ### onedrive
 
 A free Microsoft OneDrive Client which supports OneDrive Personal, OneDrive for Business, OneDrive for Office365 and SharePoint.
@@ -24514,7 +25152,7 @@ version  |versionsuffix    |toolchain
 ``3.3.0``|``-Python-3.7.4``|``foss/2019b``
 ``4.0.0``|                 |``foss/2021a``
 ``4.0.2``|                 |``foss/2021a``, ``foss/2021b``
-``4.1.1``|                 |``foss/2022b``
+``4.1.1``|                 |``foss/2022a``, ``foss/2022b``
 
 ### ont-guppy
 
@@ -24558,11 +25196,11 @@ OPARI2, the successor of Forschungszentrum Juelich's OPARI, is a  source-to-sour
 *homepage*: <https://www.score-p.org>
 
 version  |toolchain
----------|-------------------------------------------------------
+---------|------------------------------------------------------------------------------
 ``2.0``  |``foss/2016a``
 ``2.0.5``|``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 ``2.0.6``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``
-``2.0.7``|``GCCcore/11.2.0``, ``GCCcore/11.3.0``
+``2.0.7``|``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### Open-Data-Cube-Core
 
@@ -24584,6 +25222,7 @@ version   |versionsuffix    |toolchain
 ----------|-----------------|--------------
 ``0.17.1``|``-Python-3.7.4``|``foss/2019b``
 ``0.21.0``|                 |``foss/2021b``
+``0.26.2``|                 |``foss/2022a``
 
 ### OpenBabel
 
@@ -24715,6 +25354,7 @@ version   |versionsuffix            |toolchain
 ``4.5.5`` |``-contrib``             |``foss/2021b``
 ``4.6.0`` |``-CUDA-11.7.0-contrib`` |``foss/2022a``
 ``4.6.0`` |``-contrib``             |``foss/2022a``
+``4.8.0`` |``-contrib``             |``foss/2022b``
 
 ### OpenEXR
 
@@ -24774,6 +25414,7 @@ version         |versionsuffix|toolchain
 ``4.x-20170904``|             |``intel/2016b``
 ``5.0``         |             |``foss/2017b``, ``intel/2017a``, ``intel/2017b``
 ``5.0-20180108``|             |``foss/2018a``, ``intel/2017b``, ``intel/2018a``
+``5.0-20180606``|             |``foss/2019b``
 ``6``           |             |``foss/2018b``, ``foss/2019b``, ``intel/2018a``
 ``7``           |             |``foss/2019b``
 ``7``           |``-20200508``|``foss/2019b``
@@ -24782,6 +25423,7 @@ version         |versionsuffix|toolchain
 ``9``           |             |``foss/2021a``, ``intel/2021a``
 ``10``          |             |``foss/2022a``
 ``10``          |``-20230119``|``foss/2022a``
+``11``          |             |``foss/2022a``
 ``v1606+``      |             |``foss/2018b``
 ``v1612+``      |             |``foss/2018b``
 ``v1712``       |             |``foss/2017b``, ``intel/2017b``
@@ -24845,6 +25487,7 @@ version     |toolchain
 ``2.0.12``  |``gompi/2019b``, ``iimpi/2019b``
 ``2.1.12.0``|``gompi/2020a``, ``iimpi/2020a``
 ``2.3.17.0``|``GCC/11.3.0``
+``2.4.14.0``|``GCC/12.3.0``
 
 ### OpenJPEG
 
@@ -24988,7 +25631,7 @@ version   |versionsuffix   |toolchain
 ``4.1.1`` |                |``GCC/10.3.0``, ``GCC/11.2.0``, ``intel-compilers/2021.2.0``, ``intel-compilers/2021.4.0``
 ``4.1.2`` |                |``GCC/10.2.0``, ``GCC/11.2.0``
 ``4.1.4`` |                |``GCC/11.3.0``, ``GCC/12.2.0``, ``NVHPC/22.7-CUDA-11.7.0``
-``4.1.5`` |                |``GCC/12.2.0``, ``GCC/12.3.0``
+``4.1.5`` |                |``GCC/12.2.0``, ``GCC/12.3.0``, ``intel-compilers/2023.1.0``
 ``system``|                |``GCC/system-2.29``
 
 ### OpenMS
@@ -25018,8 +25661,8 @@ OpenPGM is an open source implementation of the Pragmatic General Multicast (PGM
 *homepage*: <http://code.google.com/p/openpgm/>
 
 version    |toolchain
------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-``5.2.122``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/6.4.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``, ``foss/2016a``, ``foss/2016b``, ``foss/2017a``, ``intel/2016a``, ``intel/2016b``, ``intel/2017a``
+-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+``5.2.122``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``, ``foss/2016a``, ``foss/2016b``, ``foss/2017a``, ``intel/2016a``, ``intel/2016b``, ``intel/2017a``
 
 ### OpenPIV
 
@@ -25170,6 +25813,16 @@ version    |toolchain
 -----------|--------------
 ``1.2.380``|``GCC/11.3.0``
 
+### Optax
+
+Optax is a gradient processing and optimization library for JAX.
+
+*homepage*: <https://github.com/deepmind/optax>
+
+version  |toolchain
+---------|--------------
+``0.1.7``|``foss/2022a``
+
 ### OptiType
 
 OptiType is a novel HLA genotyping algorithm based on integer linear programming,  capable of producing accurate 4-digit HLA genotyping predictions from NGS data  by simultaneously selecting all major and minor HLA Class I alleles. 
@@ -25297,6 +25950,7 @@ version    |toolchain
 ``0.108.5``|``GCCcore/7.3.0``, ``foss/2018b``
 ``0.108.6``|``GCC/10.3.0``, ``GCCcore/10.2.0``
 ``0.108.7``|``GCC/11.2.0``
+``0.108.8``|``GCC/12.2.0``
 
 ### OSPRay
 
@@ -25329,7 +25983,7 @@ version  |versionsuffix   |toolchain
 ``5.9``  |``-CUDA-11.7.0``|``gompi/2022a``
 ``5.9``  |``-ROCm-4.5.0`` |``gompi/2021b``
 ``6.2``  |                |``gompi/2022.10``, ``gompi/2022b``
-``7.1-1``|                |``gompi/2023a``
+``7.1-1``|                |``gompi/2023a``, ``iimpi/2023a``
 
 ### OTF2
 
@@ -25344,6 +25998,7 @@ version  |toolchain
 ``2.3``  |``GCCcore/10.2.0``, ``GCCcore/10.3.0``
 ``3.0``  |``GCCcore/11.3.0``
 ``3.0.2``|``GCCcore/11.2.0``, ``GCCcore/11.3.0``
+``3.0.3``|``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### OVITO
 
@@ -25389,7 +26044,7 @@ version  |versionsuffix             |toolchain
 ## P
 
 
-[p11-kit](#p11-kit) - [p4-phylogenetics](#p4-phylogenetics) - [p4est](#p4est) - [p4vasp](#p4vasp) - [p7zip](#p7zip) - [packmol](#packmol) - [pagmo](#pagmo) - [pairsnp](#pairsnp) - [PAL2NAL](#pal2nal) - [paladin](#paladin) - [PALEOMIX](#paleomix) - [PAML](#paml) - [panaroo](#panaroo) - [pandapower](#pandapower) - [pandas](#pandas) - [pandas-datareader](#pandas-datareader) - [PANDAseq](#pandaseq) - [Pandoc](#pandoc) - [Panedr](#panedr) - [Pango](#pango) - [pangolin](#pangolin) - [panito](#panito) - [PAPI](#papi) - [parallel](#parallel) - [parallel-fastq-dump](#parallel-fastq-dump) - [Parallel-Hashmap](#parallel-hashmap) - [ParallelIO](#parallelio) - [parameterized](#parameterized) - [parasail](#parasail) - [Paraver](#paraver) - [ParaView](#paraview) - [Parcels](#parcels) - [PARI-GP](#pari-gp) - [ParmEd](#parmed) - [ParMETIS](#parmetis) - [ParMGridGen](#parmgridgen) - [PartitionFinder](#partitionfinder) - [pasta](#pasta) - [PaStiX](#pastix) - [pastml](#pastml) - [patch](#patch) - [patchelf](#patchelf) - [path.py](#path.py) - [PAUP](#paup) - [pauvre](#pauvre) - [pbbam](#pbbam) - [pbcopper](#pbcopper) - [pbdagcon](#pbdagcon) - [pbipa](#pbipa) - [pbmm2](#pbmm2) - [pbs_python](#pbs_python) - [PBSuite](#pbsuite) - [PCAngsd](#pcangsd) - [PCC](#pcc) - [PCL](#pcl) - [PCMSolver](#pcmsolver) - [PCRaster](#pcraster) - [PCRE](#pcre) - [PCRE2](#pcre2) - [pdsh](#pdsh) - [PDT](#pdt) - [PEAR](#pear) - [PennCNV](#penncnv) - [PEPT](#pept) - [Percolator](#percolator) - [Perl](#perl) - [perl-app-cpanminus](#perl-app-cpanminus) - [Perl-bundle-CPAN](#perl-bundle-cpan) - [Perl4-CoreLibs](#perl4-corelibs) - [Perseus](#perseus) - [PEST++](#pest++) - [PETSc](#petsc) - [petsc4py](#petsc4py) - [PfamScan](#pfamscan) - [pfind](#pfind) - [pftoolsV3](#pftoolsv3) - [pFUnit](#pfunit) - [PGDSpider](#pgdspider) - [PGI](#pgi) - [PGPLOT](#pgplot) - [PHANOTATE](#phanotate) - [Phantompeakqualtools](#phantompeakqualtools) - [PHASE](#phase) - [PHAST](#phast) - [Phenoflow](#phenoflow) - [PheWAS](#phewas) - [PheWeb](#pheweb) - [PhiPack](#phipack) - [PHLAT](#phlat) - [phonemizer](#phonemizer) - [phono3py](#phono3py) - [phonopy](#phonopy) - [photontorch](#photontorch) - [phototonic](#phototonic) - [PHYLIP](#phylip) - [PhyloBayes-MPI](#phylobayes-mpi) - [phylokit](#phylokit) - [phylonaut](#phylonaut) - [PhyloPhlAn](#phylophlan) - [PhyML](#phyml) - [phyx](#phyx) - [picard](#picard) - [PICI-LIGGGHTS](#pici-liggghts) - [pigz](#pigz) - [PIL](#pil) - [PileOMeth](#pileometh) - [Pillow](#pillow) - [Pillow-SIMD](#pillow-simd) - [Pilon](#pilon) - [PIMS](#pims) - [Pindel](#pindel) - [Pingouin](#pingouin) - [Pint](#pint) - [pip](#pip) - [PIPITS](#pipits) - [PIRATE](#pirate) - [pIRS](#pirs) - [Pisces](#pisces) - [piSvM](#pisvm) - [piSvM-JSC](#pisvm-jsc) - [pixman](#pixman) - [pizzly](#pizzly) - [pkg-config](#pkg-config) - [pkgconf](#pkgconf) - [pkgconfig](#pkgconfig) - [PLAMS](#plams) - [plantcv](#plantcv) - [PlaScope](#plascope) - [PlasmaPy](#plasmapy) - [PLAST](#plast) - [Platanus](#platanus) - [Platypus](#platypus) - [plc](#plc) - [PLINK](#plink) - [plinkliftover](#plinkliftover) - [plinkQC](#plinkqc) - [PLINKSEQ](#plinkseq) - [plot1cell](#plot1cell) - [Ploticus](#ploticus) - [plotly](#plotly) - [plotly-orca](#plotly-orca) - [plotly.py](#plotly.py) - [PLplot](#plplot) - [PLUMED](#plumed) - [PLY](#ply) - [PMIx](#pmix) - [pmt](#pmt) - [pmx](#pmx) - [PnetCDF](#pnetcdf) - [pocl](#pocl) - [pod5-file-format](#pod5-file-format) - [poetry](#poetry) - [polars](#polars) - [polymake](#polymake) - [pomkl](#pomkl) - [pompi](#pompi) - [poppler](#poppler) - [popscle](#popscle) - [popt](#popt) - [Porechop](#porechop) - [porefoam](#porefoam) - [poretools](#poretools) - [Portcullis](#portcullis) - [Postgres-XL](#postgres-xl) - [PostgreSQL](#postgresql) - [POT](#pot) - [POV-Ray](#pov-ray) - [powerlaw](#powerlaw) - [pp-sketchlib](#pp-sketchlib) - [PPanGGOLiN](#ppanggolin) - [PPfold](#ppfold) - [ppl](#ppl) - [pplacer](#pplacer) - [pplpy](#pplpy) - [PRANK](#prank) - [PRC](#prc) - [preCICE](#precice) - [PREQUAL](#prequal) - [preseq](#preseq) - [presto](#presto) - [pretty-yaml](#pretty-yaml) - [Primer3](#primer3) - [PRINSEQ](#prinseq) - [printproto](#printproto) - [PRISMS-PF](#prisms-pf) - [ProbABEL](#probabel) - [prodigal](#prodigal) - [ProFit](#profit) - [PROJ](#proj) - [ProjectQ](#projectq) - [prokka](#prokka) - [prompt-toolkit](#prompt-toolkit) - [proovread](#proovread) - [propy](#propy) - [Proteinortho](#proteinortho) - [ProtHint](#prothint) - [protobuf](#protobuf) - [protobuf-python](#protobuf-python) - [protozero](#protozero) - [PRSice](#prsice) - [pscom](#pscom) - [PSI](#psi) - [PSI4](#psi4) - [PsiCLASS](#psiclass) - [PSIPRED](#psipred) - [psmc](#psmc) - [psmpi](#psmpi) - [psmpi2](#psmpi2) - [PSolver](#psolver) - [PSORTb](#psortb) - [psrecord](#psrecord) - [pstoedit](#pstoedit) - [psutil](#psutil) - [psycopg2](#psycopg2) - [ptemcee](#ptemcee) - [PTESFinder](#ptesfinder) - [pubtcrs](#pubtcrs) - [pugixml](#pugixml) - [pullseq](#pullseq) - [PuLP](#pulp) - [purge_dups](#purge_dups) - [py](#py) - [py-aiger](#py-aiger) - [py-aiger-bdd](#py-aiger-bdd) - [py-cpuinfo](#py-cpuinfo) - [py3Dmol](#py3dmol) - [pyABC](#pyabc) - [PyAMG](#pyamg) - [PyAPS3](#pyaps3) - [pybedtools](#pybedtools) - [PyBerny](#pyberny) - [pyBigWig](#pybigwig) - [pybind11](#pybind11) - [pybinding](#pybinding) - [PyBioLib](#pybiolib) - [PyCairo](#pycairo) - [PyCalib](#pycalib) - [pyccel](#pyccel) - [PyCharm](#pycharm) - [PyCheMPS2](#pychemps2) - [Pychopper](#pychopper) - [PyCifRW](#pycifrw) - [PyClone](#pyclone) - [pycma](#pycma) - [pycocotools](#pycocotools) - [pycodestyle](#pycodestyle) - [PyCogent](#pycogent) - [pycoQC](#pycoqc) - [PyCUDA](#pycuda) - [PycURL](#pycurl) - [PyDamage](#pydamage) - [pydantic](#pydantic) - [PyDatastream](#pydatastream) - [pydicom](#pydicom) - [pydicom-seg](#pydicom-seg) - [pydlpoly](#pydlpoly) - [pydot](#pydot) - [pyEGA3](#pyega3) - [pyenchant](#pyenchant) - [PyEVTK](#pyevtk) - [pyFAI](#pyfai) - [pyfaidx](#pyfaidx) - [pyfasta](#pyfasta) - [PyFFmpeg](#pyffmpeg) - [pyFFTW](#pyfftw) - [pyfits](#pyfits) - [PyFMI](#pyfmi) - [PyFoam](#pyfoam) - [PyFR](#pyfr) - [PyFrag](#pyfrag) - [pygccxml](#pygccxml) - [pyGenomeTracks](#pygenometracks) - [PyGEOS](#pygeos) - [pyGIMLi](#pygimli) - [Pygments](#pygments) - [pygmo](#pygmo) - [PyGObject](#pygobject) - [pygraphviz](#pygraphviz) - [pygrib](#pygrib) - [PyGTK](#pygtk) - [PyGTS](#pygts) - [PyGWAS](#pygwas) - [pyhdf](#pyhdf) - [PyImageJ](#pyimagej) - [pyiron](#pyiron) - [Pyke3](#pyke3) - [pylift](#pylift) - [Pylint](#pylint) - [pyMannKendall](#pymannkendall) - [pymatgen](#pymatgen) - [pymatgen-db](#pymatgen-db) - [pymbar](#pymbar) - [PyMC3](#pymc3) - [pymca](#pymca) - [pymemcache](#pymemcache) - [PyMOL](#pymol) - [PyNAST](#pynast) - [pyobjcryst](#pyobjcryst) - [PyOD](#pyod) - [Pyomo](#pyomo) - [PyOpenCL](#pyopencl) - [PyOpenGL](#pyopengl) - [pyparsing](#pyparsing) - [pyperf](#pyperf) - [pyplusplus](#pyplusplus) - [pypmt](#pypmt) - [PYPOWER](#pypower) - [pyproj](#pyproj) - [PyPSA](#pypsa) - [pyqstem](#pyqstem) - [PyQt](#pyqt) - [PyQt5](#pyqt5) - [PyQtGraph](#pyqtgraph) - [pyradiomics](#pyradiomics) - [PyRe](#pyre) - [PyRETIS](#pyretis) - [pyringe](#pyringe) - [pyro-api](#pyro-api) - [pyro-ppl](#pyro-ppl) - [Pyro4](#pyro4) - [PyRosetta](#pyrosetta) - [Pysam](#pysam) - [pysamstats](#pysamstats) - [PySAT](#pysat) - [pyScaf](#pyscaf) - [pySCENIC](#pyscenic) - [PySCF](#pyscf) - [pysheds](#pysheds) - [pyshp](#pyshp) - [PySide2](#pyside2) - [pyslim](#pyslim) - [pysndfx](#pysndfx) - [Pysolar](#pysolar) - [pyspoa](#pyspoa) - [pysqlite](#pysqlite) - [PyStan](#pystan) - [pysteps](#pysteps) - [pystran](#pystran) - [PyTables](#pytables) - [pytesseract](#pytesseract) - [pytest](#pytest) - [pytest-benchmark](#pytest-benchmark) - [pytest-cpp](#pytest-cpp) - [pytest-flakefinder](#pytest-flakefinder) - [pytest-rerunfailures](#pytest-rerunfailures) - [pytest-shard](#pytest-shard) - [pytest-xdist](#pytest-xdist) - [PYTHIA](#pythia) - [Python](#python) - [Python-bundle](#python-bundle) - [python-docx](#python-docx) - [python-hl7](#python-hl7) - [python-igraph](#python-igraph) - [python-irodsclient](#python-irodsclient) - [python-isal](#python-isal) - [python-Levenshtein](#python-levenshtein) - [python-libsbml](#python-libsbml) - [python-louvain](#python-louvain) - [python-mujoco](#python-mujoco) - [python-parasail](#python-parasail) - [python-telegram-bot](#python-telegram-bot) - [python-weka-wrapper3](#python-weka-wrapper3) - [python-xxhash](#python-xxhash) - [pythran](#pythran) - [PyTorch](#pytorch) - [PyTorch-bundle](#pytorch-bundle) - [pytorch-CycleGAN-pix2pix](#pytorch-cyclegan-pix2pix) - [PyTorch-Geometric](#pytorch-geometric) - [PyTorch-Ignite](#pytorch-ignite) - [PyTorch-Image-Models](#pytorch-image-models) - [PyTorch-Lightning](#pytorch-lightning) - [PyTorch3D](#pytorch3d) - [PyVCF](#pyvcf) - [PyVCF3](#pyvcf3) - [pyWannier90](#pywannier90) - [PyWavelets](#pywavelets) - [PyWBGT](#pywbgt) - [PyYAML](#pyyaml) - [PyZMQ](#pyzmq)
+[p11-kit](#p11-kit) - [p4-phylogenetics](#p4-phylogenetics) - [p4est](#p4est) - [p4vasp](#p4vasp) - [p7zip](#p7zip) - [packmol](#packmol) - [pagmo](#pagmo) - [pairsnp](#pairsnp) - [PAL2NAL](#pal2nal) - [paladin](#paladin) - [PALEOMIX](#paleomix) - [PAML](#paml) - [panaroo](#panaroo) - [pandapower](#pandapower) - [pandas](#pandas) - [pandas-datareader](#pandas-datareader) - [PANDAseq](#pandaseq) - [Pandoc](#pandoc) - [Panedr](#panedr) - [Pango](#pango) - [pangolin](#pangolin) - [panito](#panito) - [PAPI](#papi) - [parallel](#parallel) - [parallel-fastq-dump](#parallel-fastq-dump) - [Parallel-Hashmap](#parallel-hashmap) - [ParallelIO](#parallelio) - [parameterized](#parameterized) - [paramiko](#paramiko) - [parasail](#parasail) - [Paraver](#paraver) - [ParaView](#paraview) - [Parcels](#parcels) - [PARI-GP](#pari-gp) - [ParmEd](#parmed) - [ParMETIS](#parmetis) - [ParMGridGen](#parmgridgen) - [Parsl](#parsl) - [PartitionFinder](#partitionfinder) - [pasta](#pasta) - [PaStiX](#pastix) - [pastml](#pastml) - [patch](#patch) - [patchelf](#patchelf) - [path.py](#path.py) - [PAUP](#paup) - [pauvre](#pauvre) - [pbbam](#pbbam) - [pbcopper](#pbcopper) - [pbdagcon](#pbdagcon) - [pbipa](#pbipa) - [pbmm2](#pbmm2) - [pbs_python](#pbs_python) - [PBSuite](#pbsuite) - [PCAngsd](#pcangsd) - [PCC](#pcc) - [PCL](#pcl) - [PCMSolver](#pcmsolver) - [PCRaster](#pcraster) - [PCRE](#pcre) - [PCRE2](#pcre2) - [pdsh](#pdsh) - [PDT](#pdt) - [peakdetect](#peakdetect) - [PEAR](#pear) - [PennCNV](#penncnv) - [PEPT](#pept) - [Percolator](#percolator) - [Perl](#perl) - [perl-app-cpanminus](#perl-app-cpanminus) - [Perl-bundle-CPAN](#perl-bundle-cpan) - [Perl4-CoreLibs](#perl4-corelibs) - [Perseus](#perseus) - [PEST++](#pest++) - [PETSc](#petsc) - [petsc4py](#petsc4py) - [PfamScan](#pfamscan) - [pfind](#pfind) - [pftoolsV3](#pftoolsv3) - [pFUnit](#pfunit) - [PGDSpider](#pgdspider) - [PGI](#pgi) - [PGPLOT](#pgplot) - [PHANOTATE](#phanotate) - [Phantompeakqualtools](#phantompeakqualtools) - [PHASE](#phase) - [PHAST](#phast) - [Phenoflow](#phenoflow) - [PheWAS](#phewas) - [PheWeb](#pheweb) - [PhiPack](#phipack) - [PHLAT](#phlat) - [phonemizer](#phonemizer) - [phono3py](#phono3py) - [phonopy](#phonopy) - [photontorch](#photontorch) - [phototonic](#phototonic) - [PHYLIP](#phylip) - [PhyloBayes-MPI](#phylobayes-mpi) - [phylokit](#phylokit) - [phylonaut](#phylonaut) - [PhyloPhlAn](#phylophlan) - [PhyML](#phyml) - [phyx](#phyx) - [picard](#picard) - [PICI-LIGGGHTS](#pici-liggghts) - [PICRUSt2](#picrust2) - [pigz](#pigz) - [PIL](#pil) - [PileOMeth](#pileometh) - [Pillow](#pillow) - [Pillow-SIMD](#pillow-simd) - [Pilon](#pilon) - [PIMS](#pims) - [Pindel](#pindel) - [Pingouin](#pingouin) - [Pint](#pint) - [pip](#pip) - [PIPITS](#pipits) - [PIRATE](#pirate) - [pIRS](#pirs) - [Pisces](#pisces) - [piSvM](#pisvm) - [piSvM-JSC](#pisvm-jsc) - [pixman](#pixman) - [pizzly](#pizzly) - [pkg-config](#pkg-config) - [pkgconf](#pkgconf) - [pkgconfig](#pkgconfig) - [PLAMS](#plams) - [plantcv](#plantcv) - [PlaScope](#plascope) - [PlasmaPy](#plasmapy) - [PLAST](#plast) - [Platanus](#platanus) - [Platypus](#platypus) - [Platypus-Opt](#platypus-opt) - [plc](#plc) - [PLINK](#plink) - [plinkliftover](#plinkliftover) - [plinkQC](#plinkqc) - [PLINKSEQ](#plinkseq) - [plot1cell](#plot1cell) - [Ploticus](#ploticus) - [plotly](#plotly) - [plotly-orca](#plotly-orca) - [plotly.py](#plotly.py) - [PLplot](#plplot) - [PLUMED](#plumed) - [PLY](#ply) - [PMIx](#pmix) - [pmt](#pmt) - [pmx](#pmx) - [PnetCDF](#pnetcdf) - [pocl](#pocl) - [pod5-file-format](#pod5-file-format) - [poetry](#poetry) - [polars](#polars) - [polymake](#polymake) - [pomkl](#pomkl) - [pompi](#pompi) - [poppler](#poppler) - [popscle](#popscle) - [popt](#popt) - [Porechop](#porechop) - [porefoam](#porefoam) - [poretools](#poretools) - [Portcullis](#portcullis) - [PortMidi](#portmidi) - [Postgres-XL](#postgres-xl) - [PostgreSQL](#postgresql) - [POT](#pot) - [POV-Ray](#pov-ray) - [powerlaw](#powerlaw) - [pp-sketchlib](#pp-sketchlib) - [PPanGGOLiN](#ppanggolin) - [PPfold](#ppfold) - [ppl](#ppl) - [pplacer](#pplacer) - [pplpy](#pplpy) - [PRANK](#prank) - [PRC](#prc) - [preCICE](#precice) - [PREQUAL](#prequal) - [preseq](#preseq) - [presto](#presto) - [pretty-yaml](#pretty-yaml) - [Primer3](#primer3) - [PRINSEQ](#prinseq) - [printproto](#printproto) - [PRISMS-PF](#prisms-pf) - [ProbABEL](#probabel) - [prodigal](#prodigal) - [ProFit](#profit) - [PROJ](#proj) - [ProjectQ](#projectq) - [prokka](#prokka) - [prompt-toolkit](#prompt-toolkit) - [proovread](#proovread) - [propy](#propy) - [Proteinortho](#proteinortho) - [ProtHint](#prothint) - [protobuf](#protobuf) - [protobuf-python](#protobuf-python) - [protozero](#protozero) - [PRSice](#prsice) - [pscom](#pscom) - [PSI](#psi) - [PSI4](#psi4) - [PsiCLASS](#psiclass) - [PSIPRED](#psipred) - [psmc](#psmc) - [psmpi](#psmpi) - [psmpi2](#psmpi2) - [PSolver](#psolver) - [PSORTb](#psortb) - [psrecord](#psrecord) - [pstoedit](#pstoedit) - [psutil](#psutil) - [psycopg2](#psycopg2) - [ptemcee](#ptemcee) - [PTESFinder](#ptesfinder) - [pubtcrs](#pubtcrs) - [pugixml](#pugixml) - [pullseq](#pullseq) - [PuLP](#pulp) - [purge_dups](#purge_dups) - [pv](#pv) - [py](#py) - [py-aiger](#py-aiger) - [py-aiger-bdd](#py-aiger-bdd) - [py-c3d](#py-c3d) - [py-cpuinfo](#py-cpuinfo) - [py3Dmol](#py3dmol) - [pyABC](#pyabc) - [PyAMG](#pyamg) - [PyAPS3](#pyaps3) - [pybedtools](#pybedtools) - [PyBerny](#pyberny) - [pyBigWig](#pybigwig) - [pybind11](#pybind11) - [pybinding](#pybinding) - [PyBioLib](#pybiolib) - [PyCairo](#pycairo) - [PyCalib](#pycalib) - [pyccel](#pyccel) - [PyCharm](#pycharm) - [PyCheMPS2](#pychemps2) - [Pychopper](#pychopper) - [PyCifRW](#pycifrw) - [PyClone](#pyclone) - [pycma](#pycma) - [pycocotools](#pycocotools) - [pycodestyle](#pycodestyle) - [PyCogent](#pycogent) - [pycoQC](#pycoqc) - [PyCUDA](#pycuda) - [PycURL](#pycurl) - [PyDamage](#pydamage) - [pydantic](#pydantic) - [PyDatastream](#pydatastream) - [pydicom](#pydicom) - [pydicom-seg](#pydicom-seg) - [pydlpoly](#pydlpoly) - [pydot](#pydot) - [pyEGA3](#pyega3) - [pyenchant](#pyenchant) - [PyEVTK](#pyevtk) - [pyFAI](#pyfai) - [pyfaidx](#pyfaidx) - [pyfasta](#pyfasta) - [PyFFmpeg](#pyffmpeg) - [pyFFTW](#pyfftw) - [pyfits](#pyfits) - [PyFMI](#pyfmi) - [PyFoam](#pyfoam) - [PyFR](#pyfr) - [PyFrag](#pyfrag) - [pygame](#pygame) - [pygccxml](#pygccxml) - [pyGenomeTracks](#pygenometracks) - [PyGEOS](#pygeos) - [pyGIMLi](#pygimli) - [Pygments](#pygments) - [pygmo](#pygmo) - [PyGObject](#pygobject) - [pygraphviz](#pygraphviz) - [pygrib](#pygrib) - [PyGTK](#pygtk) - [PyGTS](#pygts) - [PyGWAS](#pygwas) - [pyhdf](#pyhdf) - [PyImageJ](#pyimagej) - [pyiron](#pyiron) - [Pyke3](#pyke3) - [pylift](#pylift) - [Pylint](#pylint) - [pyMannKendall](#pymannkendall) - [pymatgen](#pymatgen) - [pymatgen-db](#pymatgen-db) - [pymbar](#pymbar) - [PyMC3](#pymc3) - [pymca](#pymca) - [pymemcache](#pymemcache) - [PyMOL](#pymol) - [PyNAST](#pynast) - [pyobjcryst](#pyobjcryst) - [PyOD](#pyod) - [pyodbc](#pyodbc) - [Pyomo](#pyomo) - [PyOpenCL](#pyopencl) - [PyOpenGL](#pyopengl) - [pyparsing](#pyparsing) - [pyperf](#pyperf) - [pyplusplus](#pyplusplus) - [pypmt](#pypmt) - [PYPOWER](#pypower) - [pyproj](#pyproj) - [PyPSA](#pypsa) - [pyqstem](#pyqstem) - [PyQt](#pyqt) - [PyQt5](#pyqt5) - [PyQtGraph](#pyqtgraph) - [pyradiomics](#pyradiomics) - [PyRe](#pyre) - [PyRETIS](#pyretis) - [pyringe](#pyringe) - [pyro-api](#pyro-api) - [pyro-ppl](#pyro-ppl) - [Pyro4](#pyro4) - [PyRosetta](#pyrosetta) - [Pysam](#pysam) - [pysamstats](#pysamstats) - [PySAT](#pysat) - [pyScaf](#pyscaf) - [pySCENIC](#pyscenic) - [PySCF](#pyscf) - [pysheds](#pysheds) - [pyshp](#pyshp) - [PySide2](#pyside2) - [pyslim](#pyslim) - [pysndfx](#pysndfx) - [Pysolar](#pysolar) - [pyspoa](#pyspoa) - [pysqlite](#pysqlite) - [PyStan](#pystan) - [pysteps](#pysteps) - [pystran](#pystran) - [PyTables](#pytables) - [pytesseract](#pytesseract) - [pytest](#pytest) - [pytest-benchmark](#pytest-benchmark) - [pytest-cpp](#pytest-cpp) - [pytest-flakefinder](#pytest-flakefinder) - [pytest-rerunfailures](#pytest-rerunfailures) - [pytest-shard](#pytest-shard) - [pytest-xdist](#pytest-xdist) - [PYTHIA](#pythia) - [Python](#python) - [Python-bundle](#python-bundle) - [Python-bundle-PyPI](#python-bundle-pypi) - [python-docx](#python-docx) - [python-hl7](#python-hl7) - [python-igraph](#python-igraph) - [python-irodsclient](#python-irodsclient) - [python-isal](#python-isal) - [python-Levenshtein](#python-levenshtein) - [python-libsbml](#python-libsbml) - [python-louvain](#python-louvain) - [python-mujoco](#python-mujoco) - [python-parasail](#python-parasail) - [python-telegram-bot](#python-telegram-bot) - [python-weka-wrapper3](#python-weka-wrapper3) - [python-xxhash](#python-xxhash) - [pythran](#pythran) - [PyTorch](#pytorch) - [PyTorch-bundle](#pytorch-bundle) - [pytorch-CycleGAN-pix2pix](#pytorch-cyclegan-pix2pix) - [PyTorch-Geometric](#pytorch-geometric) - [PyTorch-Ignite](#pytorch-ignite) - [PyTorch-Image-Models](#pytorch-image-models) - [PyTorch-Lightning](#pytorch-lightning) - [PyTorch3D](#pytorch3d) - [PyVCF](#pyvcf) - [PyVCF3](#pyvcf3) - [pyWannier90](#pywannier90) - [PyWavelets](#pywavelets) - [PyWBGT](#pywbgt) - [PyYAML](#pyyaml) - [PyZMQ](#pyzmq)
 
 
 ### p11-kit
@@ -25638,6 +26293,7 @@ version    |toolchain
 ``1.48.8`` |``GCCcore/11.2.0``
 ``1.50.7`` |``GCCcore/11.3.0``
 ``1.50.12``|``GCCcore/12.2.0``
+``1.50.14``|``GCCcore/12.3.0``
 
 ### pangolin
 
@@ -25676,6 +26332,7 @@ version    |toolchain
 ``6.0.0``  |``GCCcore/10.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 ``6.0.0.1``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``
 ``7.0.0``  |``GCCcore/11.3.0``
+``7.0.1``  |``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### parallel
 
@@ -25684,7 +26341,7 @@ parallel: Build and execute shell commands in parallel
 *homepage*: <https://savannah.gnu.org/projects/parallel/>
 
 version     |toolchain
-------------|-------------------------------
+------------|--------------------------------------
 ``20141122``|``GCC/4.9.2``
 ``20150322``|``GCC/4.9.2``
 ``20150822``|``GCC/4.9.2``
@@ -25704,6 +26361,7 @@ version     |toolchain
 ``20210622``|``GCCcore/10.3.0``
 ``20210722``|``GCCcore/11.2.0``
 ``20220722``|``GCCcore/11.3.0``
+``20230722``|``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### parallel-fastq-dump
 
@@ -25748,6 +26406,16 @@ version  |toolchain
 ---------|------------------
 ``0.8.1``|``GCCcore/10.3.0``
 
+### paramiko
+
+Paramiko is a pure-Python (3.6+) implementation of the SSHv2 protocol, providing both client and server functionality. It provides the foundation for the high-level SSH library Fabric, which is what we recommend you use for common client use-cases such as running remote shell commands or transferring files. 
+
+*homepage*: <https://paramiko.org>
+
+version  |toolchain
+---------|------------------
+``3.2.0``|``GCCcore/12.3.0``
+
 ### parasail
 
 parasail is a SIMD C (C99) library containing implementations  of the Smith-Waterman (local), Needleman-Wunsch (global), and semi-global  pairwise sequence alignment algorithms. 
@@ -25790,6 +26458,7 @@ version   |versionsuffix         |toolchain
 ``5.1.2`` |``-mpi``              |``foss/2016b``, ``intel/2016b``
 ``5.2.0`` |``-mpi``              |``foss/2016b``, ``intel/2017a``
 ``5.3.0`` |``-mpi``              |``foss/2016b``
+``5.4.1`` |``-Python-2.7.16-mpi``|``foss/2019b``
 ``5.4.1`` |``-mpi``              |``foss/2017b``, ``foss/2018a``, ``foss/2018b``, ``intel/2017a``, ``intel/2017b``, ``intel/2018a``
 ``5.5.2`` |``-Python-2.7.15-mpi``|``foss/2018b``
 ``5.6.2`` |``-Python-3.7.4-mpi`` |``foss/2019b``, ``intel/2019b``
@@ -25852,6 +26521,16 @@ version|toolchain
 -------|----------------------------------------------------------------------------------------------------------------------
 ``1.0``|``gimkl/2.11.5``, ``gompi/2019b``, ``gompi/2020a``, ``iimpi/2019b``, ``iimpi/2020a``, ``intel/2016a``, ``intel/2017a``
 
+### Parsl
+
+Parsl extends parallelism in Python beyond a single computer. You can use Parsl just like Python's parallel executors but across multiple cores and nodes. However, the real power of Parsl is in expressing multi-step workflows of functions. Parsl lets you chain functions together and will launch each function as inputs and computing resources are available. 
+
+*homepage*: <https://parsl-project.org/>
+
+version      |toolchain
+-------------|------------------
+``2023.7.17``|``GCCcore/11.3.0``
+
 ### PartitionFinder
 
 PartitionFinder 2 is a Python program for simultaneously choosing partitioning schemes and models of molecular evolution for phylogenetic analyses of DNA, protein, and morphological data. You can PartitionFinder 2 before running a phylogenetic analysis, in order to decide how to divide up your sequence data into separate blocks before analysis, and to simultaneously perform model selection on each of those blocks.
@@ -25861,6 +26540,7 @@ PartitionFinder 2 is a Python program for simultaneously choosing partitioning s
 version  |versionsuffix     |toolchain
 ---------|------------------|---------------
 ``2.1.1``|``-Python-2.7.16``|``intel/2019b``
+``2.1.1``|``-Python-2.7.18``|``foss/2020b``
 
 ### pasta
 
@@ -25916,6 +26596,7 @@ version   |toolchain
 ``0.12``  |``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/9.3.0``
 ``0.13``  |``GCCcore/11.2.0``
 ``0.15.0``|``GCCcore/11.3.0``
+``0.17.2``|``GCCcore/12.2.0``
 ``0.18.0``|``GCCcore/12.3.0``
 
 ### path.py
@@ -26126,8 +26807,8 @@ A high performance, parallel remote shell utility
 *homepage*: <https://github.com/chaos/pdsh>
 
 version |toolchain
---------|--------------------------------------
-``2.34``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+--------|----------------------------------------------------------
+``2.34``|``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### PDT
 
@@ -26136,10 +26817,20 @@ Program Database Toolkit (PDT) is a framework for analyzing source code  written
 *homepage*: <https://www.cs.uoregon.edu/research/pdt/>
 
 version   |toolchain
-----------|-----------------------------------------------------------------------------
+----------|---------------------------------------------------------------------------------------------------------------------
 ``3.22``  |``foss/2016a``
 ``3.25``  |``GCCcore/10.2.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``
-``3.25.1``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/9.3.0``
+``3.25.1``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/9.3.0``
+
+### peakdetect
+
+Simple peak detection library for Python based on Billauer's work and this gist.
+
+*homepage*: <https://github.com/avhn/peakdetect>
+
+version|toolchain
+-------|--------------
+``1.2``|``foss/2022a``
 
 ### PEAR
 
@@ -26221,6 +26912,7 @@ version   |versionsuffix|toolchain
 ``5.36.0``|             |``GCCcore/12.1.0``, ``GCCcore/12.2.0``
 ``5.36.0``|``-minimal`` |``GCCcore/12.2.0``
 ``5.36.1``|             |``GCCcore/12.3.0``, ``GCCcore/13.1.0``
+``5.38.0``|             |``GCCcore/13.2.0``
 
 ### perl-app-cpanminus
 
@@ -26350,6 +27042,7 @@ version  |toolchain
 ---------|---------------
 ``3.2.9``|``gompi/2018b``
 ``4.2.0``|``gompi/2020b``
+``4.7.3``|``gompi/2022a``
 
 ### PGDSpider
 
@@ -26676,6 +27369,16 @@ version  |toolchain
 ---------|--------------
 ``3.8.1``|``foss/2022a``
 
+### PICRUSt2
+
+PICRUSt2 (Phylogenetic Investigation of Communities by  Reconstruction of Unobserved States) is a software for predicting  functional abundances based only on marker gene sequences.
+
+*homepage*: <https://github.com/picrust/picrust2>
+
+version  |toolchain
+---------|--------------
+``2.5.2``|``foss/2022b``
+
 ### pigz
 
 pigz, which stands for parallel implementation of gzip, is a fully  functional replacement for gzip that exploits multiple processors and multiple  cores to the hilt when compressing data. pigz was written by Mark Adler, and  uses the zlib and pthread libraries. 
@@ -26720,36 +27423,37 @@ Pillow is the 'friendly PIL fork' by Alex Clark and Contributors.  PIL is the Py
 
 *homepage*: <https://pillow.readthedocs.org/>
 
-version  |versionsuffix                    |toolchain
----------|---------------------------------|---------------------------------------------------
-``3.2.0``|``-Python-2.7.11``               |``intel/2016a``
-``3.2.0``|``-Python-2.7.11-freetype-2.6.3``|``foss/2016a``, ``intel/2016a``
-``3.4.2``|``-Python-2.7.12``               |``intel/2016b``
-``3.4.2``|``-Python-3.5.2``                |``foss/2016b``, ``intel/2016b``
-``3.4.2``|``-Python-3.5.2-freetype-2.6.5`` |``intel/2016b``
-``4.1.0``|``-Python-2.7.13``               |``intel/2017a``
-``4.1.1``|``-Python-3.6.1``                |``intel/2017a``
-``4.2.1``|``-Python-3.6.1``                |``intel/2017a``
-``4.3.0``|``-Python-2.7.13``               |``intel/2017a``
-``4.3.0``|``-Python-2.7.14``               |``intel/2017b``
-``4.3.0``|``-Python-3.6.3``                |``foss/2017b``
-``5.0.0``|``-Python-2.7.14``               |``foss/2017b``, ``intel/2017b``, ``intel/2018a``
-``5.0.0``|``-Python-3.6.3``                |``foss/2017b``, ``intel/2017b``
-``5.0.0``|``-Python-3.6.4``                |``foss/2018a``, ``intel/2018a``
-``5.3.0``|``-Python-2.7.15``               |``foss/2018b``
-``5.3.0``|``-Python-3.6.6``                |``foss/2018b``, ``fosscuda/2018b``, ``intel/2018b``
-``6.0.0``|                                 |``GCCcore/8.2.0``
-``6.2.1``|                                 |``GCCcore/8.3.0``
-``6.2.2``|``-Python-2.7.18``               |``foss/2020b``
-``7.0.0``|``-Python-3.8.2``                |``GCCcore/9.3.0``
-``8.0.1``|                                 |``GCCcore/10.2.0``
-``8.2.0``|                                 |``GCCcore/10.3.0``
-``8.3.1``|                                 |``GCCcore/11.2.0``
-``8.3.2``|                                 |``GCCcore/11.2.0``
-``9.1.0``|                                 |``GCCcore/10.3.0``
-``9.1.1``|                                 |``GCCcore/11.2.0``, ``GCCcore/11.3.0``
-``9.2.0``|                                 |``GCCcore/10.2.0``
-``9.4.0``|                                 |``GCCcore/12.2.0``
+version   |versionsuffix                    |toolchain
+----------|---------------------------------|---------------------------------------------------
+``3.2.0`` |``-Python-2.7.11``               |``intel/2016a``
+``3.2.0`` |``-Python-2.7.11-freetype-2.6.3``|``foss/2016a``, ``intel/2016a``
+``3.4.2`` |``-Python-2.7.12``               |``intel/2016b``
+``3.4.2`` |``-Python-3.5.2``                |``foss/2016b``, ``intel/2016b``
+``3.4.2`` |``-Python-3.5.2-freetype-2.6.5`` |``intel/2016b``
+``4.1.0`` |``-Python-2.7.13``               |``intel/2017a``
+``4.1.1`` |``-Python-3.6.1``                |``intel/2017a``
+``4.2.1`` |``-Python-3.6.1``                |``intel/2017a``
+``4.3.0`` |``-Python-2.7.13``               |``intel/2017a``
+``4.3.0`` |``-Python-2.7.14``               |``intel/2017b``
+``4.3.0`` |``-Python-3.6.3``                |``foss/2017b``
+``5.0.0`` |``-Python-2.7.14``               |``foss/2017b``, ``intel/2017b``, ``intel/2018a``
+``5.0.0`` |``-Python-3.6.3``                |``foss/2017b``, ``intel/2017b``
+``5.0.0`` |``-Python-3.6.4``                |``foss/2018a``, ``intel/2018a``
+``5.3.0`` |``-Python-2.7.15``               |``foss/2018b``
+``5.3.0`` |``-Python-3.6.6``                |``foss/2018b``, ``fosscuda/2018b``, ``intel/2018b``
+``6.0.0`` |                                 |``GCCcore/8.2.0``
+``6.2.1`` |                                 |``GCCcore/8.3.0``
+``6.2.2`` |``-Python-2.7.18``               |``foss/2020b``
+``7.0.0`` |``-Python-3.8.2``                |``GCCcore/9.3.0``
+``8.0.1`` |                                 |``GCCcore/10.2.0``
+``8.2.0`` |                                 |``GCCcore/10.3.0``
+``8.3.1`` |                                 |``GCCcore/11.2.0``
+``8.3.2`` |                                 |``GCCcore/11.2.0``
+``9.1.0`` |                                 |``GCCcore/10.3.0``
+``9.1.1`` |                                 |``GCCcore/11.2.0``, ``GCCcore/11.3.0``
+``9.2.0`` |                                 |``GCCcore/10.2.0``
+``9.4.0`` |                                 |``GCCcore/12.2.0``
+``10.0.0``|                                 |``GCCcore/12.3.0``
 
 ### Pillow-SIMD
 
@@ -26768,6 +27472,7 @@ version        |versionsuffix    |toolchain
 ``8.3.1``      |                 |``GCCcore/11.2.0``
 ``8.3.2``      |                 |``GCCcore/11.2.0``
 ``9.2.0``      |                 |``GCCcore/11.3.0``
+``9.5.0``      |                 |``GCCcore/12.3.0``
 
 ### Pilon
 
@@ -26824,6 +27529,7 @@ version   |versionsuffix    |toolchain
 ``0.14``  |``-Python-3.7.4``|``GCCcore/8.3.0``
 ``0.19.2``|                 |``GCCcore/11.2.0``
 ``0.20.1``|                 |``GCCcore/10.3.0``
+``0.22``  |                 |``GCCcore/11.3.0``
 
 ### pip
 
@@ -26911,7 +27617,7 @@ version   |toolchain
 ``0.38.0``|``GCCcore/8.2.0``
 ``0.38.4``|``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 ``0.40.0``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``
-``0.42.2``|``GCCcore/12.2.0``
+``0.42.2``|``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### pizzly
 
@@ -26948,6 +27654,7 @@ version  |toolchain
 ``1.9.3``|``GCCcore/12.2.0``
 ``1.9.4``|``GCCcore/13.1.0``
 ``1.9.5``|``GCCcore/12.3.0``
+``2.0.3``|``GCCcore/13.2.0``
 
 ### pkgconfig
 
@@ -26956,7 +27663,7 @@ pkgconfig is a Python module to interface with the pkg-config command line tool
 *homepage*: <https://github.com/matze/pkgconfig>
 
 version  |versionsuffix     |toolchain
----------|------------------|----------------------------------------------------------
+---------|------------------|------------------------------------------------------------------------------
 ``1.1.0``|``-Python-2.7.11``|``foss/2016a``, ``intel/2016a``
 ``1.1.0``|``-Python-2.7.12``|``foss/2016b``, ``intel/2016b``
 ``1.1.0``|``-Python-3.5.1`` |``foss/2016a``
@@ -26973,7 +27680,7 @@ version  |versionsuffix     |toolchain
 ``1.5.1``|``-Python-3.8.2`` |``GCCcore/9.3.0``
 ``1.5.1``|``-python``       |``GCCcore/10.2.0``, ``GCCcore/8.2.0``
 ``1.5.4``|``-python``       |``GCCcore/10.3.0``
-``1.5.5``|``-python``       |``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+``1.5.5``|``-python``       |``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### PLAMS
 
@@ -27045,6 +27752,16 @@ Platypus is a tool designed for efficient and accurate variant-detection  in hig
 version  |versionsuffix     |toolchain
 ---------|------------------|---------------
 ``0.8.1``|``-Python-2.7.11``|``intel/2016a``
+
+### Platypus-Opt
+
+Platypus is a framework for evolutionary computing in Python with a focus on  multiobjective evolutionary algorithms (MOEAs).
+
+*homepage*: <https://github.com/Project-Platypus/Platypus>
+
+version  |toolchain
+---------|--------------
+``1.1.0``|``foss/2022a``
 
 ### plc
 
@@ -27168,6 +27885,7 @@ version   |toolchain
 ``5.4.0`` |``GCCcore/11.2.0``
 ``5.12.0``|``GCCcore/11.3.0``
 ``5.13.1``|``GCCcore/12.2.0``
+``5.16.0``|``GCCcore/12.3.0``
 
 ### PLplot
 
@@ -27211,6 +27929,7 @@ version  |versionsuffix     |toolchain
 ``2.7.3``|                  |``foss/2021b``
 ``2.8.0``|                  |``foss/2021b``
 ``2.8.1``|                  |``foss/2022a``
+``2.9.0``|                  |``foss/2022b``
 
 ### PLY
 
@@ -27219,7 +27938,8 @@ PLY is yet another implementation of lex and yacc for Python.
 *homepage*: <http://www.dabeaz.com/ply/>
 
 version |versionsuffix    |toolchain
---------|-----------------|-----------------
+--------|-----------------|------------------
+``3.11``|                 |``GCCcore/12.2.0``
 ``3.11``|``-Python-3.6.4``|``foss/2018a``
 ``3.11``|``-Python-3.7.4``|``GCCcore/8.3.0``
 
@@ -27279,11 +27999,11 @@ version   |toolchain
 ``1.10.0``|``foss/2018b``, ``intel/2018b``
 ``1.12.1``|``gompi/2019b``, ``gompi/2020a``, ``gompic/2019b``, ``gompic/2020a``, ``iimpi/2020a``
 ``1.12.2``|``gompi/2020b``, ``gompi/2021a``, ``gompic/2020b``, ``iimpi/2021a``
-``1.12.3``|``gompi/2021b``, ``gompi/2022a``, ``iimpi/2022a``
+``1.12.3``|``gompi/2021b``, ``gompi/2022a``, ``gompi/2023a``, ``iimpi/2022a``
 
 ### pocl
 
-Pocl is a portable open source (MIT-licensed) implementation of the OpenCL standard
+PoCL is a portable open source (MIT-licensed) implementation  of the OpenCL standard (1.2 with some 2.0 features supported).
 
 *homepage*: <http://portablecl.org>
 
@@ -27295,6 +28015,7 @@ version|toolchain
 ``1.5``|``GCC/9.3.0``
 ``1.6``|``GCC/10.2.0``, ``gcccuda/2020b``, ``iccifort/2020.4.304``
 ``1.8``|``GCC/10.3.0``, ``GCC/11.2.0``, ``GCC/11.3.0``
+``4.0``|``GCC/12.3.0``
 
 ### pod5-file-format
 
@@ -27316,6 +28037,7 @@ version  |versionsuffix    |toolchain
 ---------|-----------------|------------------
 ``1.0.9``|``-Python-3.8.2``|``GCCcore/9.3.0``
 ``1.2.2``|                 |``GCCcore/11.3.0``
+``1.5.1``|                 |``GCCcore/12.3.0``
 
 ### polars
 
@@ -27440,6 +28162,16 @@ Portcullis stands for PORTable CULLing of Invalid Splice junctions from pre-alig
 version  |versionsuffix    |toolchain
 ---------|-----------------|--------------
 ``1.2.2``|``-Python-3.7.4``|``foss/2019b``
+
+### PortMidi
+
+PortMidi is a library for software developers. It supports real-time input and output of MIDI data using a system-independent interface. PortMidi runs on Windows (using MME), Macintosh (using CoreMIDI), and Linux (using ALSA). 
+
+*homepage*: <https://github.com/PortMidi/portmidi>
+
+version  |toolchain
+---------|------------------
+``2.0.4``|``GCCcore/11.3.0``
 
 ### Postgres-XL
 
@@ -27736,6 +28468,7 @@ version  |toolchain
 ``5.0.0``|``foss/2018a``, ``foss/2018b``, ``intel/2018a``, ``intel/2018b``, ``iomkl/2018a``
 ``6.0.0``|``GCCcore/8.2.0``
 ``6.2.1``|``GCCcore/8.3.0``
+``6.3.1``|``GCCcore/10.3.0``
 ``7.0.0``|``GCCcore/9.3.0``
 ``7.2.1``|``GCCcore/10.2.0``
 ``8.0.1``|``GCCcore/10.3.0``
@@ -27761,12 +28494,12 @@ Prokka is a software tool for the rapid annotation of prokaryotic genomes.
 *homepage*: <https://www.vicbioinformatics.com/software.prokka.shtml>
 
 version   |versionsuffix     |toolchain
-----------|------------------|----------------------------------------------------------------------------------------------------
+----------|------------------|---------------------------------------------------------------------------------------------------------------------
 ``1.11``  |``-BioPerl-1.7.0``|``foss/2016b``
 ``1.13``  |``-BioPerl-1.7.2``|``intel/2018a``
 ``1.13.4``|                  |``foss/2018b``
 ``1.13.7``|                  |``gompi/2019a``
-``1.14.5``|                  |``gompi/2019a``, ``gompi/2019b``, ``gompi/2020b``, ``gompi/2021a``, ``gompi/2021b``, ``gompi/2022a``
+``1.14.5``|                  |``gompi/2019a``, ``gompi/2019b``, ``gompi/2020b``, ``gompi/2021a``, ``gompi/2021b``, ``gompi/2022a``, ``gompi/2022b``
 
 ### prompt-toolkit
 
@@ -27850,6 +28583,7 @@ version    |toolchain
 ``3.19.4`` |``GCCcore/11.3.0``
 ``3.21.9`` |``GCCcore/10.3.0``
 ``23.0``   |``GCCcore/12.2.0``
+``24.0``   |``GCCcore/12.3.0``
 
 ### protobuf-python
 
@@ -27878,6 +28612,7 @@ version   |versionsuffix     |toolchain
 ``3.17.3``|                  |``GCCcore/10.3.0``, ``GCCcore/11.2.0``
 ``3.19.4``|                  |``GCCcore/11.3.0``
 ``4.23.0``|                  |``GCCcore/12.2.0``
+``4.24.0``|                  |``GCCcore/12.3.0``
 
 ### protozero
 
@@ -28055,6 +28790,7 @@ version  |versionsuffix     |toolchain
 ``5.6.3``|                  |``GCCcore/8.2.0``
 ``5.9.3``|                  |``GCCcore/10.2.0``, ``GCCcore/11.3.0``
 ``5.9.4``|                  |``GCCcore/11.2.0``
+``5.9.5``|                  |``GCCcore/12.2.0``
 
 ### psycopg2
 
@@ -28130,6 +28866,7 @@ PuLP is an LP modeler written in Python. PuLP can generate MPS or LP files and c
 version  |toolchain
 ---------|--------------
 ``2.5.1``|``foss/2021a``
+``2.7.0``|``foss/2022b``
 
 ### purge_dups
 
@@ -28140,6 +28877,16 @@ purge haplotigs and overlaps in an assembly based on read depth
 version  |toolchain
 ---------|--------------
 ``1.2.5``|``foss/2021b``
+
+### pv
+
+Pipe Viewer - monitor the progress of data through a pipe
+
+*homepage*: <https://www.ivarch.com/programs/pv.shtml>
+
+version   |toolchain
+----------|------------------
+``1.7.24``|``GCCcore/12.3.0``
 
 ### py
 
@@ -28172,6 +28919,16 @@ Aiger to BDD bridge.
 version  |versionsuffix    |toolchain
 ---------|-----------------|--------------
 ``3.0.0``|``-Python-3.8.2``|``foss/2020a``
+
+### py-c3d
+
+This is a small library for reading and writing C3D binary files. C3D files are a standard format for recording 3-dimensional time sequence data, especially data recorded by a 3D  motion tracking apparatus. 
+
+*homepage*: <https://github.com/EmbodiedCognition/py-c3d>
+
+version  |toolchain
+---------|--------------
+``0.5.2``|``foss/2022a``
 
 ### py-cpuinfo
 
@@ -28241,7 +28998,7 @@ version   |versionsuffix     |toolchain
 ``0.8.1`` |                  |``foss/2019b``
 ``0.8.2`` |                  |``GCC/10.2.0``, ``GCC/11.2.0``, ``iccifort/2020.4.304``
 ``0.8.2`` |``-Python-2.7.18``|``GCC/10.2.0``
-``0.9.0`` |                  |``GCC/11.3.0``
+``0.9.0`` |                  |``GCC/11.3.0``, ``GCC/12.2.0``
 
 ### PyBerny
 
@@ -28265,6 +29022,7 @@ version   |versionsuffix    |toolchain
 ``0.3.13``|``-Python-3.6.6``|``foss/2018b``
 ``0.3.17``|                 |``GCCcore/8.2.0``, ``GCCcore/9.3.0``
 ``0.3.18``|                 |``GCCcore/10.2.0``, ``foss/2021a``, ``foss/2021b``, ``foss/2022a``
+``0.3.22``|                 |``foss/2022b``
 
 ### pybind11
 
@@ -28284,6 +29042,7 @@ version   |versionsuffix     |toolchain
 ``2.7.1`` |``-Python-2.7.18``|``GCCcore/11.2.0``
 ``2.9.2`` |                  |``GCCcore/11.3.0``
 ``2.10.3``|                  |``GCCcore/12.2.0``
+``2.11.1``|                  |``GCCcore/12.3.0``
 
 ### pybinding
 
@@ -28324,6 +29083,7 @@ version   |versionsuffix     |toolchain
 ``1.20.0``|                  |``GCCcore/10.2.0``
 ``1.20.1``|                  |``GCCcore/10.3.0``, ``GCCcore/11.2.0``
 ``1.21.0``|                  |``GCCcore/11.3.0``
+``1.24.0``|                  |``GCCcore/12.2.0``
 
 ### PyCalib
 
@@ -28478,9 +29238,9 @@ PycURL is a Python interface to libcurl. PycURL can be used to fetch objects ide
 *homepage*: <http://pycurl.io/>
 
 version     |versionsuffix    |toolchain
-------------|-----------------|------------------
+------------|-----------------|----------------------------------------------------------
 ``7.43.0.5``|``-Python-3.7.4``|``GCCcore/8.3.0``
-``7.45.2``  |                 |``GCCcore/11.3.0``
+``7.45.2``  |                 |``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### PyDamage
 
@@ -28708,6 +29468,16 @@ version          |versionsuffix|toolchain
 -----------------|-------------|---------------
 ``2019-20220216``|``-ASA``     |``intel/2020b``
 
+### pygame
+
+Pygame is a set of Python modules designed for writing video games. Pygame adds functionality on top of the excellent SDL library. This allows you to create fully featured games and multimedia programs in the python language. 
+
+*homepage*: <https://www.pygame.org>
+
+version  |toolchain
+---------|------------------
+``2.1.0``|``GCCcore/11.3.0``
+
 ### pygccxml
 
 Python package for easy C++ declarations navigation.
@@ -28792,6 +29562,7 @@ version   |versionsuffix     |toolchain
 ``3.34.0``|``-Python-3.7.2`` |``GCCcore/8.2.0``
 ``3.34.0``|``-Python-3.7.4`` |``GCCcore/8.3.0``
 ``3.42.1``|                  |``GCCcore/11.3.0``
+``3.44.1``|                  |``GCCcore/12.2.0``
 
 ### pygraphviz
 
@@ -28912,12 +29683,13 @@ Pylint is a tool that checks for errors in Python code, tries to enforce  a codi
 
 *homepage*: <https://www.pylint.org/>
 
-version  |versionsuffix     |toolchain
----------|------------------|------------------------------------------------
-``1.9.3``|``-Python-2.7.15``|``foss/2018b``, ``intel/2018b``, ``iomkl/2018b``
-``1.9.5``|``-Python-2.7.15``|``GCCcore/8.2.0``
-``1.9.5``|``-Python-2.7.16``|``GCCcore/8.3.0``
-``2.7.4``|                  |``GCCcore/10.2.0``
+version   |versionsuffix     |toolchain
+----------|------------------|------------------------------------------------
+``1.9.3`` |``-Python-2.7.15``|``foss/2018b``, ``intel/2018b``, ``iomkl/2018b``
+``1.9.5`` |``-Python-2.7.15``|``GCCcore/8.2.0``
+``1.9.5`` |``-Python-2.7.16``|``GCCcore/8.3.0``
+``2.7.4`` |                  |``GCCcore/10.2.0``
+``2.17.4``|                  |``GCCcore/12.2.0``
 
 ### pyMannKendall
 
@@ -29042,6 +29814,16 @@ version  |toolchain
 ---------|-------------------------------
 ``0.8.7``|``foss/2020b``, ``intel/2020b``
 
+### pyodbc
+
+pyodbc is an open source Python module that makes  accessing ODBC databases simple. It implements the DB API 2.0  specification but is packed with even more Pythonic convenience.
+
+*homepage*: <https://github.com/mkleehammer/pyodbc>
+
+version   |toolchain
+----------|--------------
+``4.0.39``|``foss/2022b``
+
 ### Pyomo
 
 Pyomo is a Python-based open-source software package that supports a diverse set of optimization  capabilities for formulating and analyzing optimization models. 
@@ -29126,8 +29908,8 @@ PMT is a high-level software library capable of      collecting power consumptio
 *homepage*: <https://git.astron.nl/RD/pmt>
 
 version  |toolchain
----------|--------------
-``1.1.0``|``foss/2022a``
+---------|------------------------------
+``1.1.0``|``foss/2022a``, ``gfbf/2023a``
 
 ### PYPOWER
 
@@ -29155,6 +29937,7 @@ version        |versionsuffix    |toolchain
 ``3.3.1``      |                 |``GCCcore/11.2.0``, ``GCCcore/11.3.0``
 ``3.4.0``      |                 |``GCCcore/11.3.0``
 ``3.5.0``      |                 |``GCCcore/12.2.0``
+``3.6.0``      |                 |``GCCcore/12.3.0``
 
 ### PyPSA
 
@@ -29292,6 +30075,7 @@ Pyro is a flexible, scalable deep probabilistic programming library built on PyT
 version  |toolchain
 ---------|------------------
 ``1.5.2``|``fosscuda/2020b``
+``1.8.4``|``foss/2022a``
 
 ### Pyro4
 
@@ -29675,7 +30459,7 @@ version   |versionsuffix    |toolchain
 ``2.7.15``|``-bare``        |``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``
 ``2.7.16``|                 |``GCCcore/8.3.0``
 ``2.7.16``|``-bare``        |``GCCcore/8.3.0``
-``2.7.18``|                 |``GCCcore/10.2.0``, ``GCCcore/11.2.0``, ``GCCcore/9.3.0``
+``2.7.18``|                 |``GCCcore/10.2.0``, ``GCCcore/11.2.0``, ``GCCcore/12.3.0``, ``GCCcore/9.3.0``
 ``2.7.18``|``-bare``        |``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/9.3.0``
 ``3.5.1`` |                 |``foss/2016a``, ``intel/2016a``
 ``3.5.2`` |                 |``foss/2016.04``, ``foss/2016b``, ``intel/2016b``
@@ -29710,6 +30494,16 @@ Python distribution with a number of widely used  extensions incl. NumPy, SciPy,
 version   |toolchain
 ----------|--------------
 ``3.10.4``|``foss/2022a``
+
+### Python-bundle-PyPI
+
+Bundle of Python packages from PyPI
+
+*homepage*: <https://python.org/>
+
+version    |toolchain
+-----------|------------------
+``2023.06``|``GCCcore/12.3.0``
 
 ### python-docx
 
@@ -29746,6 +30540,7 @@ version        |versionsuffix     |toolchain
 ``0.9.6``      |                  |``foss/2021a``
 ``0.9.8``      |                  |``foss/2021b``
 ``0.10.3``     |                  |``foss/2022a``
+``0.10.6``     |                  |``foss/2022b``
 
 ### python-irodsclient
 
@@ -30090,11 +30885,12 @@ version   |versionsuffix          |toolchain
 ``18.1.1``|``-Python-3.7.4``      |``GCCcore/8.3.0``
 ``22.3.0``|                       |``GCCcore/10.3.0``
 ``24.0.1``|                       |``GCCcore/11.3.0``
+``25.1.1``|                       |``GCCcore/12.3.0``
 
 ## Q
 
 
-[Q6](#q6) - [QCA](#qca) - [qcat](#qcat) - [QCG-PilotJob](#qcg-pilotjob) - [qcint](#qcint) - [QCxMS](#qcxms) - [QD](#qd) - [QDD](#qdd) - [QEMU](#qemu) - [QGIS](#qgis) - [Qhull](#qhull) - [QIIME](#qiime) - [QIIME2](#qiime2) - [Qiskit](#qiskit) - [QJson](#qjson) - [QML](#qml) - [qnorm](#qnorm) - [qpth](#qpth) - [qrupdate](#qrupdate) - [QScintilla](#qscintilla) - [Qt](#qt) - [Qt5](#qt5) - [Qt5Webkit](#qt5webkit) - [Qtconsole](#qtconsole) - [QtKeychain](#qtkeychain) - [QTLtools](#qtltools) - [qtop](#qtop) - [QtPy](#qtpy) - [Qualimap](#qualimap) - [Quandl](#quandl) - [QuantumESPRESSO](#quantumespresso) - [QUAST](#quast) - [QuaZIP](#quazip) - [QuickFF](#quickff) - [QuickPIC](#quickpic) - [Quip](#quip) - [Quorum](#quorum) - [QuTiP](#qutip) - [Qwt](#qwt) - [QwtPolar](#qwtpolar)
+[Q6](#q6) - [QCA](#qca) - [qcat](#qcat) - [QCG-PilotJob](#qcg-pilotjob) - [qcint](#qcint) - [QCxMS](#qcxms) - [QD](#qd) - [QDD](#qdd) - [QEMU](#qemu) - [qforce](#qforce) - [QGIS](#qgis) - [Qhull](#qhull) - [QIIME](#qiime) - [QIIME2](#qiime2) - [Qiskit](#qiskit) - [QJson](#qjson) - [QML](#qml) - [qnorm](#qnorm) - [qpth](#qpth) - [qrupdate](#qrupdate) - [QScintilla](#qscintilla) - [Qt](#qt) - [Qt5](#qt5) - [Qt5Webkit](#qt5webkit) - [Qtconsole](#qtconsole) - [QtKeychain](#qtkeychain) - [QTLtools](#qtltools) - [qtop](#qtop) - [QtPy](#qtpy) - [Qualimap](#qualimap) - [Quandl](#quandl) - [QuantumESPRESSO](#quantumespresso) - [QUAST](#quast) - [QuaZIP](#quazip) - [QuickFF](#quickff) - [QuickPIC](#quickpic) - [Quip](#quip) - [Quorum](#quorum) - [QuTiP](#qutip) - [Qwt](#qwt) - [QwtPolar](#qwtpolar)
 
 
 ### Q6
@@ -30193,6 +30989,16 @@ version   |toolchain
 ----------|---------------
 ``2.10.1``|``intel/2017b``
 
+### qforce
+
+Quantum Mechanically augmented molecular force fields. Q-Force is a software package  for deriving all-atom force fields from quantum mechanical calculations in an automated  manner. 
+
+*homepage*: <https://github.com/selimsami/qforce>
+
+version   |toolchain
+----------|--------------
+``0.6.11``|``foss/2022a``
+
 ### QGIS
 
 QGIS is a user friendly Open Source Geographic Information System (GIS)
@@ -30216,7 +31022,7 @@ version   |toolchain
 ----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ``2015.2``|``GCCcore/5.4.0``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.3.0``, ``foss/2016a``, ``foss/2016b``, ``foss/2017b``, ``intel/2016a``, ``intel/2016b``, ``intel/2017a``
 ``2019.1``|``GCCcore/8.2.0``, ``GCCcore/8.3.0``
-``2020.2``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+``2020.2``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### QIIME
 
@@ -30230,21 +31036,22 @@ version  |toolchain
 
 ### QIIME2
 
-QIIME is an open-source bioinformatics pipeline for performing microbiome analysis  from raw DNA sequencing data.
+QIIME 2 is a powerful, extensible, and decentralized microbiome bioinformatics platform that is free, open source, and community developed.
 
-*homepage*: <http://qiime2.org/>
+*homepage*: <https://qiime2.org>
 
-version    |toolchain
------------|----------
-``2017.10``|``system``
-``2018.2`` |``system``
-``2019.4`` |``system``
-``2019.7`` |``system``
-``2020.8`` |``system``
-``2020.11``|``system``
-``2021.8`` |``system``
-``2022.8`` |``system``
-``2022.11``|``system``
+version     |toolchain
+------------|--------------
+``2017.10`` |``system``
+``2018.2``  |``system``
+``2019.4``  |``system``
+``2019.7``  |``system``
+``2020.8``  |``system``
+``2020.11`` |``system``
+``2021.8``  |``system``
+``2022.8``  |``system``
+``2022.11`` |``system``
+``2023.5.1``|``foss/2022a``
 
 ### Qiskit
 
@@ -30340,23 +31147,24 @@ Qt is a comprehensive cross-platform C++ application framework.
 
 *homepage*: <https://qt.io/>
 
-version   |toolchain
-----------|------------------------------------------------------------------------------------
-``5.6.0`` |``foss/2016a``, ``intel/2016a``
-``5.7.0`` |``foss/2016a``, ``foss/2016b``, ``intel/2016a``, ``intel/2016b``
-``5.7.1`` |``intel/2016b``
-``5.8.0`` |``foss/2017a``, ``foss/2017b``, ``intel/2016b``, ``intel/2017a``, ``intel/2017b``
-``5.9.3`` |``foss/2017b``
-``5.9.8`` |``fosscuda/2018b``
-``5.10.1``|``foss/2018a``, ``foss/2018b``, ``fosscuda/2018b``, ``intel/2018a``, ``intel/2018b``
-``5.11.2``|``foss/2018b``
-``5.12.3``|``GCCcore/8.2.0``
-``5.13.1``|``GCCcore/8.3.0``
-``5.14.1``|``GCCcore/9.3.0``
-``5.14.2``|``GCCcore/10.2.0``
-``5.15.2``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``
-``5.15.5``|``GCCcore/11.3.0``
-``5.15.7``|``GCCcore/12.2.0``
+version    |toolchain
+-----------|------------------------------------------------------------------------------------
+``5.6.0``  |``foss/2016a``, ``intel/2016a``
+``5.7.0``  |``foss/2016a``, ``foss/2016b``, ``intel/2016a``, ``intel/2016b``
+``5.7.1``  |``intel/2016b``
+``5.8.0``  |``foss/2017a``, ``foss/2017b``, ``intel/2016b``, ``intel/2017a``, ``intel/2017b``
+``5.9.3``  |``foss/2017b``
+``5.9.8``  |``fosscuda/2018b``
+``5.10.1`` |``foss/2018a``, ``foss/2018b``, ``fosscuda/2018b``, ``intel/2018a``, ``intel/2018b``
+``5.11.2`` |``foss/2018b``
+``5.12.3`` |``GCCcore/8.2.0``
+``5.13.1`` |``GCCcore/8.3.0``
+``5.14.1`` |``GCCcore/9.3.0``
+``5.14.2`` |``GCCcore/10.2.0``
+``5.15.2`` |``GCCcore/10.3.0``, ``GCCcore/11.2.0``
+``5.15.5`` |``GCCcore/11.3.0``
+``5.15.7`` |``GCCcore/12.2.0``
+``5.15.10``|``GCCcore/12.3.0``
 
 ### Qt5Webkit
 
@@ -30474,6 +31282,7 @@ version  |versionsuffix|toolchain
 ``6.8``  |             |``foss/2021a``, ``foss/2021b``, ``intel/2021a``
 ``7.0``  |             |``foss/2021b``, ``intel/2021b``
 ``7.1``  |             |``foss/2022a``, ``intel/2022a``
+``7.2``  |             |``foss/2022b``, ``intel/2022b``
 
 ### QUAST
 
@@ -30584,7 +31393,7 @@ version  |toolchain
 ## R
 
 
-[R](#r) - [R-bundle-Bioconductor](#r-bundle-bioconductor) - [R-INLA](#r-inla) - [R-keras](#r-keras) - [R-MXM](#r-mxm) - [R-opencv](#r-opencv) - [R-tesseract](#r-tesseract) - [R-transport](#r-transport) - [R2jags](#r2jags) - [Racon](#racon) - [radeontop](#radeontop) - [RaGOO](#ragoo) - [Ragout](#ragout) - [RagTag](#ragtag) - [rampart](#rampart) - [randfold](#randfold) - [randrproto](#randrproto) - [rapidcsv](#rapidcsv) - [RapidJSON](#rapidjson) - [rapidNJ](#rapidnj) - [rapidtide](#rapidtide) - [RAPSearch2](#rapsearch2) - [Rascaf](#rascaf) - [RASPA2](#raspa2) - [rasterio](#rasterio) - [rasterstats](#rasterstats) - [Ratatosk](#ratatosk) - [Raven](#raven) - [RAxML](#raxml) - [RAxML-NG](#raxml-ng) - [Ray-assembler](#ray-assembler) - [Ray-project](#ray-project) - [Raysect](#raysect) - [RBFOpt](#rbfopt) - [rclone](#rclone) - [Rcorrector](#rcorrector) - [RcppGSL](#rcppgsl) - [rCUDA](#rcuda) - [RDFlib](#rdflib) - [RDKit](#rdkit) - [RDP-Classifier](#rdp-classifier) - [RE2](#re2) - [re2c](#re2c) - [Reads2snp](#reads2snp) - [Reapr](#reapr) - [ReaxFF](#reaxff) - [RECON](#recon) - [Red](#red) - [Redis](#redis) - [redis-py](#redis-py) - [Redundans](#redundans) - [ReFrame](#reframe) - [regionmask](#regionmask) - [RegTools](#regtools) - [Relate](#relate) - [RELION](#relion) - [ReMatCh](#rematch) - [REMORA](#remora) - [renderproto](#renderproto) - [RepastHPC](#repasthpc) - [RepeatMasker](#repeatmasker) - [RepeatModeler](#repeatmodeler) - [RepeatScout](#repeatscout) - [request](#request) - [requests](#requests) - [RERconverge](#rerconverge) - [resolos](#resolos) - [retworkx](#retworkx) - [RevBayes](#revbayes) - [rgdal](#rgdal) - [rgeos](#rgeos) - [Rgurobi](#rgurobi) - [rhdf5](#rhdf5) - [RheoTool](#rheotool) - [rickflow](#rickflow) - [RInChI](#rinchi) - [rioxarray](#rioxarray) - [ripunzip](#ripunzip) - [rising](#rising) - [Rivet](#rivet) - [rjags](#rjags) - [RLCard](#rlcard) - [rmarkdown](#rmarkdown) - [Rmath](#rmath) - [rMATS-turbo](#rmats-turbo) - [RMBlast](#rmblast) - [RNA-Bloom](#rna-bloom) - [RNA-SeQC](#rna-seqc) - [RNAclust](#rnaclust) - [RNAcode](#rnacode) - [RNAIndel](#rnaindel) - [RNAmmer](#rnammer) - [rnaQUAST](#rnaquast) - [RNAz](#rnaz) - [RnBeads](#rnbeads) - [Roary](#roary) - [ROCm](#rocm) - [rocm-cmake](#rocm-cmake) - [ROCm-CompilerSupport](#rocm-compilersupport) - [rocm-smi](#rocm-smi) - [rocminfo](#rocminfo) - [ROCR-Runtime](#rocr-runtime) - [ROCT-Thunk-Interface](#roct-thunk-interface) - [ROI_PAC](#roi_pac) - [ROME](#rome) - [ROOT](#root) - [root_numpy](#root_numpy) - [rootpy](#rootpy) - [Rosetta](#rosetta) - [rpmrebuild](#rpmrebuild) - [RPostgreSQL](#rpostgresql) - [rpy2](#rpy2) - [RQGIS3](#rqgis3) - [RSEM](#rsem) - [RSeQC](#rseqc) - [RStan](#rstan) - [rstanarm](#rstanarm) - [RStudio-Server](#rstudio-server) - [RTG-Tools](#rtg-tools) - [Rtree](#rtree) - [ruamel.yaml](#ruamel.yaml) - [Ruby](#ruby) - [Ruby-Tk](#ruby-tk) - [ruffus](#ruffus) - [Rust](#rust) - [rustworkx](#rustworkx)
+[R](#r) - [R-bundle-Bioconductor](#r-bundle-bioconductor) - [R-INLA](#r-inla) - [R-keras](#r-keras) - [R-MXM](#r-mxm) - [R-opencv](#r-opencv) - [R-tesseract](#r-tesseract) - [R-transport](#r-transport) - [R2jags](#r2jags) - [Racon](#racon) - [radeontop](#radeontop) - [RaGOO](#ragoo) - [Ragout](#ragout) - [RagTag](#ragtag) - [rampart](#rampart) - [randfold](#randfold) - [randrproto](#randrproto) - [rapidcsv](#rapidcsv) - [RapidJSON](#rapidjson) - [rapidNJ](#rapidnj) - [rapidtide](#rapidtide) - [RAPSearch2](#rapsearch2) - [Rascaf](#rascaf) - [RASPA2](#raspa2) - [rasterio](#rasterio) - [rasterstats](#rasterstats) - [Ratatosk](#ratatosk) - [Raven](#raven) - [RAxML](#raxml) - [RAxML-NG](#raxml-ng) - [Ray-assembler](#ray-assembler) - [Ray-project](#ray-project) - [Raysect](#raysect) - [RBFOpt](#rbfopt) - [rclone](#rclone) - [Rcorrector](#rcorrector) - [RcppGSL](#rcppgsl) - [rCUDA](#rcuda) - [RDFlib](#rdflib) - [RDKit](#rdkit) - [RDP-Classifier](#rdp-classifier) - [RE2](#re2) - [re2c](#re2c) - [Reads2snp](#reads2snp) - [Reapr](#reapr) - [ReaxFF](#reaxff) - [RECON](#recon) - [Red](#red) - [Redis](#redis) - [redis-py](#redis-py) - [Redundans](#redundans) - [ReFrame](#reframe) - [regionmask](#regionmask) - [RegTools](#regtools) - [Relate](#relate) - [RELION](#relion) - [ReMatCh](#rematch) - [REMORA](#remora) - [renderproto](#renderproto) - [RepastHPC](#repasthpc) - [RepeatMasker](#repeatmasker) - [RepeatModeler](#repeatmodeler) - [RepeatScout](#repeatscout) - [request](#request) - [requests](#requests) - [RERconverge](#rerconverge) - [resolos](#resolos) - [retworkx](#retworkx) - [RevBayes](#revbayes) - [RFdiffusion](#rfdiffusion) - [rgdal](#rgdal) - [rgeos](#rgeos) - [Rgurobi](#rgurobi) - [rhdf5](#rhdf5) - [RheoTool](#rheotool) - [Rhodium](#rhodium) - [rickflow](#rickflow) - [RInChI](#rinchi) - [rioxarray](#rioxarray) - [ripunzip](#ripunzip) - [rising](#rising) - [Rivet](#rivet) - [rjags](#rjags) - [RLCard](#rlcard) - [rmarkdown](#rmarkdown) - [Rmath](#rmath) - [rMATS-turbo](#rmats-turbo) - [RMBlast](#rmblast) - [RNA-Bloom](#rna-bloom) - [RNA-SeQC](#rna-seqc) - [RNAclust](#rnaclust) - [RNAcode](#rnacode) - [RNAIndel](#rnaindel) - [RNAmmer](#rnammer) - [rnaQUAST](#rnaquast) - [RNAz](#rnaz) - [RnBeads](#rnbeads) - [Roary](#roary) - [ROCm](#rocm) - [rocm-cmake](#rocm-cmake) - [ROCm-CompilerSupport](#rocm-compilersupport) - [rocm-smi](#rocm-smi) - [rocminfo](#rocminfo) - [ROCR-Runtime](#rocr-runtime) - [ROCT-Thunk-Interface](#roct-thunk-interface) - [ROI_PAC](#roi_pac) - [ROME](#rome) - [ROOT](#root) - [root_numpy](#root_numpy) - [rootpy](#rootpy) - [Rosetta](#rosetta) - [rpmrebuild](#rpmrebuild) - [RPostgreSQL](#rpostgresql) - [rpy2](#rpy2) - [RQGIS3](#rqgis3) - [RSEM](#rsem) - [RSeQC](#rseqc) - [RStan](#rstan) - [rstanarm](#rstanarm) - [RStudio-Server](#rstudio-server) - [RTG-Tools](#rtg-tools) - [Rtree](#rtree) - [ruamel.yaml](#ruamel.yaml) - [Ruby](#ruby) - [Ruby-Tk](#ruby-tk) - [ruffus](#ruffus) - [ruptures](#ruptures) - [Rust](#rust) - [rustworkx](#rustworkx)
 
 
 ### R
@@ -30736,7 +31545,7 @@ version   |toolchain
 ``1.4.10``|``GCC/7.3.0-2.30``
 ``1.4.13``|``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 ``1.4.21``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``
-``1.5.0`` |``GCCcore/11.2.0``
+``1.5.0`` |``GCCcore/11.2.0``, ``GCCcore/11.3.0``
 
 ### radeontop
 
@@ -31006,7 +31815,7 @@ version  |versionsuffix    |toolchain
 
 Rclone is a command line program to sync files and directories to and from  a variety of online storage services 
 
-*homepage*: <https://rclone.org>
+*homepage*: <https://rclone.org/>
 
 version   |versionsuffix|toolchain
 ----------|-------------|----------
@@ -31014,6 +31823,7 @@ version   |versionsuffix|toolchain
 ``1.54.1``|``-amd64``   |``system``
 ``1.56.0``|``-amd64``   |``system``
 ``1.57.0``|             |``system``
+``1.63.1``|``-amd64``   |``system``
 
 ### Rcorrector
 
@@ -31100,6 +31910,7 @@ version       |toolchain
 ``2022-02-01``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``
 ``2022-06-01``|``GCCcore/11.3.0``
 ``2023-03-01``|``GCCcore/12.2.0``
+``2023-08-01``|``GCCcore/12.3.0``
 
 ### re2c
 
@@ -31116,6 +31927,7 @@ version  |toolchain
 ``2.1.1``|``GCCcore/10.3.0``
 ``2.2``  |``GCCcore/11.2.0``, ``GCCcore/11.3.0``
 ``3.0``  |``GCCcore/12.2.0``
+``3.1``  |``GCCcore/12.3.0``
 
 ### Reads2snp
 
@@ -31256,6 +32068,7 @@ version  |toolchain
 ---------|------------------------------
 ``0.4.2``|``foss/2020b``
 ``0.5.2``|``foss/2020b``, ``foss/2021b``
+``1.0.0``|``foss/2022b``
 
 ### Relate
 
@@ -31425,6 +32238,16 @@ version  |toolchain
 ``1.1.1``|``GCC/10.2.0``, ``GCC/11.2.0``
 ``1.2.1``|``gompi/2022a``
 
+### RFdiffusion
+
+RFdiffusion is an open source method for structure generation, with or without conditional information  (a motif, target etc). It can perform a whole range of protein design challenges as we have outlined  in the RFdiffusion paper. 
+
+*homepage*: <https://github.com/RosettaCommons/RFdiffusion>
+
+version  |toolchain
+---------|--------------
+``1.1.0``|``foss/2022a``
+
 ### rgdal
 
 Provides bindings to the 'Geospatial' Data Abstraction Library ('GDAL') (>= 1.11.4 and <= 2.5.0) and  access to projection/transformation operations from the 'PROJ.4' library.
@@ -31486,6 +32309,16 @@ RheoTool is an open-source toolbox based on OpenFOAM to simulate Generalized New
 version|toolchain
 -------|--------------
 ``5.0``|``foss/2019b``
+
+### Rhodium
+
+Rhodium is an open source Python library for robust decision making (RDM) and  multiobjective robust decision making (MORDM), and exploratory modelling (EM).
+
+*homepage*: <https://github.com/Project-Platypus/Rhodium>
+
+version  |toolchain
+---------|--------------
+``1.2.0``|``foss/2022a``
 
 ### rickflow
 
@@ -31574,6 +32407,7 @@ version |versionsuffix|toolchain
 ``4-10``|``-R-4.1.0`` |``foss/2021a``
 ``4-12``|``-R-4.1.2`` |``foss/2021b``
 ``4-13``|``-R-4.2.1`` |``foss/2022a``
+``4-13``|``-R-4.2.2`` |``foss/2022b``
 
 ### RLCard
 
@@ -31724,9 +32558,10 @@ RnBeads is an R package for comprehensive analysis of DNA methylation data obtai
 
 *homepage*: <https://rnbeads.org>
 
-version  |versionsuffix|toolchain
----------|-------------|--------------
-``2.6.0``|``-R-4.0.0`` |``foss/2020a``
+version   |versionsuffix|toolchain
+----------|-------------|--------------
+``2.6.0`` |``-R-4.0.0`` |``foss/2020a``
+``2.14.0``|``-R-4.2.1`` |``foss/2022a``
 
 ### Roary
 
@@ -32001,9 +32836,10 @@ RTG Tools contains utilities to easily manipulate and accurately compare multipl
 
 *homepage*: <https://www.realtimegenomics.com/products/rtg-tools>
 
-version  |versionsuffix|toolchain
----------|-------------|----------
-``3.9.1``|``-Java-1.8``|``system``
+version   |versionsuffix|toolchain
+----------|-------------|----------
+``3.9.1`` |``-Java-1.8``|``system``
+``3.12.1``|``-Java-11`` |``system``
 
 ### Rtree
 
@@ -32070,6 +32906,16 @@ version  |toolchain
 ---------|----------------------------------
 ``2.8.4``|``GCCcore/11.3.0``, ``foss/2021b``
 
+### ruptures
+
+ruptures is a Python library for off-line change point detection. This package provides  methods for the analysis and segmentation of non-stationary signals. Implemented  algorithms include exact and approximate detection for various parametric and  non-parametric models. ruptures focuses on ease of use by providing a well-documented and  consistent interface. In addition, thanks to its modular structure, different algorithms  and models can be connected and extended within this package. 
+
+*homepage*: <https://github.com/deepcharles/ruptures/>
+
+version  |toolchain
+---------|--------------
+``1.1.8``|``foss/2022a``
+
 ### Rust
 
 Rust is a systems programming language that runs blazingly fast, prevents segfaults,  and guarantees thread safety.
@@ -32109,7 +32955,7 @@ version   |toolchain
 ## S
 
 
-[S-Lang](#s-lang) - [S4](#s4) - [Safetensors](#safetensors) - [SAGE](#sage) - [Sailfish](#sailfish) - [SALib](#salib) - [Salmon](#salmon) - [SALMON-TDDFT](#salmon-tddft) - [Sambamba](#sambamba) - [samblaster](#samblaster) - [Samcef](#samcef) - [samclip](#samclip) - [samplot](#samplot) - [SAMtools](#samtools) - [sansa](#sansa) - [SAP](#sap) - [SAS](#sas) - [Satsuma2](#satsuma2) - [savvy](#savvy) - [Saxon-HE](#saxon-he) - [SBCL](#sbcl) - [sbt](#sbt) - [ScaFaCoS](#scafacos) - [ScaLAPACK](#scalapack) - [Scalasca](#scalasca) - [SCALCE](#scalce) - [Scalene](#scalene) - [scanpy](#scanpy) - [scArches](#scarches) - [sceasy](#sceasy) - [SCENIC](#scenic) - [scGeneFit](#scgenefit) - [SCGid](#scgid) - [scHiCExplorer](#schicexplorer) - [Schrodinger](#schrodinger) - [scib](#scib) - [sciClone](#sciclone) - [ScientificPython](#scientificpython) - [scikit-allel](#scikit-allel) - [scikit-bio](#scikit-bio) - [scikit-build](#scikit-build) - [scikit-cuda](#scikit-cuda) - [scikit-image](#scikit-image) - [scikit-learn](#scikit-learn) - [scikit-misc](#scikit-misc) - [scikit-multilearn](#scikit-multilearn) - [scikit-optimize](#scikit-optimize) - [scikit-uplift](#scikit-uplift) - [SCIP](#scip) - [SCIPhI](#sciphi) - [scipy](#scipy) - [SciPy-bundle](#scipy-bundle) - [SCnorm](#scnorm) - [Scoary](#scoary) - [SCons](#scons) - [SCOOP](#scoop) - [SCopeLoomR](#scopeloomr) - [Score-P](#score-p) - [SCOTCH](#scotch) - [scp](#scp) - [scPred](#scpred) - [Scrappie](#scrappie) - [scVelo](#scvelo) - [scvi-tools](#scvi-tools) - [Scythe](#scythe) - [SDCC](#sdcc) - [SDL](#sdl) - [SDL2](#sdl2) - [SDL2_image](#sdl2_image) - [SDL_image](#sdl_image) - [SDSL](#sdsl) - [Seaborn](#seaborn) - [SearchGUI](#searchgui) - [SeaView](#seaview) - [SECAPR](#secapr) - [Seeder](#seeder) - [segemehl](#segemehl) - [segmentation-models](#segmentation-models) - [SeisSol](#seissol) - [SelEstim](#selestim) - [SELFIES](#selfies) - [SentencePiece](#sentencepiece) - [sep](#sep) - [SEPP](#sepp) - [Seq-Gen](#seq-gen) - [seq2HLA](#seq2hla) - [SeqAn](#seqan) - [SeqAn3](#seqan3) - [SeqKit](#seqkit) - [SeqLib](#seqlib) - [Seqmagick](#seqmagick) - [SeqPrep](#seqprep) - [seqtk](#seqtk) - [Serf](#serf) - [setuptools](#setuptools) - [Seurat](#seurat) - [SeuratData](#seuratdata) - [SeuratDisk](#seuratdisk) - [SeuratWrappers](#seuratwrappers) - [sf](#sf) - [sfftk](#sfftk) - [Shannon](#shannon) - [SHAP](#shap) - [shapAAR](#shapaar) - [SHAPEIT](#shapeit) - [SHAPEIT4](#shapeit4) - [Shapely](#shapely) - [sharutils](#sharutils) - [Shasta](#shasta) - [ShengBTE](#shengbte) - [shift](#shift) - [SHORE](#shore) - [Short-Pair](#short-pair) - [shovill](#shovill) - [shrinkwrap](#shrinkwrap) - [SHTns](#shtns) - [Sibelia](#sibelia) - [SICER2](#sicer2) - [sickle](#sickle) - [Siesta](#siesta) - [SignalP](#signalp) - [silhouetteRank](#silhouetterank) - [silx](#silx) - [simint](#simint) - [SimNIBS](#simnibs) - [SimPEG](#simpeg) - [SIMPLE](#simple) - [Simple-DFTD3](#simple-dftd3) - [SimpleElastix](#simpleelastix) - [SimpleITK](#simpleitk) - [simpy](#simpy) - [SimVascular](#simvascular) - [SingleM](#singlem) - [Singular](#singular) - [SiNVICT](#sinvict) - [SIONlib](#sionlib) - [SIP](#sip) - [siscone](#siscone) - [SISSO](#sisso) - [SISSO++](#sisso++) - [SKESA](#skesa) - [sketchmap](#sketchmap) - [skewer](#skewer) - [sklearn-pandas](#sklearn-pandas) - [sklearn-som](#sklearn-som) - [skorch](#skorch) - [SlamDunk](#slamdunk) - [SLATEC](#slatec) - [SLEPc](#slepc) - [slepc4py](#slepc4py) - [sleuth](#sleuth) - [slidingwindow](#slidingwindow) - [SLiM](#slim) - [slow5tools](#slow5tools) - [smafa](#smafa) - [smallgenomeutilities](#smallgenomeutilities) - [SMAP](#smap) - [SMARTdenovo](#smartdenovo) - [SMC++](#smc++) - [smfishHmrf](#smfishhmrf) - [smithwaterman](#smithwaterman) - [Smoldyn](#smoldyn) - [smooth-topk](#smooth-topk) - [SMRT-Link](#smrt-link) - [SMV](#smv) - [snakemake](#snakemake) - [SNAP](#snap) - [SNAP-HMM](#snap-hmm) - [SNAPE-pooled](#snape-pooled) - [snaphu](#snaphu) - [snappy](#snappy) - [Sniffles](#sniffles) - [snippy](#snippy) - [snp-sites](#snp-sites) - [snpEff](#snpeff) - [SNPhylo](#snphylo) - [SNPomatic](#snpomatic) - [SOAPaligner](#soapaligner) - [SOAPdenovo-Trans](#soapdenovo-trans) - [SOAPdenovo2](#soapdenovo2) - [SOAPfuse](#soapfuse) - [socat](#socat) - [SOCI](#soci) - [SolexaQA++](#solexaqa++) - [sonic](#sonic) - [SoPlex](#soplex) - [SoQt](#soqt) - [SortMeRNA](#sortmerna) - [SoupX](#soupx) - [SoX](#sox) - [SoXt](#soxt) - [SpaceRanger](#spaceranger) - [Spack](#spack) - [spaCy](#spacy) - [SPAdes](#spades) - [spaln](#spaln) - [Spark](#spark) - [sparse-neighbors-search](#sparse-neighbors-search) - [sparsehash](#sparsehash) - [SpatialDE](#spatialde) - [spatialreg](#spatialreg) - [spdlog](#spdlog) - [SpectrA](#spectra) - [spectral.methods](#spectral.methods) - [speech_tools](#speech_tools) - [spektral](#spektral) - [spglib](#spglib) - [spglib-python](#spglib-python) - [Sphinx](#sphinx) - [Sphinx-RTD-Theme](#sphinx-rtd-theme) - [SpiceyPy](#spiceypy) - [SpiecEasi](#spieceasi) - [SplAdder](#spladder) - [SPLASH](#splash) - [SpliceMap](#splicemap) - [split-seq](#split-seq) - [splitRef](#splitref) - [SPM](#spm) - [spoa](#spoa) - [SPOOLES](#spooles) - [SPOTPY](#spotpy) - [SPRNG](#sprng) - [Spyder](#spyder) - [SQLite](#sqlite) - [SqueezeMeta](#squeezemeta) - [Squidpy](#squidpy) - [SRA-Toolkit](#sra-toolkit) - [sradownloader](#sradownloader) - [SRPRISM](#srprism) - [SRST2](#srst2) - [SSAHA2](#ssaha2) - [SSN](#ssn) - [SSPACE_Basic](#sspace_basic) - [SSW](#ssw) - [STACEY](#stacey) - [Stack](#stack) - [Stacks](#stacks) - [STAMP](#stamp) - [StaMPS](#stamps) - [Stampy](#stampy) - [STAR](#star) - [STAR-CCM+](#star-ccm+) - [STAR-Fusion](#star-fusion) - [stardist](#stardist) - [stars](#stars) - [Stata](#stata) - [Statistics-R](#statistics-r) - [statsmodels](#statsmodels) - [STEAK](#steak) - [STIR](#stir) - [stpipeline](#stpipeline) - [strace](#strace) - [Strainberry](#strainberry) - [STREAM](#stream) - [strelka](#strelka) - [StringTie](#stringtie) - [stripy](#stripy) - [STRique](#strique) - [Structure](#structure) - [Structure_threader](#structure_threader) - [STRUMPACK](#strumpack) - [suave](#suave) - [Subread](#subread) - [subset-bam](#subset-bam) - [Subversion](#subversion) - [suds](#suds) - [SuiteSparse](#suitesparse) - [SUMACLUST](#sumaclust) - [SUMATRA](#sumatra) - [SUMO](#sumo) - [SUNDIALS](#sundials) - [SunPy](#sunpy) - [SuperLU](#superlu) - [SuperLU_DIST](#superlu_dist) - [supermagic](#supermagic) - [supernova](#supernova) - [SURVIVOR](#survivor) - [SVclone](#svclone) - [SVDetect](#svdetect) - [SVDquest](#svdquest) - [SVG](#svg) - [SVIM](#svim) - [svist4get](#svist4get) - [swarm](#swarm) - [SWASH](#swash) - [SWAT+](#swat+) - [swifter](#swifter) - [SWIG](#swig) - [SWIPE](#swipe) - [swissknife](#swissknife) - [SymEngine](#symengine) - [SymEngine-python](#symengine-python) - [SYMPHONY](#symphony) - [sympy](#sympy) - [synthcity](#synthcity) - [SyRI](#syri) - [sysbench](#sysbench) - [Szip](#szip)
+[S-Lang](#s-lang) - [S4](#s4) - [Sabre](#sabre) - [Safetensors](#safetensors) - [SAGE](#sage) - [Sailfish](#sailfish) - [SALib](#salib) - [Salmon](#salmon) - [SALMON-TDDFT](#salmon-tddft) - [Sambamba](#sambamba) - [samblaster](#samblaster) - [Samcef](#samcef) - [samclip](#samclip) - [samplot](#samplot) - [SAMtools](#samtools) - [sansa](#sansa) - [SAP](#sap) - [SAS](#sas) - [Satsuma2](#satsuma2) - [savvy](#savvy) - [Saxon-HE](#saxon-he) - [SBCL](#sbcl) - [sbt](#sbt) - [ScaFaCoS](#scafacos) - [ScaLAPACK](#scalapack) - [Scalasca](#scalasca) - [SCALCE](#scalce) - [Scalene](#scalene) - [scanpy](#scanpy) - [scArches](#scarches) - [sceasy](#sceasy) - [SCENIC](#scenic) - [scGeneFit](#scgenefit) - [SCGid](#scgid) - [scGSVA](#scgsva) - [scHiCExplorer](#schicexplorer) - [Schrodinger](#schrodinger) - [scib](#scib) - [scib-metrics](#scib-metrics) - [sciClone](#sciclone) - [ScientificPython](#scientificpython) - [scikit-allel](#scikit-allel) - [scikit-bio](#scikit-bio) - [scikit-build](#scikit-build) - [scikit-cuda](#scikit-cuda) - [scikit-image](#scikit-image) - [scikit-learn](#scikit-learn) - [scikit-misc](#scikit-misc) - [scikit-multilearn](#scikit-multilearn) - [scikit-optimize](#scikit-optimize) - [scikit-plot](#scikit-plot) - [scikit-uplift](#scikit-uplift) - [SCIP](#scip) - [SCIPhI](#sciphi) - [scipy](#scipy) - [SciPy-bundle](#scipy-bundle) - [SCnorm](#scnorm) - [Scoary](#scoary) - [SCons](#scons) - [SCOOP](#scoop) - [SCopeLoomR](#scopeloomr) - [Score-P](#score-p) - [SCOTCH](#scotch) - [scp](#scp) - [scPred](#scpred) - [Scrappie](#scrappie) - [scVelo](#scvelo) - [scvi-tools](#scvi-tools) - [Scythe](#scythe) - [SDCC](#sdcc) - [SDL](#sdl) - [SDL2](#sdl2) - [SDL2_image](#sdl2_image) - [SDL2_mixer](#sdl2_mixer) - [SDL2_ttf](#sdl2_ttf) - [SDL_image](#sdl_image) - [SDSL](#sdsl) - [Seaborn](#seaborn) - [SearchGUI](#searchgui) - [SeaView](#seaview) - [SECAPR](#secapr) - [Seeder](#seeder) - [segemehl](#segemehl) - [segment-anything](#segment-anything) - [segmentation-models](#segmentation-models) - [SeisSol](#seissol) - [SelEstim](#selestim) - [SELFIES](#selfies) - [SentencePiece](#sentencepiece) - [sentinelsat](#sentinelsat) - [sep](#sep) - [SEPP](#sepp) - [Seq-Gen](#seq-gen) - [seq2HLA](#seq2hla) - [SeqAn](#seqan) - [SeqAn3](#seqan3) - [SeqKit](#seqkit) - [SeqLib](#seqlib) - [Seqmagick](#seqmagick) - [SeqPrep](#seqprep) - [seqtk](#seqtk) - [Serf](#serf) - [setuptools](#setuptools) - [setuptools-rust](#setuptools-rust) - [Seurat](#seurat) - [SeuratData](#seuratdata) - [SeuratDisk](#seuratdisk) - [SeuratWrappers](#seuratwrappers) - [sf](#sf) - [sfftk](#sfftk) - [Shannon](#shannon) - [SHAP](#shap) - [shapAAR](#shapaar) - [SHAPEIT](#shapeit) - [SHAPEIT4](#shapeit4) - [Shapely](#shapely) - [sharutils](#sharutils) - [Shasta](#shasta) - [ShengBTE](#shengbte) - [shift](#shift) - [SHORE](#shore) - [Short-Pair](#short-pair) - [shovill](#shovill) - [shrinkwrap](#shrinkwrap) - [SHTns](#shtns) - [Sibelia](#sibelia) - [SICER2](#sicer2) - [sickle](#sickle) - [Siesta](#siesta) - [SignalP](#signalp) - [silhouetteRank](#silhouetterank) - [silx](#silx) - [simint](#simint) - [SimNIBS](#simnibs) - [SimPEG](#simpeg) - [SIMPLE](#simple) - [Simple-DFTD3](#simple-dftd3) - [SimpleElastix](#simpleelastix) - [SimpleITK](#simpleitk) - [simpy](#simpy) - [SimVascular](#simvascular) - [SingleM](#singlem) - [Singular](#singular) - [SiNVICT](#sinvict) - [SIONlib](#sionlib) - [SIP](#sip) - [siscone](#siscone) - [SISSO](#sisso) - [SISSO++](#sisso++) - [SKESA](#skesa) - [sketchmap](#sketchmap) - [skewer](#skewer) - [sklearn-pandas](#sklearn-pandas) - [sklearn-som](#sklearn-som) - [skorch](#skorch) - [SlamDunk](#slamdunk) - [SLATEC](#slatec) - [SLEPc](#slepc) - [slepc4py](#slepc4py) - [sleuth](#sleuth) - [slidingwindow](#slidingwindow) - [SLiM](#slim) - [slow5tools](#slow5tools) - [slurm-drmaa](#slurm-drmaa) - [smafa](#smafa) - [smallgenomeutilities](#smallgenomeutilities) - [SMAP](#smap) - [SMARTdenovo](#smartdenovo) - [SMC++](#smc++) - [smfishHmrf](#smfishhmrf) - [smithwaterman](#smithwaterman) - [Smoldyn](#smoldyn) - [smooth-topk](#smooth-topk) - [SMRT-Link](#smrt-link) - [SMV](#smv) - [snakemake](#snakemake) - [SNAP](#snap) - [SNAP-HMM](#snap-hmm) - [SNAPE-pooled](#snape-pooled) - [snaphu](#snaphu) - [snappy](#snappy) - [Sniffles](#sniffles) - [snippy](#snippy) - [snp-sites](#snp-sites) - [snpEff](#snpeff) - [SNPhylo](#snphylo) - [SNPomatic](#snpomatic) - [SOAPaligner](#soapaligner) - [SOAPdenovo-Trans](#soapdenovo-trans) - [SOAPdenovo2](#soapdenovo2) - [SOAPfuse](#soapfuse) - [socat](#socat) - [SOCI](#soci) - [SolexaQA++](#solexaqa++) - [sonic](#sonic) - [SoPlex](#soplex) - [SoQt](#soqt) - [SortMeRNA](#sortmerna) - [SoupX](#soupx) - [SoX](#sox) - [SoXt](#soxt) - [SpaceRanger](#spaceranger) - [Spack](#spack) - [spaCy](#spacy) - [SPAdes](#spades) - [spaln](#spaln) - [Spark](#spark) - [sparse-neighbors-search](#sparse-neighbors-search) - [sparsehash](#sparsehash) - [SpatialDE](#spatialde) - [spatialreg](#spatialreg) - [spdlog](#spdlog) - [SpectrA](#spectra) - [spectral.methods](#spectral.methods) - [speech_tools](#speech_tools) - [spektral](#spektral) - [spglib](#spglib) - [spglib-python](#spglib-python) - [Sphinx](#sphinx) - [Sphinx-RTD-Theme](#sphinx-rtd-theme) - [SpiceyPy](#spiceypy) - [SpiecEasi](#spieceasi) - [SplAdder](#spladder) - [SPLASH](#splash) - [SpliceMap](#splicemap) - [split-seq](#split-seq) - [splitRef](#splitref) - [SPM](#spm) - [spoa](#spoa) - [SPOOLES](#spooles) - [SPOTPY](#spotpy) - [SPRNG](#sprng) - [Spyder](#spyder) - [SQLite](#sqlite) - [SqueezeMeta](#squeezemeta) - [Squidpy](#squidpy) - [SRA-Toolkit](#sra-toolkit) - [sradownloader](#sradownloader) - [SRPRISM](#srprism) - [SRST2](#srst2) - [SSAHA2](#ssaha2) - [SSN](#ssn) - [SSPACE_Basic](#sspace_basic) - [SSW](#ssw) - [STACEY](#stacey) - [Stack](#stack) - [Stacks](#stacks) - [STAMP](#stamp) - [StaMPS](#stamps) - [Stampy](#stampy) - [STAR](#star) - [STAR-CCM+](#star-ccm+) - [STAR-Fusion](#star-fusion) - [stardist](#stardist) - [stars](#stars) - [Stata](#stata) - [Statistics-R](#statistics-r) - [statsmodels](#statsmodels) - [STEAK](#steak) - [STIR](#stir) - [stpipeline](#stpipeline) - [strace](#strace) - [Strainberry](#strainberry) - [STREAM](#stream) - [strelka](#strelka) - [StringTie](#stringtie) - [stripy](#stripy) - [STRique](#strique) - [Structure](#structure) - [Structure_threader](#structure_threader) - [STRUMPACK](#strumpack) - [suave](#suave) - [SuAVE-biomat](#suave-biomat) - [Subread](#subread) - [subset-bam](#subset-bam) - [Subversion](#subversion) - [suds](#suds) - [SuiteSparse](#suitesparse) - [SUMACLUST](#sumaclust) - [SUMATRA](#sumatra) - [SUMO](#sumo) - [SUNDIALS](#sundials) - [SunPy](#sunpy) - [SuperLU](#superlu) - [SuperLU_DIST](#superlu_dist) - [supermagic](#supermagic) - [supernova](#supernova) - [SURVIVOR](#survivor) - [SVclone](#svclone) - [SVDetect](#svdetect) - [SVDquest](#svdquest) - [SVG](#svg) - [SVIM](#svim) - [svist4get](#svist4get) - [swarm](#swarm) - [SWASH](#swash) - [SWAT+](#swat+) - [swifter](#swifter) - [SWIG](#swig) - [SWIPE](#swipe) - [swissknife](#swissknife) - [SymEngine](#symengine) - [SymEngine-python](#symengine-python) - [SYMPHONY](#symphony) - [sympy](#sympy) - [synthcity](#synthcity) - [SyRI](#syri) - [sysbench](#sysbench) - [Szip](#szip)
 
 
 ### S-Lang
@@ -32131,6 +32977,16 @@ S4 stands for Stanford Stratified Structure Solver, a frequency domain code  to 
 version           |toolchain
 ------------------|--------------
 ``1.1.1-20180610``|``foss/2017b``
+
+### Sabre
+
+Sabre is a tool that will demultiplex barcoded reads  into separate files. It will work on both single-end and paired-end  data in fastq format. It simply compares the provided barcodes with  each read and separates the read into its appropriate barcode file,  after stripping the barcode from the read (and also stripping  the quality values of the barcode bases).
+
+*homepage*: <https://github.com/najoshi/sabre>
+
+version       |toolchain
+--------------|--------------
+``2013-09-28``|``GCC/12.2.0``
 
 ### Safetensors
 
@@ -32292,6 +33148,7 @@ version   |versionsuffix    |toolchain
 ``1.15.1``|                 |``GCC/11.2.0``, ``GCC/11.3.0``
 ``1.16.1``|                 |``GCC/11.2.0``, ``GCC/11.3.0``
 ``1.17``  |                 |``GCC/12.2.0``
+``1.18``  |                 |``GCC/12.3.0``
 
 ### sansa
 
@@ -32447,6 +33304,7 @@ Scalene is a high-performance CPU, GPU and memory profiler for Python that does 
 version   |toolchain
 ----------|------------------
 ``1.5.13``|``GCCcore/11.2.0``
+``1.5.26``|``GCCcore/12.3.0``
 
 ### scanpy
 
@@ -32512,6 +33370,16 @@ version  |toolchain
 ---------|--------------
 ``0.9b0``|``foss/2021b``
 
+### scGSVA
+
+scGSVA provides wrap functions to do GSVA analysis for single cell data. And scGSVA  includes functions to build annotation for almost all species. scGSVA also provides  function to generate figures based on the GSVA results. 
+
+*homepage*: <https://github.com/guokai8/scGSVA>
+
+version   |versionsuffix|toolchain
+----------|-------------|--------------
+``0.0.14``|``-R-4.2.1`` |``foss/2022a``
+
 ### scHiCExplorer
 
 The scHiCExplorer is a software to demultiplex, process, correct, normalize, manipulate, analyse and visualize single-cell Hi-C data.
@@ -32546,6 +33414,16 @@ version  |toolchain
 ---------|--------------
 ``1.1.1``|``foss/2022a``
 ``1.1.3``|``foss/2021a``
+
+### scib-metrics
+
+Accelerated and Python-only metrics for benchmarking single-cell integration outputs
+
+*homepage*: <https://scib-metrics.readthedocs.io>
+
+version  |toolchain
+---------|--------------
+``0.3.3``|``foss/2021a``
 
 ### sciClone
 
@@ -32604,6 +33482,7 @@ version   |versionsuffix    |toolchain
 ``0.11.1``|                 |``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``foss/2020b``, ``fosscuda/2020b``, ``intel/2020b``, ``intelcuda/2020b``
 ``0.15.0``|                 |``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``
 ``0.17.2``|                 |``GCCcore/12.2.0``
+``0.17.6``|                 |``GCCcore/12.3.0``
 
 ### scikit-cuda
 
@@ -32641,6 +33520,7 @@ version   |versionsuffix     |toolchain
 ``0.18.3``|                  |``foss/2021a``
 ``0.19.1``|                  |``foss/2021b``
 ``0.19.3``|                  |``foss/2022a``
+``0.21.0``|                  |``foss/2022b``
 
 ### scikit-learn
 
@@ -32716,6 +33596,16 @@ version  |versionsuffix    |toolchain
 ``0.8.1``|``-Python-3.8.2``|``foss/2020a``
 ``0.9.0``|                 |``foss/2021a``
 
+### scikit-plot
+
+Scikit-plot is the result of an unartistic data scientist's dreadful realization that *visualization  is one of the most crucial components in the data science process, not just a mere afterthought*.
+
+*homepage*: <https://github.com/reiinakano/scikit-plot>
+
+version  |toolchain
+---------|--------------
+``0.3.7``|``foss/2022b``
+
 ### scikit-uplift
 
 scikit-uplift is a Python module for classic approaches for uplift modeling built on top of scikit-learn. Uplift prediction aims to estimate the causal impact of a treatment at the individual level. 
@@ -32780,6 +33670,7 @@ version    |versionsuffix     |toolchain
 ``2021.10``|``-Python-2.7.18``|``foss/2021b``
 ``2022.05``|                  |``foss/2022.05``, ``foss/2022a``, ``intel/2022.05``, ``intel/2022a``
 ``2023.02``|                  |``gfbf/2022b``
+``2023.07``|                  |``gfbf/2023a``
 
 ### SCnorm
 
@@ -32870,6 +33761,8 @@ version  |versionsuffix   |toolchain
 ``8.0``  |                |``gompi/2021b``, ``gompi/2022a``
 ``8.0``  |``-CUDA-11.4.1``|``gompi/2021b``
 ``8.0``  |``-CUDA-11.7.0``|``gompi/2022a``
+``8.1``  |                |``gompi/2022b``, ``gompi/2023a``
+``8.1``  |``-CUDA-12.0.0``|``gompi/2022b``
 
 ### SCOTCH
 
@@ -32887,6 +33780,7 @@ version            |versionsuffix|toolchain
 ``6.1.0``          |             |``gompi/2020b``, ``gompi/2021a``, ``iimpi/2020b``, ``iimpi/2021a``
 ``6.1.2``          |             |``gompi/2021b``, ``iimpi/2021b``
 ``7.0.1``          |             |``gompi/2022a``, ``iimpi/2022a``
+``7.0.3``          |             |``gompi/2022b``, ``gompi/2023a``
 
 ### scp
 
@@ -32988,16 +33882,38 @@ version   |toolchain
 ``2.0.20``|``GCCcore/11.2.0``
 ``2.0.22``|``GCCcore/11.3.0``
 ``2.26.3``|``GCCcore/12.2.0``
+``2.28.2``|``GCCcore/12.3.0``
 
 ### SDL2_image
 
-SDL_image is an image file loading library.
+This is a simple library to load images of various formats as SDL surfaces.  It can load BMP, GIF, JPEG, LBM, PCX, PNG, PNM (PPM/PGM/PBM), QOI, TGA, XCF, XPM, and simple SVG format images. It can also load AVIF, JPEG-XL, TIFF, and WebP images, depending on build options (see the note below for details.) 
 
-*homepage*: <https://www.libsdl.org/projects/SDL_image/>
+*homepage*: <https://github.com/libsdl-org/SDL_image>
 
 version  |toolchain
----------|-----------------
+---------|------------------
 ``2.0.3``|``GCCcore/6.4.0``
+``2.6.3``|``GCCcore/11.3.0``
+
+### SDL2_mixer
+
+Due to popular demand, here is a simple multi-channel audio mixer.  It supports 8 channels of 16 bit stereo audio, plus a single channel of music. It can load FLAC, MP3, Ogg, VOC, and WAV format audio. It can also load MIDI, MOD, and Opus audio, depending on build options (see the note below for details.) 
+
+*homepage*: <https://github.com/libsdl-org/SDL_mixer>
+
+version  |toolchain
+---------|------------------
+``2.6.3``|``GCCcore/11.3.0``
+
+### SDL2_ttf
+
+This library is a wrapper around the FreeType and Harfbuzz libraries, allowing you to use TrueType fonts to render text in SDL applications. 
+
+*homepage*: <https://github.com/libsdl-org/SDL_ttf>
+
+version   |toolchain
+----------|------------------
+``2.20.2``|``GCCcore/11.3.0``
 
 ### SDL_image
 
@@ -33097,6 +34013,16 @@ version  |toolchain
 ``0.2.0``|``foss/2016b``, ``intel/2017b``, ``intel/2018a``
 ``0.3.4``|``GCC/10.2.0``, ``GCC/10.3.0``, ``GCC/11.2.0``, ``GCC/8.3.0``, ``foss/2018b``, ``iccifort/2020.4.304``
 
+### segment-anything
+
+The Segment Anything Model (SAM) produces high quality object masks from input prompts  such as points or boxes, and it can be used to generate masks for all objects in an image.  It has been trained on a dataset of 11 million images and 1.1 billion masks, and has strong zero-shot  performance on a variety of segmentation tasks.
+
+*homepage*: <https://github.com/facebookresearch/segment-anything>
+
+version|toolchain
+-------|--------------
+``1.0``|``foss/2022a``
+
 ### segmentation-models
 
 Python library with Neural Networks for Image Segmentation based on Keras and TensorFlow.
@@ -33149,6 +34075,16 @@ version   |versionsuffix    |toolchain
 ``0.1.94``|``-Python-3.8.2``|``GCC/9.3.0``
 ``0.1.96``|                 |``GCC/10.2.0``, ``GCC/10.3.0``
 ``0.1.97``|                 |``GCC/11.3.0``
+
+### sentinelsat
+
+Sentinelsat makes searching, downloading and retrieving the metadata of Sentinel  satellite images from the Copernicus Open Access Hub easy. 
+
+*homepage*: <https://github.com/sentinelsat/sentinelsat>
+
+version  |toolchain
+---------|------------------
+``1.2.1``|``GCCcore/11.3.0``
 
 ### sep
 
@@ -33291,9 +34227,20 @@ Easily download, build, install, upgrade, and uninstall Python packages
 *homepage*: <https://pypi.org/project/setuptools>
 
 version   |versionsuffix|toolchain
-----------|-------------|----------
+----------|-------------|------------------
 ``1.4.2`` |             |``system``
 ``41.0.1``|``-py3``     |``system``
+``64.0.3``|             |``GCCcore/12.2.0``
+
+### setuptools-rust
+
+setuptools-rust is a plugin for setuptools to build Rust Python extensions implemented with PyO3 or rust-cpython.
+
+*homepage*: <https://github.com/PyO3/setuptools-rust>
+
+version  |toolchain
+---------|------------------
+``1.6.0``|``GCCcore/12.3.0``
 
 ### Seurat
 
@@ -33310,6 +34257,7 @@ version     |versionsuffix|toolchain
 ``3.1.5``   |``-R-4.0.0`` |``foss/2020a``
 ``4.0.1``   |``-R-4.0.3`` |``foss/2020b``
 ``4.0.3``   |``-R-4.0.3`` |``foss/2020b``
+``4.1.0``   |``-R-4.1.0`` |``foss/2021a``
 ``4.2.0``   |``-R-4.2.1`` |``foss/2022a``
 ``4.3.0``   |``-R-4.1.2`` |``foss/2021b``
 ``4.3.0``   |``-R-4.2.1`` |``foss/2022a``
@@ -33343,6 +34291,7 @@ SeuratWrappers is a collection of community-provided methods and extensions for 
 version     |versionsuffix|toolchain
 ------------|-------------|--------------
 ``20210528``|``-R-4.0.3`` |``foss/2020b``
+``20221022``|``-R-4.2.1`` |``foss/2022a``
 
 ### sf
 
@@ -33432,7 +34381,7 @@ version        |versionsuffix    |toolchain
 ``1.8.1.post1``|                 |``GCC/11.2.0``
 ``1.8.2``      |                 |``foss/2021b``, ``foss/2022a``
 ``1.8a1``      |                 |``GCC/10.2.0``, ``GCC/10.3.0``, ``iccifort/2020.4.304``
-``2.0.1``      |                 |``foss/2022b``
+``2.0.1``      |                 |``foss/2022b``, ``gfbf/2023a``
 
 ### sharutils
 
@@ -33751,14 +34700,14 @@ SIONlib is a scalable I/O library for parallel access to task-local files.  The 
 *homepage*: <https://www.fz-juelich.de/ias/jsc/EN/Expertise/Support/Software/SIONlib/_node.html>
 
 version  |versionsuffix|toolchain
----------|-------------|----------------------------------------------------------------------------
+---------|-------------|------------------------------------------------------------------------------
 ``1.6.1``|             |``foss/2016a``
 ``1.6.1``|``-tools``   |``foss/2016a``
 ``1.7.1``|             |``foss/2017a``
 ``1.7.1``|``-tools``   |``foss/2017a``
 ``1.7.4``|``-tools``   |``GCCcore/8.2.0``
 ``1.7.6``|``-tools``   |``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
-``1.7.7``|``-tools``   |``GCCcore/11.2.0``, ``GCCcore/11.3.0``
+``1.7.7``|``-tools``   |``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### SIP
 
@@ -33966,6 +34915,16 @@ version  |toolchain
 ---------|---------------
 ``0.4.0``|``gompi/2021b``
 
+### slurm-drmaa
+
+DRMAA for Slurm Workload Manager (Slurm) is an implementation  of Open Grid Forum Distributed Resource Management Application API (DRMAA)  version 1 for submission and control of jobs to Slurm. Using DRMAA,  grid applications builders, portal developers and ISVs can use the same  high-level API to link their software with different cluster/resource management systems.
+
+*homepage*: <https://github.com/natefoo/slurm-drmaa>
+
+version  |toolchain
+---------|------------------
+``1.1.3``|``GCCcore/12.2.0``
+
 ### smafa
 
 Smafa attempts to align or cluster pre-aligned biological sequences, handling sequences  which are all the same length.
@@ -34033,8 +34992,8 @@ smith-waterman-gotoh alignment algorithm.
 *homepage*: <https://github.com/ekg/smithwaterman>
 
 version     |toolchain
-------------|-----------------------------------------------------------------------------
-``20160702``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/9.3.0``
+------------|-------------------------------------------------------------------------------------------------
+``20160702``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/9.3.0``
 
 ### Smoldyn
 
@@ -34095,6 +35054,7 @@ version   |versionsuffix    |toolchain
 ``6.10.0``|                 |``foss/2021b``
 ``7.18.2``|                 |``foss/2021b``
 ``7.22.0``|                 |``foss/2022a``
+``7.32.3``|                 |``foss/2022b``
 
 ### SNAP
 
@@ -34376,13 +35336,14 @@ Space Ranger is a set of analysis pipelines that process Visium spatial RNA-seq 
 *homepage*: <https://support.10xgenomics.com/spatial-gene-expression/software/pipelines/latest/what-is-space-ranger>
 
 version  |toolchain
----------|--------------
+---------|------------------------------
 ``1.1.0``|``GCC/9.3.0``
 ``1.2.2``|``GCC/9.3.0``
 ``1.3.0``|``GCC/10.3.0``
 ``1.3.1``|``GCC/11.2.0``
 ``2.0.0``|``GCC/11.2.0``
 ``2.0.1``|``GCC/11.3.0``
+``2.1.0``|``GCC/11.3.0``, ``GCC/12.2.0``
 
 ### Spack
 
@@ -34527,6 +35488,7 @@ Very fast, header-only/compiled, C++ logging library.
 version   |toolchain
 ----------|--------------------------------------
 ``1.9.2`` |``GCCcore/10.3.0``
+``1.10.0``|``GCCcore/11.2.0``
 ``1.11.0``|``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### SpectrA
@@ -34578,12 +35540,12 @@ Spglib is a C library for finding and handling crystal symmetries.
 *homepage*: <https://spglib.github.io/spglib/>
 
 version   |toolchain
-----------|-------------------------
+----------|--------------------------------------
 ``1.9.2`` |``intel/2016.02-GCC-4.9``
 ``1.9.9`` |``intel/2017b``
 ``1.16.1``|``GCCcore/10.2.0``
 ``1.16.2``|``GCCcore/10.3.0``
-``2.0.2`` |``GCCcore/11.3.0``
+``2.0.2`` |``GCCcore/11.3.0``, ``GCCcore/12.2.0``
 
 ### spglib-python
 
@@ -34656,6 +35618,7 @@ Sparse InversE Covariance estimation for Ecological Association and Statistical 
 version     |versionsuffix|toolchain
 ------------|-------------|---------------
 ``1.0.0``   |``-R-3.4.4`` |``intel/2018a``
+``1.1.1``   |``-R-4.2.1`` |``foss/2022a``
 ``20160830``|``-R-3.3.1`` |``intel/2016b``
 
 ### SplAdder
@@ -34739,8 +35702,8 @@ SPOOLES is a library for solving sparse real and complex linear  systems of equa
 *homepage*: <https://netlib.org/linalg/spooles/spooles.2.2.html>
 
 version|toolchain
--------|---------------
-``2.2``|``gompi/2021a``
+-------|--------------------------------
+``2.2``|``gompi/2021a``, ``gompi/2022b``
 
 ### SPOTPY
 
@@ -34945,9 +35908,10 @@ Stack is a cross-platform program for developing Haskell projects. It is intende
 
 *homepage*: <https://docs.haskellstack.org>
 
-version  |versionsuffix|toolchain
----------|-------------|----------
-``2.3.3``|``-x86_64``  |``system``
+version   |versionsuffix|toolchain
+----------|-------------|----------
+``2.3.3`` |``-x86_64``  |``system``
+``2.11.1``|``-x86_64``  |``system``
 
 ### Stacks
 
@@ -35039,6 +36003,7 @@ version                 |toolchain
 ``2.7.9a``              |``GCC/10.3.0``, ``GCC/11.2.0``
 ``2.7.10a_alpha_220601``|``GCC/10.3.0``
 ``2.7.10b``             |``GCC/11.3.0``, ``GCC/12.2.0``
+``2.7.11a``             |``GCC/12.3.0``
 
 ### STAR-CCM+
 
@@ -35258,8 +36223,8 @@ The program structure is a free software package for using multi-locus genotype 
 *homepage*: <https://web.stanford.edu/group/pritchardlab/structure.html>
 
 version  |toolchain
----------|-----------------------------------------------------------------------------------------------------
-``2.3.4``|``GCC/12.2.0``, ``GCC/8.2.0-2.31.1``, ``iccifort/2019.3.199-GCC-8.3.0-2.32``, ``iccifort/2019.5.281``
+---------|---------------------------------------------------------------------------------------------------------------------
+``2.3.4``|``GCC/11.3.0``, ``GCC/12.2.0``, ``GCC/8.2.0-2.31.1``, ``iccifort/2019.3.199-GCC-8.3.0-2.32``, ``iccifort/2019.5.281``
 
 ### Structure_threader
 
@@ -35290,6 +36255,16 @@ suave is an interactive web application to visualize read depth ratios between t
 version     |toolchain
 ------------|--------------
 ``20160529``|``foss/2020b``
+
+### SuAVE-biomat
+
+Surface Assessment via Grid Evaluation (SuAVE) for Every Surface Curvature and Cavity Shape
+
+*homepage*: <https://github.com/SuAVE-Software/source_v2.0>
+
+version           |toolchain
+------------------|---------------
+``2.0.0-20230815``|``intel/2023a``
 
 ### Subread
 
@@ -35416,6 +36391,7 @@ version  |toolchain
 ``6.2.0``|``foss/2020b``, ``intel/2020b``
 ``6.3.0``|``foss/2021b``, ``foss/2022a``
 ``6.5.1``|``foss/2022a``
+``6.6.0``|``foss/2022b``
 
 ### SunPy
 
@@ -35451,6 +36427,7 @@ version  |versionsuffix      |toolchain
 ``5.4.0``|``-trisolve-merge``|``intel/2020a``
 ``6.4.0``|                   |``foss/2020a``, ``intel/2020a``
 ``8.1.0``|                   |``foss/2022a``
+``8.1.2``|                   |``foss/2022b``
 
 ### supermagic
 
@@ -35612,6 +36589,7 @@ version   |versionsuffix               |toolchain
 ``3.0.12``|``-Python-3.7.2``           |``GCCcore/8.2.0``
 ``4.0.1`` |                            |``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 ``4.0.2`` |                            |``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``
+``4.1.1`` |                            |``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### SWIPE
 
@@ -35683,9 +36661,10 @@ version   |versionsuffix     |toolchain
 ``1.6.2`` |``-Python-3.8.2`` |``foss/2020a``
 ``1.7.1`` |                  |``foss/2020b``, ``intel/2020b``
 ``1.8``   |                  |``foss/2021a``
-``1.9``   |                  |``foss/2021b``
+``1.9``   |                  |``foss/2021b``, ``intel/2021b``
 ``1.10.1``|                  |``foss/2022a``, ``intel/2022a``
 ``1.11.1``|                  |``foss/2022a``, ``intel/2022a``
+``1.12``  |                  |``gfbf/2023a``
 
 ### synthcity
 
@@ -35731,8 +36710,19 @@ version  |toolchain
 ## T
 
 
-[tabix](#tabix) - [tabixpp](#tabixpp) - [taco](#taco) - [TagDust](#tagdust) - [TagLib](#taglib) - [Taiyaki](#taiyaki) - [TALON](#talon) - [TALYS](#talys) - [TAMkin](#tamkin) - [tantan](#tantan) - [Tapenade](#tapenade) - [task-spooler](#task-spooler) - [taxator-tk](#taxator-tk) - [TBA](#tba) - [tbb](#tbb) - [tbl2asn](#tbl2asn) - [TCC](#tcc) - [Tcl](#tcl) - [TCLAP](#tclap) - [tcsh](#tcsh) - [tecplot360ex](#tecplot360ex) - [TELEMAC-MASCARET](#telemac-mascaret) - [Telescope](#telescope) - [Teneto](#teneto) - [tensorboard](#tensorboard) - [tensorboardX](#tensorboardx) - [TensorFlow](#tensorflow) - [TensorFlow-Datasets](#tensorflow-datasets) - [TensorFlow-Graphics](#tensorflow-graphics) - [tensorflow-probability](#tensorflow-probability) - [TensorRT](#tensorrt) - [terastructure](#terastructure) - [termcolor](#termcolor) - [Tesla-Deployment-Kit](#tesla-deployment-kit) - [tesseract](#tesseract) - [testpath](#testpath) - [TetGen](#tetgen) - [TEToolkit](#tetoolkit) - [TEtranscripts](#tetranscripts) - [texinfo](#texinfo) - [texlive](#texlive) - [Text-CSV](#text-csv) - [TFEA](#tfea) - [Theano](#theano) - [ThemisPy](#themispy) - [THetA](#theta) - [thirdorder](#thirdorder) - [thurstonianIRT](#thurstonianirt) - [TiCCutils](#ticcutils) - [tidybayes](#tidybayes) - [tidymodels](#tidymodels) - [Tika](#tika) - [TiMBL](#timbl) - [time](#time) - [timm](#timm) - [TINKER](#tinker) - [TinyDB](#tinydb) - [TinyXML](#tinyxml) - [Tk](#tk) - [Tkinter](#tkinter) - [TM-align](#tm-align) - [tMAE](#tmae) - [tmap](#tmap) - [tmux](#tmux) - [TN93](#tn93) - [TOBIAS](#tobias) - [ToFu](#tofu) - [Togl](#togl) - [toil](#toil) - [tokenizers](#tokenizers) - [Tombo](#tombo) - [TOML-Fortran](#toml-fortran) - [TOPAS](#topas) - [topaz](#topaz) - [TopHat](#tophat) - [torchaudio](#torchaudio) - [torchdata](#torchdata) - [torchinfo](#torchinfo) - [torchsampler](#torchsampler) - [torchtext](#torchtext) - [torchvision](#torchvision) - [TotalView](#totalview) - [tqdm](#tqdm) - [Tracer](#tracer) - [TranscriptClean](#transcriptclean) - [TransDecoder](#transdecoder) - [Transformers](#transformers) - [Transrate](#transrate) - [travis](#travis) - [TRAVIS-Analyzer](#travis-analyzer) - [treatSens](#treatsens) - [TreeMix](#treemix) - [TreeShrink](#treeshrink) - [TRF](#trf) - [Triangle](#triangle) - [Trilinos](#trilinos) - [Trim_Galore](#trim_galore) - [trimAl](#trimal) - [trimesh](#trimesh) - [Trimmomatic](#trimmomatic) - [Trinity](#trinity) - [Trinotate](#trinotate) - [Triplexator](#triplexator) - [TRIQS](#triqs) - [TRIQS-cthyb](#triqs-cthyb) - [TRIQS-dft_tools](#triqs-dft_tools) - [TRIQS-tprf](#triqs-tprf) - [tRNAscan-SE](#trnascan-se) - [TRUST](#trust) - [TRUST4](#trust4) - [Trycycler](#trycycler) - [tsne](#tsne) - [turbinesFoam](#turbinesfoam) - [TurboVNC](#turbovnc) - [TVB](#tvb) - [tvb-data](#tvb-data) - [TVB-deps](#tvb-deps) - [tvb-framework](#tvb-framework) - [tvb-library](#tvb-library) - [TWL-NINJA](#twl-ninja) - [typing-extensions](#typing-extensions)
+[T-Coffee](#t-coffee) - [tabix](#tabix) - [tabixpp](#tabixpp) - [taco](#taco) - [TagDust](#tagdust) - [TagLib](#taglib) - [Taiyaki](#taiyaki) - [TALON](#talon) - [TALYS](#talys) - [TAMkin](#tamkin) - [tantan](#tantan) - [Tapenade](#tapenade) - [task-spooler](#task-spooler) - [taxator-tk](#taxator-tk) - [TBA](#tba) - [tbb](#tbb) - [tbl2asn](#tbl2asn) - [TCC](#tcc) - [Tcl](#tcl) - [TCLAP](#tclap) - [tcsh](#tcsh) - [tecplot360ex](#tecplot360ex) - [TELEMAC-MASCARET](#telemac-mascaret) - [Telescope](#telescope) - [Teneto](#teneto) - [tensorboard](#tensorboard) - [tensorboardX](#tensorboardx) - [TensorFlow](#tensorflow) - [tensorflow-compression](#tensorflow-compression) - [TensorFlow-Datasets](#tensorflow-datasets) - [TensorFlow-Graphics](#tensorflow-graphics) - [tensorflow-probability](#tensorflow-probability) - [TensorRT](#tensorrt) - [terastructure](#terastructure) - [termcolor](#termcolor) - [Tesla-Deployment-Kit](#tesla-deployment-kit) - [tesseract](#tesseract) - [testpath](#testpath) - [TetGen](#tetgen) - [TEToolkit](#tetoolkit) - [TEtranscripts](#tetranscripts) - [texinfo](#texinfo) - [texlive](#texlive) - [Text-CSV](#text-csv) - [TFEA](#tfea) - [Theano](#theano) - [ThemisPy](#themispy) - [THetA](#theta) - [thirdorder](#thirdorder) - [thurstonianIRT](#thurstonianirt) - [TiCCutils](#ticcutils) - [tidybayes](#tidybayes) - [tidymodels](#tidymodels) - [Tika](#tika) - [TiMBL](#timbl) - [time](#time) - [timm](#timm) - [TINKER](#tinker) - [TinyDB](#tinydb) - [TinyXML](#tinyxml) - [Tk](#tk) - [Tkinter](#tkinter) - [TM-align](#tm-align) - [tMAE](#tmae) - [tmap](#tmap) - [tmux](#tmux) - [TN93](#tn93) - [TOBIAS](#tobias) - [ToFu](#tofu) - [Togl](#togl) - [toil](#toil) - [tokenizers](#tokenizers) - [Tombo](#tombo) - [TOML-Fortran](#toml-fortran) - [TOPAS](#topas) - [topaz](#topaz) - [TopHat](#tophat) - [torchaudio](#torchaudio) - [torchdata](#torchdata) - [torchinfo](#torchinfo) - [torchsampler](#torchsampler) - [torchtext](#torchtext) - [torchvf](#torchvf) - [torchvision](#torchvision) - [tornado](#tornado) - [TotalView](#totalview) - [tqdm](#tqdm) - [Tracer](#tracer) - [TranscriptClean](#transcriptclean) - [TransDecoder](#transdecoder) - [Transformers](#transformers) - [Transrate](#transrate) - [travis](#travis) - [TRAVIS-Analyzer](#travis-analyzer) - [treatSens](#treatsens) - [TreeMix](#treemix) - [TreeShrink](#treeshrink) - [TRF](#trf) - [Triangle](#triangle) - [Trilinos](#trilinos) - [Trim_Galore](#trim_galore) - [trimAl](#trimal) - [trimesh](#trimesh) - [Trimmomatic](#trimmomatic) - [Trinity](#trinity) - [Trinotate](#trinotate) - [Triplexator](#triplexator) - [TRIQS](#triqs) - [TRIQS-cthyb](#triqs-cthyb) - [TRIQS-dft_tools](#triqs-dft_tools) - [TRIQS-tprf](#triqs-tprf) - [tRNAscan-SE](#trnascan-se) - [TRUST](#trust) - [TRUST4](#trust4) - [Trycycler](#trycycler) - [tseriesEntropy](#tseriesentropy) - [tsne](#tsne) - [turbinesFoam](#turbinesfoam) - [TurboVNC](#turbovnc) - [TVB](#tvb) - [tvb-data](#tvb-data) - [TVB-deps](#tvb-deps) - [tvb-framework](#tvb-framework) - [tvb-library](#tvb-library) - [TWL-NINJA](#twl-ninja) - [TXR](#txr) - [typing-extensions](#typing-extensions)
 
+
+### T-Coffee
+
+A collection of tools for Computing, Evaluating and Manipulating Multiple Alignments of DNA, RNA, Protein Sequences and Structures
+
+*homepage*: <https://www.tcoffee.org/>
+
+version             |toolchain
+--------------------|----------
+``13.45.61.3c310a9``|``system``
+``13.46.0.919e8c6b``|``system``
 
 ### tabix
 
@@ -35753,6 +36743,7 @@ C++ wrapper to tabix indexer
 version  |toolchain
 ---------|-------------------------------------------------------------
 ``1.1.0``|``GCC/10.2.0``, ``GCC/10.3.0``, ``GCC/11.2.0``, ``GCC/9.3.0``
+``1.1.2``|``GCC/11.3.0``
 
 ### taco
 
@@ -35905,6 +36896,7 @@ version       |toolchain
 ``2020.3``    |``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``
 ``2021.4.0``  |``GCCcore/11.2.0``
 ``2021.5.0``  |``GCCcore/11.3.0``
+``2021.10.0`` |``GCCcore/12.2.0``
 
 ### tbl2asn
 
@@ -35918,6 +36910,7 @@ version     |versionsuffix|toolchain
 ``20180227``|``-linux64`` |``system``
 ``20200302``|``-linux64`` |``system``
 ``20220427``|``-linux64`` |``system``
+``20230713``|``-linux64`` |``system``
 
 ### TCC
 
@@ -35977,6 +36970,7 @@ version    |toolchain
 ``6.22.04``|``GCCcore/10.3.0``
 ``6.24.01``|``GCCcore/11.2.0``, ``GCCcore/11.3.0``
 ``6.24.07``|``GCCcore/12.2.0``
+``6.24.10``|``GCCcore/12.3.0``
 
 ### tecplot360ex
 
@@ -36112,6 +37106,17 @@ version   |versionsuffix                |toolchain
 ``2.9.1`` |``-CUDA-11.7.0``             |``foss/2022a``
 ``2.11.0``|                             |``foss/2022a``
 ``2.11.0``|``-CUDA-11.7.0``             |``foss/2022a``
+``2.13.0``|                             |``foss/2022b``, ``foss/2023a``
+
+### tensorflow-compression
+
+TensorFlow Compression (TFC) contains data compression tools for TensorFlow.
+
+*homepage*: <https://github.com/tensorflow/compression>
+
+version   |versionsuffix   |toolchain
+----------|----------------|--------------
+``2.11.0``|``-CUDA-11.7.0``|``foss/2022a``
 
 ### TensorFlow-Datasets
 
@@ -36145,6 +37150,7 @@ version   |versionsuffix    |toolchain
 ``0.9.0`` |``-Python-3.7.4``|``foss/2019b``
 ``0.12.1``|                 |``foss/2020b``, ``fosscuda/2020b``
 ``0.16.0``|                 |``foss/2021b``
+``0.19.0``|``-CUDA-11.7.0`` |``foss/2022a``
 
 ### TensorRT
 
@@ -36419,9 +37425,9 @@ The `time' command runs another program, then displays information about the res
 *homepage*: <https://www.gnu.org/software/time/>
 
 version|toolchain
--------|-----------------------------------------------------------------------------------------------------------------------------------------------------------
+-------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ``1.7``|``system``
-``1.9``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
+``1.9``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``, ``GCCcore/7.3.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 
 ### timm
 
@@ -36485,6 +37491,7 @@ version   |versionsuffix    |toolchain
 ``8.6.10``|                 |``GCCcore/10.2.0``, ``GCCcore/9.3.0``
 ``8.6.11``|                 |``GCCcore/10.3.0``, ``GCCcore/11.2.0``
 ``8.6.12``|                 |``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+``8.6.13``|                 |``GCCcore/12.3.0``
 
 ### Tkinter
 
@@ -36513,6 +37520,7 @@ version   |versionsuffix     |toolchain
 ``3.9.6`` |                  |``GCCcore/11.2.0``
 ``3.10.4``|                  |``GCCcore/11.3.0``
 ``3.10.8``|                  |``GCCcore/12.2.0``
+``3.11.3``|                  |``GCCcore/12.3.0``
 
 ### TM-align
 
@@ -36742,6 +37750,17 @@ version   |versionsuffix                  |toolchain
 ``0.10.0``|``-PyTorch-1.9.0``             |``fosscuda/2020b``
 ``0.14.1``|``-PyTorch-1.12.0``            |``foss/2022a``
 
+### torchvf
+
+TorchVF is a unifying Python library for using vector fields for efficient proposal-free instance segmentation. 
+
+*homepage*: <https://github.com/ryanirl/torchvf>
+
+version  |versionsuffix   |toolchain
+---------|----------------|--------------
+``0.1.3``|                |``foss/2022a``
+``0.1.3``|``-CUDA-11.7.0``|``foss/2022a``
+
 ### torchvision
 
 Datasets, Transforms and Models specific to Computer Vision
@@ -36771,6 +37790,16 @@ version   |versionsuffix                       |toolchain
 ``0.12.0``|``-PyTorch-1.11.0-CUDA-11.3.1``     |``foss/2021a``
 ``0.13.1``|                                    |``foss/2022a``
 ``0.13.1``|``-CUDA-11.7.0``                    |``foss/2022a``
+
+### tornado
+
+Tornado is a Python web framework and asynchronous networking library.
+
+*homepage*: <https://github.com/tornadoweb/tornado>
+
+version  |toolchain
+---------|------------------
+``6.3.2``|``GCCcore/12.3.0``
 
 ### TotalView
 
@@ -36807,6 +37836,7 @@ version   |versionsuffix     |toolchain
 ``4.62.3``|                  |``GCCcore/11.2.0``
 ``4.64.0``|                  |``GCCcore/11.3.0``
 ``4.64.1``|                  |``GCCcore/12.2.0``
+``4.66.1``|                  |``GCCcore/12.3.0``
 
 ### Tracer
 
@@ -37145,6 +38175,16 @@ version  |versionsuffix    |toolchain
 ``0.5.2``|                 |``foss/2021a``
 ``0.5.3``|                 |``foss/2021b``
 
+### tseriesEntropy
+
+Implements an Entropy measure of dependence based on the Bhattacharya-Hellinger-Matusita distance.  Can be used as a (nonlinear) autocorrelation/crosscorrelation function for continuous and categorical time series.  The package includes tests for serial dependence and nonlinearity based on it.  Some routines have a parallel version that can be used in a multicore/cluster environment.  The package makes use of S4 classes.
+
+*homepage*: <https://cran.r-project.org/web/packages/tseriesEntropy/index.html>
+
+version  |versionsuffix|toolchain
+---------|-------------|--------------
+``0.6-0``|``-R-4.2.1`` |``foss/2022a``
+
 ### tsne
 
 Python library containing T-SNE algorithms.
@@ -37241,6 +38281,16 @@ version              |toolchain
 ``0.97-cluster_only``|``GCC/10.2.0``
 ``0.98-cluster_only``|``GCC/11.3.0``
 
+### TXR
+
+TXR is a pragmatic, convenient tool ready to take on your daily hacking challenges with its dual  personality: its whole-document pattern matching and extraction language for scraping information from arbitrary text  sources, and its powerful data-processing language to slice through problems like a hot knife through butter. Many  tasks can be accomplished with TXR "one liners" directly from your system prompt.
+
+*homepage*: <https://www.nongnu.org/txr/>
+
+version|toolchain
+-------|------------------
+``291``|``GCCcore/12.2.0``
+
 ### typing-extensions
 
 Typing Extensions - Backported and Experimental Type Hints for Python
@@ -37260,7 +38310,7 @@ version     |versionsuffix    |toolchain
 ## U
 
 
-[UCC](#ucc) - [UCC-CUDA](#ucc-cuda) - [UCLUST](#uclust) - [UCX](#ucx) - [UCX-CUDA](#ucx-cuda) - [ucx-py](#ucx-py) - [UCX-ROCm](#ucx-rocm) - [udocker](#udocker) - [UDUNITS](#udunits) - [UFL](#ufl) - [Ultralytics](#ultralytics) - [umap-learn](#umap-learn) - [UMI-tools](#umi-tools) - [umi4cPackage](#umi4cpackage) - [umis](#umis) - [UNAFold](#unafold) - [uncertainty-calibration](#uncertainty-calibration) - [unicore-uftp](#unicore-uftp) - [Unicycler](#unicycler) - [Unidecode](#unidecode) - [unimap](#unimap) - [units](#units) - [unixODBC](#unixodbc) - [unrar](#unrar) - [UnZip](#unzip) - [UQTk](#uqtk) - [USEARCH](#usearch) - [UShER](#usher) - [USPEX](#uspex) - [utf8proc](#utf8proc) - [util-linux](#util-linux)
+[UCC](#ucc) - [UCC-CUDA](#ucc-cuda) - [UCLUST](#uclust) - [UCX](#ucx) - [UCX-CUDA](#ucx-cuda) - [ucx-py](#ucx-py) - [UCX-ROCm](#ucx-rocm) - [udocker](#udocker) - [UDUNITS](#udunits) - [UFL](#ufl) - [Ultralytics](#ultralytics) - [umap-learn](#umap-learn) - [UMI-tools](#umi-tools) - [umi4cPackage](#umi4cpackage) - [umis](#umis) - [UNAFold](#unafold) - [uncertainty-calibration](#uncertainty-calibration) - [unicore-uftp](#unicore-uftp) - [Unicycler](#unicycler) - [Unidecode](#unidecode) - [unifdef](#unifdef) - [UniFrac](#unifrac) - [unimap](#unimap) - [units](#units) - [unixODBC](#unixodbc) - [unrar](#unrar) - [UnZip](#unzip) - [UQTk](#uqtk) - [USEARCH](#usearch) - [UShER](#usher) - [USPEX](#uspex) - [utf8proc](#utf8proc) - [util-linux](#util-linux)
 
 
 ### UCC
@@ -37502,6 +38552,26 @@ version  |versionsuffix    |toolchain
 ``1.1.1``|``-Python-3.7.4``|``GCCcore/8.3.0``
 ``1.3.6``|                 |``GCCcore/11.3.0``
 
+### unifdef
+
+unifdef - selectively remove C preprocessor conditionals The unifdef utility selectively processes conditional C preprocessor and the additional text that they delimit, while otherwise leaving the file alone.
+
+*homepage*: <https://github.com/fanf2/unifdef>
+
+version |toolchain
+--------|------------------
+``2.12``|``GCCcore/11.3.0``
+
+### UniFrac
+
+UniFrac is the de facto repository for high-performance phylogenetic diversity calculations. The methods in this repository are based on an implementation of the Strided State UniFrac algorithm which is faster, and uses less memory than Fast UniFrac. Strided State UniFrac supports Unweighted UniFrac, Weighted UniFrac, Generalized UniFrac, Variance Adjusted UniFrac and meta UniFrac, in both double and single precision (fp32). This repository also includes Stacked Faith (manuscript in preparation), a method for calculating Faith's PD that is faster and uses less memory than the Fast UniFrac-based reference implementation.
+
+*homepage*: <https://github.com/biocore/unifrac-binaries>
+
+version  |toolchain
+---------|--------------
+``1.3.2``|``foss/2022a``
+
 ### unimap
 
 Unimap is a fork of minimap2 optimized for assembly-to-reference alignment. It integrates the minigraph chaining algorithm and can align through long INDELs (up to 100kb by default) much faster than minimap2. Unimap is a better fit for resolving segmental duplications and is recommended over minimap2 for alignment between high-quality assemblies.  Unimap does not replace minimap2 for other types of alignment. It drops the support of multi-part index and short-read mapping. Its long-read alignment is different from minimap2 but is not necessarily better. Unimap is more of a specialized minimap2 at the moment.
@@ -37528,9 +38598,10 @@ unixODBC provides a uniform interface between application and database driver
 
 *homepage*: <https://www.unixodbc.org>
 
-version  |toolchain
----------|--------------
-``2.3.7``|``foss/2018b``
+version   |toolchain
+----------|--------------
+``2.3.7`` |``foss/2018b``
+``2.3.11``|``foss/2022b``
 
 ### unrar
 
@@ -37644,7 +38715,7 @@ version   |toolchain
 ## V
 
 
-[V8](#v8) - [Vala](#vala) - [Valgrind](#valgrind) - [Vampir](#vampir) - [Vampire](#vampire) - [VarDict](#vardict) - [variant_tools](#variant_tools) - [VariantMetaCaller](#variantmetacaller) - [VarScan](#varscan) - [vartools](#vartools) - [VASP](#vasp) - [VAtools](#vatools) - [vawk](#vawk) - [VBZ-Compression](#vbz-compression) - [VCF-kit](#vcf-kit) - [vcflib](#vcflib) - [vcfnp](#vcfnp) - [VCFtools](#vcftools) - [vConTACT2](#vcontact2) - [VEGAS](#vegas) - [velocyto](#velocyto) - [Velvet](#velvet) - [VEP](#vep) - [verifyBamID](#verifybamid) - [VERSE](#verse) - [VESTA](#vesta) - [ViennaRNA](#viennarna) - [Vim](#vim) - [VirSorter](#virsorter) - [VirSorter2](#virsorter2) - [VirtualGL](#virtualgl) - [Virtuoso-opensource](#virtuoso-opensource) - [visdom](#visdom) - [vispr](#vispr) - [VisPy](#vispy) - [vitessce-python](#vitessce-python) - [vitessceR](#vitesscer) - [VMD](#vmd) - [VMTK](#vmtk) - [voltools](#voltools) - [vorbis-tools](#vorbis-tools) - [Voro++](#voro++) - [vsc-base](#vsc-base) - [vsc-install](#vsc-install) - [vsc-mympirun](#vsc-mympirun) - [vsc-mympirun-scoop](#vsc-mympirun-scoop) - [vsc-processcontrol](#vsc-processcontrol) - [VSEARCH](#vsearch) - [vt](#vt) - [VTK](#vtk) - [VTune](#vtune) - [VV](#vv) - [VXL](#vxl)
+[V8](#v8) - [Vala](#vala) - [Valgrind](#valgrind) - [Vampir](#vampir) - [Vampire](#vampire) - [VarDict](#vardict) - [variant_tools](#variant_tools) - [VariantMetaCaller](#variantmetacaller) - [VarScan](#varscan) - [vartools](#vartools) - [VASP](#vasp) - [VAtools](#vatools) - [vawk](#vawk) - [VBZ-Compression](#vbz-compression) - [VCF-kit](#vcf-kit) - [vcflib](#vcflib) - [vcfnp](#vcfnp) - [VCFtools](#vcftools) - [vConTACT2](#vcontact2) - [VEGAS](#vegas) - [velocyto](#velocyto) - [Velvet](#velvet) - [VEP](#vep) - [verifyBamID](#verifybamid) - [VERSE](#verse) - [VESTA](#vesta) - [ViennaRNA](#viennarna) - [Vim](#vim) - [VirSorter](#virsorter) - [VirSorter2](#virsorter2) - [virtualenv](#virtualenv) - [VirtualGL](#virtualgl) - [Virtuoso-opensource](#virtuoso-opensource) - [visdom](#visdom) - [vispr](#vispr) - [VisPy](#vispy) - [vitessce-python](#vitessce-python) - [vitessceR](#vitesscer) - [VMD](#vmd) - [VMTK](#vmtk) - [voltools](#voltools) - [vorbis-tools](#vorbis-tools) - [Voro++](#voro++) - [vsc-base](#vsc-base) - [vsc-install](#vsc-install) - [vsc-mympirun](#vsc-mympirun) - [vsc-mympirun-scoop](#vsc-mympirun-scoop) - [vsc-processcontrol](#vsc-processcontrol) - [VSEARCH](#vsearch) - [vt](#vt) - [VTK](#vtk) - [VTune](#vtune) - [VV](#vv) - [VXL](#vxl)
 
 
 ### V8
@@ -37686,6 +38757,7 @@ version   |toolchain
 ``3.18.1``|``gompi/2021b``, ``iimpi/2021b``
 ``3.19.0``|``gompi/2022a``
 ``3.20.0``|``gompi/2022a``
+``3.21.0``|``gompi/2022b``, ``gompi/2023a``
 
 ### Vampir
 
@@ -37824,6 +38896,7 @@ version  |versionsuffix    |toolchain
 ``1.0.2``|``-Python-3.8.2``|``GCC/9.3.0``
 ``1.0.3``|``-R-4.1.0``     |``foss/2021a``
 ``1.0.3``|``-R-4.1.2``     |``foss/2021b``
+``1.0.9``|``-R-4.2.1``     |``foss/2022a``
 
 ### vcfnp
 
@@ -37990,6 +39063,16 @@ version  |toolchain
 ---------|--------------
 ``2.2.4``|``foss/2022a``
 
+### virtualenv
+
+A tool for creating isolated virtual python environments.
+
+*homepage*: <https://github.com/pypa/virtualenv>
+
+version    |toolchain
+-----------|------------------
+``20.23.1``|``GCCcore/12.3.0``
+
 ### VirtualGL
 
 VirtualGL is an open source toolkit that gives any Linux or  Unix remote display software the ability to run OpenGL applications with full  hardware acceleration.
@@ -38001,6 +39084,7 @@ version  |toolchain
 ``2.6.1``|``foss/2018b``
 ``2.6.2``|``GCCcore/9.3.0``
 ``3.0``  |``GCC/11.2.0``
+``3.1``  |``GCC/12.3.0``
 
 ### Virtuoso-opensource
 
@@ -38038,9 +39122,10 @@ VisPy is a high-performance interactive 2D/3D data visualization library  levera
 
 *homepage*: <https://vispy.org>
 
-version  |toolchain
----------|-------------------------------
-``0.6.6``|``foss/2020b``, ``intel/2020b``
+version   |toolchain
+----------|-------------------------------
+``0.6.6`` |``foss/2020b``, ``intel/2020b``
+``0.12.2``|``foss/2022a``
 
 ### vitessce-python
 
@@ -38262,6 +39347,7 @@ version      |versionsuffix     |toolchain
 ``8.1.1``    |``-Python-3.6.6`` |``foss/2018b``, ``fosscuda/2018b``
 ``8.2.0``    |                  |``foss/2021a``
 ``8.2.0``    |``-Python-2.7.15``|``foss/2019a``
+``8.2.0``    |``-Python-2.7.16``|``foss/2019b``
 ``8.2.0``    |``-Python-3.7.2`` |``foss/2019a``, ``intel/2019a``
 ``8.2.0``    |``-Python-3.7.4`` |``foss/2019b``
 ``8.2.0``    |``-Python-3.8.2`` |``foss/2020a``, ``fosscuda/2020a``, ``intel/2020a``
@@ -38326,7 +39412,7 @@ version   |toolchain
 ## W
 
 
-[wandb](#wandb) - [Wannier90](#wannier90) - [WannierTools](#wanniertools) - [Wayland](#wayland) - [Waylandpp](#waylandpp) - [WCSLIB](#wcslib) - [WCT](#wct) - [wcwidth](#wcwidth) - [webin-cli](#webin-cli) - [WebKitGTK+](#webkitgtk+) - [WebSocket++](#websocket++) - [WEKA](#weka) - [wget](#wget) - [wgsim](#wgsim) - [WHAM](#wham) - [WhatsHap](#whatshap) - [wheel](#wheel) - [WIEN2k](#wien2k) - [WildMagic](#wildmagic) - [Winnowmap](#winnowmap) - [WisecondorX](#wisecondorx) - [WISExome](#wisexome) - [wkhtmltopdf](#wkhtmltopdf) - [worker](#worker) - [wpebackend-fdo](#wpebackend-fdo) - [WPS](#wps) - [wrapt](#wrapt) - [WRF](#wrf) - [WRF-Fire](#wrf-fire) - [wrf-python](#wrf-python) - [wtdbg2](#wtdbg2) - [wxPropertyGrid](#wxpropertygrid) - [wxPython](#wxpython) - [wxWidgets](#wxwidgets)
+[wandb](#wandb) - [Wannier90](#wannier90) - [WannierTools](#wanniertools) - [Wayland](#wayland) - [Waylandpp](#waylandpp) - [WCSLIB](#wcslib) - [WCT](#wct) - [wcwidth](#wcwidth) - [webin-cli](#webin-cli) - [WebKitGTK+](#webkitgtk+) - [WebSocket++](#websocket++) - [WEKA](#weka) - [WFA2](#wfa2) - [wget](#wget) - [wgsim](#wgsim) - [WHAM](#wham) - [WhatsHap](#whatshap) - [wheel](#wheel) - [WIEN2k](#wien2k) - [WildMagic](#wildmagic) - [Winnowmap](#winnowmap) - [WisecondorX](#wisecondorx) - [WISExome](#wisexome) - [wkhtmltopdf](#wkhtmltopdf) - [worker](#worker) - [wpebackend-fdo](#wpebackend-fdo) - [WPS](#wps) - [wrapt](#wrapt) - [WRF](#wrf) - [WRF-Fire](#wrf-fire) - [wrf-python](#wrf-python) - [wtdbg2](#wtdbg2) - [wxPropertyGrid](#wxpropertygrid) - [wxPython](#wxpython) - [wxWidgets](#wxwidgets)
 
 
 ### wandb
@@ -38377,6 +39463,7 @@ version   |toolchain
 ----------|--------------------------------------
 ``1.20.0``|``GCCcore/11.3.0``
 ``1.21.0``|``GCCcore/11.2.0``, ``GCCcore/11.3.0``
+``1.22.0``|``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### Waylandpp
 
@@ -38442,6 +39529,7 @@ version   |toolchain
 ``2.24.1``|``GCC/8.2.0-2.31.1``
 ``2.27.4``|``GCC/10.3.0``, ``GCC/8.3.0``
 ``2.37.1``|``GCC/11.2.0``
+``2.40.4``|``GCC/11.3.0``
 
 ### WebSocket++
 
@@ -38463,6 +39551,16 @@ version   |versionsuffix     |toolchain
 ----------|------------------|----------
 ``3.6.12``|``-Java-1.7.0_80``|``system``
 ``3.7.0`` |``-Java-1.7.0_80``|``system``
+
+### WFA2
+
+The wavefront alignment (WFA) algorithm is an exact  gap-affine algorithm that takes advantage of homologous regions  between the sequences to accelerate the alignment process.
+
+*homepage*: <https://github.com/smarco/WFA2-lib>
+
+version  |toolchain
+---------|------------------
+``2.3.3``|``GCCcore/11.3.0``
 
 ### wget
 
@@ -38619,13 +39717,14 @@ version   |versionsuffix   |toolchain
 
 ### wpebackend-fdo
 
-WPE WebKit allows embedders to create simple and performant  systems based on Web platform technologies. It is a WebKit port designed with  flexibility and hardware acceleration in mind, leveraging common 3D graphics  APIs for best performance.
+WPE WebKit allows embedders to create simple and performant systems based on Web platform technologies. It is a WebKit port designed with flexibility and hardware acceleration in mind, leveraging common 3D graphics APIs for best performance.
 
 *homepage*: <https://wpewebkit.org/>
 
 version   |toolchain
 ----------|------------------
 ``1.13.1``|``GCCcore/11.2.0``
+``1.14.1``|``GCCcore/11.3.0``
 
 ### WPS
 
@@ -38651,8 +39750,8 @@ The aim of the wrapt module is to provide a transparent object proxy for Python,
 *homepage*: <https://pypi.org/project/wrapt/>
 
 version   |toolchain
-----------|-------------------------------
-``1.15.0``|``foss/2022a``, ``intel/2022a``
+----------|-----------------------------------------------
+``1.15.0``|``foss/2022a``, ``gfbf/2022b``, ``intel/2022a``
 
 ### WRF
 
@@ -38733,6 +39832,7 @@ version        |versionsuffix     |toolchain
 ``4.0.7.post2``|``-Python-3.7.4`` |``GCC/8.3.0``
 ``4.1.1``      |                  |``foss/2021a``
 ``4.2.0``      |                  |``foss/2021b``
+``4.2.1``      |                  |``foss/2022a``
 
 ### wxWidgets
 
@@ -38749,7 +39849,7 @@ version    |toolchain
 ``3.1.5``  |``GCC/10.3.0``, ``GCC/11.2.0``
 ``3.2.0``  |``GCC/11.2.0``
 ``3.2.1``  |``GCC/11.3.0``
-``3.2.2.1``|``GCCcore/12.2.0``
+``3.2.2.1``|``GCC/12.2.0``, ``GCC/12.3.0``
 
 ## X
 
@@ -38798,7 +39898,7 @@ x264 is a free software library and application for encoding video streams  into
 *homepage*: <https://www.videolan.org/developers/x264.html>
 
 version     |toolchain
-------------|---------------------------------
+------------|--------------------------------------
 ``20160114``|``gimkl/2.11.5``, ``intel/2016a``
 ``20160430``|``foss/2016a``, ``intel/2016a``
 ``20160614``|``foss/2016b``, ``intel/2016b``
@@ -38816,7 +39916,7 @@ version     |toolchain
 ``20210414``|``GCCcore/10.3.0``
 ``20210613``|``GCCcore/11.2.0``
 ``20220620``|``GCCcore/11.3.0``
-``20230226``|``GCCcore/12.2.0``
+``20230226``|``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### x265
 
@@ -38825,7 +39925,7 @@ x265 is a free software library and application for encoding video streams  into
 *homepage*: <https://x265.org/>
 
 version|toolchain
--------|------------------------------------------------------------------------------
+-------|--------------------------------------------------------------------------------------------------
 ``2.4``|``foss/2016b``
 ``2.5``|``intel/2017a``
 ``2.6``|``GCCcore/6.4.0``, ``intel/2017b``
@@ -38834,7 +39934,7 @@ version|toolchain
 ``3.0``|``GCCcore/8.2.0``
 ``3.2``|``GCCcore/8.3.0``
 ``3.3``|``GCCcore/10.2.0``, ``GCCcore/9.3.0``
-``3.5``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+``3.5``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### XALT
 
@@ -39242,7 +40342,7 @@ version   |toolchain
 ``1.19.1``|``GCCcore/6.3.0``, ``GCCcore/6.4.0``
 ``1.19.2``|``GCCcore/10.2.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.2.0``, ``GCCcore/9.3.0``
 ``1.19.3``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``
-``1.20.0``|``GCCcore/12.3.0``
+``1.20.0``|``GCCcore/12.3.0``, ``GCCcore/13.2.0``
 
 ### XPLOR-NIH
 
@@ -39266,7 +40366,7 @@ version  |versionsuffix    |toolchain
 ``1.2.2``|``-X11-20180131``|``GCCcore/6.4.0``
 ``1.2.3``|                 |``GCCcore/7.3.0``
 ``1.2.4``|                 |``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
-``1.2.5``|                 |``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``
+``1.2.5``|                 |``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``
 
 ### xproto
 
@@ -39348,6 +40448,7 @@ version    |toolchain
 ``1.20.13``|``GCCcore/11.2.0``
 ``21.1.3`` |``GCCcore/11.3.0``
 ``21.1.6`` |``GCCcore/12.2.0``
+``21.1.8`` |``GCCcore/12.3.0``
 
 ### xxd
 
@@ -39358,6 +40459,7 @@ xxd is part of the VIM package and this will only install xxd, not vim! xxd conv
 version     |toolchain
 ------------|------------------------------------------------------------------------------
 ``8.2.4220``|``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``
+``9.0.1696``|``GCCcore/12.2.0``
 
 ### xxHash
 
@@ -39387,6 +40489,7 @@ version  |versionsuffix      |toolchain
 ``5.2.5``|                   |``GCCcore/10.1.0``, ``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/9.3.0``
 ``5.2.7``|                   |``GCCcore/12.2.0``
 ``5.4.2``|                   |``GCCcore/12.3.0``, ``GCCcore/13.1.0``
+``5.4.4``|                   |``GCCcore/13.2.0``
 
 ## Y
 
@@ -39448,6 +40551,7 @@ version  |toolchain
 ---------|-------------------------
 ``3.4.2``|``intel/2016.02-GCC-4.9``
 ``5.0.4``|``intel/2021a``
+``5.1.2``|``intel/2021b``
 
 ### yaml-cpp
 
@@ -39539,14 +40643,20 @@ Z3 is a theorem prover from Microsoft Research.
 
 *homepage*: <https://github.com/Z3Prover/z3>
 
-version   |toolchain
-----------|------------------------------------
-``4.8.9`` |``GCCcore/8.3.0``, ``GCCcore/9.3.0``
-``4.8.10``|``GCCcore/10.2.0``
-``4.8.11``|``GCCcore/10.3.0``
-``4.8.12``|``GCCcore/11.2.0``
-``4.8.16``|``GCCcore/11.3.0``
-``4.10.2``|``GCCcore/11.3.0``
+version   |versionsuffix     |toolchain
+----------|------------------|--------------------------------------
+``4.8.9`` |                  |``GCCcore/8.3.0``, ``GCCcore/9.3.0``
+``4.8.10``|                  |``GCCcore/10.2.0``
+``4.8.10``|``-Python-3.8.6`` |``GCCcore/10.2.0``
+``4.8.11``|                  |``GCCcore/10.3.0``
+``4.8.11``|``-Python-3.9.5`` |``GCCcore/10.3.0``
+``4.8.12``|                  |``GCCcore/11.2.0``
+``4.8.12``|``-Python-3.9.6`` |``GCCcore/11.2.0``
+``4.8.16``|                  |``GCCcore/11.3.0``
+``4.8.16``|``-Python-3.10.4``|``GCCcore/11.3.0``
+``4.10.2``|                  |``GCCcore/11.3.0``
+``4.10.2``|``-Python-3.10.4``|``GCCcore/11.3.0``
+``4.12.2``|                  |``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### zarr
 
@@ -39561,6 +40671,7 @@ version   |versionsuffix     |toolchain
 ``2.8.1`` |                  |``foss/2020b``
 ``2.10.1``|                  |``foss/2021a``
 ``2.13.3``|                  |``foss/2021b``, ``foss/2022a``
+``2.16.0``|                  |``foss/2022b``
 
 ### ZeroMQ
 
@@ -39577,7 +40688,7 @@ version  |toolchain
 ``4.2.5``|``foss/2018a``, ``foss/2018b``, ``fosscuda/2018b``, ``intel/2018a``, ``intel/2018b``
 ``4.3.2``|``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/9.3.0``
 ``4.3.3``|``GCCcore/10.2.0``
-``4.3.4``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``
+``4.3.4``|``GCCcore/10.3.0``, ``GCCcore/11.2.0``, ``GCCcore/11.3.0``, ``GCCcore/12.2.0``, ``GCCcore/12.3.0``
 
 ### zfp
 
@@ -39643,7 +40754,7 @@ version   |toolchain
 ``1.2.10``|``system``
 ``1.2.11``|``FCC/4.5.0``, ``GCCcore/10.1.0``, ``GCCcore/10.2.0``, ``GCCcore/10.3.0``, ``GCCcore/11.1.0``, ``GCCcore/11.2.0``, ``GCCcore/5.4.0``, ``GCCcore/5.5.0``, ``GCCcore/6.3.0``, ``GCCcore/6.4.0``, ``GCCcore/7.1.0``, ``GCCcore/7.2.0``, ``GCCcore/7.3.0``, ``GCCcore/7.4.0``, ``GCCcore/8.1.0``, ``GCCcore/8.2.0``, ``GCCcore/8.3.0``, ``GCCcore/8.4.0``, ``GCCcore/9.1.0``, ``GCCcore/9.2.0``, ``GCCcore/9.3.0``, ``GCCcore/9.4.0``, ``GCCcore/system``, ``gimkl/2017a``, ``system``
 ``1.2.12``|``GCCcore/11.3.0``, ``GCCcore/12.1.0``, ``GCCcore/12.2.0``, ``GCCcore/9.5.0``, ``system``
-``1.2.13``|``GCCcore/11.4.0``, ``GCCcore/12.3.0``, ``GCCcore/13.1.0``, ``system``
+``1.2.13``|``GCCcore/11.4.0``, ``GCCcore/12.3.0``, ``GCCcore/13.1.0``, ``GCCcore/13.2.0``, ``system``
 
 ### zlib-ng
 
