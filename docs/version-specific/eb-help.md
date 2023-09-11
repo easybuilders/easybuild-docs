@@ -298,7 +298,7 @@ Option flag                                                              |Option
 ``--set-gid-bit``                                                        |Set group ID bit on newly created directories (default: False)
 ``--show-progress-bar``                                                  |Show progress bar in terminal output (default: True; disable with --disable-show-progress-bar)
 ``--silence-deprecation-warnings=SILENCE-DEPRECATION-WARNINGS``          |Silence specified deprecation warnings out of (python2, Lmod6, easyconfig, toolchain) (type comma-separated list)
-``--silence-hook-trigger``                                               |Supress printing of debug message every time a hook is triggered (default: False)
+``--silence-hook-trigger``                                               |Suppress printing of debug message every time a hook is triggered (default: False)
 ``--skip-extensions``                                                    |Skip installation of extensions (default: False)
 ``-t, --skip-test-cases``                                                |Skip running test cases (default: False)
 ``--skip-test-step``                                                     |Skip running the test step (e.g. unit tests) (default: False)
