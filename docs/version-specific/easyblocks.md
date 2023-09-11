@@ -265,7 +265,9 @@
       - EB_PyZMQ
       - EB_scipy
       - EB_SEPP
+      - EB_sympy
       - EB_TensorFlow
+      - EB_tensorflow_minus_compression
       - EB_TensorRT
       - EB_torchvision
       - EB_VSC_minus_tools
@@ -379,7 +381,9 @@
       - EB_PyZMQ
       - EB_scipy
       - EB_SEPP
+      - EB_sympy
       - EB_TensorFlow
+      - EB_tensorflow_minus_compression
       - EB_TensorRT
       - EB_torchvision
       - EB_VSC_minus_tools
