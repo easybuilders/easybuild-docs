@@ -32,8 +32,6 @@ feedback then please comment in the GitHub issue for the proposal.
 
 ### Planned changes for EasyBuild v5.0 {: #eb5_plans }
 
-* [enable `--trace` by default](https://github.com/easybuilders/easybuild-framework/pull/4250)
-
 !!! note
     This list is the major planned changes. It is not intended to be a complete list of all changes that are
     planned for EasyBuild v5.0.
@@ -48,7 +46,23 @@ feedback then please comment in the GitHub issue for the proposal.
 
 Various significant enhancements are included in EasyBuild v5.0, including:
 
-* *(no significant enhancements implemented so far in the `5.0.x` branches)*
+* [enable `--trace` by default][eb5_trace]
+
+### `--trace` enabled by default {: #eb5_trace }
+
+The [`--trace` option][trace] is enabled by default (see [easybuild-framework PR #4250](https://github.com/easybuilders/easybuild-framework/pull/4250)).
+This makes the output produced by the `eb` command more informative, by providing more information about what's going on in the background.
+
+To disable trace output, either:
+
+* Use the `--disable-trace` command line option;
+* Set the `$EASYBUILD_DISABLE_TRACE` environment variable;
+* Disable trace mode in a [configuration file][configuration_file]:
+
+    ``` ini
+    [override]
+    trace=0
+    ```
 
 ---
 
