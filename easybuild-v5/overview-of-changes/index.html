@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.0">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
     
     
       
@@ -7924,9 +7924,6 @@ feedback then please comment in the GitHub issue for the proposal.</p>
 <li><a href="https://github.com/easybuilders/easybuild/issues/872">Toolchain Support Policy</a></li>
 </ul>
 <h3 id="eb5_plans">Planned changes for EasyBuild v5.0<a class="headerlink" href="#eb5_plans" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="https://github.com/easybuilders/easybuild-framework/pull/4250">enable <code>--trace</code> by default</a></li>
-</ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This list is the major planned changes. It is not intended to be a complete list of all changes that are
@@ -7940,7 +7937,21 @@ planned for EasyBuild v5.0.</p>
 <h2 id="significant_enhancements">Significant enhancements in EasyBuild v5.0<a class="headerlink" href="#significant_enhancements" title="Permanent link">&para;</a></h2>
 <p>Various significant enhancements are included in EasyBuild v5.0, including:</p>
 <ul>
-<li><em>(no significant enhancements implemented so far in the <code>5.0.x</code> branches)</em></li>
+<li><a class="autorefs autorefs-internal" href="#eb5_trace">enable <code>--trace</code> by default</a></li>
+</ul>
+<h3 id="eb5_trace"><code>--trace</code> enabled by default<a class="headerlink" href="#eb5_trace" title="Permanent link">&para;</a></h3>
+<p>The <a class="autorefs autorefs-internal" href="../../tracing-progress/#trace"><code>--trace</code> option</a> is enabled by default (see <a href="https://github.com/easybuilders/easybuild-framework/pull/4250">easybuild-framework PR #4250</a>).
+This makes the output produced by the <code>eb</code> command more informative, by providing more information about what's going on in the background.</p>
+<p>To disable trace output, either:</p>
+<ul>
+<li>Use the <code>--disable-trace</code> command line option;</li>
+<li>Set the <code>$EASYBUILD_DISABLE_TRACE</code> environment variable;</li>
+<li>
+<p>Disable trace mode in a <a class="autorefs autorefs-internal" href="../../configuration/#configuration_file">configuration file</a>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">[override]</span>
+<span class="na">trace</span><span class="o">=</span><span class="s">0</span>
+</code></pre></div>
+</li>
 </ul>
 <hr />
 <h2 id="backwards_incompatible">Backwards-incompatible changes in EasyBuild v4.0<a class="headerlink" href="#backwards_incompatible" title="Permanent link">&para;</a></h2>
@@ -8108,7 +8119,7 @@ format and little suggestion that anyone was using it.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 7, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 5, 2023</span>
       
     
   </small>
