@@ -51,6 +51,7 @@
     - EB_Clang_minus_AOMP
     - EB_OpenSSL_wrapper
     - JuliaBundle
+    - PerlBundle
     - PythonBundle
     - SystemCompiler
     - SystemMPI
@@ -167,6 +168,7 @@
     - EB_QuantumESPRESSO
     - EB_R
     - EB_Ruby
+    - EB_Rust
     - EB_SAMtools
     - EB_Scalasca1
     - EB_Score_minus_P
@@ -263,7 +265,9 @@
       - EB_PyZMQ
       - EB_scipy
       - EB_SEPP
+      - EB_sympy
       - EB_TensorFlow
+      - EB_tensorflow_minus_compression
       - EB_TensorRT
       - EB_torchvision
       - EB_VSC_minus_tools
@@ -377,7 +381,9 @@
       - EB_PyZMQ
       - EB_scipy
       - EB_SEPP
+      - EB_sympy
       - EB_TensorFlow
+      - EB_tensorflow_minus_compression
       - EB_TensorRT
       - EB_torchvision
       - EB_VSC_minus_tools

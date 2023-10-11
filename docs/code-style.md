@@ -19,7 +19,7 @@ The only (major) exception to PEP8 is our preference for longer line lengths: li
 ## Notes
 
 Code style in easyconfig files can be **automatically checked** using `--check-contrib`, 
-for example: `eb --check-contrib DBD-mysql-4.050-GCC-11.3.0.eb` 
+for example: `eb --check-contrib HPL-2.3-foss-2022b.eb`
 (see [Code style review][contributing_review_process_code_style] for more details).
 
 Style guides that go a step beyond PEP8:
