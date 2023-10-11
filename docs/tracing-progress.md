@@ -32,171 +32,89 @@ printed, to allow determining how long the command has been running.
 ## Example {: #trace_example }
 
 ``` console
-$ eb DBD-mysql-4.050-GCC-11.3.0.eb -df --trace
-== Temporary log file in case of crash /tmp/vsc43810/eb-0hlic_jz/easybuild-r15wx134.log
-== processing EasyBuild easyconfig /user/gent/438/vsc43810/easybuild/easybuild-easyconfigs/easybuild/easyconfigs/d/DBD-mysql/DBD-mysql-4.050-GCC-11.3.0.eb
-== building and installing DBD-mysql/4.050-GCC-11.3.0...
-  >> installation prefix: /scratch/gent/vo/001/gvo00117/easybuild/RHEL8/cascadelake-ampere-ib/software/DBD-mysql/4.050-GCC-11.3.0
+$ eb HPL-2.3-foss-2023a.eb --trace --force
+== Temporary log file in case of crash /tmp/eb-od8biuwd/easybuild-v4oniskt.log
+== processing EasyBuild easyconfig /home/example/easybuild-easyconfigs/easybuild/easyconfigs/h/HPL/HPL-2.3-foss-2023a.eb
+== building and installing HPL/2.3-foss-2023a...
+  >> installation prefix: /software/HPL/2.3-foss-2023a
 == fetching files...
   >> sources:
-  >> /apps/gent/sources/d/DBD-mysql/DBD-mysql-4.050.tar.gz [SHA256: 4f48541ff15a0a7405f76adc10f81627c33996fbf56c95c26c094444c0928d78]
+  >> /home/example/sources/h/HPL/hpl-2.3.tar.gz [SHA256: 32c5c17d22330e6f2337b681aded51637fb6008d3f0eb7c277b163fadd612830]
+  >> patches:
+  >> /home/example/easybuild-easyconfigs/easybuild/easyconfigs/h/HPL/HPL_parallel-make.patch [SHA256:
+2a5bf9c4f328049828ddecec7ba3f05a9e25d236f4212747c53bd22fea80c5e6]
 == ... (took < 1 sec)
 == creating build dir, resetting environment...
-  >> build dir: /tmp/vsc43810/easybuild/build/DBDmysql/4.050/GCC-11.3.0
+  >> build dir: /tmp/easybuild_build/HPL/2.3/foss-2023a
 == ... (took < 1 sec)
 == unpacking...
   >> running command:
-        [started at: 2023-07-10 15:50:37]
-        [working dir: /tmp/vsc43810/easybuild/build/DBDmysql/4.050/GCC-11.3.0]
-        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-lb_c_n28.log]
-        tar xzf /apps/gent/sources/d/DBD-mysql/DBD-mysql-4.050.tar.gz
+        [started at: 2023-10-11 09:41:33]
+        [working dir: /tmp/easybuild_build/HPL/2.3/foss-2023a]
+        [output logged in /tmp/eb-od8biuwd/easybuild-run_cmd-lzkft2en.log]
+        tar xzf /home/example/sources/h/HPL/hpl-2.3.tar.gz
   >> command completed: exit 0, ran in < 1s
 == ... (took < 1 sec)
 == patching...
+  >> applying patch HPL_parallel-make.patch
 == ... (took < 1 sec)
 == preparing...
-  >> loading toolchain module: GCC/11.3.0
-  >> (no build dependencies specified)
-  >> loading modules for (runtime) dependencies:
-  >>  * Perl/5.34.1-GCCcore-11.3.0
-  >>  * MariaDB/10.9.3-GCC-11.3.0
-  >>  * zlib/1.2.12-GCCcore-11.3.0
-  >>  * OpenSSL/1.1
-  >> defining build environment for GCC/11.3.0 toolchain
-== ... (took 20 secs)
+  >> loading toolchain module: foss/2023a
+  >> defining build environment for foss/2023a toolchain
+== Running post-prepare hook...
+== ... (took 7 secs)
 == configuring...
+== Running pre-configure hook...
+  >> running command:
+        [started at: 2023-10-11 09:41:41]
+        [working dir: /tmp/easybuild_build/HPL/2.3/foss-2023a/hpl-2.3/setup]
+        [output logged in /tmp/eb-od8biuwd/easybuild-run_cmd-ngu5ym7y.log]
+        /bin/bash make_generic
+  >> command completed: exit 0, ran in < 1s
 == ... (took < 1 sec)
 == building...
-== ... (took < 1 sec)
+  >> running command:
+        [started at: 2023-10-11 09:41:41]
+        [working dir: /tmp/easybuild_build/HPL/2.3/foss-2023a/hpl-2.3]
+        [output logged in /tmp/eb-od8biuwd/easybuild-run_cmd-81p_xm51.log]
+        make  -j 8  TOPdir="/tmp/easybuild_build/HPL/2.3/foss-2023a/hpl-2.3/" CC="mpicc" MPICC="mpicc" LINKER="mpicc" LAlib="-lflexiblas -lgfortran"
+HPL_OPTS="-I/software/FFTW.MPI/3.3.10-gompi-2023a/include -I/software/FlexiBLAS/3.3.1-GCC-12.3.0/include
+-I/software/FlexiBLAS/3.3.1-GCC-12.3.0/include/flexiblas " LINKFLAGS="-O2 -ftree-vectorize -march=native -fno-math-errno
+-L/software/FFTW.MPI/3.3.10-gompi-2023a/lib64 -L/software/FFTW.MPI/3.3.10-gompi-2023a/lib -L/software/ScaLAPACK/2.2.0-gompi-2023a-fb/lib64
+-L/software/ScaLAPACK/2.2.0-gompi-2023a-fb/lib -L/software/FlexiBLAS/3.3.1-GCC-12.3.0/lib64
+-L/software/FlexiBLAS/3.3.1-GCC-12.3.0/lib -L/software/GCCcore/12.3.0/lib64 -L/software/GCCcore/12.3.0/lib
+-lm -lpthread" CCFLAGS='$(HPL_DEFS) -O2 -ftree-vectorize -march=native -fno-math-errno'
+  >> command completed: exit 0, ran in 00h00m08s
+== ... (took 8 secs)
 == testing...
 == ... (took < 1 sec)
 == installing...
-  >> running command:
-        [started at: 2023-07-10 15:50:58]
-        [working dir: /tmp/vsc43810/easybuild/build/DBDmysql/4.050/GCC-11.3.0/DBD-mysql-4.050]
-        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-28s6zzlb.log]
-        perl Makefile.PL PREFIX=/scratch/gent/vo/001/gvo00117/easybuild/RHEL8/cascadelake-ampere-ib/software/DBD-mysql/4.050-GCC-11.3.0
-  >> command completed: exit 0, ran in 00h00m05s
-  >> running command:
-        [started at: 2023-07-10 15:51:03]
-        [working dir: /tmp/vsc43810/easybuild/build/DBDmysql/4.050/GCC-11.3.0/DBD-mysql-4.050]
-        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-vawy0_q0.log]
-        make  -j 8
-  >> command completed: exit 0, ran in 00h00m02s
-  >> running command:
-        [started at: 2023-07-10 15:51:06]
-        [working dir: /tmp/vsc43810/easybuild/build/DBDmysql/4.050/GCC-11.3.0/DBD-mysql-4.050]
-        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-szr0wujz.log]
-        make test
-  >> command completed: exit 0, ran in 00h00m06s
-  >> running command:
-        [started at: 2023-07-10 15:51:12]
-        [working dir: /tmp/vsc43810/easybuild/build/DBDmysql/4.050/GCC-11.3.0/DBD-mysql-4.050]
-        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-u7n5p0oq.log]
-        make install
-  >> command completed: exit 0, ran in < 1s
-== ... (took 14 secs)
+== ... (took < 1 sec)
 == taking care of extensions...
+== Running pre-extensions hook...
 == ... (took < 1 sec)
 == restore after iterating...
 == ... (took < 1 sec)
 == postprocessing...
 == ... (took < 1 sec)
 == sanity checking...
-  >> running command:
-        [started at: 2023-07-10 15:51:12]
-        [working dir: /tmp/vsc43810/easybuild/build/DBDmysql/4.050/GCC-11.3.0/DBD-mysql-4.050]
-        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-1ovlnqgj.log]
-        perl -MConfig -e 'print $Config::Config{PERL_API_REVISION}'
-  >> command completed: exit 0, ran in < 1s
-  >> running command:
-        [started at: 2023-07-10 15:51:12]
-        [working dir: /tmp/vsc43810/easybuild/build/DBDmysql/4.050/GCC-11.3.0/DBD-mysql-4.050]
-        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-gu5r14nn.log]
-        perl -MConfig -e 'my $a = $Config::Config{"sitearch"}; $a =~ s/($Config::Config{"siteprefix"})//; print $a'
-  >> command completed: exit 0, ran in < 1s
-  >> running command:
-        [started at: 2023-07-10 15:51:12]
-        [working dir: /tmp/vsc43810/easybuild/build/DBDmysql/4.050/GCC-11.3.0/DBD-mysql-4.050]
-        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-nnk7n5w8.log]
-        perl -MConfig -e 'my $a = $Config::Config{"sitelib"}; $a =~ s/($Config::Config{"siteprefix"})//; print $a'
-  >> command completed: exit 0, ran in < 1s
-  >> running command:
-        [started at: 2023-07-10 15:51:20]
-        [working dir: /kyukon/scratch/gent/vo/001/gvo00117/easybuild/RHEL8/cascadelake-ampere-ib/software/DBD-mysql/4.050-GCC-11.3.0]
-        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-bo0su7a0.log]
-        perldoc -lm DBD::mysql
-  >> command completed: exit 0, ran in < 1s
-  >> file 'lib/perl5/site_perl/5.34.1/x86_64-linux-thread-multi/DBD/mysql.pm' found: OK
-  >> (non-empty) directory 'lib/perl5/site_perl/5.34.1/x86_64-linux-thread-multi/DBD/mysql' found: OK
-  >> running command:
-        [started at: 2023-07-10 15:51:25]
-        [working dir: /kyukon/scratch/gent/vo/001/gvo00117/easybuild/RHEL8/cascadelake-ampere-ib/software/DBD-mysql/4.050-GCC-11.3.0]
-        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-69mrzxwx.log]
-        perl -MConfig -e 'print $Config::Config{PERL_API_REVISION}'
-  >> command completed: exit 0, ran in < 1s
-  >> running command:
-        [started at: 2023-07-10 15:51:25]
-        [working dir: /kyukon/scratch/gent/vo/001/gvo00117/easybuild/RHEL8/cascadelake-ampere-ib/software/DBD-mysql/4.050-GCC-11.3.0]
-        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-1y9q6bb9.log]
-        perl -MConfig -e 'my $a = $Config::Config{"sitearch"}; $a =~ s/($Config::Config{"siteprefix"})//; print $a'
-  >> command completed: exit 0, ran in < 1s
-  >> running command:
-        [started at: 2023-07-10 15:51:25]
-        [working dir: /kyukon/scratch/gent/vo/001/gvo00117/easybuild/RHEL8/cascadelake-ampere-ib/software/DBD-mysql/4.050-GCC-11.3.0]
-        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-a1yiis3i.log]
-        perl -MConfig -e 'my $a = $Config::Config{"sitelib"}; $a =~ s/($Config::Config{"siteprefix"})//; print $a'
-  >> command completed: exit 0, ran in < 1s
-  >> loading modules: DBD-mysql/4.050-GCC-11.3.0...
-== ... (took 22 secs)
+== Running pre-sanitycheck hook...
+  >> file 'bin/xhpl' found: OK
+  >> loading modules: HPL/2.3-foss-2023a...
+== ... (took 9 secs)
 == cleaning up...
 == ... (took < 1 sec)
 == creating module...
-  >> generating module file @ /scratch/gent/vo/001/gvo00117/easybuild/RHEL8/cascadelake-ampere-ib/modules/all/DBD-mysql/4.050-GCC-11.3.0.lua
-  >> running command:
-        [started at: 2023-07-10 15:51:35]
-        [working dir: /kyukon/home/gent/438/vsc43810]
-        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-t70ouz_f.log]
-        perl -MConfig -e 'print $Config::Config{PERL_API_REVISION}'
-  >> command completed: exit 0, ran in < 1s
-  >> running command:
-        [started at: 2023-07-10 15:51:35]
-        [working dir: /kyukon/home/gent/438/vsc43810]
-        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-pvoshtmb.log]
-        perl -MConfig -e 'my $a = $Config::Config{"sitearch"}; $a =~ s/($Config::Config{"siteprefix"})//; print $a'
-  >> command completed: exit 0, ran in < 1s
-  >> running command:
-        [started at: 2023-07-10 15:51:35]
-        [working dir: /kyukon/home/gent/438/vsc43810]
-        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-hhuo5ew4.log]
-        perl -MConfig -e 'my $a = $Config::Config{"sitelib"}; $a =~ s/($Config::Config{"siteprefix"})//; print $a'
-  >> command completed: exit 0, ran in < 1s
-  >> running command:
-        [started at: 2023-07-10 15:51:36]
-        [working dir: /kyukon/home/gent/438/vsc43810]
-        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-i48pnde3.log]
-        perl -MConfig -e 'print $Config::Config{PERL_API_REVISION}'
-  >> command completed: exit 0, ran in < 1s
-  >> running command:
-        [started at: 2023-07-10 15:51:36]
-        [working dir: /kyukon/home/gent/438/vsc43810]
-        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-nvi8om1l.log]
-        perl -MConfig -e 'my $a = $Config::Config{"sitearch"}; $a =~ s/($Config::Config{"siteprefix"})//; print $a'
-  >> command completed: exit 0, ran in < 1s
-  >> running command:
-        [started at: 2023-07-10 15:51:36]
-        [working dir: /kyukon/home/gent/438/vsc43810]
-        [output logged in /tmp/vsc43810/eb-0hlic_jz/easybuild-run_cmd-mir66d85.log]
-        perl -MConfig -e 'my $a = $Config::Config{"sitelib"}; $a =~ s/($Config::Config{"siteprefix"})//; print $a'
-  >> command completed: exit 0, ran in < 1s
-== ... (took 11 secs)
+  >> generating module file @ /home/example/modules/all/HPL/2.3-foss-2023a.lua
+== ... (took 7 secs)
 == permissions...
 == ... (took < 1 sec)
 == packaging...
 == ... (took < 1 sec)
-== COMPLETED: Installation ended successfully (took 1 min 9 secs)
-== Results of the build can be found in the log file(s) /scratch/gent/vo/001/gvo00117/easybuild/RHEL8/cascadelake-ampere-ib/software/DBD-mysql/4.050-GCC-11.3.0/easybuild/easybuild-DBD-mysql-4.050-20230710.155146.log
+== COMPLETED: Installation ended successfully (took 34 secs)
+== Results of the build can be found in the log file(s) /home/example/software/HPL/2.3-foss-2023a/easybuild/easybuild-HPL-2.3-20231011.094207.log
+
 == Build succeeded for 1 out of 1
-== Temporary log file(s) /tmp/vsc43810/eb-0hlic_jz/easybuild-r15wx134.log* have been removed.
-== Temporary directory /tmp/vsc43810/eb-0hlic_jz has been removed.
+== Temporary log file(s) /tmp/eb-od8biuwd/easybuild-v4oniskt.log* have been removed.
+== Temporary directory /tmp/eb-od8biuwd has been removed.
 ```
