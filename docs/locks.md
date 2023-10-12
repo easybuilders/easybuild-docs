@@ -25,7 +25,7 @@ Locks are created in the [locks directory][locks_dir].
 The lock created by EasyBuild is an empty directory (rather than a file),
 because that can be created more atomically on modern filesystems.
 
-For example, if `OpenFOAM-7-foss-2019b.eb` is being installed to `/apps/easybuild/software`,
+For example, if `OpenFOAM-v2206-foss-2022a.eb` is being installed to `/apps/easybuild/software`,
 an empty directory that serves as a lock for this installation will be created at
 `/apps/easybuild/software/.locks/_apps_easybuild_software_OpenFOAM_7_foss_2019b.lock`
 (assuming the default [locks directory][locks_dir] is used).
@@ -60,20 +60,29 @@ performing those installations!**
 
 #### Waiting for locks to be removed {: #locks_wait }
 
-*(`--wait-on-lock`)*
+*(`--wait-on-lock-interval`)*
 
-Using the `--wait-on-lock` configuration option, you can change how EasyBuild deals with existing locks,
-by specifying how frequently EasyBuild should check whether an existing lock was removed. By specifying a non-zero value `S`,
-you can indicate how many seconds EasyBuild should wait before checking again whether the lock is still in place.
+Wait interval (in seconds) to use when waiting for existing lock to be removed
+
+*(`--wait-on-lock-limit`)*
+
+Maximum amount of time (in seconds) to wait until lock is released (0 means no waiting at all, exit with error;
+-1 means no waiting limit, keep waiting).
+
+*(`--wait-on-lock <secs>`)* (DEPRECATED)
+
+Using the `--wait-on-lock` configuration option, you can change how EasyBuild deals with existing locks, by specifying
+how frequently EasyBuild should check whether an existing lock was removed. By specifying a non-zero value `secs`, you
+can indicate how many seconds EasyBuild should wait before checking again whether the lock is still in place.
+
+!!! warning
+    The `--wait-on-lock` configuration option is deprecated, please use `--wait-on-lock-interval` and `--wait-on-lock-limit` instead!
 
 !!! note
-    EasyBuild will wait indefinitely for an existing lock to be removed if `--wait-on-lock` is set to a non-zero value...
-
     If the lock is never removed, the EasyBuild session will never terminate; it will keep checking every `S` seconds whether the lock is still in place.
 
 By default, EasyBuild will *abort* the installation with an error like "`Lock ... already exists, aborting!`"
-if a corresponding lock already exists, which is equivalent to setting `--wait-on-lock` to zero (`0`),
-implying that no waiting should be done at all.
+if a corresponding lock already exists.
 
 
 ### Locks directory {: #locks_dir }

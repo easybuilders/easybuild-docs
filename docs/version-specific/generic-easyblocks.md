@@ -6,7 +6,7 @@
 
 # Overview of generic easyblocks {: #generic_easyblocks }
 
-[BinariesTarball](#binariestarball) - [Binary](#binary) - [BuildEnv](#buildenv) - [Bundle](#bundle) - [CMakeMake](#cmakemake) - [CMakeMakeCp](#cmakemakecp) - [CMakeNinja](#cmakeninja) - [CMakePythonPackage](#cmakepythonpackage) - [Cargo](#cargo) - [CargoPythonPackage](#cargopythonpackage) - [CmdCp](#cmdcp) - [Conda](#conda) - [ConfigureMake](#configuremake) - [ConfigureMakePythonPackage](#configuremakepythonpackage) - [CrayToolchain](#craytoolchain) - [FortranPythonPackage](#fortranpythonpackage) - [GoPackage](#gopackage) - [IntelBase](#intelbase) - [JAR](#jar) - [JuliaBundle](#juliabundle) - [JuliaPackage](#juliapackage) - [MakeCp](#makecp) - [MesonNinja](#mesonninja) - [ModuleRC](#modulerc) - [OCamlPackage](#ocamlpackage) - [OctavePackage](#octavepackage) - [PackedBinary](#packedbinary) - [PerlModule](#perlmodule) - [PythonBundle](#pythonbundle) - [PythonPackage](#pythonpackage) - [RPackage](#rpackage) - [Rpm](#rpm) - [RubyGem](#rubygem) - [SCons](#scons) - [SystemCompiler](#systemcompiler) - [SystemMPI](#systemmpi) - [Tarball](#tarball) - [Toolchain](#toolchain) - [VSCPythonPackage](#vscpythonpackage) - [VersionIndependentPythonPackage](#versionindependentpythonpackage) - [Waf](#waf)
+[BinariesTarball](#binariestarball) - [Binary](#binary) - [BuildEnv](#buildenv) - [Bundle](#bundle) - [CMakeMake](#cmakemake) - [CMakeMakeCp](#cmakemakecp) - [CMakeNinja](#cmakeninja) - [CMakePythonPackage](#cmakepythonpackage) - [Cargo](#cargo) - [CargoPythonPackage](#cargopythonpackage) - [CmdCp](#cmdcp) - [Conda](#conda) - [ConfigureMake](#configuremake) - [ConfigureMakePythonPackage](#configuremakepythonpackage) - [CrayToolchain](#craytoolchain) - [FortranPythonPackage](#fortranpythonpackage) - [GoPackage](#gopackage) - [IntelBase](#intelbase) - [JAR](#jar) - [JuliaBundle](#juliabundle) - [JuliaPackage](#juliapackage) - [MakeCp](#makecp) - [MesonNinja](#mesonninja) - [ModuleRC](#modulerc) - [OCamlPackage](#ocamlpackage) - [OctavePackage](#octavepackage) - [PackedBinary](#packedbinary) - [PerlBundle](#perlbundle) - [PerlModule](#perlmodule) - [PythonBundle](#pythonbundle) - [PythonPackage](#pythonpackage) - [RPackage](#rpackage) - [Rpm](#rpm) - [RubyGem](#rubygem) - [SCons](#scons) - [SystemCompiler](#systemcompiler) - [SystemMPI](#systemmpi) - [Tarball](#tarball) - [Toolchain](#toolchain) - [VSCPythonPackage](#vscpythonpackage) - [VersionIndependentPythonPackage](#versionindependentpythonpackage) - [Waf](#waf)
 
 ## ``BinariesTarball``
 
@@ -44,6 +44,7 @@ easyconfig parameter|description                                                
 --------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|-------------
 ``extract_sources`` |Whether or not to extract sources                                                                                                              |``False``
 ``install_cmd``     |Install command to be used.                                                                                                                    |``None``
+``install_cmds``    |List of install commands to be used.                                                                                                           |``None``
 ``prepend_to_path`` |Prepend the given directories (relative to install-dir) to the environment variable PATH in the module file. Default is the install-dir itself.|``['']``
 ``staged_install``  |Perform staged installation via subdirectory of build directory                                                                                |``False``
 
@@ -277,11 +278,12 @@ Support for configuring with CMake, building and installing with MesonNinja.
 ### Extra easyconfig parameters specific to ``CMakeNinja`` easyblock
 
 easyconfig parameter            |description                                                                                                                                                                                       |default value
---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------
+--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------
 ``abs_path_compilers``          |Specify compilers via absolute file path (not via command names)                                                                                                                                  |``False``
 ``allow_system_boost``          |Always allow CMake to pick up on Boost installed in OS (even if Boost is included as a dependency)                                                                                                |``False``
-``build_cmd``                   |Build command to use                                                                                                                                                                              |``"make"``
+``build_cmd``                   |Build command to use                                                                                                                                                                              |``"ninja"``
 ``build_cmd_targets``           |Target name (string) or list of target names to build                                                                                                                                             |``""``
+``build_dir``                   |build_dir to pass to meson                                                                                                                                                                        |``None``
 ``build_shared_libs``           |Build shared library (instead of static library)None can be used to add no flag (usually results in static library)                                                                               |``None``
 ``build_type``                  |Build type for CMake, e.g. Release.Defaults to 'Release' or 'Debug' depending on toolchainopts[debug]                                                                                             |``None``
 ``configure_cmd``               |Configure command to use                                                                                                                                                                          |``"cmake"``
@@ -289,7 +291,7 @@ easyconfig parameter            |description                                    
 ``configure_without_installdir``|Avoid passing an install directory to the configure command (such as via --prefix)                                                                                                                |``False``
 ``generator``                   |Build file generator to use. None to use CMakes default                                                                                                                                           |``"Ninja"``
 ``host_type``                   |Value to provide to --host option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)|``None``
-``install_cmd``                 |Install command to use                                                                                                                                                                            |``"make install"``
+``install_cmd``                 |Install command to use                                                                                                                                                                            |``"ninja"``
 ``install_target_subdir``       |Subdirectory to use as installation target                                                                                                                                                        |``None``
 ``prefix_opt``                  |Prefix command line option for configure script ('--prefix=' if None)                                                                                                                             |``None``
 ``separate_build_dir``          |Perform build in a separate directory                                                                                                                                                             |``True``
@@ -488,6 +490,7 @@ easyconfig parameter  |description                                              
 ``environment_file``  |Conda environment.yml file to use with 'conda env create'                                                                                      |``None``
 ``extract_sources``   |Whether or not to extract sources                                                                                                              |``False``
 ``install_cmd``       |Install command to be used.                                                                                                                    |``None``
+``install_cmds``      |List of install commands to be used.                                                                                                           |``None``
 ``prepend_to_path``   |Prepend the given directories (relative to install-dir) to the environment variable PATH in the module file. Default is the install-dir itself.|``['']``
 ``remote_environment``|Remote conda environment to use with 'conda env create'                                                                                        |``None``
 ``requirements``      |Requirements specification to pass to 'conda install'                                                                                          |``None``
@@ -790,6 +793,7 @@ easyconfig parameter|description                                                
 --------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|-------------
 ``extract_sources`` |Whether or not to extract sources                                                                                                              |``False``
 ``install_cmd``     |Install command to be used.                                                                                                                    |``None``
+``install_cmds``    |List of install commands to be used.                                                                                                           |``None``
 ``prepend_to_path`` |Prepend the given directories (relative to install-dir) to the environment variable PATH in the module file. Default is the install-dir itself.|``['']``
 ``staged_install``  |Perform staged installation via subdirectory of build directory                                                                                |``False``
 
@@ -883,7 +887,10 @@ Support for building and installing software with 'meson' and 'ninja'.
 
 easyconfig parameter  |description                          |default value
 ----------------------|-------------------------------------|-------------
+``build_cmd``         |Build command to use                 |``"ninja"``
+``build_dir``         |build_dir to pass to meson           |``None``
 ``configure_cmd``     |Configure command to use             |``"meson"``
+``install_cmd``       |Install command to use               |``"ninja"``
 ``separate_build_dir``|Perform build in a separate directory|``True``
 
 ### Customised steps in ``MesonNinja`` easyblock
@@ -964,6 +971,7 @@ easyconfig parameter|description                                                
 --------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|-------------
 ``extract_sources`` |Whether or not to extract sources                                                                                                              |``False``
 ``install_cmd``     |Install command to be used.                                                                                                                    |``None``
+``install_cmds``    |List of install commands to be used.                                                                                                           |``None``
 ``prepend_to_path`` |Prepend the given directories (relative to install-dir) to the environment variable PATH in the module file. Default is the install-dir itself.|``['']``
 ``staged_install``  |Perform staged installation via subdirectory of build directory                                                                                |``False``
 
@@ -971,6 +979,29 @@ easyconfig parameter|description                                                
 
 * ``install_step`` - Copy all unpacked source directories to install directory, one-by-one.
 
+
+## ``PerlBundle``
+
+(derives from [``Bundle``](#bundle))
+
+
+Bundle of perl modules
+
+
+### Extra easyconfig parameters specific to ``PerlBundle`` easyblock
+
+easyconfig parameter           |description                                                                |default value
+-------------------------------|---------------------------------------------------------------------------|-------------
+``altroot``                    |Software name of dependency to use to define $EBROOT for this bundle       |``None``
+``altversion``                 |Software name of dependency to use to define $EBVERSION for this bundle    |``None``
+``components``                 |List of components to install: tuples w/ name, version and easyblock to use|``()``
+``default_component_specs``    |Default specs to use for every component                                   |``{}``
+``default_easyblock``          |Default easyblock to use for components                                    |``None``
+``options``                    |Dictionary with extension options.                                         |``{}``
+``prefix_opt``                 |String to use for option to set installation prefix (default is 'PREFIX')  |``None``
+``runtest``                    |Run unit tests.                                                            |``"test"``
+``sanity_check_all_components``|Enable sanity checks for all components                                    |``False``
+``sanity_check_components``    |List of components for which to run sanity checks                          |``[]``
 
 ## ``PerlModule``
 
@@ -980,10 +1011,11 @@ Builds and installs a Perl module, and can provide a dedicated module file.
 
 ### Extra easyconfig parameters specific to ``PerlModule`` easyblock
 
-easyconfig parameter|description                       |default value
---------------------|----------------------------------|-------------
-``options``         |Dictionary with extension options.|``{}``
-``runtest``         |Run unit tests.                   |``"test"``
+easyconfig parameter|description                                                              |default value
+--------------------|-------------------------------------------------------------------------|-------------
+``options``         |Dictionary with extension options.                                       |``{}``
+``prefix_opt``      |String to use for option to set installation prefix (default is 'PREFIX')|``None``
+``runtest``         |Run unit tests.                                                          |``"test"``
 
 ### Customised steps in ``PerlModule`` easyblock
 
@@ -1122,6 +1154,7 @@ easyconfig parameter|description                                                
 ``extract_sources`` |Whether or not to extract sources                                                                                                              |``False``
 ``force``           |Use force                                                                                                                                      |``False``
 ``install_cmd``     |Install command to be used.                                                                                                                    |``None``
+``install_cmds``    |List of install commands to be used.                                                                                                           |``None``
 ``makesymlinks``    |Create symlinks for listed paths                                                                                                               |``[]``
 ``postinstall``     |Enable post install                                                                                                                            |``False``
 ``preinstall``      |Enable pre install                                                                                                                             |``False``

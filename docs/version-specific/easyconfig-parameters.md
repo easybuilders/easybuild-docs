@@ -146,6 +146,7 @@
 **Parameter name**|**Description**                                                                                                            |**Default value**
 ------------------|---------------------------------------------------------------------------------------------------------------------------|-----------------
 `block`           |List of other 'block' sections on which this block depends (only relevant in easyconfigs with subblocks)                   |`None`
+`build_info_msg`  |String with information to be printed to stdout and logged during the building of the easyconfig                           |`None`
 `buildstats`      |A list of dicts with build statistics                                                                                      |`None`
 `deprecated`      |String specifying reason why this easyconfig file is deprecated and will be archived in the next major release of EasyBuild|`False`
 
