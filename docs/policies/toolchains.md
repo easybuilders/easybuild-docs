@@ -25,9 +25,9 @@ collection is added via the [robot search path][robot_search_path].
 
 ## Example
 
-As of July 2023 the latest toolchain generation is `2023a`.
+As of November 2023 the latest toolchain generation is `2023b`.
 
-* Supported: 2022b, 2022a, 2021b, 2021a, 2020b, 2020a
-* Deprecated: 2019b and 2019a
-* Archived (and unsupported): 2018b and older
+* Supported: 2023b, 2023a, 2022b, 2022a, 2021b, 2021a
+* Deprecated: 2020b and 2020a
+* Archived (and unsupported): 2019b and older
 
