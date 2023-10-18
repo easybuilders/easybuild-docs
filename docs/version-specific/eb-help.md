@@ -283,7 +283,7 @@ Option flag                                                              |Option
 ``--optarch=OPTARCH``                                                    |Set architecture optimization, overriding native architecture optimizations
 ``--output-format=OUTPUT-FORMAT``                                        |Set output format (type choice; default: txt) (choices: md, rst, txt)
 ``--output-style=OUTPUT-STYLE``                                          |Control output style; auto implies using Rich if available to produce rich output, with fallback to basic colored output (type choice; default: auto) (choices: auto, basic, no_color, rich)
-``--parallel=PARALLEL``                                                  |Specify (maximum) level of parallellism used during build procedure (type int)
+``--parallel=PARALLEL``                                                  |Specify (maximum) level of parallelism used during build procedure (type int)
 ``--parallel-extensions-install``                                        |Install list of extensions in parallel (if supported) (default: False)
 ``--pre-create-installdir``                                              |Create installation directory before submitting build jobs (default: True; disable with --disable-pre-create-installdir)
 ``-p, --pretend``                                                        |Does the build/installation in a test directory located in $HOME/easybuildinstall (default: False)
