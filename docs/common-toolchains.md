@@ -182,6 +182,7 @@ most recent revision of the common toolchains at that time.
 | `2021b` | Oct '21  | 2.37       | 11.2.0 | 4.1.1      | 3.0.4       | 0.3.18     | (incl. with OpenBLAS) | 2.1.0       | 3.3.10 |
 | `2022a` | Jun '22  | 2.38       | 11.3.0 | 4.1.4      | 3.2.0       | 0.3.20     | (incl. with OpenBLAS) | 2.2.0       | 3.3.10 |
 | `2022b` | Dec '22  | 2.39       | 12.2.0 | 4.1.4      | 3.2.1       | 0.3.21     | (incl. with OpenBLAS) | 2.2.0       | 3.3.10 |
+| `2023a` | Jun '23  | 2.40       | 12.3.0 | 4.1.5      | 3.3.1       | 0.3.23     | (incl. with OpenBLAS) | 2.2.0       | 3.3.10 |
 
 *(components marked with* \* *were patched)*
 
@@ -197,6 +198,7 @@ most recent revision of the common toolchains at that time.
 | `2021b` | Oct '21   | 2.37       | 11.2.0 | 2021.4.0          | 2021.4.0    | 2021.4.0    |
 | `2022a` | Jun '22   | 2.38       | 11.3.0 | 2022.1.0          | 2021.6.0    | 2022.1.0    |
 | `2022b` | Dec '22   | 2.39       | 12.2.0 | 2022.2.1          | 2021.7.1    | 2022.2.1    |
+| `2023a` | Jun '23   | 2.40       | 12.3.0 | 2023.1.0          | 2021.9.1    | 2023.1.0    |
 
 ## Overview of common toolchains (deprecated versions) {: #common_toolchains_overview_deprecated }
 
