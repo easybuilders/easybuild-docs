@@ -25,9 +25,9 @@ collection is added via the [robot search path][robot_search_path].
 
 ## Example
 
-As of November 2023 the latest toolchain generation is `2023b`.
+As of July 2023 (EasyBuild 4.8.0) the latest toolchain generation is `2023a`.
 
-* Supported: 2023b, 2023a, 2022b, 2022a, 2021b, 2021a
-* Deprecated: 2020b and 2020a
-* Archived (and unsupported): 2019b and older
+* Supported: 2023a, 2022b, 2022a, 2021b, 2021a, 2020b
+* Deprecated: 2020a, 2019b
+* Archived (and unsupported): 2019a and older
 
