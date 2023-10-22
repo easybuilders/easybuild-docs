@@ -551,7 +551,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -593,7 +593,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -674,7 +674,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -715,7 +715,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -756,7 +756,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -797,7 +797,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -838,7 +838,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -880,7 +880,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -922,7 +922,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -964,7 +964,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -1006,7 +1006,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -1048,7 +1048,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -1090,7 +1090,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -1131,7 +1131,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -1172,7 +1172,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -1214,7 +1214,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -1256,7 +1256,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -1298,7 +1298,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -1340,7 +1340,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -1382,7 +1382,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -1424,7 +1424,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -1465,7 +1465,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -1507,7 +1507,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -1549,7 +1549,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -1591,7 +1591,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -1633,7 +1633,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -1674,7 +1674,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -1715,7 +1715,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -1757,7 +1757,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -1799,7 +1799,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -1841,7 +1841,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -1883,7 +1883,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -1925,7 +1925,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -1967,7 +1967,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -2009,7 +2009,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -2051,7 +2051,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -2093,7 +2093,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``
@@ -2135,7 +2135,7 @@ option                   |description                                           
 ``f2c``                  |Generate code compatible with f2c and f77                              |``False``
 ``i8``                   |Integers are 8 byte integers                                           |``False``
 ``ieee``                 |Adhere to IEEE-754 rules                                               |``False``
-``loop``                 |Automatic loop parallellisation                                        |``False``
+``loop``                 |Automatic loop parallelisation                                         |``False``
 ``loose``                |Loose precision                                                        |``False``
 ``lowopt``               |Low compiler optimizations                                             |``False``
 ``lto``                  |Enable Link Time Optimization                                          |``False``

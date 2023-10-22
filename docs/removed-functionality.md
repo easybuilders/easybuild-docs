@@ -50,7 +50,7 @@ fittingly named `use_fma4` parameter in EasyBuild v3.2.0.
 - *alternatives*: **use** `extract_cmd` **key in Python dictionary
     format instead**
 
-Specyfing a custom extraction command for a particular source file by
+Specifying a custom extraction command for a particular source file by
 using a 2-element tuple in `sources` is no longer supported.
 
 Instead, a Python dictionary containing the `filename` and `extract_cmd`
