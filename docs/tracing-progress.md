@@ -32,72 +32,89 @@ printed, to allow determining how long the command has been running.
 ## Example {: #trace_example }
 
 ``` console
-$ eb HDF5-1.10.1-intel-2017a.eb -df --trace --experimental
-== temporary log file in case of crash /tmp/eb-ieEeg3/easybuild-Ouw3jV.log
-== processing EasyBuild easyconfig /home/example/HDF5/HDF5-1.10.1-intel-2017a.eb
-== building and installing HDF5/1.10.1-intel-2017a...
-  >> installation prefix: /prefix/software/HDF5/1.10.1-intel-2017a
+$ eb HPL-2.3-foss-2023a.eb --trace --force
+== Temporary log file in case of crash /tmp/eb-od8biuwd/easybuild-v4oniskt.log
+== processing EasyBuild easyconfig /home/example/easybuild-easyconfigs/easybuild/easyconfigs/h/HPL/HPL-2.3-foss-2023a.eb
+== building and installing HPL/2.3-foss-2023a...
+  >> installation prefix: /software/HPL/2.3-foss-2023a
 == fetching files...
   >> sources:
-  >> /prefix/sources/h/HDF5/hdf5-1.10.1.tar.gz [SHA256: 048a9d149fb99aaa1680a712963f5a78e9c43b588d0e79d55e06760ec377c172]
+  >> /home/example/sources/h/HPL/hpl-2.3.tar.gz [SHA256: 32c5c17d22330e6f2337b681aded51637fb6008d3f0eb7c277b163fadd612830]
+  >> patches:
+  >> /home/example/easybuild-easyconfigs/easybuild/easyconfigs/h/HPL/HPL_parallel-make.patch [SHA256:
+2a5bf9c4f328049828ddecec7ba3f05a9e25d236f4212747c53bd22fea80c5e6]
+== ... (took < 1 sec)
 == creating build dir, resetting environment...
-  >> build dir: /tmp/HDF5/1.10.1/intel-2017a
+  >> build dir: /tmp/easybuild_build/HPL/2.3/foss-2023a
+== ... (took < 1 sec)
 == unpacking...
-  >> running command 'tar xzf /prefix/sources/h/HDF5/hdf5-1.10.1.tar.gz' (output in /tmp/eb-ieEeg3/easybuild-run_cmd-P9kf6c.log) [started at: 2017-09-06 08:28:42]
+  >> running command:
+        [started at: 2023-10-11 09:41:33]
+        [working dir: /tmp/easybuild_build/HPL/2.3/foss-2023a]
+        [output logged in /tmp/eb-od8biuwd/easybuild-run_cmd-lzkft2en.log]
+        tar xzf /home/example/sources/h/HPL/hpl-2.3.tar.gz
+  >> command completed: exit 0, ran in < 1s
+== ... (took < 1 sec)
 == patching...
+  >> applying patch HPL_parallel-make.patch
+== ... (took < 1 sec)
 == preparing...
-  >> loading toolchain module: intel/2017a
-  >> (no build dependencies specified)
-  >> loading modules for (runtime) dependencies:
-  >>  * zlib/1.2.11-GCCcore-6.3.0
-  >>  * Szip/2.1-intel-2017a
-  >> defining build environment for intel/2017a toolchain
+  >> loading toolchain module: foss/2023a
+  >> defining build environment for foss/2023a toolchain
+== Running post-prepare hook...
+== ... (took 7 secs)
 == configuring...
-  >> running command './configure --prefix=/prefix/software/HDF5/1.10.1-intel-2017a  --with-szlib=/prefix/software/Szip/2.1-intel-2017a  --with-zlib=/prefix/software/zlib/1.2.11-GCCcore-6.3.0  --with-pic --with-pthread --enable-shared  --enable-cxx --enable-fortran FC="mpiifort"  --enable-unsupported --enable-parallel' (output in /tmp/eb-ieEeg3/easybuild-run_cmd-dPat3D.log) [started at: 2017-09-06 08:28:44]
+== Running pre-configure hook...
+  >> running command:
+        [started at: 2023-10-11 09:41:41]
+        [working dir: /tmp/easybuild_build/HPL/2.3/foss-2023a/hpl-2.3/setup]
+        [output logged in /tmp/eb-od8biuwd/easybuild-run_cmd-ngu5ym7y.log]
+        /bin/bash make_generic
+  >> command completed: exit 0, ran in < 1s
+== ... (took < 1 sec)
 == building...
-  >> running command 'make -j 24  CXXFLAGS="$CXXFLAGS -DMPICH_IGNORE_CXX_SEEK"  FC="mpiifort"' (output in /tmp/eb-ieEeg3/easybuild-run_cmd-25vKdK.log) [started at: 2017-09-06 08:31:01]
+  >> running command:
+        [started at: 2023-10-11 09:41:41]
+        [working dir: /tmp/easybuild_build/HPL/2.3/foss-2023a/hpl-2.3]
+        [output logged in /tmp/eb-od8biuwd/easybuild-run_cmd-81p_xm51.log]
+        make  -j 8  TOPdir="/tmp/easybuild_build/HPL/2.3/foss-2023a/hpl-2.3/" CC="mpicc" MPICC="mpicc" LINKER="mpicc" LAlib="-lflexiblas -lgfortran"
+HPL_OPTS="-I/software/FFTW.MPI/3.3.10-gompi-2023a/include -I/software/FlexiBLAS/3.3.1-GCC-12.3.0/include
+-I/software/FlexiBLAS/3.3.1-GCC-12.3.0/include/flexiblas " LINKFLAGS="-O2 -ftree-vectorize -march=native -fno-math-errno
+-L/software/FFTW.MPI/3.3.10-gompi-2023a/lib64 -L/software/FFTW.MPI/3.3.10-gompi-2023a/lib -L/software/ScaLAPACK/2.2.0-gompi-2023a-fb/lib64
+-L/software/ScaLAPACK/2.2.0-gompi-2023a-fb/lib -L/software/FlexiBLAS/3.3.1-GCC-12.3.0/lib64
+-L/software/FlexiBLAS/3.3.1-GCC-12.3.0/lib -L/software/GCCcore/12.3.0/lib64 -L/software/GCCcore/12.3.0/lib
+-lm -lpthread" CCFLAGS='$(HPL_DEFS) -O2 -ftree-vectorize -march=native -fno-math-errno'
+  >> command completed: exit 0, ran in 00h00m08s
+== ... (took 8 secs)
 == testing...
+== ... (took < 1 sec)
 == installing...
-  >> running command 'make install' (output in /tmp/eb-ieEeg3/easybuild-run_cmd-BepE8P.log) [started at: 2017-09-06 08:34:09]
+== ... (took < 1 sec)
 == taking care of extensions...
+== Running pre-extensions hook...
+== ... (took < 1 sec)
+== restore after iterating...
+== ... (took < 1 sec)
 == postprocessing...
+== ... (took < 1 sec)
 == sanity checking...
-  >> file 'bin/h52gif' found: OK
-  >> file 'bin/h5c++' found: OK
-  >> file 'bin/h5copy' found: OK
-  >> file 'bin/h5debug' found: OK
-  >> file 'bin/h5diff' found: OK
-  >> file 'bin/h5dump' found: OK
-  >> file 'bin/h5import' found: OK
-  >> file 'bin/h5jam' found: OK
-  >> file 'bin/h5ls' found: OK
-  >> file 'bin/h5mkgrp' found: OK
-  >> file 'bin/h5perf_serial' found: OK
-  >> file 'bin/h5redeploy' found: OK
-  >> file 'bin/h5repack' found: OK
-  >> file 'bin/h5repart' found: OK
-  >> file 'bin/h5stat' found: OK
-  >> file 'bin/h5unjam' found: OK
-  >> file 'bin/gif2h5' found: OK
-  >> file 'bin/h5perf' found: OK
-  >> file 'bin/h5pcc' found: OK
-  >> file 'bin/h5pfc' found: OK
-  >> file 'bin/ph5diff' found: OK
-  >> file 'lib/libhdf5.so' found: OK
-  >> file 'lib/libhdf5_cpp.so' found: OK
-  >> file 'lib/libhdf5_fortran.so' found: OK
-  >> file 'lib/libhdf5_hl_cpp.so' found: OK
-  >> file 'lib/libhdf5_hl.so' found: OK
-  >> file 'lib/libhdf5hl_fortran.so' found: OK
-  >> (non-empty) directory 'include' found: OK
+== Running pre-sanitycheck hook...
+  >> file 'bin/xhpl' found: OK
+  >> loading modules: HPL/2.3-foss-2023a...
+== ... (took 9 secs)
 == cleaning up...
+== ... (took < 1 sec)
 == creating module...
-  >> generating module file @ /prefix/modules/all/HDF5/1.10.1-intel-2017a.lua
+  >> generating module file @ /home/example/modules/all/HPL/2.3-foss-2023a.lua
+== ... (took 7 secs)
 == permissions...
+== ... (took < 1 sec)
 == packaging...
-== COMPLETED: Installation ended successfully
-== Results of the build can be found in the log file(s) /prefix/software/HDF5/1.10.1-intel-2017a/easybuild/easybuild-HDF5-1.10.1-20170906.083425.log
+== ... (took < 1 sec)
+== COMPLETED: Installation ended successfully (took 34 secs)
+== Results of the build can be found in the log file(s) /home/example/software/HPL/2.3-foss-2023a/easybuild/easybuild-HPL-2.3-20231011.094207.log
+
 == Build succeeded for 1 out of 1
-== Temporary log file(s) /tmp/eb-ieEeg3/easybuild-Ouw3jV.log* have been removed.
-== Temporary directory /tmp/eb-ieEeg3 has been removed.
+== Temporary log file(s) /tmp/eb-od8biuwd/easybuild-v4oniskt.log* have been removed.
+== Temporary directory /tmp/eb-od8biuwd has been removed.
 ```
