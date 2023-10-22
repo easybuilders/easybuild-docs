@@ -1,8 +1,5 @@
 # Supported Toolchain Generations Policy {: #policy_toolchains }
 
-!!! note
-     This policy will be implemented as part of the release of [EasyBuild 5.0][overview]
-
 For the central EasyBuild repositories, we support a set of toolchain generations.
 
 * Accept PRs only for the 6 most recent toolchain generations.
@@ -23,11 +20,10 @@ exceptions, but we aim to keep these limited.)
 Sites and users can then supplement these easyconfigs via there own collection of easyconfigs. This additional
 collection is added via the [robot search path][robot_search_path].
 
-## Example
+## Current situation
 
-As of November 2023 the latest toolchain generation is `2023b`.
+As of July 2023 (EasyBuild 4.8.0) the latest toolchain generation is `2023a`.
 
-* Supported: 2023b, 2023a, 2022b, 2022a, 2021b, 2021a
-* Deprecated: 2020b and 2020a
-* Archived (and unsupported): 2019b and older
-
+* Supported: 2023a, 2022b, 2022a, 2021b, 2021a, 2020b
+* Deprecated: 2020a (GCC 9.3.0), 2019b (GCC 8.3.0)
+* Archived (and unsupported): 2019a (GCC 8.2.0), and older
