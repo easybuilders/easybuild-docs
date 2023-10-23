@@ -19,12 +19,12 @@ a particular software package by specifying the dependency only on the `<major>.
 (i.e., without including the "subminor" version, which usually corresponds to a bugfix release).
 
 One particular example where this is employed is for `Java`. Since the `2018b` generation of
-the [Common toolchains][common_toolchains], we use a wrapper for `Java` (e.g., `Java/1.8`), rather than
-depending on a specific version (e.g., `Java/1.8.0_181`):
+the [Common toolchains][common_toolchains], we use a wrapper for `Java` (e.g., `Java/17`), rather than
+depending on a specific version (e.g., `Java/17.0.6`):
 
 ``` python
-# specify dependency on Java/1.8 "wrapper", rather than a specific Java version
-dependencies = [('Java', '1.8', '', SYSTEM)]
+# specify dependency on Java/17 "wrapper", rather than a specific Java version
+dependencies = [('Java', '17', '', SYSTEM)]
 ```
 
 This has a couple of advantages:
