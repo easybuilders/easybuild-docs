@@ -19,21 +19,21 @@ For example:
 * overview of dependencies of HDF5:
 
      ``` console
-     $ eb HDF5-1.8.13-intel-2015a.eb -D
+     $ eb HDF5-1.12.2-iimpi-2022a.eb -D
      ...
-     * [ ] $CFGS/i/intel/intel-2015a.eb (module: intel/2015a)
-     * [ ] $CFGS/z/zlib/zlib-1.2.8-intel-2015a.eb (module: zlib/1.2.8-intel-2015a)
-     * [ ] $CFGS/s/Szip/Szip-2.1-intel-2015a.eb (module: Szip/2.1-intel-2015a)
-     * [ ] $CFGS/h/HDF5/HDF5-1.8.13-intel-2015a.eb (module: HDF5/1.8.13-intel-2015a)
+     * [ ] $CFGS/i/iimpi/iimpi-2022a.eb (module: iimpi/2022a)
+     * [ ] $CFGS/z/zlib/zlib-1.2.12.eb (module: zlib/1.2.12)
+     * [ ] $CFGS/s/Szip/Szip-2.1.1-GCCcore-11.3.0.eb (module: Szip/2.1.1-GCCcore-11.3.0)
+     * [ ] $CFGS/h/HDF5/HDF5-1.12.2-iimpi-2022a.eb (module: HDF5/1.12.2-iimpi-2022a)
      ```
 
 * overview of dependencies of HDF5, with zlib and Szip excluded:
 
      ``` console
-     $ eb HDF5-1.8.13-intel-2015a.eb --filter-deps=zlib,Szip -D
+     $ eb HDF5-1.12.2-iimpi-2022a.eb --filter-deps=zlib,Szip -D
      ...
-     * [ ] $CFGS/i/intel/intel-2015a.eb (module: intel/2015a)
-     * [ ] $CFGS/h/HDF5/HDF5-1.8.13-intel-2015a.eb (module: HDF5/1.8.13-intel-2015a)
+     * [ ] $CFGS/i/iimpi/iimpi-2022a.eb (module: iimpi/2022a)
+     * [ ] $CFGS/h/HDF5/HDF5-1.12.2-iimpi-2022a.eb (module: HDF5/1.12.2-iimpi-2022a)
      ```
 
 
@@ -50,12 +50,12 @@ For each entry in `--filter-deps`, the expected format is either:
   should be filtered out
    * examples: `zlib=1.2.8`, `ncurses=5.9`
 * `<name>=<lower_limit>:<upper_limit>`: a software name and a version range, to indicate that any version
-  of this dependency that falls *within the specified range* should be filtered out
+  of this dependency that falls **within the specified range** should be filtered out
 
 When a version range is specified, a lower limit and/or upper limit *can* be specified (separated by `:`).
 In other words, the version range can be open ended. The `:` separator is strictly required.
 
-For both limits, you *must* indicate whether it is either:
+For both limits, you **must** indicate whether it is either:
 
 * *inclusive*, by using `[` for the lower limit, and `]` for the upper limit
 * *exclusive*, by using `]` for the lower limit, and `[` for the upper limit
@@ -76,12 +76,12 @@ configuration option.
 For example (note the preceding '`.`' in the last part of the module names for zlib and Szip):
 
 ``` console
-$ eb HDF5-1.8.13-intel-2015a.eb --hide-deps=zlib,Szip -D
+$ eb HDF5-1.12.2-iimpi-2022a.eb --hide-deps=zlib,Szip -D
 ...
-* [ ] $CFGS/i/intel/intel-2015a.eb (module: intel/2015a)
-* [ ] $CFGS/z/zlib/zlib-1.2.8-intel-2015a.eb (module: zlib/.1.2.8-intel-2015a)
-* [ ] $CFGS/s/Szip/Szip-2.1-intel-2015a.eb (module: Szip/.2.1-intel-2015a)
-* [ ] $CFGS/h/HDF5/HDF5-1.8.13-intel-2015a.eb (module: HDF5/1.8.13-intel-2015a)
+* [ ] $CFGS/i/iimpi/iimpi-2022a.eb (module: iimpi/2022a)
+* [ ] $CFGS/z/zlib/zlib-1.2.12-GCCcore-11.3.0.eb (module: zlib/.1.2.12-GCCcore-11.3.0)
+* [ ] $CFGS/s/Szip/Szip-2.1.1-GCCcore-11.3.0.eb (module: Szip/.2.1.1-GCCcore-11.3.0)
+* [ ] $CFGS/h/HDF5/HDF5-1.12.2-iimpi-2022a.eb (module: HDF5/1.12.2-iimpi-2022a)
 ```
 
 !!! note
@@ -98,7 +98,7 @@ $ eb HDF5-1.8.13-intel-2015a.eb --hide-deps=zlib,Szip -D
 
     $ module --show-hidden avail bzip2
     ----- /home/example/.local/easybuild/modules/all -----
-    bzip2/.1.0.6
+    bzip2/.1.0.8
 
     Use "module spider" to find all possible modules.
     Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
@@ -158,30 +158,28 @@ Consider the following (partial) easyconfig file for Python v2.7.9 with the `fos
 
 ``` python
 name = 'Python'
-version = '2.7.9'
+version = '3.10.8'
 
-toolchain = {'name': 'foss', 'version': '2015b'}
+toolchain = {'name': 'foss', 'version': '2022b'}
 
 dependencies = [
-    ('zlib', '1.2.8'),
+    ('zlib', '1.2.12'),
 ]
 ```
 
 When the `--minimal-toolchains` configuration option is enabled, EasyBuild will also consider the subtoolchains
-`GCC/4.9.3` and `gompi/2015b` of the `foss/2015b` toolchain (in that order) as potential minimal toolchains
+`GCC/12.2.0` and `gompi/2022b` of the `foss/2022b` toolchain (in that order) as potential minimal toolchains
 when determining the toolchain to use for dependencies.
 
-So, for the zlib v1.2.8 dependency included in the example above, the following scenarios are possible:
+So, for the zlib v1.2.12 dependency included in the example above, the following scenarios are possible:
 
 * without the use of `--minimal-toolchains`, the default behaviour of EasyBuild is to first consider the
-  `foss/2015b` toolchain for zlib v1.2.8, if no such easyconfig file is found, it will continue searching using the
-  `gompi/2015b` toolchain, and finally the `GCC/4.9.3` toolchain
+  `foss/2022b` toolchain for zlib v1.2.12, if no such easyconfig file is found, it will continue searching using the
+  `gompi/2022b` toolchain, and finally the `GCC/12.2.0` toolchain
 * if (only) `--minimal-toolchains` is enabled, EasyBuild will search for an easyconfig file for
-  zlib v1.2.8 using the `GCC/4.9.3` toolchain; if no such easyconfig file is found, it will continue searching
-  using the `gompi/2015b` toolchain, and finally the `foss/2015b` toolchain
+  zlib v1.2.12 using the `GCC/12.2.0` toolchain; if no such easyconfig file is found, it will continue searching
+  using the `gompi/2022b` toolchain, and finally the `foss/2022b` toolchain
 * if `--add-system-to-minimal-toolchains` is also enabled, EasyBuild will try locating an easyconfig file for
-  zlib v1.2.8 that uses the `system` toolchain prior to considering the `GCC/4.9.3` toolchain
+  zlib v1.2.12 that uses the `system` toolchain prior to considering the `GCC/12.2.0` toolchain
 * additionally, with `--use-existing-modules` enabled, EasyBuild will first check whether a `zlib` module for
-  version 1.2.8 built with the (sub)toolchains being considered exists; if not, it will search for an easyconfig file
-  for zlib as outlined above
-
+  version 1.2.12 built with the (sub)toolchains being considered exists; if not, it will search for an easyconfig file for zlib as outlined above
