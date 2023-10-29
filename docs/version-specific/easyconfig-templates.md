@@ -16,16 +16,22 @@ Template name              |Template value
 
 Template name       |Template value
 --------------------|------------------------------------------------
+``%(cudamajver)s``  |major version for CUDA
 ``%(cudashortver)s``|short version for CUDA (``<major>.<minor>``)
 ``%(cudaver)s``     |full version for CUDA
+``%(cudamajver)s``  |major version for CUDAcore
 ``%(cudashortver)s``|short version for CUDAcore (``<major>.<minor>``)
 ``%(cudaver)s``     |full version for CUDAcore
+``%(javamajver)s``  |major version for Java
 ``%(javashortver)s``|short version for Java (``<major>.<minor>``)
 ``%(javaver)s``     |full version for Java
+``%(perlmajver)s``  |major version for Perl
 ``%(perlshortver)s``|short version for Perl (``<major>.<minor>``)
 ``%(perlver)s``     |full version for Perl
+``%(pymajver)s``    |major version for Python
 ``%(pyshortver)s``  |short version for Python (``<major>.<minor>``)
 ``%(pyver)s``       |full version for Python
+``%(rmajver)s``     |major version for R
 ``%(rshortver)s``   |short version for R (``<major>.<minor>``)
 ``%(rver)s``        |full version for R
 
@@ -59,6 +65,7 @@ Template name     |Template value
 Template name                    |Template value
 ---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ``%(arch)s``                     |System architecture (e.g. x86_64, aarch64, ppc64le, ...)
+``%(sysroot)s``                  |Location root directory of system, prefix for standard paths like /usr/lib and /usr/includeas specify by the --sysroot configuration option
 ``%(mpi_cmd_prefix)s``           |Prefix command for running MPI programs (with default number of ranks)
 ``%(cuda_compute_capabilities)s``|Comma-separated list of CUDA compute capabilities, as specified via --cuda-compute-capabilities configuration option or via cuda_compute_capabilities easyconfig parameter
 ``%(cuda_cc_cmake)s``            |List of CUDA compute capabilities suitable for use with $CUDAARCHS in CMake 3.18+
