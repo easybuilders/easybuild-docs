@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
@@ -9486,6 +9486,11 @@ Just copy the sources to the install dir, or use the specified install command.<
 <td><code>None</code></td>
 </tr>
 <tr>
+<td><code>runtest</code></td>
+<td>Make target to test build or True to use CTest</td>
+<td><code>None</code></td>
+</tr>
+<tr>
 <td><code>separate_build_dir</code></td>
 <td>Perform build in a separate directory</td>
 <td><code>True</code></td>
@@ -9502,8 +9507,8 @@ Just copy the sources to the install dir, or use the specified install command.<
 </tr>
 <tr>
 <td><code>test_cmd</code></td>
-<td>Test command to use ('runtest' value is appended)</td>
-<td><code>"make"</code></td>
+<td>Test command to use ('runtest' value is appended, default: 'make')</td>
+<td><code>None</code></td>
 </tr>
 </tbody>
 </table>
@@ -9638,6 +9643,11 @@ Just copy the sources to the install dir, or use the specified install command.<
 <td><code>None</code></td>
 </tr>
 <tr>
+<td><code>runtest</code></td>
+<td>Make target to test build or True to use CTest</td>
+<td><code>None</code></td>
+</tr>
+<tr>
 <td><code>separate_build_dir</code></td>
 <td>Perform build in a separate directory</td>
 <td><code>True</code></td>
@@ -9654,8 +9664,8 @@ Just copy the sources to the install dir, or use the specified install command.<
 </tr>
 <tr>
 <td><code>test_cmd</code></td>
-<td>Test command to use ('runtest' value is appended)</td>
-<td><code>"make"</code></td>
+<td>Test command to use ('runtest' value is appended, default: 'make')</td>
+<td><code>None</code></td>
 </tr>
 <tr>
 <td><code>with_configure</code></td>
@@ -9762,6 +9772,11 @@ Just copy the sources to the install dir, or use the specified install command.<
 <td><code>None</code></td>
 </tr>
 <tr>
+<td><code>runtest</code></td>
+<td>Make target to test build or True to use CTest</td>
+<td><code>None</code></td>
+</tr>
+<tr>
 <td><code>separate_build_dir</code></td>
 <td>Perform build in a separate directory</td>
 <td><code>True</code></td>
@@ -9778,8 +9793,8 @@ Just copy the sources to the install dir, or use the specified install command.<
 </tr>
 <tr>
 <td><code>test_cmd</code></td>
-<td>Test command to use ('runtest' value is appended)</td>
-<td><code>"make"</code></td>
+<td>Test command to use ('runtest' value is appended, default: 'make')</td>
+<td><code>None</code></td>
 </tr>
 </tbody>
 </table>
@@ -9934,7 +9949,7 @@ to generate a module file which sets the PYTHONPATH.</p>
 </tr>
 <tr>
 <td><code>runtest</code></td>
-<td>Run unit tests.</td>
+<td>Make target to test build or True to use CTest</td>
 <td><code>None</code></td>
 </tr>
 <tr>
@@ -9964,8 +9979,8 @@ to generate a module file which sets the PYTHONPATH.</p>
 </tr>
 <tr>
 <td><code>test_cmd</code></td>
-<td>Test command to use ('runtest' value is appended)</td>
-<td><code>"make"</code></td>
+<td>Test command to use ('runtest' value is appended, default: 'make')</td>
+<td><code>None</code></td>
 </tr>
 <tr>
 <td><code>testinstall</code></td>
@@ -10298,8 +10313,8 @@ Just run the specified command for all sources, and copy specified files to the 
 </tr>
 <tr>
 <td><code>test_cmd</code></td>
-<td>Test command to use ('runtest' value is appended)</td>
-<td><code>"make"</code></td>
+<td>Test command to use ('runtest' value is appended, default: 'make')</td>
+<td><code>None</code></td>
 </tr>
 <tr>
 <td><code>with_configure</code></td>
@@ -10382,7 +10397,8 @@ Just run the specified command for all sources, and copy specified files to the 
 </table>
 <h3 id="customised-steps-in-conda-easyblock">Customised steps in <code>Conda</code> easyblock<a class="headerlink" href="#customised-steps-in-conda-easyblock" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>install_step</code> - Install software using 'conda env create' or 'conda create' &amp; 'conda install'.</li>
+<li><code>install_step</code> - Install software using 'conda env create' or 'conda create' &amp; 'conda install'
+        (or the 'mamba', etc., equivalent).</li>
 </ul>
 <h2 id="configuremake"><code>ConfigureMake</code><a class="headerlink" href="#configuremake" title="Permanent link">&para;</a></h2>
 <p>(derives from <code>EasyBlock</code>)</p>
@@ -10449,8 +10465,8 @@ Just run the specified command for all sources, and copy specified files to the 
 </tr>
 <tr>
 <td><code>test_cmd</code></td>
-<td>Test command to use ('runtest' value is appended)</td>
-<td><code>"make"</code></td>
+<td>Test command to use ('runtest' value is appended, default: 'make')</td>
+<td><code>None</code></td>
 </tr>
 </tbody>
 </table>
@@ -10649,8 +10665,8 @@ Just run the specified command for all sources, and copy specified files to the 
 </tr>
 <tr>
 <td><code>test_cmd</code></td>
-<td>Test command to use ('runtest' value is appended)</td>
-<td><code>"make"</code></td>
+<td>Test command to use ('runtest' value is appended, default: 'make')</td>
+<td><code>None</code></td>
 </tr>
 <tr>
 <td><code>testinstall</code></td>
@@ -11235,8 +11251,8 @@ Defines custom sanity checks and module environment</p>
 </tr>
 <tr>
 <td><code>test_cmd</code></td>
-<td>Test command to use ('runtest' value is appended)</td>
-<td><code>"make"</code></td>
+<td>Test command to use ('runtest' value is appended, default: 'make')</td>
+<td><code>None</code></td>
 </tr>
 <tr>
 <td><code>with_configure</code></td>
@@ -12176,8 +12192,8 @@ if an actual version is specified, it is checked against the derived version of 
 </tr>
 <tr>
 <td><code>test_cmd</code></td>
-<td>Test command to use ('runtest' value is appended)</td>
-<td><code>"make"</code></td>
+<td>Test command to use ('runtest' value is appended, default: 'make')</td>
+<td><code>None</code></td>
 </tr>
 <tr>
 <td><code>use_gold_linker</code></td>
@@ -12389,8 +12405,8 @@ if an actual version is specified, it is checked against the derived version of 
 </tr>
 <tr>
 <td><code>test_cmd</code></td>
-<td>Test command to use ('runtest' value is appended)</td>
-<td><code>"make"</code></td>
+<td>Test command to use ('runtest' value is appended, default: 'make')</td>
+<td><code>None</code></td>
 </tr>
 <tr>
 <td><code>usetmppath</code></td>
@@ -12779,7 +12795,7 @@ if an actual version is specified, it is checked against the derived version of 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 11, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 29, 2023</span>
       
     
   </small>

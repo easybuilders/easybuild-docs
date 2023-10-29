@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.4b4a2bd9.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.356b1318.min.css">
@@ -2452,6 +2452,13 @@
           <li class="md-nav__item">
   <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.dependencies" class="md-nav__link">
     dependencies()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.dependency_names" class="md-nav__link">
+    dependency_names()
   </a>
   
 </li>
@@ -9625,6 +9632,54 @@ want simple lists.</p>
   
       <p>Returns an array of parsed dependencies (after filtering, if requested)
 dependency = {'name': '', 'version': '', 'system': (False|True), 'versionsuffix': '', 'toolchain': ''}
+Iterable builddependencies are flattened when not iterating.</p>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th><b>PARAMETER</b></th>
+        <th><b> DESCRIPTION</b></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>build_only</code></td>
+          <td class="doc-param-details">
+            <div class="doc-md-description">
+              <p>only return build dependencies, discard others</p>
+            </div>
+            <p>
+                <span class="doc-param-default">
+                  <b>DEFAULT:</b> 
+                    <code>False</code>
+                </span>
+            </p>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.dependency_names" class="doc doc-heading">
+          <code class="highlight language-python"><span class="n">dependency_names</span><span class="p">(</span><span class="n">build_only</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.dependency_names" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Return a set of names of all (direct) dependencies after filtering.
 Iterable builddependencies are flattened when not iterating.</p>
 
 

@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.4b4a2bd9.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
@@ -8056,10 +8056,10 @@ of dependencies. For example, it can be used to avoid depending on a specific ve
 a particular software package by specifying the dependency only on the <code>&lt;major&gt;.&lt;minor&gt;</code> version instead
 (i.e., without including the "subminor" version, which usually corresponds to a bugfix release).</p>
 <p>One particular example where this is employed is for <code>Java</code>. Since the <code>2018b</code> generation of
-the <a class="autorefs autorefs-internal" href="../common-toolchains/#common_toolchains">Common toolchains</a>, we use a wrapper for <code>Java</code> (e.g., <code>Java/1.8</code>), rather than
-depending on a specific version (e.g., <code>Java/1.8.0_181</code>):</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># specify dependency on Java/1.8 &quot;wrapper&quot;, rather than a specific Java version</span>
-<span class="n">dependencies</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="s1">&#39;1.8&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">SYSTEM</span><span class="p">)]</span>
+the <a class="autorefs autorefs-internal" href="../common-toolchains/#common_toolchains">Common toolchains</a>, we use a wrapper for <code>Java</code> (e.g., <code>Java/17</code>), rather than
+depending on a specific version (e.g., <code>Java/17.0.6</code>):</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># specify dependency on Java/17 &quot;wrapper&quot;, rather than a specific Java version</span>
+<span class="n">dependencies</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="s1">&#39;17&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">SYSTEM</span><span class="p">)]</span>
 </code></pre></div>
 <p>This has a couple of advantages:</p>
 <ul>
@@ -8078,7 +8078,7 @@ other than <code>Java</code>.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 17, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2023</span>
       
     
   </small>
