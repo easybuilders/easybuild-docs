@@ -22,7 +22,7 @@ To contribute to this documentation, [open a pull request](https://github.com/ea
 - [Installing](installation.md), [configuring](configuration.md), and [using](using-easybuild.md) EasyBuild
 - [Writing easyconfig files](writing-easyconfig-files.md) - [available easyconfig parameters](version-specific/easyconfig-parameters.md)
 - [Generic easyblocks](version-specific/generic-easyblocks.md)
-- List of [common toolchains](common-toolchains.md) and [supported software](version-specific/supported-software)
+- List of [common toolchains](common-toolchains.md) and [supported software](version-specific/supported-software.md)
 - [Contributing to EasyBuild](contributing.md) - [GitHub integration features](integration-with-github.md)
 - [EasyBuild release notes](release-notes.md) - [EasyBuild v5.0](easybuild-v5/index.md)
 - [Getting help](getting-help.md): [mailing list](https://lists.ugent.be/wws/info/easybuild) - [Slack](https://easybuild.io/join-slack) - [conference calls](https://github.com/easybuilders/easybuild/wiki/Conference-calls) - [GitHub](https://github.com/easybuilders)
