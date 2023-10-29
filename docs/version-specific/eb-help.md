@@ -37,26 +37,26 @@ Option flag                              |Option description
 
 ## Basic options
 
-Option flag                            |Option description
----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-``--dry-run``                          |Print build overview incl. dependencies (full paths) (default: False)
-``-D, --dry-run-short``                |Print build overview incl. dependencies (short paths) (default: False)
-``-x, --extended-dry-run``             |Print build environment and (expected) build procedure that will be performed (default: False)
-``--extended-dry-run-ignore-errors``   |Ignore errors that occur during dry run (default: True; disable with --disable-extended-dry-run-ignore-errors)
-``-f, --force``                        |Force to rebuild software even if it's already installed (i.e. if it can be found as module), and skipping check for OS dependencies (default: False)
-``--ignore-locks``                     |Ignore locks that prevent two identical installations running in parallel (default: False)
-``--job``                              |Submit the build as a job (default: False)
-``--locks-dir=LOCKS-DIR``              |Directory to store lock files (should be on a shared filesystem); None implies .locks subdirectory of software installation directory
-``-l, --logtostdout``                  |Redirect main log to stdout (default: False)
-``-M, --missing-modules``              |Print list of missing modules for dependencies of specified easyconfigs (default: False)
-``-b BLOCKS, --only-blocks=BLOCKS``    |Only build listed blocks (type comma-separated list)
-``--rebuild``                          |Rebuild software, even if module already exists (don't skip OS dependencies checks) (default: False)
-``-r PATH[:PATH], --robot=PATH[:PATH]``|Enable dependency resolution, using easyconfigs in specified paths (type pathsep-separated list)
-``--robot-paths=PATH[:PATH]``          |Additional paths to consider by robot for easyconfigs (--robot paths get priority) (type pathsep-separated list; default: /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs)
-``--search-paths=PATH[:PATH]``         |Additional locations to consider in --search (next to --robot and --robot-paths paths) (type pathsep-separated list)
-``-k, --skip``                         |Skip existing software (useful for installing additional packages) (default: False)
-``-s STOP, --stop=STOP``               |Stop the installation after certain step (type choice; default: source) (choices: fetch, ready, source, patch, prepare, configure, build, test, install, extensions, postiter, postproc, sanitycheck, cleanup, module, permissions, package, testcases)
-``--strict=STRICT``                    |Set strictness level (type choice; default: warn) (choices: ignore, warn, error)
+Option flag                                |Option description
+-------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+``--dry-run``                              |Print build overview incl. dependencies (full paths) (default: False)
+``-D, --dry-run-short``                    |Print build overview incl. dependencies (short paths) (default: False)
+``-x, --extended-dry-run``                 |Print build environment and (expected) build procedure that will be performed (default: False)
+``--extended-dry-run-ignore-errors``       |Ignore errors that occur during dry run (default: True; disable with --disable-extended-dry-run-ignore-errors)
+``-f, --force``                            |Force to rebuild software even if it's already installed (i.e. if it can be found as module), and skipping check for OS dependencies (default: False)
+``--ignore-locks``                         |Ignore locks that prevent two identical installations running in parallel (default: False)
+``--job``                                  |Submit the build as a job (default: False)
+``--locks-dir=LOCKS-DIR``                  |Directory to store lock files (should be on a shared filesystem); None implies .locks subdirectory of software installation directory
+``-l, --logtostdout``                      |Redirect main log to stdout (default: False)
+``-M, --missing-modules``                  |Print list of missing modules for dependencies of specified easyconfigs (default: False)
+``-b BLOCKS, --only-blocks=BLOCKS``        |Only build listed blocks (type comma-separated list)
+``--rebuild``                              |Rebuild software, even if module already exists (don't skip OS dependencies checks) (default: False)
+``-r [PATH[:PATH]], --robot=[PATH[:PATH]]``|Enable dependency resolution, optionally consider additional paths to search for easyconfigs (type pathsep-separated list)
+``--robot-paths=PATH[:PATH]``              |Additional paths to consider by robot for easyconfigs (--robot paths get priority) (type pathsep-separated list; default: /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs)
+``--search-paths=PATH[:PATH]``             |Additional locations to consider in --search (next to --robot and --robot-paths paths) (type pathsep-separated list)
+``-k, --skip``                             |Skip existing software (useful for installing additional packages) (default: False)
+``-s STOP, --stop=STOP``                   |Stop the installation after certain step (type choice; default: source) (choices: fetch, ready, source, patch, prepare, configure, build, test, install, extensions, postiter, postproc, sanitycheck, cleanup, module, permissions, package, testcases)
+``--strict=STRICT``                        |Set strictness level (type choice; default: warn) (choices: ignore, warn, error)
 
 ## Configuration options
 
