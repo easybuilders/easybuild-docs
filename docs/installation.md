@@ -69,11 +69,11 @@ This is EasyBuild 4.8.0 (framework: 4.8.0, easyblocks: 4.8.0) on host example.lo
 ```
 
 !!! tip
-    The Tcl-based or Lmod implementations of environment modules do their default sorting differently.
-    The former will normally sort in the lexicographic order, while Lmod follows
-    an approach that is closer to Python's construct `LooseVersion` way of ordering. Such aspects
-    may make a big difference, if you have installed both versions 1.9.0 and 1.15.2,
-    with respect to what is the version being loaded by default.
+    The Tcl/C Environment Modules (version <= 3.2.10) does its default sorting differently than
+    newer versions of Environment Modules and Lmod. The former will normally sort in the
+    lexicographic order, while the latters follow an approach that is closer to Python's construct
+    `LooseVersion` way of ordering. Such aspects may make a big difference, if you have installed
+    both versions 1.9.0 and 1.15.2, with respect to what is the version being loaded by default.
 
 You can also run `eb --show-system-info` to see system information relevant to EasyBuild,
 or run`eb --show-config` to see the default EasyBuild configuration (see also [Configuring EasyBuild][configuring_easybuild]).
