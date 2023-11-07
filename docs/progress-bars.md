@@ -90,6 +90,8 @@ which shows:
 
 ## Relevant configuration options
 
+For information about configuring EasyBuild, see [Configuring Easybuild](https://docs.easybuild.io/configuration/).
+
 ### `output-style`
 
 The `output-style` configuration option determines the output style of the `eb` command.
