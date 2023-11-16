@@ -262,7 +262,7 @@ This is helpful when the release was updated with changes that don't affect the 
 (e.g. only doc changes).
 
 ``` python
-checksums = [('mainchecksum', 'alternativechecksum')]  # Placeholders used
+checksums = [('0123456789...abcdef', 'fedcba...9876543210')]
 ```
 
 The opposite is also possible:
@@ -270,39 +270,43 @@ A list instead of a tuple denotes that **all** checksums must match (logical AND
 In both cases each element can also be a type-value-tuple:
 
 ``` python
-checksums = [[('size', 42), 'sha256checksum']]  # Placeholder used
+checksums = [[('sha256', '0123456789...abcdef'), 'fedcba...9876543210']]
 ```
 
 Finally, a checksum can be specified as a dictionary mapping filenames to checksums, removing any ambiguity.
-This style is used by Easybuild with `eb --inject-checksums` when 2 or more source files are specified.
-This style is also useful when the source file is specified using e.g. the `%(arch)s` template.
+This style is used by EasyBuild with `eb --inject-checksums` when 2 or more source files are specified,
+and is particularly useful when the source file is specified using a template value like `%(arch)s`.
+Especially when many source files and patches are used this also directly documents the file each checksum is for.  
 Again, elements (values) can be strings or type-value-tuples.
 For example:
+
 ``` python
 checksums = [{
-  'src_x86_64.tgz': 'f962008105639f58e9a4455c8057933ab0a5e2f43db8340ae1e1afe6dc2d2410',
-  'src_aarch64.tgz': ('size', 42),
+  'src_x86_64.tgz': '0123456789...abcdef',
+  'src_aarch64.tgz': ('sha256', 'fedcba...9876543210'),
 }]
 ```
 
 Of course this can be combined with the logical AND/OR semantics using lists or tuples:
+
 ``` python
 checksums = [{
-  'src_x86_64.tgz': ('oldchecksum', 'newchecksum'),
-  'src_aarch64.tgz': [('size', 42), 'checksumthatmustmatchtoo'],
+  'src_x86_64.tgz': ('0123456789...abcdef', 'fedcba...9876543210'), # Match either one
+  'src_aarch64.tgz': [('sha256', '9876543210...fedcba'), 'abcdef...0123456789'], # Match both
 }]
 ```
 
 When the checksum cannot be specified for a file
 (e.g. when using a git clone instead of an archive),
 a value of `None` can be used to skip the checksum check.
-This is possible in the list of checksums as well as as a value in a dictionary, e.g.:
+This is possible in the list of checksums as well as a value in a dictionary, e.g.:
+
 ``` python
 checksums = [
   None, # No checksum for first source file
-  'checksumfor2ndfile',
+  '0123456789...abcdef', # checksum for 2nd file
   {
-    'third_file_x86_64.tgz': 'checksum',
+    'third_file_x86_64.tgz': 'fedcba...9876543210',
     'third_file_aarch64.tgz': None,
   },
 ]
@@ -538,7 +542,7 @@ cannot be automated. Reasons for this include:
 You can use the `download_instructions` parameter to specify steps for
 the user to do. This parameter takes string value and prints it whenever
 build fails because any file needed was not found. If
-`download_instructions` is not specified, Easybuild prints the default
+`download_instructions` is not specified, EasyBuild prints the default
 message stating the paths that were tested.
 
 ``` python
