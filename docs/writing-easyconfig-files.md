@@ -312,9 +312,9 @@ checksums = [
 ]
 ```
 
-The difference between having an entry in the dict with the value of `None` and not having an entry
-only matters when using the `--enforce_checksums` option which will raise an error in the latter case.
-
+Note that not having an entry in the dict for a file will raise an error
+while a value of `None` will skip the checksum verification for that file.
+But even in the latter case the `--enforce_checksums` option will raise an error.
 
 ##### Adding or replacing checksums using `--inject-checksums` {: #inject_checksums }
 
