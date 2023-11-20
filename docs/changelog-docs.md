@@ -186,7 +186,7 @@ search:
     release notes for EasyBuild v3.4.0 (see
     [EasyBuild v3.4.0 (September 10th 2017)][release_notes_eb340])
 - **release 20170906.01** (*Sept 6th 2017*): document
-    `--trace` (see [Tracing progress][trace])
+    `--trace` (see [Tracing progress](tracing-progress.md))
 - **release 20170824.02** (*Aug 24th 2017*): document
     `--inject-checksums` (see [Adding or replacing checksums using `--inject-checksums`][inject_checksums])
 - **release 20170824.01** (*Aug 24th 2017*): document
