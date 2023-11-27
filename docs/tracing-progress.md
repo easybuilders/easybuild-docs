@@ -1,4 +1,4 @@
-# Tracing progress {: #trace }
+# Tracing progress
 
 To trace the progress of EasyBuild while it is installing software, you
 can use `eb --trace`.
