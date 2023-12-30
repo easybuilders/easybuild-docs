@@ -53,6 +53,7 @@
     - JuliaBundle
     - PerlBundle
     - PythonBundle
+      - CargoPythonBundle
     - SystemCompiler
     - SystemMPI
     - Toolchain
@@ -115,6 +116,7 @@
     - EB_FFTW
       - EB_FFTW_period_MPI
     - EB_flex
+    - EB_flook
     - EB_FreeFEM
     - EB_freetype
     - EB_g2clib
@@ -127,6 +129,7 @@
     - EB_HEALPix
     - EB_HPCG
     - EB_HPL
+      - EB_HPCC
     - EB_Hypre
     - EB_LAPACK
     - EB_libdrm
@@ -221,6 +224,7 @@
   - EB_Nim
   - EB_OpenFOAM
   - EB_OpenIFS
+  - EB_PALM
   - EB_ParMETIS
   - EB_Rosetta
   - EB_SAS
@@ -236,6 +240,7 @@
   - EB_WRF_minus_Fire
   - ExtensionEasyBlock
     - Cargo
+      - CargoPythonBundle
       - CargoPythonPackage
     - EB_Scipion
     - JuliaPackage
@@ -352,6 +357,7 @@
 - **Extension**
   - ExtensionEasyBlock
     - Cargo
+      - CargoPythonBundle
       - CargoPythonPackage
     - EB_Scipion
     - JuliaPackage
