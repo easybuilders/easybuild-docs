@@ -276,12 +276,13 @@ Option flag                                                              |Option
 ``--max-fail-ratio-adjust-permissions=MAX-FAIL-RATIO-ADJUST-PERMISSIONS``|Maximum ratio for failures to allow when adjusting permissions (type float; default: 0.5)
 ``--minimal-build-env=MINIMAL-BUILD-ENV``                                |Minimal build environment to define when using system toolchain, specified as a comma-separated list that defines a mapping between name of environment variable and its value separated by a colon (':') (default: CC:gcc,CXX:g++)
 ``--minimal-toolchains``                                                 |Use minimal toolchain when resolving dependencies (default: False)
+``--module-cache-suffix=MODULE-CACHE-SUFFIX``                            |Suffix to add to the cache file name (before the extension) when updating the modules tool cache
 ``--module-only``                                                        |Only generate module file(s); skip all steps except for module, prepare, ready, postiter, sanitycheck (default: False)
 ``--modules-tool-version-check``                                         |Check version of modules tool being used (default: True; disable with --disable-modules-tool-version-check)
 ``--mpi-cmd-template=MPI-CMD-TEMPLATE``                                  |Template for MPI commands (template keys: %(nr_ranks)s, %(cmd)s)
 ``--mpi-tests``                                                          |Run MPI tests (when relevant) (default: True; disable with --disable-mpi-tests)
 ``--optarch=OPTARCH``                                                    |Set architecture optimization, overriding native architecture optimizations
-``--output-format=OUTPUT-FORMAT``                                        |Set output format (type choice; default: txt) (choices: md, rst, txt)
+``--output-format=OUTPUT-FORMAT``                                        |Set output format (type choice; default: txt) (choices: json, md, rst, txt)
 ``--output-style=OUTPUT-STYLE``                                          |Control output style; auto implies using Rich if available to produce rich output, with fallback to basic colored output (type choice; default: auto) (choices: auto, basic, no_color, rich)
 ``--parallel=PARALLEL``                                                  |Specify (maximum) level of parallelism used during build procedure (type int)
 ``--parallel-extensions-install``                                        |Install list of extensions in parallel (if supported) (default: False)
