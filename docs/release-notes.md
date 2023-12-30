@@ -6,11 +6,150 @@ search:
 # EasyBuild release notes {: #release_notes }
 
 The latest version of EasyBuild provides support for building and
-installing [**3,292** different software packages](version-specific/supported-software.md),
+installing [**3,369** different software packages](version-specific/supported-software.md),
 including 40 different (compiler) toolchains.
-It contains 251 software-specific easyblocks and 42 generic easyblocks,
-alongside 18,407 easyconfig files.
+It contains 254 software-specific easyblocks and 43 generic easyblocks,
+alongside 18,752 easyconfig files.
 
+
+## EasyBuild v4.9.0 (29 Dec 2023) {: #release_notes_eb490 }
+
+feature release
+
+**framework**
+
+- various enhancements, including:
+    - allow tweaking of easyconfigs from different toolchains ([#3669](https://github.com/easybuilders/easybuild-framework/pull/3669))
+    - add support for `--list-software --output-format=json` ([#4152](https://github.com/easybuilders/easybuild-framework/pull/4152))
+    - add `--module-cache-suffix` configuration setting to allow multiple (Lmod) caches ([#4403](https://github.com/easybuilders/easybuild-framework/pull/4403))
+- various bug fixes, including:
+    - deduplicate warnings & errors found in logs and add initial newline + tab in output ([#4361](https://github.com/easybuilders/easybuild-framework/pull/4361))
+    - fix support for Environment Modules as modules tool to pass unit tests with v4.2+ ([#4369](https://github.com/easybuilders/easybuild-framework/pull/4369))
+    - adapt module function check for Environment Modules v4+ ([#4371](https://github.com/easybuilders/easybuild-framework/pull/4371))
+    - only install GitHub token when testing with Lmod 8.x + Python 3.6 or 3.9 ([#4375](https://github.com/easybuilders/easybuild-framework/pull/4375))
+    - use `-qopenmp` instead of `-fiopenmp` for OpenMP in Intel compilers ([#4377](https://github.com/easybuilders/easybuild-framework/pull/4377))
+    - fix `LIBBLAS_MT` for FlexiBLAS, ensure `-lpthread` is included ([#4379](https://github.com/easybuilders/easybuild-framework/pull/4379))
+    - relax major version match regex in `find_related_easyconfigs` using for `--review-pr` ([#4385](https://github.com/easybuilders/easybuild-framework/pull/4385))
+    - eliminate duplicate multideps from generated module files ([#4386](https://github.com/easybuilders/easybuild-framework/pull/4386))
+    - resolve templated values in extension names in `_make_extension_list` ([#4392](https://github.com/easybuilders/easybuild-framework/pull/4392))
+    - use source toolchain version when passing only `--try-toolchain` ([#4395](https://github.com/easybuilders/easybuild-framework/pull/4395))
+    - fix writing spider cache for Lmod >= 8.7.12 ([#4402](https://github.com/easybuilders/easybuild-framework/pull/4402))
+    - fix `--inject-checksums` when extension specifies patch file in tuple format ([#4405](https://github.com/easybuilders/easybuild-framework/pull/4405))
+    - fix `LooseVersion` when running with Python 2.7 ([#4408](https://github.com/easybuilders/easybuild-framework/pull/4408))
+    - use more recent easyblocks PR in `test_github_merge_pr` ([#4414](https://github.com/easybuilders/easybuild-framework/pull/4414))
+- other changes:
+    - extend test that checks build environment to recent `foss/2023a` toolchain ([#4391](https://github.com/easybuilders/easybuild-framework/pull/4391))
+
+**easyblocks**
+
+- add generic `CargoPythonBundle` easyblock ([#2964](https://github.com/easybuilders/easybuild-easyblocks/pull/2964))
+- 3 new software-specific easyblocks: flook ([#3034](https://github.com/easybuilders/easybuild-easyblocks/pull/3034)), HPCC ([#3009](https://github.com/easybuilders/easybuild-easyblocks/pull/3009)), PALM ([#3020](https://github.com/easybuilders/easybuild-easyblocks/pull/3020))
+- minor enhancements and updates, including:
+    - add custom easyconfig parameter `cmake_options` to SuiteSparse easyblock ([#3031](https://github.com/easybuilders/easybuild-easyblocks/pull/3031))
+    - update custom intel-compilers easyblock for versions >= 2024 ([#3037](https://github.com/easybuilders/easybuild-easyblocks/pull/3037))
+    - update custom easyblock for Intel MPI easyblock for v2021.11 ([#3039](https://github.com/easybuilders/easybuild-easyblocks/pull/3039))
+    - update numpy easyblock for v1.26+ ([#3041](https://github.com/easybuilders/easybuild-easyblocks/pull/3041))
+    - update custom easyblock for Intel MKL for v2024.x ([#3042](https://github.com/easybuilders/easybuild-easyblocks/pull/3042))
+    - update Ferret easyblock to be compatible with v7.6.0 ([#3052](https://github.com/easybuilders/easybuild-easyblocks/pull/3052))
+- various bug fixes, including:
+    - add support for allowing version mismatch + consider versionsuffix when creating `.modulerc` in `ModuleRC` easyblock ([#3028](https://github.com/easybuilders/easybuild-easyblocks/pull/3028))
+    - update error detection for PyTorch tests ([#3033](https://github.com/easybuilders/easybuild-easyblocks/pull/3033))
+    - disable LLVM build downloads from CI in Rust ([#3038](https://github.com/easybuilders/easybuild-easyblocks/pull/3038))
+    - add requirement for EULA acceptance to CUDA easyblock ([#3045](https://github.com/easybuilders/easybuild-easyblocks/pull/3045))
+    - make various fixes and enhancements to NWChem easyblock ([#3049](https://github.com/easybuilders/easybuild-easyblocks/pull/3049))
+    - add binutils symlinks when building TensorFlow with `--rpath` ([#3054](https://github.com/easybuilders/easybuild-easyblocks/pull/3054), [#3058](https://github.com/easybuilders/easybuild-easyblocks/pull/3058))
+    - fix specifying path to SuiteSparse header files and libraries in numpy, Trilinos, PETSc easyblocks ([#3056](https://github.com/easybuilders/easybuild-easyblocks/pull/3056))
+    - fix `det_pylibdir` provided by `PythonPackage` easyblock for Python 3.12+ ([#3057](https://github.com/easybuilders/easybuild-easyblocks/pull/3057))
+    - fix nvptx sanity check for Clang >= 14.x ([#3059](https://github.com/easybuilders/easybuild-easyblocks/pull/3059))
+- other changes:
+    - update SuiteSparse easyblock to only install SuiteSparse libraries with `make install` ([#3004](https://github.com/easybuilders/easybuild-easyblocks/pull/3004))
+    - also consider `$EB_COMSOL_LICENSE_FILE` environment variable in custom easyblock for COMSOL ([#3044](https://github.com/easybuilders/easybuild-easyblocks/pull/3044))
+    - import `LooseVersion` from `easybuild.tools` instead of `distutils.version` in easyblocks ([#3048](https://github.com/easybuilders/easybuild-easyblocks/pull/3048))
+
+**easyconfigs**
+
+- added easyconfigs for `foss/2023b` ([#19449](https://github.com/easybuilders/easybuild-easyconfigs/pull/19449)) and `intel/2023b` ([#19450](https://github.com/easybuilders/easybuild-easyconfigs/pull/19450)) common toolchains
+- added example easyconfig files for 77 new software packages:
+    - AICSImageIO ([#19315](https://github.com/easybuilders/easybuild-easyconfigs/pull/19315)), ANTIC ([#19203](https://github.com/easybuilders/easybuild-easyconfigs/pull/19203)), BiasAdjustCXX ([#19341](https://github.com/easybuilders/easybuild-easyconfigs/pull/19341)), BOPTEST ([#19295](https://github.com/easybuilders/easybuild-easyconfigs/pull/19295)), BRiAl ([#19208](https://github.com/easybuilders/easybuild-easyconfigs/pull/19208)), castor ([#19176](https://github.com/easybuilders/easybuild-easyconfigs/pull/19176)),
+    CellBender ([#19296](https://github.com/easybuilders/easybuild-easyconfigs/pull/19296)), cliquer ([#19210](https://github.com/easybuilders/easybuild-easyconfigs/pull/19210), [#19323](https://github.com/easybuilders/easybuild-easyconfigs/pull/19323)), CPMD ([#19387](https://github.com/easybuilders/easybuild-easyconfigs/pull/19387)), cppyy ([#19204](https://github.com/easybuilders/easybuild-easyconfigs/pull/19204)), CUDD ([#19208](https://github.com/easybuilders/easybuild-easyconfigs/pull/19208)), datalad ([#18675](https://github.com/easybuilders/easybuild-easyconfigs/pull/18675)),
+    Demystify ([#17990](https://github.com/easybuilders/easybuild-easyconfigs/pull/17990)), dftd4 ([#19223](https://github.com/easybuilders/easybuild-easyconfigs/pull/19223)), dialog ([#17696](https://github.com/easybuilders/easybuild-easyconfigs/pull/17696)), DIA-NN ([#19454](https://github.com/easybuilders/easybuild-easyconfigs/pull/19454)), dynesty ([#19091](https://github.com/easybuilders/easybuild-easyconfigs/pull/19091)), ebGSEA ([#19447](https://github.com/easybuilders/easybuild-easyconfigs/pull/19447)),
+    ECL ([#19211](https://github.com/easybuilders/easybuild-easyconfigs/pull/19211)), eclib ([#19209](https://github.com/easybuilders/easybuild-easyconfigs/pull/19209)), epct ([#19298](https://github.com/easybuilders/easybuild-easyconfigs/pull/19298)), EUKulele ([#19217](https://github.com/easybuilders/easybuild-easyconfigs/pull/19217)), FACE ([#14840](https://github.com/easybuilders/easybuild-easyconfigs/pull/14840)), fastml ([#19357](https://github.com/easybuilders/easybuild-easyconfigs/pull/19357)), forbear ([#14840](https://github.com/easybuilders/easybuild-easyconfigs/pull/14840)),
+    fplll ([#19371](https://github.com/easybuilders/easybuild-easyconfigs/pull/19371)), fpylll ([#19371](https://github.com/easybuilders/easybuild-easyconfigs/pull/19371)), ftfy ([#19353](https://github.com/easybuilders/easybuild-easyconfigs/pull/19353)), Gdspy ([#19458](https://github.com/easybuilders/easybuild-easyconfigs/pull/19458)), GFF3-toolkit ([#19071](https://github.com/easybuilders/easybuild-easyconfigs/pull/19071)), giac ([#19323](https://github.com/easybuilders/easybuild-easyconfigs/pull/19323)), GMP-ECM ([#19323](https://github.com/easybuilders/easybuild-easyconfigs/pull/19323)),
+    HepMC ([#19139](https://github.com/easybuilders/easybuild-easyconfigs/pull/19139)), hic-straw ([#19309](https://github.com/easybuilders/easybuild-easyconfigs/pull/19309)), HPCC ([#18892](https://github.com/easybuilders/easybuild-easyconfigs/pull/18892)), iced ([#19309](https://github.com/easybuilders/easybuild-easyconfigs/pull/19309)), IML ([#19201](https://github.com/easybuilders/easybuild-easyconfigs/pull/19201)), iperf ([#19259](https://github.com/easybuilders/easybuild-easyconfigs/pull/19259)), jedi ([#19269](https://github.com/easybuilders/easybuild-easyconfigs/pull/19269)),
+    jedi-language-server ([#19269](https://github.com/easybuilders/easybuild-easyconfigs/pull/19269)), jupyter-rsession-proxy ([#19311](https://github.com/easybuilders/easybuild-easyconfigs/pull/19311)), lcalc ([#19329](https://github.com/easybuilders/easybuild-easyconfigs/pull/19329)), libaed2 ([#14840](https://github.com/easybuilders/easybuild-easyconfigs/pull/14840)),
+    LoopTools ([#19397](https://github.com/easybuilders/easybuild-easyconfigs/pull/19397)), m4ri ([#19208](https://github.com/easybuilders/easybuild-easyconfigs/pull/19208)), m4rie ([#19208](https://github.com/easybuilders/easybuild-easyconfigs/pull/19208)), MDI ([#19417](https://github.com/easybuilders/easybuild-easyconfigs/pull/19417)), mdust ([#19106](https://github.com/easybuilders/easybuild-easyconfigs/pull/19106)), MitoHiFi ([#19263](https://github.com/easybuilders/easybuild-easyconfigs/pull/19263)), MPFI ([#19323](https://github.com/easybuilders/easybuild-easyconfigs/pull/19323)),
+    multicharge ([#19221](https://github.com/easybuilders/easybuild-easyconfigs/pull/19221)), OMERO.insight ([#19337](https://github.com/easybuilders/easybuild-easyconfigs/pull/19337)), OMERO.py ([#19338](https://github.com/easybuilders/easybuild-easyconfigs/pull/19338)), PFFT ([#19255](https://github.com/easybuilders/easybuild-easyconfigs/pull/19255)), primecount ([#19370](https://github.com/easybuilders/easybuild-easyconfigs/pull/19370)),
+    primecountpy ([#19370](https://github.com/easybuilders/easybuild-easyconfigs/pull/19370)), PyAV ([#19359](https://github.com/easybuilders/easybuild-easyconfigs/pull/19359)), pycubescd ([#19302](https://github.com/easybuilders/easybuild-easyconfigs/pull/19302)), pylipid ([#19428](https://github.com/easybuilders/easybuild-easyconfigs/pull/19428)), PySINDy ([#19306](https://github.com/easybuilders/easybuild-easyconfigs/pull/19306)),
+    pythermalcomfort ([#19285](https://github.com/easybuilders/easybuild-easyconfigs/pull/19285)), PyTorchVideo ([#19359](https://github.com/easybuilders/easybuild-easyconfigs/pull/19359)), R-bundle-CRAN ([#19170](https://github.com/easybuilders/easybuild-easyconfigs/pull/19170)), Restrander ([#19232](https://github.com/easybuilders/easybuild-easyconfigs/pull/19232)), scikit-lego ([#19064](https://github.com/easybuilders/easybuild-easyconfigs/pull/19064)),
+    scrublet ([#19215](https://github.com/easybuilders/easybuild-easyconfigs/pull/19215)), SEACells ([#18724](https://github.com/easybuilders/easybuild-easyconfigs/pull/18724)), simanneal ([#19347](https://github.com/easybuilders/easybuild-easyconfigs/pull/19347)), Simstrat ([#14840](https://github.com/easybuilders/easybuild-easyconfigs/pull/14840)), solo ([#19216](https://github.com/easybuilders/easybuild-easyconfigs/pull/19216)), SPEI ([#19441](https://github.com/easybuilders/easybuild-easyconfigs/pull/19441)),
+    SUPPA ([#19181](https://github.com/easybuilders/easybuild-easyconfigs/pull/19181), [#19275](https://github.com/easybuilders/easybuild-easyconfigs/pull/19275)), SYMMETRICA ([#19328](https://github.com/easybuilders/easybuild-easyconfigs/pull/19328)), Triton ([#19381](https://github.com/easybuilders/easybuild-easyconfigs/pull/19381)), vaeda ([#19214](https://github.com/easybuilders/easybuild-easyconfigs/pull/19214)), VSCode ([#19418](https://github.com/easybuilders/easybuild-easyconfigs/pull/19418)), waLBerla ([#18932](https://github.com/easybuilders/easybuild-easyconfigs/pull/18932))
+- added additional easyconfigs for various supported software packages, including:
+    - ANTs 2.5.0, Arriba 2.4.0, Arrow 14.0.1, at-spi2-core 2.50.0, Autoconf-archive 2023.02.20, awscli 2.15.2,
+    Blender 3.6.5 + 4.0.1, Boost 1.83.0, boto3 1.28.70, Bracken 2.9, BUStools 0.43.1, cairo 1.18.0, cairomm 1.16.2,
+    CASTEP 23.1, cddlib 0.94m, cdo-bindings 1.6.0, CellRanger 7.2.0, CoCoALib 0.99818, COMSOL 6.2.0.290, Coreutils 9.1,
+    cryptography 41.0.5, CubeLib 4.8.2, CubeWriter 4.8.2,  CUDA 12.3.0, CVXPY 1.3.0, cysignals 1.11.2, DBus 1.15.8,
+    dftd4 3.4.0, E-ANTIC 1.3.0, elfutils 0.190, f90wrap 0.2.11, FastQC 0.12.1, Ferret 7.6.0, FFLAS-FFPACK 2.5.0,
+    ffnvcodec 12.1.14.0, FPM 1.15.1, FriBidi 1.0.13, gap 4.12.2, git-lfs 3.4.0, GitPython 3.1.40, Givaro 4.2.0,
+    GLib 2.78.1, glog 0.6.0, GObject-Introspection 1.78.1, gperftools 2.13, GPyTorch 1.10, GROMACS 2023.3,
+    HarfBuzz 8.2.2, HiC-Pro 3.1.0, hifiasm 0.19.7, hypothesis 6.90.0, ICU 74.1, imageio 2.33.1, imkl 2024.0.0,
+    impi 2021.11.0, intel-compilers 2024.0.0, IPython 8.17.2, ITK 5.3.0, Kent_tools 457, KyotoCabinet 1.2.80,
+    LHAPDF 6.5.4, libfdf 0.5.0, libjxl 0.8.2, LinBox 1.7.0, lrslib 7.2, lxml 4.9.3, magma 2.7.2, maturin 1.3.1,
+    MEME 5.5.4, meson-python 0.15.0, Miniconda3 23.9.0, Mmg 5.7.2, Molden 7.3, mrcfile 1.4.3, nanoflann 1.5.0,
+    nauty 2.8.6, Nextflow 23.10.0, nodejs 20.9.0, Normaliz 3.10.1, NSS 3.94, NWChem 7.2.2, Oases 20180312, Pango 1.51.0,
+    Parallel-Hashmap 1.36, parameterized 0.9.0, phonopy 2.20.0, pigz 2.8, pmt 1.2.0, poetry 1.6.1, PostgreSQL 16.1,
+    pplpy 0.8.9, PyCairo 1.25.1, pypmt 1.2.0, PyQt5 5.15.7, pytest 7.4.2, pytest-xdist 3.3.1,
+    Python-bundle-PyPI 2023.10, PyTorch 2.1.2, R 4.3.2, RASPA2 2.0.47, SBCL 2.3.11, SCENIC 1.3.0, scikit-image 0.22.0,
+    SciPy-bundle 2023.11, SDL2 2.28.5, setuptools-rust 1.8.0, Seurat 4.4.0, SimpleITK 2.3.1, Singular 4.3.2p10,
+    Spark 3.5.0, STAR 2.7.11a, STAR-CCM+ 2310, strace 6.6, SuiteSparse 7.1.0, tbb 2021.11.0, TOML-Fortran 0.4.1,
+    TRAVIS-Analyzer 220729, UCX-CUDA 1.15.0, VirSorter 1.0.6, virtualenv 20.24.6, VSEARCH 2.25.0, VTK 9.3.0,
+    wandb 0.16.1, XGBoost 2.0.2, xprop 1.2.6, xtb 6.6.1, Xvfb 21.1.9, xxd 9.0.2112
+- minor enhancements, including:
+    - add sanity check commands for recent GDB versions ([#19102](https://github.com/easybuilders/easybuild-easyconfigs/pull/19102))
+    - add aarch64 and ppc64le checksums to NVHPC 23.7 ([#19249](https://github.com/easybuilders/easybuild-easyconfigs/pull/19249))
+    - allow Python version of Z3 to be used as a dependency ([#19354](https://github.com/easybuilders/easybuild-easyconfigs/pull/19354))
+- various bug fixes, including:
+    - use `CargoPythonBundle` generic easyblock for timm to install required Rust packages in a controlled way ([#18332](https://github.com/easybuilders/easybuild-easyconfigs/pull/18332))
+    - add alternate checksum for OpenImageIO v2.4.14.0 ([#19090](https://github.com/easybuilders/easybuild-easyconfigs/pull/19090))
+    - only set flag `--enable-asmjit` for PLUMED when installing on `x86_64` ([#19110](https://github.com/easybuilders/easybuild-easyconfigs/pull/19110))
+    - ensure right Python version is used in DP3, WSClean and dependencies by specifying `-DPython3_EXECUTABLE` CMake option ([#19119](https://github.com/easybuilders/easybuild-easyconfigs/pull/19119))
+    - add patch to work around potential crash in PyTorch 1.13.1 caused by GCC 12 compiler bug ([#19133](https://github.com/easybuilders/easybuild-easyconfigs/pull/19133))
+    - add patch to fix detection of newer Intel CPUs in OpenBLAS 0.3.20 through 0.3.23 ([#19141](https://github.com/easybuilders/easybuild-easyconfigs/pull/19141))
+    - remove outdated `--disable-docs` configure option from FriBidi-1.0.12 ([#19147](https://github.com/easybuilders/easybuild-easyconfigs/pull/19147))
+    - add libiconv dependency to gettext 0.22 ([#19155](https://github.com/easybuilders/easybuild-easyconfigs/pull/19155))
+    - fix OpenBLAS 0.3.20+ on newer Intel CPUs ([#19159](https://github.com/easybuilders/easybuild-easyconfigs/pull/19159))
+    - only use ScaFaCos as dependency for LAMMPS 23Jun2022 on `x86_64` ([#19164](https://github.com/easybuilders/easybuild-easyconfigs/pull/19164))
+    - add patch to fix regression in GCC 12.x on AVX512 systems ([#19180](https://github.com/easybuilders/easybuild-easyconfigs/pull/19180))
+    - add pkgconf build dependency to libGLU ([#19186](https://github.com/easybuilders/easybuild-easyconfigs/pull/19186))
+    - sidestep some build issues with CUDA-Samples 12.1 ([#19189](https://github.com/easybuilders/easybuild-easyconfigs/pull/19189))
+    - make Pillow easyconfigs aware of sysroot template ([#19226](https://github.com/easybuilders/easybuild-easyconfigs/pull/19226), [#19267](https://github.com/easybuilders/easybuild-easyconfigs/pull/19267))
+    - fix possible error/crash in NCCL on x86 due to cpuid ([#19231](https://github.com/easybuilders/easybuild-easyconfigs/pull/19231))
+    - reduce timestep to fix sanity check commands in LAMMPS 23Jun2022 ([#19246](https://github.com/easybuilders/easybuild-easyconfigs/pull/19246))
+    - add patch for GCC 12.x to fix miscompiling C++ code causing double-free in case of exceptions ([#19253](https://github.com/easybuilders/easybuild-easyconfigs/pull/19253))
+    - replace format tag with explicit extension name in Optuna v3.0.3 ([#19256](https://github.com/easybuilders/easybuild-easyconfigs/pull/19256))
+    - enhance easyconfigs for gnuplot 5.4.x to make sure that Lua dependency is always used ([#19261](https://github.com/easybuilders/easybuild-easyconfigs/pull/19261))
+    - patch setup.py for grpcio extension in TensorFlow 2.13.0 easyconfigs to take into account alternate sysroot ([#19268](https://github.com/easybuilders/easybuild-easyconfigs/pull/19268))
+    - avoid indirect dependency on old CMake version built with GCCcore/10.2.0 via Catch2 build dependency using system toolchain in recent pybind11 easyconfigs ([#19270](https://github.com/easybuilders/easybuild-easyconfigs/pull/19270))
+    - use existing patch in pybind11 2.6.2 and 2.7.1 to fix failing test due to extra whitespace ([#19279](https://github.com/easybuilders/easybuild-easyconfigs/pull/19279))
+    - change toolchain in `json-fortran` easyconfigs to `GCC`, since it includes Fortran modules ([#19283](https://github.com/easybuilders/easybuild-easyconfigs/pull/19283))
+    - remove Unicode character in description of SMRT-Link easyconfigs ([#19312](https://github.com/easybuilders/easybuild-easyconfigs/pull/19312))
+    - don't use `%(namelower)s` template in extension name in IPython v8.14.0 easyconfig ([#19330](https://github.com/easybuilders/easybuild-easyconfigs/pull/19330))
+    - add patch to fix `[cz]asums` in OpenBLAS 0.3.24 ([#19331](https://github.com/easybuilders/easybuild-easyconfigs/pull/19331))
+    - fix failing tokenizers with `CargoPythonPackage` easyblock ([#19333](https://github.com/easybuilders/easybuild-easyconfigs/pull/19333))
+    - define `$GTKDOCIZE` as '`echo`' before generating configure script for new HarfBuzz versions ([#19339](https://github.com/easybuilders/easybuild-easyconfigs/pull/19339))
+    - fix PAPI test step hanging on some systems ([#19372](https://github.com/easybuilders/easybuild-easyconfigs/pull/19372))
+    - compile LERC test binary in `postinstallcmds` to fix sanity check error when RPATH linking is enabled ([#19386](https://github.com/easybuilders/easybuild-easyconfigs/pull/19386))
+    - use `GCC` toolchain in `kim-api`, since it includes Fortran modules ([#19399](https://github.com/easybuilders/easybuild-easyconfigs/pull/19399), [#19401](https://github.com/easybuilders/easybuild-easyconfigs/pull/19401), [#19402](https://github.com/easybuilders/easybuild-easyconfigs/pull/19402), [#19403](https://github.com/easybuilders/easybuild-easyconfigs/pull/19403), [#19404](https://github.com/easybuilders/easybuild-easyconfigs/pull/19404), [#19405](https://github.com/easybuilders/easybuild-easyconfigs/pull/19405))
+    - fix wrong handling of floats in z3-solver ([#19414](https://github.com/easybuilders/easybuild-easyconfigs/pull/19414))
+    - Fix numpy build on Sapphire Rapids CPUs in SciPy-bundle-2023.07-gfbf-2023a ([#19419](https://github.com/easybuilders/easybuild-easyconfigs/pull/19419), [#19425](https://github.com/easybuilders/easybuild-easyconfigs/pull/19425))
+    - allow ITK legacy code and Python wrappers in ITK v5.2.1 ([#19431](https://github.com/easybuilders/easybuild-easyconfigs/pull/19431))
+    - link to xxHash library provided via EasyBuild in python-xxhash v3.2.0 ([#19432](https://github.com/easybuilders/easybuild-easyconfigs/pull/19432))
+    - include MPFR 4.1.0 patch in MPFR 4.2.0 easyconfigs to fix failing tsprintf test with glibc >= 2.37 ([#19438](https://github.com/easybuilders/easybuild-easyconfigs/pull/19438))
+    - skip `Test::Sys::Info` test that expects `/etc/fstab` in Perl-bundle-CPAN ([#19440](https://github.com/easybuilders/easybuild-easyconfigs/pull/19440))
+    - exclude `cdp*` CUDA samples that fail to build on aarch64 in CUDA-Samples v12.1 ([#19451](https://github.com/easybuilders/easybuild-easyconfigs/pull/19451))
+- other changes:
+    - let SuiteSparse easyblock set `CMAKE_OPTIONS` for SuiteSparse v7.1.0 ([#19177](https://github.com/easybuilders/easybuild-easyconfigs/pull/19177))
+    - add versionsuffix `-param` to easyconfig for ReaxFF 2.0 ([#19307](https://github.com/easybuilders/easybuild-easyconfigs/pull/19307))
+    - use `LooseVersion` from `easybuild.tools` ([#19376](https://github.com/easybuilders/easybuild-easyconfigs/pull/19376))
 
 ## EasyBuild v4.8.2 (29 Oct 2023) {: #release_notes_eb482 }
 
