@@ -23,16 +23,20 @@ This function replaces both the `run_cmd` and `run_cmd_qa` functions, which will
 First of all `run_shell_cmd` has been designed so the defaults can be used for most situations.
 In that case the main thing to watch out for is the return code, which changed from a tuple `(output, exit_code)`
 to a named tuple with three fields:
+
 - `output`: command output, `stdout`+`stderr` combined if `split_stderr` is disabled, only `stdout` otherwise
 - `exit_code`: exit code of command (integer)
 - `stderr`: stderr output if `split_stderr` is enabled, `None` otherwise
 
 A typical transition will then change
-```
+
+```python
 (out, _) = run_cmd(cmd, log_all=True, simple=False)
 ```
+
 to
-```
+
+```python
 res = run_shell_cmd(cmd)
 out = res.output
 ```
