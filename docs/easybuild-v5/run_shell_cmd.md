@@ -8,17 +8,12 @@ This function replaces both the `run_cmd` and `run_cmd_qa` functions, which will
 
 ## Motivation
 
-...
+Over the years `run_cmd` and `run_cmd_qa` accumulated a lot of arguments which sometimes have misleading names.
+Moreover they have two different kinds of return values (depending on whether called with `simple=True` or `simple=False`).
+So a new command `run_shell_cmd` is introduced to replace both, using more direct and natural arguments, and as a bonus,
+better error reporting. In line with `--trace` being set by default, `run_shell_cmd` is now also more verbose by default.
 
 ## High-level overview
-
-...
-
-## Use cases
-
-...
-
-## Transitioning from `run_cmd` to `run_shell_cmd`
 
 First of all `run_shell_cmd` has been designed so the defaults can be used for most situations.
 In that case the main thing to watch out for is the return code, which changed from a tuple `(output, exit_code)`
@@ -40,6 +35,28 @@ to
 res = run_shell_cmd(cmd)
 out = res.output
 ```
+
+## Use cases
+
+Examples:
+
+- Basic use
+
+  ```python
+  cmd = ' '.join([self.cfg['preinstallopts'], install_cmd, self.cfg['installopts']])
+  run_shell_cmd(cmd)
+  ```
+
+- Get error code for both failure and non-failure of the command, as otherwise `run_shell_cmd` will raise `RunShellCmdError`. Additionally, don't display this command in terminal output:
+
+  ```python
+  cmd = "cmake --version"
+  res = run_shell_cmd(cmd, hidden=True, fail_on_error=False)
+  out = res.output
+  ec = res.code
+  ```
+
+## Transitioning from `run_cmd` to `run_shell_cmd`
 
 For parameters in general, the following translation table can be used, where the default values are shown:
 
@@ -66,5 +83,7 @@ For parameters in general, the following translation table can be used, where th
 |                      | `qa_wait_patterns=None`| list of 2-tuples with patterns for non-questions and number of iterations to allow these patterns to match with end out command output (not yet implemented for `run_shell_cmd`)|
 
 ## Transitioning from `run_cmd_qa` to `run_shell_cmd`
+
+This is still to be implemented in `run_shell_cmd`.
 
 ...
