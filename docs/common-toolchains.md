@@ -47,7 +47,7 @@ that explain the differences between the generations going back to the `2020b` v
 
 ``` mermaid
 graph LR
-  A[GCCCore] --> |binutils| B[GCC];
+  A[GCCcore] --> |binutils| B[GCC];
   A --> |binutils| C[intel-compilers];
   B --> |OpenMPI| E[gompi];
   C --> |impi| F[iimpi];
