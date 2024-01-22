@@ -17,7 +17,7 @@ better error reporting. In line with `--trace` being set by default, `run_shell_
 
 First of all `run_shell_cmd` has been designed so the defaults can be used for most situations.
 In that case the main thing to watch out for is the return code, which changed from a tuple `(output, exit_code)`
-to a named tuple with three fields:
+to a named tuple with multiple fields, the most prominent ones being:
 
 - `output`: command output, `stdout`+`stderr` combined if `split_stderr` is disabled, only `stdout` otherwise
 - `exit_code`: exit code of command (integer)
@@ -40,15 +40,13 @@ out = res.output
 
 Examples:
 
-- Basic use
-
+- Basic usage:
   ```python
   cmd = ' '.join([self.cfg['preinstallopts'], install_cmd, self.cfg['installopts']])
   run_shell_cmd(cmd)
   ```
 
 - Get error code for both failure and non-failure of the command, as otherwise `run_shell_cmd` will raise `RunShellCmdError`. Additionally, don't display this command in terminal output:
-
   ```python
   cmd = "cmake --version"
   res = run_shell_cmd(cmd, hidden=True, fail_on_error=False)
@@ -63,19 +61,19 @@ For parameters in general, the following translation table can be used, where th
 | run_cmd parameter    |run_shell_cmd parameter| meaning |
 | ---------------------|-----------------------|---------|
 | `cmd`                | `cmd`                 | command to run |
-| `log_all=False`      | (removed)             | always log command output and exit code (now always `True`) |
-| `simple=False`       | (removed)             | if `True`, just return `True`/`False` to indicate success (obsolete) |
-| `regexp=True`        | (removed)             | regex used to check the output for errors (obsolete) |
+| `log_all=False`      | (removed)             | always log command output and exit code *(now always `True`)* |
+| `simple=False`       | (removed)             | if `True`, just return `True`/`False` to indicate success *(obsolete)* |
+| `regexp=True`        | (removed)             | regex used to check the output for errors *(obsolete)* |
 | `log_ok=True`        | `fail_on_error=True`  | fail on non-zero exit code |
-|                      | `split_error=False`   | split of stderr from stdout output |
+|                      | `split_error=False`   | split of stderr from stdout output *(new feature)*|
 | `inp=None`           | `stdin=None`          | the input given to the command via `stdin` |
-|                      | `env=None`            | environment to use to run command (if `None`, inherit current process environment) |
+|                      | `env=None`            | environment to use to run command (if `None`, inherit current process environment) *(new feature)* |
 | `trace=True`         | `hidden=False`        | don't show command in terminal output with `--trace`, or `--extended-dry-run` / `-x`) |
 | `force_in_dry_run=False`| `in_dry_run=False` | also run command in dry run mode |
 | `verbose=True`       | `verbose_dry_run=False` | show that command is run in dry run mode (overrules `--hidden`) |
 | `path=None`          | `work_dir=None`       | working directory to run command in (current working directory if `None`) |
 | `shell=None`         | `use_bash=True`       | execute command through bash shell (`run_cmd` enables this for `None`)|
-| `log_output=False`   | `output_file=True`    | collect command output in temporary output file (changed default) |
+| `log_output=False`   | `output_file=True`    | collect command output in temporary output file *(changed default)* |
 | `stream_output=None` | `stream_output=None`  | stream command output to stdout (auto-enabled with `--logtostdout` if `None`) |
 | `asynchronous=False` | `asynchronous=False`  | run command asynchronously (not yet implemented for `run_shell_cmd`)|
 | `with_hooks=True`    | `with_hooks=True`     | trigger pre/post `run_cmd` or `run_shell_cmd` hooks |
