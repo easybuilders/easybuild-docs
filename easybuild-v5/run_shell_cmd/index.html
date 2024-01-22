@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
     
     
       
@@ -8369,14 +8369,152 @@
 <p>In EasyBuild v5.0, a new function named <code>run_shell_cmd</code> is introduced to run shell commands.</p>
 <p>This function replaces both the <code>run_cmd</code> and <code>run_cmd_qa</code> functions, which will be deprecated in EasyBuild v5.0.</p>
 <h2 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">&para;</a></h2>
-<p>...</p>
+<p>Over the years <code>run_cmd</code> and <code>run_cmd_qa</code> accumulated a lot of arguments which sometimes have misleading names.
+Moreover they have two different kinds of return values (depending on whether called with <code>simple=True</code> or <code>simple=False</code>).
+So a new command <code>run_shell_cmd</code> is introduced to replace both, using more direct and natural arguments, and as a bonus,
+better error reporting. In line with <code>--trace</code> being set by default, <code>run_shell_cmd</code> is now also more verbose by default.</p>
 <h2 id="high-level-overview">High-level overview<a class="headerlink" href="#high-level-overview" title="Permanent link">&para;</a></h2>
-<p>...</p>
+<p>First of all <code>run_shell_cmd</code> has been designed so the defaults can be used for most situations.
+In that case the main thing to watch out for is the return code, which changed from a tuple <code>(output, exit_code)</code>
+to a named tuple with multiple fields, the most prominent ones being:</p>
+<ul>
+<li><code>output</code>: command output, <code>stdout</code>+<code>stderr</code> combined if <code>split_stderr</code> is disabled, only <code>stdout</code> otherwise</li>
+<li><code>exit_code</code>: exit code of command (integer)</li>
+<li><code>stderr</code>: stderr output if <code>split_stderr</code> is enabled, <code>None</code> otherwise</li>
+</ul>
+<p>A typical transition will then change</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">run_cmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">log_all</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">simple</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+<p>to</p>
+<div class="highlight"><pre><span></span><code><span class="n">res</span> <span class="o">=</span> <span class="n">run_shell_cmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">output</span>
+</code></pre></div>
 <h2 id="use-cases">Use cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h2>
-<p>...</p>
+<p>Examples:</p>
+<ul>
+<li>Basic usage:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">cmd</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;preinstallopts&#39;</span><span class="p">],</span> <span class="n">install_cmd</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;installopts&#39;</span><span class="p">]])</span>
+<span class="n">run_shell_cmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Get error code for both failure and non-failure of the command, as otherwise <code>run_shell_cmd</code> will raise <code>RunShellCmdError</code>. Additionally, don't display this command in terminal output:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">cmd</span> <span class="o">=</span> <span class="s2">&quot;cmake --version&quot;</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">run_shell_cmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">hidden</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fail_on_error</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">output</span>
+<span class="n">ec</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">code</span>
+</code></pre></div>
 <h2 id="transitioning-from-run_cmd-to-run_shell_cmd">Transitioning from <code>run_cmd</code> to <code>run_shell_cmd</code><a class="headerlink" href="#transitioning-from-run_cmd-to-run_shell_cmd" title="Permanent link">&para;</a></h2>
-<p>...</p>
+<p>For parameters in general, the following translation table can be used, where the default values are shown:</p>
+<table>
+<thead>
+<tr>
+<th>run_cmd parameter</th>
+<th>run_shell_cmd parameter</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cmd</code></td>
+<td><code>cmd</code></td>
+<td>command to run</td>
+</tr>
+<tr>
+<td><code>log_all=False</code></td>
+<td>(removed)</td>
+<td>always log command output and exit code <em>(now always <code>True</code>)</em></td>
+</tr>
+<tr>
+<td><code>simple=False</code></td>
+<td>(removed)</td>
+<td>if <code>True</code>, just return <code>True</code>/<code>False</code> to indicate success <em>(obsolete)</em></td>
+</tr>
+<tr>
+<td><code>regexp=True</code></td>
+<td>(removed)</td>
+<td>regex used to check the output for errors <em>(obsolete)</em></td>
+</tr>
+<tr>
+<td><code>log_ok=True</code></td>
+<td><code>fail_on_error=True</code></td>
+<td>fail on non-zero exit code</td>
+</tr>
+<tr>
+<td></td>
+<td><code>split_error=False</code></td>
+<td>split of stderr from stdout output <em>(new feature)</em></td>
+</tr>
+<tr>
+<td><code>inp=None</code></td>
+<td><code>stdin=None</code></td>
+<td>the input given to the command via <code>stdin</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>env=None</code></td>
+<td>environment to use to run command (if <code>None</code>, inherit current process environment) <em>(new feature)</em></td>
+</tr>
+<tr>
+<td><code>trace=True</code></td>
+<td><code>hidden=False</code></td>
+<td>don't show command in terminal output with <code>--trace</code>, or <code>--extended-dry-run</code> / <code>-x</code>)</td>
+</tr>
+<tr>
+<td><code>force_in_dry_run=False</code></td>
+<td><code>in_dry_run=False</code></td>
+<td>also run command in dry run mode</td>
+</tr>
+<tr>
+<td><code>verbose=True</code></td>
+<td><code>verbose_dry_run=False</code></td>
+<td>show that command is run in dry run mode (overrules <code>--hidden</code>)</td>
+</tr>
+<tr>
+<td><code>path=None</code></td>
+<td><code>work_dir=None</code></td>
+<td>working directory to run command in (current working directory if <code>None</code>)</td>
+</tr>
+<tr>
+<td><code>shell=None</code></td>
+<td><code>use_bash=True</code></td>
+<td>execute command through bash shell (<code>run_cmd</code> enables this for <code>None</code>)</td>
+</tr>
+<tr>
+<td><code>log_output=False</code></td>
+<td><code>output_file=True</code></td>
+<td>collect command output in temporary output file <em>(changed default)</em></td>
+</tr>
+<tr>
+<td><code>stream_output=None</code></td>
+<td><code>stream_output=None</code></td>
+<td>stream command output to stdout (auto-enabled with <code>--logtostdout</code> if <code>None</code>)</td>
+</tr>
+<tr>
+<td><code>asynchronous=False</code></td>
+<td><code>asynchronous=False</code></td>
+<td>run command asynchronously (not yet implemented for <code>run_shell_cmd</code>)</td>
+</tr>
+<tr>
+<td><code>with_hooks=True</code></td>
+<td><code>with_hooks=True</code></td>
+<td>trigger pre/post <code>run_cmd</code> or <code>run_shell_cmd</code> hooks</td>
+</tr>
+<tr>
+<td></td>
+<td><code>qa_patterns=None</code></td>
+<td>list of 2-tuples with patterns for questions + corresponding answers (not yet implemented for <code>run_shell_cmd</code>)</td>
+</tr>
+<tr>
+<td></td>
+<td><code>qa_wait_patterns=None</code></td>
+<td>list of 2-tuples with patterns for non-questions and number of iterations to allow these patterns to match with end out command output (not yet implemented for <code>run_shell_cmd</code>)</td>
+</tr>
+</tbody>
+</table>
 <h2 id="transitioning-from-run_cmd_qa-to-run_shell_cmd">Transitioning from <code>run_cmd_qa</code> to <code>run_shell_cmd</code><a class="headerlink" href="#transitioning-from-run_cmd_qa-to-run_shell_cmd" title="Permanent link">&para;</a></h2>
+<p>This is still to be implemented in <code>run_shell_cmd</code>.</p>
 <p>...</p>
 
 
@@ -8398,7 +8536,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 20, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 22, 2024</span>
   </span>
 
     
@@ -8490,10 +8628,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.7389ff0e.min.js"></script>
       
         <script src="../../js/asciinema-player-2.6.1.js"></script>
       
