@@ -41,12 +41,14 @@ out = res.output
 Examples:
 
 - Basic usage:
+
   ```python
   cmd = ' '.join([self.cfg['preinstallopts'], install_cmd, self.cfg['installopts']])
   run_shell_cmd(cmd)
   ```
 
 - Get error code for both failure and non-failure of the command, as otherwise `run_shell_cmd` will raise `RunShellCmdError`. Additionally, don't display this command in terminal output:
+
   ```python
   cmd = "cmake --version"
   res = run_shell_cmd(cmd, hidden=True, fail_on_error=False)
