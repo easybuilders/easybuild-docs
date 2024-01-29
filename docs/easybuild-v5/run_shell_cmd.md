@@ -53,7 +53,7 @@ Examples:
   cmd = "cmake --version"
   res = run_shell_cmd(cmd, hidden=True, fail_on_error=False)
   out = res.output
-  ec = res.code
+  ec = res.exit_code
   ```
 
 ## Transitioning from `run_cmd` to `run_shell_cmd`
