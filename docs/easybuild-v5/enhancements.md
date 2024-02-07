@@ -20,7 +20,7 @@ See dedicated page on the new [`run_shell_cmd` function](run_shell_cmd.md).
 
 The [`--rpath` option][rpath_support] is enabled by default (see [easybuild-framework PR #4448](https://github.com/easybuilders/easybuild-framework/pull/4448)). The benefits for enabling RPATH are explained in [Why RPATH?][rpath_support_why].
 
-This enhancement **does not** add any filtering of envirnoment variables. This means that environment variables, such as
+This enhancement **does not** add any filtering of environment variables. This means that environment variables, such as
 `$LD_LIBRARY_PATH`, will continue to appear in the module files unless EasyBuild is configured to filter these variables
 (see [Relation to `$LD_LIBRARY_PATH`][rpath_support_LD_LIBRARY_PATH]).
 
