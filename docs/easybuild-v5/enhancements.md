@@ -5,7 +5,7 @@
 Various significant enhancements are included in EasyBuild v5.0, including:
 
 * [`run_shell_cmd` function][run_shell_cmd]
-* [Enable `--rpath` by default][rpath]
+* [Enable RPATH linking by default][rpath]
 * [Enable `--trace` by default][trace]
 
 ---
@@ -16,23 +16,26 @@ See dedicated page on the new [`run_shell_cmd` function](run_shell_cmd.md).
 
 ---
 
-## Enable `--rpath` by default {: #rpath }
+## Enable RPATH linking by default {: #rpath }
 
-The [`--rpath` option][rpath_support] is enabled by default (see [easybuild-framework PR #4448](https://github.com/easybuilders/easybuild-framework/pull/4448)). The benefits for enabling RPATH are explained in [Why RPATH?][rpath_support_why].
+The [RPATH linking][rpath_support] is enabled by default in EasyBuild v5.0 (see [easybuild-framework PR #4448](https://github.com/easybuilders/easybuild-framework/pull/4448)).
 
-This enhancement **does not** add any filtering of environment variables. This means that environment variables, such as
-`$LD_LIBRARY_PATH`, will continue to appear in the module files unless EasyBuild is configured to filter these variables
-(see [Relation to `$LD_LIBRARY_PATH`][rpath_support_LD_LIBRARY_PATH]).
+The benefits for enabling RPATH are explained in [Why RPATH?][rpath_support_why].
 
-To disable RPATH output, either:
+This enhancement **does not** add any filtering of environment variables. This means `$LD_LIBRARY_PATH`
+will continue to be appended by the environment module files EasyBuild generates,
+unless it is configured to filter these variables (via `--filter-env-vars`).
+See also [Relation to `$LD_LIBRARY_PATH`][rpath_support_LD_LIBRARY_PATH]).
+
+To disable RPATH linking, either:
 
 * Use the `--disable-rpath` command line option;
 * Set the `$EASYBUILD_DISABLE_RPATH` environment variable;
-* Disable trace mode in a [configuration file](../configuration.md#configuration_file):
+* Disable RPATH linking in an EasyBuild [configuration file](../configuration.md#configuration_file):
 
     ``` ini
     [override]
-    rapth=0
+    rpath=0
     ```
 
 
