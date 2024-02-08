@@ -18,7 +18,7 @@ See dedicated page on the new [`run_shell_cmd` function](run_shell_cmd.md).
 
 ## Enable RPATH linking by default {: #rpath }
 
-The [RPATH linking][rpath_support] is enabled by default in EasyBuild v5.0 (see [easybuild-framework PR #4448](https://github.com/easybuilders/easybuild-framework/pull/4448)).
+[RPATH linking][rpath_support] is enabled by default in EasyBuild v5.0 (see [easybuild-framework PR #4448](https://github.com/easybuilders/easybuild-framework/pull/4448)).
 
 The benefits for enabling RPATH are explained in [Why RPATH?][rpath_support_why].
 
