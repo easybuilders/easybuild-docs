@@ -24,8 +24,8 @@ The benefits for enabling RPATH are explained in [Why RPATH?][rpath_support_why]
 
 This enhancement **does not** add any filtering of environment variables. This means `$LD_LIBRARY_PATH`
 will continue to be appended by the environment module files EasyBuild generates,
-unless it is configured to filter these variables (via `--filter-env-vars`).
-See also [Relation to `$LD_LIBRARY_PATH`][rpath_support_LD_LIBRARY_PATH]).
+unless it is configured to filter these variables (via `--filter-env-vars`,
+see also [Relation to `$LD_LIBRARY_PATH`][rpath_support_LD_LIBRARY_PATH]).
 
 To disable RPATH linking, either:
 
