@@ -620,7 +620,9 @@ output of `type -f module` (in a `bash` shell), or `alias module` (in a `tcsh` s
 
 The actual module command (i.e., `modulecmd`, `modulecmd.tcl`,
 `lmod`, ...) must be available via `$PATH` (which is not standard), except when using Lmod
-(in that case the `lmod` binary can also be located via `$LMOD_CMD`).
+(in that case the `lmod` binary can also be located via `$LMOD_CMD`) or when using
+Environment Modules (in that case the `modulecmd.tcl` binary can also be located via
+`$MODULES_CMD`).
 
 For example, to indicate that EasyBuild should be using `Lmod` as modules tool:
 

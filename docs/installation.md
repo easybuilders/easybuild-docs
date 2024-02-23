@@ -356,11 +356,15 @@ Supported module tools:
     the `module` function; for example, using `type module` or `type -f module`.
 
 !!! note
-    For Lmod specifically, EasyBuild will try to fall back to finding the `lmod` binary via the `$LMOD_CMD`
+    For Lmod, EasyBuild will try to fall back to finding the `lmod` binary via the `$LMOD_CMD`
     environment variable, in case `lmod` is not available in `$PATH`.
 
     In EasyBuild versions *prior* to 2.1.1, the path specified by `$LMOD_CMD` was (erroneously) preferred over the
     (first) `lmod` binary available via `$PATH`.
+
+    For modern Tcl-only environment modules (version >= 4.0.0), EasyBuild will try to fall back to finding the
+    `modulecmd.tcl` binary via the `$MODULES_CMD` environment variable, in case `modulecmd.tcl` is not available
+    in `$PATH`.
 
 
 Additional notes:
