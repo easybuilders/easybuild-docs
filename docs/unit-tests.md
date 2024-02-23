@@ -137,7 +137,7 @@ export TEST_EASYBUILD_MODULES_TOOL=EnvironmentModules
 ```
 
 Just like for EasyBuild itself, the EasyBuild framework unit test suite expects that the modules tool binary/script
-(`modulecmd`, `modulecmd.tcl` or `lmod`) is available via `$PATH` or referred in a module tool-specific environment
+(`modulecmd`, `modulecmd.tcl` or `lmod`) is available via `$PATH` or referenced via a module tool-specific environment
 variable, see [Required modules tool][required_modules_tool].
 
 
