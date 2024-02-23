@@ -85,8 +85,8 @@ $ eb HDF5-1.8.13-intel-2015a.eb --hide-deps=zlib,Szip -D
 ```
 
 !!! note
-    Using Lmod (version >= 5.7.5), hidden modules can be made visible in the output of '`module avail`' using the
-    `--show-hidden` option.
+    Using Lmod (version >= 5.7.5) or Environment Modules (version >= 4.6.0), hidden modules can be made
+    visible in the output of '`module avail`' using respectively the `--show-hidden` or `--all` option.
 
     For example:
 
