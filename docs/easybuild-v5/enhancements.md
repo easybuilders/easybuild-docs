@@ -64,8 +64,8 @@ To disable trace output, either:
 ## Require `download_instructions` to be specified {: require_download_instructions }
 
 [`download_instructions`][download_instructions] is used in easyconfigs to specify instructions, or information, on
-how to obtain sources that are not directly downloadable. In EasyBuild 5, we require that easyconfigs specify these
-(see [easybuild-easyconfigs PR #19881](https://github.com/easybuilders/easybuild-easyconfigs/pull/19881)).
+how to obtain sources that are not directly downloadable. In EasyBuild 5, we've updated the testsuite for the `easybuild-easyconfigs`
+repository to require that all easyconfig PR specify these (see [easybuild-easyconfigs PR #19881](https://github.com/easybuilders/easybuild-easyconfigs/pull/19881)).
 
 As part of this enhancement we also added `download_instructions` to all easyconfigs that require them (see the PRs linked from 
 [easybuild-easyconfigs PR #19881](https://github.com/easybuilders/easybuild-easyconfigs/pull/19881)). In addition to the
