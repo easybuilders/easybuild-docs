@@ -196,7 +196,6 @@ plugins:
         - index.md
   # necessary for search to work
   - search
-  
   - redirects:
       redirect_maps:
         # redirect removed pages to sensible alternative
