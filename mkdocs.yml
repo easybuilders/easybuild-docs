@@ -196,9 +196,12 @@ plugins:
         - index.md
   # necessary for search to work
   - search
-  # redirects for original EasyBuild documentation to avoid broken URLs
+  
   - redirects:
       redirect_maps:
+        # redirect removed pages to sensible alternative
+        easybuild-v5/proposed-changes/: easybuild-v5/index.md
+        # redirects for original EasyBuild documentation to avoid broken URLs
         en/latest/Archived-easyconfigs.html: archived-easyconfigs.md
         en/latest/Backup_modules.html: backup-modules.md
         en/latest/Changelog.html: changelog-docs.md
