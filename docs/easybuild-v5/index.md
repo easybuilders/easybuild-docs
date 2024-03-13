@@ -2,6 +2,7 @@
 
 - [Overview of changes](overview-of-changes.md)
     - [Backwards-incompatible changes](backwards-incompatible-changes.md)
+    - [Changes in default configuration](changes-in-default-configuration.md)
     - [Enhancements](enhancements.md)
         - [`run_shell_cmd` function](run_shell_cmd.md)
     - [Deprecated functionality](deprecated-functionality.md)

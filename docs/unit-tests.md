@@ -126,18 +126,19 @@ instead. Thus, to set a particular configuration option `--foo`, you should defi
 #### Modules tool to use for running tests {: #unit_tests_modules_tool }
 
 One particular configuration option worth mentioning explicitly is the modules tool that is to be used by the EasyBuild
-framework, which is by default the traditional Tcl/C environment modules, referred to as `EnvironmentModulesC` in
-EasyBuild configuration terms (see `eb --help` and `eb --avail-modules-tools`).
+framework, which is by default Lmod, referred to as `Lmod` in EasyBuild configuration terms (see `eb --help` and
+`eb --avail-modules-tools`).
 
 To run the EasyBuild framework unit tests with a particular modules tool, simply define the
 `$TEST_EASYBUILD_MODULES_TOOL` environment variable with the corresponding value. For example::
 
 ``` shell
-export TEST_EASYBUILD_MODULES_TOOL=Lmod
+export TEST_EASYBUILD_MODULES_TOOL=EnvironmentModules
 ```
 
 Just like for EasyBuild itself, the EasyBuild framework unit test suite expects that the modules tool binary/script
-(`modulecmd`, `modulecmd.tcl` or `lmod`) is available via `$PATH`, see [Required modules tool][required_modules_tool].
+(`modulecmd`, `modulecmd.tcl` or `lmod`) is available via `$PATH` or referenced via a module tool-specific environment
+variable, see [Required modules tool][required_modules_tool].
 
 
 #### Installing a GitHub token for the unit tests {: #unit_tests_github_token }
@@ -173,10 +174,12 @@ other than `suite`, to focus on testing a particular aspect. See
 <https://github.com/easybuilders/easybuild-framework/tree/main/test/framework> for an overview of the available Python
 modules corresponding to subgroups of tests (note: `__init__.py` and `utilities.py` are *not* such modules).
 
-For example, to run the full EasyBuild framework unit test suite using Lmod as a modules tool::
+For example, to run the full EasyBuild framework unit test suite using Environment Modules as a modules tool and Tcl as
+module file syntax::
 
 ``` shell
-export TEST_EASYBUILD_MODULES_TOOL=Lmod
+export TEST_EASYBUILD_MODULES_TOOL=EnvironmentModules
+export TEST_EASYBUILD_MODULE_SYNTAX=Tcl
 python -m test.framework.suite
 ```
 
