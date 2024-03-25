@@ -51,8 +51,8 @@ graph LR
   A --> |binutils| C[intel-compilers];
   B --> |OpenMPI| E[gompi];
   C --> |impi| F[iimpi];
-  B --> |FlexiBLAS + FFTW + ScaLAPACK| D[gfbf];
-  D --> |OpenMPI| G[foss];
+  B --> |FlexiBLAS (incl. LAPACK) + FFTW| D[gfbf];
+  D --> |OpenMPI + ScaLAPACK| G[foss];
   E --> |FlexiBLAS + FFTW + ScaLAPACK| G[foss];
   F --> |imkl| Z[intel];
   C --> |imkl| H[iimkl];
