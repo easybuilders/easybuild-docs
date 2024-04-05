@@ -3,16 +3,15 @@
 !!! warning
     EasyBuild 5.0 is currently still under development, via the `5.0.x` branches in the EasyBuild GitHub repositories.
 
-    We intend to update this section of the documentation regularly as the planned changes are being implemented,
-    and when there are [proposed changes](proposed-changes.md) where we are requesting community feedback.
+    We intend to update this section of the documentation regularly as the planned changes are being implemented.
 
 This page provides a concise overview of the most prominent changes in EasyBuild version 5.0,
 which can be categorized as:
 
 * [Enhancements](enhancements.md)
+* [Changes in default configuration](changes-in-default-configuration.md)
 * [Backward-incompatible changes](backwards-incompatible-changes.md)
 * [Deprecated functionality](deprecated-functionality.md)
-* [Proposed changes](proposed-changes.md)
 * [Policies](policies.md)
 
 For in-depth details on a particular change, see the pull requests that are linked

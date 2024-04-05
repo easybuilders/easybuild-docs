@@ -60,6 +60,7 @@
   - ConfigureMake
     - CMakeMake
       - CMakeMakeCp
+        - EB_DualSPHysics
       - CMakeNinja
       - CMakePythonPackage
         - EB_DOLFIN
@@ -191,6 +192,7 @@
     - EB_XCrySDen
     - MakeCp
       - CMakeMakeCp
+        - EB_DualSPHysics
       - CmdCp
         - EB_fastStructure
       - EB_BamTools

@@ -139,10 +139,12 @@ Option flag                                            |Option description
 ``--close-pr-msg=CLOSE-PR-MSG``                        |Custom close message for pull request closed with --close-pr;  (type <class 'str'>)
 ``--close-pr-reasons=CLOSE-PR-REASONS``                |Close reason for pull request closed with --close-pr; supported values: archived, inactive, obsolete, retest (type <class 'str'>)
 ``--dump-test-report=DUMP-TEST-REPORT``                |Dump test report to specified path (default: test_report.md)
+``--from-commit=commit_SHA``                           |Obtain easyconfigs from specified commit (type str)
 ``--from-pr=PR#``                                      |Obtain easyconfigs from specified PR (type comma-separated list)
 ``--git-working-dirs-path=GIT-WORKING-DIRS-PATH``      |Path to Git working directories for EasyBuild repositories (type <class 'str'>)
 ``--github-org=GITHUB-ORG``                            |GitHub organization (type <class 'str'>)
 ``--github-user=GITHUB-USER``                          |GitHub username (type <class 'str'>)
+``--include-easyblocks-from-commit=commit_SHA``        |Include easyblocks from specified commit (type str)
 ``--include-easyblocks-from-pr=PR#``                   |Include easyblocks from specified PR (type comma-separated list)
 ``--install-github-token``                             |Install GitHub token (requires --github-user) (default: False)
 ``--list-prs=STATE,ORDER,DIRECTION``                   |List pull requests (type <class 'str'>; default: open,created,desc)
@@ -225,7 +227,7 @@ Option flag                                                              |Option
 ``--allow-loaded-modules=ALLOW-LOADED-MODULES``                          |List of software names for which to allow loaded modules in initial environment (type comma-separated list; default: EasyBuild)
 ``--allow-modules-tool-mismatch``                                        |Allow mismatch of modules tool and definition of 'module' function (default: False)
 ``--allow-use-as-root-and-accept-consequences``                          |Allow using of EasyBuild as root (NOT RECOMMENDED!) (default: False)
-``--backup-modules``                                                     |Back up an existing module file, if any. Only works when using --module-only
+``--backup-modules``                                                     |Back up an existing module file, if any. Auto-enabled when using --module-only or --skip
 ``--backup-patched-files``                                               |Create a backup (*.orig) file when applying a patch (default: False)
 ``--banned-linked-shared-libs=BANNED-LINKED-SHARED-LIBS``                |Comma-separated list of shared libraries (names, file names, or paths) which are not allowed to be linked in any installed binary/library (type comma-separated list)
 ``--check-ebroot-env-vars=CHECK-EBROOT-ENV-VARS``                        |Action to take when defined $EBROOT* environment variables are found for which there is no matching loaded module; supported values: error, ignore, unset, warn (default: warn)
