@@ -55,7 +55,7 @@ bugix/update release
     - update Clang-AOMP easyblock for ROCm 5.6 ([#2958](https://github.com/easybuilders/easybuild-easyblocks/pull/2958))
     - consider both `$EBROOTGCC` and `$EBROOTGCCCORE` in Clang-AOMP easyblock to specify `-DGCC_INSTALL_PREFIX` ([#2958](https://github.com/easybuilders/easybuild-easyblocks/pull/2958))
     - update WIEN2k easyblock for v23.2 ([#3035](https://github.com/easybuilders/easybuild-easyblocks/pull/3035))
-    - enhance LAMMPS easyblock dynamically add `ARMV81` and `A64FX` to Kokkos CPU mapping based on LAMMPS version ([#3036](https://github.com/easybuilders/easybuild-easyblocks/pull/3036))
+    - enhance LAMMPS easyblock to dynamically add `ARMV81` and `A64FX` to Kokkos CPU mapping based on LAMMPS version ([#3036](https://github.com/easybuilders/easybuild-easyblocks/pull/3036))
     - add `pip_verbose` option to PythonPackage and set it to True in PyTorch easyblock, to show build output when using pip ([#3065](https://github.com/easybuilders/easybuild-easyblocks/pull/3065))
     - also support OpenSSL 3 in OpenSSL wrapper easyblock ([#3081](https://github.com/easybuilders/easybuild-easyblocks/pull/3081))
     - improve error checking in PyTorch easyblock ([#3085](https://github.com/easybuilders/easybuild-easyblocks/pull/3085))
