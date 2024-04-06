@@ -80,5 +80,5 @@ For parameters in general, the following translation table can be used, where th
 | `asynchronous=False`           | `asynchronous=False`    | run command asynchronously (not yet implemented for `run_shell_cmd`)|
 | `with_hooks=True`              | `with_hooks=True`       | trigger pre/post `run_cmd` or `run_shell_cmd` hooks |
 | `qa` and `std_qa=None`         | `qa_patterns=None`      | list of 2-tuples with patterns for questions + corresponding answers |
-| `no_qa=None`                   | `qa_wait_patterns=None` | list of 2-tuples with patterns for non-questions and number of iterations to allow these patterns to match with end out command output |
+| `no_qa=None`                   | `qa_wait_patterns=None` | list of strings with patterns for non-questions |
 | `maxhits=50`                   | `qa_timeout=100`        | amount of seconds to wait until more output is produced when there is no matching question |
