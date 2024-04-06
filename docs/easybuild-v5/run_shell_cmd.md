@@ -77,7 +77,7 @@ For parameters in general, the following translation table can be used, where th
 | `shell=None`                   | `use_bash=True`         | execute command through bash shell (`run_cmd` enables this for `None`)|
 | `log_output=False`             | `output_file=True`      | collect command output in temporary output file *(changed default)* |
 | `stream_output=None`           | `stream_output=None`    | stream command output to stdout (auto-enabled with `--logtostdout` if `None`) |
-| `asynchronous=False`           | `asynchronous=False`    | run command asynchronously (not yet implemented for `run_shell_cmd`)|
+| `asynchronous=False`           | `asynchronous=False`    | run command asynchronously |
 | `with_hooks=True`              | `with_hooks=True`       | trigger pre/post `run_cmd` or `run_shell_cmd` hooks |
 | `qa` and `std_qa=None`         | `qa_patterns=None`      | list of 2-tuples with patterns for questions + corresponding answers |
 | `no_qa=None`                   | `qa_wait_patterns=None` | list of strings with patterns for non-questions |
