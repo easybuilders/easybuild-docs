@@ -302,7 +302,7 @@ a value of `None` can be used to skip the checksum check.
 This is possible in the list of checksums as well as a value in a dictionary, e.g.:
 
 ``` python
-checksums = [{
+checksums = [
   None, # No checksum for first source file
   '0123456789...abcdef', # checksum for 2nd file
   {
