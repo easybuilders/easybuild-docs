@@ -11,7 +11,7 @@ The progress bars shown by EasyBuild are *dynamic*: they are only visible when t
 
 Note that for most progress bars each step is treated as being equal even though the time taken for the
 various steps varies. There are many factors that impact how long an individual installation step, installing
-an easyconfig, or installing an extension may and this makes it very difficult to get a good estimate on how
+an easyconfig, or installing an extension may take and this makes it very difficult to get a good estimate on how
 much time will be needed.
 The download progress bar is an exception here (as long as the size of the file to download could be determined first).
 
@@ -102,7 +102,7 @@ This also makes `Rich` a *required* dependency for EasyBuild.
 Using '`basic`' as value for `output-style` results in basic output (no progress bars).
 
 By default `output-style` is set to '`auto`', which implies using the `Rich` Python package to produce
-rich output (incl. progress bars) if is available,
+rich output (incl. progress bars) if `Rich` is available,
 and falling back to using the basic output style if `Rich` is not available.
 
 ### `show-progress-bar`
