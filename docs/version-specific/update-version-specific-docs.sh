@@ -164,6 +164,7 @@ echo >> supported-software.md
 echo "    This page contains a lot of information, it may take a while to load." >> supported-software.md
 echo >> supported-software.md
 eb --list-software=detailed --output-format=md | egrep -v $skip_lines >> supported-software.md
+eb --list-software=detailed --output-format=json | egrep -v $skip_lines > supported-software.json
 
 echo "* [List of supported software](supported-software.md)" >> $overview
 
