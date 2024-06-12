@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8424,15 +8424,15 @@
 
 
 <a id="easybuild.tools.module_naming_scheme.categorized_hmns"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Implementation of a hierarchical module naming scheme using module classes.</p>
 <p>Authors:</p>
 <ul>
 <li>Markus Geimer (Juelich Supercomputing Centre)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8448,23 +8448,23 @@
 
 
 <h2 id="easybuild.tools.module_naming_scheme.categorized_hmns.CategorizedHMNS" class="doc doc-heading">
-          <code>CategorizedHMNS</code>
+            <code>CategorizedHMNS</code>
 
 
 <a href="#easybuild.tools.module_naming_scheme.categorized_hmns.CategorizedHMNS" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.module_naming_scheme.hierarchical_mns.HierarchicalMNS" href="../hierarchical_mns/#easybuild.tools.module_naming_scheme.hierarchical_mns.HierarchicalMNS">HierarchicalMNS</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.module_naming_scheme.hierarchical_mns.HierarchicalMNS" href="../hierarchical_mns/#easybuild.tools.module_naming_scheme.hierarchical_mns.HierarchicalMNS">HierarchicalMNS</a></code></p>
 
-  
+
       <p>Class implementing an extended hierarchical module naming scheme using the
 'moduleclass' easyconfig parameter to categorize modulefiles on each level
 of the hierarchy.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8476,84 +8476,76 @@ of the hierarchy.</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.module_naming_scheme.categorized_hmns.CategorizedHMNS.categorize_paths" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">categorize_paths</span><span class="p">(</span><span class="n">basepaths</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">categorize_paths</span><span class="p">(</span><span class="n">basepaths</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.module_naming_scheme.categorized_hmns.CategorizedHMNS.categorize_paths" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns a list of paths where all known (valid) module classes have
 been added to each of the given base paths.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.module_naming_scheme.categorized_hmns.CategorizedHMNS.det_init_modulepaths" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_init_modulepaths</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_init_modulepaths</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.module_naming_scheme.categorized_hmns.CategorizedHMNS.det_init_modulepaths" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine list of initial module paths (i.e., top of the hierarchy).
 Appends all known (valid) module classes to the top-level base path.</p>
 <p>Examples:
 Core/<moduleclasses></p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.module_naming_scheme.categorized_hmns.CategorizedHMNS.det_modpath_extensions" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_modpath_extensions</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_modpath_extensions</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.module_naming_scheme.categorized_hmns.CategorizedHMNS.det_modpath_extensions" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine module path extensions, if any. Appends all known (valid)
 module classes to the base path of the corresponding hierarchy level.</p>
 <p>Examples:
 Compiler/GCC/4.8.3/<moduleclasses> (for GCC/4.8.3 module),
 MPI/GCC/4.8.3/OpenMPI/1.6.5/<moduleclasses> (for OpenMPI/1.6.5 module)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.module_naming_scheme.categorized_hmns.CategorizedHMNS.det_module_subdir" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_module_subdir</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_module_subdir</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.module_naming_scheme.categorized_hmns.CategorizedHMNS.det_module_subdir" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine module subdirectory, relative to the top of the module path.
 This determines the separation between module names exposed to users,
 and what's part of the $MODULEPATH. This implementation appends the
@@ -8562,29 +8554,27 @@ hierarchy level.</p>
 <p>Examples:
 Core/compiler, Compiler/GCC/4.8.3/mpi, MPI/GCC/4.8.3/OpenMPI/1.6.5/bio</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.module_naming_scheme.categorized_hmns.CategorizedHMNS.det_user_modpath_extensions" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_user_modpath_extensions</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_user_modpath_extensions</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.module_naming_scheme.categorized_hmns.CategorizedHMNS.det_user_modpath_extensions" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine user module path extensions, if any. As typical users are not expected to have many local modules,
 further categorizing them using module classes is considered overkill. Thus, we are using a plain hierarchical
 scheme for user modules instead.</p>
 <p>Examples: Compiler/GCC/4.8.3 (for GCC/4.8.3 module), MPI/GCC/4.8.3/OpenMPI/1.6.5 (for OpenMPI/1.6.5 module)</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8592,8 +8582,7 @@ scheme for user modules instead.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8602,7 +8591,7 @@ scheme for user modules instead.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8702,7 +8691,7 @@ scheme for user modules instead.</p>
     <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../../js/asciinema-player-2.6.1.js"></script>
       

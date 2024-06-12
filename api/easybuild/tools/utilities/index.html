@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8506,15 +8506,15 @@
 
 
 <a id="easybuild.tools.utilities"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Module with various utility functions</p>
 <p>Authors:</p>
 <ul>
 <li>Kenneth Hoste (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8526,227 +8526,207 @@
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.utilities.flatten" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">flatten</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">flatten</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.utilities.flatten" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Flatten a list of lists.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.utilities.get_class_for" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_class_for</span><span class="p">(</span><span class="n">modulepath</span><span class="p">,</span> <span class="n">class_name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_class_for</span><span class="p">(</span><span class="n">modulepath</span><span class="p">,</span> <span class="n">class_name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.utilities.get_class_for" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get class for a given Python class name and Python module path.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>modulepath</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Python module path (e.g., 'easybuild.base.generaloption')</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>class_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Python class name (e.g., 'GeneralOption')</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>modulepath</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Python module path (e.g., 'easybuild.base.generaloption')</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>class_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Python class name (e.g., 'GeneralOption')</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.utilities.get_subclasses" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_subclasses</span><span class="p">(</span><span class="n">klass</span><span class="p">,</span> <span class="n">include_base_class</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_subclasses</span><span class="p">(</span><span class="n">klass</span><span class="p">,</span> <span class="n">include_base_class</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.utilities.get_subclasses" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get list of all subclasses, recursively from the specified base class.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.utilities.get_subclasses_dict" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_subclasses_dict</span><span class="p">(</span><span class="n">klass</span><span class="p">,</span> <span class="n">include_base_class</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_subclasses_dict</span><span class="p">(</span><span class="n">klass</span><span class="p">,</span> <span class="n">include_base_class</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.utilities.get_subclasses_dict" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get dict with subclasses per classes, recursively from the specified base class.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.utilities.import_available_modules" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">import_available_modules</span><span class="p">(</span><span class="n">namespace</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">import_available_modules</span><span class="p">(</span><span class="n">namespace</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.utilities.import_available_modules" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Import all available module in the specified namespace.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>namespace</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The namespace to import modules from.</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>namespace</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The namespace to import modules from.</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.utilities.mk_md_table" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">mk_md_table</span><span class="p">(</span><span class="n">titles</span><span class="p">,</span> <span class="n">columns</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">mk_md_table</span><span class="p">(</span><span class="n">titles</span><span class="p">,</span> <span class="n">columns</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.utilities.mk_md_table" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns a MarkDown table with given titles and columns (a nested list of string columns for each column)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.utilities.mk_rst_table" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">mk_rst_table</span><span class="p">(</span><span class="n">titles</span><span class="p">,</span> <span class="n">columns</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">mk_rst_table</span><span class="p">(</span><span class="n">titles</span><span class="p">,</span> <span class="n">columns</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.utilities.mk_rst_table" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns an rst table with given titles and columns (a nested list of string columns for each column)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.utilities.natural_keys" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">natural_keys</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">natural_keys</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.utilities.natural_keys" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Can be used as the sort key in list.sort(key=natural_keys) to sort in natural order (i.e. respecting numbers)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.utilities.nub" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">nub</span><span class="p">(</span><span class="n">list_</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">nub</span><span class="p">(</span><span class="n">list_</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.utilities.nub" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns the unique items of a list of hashables, while preserving order of
 the original list, i.e. the first unique element encoutered is
 retained.</p>
@@ -8757,82 +8737,75 @@ unique elements of a list.</p>
 <p>@type list_: a list :-)</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>a new list with each element from <code>list</code> appearing only once (cfr. Michelle Dubois).</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>a new list with each element from <code>list</code> appearing only once (cfr. Michelle Dubois).</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.utilities.only_if_module_is_available" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">only_if_module_is_available</span><span class="p">(</span><span class="n">modnames</span><span class="p">,</span> <span class="n">pkgname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">only_if_module_is_available</span><span class="p">(</span><span class="n">modnames</span><span class="p">,</span> <span class="n">pkgname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.utilities.only_if_module_is_available" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Decorator to guard functions/methods against missing required module with specified name.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.utilities.quote_py_str" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">quote_py_str</span><span class="p">(</span><span class="n">val</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">quote_py_str</span><span class="p">(</span><span class="n">val</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.utilities.quote_py_str" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Version of quote_str specific for generating use in Python context (e.g., easyconfig parameters).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.utilities.quote_str" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">quote_str</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">escape_newline</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">prefer_single_quotes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">escape_backslash</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">tcl</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">quote_str</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">escape_newline</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">prefer_single_quotes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">escape_backslash</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">tcl</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.utilities.quote_str" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Obtain a new value to be used in string replacement context.</p>
 <p>For non-string values, it just returns the exact same value.</p>
 <p>For string values, it tries to escape the string in quotes, e.g.,
@@ -8840,153 +8813,144 @@ foo becomes 'foo', foo'bar becomes "foo'bar",
 foo'bar"baz becomes """foo'bar"baz""", etc.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>escape_newline</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>wrap strings that include a newline in triple quotes</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>prefer_single_quotes</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>if possible use single quotes</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>escape_backslash</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>escape backslash characters in the string</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>tcl</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Boolean for whether we are quoting for Tcl syntax</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>escape_newline</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>wrap strings that include a newline in triple quotes</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>prefer_single_quotes</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>if possible use single quotes</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>escape_backslash</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>escape backslash characters in the string</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>tcl</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Boolean for whether we are quoting for Tcl syntax</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.utilities.remove_unwanted_chars" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">remove_unwanted_chars</span><span class="p">(</span><span class="n">inputstring</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">remove_unwanted_chars</span><span class="p">(</span><span class="n">inputstring</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.utilities.remove_unwanted_chars" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Remove unwanted characters from the given string and return a copy</p>
 <p>All non-letter and non-numeral characters are considered unwanted except for underscore ('_').</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.utilities.shell_quote" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">shell_quote</span><span class="p">(</span><span class="n">token</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">shell_quote</span><span class="p">(</span><span class="n">token</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.utilities.shell_quote" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Wrap provided token in single quotes (to escape space and characters with special meaning in a shell),
 so it can be used in a shell command. This results in token that is not expanded/interpolated by the shell.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.utilities.time2str" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">time2str</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">time2str</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.utilities.time2str" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return string representing provided datetime.timedelta value in human-readable form.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.utilities.trace_msg" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">trace_msg</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">trace_msg</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.utilities.trace_msg" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Print trace message.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8994,7 +8958,7 @@ so it can be used in a shell command. This results in token that is not expanded
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9094,7 +9058,7 @@ so it can be used in a shell command. This results in token that is not expanded
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       

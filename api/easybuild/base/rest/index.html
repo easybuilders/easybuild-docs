@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8524,8 +8524,8 @@
 
 
 <a id="easybuild.base.rest"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>This module contains Rest api utilities,
 Mainly the RestClient, which you can use to easily pythonify a rest api.</p>
 <p>based on https://github.com/jpaugh/agithub/commit/1e2575825b165c1cb7cbd85c22e2561fc4d434d3</p>
@@ -8535,7 +8535,7 @@ Mainly the RestClient, which you can use to easily pythonify a rest api.</p>
 <li>Jens Timmerman</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8551,21 +8551,21 @@ Mainly the RestClient, which you can use to easily pythonify a rest api.</p>
 
 
 <h2 id="easybuild.base.rest.Client" class="doc doc-heading">
-          <code>Client</code>
+            <code>Client</code>
 
 
 <a href="#easybuild.base.rest.Client" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
-  
+
       <p>An implementation of a REST client</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8577,19 +8577,17 @@ Mainly the RestClient, which you can use to easily pythonify a rest api.</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.rest.Client.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">token_type</span><span class="o">=</span><span class="s1">&#39;Token&#39;</span><span class="p">,</span> <span class="n">user_agent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">append_slash</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">token_type</span><span class="o">=</span><span class="s1">&#39;Token&#39;</span><span class="p">,</span> <span class="n">user_agent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">append_slash</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.rest.Client.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create a Client object,
 this client can consume a REST api hosted at host/endpoint</p>
 <p>If a username is given a password or a token is required.
@@ -8597,146 +8595,132 @@ You can not use a password and a token.
 token_type is the typoe fo th the authorization token text in the http authentication header, defaults to Token
 This should be set to 'Bearer' for certain OAuth implementations.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.rest.Client.delete" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">delete</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">delete</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.rest.Client.delete" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Do a http delete request on the given url with given headers, body and parameters
 Parameters is a dictionary that will will be urlencoded</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.rest.Client.get" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.rest.Client.get" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Do a http get request on the given url with given headers and parameters
 Parameters is a dictionary that will will be urlencoded</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.rest.Client.head" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">head</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">head</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.rest.Client.head" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Do a http head request on the given url with given headers and parameters
 Parameters is a dictionary that will will be urlencoded</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.rest.Client.patch" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">patch</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">patch</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.rest.Client.patch" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Do a http patch request on the given url with given body, headers and parameters
 Parameters is a dictionary that will will be urlencoded</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.rest.Client.post" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.rest.Client.post" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Do a http post request on the given url with given body, headers and parameters
 Parameters is a dictionary that will will be urlencoded</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.rest.Client.put" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">put</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">put</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.rest.Client.put" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Do a http put request on the given url with given body, headers and parameters
 Parameters is a dictionary that will will be urlencoded</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.rest.Client.request" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">content_type</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">content_type</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.rest.Client.request" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Low-level networking. All HTTP-method methods call this</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8744,8 +8728,7 @@ Parameters is a dictionary that will will be urlencoded</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8754,17 +8737,17 @@ Parameters is a dictionary that will will be urlencoded</p>
 
 
 <h2 id="easybuild.base.rest.RequestBuilder" class="doc doc-heading">
-          <code>RequestBuilder</code>
+            <code>RequestBuilder</code>
 
 
 <a href="#easybuild.base.rest.RequestBuilder" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
-  
+
       <p>RequestBuilder(client).path.to.resource.method(...)
     stands for
 RequestBuilder(client).client.method('path/to/resource, ...)</p>
@@ -8775,7 +8758,7 @@ bad status from github.com. (Or maybe an httplib.error...)</p>
 <p>To understand the method(...) calls, check out github.client.Client.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8787,63 +8770,57 @@ bad status from github.com. (Or maybe an httplib.error...)</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.rest.RequestBuilder.__getattr__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__getattr__</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__getattr__</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.rest.RequestBuilder.__getattr__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Overwrite <strong>getattr</strong> to build up the equest url
 this enables us to do bla.some.path['something']
 and get the url bla/some/path/something</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.rest.RequestBuilder.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">client</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">client</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.rest.RequestBuilder.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Constructor</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.rest.RequestBuilder.__str__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.rest.RequestBuilder.__str__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>If you ever stringify this, you've (probably) messed up
 somewhere. So let's give a semi-helpful message.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8851,8 +8828,7 @@ somewhere. So let's give a semi-helpful message.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8861,17 +8837,17 @@ somewhere. So let's give a semi-helpful message.</p>
 
 
 <h2 id="easybuild.base.rest.RestClient" class="doc doc-heading">
-          <code>RestClient</code>
+            <code>RestClient</code>
 
 
 <a href="#easybuild.base.rest.RestClient" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
-  
+
       <p>A client with a request builder, so you can easily create rest requests
 e.g. to create a github Rest API client just do</p>
 <blockquote>
@@ -8900,7 +8876,7 @@ try to validate the url you feed it. On the other hand, it
 automatically supports the full API--so why should you care?</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8912,41 +8888,37 @@ automatically supports the full API--so why should you care?</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.rest.RestClient.__getattr__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__getattr__</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__getattr__</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.rest.RestClient.__getattr__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get an attribute, we will build a request with it</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.rest.RestClient.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.rest.RestClient.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>We create a client with the given arguments</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8954,8 +8926,7 @@ automatically supports the full API--so why should you care?</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8964,7 +8935,7 @@ automatically supports the full API--so why should you care?</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9064,7 +9035,7 @@ automatically supports the full API--so why should you care?</p>
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       

@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8462,8 +8462,8 @@
 
 
 <a id="easybuild.framework.easyconfig.format.pyheaderconfigobj"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>The main easyconfig format class</p>
 <p>Authors:</p>
 <ul>
@@ -8471,7 +8471,7 @@
 <li>Kenneth Hoste (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8487,17 +8487,17 @@
 
 
 <h2 id="easybuild.framework.easyconfig.format.pyheaderconfigobj.EasyConfigFormatConfigObj" class="doc doc-heading">
-          <code>EasyConfigFormatConfigObj</code>
+            <code>EasyConfigFormatConfigObj</code>
 
 
 <a href="#easybuild.framework.easyconfig.format.pyheaderconfigobj.EasyConfigFormatConfigObj" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.framework.easyconfig.format.format.EasyConfigFormat" href="../format/#easybuild.framework.easyconfig.format.format.EasyConfigFormat">EasyConfigFormat</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.framework.easyconfig.format.format.EasyConfigFormat" href="../format/#easybuild.framework.easyconfig.format.format.EasyConfigFormat">EasyConfigFormat</a></code></p>
 
-  
+
       <p>Extended EasyConfig format, with support for a header and sections that are actually parsed (as opposed to exec'ed).
 It's very limited for now, but is already huge improvement.</p>
 <p>3 parts in easyconfig file:
@@ -8508,7 +8508,7 @@ It's very limited for now, but is already huge improvement.</p>
  - feed to ConfigObj</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8520,137 +8520,123 @@ It's very limited for now, but is already huge improvement.</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.pyheaderconfigobj.EasyConfigFormatConfigObj.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.pyheaderconfigobj.EasyConfigFormatConfigObj.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Extend EasyConfigFormat with some more attributes</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.pyheaderconfigobj.EasyConfigFormatConfigObj.parse" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">parse</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="n">strict_section_markers</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">parse</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="n">strict_section_markers</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.pyheaderconfigobj.EasyConfigFormatConfigObj.parse" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Pre-process txt to extract header, docstring and pyheader
 Then create the configobj instance by parsing the remainder</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.pyheaderconfigobj.EasyConfigFormatConfigObj.parse_header" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">parse_header</span><span class="p">(</span><span class="n">header</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">parse_header</span><span class="p">(</span><span class="n">header</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.pyheaderconfigobj.EasyConfigFormatConfigObj.parse_header" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Parse the header, assign to self.header</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.pyheaderconfigobj.EasyConfigFormatConfigObj.parse_pre_section" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">parse_pre_section</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">parse_pre_section</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.pyheaderconfigobj.EasyConfigFormatConfigObj.parse_pre_section" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Parse the text block before the start of the first section</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.pyheaderconfigobj.EasyConfigFormatConfigObj.parse_pyheader" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">parse_pyheader</span><span class="p">(</span><span class="n">pyheader</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">parse_pyheader</span><span class="p">(</span><span class="n">pyheader</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.pyheaderconfigobj.EasyConfigFormatConfigObj.parse_pyheader" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Parse the python header, assign to docstring and cfg</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.pyheaderconfigobj.EasyConfigFormatConfigObj.parse_section_block" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">parse_section_block</span><span class="p">(</span><span class="n">section</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">parse_section_block</span><span class="p">(</span><span class="n">section</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.pyheaderconfigobj.EasyConfigFormatConfigObj.parse_section_block" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Parse the section block by trying to convert it into a ConfigObj instance</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.pyheaderconfigobj.EasyConfigFormatConfigObj.pyheader_env" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">pyheader_env</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">pyheader_env</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.pyheaderconfigobj.EasyConfigFormatConfigObj.pyheader_env" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create the global/local environment to use with eval/execfile</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8658,47 +8644,42 @@ Then create the configobj instance by parsing the remainder</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.format.pyheaderconfigobj.build_easyconfig_constants_dict" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">build_easyconfig_constants_dict</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">build_easyconfig_constants_dict</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.pyheaderconfigobj.build_easyconfig_constants_dict" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Make a dictionary with all constants that can be used</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.format.pyheaderconfigobj.build_easyconfig_variables_dict" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">build_easyconfig_variables_dict</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">build_easyconfig_variables_dict</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.pyheaderconfigobj.build_easyconfig_variables_dict" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Make a dictionary with all variables that can be used</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8706,7 +8687,7 @@ Then create the configobj instance by parsing the remainder</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8806,7 +8787,7 @@ Then create the configobj instance by parsing the remainder</p>
     <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../../../js/asciinema-player-2.6.1.js"></script>
       

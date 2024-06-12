@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8442,14 +8442,14 @@
 
 
 <a id="easybuild.tools.containers.base"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Authors:</p>
 <ul>
 <li>Mohamed Abidi (Bright Computing)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8465,22 +8465,22 @@
 
 
 <h2 id="easybuild.tools.containers.base.ContainerGenerator" class="doc doc-heading">
-          <code>ContainerGenerator</code>
+            <code>ContainerGenerator</code>
 
 
 <a href="#easybuild.tools.containers.base.ContainerGenerator" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
-  
+
       <p>The parent class for concrete container recipe and image generator.
 Subclasses have to provide at least template resolution and image creation logic.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8492,146 +8492,132 @@ Subclasses have to provide at least template resolution and image creation logic
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.containers.base.ContainerGenerator.build_image" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">build_image</span><span class="p">(</span><span class="n">recipe_path</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">build_image</span><span class="p">(</span><span class="n">recipe_path</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.containers.base.ContainerGenerator.build_image" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>This method will be used on the concrete subclass to build the image using
 The path of the container recipe.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.containers.base.ContainerGenerator.generate" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">generate</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">generate</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.containers.base.ContainerGenerator.generate" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>The entry point for container recipe and image generation.
 It starts by validating the needed tools are available using TOOLS class attribute.
 If the validation passes, it will generate the container recipe, and optionally build out of it the container.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.containers.base.ContainerGenerator.generate_recipe" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">generate_recipe</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">generate_recipe</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.containers.base.ContainerGenerator.generate_recipe" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>This method will make use of resolve_template and resolve_template_data methods
 in order to generate the container recipe.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.containers.base.ContainerGenerator.resolve_template" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">resolve_template</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">resolve_template</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.containers.base.ContainerGenerator.resolve_template" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>This method should be implemented by the concrete subclass to return
 the correct template for the container recipe.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.containers.base.ContainerGenerator.resolve_template_data" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">resolve_template_data</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">resolve_template_data</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.containers.base.ContainerGenerator.resolve_template_data" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>This method should be implemented by the concrete subclass to return
 a dictionary of template data for container recipe generation.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.containers.base.ContainerGenerator.validate" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">validate</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">validate</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.containers.base.ContainerGenerator.validate" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A method that should contain all the validation logic
 for both container recipe (Singularity, Dockerfile, ...) and
 image generation.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.containers.base.ContainerGenerator.validate_tools" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">validate_tools</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">validate_tools</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.containers.base.ContainerGenerator.validate_tools" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A method that gets called as part of image generation
 that uses TOOLS class attribute to check for the existence
 of the needed binary/tools on the host system.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8639,8 +8625,7 @@ of the needed binary/tools on the host system.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8649,7 +8634,7 @@ of the needed binary/tools on the host system.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8749,7 +8734,7 @@ of the needed binary/tools on the host system.</p>
     <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../../js/asciinema-player-2.6.1.js"></script>
       

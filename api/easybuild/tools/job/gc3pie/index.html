@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8433,8 +8433,8 @@
 
 
 <a id="easybuild.tools.job.gc3pie"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Interface for submitting jobs via GC3Pie.</p>
 <p>Authors:</p>
 <ul>
@@ -8442,7 +8442,7 @@
 <li>Kenneth Hoste (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8458,24 +8458,23 @@
 
 
 <h2 id="easybuild.tools.job.gc3pie.AbortingDependentTaskCollection" class="doc doc-heading">
-          <code>AbortingDependentTaskCollection</code>
+            <code>AbortingDependentTaskCollection</code>
 
 
 <a href="#easybuild.tools.job.gc3pie.AbortingDependentTaskCollection" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="gc3libs.workflow.AbortOnError">AbortOnError</span></code>, <code><span title="gc3libs.workflow.DependentTaskCollection">DependentTaskCollection</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="gc3libs.workflow.AbortOnError">AbortOnError</span></code>, <code><span title="gc3libs.workflow.DependentTaskCollection">DependentTaskCollection</span></code></p>
 
-  
+
       <p>A <code>DependentTaskCollection</code>:class: that aborts execution upon error.</p>
 <p>This is used to stop the build process in case some dependency
 fails.  See also <code>&lt;https://github.com/easybuilders/easybuild-framework/issues/1441&gt;</code>_</p>
 
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8484,17 +8483,17 @@ fails.  See also <code>&lt;https://github.com/easybuilders/easybuild-framework/i
 
 
 <h2 id="easybuild.tools.job.gc3pie.GC3Pie" class="doc doc-heading">
-          <code>GC3Pie</code>
+            <code>GC3Pie</code>
 
 
 <a href="#easybuild.tools.job.gc3pie.GC3Pie" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.job.backend.JobBackend" href="../backend/#easybuild.tools.job.backend.JobBackend">JobBackend</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.job.backend.JobBackend" href="../backend/#easybuild.tools.job.backend.JobBackend">JobBackend</a></code></p>
 
-  
+
       <p>Use the GC3Pie framework to submit and monitor compilation jobs,
 see http://gc3pie.readthedocs.org/.</p>
 <p>In contrast with accessing an external service, GC3Pie implements
@@ -8503,7 +8502,7 @@ its own workflow manager, which means <code>eb --job
 terminated.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8515,77 +8514,69 @@ terminated.</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.gc3pie.GC3Pie.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.job.gc3pie.GC3Pie.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>GC3Pie JobBackend constructor.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.gc3pie.GC3Pie.complete" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">complete</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">complete</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.job.gc3pie.GC3Pie.complete" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Complete a bulk job submission.</p>
 <p>Create engine, and progress it until all jobs have terminated.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.gc3pie.GC3Pie.init" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">init</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">init</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.job.gc3pie.GC3Pie.init" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Initialise the GC3Pie job backend.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.gc3pie.GC3Pie.make_job" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">make_job</span><span class="p">(</span><span class="n">script</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">env_vars</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hours</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cores</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">make_job</span><span class="p">(</span><span class="n">script</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">env_vars</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hours</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cores</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.job.gc3pie.GC3Pie.make_job" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create and return a job object with the given parameters.</p>
 <p>Argument <em>script</em> is the content of the job script
 itself, i.e., the sequence of shell commands that will be
@@ -8599,53 +8590,50 @@ integer values:
 - <em>hours</em> must be in the range 1 .. <code>MAX_WALLTIME</code>;
 - <em>cores</em> depends on which cluster the job is being run.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.gc3pie.GC3Pie.queue" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">queue</span><span class="p">(</span><span class="n">job</span><span class="p">,</span> <span class="n">dependencies</span><span class="o">=</span><span class="nb">frozenset</span><span class="p">())</span></code>
+            <code class="highlight language-python"><span class="n">queue</span><span class="p">(</span><span class="n">job</span><span class="p">,</span> <span class="n">dependencies</span><span class="o">=</span><span class="nb">frozenset</span><span class="p">())</span></code>
 
 <a href="#easybuild.tools.job.gc3pie.GC3Pie.queue" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Add a job to the queue, optionally specifying dependencies.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>dependencies</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>jobs on which this job depends.</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>frozenset()</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>dependencies</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>jobs on which this job depends.</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>frozenset()</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8653,8 +8641,7 @@ integer values:
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8663,7 +8650,7 @@ integer values:
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8763,7 +8750,7 @@ integer values:
     <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../../js/asciinema-player-2.6.1.js"></script>
       

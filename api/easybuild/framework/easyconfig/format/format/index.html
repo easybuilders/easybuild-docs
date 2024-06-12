@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8657,8 +8657,8 @@
 
 
 <a id="easybuild.framework.easyconfig.format.format"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>The main easyconfig format class</p>
 <p>Authors:</p>
 <ul>
@@ -8666,7 +8666,7 @@
 <li>Kenneth Hoste (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8682,17 +8682,17 @@
 
 
 <h2 id="easybuild.framework.easyconfig.format.format.EBConfigObj" class="doc doc-heading">
-          <code>EBConfigObj</code>
+            <code>EBConfigObj</code>
 
 
 <a href="#easybuild.framework.easyconfig.format.format.EBConfigObj" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
-  
+
       <p>Enhanced ConfigObj, version/toolchain and other easyconfig specific aspects aware</p>
 <p>Given ConfigObj instance, make instance that represents a parser</p>
 <p>Mandatory/minimal (to mimic v1.0 behaviour); first version/toolchain is the default
@@ -8710,7 +8710,7 @@ toolchains=toolchain_version_operator</p>
 ...</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8722,246 +8722,230 @@ toolchains=toolchain_version_operator</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.format.EBConfigObj.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">configobj</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">configobj</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.format.EBConfigObj.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Initialise EBConfigObj instance</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>configobj</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>ConfigObj instance</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>configobj</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>ConfigObj instance</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.format.EBConfigObj.get_specs_for" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_specs_for</span><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tcname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tcversion</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_specs_for</span><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tcname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tcversion</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.format.EBConfigObj.get_specs_for" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return dictionary with specifications listed in sections applicable for specified info.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.format.EBConfigObj.get_version_toolchain" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_version_toolchain</span><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tcname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tcversion</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_version_toolchain</span><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tcname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tcversion</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.format.EBConfigObj.get_version_toolchain" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return tuple of version, toolchainname and toolchainversion (possibly using defaults).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.format.EBConfigObj.parse" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">parse</span><span class="p">(</span><span class="n">configobj</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">parse</span><span class="p">(</span><span class="n">configobj</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.format.EBConfigObj.parse" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Parse configobj using using recursive parse_sections.
 Then split off the default and supported sections.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>configobj</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>ConfigObj instance</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>configobj</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>ConfigObj instance</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.format.EBConfigObj.parse_sections" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">parse_sections</span><span class="p">(</span><span class="n">toparse</span><span class="p">,</span> <span class="n">current</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">parse_sections</span><span class="p">(</span><span class="n">toparse</span><span class="p">,</span> <span class="n">current</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.format.EBConfigObj.parse_sections" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Parse Section instance; convert all supported sections, keys and values to their respective representations</p>
 <p>Returns a dict of (nested) Sections</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>toparse</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>a Section (or ConfigObj) instance, basically a dict of (unparsed) sections</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>current</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>the current NestedDict</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>toparse</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>a Section (or ConfigObj) instance, basically a dict of (unparsed) sections</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>current</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>the current NestedDict</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.format.EBConfigObj.squash" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">squash</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">tcname</span><span class="p">,</span> <span class="n">tcversion</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">squash</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">tcname</span><span class="p">,</span> <span class="n">tcversion</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.format.EBConfigObj.squash" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Project the multidimensional easyconfig to single easyconfig
 It (tries to) detect conflicts in the easyconfig.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>version</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>version to keep</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>tcname</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>toolchain name to keep</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>tcversion</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>toolchain version to keep</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>version</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>version to keep</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>tcname</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>toolchain name to keep</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>tcversion</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>toolchain version to keep</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
 
@@ -8969,8 +8953,7 @@ It (tries to) detect conflicts in the easyconfig.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8979,21 +8962,21 @@ It (tries to) detect conflicts in the easyconfig.</p>
 
 
 <h2 id="easybuild.framework.easyconfig.format.format.EasyConfigFormat" class="doc doc-heading">
-          <code>EasyConfigFormat</code>
+            <code>EasyConfigFormat</code>
 
 
 <a href="#easybuild.framework.easyconfig.format.format.EasyConfigFormat" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
-  
+
       <p>EasyConfigFormat class</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9008,8 +8991,8 @@ It (tries to) detect conflicts in the easyconfig.</p>
 
 
 <h3 id="easybuild.framework.easyconfig.format.format.EasyConfigFormat.comments" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">comments</span></code>
-  
+            <code class="highlight language-python"><span class="n">comments</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -9017,145 +9000,131 @@ It (tries to) detect conflicts in the easyconfig.</p>
 <a href="#easybuild.framework.easyconfig.format.format.EasyConfigFormat.comments" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return comments in easyconfig file</p>
-  </div>
+    </div>
 
 </div>
-
 
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.format.EasyConfigFormat.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.format.EasyConfigFormat.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Initialise the EasyConfigFormat class</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.format.EasyConfigFormat.dump" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">dump</span><span class="p">(</span><span class="n">ecfg</span><span class="p">,</span> <span class="n">default_values</span><span class="p">,</span> <span class="n">templ_const</span><span class="p">,</span> <span class="n">templ_val</span><span class="p">,</span> <span class="n">toolchain_hierarchy</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">dump</span><span class="p">(</span><span class="n">ecfg</span><span class="p">,</span> <span class="n">default_values</span><span class="p">,</span> <span class="n">templ_const</span><span class="p">,</span> <span class="n">templ_val</span><span class="p">,</span> <span class="n">toolchain_hierarchy</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.format.EasyConfigFormat.dump" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Dump easyconfig according to this format. This is highly version specific</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.format.EasyConfigFormat.extract_comments" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">extract_comments</span><span class="p">(</span><span class="n">rawtxt</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">extract_comments</span><span class="p">(</span><span class="n">rawtxt</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.format.EasyConfigFormat.extract_comments" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Extract comments from raw content.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.format.EasyConfigFormat.get_config_dict" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_config_dict</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_config_dict</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.format.EasyConfigFormat.get_config_dict" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns a single easyconfig dictionary.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.format.EasyConfigFormat.parse" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">parse</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">parse</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.format.EasyConfigFormat.parse" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Parse the txt according to this format. This is highly version specific</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.format.EasyConfigFormat.set_specifications" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">set_specifications</span><span class="p">(</span><span class="n">specs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">set_specifications</span><span class="p">(</span><span class="n">specs</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.format.EasyConfigFormat.set_specifications" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Set specifications.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.format.EasyConfigFormat.validate" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">validate</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">validate</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.format.EasyConfigFormat.validate" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Verify the easyconfig format</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9163,8 +9132,7 @@ It (tries to) detect conflicts in the easyconfig.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9173,21 +9141,21 @@ It (tries to) detect conflicts in the easyconfig.</p>
 
 
 <h2 id="easybuild.framework.easyconfig.format.format.NestedDict" class="doc doc-heading">
-          <code>NestedDict</code>
+            <code>NestedDict</code>
 
 
 <a href="#easybuild.framework.easyconfig.format.format.NestedDict" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>dict</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>dict</code></p>
 
-  
+
       <p>A nested dictionary, with tracking of depth and parent</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9199,60 +9167,54 @@ It (tries to) detect conflicts in the easyconfig.</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.format.NestedDict.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">depth</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">depth</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.format.NestedDict.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Initialise NestedDict instance</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.format.NestedDict.copy" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">copy</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">copy</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.format.NestedDict.copy" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return a copy. Any relation between key and value are deepcopied away.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.format.NestedDict.get_nested_dict" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_nested_dict</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_nested_dict</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.format.NestedDict.get_nested_dict" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return an instance of NestedDict with this instance as parent</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9260,8 +9222,7 @@ It (tries to) detect conflicts in the easyconfig.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9270,21 +9231,21 @@ It (tries to) detect conflicts in the easyconfig.</p>
 
 
 <h2 id="easybuild.framework.easyconfig.format.format.Squashed" class="doc doc-heading">
-          <code>Squashed</code>
+            <code>Squashed</code>
 
 
 <a href="#easybuild.framework.easyconfig.format.format.Squashed" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
-  
+
       <p>Class to ease the squashing of OrderedVersionOperators and OrderedToolchainVersionOperators</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9296,135 +9257,125 @@ It (tries to) detect conflicts in the easyconfig.</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.format.Squashed.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.format.Squashed.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Initialise Squashed instance</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.format.Squashed.add_toolchain" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">add_toolchain</span><span class="p">(</span><span class="n">squashed</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">add_toolchain</span><span class="p">(</span><span class="n">squashed</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.format.Squashed.add_toolchain" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Add squashed instance from a toolchain section</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>squashed</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>a Squashed instance</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>squashed</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>a Squashed instance</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.format.Squashed.add_version" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">add_version</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="n">squashed</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">add_version</span><span class="p">(</span><span class="n">section</span><span class="p">,</span> <span class="n">squashed</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.format.Squashed.add_version" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Add squashed instance from version section</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>section</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>the version section versionoperator instance</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>squashed</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>a Squashed instance</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>section</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>the version section versionoperator instance</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>squashed</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>a Squashed instance</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.format.Squashed.final" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">final</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">final</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.format.Squashed.final" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Final squashing of version and toolchainversion operators and return the result</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9432,8 +9383,7 @@ It (tries to) detect conflicts in the easyconfig.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9442,21 +9392,21 @@ It (tries to) detect conflicts in the easyconfig.</p>
 
 
 <h2 id="easybuild.framework.easyconfig.format.format.TopNestedDict" class="doc doc-heading">
-          <code>TopNestedDict</code>
+            <code>TopNestedDict</code>
 
 
 <a href="#easybuild.framework.easyconfig.format.format.TopNestedDict" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.framework.easyconfig.format.format.NestedDict" href="#easybuild.framework.easyconfig.format.format.NestedDict">NestedDict</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.framework.easyconfig.format.format.NestedDict" href="#easybuild.framework.easyconfig.format.format.NestedDict">NestedDict</a></code></p>
 
-  
+
       <p>The top level nested dictionary (depth 0, parent is itself)</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9468,22 +9418,20 @@ It (tries to) detect conflicts in the easyconfig.</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.format.TopNestedDict.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.format.TopNestedDict.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Initialise TopNestedDict instance</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9491,47 +9439,42 @@ It (tries to) detect conflicts in the easyconfig.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.format.format.get_format_version" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_format_version</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_format_version</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.format.get_format_version" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get the easyconfig format version as EasyVersion instance.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.format.format.get_format_version_classes" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_format_version_classes</span><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_format_version_classes</span><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.format.get_format_version_classes" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the (usable) subclasses from EasyConfigFormat that have a matching version.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9539,7 +9482,7 @@ It (tries to) detect conflicts in the easyconfig.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9639,7 +9582,7 @@ It (tries to) detect conflicts in the easyconfig.</p>
     <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../../../js/asciinema-player-2.6.1.js"></script>
       

@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8674,8 +8674,8 @@
 
 
 <a id="easybuild.tools.variables"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Module that contains a set of classes and function to generate variables to be used
 e.g., in compiling or linking</p>
 <p>Authors:</p>
@@ -8684,7 +8684,7 @@ e.g., in compiling or linking</p>
 <li>Kenneth Hoste (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8700,21 +8700,21 @@ e.g., in compiling or linking</p>
 
 
 <h2 id="easybuild.tools.variables.AbsPathList" class="doc doc-heading">
-          <code>AbsPathList</code>
+            <code>AbsPathList</code>
 
 
 <a href="#easybuild.tools.variables.AbsPathList" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.variables.StrList" href="#easybuild.tools.variables.StrList">StrList</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.variables.StrList" href="#easybuild.tools.variables.StrList">StrList</a></code></p>
 
-  
+
       <p>Absolute paths (eg -L or -I)</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8726,43 +8726,39 @@ e.g., in compiling or linking</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.AbsPathList.append_exists" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">append_exists</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">paths</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">append_all</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">append_exists</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">paths</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">append_all</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.variables.AbsPathList.append_exists" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Given prefix and list of paths, return first that exists
     if suffix : extend the paths with prefixes
     if filename : look for filename in prefix+paths</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.AbsPathList.append_subdirs" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">append_subdirs</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">subdirs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">append_subdirs</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">subdirs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.variables.AbsPathList.append_subdirs" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Add directory base, or its subdirs if subdirs is not None</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8770,8 +8766,7 @@ e.g., in compiling or linking</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8780,21 +8775,21 @@ e.g., in compiling or linking</p>
 
 
 <h2 id="easybuild.tools.variables.CommaList" class="doc doc-heading">
-          <code>CommaList</code>
+            <code>CommaList</code>
 
 
 <a href="#easybuild.tools.variables.CommaList" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.variables.StrList" href="#easybuild.tools.variables.StrList">StrList</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.variables.StrList" href="#easybuild.tools.variables.StrList">StrList</a></code></p>
 
-  
+
       <p>Comma-separated list</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8810,8 +8805,7 @@ e.g., in compiling or linking</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8820,21 +8814,21 @@ e.g., in compiling or linking</p>
 
 
 <h2 id="easybuild.tools.variables.ListOfLists" class="doc doc-heading">
-          <code>ListOfLists</code>
+            <code>ListOfLists</code>
 
 
 <a href="#easybuild.tools.variables.ListOfLists" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>list</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>list</code></p>
 
-  
+
       <p>List of lists</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8846,197 +8840,177 @@ e.g., in compiling or linking</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.ListOfLists.append_empty" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">append_empty</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">append_empty</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.variables.ListOfLists.append_empty" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Initialise MAP_CLASS instance</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.ListOfLists.copy" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">copy</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">copy</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.variables.ListOfLists.copy" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return copy of self</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.ListOfLists.get_first" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_first</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_first</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.variables.ListOfLists.get_first" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return first non-empty list
 if it doesn't exist, try to return first element</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.ListOfLists.nappend" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">nappend</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">nappend</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.variables.ListOfLists.nappend" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Named append
 name is not used anymore</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.ListOfLists.nextend" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">nextend</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">nextend</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.variables.ListOfLists.nextend" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Named extend, value is list type (TODO: tighten the allowed values)
 name not used anymore</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.ListOfLists.sanitize" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">sanitize</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">sanitize</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.variables.ListOfLists.sanitize" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Cleanup self</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.ListOfLists.show_el" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">show_el</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">show_el</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.variables.ListOfLists.show_el" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Show some info on the elements</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.ListOfLists.str_convert" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">str_convert</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">str_convert</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.variables.ListOfLists.str_convert" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Given x, return a string representing x
 called in <strong>str</strong> of this class</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.ListOfLists.try_function_on_element" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">try_function_on_element</span><span class="p">(</span><span class="n">function_name</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">try_function_on_element</span><span class="p">(</span><span class="n">function_name</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.variables.ListOfLists.try_function_on_element" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Try to run function function_name on each element</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.ListOfLists.try_remove" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">try_remove</span><span class="p">(</span><span class="n">values</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">try_remove</span><span class="p">(</span><span class="n">values</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.variables.ListOfLists.try_remove" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Try to remove one or more values from the elements</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9044,8 +9018,7 @@ called in <strong>str</strong> of this class</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9054,21 +9027,21 @@ called in <strong>str</strong> of this class</p>
 
 
 <h2 id="easybuild.tools.variables.StrList" class="doc doc-heading">
-          <code>StrList</code>
+            <code>StrList</code>
 
 
 <a href="#easybuild.tools.variables.StrList" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>list</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>list</code></p>
 
-  
+
       <p>List of strings</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9080,117 +9053,105 @@ called in <strong>str</strong> of this class</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.StrList.__getattribute__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__getattribute__</span><span class="p">(</span><span class="n">attr_name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__getattribute__</span><span class="p">(</span><span class="n">attr_name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.variables.StrList.__getattribute__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Filter out function calls from Variables class</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.StrList.__str__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.variables.StrList.__str__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>_str_self and support for BEGIN/END</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.StrList.copy" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">copy</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">copy</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.variables.StrList.copy" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return copy of self</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.StrList.sanitize" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">sanitize</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">sanitize</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.variables.StrList.sanitize" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Sanitize self</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.StrList.str_convert" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">str_convert</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">str_convert</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.variables.StrList.str_convert" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Convert members of list to string (no prefix of begin and end)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.StrList.try_remove" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">try_remove</span><span class="p">(</span><span class="n">values</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">try_remove</span><span class="p">(</span><span class="n">values</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.variables.StrList.try_remove" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Remove without ValueError in case of missing element</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9198,8 +9159,7 @@ called in <strong>str</strong> of this class</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9208,17 +9168,17 @@ called in <strong>str</strong> of this class</p>
 
 
 <h2 id="easybuild.tools.variables.Variables" class="doc doc-heading">
-          <code>Variables</code>
+            <code>Variables</code>
 
 
 <a href="#easybuild.tools.variables.Variables" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>dict</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>dict</code></p>
 
-  
+
       <p>Class to hold variable-like key/value pairs
     All values are lists (or derived from list class)
         most only have a single element though
@@ -9229,7 +9189,7 @@ called in <strong>str</strong> of this class</p>
 </code></pre>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9241,138 +9201,124 @@ called in <strong>str</strong> of this class</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.Variables.__setitem__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__setitem__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__setitem__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.variables.Variables.__setitem__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Automatically creates a list for each name</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.Variables.append" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.variables.Variables.append" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Append value to element name (alias for nappend)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.Variables.get_element_class" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_element_class</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_element_class</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.variables.Variables.get_element_class" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the class associated with the name according to the DEFAULT_CLASS and MAP_CLASS</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.Variables.get_instance" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_instance</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_instance</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.variables.Variables.get_instance" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return an instance of the class</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.Variables.get_list_class" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_list_class</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_list_class</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.variables.Variables.get_list_class" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the class associated with the name according to the DEFAULT_LISTCLASS and MAP_LISTCLASS</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.Variables.join" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">join</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="o">*</span><span class="n">others</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">join</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="o">*</span><span class="n">others</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.variables.Variables.join" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Join all values in others into name
 it is first tested if other is an existing element
     else it is nappend-ed</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.variables.Variables.try_function_on_element" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">try_function_on_element</span><span class="p">(</span><span class="n">function_name</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">try_function_on_element</span><span class="p">(</span><span class="n">function_name</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.variables.Variables.try_function_on_element" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Try to run function function_name on each element of names</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9380,50 +9326,45 @@ it is first tested if other is an existing element
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.variables.get_class" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_class</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">default_class</span><span class="p">,</span> <span class="n">map_class</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_class</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">default_class</span><span class="p">,</span> <span class="n">map_class</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.variables.get_class" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return class based on default
 map_class
      if key == str -&gt; value = class
      else: key = class -&gt; list of strings</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.variables.join_map_class" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">join_map_class</span><span class="p">(</span><span class="n">map_classes</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">join_map_class</span><span class="p">(</span><span class="n">map_classes</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.variables.join_map_class" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Join all class_maps into single class_map</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9431,7 +9372,7 @@ map_class
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9531,7 +9472,7 @@ map_class
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       

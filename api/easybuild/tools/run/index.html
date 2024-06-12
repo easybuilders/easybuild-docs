@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8452,8 +8452,8 @@
 
 
 <a id="easybuild.tools.run"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Tools to run commands.</p>
 <p>Authors:</p>
 <ul>
@@ -8466,7 +8466,7 @@
 <li>Ward Poelmans (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8478,1064 +8478,1035 @@
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.run.check_async_cmd" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_async_cmd</span><span class="p">(</span><span class="n">proc</span><span class="p">,</span> <span class="n">cmd</span><span class="p">,</span> <span class="n">owd</span><span class="p">,</span> <span class="n">start_time</span><span class="p">,</span> <span class="n">cmd_log</span><span class="p">,</span> <span class="n">fail_on_error</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">output_read_size</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_async_cmd</span><span class="p">(</span><span class="n">proc</span><span class="p">,</span> <span class="n">cmd</span><span class="p">,</span> <span class="n">owd</span><span class="p">,</span> <span class="n">start_time</span><span class="p">,</span> <span class="n">cmd_log</span><span class="p">,</span> <span class="n">fail_on_error</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">output_read_size</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.run.check_async_cmd" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check status of command that was started asynchronously.</p>
 <p>:result: dict value with result of the check (boolean 'done', 'exit_code', 'output')</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>proc</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>subprocess.Popen instance representing asynchronous command</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>cmd</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>command being run</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>owd</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>original working directory</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>start_time</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>start time of command (datetime instance)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>cmd_log</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>log file to print command output to</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>fail_on_error</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>raise EasyBuildError when command exited with an error</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>output_read_size</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>number of bytes to read from output</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>1024</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>output</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>already collected output for this command</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>&#39;&#39;</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>proc</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>subprocess.Popen instance representing asynchronous command</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>cmd</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>command being run</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>owd</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>original working directory</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>start_time</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>start time of command (datetime instance)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>cmd_log</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>log file to print command output to</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>fail_on_error</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>raise EasyBuildError when command exited with an error</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>output_read_size</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>number of bytes to read from output</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>1024</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>output</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>already collected output for this command</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>&#39;&#39;</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.run.check_log_for_errors" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_log_for_errors</span><span class="p">(</span><span class="n">log_txt</span><span class="p">,</span> <span class="n">reg_exps</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_log_for_errors</span><span class="p">(</span><span class="n">log_txt</span><span class="p">,</span> <span class="n">reg_exps</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.run.check_log_for_errors" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check log_txt for messages matching regExps in order and do appropriate action</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>log_txt</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>String containing the log, will be split into individual lines</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>reg_exps</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>List of: regular expressions (as strings) to error on, or tuple of regular expression and action (any of [IGNORE, WARN, ERROR])</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>log_txt</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>String containing the log, will be split into individual lines</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>reg_exps</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>List of: regular expressions (as strings) to error on, or tuple of regular expression and action (any of [IGNORE, WARN, ERROR])</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.run.complete_cmd" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">complete_cmd</span><span class="p">(</span><span class="n">proc</span><span class="p">,</span> <span class="n">cmd</span><span class="p">,</span> <span class="n">owd</span><span class="p">,</span> <span class="n">start_time</span><span class="p">,</span> <span class="n">cmd_log</span><span class="p">,</span> <span class="n">log_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">log_all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">simple</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">regexp</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">stream_output</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">trace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">with_hook</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">complete_cmd</span><span class="p">(</span><span class="n">proc</span><span class="p">,</span> <span class="n">cmd</span><span class="p">,</span> <span class="n">owd</span><span class="p">,</span> <span class="n">start_time</span><span class="p">,</span> <span class="n">cmd_log</span><span class="p">,</span> <span class="n">log_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">log_all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">simple</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">regexp</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">stream_output</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">trace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">with_hook</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.run.complete_cmd" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Complete running of command represented by passed subprocess.Popen instance.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>proc</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>subprocess.Popen instance representing running command</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>cmd</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>command being run</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>owd</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>original working directory</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>start_time</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>start time of command (datetime instance)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>cmd_log</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>log file to print command output to</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>log_ok</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>only run output/exit code for failing commands (exit code non-zero)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>log_all</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>always log command output and exit code</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>simple</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>if True, just return True/False to indicate success, else return a tuple: (output, exit_code)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>regexp</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>regex used to check the output for errors;  if True it will use the default (see parse_log_for_error)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>stream_output</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>enable streaming command output to stdout</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>trace</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>print command being executed as part of trace output</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>with_hook</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>trigger post run_shell_cmd hooks (if defined)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>proc</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>subprocess.Popen instance representing running command</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>cmd</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>command being run</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>owd</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>original working directory</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>start_time</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>start time of command (datetime instance)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>cmd_log</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>log file to print command output to</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>log_ok</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>only run output/exit code for failing commands (exit code non-zero)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>log_all</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>always log command output and exit code</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>simple</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>if True, just return True/False to indicate success, else return a tuple: (output, exit_code)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>regexp</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>regex used to check the output for errors;  if True it will use the default (see parse_log_for_error)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>stream_output</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>enable streaming command output to stdout</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>trace</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>print command being executed as part of trace output</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>with_hook</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>trigger post run_shell_cmd hooks (if defined)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.run.extract_errors_from_log" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">extract_errors_from_log</span><span class="p">(</span><span class="n">log_txt</span><span class="p">,</span> <span class="n">reg_exps</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">extract_errors_from_log</span><span class="p">(</span><span class="n">log_txt</span><span class="p">,</span> <span class="n">reg_exps</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.run.extract_errors_from_log" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check provided string (command output) for messages matching specified regular expressions,
 and return 2-tuple with list of warnings and errors.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>log_txt</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>String containing the log, will be split into individual lines</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>reg_exps</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>List of: regular expressions (as strings) to error on, or tuple of regular expression and action (any of [IGNORE, WARN, ERROR])</p>
-            </div>
-            <p>
-            </p>
-          </td>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>log_txt</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>String containing the log, will be split into individual lines</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>reg_exps</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>List of: regular expressions (as strings) to error on, or tuple of regular expression and action (any of [IGNORE, WARN, ERROR])</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>(warnings, errors) as lists of lines containing a match</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>(warnings, errors) as lists of lines containing a match</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.run.get_output_from_process" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_output_from_process</span><span class="p">(</span><span class="n">proc</span><span class="p">,</span> <span class="n">read_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">asynchronous</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_output_from_process</span><span class="p">(</span><span class="n">proc</span><span class="p">,</span> <span class="n">read_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">asynchronous</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.run.get_output_from_process" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get output from running process (that was opened with subprocess.Popen).</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>proc</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>process to get output from</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>read_size</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>number of bytes of output to read (if None: read all output)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>asynchronous</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>get output asynchronously</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>proc</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>process to get output from</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>read_size</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>number of bytes of output to read (if None: read all output)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>asynchronous</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>get output asynchronously</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.run.parse_cmd_output" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">parse_cmd_output</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">stdouterr</span><span class="p">,</span> <span class="n">ec</span><span class="p">,</span> <span class="n">simple</span><span class="p">,</span> <span class="n">log_all</span><span class="p">,</span> <span class="n">log_ok</span><span class="p">,</span> <span class="n">regexp</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">parse_cmd_output</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">stdouterr</span><span class="p">,</span> <span class="n">ec</span><span class="p">,</span> <span class="n">simple</span><span class="p">,</span> <span class="n">log_all</span><span class="p">,</span> <span class="n">log_ok</span><span class="p">,</span> <span class="n">regexp</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.run.parse_cmd_output" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Parse command output and construct return value.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>cmd</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>executed command</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>stdouterr</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>combined stdout/stderr of executed command</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>ec</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>exit code of executed command</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>simple</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>if True, just return True/False to indicate success, else return a tuple: (output, exit_code)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>log_all</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>always log command output and exit code</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>log_ok</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>only run output/exit code for failing commands (exit code non-zero)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>regexp</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>regex used to check the output for errors; if True it will use the default (see parse_log_for_error)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>cmd</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>executed command</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>stdouterr</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>combined stdout/stderr of executed command</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>ec</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>exit code of executed command</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>simple</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>if True, just return True/False to indicate success, else return a tuple: (output, exit_code)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>log_all</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>always log command output and exit code</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>log_ok</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>only run output/exit code for failing commands (exit code non-zero)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>regexp</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>regex used to check the output for errors; if True it will use the default (see parse_log_for_error)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.run.parse_log_for_error" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">parse_log_for_error</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="n">regExp</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">parse_log_for_error</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="n">regExp</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.run.parse_log_for_error" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>txt is multiline string.
 - in memory
 regExp is a one-line regular expression
 - default</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.run.run_cmd" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">run_cmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">log_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">log_all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">simple</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inp</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">regexp</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">log_output</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force_in_dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">trace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">stream_output</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">asynchronous</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">with_hooks</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">run_cmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">log_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">log_all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">simple</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inp</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">regexp</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">log_output</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force_in_dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">trace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">stream_output</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">asynchronous</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">with_hooks</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.run.run_cmd" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Run specified command (in a subshell)</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>cmd</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>command to run</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>log_ok</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>only run output/exit code for failing commands (exit code non-zero)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>log_all</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>always log command output and exit code</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>simple</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>if True, just return True/False to indicate success, else return a tuple: (output, exit_code)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>inp</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>the input given to the command via stdin</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>regexp</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>regex used to check the output for errors;  if True it will use the default (see parse_log_for_error)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>log_output</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>indicate whether all output of command should be logged to a separate temporary logfile</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path to execute the command in; current working directory is used if unspecified</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>force_in_dry_run</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>force running the command during dry run</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>verbose</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>include message on running the command in dry run output</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>shell</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>allow commands to not run in a shell (especially useful for cmd lists), defaults to True</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>trace</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>print command being executed as part of trace output</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>stream_output</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>enable streaming command output to stdout</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>asynchronous</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>run command asynchronously (returns subprocess.Popen instance if set to True)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>with_hooks</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>trigger pre/post run_shell_cmd hooks (if defined)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>cmd</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>command to run</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>log_ok</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>only run output/exit code for failing commands (exit code non-zero)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>log_all</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>always log command output and exit code</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>simple</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>if True, just return True/False to indicate success, else return a tuple: (output, exit_code)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>inp</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>the input given to the command via stdin</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>regexp</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>regex used to check the output for errors;  if True it will use the default (see parse_log_for_error)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>log_output</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>indicate whether all output of command should be logged to a separate temporary logfile</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path to execute the command in; current working directory is used if unspecified</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>force_in_dry_run</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>force running the command during dry run</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>verbose</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>include message on running the command in dry run output</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>shell</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>allow commands to not run in a shell (especially useful for cmd lists), defaults to True</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>trace</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>print command being executed as part of trace output</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>stream_output</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>enable streaming command output to stdout</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>asynchronous</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>run command asynchronously (returns subprocess.Popen instance if set to True)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>with_hooks</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>trigger pre/post run_shell_cmd hooks (if defined)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.run.run_cmd_cache" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">run_cmd_cache</span><span class="p">(</span><span class="n">func</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">run_cmd_cache</span><span class="p">(</span><span class="n">func</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.run.run_cmd_cache" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Function decorator to cache (and retrieve cached) results of running commands.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.run.run_cmd_qa" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">run_cmd_qa</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">qa</span><span class="p">,</span> <span class="n">no_qa</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">log_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">log_all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">simple</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">regexp</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">std_qa</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">maxhits</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">trace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">run_cmd_qa</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">qa</span><span class="p">,</span> <span class="n">no_qa</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">log_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">log_all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">simple</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">regexp</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">std_qa</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">maxhits</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">trace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.run.run_cmd_qa" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Run specified interactive command (in a subshell)</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>cmd</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>command to run</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>qa</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>dictionary which maps question to answers</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>no_qa</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of patters that are not questions</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>log_ok</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>only run output/exit code for failing commands (exit code non-zero)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>log_all</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>always log command output and exit code</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>simple</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>if True, just return True/False to indicate success, else return a tuple: (output, exit_code)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>regexp</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>regex used to check the output for errors; if True it will use the default (see parse_log_for_error)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>std_qa</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>dictionary which maps question regex patterns to answers</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path to execute the command is; current working directory is used if unspecified</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>maxhits</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>maximum number of cycles (seconds) without being able to find a known question</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>50</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>trace</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>print command being executed as part of trace output</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>cmd</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>command to run</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>qa</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>dictionary which maps question to answers</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>no_qa</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of patters that are not questions</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>log_ok</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>only run output/exit code for failing commands (exit code non-zero)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>log_all</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>always log command output and exit code</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>simple</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>if True, just return True/False to indicate success, else return a tuple: (output, exit_code)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>regexp</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>regex used to check the output for errors; if True it will use the default (see parse_log_for_error)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>std_qa</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>dictionary which maps question regex patterns to answers</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path to execute the command is; current working directory is used if unspecified</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>maxhits</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>maximum number of cycles (seconds) without being able to find a known question</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>50</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>trace</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>print command being executed as part of trace output</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
 
@@ -9543,7 +9514,7 @@ regExp is a one-line regular expression
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9643,7 +9614,7 @@ regExp is a one-line regular expression
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       

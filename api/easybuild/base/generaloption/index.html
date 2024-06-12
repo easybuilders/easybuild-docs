@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8842,8 +8842,8 @@
 
 
 <a id="easybuild.base.generaloption"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>A class that can be used to generated options to python scripts in a general way.</p>
 <p>Authors:</p>
 <ul>
@@ -8851,7 +8851,7 @@
 <li>Jens Timmerman (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8867,17 +8867,17 @@
 
 
 <h2 id="easybuild.base.generaloption.ExtOption" class="doc doc-heading">
-          <code>ExtOption</code>
+            <code>ExtOption</code>
 
 
 <a href="#easybuild.base.generaloption.ExtOption" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.base.optcomplete.CompleterOption" href="../optcomplete/#easybuild.base.optcomplete.CompleterOption">CompleterOption</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.base.optcomplete.CompleterOption" href="../optcomplete/#easybuild.base.optcomplete.CompleterOption">CompleterOption</a></code></p>
 
-  
+
       <p>Extended options class
  - enable/disable support</p>
 <p>Actions:
@@ -8911,7 +8911,7 @@
        - the path separator is OS-dependent</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8923,60 +8923,54 @@
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.ExtOption.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.ExtOption.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Add logger to init</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.ExtOption.process" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">process</span><span class="p">(</span><span class="n">opt</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">parser</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">process</span><span class="p">(</span><span class="n">opt</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">parser</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.ExtOption.process" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Handle option-as-value issues before actually processing option.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.ExtOption.take_action" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">take_action</span><span class="p">(</span><span class="n">action</span><span class="p">,</span> <span class="n">dest</span><span class="p">,</span> <span class="n">opt</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">parser</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">take_action</span><span class="p">(</span><span class="n">action</span><span class="p">,</span> <span class="n">dest</span><span class="p">,</span> <span class="n">opt</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">parser</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.ExtOption.take_action" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Extended take_action</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8984,8 +8978,7 @@
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8994,24 +8987,23 @@
 
 
 <h2 id="easybuild.base.generaloption.ExtOptionGroup" class="doc doc-heading">
-          <code>ExtOptionGroup</code>
+            <code>ExtOptionGroup</code>
 
 
 <a href="#easybuild.base.generaloption.ExtOptionGroup" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="optparse.OptionGroup">OptionGroup</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="optparse.OptionGroup">OptionGroup</span></code></p>
 
-  
+
       <p>An OptionGroup with support for configfile section names</p>
 
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -9024,18 +9016,17 @@
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.ExtOptionGroup.add_option" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">add_option</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">add_option</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.ExtOptionGroup.add_option" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Extract configfile section info</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9043,8 +9034,7 @@
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9053,17 +9043,17 @@
 
 
 <h2 id="easybuild.base.generaloption.ExtOptionParser" class="doc doc-heading">
-          <code>ExtOptionParser</code>
+            <code>ExtOptionParser</code>
 
 
 <a href="#easybuild.base.generaloption.ExtOptionParser" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="optparse.OptionParser">OptionParser</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="optparse.OptionParser">OptionParser</span></code></p>
 
-  
+
       <p>Make an option parser that limits the C{-h} / C{--shorthelp} to short opts only,
 C{-H} / C{--help} for all options.</p>
 <p>Pass options through environment. Like:</p>
@@ -9076,10 +9066,9 @@ C{-H} / C{--help} for all options.</p>
 C{--enable-} / C{--disable-} (using eg ExtOption option_class)</p>
 
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -9092,15 +9081,14 @@ C{--enable-} / C{--disable-} (using eg ExtOption option_class)</p>
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.ExtOptionParser.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.ExtOptionParser.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Following named arguments are specific to ExtOptionParser
 (the remaining ones are passed to the parent OptionParser class)</p>
 <pre><code>:param help_to_string: boolean, if True, the help is written
@@ -9121,217 +9109,195 @@ C{--enable-} / C{--disable-} (using eg ExtOption option_class)</p>
                                  (default: own log.error method)
 </code></pre>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.ExtOptionParser.check_help" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_help</span><span class="p">(</span><span class="n">fh</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_help</span><span class="p">(</span><span class="n">fh</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.ExtOptionParser.check_help" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Checks filehandle for help functions</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.ExtOptionParser.format_description" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">format_description</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">format_description</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.ExtOptionParser.format_description" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Extend to allow docstring as description</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.ExtOptionParser.format_epilog" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">format_epilog</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">format_epilog</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.ExtOptionParser.format_epilog" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Allow multiple epilog parts</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.ExtOptionParser.format_help" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">format_help</span><span class="p">(</span><span class="n">formatter</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">format_help</span><span class="p">(</span><span class="n">formatter</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.ExtOptionParser.format_help" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>For py2.4 compatibility reasons (missing epilog). This is the py2.7 / optparse 1.5.3 code</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.ExtOptionParser.format_option_mdhelp" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">format_option_mdhelp</span><span class="p">(</span><span class="n">formatter</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">format_option_mdhelp</span><span class="p">(</span><span class="n">formatter</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.ExtOptionParser.format_option_mdhelp" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Formatting for help in rst format</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.ExtOptionParser.format_option_rsthelp" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">format_option_rsthelp</span><span class="p">(</span><span class="n">formatter</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">format_option_rsthelp</span><span class="p">(</span><span class="n">formatter</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.ExtOptionParser.format_option_rsthelp" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Formatting for help in rst format</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.ExtOptionParser.get_default_values" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_default_values</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_default_values</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.generaloption.ExtOptionParser.get_default_values" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Introduce the ExtValues class with class constant
 - make it dynamic, otherwise the class constant is shared between multiple instances
 - class constant is used to avoid _action_taken as option in the <strong>dict</strong>
     - only works by using reference to object
     - same for _logaction_taken</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.ExtOptionParser.get_env_options" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_env_options</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_env_options</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.generaloption.ExtOptionParser.get_env_options" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Retrieve options from the environment: prefix_longopt.upper()</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.ExtOptionParser.get_env_options_prefix" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_env_options_prefix</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_env_options_prefix</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.generaloption.ExtOptionParser.get_env_options_prefix" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the prefix to use for options passed through the environment</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.ExtOptionParser.get_option_by_long_name" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_option_by_long_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_option_by_long_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.ExtOptionParser.get_option_by_long_name" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the option matching the long option name</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.ExtOptionParser.is_value_a_commandline_option" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_value_a_commandline_option</span><span class="p">(</span><span class="n">opt</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">is_value_a_commandline_option</span><span class="p">(</span><span class="n">opt</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.ExtOptionParser.is_value_a_commandline_option" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine if value is/could be an option passed via the commandline.
 If it is, return the reason why (can be used as message); or return None if it isn't.</p>
 <p>opt is the option flag to which the value is passed;
@@ -9340,140 +9306,126 @@ index is the index of the value on the commandline (if None, it is determined fr
 interprets the argument following an option as a value, whereas it is far more likely that
 it is (intended as) an option; --longopt=value is never considered ambiguous, regardless of the value.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.ExtOptionParser.print_confighelp" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">print_confighelp</span><span class="p">(</span><span class="n">fh</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">print_confighelp</span><span class="p">(</span><span class="n">fh</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.ExtOptionParser.print_confighelp" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Print help as a configfile.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.ExtOptionParser.print_help" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">print_help</span><span class="p">(</span><span class="n">fh</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">print_help</span><span class="p">(</span><span class="n">fh</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.ExtOptionParser.print_help" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Intercept print to file to print to string and remove the ENABLE/DISABLE options from help</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.ExtOptionParser.print_mdhelp" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">print_mdhelp</span><span class="p">(</span><span class="n">fh</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">print_mdhelp</span><span class="p">(</span><span class="n">fh</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.ExtOptionParser.print_mdhelp" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Print help in MarkDown format</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.ExtOptionParser.print_rsthelp" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">print_rsthelp</span><span class="p">(</span><span class="n">fh</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">print_rsthelp</span><span class="p">(</span><span class="n">fh</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.ExtOptionParser.print_rsthelp" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Print help in rst format</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.ExtOptionParser.print_shorthelp" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">print_shorthelp</span><span class="p">(</span><span class="n">fh</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">print_shorthelp</span><span class="p">(</span><span class="n">fh</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.ExtOptionParser.print_shorthelp" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Print a shortened help (no longopts)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.ExtOptionParser.set_description_docstring" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">set_description_docstring</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">set_description_docstring</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.generaloption.ExtOptionParser.set_description_docstring" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Try to find the main docstring and add it if description is not None</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.ExtOptionParser.set_usage" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">set_usage</span><span class="p">(</span><span class="n">usage</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">set_usage</span><span class="p">(</span><span class="n">usage</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.ExtOptionParser.set_usage" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return usage and set try to set autogenerated description.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9481,8 +9433,7 @@ it is (intended as) an option; --longopt=value is never considered ambiguous, re
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9491,17 +9442,17 @@ it is (intended as) an option; --longopt=value is never considered ambiguous, re
 
 
 <h2 id="easybuild.base.generaloption.GeneralOption" class="doc doc-heading">
-          <code>GeneralOption</code>
+            <code>GeneralOption</code>
 
 
 <a href="#easybuild.base.generaloption.GeneralOption" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
-  
+
       <p>'Used-to-be simple' wrapper class for option parsing</p>
 <p>Options with go_ prefix are for this class, the remainder is passed to the parser
     - go_args : use these instead of of sys.argv[1:]
@@ -9528,7 +9479,7 @@ with templates in them.</p>
         1. value set through commandline option</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9540,83 +9491,76 @@ with templates in them.</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.GeneralOption.add_group_parser" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">add_group_parser</span><span class="p">(</span><span class="n">opt_dict</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">otherdefaults</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">section_name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">add_group_parser</span><span class="p">(</span><span class="n">opt_dict</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">otherdefaults</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">section_name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.GeneralOption.add_group_parser" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Make a group parser from a dict</p>
 <p>@type opt_dict: dict
 @type description: a 2 element list (short and long description)
 @section_name: str, the name of the section group in the config file.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>opt_dict</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>options, with the form C{"long_opt" : value}. Value is a C{tuple} containing C{(help,type,action,default(,optional string=short option; list/tuple=choices; dict=add_option kwargs))}  help message passed through opt_dict will be extended with type and default  If section_name is None, prefix will be used. If prefix is None or '', 'DEFAULT' is used.</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>opt_dict</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>options, with the form C{"long_opt" : value}. Value is a C{tuple} containing C{(help,type,action,default(,optional string=short option; list/tuple=choices; dict=add_option kwargs))}  help message passed through opt_dict will be extended with type and default  If section_name is None, prefix will be used. If prefix is None or '', 'DEFAULT' is used.</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.GeneralOption.autocomplete" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">autocomplete</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">autocomplete</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.generaloption.GeneralOption.autocomplete" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Set the autocompletion magic via optcomplete</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.GeneralOption.configfile_parser_init" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">configfile_parser_init</span><span class="p">(</span><span class="n">initenv</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">configfile_parser_init</span><span class="p">(</span><span class="n">initenv</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.GeneralOption.configfile_parser_init" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Initialise the configparser to use.</p>
 <pre><code>:param initenv: insert initial environment into the configparser.
     It is a dict of dicts; the first level key is the section name;
@@ -9624,288 +9568,261 @@ with templates in them.</p>
     All section names, keys and values are converted to strings.
 </code></pre>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.GeneralOption.default_parseoptions" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">default_parseoptions</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">default_parseoptions</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.generaloption.GeneralOption.default_parseoptions" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return default options</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.GeneralOption.dict_by_prefix" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">dict_by_prefix</span><span class="p">(</span><span class="n">merge_empty_prefix</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">dict_by_prefix</span><span class="p">(</span><span class="n">merge_empty_prefix</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.GeneralOption.dict_by_prefix" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Break the options dict by prefix; return nested dict.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code></code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>boolean (default False) also (try to) merge the empty prefix in the root of the dict. If there is a non-prefixed optionname that matches a prefix, it will be rejected and error will be logged.</p>
-            </div>
-            <p>
-                <span class="doc-param-annotation">
-                  <b>TYPE:</b>
-                    <code>merge_empty_prefix</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code></code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>boolean (default False) also (try to) merge the empty prefix in the root of the dict. If there is a non-prefixed optionname that matches a prefix, it will be rejected and error will be logged.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code>merge_empty_prefix</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.GeneralOption.generate_cmd_line" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">generate_cmd_line</span><span class="p">(</span><span class="n">ignore</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">add_default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">generate_cmd_line</span><span class="p">(</span><span class="n">ignore</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">add_default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.GeneralOption.generate_cmd_line" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create the commandline options that would create the current self.options.
 The result is sorted on the destination names.</p>
 <p>:param ignore : regex on destination
  :param add_default : print value that are equal to default</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.GeneralOption.get_options_by_prefix" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_options_by_prefix</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_options_by_prefix</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.GeneralOption.get_options_by_prefix" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get all options that set with prefix. Return a dict. The keys are stripped of the prefix.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.GeneralOption.get_options_by_section" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_options_by_section</span><span class="p">(</span><span class="n">section</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_options_by_section</span><span class="p">(</span><span class="n">section</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.GeneralOption.get_options_by_section" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get all options from section. Return a dict.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.GeneralOption.main_options" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">main_options</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">main_options</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.generaloption.GeneralOption.main_options" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create the main options automatically</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.GeneralOption.make_option_metavar" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">make_option_metavar</span><span class="p">(</span><span class="n">longopt</span><span class="p">,</span> <span class="n">details</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">make_option_metavar</span><span class="p">(</span><span class="n">longopt</span><span class="p">,</span> <span class="n">details</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.GeneralOption.make_option_metavar" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Generate the metavar for option longopt
 @type longopt: str
 @type details: tuple</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.GeneralOption.make_options_option_name_and_destination" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">make_options_option_name_and_destination</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">make_options_option_name_and_destination</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.GeneralOption.make_options_option_name_and_destination" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Make the options option name</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.GeneralOption.parseconfigfiles" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">parseconfigfiles</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">parseconfigfiles</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.generaloption.GeneralOption.parseconfigfiles" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Parse configfiles</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.GeneralOption.parseoptions" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">parseoptions</span><span class="p">(</span><span class="n">options_list</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">parseoptions</span><span class="p">(</span><span class="n">options_list</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.GeneralOption.parseoptions" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Parse the options</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.GeneralOption.postprocess" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">postprocess</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">postprocess</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.generaloption.GeneralOption.postprocess" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Some additional processing</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.GeneralOption.set_go_debug" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">set_go_debug</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">set_go_debug</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.generaloption.GeneralOption.set_go_debug" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check if debug options are on and then set fancylogger to debug.
 This is not the default way to set debug, it enables debug logging
 in an earlier stage to debug generaloption itself.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.GeneralOption.validate" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">validate</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">validate</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.generaloption.GeneralOption.validate" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Final step, allows for validating the options and/or args</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9913,8 +9830,7 @@ in an earlier stage to debug generaloption itself.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9923,19 +9839,19 @@ in an earlier stage to debug generaloption itself.</p>
 
 
 <h2 id="easybuild.base.generaloption.SimpleOption" class="doc doc-heading">
-          <code>SimpleOption</code>
+            <code>SimpleOption</code>
 
 
 <a href="#easybuild.base.generaloption.SimpleOption" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.base.generaloption.GeneralOption" href="#easybuild.base.generaloption.GeneralOption">GeneralOption</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.base.generaloption.GeneralOption" href="#easybuild.base.generaloption.GeneralOption">GeneralOption</a></code></p>
 
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9947,91 +9863,88 @@ in an earlier stage to debug generaloption itself.</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.generaloption.SimpleOption.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">go_dict</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">descr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">short_groupdescr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">long_groupdescr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">config_files</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">go_dict</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">descr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">short_groupdescr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">long_groupdescr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">config_files</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.SimpleOption.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Initialisation</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>go_dict</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>General Option option dict</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>short_groupdescr</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>short description of main options</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>long_groupdescr</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>longer description of main options</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>config_files</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of configfiles to read options from  a general options dict has as key the long option name, and is followed by a list/tuple mandatory are 4 elements : option help, type, action, default a 5th element is optional and is the short help name (if any)  the generated help will include the docstring</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>go_dict</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>General Option option dict</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>short_groupdescr</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>short description of main options</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>long_groupdescr</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>longer description of main options</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>config_files</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of configfiles to read options from  a general options dict has as key the long option name, and is followed by a list/tuple mandatory are 4 elements : option help, type, action, default a 5th element is optional and is the short help name (if any)  the generated help will include the docstring</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
 
@@ -10039,177 +9952,165 @@ in an earlier stage to debug generaloption itself.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.generaloption.check_str_list_tuple" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_str_list_tuple</span><span class="p">(</span><span class="n">option</span><span class="p">,</span> <span class="n">opt</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_str_list_tuple</span><span class="p">(</span><span class="n">option</span><span class="p">,</span> <span class="n">opt</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.check_str_list_tuple" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>check function for strlist and strtuple type
     assumes value is comma-separated list
     returns list or tuple of strings</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.generaloption.get_empty_add_flex" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_empty_add_flex</span><span class="p">(</span><span class="n">allvalues</span><span class="p">,</span> <span class="bp">self</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_empty_add_flex</span><span class="p">(</span><span class="n">allvalues</span><span class="p">,</span> <span class="bp">self</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.get_empty_add_flex" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the empty element for add_flex action for allvalues</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.generaloption.set_columns" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">set_columns</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">set_columns</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.set_columns" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Set os.environ COLUMNS variable
 - only if it is not set already</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.generaloption.simple_option" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">simple_option</span><span class="p">(</span><span class="n">go_dict</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">descr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">short_groupdescr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">long_groupdescr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">config_files</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">simple_option</span><span class="p">(</span><span class="n">go_dict</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">descr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">short_groupdescr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">long_groupdescr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">config_files</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.simple_option" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A function that returns a single level GeneralOption option parser</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>go_dict</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>General Option option dict</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>short_groupdescr</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>short description of main options</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>long_groupdescr</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>longer description of main options</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>config_files</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of configfiles to read options from  a general options dict has as key the long option name, and is followed by a list/tuple mandatory are 4 elements : option help, type, action, default a 5th element is optional and is the short help name (if any)  the generated help will include the docstring</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>go_dict</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>General Option option dict</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>short_groupdescr</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>short description of main options</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>long_groupdescr</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>longer description of main options</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>config_files</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of configfiles to read options from  a general options dict has as key the long option name, and is followed by a list/tuple mandatory are 4 elements : option help, type, action, default a 5th element is optional and is the short help name (if any)  the generated help will include the docstring</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.generaloption.what_str_list_tuple" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">what_str_list_tuple</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">what_str_list_tuple</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.generaloption.what_str_list_tuple" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Given name, return separator, class and helptext wrt separator.
 (Currently supports strlist, strtuple, pathlist, pathtuple)</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -10217,7 +10118,7 @@ in an earlier stage to debug generaloption itself.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -10317,7 +10218,7 @@ in an earlier stage to debug generaloption itself.</p>
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       

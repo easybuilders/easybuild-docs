@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -9178,8 +9178,8 @@
 
 
 <a id="easybuild.tools.filetools"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Set of file tools.</p>
 <p>Authors:</p>
 <ul>
@@ -9197,7 +9197,7 @@
 <li>Maxime Boissonneault (Compute Canada)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9213,22 +9213,22 @@
 
 
 <h2 id="easybuild.tools.filetools.ZlibChecksum" class="doc doc-heading">
-          <code>ZlibChecksum</code>
+            <code>ZlibChecksum</code>
 
 
 <a href="#easybuild.tools.filetools.ZlibChecksum" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
-  
+
       <p>wrapper class for adler32 and crc32 checksums to
 match the interface of the hashlib module</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9240,41 +9240,37 @@ match the interface of the hashlib module</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.filetools.ZlibChecksum.hexdigest" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">hexdigest</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">hexdigest</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.filetools.ZlibChecksum.hexdigest" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return hex string of the checksum</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.filetools.ZlibChecksum.update" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">update</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">update</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.ZlibChecksum.update" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Calculates a new checksum using the old one and the new data</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9282,1472 +9278,1384 @@ match the interface of the hashlib module</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.adjust_permissions" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">adjust_permissions</span><span class="p">(</span><span class="n">provided_path</span><span class="p">,</span> <span class="n">permission_bits</span><span class="p">,</span> <span class="n">add</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">onlyfiles</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">onlydirs</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">group_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">relative</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ignore_errors</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">skip_symlinks</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">adjust_permissions</span><span class="p">(</span><span class="n">provided_path</span><span class="p">,</span> <span class="n">permission_bits</span><span class="p">,</span> <span class="n">add</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">onlyfiles</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">onlydirs</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">group_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">relative</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ignore_errors</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">skip_symlinks</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.adjust_permissions" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Change permissions for specified path, using specified permission bits</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>add</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>add permissions relative to current permissions (only relevant if 'relative' is set to True)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>onlyfiles</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>only change permissions on files (not directories)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>onlydirs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>only change permissions on directories (not files)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>recursive</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>change permissions recursively (only makes sense if path is a directory)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>group_id</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>also change group ownership to group with this group ID</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>relative</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>add/remove permissions relative to current permissions (if False, hard set specified permissions)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>ignore_errors</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>ignore errors that occur when changing permissions (up to a maximum ratio specified by --max-fail-ratio-adjust-permissions configuration option)  Add or remove (if add is False) permission_bits from all files (if onlydirs is False) and directories (if onlyfiles is False) in path</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>add</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>add permissions relative to current permissions (only relevant if 'relative' is set to True)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>onlyfiles</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>only change permissions on files (not directories)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>onlydirs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>only change permissions on directories (not files)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>recursive</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>change permissions recursively (only makes sense if path is a directory)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>group_id</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>also change group ownership to group with this group ID</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>relative</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>add/remove permissions relative to current permissions (if False, hard set specified permissions)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>ignore_errors</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>ignore errors that occur when changing permissions (up to a maximum ratio specified by --max-fail-ratio-adjust-permissions configuration option)  Add or remove (if add is False) permission_bits from all files (if onlydirs is False) and directories (if onlyfiles is False) in path</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.apply_patch" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">apply_patch</span><span class="p">(</span><span class="n">patch_file</span><span class="p">,</span> <span class="n">dest</span><span class="p">,</span> <span class="n">fn</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">use_git_am</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">use_git</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">apply_patch</span><span class="p">(</span><span class="n">patch_file</span><span class="p">,</span> <span class="n">dest</span><span class="p">,</span> <span class="n">fn</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">use_git_am</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">use_git</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.apply_patch" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Apply a patch to source code in directory dest
 - assume unified diff created with "diff -ru old new"</p>
 <p>Raises EasyBuildError on any error and returns True on success</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.apply_regex_substitutions" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">apply_regex_substitutions</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">regex_subs</span><span class="p">,</span> <span class="n">backup</span><span class="o">=</span><span class="s1">&#39;.orig.eb&#39;</span><span class="p">,</span> <span class="n">on_missing_match</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">apply_regex_substitutions</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">regex_subs</span><span class="p">,</span> <span class="n">backup</span><span class="o">=</span><span class="s1">&#39;.orig.eb&#39;</span><span class="p">,</span> <span class="n">on_missing_match</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.apply_regex_substitutions" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Apply specified list of regex substitutions.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of paths to files to patch (or just a single filepath)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>regex_subs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of substitutions to apply, specified as (<regexp pattern>, <replacement string>)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>backup</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>create backup of original file with specified suffix (no backup if value evaluates to False)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>&#39;.orig.eb&#39;</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>on_missing_match</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Define what to do when no match was found in the file. Can be 'error' to raise an error, 'warn' to print a warning or 'ignore' to do nothing Defaults to the value of --strict</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of paths to files to patch (or just a single filepath)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>regex_subs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of substitutions to apply, specified as (<regexp pattern>, <replacement string>)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>backup</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>create backup of original file with specified suffix (no backup if value evaluates to False)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>&#39;.orig.eb&#39;</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>on_missing_match</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Define what to do when no match was found in the file. Can be 'error' to raise an error, 'warn' to print a warning or 'ignore' to do nothing Defaults to the value of --strict</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.back_up_file" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">back_up_file</span><span class="p">(</span><span class="n">src_file</span><span class="p">,</span> <span class="n">backup_extension</span><span class="o">=</span><span class="s1">&#39;bak&#39;</span><span class="p">,</span> <span class="n">hidden</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">strip_fn</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">back_up_file</span><span class="p">(</span><span class="n">src_file</span><span class="p">,</span> <span class="n">backup_extension</span><span class="o">=</span><span class="s1">&#39;bak&#39;</span><span class="p">,</span> <span class="n">hidden</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">strip_fn</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.back_up_file" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Backs up a file appending a backup extension and timestamp to it (if there is already an existing backup).</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>src_file</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>file to be back up</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>backup_extension</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>extension to use for the backup file (can be empty or None)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>&#39;bak&#39;</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>hidden</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>make backup hidden (leading dot in filename)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>strip_fn</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>strip specified trailing substring from filename of backup</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>src_file</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>file to be back up</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>backup_extension</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>extension to use for the backup file (can be empty or None)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>&#39;bak&#39;</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>hidden</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>make backup hidden (leading dot in filename)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>strip_fn</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>strip specified trailing substring from filename of backup</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>location of backed up file</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>location of backed up file</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.calc_block_checksum" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">calc_block_checksum</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">algorithm</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">calc_block_checksum</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">algorithm</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.calc_block_checksum" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Calculate a checksum of a file by reading it into blocks</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.change_dir" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">change_dir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">change_dir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.change_dir" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Change to directory at specified location.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>location to change to</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>location to change to</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>previous location we were in</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>previous location we were in</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.check_lock" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_lock</span><span class="p">(</span><span class="n">lock_name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_lock</span><span class="p">(</span><span class="n">lock_name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.check_lock" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether a lock with specified name already exists.</p>
 <p>If it exists, either wait until it's released, or raise an error
 (depending on --wait-on-lock configuration option).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.clean_up_locks" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">clean_up_locks</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">clean_up_locks</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.filetools.clean_up_locks" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Clean up all still existing locks that were created in this session.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.clean_up_locks_signal_handler" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">clean_up_locks_signal_handler</span><span class="p">(</span><span class="n">signum</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">clean_up_locks_signal_handler</span><span class="p">(</span><span class="n">signum</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.clean_up_locks_signal_handler" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Signal handler, cleans up locks &amp; exits with received signal number.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.cleanup" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">cleanup</span><span class="p">(</span><span class="n">logfile</span><span class="p">,</span> <span class="n">tempdir</span><span class="p">,</span> <span class="n">testing</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">cleanup</span><span class="p">(</span><span class="n">logfile</span><span class="p">,</span> <span class="n">tempdir</span><span class="p">,</span> <span class="n">testing</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.cleanup" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Cleanup the specified log file and the tmp directory, if desired.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>logfile</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path to log file to clean up</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>tempdir</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path to temporary directory to clean up</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>testing</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>are we in testing mode? if so, don't actually clean up anything</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>silent</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>be silent (don't print anything to stdout)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>logfile</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path to log file to clean up</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>tempdir</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path to temporary directory to clean up</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>testing</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>are we in testing mode? if so, don't actually clean up anything</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>silent</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>be silent (don't print anything to stdout)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.compute_checksum" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">compute_checksum</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">checksum_type</span><span class="o">=</span><span class="n">DEFAULT_CHECKSUM</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">compute_checksum</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">checksum_type</span><span class="o">=</span><span class="n">DEFAULT_CHECKSUM</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.compute_checksum" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Compute checksum of specified file.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Path of file to compute checksum for</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>checksum_type</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>type(s) of checksum ('adler32', 'crc32', 'md5' (default), 'sha1', 'sha256', 'sha512', 'size')</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code><span title="easybuild.tools.filetools.DEFAULT_CHECKSUM">DEFAULT_CHECKSUM</span></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Path of file to compute checksum for</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>checksum_type</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>type(s) of checksum ('adler32', 'crc32', 'md5' (default), 'sha1', 'sha256', 'sha512', 'size')</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code><span title="easybuild.tools.filetools.DEFAULT_CHECKSUM">DEFAULT_CHECKSUM</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.convert_name" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">convert_name</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">upper</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">convert_name</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">upper</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.convert_name" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Converts name so it can be used as variable name</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.copy" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">copy</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">target_path</span><span class="p">,</span> <span class="n">force_in_dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">copy</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">target_path</span><span class="p">,</span> <span class="n">force_in_dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.copy" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Copy single file/directory or list of files and directories to specified location</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path(s) to copy</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>target_path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>target location</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>force_in_dry_run</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>force running the command during dry run</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>kwargs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>additional named arguments to pass down to copy_dir</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>{}</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path(s) to copy</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>target_path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>target location</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>force_in_dry_run</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>force running the command during dry run</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>kwargs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>additional named arguments to pass down to copy_dir</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>{}</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.copy_dir" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">copy_dir</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">target_path</span><span class="p">,</span> <span class="n">force_in_dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">dirs_exist_ok</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">check_for_recursive_symlinks</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">copy_dir</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">target_path</span><span class="p">,</span> <span class="n">force_in_dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">dirs_exist_ok</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">check_for_recursive_symlinks</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.copy_dir" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Copy a directory from specified location to specified location</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>the original directory path</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>target_path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path to copy the directory to</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>force_in_dry_run</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>force running the command during dry run</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>dirs_exist_ok</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>boolean indicating whether it's OK if the target directory already exists</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>check_for_recursive_symlinks</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>If symlink arg is not given or False check for recursive symlinks first  shutil.copytree is used if the target path does not exist yet; if the target path already exists, the 'copy' function will be used to copy the contents of the source path to the target path  Additional specified named arguments are passed down to shutil.copytree/copy if used.</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>the original directory path</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>target_path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path to copy the directory to</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>force_in_dry_run</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>force running the command during dry run</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>dirs_exist_ok</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>boolean indicating whether it's OK if the target directory already exists</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>check_for_recursive_symlinks</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>If symlink arg is not given or False check for recursive symlinks first  shutil.copytree is used if the target path does not exist yet; if the target path already exists, the 'copy' function will be used to copy the contents of the source path to the target path  Additional specified named arguments are passed down to shutil.copytree/copy if used.</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.copy_easyblocks" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">copy_easyblocks</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">target_dir</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">copy_easyblocks</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">target_dir</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.copy_easyblocks" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Find right location for easyblock file and copy it there</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.copy_file" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">copy_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">target_path</span><span class="p">,</span> <span class="n">force_in_dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">copy_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">target_path</span><span class="p">,</span> <span class="n">force_in_dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.copy_file" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Copy a file from specified location to specified location</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>the original filepath</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>target_path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path to copy the file to</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>force_in_dry_run</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>force copying of file during dry run</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>the original filepath</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>target_path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path to copy the file to</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>force_in_dry_run</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>force copying of file during dry run</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.copy_files" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">copy_files</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">target_path</span><span class="p">,</span> <span class="n">force_in_dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">target_single_file</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">allow_empty</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">copy_files</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">target_path</span><span class="p">,</span> <span class="n">force_in_dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">target_single_file</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">allow_empty</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.copy_files" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Copy list of files to specified target path.
 Target directory is created if it doesn't exist yet.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of filepaths to copy</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>target_path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path to copy files to</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>force_in_dry_run</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>force copying of files during dry run</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>target_single_file</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>if there's only a single file to copy, copy to a file at target path (not a directory)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>allow_empty</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>allow empty list of paths to copy as input (if False: raise error on empty input list)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>verbose</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>print a message to report copying of files</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of filepaths to copy</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>target_path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path to copy files to</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>force_in_dry_run</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>force copying of files during dry run</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>target_single_file</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>if there's only a single file to copy, copy to a file at target path (not a directory)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>allow_empty</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>allow empty list of paths to copy as input (if False: raise error on empty input list)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>verbose</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>print a message to report copying of files</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.copy_framework_files" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">copy_framework_files</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">target_dir</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">copy_framework_files</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">target_dir</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.copy_framework_files" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Find right location for framework file and copy it there</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.copytree" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">copytree</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">symlinks</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ignore</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">copytree</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">symlinks</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ignore</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.copytree" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>DEPRECATED and removed. Use copy_dir</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.create_index" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">create_index</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">ignore_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">create_index</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">ignore_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.create_index" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create index for files in specified path.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.create_lock" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">create_lock</span><span class="p">(</span><span class="n">lock_name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">create_lock</span><span class="p">(</span><span class="n">lock_name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.create_lock" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create lock with specified name.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.create_patch_info" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">create_patch_info</span><span class="p">(</span><span class="n">patch_spec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">create_patch_info</span><span class="p">(</span><span class="n">patch_spec</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.create_patch_info" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create info dictionary from specified patch spec.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.create_unused_dir" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">create_unused_dir</span><span class="p">(</span><span class="n">parent_folder</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">create_unused_dir</span><span class="p">(</span><span class="n">parent_folder</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.create_unused_dir" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create a new folder in parent_folder using name as the name.
 When a folder of that name already exists, '_0' is appended which is retried for increasing numbers until
 an unused name was found</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.decode_class_name" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">decode_class_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">decode_class_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.decode_class_name" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return decoded version of class name.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.decode_string" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">decode_string</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">decode_string</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.decode_string" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Decoding function to revert result of encode_string.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.derive_alt_pypi_url" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">derive_alt_pypi_url</span><span class="p">(</span><span class="n">url</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">derive_alt_pypi_url</span><span class="p">(</span><span class="n">url</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.derive_alt_pypi_url" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Derive alternate PyPI URL for given URL.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.det_common_path_prefix" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_common_path_prefix</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_common_path_prefix</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.det_common_path_prefix" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine common path prefix for a given list of paths.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.det_file_size" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_file_size</span><span class="p">(</span><span class="n">http_header</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_file_size</span><span class="p">(</span><span class="n">http_header</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.det_file_size" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine size of file from provided HTTP header info (without downloading it).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.det_lock_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_lock_path</span><span class="p">(</span><span class="n">lock_name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_lock_path</span><span class="p">(</span><span class="n">lock_name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.det_lock_path" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine full path for lock with specifed name.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.det_patched_files" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_patched_files</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">txt</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">omit_ab_prefix</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">github</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">filter_deleted</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_patched_files</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">txt</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">omit_ab_prefix</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">github</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">filter_deleted</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.det_patched_files" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine list of patched files from a patch.
 It searches for "+++ path/to/patched/file" lines to determine the patched files.
 Note: does not correctly handle filepaths with spaces.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>the path to the diff</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>txt</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>the contents of the diff (either path or txt should be give)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>omit_ab_prefix</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>ignore the a/ or b/ prefix of the files</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>github</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>only consider lines that start with 'diff --git' to determine list of patched files</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>filter_deleted</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>filter out all files that were deleted by the patch</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>the path to the diff</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>txt</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>the contents of the diff (either path or txt should be give)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>omit_ab_prefix</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>ignore the a/ or b/ prefix of the files</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>github</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>only consider lines that start with 'diff --git' to determine list of patched files</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>filter_deleted</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>filter out all files that were deleted by the patch</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.det_size" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_size</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_size</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.det_size" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine total size of given filepath (in bytes).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.diff_files" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">diff_files</span><span class="p">(</span><span class="n">path1</span><span class="p">,</span> <span class="n">path2</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">diff_files</span><span class="p">(</span><span class="n">path1</span><span class="p">,</span> <span class="n">path2</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.diff_files" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return unified diff between two files</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.dir_contains_files" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">dir_contains_files</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">dir_contains_files</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.dir_contains_files" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return True if the given directory does contain any file</p>
 <p>:recursive If False only the path itself is considered, else all subdirectories are also searched</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.download_file" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">download_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">forced</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">download_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">forced</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.download_file" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Download a file from the given URL, to the specified path.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.dump_index" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">dump_index</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">max_age_sec</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">dump_index</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">max_age_sec</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.dump_index" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create index for files in specified path, and dump it to file (alphabetically sorted).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.encode_class_name" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">encode_class_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">encode_class_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.encode_class_name" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>return encoded version of class name</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.encode_string" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">encode_string</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">encode_string</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.encode_string" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>This encoding function handles funky software names ad infinitum, like:
   example: '0_foo+0x0x#-$__'
   becomes: '0_underscore_foo_plus_0x0x_hash__minus__dollar__underscore__underscore_'
@@ -10762,303 +10670,283 @@ For readability of &gt;2 words, it is suggested to use <em>CamelCase</em> style.
 So, yes, '<em>GreekSmallLetterEtaWithPsiliAndOxia</em>' <em>could</em> indeed be a fully
 valid software name; software "electron" in the original spelling anyone? ;-)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.expand_glob_paths" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">expand_glob_paths</span><span class="p">(</span><span class="n">glob_paths</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">expand_glob_paths</span><span class="p">(</span><span class="n">glob_paths</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.expand_glob_paths" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Expand specified glob paths to a list of unique non-glob paths to only files.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.extract_cmd" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">extract_cmd</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">extract_cmd</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.extract_cmd" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determines the file type of file at filepath, returns extract cmd based on file suffix</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.extract_file" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">extract_file</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">dest</span><span class="p">,</span> <span class="n">cmd</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">extra_options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">forced</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">change_into_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">extract_file</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">dest</span><span class="p">,</span> <span class="n">cmd</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">extra_options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">forced</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">change_into_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.extract_file" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Extract file at given path to specified directory</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>fn</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path to file to extract</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>dest</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>location to extract to</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>cmd</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>extract command to use (derived from filename if not specified)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>extra_options</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>extra options to pass to extract command</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>overwrite</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>overwrite existing unpacked file</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>forced</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>force extraction in (extended) dry run mode</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>change_into_dir</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>change into resulting directory; None (current default) implies True, but this is deprecated, this named argument should be set to False or True explicitely (in a future major release, default will be changed to False)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>fn</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path to file to extract</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>dest</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>location to extract to</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>cmd</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>extract command to use (derived from filename if not specified)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>extra_options</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>extra options to pass to extract command</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>overwrite</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>overwrite existing unpacked file</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>forced</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>force extraction in (extended) dry run mode</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>change_into_dir</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>change into resulting directory; None (current default) implies True, but this is deprecated, this named argument should be set to False or True explicitely (in a future major release, default will be changed to False)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>path to directory (in case of success)</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>path to directory (in case of success)</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.find_backup_name_candidate" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">find_backup_name_candidate</span><span class="p">(</span><span class="n">src_file</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">find_backup_name_candidate</span><span class="p">(</span><span class="n">src_file</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.find_backup_name_candidate" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns a non-existing file to be used as destination for backup files</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.find_base_dir" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">find_base_dir</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">find_base_dir</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.filetools.find_base_dir" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Try to locate a possible new base directory
 - this is typically a single subdir, e.g. from untarring a tarball
 - when extracting multiple tarballs in the same directory,
   expect only the first one to give the correct path</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.find_easyconfigs" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">find_easyconfigs</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">ignore_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">find_easyconfigs</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">ignore_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.find_easyconfigs" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Find .eb easyconfig files in path</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.find_eb_script" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">find_eb_script</span><span class="p">(</span><span class="n">script_name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">find_eb_script</span><span class="p">(</span><span class="n">script_name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.find_eb_script" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Find EasyBuild script with given name (in easybuild/scripts subdirectory).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.find_extension" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">find_extension</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">find_extension</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.find_extension" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Find best match for filename extension.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.find_flexlm_license" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">find_flexlm_license</span><span class="p">(</span><span class="n">custom_env_vars</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lic_specs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">find_flexlm_license</span><span class="p">(</span><span class="n">custom_env_vars</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lic_specs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.find_flexlm_license" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Find FlexLM license.</p>
 <p>Considered specified list of environment variables;
 checks for path to existing license file or valid license server specification;
@@ -11066,1454 +10954,1359 @@ duplicate paths are not retained in the returned list of license specs.</p>
 <p>If no license is found through environment variables, also consider 'lic_specs'.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>custom_env_vars</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of environment variables to considered (if None, only consider $LM_LICENSE_FILE)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>lic_specs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of license specifications</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>custom_env_vars</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of environment variables to considered (if None, only consider $LM_LICENSE_FILE)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>lic_specs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of license specifications</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>tuple with list of valid license specs found and name of first valid environment variable</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>tuple with list of valid license specs found and name of first valid environment variable</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.find_glob_pattern" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">find_glob_pattern</span><span class="p">(</span><span class="n">glob_pattern</span><span class="p">,</span> <span class="n">fail_on_no_match</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">find_glob_pattern</span><span class="p">(</span><span class="n">glob_pattern</span><span class="p">,</span> <span class="n">fail_on_no_match</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.find_glob_pattern" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Find unique file/dir matching glob_pattern (raises error if more than one match is found)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.get_easyblock_class_name" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_easyblock_class_name</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_easyblock_class_name</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.get_easyblock_class_name" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Make sure file is an easyblock and get easyblock class name</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.get_source_tarball_from_git" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_source_tarball_from_git</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">targetdir</span><span class="p">,</span> <span class="n">git_config</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_source_tarball_from_git</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">targetdir</span><span class="p">,</span> <span class="n">git_config</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.get_source_tarball_from_git" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Downloads a git repository, at a specific tag or commit, recursively or not, and make an archive with it</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>filename</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>name of the archive to save the code to (must be .tar.gz)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>targetdir</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>target directory where to save the archive to</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>git_config</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>dictionary containing url, repo_name, recursive, and one of tag or commit</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>filename</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>name of the archive to save the code to (must be .tar.gz)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>targetdir</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>target directory where to save the archive to</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>git_config</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>dictionary containing url, repo_name, recursive, and one of tag or commit</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.guess_patch_level" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">guess_patch_level</span><span class="p">(</span><span class="n">patched_files</span><span class="p">,</span> <span class="n">parent_dir</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">guess_patch_level</span><span class="p">(</span><span class="n">patched_files</span><span class="p">,</span> <span class="n">parent_dir</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.guess_patch_level" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Guess patch level based on list of patched files and specified directory.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.has_recursive_symlinks" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">has_recursive_symlinks</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">has_recursive_symlinks</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.has_recursive_symlinks" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check the given directory for recursive symlinks.</p>
 <p>That means symlinks to folders inside the path which would cause infinite loops when traversed regularily.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Path to directory to check</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Path to directory to check</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.install_fake_vsc" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">install_fake_vsc</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">install_fake_vsc</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.filetools.install_fake_vsc" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Put fake 'vsc' Python package in place, to catch easyblocks/scripts that still import from vsc.* namespace
 (vsc-base &amp; vsc-install were ingested into the EasyBuild framework for EasyBuild 4.0,
  see https://github.com/easybuilders/easybuild-framework/pull/2708)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.is_alt_pypi_url" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_alt_pypi_url</span><span class="p">(</span><span class="n">url</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">is_alt_pypi_url</span><span class="p">(</span><span class="n">url</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.is_alt_pypi_url" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine whether specified URL is already an alternate PyPI URL, i.e. whether it contains a hash.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.is_binary" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_binary</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">is_binary</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.is_binary" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether given bytestring represents the contents of a binary file or not.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.is_generic_easyblock" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_generic_easyblock</span><span class="p">(</span><span class="n">easyblock</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">is_generic_easyblock</span><span class="p">(</span><span class="n">easyblock</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.is_generic_easyblock" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return whether specified easyblock name is a generic easyblock or not.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.is_patch_file" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_patch_file</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">is_patch_file</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.is_patch_file" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine whether file at specified path is a patch file (based on +++ and --- lines being present).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.is_readable" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_readable</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">is_readable</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.is_readable" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return whether file at specified location exists and is readable.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.is_sha256_checksum" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_sha256_checksum</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">is_sha256_checksum</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.is_sha256_checksum" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether provided string is a SHA256 checksum.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.load_index" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">load_index</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">ignore_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">load_index</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">ignore_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.load_index" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Load index for specified path, and return contents (or None if no index exists).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.locate_files" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">locate_files</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">paths</span><span class="p">,</span> <span class="n">ignore_subdirs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">locate_files</span><span class="p">(</span><span class="n">files</span><span class="p">,</span> <span class="n">paths</span><span class="p">,</span> <span class="n">ignore_subdirs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.locate_files" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine full path for list of files, in given list of paths (directories).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.mkdir" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">mkdir</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">parents</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">set_gid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">mkdir</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">parents</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">set_gid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.mkdir" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create a directory
 Directory is the path to create</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>parents</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>create parent directories if needed (mkdir -p)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>set_gid</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>set group ID bit, to make subdirectories and files inherit group</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>sticky</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>set the sticky bit on this directory (a.k.a. the restricted deletion flag), to avoid users can removing/renaming files in this directory</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>parents</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>create parent directories if needed (mkdir -p)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>set_gid</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>set group ID bit, to make subdirectories and files inherit group</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>sticky</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>set the sticky bit on this directory (a.k.a. the restricted deletion flag), to avoid users can removing/renaming files in this directory</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.modify_env" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">modify_env</span><span class="p">(</span><span class="n">old</span><span class="p">,</span> <span class="n">new</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">modify_env</span><span class="p">(</span><span class="n">old</span><span class="p">,</span> <span class="n">new</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.modify_env" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>NO LONGER SUPPORTED: use modify_env from easybuild.tools.environment instead</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.move_file" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">move_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">target_path</span><span class="p">,</span> <span class="n">force_in_dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">move_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">target_path</span><span class="p">,</span> <span class="n">force_in_dry_run</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.move_file" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Move a file from path to target_path</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>the original filepath</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>target_path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path to move the file to</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>force_in_dry_run</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>force running the command during dry run</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>the original filepath</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>target_path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path to move the file to</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>force_in_dry_run</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>force running the command during dry run</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.move_logs" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">move_logs</span><span class="p">(</span><span class="n">src_logfile</span><span class="p">,</span> <span class="n">target_logfile</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">move_logs</span><span class="p">(</span><span class="n">src_logfile</span><span class="p">,</span> <span class="n">target_logfile</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.move_logs" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Move log file(s).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.normalize_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">normalize_path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">normalize_path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.normalize_path" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Normalize path removing empty and dot components.</p>
 <p>Similar to os.path.normpath but does not resolve '..' which may return a wrong path when symlinks are used</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.open_file" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">open_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">open_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.open_file" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Open a (usually) text file. If mode is not binary, then utf-8 encoding will be used for Python 3.x</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.parse_http_header_fields_urlpat" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">parse_http_header_fields_urlpat</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">urlpat</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">urlpat_headers_collection</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">maxdepth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">parse_http_header_fields_urlpat</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">urlpat</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">urlpat_headers_collection</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">maxdepth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.parse_http_header_fields_urlpat" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Recurse into multi-line string "[URLPAT::][HEADER:]FILE|FIELD" where FILE may be another such string or file
 containing lines matching the same format, such as "^https://www.example.com::/path/to/headers.txt", and flatten
 the result to dict e.g. {'^https://www.example.com': ['Authorization: Basic token', 'User-Agent: Special Agent']}</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.parse_log_for_error" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">parse_log_for_error</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="n">regExp</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">parse_log_for_error</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="n">regExp</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.parse_log_for_error" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>NO LONGER SUPPORTED: use parse_log_for_error from easybuild.tools.run instead</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.path_matches" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">path_matches</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">paths</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">path_matches</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">paths</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.path_matches" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether given path matches any of the provided paths.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.pypi_source_urls" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">pypi_source_urls</span><span class="p">(</span><span class="n">pkg_name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">pypi_source_urls</span><span class="p">(</span><span class="n">pkg_name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.pypi_source_urls" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Fetch list of source URLs (incl. source filename) for specified Python package from PyPI, using 'simple' PyPI API.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.read_file" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">read_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">log_error</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">read_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">log_error</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.read_file" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Read contents of file at given path, in a robust way.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.register_lock_cleanup_signal_handlers" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">register_lock_cleanup_signal_handlers</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">register_lock_cleanup_signal_handlers</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.filetools.register_lock_cleanup_signal_handlers" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Register signal handler for signals that cancel the current EasyBuild session,
 so we can clean up the locks that were created first.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.remove" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">remove</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">remove</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.remove" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Remove single file/directory or list of files and directories</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path(s) to remove</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path(s) to remove</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.remove_dir" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">remove_dir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">remove_dir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.remove_dir" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Remove directory at specified path.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.remove_file" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">remove_file</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">remove_file</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.remove_file" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Remove file at specified path.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.remove_lock" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">remove_lock</span><span class="p">(</span><span class="n">lock_name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">remove_lock</span><span class="p">(</span><span class="n">lock_name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.remove_lock" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Remove lock with specified name.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.resolve_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">resolve_path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">resolve_path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.resolve_path" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return fully resolved path for given path.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path that (maybe) contains symlinks</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path that (maybe) contains symlinks</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.rmtree2" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">rmtree2</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">rmtree2</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.rmtree2" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Wrapper around shutil.rmtree to make it more robust when used on NFS mounted file systems.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.run_cmd" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">run_cmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">log_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">log_all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">simple</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inp</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">regexp</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">log_output</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">run_cmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">log_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">log_all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">simple</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inp</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">regexp</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">log_output</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.run_cmd" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>NO LONGER SUPPORTED: use run_cmd from easybuild.tools.run instead</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.run_cmd_qa" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">run_cmd_qa</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">qa</span><span class="p">,</span> <span class="n">no_qa</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">log_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">log_all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">simple</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">regexp</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">std_qa</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">run_cmd_qa</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">qa</span><span class="p">,</span> <span class="n">no_qa</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">log_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">log_all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">simple</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">regexp</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">std_qa</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.run_cmd_qa" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>NO LONGER SUPPORTED: use run_cmd_qa from easybuild.tools.run instead</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.search_file" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">search_file</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">short</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ignore_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">filename_only</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">terse</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">case_sensitive</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">search_file</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">short</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ignore_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">filename_only</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">terse</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">case_sensitive</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.search_file" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Search for files using in specified paths using specified search query (regular expression)</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of paths to search in</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>query</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>search query to use (regular expression); will be used case-insensitive</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>short</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>figure out common prefix of hits, use variable to factor it out</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>ignore_dirs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of directories to ignore (default: ['.git', '.svn'])</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>silent</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>whether or not to remain silent (don't print anything)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>filename_only</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>only return filenames, not file paths</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>terse</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>stick to terse (machine-readable) output, as opposed to pretty-printing</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of paths to search in</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>query</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>search query to use (regular expression); will be used case-insensitive</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>short</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>figure out common prefix of hits, use variable to factor it out</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>ignore_dirs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of directories to ignore (default: ['.git', '.svn'])</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>silent</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>whether or not to remain silent (don't print anything)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>filename_only</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>only return filenames, not file paths</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>terse</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>stick to terse (machine-readable) output, as opposed to pretty-printing</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.set_gid_sticky_bits" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">set_gid_sticky_bits</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">set_gid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">set_gid_sticky_bits</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">set_gid</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sticky</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.set_gid_sticky_bits" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Set GID/sticky bits on specified path.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.symlink" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">symlink</span><span class="p">(</span><span class="n">source_path</span><span class="p">,</span> <span class="n">symlink_path</span><span class="p">,</span> <span class="n">use_abspath_source</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">symlink</span><span class="p">(</span><span class="n">source_path</span><span class="p">,</span> <span class="n">symlink_path</span><span class="p">,</span> <span class="n">use_abspath_source</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.symlink" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create a symlink at the specified path to the given path.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>source_path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>source file path</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>symlink_path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>symlink file path</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>use_abspath_source</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>resolves the absolute path of source_path</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>source_path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>source file path</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>symlink_path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>symlink file path</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>use_abspath_source</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>resolves the absolute path of source_path</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.verify_checksum" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">verify_checksum</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">checksums</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">verify_checksum</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">checksums</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.verify_checksum" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Verify checksum of specified file.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path of file to verify checksum of</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>checksums</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>checksum values (and type, optionally, default is MD5), e.g., 'af314', ('sha', '5ec1b')</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path of file to verify checksum of</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>checksums</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>checksum values (and type, optionally, default is MD5), e.g., 'af314', ('sha', '5ec1b')</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.weld_paths" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">weld_paths</span><span class="p">(</span><span class="n">path1</span><span class="p">,</span> <span class="n">path2</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">weld_paths</span><span class="p">(</span><span class="n">path1</span><span class="p">,</span> <span class="n">path2</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.weld_paths" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Weld two paths together, taking into account overlap between tail of 1st path with head of 2nd path.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.which" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">which</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">retain_all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">check_perms</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">log_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">log_error</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">on_error</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">which</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">retain_all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">check_perms</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">log_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">log_error</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">on_error</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.which" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return (first) path in $PATH for specified command, or None if command is not found</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>retain_all</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>returns <em>all</em> locations to the specified command in $PATH, not just the first one</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>check_perms</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>check whether candidate path has read/exec permissions before accepting it as a match</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>log_ok</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Log an info message where the command has been found (if any)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>on_error</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>What to do if the command was not found, default: WARN. Possible values: IGNORE, WARN, ERROR</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>retain_all</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>returns <em>all</em> locations to the specified command in $PATH, not just the first one</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>check_perms</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>check whether candidate path has read/exec permissions before accepting it as a match</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>log_ok</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Log an info message where the command has been found (if any)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>on_error</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>What to do if the command was not found, default: WARN. Possible values: IGNORE, WARN, ERROR</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.filetools.write_file" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">write_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">append</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">forced</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">backup</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">always_overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">show_progress</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">write_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">append</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">forced</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">backup</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">always_overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">show_progress</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.write_file" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Write given contents to file at given path;
 overwrites current file contents without backup by default!</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>location of file</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>data</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>contents to write to file. Can be a file-like object of binary data</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>append</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>append to existing file rather than overwrite</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>forced</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>force actually writing file in (extended) dry run mode</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>backup</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>back up existing file before overwriting or modifying it</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>always_overwrite</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>don't require --force to overwrite an existing file</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>verbose</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>be verbose, i.e. inform where backup file was created</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>show_progress</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>show progress bar while writing file</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>size</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>size (in bytes) of data to write (used for progress bar)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>location of file</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>data</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>contents to write to file. Can be a file-like object of binary data</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>append</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>append to existing file rather than overwrite</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>forced</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>force actually writing file in (extended) dry run mode</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>backup</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>back up existing file before overwriting or modifying it</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>always_overwrite</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>don't require --force to overwrite an existing file</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>verbose</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>be verbose, i.e. inform where backup file was created</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>show_progress</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>show progress bar while writing file</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>size</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>size (in bytes) of data to write (used for progress bar)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
 
@@ -12521,7 +12314,7 @@ overwrites current file contents without backup by default!</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -12621,7 +12414,7 @@ overwrites current file contents without backup by default!</p>
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       

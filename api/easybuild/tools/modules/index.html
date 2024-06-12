@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -9136,8 +9136,8 @@
 
 
 <a id="easybuild.tools.modules"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>This python module implements the environment modules functionality:
  - loading modules
  - checking for available modules
@@ -9152,7 +9152,7 @@
 <li>David Brown (Pacific Northwest National Laboratory)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9168,21 +9168,21 @@
 
 
 <h2 id="easybuild.tools.modules.EnvironmentModules" class="doc doc-heading">
-          <code>EnvironmentModules</code>
+            <code>EnvironmentModules</code>
 
 
 <a href="#easybuild.tools.modules.EnvironmentModules" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.modules.EnvironmentModulesTcl" href="#easybuild.tools.modules.EnvironmentModulesTcl">EnvironmentModulesTcl</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.modules.EnvironmentModulesTcl" href="#easybuild.tools.modules.EnvironmentModulesTcl">EnvironmentModulesTcl</a></code></p>
 
-  
+
       <p>Interface to environment modules 4.0+</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9194,159 +9194,147 @@
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.EnvironmentModules.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.EnvironmentModules.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Constructor, set Environment Modules-specific class variable values.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.EnvironmentModules.available" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">available</span><span class="p">(</span><span class="n">mod_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">extra_args</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">available</span><span class="p">(</span><span class="n">mod_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">extra_args</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.EnvironmentModules.available" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return a list of available modules for the given (partial) module name;
 use None to obtain a list of all available modules.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>mod_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>a (partial) module name for filtering (default: None)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>mod_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>a (partial) module name for filtering (default: None)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.EnvironmentModules.check_module_function" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_module_function</span><span class="p">(</span><span class="n">allow_mismatch</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_module_function</span><span class="p">(</span><span class="n">allow_mismatch</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.EnvironmentModules.check_module_function" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether selected module tool matches 'module' function definition.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.EnvironmentModules.check_module_output" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_module_output</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_module_output</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.EnvironmentModules.check_module_output" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check output of 'module' command, see if if is potentially invalid.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.EnvironmentModules.get_setenv_value_from_modulefile" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_setenv_value_from_modulefile</span><span class="p">(</span><span class="n">mod_name</span><span class="p">,</span> <span class="n">var_name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_setenv_value_from_modulefile</span><span class="p">(</span><span class="n">mod_name</span><span class="p">,</span> <span class="n">var_name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.EnvironmentModules.get_setenv_value_from_modulefile" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get value for specific 'setenv' statement from module file for the specified module.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>mod_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>module name</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>var_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>name of the variable being set for which value should be returned</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>mod_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>module name</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>var_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>name of the variable being set for which value should be returned</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9354,8 +9342,7 @@ use None to obtain a list of all available modules.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9364,21 +9351,21 @@ use None to obtain a list of all available modules.</p>
 
 
 <h2 id="easybuild.tools.modules.EnvironmentModulesC" class="doc doc-heading">
-          <code>EnvironmentModulesC</code>
+            <code>EnvironmentModulesC</code>
 
 
 <a href="#easybuild.tools.modules.EnvironmentModulesC" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.modules.ModulesTool" href="#easybuild.tools.modules.ModulesTool">ModulesTool</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.modules.ModulesTool" href="#easybuild.tools.modules.ModulesTool">ModulesTool</a></code></p>
 
-  
+
       <p>Interface to (C) environment modules (modulecmd).</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9390,93 +9377,86 @@ use None to obtain a list of all available modules.</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.EnvironmentModulesC.get_setenv_value_from_modulefile" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_setenv_value_from_modulefile</span><span class="p">(</span><span class="n">mod_name</span><span class="p">,</span> <span class="n">var_name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_setenv_value_from_modulefile</span><span class="p">(</span><span class="n">mod_name</span><span class="p">,</span> <span class="n">var_name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.EnvironmentModulesC.get_setenv_value_from_modulefile" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get value for specific 'setenv' statement from module file for the specified module.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>mod_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>module name</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>var_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>name of the variable being set for which value should be returned</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>mod_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>module name</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>var_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>name of the variable being set for which value should be returned</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.EnvironmentModulesC.run_module" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">run_module</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">run_module</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.EnvironmentModulesC.run_module" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Run module command, tweak output that is exec'ed if necessary.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.EnvironmentModulesC.update" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">update</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">update</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.modules.EnvironmentModulesC.update" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Update after new modules were added.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9484,8 +9464,7 @@ use None to obtain a list of all available modules.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9494,21 +9473,21 @@ use None to obtain a list of all available modules.</p>
 
 
 <h2 id="easybuild.tools.modules.EnvironmentModulesTcl" class="doc doc-heading">
-          <code>EnvironmentModulesTcl</code>
+            <code>EnvironmentModulesTcl</code>
 
 
 <a href="#easybuild.tools.modules.EnvironmentModulesTcl" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.modules.EnvironmentModulesC" href="#easybuild.tools.modules.EnvironmentModulesC">EnvironmentModulesC</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.modules.EnvironmentModulesC" href="#easybuild.tools.modules.EnvironmentModulesC">EnvironmentModulesC</a></code></p>
 
-  
+
       <p>Interface to (Tcl) environment modules (modulecmd.tcl).</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9520,144 +9499,134 @@ use None to obtain a list of all available modules.</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.EnvironmentModulesTcl.available" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">available</span><span class="p">(</span><span class="n">mod_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">extra_args</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">available</span><span class="p">(</span><span class="n">mod_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">extra_args</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.EnvironmentModulesTcl.available" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return a list of available modules for the given (partial) module name;
 use None to obtain a list of all available modules.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>mod_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>a (partial) module name for filtering (default: None)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>mod_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>a (partial) module name for filtering (default: None)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.EnvironmentModulesTcl.remove_module_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">remove_module_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">set_mod_paths</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">remove_module_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">set_mod_paths</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.EnvironmentModulesTcl.remove_module_path" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Remove specified module path (using 'module unuse').</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path to remove from $MODULEPATH via 'unuse'</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>set_mod_paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>(re)set self.mod_paths</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path to remove from $MODULEPATH via 'unuse'</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>set_mod_paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>(re)set self.mod_paths</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.EnvironmentModulesTcl.run_module" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">run_module</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">run_module</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.EnvironmentModulesTcl.run_module" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Run module command, tweak output that is exec'ed if necessary.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.EnvironmentModulesTcl.set_path_env_var" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">set_path_env_var</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">paths</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">set_path_env_var</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">paths</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.EnvironmentModulesTcl.set_path_env_var" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Set environment variable with given name to the given list of paths.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9665,8 +9634,7 @@ use None to obtain a list of all available modules.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9675,21 +9643,21 @@ use None to obtain a list of all available modules.</p>
 
 
 <h2 id="easybuild.tools.modules.Lmod" class="doc doc-heading">
-          <code>Lmod</code>
+            <code>Lmod</code>
 
 
 <a href="#easybuild.tools.modules.Lmod" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.modules.ModulesTool" href="#easybuild.tools.modules.ModulesTool">ModulesTool</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.modules.ModulesTool" href="#easybuild.tools.modules.ModulesTool">ModulesTool</a></code></p>
 
-  
+
       <p>Interface to Lmod.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9701,407 +9669,379 @@ use None to obtain a list of all available modules.</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.Lmod.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.Lmod.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Constructor, set lmod-specific class variable values.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.Lmod.available" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">available</span><span class="p">(</span><span class="n">mod_name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">available</span><span class="p">(</span><span class="n">mod_name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.Lmod.available" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return a list of available modules for the given (partial) module name;
 use None to obtain a list of all available modules.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>mod_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>a (partial) module name for filtering (default: None)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>mod_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>a (partial) module name for filtering (default: None)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.Lmod.check_module_function" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_module_function</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_module_function</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.Lmod.check_module_function" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether selected module tool matches 'module' function definition.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.Lmod.check_module_output" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_module_output</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_module_output</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.Lmod.check_module_output" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check output of 'module' command, see if if is potentially invalid.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.Lmod.compose_cmd_list" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">compose_cmd_list</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">opts</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">compose_cmd_list</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">opts</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.Lmod.compose_cmd_list" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Compose full module command to run, based on provided arguments</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>args</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of arguments for module command</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>args</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of arguments for module command</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>list of strings representing the full module command to run</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>list of strings representing the full module command to run</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.Lmod.get_setenv_value_from_modulefile" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_setenv_value_from_modulefile</span><span class="p">(</span><span class="n">mod_name</span><span class="p">,</span> <span class="n">var_name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_setenv_value_from_modulefile</span><span class="p">(</span><span class="n">mod_name</span><span class="p">,</span> <span class="n">var_name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.Lmod.get_setenv_value_from_modulefile" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get value for specific 'setenv' statement from module file for the specified module.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>mod_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>module name</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>var_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>name of the variable being set for which value should be returned</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>mod_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>module name</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>var_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>name of the variable being set for which value should be returned</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.Lmod.module_wrapper_exists" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">module_wrapper_exists</span><span class="p">(</span><span class="n">mod_name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">module_wrapper_exists</span><span class="p">(</span><span class="n">mod_name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.Lmod.module_wrapper_exists" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine whether a module wrapper with specified name exists.
 First check for wrapper defined in .modulerc.lua, fall back to also checking .modulerc (Tcl syntax).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.Lmod.prepend_module_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">prepend_module_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">set_mod_paths</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">priority</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">prepend_module_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">set_mod_paths</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">priority</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.Lmod.prepend_module_path" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Prepend given module path to list of module paths, or bump it to 1st place.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path to prepend to $MODULEPATH</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>set_mod_paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>(re)set self.mod_paths</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>priority</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>priority for this path in $MODULEPATH (Lmod-specific)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path to prepend to $MODULEPATH</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>set_mod_paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>(re)set self.mod_paths</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>priority</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>priority for this path in $MODULEPATH (Lmod-specific)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.Lmod.unuse" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">unuse</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">unuse</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.Lmod.unuse" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Remove a module path</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.Lmod.update" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">update</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">update</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.modules.Lmod.update" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Update after new modules were added.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.Lmod.use" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">use</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">priority</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">use</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">priority</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.Lmod.use" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Add path to $MODULEPATH via 'module use'.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path to add to $MODULEPATH</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>priority</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>priority for this path in $MODULEPATH (Lmod-specific)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path to add to $MODULEPATH</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>priority</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>priority for this path in $MODULEPATH (Lmod-specific)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
 
@@ -10109,8 +10049,7 @@ First check for wrapper defined in .modulerc.lua, fall back to also checking .mo
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -10119,21 +10058,21 @@ First check for wrapper defined in .modulerc.lua, fall back to also checking .mo
 
 
 <h2 id="easybuild.tools.modules.Modules" class="doc doc-heading">
-          <code>Modules</code>
+            <code>Modules</code>
 
 
 <a href="#easybuild.tools.modules.Modules" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.modules.EnvironmentModulesC" href="#easybuild.tools.modules.EnvironmentModulesC">EnvironmentModulesC</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.modules.EnvironmentModulesC" href="#easybuild.tools.modules.EnvironmentModulesC">EnvironmentModulesC</a></code></p>
 
-  
+
       <p>NO LONGER SUPPORTED: interface to modules tool, use modules_tool from easybuild.tools.modules instead</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -10149,8 +10088,7 @@ First check for wrapper defined in .modulerc.lua, fall back to also checking .mo
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -10159,21 +10097,21 @@ First check for wrapper defined in .modulerc.lua, fall back to also checking .mo
 
 
 <h2 id="easybuild.tools.modules.ModulesTool" class="doc doc-heading">
-          <code>ModulesTool</code>
+            <code>ModulesTool</code>
 
 
 <a href="#easybuild.tools.modules.ModulesTool" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
-  
+
       <p>An abstract interface to a tool that deals with modules.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -10185,889 +10123,829 @@ First check for wrapper defined in .modulerc.lua, fall back to also checking .mo
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">mod_paths</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">testing</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">mod_paths</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">testing</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create a ModulesTool object</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>mod_paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>A list of paths where the modules can be located @type mod_paths: list</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>mod_paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>A list of paths where the modules can be located @type mod_paths: list</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.__str__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.__str__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>String representation of this ModulesTool instance.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.add_module_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">add_module_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">set_mod_paths</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">add_module_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">set_mod_paths</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.add_module_path" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Add specified module path (using 'module use') if it's not there yet.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path to add to $MODULEPATH via 'use'</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>set_mod_paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>(re)set self.mod_paths</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path to add to $MODULEPATH via 'use'</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>set_mod_paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>(re)set self.mod_paths</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.available" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">available</span><span class="p">(</span><span class="n">mod_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">extra_args</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">available</span><span class="p">(</span><span class="n">mod_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">extra_args</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.available" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return a list of available modules for the given (partial) module name;
 use None to obtain a list of all available modules.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>mod_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>a (partial) module name for filtering (default: None)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>mod_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>a (partial) module name for filtering (default: None)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.buildstats" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">buildstats</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">buildstats</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.buildstats" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return tuple with data to be included in buildstats</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.check_cmd_avail" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_cmd_avail</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">check_cmd_avail</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.check_cmd_avail" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether modules tool command is available.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.check_loaded_modules" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_loaded_modules</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">check_loaded_modules</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.check_loaded_modules" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether any (EasyBuild-generated) modules are loaded already in the current session</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.check_module_function" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_module_function</span><span class="p">(</span><span class="n">allow_mismatch</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_module_function</span><span class="p">(</span><span class="n">allow_mismatch</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.check_module_function" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether selected module tool matches 'module' function definition.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.check_module_output" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_module_output</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_module_output</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.check_module_output" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check output of 'module' command, see if if is potentially invalid.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.check_module_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_module_path</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">check_module_path</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.check_module_path" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check if MODULEPATH is set and change it if necessary.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.compose_cmd_list" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">compose_cmd_list</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">opts</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">compose_cmd_list</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">opts</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.compose_cmd_list" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Compose full module command to run, based on provided arguments</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>args</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of arguments for module command</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>args</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of arguments for module command</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>list of strings representing the full module command to run</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>list of strings representing the full module command to run</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.exist" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">exist</span><span class="p">(</span><span class="n">mod_names</span><span class="p">,</span> <span class="n">mod_exists_regex_template</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">skip_avail</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">maybe_partial</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">exist</span><span class="p">(</span><span class="n">mod_names</span><span class="p">,</span> <span class="n">mod_exists_regex_template</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">skip_avail</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">maybe_partial</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.exist" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check if modules with specified names exists.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>mod_names</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of module names</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>mod_exists_regex_template</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>DEPRECATED and unused</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>skip_avail</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>skip checking through 'module avail', only check via 'module show'</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>maybe_partial</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>indicates if the module name may be a partial module name</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>mod_names</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of module names</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>mod_exists_regex_template</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>DEPRECATED and unused</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>skip_avail</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>skip checking through 'module avail', only check via 'module show'</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>maybe_partial</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>indicates if the module name may be a partial module name</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.get_setenv_value_from_modulefile" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_setenv_value_from_modulefile</span><span class="p">(</span><span class="n">mod_name</span><span class="p">,</span> <span class="n">var_name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_setenv_value_from_modulefile</span><span class="p">(</span><span class="n">mod_name</span><span class="p">,</span> <span class="n">var_name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.get_setenv_value_from_modulefile" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get value for specific 'setenv' statement from module file for the specified module.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>mod_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>module name</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>var_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>name of the variable being set for which value should be returned</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>mod_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>module name</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>var_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>name of the variable being set for which value should be returned</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.get_value_from_modulefile" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_value_from_modulefile</span><span class="p">(</span><span class="n">mod_name</span><span class="p">,</span> <span class="n">regex</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_value_from_modulefile</span><span class="p">(</span><span class="n">mod_name</span><span class="p">,</span> <span class="n">regex</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.get_value_from_modulefile" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get info from the module file for the specified module.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>mod_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>module name</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>regex</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>(compiled) regular expression, with one group</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>mod_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>module name</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>regex</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>(compiled) regular expression, with one group</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.interpret_raw_path_lua" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">interpret_raw_path_lua</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">interpret_raw_path_lua</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.interpret_raw_path_lua" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Interpret raw path (Lua syntax): resolve environment variables, join paths where <code>pathJoin</code> is specified</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.interpret_raw_path_tcl" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">interpret_raw_path_tcl</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">interpret_raw_path_tcl</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.interpret_raw_path_tcl" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Interpret raw path (TCL syntax): resolve environment variables</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.list" class="doc doc-heading">
-          <code class="highlight language-python"><span class="nb">list</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="nb">list</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.list" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return result of 'module list'.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.load" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">load</span><span class="p">(</span><span class="n">modules</span><span class="p">,</span> <span class="n">mod_paths</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">purge</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">init_env</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">allow_reload</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">load</span><span class="p">(</span><span class="n">modules</span><span class="p">,</span> <span class="n">mod_paths</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">purge</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">init_env</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">allow_reload</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.load" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Load all requested modules.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>modules</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of modules to load</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>mod_paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of module paths to activate before loading</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>purge</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>whether or not a 'module purge' should be run before loading</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>init_env</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>original environment to restore after running 'module purge'</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>allow_reload</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>allow reloading an already loaded module</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>modules</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of modules to load</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>mod_paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of module paths to activate before loading</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>purge</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>whether or not a 'module purge' should be run before loading</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>init_env</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>original environment to restore after running 'module purge'</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>allow_reload</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>allow reloading an already loaded module</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.loaded_modules" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">loaded_modules</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">loaded_modules</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.loaded_modules" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return a list of loaded modules.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.mk_module_cache_key" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">mk_module_cache_key</span><span class="p">(</span><span class="n">partial_key</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">mk_module_cache_key</span><span class="p">(</span><span class="n">partial_key</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.mk_module_cache_key" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create a module cache key, using the specified partial key, by combining it with the current $MODULEPATH.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.modpath_extensions_for" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">modpath_extensions_for</span><span class="p">(</span><span class="n">mod_names</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">modpath_extensions_for</span><span class="p">(</span><span class="n">mod_names</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.modpath_extensions_for" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine dictionary with $MODULEPATH extensions for specified modules.
 All potential $MODULEPATH extensions are included, even the ones guarded by a condition (which is not checked).
 Only direct $MODULEPATH extensions are found, no recursion if performed for modules that load other modules.
 Modules with an empty list of $MODULEPATH extensions are included in the result.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>mod_names</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of module names for which to determine the list of $MODULEPATH extensions</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>mod_names</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of module names for which to determine the list of $MODULEPATH extensions</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>dictionary with module names as keys and lists of $MODULEPATH extensions as values</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>dictionary with module names as keys and lists of $MODULEPATH extensions as values</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.module_wrapper_exists" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">module_wrapper_exists</span><span class="p">(</span><span class="n">mod_name</span><span class="p">,</span> <span class="n">modulerc_fn</span><span class="o">=</span><span class="s1">&#39;.modulerc&#39;</span><span class="p">,</span> <span class="n">mod_wrapper_regex_template</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">module_wrapper_exists</span><span class="p">(</span><span class="n">mod_name</span><span class="p">,</span> <span class="n">modulerc_fn</span><span class="o">=</span><span class="s1">&#39;.modulerc&#39;</span><span class="p">,</span> <span class="n">mod_wrapper_regex_template</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.module_wrapper_exists" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine whether a module wrapper with specified name exists.
 Only .modulerc file in Tcl syntax is considered here.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.modulefile_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">modulefile_path</span><span class="p">(</span><span class="n">mod_name</span><span class="p">,</span> <span class="n">strip_ext</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">modulefile_path</span><span class="p">(</span><span class="n">mod_name</span><span class="p">,</span> <span class="n">strip_ext</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.modulefile_path" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get the path of the module file for the specified module</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>mod_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>module name</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>strip_ext</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>strip (.lua) extension from module fileame (if present)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>mod_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>module name</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>strip_ext</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>strip (.lua) extension from module fileame (if present)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.path_to_top_of_module_tree" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">path_to_top_of_module_tree</span><span class="p">(</span><span class="n">top_paths</span><span class="p">,</span> <span class="n">mod_name</span><span class="p">,</span> <span class="n">full_mod_subdir</span><span class="p">,</span> <span class="n">deps</span><span class="p">,</span> <span class="n">modpath_exts</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">path_to_top_of_module_tree</span><span class="p">(</span><span class="n">top_paths</span><span class="p">,</span> <span class="n">mod_name</span><span class="p">,</span> <span class="n">full_mod_subdir</span><span class="p">,</span> <span class="n">deps</span><span class="p">,</span> <span class="n">modpath_exts</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.path_to_top_of_module_tree" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Recursively determine path to the top of the module tree,
 for given module, module subdir and list of $MODULEPATH extensions per dependency module.</p>
 <p>For example, when to determine the path to the top of the module tree for the HPL/2.1 module being
@@ -11097,513 +10975,481 @@ installed with a goolf/1.5.14 toolchain in a Core/Compiler/MPI hierarchy (Hierar
 </ul>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>top_paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of potentation 'top of module tree' (absolute) paths</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>mod_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>(short) module name for starting point (only used in log messages)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>full_mod_subdir</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>absolute path to module subdirectory for starting point</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>deps</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of dependency modules for module at starting point</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>modpath_exts</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of module path extensions for each of the dependency modules</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>top_paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of potentation 'top of module tree' (absolute) paths</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>mod_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>(short) module name for starting point (only used in log messages)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>full_mod_subdir</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>absolute path to module subdirectory for starting point</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>deps</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of dependency modules for module at starting point</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>modpath_exts</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of module path extensions for each of the dependency modules</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.prepend_module_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">prepend_module_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">set_mod_paths</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">priority</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">prepend_module_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">set_mod_paths</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">priority</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.prepend_module_path" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Prepend given module path to list of module paths, or bump it to 1st place.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path to prepend to $MODULEPATH</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>set_mod_paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>(re)set self.mod_paths</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>priority</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>priority for this path in $MODULEPATH (Lmod-specific)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path to prepend to $MODULEPATH</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>set_mod_paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>(re)set self.mod_paths</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>priority</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>priority for this path in $MODULEPATH (Lmod-specific)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.purge" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">purge</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">purge</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.purge" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Purge loaded modules.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.read_module_file" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">read_module_file</span><span class="p">(</span><span class="n">mod_name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">read_module_file</span><span class="p">(</span><span class="n">mod_name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.read_module_file" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Read module file with specified name.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.remove_module_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">remove_module_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">set_mod_paths</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">remove_module_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">set_mod_paths</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.remove_module_path" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Remove specified module path (using 'module unuse').</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path to remove from $MODULEPATH via 'unuse'</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>set_mod_paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>(re)set self.mod_paths</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path to remove from $MODULEPATH via 'unuse'</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>set_mod_paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>(re)set self.mod_paths</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.run_module" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">run_module</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">run_module</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.run_module" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Run module command.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>args</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of arguments for module command; first argument should be the subcommand to run</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>()</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>kwargs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>dictionary with options that control certain aspects of how to run the module command</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>{}</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>args</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of arguments for module command; first argument should be the subcommand to run</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>()</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>kwargs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>dictionary with options that control certain aspects of how to run the module command</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>{}</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.set_and_check_version" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">set_and_check_version</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">set_and_check_version</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.set_and_check_version" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get the module version, and check any requirements</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.set_mod_paths" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">set_mod_paths</span><span class="p">(</span><span class="n">mod_paths</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">set_mod_paths</span><span class="p">(</span><span class="n">mod_paths</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.set_mod_paths" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Set mod_paths, based on $MODULEPATH unless a list of module paths is specified.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>mod_paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of entries for $MODULEPATH to use</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>mod_paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of entries for $MODULEPATH to use</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.set_path_env_var" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">set_path_env_var</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">paths</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">set_path_env_var</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">paths</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.set_path_env_var" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Set path environment variable to the given list of paths.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.show" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">show</span><span class="p">(</span><span class="n">mod_name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">show</span><span class="p">(</span><span class="n">mod_name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.show" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Run 'module show' for the specified module.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.unload" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">unload</span><span class="p">(</span><span class="n">modules</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">unload</span><span class="p">(</span><span class="n">modules</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.unload" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Unload all requested modules.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.unuse" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">unuse</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">unuse</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.unuse" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Remove module path via 'module unuse'.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.update" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">update</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">update</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.update" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Update after new modules were added.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.ModulesTool.use" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">use</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">priority</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">use</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">priority</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.ModulesTool.use" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Add path to $MODULEPATH via 'module use'.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path to add to $MODULEPATH</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>priority</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>priority for this path in $MODULEPATH (Lmod-specific)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path to add to $MODULEPATH</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>priority</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>priority for this path in $MODULEPATH (Lmod-specific)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
 
@@ -11611,8 +11457,7 @@ installed with a goolf/1.5.14 toolchain in a Core/Compiler/MPI hierarchy (Hierar
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -11621,21 +11466,21 @@ installed with a goolf/1.5.14 toolchain in a Core/Compiler/MPI hierarchy (Hierar
 
 
 <h2 id="easybuild.tools.modules.NoModulesTool" class="doc doc-heading">
-          <code>NoModulesTool</code>
+            <code>NoModulesTool</code>
 
 
 <a href="#easybuild.tools.modules.NoModulesTool" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.modules.ModulesTool" href="#easybuild.tools.modules.ModulesTool">ModulesTool</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.modules.ModulesTool" href="#easybuild.tools.modules.ModulesTool">ModulesTool</a></code></p>
 
-  
+
       <p>Class that mock the module behaviour, used for operation not requiring modules. Eg. tests, fetch only</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -11647,79 +11492,71 @@ installed with a goolf/1.5.14 toolchain in a Core/Compiler/MPI hierarchy (Hierar
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.NoModulesTool.available" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">available</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">available</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.NoModulesTool.available" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>No modules, so nothing available</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.NoModulesTool.check_loaded_modules" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_loaded_modules</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">check_loaded_modules</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.modules.NoModulesTool.check_loaded_modules" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Nothing to do since no modules</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.NoModulesTool.exist" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">exist</span><span class="p">(</span><span class="n">mod_names</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">exist</span><span class="p">(</span><span class="n">mod_names</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.NoModulesTool.exist" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>No modules, so nothing exists</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.modules.NoModulesTool.list" class="doc doc-heading">
-          <code class="highlight language-python"><span class="nb">list</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="nb">list</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.modules.NoModulesTool.list" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>No modules loaded</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -11727,298 +11564,274 @@ installed with a goolf/1.5.14 toolchain in a Core/Compiler/MPI hierarchy (Hierar
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.modules.avail_modules_tools" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">avail_modules_tools</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">avail_modules_tools</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.modules.avail_modules_tools" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return all known modules tools.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.modules.curr_module_paths" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">curr_module_paths</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">curr_module_paths</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.curr_module_paths" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return a list of current module paths.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>normalize</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Normalize the paths</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>normalize</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Normalize the paths</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.modules.get_software_libdir" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_software_libdir</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">only_one</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_software_libdir</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">only_one</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.get_software_libdir" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Find library subdirectories for the specified software package.</p>
 <p>Returns the library subdirectory, relative to software root.
-It fails if multiple library subdirs are found, unless only_one is False which yields a list of all library subdirs.</p>
+It fails if multiple library subdirs are found, unless only_one is False which yields a list of all library subdirs.
+If only_one is True and fs is None, select the one subdirectory with shared or static libraries, if possible.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>name of the software package</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>only_one</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>indicates whether only one lib path is expected to be found</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>fs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>only retain library subdirs that contain one of the files in this list</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>name of the software package</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>only_one</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>indicates whether only one lib path is expected to be found</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>fs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>only retain library subdirs that contain one of the files in this list</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.modules.get_software_root" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_software_root</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">with_env_var</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_software_root</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">with_env_var</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.get_software_root" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the software root set for a particular software name.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.modules.get_software_root_env_var_name" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_software_root_env_var_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_software_root_env_var_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.get_software_root_env_var_name" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return name of environment variable for software root.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.modules.get_software_version" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_software_version</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_software_version</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.get_software_version" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the software version set for a particular software name.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.modules.get_software_version_env_var_name" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_software_version_env_var_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_software_version_env_var_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.get_software_version_env_var_name" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return name of environment variable for software root.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.modules.invalidate_module_caches_for" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">invalidate_module_caches_for</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">invalidate_module_caches_for</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.invalidate_module_caches_for" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Invalidate cache entries related to specified path.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.modules.mk_module_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">mk_module_path</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">mk_module_path</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.mk_module_path" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create a string representing the list of module paths.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.modules.modules_tool" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">modules_tool</span><span class="p">(</span><span class="n">mod_paths</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">testing</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">modules_tool</span><span class="p">(</span><span class="n">mod_paths</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">testing</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.modules.modules_tool" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return interface to modules tool (environment modules (C, Tcl), or Lmod)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.modules.reset_module_caches" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">reset_module_caches</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">reset_module_caches</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.modules.reset_module_caches" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Reset module caches.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -12026,7 +11839,7 @@ It fails if multiple library subdirs are found, unless only_one is False which y
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -12126,7 +11939,7 @@ It fails if multiple library subdirs are found, unless only_one is False which y
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       

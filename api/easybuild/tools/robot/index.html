@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8425,8 +8425,8 @@
 
 
 <a id="easybuild.tools.robot"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Dependency resolution functionality, a.k.a. robot.</p>
 <p>Authors:</p>
 <ul>
@@ -8439,7 +8439,7 @@
 <li>Ward Poelmans (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8451,126 +8451,118 @@
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.robot.check_conflicts" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_conflicts</span><span class="p">(</span><span class="n">easyconfigs</span><span class="p">,</span> <span class="n">modtool</span><span class="p">,</span> <span class="n">check_inter_ec_conflicts</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_conflicts</span><span class="p">(</span><span class="n">easyconfigs</span><span class="p">,</span> <span class="n">modtool</span><span class="p">,</span> <span class="n">check_inter_ec_conflicts</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.robot.check_conflicts" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check for conflicts in dependency graphs for specified easyconfigs.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>easyconfigs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of easyconfig files (EasyConfig instances) to check for conflicts</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>modtool</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>ModulesTool instance to use</p>
-            </div>
-            <p>
-            </p>
-          </td>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>easyconfigs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of easyconfig files (EasyConfig instances) to check for conflicts</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>modtool</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>ModulesTool instance to use</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>check_inter_ec_conflicts</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>also check for conflicts between (dependencies of) listed easyconfigs</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>check_inter_ec_conflicts</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>also check for conflicts between (dependencies of) listed easyconfigs</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>True if one or more conflicts were found, False otherwise</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>True if one or more conflicts were found, False otherwise</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.robot.det_robot_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_robot_path</span><span class="p">(</span><span class="n">robot_paths_option</span><span class="p">,</span> <span class="n">tweaked_ecs_paths</span><span class="p">,</span> <span class="n">extra_ec_paths</span><span class="p">,</span> <span class="n">auto_robot</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_robot_path</span><span class="p">(</span><span class="n">robot_paths_option</span><span class="p">,</span> <span class="n">tweaked_ecs_paths</span><span class="p">,</span> <span class="n">extra_ec_paths</span><span class="p">,</span> <span class="n">auto_robot</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.robot.det_robot_path" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine robot path.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.robot.dry_run" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">dry_run</span><span class="p">(</span><span class="n">easyconfigs</span><span class="p">,</span> <span class="n">modtool</span><span class="p">,</span> <span class="n">short</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">dry_run</span><span class="p">(</span><span class="n">easyconfigs</span><span class="p">,</span> <span class="n">modtool</span><span class="p">,</span> <span class="n">short</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.robot.dry_run" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Compose dry run overview for supplied easyconfigs:
 * [ ] for unavailable
 * [x] for available
@@ -8578,319 +8570,307 @@
 * [R] for rebuild</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>easyconfigs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of parsed easyconfigs (EasyConfig instances)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>modtool</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>ModulesTool instance to use</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>short</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>use short format for overview: use a variable for common prefixes</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>easyconfigs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of parsed easyconfigs (EasyConfig instances)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>modtool</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>ModulesTool instance to use</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>short</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>use short format for overview: use a variable for common prefixes</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.robot.missing_deps" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">missing_deps</span><span class="p">(</span><span class="n">easyconfigs</span><span class="p">,</span> <span class="n">modtool</span><span class="p">,</span> <span class="n">terse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">missing_deps</span><span class="p">(</span><span class="n">easyconfigs</span><span class="p">,</span> <span class="n">modtool</span><span class="p">,</span> <span class="n">terse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.robot.missing_deps" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine subset of easyconfigs for which no module is installed yet.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.robot.raise_error_missing_deps" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">raise_error_missing_deps</span><span class="p">(</span><span class="n">missing_deps</span><span class="p">,</span> <span class="n">extra_msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">raise_error_missing_deps</span><span class="p">(</span><span class="n">missing_deps</span><span class="p">,</span> <span class="n">extra_msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.robot.raise_error_missing_deps" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Raise error to report missing dependencies.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.robot.resolve_dependencies" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">resolve_dependencies</span><span class="p">(</span><span class="n">easyconfigs</span><span class="p">,</span> <span class="n">modtool</span><span class="p">,</span> <span class="n">retain_all_deps</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">raise_error_missing_ecs</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">resolve_dependencies</span><span class="p">(</span><span class="n">easyconfigs</span><span class="p">,</span> <span class="n">modtool</span><span class="p">,</span> <span class="n">retain_all_deps</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">raise_error_missing_ecs</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.robot.resolve_dependencies" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Work through the list of easyconfigs to determine an optimal order</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>easyconfigs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of easyconfigs</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>modtool</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>ModulesTool instance to use</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>retain_all_deps</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>boolean indicating whether all dependencies must be retained, regardless of availability; retain all deps when True, check matching build option when False</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>raise_error_missing_ecs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>raise an error when one or more easyconfig files could not be found</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>easyconfigs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of easyconfigs</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>modtool</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>ModulesTool instance to use</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>retain_all_deps</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>boolean indicating whether all dependencies must be retained, regardless of availability; retain all deps when True, check matching build option when False</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>raise_error_missing_ecs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>raise an error when one or more easyconfig files could not be found</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.robot.search_easyconfigs" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">search_easyconfigs</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">short</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">filename_only</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">terse</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">consider_extra_paths</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">print_result</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">case_sensitive</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">search_easyconfigs</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">short</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">filename_only</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">terse</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">consider_extra_paths</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">print_result</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">case_sensitive</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.robot.search_easyconfigs" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Search for easyconfigs, if a query is provided.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>query</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>regex query string</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>short</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>figure out common prefix of hits, use variable to factor it out</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>filename_only</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>only print filenames, not paths</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>terse</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>stick to terse (machine-readable) output, as opposed to pretty-printing</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>consider_extra_paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>consider all paths when searching</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>print_result</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>print the list of easyconfigs</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>case_sensitive</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>boolean to decide whether search is case sensitive</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>query</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>regex query string</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>short</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>figure out common prefix of hits, use variable to factor it out</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>filename_only</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>only print filenames, not paths</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>terse</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>stick to terse (machine-readable) output, as opposed to pretty-printing</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>consider_extra_paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>consider all paths when searching</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>print_result</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>print the list of easyconfigs</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>case_sensitive</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>boolean to decide whether search is case sensitive</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>return a list of paths for the query</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>return a list of paths for the query</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8898,7 +8878,7 @@
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8998,7 +8978,7 @@
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       

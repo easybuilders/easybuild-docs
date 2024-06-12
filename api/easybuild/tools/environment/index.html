@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8452,8 +8452,8 @@
 
 
 <a id="easybuild.tools.environment"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Utility module for modifying os.environ</p>
 <p>Authors:</p>
 <ul>
@@ -8461,7 +8461,7 @@
 <li>Ward Poelmans (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8473,170 +8473,155 @@
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.environment.get_changes" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_changes</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_changes</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.environment.get_changes" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return tracked changes made in environment.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.environment.modify_env" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">modify_env</span><span class="p">(</span><span class="n">old</span><span class="p">,</span> <span class="n">new</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">modify_env</span><span class="p">(</span><span class="n">old</span><span class="p">,</span> <span class="n">new</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.environment.modify_env" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Compares two os.environ dumps. Adapts final environment.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.environment.read_environment" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">read_environment</span><span class="p">(</span><span class="n">env_vars</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">read_environment</span><span class="p">(</span><span class="n">env_vars</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.environment.read_environment" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Read variables from the environment</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>env_vars</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>a dict with key a name, value a environment variable name</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>strict</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>boolean, if True enforces that all specified environment variables are found</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>env_vars</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>a dict with key a name, value a environment variable name</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>strict</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>boolean, if True enforces that all specified environment variables are found</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.environment.reset_changes" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">reset_changes</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">reset_changes</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.environment.reset_changes" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Reset the changes tracked by this module</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.environment.restore_env" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">restore_env</span><span class="p">(</span><span class="n">env</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">restore_env</span><span class="p">(</span><span class="n">env</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.environment.restore_env" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Restore active environment based on specified dictionary.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.environment.restore_env_vars" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">restore_env_vars</span><span class="p">(</span><span class="n">env_keys</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">restore_env_vars</span><span class="p">(</span><span class="n">env_keys</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.environment.restore_env_vars" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Restore the environment by setting the keys in the env_keys dict again with their old value</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.environment.sanitize_env" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">sanitize_env</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">sanitize_env</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.environment.sanitize_env" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Sanitize environment.</p>
 <p>This function:</p>
 <ul>
@@ -8658,93 +8643,86 @@
   picking up non-stdlib Python packages (e.g., setuptools, vsc-base, ...), thanks to the magic of .pth files,
   cfr. https://docs.python.org/2/library/site.html .</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.environment.setvar" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">setvar</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">setvar</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.environment.setvar" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>put key in the environment with value
 tracks added keys until write_changes has been called</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>verbose</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>include message in dry run output for defining this environment variable</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>verbose</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>include message in dry run output for defining this environment variable</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.environment.unset_env_vars" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">unset_env_vars</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">unset_env_vars</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.environment.unset_env_vars" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Unset the keys given in the environment
 Returns a dict with the old values of the unset keys</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.environment.write_changes" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">write_changes</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">write_changes</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.environment.write_changes" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Write current changes to filename and reset environment afterwards</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8752,7 +8730,7 @@ Returns a dict with the old values of the unset keys</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8852,7 +8830,7 @@ Returns a dict with the old values of the unset keys</p>
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       

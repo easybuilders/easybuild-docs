@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8770,8 +8770,8 @@
 
 
 <a id="easybuild.base.fancylogger"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>This module implements a fancy logger on top of python logging</p>
 <p>It adds:
  - custom specifiers for mpi logging (the mpirank) with autodetection of mpi
@@ -8826,7 +8826,7 @@ logger.debug("warning")
 <li>Kenneth Hoste (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8842,22 +8842,22 @@ logger.debug("warning")
 
 
 <h2 id="easybuild.base.fancylogger.FancyLogRecord" class="doc doc-heading">
-          <code>FancyLogRecord</code>
+            <code>FancyLogRecord</code>
 
 
 <a href="#easybuild.base.fancylogger.FancyLogRecord" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="logging.LogRecord">LogRecord</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="logging.LogRecord">LogRecord</span></code></p>
 
-  
+
       <p>This class defines a custom log record.
 Adding extra specifiers is as simple as adding attributes to the log record</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8873,8 +8873,7 @@ Adding extra specifiers is as simple as adding attributes to the log record</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8883,23 +8882,23 @@ Adding extra specifiers is as simple as adding attributes to the log record</p>
 
 
 <h2 id="easybuild.base.fancylogger.FancyLogger" class="doc doc-heading">
-          <code>FancyLogger</code>
+            <code>FancyLogger</code>
 
 
 <a href="#easybuild.base.fancylogger.FancyLogger" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="logging.getLoggerClass">getLoggerClass</span>()</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="logging.getLoggerClass">getLoggerClass</span>()</code></p>
 
-  
+
       <p>This is a custom Logger class that uses the FancyLogRecord
 and has extra log methods raiseException and deprecated and
 streaming versions for debug,info,warning and error.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8911,274 +8910,249 @@ streaming versions for debug,info,warning and error.</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.fancylogger.FancyLogger.__copy__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">__copy__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">__copy__</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.fancylogger.FancyLogger.__copy__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return shallow copy, in this case reference to current logger</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.fancylogger.FancyLogger.__deepcopy__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">__deepcopy__</span><span class="p">(</span><span class="n">memo</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">__deepcopy__</span><span class="p">(</span><span class="n">memo</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.fancylogger.FancyLogger.__deepcopy__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>This behaviour is undefined, fancylogger will return shallow copy, instead just crashing.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.fancylogger.FancyLogger.deprecated" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">deprecated</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">cur_ver</span><span class="p">,</span> <span class="n">max_ver</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">exception</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">log_callback</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">deprecated</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">cur_ver</span><span class="p">,</span> <span class="n">max_ver</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">exception</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">log_callback</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.fancylogger.FancyLogger.deprecated" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Log deprecation message, throw error if current version is passed given threshold.</p>
 <p>Checks only major/minor version numbers (MAJ.MIN.x) by default, controlled by 'depth' argument.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.fancylogger.FancyLogger.fail" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">fail</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">fail</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.fancylogger.FancyLogger.fail" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Log error message and raise exception.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.fancylogger.FancyLogger.get_parent_info" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_parent_info</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_parent_info</span><span class="p">(</span><span class="n">prefix</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.fancylogger.FancyLogger.get_parent_info" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return pretty text version</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.fancylogger.FancyLogger.makeRecord" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">makeRecord</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">pathname</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">excinfo</span><span class="p">,</span> <span class="n">func</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sinfo</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">makeRecord</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">pathname</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">excinfo</span><span class="p">,</span> <span class="n">func</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sinfo</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.fancylogger.FancyLogger.makeRecord" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>overwrite make record to use a fancy record (with more options)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.fancylogger.FancyLogger.raiseException" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">raiseException</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">exception</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">catch</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">raiseException</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">exception</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">catch</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.fancylogger.FancyLogger.raiseException" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>logs message and raises an exception (since it can be caught higher up and handled)
 and raises it afterwards</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>exception</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>subclass of Exception to use for raising</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>catch</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>boolean, try to catch raised exception and add relevant info to message (this will also happen if exception is not specified)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>exception</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>subclass of Exception to use for raising</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>catch</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>boolean, try to catch raised exception and add relevant info to message (this will also happen if exception is not specified)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.fancylogger.FancyLogger.setLevelName" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">setLevelName</span><span class="p">(</span><span class="n">level_name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">setLevelName</span><span class="p">(</span><span class="n">level_name</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.fancylogger.FancyLogger.setLevelName" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Set the level by name.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.fancylogger.FancyLogger.streamDebug" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">streamDebug</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">streamDebug</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.fancylogger.FancyLogger.streamDebug" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get a DEBUG loglevel streamLog</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.fancylogger.FancyLogger.streamError" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">streamError</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">streamError</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.fancylogger.FancyLogger.streamError" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get a ERROR loglevel streamLog</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.fancylogger.FancyLogger.streamInfo" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">streamInfo</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">streamInfo</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.fancylogger.FancyLogger.streamInfo" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get a INFO loglevel streamLog</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.fancylogger.FancyLogger.streamLog" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">streamLog</span><span class="p">(</span><span class="n">levelno</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">streamLog</span><span class="p">(</span><span class="n">levelno</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.fancylogger.FancyLogger.streamLog" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Add (continuous) data to an existing message stream (eg a stream after a logging.info()</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9186,8 +9160,7 @@ and raises it afterwards</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9196,21 +9169,21 @@ and raises it afterwards</p>
 
 
 <h2 id="easybuild.base.fancylogger.FancyStreamHandler" class="doc doc-heading">
-          <code>FancyStreamHandler</code>
+            <code>FancyStreamHandler</code>
 
 
 <a href="#easybuild.base.fancylogger.FancyStreamHandler" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="logging.StreamHandler">StreamHandler</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="logging.StreamHandler">StreamHandler</span></code></p>
 
-  
+
       <p>The logging StreamHandler with uniform named arg in <strong>init</strong> for selecting the stream.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9222,24 +9195,22 @@ and raises it afterwards</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.fancylogger.FancyStreamHandler.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">stream</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">stream</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.fancylogger.FancyStreamHandler.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Initialize the stream (default is sys.stderr)
 - stream : a specific stream to use
 - stdout: if True and no stream specified, set stream to sys.stdout (False log to stderr)</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9247,244 +9218,224 @@ and raises it afterwards</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.fancylogger.disableDefaultHandlers" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">disableDefaultHandlers</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">disableDefaultHandlers</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.fancylogger.disableDefaultHandlers" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Disable the default handlers on all fancyloggers
 - if this is the last logger, it will just set the logLevel very high</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.fancylogger.enableDefaultHandlers" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">enableDefaultHandlers</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">enableDefaultHandlers</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.fancylogger.enableDefaultHandlers" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>(re)Enable the default handlers on all fancyloggers</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.fancylogger.getAllExistingLoggers" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">getAllExistingLoggers</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">getAllExistingLoggers</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.fancylogger.getAllExistingLoggers" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>the existing loggers, in a list of C{(name, logger)} tuples</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>the existing loggers, in a list of C{(name, logger)} tuples</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.fancylogger.getAllFancyloggers" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">getAllFancyloggers</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">getAllFancyloggers</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.fancylogger.getAllFancyloggers" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return all loggers that are not fancyloggers</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.fancylogger.getAllNonFancyloggers" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">getAllNonFancyloggers</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">getAllNonFancyloggers</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.fancylogger.getAllNonFancyloggers" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>all loggers that are not fancyloggers</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>all loggers that are not fancyloggers</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.fancylogger.getDetailsLogLevels" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">getDetailsLogLevels</span><span class="p">(</span><span class="n">fancy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">numeric</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">getDetailsLogLevels</span><span class="p">(</span><span class="n">fancy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">numeric</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.fancylogger.getDetailsLogLevels" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return list of (name,loglevelname) pairs of existing loggers</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>fancy</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>if True, returns only Fancylogger; if False, returns non-FancyLoggers, anything else, return all loggers</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>numeric</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>if True, return the numeric value instead of the name</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>fancy</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>if True, returns only Fancylogger; if False, returns non-FancyLoggers, anything else, return all loggers</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>numeric</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>if True, return the numeric value instead of the name</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.fancylogger.getLevelInt" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">getLevelInt</span><span class="p">(</span><span class="n">level_name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">getLevelInt</span><span class="p">(</span><span class="n">level_name</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.fancylogger.getLevelInt" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Given a level name, return the int value</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.fancylogger.getLogger" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">getLogger</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fname</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">clsname</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fancyrecord</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">getLogger</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fname</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">clsname</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fancyrecord</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.fancylogger.getLogger" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns a Fancylogger instance
 if fname is True, the loggers name will be 'name[.classname].functionname'
 if clsname is True the loggers name will be 'name.classname[.functionname]'</p>
@@ -9493,81 +9444,73 @@ This can make your code a lot slower, so this can be disabled by setting fancyre
 FANCYLOG_FANCYRECORD to False, or will also be disabled if a Name is set (and fancyrecord and
 module constant FANCYLOG_FANCYRECORD are also not set).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.fancylogger.getRootLoggerName" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">getRootLoggerName</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">getRootLoggerName</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.fancylogger.getRootLoggerName" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>returns the name of the root module
 this is the module that is actually running everything and so doing the logging</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.fancylogger.is_fancyroot" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_fancyroot</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">is_fancyroot</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.fancylogger.is_fancyroot" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return if the logging.root logger is a FancyLogger</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.fancylogger.logToDevLog" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">logToDevLog</span><span class="p">(</span><span class="n">enable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">handler</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">logToDevLog</span><span class="p">(</span><span class="n">enable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">handler</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.fancylogger.logToDevLog" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Log to syslog through /dev/log</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.fancylogger.logToFile" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">logToFile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">enable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">filehandler</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_bytes</span><span class="o">=</span><span class="n">MAX_BYTES</span><span class="p">,</span> <span class="n">backup_count</span><span class="o">=</span><span class="n">BACKUPCOUNT</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">logToFile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">enable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">filehandler</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_bytes</span><span class="o">=</span><span class="n">MAX_BYTES</span><span class="p">,</span> <span class="n">backup_count</span><span class="o">=</span><span class="n">BACKUPCOUNT</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.fancylogger.logToFile" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>enable (or disable) logging to file
 given filename
 will log to a file with the given name using a rotatingfilehandler
@@ -9576,23 +9519,21 @@ saving the last BACKUPCOUNT files.</p>
 <p>returns the filehandler (this can be used to later disable logging to file)</p>
 <p>if you want to disable logging to file, pass the earlier obtained filehandler</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.fancylogger.logToScreen" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">logToScreen</span><span class="p">(</span><span class="n">enable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">handler</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">colorize</span><span class="o">=</span><span class="n">Colorize</span><span class="o">.</span><span class="n">NEVER</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">logToScreen</span><span class="p">(</span><span class="n">enable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">handler</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">colorize</span><span class="o">=</span><span class="n">Colorize</span><span class="o">.</span><span class="n">NEVER</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.fancylogger.logToScreen" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>enable (or disable) logging to screen
 returns the screenhandler (this can be used to later disable logging to screen)</p>
 <p>if you want to disable logging to screen, pass the earlier obtained screenhandler</p>
@@ -9605,248 +9546,225 @@ ANSI terminal escape sequences, according to the values allowed
 in the <code>colorize</code> parameter to function <code>_screenLogFormatterFactory</code>
 (which see).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.fancylogger.logToUDP" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">logToUDP</span><span class="p">(</span><span class="n">hostname</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">5005</span><span class="p">,</span> <span class="n">enable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">datagramhandler</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">logToUDP</span><span class="p">(</span><span class="n">hostname</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">5005</span><span class="p">,</span> <span class="n">enable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">datagramhandler</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.fancylogger.logToUDP" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>enable (or disable) logging to udp
 given hostname and port.</p>
 <p>returns the filehandler (this can be used to later disable logging to udp)</p>
 <p>if you want to disable logging to udp, pass the earlier obtained filehandler,
 and set boolean = False</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.fancylogger.resetroot" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">resetroot</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">resetroot</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.fancylogger.resetroot" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Restore the original logging.root logger</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.fancylogger.setLogFormat" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">setLogFormat</span><span class="p">(</span><span class="n">f_format</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">setLogFormat</span><span class="p">(</span><span class="n">f_format</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.fancylogger.setLogFormat" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Set the log format. (Has to be set before logToSomething is called).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.fancylogger.setLogLevel" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">setLogLevel</span><span class="p">(</span><span class="n">level</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">setLogLevel</span><span class="p">(</span><span class="n">level</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.fancylogger.setLogLevel" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Set a global log level for all FancyLoggers</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.fancylogger.setLogLevelDebug" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">setLogLevelDebug</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">setLogLevelDebug</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.fancylogger.setLogLevelDebug" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>shorthand for setting debug level</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.fancylogger.setLogLevelError" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">setLogLevelError</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">setLogLevelError</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.fancylogger.setLogLevelError" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>shorthand for setting loglevel to Error</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.fancylogger.setLogLevelInfo" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">setLogLevelInfo</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">setLogLevelInfo</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.fancylogger.setLogLevelInfo" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>shorthand for setting loglevel to Info</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.fancylogger.setLogLevelWarning" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">setLogLevelWarning</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">setLogLevelWarning</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.fancylogger.setLogLevelWarning" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>shorthand for setting loglevel to Warning</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.fancylogger.setTestLogFormat" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">setTestLogFormat</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">setTestLogFormat</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.fancylogger.setTestLogFormat" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Set the log format to the test format (i.e. without timestamp).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.fancylogger.setroot" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">setroot</span><span class="p">(</span><span class="n">fancyrecord</span><span class="o">=</span><span class="n">FANCYLOG_FANCYRECORD</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">setroot</span><span class="p">(</span><span class="n">fancyrecord</span><span class="o">=</span><span class="n">FANCYLOG_FANCYRECORD</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.fancylogger.setroot" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Set a FancyLogger instance as the logging root logger
 with (effective)loglevel of current root FancyLogger</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>fancyrecord</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>is enabled or not (default FANCYLOG_FANCYRECORD module constant)  Detecting the loglevel is best-effort, better to set the loglevel after setroot()</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code><span title="easybuild.base.fancylogger.FANCYLOG_FANCYRECORD">FANCYLOG_FANCYRECORD</span></code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>fancyrecord</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>is enabled or not (default FANCYLOG_FANCYRECORD module constant)  Detecting the loglevel is best-effort, better to set the loglevel after setroot()</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code><span title="easybuild.base.fancylogger.FANCYLOG_FANCYRECORD">FANCYLOG_FANCYRECORD</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.fancylogger.thread_name" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">thread_name</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">thread_name</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.fancylogger.thread_name" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>returns the current threads name</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9854,7 +9772,7 @@ with (effective)loglevel of current root FancyLogger</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9954,7 +9872,7 @@ with (effective)loglevel of current root FancyLogger</p>
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       

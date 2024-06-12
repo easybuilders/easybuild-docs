@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8848,9 +8848,9 @@
 
 
 <a id="easybuild.tools.configobj"></a>
-  <div class="doc doc-contents first">
+    <div class="doc doc-contents first">
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8866,21 +8866,21 @@
 
 
 <h2 id="easybuild.tools.configobj.ConfigObj" class="doc doc-heading">
-          <code>ConfigObj</code>
+            <code>ConfigObj</code>
 
 
 <a href="#easybuild.tools.configobj.ConfigObj" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.configobj.Section" href="#easybuild.tools.configobj.Section">Section</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.configobj.Section" href="#easybuild.tools.configobj.Section">Section</a></code></p>
 
-  
+
       <p>An object to read, create, and write config files.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8892,19 +8892,17 @@
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.ConfigObj.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">infile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">configspec</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">raise_errors</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">list_values</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">create_empty</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">file_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">stringify</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">indent_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">default_encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">unrepr</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">write_empty_values</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">_inspec</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">infile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">configspec</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">raise_errors</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">list_values</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">create_empty</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">file_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">stringify</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">indent_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">default_encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">unrepr</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">write_empty_values</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">_inspec</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.configobj.ConfigObj.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Parse a config file or create a config file object.</p>
 <p><code>ConfigObj(infile=None, configspec=None, encoding=None,
             interpolation=True, raise_errors=False, list_values=True,
@@ -8912,63 +8910,57 @@
             indent_type=None, default_encoding=None, unrepr=False,
             write_empty_values=False, _inspec=False)</code></p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.ConfigObj.reload" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">reload</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">reload</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.configobj.ConfigObj.reload" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Reload a ConfigObj from file.</p>
 <p>This method raises a <code>ReloadError</code> if the ConfigObj doesn't have
 a filename attribute pointing to a file.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.ConfigObj.reset" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">reset</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">reset</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.configobj.ConfigObj.reset" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Clear ConfigObj instance and restore to 'freshly created' state.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.ConfigObj.validate" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">validator</span><span class="p">,</span> <span class="n">preserve_errors</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">section</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">validator</span><span class="p">,</span> <span class="n">preserve_errors</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">section</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.configobj.ConfigObj.validate" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Test the ConfigObj against a configspec.</p>
 <p>It uses the <code>validator</code> object from <em>validate.py</em>.</p>
 <p>To run <code>validate</code> on the current ConfigObj, call: ::</p>
@@ -8994,23 +8986,21 @@ still be marked as <code>False</code>.</p>
 results dictionary into a flattened list of failures - useful for
 displaying meaningful error messages.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.ConfigObj.write" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">write</span><span class="p">(</span><span class="n">outfile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">section</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">write</span><span class="p">(</span><span class="n">outfile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">section</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.configobj.ConfigObj.write" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Write the current ConfigObj as a file</p>
 <p>tekNico: FIXME: use StringIO instead of real files</p>
 <blockquote>
@@ -9028,7 +9018,7 @@ os.remove('test.ini')</p>
 </blockquote>
 </blockquote>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9036,8 +9026,7 @@ os.remove('test.ini')</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9046,22 +9035,22 @@ os.remove('test.ini')</p>
 
 
 <h2 id="easybuild.tools.configobj.ConfigObjError" class="doc doc-heading">
-          <code>ConfigObjError</code>
+            <code>ConfigObjError</code>
 
 
 <a href="#easybuild.tools.configobj.ConfigObjError" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>SyntaxError</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>SyntaxError</code></p>
 
-  
+
       <p>This is the base class for all errors that ConfigObj raises.
 It is a subclass of SyntaxError.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9077,8 +9066,7 @@ It is a subclass of SyntaxError.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9087,21 +9075,21 @@ It is a subclass of SyntaxError.</p>
 
 
 <h2 id="easybuild.tools.configobj.ConfigParserInterpolation" class="doc doc-heading">
-          <code>ConfigParserInterpolation</code>
+            <code>ConfigParserInterpolation</code>
 
 
 <a href="#easybuild.tools.configobj.ConfigParserInterpolation" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.configobj.InterpolationEngine" href="#easybuild.tools.configobj.InterpolationEngine">InterpolationEngine</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.configobj.InterpolationEngine" href="#easybuild.tools.configobj.InterpolationEngine">InterpolationEngine</a></code></p>
 
-  
+
       <p>Behaves like ConfigParser.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9117,8 +9105,7 @@ It is a subclass of SyntaxError.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9127,22 +9114,21 @@ It is a subclass of SyntaxError.</p>
 
 
 <h2 id="easybuild.tools.configobj.ConfigspecError" class="doc doc-heading">
-          <code>ConfigspecError</code>
+            <code>ConfigspecError</code>
 
 
 <a href="#easybuild.tools.configobj.ConfigspecError" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.configobj.ConfigObjError" href="#easybuild.tools.configobj.ConfigObjError">ConfigObjError</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.configobj.ConfigObjError" href="#easybuild.tools.configobj.ConfigObjError">ConfigObjError</a></code></p>
 
-  
+
       <p>An error occurred whilst parsing a configspec.</p>
 
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9151,22 +9137,21 @@ It is a subclass of SyntaxError.</p>
 
 
 <h2 id="easybuild.tools.configobj.DuplicateError" class="doc doc-heading">
-          <code>DuplicateError</code>
+            <code>DuplicateError</code>
 
 
 <a href="#easybuild.tools.configobj.DuplicateError" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.configobj.ConfigObjError" href="#easybuild.tools.configobj.ConfigObjError">ConfigObjError</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.configobj.ConfigObjError" href="#easybuild.tools.configobj.ConfigObjError">ConfigObjError</a></code></p>
 
-  
+
       <p>The keyword or section specified already exists.</p>
 
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9175,23 +9160,23 @@ It is a subclass of SyntaxError.</p>
 
 
 <h2 id="easybuild.tools.configobj.InterpolationEngine" class="doc doc-heading">
-          <code>InterpolationEngine</code>
+            <code>InterpolationEngine</code>
 
 
 <a href="#easybuild.tools.configobj.InterpolationEngine" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
-  
+
       <p>A helper class to help perform string interpolation.</p>
 <p>This class is an abstract base class; its descendants perform
 the actual work.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9207,8 +9192,7 @@ the actual work.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9217,22 +9201,21 @@ the actual work.</p>
 
 
 <h2 id="easybuild.tools.configobj.InterpolationError" class="doc doc-heading">
-          <code>InterpolationError</code>
+            <code>InterpolationError</code>
 
 
 <a href="#easybuild.tools.configobj.InterpolationError" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.configobj.ConfigObjError" href="#easybuild.tools.configobj.ConfigObjError">ConfigObjError</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.configobj.ConfigObjError" href="#easybuild.tools.configobj.ConfigObjError">ConfigObjError</a></code></p>
 
-  
+
       <p>Base class for the two interpolation errors.</p>
 
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9241,21 +9224,21 @@ the actual work.</p>
 
 
 <h2 id="easybuild.tools.configobj.InterpolationLoopError" class="doc doc-heading">
-          <code>InterpolationLoopError</code>
+            <code>InterpolationLoopError</code>
 
 
 <a href="#easybuild.tools.configobj.InterpolationLoopError" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.configobj.InterpolationError" href="#easybuild.tools.configobj.InterpolationError">InterpolationError</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.configobj.InterpolationError" href="#easybuild.tools.configobj.InterpolationError">InterpolationError</a></code></p>
 
-  
+
       <p>Maximum interpolation depth exceeded in string interpolation.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9271,8 +9254,7 @@ the actual work.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9281,21 +9263,21 @@ the actual work.</p>
 
 
 <h2 id="easybuild.tools.configobj.MissingInterpolationOption" class="doc doc-heading">
-          <code>MissingInterpolationOption</code>
+            <code>MissingInterpolationOption</code>
 
 
 <a href="#easybuild.tools.configobj.MissingInterpolationOption" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.configobj.InterpolationError" href="#easybuild.tools.configobj.InterpolationError">InterpolationError</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.configobj.InterpolationError" href="#easybuild.tools.configobj.InterpolationError">InterpolationError</a></code></p>
 
-  
+
       <p>A value specified for interpolation was missing.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9311,8 +9293,7 @@ the actual work.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9321,22 +9302,21 @@ the actual work.</p>
 
 
 <h2 id="easybuild.tools.configobj.NestingError" class="doc doc-heading">
-          <code>NestingError</code>
+            <code>NestingError</code>
 
 
 <a href="#easybuild.tools.configobj.NestingError" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.configobj.ConfigObjError" href="#easybuild.tools.configobj.ConfigObjError">ConfigObjError</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.configobj.ConfigObjError" href="#easybuild.tools.configobj.ConfigObjError">ConfigObjError</a></code></p>
 
-  
+
       <p>This error indicates a level of nesting that doesn't match.</p>
 
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9345,24 +9325,23 @@ the actual work.</p>
 
 
 <h2 id="easybuild.tools.configobj.ParseError" class="doc doc-heading">
-          <code>ParseError</code>
+            <code>ParseError</code>
 
 
 <a href="#easybuild.tools.configobj.ParseError" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.configobj.ConfigObjError" href="#easybuild.tools.configobj.ConfigObjError">ConfigObjError</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.configobj.ConfigObjError" href="#easybuild.tools.configobj.ConfigObjError">ConfigObjError</a></code></p>
 
-  
+
       <p>This error indicates that a line is badly written.
 It is neither a valid <code>key = value</code> line,
 nor a valid section marker line.</p>
 
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9371,22 +9350,22 @@ nor a valid section marker line.</p>
 
 
 <h2 id="easybuild.tools.configobj.ReloadError" class="doc doc-heading">
-          <code>ReloadError</code>
+            <code>ReloadError</code>
 
 
 <a href="#easybuild.tools.configobj.ReloadError" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>IOError</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>IOError</code></p>
 
-  
+
       <p>A 'reload' operation failed.
 This exception is a subclass of <code>IOError</code>.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9402,8 +9381,7 @@ This exception is a subclass of <code>IOError</code>.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9412,23 +9390,22 @@ This exception is a subclass of <code>IOError</code>.</p>
 
 
 <h2 id="easybuild.tools.configobj.RepeatSectionError" class="doc doc-heading">
-          <code>RepeatSectionError</code>
+            <code>RepeatSectionError</code>
 
 
 <a href="#easybuild.tools.configobj.RepeatSectionError" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.configobj.ConfigObjError" href="#easybuild.tools.configobj.ConfigObjError">ConfigObjError</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.configobj.ConfigObjError" href="#easybuild.tools.configobj.ConfigObjError">ConfigObjError</a></code></p>
 
-  
+
       <p>This error indicates additional sections in a section with a
 <code>__many__</code> (repeated) section.</p>
 
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9437,17 +9414,17 @@ This exception is a subclass of <code>IOError</code>.</p>
 
 
 <h2 id="easybuild.tools.configobj.Section" class="doc doc-heading">
-          <code>Section</code>
+            <code>Section</code>
 
 
 <a href="#easybuild.tools.configobj.Section" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>dict</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>dict</code></p>
 
-  
+
       <p>A dictionary-like object that represents a section in a config file.</p>
 <p>It does string interpolation if the 'interpolation' attribute
 of the 'main' object is set to True.</p>
@@ -9460,7 +9437,7 @@ You can use this to change the order of members.</p>
 <p>Iteration follows the order: scalars, then sections.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9472,57 +9449,51 @@ You can use this to change the order of members.</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.__delitem__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__delitem__</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__delitem__</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.configobj.Section.__delitem__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Remove items from the sequence when deleting.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.__getitem__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__getitem__</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__getitem__</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.configobj.Section.__getitem__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Fetch the item and do string interpolation.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span> <span class="n">main</span><span class="p">,</span> <span class="n">indict</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span> <span class="n">main</span><span class="p">,</span> <span class="n">indict</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.configobj.Section.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <ul>
 <li>parent is the section above</li>
 <li>depth is the depth level of this section</li>
@@ -9530,42 +9501,38 @@ You can use this to change the order of members.</p>
 <li>indict is a dictionary to initialise the section with</li>
 </ul>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.__repr__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__repr__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__repr__</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.configobj.Section.__repr__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>x.<strong>repr</strong>() &lt;==&gt; repr(x)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.__setitem__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__setitem__</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">unrepr</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__setitem__</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">unrepr</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.configobj.Section.__setitem__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Correctly set a value.</p>
 <p>Making dictionary values Section instances.
 (We have to special case 'Section' instances - which are also dicts)</p>
@@ -9575,23 +9542,21 @@ Values need only be strings (or lists of strings) if
 <p><code>unrepr</code> must be set when setting a value to a dictionary, without
 creating a new sub-section.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.as_bool" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">as_bool</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">as_bool</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.configobj.Section.as_bool" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Accepts a key as input. The corresponding value must be a string or
 the objects (<code>True</code> or 1) or (<code>False</code> or 0). We allow 0 and 1 to
 retain compatibility with Python 2.2.</p>
@@ -9619,23 +9584,21 @@ a.as_bool('b')
 </blockquote>
 </blockquote>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.as_float" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">as_float</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">as_float</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.configobj.Section.as_float" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A convenience method which coerces the specified value to a float.</p>
 <p>If the value is an invalid literal for <code>float</code>, a <code>ValueError</code> will
 be raised.</p>
@@ -9657,23 +9620,21 @@ a.as_float('b')
 </blockquote>
 </blockquote>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.as_int" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">as_int</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">as_int</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.configobj.Section.as_int" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A convenience method which coerces the specified value to an integer.</p>
 <p>If the value is an invalid literal for <code>int</code>, a <code>ValueError</code> will
 be raised.</p>
@@ -9696,23 +9657,21 @@ ValueError: invalid literal for int() with base 10: '3.2'</p>
 </blockquote>
 </blockquote>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.as_list" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">as_list</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">as_list</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.configobj.Section.as_list" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A convenience method which fetches the specified value, guaranteeing
 that it is a list.</p>
 <blockquote>
@@ -9732,45 +9691,41 @@ a.as_list('a')
 </blockquote>
 </blockquote>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.clear" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">clear</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">clear</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.configobj.Section.clear" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A version of clear that also affects scalars/sections
 Also clears comments and configspec.</p>
 <p>Leaves other attributes alone :
     depth/main/parent are not affected</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.dict" class="doc doc-heading">
-          <code class="highlight language-python"><span class="nb">dict</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="nb">dict</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.configobj.Section.dict" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return a deepcopy of self as a dictionary.</p>
 <p>All members that are <code>Section</code> instances are recursively turned to
 ordinary dictionaries - by calling their <code>dict</code> method.</p>
@@ -9786,137 +9741,123 @@ n is a
 </blockquote>
 </blockquote>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.get" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.configobj.Section.get" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A version of <code>get</code> that doesn't bypass string interpolation.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.items" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">items</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">items</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.configobj.Section.items" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>D.items() -&gt; list of D's (key, value) pairs, as 2-tuples</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.iteritems" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">iteritems</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">iteritems</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.configobj.Section.iteritems" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>D.iteritems() -&gt; an iterator over the (key, value) items of D</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.iterkeys" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">iterkeys</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">iterkeys</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.configobj.Section.iterkeys" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>D.iterkeys() -&gt; an iterator over the keys of D</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.itervalues" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">itervalues</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">itervalues</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.configobj.Section.itervalues" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>D.itervalues() -&gt; an iterator over the values of D</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.keys" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">keys</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">keys</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.configobj.Section.keys" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>D.keys() -&gt; list of D's keys</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.merge" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">merge</span><span class="p">(</span><span class="n">indict</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">merge</span><span class="p">(</span><span class="n">indict</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.configobj.Section.merge" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A recursive update - useful for merging config files.</p>
 <blockquote>
 <blockquote>
@@ -9939,186 +9880,168 @@ ConfigObj({'section1': {'option1': 'False', 'subsection': {'more_options': 'Fals
 </blockquote>
 </blockquote>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.pop" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">pop</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">MISSING</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">pop</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">MISSING</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.configobj.Section.pop" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>'D.pop(k[,d]) -&gt; v, remove specified key and return the corresponding value.
 If key is not found, d is returned if given, otherwise KeyError is raised'</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.popitem" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">popitem</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">popitem</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.configobj.Section.popitem" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Pops the first (key,val)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.rename" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">rename</span><span class="p">(</span><span class="n">oldkey</span><span class="p">,</span> <span class="n">newkey</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">rename</span><span class="p">(</span><span class="n">oldkey</span><span class="p">,</span> <span class="n">newkey</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.configobj.Section.rename" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Change a keyname to another, without changing position in sequence.</p>
 <p>Implemented so that transformations can be made on keys,
 as well as on values. (used by encode and decode)</p>
 <p>Also renames comments.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.restore_default" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">restore_default</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">restore_default</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.configobj.Section.restore_default" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Restore (and return) default value for the specified key.</p>
 <p>This method will only work for a ConfigObj that was created
 with a configspec and has been validated.</p>
 <p>If there is no default value for this key, <code>KeyError</code> is raised.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.restore_defaults" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">restore_defaults</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">restore_defaults</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.configobj.Section.restore_defaults" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Recursively restore default values to all members
 that have them.</p>
 <p>This method will only work for a ConfigObj that was created
 with a configspec and has been validated.</p>
 <p>It doesn't delete or modify entries without default values.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.setdefault" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">setdefault</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">setdefault</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.configobj.Section.setdefault" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A version of setdefault that sets sequence if appropriate.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.update" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">update</span><span class="p">(</span><span class="n">indict</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">update</span><span class="p">(</span><span class="n">indict</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.configobj.Section.update" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A version of update that uses our <code>__setitem__</code>.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.values" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">values</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">values</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.configobj.Section.values" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>D.values() -&gt; list of D's values</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.Section.walk" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">walk</span><span class="p">(</span><span class="n">function</span><span class="p">,</span> <span class="n">raise_errors</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">call_on_sections</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">keywargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">walk</span><span class="p">(</span><span class="n">function</span><span class="p">,</span> <span class="n">raise_errors</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">call_on_sections</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">keywargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.configobj.Section.walk" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Walk every member and call a function on the keyword and value.</p>
 <p>Return a dictionary of the return values</p>
 <p>If the function raises an exception, raise the errror
@@ -10162,7 +10085,7 @@ ConfigObj({'CLIENT1section': {'CLIENT1key': 'CLIENT1value'}})</p>
 </blockquote>
 </blockquote>
 
-  </div>
+    </div>
 
 </div>
 
@@ -10170,8 +10093,7 @@ ConfigObj({'CLIENT1section': {'CLIENT1key': 'CLIENT1value'}})</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -10180,17 +10102,17 @@ ConfigObj({'CLIENT1section': {'CLIENT1key': 'CLIENT1value'}})</p>
 
 
 <h2 id="easybuild.tools.configobj.SimpleVal" class="doc doc-heading">
-          <code>SimpleVal</code>
+            <code>SimpleVal</code>
 
 
 <a href="#easybuild.tools.configobj.SimpleVal" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
-  
+
       <p>A simple validator.
 Can be used to check that all members expected are present.</p>
 <p>To use it, provide a configspec with all your members in (the value given
@@ -10200,10 +10122,9 @@ members are present, or a dictionary with True/False meaning
 present/missing. (Whole missing sections will be replaced with <code>False</code>)</p>
 
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -10216,18 +10137,17 @@ present/missing. (Whole missing sections will be replaced with <code>False</code
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.configobj.SimpleVal.check" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check</span><span class="p">(</span><span class="n">check</span><span class="p">,</span> <span class="n">member</span><span class="p">,</span> <span class="n">missing</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check</span><span class="p">(</span><span class="n">check</span><span class="p">,</span> <span class="n">member</span><span class="p">,</span> <span class="n">missing</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.configobj.SimpleVal.check" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A dummy check method, always returns the value unchanged.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -10235,8 +10155,7 @@ present/missing. (Whole missing sections will be replaced with <code>False</code
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -10245,21 +10164,21 @@ present/missing. (Whole missing sections will be replaced with <code>False</code
 
 
 <h2 id="easybuild.tools.configobj.TemplateInterpolation" class="doc doc-heading">
-          <code>TemplateInterpolation</code>
+            <code>TemplateInterpolation</code>
 
 
 <a href="#easybuild.tools.configobj.TemplateInterpolation" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.configobj.InterpolationEngine" href="#easybuild.tools.configobj.InterpolationEngine">InterpolationEngine</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.configobj.InterpolationEngine" href="#easybuild.tools.configobj.InterpolationEngine">InterpolationEngine</a></code></p>
 
-  
+
       <p>Behaves like string.Template.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -10275,8 +10194,7 @@ present/missing. (Whole missing sections will be replaced with <code>False</code
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -10285,39 +10203,36 @@ present/missing. (Whole missing sections will be replaced with <code>False</code
 
 
 <h2 id="easybuild.tools.configobj.UnreprError" class="doc doc-heading">
-          <code>UnreprError</code>
+            <code>UnreprError</code>
 
 
 <a href="#easybuild.tools.configobj.UnreprError" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.configobj.ConfigObjError" href="#easybuild.tools.configobj.ConfigObjError">ConfigObjError</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.configobj.ConfigObjError" href="#easybuild.tools.configobj.ConfigObjError">ConfigObjError</a></code></p>
 
-  
+
       <p>An error parsing in unrepr mode.</p>
 
 
-  </div>
-
+    </div>
 
 </div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.configobj.flatten_errors" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">flatten_errors</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">results</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">flatten_errors</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">results</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.configobj.flatten_errors" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>An example function that will turn a nested dictionary of results
 (as returned by <code>ConfigObj.validate</code>) into a flat list.</p>
 <p><code>cfg</code> is the ConfigObj instance being checked, <code>res</code> is the results
@@ -10339,23 +10254,21 @@ was present, but failed the check, then <code>result</code> will be the exceptio
 object returned. You can use this as a string that describes the failure.</p>
 <p>For example <em>The value "3" is of the wrong type</em>.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.configobj.get_extra_values" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_extra_values</span><span class="p">(</span><span class="n">conf</span><span class="p">,</span> <span class="n">_prepend</span><span class="o">=</span><span class="p">())</span></code>
+            <code class="highlight language-python"><span class="n">get_extra_values</span><span class="p">(</span><span class="n">conf</span><span class="p">,</span> <span class="n">_prepend</span><span class="o">=</span><span class="p">())</span></code>
 
 <a href="#easybuild.tools.configobj.get_extra_values" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Find all the values and sections not in the configspec from a validated
 ConfigObj.</p>
 <p><code>get_extra_values</code> returns a list of tuples where each tuple represents
@@ -10368,7 +10281,7 @@ subsection of the 'foo' section the first member will be <code>('foo', 'bar')</c
 <p>NOTE: If you call <code>get_extra_values</code> on a ConfigObj instance that hasn't
 been validated it will return an empty list.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -10376,7 +10289,7 @@ been validated it will return an empty list.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -10476,7 +10389,7 @@ been validated it will return an empty list.</p>
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       

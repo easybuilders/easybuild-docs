@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8422,8 +8422,8 @@
 
 
 <a id="easybuild.framework.extensioneasyblock"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>EasyBuild support for building and installing extensions as actual extensions or as stand-alone modules,
 implemented as an easyblock</p>
 <p>Authors:</p>
@@ -8431,7 +8431,7 @@ implemented as an easyblock</p>
 <li>Kenneth Hoste (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8447,17 +8447,17 @@ implemented as an easyblock</p>
 
 
 <h2 id="easybuild.framework.extensioneasyblock.ExtensionEasyBlock" class="doc doc-heading">
-          <code>ExtensionEasyBlock</code>
+            <code>ExtensionEasyBlock</code>
 
 
 <a href="#easybuild.framework.extensioneasyblock.ExtensionEasyBlock" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.framework.easyblock.EasyBlock" href="../easyblock/#easybuild.framework.easyblock.EasyBlock">EasyBlock</a></code>, <code><a class="autorefs autorefs-internal" title="easybuild.framework.extension.Extension" href="../extension/#easybuild.framework.extension.Extension">Extension</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.framework.easyblock.EasyBlock" href="../easyblock/#easybuild.framework.easyblock.EasyBlock">EasyBlock</a></code>, <code><a class="autorefs autorefs-internal" title="easybuild.framework.extension.Extension" href="../extension/#easybuild.framework.extension.Extension">Extension</a></code></p>
 
-  
+
       <p>Install an extension as a separate module, or as an extension.</p>
 <p>Deriving classes should implement the following functions:
 * required EasyBlock functions:
@@ -8468,7 +8468,7 @@ implemented as an easyblock</p>
   - run</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8480,33 +8480,29 @@ implemented as an easyblock</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.extensioneasyblock.ExtensionEasyBlock.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.extensioneasyblock.ExtensionEasyBlock.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Initialize either as EasyBlock or as Extension.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.extensioneasyblock.ExtensionEasyBlock.extra_options" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">extra_options</span><span class="p">(</span><span class="n">extra_vars</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
-  
+            <code class="highlight language-python"><span class="n">extra_options</span><span class="p">(</span><span class="n">extra_vars</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
   </span>
@@ -8514,68 +8510,62 @@ implemented as an easyblock</p>
 <a href="#easybuild.framework.extensioneasyblock.ExtensionEasyBlock.extra_options" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Extra easyconfig parameters specific to ExtensionEasyBlock.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.extensioneasyblock.ExtensionEasyBlock.make_module_extra" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">make_module_extra</span><span class="p">(</span><span class="n">extra</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">make_module_extra</span><span class="p">(</span><span class="n">extra</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.extensioneasyblock.ExtensionEasyBlock.make_module_extra" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Add custom entries to module.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.extensioneasyblock.ExtensionEasyBlock.run" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">run</span><span class="p">(</span><span class="n">unpack_src</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">run</span><span class="p">(</span><span class="n">unpack_src</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.extensioneasyblock.ExtensionEasyBlock.run" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Common operations for extensions: unpacking sources, patching, ...</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.extensioneasyblock.ExtensionEasyBlock.sanity_check_step" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">sanity_check_step</span><span class="p">(</span><span class="n">exts_filter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">custom_paths</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">custom_commands</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">sanity_check_step</span><span class="p">(</span><span class="n">exts_filter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">custom_paths</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">custom_commands</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.extensioneasyblock.ExtensionEasyBlock.sanity_check_step" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Custom sanity check for extensions, whether installed as stand-alone module or not</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8583,8 +8573,7 @@ implemented as an easyblock</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8593,7 +8582,7 @@ implemented as an easyblock</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8693,7 +8682,7 @@ implemented as an easyblock</p>
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       

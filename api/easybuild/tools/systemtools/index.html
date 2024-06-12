@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8686,8 +8686,8 @@
 
 
 <a id="easybuild.tools.systemtools"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Module with useful functions for getting system information</p>
 <p>Authors:</p>
 <ul>
@@ -8695,7 +8695,7 @@
 <li>Ward Poelmans (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8711,908 +8711,829 @@
 
 
 <h2 id="easybuild.tools.systemtools.SystemToolsException" class="doc doc-heading">
-          <code>SystemToolsException</code>
+            <code>SystemToolsException</code>
 
 
 <a href="#easybuild.tools.systemtools.SystemToolsException" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>Exception</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>Exception</code></p>
 
-  
+
       <p>raised when systemtools fails</p>
 
 
-  </div>
-
+    </div>
 
 </div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.check_easybuild_deps" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_easybuild_deps</span><span class="p">(</span><span class="n">modtool</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_easybuild_deps</span><span class="p">(</span><span class="n">modtool</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.systemtools.check_easybuild_deps" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check presence and version of required and optional EasyBuild dependencies, and report back to terminal.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.check_linked_shared_libs" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_linked_shared_libs</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">required_patterns</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">banned_patterns</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_linked_shared_libs</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">required_patterns</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">banned_patterns</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.systemtools.check_linked_shared_libs" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check for (lack of) patterns in linked shared libraries for binary/library at specified path.
 Uses 'ldd' on Linux and 'otool -L' on macOS to determine linked shared libraries.</p>
 <p>Returns True or False for dynamically linked binaries and shared libraries to indicate
 whether all patterns match and antipatterns don't match.</p>
 <p>Returns None if given path is not a dynamically linked binary or library.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.check_os_dependency" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_os_dependency</span><span class="p">(</span><span class="n">dep</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_os_dependency</span><span class="p">(</span><span class="n">dep</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.systemtools.check_os_dependency" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check if dependency is available from OS.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.check_python_version" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_python_version</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">check_python_version</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.systemtools.check_python_version" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check currently used Python version.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.det_parallelism" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_parallelism</span><span class="p">(</span><span class="n">par</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">maxpar</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_parallelism</span><span class="p">(</span><span class="n">par</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">maxpar</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.systemtools.det_parallelism" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine level of parallelism that should be used.
 Default: educated guess based on # cores and 'ulimit -u' setting: min(# cores, ((ulimit -u) - 15) // 6)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.det_pypkg_version" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_pypkg_version</span><span class="p">(</span><span class="n">pkg_name</span><span class="p">,</span> <span class="n">imported_pkg</span><span class="p">,</span> <span class="n">import_name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_pypkg_version</span><span class="p">(</span><span class="n">pkg_name</span><span class="p">,</span> <span class="n">imported_pkg</span><span class="p">,</span> <span class="n">import_name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.systemtools.det_pypkg_version" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine version of a Python package.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.det_terminal_size" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_terminal_size</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">det_terminal_size</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.systemtools.det_terminal_size" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine the current size of the terminal window.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>tuple with terminal width and height</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>tuple with terminal width and height</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.find_library_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">find_library_path</span><span class="p">(</span><span class="n">lib_filename</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">find_library_path</span><span class="p">(</span><span class="n">lib_filename</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.systemtools.find_library_path" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Search library by file name in the system
 Return absolute path to existing libraries</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>lib_filename</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>name of library file</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>lib_filename</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>name of library file</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.get_avail_core_count" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_avail_core_count</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_avail_core_count</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.systemtools.get_avail_core_count" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns the number of available CPUs, according to cgroups and taskssets limits</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.get_core_count" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_core_count</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_core_count</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.systemtools.get_core_count" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>NO LONGER SUPPORTED: use get_avail_core_count() instead</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.get_cpu_arch_name" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_cpu_arch_name</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_cpu_arch_name</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.systemtools.get_cpu_arch_name" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine CPU architecture name via archspec (if available).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.get_cpu_architecture" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_cpu_architecture</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_cpu_architecture</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.systemtools.get_cpu_architecture" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Try to detect the CPU architecture</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>a value from the CPU_ARCHITECTURES list</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>a value from the CPU_ARCHITECTURES list</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.get_cpu_family" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_cpu_family</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_cpu_family</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.systemtools.get_cpu_family" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine CPU family.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>a value from the CPU_FAMILIES list</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>a value from the CPU_FAMILIES list</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.get_cpu_features" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_cpu_features</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_cpu_features</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.systemtools.get_cpu_features" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get list of CPU features</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.get_cpu_model" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_cpu_model</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_cpu_model</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.systemtools.get_cpu_model" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine CPU model, e.g., Intel(R) Core(TM) i5-2540M CPU @ 2.60GHz</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.get_cpu_speed" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_cpu_speed</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_cpu_speed</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.systemtools.get_cpu_speed" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns the (maximum) cpu speed in MHz, as a float value.
 In case of throttling, the highest cpu speed is returns.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.get_cpu_vendor" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_cpu_vendor</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_cpu_vendor</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.systemtools.get_cpu_vendor" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Try to detect the CPU vendor</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>a value from the CPU_VENDORS list</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>a value from the CPU_VENDORS list</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.get_gcc_version" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_gcc_version</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_gcc_version</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.systemtools.get_gcc_version" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Process <code>gcc --version</code> and return the GCC version.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.get_glibc_version" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_glibc_version</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_glibc_version</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.systemtools.get_glibc_version" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Find the version of glibc used on this system</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.get_gpu_info" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_gpu_info</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_gpu_info</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.systemtools.get_gpu_info" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get the GPU info</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.get_kernel_name" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_kernel_name</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_kernel_name</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.systemtools.get_kernel_name" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>NO LONGER SUPPORTED: use get_os_type() instead</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.get_linked_libs_raw" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_linked_libs_raw</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_linked_libs_raw</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.systemtools.get_linked_libs_raw" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get raw output from command that reports linked libraries for dynamically linked executables/libraries,
 or None for other types of files.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.get_os_name" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_os_name</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_os_name</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.systemtools.get_os_name" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine system name, e.g., 'redhat' (generic), 'centos', 'debian', 'fedora', 'suse', 'ubuntu',
 'red hat enterprise linux server', 'SL' (Scientific Linux), 'opensuse', ...</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.get_os_type" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_os_type</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_os_type</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.systemtools.get_os_type" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine system type, e.g., 'Linux', 'Darwin', 'Java'.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.get_os_version" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_os_version</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_os_version</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.systemtools.get_os_version" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine system version.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.get_platform_name" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_platform_name</span><span class="p">(</span><span class="n">withversion</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_platform_name</span><span class="p">(</span><span class="n">withversion</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.systemtools.get_platform_name" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Try and determine platform name
 e.g., x86_64-unknown-linux, x86_64-apple-darwin</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.get_shared_lib_ext" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_shared_lib_ext</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_shared_lib_ext</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.systemtools.get_shared_lib_ext" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine extention for shared libraries</p>
 <p>Linux: 'so', Darwin: 'dylib'</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.get_system_info" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_system_info</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_system_info</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.systemtools.get_system_info" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return a dictionary with system information.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.get_tool_version" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_tool_version</span><span class="p">(</span><span class="n">tool</span><span class="p">,</span> <span class="n">version_option</span><span class="o">=</span><span class="s1">&#39;--version&#39;</span><span class="p">,</span> <span class="n">ignore_ec</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_tool_version</span><span class="p">(</span><span class="n">tool</span><span class="p">,</span> <span class="n">version_option</span><span class="o">=</span><span class="s1">&#39;--version&#39;</span><span class="p">,</span> <span class="n">ignore_ec</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.systemtools.get_tool_version" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get output of running version option for specific command line tool.
 Output is returned as a single-line string (newlines are replaced by '; ').</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.get_total_memory" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_total_memory</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_total_memory</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.systemtools.get_total_memory" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Try to ascertain this node's total memory</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>total memory as an integer, specifically a number of megabytes</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>total memory as an integer, specifically a number of megabytes</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.locate_solib" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">locate_solib</span><span class="p">(</span><span class="n">libobj</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">locate_solib</span><span class="p">(</span><span class="n">libobj</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.systemtools.locate_solib" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return absolute path to loaded library using dlinfo
 Based on https://stackoverflow.com/a/35683698</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>libobj</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>ctypes CDLL object</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>libobj</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>ctypes CDLL object</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.pick_dep_version" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">pick_dep_version</span><span class="p">(</span><span class="n">dep_version</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">pick_dep_version</span><span class="p">(</span><span class="n">dep_version</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.systemtools.pick_dep_version" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Pick the correct dependency version to use for this system.
 Input can either be:
 * a string value (or None)
 * a dict with options to choose from</p>
 <p>Return value is the version to use or False to skip this dependency.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.pick_system_specific_value" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">pick_system_specific_value</span><span class="p">(</span><span class="n">description</span><span class="p">,</span> <span class="n">options_or_value</span><span class="p">,</span> <span class="n">allow_none</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">pick_system_specific_value</span><span class="p">(</span><span class="n">description</span><span class="p">,</span> <span class="n">options_or_value</span><span class="p">,</span> <span class="n">allow_none</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.systemtools.pick_system_specific_value" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Pick an entry for the current system when the input has multiple options</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>description</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Descriptive string about the value to be retrieved. Used for logging.</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>options_or_value</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Either a dictionary with options to choose from or a value of any other type</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>allow_none</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>When True and no matching arch key was found, return None instead of an error</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>description</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Descriptive string about the value to be retrieved. Used for logging.</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>options_or_value</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Either a dictionary with options to choose from or a value of any other type</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>allow_none</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>When True and no matching arch key was found, return None instead of an error</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.sched_getaffinity" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">sched_getaffinity</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">sched_getaffinity</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.systemtools.sched_getaffinity" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine list of available cores for current process.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.systemtools.use_group" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">use_group</span><span class="p">(</span><span class="n">group_name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">use_group</span><span class="p">(</span><span class="n">group_name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.systemtools.use_group" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Use group with specified name.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9620,7 +9541,7 @@ Input can either be:
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9720,7 +9641,7 @@ Input can either be:
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       

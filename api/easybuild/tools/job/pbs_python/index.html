@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8538,8 +8538,8 @@
 
 
 <a id="easybuild.tools.job.pbs_python"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Interface module to TORQUE (PBS).</p>
 <p>Authors:</p>
 <ul>
@@ -8548,7 +8548,7 @@
 <li>Kenneth Hoste (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8564,21 +8564,21 @@
 
 
 <h2 id="easybuild.tools.job.pbs_python.PbsJob" class="doc doc-heading">
-          <code>PbsJob</code>
+            <code>PbsJob</code>
 
 
 <a href="#easybuild.tools.job.pbs_python.PbsJob" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
-  
+
       <p>Interaction with TORQUE</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8590,179 +8590,161 @@
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.pbs_python.PbsJob.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">script</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">env_vars</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hours</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cores</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">conn</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ppn</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">server</span><span class="p">,</span> <span class="n">script</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">env_vars</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hours</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cores</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">conn</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ppn</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.job.pbs_python.PbsJob.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>create a new Job to be submitted to PBS
 env_vars is a dictionary with key-value pairs of environment variables that should be passed on to the job
 hours and cores should be integer values.
 hours can be 1 - (max walltime), cores depends on which cluster it is being run.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.pbs_python.PbsJob.__str__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.job.pbs_python.PbsJob.__str__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the job ID as a string.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.pbs_python.PbsJob.add_dependencies" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">add_dependencies</span><span class="p">(</span><span class="n">jobs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">add_dependencies</span><span class="p">(</span><span class="n">jobs</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.job.pbs_python.PbsJob.add_dependencies" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Add dependencies to this job.</p>
 <p>Argument <code>jobs</code> is a sequence of <code>PbsJob</code> objects.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.pbs_python.PbsJob.has_holds" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">has_holds</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">has_holds</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.job.pbs_python.PbsJob.has_holds" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return whether this job has holds or not.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.pbs_python.PbsJob.info" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">info</span><span class="p">(</span><span class="n">types</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">info</span><span class="p">(</span><span class="n">types</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.job.pbs_python.PbsJob.info" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return jobinfo</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.pbs_python.PbsJob.release_hold" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">release_hold</span><span class="p">(</span><span class="n">hold_type</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">release_hold</span><span class="p">(</span><span class="n">hold_type</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.job.pbs_python.PbsJob.release_hold" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Release hold on job of specified type.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.pbs_python.PbsJob.remove" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">remove</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">remove</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.job.pbs_python.PbsJob.remove" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Remove the job with id jobid</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.pbs_python.PbsJob.set_hold" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">set_hold</span><span class="p">(</span><span class="n">hold_type</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">set_hold</span><span class="p">(</span><span class="n">hold_type</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.job.pbs_python.PbsJob.set_hold" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Set hold on job of specified type.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.pbs_python.PbsJob.state" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">state</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">state</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.job.pbs_python.PbsJob.state" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the state of the job
 State can be 'not submitted', 'running', 'queued' or 'finished',</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8770,8 +8752,7 @@ State can be 'not submitted', 'running', 'queued' or 'finished',</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8780,21 +8761,21 @@ State can be 'not submitted', 'running', 'queued' or 'finished',</p>
 
 
 <h2 id="easybuild.tools.job.pbs_python.PbsPython" class="doc doc-heading">
-          <code>PbsPython</code>
+            <code>PbsPython</code>
 
 
 <a href="#easybuild.tools.job.pbs_python.PbsPython" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.job.backend.JobBackend" href="../backend/#easybuild.tools.job.backend.JobBackend">JobBackend</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.job.backend.JobBackend" href="../backend/#easybuild.tools.job.backend.JobBackend">JobBackend</a></code></p>
 
-  
+
       <p>Manage PBS server communication and create <code>PbsJob</code> objects.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8806,165 +8787,150 @@ State can be 'not submitted', 'running', 'queued' or 'finished',</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.pbs_python.PbsPython.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.job.pbs_python.PbsPython.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Constructor.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.pbs_python.PbsPython.complete" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">complete</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">complete</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.job.pbs_python.PbsPython.complete" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Complete a bulk job submission.</p>
 <p>Release all user holds on submitted jobs, and disconnect from server.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.pbs_python.PbsPython.connect_to_server" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">connect_to_server</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">connect_to_server</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.job.pbs_python.PbsPython.connect_to_server" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Connect to PBS server, set and return connection.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.pbs_python.PbsPython.disconnect_from_server" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">disconnect_from_server</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">disconnect_from_server</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.job.pbs_python.PbsPython.disconnect_from_server" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Disconnect current connection.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.pbs_python.PbsPython.init" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">init</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">init</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.job.pbs_python.PbsPython.init" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Initialise the job backend.</p>
 <p>Connect to the PBS server &amp; reset list of submitted jobs.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.pbs_python.PbsPython.make_job" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">make_job</span><span class="p">(</span><span class="n">script</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">env_vars</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hours</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cores</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">make_job</span><span class="p">(</span><span class="n">script</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">env_vars</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hours</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cores</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.job.pbs_python.PbsPython.make_job" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create and return a <code>PbsJob</code> object with the given parameters.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.pbs_python.PbsPython.queue" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">queue</span><span class="p">(</span><span class="n">job</span><span class="p">,</span> <span class="n">dependencies</span><span class="o">=</span><span class="nb">frozenset</span><span class="p">())</span></code>
+            <code class="highlight language-python"><span class="n">queue</span><span class="p">(</span><span class="n">job</span><span class="p">,</span> <span class="n">dependencies</span><span class="o">=</span><span class="nb">frozenset</span><span class="p">())</span></code>
 
 <a href="#easybuild.tools.job.pbs_python.PbsPython.queue" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Add a job to the queue.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>dependencies</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>jobs on which this job depends.</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>frozenset()</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>dependencies</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>jobs on which this job depends.</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>frozenset()</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8972,8 +8938,7 @@ State can be 'not submitted', 'running', 'queued' or 'finished',</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8982,7 +8947,7 @@ State can be 'not submitted', 'running', 'queued' or 'finished',</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9082,7 +9047,7 @@ State can be 'not submitted', 'running', 'queued' or 'finished',</p>
     <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../../js/asciinema-player-2.6.1.js"></script>
       

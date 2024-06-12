@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -9159,8 +9159,8 @@
 
 
 <a id="easybuild.framework.easyconfig.easyconfig"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Easyconfig module that contains the EasyConfig class.</p>
 <p>Authors:</p>
 <ul>
@@ -9177,7 +9177,7 @@
 <li>Victor Holanda (CSCS, ETH Zurich)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9193,21 +9193,21 @@
 
 
 <h2 id="easybuild.framework.easyconfig.easyconfig.ActiveMNS" class="doc doc-heading">
-          <code>ActiveMNS</code>
+            <code>ActiveMNS</code>
 
 
 <a href="#easybuild.framework.easyconfig.easyconfig.ActiveMNS" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="easybuild.framework.easyconfig.easyconfig.BaseActiveMNS">BaseActiveMNS</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="easybuild.framework.easyconfig.easyconfig.BaseActiveMNS">BaseActiveMNS</span></code></p>
 
-  
+
       <p>Wrapper class for active module naming scheme.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9219,307 +9219,278 @@
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.ActiveMNS.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.ActiveMNS.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Initialize logger.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.ActiveMNS.check_ec_type" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_ec_type</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">raise_error</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_ec_type</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">raise_error</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.ActiveMNS.check_ec_type" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Obtain a full parsed easyconfig file to pass to naming scheme methods if provided keys are insufficient.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>ec</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>available easyconfig parameter specifications (EasyConfig instance or dict value)</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>raise_error</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>boolean indicating whether or not an error should be raised if a full easyconfig is required but not found</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>ec</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>available easyconfig parameter specifications (EasyConfig instance or dict value)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>raise_error</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>boolean indicating whether or not an error should be raised if a full easyconfig is required but not found</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.ActiveMNS.det_devel_module_filename" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_devel_module_filename</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">force_visible</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_devel_module_filename</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">force_visible</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.ActiveMNS.det_devel_module_filename" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine devel module filename.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.ActiveMNS.det_full_module_name" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_full_module_name</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">force_visible</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">require_result</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_full_module_name</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">force_visible</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">require_result</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.ActiveMNS.det_full_module_name" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine full module name by selected module naming scheme, based on supplied easyconfig.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.ActiveMNS.det_init_modulepaths" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_init_modulepaths</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_init_modulepaths</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.ActiveMNS.det_init_modulepaths" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine initial modulepaths according to module naming scheme.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.ActiveMNS.det_install_subdir" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_install_subdir</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_install_subdir</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.ActiveMNS.det_install_subdir" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine name of software installation subdirectory.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.ActiveMNS.det_modpath_extensions" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_modpath_extensions</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_modpath_extensions</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.ActiveMNS.det_modpath_extensions" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine modulepath extensions according to module naming scheme.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.ActiveMNS.det_module_subdir" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_module_subdir</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_module_subdir</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.ActiveMNS.det_module_subdir" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine module subdirectory according to module naming scheme.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.ActiveMNS.det_module_symlink_paths" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_module_symlink_paths</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_module_symlink_paths</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.ActiveMNS.det_module_symlink_paths" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine list of paths in which symlinks to module files must be created.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.ActiveMNS.det_short_module_name" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_short_module_name</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">force_visible</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_short_module_name</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">force_visible</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.ActiveMNS.det_short_module_name" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine short module name according to module naming scheme.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.ActiveMNS.det_user_modpath_extensions" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_user_modpath_extensions</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_user_modpath_extensions</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.ActiveMNS.det_user_modpath_extensions" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine user-specific modulepath extensions according to module naming scheme.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.ActiveMNS.expand_toolchain_load" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">expand_toolchain_load</span><span class="p">(</span><span class="n">ec</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">expand_toolchain_load</span><span class="p">(</span><span class="n">ec</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.ActiveMNS.expand_toolchain_load" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine whether load statements for a toolchain should be expanded to load statements for its dependencies.
 This is useful when toolchains are not exposed to users.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.ActiveMNS.is_short_modname_for" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_short_modname_for</span><span class="p">(</span><span class="n">short_modname</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">is_short_modname_for</span><span class="p">(</span><span class="n">short_modname</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.ActiveMNS.is_short_modname_for" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine whether the specified (short) module name is a module for software with the specified name.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.ActiveMNS.requires_full_easyconfig" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">requires_full_easyconfig</span><span class="p">(</span><span class="n">keys</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">requires_full_easyconfig</span><span class="p">(</span><span class="n">keys</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.ActiveMNS.requires_full_easyconfig" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether specified list of easyconfig parameters is sufficient for active module naming scheme.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9527,8 +9498,7 @@ This is useful when toolchains are not exposed to users.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9537,21 +9507,21 @@ This is useful when toolchains are not exposed to users.</p>
 
 
 <h2 id="easybuild.framework.easyconfig.easyconfig.EasyConfig" class="doc doc-heading">
-          <code>EasyConfig</code>
+            <code>EasyConfig</code>
 
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
-  
+
       <p>Class which handles loading, reading, validation of easyconfigs</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9566,8 +9536,8 @@ This is useful when toolchains are not exposed to users.</p>
 
 
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.all_dependencies" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">all_dependencies</span></code>
-  
+            <code class="highlight language-python"><span class="n">all_dependencies</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -9575,10 +9545,10 @@ This is useful when toolchains are not exposed to users.</p>
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.all_dependencies" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return list of all dependencies, incl. hidden/build deps &amp; toolchain, but excluding filtered deps.</p>
-  </div>
+    </div>
 
 </div>
 
@@ -9587,8 +9557,8 @@ This is useful when toolchains are not exposed to users.</p>
 
 
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.name" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">name</span></code>
-  
+            <code class="highlight language-python"><span class="n">name</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -9596,10 +9566,10 @@ This is useful when toolchains are not exposed to users.</p>
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.name" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>returns name</p>
-  </div>
+    </div>
 
 </div>
 
@@ -9608,8 +9578,8 @@ This is useful when toolchains are not exposed to users.</p>
 
 
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.toolchain" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">toolchain</span></code>
-  
+            <code class="highlight language-python"><span class="n">toolchain</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -9617,10 +9587,10 @@ This is useful when toolchains are not exposed to users.</p>
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.toolchain" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>returns the Toolchain used</p>
-  </div>
+    </div>
 
 </div>
 
@@ -9629,8 +9599,8 @@ This is useful when toolchains are not exposed to users.</p>
 
 
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.version" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">version</span></code>
-  
+            <code class="highlight language-python"><span class="n">version</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -9638,956 +9608,880 @@ This is useful when toolchains are not exposed to users.</p>
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.version" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>returns version</p>
-  </div>
+    </div>
 
 </div>
-
 
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.__contains__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__contains__</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__contains__</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.__contains__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether easyconfig parameter is defined</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.__eq__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__eq__</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__eq__</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.__eq__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Is this EasyConfig instance equivalent to the provided one?</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.__getitem__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__getitem__</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__getitem__</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.__getitem__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return value of specified easyconfig parameter (without help text, etc.)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.__hash__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__hash__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__hash__</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.__hash__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return hash value for a hashable representation of this EasyConfig instance.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">extra_options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">build_specs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hidden</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rawtxt</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">auto_convert_value_types</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">local_var_naming_check</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">extra_options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">build_specs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hidden</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rawtxt</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">auto_convert_value_types</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">local_var_naming_check</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>initialize an easyconfig.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path to easyconfig file to be parsed (ignored if rawtxt is specified)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>extra_options</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>dictionary with extra variables that can be set for this specific instance</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>build_specs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>dictionary of build specifications (see EasyConfig class, default: {})</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>validate</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>indicates whether validation should be performed (note: combined with 'validate' build option)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>hidden</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>indicate whether corresponding module file should be installed hidden ('.'-prefixed)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>rawtxt</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>raw contents of easyconfig file</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>auto_convert_value_types</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>indicates wether types of easyconfig values should be automatically converted in case they are wrong</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>local_var_naming_check</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>mode to use when checking if local variables use the recommended naming scheme</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path to easyconfig file to be parsed (ignored if rawtxt is specified)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>extra_options</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>dictionary with extra variables that can be set for this specific instance</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>build_specs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>dictionary of build specifications (see EasyConfig class, default: {})</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>validate</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>indicates whether validation should be performed (note: combined with 'validate' build option)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>hidden</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>indicate whether corresponding module file should be installed hidden ('.'-prefixed)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>rawtxt</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>raw contents of easyconfig file</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>auto_convert_value_types</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>indicates wether types of easyconfig values should be automatically converted in case they are wrong</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>local_var_naming_check</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>mode to use when checking if local variables use the recommended naming scheme</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.__ne__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__ne__</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__ne__</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.__ne__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Is this EasyConfig instance equivalent to the provided one?</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.__setitem__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__setitem__</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__setitem__</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.__setitem__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Set value of specified easyconfig parameter (help text &amp; co is left untouched)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.__str__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.__str__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return a string representation of this EasyConfig instance</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.asdict" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">asdict</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">asdict</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.asdict" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return dict representation of this EasyConfig instance.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.builddependencies" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">builddependencies</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">builddependencies</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.builddependencies" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return a flat list of the parsed build dependencies
 When builddependencies are iterable they are flattened lists with
 duplicates removed outside of the iterating process, because the callers
 want simple lists.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.check_deprecated" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_deprecated</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_deprecated</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.check_deprecated" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether this easyconfig file is deprecated.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.copy" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">copy</span><span class="p">(</span><span class="n">validate</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">copy</span><span class="p">(</span><span class="n">validate</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.copy" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return a copy of this EasyConfig instance.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.count_files" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">count_files</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">count_files</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.count_files" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine number of files (sources + patches) required for this easyconfig.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.dep_is_filtered" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">dep_is_filtered</span><span class="p">(</span><span class="n">dep</span><span class="p">,</span> <span class="n">filter_deps_specs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">dep_is_filtered</span><span class="p">(</span><span class="n">dep</span><span class="p">,</span> <span class="n">filter_deps_specs</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.dep_is_filtered" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns True if a dependency is filtered according to the filter_deps_specs</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.dependencies" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">dependencies</span><span class="p">(</span><span class="n">build_only</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">dependencies</span><span class="p">(</span><span class="n">build_only</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.dependencies" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns an array of parsed dependencies (after filtering, if requested)
 dependency = {'name': '', 'version': '', 'system': (False|True), 'versionsuffix': '', 'toolchain': ''}
 Iterable builddependencies are flattened when not iterating.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>build_only</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>only return build dependencies, discard others</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>build_only</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>only return build dependencies, discard others</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.dependency_names" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">dependency_names</span><span class="p">(</span><span class="n">build_only</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">dependency_names</span><span class="p">(</span><span class="n">build_only</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.dependency_names" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return a set of names of all (direct) dependencies after filtering.
 Iterable builddependencies are flattened when not iterating.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>build_only</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>only return build dependencies, discard others</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>build_only</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>only return build dependencies, discard others</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.disable_templating" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">disable_templating</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">disable_templating</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.disable_templating" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Temporarily disable templating on the given EasyConfig</p>
 <p>Usage:
     with ec.disable_templating():
         # Do what you want without templating
     # Templating set to previous value</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.dump" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">dump</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="n">always_overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">backup</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">explicit_toolchains</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">dump</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="n">always_overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">backup</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">explicit_toolchains</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.dump" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Dump this easyconfig to file, with the given filename.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>always_overwrite</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>overwrite existing file at specified location without use of --force</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>backup</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>create backup of existing file before overwriting it</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>always_overwrite</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>overwrite existing file at specified location without use of --force</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>backup</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>create backup of existing file before overwriting it</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.extend_params" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">extend_params</span><span class="p">(</span><span class="n">extra</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">extend_params</span><span class="p">(</span><span class="n">extra</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.extend_params" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Extend list of known parameters via provided list of extra easyconfig parameters.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.filename" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">filename</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">filename</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.filename" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine correct filename for this easyconfig file.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.filter_deps" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">filter_deps</span><span class="p">(</span><span class="n">deps</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">filter_deps</span><span class="p">(</span><span class="n">deps</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.filter_deps" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Filter dependencies according to 'filter-deps' configuration setting.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.filter_hidden_deps" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">filter_hidden_deps</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">filter_hidden_deps</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.filter_hidden_deps" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Replace dependencies by hidden dependencies in list of (build) dependencies, where appropriate.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.generate_template_values" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">generate_template_values</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">generate_template_values</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.generate_template_values" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Try to generate all template values.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.get" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">resolve</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">resolve</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.get" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Gets the value of a key in the config, with 'default' as fallback.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>resolve</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>if False, disables templating via calling get_ref, else resolves template values</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>resolve</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>if False, disables templating via calling get_ref, else resolves template values</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.get_cuda_cc_template_value" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_cuda_cc_template_value</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_cuda_cc_template_value</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.get_cuda_cc_template_value" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get template value based on --cuda-compute-capabilities EasyBuild configuration option
 and cuda_compute_capabilities easyconfig parameter.
 Returns user-friendly error message in case neither are defined,
 or if an unknown key is used.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.get_parsed_multi_deps" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_parsed_multi_deps</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_parsed_multi_deps</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.get_parsed_multi_deps" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get list of lists of parsed dependencies that correspond with entries in multi_deps easyconfig parameter.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.get_ref" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_ref</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_ref</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.get_ref" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Obtain reference to original/untemplated value of specified easyconfig parameter
 rather than a copied value with templated values.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.handle_external_module_metadata" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">handle_external_module_metadata</span><span class="p">(</span><span class="n">mod_name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">handle_external_module_metadata</span><span class="p">(</span><span class="n">mod_name</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.handle_external_module_metadata" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Helper function for _parse_dependency; collects metadata for external module dependencies.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>mod_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>name of external module to collect metadata for</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>mod_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>name of external module to collect metadata for</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.handle_multi_deps" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">handle_multi_deps</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">handle_multi_deps</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.handle_multi_deps" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Handle lists of dependency versions of which we should iterate specified in 'multi_deps' easyconfig parameter.</p>
 <p>This is basically just syntactic sugar to prevent having to specify a list of lists in 'builddependencies'.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.is_mandatory_param" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_mandatory_param</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">is_mandatory_param</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.is_mandatory_param" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether specified easyconfig parameter is mandatory.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.local_var_naming" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">local_var_naming</span><span class="p">(</span><span class="n">local_var_naming_check</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">local_var_naming</span><span class="p">(</span><span class="n">local_var_naming_check</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.local_var_naming" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Deal with local variables that do not follow the recommended naming scheme (if any).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.parse" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">parse</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">parse</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.parse" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Parse the file and set options
 mandatory requirements are checked here</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.parse_filter_deps" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">parse_filter_deps</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">parse_filter_deps</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.parse_filter_deps" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Parse specifications for which dependencies should be filtered.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.parse_version_range" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">parse_version_range</span><span class="p">(</span><span class="n">version_spec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">parse_version_range</span><span class="p">(</span><span class="n">version_spec</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.parse_version_range" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Parse provided version specification as a version range.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.probe_external_module_metadata" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">probe_external_module_metadata</span><span class="p">(</span><span class="n">mod_name</span><span class="p">,</span> <span class="n">existing_metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">probe_external_module_metadata</span><span class="p">(</span><span class="n">mod_name</span><span class="p">,</span> <span class="n">existing_metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.probe_external_module_metadata" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Helper function for handle_external_module_metadata.</p>
 <p>Tries to determine metadata for external module when there is not entry in the metadata file,
 by looking at the variables defined by the module file.</p>
@@ -10606,224 +10500,206 @@ where 'XXX' is the software name in capitals:
 <p>If none of the pairs is found, then an empty dictionary is returned.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>mod_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>name of the external module</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>existing_metadata</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>already available metadata for this external module (if any)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>mod_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>name of the external module</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>existing_metadata</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>already available metadata for this external module (if any)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.set_keys" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">set_keys</span><span class="p">(</span><span class="n">params</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">set_keys</span><span class="p">(</span><span class="n">params</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.set_keys" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Set keys in this EasyConfig instance based on supplied easyconfig parameter values.</p>
 <p>If any unknown easyconfig parameters are encountered here, an error is raised.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>params</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>a dict value with names/values of easyconfig parameters to set</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>params</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>a dict value with names/values of easyconfig parameters to set</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.start_iterating" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">start_iterating</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">start_iterating</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.start_iterating" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Start iterative mode.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.stop_iterating" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">stop_iterating</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">stop_iterating</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.stop_iterating" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Stop iterative mode.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.update" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">update</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">allow_duplicate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">update</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">allow_duplicate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.update" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Update an easyconfig parameter with the specified value (i.e. append to it).
 Note: For dictionary easyconfig parameters, 'allow_duplicate' is ignored (since it's meaningless).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.validate" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">check_osdeps</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">validate</span><span class="p">(</span><span class="n">check_osdeps</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.validate" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Validate this easyonfig
 - ensure certain easyconfig parameters are set to a known value (see self.validations)
 - check OS dependencies
 - check license</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.validate_iterate_opts_lists" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">validate_iterate_opts_lists</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">validate_iterate_opts_lists</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.validate_iterate_opts_lists" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Configure/build/install options specified as lists should have same length.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.validate_license" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">validate_license</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">validate_license</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.validate_license" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Validate the license</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.easyconfig.EasyConfig.validate_os_deps" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">validate_os_deps</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">validate_os_deps</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.EasyConfig.validate_os_deps" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>validate presence of OS dependencies
 osdependencies should be a single list</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -10831,404 +10707,379 @@ osdependencies should be a single list</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.easyconfig.clean_up_easyconfigs" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">clean_up_easyconfigs</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">clean_up_easyconfigs</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.clean_up_easyconfigs" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Clean up easyconfigs (in place) by filtering out comments/buildstats included by EasyBuild in archived easyconfigs
 (cfr. FileRepository.add_easyconfig in easybuild.tools.repository.filerepo)</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of paths to easyconfigs to clean up</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of paths to easyconfigs to clean up</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.easyconfig.copy_easyconfigs" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">copy_easyconfigs</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">target_dir</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">copy_easyconfigs</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">target_dir</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.copy_easyconfigs" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Copy easyconfig files to specified directory, in the 'right' location and using the filename expected by robot.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of paths to copy to git working dir</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>target_dir</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>target directory</p>
-            </div>
-            <p>
-            </p>
-          </td>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of paths to copy to git working dir</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>target_dir</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>target directory</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>dict with useful information on copied easyconfig files (corresponding EasyConfig instances, paths, status)</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>dict with useful information on copied easyconfig files (corresponding EasyConfig instances, paths, status)</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.easyconfig.copy_patch_files" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">copy_patch_files</span><span class="p">(</span><span class="n">patch_specs</span><span class="p">,</span> <span class="n">target_dir</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">copy_patch_files</span><span class="p">(</span><span class="n">patch_specs</span><span class="p">,</span> <span class="n">target_dir</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.copy_patch_files" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Copy patch files to specified directory, in the 'right' location according to the software name they relate to.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>patch_specs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of tuples with patch file location and name of software they are for</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>target_dir</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>target directory</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>patch_specs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of tuples with patch file location and name of software they are for</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>target_dir</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>target directory</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.easyconfig.create_paths" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">create_paths</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">create_paths</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.create_paths" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns all the paths where easyconfig could be located
 <path> is the basepath
 <name> should be a string
 <version> can be a '*' if you use glob patterns, or an install version otherwise</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.easyconfig.det_file_info" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_file_info</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">target_dir</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_file_info</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">target_dir</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.det_file_info" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine useful information on easyconfig files relative to a target directory,
 before any actual operation (e.g. copying) is performed</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of paths to easyconfig files</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>target_dir</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>target directory</p>
-            </div>
-            <p>
-            </p>
-          </td>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of paths to easyconfig files</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>target_dir</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>target directory</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>dict with useful information on easyconfig files (corresponding EasyConfig instances, paths, status) relative to a target directory</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>dict with useful information on easyconfig files (corresponding EasyConfig instances, paths, status) relative to a target directory</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.easyconfig.det_installversion" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_installversion</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">toolchain_name</span><span class="p">,</span> <span class="n">toolchain_version</span><span class="p">,</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">suffix</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_installversion</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">toolchain_name</span><span class="p">,</span> <span class="n">toolchain_version</span><span class="p">,</span> <span class="n">prefix</span><span class="p">,</span> <span class="n">suffix</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.det_installversion" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Deprecated 'det_installversion' function, to determine exact install version, based on supplied parameters.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.easyconfig.det_location_for" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_location_for</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">target_dir</span><span class="p">,</span> <span class="n">soft_name</span><span class="p">,</span> <span class="n">target_file</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_location_for</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">target_dir</span><span class="p">,</span> <span class="n">soft_name</span><span class="p">,</span> <span class="n">target_file</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.det_location_for" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine path to easyconfigs directory for specified software name, using specified target file name.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path of file to copy</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>target_dir</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>(parent) target directory, should contain easybuild/easyconfigs subdirectory</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>soft_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>software name (to determine location to copy to)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>target_file</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>target file name</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path of file to copy</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>target_dir</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>(parent) target directory, should contain easybuild/easyconfigs subdirectory</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>soft_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>software name (to determine location to copy to)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>target_file</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>target file name</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>full path to the right location</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>full path to the right location</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.easyconfig.det_subtoolchain_version" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_subtoolchain_version</span><span class="p">(</span><span class="n">current_tc</span><span class="p">,</span> <span class="n">subtoolchain_names</span><span class="p">,</span> <span class="n">optional_toolchains</span><span class="p">,</span> <span class="n">cands</span><span class="p">,</span> <span class="n">incl_capabilities</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_subtoolchain_version</span><span class="p">(</span><span class="n">current_tc</span><span class="p">,</span> <span class="n">subtoolchain_names</span><span class="p">,</span> <span class="n">optional_toolchains</span><span class="p">,</span> <span class="n">cands</span><span class="p">,</span> <span class="n">incl_capabilities</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.det_subtoolchain_version" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns unique version for subtoolchain, in tc dict.
 If there is no unique version:
 * use '' for system, if system is not skipped.
@@ -11236,145 +11087,134 @@ If there is no unique version:
   optional toolchains or system toolchain without add_system_to_minimal_toolchains.
 * in all other cases, raises an exception.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.easyconfig.disable_templating" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">disable_templating</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">disable_templating</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.disable_templating" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Temporarily disable templating on the given EasyConfig</p>
 <p>Usage:
     with disable_templating(ec):
         # Do what you want without templating
     # Templating set to previous value</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.easyconfig.fix_deprecated_easyconfigs" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">fix_deprecated_easyconfigs</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">fix_deprecated_easyconfigs</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.fix_deprecated_easyconfigs" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Fix use of deprecated functionality in easyconfigs at specified locations.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.easyconfig.get_easyblock_class" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_easyblock_class</span><span class="p">(</span><span class="n">easyblock</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">error_on_failed_import</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">error_on_missing_easyblock</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_easyblock_class</span><span class="p">(</span><span class="n">easyblock</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">error_on_failed_import</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">error_on_missing_easyblock</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.get_easyblock_class" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get class for a particular easyblock (or use default)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.easyconfig.get_module_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_module_path</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">generic</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">decode</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_module_path</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">generic</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">decode</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.get_module_path" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine the module path for a given easyblock or software name,
 based on the encoded class name.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>generic</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>whether or not the easyblock is generic (if None: auto-derive from specified class name)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>decode</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>whether or not to decode the provided class name</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>generic</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>whether or not the easyblock is generic (if None: auto-derive from specified class name)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>decode</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>whether or not to decode the provided class name</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.easyconfig.get_toolchain_hierarchy" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_toolchain_hierarchy</span><span class="p">(</span><span class="n">parent_toolchain</span><span class="p">,</span> <span class="n">incl_capabilities</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_toolchain_hierarchy</span><span class="p">(</span><span class="n">parent_toolchain</span><span class="p">,</span> <span class="n">incl_capabilities</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.get_toolchain_hierarchy" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine list of subtoolchains for specified parent toolchain.
 Result starts with the most minimal subtoolchains first, ends with specified toolchain.</p>
 <p>The system toolchain is considered the most minimal subtoolchain only if the add_system_to_minimal_toolchains
@@ -11394,517 +11234,488 @@ build option is enabled.</p>
          (system: only considered if --add-system-to-minimal-toolchains configuration option is enabled)</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>parent_toolchain</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>dictionary with name/version of parent toolchain</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>incl_capabilities</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>also register toolchain capabilities in result</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>parent_toolchain</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>dictionary with name/version of parent toolchain</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>incl_capabilities</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>also register toolchain capabilities in result</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.easyconfig.handle_deprecated_or_replaced_easyconfig_parameters" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">handle_deprecated_or_replaced_easyconfig_parameters</span><span class="p">(</span><span class="n">ec_method</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">handle_deprecated_or_replaced_easyconfig_parameters</span><span class="p">(</span><span class="n">ec_method</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.handle_deprecated_or_replaced_easyconfig_parameters" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Decorator to handle deprecated/replaced easyconfig parameters.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.easyconfig.is_generic_easyblock" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_generic_easyblock</span><span class="p">(</span><span class="n">easyblock</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">is_generic_easyblock</span><span class="p">(</span><span class="n">easyblock</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.is_generic_easyblock" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return whether specified easyblock name is a generic easyblock or not.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.easyconfig.is_local_var_name" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_local_var_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">is_local_var_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.is_local_var_name" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine whether provided variable name can be considered as the name of a local variable:</p>
 <p>One of the following suffices to be considered a name of a local variable:
 * name starts with 'local_' or '_'
 * name consists of a single letter
 * name is <strong>builtins</strong> (which is always defined)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.easyconfig.letter_dir_for" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">letter_dir_for</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">letter_dir_for</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.letter_dir_for" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine 'letter' directory for specified software name.
 This usually just the 1st letter of the software name (in lowercase),
 except for funky software names, e.g. ones starting with a digit.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.easyconfig.process_easyconfig" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">process_easyconfig</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">build_specs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">parse_only</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">hidden</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">process_easyconfig</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">build_specs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">parse_only</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">hidden</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.process_easyconfig" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Process easyconfig, returning some information for each block</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path to easyconfig file</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>build_specs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>dictionary specifying build specifications (e.g. version, toolchain, ...)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>validate</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>whether or not to perform validation</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>parse_only</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>only parse easyconfig superficially (faster, but results in partial info)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>hidden</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>indicate whether corresponding module file should be installed hidden ('.'-prefixed)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path to easyconfig file</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>build_specs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>dictionary specifying build specifications (e.g. version, toolchain, ...)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>validate</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>whether or not to perform validation</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>parse_only</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>only parse easyconfig superficially (faster, but results in partial info)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>hidden</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>indicate whether corresponding module file should be installed hidden ('.'-prefixed)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.easyconfig.resolve_template" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">resolve_template</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">tmpl_dict</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">resolve_template</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">tmpl_dict</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.resolve_template" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Given a value, try to susbstitute the templated strings with actual values.
 - value: some python object (supported are string, tuple/list, dict or some mix thereof)
 - tmpl_dict: template dictionary</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.easyconfig.robot_find_easyconfig" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">robot_find_easyconfig</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">robot_find_easyconfig</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.robot_find_easyconfig" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Find an easyconfig for module in path, returns (absolute) path to easyconfig file (or None, if none is found).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.easyconfig.robot_find_subtoolchain_for_dep" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">robot_find_subtoolchain_for_dep</span><span class="p">(</span><span class="n">dep</span><span class="p">,</span> <span class="n">modtool</span><span class="p">,</span> <span class="n">parent_tc</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">parent_first</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">robot_find_subtoolchain_for_dep</span><span class="p">(</span><span class="n">dep</span><span class="p">,</span> <span class="n">modtool</span><span class="p">,</span> <span class="n">parent_tc</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">parent_first</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.robot_find_subtoolchain_for_dep" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Find the subtoolchain to use for a dependency</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>dep</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>dependency target dict (long and short module names may not exist yet)</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>parent_tc</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>toolchain from which to derive the toolchain hierarchy to search (default: use dep's toolchain)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>dep</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>dependency target dict (long and short module names may not exist yet)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>parent_tc</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>toolchain from which to derive the toolchain hierarchy to search (default: use dep's toolchain)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>parent_first</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>reverse order in which subtoolchains are considered: parent toolchain, then subtoolchains</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>parent_first</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>reverse order in which subtoolchains are considered: parent toolchain, then subtoolchains</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>minimal toolchain for which an easyconfig exists for this dependency (and matches build_options)</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>minimal toolchain for which an easyconfig exists for this dependency (and matches build_options)</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.easyconfig.toolchain_hierarchy_cache" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">toolchain_hierarchy_cache</span><span class="p">(</span><span class="n">func</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">toolchain_hierarchy_cache</span><span class="p">(</span><span class="n">func</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.toolchain_hierarchy_cache" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Function decorator to cache (and retrieve cached) toolchain hierarchy queries.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.easyconfig.triage_easyconfig_params" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">triage_easyconfig_params</span><span class="p">(</span><span class="n">variables</span><span class="p">,</span> <span class="n">ec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">triage_easyconfig_params</span><span class="p">(</span><span class="n">variables</span><span class="p">,</span> <span class="n">ec</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.triage_easyconfig_params" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Triage supplied variables into known easyconfig parameters and other variables.</p>
 <p>Unknown easyconfig parameters that have a single-letter name, or of which the name starts with 'local_'
 are considered to be local variables.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>variables</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>dictionary with names/values of variables that should be triaged</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>ec</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>dictionary with set of known easyconfig parameters</p>
-            </div>
-            <p>
-            </p>
-          </td>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>variables</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>dictionary with names/values of variables that should be triaged</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>ec</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>dictionary with set of known easyconfig parameters</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>2-tuple with dict of names/values for known easyconfig parameters + unknown (non-local) variables</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>2-tuple with dict of names/values for known easyconfig parameters + unknown (non-local) variables</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.easyconfig.verify_easyconfig_filename" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">verify_easyconfig_filename</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">specs</span><span class="p">,</span> <span class="n">parsed_ec</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">verify_easyconfig_filename</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">specs</span><span class="p">,</span> <span class="n">parsed_ec</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.easyconfig.verify_easyconfig_filename" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether parsed easyconfig at specified path matches expected specs;
 this basically verifies whether the easyconfig filename corresponds to its contents</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path to easyconfig file</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>specs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>expected specs (dict with easyconfig parameter values)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>parsed_ec</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>(list of) EasyConfig instance(s) corresponding to easyconfig file</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path to easyconfig file</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>specs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>expected specs (dict with easyconfig parameter values)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>parsed_ec</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>(list of) EasyConfig instance(s) corresponding to easyconfig file</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
 
@@ -11912,7 +11723,7 @@ this basically verifies whether the easyconfig filename corresponds to its conte
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -12012,7 +11823,7 @@ this basically verifies whether the easyconfig filename corresponds to its conte
     <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../../js/asciinema-player-2.6.1.js"></script>
       

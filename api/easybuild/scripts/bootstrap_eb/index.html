@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8515,8 +8515,8 @@
 
 
 <a id="easybuild.scripts.bootstrap_eb"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Bootstrap script for EasyBuild</p>
 <p>Installs distribute with included (patched) distribute_setup.py script to obtain easy_install,
 and then performs a staged install of EasyBuild:
@@ -8528,7 +8528,7 @@ License: GPLv2</p>
 <p>inspired by https://bitbucket.org/pdubroy/pip/raw/tip/getpip.py
 (via http://dubroy.com/blog/so-you-want-to-install-a-python-package/)</p>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8540,326 +8540,292 @@ License: GPLv2</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.scripts.bootstrap_eb.check_easy_install_cmd" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_easy_install_cmd</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">check_easy_install_cmd</span><span class="p">()</span></code>
 
 <a href="#easybuild.scripts.bootstrap_eb.check_easy_install_cmd" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Try to make sure available 'easy_install' command matches active 'setuptools' installation.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.scripts.bootstrap_eb.check_module_command" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_module_command</span><span class="p">(</span><span class="n">tmpdir</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_module_command</span><span class="p">(</span><span class="n">tmpdir</span><span class="p">)</span></code>
 
 <a href="#easybuild.scripts.bootstrap_eb.check_module_command" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check which module command is available, and prepare for using it.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.scripts.bootstrap_eb.check_setuptools" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_setuptools</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">check_setuptools</span><span class="p">()</span></code>
 
 <a href="#easybuild.scripts.bootstrap_eb.check_setuptools" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether a suitable setuptools installation is already available.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.scripts.bootstrap_eb.debug" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">debug</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">debug</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></code>
 
 <a href="#easybuild.scripts.bootstrap_eb.debug" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Print debug message.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.scripts.bootstrap_eb.det_lib_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_lib_path</span><span class="p">(</span><span class="n">libdir</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_lib_path</span><span class="p">(</span><span class="n">libdir</span><span class="p">)</span></code>
 
 <a href="#easybuild.scripts.bootstrap_eb.det_lib_path" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine relative path of Python library dir.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.scripts.bootstrap_eb.det_modules_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_modules_path</span><span class="p">(</span><span class="n">install_path</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_modules_path</span><span class="p">(</span><span class="n">install_path</span><span class="p">)</span></code>
 
 <a href="#easybuild.scripts.bootstrap_eb.det_modules_path" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine modules path.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.scripts.bootstrap_eb.error" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">error</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">exit</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">error</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">exit</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.scripts.bootstrap_eb.error" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Print error message and exit.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.scripts.bootstrap_eb.find_egg_dir_for" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">find_egg_dir_for</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">pkg</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">find_egg_dir_for</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">pkg</span><span class="p">)</span></code>
 
 <a href="#easybuild.scripts.bootstrap_eb.find_egg_dir_for" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Find full path of egg dir for given package.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.scripts.bootstrap_eb.info" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">info</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">info</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></code>
 
 <a href="#easybuild.scripts.bootstrap_eb.info" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Print info message.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.scripts.bootstrap_eb.main" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">main</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">main</span><span class="p">()</span></code>
 
 <a href="#easybuild.scripts.bootstrap_eb.main" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Main script: bootstrap EasyBuild in stages.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.scripts.bootstrap_eb.mock_stdout_stderr" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">mock_stdout_stderr</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">mock_stdout_stderr</span><span class="p">()</span></code>
 
 <a href="#easybuild.scripts.bootstrap_eb.mock_stdout_stderr" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Mock stdout/stderr channels</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.scripts.bootstrap_eb.prep" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">prep</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">prep</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
 
 <a href="#easybuild.scripts.bootstrap_eb.prep" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Prepare for installing a Python package in the specified path.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.scripts.bootstrap_eb.restore_stdout_stderr" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">restore_stdout_stderr</span><span class="p">(</span><span class="n">orig_stdout</span><span class="p">,</span> <span class="n">orig_stderr</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">restore_stdout_stderr</span><span class="p">(</span><span class="n">orig_stdout</span><span class="p">,</span> <span class="n">orig_stderr</span><span class="p">)</span></code>
 
 <a href="#easybuild.scripts.bootstrap_eb.restore_stdout_stderr" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Restore stdout/stderr channels after mocking</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.scripts.bootstrap_eb.run_easy_install" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">run_easy_install</span><span class="p">(</span><span class="n">args</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">run_easy_install</span><span class="p">(</span><span class="n">args</span><span class="p">)</span></code>
 
 <a href="#easybuild.scripts.bootstrap_eb.run_easy_install" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Run easy_install with specified list of arguments</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.scripts.bootstrap_eb.stage0" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">stage0</span><span class="p">(</span><span class="n">tmpdir</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">stage0</span><span class="p">(</span><span class="n">tmpdir</span><span class="p">)</span></code>
 
 <a href="#easybuild.scripts.bootstrap_eb.stage0" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>STAGE 0: Prepare and install distribute via included (patched) distribute_setup.py script.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.scripts.bootstrap_eb.stage1" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">stage1</span><span class="p">(</span><span class="n">tmpdir</span><span class="p">,</span> <span class="n">sourcepath</span><span class="p">,</span> <span class="n">distribute_egg_dir</span><span class="p">,</span> <span class="n">forcedversion</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">stage1</span><span class="p">(</span><span class="n">tmpdir</span><span class="p">,</span> <span class="n">sourcepath</span><span class="p">,</span> <span class="n">distribute_egg_dir</span><span class="p">,</span> <span class="n">forcedversion</span><span class="p">)</span></code>
 
 <a href="#easybuild.scripts.bootstrap_eb.stage1" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>STAGE 1: temporary install EasyBuild using distribute's easy_install.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.scripts.bootstrap_eb.stage2" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">stage2</span><span class="p">(</span><span class="n">tmpdir</span><span class="p">,</span> <span class="n">templates</span><span class="p">,</span> <span class="n">install_path</span><span class="p">,</span> <span class="n">distribute_egg_dir</span><span class="p">,</span> <span class="n">sourcepath</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">stage2</span><span class="p">(</span><span class="n">tmpdir</span><span class="p">,</span> <span class="n">templates</span><span class="p">,</span> <span class="n">install_path</span><span class="p">,</span> <span class="n">distribute_egg_dir</span><span class="p">,</span> <span class="n">sourcepath</span><span class="p">)</span></code>
 
 <a href="#easybuild.scripts.bootstrap_eb.stage2" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>STAGE 2: install EasyBuild to temporary dir with EasyBuild from stage 1.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8867,7 +8833,7 @@ License: GPLv2</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8967,7 +8933,7 @@ License: GPLv2</p>
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       

@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8515,8 +8515,8 @@
 
 
 <a id="easybuild.tools.output"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Tools for controlling output to terminal produced by EasyBuild.</p>
 <p>Authors:</p>
 <ul>
@@ -8524,7 +8524,7 @@
 <li>Jørgen Nordmoen (University of Oslo)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8540,22 +8540,22 @@
 
 
 <h2 id="easybuild.tools.output.DummyRich" class="doc doc-heading">
-          <code>DummyRich</code>
+            <code>DummyRich</code>
 
 
 <a href="#easybuild.tools.output.DummyRich" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
-  
+
       <p>Dummy shim for Rich classes.
 Used in case Rich is not available, or when EasyBuild is not configured to use rich output style.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8571,401 +8571,366 @@ Used in case Rich is not available, or when EasyBuild is not configured to use r
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.output.colorize" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">colorize</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">colorize</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.output.colorize" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Colorize given text, with specified color.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.output.download_all_progress_bar" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">download_all_progress_bar</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">download_all_progress_bar</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.output.download_all_progress_bar" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get progress bar to show progress on downloading of all source files.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.output.download_one_progress_bar" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">download_one_progress_bar</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">download_one_progress_bar</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.output.download_one_progress_bar" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get progress bar to show progress for downloading a file of known size.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.output.download_one_progress_bar_unknown_size" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">download_one_progress_bar_unknown_size</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">download_one_progress_bar_unknown_size</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.output.download_one_progress_bar_unknown_size" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get progress bar to show progress for downloading a file of unknown size.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.output.easyconfig_progress_bar" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">easyconfig_progress_bar</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">easyconfig_progress_bar</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.output.easyconfig_progress_bar" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get progress bar to display progress for installing a single easyconfig file.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.output.extensions_progress_bar" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">extensions_progress_bar</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">extensions_progress_bar</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.output.extensions_progress_bar" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get progress bar to show progress for installing extensions.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.output.get_progress_bar" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_progress_bar</span><span class="p">(</span><span class="n">bar_type</span><span class="p">,</span> <span class="n">ignore_cache</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_progress_bar</span><span class="p">(</span><span class="n">bar_type</span><span class="p">,</span> <span class="n">ignore_cache</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.output.get_progress_bar" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get progress bar of given type.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.output.print_checks" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">print_checks</span><span class="p">(</span><span class="n">checks_data</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">print_checks</span><span class="p">(</span><span class="n">checks_data</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.output.print_checks" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Print overview of checks that were made.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.output.progress_bar_cache" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">progress_bar_cache</span><span class="p">(</span><span class="n">func</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">progress_bar_cache</span><span class="p">(</span><span class="n">func</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.output.progress_bar_cache" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Function decorator to cache created progress bars for easy retrieval.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.output.rich_live_cm" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">rich_live_cm</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">rich_live_cm</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.output.rich_live_cm" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return Live instance to use as context manager.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.output.show_progress_bars" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">show_progress_bars</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">show_progress_bars</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.output.show_progress_bars" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return whether or not to show progress bars.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.output.start_progress_bar" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">start_progress_bar</span><span class="p">(</span><span class="n">bar_type</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">start_progress_bar</span><span class="p">(</span><span class="n">bar_type</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.output.start_progress_bar" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Start progress bar of given type.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>label</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>label for progress bar</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>size</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>total target size of progress bar</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>label</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>label for progress bar</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>size</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>total target size of progress bar</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.output.status_bar" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">status_bar</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">status_bar</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.output.status_bar" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get progress bar to display overall progress.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.output.stop_progress_bar" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">stop_progress_bar</span><span class="p">(</span><span class="n">bar_type</span><span class="p">,</span> <span class="n">visible</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">stop_progress_bar</span><span class="p">(</span><span class="n">bar_type</span><span class="p">,</span> <span class="n">visible</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.output.stop_progress_bar" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Stop progress bar of given type.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.output.update_progress_bar" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">update_progress_bar</span><span class="p">(</span><span class="n">bar_type</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">progress_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">update_progress_bar</span><span class="p">(</span><span class="n">bar_type</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">progress_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.output.update_progress_bar" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Update progress bar of given type (if it was started), add progress of given size.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>bar_type</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>type of progress bar</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>label</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>label for progress bar</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>progress_size</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>amount of progress made</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>1</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>bar_type</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>type of progress bar</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>label</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>label for progress bar</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>progress_size</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>amount of progress made</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>1</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.output.use_rich" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">use_rich</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">use_rich</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.output.use_rich" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return whether or not to use Rich to produce rich output.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8973,7 +8938,7 @@ Used in case Rich is not available, or when EasyBuild is not configured to use r
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9073,7 +9038,7 @@ Used in case Rich is not available, or when EasyBuild is not configured to use r
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       

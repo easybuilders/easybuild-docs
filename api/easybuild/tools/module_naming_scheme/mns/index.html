@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8505,8 +8505,8 @@
 
 
 <a id="easybuild.tools.module_naming_scheme.mns"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Module naming scheme API.</p>
 <p>Authors:</p>
 <ul>
@@ -8514,7 +8514,7 @@
 <li>Kenneth Hoste (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8530,21 +8530,21 @@
 
 
 <h2 id="easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme" class="doc doc-heading">
-          <code>ModuleNamingScheme</code>
+            <code>ModuleNamingScheme</code>
 
 
 <a href="#easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="easybuild.tools.module_naming_scheme.mns.BaseModuleNamingScheme">BaseModuleNamingScheme</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="easybuild.tools.module_naming_scheme.mns.BaseModuleNamingScheme">BaseModuleNamingScheme</span></code></p>
 
-  
+
       <p>Abstract class for a module naming scheme implementation.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8556,547 +8556,507 @@
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Initialize logger.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.det_full_module_name" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_full_module_name</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_full_module_name</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.det_full_module_name" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine full module name, relative to the top of the module path.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>ec</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>dict-like object with easyconfig parameter values; for now only the 'name', 'version', 'versionsuffix' and 'toolchain' parameters are guaranteed to be available</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>ec</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>dict-like object with easyconfig parameter values; for now only the 'name', 'version', 'versionsuffix' and 'toolchain' parameters are guaranteed to be available</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>string with full module name, e.g.: '<compiler>/<mpi_lib>/<name>/<version>'</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>string with full module name, e.g.: '<compiler>/<mpi_lib>/<name>/<version>'</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.det_init_modulepaths" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_init_modulepaths</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_init_modulepaths</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.det_init_modulepaths" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine initial module paths, where the modules that are top of the hierarchy (if any) live.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.det_install_subdir" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_install_subdir</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_install_subdir</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.det_install_subdir" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine name of software installation subdirectory of install path.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>ec</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>dict-like object with easyconfig parameter values; for now only the 'name', 'version', 'versionsuffix' and 'toolchain' parameters are guaranteed to be available</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>ec</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>dict-like object with easyconfig parameter values; for now only the 'name', 'version', 'versionsuffix' and 'toolchain' parameters are guaranteed to be available</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>string with name of subdirectory, e.g.: '<compiler>/<mpi_lib>/<name>/<version>'</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>string with name of subdirectory, e.g.: '<compiler>/<mpi_lib>/<name>/<version>'</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.det_make_devel_module" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_make_devel_module</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">det_make_devel_module</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.det_make_devel_module" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine if a devel module should be generated.
 Can be used to create a separate set of modules with a different naming scheme.
 Software is already installed beforehand with one naming scheme, including development module.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.det_modpath_extensions" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_modpath_extensions</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_modpath_extensions</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.det_modpath_extensions" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine list of subdirectories for which to extend $MODULEPATH with when this module is loaded (if any).</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>ec</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>dict-like object with easyconfig parameter values; for now only the 'name', 'version', 'versionsuffix' and 'toolchain' parameters are guaranteed to be available</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>ec</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>dict-like object with easyconfig parameter values; for now only the 'name', 'version', 'versionsuffix' and 'toolchain' parameters are guaranteed to be available</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>A list of $MODULEPATH subdirectories.</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>A list of $MODULEPATH subdirectories.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.det_module_subdir" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_module_subdir</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_module_subdir</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.det_module_subdir" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine subdirectory for module file in $MODULEPATH.
 This determines the separation between module names exposed to users, and what's part of the $MODULEPATH.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>ec</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>dict-like object with easyconfig parameter values; for now only the 'name', 'version', 'versionsuffix' and 'toolchain' parameters are guaranteed to be available</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>ec</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>dict-like object with easyconfig parameter values; for now only the 'name', 'version', 'versionsuffix' and 'toolchain' parameters are guaranteed to be available</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>string with subdir path (relative to $MODULEPATH), e.g. '<compiler>/<mpi_lib>'</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>string with subdir path (relative to $MODULEPATH), e.g. '<compiler>/<mpi_lib>'</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.det_module_symlink_paths" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_module_symlink_paths</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_module_symlink_paths</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.det_module_symlink_paths" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine list of paths in which symlinks to module files must be created.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.det_short_module_name" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_short_module_name</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_short_module_name</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.det_short_module_name" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine short module name, i.e. the name under which modules will be exposed to users.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>ec</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>dict-like object with easyconfig parameter values; for now only the 'name', 'version', 'versionsuffix' and 'toolchain' parameters are guaranteed to be available</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>ec</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>dict-like object with easyconfig parameter values; for now only the 'name', 'version', 'versionsuffix' and 'toolchain' parameters are guaranteed to be available</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>string with module name, e.g. '<name>/<version>'</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>string with module name, e.g. '<name>/<version>'</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.det_user_modpath_extensions" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_user_modpath_extensions</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_user_modpath_extensions</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.det_user_modpath_extensions" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine list of subdirectories relative to the user-specific modules directory for which to extend
 $MODULEPATH with when this module is loaded (if any).</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>ec</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>dict-like object with easyconfig parameter values; for now only the 'name', 'version', 'versionsuffix' and 'toolchain' parameters are guaranteed to be available</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>ec</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>dict-like object with easyconfig parameter values; for now only the 'name', 'version', 'versionsuffix' and 'toolchain' parameters are guaranteed to be available</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>A list of $MODULEPATH subdirectories.</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>A list of $MODULEPATH subdirectories.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.expand_toolchain_load" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">expand_toolchain_load</span><span class="p">(</span><span class="n">ec</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">expand_toolchain_load</span><span class="p">(</span><span class="n">ec</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.expand_toolchain_load" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine whether load statements for a toolchain should be expanded to load statements for its dependencies.
 This is useful when toolchains are not exposed to users.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.is_short_modname_for" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_short_modname_for</span><span class="p">(</span><span class="n">short_modname</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">is_short_modname_for</span><span class="p">(</span><span class="n">short_modname</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.is_short_modname_for" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine whether the specified (short) module name is a module for software with the specified name.
 Default implementation checks via a strict regex pattern, and assumes short module names are of the form:
     <name>/<version>[-<toolchain>]</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.is_sufficient" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_sufficient</span><span class="p">(</span><span class="n">keys</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">is_sufficient</span><span class="p">(</span><span class="n">keys</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.is_sufficient" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine whether specified list of easyconfig parameters is sufficient for this module naming scheme.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.requires_toolchain_details" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">requires_toolchain_details</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">requires_toolchain_details</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.module_naming_scheme.mns.ModuleNamingScheme.requires_toolchain_details" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine whether toolchain details are required by this module naming scheme,
 e.g. whether one of det_toolchain_* functions are relied upon.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9104,8 +9064,7 @@ e.g. whether one of det_toolchain_* functions are relied upon.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9114,7 +9073,7 @@ e.g. whether one of det_toolchain_* functions are relied upon.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9214,7 +9173,7 @@ e.g. whether one of det_toolchain_* functions are relied upon.</p>
     <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../../js/asciinema-player-2.6.1.js"></script>
       

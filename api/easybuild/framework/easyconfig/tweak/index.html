@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8517,8 +8517,8 @@
 
 
 <a id="easybuild.framework.easyconfig.tweak"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Easyconfig module that provides functionality for tweaking existing eaysconfig (.eb) files.</p>
 <p>Authors:</p>
 <ul>
@@ -8533,7 +8533,7 @@
 <li>Maxime Boissonneault (Universite Laval, Calcul Quebec, Compute Canada)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8545,912 +8545,865 @@
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.tweak.check_capability_mapping" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_capability_mapping</span><span class="p">(</span><span class="n">source_tc_spec</span><span class="p">,</span> <span class="n">target_tc_spec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_capability_mapping</span><span class="p">(</span><span class="n">source_tc_spec</span><span class="p">,</span> <span class="n">target_tc_spec</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.tweak.check_capability_mapping" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Compare whether the capabilities of a source toolchain are all present in a target toolchain</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>source_tc_spec</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>specs of source toolchain</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>target_tc_spec</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>specs of target toolchain</p>
-            </div>
-            <p>
-            </p>
-          </td>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>source_tc_spec</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>specs of source toolchain</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>target_tc_spec</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>specs of target toolchain</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>boolean indicating whether or not source toolchain is compatible with target toolchain</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>boolean indicating whether or not source toolchain is compatible with target toolchain</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.tweak.ec_filename_for" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">ec_filename_for</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">ec_filename_for</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.tweak.ec_filename_for" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return a suiting file name for the easyconfig file at <path>,
 as determined by its contents.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.tweak.find_matching_easyconfigs" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">find_matching_easyconfigs</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">installver</span><span class="p">,</span> <span class="n">paths</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">find_matching_easyconfigs</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">installver</span><span class="p">,</span> <span class="n">paths</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.tweak.find_matching_easyconfigs" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Find easyconfigs that match specified name/installversion in specified list of paths.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>software name</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>installver</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>software install version (which includes version, toolchain, versionprefix/suffix, ...)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of paths to search easyconfigs in</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>software name</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>installver</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>software install version (which includes version, toolchain, versionprefix/suffix, ...)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of paths to search easyconfigs in</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.tweak.find_potential_version_mappings" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">find_potential_version_mappings</span><span class="p">(</span><span class="n">dep</span><span class="p">,</span> <span class="n">toolchain_mapping</span><span class="p">,</span> <span class="n">versionsuffix_mapping</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">highest_versions_only</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ignore_versionsuffixes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">find_potential_version_mappings</span><span class="p">(</span><span class="n">dep</span><span class="p">,</span> <span class="n">toolchain_mapping</span><span class="p">,</span> <span class="n">versionsuffix_mapping</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">highest_versions_only</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ignore_versionsuffixes</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.tweak.find_potential_version_mappings" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Find potential version mapping for a dependency in a new hierarchy</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>dep</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>dependency specification (dict)</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>toolchain_mapping</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>toolchain mapping used for search</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>versionsuffix_mapping</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>mapping of version suffixes (required by software with a special version suffix, such as Python packages)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>highest_versions_only</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>only return highest versions</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>dep</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>dependency specification (dict)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>toolchain_mapping</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>toolchain mapping used for search</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>versionsuffix_mapping</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>mapping of version suffixes (required by software with a special version suffix, such as Python packages)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>highest_versions_only</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>only return highest versions</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>list of dependencies that match</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>list of dependencies that match</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.tweak.get_dep_tree_of_toolchain" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_dep_tree_of_toolchain</span><span class="p">(</span><span class="n">toolchain_spec</span><span class="p">,</span> <span class="n">modtool</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_dep_tree_of_toolchain</span><span class="p">(</span><span class="n">toolchain_spec</span><span class="p">,</span> <span class="n">modtool</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.tweak.get_dep_tree_of_toolchain" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get list of dependencies of a toolchain (as EasyConfig objects)</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>toolchain_spec</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>toolchain spec to get the dependencies of</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>modtool</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>module tool used</p>
-            </div>
-            <p>
-            </p>
-          </td>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>toolchain_spec</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>toolchain spec to get the dependencies of</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>modtool</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>module tool used</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>The dependency tree of the toolchain spec</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>The dependency tree of the toolchain spec</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.tweak.get_matching_easyconfig_candidates" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_matching_easyconfig_candidates</span><span class="p">(</span><span class="n">prefix_stub</span><span class="p">,</span> <span class="n">toolchain</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_matching_easyconfig_candidates</span><span class="p">(</span><span class="n">prefix_stub</span><span class="p">,</span> <span class="n">toolchain</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.tweak.get_matching_easyconfig_candidates" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Find easyconfigs that match specified requirements w.r.t. toolchain and partial filename pattern.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>prefix_stub</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>stub used in regex (e.g., 'Python-' or 'Python-2')</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>toolchain</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>the toolchain to use with the search</p>
-            </div>
-            <p>
-            </p>
-          </td>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>prefix_stub</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>stub used in regex (e.g., 'Python-' or 'Python-2')</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>toolchain</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>the toolchain to use with the search</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>list of candidate paths, toolchain_suffix of candidates</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>list of candidate paths, toolchain_suffix of candidates</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.tweak.list_deps_versionsuffixes" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">list_deps_versionsuffixes</span><span class="p">(</span><span class="n">ec_spec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">list_deps_versionsuffixes</span><span class="p">(</span><span class="n">ec_spec</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.tweak.list_deps_versionsuffixes" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Take an easyconfig spec, parse it, extracts the list of version suffixes used in its dependencies</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>ec_spec</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>location of original easyconfig file</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>ec_spec</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>location of original easyconfig file</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>The list of versionsuffixes used by the dependencies of this recipe</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>The list of versionsuffixes used by the dependencies of this recipe</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.tweak.map_common_versionsuffixes" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">map_common_versionsuffixes</span><span class="p">(</span><span class="n">software_name</span><span class="p">,</span> <span class="n">original_toolchain</span><span class="p">,</span> <span class="n">toolchain_mapping</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">map_common_versionsuffixes</span><span class="p">(</span><span class="n">software_name</span><span class="p">,</span> <span class="n">original_toolchain</span><span class="p">,</span> <span class="n">toolchain_mapping</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.tweak.map_common_versionsuffixes" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create a mapping of common versionssuffixes (like <code>-Python-%(pyver)s</code>) between toolchains</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>software_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Name of software</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>original_toolchain</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>original toolchain</p>
-            </div>
-            <p>
-            </p>
-          </td>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>software_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Name of software</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>original_toolchain</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>original toolchain</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>toolchain_mapping</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>toolchain mapping from that containing original to target</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>toolchain_mapping</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>toolchain mapping from that containing original to target</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>dictionary of possible mappings</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>dictionary of possible mappings</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.tweak.map_easyconfig_to_target_tc_hierarchy" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">map_easyconfig_to_target_tc_hierarchy</span><span class="p">(</span><span class="n">ec_spec</span><span class="p">,</span> <span class="n">toolchain_mapping</span><span class="p">,</span> <span class="n">targetdir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">update_build_specs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">update_dep_versions</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ignore_versionsuffixes</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">map_easyconfig_to_target_tc_hierarchy</span><span class="p">(</span><span class="n">ec_spec</span><span class="p">,</span> <span class="n">toolchain_mapping</span><span class="p">,</span> <span class="n">targetdir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">update_build_specs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">update_dep_versions</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ignore_versionsuffixes</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.tweak.map_easyconfig_to_target_tc_hierarchy" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Take an easyconfig spec, parse it, map it to a target toolchain and dump it out</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>ec_spec</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>location of original easyconfig file</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>toolchain_mapping</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>mapping between source toolchain and target toolchain</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>targetdir</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>directory to dump the modified easyconfig file in</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>update_build_specs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>dict with names and values of easyconfig parameters to tweak</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>update_dep_versions</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>boolean indicating whether dependency versions should be updated</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>ec_spec</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>location of original easyconfig file</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>toolchain_mapping</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>mapping between source toolchain and target toolchain</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>targetdir</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>directory to dump the modified easyconfig file in</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>update_build_specs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>dict with names and values of easyconfig parameters to tweak</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>update_dep_versions</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>boolean indicating whether dependency versions should be updated</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>Location of the modified easyconfig file</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>Location of the modified easyconfig file</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.tweak.map_toolchain_hierarchies" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">map_toolchain_hierarchies</span><span class="p">(</span><span class="n">source_toolchain</span><span class="p">,</span> <span class="n">target_toolchain</span><span class="p">,</span> <span class="n">modtool</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">map_toolchain_hierarchies</span><span class="p">(</span><span class="n">source_toolchain</span><span class="p">,</span> <span class="n">target_toolchain</span><span class="p">,</span> <span class="n">modtool</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.tweak.map_toolchain_hierarchies" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create a map between toolchain hierarchy of the initial toolchain and that of the target toolchain</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>source_toolchain</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>initial toolchain of the easyconfig(s)</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>target_toolchain</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>target toolchain for tweaked easyconfig(s)</p>
-            </div>
-            <p>
-            </p>
-          </td>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>source_toolchain</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>initial toolchain of the easyconfig(s)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>target_toolchain</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>target toolchain for tweaked easyconfig(s)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>modtool</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>module tool used</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>modtool</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>module tool used</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>mapping from source hierarchy to target hierarchy</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>mapping from source hierarchy to target hierarchy</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.tweak.map_versionsuffixes_cache" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">map_versionsuffixes_cache</span><span class="p">(</span><span class="n">func</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">map_versionsuffixes_cache</span><span class="p">(</span><span class="n">func</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.tweak.map_versionsuffixes_cache" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Function decorator to cache (and retrieve cached) versionsuffixes mapping between toolchains.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.tweak.match_minimum_tc_specs" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">match_minimum_tc_specs</span><span class="p">(</span><span class="n">source_tc_spec</span><span class="p">,</span> <span class="n">target_tc_hierarchy</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">match_minimum_tc_specs</span><span class="p">(</span><span class="n">source_tc_spec</span><span class="p">,</span> <span class="n">target_tc_hierarchy</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.tweak.match_minimum_tc_specs" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Match a source toolchain spec to the minimal corresponding toolchain in a target hierarchy</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>source_tc_spec</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>specs of source toolchain</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>target_tc_hierarchy</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>hierarchy of specs for target toolchain</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>source_tc_spec</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>specs of source toolchain</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>target_tc_hierarchy</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>hierarchy of specs for target toolchain</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.tweak.obtain_ec_for" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">obtain_ec_for</span><span class="p">(</span><span class="n">specs</span><span class="p">,</span> <span class="n">paths</span><span class="p">,</span> <span class="n">fp</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">obtain_ec_for</span><span class="p">(</span><span class="n">specs</span><span class="p">,</span> <span class="n">paths</span><span class="p">,</span> <span class="n">fp</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.tweak.obtain_ec_for" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Obtain an easyconfig file to the given specifications.</p>
 <p>Either select between available ones, or use the best suited available one
 to generate a new easyconfig file.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>specs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of available easyconfig files</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>a list of paths where easyconfig files can be found</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>fp</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>the desired file name</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>specs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of available easyconfig files</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>a list of paths where easyconfig files can be found</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>fp</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>the desired file name</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.tweak.pick_version" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">pick_version</span><span class="p">(</span><span class="n">req_ver</span><span class="p">,</span> <span class="n">avail_vers</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">pick_version</span><span class="p">(</span><span class="n">req_ver</span><span class="p">,</span> <span class="n">avail_vers</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.tweak.pick_version" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Pick version based on an optionally desired version and available versions.</p>
 <p>If a desired version is specifed, the most recent version that is less recent than or equal to
 the desired version will be picked; else, the most recent version will be picked.</p>
@@ -9458,55 +9411,52 @@ the desired version will be picked; else, the most recent version will be picked
 if it was specified, and the version picked that matches that closest.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>req_ver</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>required version</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>avail_vers</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of available versions</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>req_ver</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>required version</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>avail_vers</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of available versions</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.tweak.select_or_generate_ec" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">select_or_generate_ec</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="n">paths</span><span class="p">,</span> <span class="n">specs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">select_or_generate_ec</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="n">paths</span><span class="p">,</span> <span class="n">specs</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.tweak.select_or_generate_ec" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Select or generate an easyconfig file with the given requirements, from existing easyconfig files.</p>
 <p>If easyconfig files are available for the specified software package,
 then this function will first try to determine which toolchain to use.
@@ -9521,42 +9471,38 @@ based on the following requirements (in order of preference):
 <p>If a complete match is found, it will return that easyconfig.
 Else, it will generate a new easyconfig file based on the selected 'best matching' easyconfig file.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.tweak.tweak" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">tweak</span><span class="p">(</span><span class="n">easyconfigs</span><span class="p">,</span> <span class="n">build_specs</span><span class="p">,</span> <span class="n">modtool</span><span class="p">,</span> <span class="n">targetdirs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">tweak</span><span class="p">(</span><span class="n">easyconfigs</span><span class="p">,</span> <span class="n">build_specs</span><span class="p">,</span> <span class="n">modtool</span><span class="p">,</span> <span class="n">targetdirs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.tweak.tweak" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Tweak list of easyconfigs according to provided build specifications.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.tweak.tweak_one" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">tweak_one</span><span class="p">(</span><span class="n">orig_ec</span><span class="p">,</span> <span class="n">tweaked_ec</span><span class="p">,</span> <span class="n">tweaks</span><span class="p">,</span> <span class="n">targetdir</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">tweak_one</span><span class="p">(</span><span class="n">orig_ec</span><span class="p">,</span> <span class="n">tweaked_ec</span><span class="p">,</span> <span class="n">tweaks</span><span class="p">,</span> <span class="n">targetdir</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.tweak.tweak_one" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Tweak an easyconfig file with the given list of tweaks, using replacement via regular expressions.
 Note: this will only work 'well-written' easyconfig files, i.e. ones that e.g. set the version
 once and then use the 'version' variable to construct the list of sources, and possibly other
@@ -9568,63 +9514,62 @@ to be set.</p>
 contents of the tweaked easyconfig file.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>orig_ec</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>location of original easyconfig file to read</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>tweaked_ec</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>location where tweaked easyconfig file should be written (if this is None, then filename for tweaked easyconfig is auto-derived from contents)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>tweaks</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>dictionary with set of changes to apply to original easyconfig file</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>targetdir</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>target directory for tweaked easyconfig file, defaults to temporary directory (only used if tweaked_ec is None)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>orig_ec</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>location of original easyconfig file to read</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>tweaked_ec</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>location where tweaked easyconfig file should be written (if this is None, then filename for tweaked easyconfig is auto-derived from contents)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>tweaks</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>dictionary with set of changes to apply to original easyconfig file</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>targetdir</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>target directory for tweaked easyconfig file, defaults to temporary directory (only used if tweaked_ec is None)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
 
@@ -9632,7 +9577,7 @@ contents of the tweaked easyconfig file.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9732,7 +9677,7 @@ contents of the tweaked easyconfig file.</p>
     <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../../js/asciinema-player-2.6.1.js"></script>
       

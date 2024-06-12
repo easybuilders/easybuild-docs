@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8535,8 +8535,8 @@
 
 
 <a id="easybuild.framework.easyconfig.types"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Support for checking types of easyconfig parameter values.</p>
 <p>Authors:</p>
 <ul>
@@ -8544,7 +8544,7 @@
 <li>Kenneth Hoste (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8556,400 +8556,371 @@
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.types.as_hashable" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">as_hashable</span><span class="p">(</span><span class="n">dict_value</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">as_hashable</span><span class="p">(</span><span class="n">dict_value</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.types.as_hashable" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Helper function, convert dict value to hashable equivalent via tuples.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.types.check_element_types" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_element_types</span><span class="p">(</span><span class="n">elems</span><span class="p">,</span> <span class="n">allowed_types</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_element_types</span><span class="p">(</span><span class="n">elems</span><span class="p">,</span> <span class="n">allowed_types</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.types.check_element_types" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether types of elements of specified (iterable) value are as expected.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>elems</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>iterable value (list or dict) of elements</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>allowed_types</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>allowed types per element; either a simple list, or a dict of allowed_types by element name</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>elems</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>iterable value (list or dict) of elements</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>allowed_types</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>allowed types per element; either a simple list, or a dict of allowed_types by element name</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.types.check_key_types" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_key_types</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">allowed_types</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_key_types</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">allowed_types</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.types.check_key_types" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether type of keys for specific dict value are as expected.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.types.check_known_keys" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_known_keys</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">allowed_keys</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_known_keys</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">allowed_keys</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.types.check_known_keys" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether all keys for specified dict value are known keys.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.types.check_required_keys" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_required_keys</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">required_keys</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_required_keys</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">required_keys</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.types.check_required_keys" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether all required keys are present in the specified dict value.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.types.check_type_of_param_value" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_type_of_param_value</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">auto_convert</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_type_of_param_value</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">auto_convert</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.types.check_type_of_param_value" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check value type of specified easyconfig parameter.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>key</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>name of easyconfig parameter</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>val</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>easyconfig parameter value, of which type should be checked</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>auto_convert</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>try to automatically convert to expected value type if required</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>key</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>name of easyconfig parameter</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>val</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>easyconfig parameter value, of which type should be checked</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>auto_convert</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>try to automatically convert to expected value type if required</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.types.convert_value_type" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">convert_value_type</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">typ</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">convert_value_type</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">typ</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.types.convert_value_type" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Try to convert type of provided value to specific type.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>val</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>value to convert type of</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>typ</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>target type</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>val</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>value to convert type of</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>typ</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>target type</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.types.ensure_iterable_license_specs" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">ensure_iterable_license_specs</span><span class="p">(</span><span class="n">specs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">ensure_iterable_license_specs</span><span class="p">(</span><span class="n">specs</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.types.ensure_iterable_license_specs" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Ensures that the provided license file/server specifications are of correct type and converts
 them to a list.  The input can either be None, a string, or a list/tuple of strings.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>specs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>License file/server specifications as provided via <code>license_file</code> easyconfig parameter</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>specs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>License file/server specifications as provided via <code>license_file</code> easyconfig parameter</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.types.is_value_of_type" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_value_of_type</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">expected_type</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">is_value_of_type</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">expected_type</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.types.is_value_of_type" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether specified value matches a particular very specific (non-trivial) type,
 which is specified by means of a 2-tuple: (parent type, tuple with additional type requirements).</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>value</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>value to check the type of</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>expected_type</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>type of value to check against</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>value</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>value to check the type of</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>expected_type</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>type of value to check against</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.types.to_checksums" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_checksums</span><span class="p">(</span><span class="n">checksums</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">to_checksums</span><span class="p">(</span><span class="n">checksums</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.types.to_checksums" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Ensure correct element types for list of checksums: convert list elements to tuples.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.types.to_dependencies" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_dependencies</span><span class="p">(</span><span class="n">dep_list</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">to_dependencies</span><span class="p">(</span><span class="n">dep_list</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.types.to_dependencies" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Convert a list of dependencies obtained from parsing a .yeb easyconfig
 to a list of dependencies in the correct format</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.types.to_dependency" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_dependency</span><span class="p">(</span><span class="n">dep</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">to_dependency</span><span class="p">(</span><span class="n">dep</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.types.to_dependency" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Convert a dependency specification to a dependency dict with name/version/versionsuffix/toolchain keys.</p>
 <p>Example:
     {'foo': '1.2.3', 'toolchain': 'GCC, 4.8.2'}
@@ -8959,153 +8930,139 @@ to a list of dependencies in the correct format</p>
     {'name': 'fftw/3.3.4.1', 'external_module': True}
     to</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.types.to_list_of_strings" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_list_of_strings</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">to_list_of_strings</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.types.to_list_of_strings" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Convert specified value to a list of strings, if possible.</p>
 <p>Supported: single string value, tuple of string values.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.types.to_list_of_strings_and_tuples" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_list_of_strings_and_tuples</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">to_list_of_strings_and_tuples</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.types.to_list_of_strings_and_tuples" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Convert a 'list of lists and strings' to a 'list of tuples and strings'</p>
 <p>Example:
     ['foo', ['bar', 'baz']]
     to
     ['foo', ('bar', 'baz')]</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.types.to_list_of_strings_and_tuples_and_dicts" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_list_of_strings_and_tuples_and_dicts</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">to_list_of_strings_and_tuples_and_dicts</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.types.to_list_of_strings_and_tuples_and_dicts" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Convert a 'list of dicts and tuples/lists and strings' to a 'list of dicts and tuples and strings'</p>
 <p>Example:
     ['foo', ['bar', 'baz']]
     to
     ['foo', ('bar', 'baz')]</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.types.to_name_version_dict" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_name_version_dict</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">to_name_version_dict</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.types.to_name_version_dict" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>No longer supported, replaced by to_toolchain_dict.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.types.to_sanity_check_paths_dict" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_sanity_check_paths_dict</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">to_sanity_check_paths_dict</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.types.to_sanity_check_paths_dict" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Convert a sanity_check_paths dict as received by yaml (a dict with list values that contain either lists or strings)</p>
 <p _dirs_:="'dirs':" _file1_="['file1'," _file2a_="('file2a'," _file2b_="'file2b')]," _files_:="'files':" _foo_bar_="['foo/bar']">Example:
     {'files': ['file1', ['file2a', 'file2b]], 'dirs': ['foo/bar']}
     to</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.types.to_sanity_check_paths_entry" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_sanity_check_paths_entry</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">to_sanity_check_paths_entry</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.types.to_sanity_check_paths_entry" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Convert a 'list of lists and strings' to a 'list of tuples and strings' while allowing dicts of lists or strings</p>
 <p>Example:
     ['foo', ['bar', 'baz'], {'f42': ['a', 'b']}]
     to
     ['foo', ('bar', 'baz'), {'f42': ('a', 'b')}]</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.types.to_toolchain_dict" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">to_toolchain_dict</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">to_toolchain_dict</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.types.to_toolchain_dict" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Convert a comma-separated string or 2/3-element list of strings to a dictionary with name/version keys, and
 optionally a hidden key. If the specified value is a dict already, the keys are checked to be only
 name/version/hidden.</p>
@@ -9113,29 +9070,28 @@ name/version/hidden.</p>
              "foss, 2016a, True" =&gt; {'name': 'foss', 'version': '2016a', 'hidden': True}</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>spec</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>a comma-separated string with two or three values, or a 2/3-element list of strings, or a dict</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>spec</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>a comma-separated string with two or three values, or a 2/3-element list of strings, or a dict</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9143,7 +9099,7 @@ name/version/hidden.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9243,7 +9199,7 @@ name/version/hidden.</p>
     <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../../js/asciinema-player-2.6.1.js"></script>
       

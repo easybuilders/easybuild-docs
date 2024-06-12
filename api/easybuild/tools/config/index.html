@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8665,8 +8665,8 @@
 
 
 <a id="easybuild.tools.config"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>EasyBuild configuration (paths, preferences, etc.)</p>
 <p>Authors:</p>
 <ul>
@@ -8682,7 +8682,7 @@
 <li>Maxime Boissonneault (Compute Canada)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8698,21 +8698,21 @@
 
 
 <h2 id="easybuild.tools.config.BuildOptions" class="doc doc-heading">
-          <code>BuildOptions</code>
+            <code>BuildOptions</code>
 
 
 <a href="#easybuild.tools.config.BuildOptions" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="easybuild.tools.config.BaseBuildOptions">BaseBuildOptions</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="easybuild.tools.config.BaseBuildOptions">BaseBuildOptions</span></code></p>
 
-  
+
       <p>Representation of a set of build options, acts like a dictionary.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8728,8 +8728,7 @@
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8738,24 +8737,23 @@
 
 
 <h2 id="easybuild.tools.config.ConfigurationVariables" class="doc doc-heading">
-          <code>ConfigurationVariables</code>
+            <code>ConfigurationVariables</code>
 
 
 <a href="#easybuild.tools.config.ConfigurationVariables" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="easybuild.tools.config.BaseConfigurationVariables">BaseConfigurationVariables</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="easybuild.tools.config.BaseConfigurationVariables">BaseConfigurationVariables</span></code></p>
 
-  
+
       <p>This is a dict that supports legacy config names transparently.</p>
 
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -8768,19 +8766,18 @@
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.config.ConfigurationVariables.get_items_check_required" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_items_check_required</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_items_check_required</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.config.ConfigurationVariables.get_items_check_required" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>For all known/required keys, check if exists and return all key/value pairs.
     no_missing: boolean, when True, will throw error message for missing values</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8788,8 +8785,7 @@
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8798,22 +8794,22 @@
 
 
 <h2 id="easybuild.tools.config.Singleton" class="doc doc-heading">
-          <code>Singleton</code>
+            <code>Singleton</code>
 
 
 <a href="#easybuild.tools.config.Singleton" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="abc.ABCMeta">ABCMeta</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="abc.ABCMeta">ABCMeta</span></code></p>
 
-  
+
       <p>Serves as metaclass for classes that should implement the Singleton pattern.</p>
 <p>See http://stackoverflow.com/questions/6760685/creating-a-singleton-in-python</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8829,740 +8825,677 @@
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.build_option" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">build_option</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">build_option</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.config.build_option" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Obtain value specified build option.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.build_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">build_path</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">build_path</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.config.build_path" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the build path</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.container_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">container_path</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">container_path</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.config.container_path" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the path for container recipes &amp; images</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.find_last_log" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">find_last_log</span><span class="p">(</span><span class="n">curlog</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">find_last_log</span><span class="p">(</span><span class="n">curlog</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.config.find_last_log" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Find location to last log file that is still available.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>curlog</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>location to log file of current session</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>curlog</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>location to log file of current session</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>path to last log file (or None if no log files were found)</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>path to last log file (or None if no log files were found)</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.get_build_log_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_build_log_path</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_build_log_path</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.config.get_build_log_path" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return (temporary) directory for build log</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.get_job_backend" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_job_backend</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_job_backend</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.config.get_job_backend" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return job execution backend (PBS, GC3Pie, ...)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.get_log_filename" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_log_filename</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="n">add_salt</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_log_filename</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="n">add_salt</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.config.get_log_filename" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Generate a filename to be used for logging</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>software name ('%(name)s')</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>version</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>software version ('%(version)s')</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>add_salt</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>add salt (5 random characters)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>date</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>string representation of date to use ('%(date)s')</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>timestamp</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>timestamp to use ('%(time)s')</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>software name ('%(name)s')</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>version</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>software version ('%(version)s')</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>add_salt</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>add salt (5 random characters)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>date</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>string representation of date to use ('%(date)s')</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>timestamp</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>timestamp to use ('%(time)s')</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.get_module_naming_scheme" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_module_naming_scheme</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_module_naming_scheme</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.config.get_module_naming_scheme" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return module naming scheme (EasyBuildMNS, HierarchicalMNS, ...)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.get_module_syntax" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_module_syntax</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_module_syntax</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.config.get_module_syntax" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return module syntax (Lua, Tcl)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.get_modules_tool" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_modules_tool</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_modules_tool</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.config.get_modules_tool" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return modules tool (EnvironmentModulesC, Lmod, ...)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.get_output_style" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_output_style</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_output_style</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.config.get_output_style" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return output style to use.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.get_package_naming_scheme" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_package_naming_scheme</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_package_naming_scheme</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.config.get_package_naming_scheme" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the package naming scheme</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.get_pretend_installpath" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_pretend_installpath</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_pretend_installpath</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.config.get_pretend_installpath" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get the installpath when --pretend option is used</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.get_repository" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_repository</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_repository</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.config.get_repository" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the repository (git, svn or file)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.get_repositorypath" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_repositorypath</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_repositorypath</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.config.get_repositorypath" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the repository path</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.init" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">init</span><span class="p">(</span><span class="n">options</span><span class="p">,</span> <span class="n">config_options_dict</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">init</span><span class="p">(</span><span class="n">options</span><span class="p">,</span> <span class="n">config_options_dict</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.config.init" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Gather all variables and check if they're valid
 Variables are read in this order of preference: generaloption &gt; legacy environment &gt; legacy config file</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.init_build_options" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">init_build_options</span><span class="p">(</span><span class="n">build_options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cmdline_options</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">init_build_options</span><span class="p">(</span><span class="n">build_options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cmdline_options</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.config.init_build_options" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Initialize build options.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.install_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">install_path</span><span class="p">(</span><span class="n">typ</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">install_path</span><span class="p">(</span><span class="n">typ</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.config.install_path" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns the install path
 - subdir 'software' for actual installation (default)
 - subdir 'modules' for environment modules (typ='mod')</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.log_file_format" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">log_file_format</span><span class="p">(</span><span class="n">return_directory</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">log_file_format</span><span class="p">(</span><span class="n">return_directory</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.config.log_file_format" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the format for the logfile or the directory</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>ec</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>dict-like value that provides values for %(name)s and %(version)s template values</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>date</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>string representation of date to use ('%(date)s')</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>timestamp</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>timestamp to use ('%(time)s')</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>ec</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>dict-like value that provides values for %(name)s and %(version)s template values</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>date</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>string representation of date to use ('%(date)s')</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>timestamp</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>timestamp to use ('%(time)s')</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.log_format" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">log_format</span><span class="p">(</span><span class="n">ec</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">log_format</span><span class="p">(</span><span class="n">ec</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.config.log_format" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the logfilename format</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.log_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">log_path</span><span class="p">(</span><span class="n">ec</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">log_path</span><span class="p">(</span><span class="n">ec</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.config.log_path" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the log path</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.mk_full_default_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">mk_full_default_path</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="n">DEFAULT_PREFIX</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">mk_full_default_path</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="n">DEFAULT_PREFIX</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.config.mk_full_default_path" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create full path, avoid '/' at the end.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.module_classes" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">module_classes</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">module_classes</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.config.module_classes" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return list of module classes specified in config file.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.package_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">package_path</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">package_path</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.config.package_path" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the path where built packages are copied to</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.read_environment" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">read_environment</span><span class="p">(</span><span class="n">env_vars</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">read_environment</span><span class="p">(</span><span class="n">env_vars</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.config.read_environment" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>NO LONGER SUPPORTED: use read_environment from easybuild.tools.environment instead</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.source_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">source_path</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">source_path</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.config.source_path" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>NO LONGER SUPPORTED: use source_paths instead</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.source_paths" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">source_paths</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">source_paths</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.config.source_paths" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the list of source paths</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.update_build_option" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">update_build_option</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">update_build_option</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.config.update_build_option" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Update build option with specified name to given value.</p>
 <p>WARNING: Use this with care, the build options are not expected to be changed during an EasyBuild session!</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.config.update_build_options" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">update_build_options</span><span class="p">(</span><span class="n">key_value_dict</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">update_build_options</span><span class="p">(</span><span class="n">key_value_dict</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.config.update_build_options" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Update build options as specified by the given dictionary (where keys are assumed to be build option names).
 Returns dictionary with original values for the updated build options.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9570,7 +9503,7 @@ Returns dictionary with original values for the updated build options.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9670,7 +9603,7 @@ Returns dictionary with original values for the updated build options.</p>
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       

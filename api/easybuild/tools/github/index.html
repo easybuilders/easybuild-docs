@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8917,8 +8917,8 @@
 
 
 <a id="easybuild.tools.github"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Utility module for working with github</p>
 <p>Authors:</p>
 <ul>
@@ -8927,7 +8927,7 @@
 <li>Toon Willems (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8943,22 +8943,21 @@
 
 
 <h2 id="easybuild.tools.github.GithubError" class="doc doc-heading">
-          <code>GithubError</code>
+            <code>GithubError</code>
 
 
 <a href="#easybuild.tools.github.GithubError" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>Exception</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>Exception</code></p>
 
-  
+
       <p>Error raised by the Githubfs</p>
 
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8967,21 +8966,21 @@
 
 
 <h2 id="easybuild.tools.github.Githubfs" class="doc doc-heading">
-          <code>Githubfs</code>
+            <code>Githubfs</code>
 
 
 <a href="#easybuild.tools.github.Githubfs" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
-  
+
       <p>This class implements some higher level functionality on top of the Github api</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8993,160 +8992,151 @@
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.github.Githubfs.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">githubuser</span><span class="p">,</span> <span class="n">reponame</span><span class="p">,</span> <span class="n">branchname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">githubuser</span><span class="p">,</span> <span class="n">reponame</span><span class="p">,</span> <span class="n">branchname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.Githubfs.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Construct a new githubfs object</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>githubuser</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>the github user's repo we want to use.</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>reponame</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>The name of the repository we want to use.</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>branchname</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Then name of the branch to use (defaults to 'main' for easybuilders org, 'master' otherwise)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>username</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>(optional) your github username.</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>password</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>(optional) your github password.</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>token</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>(optional) a github api token.</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>githubuser</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>the github user's repo we want to use.</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>reponame</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>The name of the repository we want to use.</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>branchname</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>Then name of the branch to use (defaults to 'main' for easybuilders org, 'master' otherwise)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>username</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>(optional) your github username.</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>password</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>(optional) your github password.</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>token</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>(optional) a github api token.</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.github.Githubfs.get_path" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.Githubfs.get_path" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>returns the path as a Github object (from agithub)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.github.Githubfs.get_repo" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_repo</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_repo</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.github.Githubfs.get_repo" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns the repo as a Github object (from agithub)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.github.Githubfs.isdir" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">isdir</span><span class="p">(</span><span class="n">githubobj</span><span class="p">)</span></code>
-  
+            <code class="highlight language-python"><span class="n">isdir</span><span class="p">(</span><span class="n">githubobj</span><span class="p">)</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
   </span>
@@ -9154,22 +9144,20 @@
 <a href="#easybuild.tools.github.Githubfs.isdir" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check if this path points to a directory</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.github.Githubfs.isfile" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">isfile</span><span class="p">(</span><span class="n">githubobj</span><span class="p">)</span></code>
-  
+            <code class="highlight language-python"><span class="n">isfile</span><span class="p">(</span><span class="n">githubobj</span><span class="p">)</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
   </span>
@@ -9177,22 +9165,20 @@
 <a href="#easybuild.tools.github.Githubfs.isfile" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check if this path points to a file</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.github.Githubfs.join" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">join</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
-  
+            <code class="highlight language-python"><span class="n">join</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
   </span>
@@ -9200,69 +9186,63 @@
 <a href="#easybuild.tools.github.Githubfs.join" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>This method joins 'paths' inside a github repository</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.github.Githubfs.listdir" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.Githubfs.listdir" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>List the contents of a directory</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.github.Githubfs.read" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">read</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">api</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">read</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">api</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.Githubfs.read" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Read the contents of a file and return it
 Or, if api=False it will download the file and return the location of the downloaded file</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.github.Githubfs.walk" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">walk</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">topdown</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">walk</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">topdown</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.Githubfs.walk" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Walk the github repo in an os.walk like fashion.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9270,81 +9250,75 @@ Or, if api=False it will download the file and return the location of the downlo
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.add_pr_labels" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">add_pr_labels</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">branch</span><span class="o">=</span><span class="n">GITHUB_DEVELOP_BRANCH</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">add_pr_labels</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">branch</span><span class="o">=</span><span class="n">GITHUB_DEVELOP_BRANCH</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.add_pr_labels" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Try to determine and add labels to PR.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>pr</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>pull request number in easybuild-easyconfigs repo</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>branch</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>easybuild-easyconfigs branch to compare with</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code><span title="easybuild.tools.github.GITHUB_DEVELOP_BRANCH">GITHUB_DEVELOP_BRANCH</span></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>pr</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>pull request number in easybuild-easyconfigs repo</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>branch</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>easybuild-easyconfigs branch to compare with</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code><span title="easybuild.tools.github.GITHUB_DEVELOP_BRANCH">GITHUB_DEVELOP_BRANCH</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.check_github" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_github</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">check_github</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.github.check_github" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check status of GitHub integration, and report back.
 * check whether GitHub username is available
 * check whether a GitHub token is available, and whether it works
@@ -9353,296 +9327,276 @@ Or, if api=False it will download the file and return the location of the downlo
 * check whether creating gists works
 * check whether location to local working directories for Git repositories is available (not strictly needed)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.check_online_status" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_online_status</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">check_online_status</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.github.check_online_status" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether we currently are online
 Return True if online, else a list of error messages</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.check_pr_eligible_to_merge" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_pr_eligible_to_merge</span><span class="p">(</span><span class="n">pr_data</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_pr_eligible_to_merge</span><span class="p">(</span><span class="n">pr_data</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.check_pr_eligible_to_merge" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether PR is eligible for merging.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>pr_data</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>PR data obtained through GitHub API</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>pr_data</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>PR data obtained through GitHub API</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>boolean value indicates whether PR is eligible</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>boolean value indicates whether PR is eligible</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.close_pr" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">close_pr</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">motivation_msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">close_pr</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">motivation_msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.close_pr" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Close specified pull request</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>pr</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>PR number</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>motivation_msg</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>string containing motivation for closing the PR</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>pr</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>PR number</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>motivation_msg</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>string containing motivation for closing the PR</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.create_gist" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">create_gist</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="n">fn</span><span class="p">,</span> <span class="n">descr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_token</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">create_gist</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="n">fn</span><span class="p">,</span> <span class="n">descr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_token</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.create_gist" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create a gist with the provided text.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.create_remote" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">create_remote</span><span class="p">(</span><span class="n">git_repo</span><span class="p">,</span> <span class="n">account</span><span class="p">,</span> <span class="n">repo</span><span class="p">,</span> <span class="n">https</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">create_remote</span><span class="p">(</span><span class="n">git_repo</span><span class="p">,</span> <span class="n">account</span><span class="p">,</span> <span class="n">repo</span><span class="p">,</span> <span class="n">https</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.create_remote" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create remote in specified git working directory for specified account &amp; repository.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>git_repo</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>git.Repo instance to use (after init_repo &amp; setup_repo)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>account</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>GitHub account name</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>repo</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>repository name</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>https</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>use https:// URL rather than git@</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>git_repo</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>git.Repo instance to use (after init_repo &amp; setup_repo)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>account</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>GitHub account name</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>repo</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>repository name</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>https</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>use https:// URL rather than git@</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.delete_gist" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">delete_gist</span><span class="p">(</span><span class="n">gist_id</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_token</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">delete_gist</span><span class="p">(</span><span class="n">gist_id</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_token</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.delete_gist" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Delete gist with specified ID.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.det_account_branch_for_pr" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_account_branch_for_pr</span><span class="p">(</span><span class="n">pr_id</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">pr_target_repo</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_account_branch_for_pr</span><span class="p">(</span><span class="n">pr_id</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">pr_target_repo</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.det_account_branch_for_pr" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine account &amp; branch corresponding to pull request with specified id.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.det_commit_status" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_commit_status</span><span class="p">(</span><span class="n">account</span><span class="p">,</span> <span class="n">repo</span><span class="p">,</span> <span class="n">commit_sha</span><span class="p">,</span> <span class="n">github_user</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_commit_status</span><span class="p">(</span><span class="n">account</span><span class="p">,</span> <span class="n">repo</span><span class="p">,</span> <span class="n">commit_sha</span><span class="p">,</span> <span class="n">github_user</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.det_commit_status" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine status of specified commit (pending, error, failure, success)</p>
 <p>We combine two different things here:</p>
 <ul>
@@ -9650,1788 +9604,1686 @@ Return True if online, else a list of error messages</p>
 <li>results of check suites (set by CI run in GitHub Actions)</li>
 </ul>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.det_patch_specs" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_patch_specs</span><span class="p">(</span><span class="n">patch_paths</span><span class="p">,</span> <span class="n">file_info</span><span class="p">,</span> <span class="n">ec_dirs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_patch_specs</span><span class="p">(</span><span class="n">patch_paths</span><span class="p">,</span> <span class="n">file_info</span><span class="p">,</span> <span class="n">ec_dirs</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.det_patch_specs" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine software names for patch files</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.det_pr_labels" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_pr_labels</span><span class="p">(</span><span class="n">file_info</span><span class="p">,</span> <span class="n">pr_target_repo</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_pr_labels</span><span class="p">(</span><span class="n">file_info</span><span class="p">,</span> <span class="n">pr_target_repo</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.det_pr_labels" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine labels for a pull request based on provided information on files changed by that pull request.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.det_pr_target_repo" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_pr_target_repo</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_pr_target_repo</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.det_pr_target_repo" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine target repository for pull request from given cagetorized list of files</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>paths to categorized lists of files (easyconfigs, files to delete, patches, .py files)</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>paths to categorized lists of files (easyconfigs, files to delete, patches, .py files)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.det_pr_title" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_pr_title</span><span class="p">(</span><span class="n">ecs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">det_pr_title</span><span class="p">(</span><span class="n">ecs</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.det_pr_title" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create title for PR based on first easyconfigs</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>ecs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of parsed easyconfigs</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>ecs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of parsed easyconfigs</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.download_repo" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">download_repo</span><span class="p">(</span><span class="n">repo</span><span class="o">=</span><span class="n">GITHUB_EASYCONFIGS_REPO</span><span class="p">,</span> <span class="n">branch</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">commit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">account</span><span class="o">=</span><span class="n">GITHUB_EB_MAIN</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">download_repo</span><span class="p">(</span><span class="n">repo</span><span class="o">=</span><span class="n">GITHUB_EASYCONFIGS_REPO</span><span class="p">,</span> <span class="n">branch</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">commit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">account</span><span class="o">=</span><span class="n">GITHUB_EB_MAIN</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.download_repo" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Download entire GitHub repo as a tar.gz archive, and extract it into specified path.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>repo</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>repo to download</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code><span title="easybuild.tools.github.GITHUB_EASYCONFIGS_REPO">GITHUB_EASYCONFIGS_REPO</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>branch</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>branch to download</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>commit</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>commit to download</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>account</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>GitHub account to download repo from</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code><span title="easybuild.tools.github.GITHUB_EB_MAIN">GITHUB_EB_MAIN</span></code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path to extract to</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>github_user</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>name of GitHub user to use</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>repo</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>repo to download</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code><span title="easybuild.tools.github.GITHUB_EASYCONFIGS_REPO">GITHUB_EASYCONFIGS_REPO</span></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>branch</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>branch to download</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>commit</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>commit to download</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>account</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>GitHub account to download repo from</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code><span title="easybuild.tools.github.GITHUB_EB_MAIN">GITHUB_EB_MAIN</span></code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path to extract to</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>github_user</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>name of GitHub user to use</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.fetch_easyblocks_from_commit" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">fetch_easyblocks_from_commit</span><span class="p">(</span><span class="n">commit</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">fetch_easyblocks_from_commit</span><span class="p">(</span><span class="n">commit</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.fetch_easyblocks_from_commit" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Fetch easyblocks from a specified commit.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.fetch_easyblocks_from_pr" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">fetch_easyblocks_from_pr</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">fetch_easyblocks_from_pr</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.fetch_easyblocks_from_pr" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Fetch patched easyblocks for a particular PR.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.fetch_easyconfigs_from_commit" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">fetch_easyconfigs_from_commit</span><span class="p">(</span><span class="n">commit</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">fetch_easyconfigs_from_commit</span><span class="p">(</span><span class="n">commit</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.fetch_easyconfigs_from_commit" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Fetch specified easyconfig files from a specific commit.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.fetch_easyconfigs_from_pr" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">fetch_easyconfigs_from_pr</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">fetch_easyconfigs_from_pr</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.fetch_easyconfigs_from_pr" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Fetch patched easyconfig files for a particular PR.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.fetch_files_from_commit" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">fetch_files_from_commit</span><span class="p">(</span><span class="n">commit</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_account</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_repo</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">fetch_files_from_commit</span><span class="p">(</span><span class="n">commit</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_account</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_repo</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.fetch_files_from_commit" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Fetch files from a specific commit.</p>
 <p>If 'files' is None, all files touched in the commit are used.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.fetch_files_from_pr" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">fetch_files_from_pr</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_account</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_repo</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">fetch_files_from_pr</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_account</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_repo</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.fetch_files_from_pr" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Fetch patched files for a particular PR.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.fetch_github_token" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">fetch_github_token</span><span class="p">(</span><span class="n">user</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">fetch_github_token</span><span class="p">(</span><span class="n">user</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.fetch_github_token" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Fetch GitHub token for specified user from keyring.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.fetch_latest_commit_sha" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">fetch_latest_commit_sha</span><span class="p">(</span><span class="n">repo</span><span class="p">,</span> <span class="n">account</span><span class="p">,</span> <span class="n">branch</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">fetch_latest_commit_sha</span><span class="p">(</span><span class="n">repo</span><span class="p">,</span> <span class="n">account</span><span class="p">,</span> <span class="n">branch</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.fetch_latest_commit_sha" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Fetch latest SHA1 for a specified repository and branch.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>repo</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>GitHub repository</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>account</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>GitHub account</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>branch</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>branch to fetch latest SHA1 for</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>github_user</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>name of GitHub user to use</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>token</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>GitHub token to use</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>repo</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>GitHub repository</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>account</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>GitHub account</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>branch</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>branch to fetch latest SHA1 for</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>github_user</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>name of GitHub user to use</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>token</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>GitHub token to use</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>latest SHA1</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>latest SHA1</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.fetch_pr_data" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">fetch_pr_data</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">pr_target_account</span><span class="p">,</span> <span class="n">pr_target_repo</span><span class="p">,</span> <span class="n">github_user</span><span class="p">,</span> <span class="n">full</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">parameters</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">fetch_pr_data</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">pr_target_account</span><span class="p">,</span> <span class="n">pr_target_repo</span><span class="p">,</span> <span class="n">github_user</span><span class="p">,</span> <span class="n">full</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">parameters</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.fetch_pr_data" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Fetch PR data from GitHub</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.find_easybuild_easyconfig" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">find_easybuild_easyconfig</span><span class="p">(</span><span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">find_easybuild_easyconfig</span><span class="p">(</span><span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.find_easybuild_easyconfig" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Fetches the latest EasyBuild version eb file from GitHub</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>github_user</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>name of GitHub user to use when querying GitHub</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>github_user</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>name of GitHub user to use when querying GitHub</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.find_software_name_for_patch" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">find_software_name_for_patch</span><span class="p">(</span><span class="n">patch_name</span><span class="p">,</span> <span class="n">ec_dirs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">find_software_name_for_patch</span><span class="p">(</span><span class="n">patch_name</span><span class="p">,</span> <span class="n">ec_dirs</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.find_software_name_for_patch" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Scan all easyconfigs in the robot path(s) to determine which software a patch file belongs to</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>patch_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>name of the patch file</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>ec_dirs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of directories to consider when looking for easyconfigs</p>
-            </div>
-            <p>
-            </p>
-          </td>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>patch_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>name of the patch file</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>ec_dirs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of directories to consider when looking for easyconfigs</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>name of the software that this patch file belongs to (if found)</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>name of the software that this patch file belongs to (if found)</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.github_api_get_request" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">github_api_get_request</span><span class="p">(</span><span class="n">request_f</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">github_api_get_request</span><span class="p">(</span><span class="n">request_f</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.github_api_get_request" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Helper method, for performing get requests to GitHub API.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>request_f</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>function that should be called to compose request, providing a RestClient instance</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>github_user</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>GitHub user name (to try and obtain matching GitHub token if none is provided)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>request_f</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>function that should be called to compose request, providing a RestClient instance</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>github_user</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>GitHub user name (to try and obtain matching GitHub token if none is provided)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>token</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>GitHub token to use</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>token</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>GitHub token to use</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>tuple with return status and data</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>tuple with return status and data</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.github_api_put_request" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">github_api_put_request</span><span class="p">(</span><span class="n">request_f</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">github_api_put_request</span><span class="p">(</span><span class="n">request_f</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.github_api_put_request" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Helper method, for performing put requests to GitHub API.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>request_f</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>function that should be called to compose request, providing a RestClient instance</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>github_user</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>GitHub user name (to try and obtain matching GitHub token if none is provided)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>request_f</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>function that should be called to compose request, providing a RestClient instance</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>github_user</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>GitHub user name (to try and obtain matching GitHub token if none is provided)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>token</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>GitHub token to use</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>token</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>GitHub token to use</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>tuple with return status and data</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>tuple with return status and data</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.init_repo" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">init_repo</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">repo_name</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">init_repo</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">repo_name</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.init_repo" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Initialize a new Git repository at the specified location.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>path</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>location where Git repository should be initialized</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>repo_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>name of Git repository</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>silent</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>keep quiet (don't print any messages)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>path</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>location where Git repository should be initialized</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>repo_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>name of Git repository</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>silent</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>keep quiet (don't print any messages)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.install_github_token" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">install_github_token</span><span class="p">(</span><span class="n">github_user</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">install_github_token</span><span class="p">(</span><span class="n">github_user</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.install_github_token" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Install specified GitHub token for specified user.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>github_user</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>GitHub user to install token for</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>silent</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>keep quiet (don't print any messages)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>github_user</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>GitHub user to install token for</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>silent</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>keep quiet (don't print any messages)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.is_patch_for" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_patch_for</span><span class="p">(</span><span class="n">patch_name</span><span class="p">,</span> <span class="n">ec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">is_patch_for</span><span class="p">(</span><span class="n">patch_name</span><span class="p">,</span> <span class="n">ec</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.is_patch_for" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether specified patch matches any patch in the provided EasyConfig instance.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.list_prs" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">list_prs</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">per_page</span><span class="o">=</span><span class="n">GITHUB_MAX_PER_PAGE</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">list_prs</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">per_page</span><span class="o">=</span><span class="n">GITHUB_MAX_PER_PAGE</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.list_prs" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>List pull requests according to specified selection/order parameters</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>params</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>3-tuple with selection parameters for PRs (<state>, <sort>, <direction>), see https://developer.github.com/v3/pulls/#parameters</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>params</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>3-tuple with selection parameters for PRs (<state>, <sort>, <direction>), see https://developer.github.com/v3/pulls/#parameters</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.merge_pr" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">merge_pr</span><span class="p">(</span><span class="n">pr</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">merge_pr</span><span class="p">(</span><span class="n">pr</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.merge_pr" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Merge specified pull request</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.new_branch_github" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">new_branch_github</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">ecs</span><span class="p">,</span> <span class="n">commit_msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">new_branch_github</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">ecs</span><span class="p">,</span> <span class="n">commit_msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.new_branch_github" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create new branch on GitHub using specified files</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>paths to categorized lists of files (easyconfigs, files to delete, patches, files with .py extension)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>ecs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of parsed easyconfigs, incl. for dependencies (if robot is enabled)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>commit_msg</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>commit message to use</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>paths to categorized lists of files (easyconfigs, files to delete, patches, files with .py extension)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>ecs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of parsed easyconfigs, incl. for dependencies (if robot is enabled)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>commit_msg</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>commit message to use</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.new_pr" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">new_pr</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">ecs</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">descr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">commit_msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">new_pr</span><span class="p">(</span><span class="n">paths</span><span class="p">,</span> <span class="n">ecs</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">descr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">commit_msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.new_pr" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Open new pull request using specified files</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>paths to categorized lists of files (easyconfigs, files to delete, patches)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>ecs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of parsed easyconfigs, incl. for dependencies (if robot is enabled)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>title</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>title to use for pull request</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>descr</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>description to use for description</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>commit_msg</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>commit message to use</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>paths to categorized lists of files (easyconfigs, files to delete, patches)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>ecs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of parsed easyconfigs, incl. for dependencies (if robot is enabled)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>title</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>title to use for pull request</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>descr</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>description to use for description</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>commit_msg</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>commit message to use</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.new_pr_from_branch" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">new_pr_from_branch</span><span class="p">(</span><span class="n">branch_name</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">descr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">pr_target_repo</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">pr_metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">commit_msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">new_pr_from_branch</span><span class="p">(</span><span class="n">branch_name</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">descr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">pr_target_repo</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">pr_metadata</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">commit_msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.new_pr_from_branch" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create new pull request from specified branch on GitHub.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.pick_default_branch" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">pick_default_branch</span><span class="p">(</span><span class="n">github_owner</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">pick_default_branch</span><span class="p">(</span><span class="n">github_owner</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.pick_default_branch" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine default name to use.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.post_comment_in_issue" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">post_comment_in_issue</span><span class="p">(</span><span class="n">issue</span><span class="p">,</span> <span class="n">txt</span><span class="p">,</span> <span class="n">account</span><span class="o">=</span><span class="n">GITHUB_EB_MAIN</span><span class="p">,</span> <span class="n">repo</span><span class="o">=</span><span class="n">GITHUB_EASYCONFIGS_REPO</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">post_comment_in_issue</span><span class="p">(</span><span class="n">issue</span><span class="p">,</span> <span class="n">txt</span><span class="p">,</span> <span class="n">account</span><span class="o">=</span><span class="n">GITHUB_EB_MAIN</span><span class="p">,</span> <span class="n">repo</span><span class="o">=</span><span class="n">GITHUB_EASYCONFIGS_REPO</span><span class="p">,</span> <span class="n">github_user</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.post_comment_in_issue" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Post a comment in the specified PR.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.post_pr_labels" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">post_pr_labels</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">post_pr_labels</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.post_pr_labels" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Update PR labels</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.pr_files_cache" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">pr_files_cache</span><span class="p">(</span><span class="n">func</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">pr_files_cache</span><span class="p">(</span><span class="n">func</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.pr_files_cache" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Decorator to cache result of fetch_files_from_pr.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.push_branch_to_github" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">push_branch_to_github</span><span class="p">(</span><span class="n">git_repo</span><span class="p">,</span> <span class="n">target_account</span><span class="p">,</span> <span class="n">target_repo</span><span class="p">,</span> <span class="n">branch</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">push_branch_to_github</span><span class="p">(</span><span class="n">git_repo</span><span class="p">,</span> <span class="n">target_account</span><span class="p">,</span> <span class="n">target_repo</span><span class="p">,</span> <span class="n">branch</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.push_branch_to_github" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Push specified branch to GitHub from specified git repository.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>git_repo</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>git.Repo instance to use (after init_repo &amp; setup_repo)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>target_account</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>GitHub account name</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>target_repo</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>repository name</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>branch</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>name of branch to push</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>git_repo</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>git.Repo instance to use (after init_repo &amp; setup_repo)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>target_account</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>GitHub account name</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>target_repo</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>repository name</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>branch</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>name of branch to push</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.reasons_for_closing" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">reasons_for_closing</span><span class="p">(</span><span class="n">pr_data</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">reasons_for_closing</span><span class="p">(</span><span class="n">pr_data</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.reasons_for_closing" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Look for valid reasons to close PR by comparing with existing easyconfigs.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.setup_repo" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">setup_repo</span><span class="p">(</span><span class="n">git_repo</span><span class="p">,</span> <span class="n">target_account</span><span class="p">,</span> <span class="n">target_repo</span><span class="p">,</span> <span class="n">branch_name</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">git_only</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">setup_repo</span><span class="p">(</span><span class="n">git_repo</span><span class="p">,</span> <span class="n">target_account</span><span class="p">,</span> <span class="n">target_repo</span><span class="p">,</span> <span class="n">branch_name</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">git_only</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.setup_repo" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Set up repository by checking out specified branch for specfied GitHub account/repository.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>git_repo</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>git.Repo instance</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>target_account</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>name of GitHub account that owns GitHub repository</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>target_repo</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>name of GitHib repository</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>branch_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>name of branch to check out</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>silent</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>keep quiet (don't print any messages)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>git_only</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>only use git@github.com repo URL, skip trying https://github.com first</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>git_repo</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>git.Repo instance</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>target_account</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>name of GitHub account that owns GitHub repository</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>target_repo</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>name of GitHib repository</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>branch_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>name of branch to check out</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>silent</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>keep quiet (don't print any messages)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>git_only</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>only use git@github.com repo URL, skip trying https://github.com first</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.setup_repo_from" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">setup_repo_from</span><span class="p">(</span><span class="n">git_repo</span><span class="p">,</span> <span class="n">github_url</span><span class="p">,</span> <span class="n">target_account</span><span class="p">,</span> <span class="n">branch_name</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">setup_repo_from</span><span class="p">(</span><span class="n">git_repo</span><span class="p">,</span> <span class="n">github_url</span><span class="p">,</span> <span class="n">target_account</span><span class="p">,</span> <span class="n">branch_name</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.setup_repo_from" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Set up repository by checking out specified branch from repository at specified URL.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>git_repo</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>git.Repo instance</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>github_url</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>URL to GitHub repository</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>target_account</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>name of GitHub account that owns GitHub repository at specified URL</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>branch_name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>name of branch to check out</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>silent</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>keep quiet (don't print any messages)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>git_repo</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>git.Repo instance</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>github_url</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>URL to GitHub repository</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>target_account</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>name of GitHub account that owns GitHub repository at specified URL</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>branch_name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>name of branch to check out</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>silent</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>keep quiet (don't print any messages)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.sync_branch_with_develop" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">sync_branch_with_develop</span><span class="p">(</span><span class="n">branch_name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">sync_branch_with_develop</span><span class="p">(</span><span class="n">branch_name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.sync_branch_with_develop" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Sync branch with specified name with current develop branch.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.sync_pr_with_develop" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">sync_pr_with_develop</span><span class="p">(</span><span class="n">pr_id</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">sync_pr_with_develop</span><span class="p">(</span><span class="n">pr_id</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.sync_pr_with_develop" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Sync pull request with specified ID with current develop branch.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.sync_with_develop" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">sync_with_develop</span><span class="p">(</span><span class="n">git_repo</span><span class="p">,</span> <span class="n">branch_name</span><span class="p">,</span> <span class="n">github_account</span><span class="p">,</span> <span class="n">github_repo</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">sync_with_develop</span><span class="p">(</span><span class="n">git_repo</span><span class="p">,</span> <span class="n">branch_name</span><span class="p">,</span> <span class="n">github_account</span><span class="p">,</span> <span class="n">github_repo</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.sync_with_develop" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Sync specified branch with develop branch.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.update_branch" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">update_branch</span><span class="p">(</span><span class="n">branch_name</span><span class="p">,</span> <span class="n">paths</span><span class="p">,</span> <span class="n">ecs</span><span class="p">,</span> <span class="n">github_account</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">commit_msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">update_branch</span><span class="p">(</span><span class="n">branch_name</span><span class="p">,</span> <span class="n">paths</span><span class="p">,</span> <span class="n">ecs</span><span class="p">,</span> <span class="n">github_account</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">commit_msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.update_branch" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Update specified branch in GitHub using specified files</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>paths to categorized lists of files (easyconfigs, files to delete, patches)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>github_account</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>GitHub account where branch is located</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>ecs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of parsed easyconfigs, incl. for dependencies (if robot is enabled)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>commit_msg</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>commit message to use</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>paths to categorized lists of files (easyconfigs, files to delete, patches)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>github_account</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>GitHub account where branch is located</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>ecs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of parsed easyconfigs, incl. for dependencies (if robot is enabled)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>commit_msg</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>commit message to use</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.update_pr" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">update_pr</span><span class="p">(</span><span class="n">pr_id</span><span class="p">,</span> <span class="n">paths</span><span class="p">,</span> <span class="n">ecs</span><span class="p">,</span> <span class="n">commit_msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">update_pr</span><span class="p">(</span><span class="n">pr_id</span><span class="p">,</span> <span class="n">paths</span><span class="p">,</span> <span class="n">ecs</span><span class="p">,</span> <span class="n">commit_msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.update_pr" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Update specified pull request using specified files</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>pr_id</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>ID of pull request to update</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>paths to categorized lists of files (easyconfigs, files to delete, patches)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>ecs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of parsed easyconfigs, incl. for dependencies (if robot is enabled)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>commit_msg</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>commit message to use</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>pr_id</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>ID of pull request to update</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>paths to categorized lists of files (easyconfigs, files to delete, patches)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>ecs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of parsed easyconfigs, incl. for dependencies (if robot is enabled)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>commit_msg</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>commit message to use</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.github.validate_github_token" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">validate_github_token</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">github_user</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">validate_github_token</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">github_user</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.github.validate_github_token" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check GitHub token:
 * see if it conforms expectations (classic GitHub token with only [0-9a-f] characters
   and length of 40 starting with 'ghp_', or fine-grained GitHub token with only
   alphanumeric ([a-zA-Z0-9]) characters + '<em>' and length of 93 starting with 'github_pat</em>'),
  * see if it can be used for authenticated access.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -11439,7 +11291,7 @@ Return True if online, else a list of error messages</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -11539,7 +11391,7 @@ Return True if online, else a list of error messages</p>
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       

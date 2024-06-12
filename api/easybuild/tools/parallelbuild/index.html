@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8398,8 +8398,8 @@
 
 
 <a id="easybuild.tools.parallelbuild"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Module for doing parallel builds. This uses a PBS-like cluster. You should be able to submit jobs (which can have
 dependencies)</p>
 <p>Support for PBS is provided via the PbsJob class. If you want you could create other job classes and use them here.</p>
@@ -8410,7 +8410,7 @@ dependencies)</p>
 <li>Stijn De Weirdt (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8422,19 +8422,17 @@ dependencies)</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.parallelbuild.build_easyconfigs_in_parallel" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">build_easyconfigs_in_parallel</span><span class="p">(</span><span class="n">build_command</span><span class="p">,</span> <span class="n">easyconfigs</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="s1">&#39;easybuild-build&#39;</span><span class="p">,</span> <span class="n">prepare_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">build_easyconfigs_in_parallel</span><span class="p">(</span><span class="n">build_command</span><span class="p">,</span> <span class="n">easyconfigs</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="s1">&#39;easybuild-build&#39;</span><span class="p">,</span> <span class="n">prepare_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.parallelbuild.build_easyconfigs_in_parallel" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Build easyconfigs in parallel by submitting jobs to a batch-queuing system.
 Return list of jobs submitted.</p>
 <p>Argument <code>easyconfigs</code> is a list of easyconfigs which can be
@@ -8442,265 +8440,255 @@ built: e.g. they have no unresolved dependencies.  This function
 will build them in parallel by submitting jobs.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>build_command</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>build command to use</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>easyconfigs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of easyconfig files</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>output_dir</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>output directory</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>&#39;easybuild-build&#39;</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>prepare_first</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>prepare by runnning fetch step first for each easyconfig</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>build_command</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>build command to use</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>easyconfigs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of easyconfig files</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>output_dir</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>output directory</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>&#39;easybuild-build&#39;</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>prepare_first</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>prepare by runnning fetch step first for each easyconfig</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.parallelbuild.create_job" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">create_job</span><span class="p">(</span><span class="n">job_backend</span><span class="p">,</span> <span class="n">build_command</span><span class="p">,</span> <span class="n">easyconfig</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="s1">&#39;easybuild-build&#39;</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">create_job</span><span class="p">(</span><span class="n">job_backend</span><span class="p">,</span> <span class="n">build_command</span><span class="p">,</span> <span class="n">easyconfig</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="s1">&#39;easybuild-build&#39;</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.parallelbuild.create_job" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Creates a job to build a <em>single</em> easyconfig.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>job_backend</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>A factory object for querying server parameters and creating actual job objects</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>build_command</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>format string for command, full path to an easyconfig file will be substituted in it</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>easyconfig</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>easyconfig as processed by process_easyconfig</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>output_dir</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>optional output path; --regtest-output-dir will be used inside the job with this variable  returns the job</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>&#39;easybuild-build&#39;</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>job_backend</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>A factory object for querying server parameters and creating actual job objects</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>build_command</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>format string for command, full path to an easyconfig file will be substituted in it</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>easyconfig</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>easyconfig as processed by process_easyconfig</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>output_dir</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>optional output path; --regtest-output-dir will be used inside the job with this variable  returns the job</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>&#39;easybuild-build&#39;</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.parallelbuild.prepare_easyconfig" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">prepare_easyconfig</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">prepare_easyconfig</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.parallelbuild.prepare_easyconfig" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Prepare for building specified easyconfig (fetch sources)</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>ec</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>parsed easyconfig (EasyConfig instance)</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>ec</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>parsed easyconfig (EasyConfig instance)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.parallelbuild.submit_jobs" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">submit_jobs</span><span class="p">(</span><span class="n">ordered_ecs</span><span class="p">,</span> <span class="n">cmd_line_opts</span><span class="p">,</span> <span class="n">testing</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">prepare_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">submit_jobs</span><span class="p">(</span><span class="n">ordered_ecs</span><span class="p">,</span> <span class="n">cmd_line_opts</span><span class="p">,</span> <span class="n">testing</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">prepare_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.parallelbuild.submit_jobs" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Submit jobs.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>ordered_ecs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of easyconfigs, in the order they should be processed</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>cmd_line_opts</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of command line options (in 'longopt=value' form)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>testing</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>If <code>True</code>, skip actual job submission</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>prepare_first</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>prepare by runnning fetch step first for each easyconfig</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>ordered_ecs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of easyconfigs, in the order they should be processed</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>cmd_line_opts</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of command line options (in 'longopt=value' form)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>testing</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>If <code>True</code>, skip actual job submission</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>prepare_first</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>prepare by runnning fetch step first for each easyconfig</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
 
@@ -8708,7 +8696,7 @@ will build them in parallel by submitting jobs.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8808,7 +8796,7 @@ will build them in parallel by submitting jobs.</p>
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       

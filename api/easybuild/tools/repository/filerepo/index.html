@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8424,8 +8424,8 @@
 
 
 <a id="easybuild.tools.repository.filerepo"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Repository tools</p>
 <p>Plain filesystem repository</p>
 <p>Authors:</p>
@@ -8440,7 +8440,7 @@
 <li>Fotis Georgatos (Uni.Lu, NTUA)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8456,21 +8456,21 @@
 
 
 <h2 id="easybuild.tools.repository.filerepo.FileRepository" class="doc doc-heading">
-          <code>FileRepository</code>
+            <code>FileRepository</code>
 
 
 <a href="#easybuild.tools.repository.filerepo.FileRepository" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.repository.repository.Repository" href="../repository/#easybuild.tools.repository.repository.Repository">Repository</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.repository.repository.Repository" href="../repository/#easybuild.tools.repository.repository.Repository">Repository</a></code></p>
 
-  
+
       <p>Class for file repositories.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8482,240 +8482,226 @@
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.repository.filerepo.FileRepository.add_easyconfig" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">add_easyconfig</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="n">stats</span><span class="p">,</span> <span class="n">previous</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">add_easyconfig</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="n">stats</span><span class="p">,</span> <span class="n">previous</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.repository.filerepo.FileRepository.add_easyconfig" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Add easyconfig to repository</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>cfg</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>location of easyconfig file</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>software name</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>version</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>software install version, incl. toolchain &amp; versionsuffix</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>stats</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>build stats, to add to archived easyconfig</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>previous</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of previous build stats</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>cfg</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>location of easyconfig file</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>software name</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>version</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>software install version, incl. toolchain &amp; versionsuffix</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>stats</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>build stats, to add to archived easyconfig</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>previous</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of previous build stats</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>location of archived easyconfig</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>location of archived easyconfig</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.repository.filerepo.FileRepository.add_patch" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">add_patch</span><span class="p">(</span><span class="n">patch</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">add_patch</span><span class="p">(</span><span class="n">patch</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.repository.filerepo.FileRepository.add_patch" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Add patch file to repository</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>patch</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>location of patch file</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>software name</p>
-            </div>
-            <p>
-            </p>
-          </td>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>patch</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>location of patch file</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>software name</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>location of archived patch</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>location of archived patch</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.repository.filerepo.FileRepository.create_working_copy" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">create_working_copy</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">create_working_copy</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.repository.filerepo.FileRepository.create_working_copy" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>set the working directory to the repo directory</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.repository.filerepo.FileRepository.get_buildstats" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_buildstats</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">ec_version</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_buildstats</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">ec_version</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.repository.filerepo.FileRepository.get_buildstats" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>return the build statistics</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.repository.filerepo.FileRepository.setup_repo" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">setup_repo</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">setup_repo</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.repository.filerepo.FileRepository.setup_repo" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>for file based repos this will create the repo directory
 if it doesn't exist.</p>
 <p>if a subdir is specified also create the subdir</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8723,8 +8709,7 @@ if it doesn't exist.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8733,7 +8718,7 @@ if it doesn't exist.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8833,7 +8818,7 @@ if it doesn't exist.</p>
     <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../../js/asciinema-player-2.6.1.js"></script>
       

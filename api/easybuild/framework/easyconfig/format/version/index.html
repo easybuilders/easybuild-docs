@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8705,8 +8705,8 @@
 
 
 <a id="easybuild.framework.easyconfig.format.version"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>This describes the easyconfig version class. To be used in EasyBuild for anything related to version checking</p>
 <p>Authors:</p>
 <ul>
@@ -8714,7 +8714,7 @@
 <li>Kenneth Hoste (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8730,21 +8730,21 @@
 
 
 <h2 id="easybuild.framework.easyconfig.format.version.EasyVersion" class="doc doc-heading">
-          <code>EasyVersion</code>
+            <code>EasyVersion</code>
 
 
 <a href="#easybuild.framework.easyconfig.format.version.EasyVersion" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.LooseVersion" href="../../../../tools/loose_version/#easybuild.tools.loose_version.LooseVersion">LooseVersion</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.tools.LooseVersion" href="../../../../tools/loose_version/#easybuild.tools.loose_version.LooseVersion">LooseVersion</a></code></p>
 
-  
+
       <p>Exact LooseVersion. No modifications needed (yet)</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8756,41 +8756,37 @@
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.EasyVersion.__hash__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__hash__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__hash__</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.EasyVersion.__hash__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return hash for this object.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.EasyVersion.__len__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__len__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__len__</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.EasyVersion.__len__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine length of this EasyVersion instance.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8798,8 +8794,7 @@
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8808,24 +8803,24 @@
 
 
 <h2 id="easybuild.framework.easyconfig.format.version.OrderedVersionOperators" class="doc doc-heading">
-          <code>OrderedVersionOperators</code>
+            <code>OrderedVersionOperators</code>
 
 
 <a href="#easybuild.framework.easyconfig.format.version.OrderedVersionOperators" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
-  
+
       <p>Ordered version operators. The ordering is defined such that one can test from left to right,
 and assume that the first matching version operator is the one that is the best match.</p>
 <p>Example: '&gt; 2', '&gt; 3' should be ordered ['&gt; 3', '&gt; 2'], because for 4, both match, but 3 is considered more strict.</p>
 <p>Conflicting version operators are not allowed.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8837,133 +8832,124 @@ and assume that the first matching version operator is the one that is the best 
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.OrderedVersionOperators.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.OrderedVersionOperators.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Initialise the list of version operators as an empty list.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.OrderedVersionOperators.__str__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.OrderedVersionOperators.__str__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Print the list and map</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.OrderedVersionOperators.add" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">add</span><span class="p">(</span><span class="n">versop_new</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">update</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">add</span><span class="p">(</span><span class="n">versop_new</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">update</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.OrderedVersionOperators.add" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Try to add argument as VersionOperator instance to current list of version operators.
 Make sure there is no conflict with existing versops, and that the ordering is maintained.
 After add, versop_new is in the OrderedVersionOperators. If the same versop_new was already in it,
 it will update the data (if not None) (and not raise an error)</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>versop_new</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>VersionOperator instance (or will be converted into one if type string)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>data</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>additional data for supplied version operator to be stored</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>update</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>if versop_new already exist and has data set, try to update the existing data with the new data; instead of overriding the existing data with the new data (method used for updating is .update)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>versop_new</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>VersionOperator instance (or will be converted into one if type string)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>data</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>additional data for supplied version operator to be stored</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>update</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>if versop_new already exist and has data set, try to update the existing data with the new data; instead of overriding the existing data with the new data (method used for updating is .update)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.OrderedVersionOperators.get_data" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_data</span><span class="p">(</span><span class="n">versop</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_data</span><span class="p">(</span><span class="n">versop</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.OrderedVersionOperators.get_data" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the data for versop from datamap</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8971,8 +8957,7 @@ it will update the data (if not None) (and not raise an error)</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8981,21 +8966,21 @@ it will update the data (if not None) (and not raise an error)</p>
 
 
 <h2 id="easybuild.framework.easyconfig.format.version.ToolchainVersionOperator" class="doc doc-heading">
-          <code>ToolchainVersionOperator</code>
+            <code>ToolchainVersionOperator</code>
 
 
 <a href="#easybuild.framework.easyconfig.format.version.ToolchainVersionOperator" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.framework.easyconfig.format.version.VersionOperator" href="#easybuild.framework.easyconfig.format.version.VersionOperator">VersionOperator</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.framework.easyconfig.format.version.VersionOperator" href="#easybuild.framework.easyconfig.format.version.VersionOperator">VersionOperator</a></code></p>
 
-  
+
       <p>Class which represents a toolchain and versionoperator instance</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9007,239 +8992,219 @@ it will update the data (if not None) (and not raise an error)</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.ToolchainVersionOperator.__hash__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__hash__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__hash__</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.ToolchainVersionOperator.__hash__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return hash for this object.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.ToolchainVersionOperator.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">tcversop_str</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">tcversop_str</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.ToolchainVersionOperator.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Initialise VersionOperator instance.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>tcversop_str</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>intialise with toolchain version operator string</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>tcversop_str</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>intialise with toolchain version operator string</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.ToolchainVersionOperator.__str__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.ToolchainVersionOperator.__str__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return string representation of this instance</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.ToolchainVersionOperator.as_dict" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">as_dict</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">as_dict</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.ToolchainVersionOperator.as_dict" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return toolchain version operator as a dictionary with name/version keys.
 Returns None if translation to a dictionary is not possible (e.g. non-equals operator, missing version, ...).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.ToolchainVersionOperator.is_valid" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_valid</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">is_valid</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.ToolchainVersionOperator.is_valid" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check if this is a valid ToolchainVersionOperator</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.ToolchainVersionOperator.parse_versop_str" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">parse_versop_str</span><span class="p">(</span><span class="n">tcversop_str</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">parse_versop_str</span><span class="p">(</span><span class="n">tcversop_str</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.ToolchainVersionOperator.parse_versop_str" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>If argument matches a toolchain versop, return dict with toolchain name and version, and optionally operator.
 Otherwise, return None.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.ToolchainVersionOperator.set" class="doc doc-heading">
-          <code class="highlight language-python"><span class="nb">set</span><span class="p">(</span><span class="n">tcversop_str</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="nb">set</span><span class="p">(</span><span class="n">tcversop_str</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.ToolchainVersionOperator.set" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Parse argument as toolchain version string, and set attributes.
 Returns None in case of failure (e.g. if supplied string doesn't parse), True in case of success.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.ToolchainVersionOperator.test" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">test</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">test</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.ToolchainVersionOperator.test" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check if a toolchain with name name and version version would fit
     in this ToolchainVersionOperator</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>toolchain name</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>version</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>a version string or EasyVersion instance</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>toolchain name</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>version</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>a version string or EasyVersion instance</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.ToolchainVersionOperator.versop_regex" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">versop_regex</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">versop_regex</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.ToolchainVersionOperator.versop_regex" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create the regular expression for toolchain support of format ^<toolchain> <versop_expr>$ ,
 with <toolchain> the name of one of the supported toolchains and <versop_expr> in '<operator> <version>' syntax</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9247,8 +9212,7 @@ with <toolchain> the name of one of the supported toolchains and <versop_expr> i
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9257,21 +9221,21 @@ with <toolchain> the name of one of the supported toolchains and <versop_expr> i
 
 
 <h2 id="easybuild.framework.easyconfig.format.version.VersionOperator" class="doc doc-heading">
-          <code>VersionOperator</code>
+            <code>VersionOperator</code>
 
 
 <a href="#easybuild.framework.easyconfig.format.version.VersionOperator" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
-  
+
       <p>VersionOperator class represents a version expression that includes an operator.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -9283,488 +9247,450 @@ with <toolchain> the name of one of the supported toolchains and <versop_expr> i
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.VersionOperator.__bool__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__bool__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__bool__</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.VersionOperator.__bool__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Interpretation of a VersionOperator instance as a boolean expression: is it valid?</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.VersionOperator.__eq__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__eq__</span><span class="p">(</span><span class="n">versop</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__eq__</span><span class="p">(</span><span class="n">versop</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.VersionOperator.__eq__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Compare this instance to supplied argument.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.VersionOperator.__gt__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__gt__</span><span class="p">(</span><span class="n">versop_other</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__gt__</span><span class="p">(</span><span class="n">versop_other</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.VersionOperator.__gt__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine if this instance is greater than supplied argument.</p>
 <p>Returns True if it is more strict in case of overlap, or if self.version &gt; versop_other.version otherwise.
 Returns None in case of conflict.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>versop_other</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>a VersionOperator instance  Examples: '&gt; 2' &gt; '&gt; 1' : True, order by strictness equals order by boundaries for &gt;, &gt;= '&lt; 8' &gt; '&lt; 10': True, order by strictness equals inversed order by boundaries for &lt;, &lt;= '== 4' &gt; '&gt; 3' : equality is more strict than inequality, but this order by boundaries '&gt; 3' &gt; '== 2' : there is no overlap, so just order the intervals according their boundaries '&gt; 1' &gt; '== 1' &gt; '&lt; 1' : no overlap, same boundaries, order by operator suffix: '&gt; 2' &gt; '&gt; 1': both equal (both None), ordering like above '&gt; 2 suffix:-x1' &gt; '&gt; 1 suffix:-x1': both equal (both -x1), ordering like above '&gt; 2 suffix:-x1' &gt; '&gt; 1 suffix:-x2': not equal, conflict</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>versop_other</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>a VersionOperator instance  Examples: '&gt; 2' &gt; '&gt; 1' : True, order by strictness equals order by boundaries for &gt;, &gt;= '&lt; 8' &gt; '&lt; 10': True, order by strictness equals inversed order by boundaries for &lt;, &lt;= '== 4' &gt; '&gt; 3' : equality is more strict than inequality, but this order by boundaries '&gt; 3' &gt; '== 2' : there is no overlap, so just order the intervals according their boundaries '&gt; 1' &gt; '== 1' &gt; '&lt; 1' : no overlap, same boundaries, order by operator suffix: '&gt; 2' &gt; '&gt; 1': both equal (both None), ordering like above '&gt; 2 suffix:-x1' &gt; '&gt; 1 suffix:-x1': both equal (both -x1), ordering like above '&gt; 2 suffix:-x1' &gt; '&gt; 1 suffix:-x2': not equal, conflict</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.VersionOperator.__hash__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__hash__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__hash__</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.VersionOperator.__hash__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return hash for this object.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.VersionOperator.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">versop_str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">error_on_parse_failure</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">versop_str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">error_on_parse_failure</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.VersionOperator.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Initialise VersionOperator instance.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>versop_str</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>intialise with version operator string</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>error_on_parse_failure</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>raise EasyBuildError in case of parse error</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>versop_str</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>intialise with version operator string</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>error_on_parse_failure</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>raise EasyBuildError in case of parse error</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.VersionOperator.__ne__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__ne__</span><span class="p">(</span><span class="n">versop</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__ne__</span><span class="p">(</span><span class="n">versop</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.VersionOperator.__ne__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Is self not equal to versop</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.VersionOperator.__repr__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__repr__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__repr__</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.VersionOperator.__repr__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return instance as string (ignores begin_end)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.VersionOperator.__str__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.VersionOperator.__str__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return string representation of this VersionOperator instance</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.VersionOperator.get_version_str" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_version_str</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_version_str</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.VersionOperator.get_version_str" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return string representation of version (ignores operator).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.VersionOperator.is_valid" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_valid</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">is_valid</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.VersionOperator.is_valid" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check if this is a valid VersionOperator. Suffix can be anything.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.VersionOperator.parse_error" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">parse_error</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">parse_error</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.VersionOperator.parse_error" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Special function to deal with parse errors</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.VersionOperator.parse_versop_str" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">parse_versop_str</span><span class="p">(</span><span class="n">versop_str</span><span class="p">,</span> <span class="n">versop_dict</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">parse_versop_str</span><span class="p">(</span><span class="n">versop_str</span><span class="p">,</span> <span class="n">versop_dict</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.VersionOperator.parse_versop_str" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>If argument contains a version operator, returns a dict with version and operator; returns None otherwise</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>versop_str</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>the string to parse</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>versop_dict</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>advanced usage: pass intialised versop_dict (eg for ToolchainVersionOperator)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>versop_str</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>the string to parse</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>versop_dict</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>advanced usage: pass intialised versop_dict (eg for ToolchainVersionOperator)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.VersionOperator.set" class="doc doc-heading">
-          <code class="highlight language-python"><span class="nb">set</span><span class="p">(</span><span class="n">versop_str</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="nb">set</span><span class="p">(</span><span class="n">versop_str</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.VersionOperator.set" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Parse argument as a version operator, and set attributes.
 Returns True in case of success, throws an error in case of parsing failure.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.VersionOperator.test" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">test</span><span class="p">(</span><span class="n">test_version</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">test</span><span class="p">(</span><span class="n">test_version</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.VersionOperator.test" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Convert argument to an EasyVersion instance if needed, and return self.operator(<argument>, self.version)
     Versions only, no suffix.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>test_version</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>a version string or EasyVersion instance</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>test_version</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>a version string or EasyVersion instance</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.VersionOperator.test_overlap_and_conflict" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">test_overlap_and_conflict</span><span class="p">(</span><span class="n">versop_other</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">test_overlap_and_conflict</span><span class="p">(</span><span class="n">versop_other</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.VersionOperator.test_overlap_and_conflict" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Test if there is any overlap between this instance and versop_other, and if so, if there is a conflict or not.</p>
 <p>Returns 2 booleans: has_overlap, is_conflict</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>versop_other</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>a VersionOperator instance  Examples: '&gt; 3' and '&gt; 3' : equal, and thus overlap (no conflict) '&gt; 3' and '&lt; 2' : no overlap '&lt; 3' and '&gt; 2' : overlap, and conflict (region between 2 and 3 is ambiguous) '&gt; 3' and '== 3' : no overlap '&gt;= 3' and '== 3' : overlap, and conflict (boundary 3 is ambigous) '&gt; 3' and '&gt;= 3' : overlap, no conflict ('&gt; 3' is more strict then '&gt;= 3')  # suffix '&gt; 2 suffix:-x1' &gt; '&gt; 1 suffix:-x2': suffix not equal, conflict</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>versop_other</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>a VersionOperator instance  Examples: '&gt; 3' and '&gt; 3' : equal, and thus overlap (no conflict) '&gt; 3' and '&lt; 2' : no overlap '&lt; 3' and '&gt; 2' : overlap, and conflict (region between 2 and 3 is ambiguous) '&gt; 3' and '== 3' : no overlap '&gt;= 3' and '== 3' : overlap, and conflict (boundary 3 is ambigous) '&gt; 3' and '&gt;= 3' : overlap, no conflict ('&gt; 3' is more strict then '&gt;= 3')  # suffix '&gt; 2 suffix:-x1' &gt; '&gt; 1 suffix:-x2': suffix not equal, conflict</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.format.version.VersionOperator.versop_regex" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">versop_regex</span><span class="p">(</span><span class="n">begin_end</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">versop_regex</span><span class="p">(</span><span class="n">begin_end</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.format.version.VersionOperator.versop_regex" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create the version regular expression with operator support.
 This supports version expressions like '&gt; 5' (anything strict larger than 5),
 or '&lt;= 1.2' (anything smaller than or equal to 1.2)</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>begin_end</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>boolean, create a regex with begin/end match</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>begin_end</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>boolean, create a regex with begin/end match</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9772,8 +9698,7 @@ or '&lt;= 1.2' (anything smaller than or equal to 1.2)</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -9782,7 +9707,7 @@ or '&lt;= 1.2' (anything smaller than or equal to 1.2)</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9882,7 +9807,7 @@ or '&lt;= 1.2' (anything smaller than or equal to 1.2)</p>
     <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../../../js/asciinema-player-2.6.1.js"></script>
       

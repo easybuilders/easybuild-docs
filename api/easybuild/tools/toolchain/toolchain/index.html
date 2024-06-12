@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8754,8 +8754,8 @@
 
 
 <a id="easybuild.tools.toolchain.toolchain"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>The toolchain module with the abstract Toolchain class.</p>
 <p>Creating a new toolchain should be as simple as possible.</p>
 <h3 id="easybuild.tools.toolchain.toolchain--toolchain-terminology">Toolchain terminology<a class="headerlink" href="#easybuild.tools.toolchain.toolchain--toolchain-terminology" title="Permanent link">&para;</a></h3>
@@ -8777,7 +8777,7 @@
 <li>Kenneth Hoste (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8793,21 +8793,21 @@
 
 
 <h2 id="easybuild.tools.toolchain.toolchain.Toolchain" class="doc doc-heading">
-          <code>Toolchain</code>
+            <code>Toolchain</code>
 
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
-  
+
       <p>General toolchain class</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8819,595 +8819,546 @@
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mns</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">class_constants</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tcdeps</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">modtool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hidden</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mns</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">class_constants</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tcdeps</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">modtool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hidden</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Toolchain constructor.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>toolchain name</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>version</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>toolchain version</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>mns</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>module naming scheme to use</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>class_constants</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>toolchain 'constants' to define</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>tcdeps</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of toolchain 'dependencies' (i.e., the toolchain components)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>modtool</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>ModulesTool instance to use</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>hidden</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>bool indicating whether toolchain is hidden or not</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>name</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>toolchain name</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>version</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>toolchain version</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>mns</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>module naming scheme to use</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>class_constants</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>toolchain 'constants' to define</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>tcdeps</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of toolchain 'dependencies' (i.e., the toolchain components)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>modtool</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>ModulesTool instance to use</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>hidden</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>bool indicating whether toolchain is hidden or not</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.add_dependencies" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">add_dependencies</span><span class="p">(</span><span class="n">dependencies</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">add_dependencies</span><span class="p">(</span><span class="n">dependencies</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.add_dependencies" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>[DEPRECATED] Verify if the given dependencies exist, and return them.</p>
 <p>This method is deprecated.
 You should pass the dependencies to the 'prepare' method instead, via the 'deps' named argument.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.as_dict" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">as_dict</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">as_dict</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.as_dict" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return toolchain specification as a dictionary.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.banned_linked_shared_libs" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">banned_linked_shared_libs</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">banned_linked_shared_libs</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.banned_linked_shared_libs" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>List of shared libraries (names, file names, paths) which are
 not allowed to be linked in any installed binary/library.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.base_init" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">base_init</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">base_init</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.base_init" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Initialise missing class attributes (log, options, variables).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.blas_family" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">blas_family</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">blas_family</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.blas_family" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return type of BLAS library used in this toolchain, or 'None' if BLAS is not supported.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.cleanup" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">cleanup</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">cleanup</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.cleanup" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Clean up after using this toolchain</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.comp_cache_compilers" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">comp_cache_compilers</span><span class="p">(</span><span class="n">cache_tool</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">comp_cache_compilers</span><span class="p">(</span><span class="n">cache_tool</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.comp_cache_compilers" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine list of relevant compilers for specified compiler caching tool.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>cache_tool</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>name of compiler caching tool</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>cache_tool</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>name of compiler caching tool</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>list of names of relevant compilers</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>list of names of relevant compilers</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.comp_family" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">comp_family</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">comp_family</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.comp_family" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return compiler family used in this toolchain (abstract method).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.compilers" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">compilers</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">compilers</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.compilers" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return list of relevant compilers for this toolchain</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.definition" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">definition</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">definition</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.definition" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine toolchain elements for given Toolchain instance.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.det_short_module_name" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">det_short_module_name</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">det_short_module_name</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.det_short_module_name" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine module name for this toolchain.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.generate_vars" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">generate_vars</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">generate_vars</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.generate_vars" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Convert the variables in simple vars</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.get_dependency_version" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_dependency_version</span><span class="p">(</span><span class="n">dependency</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_dependency_version</span><span class="p">(</span><span class="n">dependency</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.get_dependency_version" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Generate a version string for a dependency on a module using this toolchain</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.get_flag" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_flag</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_flag</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.get_flag" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get compiler flag(s) for a certain option.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.get_software_root" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_software_root</span><span class="p">(</span><span class="n">names</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_software_root</span><span class="p">(</span><span class="n">names</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.get_software_root" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Try to get the software root for all names</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.get_software_version" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_software_version</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_software_version</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.get_software_version" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Try to get the software version for all names</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.get_variable" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_variable</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">typ</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_variable</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">typ</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.get_variable" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get value for specified variable.
 typ: indicates what type of return value is expected</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.handle_sysroot" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">handle_sysroot</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">handle_sysroot</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.handle_sysroot" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Extra stuff to be done when alternate system root is specified via --sysroot EasyBuild configuration option.</p>
 <ul>
 <li>Update $PKG_CONFIG_PATH to include sysroot location to pkg-config files (*.pc).</li>
 </ul>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.is_dep_in_toolchain_module" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_dep_in_toolchain_module</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">is_dep_in_toolchain_module</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.is_dep_in_toolchain_module" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether a specific software name is listed as a dependency in the module for this toolchain.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.is_deprecated" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_deprecated</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">is_deprecated</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.is_deprecated" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return whether or not this toolchain is deprecated.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.is_required" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_required</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">is_required</span><span class="p">(</span><span class="n">name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.is_required" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine whether this is a required toolchain element.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.is_rpath_wrapper" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_rpath_wrapper</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
-  
+            <code class="highlight language-python"><span class="n">is_rpath_wrapper</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
   </span>
@@ -9415,470 +9366,436 @@ typ: indicates what type of return value is expected</p>
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.is_rpath_wrapper" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether command at specified location already is an RPATH wrapper script rather than the actual command</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.is_system_toolchain" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_system_toolchain</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">is_system_toolchain</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.is_system_toolchain" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return boolean to indicate whether this toolchain is a system(/dummy) toolchain.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.lapack_family" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">lapack_family</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">lapack_family</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.lapack_family" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return type of LAPACK library used in this toolchain, or 'None' if LAPACK is not supported.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.mpi_family" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">mpi_family</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">mpi_family</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.mpi_family" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return type of MPI library used in this toolchain, or 'None' if MPI is not supported.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.prepare" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">prepare</span><span class="p">(</span><span class="n">onlymod</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">deps</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">loadmod</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rpath_filter_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rpath_include_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">prepare</span><span class="p">(</span><span class="n">onlymod</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">deps</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">loadmod</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rpath_filter_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rpath_include_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.prepare" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Prepare a set of environment parameters based on name/version of toolchain
 - load modules for toolchain and dependencies
 - generate extra variables and set them in the environment</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>deps</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of dependencies</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>onlymod</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>boolean/string to indicate if the toolchain should only load the environment with module (True) or also set all other variables (False) like compiler CC etc (If string: comma separated list of variables that will be ignored).</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>silent</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>keep quiet, or not (mostly relates to extended dry run output)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>loadmod</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>whether or not to (re)load the toolchain module, and the modules for the dependencies</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>rpath_filter_dirs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>extra directories to include in RPATH filter (e.g. build dir, tmpdir, ...)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>rpath_include_dirs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>extra directories to include in RPATH</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>deps</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of dependencies</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>onlymod</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>boolean/string to indicate if the toolchain should only load the environment with module (True) or also set all other variables (False) like compiler CC etc (If string: comma separated list of variables that will be ignored).</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>silent</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>keep quiet, or not (mostly relates to extended dry run output)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>loadmod</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>whether or not to (re)load the toolchain module, and the modules for the dependencies</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>rpath_filter_dirs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>extra directories to include in RPATH filter (e.g. build dir, tmpdir, ...)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>rpath_include_dirs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>extra directories to include in RPATH</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.prepare_compiler_cache" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">prepare_compiler_cache</span><span class="p">(</span><span class="n">cache_tool</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">prepare_compiler_cache</span><span class="p">(</span><span class="n">cache_tool</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.prepare_compiler_cache" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Prepare for using specified compiler caching tool (e.g., ccache, f90cache)</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>cache_tool</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>name of compiler caching tool to prepare for</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>cache_tool</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>name of compiler caching tool to prepare for</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.prepare_rpath_wrappers" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">prepare_rpath_wrappers</span><span class="p">(</span><span class="n">rpath_filter_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rpath_include_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">prepare_rpath_wrappers</span><span class="p">(</span><span class="n">rpath_filter_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rpath_include_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.prepare_rpath_wrappers" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Put RPATH wrapper script in place for compiler and linker commands</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>rpath_filter_dirs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>extra directories to include in RPATH filter (e.g. build dir, tmpdir, ...)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>rpath_filter_dirs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>extra directories to include in RPATH filter (e.g. build dir, tmpdir, ...)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.required_linked_shared_libs" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">required_linked_shared_libs</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">required_linked_shared_libs</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.required_linked_shared_libs" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>List of shared libraries (names, file names, paths) which
 must be linked in all installed binaries/libraries.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.reset" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">reset</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">reset</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.reset" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Reset this toolchain instance.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.set_minimal_build_env" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">set_minimal_build_env</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">set_minimal_build_env</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.set_minimal_build_env" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Set up a minimal build environment, by setting (only) the $CC and $CXX environment variables.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.set_options" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">set_options</span><span class="p">(</span><span class="n">options</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">set_options</span><span class="p">(</span><span class="n">options</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.set_options" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Process toolchain options</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.set_variables" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">set_variables</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">set_variables</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.set_variables" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Do nothing? Everything should have been set by others
 Needs to be defined for super() relations</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.show_variables" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">show_variables</span><span class="p">(</span><span class="n">offset</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">show_variables</span><span class="p">(</span><span class="n">offset</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.show_variables" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Pretty print the variables</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.symlink_commands" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">symlink_commands</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">symlink_commands</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.symlink_commands" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create a symlink for each command to binary/script at specified path.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>dictionary containing one or mappings, each one specified as a tuple: (<path/to/script>, <list of commands to symlink to the script>)</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>dictionary containing one or mappings, each one specified as a tuple: (<path/to/script>, <list of commands to symlink to the script>)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.toolchain_family" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">toolchain_family</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">toolchain_family</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.toolchain_family" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return toolchain family for this toolchain.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.variables_init" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">variables_init</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">variables_init</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.variables_init" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Initialise toolchain variables.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9886,48 +9803,43 @@ Needs to be defined for super() relations</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.toolchain.toolchain.env_vars_external_module" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">env_vars_external_module</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="n">metadata</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">env_vars_external_module</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="n">metadata</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.env_vars_external_module" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Determine $EBROOT<em> and/or $EBVERSION</em> environment variables that can be set for external module,
 based on the provided name, version and metadata.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.toolchain.toolchain.is_system_toolchain" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_system_toolchain</span><span class="p">(</span><span class="n">tc_name</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">is_system_toolchain</span><span class="p">(</span><span class="n">tc_name</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.is_system_toolchain" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return whether toolchain with specified name is a system toolchain or not.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -9935,7 +9847,7 @@ based on the provided name, version and metadata.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -10035,7 +9947,7 @@ based on the provided name, version and metadata.</p>
     <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../../js/asciinema-player-2.6.1.js"></script>
       

@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8455,8 +8455,8 @@
 
 
 <a id="easybuild.framework.easystack"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Support for easybuild-ing from multiple easyconfigs based on
 information obtained from provided file (easystack) with build specifications.</p>
 <p>Authors:</p>
@@ -8467,7 +8467,7 @@ information obtained from provided file (easystack) with build specifications.</
 <li>Caspar van Leeuwen (SURF)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8483,21 +8483,21 @@ information obtained from provided file (easystack) with build specifications.</
 
 
 <h2 id="easybuild.framework.easystack.EasyStack" class="doc doc-heading">
-          <code>EasyStack</code>
+            <code>EasyStack</code>
 
 
 <a href="#easybuild.framework.easystack.EasyStack" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
-  
+
       <p>One class instance per easystack. General options + list of all SoftwareSpecs instances</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8509,41 +8509,37 @@ information obtained from provided file (easystack) with build specifications.</
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easystack.EasyStack.__str__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easystack.EasyStack.__str__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Pretty printing of an EasyStack instance</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easystack.EasyStack.get_general_options" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_general_options</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_general_options</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easystack.EasyStack.get_general_options" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns general options (flags applicable to all sw (i.e. --robot))</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8551,8 +8547,7 @@ information obtained from provided file (easystack) with build specifications.</
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8561,21 +8556,21 @@ information obtained from provided file (easystack) with build specifications.</
 
 
 <h2 id="easybuild.framework.easystack.EasyStackParser" class="doc doc-heading">
-          <code>EasyStackParser</code>
+            <code>EasyStackParser</code>
 
 
 <a href="#easybuild.framework.easystack.EasyStackParser" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
-  
+
       <p>Parser for easystack files (in YAML syntax).</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8587,14 +8582,12 @@ information obtained from provided file (easystack) with build specifications.</
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easystack.EasyStackParser.parse" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">parse</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span></code>
-  
+            <code class="highlight language-python"><span class="n">parse</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
   </span>
@@ -8602,22 +8595,20 @@ information obtained from provided file (easystack) with build specifications.</
 <a href="#easybuild.framework.easystack.EasyStackParser.parse" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Parses YAML file and assigns obtained values to SW config instances as well as general config instance</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easystack.EasyStackParser.parse_by_easyconfigs" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">parse_by_easyconfigs</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">easyconfigs</span><span class="p">,</span> <span class="n">easybuild_version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">robot</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
-  
+            <code class="highlight language-python"><span class="n">parse_by_easyconfigs</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">easyconfigs</span><span class="p">,</span> <span class="n">easybuild_version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">robot</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
   </span>
@@ -8625,11 +8616,11 @@ information obtained from provided file (easystack) with build specifications.</
 <a href="#easybuild.framework.easystack.EasyStackParser.parse_by_easyconfigs" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Parse easystack file with 'easyconfigs' as top-level key.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8637,8 +8628,7 @@ information obtained from provided file (easystack) with build specifications.</
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8647,21 +8637,21 @@ information obtained from provided file (easystack) with build specifications.</
 
 
 <h2 id="easybuild.framework.easystack.SoftwareSpecs" class="doc doc-heading">
-          <code>SoftwareSpecs</code>
+            <code>SoftwareSpecs</code>
 
 
 <a href="#easybuild.framework.easystack.SoftwareSpecs" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
-  
+
       <p>Contains information about every software that should be installed</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8677,48 +8667,43 @@ information obtained from provided file (easystack) with build specifications.</
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easystack.check_value" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_value</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_value</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easystack.check_value" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check whether specified value obtained from a YAML file in specified context represents is valid.
 The value must be a string (not a float or an int).</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easystack.parse_easystack" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">parse_easystack</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">parse_easystack</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easystack.parse_easystack" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Parses through easystack file, returns what EC are to be installed together with their options.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8726,7 +8711,7 @@ The value must be a string (not a float or an int).</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8826,7 +8811,7 @@ The value must be a string (not a float or an int).</p>
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       

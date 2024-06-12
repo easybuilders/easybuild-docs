@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8404,15 +8404,15 @@
 
 
 <a id="easybuild.toolchains.foss"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>EasyBuild support for foss compiler toolchain (includes GCC, OpenMPI, OpenBLAS, LAPACK, ScaLAPACK and FFTW).</p>
 <p>Authors:</p>
 <ul>
 <li>Kenneth Hoste (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8428,21 +8428,21 @@
 
 
 <h2 id="easybuild.toolchains.foss.Foss" class="doc doc-heading">
-          <code>Foss</code>
+            <code>Foss</code>
 
 
 <a href="#easybuild.toolchains.foss.Foss" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><a class="autorefs autorefs-internal" title="easybuild.toolchains.gompi.Gompi" href="../gompi/#easybuild.toolchains.gompi.Gompi">Gompi</a></code>, <code><a class="autorefs autorefs-internal" title="easybuild.toolchains.linalg.openblas.OpenBLAS" href="../linalg/openblas/#easybuild.toolchains.linalg.openblas.OpenBLAS">OpenBLAS</a></code>, <code><a class="autorefs autorefs-internal" title="easybuild.toolchains.linalg.flexiblas.FlexiBLAS" href="../linalg/flexiblas/#easybuild.toolchains.linalg.flexiblas.FlexiBLAS">FlexiBLAS</a></code>, <code><a class="autorefs autorefs-internal" title="easybuild.toolchains.linalg.scalapack.ScaLAPACK" href="../linalg/scalapack/#easybuild.toolchains.linalg.scalapack.ScaLAPACK">ScaLAPACK</a></code>, <code><a class="autorefs autorefs-internal" title="easybuild.toolchains.fft.fftw.Fftw" href="../fft/fftw/#easybuild.toolchains.fft.fftw.Fftw">Fftw</a></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="easybuild.toolchains.gompi.Gompi" href="../gompi/#easybuild.toolchains.gompi.Gompi">Gompi</a></code>, <code><a class="autorefs autorefs-internal" title="easybuild.toolchains.linalg.openblas.OpenBLAS" href="../linalg/openblas/#easybuild.toolchains.linalg.openblas.OpenBLAS">OpenBLAS</a></code>, <code><a class="autorefs autorefs-internal" title="easybuild.toolchains.linalg.flexiblas.FlexiBLAS" href="../linalg/flexiblas/#easybuild.toolchains.linalg.flexiblas.FlexiBLAS">FlexiBLAS</a></code>, <code><a class="autorefs autorefs-internal" title="easybuild.toolchains.linalg.scalapack.ScaLAPACK" href="../linalg/scalapack/#easybuild.toolchains.linalg.scalapack.ScaLAPACK">ScaLAPACK</a></code>, <code><a class="autorefs autorefs-internal" title="easybuild.toolchains.fft.fftw.Fftw" href="../fft/fftw/#easybuild.toolchains.fft.fftw.Fftw">Fftw</a></code></p>
 
-  
+
       <p>Compiler toolchain with GCC, OpenMPI, OpenBLAS, ScaLAPACK and FFTW.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8454,61 +8454,55 @@
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.toolchains.foss.Foss.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.toolchains.foss.Foss.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Toolchain constructor.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.toolchains.foss.Foss.banned_linked_shared_libs" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">banned_linked_shared_libs</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">banned_linked_shared_libs</span><span class="p">()</span></code>
 
 <a href="#easybuild.toolchains.foss.Foss.banned_linked_shared_libs" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>List of shared libraries (names, file names, paths) which are
 not allowed to be linked in any installed binary/library.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.toolchains.foss.Foss.is_deprecated" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_deprecated</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">is_deprecated</span><span class="p">()</span></code>
 
 <a href="#easybuild.toolchains.foss.Foss.is_deprecated" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return whether or not this toolchain is deprecated.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8516,8 +8510,7 @@ not allowed to be linked in any installed binary/library.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -8526,7 +8519,7 @@ not allowed to be linked in any installed binary/library.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8626,7 +8619,7 @@ not allowed to be linked in any installed binary/library.</p>
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       

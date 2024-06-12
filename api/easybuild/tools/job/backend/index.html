@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8442,8 +8442,8 @@
 
 
 <a id="easybuild.tools.job.backend"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Abstract interface for submitting jobs and related utilities.</p>
 <p>Authors:</p>
 <ul>
@@ -8451,7 +8451,7 @@
 <li>Kenneth Hoste (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8467,19 +8467,19 @@
 
 
 <h2 id="easybuild.tools.job.backend.JobBackend" class="doc doc-heading">
-          <code>JobBackend</code>
+            <code>JobBackend</code>
 
 
 <a href="#easybuild.tools.job.backend.JobBackend" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8491,33 +8491,29 @@
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.backend.JobBackend.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.job.backend.JobBackend.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Constructor.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.backend.JobBackend.complete" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">complete</span><span class="p">()</span></code>
-  
+            <code class="highlight language-python"><span class="n">complete</span><span class="p">()</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
   </span>
@@ -8525,26 +8521,24 @@
 <a href="#easybuild.tools.job.backend.JobBackend.complete" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Complete a bulk job submission.</p>
 <p>Releases any jobs that were possibly queued since the last
 <code>init()</code> call.</p>
 <p>No more job submissions should be attempted after <code>complete()</code>
 has been called, until a <code>init()</code> is invoked again.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.backend.JobBackend.init" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">init</span><span class="p">()</span></code>
-  
+            <code class="highlight language-python"><span class="n">init</span><span class="p">()</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
   </span>
@@ -8552,24 +8546,22 @@ has been called, until a <code>init()</code> is invoked again.</p>
 <a href="#easybuild.tools.job.backend.JobBackend.init" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Initialise the job backend, to start a bulk job submission.</p>
 <p>Jobs may be queued and only actually submitted when <code>complete()</code>
 is called.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.backend.JobBackend.make_job" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">make_job</span><span class="p">(</span><span class="n">script</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">env_vars</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hours</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cores</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
-  
+            <code class="highlight language-python"><span class="n">make_job</span><span class="p">(</span><span class="n">script</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">env_vars</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">hours</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cores</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
   </span>
@@ -8577,24 +8569,22 @@ is called.</p>
 <a href="#easybuild.tools.job.backend.JobBackend.make_job" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create and return a <code>Job</code> object with the given parameters.</p>
 <p>See the <code>Job</code>:class: constructor for an explanation of what
 the arguments are.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.job.backend.JobBackend.queue" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">queue</span><span class="p">(</span><span class="n">job</span><span class="p">,</span> <span class="n">dependencies</span><span class="o">=</span><span class="nb">frozenset</span><span class="p">())</span></code>
-  
+            <code class="highlight language-python"><span class="n">queue</span><span class="p">(</span><span class="n">job</span><span class="p">,</span> <span class="n">dependencies</span><span class="o">=</span><span class="nb">frozenset</span><span class="p">())</span></code>
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
   </span>
@@ -8602,8 +8592,8 @@ the arguments are.</p>
 <a href="#easybuild.tools.job.backend.JobBackend.queue" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Add a job to the queue.</p>
 <p>If second optional argument <code>dependencies</code> is given, it must be a
 sequence of jobs that must be successfully terminated before
@@ -8611,7 +8601,7 @@ the new job can run.</p>
 <p>Note that actual submission may be delayed until <code>complete()</code> is
 called.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8619,47 +8609,42 @@ called.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.job.backend.avail_job_backends" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">avail_job_backends</span><span class="p">(</span><span class="n">check_usable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">avail_job_backends</span><span class="p">(</span><span class="n">check_usable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.job.backend.avail_job_backends" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return all known job execution backends.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.job.backend.job_backend" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">job_backend</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">job_backend</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.job.backend.job_backend" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return interface to job server, or <code>None</code> if none is available.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8667,7 +8652,7 @@ called.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8767,7 +8752,7 @@ called.</p>
     <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../../js/asciinema-player-2.6.1.js"></script>
       

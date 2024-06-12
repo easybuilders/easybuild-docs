@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8460,8 +8460,8 @@
 
 
 <a id="easybuild.framework.easyconfig.parser"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>This describes the easyconfig parser</p>
 <p>The parser is format version aware</p>
 <p>Authors:</p>
@@ -8469,7 +8469,7 @@
 <li>Stijn De Weirdt (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8485,22 +8485,22 @@
 
 
 <h2 id="easybuild.framework.easyconfig.parser.EasyConfigParser" class="doc doc-heading">
-          <code>EasyConfigParser</code>
+            <code>EasyConfigParser</code>
 
 
 <a href="#easybuild.framework.easyconfig.parser.EasyConfigParser" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
-  
+
       <p>Read the easyconfig file, return a parsed config object
 Can contain references to multiple version and toolchain/toolchain versions</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8512,247 +8512,229 @@ Can contain references to multiple version and toolchain/toolchain versions</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.parser.EasyConfigParser.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">format_version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rawcontent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">auto_convert_value_types</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">format_version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rawcontent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">auto_convert_value_types</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.parser.EasyConfigParser.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Initialise the EasyConfigParser class</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>filename</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path to easyconfig file to parse (superseded by rawcontent, if specified)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>format_version</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>version of easyconfig file format, used to determine how to parse supplied easyconfig</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>rawcontent</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>raw content of easyconfig file to parse (preferred over easyconfig supplied via filename)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>auto_convert_value_types</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>indicates whether types of easyconfig values should be automatically converted in case they are wrong</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>filename</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path to easyconfig file to parse (superseded by rawcontent, if specified)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>format_version</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>version of easyconfig file format, used to determine how to parse supplied easyconfig</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>rawcontent</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>raw content of easyconfig file to parse (preferred over easyconfig supplied via filename)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>auto_convert_value_types</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>indicates whether types of easyconfig values should be automatically converted in case they are wrong</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.parser.EasyConfigParser.check_values_types" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">check_values_types</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">check_values_types</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.parser.EasyConfigParser.check_values_types" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Check types of easyconfig parameter values.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>cfg</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>dictionary with easyconfig parameter values (result of get_config_dict())</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>cfg</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>dictionary with easyconfig parameter values (result of get_config_dict())</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.parser.EasyConfigParser.dump" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">dump</span><span class="p">(</span><span class="n">ecfg</span><span class="p">,</span> <span class="n">default_values</span><span class="p">,</span> <span class="n">templ_const</span><span class="p">,</span> <span class="n">templ_val</span><span class="p">,</span> <span class="n">toolchain_hierarchy</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">dump</span><span class="p">(</span><span class="n">ecfg</span><span class="p">,</span> <span class="n">default_values</span><span class="p">,</span> <span class="n">templ_const</span><span class="p">,</span> <span class="n">templ_val</span><span class="p">,</span> <span class="n">toolchain_hierarchy</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.parser.EasyConfigParser.dump" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Dump easyconfig in format it was parsed from.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.parser.EasyConfigParser.get_config_dict" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_config_dict</span><span class="p">(</span><span class="n">validate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_config_dict</span><span class="p">(</span><span class="n">validate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.parser.EasyConfigParser.get_config_dict" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return parsed easyconfig as a dict.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.parser.EasyConfigParser.process" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">process</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">process</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.parser.EasyConfigParser.process" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create an instance</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.parser.EasyConfigParser.set_format_text" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">set_format_text</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">set_format_text</span><span class="p">()</span></code>
 
 <a href="#easybuild.framework.easyconfig.parser.EasyConfigParser.set_format_text" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create the text for the formatter instance</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.parser.EasyConfigParser.set_specifications" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">set_specifications</span><span class="p">(</span><span class="n">specs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">set_specifications</span><span class="p">(</span><span class="n">specs</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.parser.EasyConfigParser.set_specifications" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Set specifications.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.framework.easyconfig.parser.EasyConfigParser.write" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">write</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">write</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.parser.EasyConfigParser.write" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Write the easyconfig format instance, using content in self.rawcontent.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8760,61 +8742,57 @@ Can contain references to multiple version and toolchain/toolchain versions</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.framework.easyconfig.parser.fetch_parameters_from_easyconfig" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">fetch_parameters_from_easyconfig</span><span class="p">(</span><span class="n">rawtxt</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">fetch_parameters_from_easyconfig</span><span class="p">(</span><span class="n">rawtxt</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyconfig.parser.fetch_parameters_from_easyconfig" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Fetch (initial) parameter definition from the given easyconfig file contents.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>rawtxt</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>contents of the easyconfig file</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>params</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of parameter names to fetch values for</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>rawtxt</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>contents of the easyconfig file</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>params</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of parameter names to fetch values for</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8822,7 +8800,7 @@ Can contain references to multiple version and toolchain/toolchain versions</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8922,7 +8900,7 @@ Can contain references to multiple version and toolchain/toolchain versions</p>
     <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../../js/asciinema-player-2.6.1.js"></script>
       

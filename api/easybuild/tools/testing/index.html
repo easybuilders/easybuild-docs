@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8416,8 +8416,8 @@
 
 
 <a id="easybuild.tools.testing"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Module for doing parallel builds. This uses a PBS-like cluster. You should be able to submit jobs (which can have
 dependencies)</p>
 <p>Support for PBS is provided via the PbsJob class. If you want you could create other job classes and use them here.</p>
@@ -8429,7 +8429,7 @@ dependencies)</p>
 <li>Ward Poelmans (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8441,340 +8441,325 @@ dependencies)</p>
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.testing.create_test_report" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">create_test_report</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">ecs_with_res</span><span class="p">,</span> <span class="n">init_session_state</span><span class="p">,</span> <span class="n">pr_nrs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">gist_log</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">easyblock_pr_nrs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ec_parse_error</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">create_test_report</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">ecs_with_res</span><span class="p">,</span> <span class="n">init_session_state</span><span class="p">,</span> <span class="n">pr_nrs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">gist_log</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">easyblock_pr_nrs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ec_parse_error</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.testing.create_test_report" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create test report for easyconfigs PR, in Markdown format.</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>msg</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>message to be included in test report</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>ecs_with_res</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>processed easyconfigs with build result (success/failure)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>init_session_state</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>initial session state info to include in test report</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>pr_nrs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of ints for the PRs in the easyconfigs repository</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>gist_log</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>boolean for whether to create a gist from the log file(s)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>easyblock_pr_nrs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of ints for the PRs in the easyblocks repository</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>ec_parse_error</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>error message for easyconfig parse failure</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>msg</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>message to be included in test report</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>ecs_with_res</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>processed easyconfigs with build result (success/failure)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>init_session_state</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>initial session state info to include in test report</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>pr_nrs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of ints for the PRs in the easyconfigs repository</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>gist_log</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>boolean for whether to create a gist from the log file(s)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>False</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>easyblock_pr_nrs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of ints for the PRs in the easyblocks repository</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>ec_parse_error</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>error message for easyconfig parse failure</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.testing.overall_test_report" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">overall_test_report</span><span class="p">(</span><span class="n">ecs_with_res</span><span class="p">,</span> <span class="n">orig_cnt</span><span class="p">,</span> <span class="n">success</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">init_session_state</span><span class="p">,</span> <span class="n">ec_parse_error</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">overall_test_report</span><span class="p">(</span><span class="n">ecs_with_res</span><span class="p">,</span> <span class="n">orig_cnt</span><span class="p">,</span> <span class="n">success</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">init_session_state</span><span class="p">,</span> <span class="n">ec_parse_error</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.testing.overall_test_report" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Upload/dump overall test report</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>ecs_with_res</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>processed easyconfigs with build result (success/failure)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>orig_cnt</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>number of original easyconfig paths</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>success</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>boolean indicating whether all builds were successful</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>msg</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>message to be included in test report</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>init_session_state</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>initial session state info to include in test report</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>ec_parse_error</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>error message for easyconfig parse failure</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>ecs_with_res</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>processed easyconfigs with build result (success/failure)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>orig_cnt</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>number of original easyconfig paths</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>success</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>boolean indicating whether all builds were successful</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>msg</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>message to be included in test report</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>init_session_state</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>initial session state info to include in test report</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>ec_parse_error</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>error message for easyconfig parse failure</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.testing.post_pr_test_report" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">post_pr_test_report</span><span class="p">(</span><span class="n">pr_nrs</span><span class="p">,</span> <span class="n">repo_type</span><span class="p">,</span> <span class="n">test_report</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">init_session_state</span><span class="p">,</span> <span class="n">success</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">post_pr_test_report</span><span class="p">(</span><span class="n">pr_nrs</span><span class="p">,</span> <span class="n">repo_type</span><span class="p">,</span> <span class="n">test_report</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">init_session_state</span><span class="p">,</span> <span class="n">success</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.testing.post_pr_test_report" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Post test report in a gist, and submit comment in easyconfigs or easyblocks PR.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.testing.regtest" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">regtest</span><span class="p">(</span><span class="n">easyconfig_paths</span><span class="p">,</span> <span class="n">modtool</span><span class="p">,</span> <span class="n">build_specs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">regtest</span><span class="p">(</span><span class="n">easyconfig_paths</span><span class="p">,</span> <span class="n">modtool</span><span class="p">,</span> <span class="n">build_specs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.testing.regtest" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Run regression test, using easyconfigs available in given path</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>easyconfig_paths</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path of easyconfigs to run regtest on</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>modtool</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>ModulesTool instance to use</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>build_specs</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>dictionary specifying build specifications (e.g. version, toolchain, ...)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>easyconfig_paths</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>path of easyconfigs to run regtest on</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>modtool</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>ModulesTool instance to use</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>build_specs</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>dictionary specifying build specifications (e.g. version, toolchain, ...)</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>None</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.testing.session_state" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">session_state</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">session_state</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.testing.session_state" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get session state: timestamp, dump of environment, system info.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.testing.upload_test_report_as_gist" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">upload_test_report_as_gist</span><span class="p">(</span><span class="n">test_report</span><span class="p">,</span> <span class="n">descr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fn</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">upload_test_report_as_gist</span><span class="p">(</span><span class="n">test_report</span><span class="p">,</span> <span class="n">descr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fn</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.testing.upload_test_report_as_gist" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Upload test report as a gist.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8782,7 +8767,7 @@ dependencies)</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8882,7 +8867,7 @@ dependencies)</p>
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       

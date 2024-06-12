@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8449,8 +8449,8 @@
 
 
 <a id="easybuild.tools.multidiff"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Module which allows the diffing of multiple files</p>
 <p>Authors:</p>
 <ul>
@@ -8458,7 +8458,7 @@
 <li>Kenneth Hoste (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8474,21 +8474,21 @@
 
 
 <h2 id="easybuild.tools.multidiff.MultiDiff" class="doc doc-heading">
-          <code>MultiDiff</code>
+            <code>MultiDiff</code>
 
 
 <a href="#easybuild.tools.multidiff.MultiDiff" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code>object</code></p>
 
-  
+
       <p>Class representing a multi-diff.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8500,291 +8500,273 @@
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.multidiff.MultiDiff.__init__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">base_fn</span><span class="p">,</span> <span class="n">base_lines</span><span class="p">,</span> <span class="n">files</span><span class="p">,</span> <span class="n">colored</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">base_fn</span><span class="p">,</span> <span class="n">base_lines</span><span class="p">,</span> <span class="n">files</span><span class="p">,</span> <span class="n">colored</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.multidiff.MultiDiff.__init__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>MultiDiff constructor</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>base_fn</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>base function to compare with</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>base_lines</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>base lines to compare to</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>files</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of files to compare with base</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>colored</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>boolean indicating whether a colored multi-diff should be generated</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>base_fn</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>base function to compare with</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>base_lines</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>base lines to compare to</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>files</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of files to compare with base</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>colored</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>boolean indicating whether a colored multi-diff should be generated</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.multidiff.MultiDiff.__str__" class="doc doc-heading">
-          <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="fm">__str__</span><span class="p">()</span></code>
 
 <a href="#easybuild.tools.multidiff.MultiDiff.__str__" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create a string representation of this multi-diff</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.multidiff.MultiDiff.color_line" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">color_line</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">color_line</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.multidiff.MultiDiff.color_line" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Create colored version of given line, with given color, if color mode is enabled.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.multidiff.MultiDiff.colorize" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">colorize</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">squigly</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">colorize</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">squigly</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.multidiff.MultiDiff.colorize" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Add colors to the diff line based on the squigly line.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.multidiff.MultiDiff.get_line" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_line</span><span class="p">(</span><span class="n">line_no</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">get_line</span><span class="p">(</span><span class="n">line_no</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.multidiff.MultiDiff.get_line" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the line information for a specific line</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>line_no</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>line number to obtain information for</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>line_no</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>line number to obtain information for</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>list with text lines providing line information</p>
-            </div>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>list with text lines providing line information</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.multidiff.MultiDiff.merge_squigly" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">merge_squigly</span><span class="p">(</span><span class="n">squigly1</span><span class="p">,</span> <span class="n">squigly2</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">merge_squigly</span><span class="p">(</span><span class="n">squigly1</span><span class="p">,</span> <span class="n">squigly2</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.multidiff.MultiDiff.merge_squigly" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Combine two squigly lines into a single squigly line.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.tools.multidiff.MultiDiff.parse_line" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">parse_line</span><span class="p">(</span><span class="n">line_no</span><span class="p">,</span> <span class="n">diff_line</span><span class="p">,</span> <span class="n">meta</span><span class="p">,</span> <span class="n">squigly_line</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">parse_line</span><span class="p">(</span><span class="n">line_no</span><span class="p">,</span> <span class="n">diff_line</span><span class="p">,</span> <span class="n">meta</span><span class="p">,</span> <span class="n">squigly_line</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.multidiff.MultiDiff.parse_line" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Register a diff line</p>
 
 
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>line_no</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>line number</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>diff_line</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>diff line generated by difflib</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>meta</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>meta information (e.g., filename)</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>squigly_line</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>squigly line indicating which characters changed</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>line_no</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>line number</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>diff_line</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>diff line generated by difflib</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>meta</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>meta information (e.g., filename)</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-        <tr class="doc-section-item">
-          <td><code>squigly_line</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>squigly line indicating which characters changed</p>
-            </div>
-            <p>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
 
@@ -8792,97 +8774,92 @@
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.tools.multidiff.multidiff" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">multidiff</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">files</span><span class="p">,</span> <span class="n">colored</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">multidiff</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">files</span><span class="p">,</span> <span class="n">colored</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.multidiff.multidiff" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Generate a diff for multiple files, all compared to base.</p>
 
 
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">PARAMETER</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td><code>base</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>base to compare with</p>
-            </div>
-            <p>
-            </p>
-          </td>
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>files</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>list of files to compare with base</p>
-            </div>
-            <p>
-            </p>
-          </td>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>base</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>base to compare with</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>files</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of files to compare with base</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>colored</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>boolean indicating whether a colored multi-diff should be generated</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
         </tr>
-        <tr class="doc-section-item">
-          <td><code>colored</code></td>
-          <td class="doc-param-details">
-            <div class="doc-md-description">
-              <p>boolean indicating whether a colored multi-diff should be generated</p>
-            </div>
-            <p>
-                <span class="doc-param-default">
-                  <b>DEFAULT:</b> 
-                    <code>True</code>
-                </span>
-            </p>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>text with multidiff overview</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-
-
-  <table>
-    <thead>
-      <tr>
-        <th><span class="doc-section-title">RETURNS</span></th>
-        <th><span>DESCRIPTION</span></th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr class="doc-section-item">
-          <td>
-          </td>
-          <td class="doc-returns-details">
-            <div class="doc-md-description">
-              <p>text with multidiff overview</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
 
@@ -8890,7 +8867,7 @@
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8990,7 +8967,7 @@
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       

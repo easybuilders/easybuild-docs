@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -190,7 +190,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -8503,8 +8503,8 @@
 
 
 <a id="easybuild.base.testing"></a>
-  <div class="doc doc-contents first">
-  
+    <div class="doc doc-contents first">
+
       <p>Shared module for vsc software testing</p>
 <p>TestCase: use instead of unittest TestCase
    from easybuild.base.testing import TestCase</p>
@@ -8514,7 +8514,7 @@
 <li>Kenneth Hoste (Ghent University)</li>
 </ul>
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8530,21 +8530,21 @@
 
 
 <h2 id="easybuild.base.testing.TestCase" class="doc doc-heading">
-          <code>TestCase</code>
+            <code>TestCase</code>
 
 
 <a href="#easybuild.base.testing.TestCase" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="unittest.TestCase">TestCase</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="unittest.TestCase">TestCase</span></code></p>
 
-  
+
       <p>Enhanced test case, provides extra functionality (e.g. an assertErrorRegex method).</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -8556,251 +8556,225 @@
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.testing.TestCase.assertEqual" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">assertEqual</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">assertEqual</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.testing.TestCase.assertEqual" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Make assertEqual always print useful messages</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.testing.TestCase.assertErrorRegex" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">assertErrorRegex</span><span class="p">(</span><span class="n">error</span><span class="p">,</span> <span class="n">regex</span><span class="p">,</span> <span class="n">call</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">assertErrorRegex</span><span class="p">(</span><span class="n">error</span><span class="p">,</span> <span class="n">regex</span><span class="p">,</span> <span class="n">call</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.testing.TestCase.assertErrorRegex" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Convenience method to match regex with the expected error message.
 Example: self.assertErrorRegex(OSError, "No such file or directory", os.remove, '/no/such/file')</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.testing.TestCase.assertExists" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">assertExists</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">assertExists</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.testing.TestCase.assertExists" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Assert the given path exists</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.testing.TestCase.assertNotExists" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">assertNotExists</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">assertNotExists</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.testing.TestCase.assertNotExists" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Assert the given path exists</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.testing.TestCase.convert_exception_to_str" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">convert_exception_to_str</span><span class="p">(</span><span class="n">err</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">convert_exception_to_str</span><span class="p">(</span><span class="n">err</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.testing.TestCase.convert_exception_to_str" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Convert an Exception instance to a string.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.testing.TestCase.get_stderr" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_stderr</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_stderr</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.testing.TestCase.get_stderr" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return output captured from stderr until now.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.testing.TestCase.get_stdout" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">get_stdout</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">get_stdout</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.testing.TestCase.get_stdout" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return output captured from stdout until now.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.testing.TestCase.is_string" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">is_string</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">is_string</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.testing.TestCase.is_string" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>test if the variable x is a string)</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.testing.TestCase.mock_stderr" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">mock_stderr</span><span class="p">(</span><span class="n">enable</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">mock_stderr</span><span class="p">(</span><span class="n">enable</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.testing.TestCase.mock_stderr" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Enable/disable mocking stdout.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.testing.TestCase.mock_stdout" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">mock_stdout</span><span class="p">(</span><span class="n">enable</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">mock_stdout</span><span class="p">(</span><span class="n">enable</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.testing.TestCase.mock_stdout" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Enable/disable mocking stdout.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.testing.TestCase.mocked_stdout_stderr" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">mocked_stdout_stderr</span><span class="p">(</span><span class="n">mock_stdout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">mock_stderr</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">mocked_stdout_stderr</span><span class="p">(</span><span class="n">mock_stdout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">mock_stderr</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.testing.TestCase.mocked_stdout_stderr" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Context manager to mock stdout and stderr</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.testing.TestCase.setUp" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">setUp</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">setUp</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.testing.TestCase.setUp" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Prepare test case.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="easybuild.base.testing.TestCase.tearDown" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">tearDown</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">tearDown</span><span class="p">()</span></code>
 
 <a href="#easybuild.base.testing.TestCase.tearDown" class="headerlink" title="Permanent link">&para;</a></h3>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Cleanup after running a test.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8808,32 +8782,29 @@ Example: self.assertErrorRegex(OSError, "No such file or directory", os.remove, 
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h2 id="easybuild.base.testing.nicediff" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">nicediff</span><span class="p">(</span><span class="n">txta</span><span class="p">,</span> <span class="n">txtb</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">nicediff</span><span class="p">(</span><span class="n">txta</span><span class="p">,</span> <span class="n">txtb</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.testing.nicediff" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>generate unified diff style output
     ndiff has nice indicators what is different, but prints the whole content
         each line that is interesting starts with non-space
     unified diff only prints changes and some offset around it</p>
 <p>return list with diff (one per line) (not a generator like ndiff or unified_diff)</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8841,7 +8812,7 @@ Example: self.assertErrorRegex(OSError, "No such file or directory", os.remove, 
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -8941,7 +8912,7 @@ Example: self.assertErrorRegex(OSError, "No such file or directory", os.remove, 
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       
