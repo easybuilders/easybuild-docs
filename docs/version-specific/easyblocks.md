@@ -22,6 +22,7 @@
     - EB_TensorRT
     - JAR
     - PackedBinary
+      - EB_AEDT
       - EB_ANSYS
       - EB_ant
       - EB_AOCC
@@ -37,6 +38,7 @@
       - EB_MCR
       - EB_MotionCor2
       - EB_NVHPC
+      - EB_optiSLang
       - EB_ORCA
       - EB_PGI
       - EB_Samcef
@@ -87,6 +89,7 @@
       - EB_OpenBabel
       - EB_OpenCV
       - EB_PSI
+      - EB_QuantumESPRESSOcmake
       - EB_ROOT
       - EB_ScaLAPACK
       - EB_SuperLU
@@ -199,6 +202,7 @@
       - EB_BLAT
       - EB_Bowtie2
       - EB_BWISE
+      - EB_MetalWalls
       - EB_MSM
       - EB_mutil
       - EB_MXNet
@@ -332,6 +336,7 @@
     - EB_scipy
   - ModuleRC
   - PackedBinary
+    - EB_AEDT
     - EB_ANSYS
     - EB_ant
     - EB_AOCC
@@ -347,6 +352,7 @@
     - EB_MCR
     - EB_MotionCor2
     - EB_NVHPC
+    - EB_optiSLang
     - EB_ORCA
     - EB_PGI
     - EB_Samcef

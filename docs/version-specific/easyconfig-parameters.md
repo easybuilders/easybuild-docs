@@ -42,6 +42,7 @@
 `hidden`                     |Install module file as 'hidden' by prefixing its version with '.'                                                                        |`False`
 `installopts`                |Extra options for installation                                                                                                           |`""`
 `maxparallel`                |Max degree of parallelism                                                                                                                |`None`
+`module_only`                |Only generate module file                                                                                                                |`False`
 `parallel`                   |Degree of parallelism for e.g. make (default: based on the number of cores, active cpuset and restrictions in ulimit)                    |`None`
 `patches`                    |List of patches to apply                                                                                                                 |`[]`
 `postinstallcmds`            |Commands to run after the install step.                                                                                                  |`[]`
