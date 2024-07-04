@@ -539,6 +539,15 @@ In this case the following filepaths (also relative to each entry in the robot s
 
 !!! note
 
+    The search for those paths is **not recursive**.
+    I.e. for `--robot-path=/my/robot_path` the filepath `/my/robot_path/easyconfigs/OpenMPI` and similar is **NOT** considered.
+    You would need to set `--robot-path=/my/robot_path/easyconfigs` instead.
+    Note that you likely want to include the default search path by including a colon (see [below][robot_search_path_prepend_append]),
+    like `--robot-path=/my/robot_path/easyconfigs:`.
+    
+
+!!! note
+
     Sometimes easyconfig files are needed even when the modules for the dependencies are already available,
     i.e., whenever the information provided by the dependency specification (software name/version, toolchain and version
     suffix) is not sufficient. This is the case when using `--dry-run` to construct the complete dependency graph, or
