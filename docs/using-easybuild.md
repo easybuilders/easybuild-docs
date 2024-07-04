@@ -528,6 +528,24 @@ For example, when looking for an easyconfig for `OpenMPI` version `4.1.4` and ve
 * `o/OpenMPI/OpenMPI-4.1.4-GCC-11.3.0-test.eb`
 * `OpenMPI-4.1.4-GCC-11.3.0-test.eb`
 
+If no match is found sub-toolchains are also considered,
+see [the toolchain diagram][common-toolchains#toolchains_diagram] for an overview of the toolchain hierarchy.
+In this case the following filepaths (also relative to each entry in the robot search path) are considered if none of the above was found:
+
+* `OpenMPI/4.1.4-GCCcore-11.3.0-test.eb`
+* `OpenMPI/OpenMPI-4.1.4-GCCcore-11.3.0-test.eb`
+* `o/OpenMPI/OpenMPI-4.1.4-GCCcore-11.3.0-test.eb`
+* `OpenMPI-4.1.4-GCCcore-11.3.0-test.eb`
+
+!!! note
+
+    The search for those paths is **not recursive**.
+    I.e. for `--robot-path=/my/robot_path` the filepath `/my/robot_path/easyconfigs/OpenMPI` and similar is **NOT** considered.
+    You would need to set `--robot-path=/my/robot_path/easyconfigs` instead.
+    Note that you likely want to include the default search path by including a colon (see [below][robot_search_path_prepend_append]),
+    like `--robot-path=/my/robot_path/easyconfigs:`.
+    
+
 !!! note
 
     Sometimes easyconfig files are needed even when the modules for the dependencies are already available,
