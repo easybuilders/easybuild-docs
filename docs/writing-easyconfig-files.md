@@ -443,7 +443,7 @@ filename that should be used to download the source file.
 This can be specified using a Python dictionary value in the `sources`
 easyconfig parameter.
 
-Since EasyBuild v3.3.0, three keys are supported:
+The following keys are supported:
 
 - `filename` (*mandatory*): filename of source file
 - `download_filename`: filename that should be used when downloading
