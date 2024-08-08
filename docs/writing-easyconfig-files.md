@@ -217,6 +217,33 @@ patches = [
 ]
 ```
 
+##### Creating a patch file
+
+Get the sources which you would like to patch. And create a copy to be able to create a diff file.
+
+``` bash
+cp -a <unpacked_sources> <unpacked_sources>.orig
+
+```
+
+Than you can make the necessary changes to the sources in the `<unpacked_sources>` that are not marked with the `.orig` extension. Once you have made all the updates to the sources you can create the `.patch` file with `diff`.
+
+``` bash
+diff -ruN <unpacked_sources>.orig <unpacked_sources> > <software_name>-<version>_<short_description>.patch
+```
+
+Please also add a discription on top of the patch file and the author or source of the patch.
+
+For example:
+```
+minimus2 needs delta-filter and show-coords but these were not set correctly like NUCMER
+author: Lara Peeters (HPC-UGent)
+diff -ru amos-3.1.0.orig/src/Pipeline/Makefile.in amos-3.1.0/src/Pipeline/Makefile.in
+--- amos-3.1.0.orig/src/Pipeline/Makefile.in	2011-08-05 05:08:07.000000000 +0200
++++ amos-3.1.0/src/Pipeline/Makefile.in	2024-03-14 12:31:16.218067000 +0100
+@@ -477,7 +477,8 @@
+```
+
 #### Checksums {: #common_easyconfig_param_sources_checksums }
 
 Checksums for source files and patches can be provided via the
