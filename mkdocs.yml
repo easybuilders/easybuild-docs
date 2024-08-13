@@ -83,6 +83,7 @@ nav:
       - Local variables in easyconfigs: easyconfig-files-local-variables.md
       - Unit tests: unit-tests.md
       - Framework Overview: framework-overview.md
+      - Patches: patches.md
   - Experimental features:
       - (overview): experimental-features.md
       - Creating container images/recipes: containers.md
