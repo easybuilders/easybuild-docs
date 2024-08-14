@@ -2,7 +2,7 @@
 
 ## What are Patches?
 
-A patch is a file that can be used to modify an existing software sources. This is ofter used to fix bugs, but can also be usedd to improve the usibility or performance. 
+A patch is a file that can be used to modify an existing software sources. This is often used to fix bugs, but can also be used to improve the usability or performance. 
 
 ## Including patches in the EasyBuild EasyConfigs
 
@@ -80,7 +80,7 @@ Please also add a description on top of the patch file and the author or source 
 
 For example:
 
-```
+``` diff
 minimus2 needs delta-filter and show-coords but these were not set correctly like NUCMER
 author: Lara Peeters (HPC-UGent)
 diff -ru amos-3.1.0.orig/src/Pipeline/Makefile.in amos-3.1.0/src/Pipeline/Makefile.in
