@@ -130,7 +130,7 @@ Remarks:
 - patches need to be EasyBuild-compatible
     - unified diff format (`diff -ruN`)
     - patched locations relative to unpacked sources
-- see [Patches][patches] for more information on `patches`
+- for more information on `patches`, see [separate page on patch files](patch-files.md)
 - see [Checksums][common_easyconfig_param_sources_checksums] for more information on `checksums`
 - `sources` is usually specified as a list of strings representing
     filenames for source files, but other formats are supported too, see
@@ -160,6 +160,9 @@ checksums = ['ac7534163a09e21a5fa763e4e16dfc119bc84043f6e6a807aba666518f8df440']
     a string template `%(version)s` can be used, see also
     [Dynamic values for easyconfig parameters][easyconfig_param_templates].
 
+#### Patches {: #common_easyconfig_param_sources_patches }
+
+See [separate page dedicated to creating and using patch files](patch-files.md).
 
 #### Checksums {: #common_easyconfig_param_sources_checksums }
 
