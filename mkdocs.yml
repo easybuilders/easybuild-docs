@@ -81,8 +81,9 @@ nav:
       - GitHub integration: integration-with-github.md
       - Implementing easyblocks: implementing-easyblocks.md
       - Local variables in easyconfigs: easyconfig-files-local-variables.md
+      - Patch files: patch-files.md
       - Unit tests: unit-tests.md
-      - Framework Overview: framework-overview.md
+      - Framework overview: framework-overview.md
   - Experimental features:
       - (overview): experimental-features.md
       - Creating container images/recipes: containers.md
