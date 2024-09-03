@@ -375,7 +375,7 @@ Additional notes:
   (`lua-posix`, `lua-filesystem`) to be available
     * Tcl (`tclsh`) must also be available for Lmod to support module files in `Tcl` syntax
 * a guide to installing Tcl/C environment modules without having root
-  permissions is available at [Installing environment modules without root permissions][installing_env_mod_c].
+  permissions is available at [Installing environment modules without root permissions][installing_env_mod].
 * a guide to installing Lmod without having root permissions is available at
   [Installing Lmod without root permissions][installing_lmod].
 
