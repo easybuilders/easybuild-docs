@@ -6,7 +6,7 @@ Mac OS X system, together with Tcl on which it depends.
 
 ## Tcl
 
-1. Go to <https://www.tcl.tk> and download the latest Tcl sources. At
+1. Go to <https://www.tcl-lang.org> and download the latest Tcl sources. At
     the time of writing, the latest available Tcl version was 8.5.15,
     which can be downloaded from
     [here](https://prdownloads.sourceforge.net/tcl/tcl8.5.15-src.tar.gz).

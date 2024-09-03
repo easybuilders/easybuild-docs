@@ -369,7 +369,7 @@ Supported module tools:
 
 Additional notes:
 
-* Tcl(/C) environment-modules requires [Tcl](https://www.tcl.tk/) to be
+* Tcl(/C) environment-modules requires [Tcl](https://www.tcl-lang.org/) to be
   installed (with header files and development libraries)
 * Lmod requires [Lua](https://www.lua.org/) and a couple of non-standard Lua libraries
   (`lua-posix`, `lua-filesystem`) to be available
