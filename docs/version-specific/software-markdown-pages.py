@@ -22,7 +22,7 @@ def generate_character_links_line(characters, current=None):
         if c == current:
             links.append(f'*{c}*')
         else:
-            links.append(f"[../{c}/index.md]({c})")
+            links.append(f"[{c}](../{c}/index.md)")
     return f"{' - '.join(links)}\n\n"
 
 
