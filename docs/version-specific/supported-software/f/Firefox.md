@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # Firefox
 
 Firefox is a free, open source Web browser for Windows, Linux and Mac OS X. It is based on the  Mozilla code base and offers customization options and features such as its capability to block pop-up windows,  tabbed browsing, privacy and security measures, smart searching, and RSS live bookmarks.
@@ -7,3 +11,6 @@ Firefox is a free, open source Web browser for Windows, Linux and Mac OS X. It i
 version | toolchain
 --------|----------
 ``44.0.2`` | ``system``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

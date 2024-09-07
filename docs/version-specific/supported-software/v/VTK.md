@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # VTK
 
 The Visualization Toolkit (VTK) is an open-source, freely available software system for  3D computer graphics, image processing and visualization. VTK consists of a C++ class library and several  interpreted interface layers including Tcl/Tk, Java, and Python. VTK supports a wide variety of visualization  algorithms including: scalar, vector, tensor, texture, and volumetric methods; and advanced modeling techniques  such as: implicit modeling, polygon reduction, mesh smoothing, cutting, contouring, and Delaunay triangulation.
@@ -41,3 +45,6 @@ version | versionsuffix | toolchain
 ``9.2.6`` |  | ``foss/2022b``
 ``9.3.0`` |  | ``foss/2023a``
 ``9.3.0`` |  | ``foss/2023b``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

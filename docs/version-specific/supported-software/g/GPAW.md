@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # GPAW
 
 GPAW is a density-functional theory (DFT) Python code based on the projector-augmented wave (PAW)  method and the atomic simulation environment (ASE). It uses real-space uniform grids and multigrid methods or  atom-centered basis-functions.
@@ -34,3 +38,6 @@ version | versionsuffix | toolchain
 ``24.1.0`` |  | ``foss/2023a``
 ``24.1.0`` |  | ``intel/2022a``
 ``24.1.0`` |  | ``intel/2023a``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

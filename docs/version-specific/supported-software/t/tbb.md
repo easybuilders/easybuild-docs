@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # tbb
 
 Intel Threading Building Blocks (Intel TBB)  is a widely used, award-winning C++ template library for creating reliable,  portable, and scalable parallel applications.  Use Intel TBB for a simple and rapid way of developing robust task-based  parallel applications that scale to available processor cores, are compatible  with multiple environments, and are easier to maintain.  Intel TBB is the most proficient way to implement future-proof parallel applications  that tap into the power and performance of multicore and manycore hardware platforms.
@@ -36,3 +40,6 @@ version | toolchain
 ``4.0.5.339`` | ``system``
 ``4.3.6.211`` | ``system``
 ``4.4.2.152`` | ``system``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

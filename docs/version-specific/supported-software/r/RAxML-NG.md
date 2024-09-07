@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # RAxML-NG
 
 RAxML-NG is a phylogenetic tree inference tool which uses maximum-likelihood (ML) optimality criterion. Its search heuristic  is based on iteratively performing a series of Subtree Pruning and Regrafting  (SPR) moves, which allows to quickly navigate to the best-known ML tree.
@@ -14,3 +18,6 @@ version | toolchain
 ``1.1.0`` | ``GCC/11.2.0``
 ``1.2.0`` | ``GCC/12.2.0``
 ``1.2.0`` | ``GCC/12.3.0``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

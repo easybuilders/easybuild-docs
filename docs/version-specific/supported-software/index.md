@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # List of supported software
 
 EasyBuild supports 3552 different software packages (incl. toolchains, bundles):

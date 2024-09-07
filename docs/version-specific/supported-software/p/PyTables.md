@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # PyTables
 
 PyTables is a package for managing hierarchical datasets and designed to efficiently and easily cope  with extremely large amounts of data. PyTables is built on top of the HDF5 library, using the Python language and the  NumPy package. It features an object-oriented interface that, combined with C extensions for the performance-critical  parts of the code (generated using Cython), makes it a fast, yet extremely easy to use tool for interactively browse,  process and search very large amounts of data. One important feature of PyTables is that it optimizes memory and disk  resources so that data takes much less space (specially if on-flight compression is used) than other solutions such as  relational or object oriented databases.
@@ -38,3 +42,6 @@ version | versionsuffix | toolchain
 ``3.8.0`` |  | ``foss/2022b``
 ``3.8.0`` |  | ``foss/2023a``
 ``3.9.2`` |  | ``foss/2023b``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

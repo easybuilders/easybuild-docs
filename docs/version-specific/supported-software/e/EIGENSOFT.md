@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # EIGENSOFT
 
 The EIGENSOFT package combines functionality from our population genetics methods (Patterson et al.  2006)  and our EIGENSTRAT stratification correction method (Price et al. 2006). The EIGENSTRAT method uses principal  components  analysis to explicitly model ancestry differences between cases and controls along continuous axes of  variation;  the resulting correction is specific to a candidate marker’s variation in frequency across ancestral  populations,  minimizing spurious associations while maximizing power to detect true associations. The EIGENSOFT  package has a built-in plotting script and supports multiple file formats and quantitative phenotypes.
@@ -15,3 +19,6 @@ version | toolchain
 ``7.2.1`` | ``foss/2020b``
 ``7.2.1`` | ``foss/2021a``
 ``7.2.1`` | ``intel/2019a``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # IPython
 
 IPython provides a rich architecture for interactive computing with:  Powerful interactive shells (terminal and Qt-based).  A browser-based notebook with support for code, text, mathematical expressions, inline plots and other rich media.  Support for interactive data visualization and use of GUI toolkits.  Flexible, embeddable interpreters to load into your own projects.  Easy to use, high performance tools for parallel computing.
@@ -55,3 +59,6 @@ version | versionsuffix | toolchain
 ``8.14.0`` |  | ``GCCcore/12.3.0``
 ``8.17.2`` |  | ``GCCcore/13.2.0``
 ``8.5.0`` |  | ``GCCcore/11.3.0``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

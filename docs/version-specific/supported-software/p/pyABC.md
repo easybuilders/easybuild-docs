@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # pyABC
 
 Massively parallel, distributed and scalable ABC-SMC (Approximate Bayesian Computation - Sequential Monte Carlo) for parameter estimation of complex stochastic models.  Implemented in Python with support of the R language.
@@ -7,3 +11,6 @@ Massively parallel, distributed and scalable ABC-SMC (Approximate Bayesian Compu
 version | versionsuffix | toolchain
 --------|---------------|----------
 ``0.10.4`` | ``-Python-3.7.4`` | ``foss/2019b``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

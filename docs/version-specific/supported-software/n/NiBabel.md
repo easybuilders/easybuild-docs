@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # NiBabel
 
 NiBabel provides read/write access to some common medical and neuroimaging file formats,  including: ANALYZE (plain, SPM99, SPM2 and later), GIFTI, NIfTI1, NIfTI2, MINC1, MINC2, MGH and ECAT  as well as Philips PAR/REC. We can read and write Freesurfer geometry, and read Freesurfer morphometry and  annotation files. There is some very limited support for DICOM. NiBabel is the successor of PyNIfTI.
@@ -27,3 +31,6 @@ version | versionsuffix | toolchain
 ``3.2.2`` |  | ``foss/2021b``
 ``4.0.2`` |  | ``foss/2022a``
 ``5.2.0`` |  | ``gfbf/2023a``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

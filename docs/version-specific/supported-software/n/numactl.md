@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # numactl
 
 The numactl program allows you to run your application program on specific cpu's and memory nodes.  It does this by supplying a NUMA memory policy to the operating system before running your program.  The libnuma library provides convenient ways for you to add NUMA memory policies into your own program.
@@ -44,3 +48,6 @@ version | toolchain
 ``2.0.16`` | ``GCCcore/13.2.0``
 ``2.0.18`` | ``GCCcore/13.3.0``
 ``2.0.9`` | ``GCC/4.8.3``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

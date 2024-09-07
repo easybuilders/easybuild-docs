@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # MPICH
 
 MPICH v3.x is an open source high-performance MPI 3.0 implementation. It does not support InfiniBand (use MVAPICH2 with InfiniBand devices).
@@ -13,3 +17,6 @@ version | toolchain
 ``3.3.2`` | ``GCC/10.2.0``
 ``3.3.2`` | ``GCC/9.3.0``
 ``3.4.2`` | ``GCC/10.3.0``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

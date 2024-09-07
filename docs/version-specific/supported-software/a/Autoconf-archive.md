@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # Autoconf-archive
 
 The GNU Autoconf Archive is a collection of more than 500 macros for GNU Autoconf  that have been contributed as free software by friendly supporters of the cause from  all over the Internet. Every single one of those macros can be re-used without  imposing any restrictions whatsoever on the licensing of the generated configure script.  In particular, it is possible to use all those macros in configure scripts that  are meant for non-free software. This policy is unusual for a Free Software Foundation  project. The FSF firmly believes that software ought to be free, and software licenses  like the GPL are specifically designed to ensure that derivative work based on free  software must be free as well. In case of Autoconf, however, an exception has been made,  because Autoconf is at such a pivotal position in the software development tool chain  that the benefits from having this tool available as widely as possible outweigh the  disadvantage that some authors may choose to use it, too, for proprietary software.
@@ -9,3 +13,6 @@ version | toolchain
 ``2019.01.06`` | ``GCC/8.2.0-2.31.1``
 ``2021.02.19`` | ``GCCcore/10.2.0``
 ``2023.02.20`` | ``GCCcore/11.3.0``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

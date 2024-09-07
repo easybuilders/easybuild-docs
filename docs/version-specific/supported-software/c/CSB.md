@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # CSB
 
 Computational Structural Biology Toolbox CSB is a python library and application framework, which can be used to solve    problems in the field of structural bioinformatics. If you are a                 bioinformatician, software engineer or a researcher working in this field,       chances are you may find something useful here. Our package consists of a few    major components: 1. Core class library - object-oriented, granular, with an emphasis on design    and clean interfaces. 2. Application framework - console applications ("protocols"), which consume     objects from the core library in order to build something executable (and        hopefully useful). 3. Test framework - ensures that the library actually works.
@@ -7,3 +11,6 @@ Computational Structural Biology Toolbox CSB is a python library and application
 version | toolchain
 --------|----------
 ``1.2.5`` | ``foss/2020b``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

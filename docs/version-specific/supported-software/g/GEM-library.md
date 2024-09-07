@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # GEM-library
 
 Next-generation sequencing platforms (Illumina/Solexa, ABI/SOLiD, etc.)   call for powerful and very optimized tools to index/analyze huge genomes. The GEM library   strives to be a true "next-generation" tool for handling any kind of sequence data, offering   state-of-the-art algorithms and data structures specifically tailored to this demanding task.   At the moment, efficient indexing and searching algorithms based on the Burrows-Wheeler   transform (BWT) have been implemented. The library core is written in C for maximum speed,   with concise interfaces to higher-level programming languages like OCaml and Python.   Many high-performance standalone programs (mapper, splice mapper, etc.) are provided along   with the library; in general, new algorithms and tools can be easily implemented on the top of it.
@@ -7,3 +11,6 @@ Next-generation sequencing platforms (Illumina/Solexa, ABI/SOLiD, etc.)   call f
 version | versionsuffix | toolchain
 --------|---------------|----------
 ``20130406-045632`` | ``_pre-release-3_Linux-x86_64`` | ``system``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

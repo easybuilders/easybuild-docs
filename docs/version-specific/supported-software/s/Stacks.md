@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # Stacks
 
 Stacks is a software pipeline for building loci from short-read sequences, such as those generated on  the Illumina platform. Stacks was developed to work with restriction enzyme-based data, such as RAD-seq,  for the purpose of building genetic maps and conducting population genomics and phylogeography.
@@ -31,3 +35,6 @@ version | toolchain
 ``2.53`` | ``iccifort/2019.5.281``
 ``2.54`` | ``foss/2020a``
 ``2.62`` | ``foss/2022a``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

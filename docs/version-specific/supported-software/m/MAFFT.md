@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # MAFFT
 
 MAFFT is a multiple sequence alignment program   for unix-like operating systems.  It offers a range of multiple  alignment methods, L-INS-i (accurate; for alignment of <∼200 sequences),   FFT-NS-2 (fast; for alignment of <∼10,000 sequences), etc.
@@ -28,3 +32,6 @@ version | versionsuffix | toolchain
 ``7.505`` | ``-with-extensions`` | ``GCC/11.3.0``
 ``7.505`` | ``-with-extensions`` | ``GCC/12.2.0``
 ``7.520`` | ``-with-extensions`` | ``GCC/12.3.0``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

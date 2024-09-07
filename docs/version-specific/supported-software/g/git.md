@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # git
 
 Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
@@ -29,3 +33,6 @@ version | versionsuffix | toolchain
 ``2.42.0`` |  | ``GCCcore/13.2.0``
 ``2.45.1`` |  | ``GCCcore/13.3.0``
 ``2.8.0`` |  | ``foss/2016a``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

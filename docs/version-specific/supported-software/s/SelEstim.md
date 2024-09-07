@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # SelEstim
 
 SelEstim is aimed at distinguishing neutral from selected polymorphisms and estimate   the intensity of selection at the latter. The SelEstim model accounts explicitly for positive selection,   and it is assumed that all marker loci in the dataset are responding to selection, to some extent
@@ -7,3 +11,6 @@ SelEstim is aimed at distinguishing neutral from selected polymorphisms and esti
 version | versionsuffix | toolchain
 --------|---------------|----------
 ``1.1.4`` | ``-Linux-64bits`` | ``system``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

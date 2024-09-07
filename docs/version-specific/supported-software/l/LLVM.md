@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # LLVM
 
 The LLVM Core libraries provide a modern source- and target-independent  optimizer, along with code generation support for many popular CPUs  (as well as some less common ones!) These libraries are built around a well  specified code representation known as the LLVM intermediate representation  ("LLVM IR"). The LLVM Core libraries are well documented, and it is  particularly easy to invent your own language (or port an existing compiler)  to use LLVM as an optimizer and code generator.
@@ -47,3 +51,6 @@ version | versionsuffix | toolchain
 ``9.0.0`` |  | ``GCCcore/8.3.0``
 ``9.0.1`` |  | ``GCCcore/8.3.0``
 ``9.0.1`` |  | ``GCCcore/9.3.0``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

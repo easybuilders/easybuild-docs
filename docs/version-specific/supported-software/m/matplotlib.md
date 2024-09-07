@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # matplotlib
 
 matplotlib is a python 2D plotting library which produces publication quality figures in a variety of  hardcopy formats and interactive environments across platforms. matplotlib can be used in python scripts, the python  and ipython shell, web application servers, and six graphical user interface toolkits.
@@ -102,3 +106,6 @@ version | versionsuffix | toolchain
 ``3.7.2`` |  | ``gfbf/2023a``
 ``3.7.2`` |  | ``iimkl/2023a``
 ``3.8.2`` |  | ``gfbf/2023b``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

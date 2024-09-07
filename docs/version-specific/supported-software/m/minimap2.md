@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # minimap2
 
 Minimap2 is a fast sequence mapping and alignment program that can find overlaps between  long noisy reads, or map long reads or their assemblies to a reference genome optionally with detailed  alignment (i.e. CIGAR). At present, it works efficiently with query sequences from a few kilobases to  ~100 megabases in length at an error rate ~15%. Minimap2 outputs in the PAF or the SAM format. On limited  test data sets, minimap2 is over 20 times faster than most other long-read aligners. It will replace  BWA-MEM for long reads and contig alignment.
@@ -22,3 +26,6 @@ version | toolchain
 ``2.24`` | ``GCCcore/11.3.0``
 ``2.26`` | ``GCCcore/12.2.0``
 ``2.26`` | ``GCCcore/12.3.0``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

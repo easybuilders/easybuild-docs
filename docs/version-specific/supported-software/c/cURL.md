@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # cURL
 
 libcurl is a free and easy-to-use client-side URL transfer library,  supporting DICT, FILE, FTP, FTPS, Gopher, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS,  POP3, POP3S, RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, Telnet and TFTP. libcurl supports  SSL certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP form based upload,  proxies, cookies, user+password authentication (Basic, Digest, NTLM, Negotiate,  Kerberos), file transfer resume, http proxy tunneling and more.
@@ -43,3 +47,6 @@ version | toolchain
 ``8.0.1`` | ``GCCcore/13.1.0``
 ``8.3.0`` | ``GCCcore/13.2.0``
 ``8.7.1`` | ``GCCcore/13.3.0``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

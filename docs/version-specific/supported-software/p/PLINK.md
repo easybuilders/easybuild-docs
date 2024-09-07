@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # PLINK
 
 PLINK is a free, open-source whole genome association analysis toolset,   designed to perform a range of basic, large-scale analyses in a computationally efficient manner.  The focus of PLINK is purely on analysis of genotype/phenotype data, so there is no support for   steps prior to this (e.g. study design and planning, generating genotype or CNV calls from raw data).   Through integration with gPLINK and Haploview, there is some support for the subsequent visualization,   annotation and storage of results.
@@ -23,3 +27,6 @@ version | toolchain
 ``2.00a3.6`` | ``GCC/11.3.0``
 ``2.00a3.7`` | ``foss/2022a``
 ``2.00a3.7`` | ``gfbf/2023a``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

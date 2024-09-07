@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # PostgreSQL
 
 PostgreSQL is a powerful, open source object-relational database system.  It is fully ACID compliant, has full support for foreign keys,  joins, views, triggers, and stored procedures (in multiple languages).  It includes most SQL:2008 data types, including INTEGER,  NUMERIC, BOOLEAN, CHAR, VARCHAR, DATE, INTERVAL, and TIMESTAMP.  It also supports storage of binary large objects, including pictures,  sounds, or video. It has native programming interfaces for C/C++, Java,  .Net, Perl, Python, Ruby, Tcl, ODBC, among others, and exceptional documentation.
@@ -27,3 +31,6 @@ version | versionsuffix | toolchain
 ``9.6.0`` | ``-Python-2.7.12`` | ``intel/2016b``
 ``9.6.2`` | ``-Python-2.7.12`` | ``foss/2016b``
 ``9.6.2`` | ``-Python-2.7.12`` | ``intel/2016b``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

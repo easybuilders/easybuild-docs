@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # buildenv
 
 This module sets a group of environment variables for compilers, linkers, maths libraries, etc., that  you can use to easily transition between toolchains when building your software. To query the variables being set  please use: module show <this module name>
@@ -42,3 +46,6 @@ version | versionsuffix | toolchain
 ``default`` |  | ``intelcuda/2020a``
 ``default`` |  | ``intelcuda/2020b``
 ``default`` |  | ``nvompi/2022.07``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # numexpr
 
 The numexpr package evaluates multiple-operator array expressions many times faster than NumPy can.  It accepts the expression as a string, analyzes it, rewrites it more efficiently, and compiles it on the fly into  code for its internal virtual machine (VM). Due to its integrated just-in-time (JIT) compiler, it does not require a  compiler at runtime.
@@ -31,3 +35,6 @@ version | versionsuffix | toolchain
 ``2.8.1`` |  | ``foss/2021a``
 ``2.8.1`` |  | ``intel/2021a``
 ``2.8.4`` |  | ``foss/2022a``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

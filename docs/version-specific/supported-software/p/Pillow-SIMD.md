@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # Pillow-SIMD
 
 Pillow is the 'friendly PIL fork' by Alex Clark and Contributors.  PIL is the Python Imaging Library by Fredrik Lundh and Contributors.
@@ -21,3 +25,6 @@ version | versionsuffix | toolchain
 ``9.2.0`` |  | ``GCCcore/11.3.0``
 ``9.5.0`` |  | ``GCCcore/12.2.0``
 ``9.5.0`` |  | ``GCCcore/12.3.0``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+

@@ -1,3 +1,7 @@
+---
+search:
+  boost: 0.5
+---
 # hwloc
 
 The Portable Hardware Locality (hwloc) software package provides a portable abstraction  (across OS, versions, architectures, ...) of the hierarchical topology of modern architectures, including  NUMA memory nodes, sockets, shared caches, cores and simultaneous multithreading. It also gathers various  system attributes such as cache and memory information as well as the locality of I/O devices such as  network interfaces, InfiniBand HCAs or GPUs. It primarily aims at helping applications with gathering  information about modern computing hardware so as to exploit it accordingly and efficiently.
@@ -54,3 +58,6 @@ version | toolchain
 ``2.8.0`` | ``GCCcore/12.2.0``
 ``2.9.1`` | ``GCCcore/12.3.0``
 ``2.9.2`` | ``GCCcore/13.2.0``
+
+[../0/index.md](0) - [../a/index.md](a) - [../b/index.md](b) - [../c/index.md](c) - [../d/index.md](d) - [../e/index.md](e) - [../f/index.md](f) - [../g/index.md](g) - [../h/index.md](h) - [../i/index.md](i) - [../j/index.md](j) - [../k/index.md](k) - [../l/index.md](l) - [../m/index.md](m) - [../n/index.md](n) - [../o/index.md](o) - [../p/index.md](p) - [../q/index.md](q) - [../r/index.md](r) - [../s/index.md](s) - [../t/index.md](t) - [../u/index.md](u) - [../v/index.md](v) - [../w/index.md](w) - [../x/index.md](x) - [../y/index.md](y) - [../z/index.md](z)
+
