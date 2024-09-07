@@ -1,0 +1,9 @@
+# PHASE
+
+The program PHASE implements a Bayesian statistical  method for reconstructing haplotypes from population genotype data. Documentation: http://stephenslab.uchicago.edu/assets/software/phase/instruct2.1.pdf
+
+*homepage*: <http://stephenslab.uchicago.edu/phase/download.html>
+
+version | toolchain
+--------|----------
+``2.1.1`` | ``system``

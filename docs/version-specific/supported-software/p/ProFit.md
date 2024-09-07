@@ -1,0 +1,9 @@
+# ProFit
+
+ProFit (pronounced Pro-Fit, not profit!) is designed to be the ultimate program for  performing least squares fits of two or more protein structures. It performs a very simple and  basic function, but allows as much flexibility as possible in performing this procedure. Thus one  can specify subsets of atoms to be considered, specify zones to be fitted by number, sequence, or  by sequence alignment.
+
+*homepage*: <http://www.bioinf.org.uk/software/profit>
+
+version | toolchain
+--------|----------
+``3.3`` | ``GCC/10.3.0``

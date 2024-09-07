@@ -1,0 +1,15 @@
+# ncdu
+
+Ncdu is a disk usage analyzer with an ncurses interface. It is designed to find space hogs on a  remote server where you don't have an entire graphical setup available, but it is a useful tool even on regular  desktop systems. Ncdu aims to be fast, simple and easy to use, and should be able to run in any minimal POSIX-like  environment with ncurses installed.
+
+*homepage*: <https://dev.yorhel.nl/ncdu>
+
+version | toolchain
+--------|----------
+``1.13`` | ``GCCcore/7.3.0``
+``1.14`` | ``GCCcore/7.3.0``
+``1.15.1`` | ``GCCcore/9.3.0``
+``1.16`` | ``GCC/10.3.0``
+``1.16`` | ``GCC/11.2.0``
+``1.17`` | ``GCC/11.3.0``
+``1.18`` | ``GCC/12.3.0``

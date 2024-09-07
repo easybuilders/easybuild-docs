@@ -1,0 +1,10 @@
+# WEKA
+
+Weka is a collection of machine learning algorithms for data mining tasks.   The algorithms can either be applied directly to a dataset or called from your own Java code.   Weka contains tools for data pre-processing, classification, regression, clustering,   association rules, and visualization. It is also well-suited for developing new machine   learning schemes.
+
+*homepage*: <http://www.cs.waikato.ac.nz/ml/weka/index.html>
+
+version | versionsuffix | toolchain
+--------|---------------|----------
+``3.6.12`` | ``-Java-1.7.0_80`` | ``system``
+``3.7.0`` | ``-Java-1.7.0_80`` | ``system``

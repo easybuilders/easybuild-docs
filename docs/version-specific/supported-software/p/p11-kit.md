@@ -1,0 +1,16 @@
+# p11-kit
+
+Provides a way to load and enumerate PKCS#11 modules.  Provides a standard configuration setup for installing  PKCS#11 modules in such a way that they're discoverable.  Also solves problems with coordinating the use of PKCS#11  by different components or libraries living in the same process.
+
+*homepage*: <http://p11-glue.freedesktop.org/p11-kit.html>
+
+version | toolchain
+--------|----------
+``0.23.2`` | ``GCCcore/5.4.0``
+``0.23.2`` | ``GNU/4.9.3-2.25``
+``0.23.2`` | ``foss/2016a``
+``0.23.2`` | ``intel/2016a``
+``0.24.0`` | ``GCCcore/10.3.0``
+``0.24.1`` | ``GCCcore/11.2.0``
+``0.24.1`` | ``GCCcore/11.3.0``
+``0.25.3`` | ``GCCcore/12.3.0``

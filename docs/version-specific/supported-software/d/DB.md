@@ -1,0 +1,26 @@
+# DB
+
+Berkeley DB enables the development of custom data management  solutions, without the overhead traditionally associated with such custom projects.
+
+*homepage*: <https://www.oracle.com/technetwork/products/berkeleydb>
+
+version | toolchain
+--------|----------
+``18.1.25`` | ``GCCcore/7.3.0``
+``18.1.32`` | ``GCCcore/8.2.0``
+``18.1.32`` | ``GCCcore/8.3.0``
+``18.1.32`` | ``GCCcore/9.3.0``
+``18.1.40`` | ``FCC/4.5.0``
+``18.1.40`` | ``GCCcore/10.2.0``
+``18.1.40`` | ``GCCcore/10.3.0``
+``18.1.40`` | ``GCCcore/11.2.0``
+``18.1.40`` | ``GCCcore/11.3.0``
+``18.1.40`` | ``GCCcore/12.1.0``
+``18.1.40`` | ``GCCcore/12.2.0``
+``18.1.40`` | ``GCCcore/12.3.0``
+``18.1.40`` | ``GCCcore/8.2.0``
+``18.1.40`` | ``GCCcore/8.3.0``
+``4.8.30`` | ``intel/2016a``
+``6.2.23`` | ``foss/2016a``
+``6.2.32`` | ``GCCcore/6.4.0``
+``6.2.32`` | ``intel/2017a``

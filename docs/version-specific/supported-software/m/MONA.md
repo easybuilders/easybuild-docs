@@ -1,0 +1,9 @@
+# MONA
+
+MONA is a tool that translates formulas to finite-state automata. The formulas may express search patterns, temporal properties of reactive systems, parse tree constraints, etc. MONA analyses the automaton resulting from the compilation and prints out "valid" or a counter-example.
+
+*homepage*: <https://www.brics.dk/mona/index.html>
+
+version | toolchain
+--------|----------
+``1.4-18`` | ``GCC/11.2.0``

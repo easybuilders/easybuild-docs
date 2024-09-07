@@ -1,0 +1,12 @@
+# Caffe
+
+Caffe is a deep learning framework made with expression, speed, and modularity in mind. It is developed by the Berkeley Vision and Learning Center (BVLC) and community contributors.
+
+*homepage*: <https://github.com/BVLC/caffe>
+
+version | versionsuffix | toolchain
+--------|---------------|----------
+``1.0`` | ``-Python-2.7.13`` | ``intel/2017a``
+``1.0`` | ``-CUDA-9.1.85-Python-2.7.14`` | ``intel/2017b``
+``1.0`` | ``-Python-2.7.14`` | ``intel/2017b``
+``rc3`` | ``-CUDA-7.5.18-Python-2.7.11`` | ``foss/2016a``

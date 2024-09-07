@@ -1,0 +1,9 @@
+# itpp
+
+IT++ is a C++ library of mathematical, signal processing and communication  classes and functions. Its main use is in simulation of communication systems and for  performing research in the area of communications.
+
+*homepage*: <https://sourceforge.net/projects/itpp/>
+
+version | toolchain
+--------|----------
+``4.3.1`` | ``foss/2019b``

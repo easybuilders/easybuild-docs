@@ -1,0 +1,13 @@
+# Redis
+
+Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker. Redis provides data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes, and streams. Redis has built-in replication, Lua scripting, LRU eviction, transactions, and different levels of on-disk persistence, and provides high availability via Redis Sentinel and automatic partitioning with Redis Cluster.
+
+*homepage*: <https://redis.io>
+
+version | toolchain
+--------|----------
+``6.2.6`` | ``GCC/10.3.0``
+``6.2.6`` | ``GCC/11.2.0``
+``7.0.8`` | ``GCC/11.3.0``
+``7.2.3`` | ``GCCcore/12.3.0``
+``7.2.4`` | ``GCCcore/13.2.0``

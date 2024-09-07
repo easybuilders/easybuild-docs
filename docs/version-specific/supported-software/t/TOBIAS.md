@@ -1,0 +1,11 @@
+# TOBIAS
+
+TOBIAS is a collection of command-line bioinformatics tools for performing footprinting analysis on ATAC-seq data, and includes: Correction of Tn5 insertion bias; Calculation of footprint scores within regulatory regions; Estimation of bound/unbound transcription factor binding sites; and Visualization of footprints within and across different conditions
+
+*homepage*: <https://github.com/loosolab/TOBIAS>
+
+version | toolchain
+--------|----------
+``0.12.12`` | ``foss/2021b``
+``0.14.0`` | ``foss/2020b``
+``0.16.1`` | ``foss/2023a``

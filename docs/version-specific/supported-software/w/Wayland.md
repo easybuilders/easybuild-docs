@@ -1,0 +1,14 @@
+# Wayland
+
+Wayland is a project to define a protocol for a compositor to talk to  its clients as well as a library implementation of the protocol.  The  compositor can be a standalone display server running on Linux kernel  modesetting and evdev input devices, an X application, or a wayland  client itself.  The clients can be traditional applications, X servers  (rootless or fullscreen) or other display servers.
+
+*homepage*: <https://wayland.freedesktop.org/>
+
+version | toolchain
+--------|----------
+``1.20.0`` | ``GCCcore/11.3.0``
+``1.21.0`` | ``GCCcore/11.2.0``
+``1.21.0`` | ``GCCcore/11.3.0``
+``1.22.0`` | ``GCCcore/12.2.0``
+``1.22.0`` | ``GCCcore/12.3.0``
+``1.22.0`` | ``GCCcore/13.2.0``

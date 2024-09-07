@@ -1,0 +1,12 @@
+# fastq-tools
+
+This package provides a number of small and efficient programs to perform  common tasks with high throughput sequencing data in the FASTQ format. All of the programs  work with typical FASTQ files as well as gzipped FASTQ files.
+
+*homepage*: <https://homes.cs.washington.edu/~dcjones/fastq-tools/>
+
+version | toolchain
+--------|----------
+``0.8`` | ``foss/2016b``
+``0.8`` | ``foss/2018b``
+``0.8.3`` | ``GCC/10.3.0``
+``0.8.3`` | ``GCC/11.2.0``

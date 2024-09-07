@@ -1,0 +1,9 @@
+# PCC
+
+The compiler is based on the original Portable C Compiler by S. C. Johnson,  written in the late 70's. About 50% of the frontend code and 80% of the backend code has been modified.
+
+*homepage*: <http://pcc.ludd.ltu.se/>
+
+version | toolchain
+--------|----------
+``20131024`` | ``system``

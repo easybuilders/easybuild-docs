@@ -1,0 +1,13 @@
+# Scalene
+
+Scalene is a high-performance CPU, GPU and memory profiler for Python that does a number of things that other Python profilers do not and cannot do. It runs orders of magnitude faster than other profilers while delivering far more detailed information.
+
+*homepage*: <https://github.com/plasma-umass/scalene>
+
+version | toolchain
+--------|----------
+``1.5.13`` | ``GCCcore/11.2.0``
+``1.5.20`` | ``GCCcore/11.3.0``
+``1.5.26`` | ``GCCcore/12.2.0``
+``1.5.26`` | ``GCCcore/12.3.0``
+``1.5.35`` | ``GCCcore/13.2.0``

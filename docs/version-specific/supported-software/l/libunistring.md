@@ -1,0 +1,26 @@
+# libunistring
+
+This library provides functions for manipulating Unicode strings and for  manipulating C strings according to the Unicode standard.
+
+*homepage*: <https://www.gnu.org/software/libunistring/>
+
+version | toolchain
+--------|----------
+``0.9.10`` | ``GCCcore/10.3.0``
+``0.9.10`` | ``GCCcore/7.3.0``
+``0.9.10`` | ``GCCcore/8.2.0``
+``0.9.10`` | ``GCCcore/8.3.0``
+``0.9.10`` | ``GCCcore/9.3.0``
+``0.9.3`` | ``GCC/4.9.3-2.25``
+``0.9.3`` | ``GNU/4.9.3-2.25``
+``0.9.3`` | ``foss/2016a``
+``0.9.3`` | ``intel/2016a``
+``0.9.6`` | ``GCCcore/5.4.0``
+``0.9.6`` | ``foss/2016b``
+``0.9.6`` | ``foss/2017a``
+``0.9.6`` | ``intel/2016b``
+``0.9.7`` | ``GCCcore/6.4.0``
+``1.0`` | ``GCCcore/11.2.0``
+``1.0`` | ``GCCcore/11.3.0``
+``1.1`` | ``GCCcore/10.2.0``
+``1.1`` | ``GCCcore/12.3.0``

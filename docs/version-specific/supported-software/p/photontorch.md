@@ -1,0 +1,11 @@
+# photontorch
+
+Photontorch is a photonic simulator for highly parallel simulation and optimization of photonic circuits in time and frequency domain. Photontorch features CUDA enabled simulation and optimization of photonic circuits. It leverages the deep learning framework PyTorch to view the photonic circuit as essentially a recurrent neural network. This enables the use of native PyTorch optimizers to optimize the (physical) parameters of the circuit.
+
+*homepage*: <https://docs.photontorch.com/>
+
+version | toolchain
+--------|----------
+``0.4.1`` | ``foss/2020b``
+``0.4.1`` | ``foss/2022a``
+``0.4.1`` | ``fosscuda/2020b``

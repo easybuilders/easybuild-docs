@@ -1,0 +1,30 @@
+# Ghostscript
+
+Ghostscript is a versatile processor for PostScript data with the ability to render PostScript to  different targets. It used to be part of the cups printing stack, but is no longer used for that.
+
+*homepage*: <https://ghostscript.com>
+
+version | versionsuffix | toolchain
+--------|---------------|----------
+``10.0.0`` |  | ``GCCcore/12.2.0``
+``10.01.2`` |  | ``GCCcore/12.3.0``
+``10.02.1`` |  | ``GCCcore/13.2.0``
+``9.19`` |  | ``intel/2016a``
+``9.19`` |  | ``intel/2016b``
+``9.20`` |  | ``foss/2016b``
+``9.20`` |  | ``intel/2016b``
+``9.21`` |  | ``intel/2017a``
+``9.22`` | ``-cairo-1.14.12`` | ``GCCcore/6.4.0``
+``9.22`` |  | ``GCCcore/6.4.0``
+``9.22`` |  | ``foss/2017b``
+``9.22`` |  | ``intel/2017b``
+``9.23`` | ``-cairo-1.14.12`` | ``GCCcore/6.4.0``
+``9.23`` |  | ``GCCcore/6.4.0``
+``9.23`` |  | ``GCCcore/7.3.0``
+``9.27`` |  | ``GCCcore/8.2.0``
+``9.50`` |  | ``GCCcore/8.3.0``
+``9.52`` |  | ``GCCcore/9.3.0``
+``9.53.3`` |  | ``GCCcore/10.2.0``
+``9.54.0`` |  | ``GCCcore/10.3.0``
+``9.54.0`` |  | ``GCCcore/11.2.0``
+``9.56.1`` |  | ``GCCcore/11.3.0``

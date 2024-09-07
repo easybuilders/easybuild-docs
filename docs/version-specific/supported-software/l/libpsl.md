@@ -1,0 +1,15 @@
+# libpsl
+
+C library for the Public Suffix List
+
+*homepage*: <https://rockdaboot.github.io/libpsl>
+
+version | toolchain
+--------|----------
+``0.20.2`` | ``GCCcore/7.3.0``
+``0.21.0`` | ``GCCcore/8.2.0``
+``0.21.0`` | ``GCCcore/8.3.0``
+``0.21.1`` | ``GCCcore/10.2.0``
+``0.21.1`` | ``GCCcore/10.3.0``
+``0.21.1`` | ``GCCcore/11.2.0``
+``0.21.1`` | ``GCCcore/11.3.0``

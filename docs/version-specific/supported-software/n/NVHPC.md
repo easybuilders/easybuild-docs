@@ -1,0 +1,24 @@
+# NVHPC
+
+C, C++ and Fortran compilers included with the NVIDIA HPC SDK (previously: PGI)
+
+*homepage*: <https://developer.nvidia.com/hpc-sdk/>
+
+version | versionsuffix | toolchain
+--------|---------------|----------
+``20.11`` |  | ``system``
+``20.7`` |  | ``system``
+``20.9`` |  | ``system``
+``21.11`` |  | ``system``
+``21.2`` |  | ``system``
+``21.3`` |  | ``system``
+``21.5`` |  | ``system``
+``21.7`` |  | ``system``
+``21.9`` |  | ``system``
+``22.11`` | ``-CUDA-11.7.0`` | ``system``
+``22.7`` | ``-CUDA-11.7.0`` | ``system``
+``22.9`` | ``-CUDA-11.7.0`` | ``system``
+``23.1`` | ``-CUDA-12.0.0`` | ``system``
+``23.7`` | ``-CUDA-12.1.1`` | ``system``
+``23.7`` | ``-CUDA-12.2.0`` | ``system``
+``24.1`` | ``-CUDA-12.3.0`` | ``system``

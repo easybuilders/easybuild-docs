@@ -1,0 +1,17 @@
+# pymatgen
+
+Python Materials Genomics is a robust materials analysis code that defines core object  representations for structures and molecules with support for many electronic structure codes.
+
+*homepage*: <https://pypi.python.org/pypi/pymatgen>
+
+version | versionsuffix | toolchain
+--------|---------------|----------
+``2017.10.16`` | ``-Python-2.7.14`` | ``intel/2017b``
+``2017.10.16`` | ``-Python-3.6.3`` | ``intel/2017b``
+``2022.0.4`` |  | ``foss/2020b``
+``2023.12.18`` |  | ``foss/2023a``
+``2023.3.10`` |  | ``foss/2022a``
+``3.5.0`` | ``-Python-2.7.11`` | ``intel/2016.02-GCC-4.9``
+``4.1.1`` | ``-Python-2.7.12`` | ``intel/2016b``
+``4.3.2`` | ``-Python-2.7.12`` | ``intel/2016b``
+``4.7.3`` | ``-Python-2.7.13`` | ``intel/2017a``

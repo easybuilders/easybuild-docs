@@ -1,0 +1,14 @@
+# QScintilla
+
+QScintilla is a port to Qt of Neil Hodgson's Scintilla C++ editor control
+
+*homepage*: <https://www.riverbankcomputing.com/software/qscintilla>
+
+version | versionsuffix | toolchain
+--------|---------------|----------
+``2.10`` | ``-Python-2.7.12`` | ``foss/2016b``
+``2.10`` | ``-Python-2.7.12`` | ``intel/2016b``
+``2.11.2`` | ``-Python-3.7.2`` | ``GCCcore/8.2.0``
+``2.11.6`` |  | ``GCCcore/11.2.0``
+``2.9.4`` | ``-Python-2.7.12`` | ``foss/2016b``
+``2.9.4`` | ``-Python-2.7.12`` | ``intel/2016b``

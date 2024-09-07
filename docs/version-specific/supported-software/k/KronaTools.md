@@ -1,0 +1,16 @@
+# KronaTools
+
+Krona Tools is a set of scripts to create Krona charts from  several Bioinformatics tools as well as from text and XML files.
+
+*homepage*: <https://github.com/marbl/Krona/wiki/KronaTools>
+
+version | toolchain
+--------|----------
+``2.7`` | ``GCCcore/7.3.0``
+``2.7.1`` | ``GCCcore/8.2.0``
+``2.8`` | ``GCC/10.3.0``
+``2.8`` | ``GCCcore/10.2.0``
+``2.8.1`` | ``GCCcore/11.2.0``
+``2.8.1`` | ``GCCcore/11.3.0``
+``2.8.1`` | ``GCCcore/12.2.0``
+``2.8.1`` | ``GCCcore/12.3.0``

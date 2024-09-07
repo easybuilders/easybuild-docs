@@ -1,0 +1,25 @@
+# ASAP3
+
+ASAP is a calculator for doing large-scale classical molecular dynamics within the Campos Atomic Simulation Environment (ASE).
+
+*homepage*: <https://wiki.fysik.dtu.dk/asap/>
+
+version | versionsuffix | toolchain
+--------|---------------|----------
+``3.10.10`` | ``-Python-3.6.6`` | ``foss/2018b``
+``3.10.10`` | ``-Python-3.6.6`` | ``intel/2018b``
+``3.10.10`` | ``-Python-3.6.6`` | ``iomkl/2018b``
+``3.10.7`` | ``-Python-3.5.2`` | ``foss/2016b``
+``3.10.7`` | ``-Python-3.6.2`` | ``foss/2017b``
+``3.10.8`` | ``-Python-3.5.2`` | ``foss/2016b``
+``3.10.8`` | ``-Python-3.6.2`` | ``foss/2017b``
+``3.10.8`` | ``-Python-3.6.3`` | ``foss/2017b``
+``3.11.10`` | ``-Python-3.7.2`` | ``foss/2019a``
+``3.11.10`` | ``-Python-3.7.2`` | ``intel/2019a``
+``3.12.2`` | ``-ASE-3.21.1`` | ``foss/2020b``
+``3.12.2`` | ``-ASE-3.21.1`` | ``intel/2020b``
+``3.12.7`` | ``-ASE-3.21.1`` | ``foss/2020b``
+``3.12.7`` | ``-ASE-3.21.1`` | ``intel/2020b``
+``3.13.2`` |  | ``foss/2023a``
+``3.13.3`` |  | ``foss/2023a``
+``3.13.3`` |  | ``intel/2023a``

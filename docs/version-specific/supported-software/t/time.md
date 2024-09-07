@@ -1,0 +1,18 @@
+# time
+
+The `time' command runs another program, then displays information about the resources used by that  program, collected by the system while the program was running.
+
+*homepage*: <http://www.gnu.org/software/time/>
+
+version | toolchain
+--------|----------
+``1.7`` | ``system``
+``1.9`` | ``GCCcore/10.2.0``
+``1.9`` | ``GCCcore/10.3.0``
+``1.9`` | ``GCCcore/11.2.0``
+``1.9`` | ``GCCcore/11.3.0``
+``1.9`` | ``GCCcore/12.2.0``
+``1.9`` | ``GCCcore/12.3.0``
+``1.9`` | ``GCCcore/7.3.0``
+``1.9`` | ``GCCcore/8.3.0``
+``1.9`` | ``GCCcore/9.3.0``

@@ -1,0 +1,12 @@
+# UMI-tools
+
+Tools for handling Unique Molecular Identifiers in NGS data sets
+
+*homepage*: <https://umi-tools.readthedocs.io>
+
+version | versionsuffix | toolchain
+--------|---------------|----------
+``1.0.0`` | ``-Python-3.6.6`` | ``foss/2018b``
+``1.0.1`` | ``-Python-3.7.4`` | ``foss/2019b``
+``1.0.1`` | ``-Python-3.8.2`` | ``foss/2020a``
+``1.1.4`` |  | ``foss/2023a``

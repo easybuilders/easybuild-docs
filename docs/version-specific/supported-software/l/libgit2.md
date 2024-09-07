@@ -1,0 +1,17 @@
+# libgit2
+
+libgit2 is a portable, pure C implementation of the Git core methods provided as a re-entrant linkable library with a solid API, allowing you to write native speed custom Git applications in any language which supports C bindings.
+
+*homepage*: <https://libgit2.org/>
+
+version | toolchain
+--------|----------
+``1.0.0`` | ``GCCcore/8.3.0``
+``1.1.0`` | ``GCCcore/10.2.0``
+``1.1.0`` | ``GCCcore/10.3.0``
+``1.1.0`` | ``GCCcore/9.3.0``
+``1.1.1`` | ``GCCcore/11.2.0``
+``1.4.3`` | ``GCCcore/11.3.0``
+``1.5.0`` | ``GCCcore/12.2.0``
+``1.7.1`` | ``GCCcore/12.3.0``
+``1.7.2`` | ``GCCcore/13.2.0``

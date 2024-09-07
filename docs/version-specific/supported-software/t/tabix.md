@@ -1,0 +1,19 @@
+# tabix
+
+Generic indexer for TAB-delimited genome position files
+
+*homepage*: <http://samtools.sourceforge.net>
+
+version | toolchain
+--------|----------
+``0.2.6`` | ``GCCcore/10.2.0``
+``0.2.6`` | ``GCCcore/10.3.0``
+``0.2.6`` | ``GCCcore/11.2.0``
+``0.2.6`` | ``GCCcore/11.3.0``
+``0.2.6`` | ``GCCcore/5.4.0``
+``0.2.6`` | ``GCCcore/6.4.0``
+``0.2.6`` | ``GCCcore/7.3.0``
+``0.2.6`` | ``GCCcore/8.3.0``
+``0.2.6`` | ``foss/2016a``
+``0.2.6`` | ``intel/2016a``
+``0.2.6`` | ``intel/2016b``

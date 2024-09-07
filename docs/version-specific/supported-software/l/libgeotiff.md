@@ -1,0 +1,20 @@
+# libgeotiff
+
+Library for reading and writing coordinate system information from/to GeoTIFF files
+
+*homepage*: <https://directory.fsf.org/wiki/Libgeotiff>
+
+version | toolchain
+--------|----------
+``1.4.2`` | ``foss/2018a``
+``1.4.2`` | ``foss/2018b``
+``1.4.2`` | ``intel/2018b``
+``1.5.1`` | ``GCCcore/8.2.0``
+``1.5.1`` | ``GCCcore/8.3.0``
+``1.5.1`` | ``GCCcore/9.3.0``
+``1.6.0`` | ``GCCcore/10.2.0``
+``1.6.0`` | ``GCCcore/10.3.0``
+``1.7.0`` | ``GCCcore/11.2.0``
+``1.7.1`` | ``GCCcore/11.3.0``
+``1.7.1`` | ``GCCcore/12.2.0``
+``1.7.1`` | ``GCCcore/12.3.0``

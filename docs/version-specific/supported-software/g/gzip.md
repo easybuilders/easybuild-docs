@@ -1,0 +1,23 @@
+# gzip
+
+gzip (GNU zip) is a popular data compression program as a replacement for compress
+
+*homepage*: <https://www.gnu.org/software/gzip/>
+
+version | toolchain
+--------|----------
+``1.10`` | ``GCCcore/10.2.0``
+``1.10`` | ``GCCcore/10.3.0``
+``1.10`` | ``GCCcore/11.2.0``
+``1.10`` | ``GCCcore/8.2.0``
+``1.10`` | ``GCCcore/8.3.0``
+``1.10`` | ``GCCcore/9.3.0``
+``1.12`` | ``GCCcore/11.3.0``
+``1.12`` | ``GCCcore/12.2.0``
+``1.12`` | ``GCCcore/12.3.0``
+``1.13`` | ``GCCcore/13.2.0``
+``1.13`` | ``GCCcore/13.3.0``
+``1.8`` | ``GCCcore/5.4.0``
+``1.8`` | ``GCCcore/6.3.0``
+``1.8`` | ``GCCcore/6.4.0``
+``1.9`` | ``GCCcore/7.3.0``

@@ -1,0 +1,11 @@
+# PARI-GP
+
+PARI/GP is a widely used computer algebra system designed for fast computations in number theory  (factorizations, algebraic  number theory, elliptic curves...), but also contains a large number of other useful  functions to compute with mathematical entities such as matrices, polynomials, power series, algebraic numbers etc.,  and a lot of transcendental functions. PARI is  also available as a C library to allow for faster computations.
+
+*homepage*: <https://pari.math.u-bordeaux.fr>
+
+version | toolchain
+--------|----------
+``2.15.4`` | ``GCCcore/11.3.0``
+``2.15.5`` | ``GCCcore/13.2.0``
+``2.7.6`` | ``foss/2016a``

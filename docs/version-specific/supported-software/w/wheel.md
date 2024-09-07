@@ -1,0 +1,27 @@
+# wheel
+
+A built-package format for Python.
+
+*homepage*: <https://pypi.python.org/pypi/wheel>
+
+version | versionsuffix | toolchain
+--------|---------------|----------
+``0.29.0`` | ``-Python-2.7.11`` | ``foss/2016a``
+``0.29.0`` | ``-Python-3.5.1`` | ``foss/2016a``
+``0.30.0`` | ``-Python-2.7.14`` | ``foss/2017b``
+``0.30.0`` | ``-Python-3.6.3`` | ``foss/2017b``
+``0.30.0`` | ``-Python-3.6.4`` | ``foss/2018a``
+``0.30.0`` | ``-Python-2.7.14`` | ``fosscuda/2017b``
+``0.30.0`` | ``-Python-3.6.3`` | ``fosscuda/2017b``
+``0.30.0`` | ``-Python-2.7.14`` | ``intel/2017b``
+``0.30.0`` | ``-Python-3.6.3`` | ``intel/2017b``
+``0.30.0`` | ``-Python-3.6.4`` | ``intel/2018a``
+``0.30.0`` | ``-Python-2.7.14`` | ``intelcuda/2017b``
+``0.30.0`` | ``-Python-3.6.3`` | ``intelcuda/2017b``
+``0.31.0`` | ``-Python-3.6.4`` | ``foss/2018a``
+``0.31.0`` | ``-Python-2.7.14`` | ``fosscuda/2018a``
+``0.31.0`` | ``-Python-3.6.4`` | ``fosscuda/2018a``
+``0.31.0`` | ``-Python-2.7.14`` | ``intel/2018a``
+``0.31.1`` | ``-Python-3.6.6`` | ``foss/2018b``
+``0.31.1`` | ``-Python-2.7.15`` | ``fosscuda/2018b``
+``0.31.1`` | ``-Python-3.6.6`` | ``fosscuda/2018b``

@@ -1,0 +1,19 @@
+# python-igraph
+
+Python interface to the igraph high performance graph library, primarily aimed at complex network  research and analysis.
+
+*homepage*: <https://igraph.org/python>
+
+version | versionsuffix | toolchain
+--------|---------------|----------
+``0.10.3`` |  | ``foss/2022a``
+``0.10.6`` |  | ``foss/2022b``
+``0.11.4`` |  | ``foss/2023a``
+``0.7.1.post6`` | ``-Python-3.6.6`` | ``foss/2018b``
+``0.7.1.post6`` | ``-Python-2.7.14`` | ``intel/2017b``
+``0.8.0`` |  | ``foss/2019b``
+``0.8.0`` |  | ``foss/2020a``
+``0.9.0`` |  | ``foss/2020b``
+``0.9.0`` |  | ``fosscuda/2020b``
+``0.9.6`` |  | ``foss/2021a``
+``0.9.8`` |  | ``foss/2021b``

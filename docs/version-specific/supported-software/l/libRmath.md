@@ -1,0 +1,14 @@
+# libRmath
+
+The routines supporting the distribution and special functions in R and a few others are declared  in C header file Rmath.h. These can be compiled into a standalone library for linking to other applications.
+
+*homepage*: <https://cran.r-project.org/doc/manuals/r-release/R-admin.html#The-standalone-Rmath-library>
+
+version | toolchain
+--------|----------
+``3.6.0`` | ``foss/2018b``
+``4.0.0`` | ``GCCcore/9.3.0``
+``4.1.0`` | ``GCCcore/10.2.0``
+``4.1.2`` | ``GCCcore/11.2.0``
+``4.2.0`` | ``GCCcore/10.3.0``
+``4.2.1`` | ``GCCcore/11.3.0``
