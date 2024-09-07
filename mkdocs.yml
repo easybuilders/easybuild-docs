@@ -105,7 +105,7 @@ nav:
   - EasyBuild release notes: release-notes.md
   - EasyBuild maintainers: maintainers.md
   - API: api/
-  - List of supported software: version-specific/supported-software.md
+  - List of supported software: version-specific/supported-software/index.md
   - Getting help: getting-help.md
   - User survey: user-survey/index.md
   - Policies:
@@ -194,6 +194,8 @@ plugins:
         - api/easybuild/*
         - api/summary.md
         - index.md
+        - version-specific/supported-software/*
+        - version-specific/supported-software/*/*
   # necessary for search to work
   - search
   - redirects:
