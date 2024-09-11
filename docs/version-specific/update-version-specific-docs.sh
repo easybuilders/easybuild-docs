@@ -155,11 +155,12 @@ echo "* [List of known toolchains](toolchains.md)" >> $overview
 
 ###################################################################################################
 
+tmp_software_json="$(mktemp)"
 echo "eb --list-software=detailed"
 skip_lines='Temporary log file|Processed.*easyconfigs|Found.*different software packages|^# List of supported software'
-eb --list-software=detailed --output-format=json | egrep -v $skip_lines >> software.json
-python software-markdown-pages.py -o supported-software --delete-existing-output
-rm software.json
+eb --list-software=detailed --output-format=json | egrep -v "$skip_lines" > ${tmp_software_json}
+python3 software-markdown-pages.py --jsonfile ${tmp_software_json} --output-base supported-software --delete-existing-output
+rm ${tmp_software_json}
 
 echo "* [List of supported software](supported-software/index.md)" >> $overview
 
