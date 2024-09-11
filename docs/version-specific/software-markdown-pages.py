@@ -1,6 +1,7 @@
 import argparse
 import json
 import shutil
+import sys
 from collections import defaultdict
 from pathlib import Path
 
@@ -91,6 +92,10 @@ def generate_markdown_pages(jsonfile, output_base, delete_existing):
     :param output_base: base directory for output files
     :param delete_existing: delete the output directory (if it exists)
     """
+    if jsonfile is None:
+        sys.stderr.write("ERROR: No input JSON file specified, it is required!\n")
+        sys.exit(1)
+
     with open(jsonfile) as f:
         data = json.load(f)
 
@@ -113,7 +118,7 @@ def generate_markdown_pages(jsonfile, output_base, delete_existing):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(prog='Software Markdown Pages',
                                      description='Generate Markdown pages of software from JSON file')
-    parser.add_argument('-j', '--jsonfile', default='software.json', help='Input JSON file')
+    parser.add_argument('-j', '--jsonfile', default=None, help='Input JSON file')
     parser.add_argument('-o', '--output-base', default='output', help='Base directory for output files')
     parser.add_argument('--delete-existing-output', action='store_true',
                         help='Delete output base directory (if it exists)')
