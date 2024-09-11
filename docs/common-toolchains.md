@@ -61,9 +61,8 @@ graph LR
 
 Note: following notes apply for the generations listed and those older than it:
 
-- `2022a` - `iimkl` not present yet
-- `2021b` - `gfbf` not present yet
-- `2020b` - `foss` uses OpenBLAS instead of FlexiBLAS, `iccifort` is used instead of `intel-compilers`
+- <= `2021b` - `gfbf` not present yet
+- <= `2020b` - `foss` uses OpenBLAS instead of FlexiBLAS, `iccifort` is used instead of `intel-compilers`
 
 
 Keep in mind that when creating an Easyconfig, you need to look at what toolchain "level" (e.g. `foss` vs `GCC`) your
