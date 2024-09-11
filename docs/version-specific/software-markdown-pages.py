@@ -13,18 +13,22 @@ search:
 """
 
 
-def generate_character_links_line(characters, current=None):
+def generate_quick_links_line(chars, level, current=None):
     """
     Generate links to index page for each character
     :param characters: Initial characters to generate links for
     """
+    up = '/'.join(['..'] * level) or '.'
     links = []
-    for c in characters:
-        if c == current:
-            links.append(f'*{c}*')
+    if level > 0:
+        links.append(f"[(all)]({up}/index.md)")
+    for char in chars:
+        if char == current:
+            links.append(f'*{char}*')
         else:
-            links.append(f"[{c}](../{c}/index.md)")
-    return f"{' - '.join(links)}\n\n"
+            links.append(f"[{char}]({up}/{char}/index.md)")
+    links_txt = ' - '.join(links)
+    return f"*(quick links: {links_txt})*\n\n"
 
 
 def output_markdown(processed, output_base_path):
@@ -33,12 +37,14 @@ def output_markdown(processed, output_base_path):
     :param processed: Processed data to output (dictionary - letter -> software -> list of versions)
     :param output_base_path: Pathlib object for base path of output
     """
-    packages = sum(len(v) for v in processed.values())
+    software_cnt = sum(len(v) for v in processed.values())
+    letters = sorted(processed.keys())
 
     with open(output_base_path / 'index.md', 'w') as top_page:
         top_page.write(MKDOCS_SEARCH_PRIORITY)
         top_page.write("# List of supported software\n\n")
-        top_page.write(f"EasyBuild supports {packages} different software packages (incl. toolchains, bundles):\n\n")
+        top_page.write(generate_quick_links_line(letters, 0))
+        top_page.write(f"EasyBuild supports {software_cnt} different software packages (incl. toolchains, bundles):\n\n")
 
         for letter in processed:
             top_page.write(f" * [{letter}]({letter}/index.md)\n")
@@ -48,7 +54,7 @@ def output_markdown(processed, output_base_path):
             with open(letter_dir / 'index.md', 'w') as letter_page:
                 letter_page.write(MKDOCS_SEARCH_PRIORITY)
                 letter_page.write(f"# List of supported software ({letter})\n\n")
-                letter_page.write(generate_character_links_line([v for v in processed], current=letter))
+                letter_page.write(generate_quick_links_line(letters, 1, current=letter) + "\n\n")
 
                 for software in processed[letter]:
                     top_page.write(f"    * [{software}]({letter}/{software}.md)\n")
@@ -77,8 +83,11 @@ def output_markdown(processed, output_base_path):
                                 software_page.write(" | ")
                             software_page.write(f"``{version['toolchain']}``\n")
 
-                        software_page.write('\n')
-                        software_page.write(generate_character_links_line([v for v in processed]))
+                        software_page.write("\n\n" + generate_quick_links_line(letters, 1))
+
+                letter_page.write("\n\n" + generate_quick_links_line(letters, 1, current=letter))
+
+        top_page.write("\n\n" + generate_quick_links_line(letters, 0))
 
 
 def generate_markdown_pages(jsonfile, output_base, delete_existing):
