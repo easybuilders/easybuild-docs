@@ -34,55 +34,51 @@ def output_markdown(processed, output_base_path):
     :param output_base_path: Pathlib object for base path of output
     """
     packages = sum(len(v) for v in processed.values())
-    top_page = open(output_base_path / 'index.md', 'w')
-    top_page.write(MKDOCS_SEARCH_PRIORITY)
-    top_page.write("# List of supported software\n\n")
-    top_page.write(f"EasyBuild supports {packages} different software packages (incl. toolchains, bundles):\n\n")
 
-    for letter in processed:
-        top_page.write(f" * [{letter}]({letter}/index.md)\n")
+    with open(output_base_path / 'index.md', 'w') as top_page:
+        top_page.write(MKDOCS_SEARCH_PRIORITY)
+        top_page.write("# List of supported software\n\n")
+        top_page.write(f"EasyBuild supports {packages} different software packages (incl. toolchains, bundles):\n\n")
 
-        letter_dir = output_base_path / letter
-        letter_dir.mkdir()
-        letter_page = open(letter_dir / 'index.md', 'w')
-        letter_page.write(MKDOCS_SEARCH_PRIORITY)
-        letter_page.write(f"# List of supported software ({letter})\n\n")
-        letter_page.write(generate_character_links_line([v for v in processed], current=letter))
+        for letter in processed:
+            top_page.write(f" * [{letter}]({letter}/index.md)\n")
 
-        for software in processed[letter]:
-            top_page.write(f"    * [{software}]({letter}/{software}.md)\n")
-            letter_page.write(f" * [{software}]({software}.md)\n")
+            letter_dir = output_base_path / letter
+            letter_dir.mkdir()
+            with open(letter_dir / 'index.md', 'w') as letter_page:
+                letter_page.write(MKDOCS_SEARCH_PRIORITY)
+                letter_page.write(f"# List of supported software ({letter})\n\n")
+                letter_page.write(generate_character_links_line([v for v in processed], current=letter))
 
-            versionsuffix = any(v['versionsuffix'] for v in processed[letter][software])
+                for software in processed[letter]:
+                    top_page.write(f"    * [{software}]({letter}/{software}.md)\n")
+                    letter_page.write(f" * [{software}]({software}.md)\n")
 
-            software_page = open(letter_dir / f'{software}.md', 'w')
-            software_page.write(MKDOCS_SEARCH_PRIORITY)
-            software_page.write(f"# {software}\n\n")
-            software_page.write(f"{processed[letter][software][0]['description']}\n\n")
-            software_page.write(f"*homepage*: <{processed[letter][software][0]['homepage']}>\n\n")
+                    versionsuffix = any(v['versionsuffix'] for v in processed[letter][software])
 
-            if versionsuffix:
-                software_page.write("version | versionsuffix | toolchain\n")
-                software_page.write("--------|---------------|----------\n")
-            else:
-                software_page.write("version | toolchain\n")
-                software_page.write("--------|----------\n")
+                    with open(letter_dir / f'{software}.md', 'w') as software_page:
+                        software_page.write(MKDOCS_SEARCH_PRIORITY)
+                        software_page.write(f"# {software}\n\n")
+                        software_page.write(f"{processed[letter][software][0]['description']}\n\n")
+                        software_page.write(f"*homepage*: <{processed[letter][software][0]['homepage']}>\n\n")
 
-            for version in processed[letter][software]:
-                software_page.write(f"``{version['version']}`` | ")
-                if versionsuffix:
-                    if version['versionsuffix']:
-                        software_page.write(f"``{version['versionsuffix']}``")
-                    software_page.write(" | ")
-                software_page.write(f"``{version['toolchain']}``\n")
+                        if versionsuffix:
+                            software_page.write("version | versionsuffix | toolchain\n")
+                            software_page.write("--------|---------------|----------\n")
+                        else:
+                            software_page.write("version | toolchain\n")
+                            software_page.write("--------|----------\n")
 
-            software_page.write('\n')
-            software_page.write(generate_character_links_line([v for v in processed]))
-            software_page.close()
+                        for version in processed[letter][software]:
+                            software_page.write(f"``{version['version']}`` | ")
+                            if versionsuffix:
+                                if version['versionsuffix']:
+                                    software_page.write(f"``{version['versionsuffix']}``")
+                                software_page.write(" | ")
+                            software_page.write(f"``{version['toolchain']}``\n")
 
-        letter_page.close()
-
-    top_page.close()
+                        software_page.write('\n')
+                        software_page.write(generate_character_links_line([v for v in processed]))
 
 
 def generate_markdown_pages(jsonfile, output_base, delete_existing):
