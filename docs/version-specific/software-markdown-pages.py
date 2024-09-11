@@ -37,14 +37,14 @@ def output_markdown(processed, output_base_path):
     :param processed: Processed data to output (dictionary - letter -> software -> list of versions)
     :param output_base_path: Pathlib object for base path of output
     """
-    software_cnt = sum(len(v) for v in processed.values())
+    pkg_cnt = sum(len(v) for v in processed.values())
     letters = sorted(processed.keys())
 
     with open(output_base_path / 'index.md', 'w') as top_page:
         top_page.write(MKDOCS_SEARCH_PRIORITY)
         top_page.write("# List of supported software\n\n")
         top_page.write(generate_quick_links_line(letters, 0))
-        top_page.write(f"EasyBuild supports {software_cnt} different software packages (incl. toolchains, bundles):\n\n")
+        top_page.write(f"EasyBuild supports {pkg_cnt} different software packages (incl. toolchains, bundles):\n\n")
 
         for letter in processed:
             top_page.write(f" * [{letter}]({letter}/index.md)\n")
