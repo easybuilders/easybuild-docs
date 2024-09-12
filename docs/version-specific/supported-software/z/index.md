@@ -9,6 +9,7 @@ search:
 
 
  * [Z3](Z3.md)
+ * [z5py](z5py.md)
  * [zarr](zarr.md)
  * [Zeo++](Zeo++.md)
  * [ZeroMQ](ZeroMQ.md)
@@ -21,6 +22,7 @@ search:
  * [zlib](zlib.md)
  * [zlib-ng](zlib-ng.md)
  * [zlibbioc](zlibbioc.md)
+ * [Zoltan](Zoltan.md)
  * [Zopfli](Zopfli.md)
  * [ZPAQ](ZPAQ.md)
  * [zsh](zsh.md)

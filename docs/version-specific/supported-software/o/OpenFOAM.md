@@ -10,11 +10,13 @@ OpenFOAM is a free, open source CFD software package.  OpenFOAM has an extensive
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``10`` | ``-20230119-int64`` | ``foss/2022a``
 ``10`` | ``-20230119`` | ``foss/2022a``
 ``10`` |  | ``foss/2022a``
 ``10`` |  | ``foss/2023a``
 ``11`` |  | ``foss/2022a``
 ``11`` |  | ``foss/2023a``
+``12`` |  | ``foss/2023a``
 ``2.2.2`` |  | ``intel/2016a``
 ``2.2.2`` |  | ``intel/2017a``
 ``2.2.2`` |  | ``intel/2018a``
@@ -70,6 +72,7 @@ version | versionsuffix | toolchain
 ``v2206`` |  | ``foss/2022a``
 ``v2306`` |  | ``foss/2022b``
 ``v2312`` |  | ``foss/2023a``
+``v2406`` |  | ``foss/2023a``
 
 
 *(quick links: [(all)](../index.md) - [0](../0/index.md) - [a](../a/index.md) - [b](../b/index.md) - [c](../c/index.md) - [d](../d/index.md) - [e](../e/index.md) - [f](../f/index.md) - [g](../g/index.md) - [h](../h/index.md) - [i](../i/index.md) - [j](../j/index.md) - [k](../k/index.md) - [l](../l/index.md) - [m](../m/index.md) - [n](../n/index.md) - [o](../o/index.md) - [p](../p/index.md) - [q](../q/index.md) - [r](../r/index.md) - [s](../s/index.md) - [t](../t/index.md) - [u](../u/index.md) - [v](../v/index.md) - [w](../w/index.md) - [x](../x/index.md) - [y](../y/index.md) - [z](../z/index.md))*

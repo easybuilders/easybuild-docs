@@ -4,13 +4,12 @@ search:
 ---
 # makeinfo
 
-makeinfo is part of the Texinfo project, the official documentation format of the GNU project.
+makeinfo is part of the Texinfo project, the official documentation format of the GNU project.  This is a minimal build with very basic functionality. Should only be used for build dependencies.
 
 *homepage*: <https://www.gnu.org/software/texinfo/>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``6.7`` |  | ``FCC/4.5.0``
 ``6.7`` | ``-minimal`` | ``GCCcore/10.2.0``
 ``6.7`` |  | ``GCCcore/10.2.0``
 ``6.7`` | ``-minimal`` | ``GCCcore/10.3.0``

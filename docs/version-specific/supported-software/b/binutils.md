@@ -51,7 +51,6 @@ version | toolchain
 ``2.34`` | ``system``
 ``2.35`` | ``GCCcore/10.2.0``
 ``2.35`` | ``system``
-``2.36.1`` | ``FCC/4.5.0``
 ``2.36.1`` | ``GCCcore/10.3.0``
 ``2.36.1`` | ``GCCcore/11.1.0``
 ``2.36.1`` | ``GCCcore/8.4.0``
@@ -72,6 +71,7 @@ version | toolchain
 ``2.40`` | ``system``
 ``2.42`` | ``GCCcore/13.3.0``
 ``2.42`` | ``GCCcore/14.1.0``
+``2.42`` | ``GCCcore/14.2.0``
 ``2.42`` | ``system``
 
 

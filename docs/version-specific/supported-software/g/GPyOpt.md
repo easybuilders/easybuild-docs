@@ -10,6 +10,7 @@ GPyOpt is a Python open-source library for Bayesian Optimization
 
 version | toolchain
 --------|----------
+``1.2.6`` | ``foss/2023a``
 ``1.2.6`` | ``intel/2020b``
 
 

@@ -10,8 +10,6 @@ This module sets a group of environment variables for compilers, linkers, maths 
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``default`` |  | ``FCC/4.5.0``
-``default`` |  | ``Fujitsu/21.05``
 ``default`` |  | ``foss/2017b``
 ``default`` |  | ``foss/2018b``
 ``default`` |  | ``foss/2019b``

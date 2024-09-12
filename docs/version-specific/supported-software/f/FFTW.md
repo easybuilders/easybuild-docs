@@ -4,13 +4,12 @@ search:
 ---
 # FFTW
 
-This is a fork of FFTW3 for the Armv8-A 64-bit architecture (AArch64)  with 512-bit Scalable Vector Extension (SVE) support.
+FFTW is a C subroutine library for computing the discrete Fourier transform (DFT)   in one or more dimensions, of arbitrary input size, and of both real and complex data.
 
-*homepage*: <https://github.com/fujitsu/fftw3>
+*homepage*: <http://www.fftw.org>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.0.0`` | ``-fujitsu`` | ``FCC/4.5.0``
 ``2.1.5`` |  | ``intel/2016b``
 ``2.1.5`` |  | ``intel/2017a``
 ``2.1.5`` |  | ``intel/2018b``

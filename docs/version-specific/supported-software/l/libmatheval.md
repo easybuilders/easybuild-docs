@@ -6,10 +6,11 @@ search:
 
 GNU libmatheval is a library (callable from C and Fortran) to parse  and evaluate symbolic expressions input as text.
 
-*homepage*: <http://www.gnu.org/software/libmatheval/>
+*homepage*: <https://www.gnu.org/software/libmatheval/>
 
 version | toolchain
 --------|----------
+``1.1.11`` | ``GCCcore/13.3.0``
 ``1.1.11`` | ``GCCcore/6.4.0``
 ``1.1.11`` | ``GCCcore/7.3.0``
 ``1.1.11`` | ``GCCcore/8.2.0``

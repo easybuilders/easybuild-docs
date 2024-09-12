@@ -16,6 +16,7 @@ version | versionsuffix | toolchain
 ``3.19.1`` |  | ``foss/2017b``
 ``3.19.1`` |  | ``intel/2017b``
 ``3.20.11`` |  | ``GCCcore/11.3.0``
+``3.20.11`` |  | ``GCCcore/12.3.0``
 ``3.20.3`` |  | ``GCCcore/7.3.0``
 ``3.20.4`` |  | ``GCCcore/8.2.0``
 ``3.20.6`` |  | ``GCCcore/8.3.0``

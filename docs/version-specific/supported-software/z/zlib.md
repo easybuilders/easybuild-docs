@@ -11,7 +11,6 @@ zlib is designed to be a free, general-purpose, legally unencumbered -- that is,
 version | toolchain
 --------|----------
 ``1.2.10`` | ``system``
-``1.2.11`` | ``FCC/4.5.0``
 ``1.2.11`` | ``GCCcore/10.1.0``
 ``1.2.11`` | ``GCCcore/10.2.0``
 ``1.2.11`` | ``GCCcore/10.3.0``
@@ -78,6 +77,7 @@ version | toolchain
 ``1.2.8`` | ``system``
 ``1.3.1`` | ``GCCcore/13.3.0``
 ``1.3.1`` | ``GCCcore/14.1.0``
+``1.3.1`` | ``GCCcore/14.2.0``
 ``1.3.1`` | ``system``
 
 

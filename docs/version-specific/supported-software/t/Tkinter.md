@@ -30,6 +30,7 @@ version | versionsuffix | toolchain
 ``3.10.8`` |  | ``GCCcore/12.2.0``
 ``3.11.3`` |  | ``GCCcore/12.3.0``
 ``3.11.5`` |  | ``GCCcore/13.2.0``
+``3.12.3`` |  | ``GCCcore/13.3.0``
 ``3.6.1`` | ``-Python-3.6.1`` | ``foss/2017a``
 ``3.6.1`` | ``-Python-3.6.1`` | ``intel/2017a``
 ``3.6.2`` | ``-Python-3.6.2`` | ``foss/2017b``

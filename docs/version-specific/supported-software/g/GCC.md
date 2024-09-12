@@ -24,6 +24,7 @@ version | versionsuffix | toolchain
 ``13.2.0`` |  | ``system``
 ``13.3.0`` |  | ``system``
 ``14.1.0`` |  | ``system``
+``14.2.0`` |  | ``system``
 ``4.8.1`` | ``-CLooG`` | ``system``
 ``4.8.1`` |  | ``system``
 ``4.8.2`` | ``-CLooG-multilib`` | ``system``

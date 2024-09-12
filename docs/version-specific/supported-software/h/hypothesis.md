@@ -20,6 +20,7 @@ version | versionsuffix | toolchain
 ``5.41.2`` |  | ``GCCcore/10.2.0``
 ``5.41.5`` |  | ``GCCcore/10.2.0``
 ``5.6.0`` | ``-Python-3.8.2`` | ``GCCcore/9.3.0``
+``6.103.1`` |  | ``GCCcore/13.3.0``
 ``6.13.1`` |  | ``GCCcore/10.3.0``
 ``6.14.6`` |  | ``GCCcore/11.2.0``
 ``6.46.7`` |  | ``GCCcore/11.3.0``

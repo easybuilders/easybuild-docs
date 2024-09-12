@@ -10,6 +10,7 @@ Imath is a C++ and python library of 2D and 3D vector, matrix, and math operatio
 
 version | toolchain
 --------|----------
+``3.1.11`` | ``GCCcore/13.3.0``
 ``3.1.5`` | ``GCCcore/11.3.0``
 ``3.1.6`` | ``GCCcore/12.2.0``
 ``3.1.7`` | ``GCCcore/12.3.0``

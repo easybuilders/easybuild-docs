@@ -11,6 +11,7 @@ TensorBoard is a suite of web applications for inspecting and understanding your
 version | toolchain
 --------|----------
 ``2.10.0`` | ``foss/2022a``
+``2.15.1`` | ``gfbf/2022b``
 ``2.15.1`` | ``gfbf/2023a``
 ``2.8.0`` | ``foss/2021a``
 

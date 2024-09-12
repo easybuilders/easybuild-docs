@@ -10,6 +10,7 @@ The DWARF Debugging Information Format is of interest to programmers working on 
 
 version | toolchain
 --------|----------
+``0.10.1`` | ``GCCcore/13.3.0``
 ``0.4.1`` | ``GCCcore/11.3.0``
 ``0.7.0`` | ``GCCcore/12.3.0``
 ``0.9.2`` | ``GCCcore/13.2.0``
