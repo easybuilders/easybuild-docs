@@ -106,7 +106,7 @@ nav:
   - EasyBuild release notes: release-notes.md
   - EasyBuild maintainers: maintainers.md
   - API: api/
-  - List of supported software: version-specific/supported-software.md
+  - List of supported software: version-specific/supported-software/index.md
   - Getting help: getting-help.md
   - User survey: user-survey/index.md
   - Policies:
@@ -195,6 +195,8 @@ plugins:
         - api/easybuild/*
         - api/summary.md
         - index.md
+        - version-specific/supported-software/*
+        - version-specific/supported-software/*/*
   # necessary for search to work
   - search
   - redirects:
@@ -269,7 +271,7 @@ plugins:
         en/latest/eb_list_easyblocks.html: version-specific/easyblocks.md
         en/latest/eb_list_toolchains.html: version-specific/toolchains.md
         en/latest/index.html: index.md
-        en/latest/version-specific/Supported_software.html: version-specific/supported-software.md
+        en/latest/version-specific/Supported_software.html: version-specific/supported-software/index.md
         en/latest/version-specific/config_file_constants.html: version-specific/config-file-constants.md
         en/latest/version-specific/easyblocks.html: version-specific/easyblocks.md
         en/latest/version-specific/easyconfig_constants.html: version-specific/easyconfig-constants.md

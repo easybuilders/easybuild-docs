@@ -6,7 +6,7 @@ search:
 # EasyBuild release notes {: #release_notes }
 
 The latest version of EasyBuild provides support for building and
-installing [**3,552** different software packages](version-specific/supported-software.md),
+installing [**3,552** different software packages](version-specific/supported-software/index.md),
 including 40 different (compiler) toolchains.
 It contains 259 software-specific easyblocks and 43 generic easyblocks,
 alongside 19,985 easyconfig files.
@@ -21,7 +21,7 @@ bugfix/update release
 - various enhancements, including:
     - improve behavior when using extension which has `nosource` enabled ([#4506](https://github.com/easybuilders/easybuild-framework/pull/4506))
     - enhance `get_software_libdir` to return `lib` or `lib64` if only one of them contains library files ([#4513](https://github.com/easybuilders/easybuild-framework/pull/4513))
-    - implement versions checks to avoid mixing major versions across the EasyBuild components ([#4520](https://github.com/easybuilders/easybuild-framework/pull/4520), [#4553](https://github.com/easybuilders/easybuild-framework/pull/4553))
+    - implement version checks to avoid mixing major versions across the EasyBuild components ([#4520](https://github.com/easybuilders/easybuild-framework/pull/4520), [#4553](https://github.com/easybuilders/easybuild-framework/pull/4553))
     - add support for easyconfig parameter `module_only` ([#4537](https://github.com/easybuilders/easybuild-framework/pull/4537))
 - various bug fixes, including:
     - fix typo in `patch_step` logging ([#4505](https://github.com/easybuilders/easybuild-framework/pull/4505))
