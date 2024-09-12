@@ -890,7 +890,7 @@ easyconfig parameter           |description                                     
 
 Builds and installs Julia Packages.
 
-Julia environement setup during installation:
+Julia environment setup during installation:
 - initialize new Julia environment in 'environments' subdir in installation directory
 - remove paths in user depot '~/.julia' from DEPOT_PATH and LOAD_PATH
 - put installation directory as top DEPOT_PATH, the target depot for installations with Pkg
