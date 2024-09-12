@@ -11,6 +11,7 @@ Fast-ish (and correct!) quantile normalization in Python
 version | toolchain
 --------|----------
 ``0.8.1`` | ``foss/2022a``
+``0.8.1`` | ``foss/2022b``
 ``0.8.1`` | ``foss/2023a``
 
 

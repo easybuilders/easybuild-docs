@@ -11,6 +11,7 @@ A modern, C++-native, header-only,  test framework for unit-tests, TDD and BDD  
 version | toolchain
 --------|----------
 ``2.11.0`` | ``system``
+``2.13.10`` | ``GCCcore/13.3.0``
 ``2.13.4`` | ``system``
 ``2.13.9`` | ``GCCcore/12.2.0``
 ``2.13.9`` | ``GCCcore/12.3.0``

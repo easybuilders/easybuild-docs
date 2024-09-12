@@ -11,6 +11,7 @@ Boost provides free peer-reviewed portable C++ source libraries.
 version | versionsuffix | toolchain
 --------|---------------|----------
 ``1.54.0`` | ``-Python-2.7.12`` | ``foss/2016b``
+``1.55.0`` |  | ``GCC/11.2.0``
 ``1.55.0`` | ``-Python-2.7.11`` | ``foss/2016a``
 ``1.55.0`` |  | ``system``
 ``1.57.0`` | ``-Python-2.7.10`` | ``gimkl/2.11.5``

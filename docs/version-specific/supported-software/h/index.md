@@ -43,6 +43,7 @@ search:
  * [help2man](help2man.md)
  * [HepMC](HepMC.md)
  * [HepMC3](HepMC3.md)
+ * [HERRO](HERRO.md)
  * [hevea](hevea.md)
  * [HF-Datasets](HF-Datasets.md)
  * [HH-suite](HH-suite.md)

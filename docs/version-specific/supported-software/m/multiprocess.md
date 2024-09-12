@@ -10,6 +10,7 @@ better multiprocessing and multithreading in python
 
 version | toolchain
 --------|----------
+``0.70.15`` | ``gfbf/2022b``
 ``0.70.15`` | ``gfbf/2023a``
 
 

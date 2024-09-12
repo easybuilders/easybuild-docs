@@ -13,6 +13,7 @@ version | toolchain
 ``2`` | ``foss/2018b``
 ``2`` | ``foss/2021b``
 ``2`` | ``foss/2022a``
+``2`` | ``foss/2023a``
 ``2`` | ``intel/2018b``
 ``2`` | ``iomkl/2018b``
 

@@ -10,6 +10,7 @@ Transcription Factor Co-Occurrence using Market Basket analysis.
 
 version | toolchain
 --------|----------
+``1.1`` | ``foss/2022b``
 ``1.1`` | ``foss/2023a``
 
 

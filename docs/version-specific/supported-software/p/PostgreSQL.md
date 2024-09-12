@@ -26,6 +26,7 @@ version | versionsuffix | toolchain
 ``15.2`` |  | ``GCCcore/12.2.0``
 ``16.1`` |  | ``GCCcore/12.3.0``
 ``16.1`` |  | ``GCCcore/13.2.0``
+``16.4`` |  | ``GCCcore/13.3.0``
 ``9.4.7`` | ``-Python-2.7.11`` | ``intel/2016a``
 ``9.5.2`` | ``-Python-2.7.11`` | ``intel/2016a``
 ``9.6.0`` | ``-Python-2.7.12`` | ``intel/2016b``

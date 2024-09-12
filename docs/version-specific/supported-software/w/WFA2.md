@@ -11,6 +11,7 @@ The wavefront alignment (WFA) algorithm is an exact  gap-affine algorithm that t
 version | toolchain
 --------|----------
 ``2.3.3`` | ``GCCcore/11.3.0``
+``2.3.4`` | ``GCCcore/12.2.0``
 ``2.3.4`` | ``GCCcore/12.3.0``
 
 

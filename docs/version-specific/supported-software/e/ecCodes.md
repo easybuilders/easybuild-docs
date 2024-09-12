@@ -21,6 +21,7 @@ version | versionsuffix | toolchain
 ``2.24.2`` |  | ``gompi/2021b``
 ``2.24.2`` |  | ``iimpi/2021b``
 ``2.27.0`` |  | ``gompi/2022a``
+``2.27.0`` |  | ``iimpi/2022a``
 ``2.31.0`` |  | ``gompi/2022b``
 ``2.31.0`` |  | ``gompi/2023a``
 ``2.31.0`` |  | ``gompi/2023b``

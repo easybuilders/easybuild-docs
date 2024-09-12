@@ -11,6 +11,7 @@ Nose extends unittest to make testing easier.
 version | toolchain
 --------|----------
 ``1.3.8`` | ``GCCcore/11.3.0``
+``1.3.8`` | ``GCCcore/12.2.0``
 ``1.3.8`` | ``GCCcore/12.3.0``
 
 

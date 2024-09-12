@@ -32,6 +32,7 @@ version | versionsuffix | toolchain
 ``7.7.0`` |  | ``foss/2022a``
 ``8.0.0`` | ``-CUDA-11.7.0`` | ``foss/2022a``
 ``8.0.0`` |  | ``foss/2022a``
+``8.0.0`` | ``-CUDA-12.1.1`` | ``foss/2023a``
 ``8.0.0`` |  | ``foss/2023a``
 
 

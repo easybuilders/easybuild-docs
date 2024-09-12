@@ -11,6 +11,7 @@ imbalanced-learn is a Python package offering a number of re-sampling techniques
 version | versionsuffix | toolchain
 --------|---------------|----------
 ``0.10.1`` |  | ``foss/2022a``
+``0.12.3`` |  | ``gfbf/2023a``
 ``0.2.1`` | ``-Python-2.7.12`` | ``intel/2016b``
 ``0.2.1`` | ``-Python-3.5.2`` | ``intel/2016b``
 ``0.3.3`` | ``-Python-3.6.4`` | ``foss/2018a``

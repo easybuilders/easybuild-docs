@@ -10,6 +10,8 @@ The Advanced Linux Sound Architecture (ALSA) provides audio and MIDI functionali
 
 version | toolchain
 --------|----------
+``1.2.11`` | ``GCCcore/13.2.0``
+``1.2.11`` | ``GCCcore/13.3.0``
 ``1.2.4`` | ``GCCcore/9.3.0``
 ``1.2.8`` | ``GCCcore/10.2.0``
 ``1.2.8`` | ``GCCcore/11.2.0``

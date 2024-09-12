@@ -11,6 +11,7 @@ A fast JSON parser/generator for C++ with both SAX/DOM style API
 version | toolchain
 --------|----------
 ``1.1.0-20230928`` | ``GCCcore/12.3.0``
+``1.1.0-20240409`` | ``GCCcore/13.2.0``
 ``1.1.0`` | ``GCCcore/10.2.0``
 ``1.1.0`` | ``GCCcore/10.3.0``
 ``1.1.0`` | ``GCCcore/11.2.0``

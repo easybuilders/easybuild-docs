@@ -35,6 +35,7 @@ version | versionsuffix | toolchain
 ``2023a`` |  | ``system``
 ``2023b`` |  | ``system``
 ``2024.05`` |  | ``system``
+``2024a`` |  | ``system``
 ``system`` | ``-2.29`` | ``system``
 
 

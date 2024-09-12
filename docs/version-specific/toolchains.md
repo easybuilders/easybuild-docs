@@ -30,6 +30,7 @@ Name               |Compiler(s)     |MPI          |Linear algebra           |FFT
 **gmacml**         |GCC             |MVAPICH2     |ACML, ScaLAPACK          |FFTW
 **gmkl**           |GCC             |*(none)*     |imkl                     |imkl
 **gmklc**          |GCC, CUDA       |*(none)*     |imkl                     |imkl
+**gmpflf**         |GCC             |MPICH        |FlexiBLAS, ScaLAPACK     |FFTW
 **gmpich**         |GCC             |MPICH        |*(none)*                 |*(none)*
 **gmpich2**        |GCC             |MPICH2       |*(none)*                 |*(none)*
 **gmpit**          |GCC             |MPItrampoline|*(none)*                 |*(none)*

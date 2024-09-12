@@ -11,6 +11,7 @@ Miniconda is a free minimal installer for conda. It is a small,  bootstrap versi
 version | toolchain
 --------|----------
 ``22.11.1-1`` | ``system``
+``23.10.0-1`` | ``system``
 ``23.5.2-0`` | ``system``
 ``23.9.0-0`` | ``system``
 ``4.12.0`` | ``system``

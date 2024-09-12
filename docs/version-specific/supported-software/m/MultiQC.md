@@ -20,6 +20,7 @@ version | versionsuffix | toolchain
 ``1.2`` | ``-Python-3.6.3`` | ``foss/2017b``
 ``1.2`` | ``-Python-2.7.14`` | ``intel/2017b``
 ``1.2`` | ``-Python-3.6.3`` | ``intel/2017b``
+``1.22.3`` |  | ``foss/2023b``
 ``1.6`` | ``-Python-2.7.14`` | ``foss/2017b``
 ``1.6`` | ``-Python-3.6.3`` | ``foss/2017b``
 ``1.6`` | ``-Python-2.7.14`` | ``intel/2017b``

@@ -63,6 +63,8 @@ version | versionsuffix | toolchain
 ``3.22.1`` |  | ``iimkl/2023a``
 ``3.22.1`` |  | ``intel/2021b``
 ``3.22.1`` |  | ``intel/2022a``
+``3.23.0`` |  | ``gfbf/2023a``
+``3.23.0`` |  | ``iimkl/2023a``
 ``3.9.1.4567`` | ``-Python-2.7.11`` | ``intel/2016a``
 
 
