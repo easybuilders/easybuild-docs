@@ -41,6 +41,7 @@ bugfix/update release
     - handle post-install patches in check_checksums_for ([#4605](https://github.com/easybuilders/easybuild-framework/pull/4605))
     - fix `copy_file` with a folder as the target ([#4609](https://github.com/easybuilders/easybuild-framework/pull/4609))
     - allow for case where `homepage = None` when generating the docs ([#4626](https://github.com/easybuilders/easybuild-framework/pull/4626))
+    - fix `test_github_det_commit_status` by using more recent commits ([#4636](https://github.com/easybuilders/easybuild-framework/pull/4636))
 - other changes:
     - clean up code that was only there to support Python 2.6 + avoid syntax warnings when parsing py2vs3/py.p2 with Python 3.x ([#3788](https://github.com/easybuilders/easybuild-framework/pull/3788))
     - use Intel's oneAPI Fortran compiler by default for version 2024.0.0 and newer (`oneapi_fortran` toolchain option set to `True`) ([#4567](https://github.com/easybuilders/easybuild-framework/pull/4567))
