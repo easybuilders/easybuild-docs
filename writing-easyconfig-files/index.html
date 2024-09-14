@@ -1568,6 +1568,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../patch-files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patch files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../unit-tests/" class="md-nav__link">
         
   
@@ -1593,7 +1614,7 @@
         
   
   <span class="md-ellipsis">
-    Framework Overview
+    Framework overview
   </span>
   
 
@@ -4248,6 +4269,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../api/easybuild/toolchains/gmpflf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gmpflf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../api/easybuild/toolchains/gmpich/" class="md-nav__link">
         
   
@@ -5263,7 +5305,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_5_80" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_5_81" >
         
           
           
@@ -5279,14 +5321,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_5_80" id="__nav_11_1_5_80_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11_1_5_81" id="__nav_11_1_5_81_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_5_80_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_5_80">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_5_81_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1_5_81">
             <span class="md-nav__icon md-icon"></span>
             linalg
           </label>
@@ -5587,7 +5629,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_5_81" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_5_82" >
         
           
           
@@ -5603,14 +5645,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_5_81" id="__nav_11_1_5_81_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11_1_5_82" id="__nav_11_1_5_82_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_5_81_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_5_81">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_5_82_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1_5_82">
             <span class="md-nav__icon md-icon"></span>
             mpi
           </label>
@@ -8757,7 +8799,7 @@ easyconfig parameters.</p>
 <li>patched locations relative to unpacked sources</li>
 </ul>
 </li>
-<li>see <a class="autorefs autorefs-internal" href="#common_easyconfig_param_sources_patches">Patches</a> for more information on <code>patches</code></li>
+<li>for more information on <code>patches</code>, see <a href="../patch-files/">separate page on patch files</a></li>
 <li>see <a class="autorefs autorefs-internal" href="#common_easyconfig_param_sources_checksums">Checksums</a> for more information on <code>checksums</code></li>
 <li><code>sources</code> is usually specified as a list of strings representing
     filenames for source files, but other formats are supported too, see
@@ -8786,57 +8828,7 @@ a string template <code>%(version)s</code> can be used, see also
 <a class="autorefs autorefs-internal" href="#easyconfig_param_templates">Dynamic values for easyconfig parameters</a>.</p>
 </div>
 <h4 id="common_easyconfig_param_sources_patches">Patches<a class="headerlink" href="#common_easyconfig_param_sources_patches" title="Permanent link">&para;</a></h4>
-<p>Patches can be provided via the <code>patches</code> easyconfig parameter (list). A
-patch can be defined as:</p>
-<ul>
-<li>a <code>string</code>,</li>
-<li>a <code>tuple</code> of 2 elements, or</li>
-<li>a <code>dict</code></li>
-</ul>
-<p>The most straight-forward use-case is <code>string</code>, which contains the name
-of the patch file (and must have <code>.patch</code> extension).</p>
-<p>A <code>tuple</code> adds the possibility to specify where patch should be applied.
-This is mostly needed if a patch file adds new files or it is generally
-not possible to determine the starting directory. The first element is
-the patch file and the second is either the patch level (as an integer)
-which is used in the patch command (<code>patch -p&lt;n&gt;</code>) or a directory
-relative to the unpacked source dir.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code>tuple</code> also has a special use case if the patch file has any other extension than <code>.patch</code>.
-In this case, the first tuple argument is a file which should be
-copied to the unpacked source dir and the second tuple argument is
-the target path, where the files should be copied to (relative to
-the unpacked source dir). See below for an example of this use case.</p>
-</div>
-<p>A <code>dict</code> adds the ability to pass the <code>patch</code> command additional
-arguments. For example, the <code>--binary</code> flag is needed to patch files
-with CRLF endings. The <code>dict</code> has a required <code>filename</code> key, with
-<code>level</code> and <code>opts</code> being optional ones.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Specifying only <code>filename</code> in <code>dict</code> is the same as using a plain <code>string</code> definition.
-Specifying <code>filename</code> and <code>level</code> is same as using a <code>tuple</code>
-definition.</p>
-</div>
-<p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="n">patches</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="c1"># a simple patch file</span>
-  <span class="s1">&#39;name-versions-fix.patch&#39;</span><span class="p">,</span>
-
-  <span class="c1"># when creating only new files by patch file, you need to specify the level:</span>
-  <span class="p">(</span><span class="s1">&#39;name-versions-fix.patch&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
-
-  <span class="c1"># apply the patch in a (sub-)subdirectory inside the source tree</span>
-  <span class="p">(</span><span class="s1">&#39;name-versions-fix.patch&#39;</span><span class="p">,</span> <span class="s1">&#39;src/subfolder&#39;</span><span class="p">),</span>
-
-  <span class="c1"># copy file to target_path folder</span>
-  <span class="p">(</span><span class="s1">&#39;Makefile&#39;</span><span class="p">,</span> <span class="s1">&#39;target_path&#39;</span><span class="p">),</span>
-
-  <span class="c1"># specify patch file and optionally level and opts for patch command</span>
-  <span class="p">{</span><span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;name-versions-fix.patch&#39;</span><span class="p">,</span> <span class="s1">&#39;level&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;opts&#39;</span><span class="p">:</span> <span class="s1">&#39;-l&#39;</span><span class="p">}</span>
-<span class="p">]</span>
-</code></pre></div>
+<p>See <a href="../patch-files/">separate page dedicated to creating and using patch files</a>.</p>
 <h4 id="common_easyconfig_param_sources_checksums">Checksums<a class="headerlink" href="#common_easyconfig_param_sources_checksums" title="Permanent link">&para;</a></h4>
 <p>Checksums for source files and patches can be provided via the
 <code>checksums</code> easyconfig parameter.</p>
@@ -9021,7 +9013,7 @@ the one derived from the file extension is not correct), or an altername
 filename that should be used to download the source file.</p>
 <p>This can be specified using a Python dictionary value in the <code>sources</code>
 easyconfig parameter.</p>
-<p>Since EasyBuild v3.3.0, three keys are supported:</p>
+<p>The following keys are supported:</p>
 <ul>
 <li><code>filename</code> (<em>mandatory</em>): filename of source file</li>
 <li><code>download_filename</code>: filename that should be used when downloading
@@ -9516,7 +9508,7 @@ especially if:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 17, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 2, 2024</span>
   </span>
 
     

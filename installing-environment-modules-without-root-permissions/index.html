@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installing_env_mod_c" class="md-skip">
+        <a href="#installing_env_mod" class="md-skip">
           Skip to content
         </a>
       
@@ -1229,6 +1229,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../patch-files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patch files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../unit-tests/" class="md-nav__link">
         
   
@@ -1254,7 +1275,7 @@
         
   
   <span class="md-ellipsis">
-    Framework Overview
+    Framework overview
   </span>
   
 
@@ -3909,6 +3930,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../api/easybuild/toolchains/gmpflf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gmpflf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../api/easybuild/toolchains/gmpich/" class="md-nav__link">
         
   
@@ -4924,7 +4966,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_5_80" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_5_81" >
         
           
           
@@ -4940,14 +4982,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_5_80" id="__nav_11_1_5_80_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11_1_5_81" id="__nav_11_1_5_81_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_5_80_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_5_80">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_5_81_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1_5_81">
             <span class="md-nav__icon md-icon"></span>
             linalg
           </label>
@@ -5248,7 +5290,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_5_81" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_5_82" >
         
           
           
@@ -5264,14 +5306,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_5_81" id="__nav_11_1_5_81_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11_1_5_82" id="__nav_11_1_5_82_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_5_81_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_5_81">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_5_82_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1_5_82">
             <span class="md-nav__icon md-icon"></span>
             mpi
           </label>
@@ -8373,26 +8415,23 @@
   
 
 
-<h1 id="installing_env_mod_c">Installing environment modules without root permissions<a class="headerlink" href="#installing_env_mod_c" title="Permanent link">&para;</a></h1>
-<p>This short guide will explain how to install the standard environment
-modules Tcl/C software package without root permissions on a Linux or
+<h1 id="installing_env_mod">Installing Environment Modules without root permissions<a class="headerlink" href="#installing_env_mod" title="Permanent link">&para;</a></h1>
+<p>This short guide will explain how to install the standard Environment
+Modules software package without root permissions on a Linux or
 Mac OS X system, together with Tcl on which it depends.</p>
 <h2 id="tcl">Tcl<a class="headerlink" href="#tcl" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>Go to <a href="https://www.tcl.tk">https://www.tcl.tk</a> and download the latest Tcl sources. At
-    the time of writing, the latest available Tcl version was 8.5.15,
+<p>Go to <a href="https://www.tcl-lang.org">https://www.tcl-lang.org</a> and download the latest Tcl sources. At
+    the time of writing, the latest available Tcl version was 8.6.14,
     which can be downloaded from
-    <a href="https://prdownloads.sourceforge.net/tcl/tcl8.5.15-src.tar.gz">here</a>.
-    The remainder of these commands will assume Tcl v8.5.15 is being
-    installed, you may need to adjust them accordingly. <strong>Note</strong>: Stick
-    to Tcl v8.5.x, don't consider using the more recent v8.6.x or
-    higher, since the environment modules package is not compatible with
-    those Tcl versions.</p>
+    <a href="https://prdownloads.sourceforge.net/tcl/tcl8.6.14-src.tar.gz">here</a>.
+    The remainder of these commands will assume Tcl v8.6.14 is being
+    installed, you may need to adjust them accordingly.</p>
 </li>
 <li>
 <p>Unpack the Tcl source tarball:</p>
-<div class="highlight"><pre><span></span><code>tar<span class="w"> </span>xfvz<span class="w"> </span>tcl8.5.15-src.tar.gz
+<div class="highlight"><pre><span></span><code>tar<span class="w"> </span>xfvz<span class="w"> </span>tcl8.6.14-src.tar.gz
 </code></pre></div>
 </li>
 <li>
@@ -8403,11 +8442,11 @@ Mac OS X system, together with Tcl on which it depends.</p>
 <li>
 <p>Go to the <code>unix</code> subdirectory of the unpacked Tcl directory, and run
     the <code>configure</code> script using the <code>--prefix</code> option:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>tcl8.5.15/unix
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>tcl8.6.14/unix
 ./configure<span class="w"> </span>--prefix<span class="o">=</span><span class="nv">$HOME</span>/.local/Tcl
 </code></pre></div>
-<p>If you're building Tcl and environment modules on Mac, you should
-run <code>configure</code> in the <code>tcl8.5.15/macosx</code> directory instead.</p>
+<p>If you're building Tcl and Environment Modules on Mac, you should
+run <code>configure</code> in the <code>tcl8.6.14/macosx</code> directory instead.</p>
 </li>
 <li>
 <p>Next, build Tcl using the <code>make</code> command. If the system you are
@@ -8425,35 +8464,34 @@ run <code>configure</code> in the <code>tcl8.5.15/macosx</code> directory instea
 </code></pre></div>
 </li>
 </ol>
-<p><strong>All done!</strong> Now you are ready to build the environment modules
+<p><strong>All done!</strong> Now you are ready to build the Environment Modules
 package, which requires Tcl.</p>
 <h2 id="environment-modules">Environment Modules<a class="headerlink" href="#environment-modules" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>Download the latest source tarball for the environment modules tools
+<p>Download the latest source tarball for the Environment Modules tools
     from <a href="https://modules.sourceforge.net">https://modules.sourceforge.net</a>. At the time of writing, the
-    latest available version is 3.2.10 which can be downloaded <a href="https://prdownloads.sourceforge.net/modules/modules-3.2.10.tar.gz">from
+    latest available version is 5.4.0 which can be downloaded <a href="https://prdownloads.sourceforge.net/modules/modules-5.4.0.tar.gz">from
     here</a>.</p>
 </li>
 <li>
 <p>Unpack the downloaded source tarball:</p>
-<div class="highlight"><pre><span></span><code>tar<span class="w"> </span>xfvz<span class="w"> </span>modules-3.2.10.tar.gz
+<div class="highlight"><pre><span></span><code>tar<span class="w"> </span>xfvz<span class="w"> </span>modules-5.4.0.tar.gz
 </code></pre></div>
 </li>
 <li>
 <p>Configure the build, again use <code>--prefix</code> to specify where to
-    install the environment modules tool in the end. If you needed to
+    install the Environment Modules tool in the end. If you needed to
     install Tcl by hand as outlined in the previous section, you'll also
     need to specify where it was installed using the <code>--with-tcl</code>
     option:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>modules-3.2.10
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>modules-5.4.0
 ./configure<span class="w"> </span>--prefix<span class="o">=</span><span class="nv">$HOME</span>/.local/environment-modules<span class="w"> </span>--with-tcl<span class="o">=</span><span class="nv">$HOME</span>/.local/Tcl/lib
 </code></pre></div>
 </li>
 <li>
-<p>Build with <code>make</code>, consider parallel build if your system is recent
-    enough:</p>
-<div class="highlight"><pre><span></span><code>make<span class="w"> </span>-j<span class="w"> </span><span class="m">4</span>
+<p>Build with <code>make</code>:</p>
+<div class="highlight"><pre><span></span><code>make
 </code></pre></div>
 </li>
 <li>
@@ -8464,14 +8502,14 @@ package, which requires Tcl.</p>
 </ol>
 <p>Alright, now just one more thing...</p>
 <h2 id="set-up-your-environment">Set up your environment<a class="headerlink" href="#set-up-your-environment" title="Permanent link">&para;</a></h2>
-<p>Because you've installed environment modules and Tcl in a non-default
+<p>Because you've installed Environment Modules and Tcl in a non-default
 location, you need to make sure your environment is setup up correctly
 to use them.</p>
 <p>To make a long story short, these are the commands you need to execute:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$HOME</span>/.local/environment-modules/Modules/3.2.10/bin:<span class="nv">$PATH</span>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$HOME</span>/.local/environment-modules/bin:<span class="nv">$PATH</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$HOME</span>/.local/Tcl/lib:<span class="nv">$LD_LIBRARY_PATH</span>
 <span class="c1"># adjust line below if you&#39;re using a shell other than bash, check with &#39;echo $SHELL&#39;</span>
-<span class="nb">source</span><span class="w"> </span><span class="nv">$HOME</span>/.local/environment-modules/Modules/3.2.10/init/bash
+<span class="nb">source</span><span class="w"> </span><span class="nv">$HOME</span>/.local/environment-modules/init/bash
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -8498,7 +8536,7 @@ be executed every time you log in.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 26, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 3, 2024</span>
   </span>
 
     

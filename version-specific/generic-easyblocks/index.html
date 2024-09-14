@@ -1229,6 +1229,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../patch-files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patch files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../unit-tests/" class="md-nav__link">
         
   
@@ -1254,7 +1275,7 @@
         
   
   <span class="md-ellipsis">
-    Framework Overview
+    Framework overview
   </span>
   
 
@@ -2337,6 +2358,15 @@
   <a href="#extra-easyconfig-parameters-specific-to-juliabundle-easyblock" class="md-nav__link">
     <span class="md-ellipsis">
       Extra easyconfig parameters specific to JuliaBundle easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-juliabundle-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in JuliaBundle easyblock
     </span>
   </a>
   
@@ -5307,6 +5337,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api/easybuild/toolchains/gmpflf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gmpflf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api/easybuild/toolchains/gmpich/" class="md-nav__link">
         
   
@@ -6322,7 +6373,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_5_80" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_5_81" >
         
           
           
@@ -6338,14 +6389,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_5_80" id="__nav_11_1_5_80_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11_1_5_81" id="__nav_11_1_5_81_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_5_80_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_5_80">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_5_81_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1_5_81">
             <span class="md-nav__icon md-icon"></span>
             linalg
           </label>
@@ -6646,7 +6697,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_5_81" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_5_82" >
         
           
           
@@ -6662,14 +6713,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_5_81" id="__nav_11_1_5_81_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11_1_5_82" id="__nav_11_1_5_82_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_5_81_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_5_81">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_5_82_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1_5_82">
             <span class="md-nav__icon md-icon"></span>
             mpi
           </label>
@@ -11840,7 +11891,7 @@ Just run the specified command for all sources, and copy specified files to the 
 </tbody>
 </table>
 <h2 id="juliabundle"><code>JuliaBundle</code><a class="headerlink" href="#juliabundle" title="Permanent link">&para;</a></h2>
-<p>(derives from <a href="#bundle"><code>Bundle</code></a>)</p>
+<p>(derives from <a href="#bundle"><code>Bundle</code></a>, <a href="#juliapackage"><code>JuliaPackage</code></a>)</p>
 <p>Bundle of JuliaPackages: install Julia packages as extensions in a bundle
 Defines custom sanity checks and module environment</p>
 <h3 id="extra-easyconfig-parameters-specific-to-juliabundle-easyblock">Extra easyconfig parameters specific to <code>JuliaBundle</code> easyblock<a class="headerlink" href="#extra-easyconfig-parameters-specific-to-juliabundle-easyblock" title="Permanent link">&para;</a></h3>
@@ -11900,9 +11951,28 @@ Defines custom sanity checks and module environment</p>
 </tr>
 </tbody>
 </table>
+<h3 id="customised-steps-in-juliabundle-easyblock">Customised steps in <code>JuliaBundle</code> easyblock<a class="headerlink" href="#customised-steps-in-juliabundle-easyblock" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>install_step</code> - Prepare installation environment and dd all dependencies to project environment.</li>
+</ul>
 <h2 id="juliapackage"><code>JuliaPackage</code><a class="headerlink" href="#juliapackage" title="Permanent link">&para;</a></h2>
 <p>(derives from <code>ExtensionEasyBlock</code>)</p>
 <p>Builds and installs Julia Packages.</p>
+<p>Julia environment setup during installation:
+- initialize new Julia environment in 'environments' subdir in installation directory
+- remove paths in user depot '~/.julia' from DEPOT_PATH and LOAD_PATH
+- put installation directory as top DEPOT_PATH, the target depot for installations with Pkg
+- put installation environment as top LOAD_PATH, needed to precompile installed packages
+- add Julia packages found in dependencies of the easyconfig to installation environment, needed
+for Pkg to be aware of those packages and not install them again
+- add newly installed Julia packages to installation environment (automatically done by Pkg)</p>
+<p>Julia environment setup on module load:
+User depot and its shared environment for this version of Julia are kept as top paths of DEPOT_PATH and
+LOAD_PATH respectively. This ensures that the user can keep using its own environment after loading
+JuliaPackage modules, installing additional software on its personal depot while still using packages
+provided by the module. Effectively, this translates to:
+- append installation directory to list of DEPOT_PATH, only really needed to load artifacts (JLL packages)
+- append installation Project.toml file to list of LOAD_PATH, needed to load packages with <code>using</code> command</p>
 <h3 id="extra-easyconfig-parameters-specific-to-juliapackage-easyblock">Extra easyconfig parameters specific to <code>JuliaPackage</code> easyblock<a class="headerlink" href="#extra-easyconfig-parameters-specific-to-juliapackage-easyblock" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -11934,7 +12004,7 @@ Defines custom sanity checks and module environment</p>
 <p><code>configure_step</code> - No separate configuration for JuliaPackage.</p>
 </li>
 <li>
-<p><code>install_step</code> - Install Julia package with Pkg</p>
+<p><code>install_step</code> - Prepare installation environment and install Julia package.</p>
 </li>
 </ul>
 <h2 id="makecp"><code>MakeCp</code><a class="headerlink" href="#makecp" title="Permanent link">&para;</a></h2>
@@ -12771,9 +12841,6 @@ Defines custom sanity checks and module environment</p>
 <h3 id="customised-steps-in-rubygem-easyblock">Customised steps in <code>RubyGem</code> easyblock<a class="headerlink" href="#customised-steps-in-rubygem-easyblock" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p><code>build_step</code> - No separate build procedure for Ruby Gems.</p>
-</li>
-<li>
 <p><code>configure_step</code> - No separate configuration for Ruby Gems.</p>
 </li>
 <li>
@@ -13607,7 +13674,7 @@ if an actual version is specified, it is checked against the derived version of 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 4, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 12, 2024</span>
   </span>
 
     

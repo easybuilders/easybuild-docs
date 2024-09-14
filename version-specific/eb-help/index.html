@@ -1229,6 +1229,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../patch-files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patch files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../unit-tests/" class="md-nav__link">
         
   
@@ -1254,7 +1275,7 @@
         
   
   <span class="md-ellipsis">
-    Framework Overview
+    Framework overview
   </span>
   
 
@@ -4104,6 +4125,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api/easybuild/toolchains/gmpflf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gmpflf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api/easybuild/toolchains/gmpich/" class="md-nav__link">
         
   
@@ -5119,7 +5161,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_5_80" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_5_81" >
         
           
           
@@ -5135,14 +5177,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_5_80" id="__nav_11_1_5_80_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11_1_5_81" id="__nav_11_1_5_81_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_5_80_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_5_80">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_5_81_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1_5_81">
             <span class="md-nav__icon md-icon"></span>
             linalg
           </label>
@@ -5443,7 +5485,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_5_81" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_5_82" >
         
           
           
@@ -5459,14 +5501,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_5_81" id="__nav_11_1_5_81_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11_1_5_82" id="__nav_11_1_5_82_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_5_81_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_5_81">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_5_82_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1_5_82">
             <span class="md-nav__icon md-icon"></span>
             mpi
           </label>
@@ -9117,7 +9159,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--dep-graph=depgraph.&lt;ext&gt;</code></td>
-<td>Create dependency graph</td>
+<td>Create dependency graph. Output format depends on <ext>, e.g. 'dot', 'png', 'pdf', 'gv'.</td>
 </tr>
 <tr>
 <td><code>--dump-env-script</code></td>
@@ -9378,6 +9420,10 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 <td>List of extra modules to load after setting up the build environment (type comma-separated list)</td>
 </tr>
 <tr>
+<td><code>--extra-source-urls=URL[|URL]</code></td>
+<td>Specify URLs to fetch sources from in addition to those in the easyconfig (type</td>
+</tr>
+<tr>
 <td><code>--fetch</code></td>
 <td>Allow downloading sources ignoring OS and modules tool dependencies, implies --stop=fetch, --ignore-osdeps and ignore modules tool (default: False)</td>
 </tr>
@@ -9430,8 +9476,8 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 <td>Comma separated list of toolchains that you want automatically hidden, (e.g. --hide-toolchains=GCCcore) (type comma-separated list)</td>
 </tr>
 <tr>
-<td><code>--http-header-fields-urlpat=[URLPAT::][HEADER:]FILE|FIELD</code></td>
-<td>Set extra HTTP header FIELDs when downloading files from URL PATterns. To not log sensitive values, specify a file containing newline separated FIELDs. e.g. "^https://www.example.com::/path/to/headers.txt" or "client[A-z0-9]*.example.com': ['Authorization: Basic token']".</td>
+<td><code>--http-header-fields-urlpat=[URLPAT::][HEADER:]FIELDVALUE|FILE</code></td>
+<td>Set extra HTTP header FIELD when downloading files from URL PATterns. Use FILE (to hide sensitive values) and newline separated FIELDs in the same format. e.g. "^https://www.example.com::path/to/headers.txt" or "client[A-z0-9]*.example.com:: Authorization: Basic token".</td>
 </tr>
 <tr>
 <td><code>--ignore-checksums</code></td>
@@ -9578,12 +9624,20 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 <td>Skip installation of extensions (default: False)</td>
 </tr>
 <tr>
+<td><code>--skip-sanity-check</code></td>
+<td>Skip running the sanity check step (e.g. testing for installed files or running basic commands) (default: False)</td>
+</tr>
+<tr>
 <td><code>-t, --skip-test-cases</code></td>
 <td>Skip running test cases (default: False)</td>
 </tr>
 <tr>
 <td><code>--skip-test-step</code></td>
 <td>Skip running the test step (e.g. unit tests) (default: False)</td>
+</tr>
+<tr>
+<td><code>--software-commit=SOFTWARE-COMMIT</code></td>
+<td>Git commit to use for the target software build (robot capabilities are automatically disabled)</td>
 </tr>
 <tr>
 <td><code>--sticky-bit</code></td>
@@ -9816,7 +9870,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 4, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 12, 2024</span>
   </span>
 
     
