@@ -43,6 +43,7 @@ version | versionsuffix | toolchain
 ``9.2.0.rc2`` |  | ``foss/2022a``
 ``9.2.2`` |  | ``foss/2022a``
 ``9.2.6`` |  | ``foss/2022b``
+``9.2.6`` |  | ``foss/2023a``
 ``9.3.0`` |  | ``foss/2023a``
 ``9.3.0`` |  | ``foss/2023b``
 

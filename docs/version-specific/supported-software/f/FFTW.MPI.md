@@ -10,6 +10,7 @@ FFTW is a C subroutine library for computing the discrete Fourier transform (DFT
 
 version | toolchain
 --------|----------
+``3.3.10`` | ``gmpich/2024.06``
 ``3.3.10`` | ``gompi/2022.05``
 ``3.3.10`` | ``gompi/2022.10``
 ``3.3.10`` | ``gompi/2022a``
@@ -18,6 +19,7 @@ version | toolchain
 ``3.3.10`` | ``gompi/2023a``
 ``3.3.10`` | ``gompi/2023b``
 ``3.3.10`` | ``gompi/2024.05``
+``3.3.10`` | ``gompi/2024a``
 ``3.3.10`` | ``nvompi/2022.07``
 
 

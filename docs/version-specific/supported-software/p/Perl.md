@@ -47,7 +47,6 @@ version | versionsuffix | toolchain
 ``5.30.2`` |  | ``GCCcore/9.3.0``
 ``5.32.0`` | ``-minimal`` | ``GCCcore/10.2.0``
 ``5.32.0`` |  | ``GCCcore/10.2.0``
-``5.32.1`` |  | ``FCC/4.5.0``
 ``5.32.1`` | ``-minimal`` | ``GCCcore/10.3.0``
 ``5.32.1`` |  | ``GCCcore/10.3.0``
 ``5.34.0`` | ``-minimal`` | ``GCCcore/11.2.0``

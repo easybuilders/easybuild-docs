@@ -13,6 +13,7 @@ version | versionsuffix | toolchain
 ``2.10.3`` |  | ``GCCcore/12.2.0``
 ``2.11.1`` |  | ``GCCcore/12.3.0``
 ``2.11.1`` |  | ``GCCcore/13.2.0``
+``2.12.0`` |  | ``GCC/13.3.0``
 ``2.2.4`` | ``-Python-3.6.4`` | ``foss/2018a``
 ``2.2.4`` | ``-Python-3.6.6`` | ``intel/2018b``
 ``2.4.3`` | ``-Python-3.7.4`` | ``GCCcore/8.3.0``

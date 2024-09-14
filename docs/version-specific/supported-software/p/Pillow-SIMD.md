@@ -10,6 +10,7 @@ Pillow is the 'friendly PIL fork' by Alex Clark and Contributors.  PIL is the Py
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``10.4.0`` |  | ``GCCcore/13.3.0``
 ``5.0.0`` | ``-Python-3.6.4`` | ``foss/2018a``
 ``5.0.0`` | ``-Python-3.6.4`` | ``intel/2018a``
 ``5.3.0.post0`` | ``-Python-3.6.6`` | ``foss/2018b``

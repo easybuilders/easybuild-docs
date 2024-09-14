@@ -369,13 +369,13 @@ Supported module tools:
 
 Additional notes:
 
-* Tcl(/C) environment-modules requires [Tcl](https://www.tcl.tk/) to be
+* Tcl(/C) environment-modules requires [Tcl](https://www.tcl-lang.org/) to be
   installed (with header files and development libraries)
 * Lmod requires [Lua](https://www.lua.org/) and a couple of non-standard Lua libraries
   (`lua-posix`, `lua-filesystem`) to be available
     * Tcl (`tclsh`) must also be available for Lmod to support module files in `Tcl` syntax
 * a guide to installing Tcl/C environment modules without having root
-  permissions is available at [Installing environment modules without root permissions][installing_env_mod_c].
+  permissions is available at [Installing environment modules without root permissions][installing_env_mod].
 * a guide to installing Lmod without having root permissions is available at
   [Installing Lmod without root permissions][installing_lmod].
 

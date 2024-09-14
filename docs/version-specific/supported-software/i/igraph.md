@@ -11,6 +11,7 @@ igraph is a collection of network analysis tools with the emphasis on efficiency
 version | toolchain
 --------|----------
 ``0.10.10`` | ``foss/2023a``
+``0.10.12`` | ``foss/2023b``
 ``0.10.3`` | ``foss/2022a``
 ``0.10.6`` | ``foss/2022b``
 ``0.7.1`` | ``foss/2018b``

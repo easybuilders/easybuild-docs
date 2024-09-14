@@ -10,6 +10,7 @@ Berkeley Yacc (byacc) is generally conceded to be the best yacc variant availabl
 
 version | toolchain
 --------|----------
+``2.0.20240109`` | ``GCCcore/13.3.0``
 ``20160324`` | ``intel/2016a``
 ``20160606`` | ``foss/2016b``
 ``20160606`` | ``intel/2016b``

@@ -10,6 +10,7 @@ Pysteps is an open-source and community-driven Python library for probabilistic 
 
 version | toolchain
 --------|----------
+``1.10.0`` | ``foss/2023a``
 ``1.7.1`` | ``foss/2022a``
 
 

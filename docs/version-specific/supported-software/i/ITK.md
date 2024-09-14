@@ -30,6 +30,7 @@ version | versionsuffix | toolchain
 ``5.2.1`` |  | ``foss/2021b``
 ``5.2.1`` |  | ``foss/2022a``
 ``5.2.1`` |  | ``fosscuda/2020b``
+``5.3.0`` |  | ``foss/2022b``
 ``5.3.0`` |  | ``foss/2023a``
 
 

@@ -11,6 +11,7 @@ Svist4get is a simple bioinformatics tool for visualization of  genomic signal t
 version | toolchain
 --------|----------
 ``1.3.1`` | ``foss/2020b``
+``1.3.1`` | ``foss/2022b``
 ``1.3.1`` | ``foss/2023a``
 
 

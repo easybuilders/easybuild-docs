@@ -16,6 +16,7 @@ version | versionsuffix | toolchain
 ``4.11.1`` |  | ``GCCcore/12.2.0``
 ``4.12.2`` |  | ``GCCcore/12.3.0``
 ``4.12.2`` |  | ``GCCcore/13.2.0``
+``4.12.3`` |  | ``GCCcore/13.3.0``
 ``4.6.0`` | ``-Python-3.6.3`` | ``intel/2017b``
 ``4.6.3`` | ``-Python-3.6.4`` | ``intel/2018a``
 ``4.7.1`` | ``-Python-3.6.6`` | ``intel/2018b``

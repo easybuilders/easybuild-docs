@@ -48,6 +48,7 @@ version | versionsuffix | toolchain
 ``2.1.0`` |  | ``gompic/2020b``
 ``2.1.0`` | ``-bf`` | ``iimpi/2020b``
 ``2.2`` | ``-amd`` | ``gompi/2020a``
+``2.2.0`` | ``-fb`` | ``gmpich/2024.06``
 ``2.2.0`` | ``-fb`` | ``gompi/2022.05``
 ``2.2.0`` | ``-fb`` | ``gompi/2022.10``
 ``2.2.0`` | ``-fb`` | ``gompi/2022a``
@@ -56,6 +57,7 @@ version | versionsuffix | toolchain
 ``2.2.0`` | ``-fb`` | ``gompi/2023a``
 ``2.2.0`` | ``-fb`` | ``gompi/2023b``
 ``2.2.0`` | ``-fb`` | ``gompi/2024.05``
+``2.2.0`` | ``-fb`` | ``gompi/2024a``
 ``2.2.0`` | ``-fb`` | ``nvompi/2022.07``
 
 

@@ -172,7 +172,7 @@
       - EB_Tkinter
     - EB_QScintilla
     - EB_Qt
-    - EB_QuantumESPRESSO
+    - EB_QuantumESPRESSOconfig
     - EB_R
     - EB_Ruby
     - EB_Rust
@@ -232,6 +232,7 @@
   - EB_OpenIFS
   - EB_PALM
   - EB_ParMETIS
+  - EB_QuantumESPRESSO
   - EB_Rosetta
   - EB_SAS
   - EB_SCOTCH
@@ -250,6 +251,7 @@
       - CargoPythonPackage
     - EB_Scipion
     - JuliaPackage
+      - JuliaBundle
     - OCamlPackage
     - OctavePackage
     - PerlModule
@@ -369,6 +371,7 @@
       - CargoPythonPackage
     - EB_Scipion
     - JuliaPackage
+      - JuliaBundle
     - OCamlPackage
     - OctavePackage
     - PerlModule

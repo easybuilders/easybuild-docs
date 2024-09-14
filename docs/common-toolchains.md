@@ -61,9 +61,8 @@ graph LR
 
 Note: following notes apply for the generations listed and those older than it:
 
-- `2022a` - `iimkl` not present yet
-- `2021b` - `gfbf` not present yet
-- `2020b` - `foss` uses OpenBLAS instead of FlexiBLAS, `iccifort` is used instead of `intel-compilers`
+- <= `2021b` - `gfbf` not present yet
+- <= `2020b` - `foss` uses OpenBLAS instead of FlexiBLAS, `iccifort` is used instead of `intel-compilers`
 
 
 Keep in mind that when creating an Easyconfig, you need to look at what toolchain "level" (e.g. `foss` vs `GCC`) your
@@ -180,6 +179,7 @@ most recent revision of the common toolchains at that time.
 | `2022b` | Dec '22  | 2.39       | 12.2.0 | 4.1.4      | 3.2.1       | 0.3.21     | (incl. with FlexiBLAS) | 2.2.0       | 3.3.10 |
 | `2023a` | Jun '23  | 2.40       | 12.3.0 | 4.1.5      | 3.3.1       | 0.3.23     | (incl. with FlexiBLAS) | 2.2.0       | 3.3.10 |
 | `2023b` | Dec '23  | 2.40       | 13.2.0 | 4.1.6      | 3.3.1       | 0.3.24     | (incl. with FlexiBLAS) | 2.2.0       | 3.3.10 |
+| `2024a` | Aug '24  | 2.42       | 13.3.0 | 5.0.3      | 3.4.4       | 0.3.27     | (incl. with FlexiBLAS) | 2.2.0       | 3.3.10 |
 
 ### Component versions in `intel` toolchain {: #common_toolchains_overview_intel }
 
@@ -191,6 +191,7 @@ most recent revision of the common toolchains at that time.
 | `2022b` | Dec '22  | 2.39       | 12.2.0 | 2022.2.1          | 2021.7.1    | 2022.2.1    |
 | `2023a` | Jun '23  | 2.40       | 12.3.0 | 2023.1.0          | 2021.9.1    | 2023.1.0    |
 | `2023b` | Dec '23  | 2.40       | 13.2.0 | 2023.2.1          | 2021.10.1   | 2023.2.0    |
+| `2024a` | Aug '24  | 2.42       | 13.3.0 | 2024.2.0          | 2021.13.0   | 2024.2.0    |
 
 ## Overview of common toolchains (deprecated versions) {: #common_toolchains_overview_deprecated }
 

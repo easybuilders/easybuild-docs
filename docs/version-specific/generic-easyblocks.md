@@ -857,7 +857,7 @@ easyconfig parameter|description                                                
 
 ## ``JuliaBundle``
 
-(derives from [``Bundle``](#bundle))
+(derives from [``Bundle``](#bundle), [``JuliaPackage``](#juliapackage))
 
 
 Bundle of JuliaPackages: install Julia packages as extensions in a bundle
@@ -878,11 +878,35 @@ easyconfig parameter           |description                                     
 ``sanity_check_all_components``|Enable sanity checks for all components                                    |``False``
 ``sanity_check_components``    |List of components for which to run sanity checks                          |``[]``
 
+### Customised steps in ``JuliaBundle`` easyblock
+
+* ``install_step`` - Prepare installation environment and dd all dependencies to project environment.
+
+
 ## ``JuliaPackage``
 
 (derives from ``ExtensionEasyBlock``)
 
+
 Builds and installs Julia Packages.
+
+Julia environment setup during installation:
+- initialize new Julia environment in 'environments' subdir in installation directory
+- remove paths in user depot '~/.julia' from DEPOT_PATH and LOAD_PATH
+- put installation directory as top DEPOT_PATH, the target depot for installations with Pkg
+- put installation environment as top LOAD_PATH, needed to precompile installed packages
+- add Julia packages found in dependencies of the easyconfig to installation environment, needed
+for Pkg to be aware of those packages and not install them again
+- add newly installed Julia packages to installation environment (automatically done by Pkg)
+
+Julia environment setup on module load:
+User depot and its shared environment for this version of Julia are kept as top paths of DEPOT_PATH and
+LOAD_PATH respectively. This ensures that the user can keep using its own environment after loading
+JuliaPackage modules, installing additional software on its personal depot while still using packages
+provided by the module. Effectively, this translates to:
+- append installation directory to list of DEPOT_PATH, only really needed to load artifacts (JLL packages)
+- append installation Project.toml file to list of LOAD_PATH, needed to load packages with `using` command
+
 
 ### Extra easyconfig parameters specific to ``JuliaPackage`` easyblock
 
@@ -897,7 +921,7 @@ easyconfig parameter |description                                               
 
 * ``configure_step`` - No separate configuration for JuliaPackage.
 
-* ``install_step`` - Install Julia package with Pkg
+* ``install_step`` - Prepare installation environment and install Julia package.
 
 
 ## ``MakeCp``
@@ -1248,8 +1272,6 @@ easyconfig parameter|description                         |default value
 ``options``         |Dictionary with extension options.  |``{}``
 
 ### Customised steps in ``RubyGem`` easyblock
-
-* ``build_step`` - No separate build procedure for Ruby Gems.
 
 * ``configure_step`` - No separate configuration for Ruby Gems.
 

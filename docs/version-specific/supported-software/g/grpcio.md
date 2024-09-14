@@ -10,6 +10,7 @@ gRPC is a modern, open source, high-performance remote procedure call (RPC) fram
 
 version | toolchain
 --------|----------
+``1.57.0`` | ``GCCcore/12.2.0``
 ``1.57.0`` | ``GCCcore/12.3.0``
 
 

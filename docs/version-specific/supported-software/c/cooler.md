@@ -10,6 +10,7 @@ Cooler is a support library for a storage format, also called cooler, used to st
 
 version | toolchain
 --------|----------
+``0.10.2`` | ``foss/2023a``
 ``0.9.1`` | ``foss/2022a``
 
 

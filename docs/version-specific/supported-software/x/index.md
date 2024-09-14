@@ -55,6 +55,7 @@ search:
  * [XSD](XSD.md)
  * [XTandem](XTandem.md)
  * [xtb](xtb.md)
+ * [xtb-IFF](xtb-IFF.md)
  * [xtensor](xtensor.md)
  * [xtrans](xtrans.md)
  * [Xvfb](Xvfb.md)

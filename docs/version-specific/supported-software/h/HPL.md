@@ -77,7 +77,6 @@ version | versionsuffix | toolchain
 ``2.3`` |  | ``CrayCCE/19.06``
 ``2.3`` |  | ``CrayGNU/19.06``
 ``2.3`` |  | ``CrayIntel/19.06``
-``2.3`` |  | ``Fujitsu/21.05``
 ``2.3`` |  | ``foss/2019a``
 ``2.3`` |  | ``foss/2019b``
 ``2.3`` |  | ``foss/2020a``
@@ -92,8 +91,10 @@ version | versionsuffix | toolchain
 ``2.3`` |  | ``foss/2023a``
 ``2.3`` |  | ``foss/2023b``
 ``2.3`` |  | ``foss/2024.05``
+``2.3`` |  | ``foss/2024a``
 ``2.3`` |  | ``fosscuda/2019b``
 ``2.3`` |  | ``fosscuda/2020a``
+``2.3`` |  | ``gmpflf/2024.06``
 ``2.3`` |  | ``gobff/2020.06-amd``
 ``2.3`` |  | ``gobff/2020.11``
 ``2.3`` |  | ``gobff/2020b``
@@ -125,6 +126,7 @@ version | versionsuffix | toolchain
 ``2.3`` |  | ``intel/2023.07``
 ``2.3`` |  | ``intel/2023a``
 ``2.3`` |  | ``intel/2023b``
+``2.3`` |  | ``intel/2024a``
 ``2.3`` |  | ``intelcuda/2019b``
 ``2.3`` |  | ``intelcuda/2020a``
 ``2.3`` |  | ``iomkl/2019.01``

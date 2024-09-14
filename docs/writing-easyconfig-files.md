@@ -130,7 +130,7 @@ Remarks:
 - patches need to be EasyBuild-compatible
     - unified diff format (`diff -ruN`)
     - patched locations relative to unpacked sources
-- see [Patches][common_easyconfig_param_sources_patches] for more information on `patches`
+- for more information on `patches`, see [separate page on patch files](patch-files.md)
 - see [Checksums][common_easyconfig_param_sources_checksums] for more information on `checksums`
 - `sources` is usually specified as a list of strings representing
     filenames for source files, but other formats are supported too, see
@@ -162,60 +162,7 @@ checksums = ['ac7534163a09e21a5fa763e4e16dfc119bc84043f6e6a807aba666518f8df440']
 
 #### Patches {: #common_easyconfig_param_sources_patches }
 
-Patches can be provided via the `patches` easyconfig parameter (list). A
-patch can be defined as:
-
-- a `string`,
-- a `tuple` of 2 elements, or
-- a `dict`
-
-The most straight-forward use-case is `string`, which contains the name
-of the patch file (and must have `.patch` extension).
-
-A `tuple` adds the possibility to specify where patch should be applied.
-This is mostly needed if a patch file adds new files or it is generally
-not possible to determine the starting directory. The first element is
-the patch file and the second is either the patch level (as an integer)
-which is used in the patch command (`patch -p<n>`) or a directory
-relative to the unpacked source dir.
-
-!!! note
-    `tuple` also has a special use case if the patch file has any other extension than `.patch`.
-    In this case, the first tuple argument is a file which should be
-    copied to the unpacked source dir and the second tuple argument is
-    the target path, where the files should be copied to (relative to
-    the unpacked source dir). See below for an example of this use case.
-
-A `dict` adds the ability to pass the `patch` command additional
-arguments. For example, the `--binary` flag is needed to patch files
-with CRLF endings. The `dict` has a required `filename` key, with
-`level` and `opts` being optional ones.
-
-!!! note
-    Specifying only `filename` in `dict` is the same as using a plain `string` definition.
-    Specifying `filename` and `level` is same as using a `tuple`
-    definition.
-
-Example:
-
-``` python
-patches = [
-  # a simple patch file
-  'name-versions-fix.patch',
-
-  # when creating only new files by patch file, you need to specify the level:
-  ('name-versions-fix.patch', 1),
-
-  # apply the patch in a (sub-)subdirectory inside the source tree
-  ('name-versions-fix.patch', 'src/subfolder'),
-
-  # copy file to target_path folder
-  ('Makefile', 'target_path'),
-
-  # specify patch file and optionally level and opts for patch command
-  {'filename': 'name-versions-fix.patch', 'level': 1, 'opts': '-l'}
-]
-```
+See [separate page dedicated to creating and using patch files](patch-files.md).
 
 #### Checksums {: #common_easyconfig_param_sources_checksums }
 
@@ -443,7 +390,7 @@ filename that should be used to download the source file.
 This can be specified using a Python dictionary value in the `sources`
 easyconfig parameter.
 
-Since EasyBuild v3.3.0, three keys are supported:
+The following keys are supported:
 
 - `filename` (*mandatory*): filename of source file
 - `download_filename`: filename that should be used when downloading

@@ -6,7 +6,7 @@ search:
 
 HDF (also known as HDF4) is a library and multi-object file format for storing and managing data  between machines.
 
-*homepage*: <http://www.hdfgroup.org/products/hdf4/>
+*homepage*: <http://support.hdfgroup.org/products/hdf4/>
 
 version | versionsuffix | toolchain
 --------|---------------|----------

@@ -55,6 +55,7 @@ version | versionsuffix | toolchain
 ``2023.11`` |  | ``system``
 ``2023a`` |  | ``system``
 ``2023b`` |  | ``system``
+``2024a`` |  | ``system``
 ``8.1.5`` | ``-GCC-4.9.3-2.25`` | ``system``
 ``system`` | ``-GCC-system-2.29`` | ``system``
 

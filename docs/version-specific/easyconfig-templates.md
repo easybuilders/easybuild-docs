@@ -62,17 +62,19 @@ Template name     |Template value
 
 ## Template values which are defined dynamically
 
-Template name                    |Template value
----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-``%(arch)s``                     |System architecture (e.g. x86_64, aarch64, ppc64le, ...)
-``%(sysroot)s``                  |Location root directory of system, prefix for standard paths like /usr/lib and /usr/includeas specify by the --sysroot configuration option
-``%(mpi_cmd_prefix)s``           |Prefix command for running MPI programs (with default number of ranks)
-``%(cuda_compute_capabilities)s``|Comma-separated list of CUDA compute capabilities, as specified via --cuda-compute-capabilities configuration option or via cuda_compute_capabilities easyconfig parameter
-``%(cuda_cc_cmake)s``            |List of CUDA compute capabilities suitable for use with $CUDAARCHS in CMake 3.18+
-``%(cuda_cc_space_sep)s``        |Space-separated list of CUDA compute capabilities
-``%(cuda_cc_semicolon_sep)s``    |Semicolon-separated list of CUDA compute capabilities
-``%(cuda_sm_comma_sep)s``        |Comma-separated list of sm_* values that correspond with CUDA compute capabilities
-``%(cuda_sm_space_sep)s``        |Space-separated list of sm_* values that correspond with CUDA compute capabilities
+Template name                      |Template value
+-----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+``%(arch)s``                       |System architecture (e.g. x86_64, aarch64, ppc64le, ...)
+``%(cuda_compute_capabilities)s``  |Comma-separated list of CUDA compute capabilities, as specified via --cuda-compute-capabilities configuration option or via cuda_compute_capabilities easyconfig parameter
+``%(cuda_cc_cmake)s``              |List of CUDA compute capabilities suitable for use with $CUDAARCHS in CMake 3.18+
+``%(cuda_cc_space_sep)s``          |Space-separated list of CUDA compute capabilities
+``%(cuda_cc_space_sep_no_period)s``|Space-separated list of CUDA compute capabilities, without periods (e.g. '80 90').
+``%(cuda_cc_semicolon_sep)s``      |Semicolon-separated list of CUDA compute capabilities
+``%(cuda_sm_comma_sep)s``          |Comma-separated list of sm_* values that correspond with CUDA compute capabilities
+``%(cuda_sm_space_sep)s``          |Space-separated list of sm_* values that correspond with CUDA compute capabilities
+``%(mpi_cmd_prefix)s``             |Prefix command for running MPI programs (with default number of ranks)
+``%(software_commit)s``            |Git commit id to use for the software as specified by --software-commit command line option
+``%(sysroot)s``                    |Location root directory of system, prefix for standard paths like /usr/lib and /usr/includeas specified by the --sysroot configuration option
 
 ## Template constants that can be used in easyconfigs
 
@@ -88,7 +90,8 @@ Constant                |Template value                                         
 ``GITHUB_RELEASE``      |GitHub release URL (if github_account easyconfig parameter is not specified, namelower is used in its place)                    |``https://github.com/%(github_account)s/%(name)s/releases/download/v%(version)s``
 ``GITHUB_LOWER_RELEASE``|GitHub release URL with lowercase name (if github_account easyconfig parameter is not specified, namelower is used in its place)|``https://github.com/%(github_account)s/%(namelower)s/releases/download/v%(version)s``
 ``GNU_SAVANNAH_SOURCE`` |download.savannah.gnu.org source url                                                                                            |``https://download-mirror.savannah.gnu.org/releases/%(namelower)s``
-``GNU_SOURCE``          |gnu.org source url                                                                                                              |``https://ftpmirror.gnu.org/gnu/%(namelower)s``
+``GNU_SOURCE``          |gnu.org source url (ftp mirror)                                                                                                 |``https://ftpmirror.gnu.org/gnu/%(namelower)s``
+``GNU_FTP_SOURCE``      |gnu.org source url (main ftp)                                                                                                   |``https://ftp.gnu.org/gnu/%(namelower)s``
 ``GOOGLECODE_SOURCE``   |googlecode.com source url                                                                                                       |``http://%(namelower)s.googlecode.com/files``
 ``LAUNCHPAD_SOURCE``    |launchpad.net source url                                                                                                        |``https://launchpad.net/%(namelower)s/%(version_major_minor)s.x/%(version)s/+download/``
 ``PYPI_SOURCE``         |pypi source url                                                                                                                 |``https://pypi.python.org/packages/source/%(nameletter)s/%(name)s``
