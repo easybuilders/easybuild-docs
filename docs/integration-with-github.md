@@ -16,9 +16,10 @@ are a couple of requirements:
 - **a GitHub user name**
     - only required for authenticated access to the GitHub API, which can
         help to avoid rate limitations
-    - *not* strictly necessary for read-only operations
-        - i.e. *not* required for [Using easyconfigs from pull requests][github_from_pr] and 
-        [Reviewing easyconfig pull requests][github_review_pr]
+    - *not* (strictly) necessary for read-only operations, including:
+        - [Using easyconfigs from pull requests (`--from-pr`)][github_from_pr];
+        - [Using easyconfigs from commits (`--from-commit`)][github_from_commit];
+        - [Reviewing easyconfig pull requests (`--review-pr`][github_review_pr];
     - see [Providing a GitHub username][github_user]
 - **a GitHub token** + `keyring` **Python package**
     - install via `pip install keyring` (for Python2: `pip install 'keyring<19.0'`)
@@ -29,6 +30,7 @@ are a couple of requirements:
       permissions
         - i.e. for [Uploading test reports][github_upload_test_report] and
           [Submitting pull requests][github_new_pr]
+    - *not* used for [Using easyconfig from commits][github_from_commit]
     - see [Installing a GitHub token][github_token]
 - `git` **command** / `GitPython` **Python package**
     - install via `pip install GitPython` (for Python2:
@@ -362,6 +364,35 @@ Dry run: printing build status of easyconfigs and dependencies
 Again, note that locally available easyconfigs that are required to
 resolve dependencies are being picked up as needed.
 
+## Using easyconfigs from a commit {: #github_from_commit }
+
+*(`--from-commit`, supported since EasyBuild v4.9.1)*
+
+Using `--from-commit`, you can let EasyBuild use easyconfig files that were added or modified in a specific Git commit.
+
+This is similar to using `--from-pr` (see [Using easyconfigs from pull requests][github_from_pr]), but it differs in two ways:
+
+- The GitHub API is *not* used to obtain the easyconfig files from a particular commit. This can be important since
+  it avoids hitting the [GitHub API rate limits](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api),
+  especially when no GitHub token is available;
+
+- The easyconfig files will be *exactly* those as they are in the specified commit,
+  as they can also be consulted [on GitHub](https://github.com/easybuilders/easybuild-easyconfigs/tree/c0ff3315c0ffeec0ff3315c0ffeec0ffeec0ff33/easybuild/easyconfigs)
+  (link points to a fictious commit SHA `c0ff3315c0ffeec0ff3315c0ffeec0ffeec0ff33`).
+  This is not the case with `--from-pr`, since then either the PR branch is merged with the target branch
+  (typically `develop`) before obtained the easyconfigs (for open PRs), or the  `develop` branch is used (for merged PRs).
+  This aspect can be important to ensure reproducibility.
+
+!!! note
+    The commit SHA passed to `--from-commit` must be a full commit SHA consisting of 40 characters,
+    not a 10-character shortered commit SHA as you often see in GitHub.
+
+Example usage:
+```shell
+# use easyconfig file for EasyBuild v4.9.3 which was contributed in https://github.com/easybuilders/easybuild-easyconfigs/pull/21412
+eb --from-commit 82206bb1c68d8d9ccd551b36efb0a0cc2251147c EasyBuild-4.9.3.eb
+```
+
 ## Using easyblocks from pull requests {: #github_include_easyblocks_from_pr }
 
 *(`--include-easyblocks-from-pr`, supported since EasyBuild v4.2.0)*
@@ -396,6 +427,16 @@ EasyBlock (easybuild.framework.easyblock)
 |   |   |-- EB_LAMMPS (easybuild.easyblocks.lammps @ /tmp/included-easyblocks-rD2HEQ/easybuild/easyblocks/lammps.py)
 ...
 ```
+
+## Using easyblocks from a commit {: #github_include_easyblocks_from_commit }
+
+*(`--include-easyblocks-from-commit`, supported since EasyBuild v4.9.1)*
+
+Using `--include-easyblocks-from-commit`, you can let EasyBuild use easyblocks exactly
+as they were in a particular commit.
+
+This differs from using `--include-easyblocks-from-pr` in the same way as using `--from-commit` differs from using
+`--from-commit`, see also [Using easyconfigs from a commit][github_from_commit].
 
 ## Uploading test reports {: #github_upload_test_report }
 
