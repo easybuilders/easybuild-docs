@@ -1349,9 +1349,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#github_from_commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using easyconfigs from a commit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#github_include_easyblocks_from_pr" class="md-nav__link">
     <span class="md-ellipsis">
       Using easyblocks from pull requests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github_include_easyblocks_from_commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using easyblocks from a commit
     </span>
   </a>
   
@@ -8764,9 +8782,10 @@ are a couple of requirements:</p>
 <li><strong>a GitHub user name</strong><ul>
 <li>only required for authenticated access to the GitHub API, which can
     help to avoid rate limitations</li>
-<li><em>not</em> strictly necessary for read-only operations<ul>
-<li>i.e. <em>not</em> required for <a class="autorefs autorefs-internal" href="#github_from_pr">Using easyconfigs from pull requests</a> and 
-<a class="autorefs autorefs-internal" href="#github_review_pr">Reviewing easyconfig pull requests</a></li>
+<li><em>not</em> (strictly) necessary for read-only operations, including:<ul>
+<li><a class="autorefs autorefs-internal" href="#github_from_pr">Using easyconfigs from pull requests (<code>--from-pr</code>)</a>;</li>
+<li><a class="autorefs autorefs-internal" href="#github_from_commit">Using easyconfigs from commits (<code>--from-commit</code>)</a>;</li>
+<li><a class="autorefs autorefs-internal" href="#github_review_pr">Reviewing easyconfig pull requests (<code>--review-pr</code></a>;</li>
 </ul>
 </li>
 <li>see <a class="autorefs autorefs-internal" href="#github_user">Providing a GitHub username</a></li>
@@ -8783,6 +8802,7 @@ are a couple of requirements:</p>
   <a class="autorefs autorefs-internal" href="#github_new_pr">Submitting pull requests</a></li>
 </ul>
 </li>
+<li><em>not</em> used for <a class="autorefs autorefs-internal" href="#github_from_commit">Using easyconfig from commits</a></li>
 <li>see <a class="autorefs autorefs-internal" href="#github_token">Installing a GitHub token</a></li>
 </ul>
 </li>
@@ -9072,6 +9092,34 @@ request for netCDF, WRF, ...:</p>
 </code></pre></div>
 <p>Again, note that locally available easyconfigs that are required to
 resolve dependencies are being picked up as needed.</p>
+<h2 id="github_from_commit">Using easyconfigs from a commit<a class="headerlink" href="#github_from_commit" title="Permanent link">&para;</a></h2>
+<p><em>(<code>--from-commit</code>, supported since EasyBuild v4.9.1)</em></p>
+<p>Using <code>--from-commit</code>, you can let EasyBuild use easyconfig files that were added or modified in a specific Git commit.</p>
+<p>This is similar to using <code>--from-pr</code> (see <a class="autorefs autorefs-internal" href="#github_from_pr">Using easyconfigs from pull requests</a>), but it differs in two ways:</p>
+<ul>
+<li>
+<p>The GitHub API is <em>not</em> used to obtain the easyconfig files from a particular commit. This can be important since
+  it avoids hitting the <a href="https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api">GitHub API rate limits</a>,
+  especially when no GitHub token is available;</p>
+</li>
+<li>
+<p>The easyconfig files will be <em>exactly</em> as they are in the specified commit
+  and they can also be consulted <a href="https://github.com/easybuilders/easybuild-easyconfigs/tree/c0ff3315c0ffeec0ff3315c0ffeec0ffeec0ff33/easybuild/easyconfigs">on GitHub</a>
+  (link points to a fictitious commit SHA <code>c0ff3315c0ffeec0ff3315c0ffeec0ffeec0ff33</code>).
+  This is not the case with <code>--from-pr</code>, since then either the PR branch is merged with the target branch
+  (typically <code>develop</code>) before obtained the easyconfigs (for open PRs), or the  <code>develop</code> branch is used (for merged PRs).
+  This aspect can be important to ensure reproducibility.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The commit SHA passed to <code>--from-commit</code> must be a full commit SHA consisting of 40 characters,
+not a the first part of a commit SHA as you often see in GitHub.</p>
+</div>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># use easyconfig file for EasyBuild v4.9.3 which was contributed in https://github.com/easybuilders/easybuild-easyconfigs/pull/21412</span>
+eb<span class="w"> </span>--from-commit<span class="w"> </span>82206bb1c68d8d9ccd551b36efb0a0cc2251147c<span class="w"> </span>EasyBuild-4.9.3.eb
+</code></pre></div>
 <h2 id="github_include_easyblocks_from_pr">Using easyblocks from pull requests<a class="headerlink" href="#github_include_easyblocks_from_pr" title="Permanent link">&para;</a></h2>
 <p><em>(<code>--include-easyblocks-from-pr</code>, supported since EasyBuild v4.2.0)</em></p>
 <p>Via the <code>--include-easyblocks-from-pr</code> command line option, easyblocks
@@ -9099,6 +9147,12 @@ together with the LAMMPS v7Aug2019 easyconfigs contributed via
 <span class="go">|   |   |-- EB_LAMMPS (easybuild.easyblocks.lammps @ /tmp/included-easyblocks-rD2HEQ/easybuild/easyblocks/lammps.py)</span>
 <span class="go">...</span>
 </code></pre></div>
+<h2 id="github_include_easyblocks_from_commit">Using easyblocks from a commit<a class="headerlink" href="#github_include_easyblocks_from_commit" title="Permanent link">&para;</a></h2>
+<p><em>(<code>--include-easyblocks-from-commit</code>, supported since EasyBuild v4.9.1)</em></p>
+<p>Using <code>--include-easyblocks-from-commit</code>, you can let EasyBuild use easyblocks exactly
+as they were in a particular commit.</p>
+<p>This differs from using <code>--include-easyblocks-from-pr</code> in the same way as using <code>--from-commit</code> differs from using
+<code>--from-commit</code>, see also <a class="autorefs autorefs-internal" href="#github_from_commit">Using easyconfigs from a commit</a>.</p>
 <h2 id="github_upload_test_report">Uploading test reports<a class="headerlink" href="#github_upload_test_report" title="Permanent link">&para;</a></h2>
 <p><em>(<code>--upload-test-report</code>, supported since EasyBuild v1.13.0)</em></p>
 <div class="admonition note">
@@ -9566,7 +9620,7 @@ is that the latter will show the full diff of the changes (equivalent to
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 1, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 15, 2024</span>
   </span>
 
     
