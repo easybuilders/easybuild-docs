@@ -376,18 +376,19 @@ This is similar to using `--from-pr` (see [Using easyconfigs from pull requests]
   it avoids hitting the [GitHub API rate limits](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api),
   especially when no GitHub token is available;
 
-- The easyconfig files will be *exactly* those as they are in the specified commit,
-  as they can also be consulted [on GitHub](https://github.com/easybuilders/easybuild-easyconfigs/tree/c0ff3315c0ffeec0ff3315c0ffeec0ffeec0ff33/easybuild/easyconfigs)
-  (link points to a fictious commit SHA `c0ff3315c0ffeec0ff3315c0ffeec0ffeec0ff33`).
+- The easyconfig files will be *exactly* as they are in the specified commit
+  and they can also be consulted [on GitHub](https://github.com/easybuilders/easybuild-easyconfigs/tree/c0ff3315c0ffeec0ff3315c0ffeec0ffeec0ff33/easybuild/easyconfigs)
+  (link points to a fictitious commit SHA `c0ff3315c0ffeec0ff3315c0ffeec0ffeec0ff33`).
   This is not the case with `--from-pr`, since then either the PR branch is merged with the target branch
   (typically `develop`) before obtained the easyconfigs (for open PRs), or the  `develop` branch is used (for merged PRs).
   This aspect can be important to ensure reproducibility.
 
 !!! note
     The commit SHA passed to `--from-commit` must be a full commit SHA consisting of 40 characters,
-    not a 10-character shortered commit SHA as you often see in GitHub.
+    not a the first part of a commit SHA as you often see in GitHub.
 
 Example usage:
+
 ```shell
 # use easyconfig file for EasyBuild v4.9.3 which was contributed in https://github.com/easybuilders/easybuild-easyconfigs/pull/21412
 eb --from-commit 82206bb1c68d8d9ccd551b36efb0a0cc2251147c EasyBuild-4.9.3.eb
