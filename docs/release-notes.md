@@ -31,7 +31,7 @@ bugfix/update release
     - add support for `--software-commit` and an associated template `%(software_commit)s` ([#4628](https://github.com/easybuilders/easybuild-framework/pull/4628))
 - various bug fixes, including:
     - correctly evaluate result for `--dep-graph` ([#4554](https://github.com/easybuilders/easybuild-framework/pull/4554))
-    - fix fetch progress bar showing to many files ([#4568](https://github.com/easybuilders/easybuild-framework/pull/4568))
+    - fix fetch progress bar showing too many files ([#4568](https://github.com/easybuilders/easybuild-framework/pull/4568))
     - resolve internal for imkl>=2021 version subdir via "latest" symlink ([#4570](https://github.com/easybuilders/easybuild-framework/pull/4570))
     - fix typo in message about including an easyblock from a commit ([#4575](https://github.com/easybuilders/easybuild-framework/pull/4575))
     - don't use special flags for `strict`, `precise`, `loose`, `veryloose` toolchain options on RISC-V ([#4576](https://github.com/easybuilders/easybuild-framework/pull/4576))
