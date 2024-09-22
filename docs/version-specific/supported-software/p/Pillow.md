@@ -12,6 +12,7 @@ version | versionsuffix | toolchain
 --------|---------------|----------
 ``10.0.0`` |  | ``GCCcore/12.3.0``
 ``10.2.0`` |  | ``GCCcore/13.2.0``
+``10.4.0`` |  | ``GCCcore/13.3.0``
 ``3.2.0`` | ``-Python-2.7.11-freetype-2.6.3`` | ``foss/2016a``
 ``3.2.0`` | ``-Python-2.7.11-freetype-2.6.3`` | ``intel/2016a``
 ``3.2.0`` | ``-Python-2.7.11`` | ``intel/2016a``

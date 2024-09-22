@@ -14,6 +14,7 @@ version | versionsuffix | toolchain
 ``2.11.0`` |  | ``gompi/2020b``
 ``2.13.0`` |  | ``gompi/2022a``
 ``2.14.0`` |  | ``gompi/2021a``
+``2.14.1`` |  | ``gompi/2023a``
 ``2.2.28`` | ``-Python-2.7.11`` | ``foss/2016a``
 ``2.9.0`` |  | ``gompi/2019b``
 

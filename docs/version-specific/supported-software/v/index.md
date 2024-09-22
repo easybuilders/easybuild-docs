@@ -36,6 +36,7 @@ search:
  * [VEP](VEP.md)
  * [verifyBamID](verifyBamID.md)
  * [VERSE](VERSE.md)
+ * [versioningit](versioningit.md)
  * [VESTA](VESTA.md)
  * [ViennaRNA](ViennaRNA.md)
  * [vigra](vigra.md)

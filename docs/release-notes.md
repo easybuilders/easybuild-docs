@@ -6,10 +6,62 @@ search:
 # EasyBuild release notes {: #release_notes }
 
 The latest version of EasyBuild provides support for building and
-installing [**3,656** different software packages](version-specific/supported-software/index.md),
+installing [**3,670** different software packages](version-specific/supported-software/index.md),
 including 41 different (compiler) toolchains.
 It contains 259 software-specific easyblocks and 43 generic easyblocks,
-alongside 20,561 easyconfig files.
+alongside 20,670 easyconfig files.
+
+
+## EasyBuild v4.9.4 (22 Sept 2024) {: #release_notes_eb494 }
+
+bugfix/update release
+
+**framework**
+
+- various enhancements, including:
+  - set `$LMOD_TERSE_DECORATIONS` to '`no`' to avoid additional info in output produced by '`ml --terse avail`' ([#4648](https://github.com/easybuilders/easybuild-framework/pull/4648))
+- various bug fixes, including:
+  - implement workaround for permission error when copying read-only files that have extended attributes set and using Python 3.6 ([#4642](https://github.com/easybuilders/easybuild-framework/pull/4642))
+  - take into account alternate sysroot for `/bin/bash` used by `run_cmd` ([#4646](https://github.com/easybuilders/easybuild-framework/pull/4646))
+
+**easyblocks**
+
+- various enhancements, including:
+  - allow Python bundles and packages to specify a maximum Python version for the system toolchain ([#3431](https://github.com/easybuilders/easybuild-easyblocks/pull/3431))
+  - copy `EasyConfig` instance in constructor of `Bundle` and `Cargo` easyblocks before making changes to it ([#3448](https://github.com/easybuilders/easybuild-easyblocks/pull/3448))
+  - fix crash in GCC easyblock when `cuda-compute-capabilities` EasyBuild configuration option is not set ([#3449](https://github.com/easybuilders/easybuild-easyblocks/pull/3449))
+- various bug fixes, including:
+  - ignore Python from virtualenvs in GROMACS configure via `-DPython3_FIND_VIRTUALENV=STANDARD` ([#3283](https://github.com/easybuilders/easybuild-easyblocks/pull/3283))
+  - enhance custom easyblock for NCCL: add licence to NCCL installation ([#3451](https://github.com/easybuilders/easybuild-easyblocks/pull/3451))
+
+**easyconfigs**
+
+- added example easyconfig files for 14 new software packages:
+  - Biotite ([#21026](https://github.com/easybuilders/easybuild-easyconfigs/pull/21026)), chopper ([#21418](https://github.com/easybuilders/easybuild-easyconfigs/pull/21418)), CLUMPP ([#21329](https://github.com/easybuilders/easybuild-easyconfigs/pull/21329)), cramino ([#21382](https://github.com/easybuilders/easybuild-easyconfigs/pull/21382)), dub ([#21378](https://github.com/easybuilders/easybuild-easyconfigs/pull/21378)), ESM3 ([#21026](https://github.com/easybuilders/easybuild-easyconfigs/pull/21026)), GOMC ([#21008](https://github.com/easybuilders/easybuild-easyconfigs/pull/21008)),
+    MOKIT ([#21352](https://github.com/easybuilders/easybuild-easyconfigs/pull/21352)), nanoQC ([#21371](https://github.com/easybuilders/easybuild-easyconfigs/pull/21371)), phasius ([#21389](https://github.com/easybuilders/easybuild-easyconfigs/pull/21389)), PyBullet ([#21356](https://github.com/easybuilders/easybuild-easyconfigs/pull/21356)), rnamotif ([#21336](https://github.com/easybuilders/easybuild-easyconfigs/pull/21336)), versioningit ([#21424](https://github.com/easybuilders/easybuild-easyconfigs/pull/21424)),
+    xskillscore ([#21351](https://github.com/easybuilders/easybuild-easyconfigs/pull/21351))
+- added additional easyconfigs for various supported software packages, including:
+  - awscli 2.17.54, BiG-SCAPE-1.1.9, ccache 4.10.2, CLHEP 2.4.7.1, CREST 3.0.2, decona 1.4-2024073, dftd4 3.7.0,
+    GATE 9.4, Gdk-Pixbuf 2.42.11, Geant4 11.2.2, Geant4-data 11.2, Ghostscript 10.03.1, GitPython 3.1.43,
+    GObject-Introspection 1.80.1, HarfBuzz 9.0.0, ImageMagick 7.1.1-38, JasPer 4.2.4, joypy 0.2.6, Julia 1.10.4,
+    LDC 1.39.0, Leptonica 1.84.1, Markdown 3.7, MPICH 4.2.2, NanoComp 1.24.0, nanoget 1.19.3, nanomath 1.4.0,
+    NanoPlot 1.43.0, Pango 1.54.0, PCAngsd 1.2, Pillow 10.4.0, python-isal 1.7.0, pocl 6.0, PROJ 9.4.1, protobuf 28.0,
+    protobuf-python 5.28.0, R-tesseract 5.2.1, RepeatMasker 4.1.7-p1, RHEIA 1.1.11, RMBlast 2.14.1,
+    scikit-build-core 0.10.6, sleuth 0.30.1, SNAP-ESA 10.0.0, tesseract 5.3.4, Triton 2.1.0, TurboVNC 3.1.2,
+    VirtualGL 3.1.1, zlib-ng 2.2.1
+- minor enhancements, including:
+  - enable support for Apache ORC to Arrow v14.0.1 and v16.1.0 ([#21056](https://github.com/easybuilders/easybuild-easyconfigs/pull/21056))
+  - use proper dependency for tensorboard in easyconfigs for TensorFlow v2.15.1 ([#21337](https://github.com/easybuilders/easybuild-easyconfigs/pull/21337))
+- various bug fixes, including:
+  - account for crates for easyconfigs using Cargo-based easyblock when determining checksums for patches in easyconfigs test suite ([#21419](https://github.com/easybuilders/easybuild-easyconfigs/pull/21419))
+  - avoid missing symbol in `mclust` extension of R-4.0.3 w/ foss/2020b ([#21429](https://github.com/easybuilders/easybuild-easyconfigs/pull/21429))
+  - fix build of librosa 0.10.1 in some environments by removing "python -m build" for soxr extension ([#21434](https://github.com/easybuilders/easybuild-easyconfigs/pull/21434))
+  - fix repeated sanity check runs in manta easyconfigs ([#21435](https://github.com/easybuilders/easybuild-easyconfigs/pull/21435))
+  - fix `test_easyconfig_locations` when easyconfigs index is present ([#21394](https://github.com/easybuilders/easybuild-easyconfigs/pull/21394))
+  - use proper dependency for libnsl in git-annex ([#21441](https://github.com/easybuilders/easybuild-easyconfigs/pull/21441))
+  - avoid writing into `~/.stack` directory during build for git-annex ([#21452](https://github.com/easybuilders/easybuild-easyconfigs/pull/21452))
+- other changes:
+  - remove `exts_default_options` from TensorFlow 2.3.1 ([#21290](https://github.com/easybuilders/easybuild-easyconfigs/pull/21290))
 
 
 ## EasyBuild v4.9.3 (14 Sept 2024) {: #release_notes_eb493 }

@@ -126,6 +126,7 @@ search:
  * [dtcmp](dtcmp.md)
  * [dtcwt](dtcwt.md)
  * [DualSPHysics](DualSPHysics.md)
+ * [dub](dub.md)
  * [DUBStepR](DUBStepR.md)
  * [dune-core](dune-core.md)
  * [dune-fem](dune-fem.md)

@@ -173,6 +173,7 @@ search:
  * [Godon](Godon.md)
  * [gofasta](gofasta.md)
  * [golf](golf.md)
+ * [GOMC](GOMC.md)
  * [gomkl](gomkl.md)
  * [gompi](gompi.md)
  * [gompic](gompic.md)

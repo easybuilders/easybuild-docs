@@ -10,6 +10,7 @@ CAMPARI is a joint package for performing and analyzing molecular simulations, i
 
 version | toolchain
 --------|----------
+``4.0`` | ``foss/2023a``
 ``4.0`` | ``intel/2020b``
 ``4.0`` | ``intel/2023a``
 

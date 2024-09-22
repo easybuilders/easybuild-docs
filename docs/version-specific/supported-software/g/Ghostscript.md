@@ -13,6 +13,7 @@ version | versionsuffix | toolchain
 ``10.0.0`` |  | ``GCCcore/12.2.0``
 ``10.01.2`` |  | ``GCCcore/12.3.0``
 ``10.02.1`` |  | ``GCCcore/13.2.0``
+``10.03.1`` |  | ``GCCcore/13.3.0``
 ``9.19`` |  | ``intel/2016a``
 ``9.19`` |  | ``intel/2016b``
 ``9.20`` |  | ``foss/2016b``
