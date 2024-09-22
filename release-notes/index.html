@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.36">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.06209087.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -1784,6 +1784,15 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#release_notes_eb494" class="md-nav__link">
+    <span class="md-ellipsis">
+      EasyBuild v4.9.4 (22 Sept 2024)
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#release_notes_eb493" class="md-nav__link">
@@ -9351,10 +9360,77 @@
 
 <h1 id="release_notes">EasyBuild release notes<a class="headerlink" href="#release_notes" title="Permanent link">&para;</a></h1>
 <p>The latest version of EasyBuild provides support for building and
-installing <a href="../version-specific/supported-software/"><strong>3,656</strong> different software packages</a>,
+installing <a href="../version-specific/supported-software/"><strong>3,670</strong> different software packages</a>,
 including 41 different (compiler) toolchains.
 It contains 259 software-specific easyblocks and 43 generic easyblocks,
-alongside 20,561 easyconfig files.</p>
+alongside 20,670 easyconfig files.</p>
+<h2 id="release_notes_eb494">EasyBuild v4.9.4 (22 Sept 2024)<a class="headerlink" href="#release_notes_eb494" title="Permanent link">&para;</a></h2>
+<p>bugfix/update release</p>
+<p><strong>framework</strong></p>
+<ul>
+<li>various enhancements, including:<ul>
+<li>set <code>$LMOD_TERSE_DECORATIONS</code> to '<code>no</code>' to avoid additional info in output produced by '<code>ml --terse avail</code>' (<a href="https://github.com/easybuilders/easybuild-framework/pull/4648">#4648</a>)</li>
+</ul>
+</li>
+<li>various bug fixes, including:<ul>
+<li>implement workaround for permission error when copying read-only files that have extended attributes set and using Python 3.6 (<a href="https://github.com/easybuilders/easybuild-framework/pull/4642">#4642</a>)</li>
+<li>take into account alternate sysroot for <code>/bin/bash</code> used by <code>run_cmd</code> (<a href="https://github.com/easybuilders/easybuild-framework/pull/4646">#4646</a>)</li>
+</ul>
+</li>
+</ul>
+<p><strong>easyblocks</strong></p>
+<ul>
+<li>various enhancements, including:<ul>
+<li>allow Python bundles and packages to specify a maximum Python version for the system toolchain (<a href="https://github.com/easybuilders/easybuild-easyblocks/pull/3431">#3431</a>)</li>
+<li>copy <code>EasyConfig</code> instance in constructor of <code>Bundle</code> and <code>Cargo</code> easyblocks before making changes to it (<a href="https://github.com/easybuilders/easybuild-easyblocks/pull/3448">#3448</a>)</li>
+<li>fix crash in GCC easyblock when <code>cuda-compute-capabilities</code> EasyBuild configuration option is not set (<a href="https://github.com/easybuilders/easybuild-easyblocks/pull/3449">#3449</a>)</li>
+</ul>
+</li>
+<li>various bug fixes, including:<ul>
+<li>ignore Python from virtualenvs in GROMACS configure via <code>-DPython3_FIND_VIRTUALENV=STANDARD</code> (<a href="https://github.com/easybuilders/easybuild-easyblocks/pull/3283">#3283</a>)</li>
+<li>enhance custom easyblock for NCCL: add licence to NCCL installation (<a href="https://github.com/easybuilders/easybuild-easyblocks/pull/3451">#3451</a>)</li>
+</ul>
+</li>
+</ul>
+<p><strong>easyconfigs</strong></p>
+<ul>
+<li>added example easyconfig files for 14 new software packages:<ul>
+<li>Biotite (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21026">#21026</a>), chopper (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21418">#21418</a>), CLUMPP (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21329">#21329</a>), cramino (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21382">#21382</a>), dub (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21378">#21378</a>), ESM3 (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21026">#21026</a>), GOMC (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21008">#21008</a>),
+MOKIT (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21352">#21352</a>), nanoQC (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21371">#21371</a>), phasius (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21389">#21389</a>), PyBullet (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21356">#21356</a>), rnamotif (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21336">#21336</a>), versioningit (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21424">#21424</a>),
+xskillscore (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21351">#21351</a>)</li>
+</ul>
+</li>
+<li>added additional easyconfigs for various supported software packages, including:<ul>
+<li>awscli 2.17.54, BiG-SCAPE-1.1.9, ccache 4.10.2, CLHEP 2.4.7.1, CREST 3.0.2, decona 1.4-2024073, dftd4 3.7.0,
+GATE 9.4, Gdk-Pixbuf 2.42.11, Geant4 11.2.2, Geant4-data 11.2, Ghostscript 10.03.1, GitPython 3.1.43,
+GObject-Introspection 1.80.1, HarfBuzz 9.0.0, ImageMagick 7.1.1-38, JasPer 4.2.4, joypy 0.2.6, Julia 1.10.4,
+LDC 1.39.0, Leptonica 1.84.1, Markdown 3.7, MPICH 4.2.2, NanoComp 1.24.0, nanoget 1.19.3, nanomath 1.4.0,
+NanoPlot 1.43.0, Pango 1.54.0, PCAngsd 1.2, Pillow 10.4.0, python-isal 1.7.0, pocl 6.0, PROJ 9.4.1, protobuf 28.0,
+protobuf-python 5.28.0, R-tesseract 5.2.1, RepeatMasker 4.1.7-p1, RHEIA 1.1.11, RMBlast 2.14.1,
+scikit-build-core 0.10.6, sleuth 0.30.1, SNAP-ESA 10.0.0, tesseract 5.3.4, Triton 2.1.0, TurboVNC 3.1.2,
+VirtualGL 3.1.1, zlib-ng 2.2.1</li>
+</ul>
+</li>
+<li>minor enhancements, including:<ul>
+<li>enable support for Apache ORC to Arrow v14.0.1 and v16.1.0 (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21056">#21056</a>)</li>
+<li>use proper dependency for tensorboard in easyconfigs for TensorFlow v2.15.1 (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21337">#21337</a>)</li>
+</ul>
+</li>
+<li>various bug fixes, including:<ul>
+<li>account for crates for easyconfigs using Cargo-based easyblock when determining checksums for patches in easyconfigs test suite (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21419">#21419</a>)</li>
+<li>avoid missing symbol in <code>mclust</code> extension of R-4.0.3 w/ foss/2020b (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21429">#21429</a>)</li>
+<li>fix build of librosa 0.10.1 in some environments by removing "python -m build" for soxr extension (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21434">#21434</a>)</li>
+<li>fix repeated sanity check runs in manta easyconfigs (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21435">#21435</a>)</li>
+<li>fix <code>test_easyconfig_locations</code> when easyconfigs index is present (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21394">#21394</a>)</li>
+<li>use proper dependency for libnsl in git-annex (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21441">#21441</a>)</li>
+<li>avoid writing into <code>~/.stack</code> directory during build for git-annex (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21452">#21452</a>)</li>
+</ul>
+</li>
+<li>other changes:<ul>
+<li>remove <code>exts_default_options</code> from TensorFlow 2.3.1 (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21290">#21290</a>)</li>
+</ul>
+</li>
+</ul>
 <h2 id="release_notes_eb493">EasyBuild v4.9.3 (14 Sept 2024)<a class="headerlink" href="#release_notes_eb493" title="Permanent link">&para;</a></h2>
 <p>bugfix/update release</p>
 <p><strong>framework</strong></p>
@@ -36908,7 +36984,7 @@ with easybuild-framework)</em></p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 14, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 22, 2024</span>
   </span>
 
     
@@ -37000,7 +37076,7 @@ with easybuild-framework)</em></p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
