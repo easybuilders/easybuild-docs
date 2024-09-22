@@ -10,6 +10,7 @@ The Sentinel Application Platform (SNAP) is a common architecture for all Sentin
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``10.0.0`` | ``-Java-11`` | ``system``
 ``8.0`` | ``-Java-1.8`` | ``system``
 ``9.0.0`` | ``-Java-11`` | ``system``
 

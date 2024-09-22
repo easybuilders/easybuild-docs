@@ -15,6 +15,7 @@ version | versionsuffix | toolchain
 ``1.6.12`` |  | ``foss/2021b``
 ``1.6.13`` |  | ``iimpi/2021b``
 ``1.6.13`` |  | ``iimpi/2022b``
+``1.6.13`` |  | ``iimpi/2023a``
 ``1.6.4`` |  | ``intel/2016a``
 ``1.6.5`` |  | ``intel/2016a``
 ``1.6.6`` |  | ``intel/2016b``

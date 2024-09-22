@@ -27,6 +27,7 @@ search:
  * [NanoPlot](NanoPlot.md)
  * [nanopolish](nanopolish.md)
  * [NanopolishComp](NanopolishComp.md)
+ * [nanoQC](nanoQC.md)
  * [NanoStat](NanoStat.md)
  * [napari](napari.md)
  * [napari-denoiseg](napari-denoiseg.md)
