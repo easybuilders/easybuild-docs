@@ -93,6 +93,7 @@ search:
  * [BioPP](BioPP.md)
  * [Biopython](Biopython.md)
  * [BioServices](BioServices.md)
+ * [Biotite](Biotite.md)
  * [BirdNET](BirdNET.md)
  * [biscuit](biscuit.md)
  * [Bismark](Bismark.md)

@@ -15,6 +15,7 @@ version | versionsuffix | toolchain
 ``4.09.1`` |  | ``GCCcore/10.2.0``
 ``4.09.1`` |  | ``GCCcore/11.2.0``
 ``4.09.1`` |  | ``GCCcore/11.3.0``
+``4.09.1`` |  | ``GCCcore/12.3.0``
 ``4.09.1`` |  | ``GCCcore/9.3.0``
 
 

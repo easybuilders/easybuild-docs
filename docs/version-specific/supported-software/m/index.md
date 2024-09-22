@@ -202,6 +202,7 @@ search:
  * [MODFLOW](MODFLOW.md)
  * [modred](modred.md)
  * [MOFA2](MOFA2.md)
+ * [MOKIT](MOKIT.md)
  * [Molcas](Molcas.md)
  * [mold](mold.md)
  * [Molden](Molden.md)

@@ -22,6 +22,7 @@ version | versionsuffix | toolchain
 ``3.1.31`` |  | ``GCCcore/12.2.0``
 ``3.1.40`` |  | ``GCCcore/12.3.0``
 ``3.1.42`` |  | ``GCCcore/13.2.0``
+``3.1.43`` |  | ``GCCcore/13.3.0``
 ``3.1.9`` | ``-Python-3.8.2`` | ``GCCcore/9.3.0``
 
 

@@ -53,6 +53,7 @@ search:
  * [xprop](xprop.md)
  * [xproto](xproto.md)
  * [XSD](XSD.md)
+ * [xskillscore](xskillscore.md)
  * [XTandem](XTandem.md)
  * [xtb](xtb.md)
  * [xtb-IFF](xtb-IFF.md)
