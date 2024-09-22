@@ -27,12 +27,12 @@ bugfix/update release
 **easyblocks**
 
 - various enhancements, including:
+    - ignore Python from virtualenvs in GROMACS configure via `-DPython3_FIND_VIRTUALENV=STANDARD` ([#3283](https://github.com/easybuilders/easybuild-easyblocks/pull/3283))
+    - enhance custom easyblock for NCCL: add licence to NCCL installation ([#3451](https://github.com/easybuilders/easybuild-easyblocks/pull/3451))
+- various bug fixes, including:
     - allow Python bundles and packages to specify a maximum Python version for the system toolchain ([#3431](https://github.com/easybuilders/easybuild-easyblocks/pull/3431))
     - copy `EasyConfig` instance in constructor of `Bundle` and `Cargo` easyblocks before making changes to it ([#3448](https://github.com/easybuilders/easybuild-easyblocks/pull/3448))
     - fix crash in GCC easyblock when `cuda-compute-capabilities` EasyBuild configuration option is not set ([#3449](https://github.com/easybuilders/easybuild-easyblocks/pull/3449))
-- various bug fixes, including:
-    - ignore Python from virtualenvs in GROMACS configure via `-DPython3_FIND_VIRTUALENV=STANDARD` ([#3283](https://github.com/easybuilders/easybuild-easyblocks/pull/3283))
-    - enhance custom easyblock for NCCL: add licence to NCCL installation ([#3451](https://github.com/easybuilders/easybuild-easyblocks/pull/3451))
 
 **easyconfigs**
 
