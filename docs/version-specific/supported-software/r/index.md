@@ -116,6 +116,7 @@ search:
  * [RNAcode](RNAcode.md)
  * [RNAIndel](RNAIndel.md)
  * [RNAmmer](RNAmmer.md)
+ * [rnamotif](rnamotif.md)
  * [rnaQUAST](rnaQUAST.md)
  * [RNAz](RNAz.md)
  * [RnBeads](RnBeads.md)

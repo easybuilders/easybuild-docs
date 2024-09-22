@@ -16,6 +16,7 @@ version | versionsuffix | toolchain
 ``3.7.4.3`` | ``-Python-3.7.4`` | ``GCCcore/8.3.0``
 ``3.7.4.3`` | ``-Python-3.8.2`` | ``GCCcore/9.3.0``
 ``4.10.0`` |  | ``GCCcore/13.2.0``
+``4.11.0`` |  | ``GCCcore/13.3.0``
 ``4.3.0`` |  | ``GCCcore/11.3.0``
 ``4.4.0`` |  | ``GCCcore/10.3.0``
 ``4.9.0`` |  | ``GCCcore/12.2.0``

@@ -11,6 +11,7 @@ Datasets for Geant4.
 version | toolchain
 --------|----------
 ``11.1`` | ``system``
+``11.2`` | ``system``
 ``20201103`` | ``system``
 ``20210510`` | ``system``
 
