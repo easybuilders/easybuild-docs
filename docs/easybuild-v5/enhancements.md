@@ -29,7 +29,7 @@ status codes are reported in the corresponding logs.
 
 ## Reproducible tarballs { : #reproducible_tarballs}
 
-EasyBuild can now generate reproducible tarballs of sources downloaded from Git
+EasyBuild can now generate reproducible tarballs of sources cloned from Git
 repositories. This means that the contents of sources obtained by cloning Git
 repositories will be consistent across different systems and across time,
 allowing to reliably validate those sources with checksums. EasyBuild follows
