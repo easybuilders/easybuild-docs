@@ -30,11 +30,11 @@ status codes are reported in the corresponding logs.
 ## Reproducible tarballs { : #reproducible_tarballs}
 
 EasyBuild can now generate reproducible tarballs of sources cloned from Git
-repositories. This means that the contents of sources obtained by cloning Git
-repositories will be consistent across different systems and across time,
-allowing to reliably validate those sources with checksums. EasyBuild follows
-the [archival guidelines from reproducible-builds.org](https://reproducible-builds.org/docs/archives/) 
-to generate reproducible tarballs.
+repositories. This means that those sources using the `git_config` option will
+now have consistent contents across different systems and across time, allowing
+to reliably validate them with checksums. EasyBuild follows the
+[archival guidelines from reproducible-builds.org](https://reproducible-builds.org/docs/archives/) 
+to generate those reproducible tarballs.
 
 This new feature does not apply to sources cloned with `keep_git_dir` enabled.
 Including the `.git` folder in the sources is inherently time-dependent as it
