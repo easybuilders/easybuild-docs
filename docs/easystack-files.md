@@ -107,6 +107,20 @@ easyconfigs:
 
 This is not recommended however, as short options are more difficult to interpret by humans.
 
+If you use an option that can be set multiple times (namely `amend` and `try-amend`),
+you can supply the various values as a list under that option.
+For example, to set various site customization easyconfig parameters for a MATLAB without editing the easyconfig, one can use:
+
+``` yaml
+easyconfigs:
+  - MATLAB-2023a.eb:
+      options:
+        try-amend:
+          - license_server=hostname
+          - license_server_port=12345
+          - key=abc-123
+```
+
 
 ## Combining command line options with options in an easystack file {: #easystack_combining_options }
 
