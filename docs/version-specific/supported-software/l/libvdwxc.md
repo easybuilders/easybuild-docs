@@ -6,7 +6,7 @@ search:
 
 libvdwxc is a general library for evaluating energy and potential for exchange-correlation (XC) functionals from the vdW-DF family that can be used with various of density functional theory (DFT) codes.
 
-*homepage*: <http://libvdwxc.org>
+*homepage*: <https://libvdwxc.materialsmodeling.org/>
 
 version | toolchain
 --------|----------
