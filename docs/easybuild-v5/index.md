@@ -1,5 +1,7 @@
 # EasyBuild v5.0
 
+
+- [Beta releases and release candidates](release-candidates.md)
 - [Overview of changes](overview-of-changes.md)
     - [Backwards-incompatible changes](backwards-incompatible-changes.md)
     - [Changes in default configuration](changes-in-default-configuration.md)
