@@ -16,6 +16,12 @@ EasyBuild maintainers should meet the following criteria:
 
 ## Roles {: #maintainers_roles }
 
+### Lead developer {: #maintainers_lead_developer }
+
+* **Kenneth Hoste** ([HPC-UGent](https://www.ugent.be/hpc/en))
+    * GitHub: [@boegel](https://github.com/boegel) - e-mail: `kenneth.hoste (at) ugent.be` - IRC/Slack: `boegel`
+
+
 
 ### Release managers {: #maintainers_release_manager }
 
