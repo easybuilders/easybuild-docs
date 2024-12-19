@@ -8839,8 +8839,7 @@ specified sources (in order), and subsequently also for patches.</p>
 highly recommended.</p>
 <p>If checksums are provided, the checksum of the corresponding source
 files and patches is verified to match.</p>
-<p>The <code>checksums</code> easyconfig parameter is usually defined as a list of
-strings.</p>
+<p>The <code>checksums</code> easyconfig parameter is a list usually containing strings.</p>
 <p>Until EasyBuild v3.3.0, only MD5 checksums could be provided through a
 list of strings. Since EasyBuild v3.3.0, the checksum type is determined
 by looking at the length of the string:</p>
@@ -8859,6 +8858,50 @@ tuples of the form <code>('&lt;checksum type&gt;', '&lt;checksum value&gt;')</co
 example:</p>
 <div class="highlight"><pre><span></span><code><span class="n">checksums</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;sha512&#39;</span><span class="p">,</span> <span class="s1">&#39;f962008105639f58e9a4455c8057933ab0a5e2f43db8340ae1e1afe6dc2d24105bfca3b2e1f79cb242495ca4eb363c9820d8cea6084df9d62c4c3e5211d99266&#39;</span><span class="p">)]</span>
 </code></pre></div>
+<p>It is also possible to specify alternative checksums using a tuple of
+checksum elements where any match is sufficient (logical OR).
+This is helpful when the release was updated with changes that don't affect the behavior of the software in any way
+(e.g. only doc changes).</p>
+<div class="highlight"><pre><span></span><code><span class="n">checksums</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;0123456789...abcdef&#39;</span><span class="p">,</span> <span class="s1">&#39;fedcba...9876543210&#39;</span><span class="p">)]</span>
+</code></pre></div>
+<p>The opposite is also possible:
+A list instead of a tuple denotes that <strong>all</strong> checksums must match (logical AND).
+In both cases each element can also be a type-value-tuple:</p>
+<div class="highlight"><pre><span></span><code><span class="n">checksums</span> <span class="o">=</span> <span class="p">[[(</span><span class="s1">&#39;sha256&#39;</span><span class="p">,</span> <span class="s1">&#39;0123456789...abcdef&#39;</span><span class="p">),</span> <span class="s1">&#39;fedcba...9876543210&#39;</span><span class="p">]]</span>
+</code></pre></div>
+<p>Finally, a checksum can be specified as a dictionary mapping filenames to checksums, removing any ambiguity.
+This style is used by EasyBuild with <code>eb --inject-checksums</code> when 2 or more source files are specified,
+and is particularly useful when the source file is specified using a template value like <code>%(arch)s</code>.
+Especially when many source files and patches are used this also directly documents the file each checksum is for.<br />
+Again, elements (values) can be strings or type-value-tuples.
+For example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">checksums</span> <span class="o">=</span> <span class="p">[{</span>
+  <span class="s1">&#39;src_x86_64.tgz&#39;</span><span class="p">:</span> <span class="s1">&#39;0123456789...abcdef&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;src_aarch64.tgz&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;sha256&#39;</span><span class="p">,</span> <span class="s1">&#39;fedcba...9876543210&#39;</span><span class="p">),</span>
+<span class="p">}]</span>
+</code></pre></div>
+<p>Of course this can be combined with the logical AND/OR semantics using lists or tuples:</p>
+<div class="highlight"><pre><span></span><code><span class="n">checksums</span> <span class="o">=</span> <span class="p">[{</span>
+  <span class="s1">&#39;src_x86_64.tgz&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;0123456789...abcdef&#39;</span><span class="p">,</span> <span class="s1">&#39;fedcba...9876543210&#39;</span><span class="p">),</span> <span class="c1"># Match either one</span>
+  <span class="s1">&#39;src_aarch64.tgz&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;sha256&#39;</span><span class="p">,</span> <span class="s1">&#39;9876543210...fedcba&#39;</span><span class="p">),</span> <span class="s1">&#39;abcdef...0123456789&#39;</span><span class="p">],</span> <span class="c1"># Match both</span>
+<span class="p">}]</span>
+</code></pre></div>
+<p>When the checksum cannot be specified for a file
+(e.g. when using a git clone instead of an archive),
+a value of <code>None</code> can be used to skip the checksum check.
+This is possible in the list of checksums as well as a value in a dictionary, e.g.:</p>
+<div class="highlight"><pre><span></span><code><span class="n">checksums</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="kc">None</span><span class="p">,</span> <span class="c1"># No checksum for first source file</span>
+  <span class="s1">&#39;0123456789...abcdef&#39;</span><span class="p">,</span> <span class="c1"># checksum for 2nd file</span>
+  <span class="p">{</span>
+    <span class="s1">&#39;third_file_x86_64.tgz&#39;</span><span class="p">:</span> <span class="s1">&#39;fedcba...9876543210&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;third_file_aarch64.tgz&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">]</span>
+</code></pre></div>
+<p>Note that not having an entry in the dict for a file will raise an error
+while a value of <code>None</code> will skip the checksum verification for that file.
+But even in the latter case the <code>--enforce_checksums</code> option will raise an error.</p>
 <h5 id="inject_checksums">Adding or replacing checksums using <code>--inject-checksums</code><a class="headerlink" href="#inject_checksums" title="Permanent link">&para;</a></h5>
 <p>Using the <code>--inject-checksums</code> command line option, you can let
 EasyBuild add or update checksums in one or more easyconfig files (which
@@ -9050,7 +9093,7 @@ cannot be automated. Reasons for this include:</p>
 <p>You can use the <code>download_instructions</code> parameter to specify steps for
 the user to do. This parameter takes string value and prints it whenever
 build fails because any file needed was not found. If
-<code>download_instructions</code> is not specified, Easybuild prints the default
+<code>download_instructions</code> is not specified, EasyBuild prints the default
 message stating the paths that were tested.</p>
 <div class="highlight"><pre><span></span><code><span class="n">download_instructions</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">  Step 1: Go to example.com and download example.jar.</span>
