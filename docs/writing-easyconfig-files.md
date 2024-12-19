@@ -179,8 +179,7 @@ highly recommended.
 If checksums are provided, the checksum of the corresponding source
 files and patches is verified to match.
 
-The `checksums` easyconfig parameter is usually defined as a list of
-strings.
+The `checksums` easyconfig parameter is a list usually containing strings.
 
 Until EasyBuild v3.3.0, only MD5 checksums could be provided through a
 list of strings. Since EasyBuild v3.3.0, the checksum type is determined
@@ -203,6 +202,66 @@ example:
 ``` python
 checksums = [('sha512', 'f962008105639f58e9a4455c8057933ab0a5e2f43db8340ae1e1afe6dc2d24105bfca3b2e1f79cb242495ca4eb363c9820d8cea6084df9d62c4c3e5211d99266')]
 ```
+
+It is also possible to specify alternative checksums using a tuple of
+checksum elements where any match is sufficient (logical OR).
+This is helpful when the release was updated with changes that don't affect the behavior of the software in any way
+(e.g. only doc changes).
+
+``` python
+checksums = [('0123456789...abcdef', 'fedcba...9876543210')]
+```
+
+The opposite is also possible:
+A list instead of a tuple denotes that **all** checksums must match (logical AND).
+In both cases each element can also be a type-value-tuple:
+
+``` python
+checksums = [[('sha256', '0123456789...abcdef'), 'fedcba...9876543210']]
+```
+
+Finally, a checksum can be specified as a dictionary mapping filenames to checksums, removing any ambiguity.
+This style is used by EasyBuild with `eb --inject-checksums` when 2 or more source files are specified,
+and is particularly useful when the source file is specified using a template value like `%(arch)s`.
+Especially when many source files and patches are used this also directly documents the file each checksum is for.  
+Again, elements (values) can be strings or type-value-tuples.
+For example:
+
+``` python
+checksums = [{
+  'src_x86_64.tgz': '0123456789...abcdef',
+  'src_aarch64.tgz': ('sha256', 'fedcba...9876543210'),
+}]
+```
+
+Of course this can be combined with the logical AND/OR semantics using lists or tuples:
+
+``` python
+checksums = [{
+  'src_x86_64.tgz': ('0123456789...abcdef', 'fedcba...9876543210'), # Match either one
+  'src_aarch64.tgz': [('sha256', '9876543210...fedcba'), 'abcdef...0123456789'], # Match both
+}]
+```
+
+When the checksum cannot be specified for a file
+(e.g. when using a git clone instead of an archive),
+a value of `None` can be used to skip the checksum check.
+This is possible in the list of checksums as well as a value in a dictionary, e.g.:
+
+``` python
+checksums = [
+  None, # No checksum for first source file
+  '0123456789...abcdef', # checksum for 2nd file
+  {
+    'third_file_x86_64.tgz': 'fedcba...9876543210',
+    'third_file_aarch64.tgz': None,
+  },
+]
+```
+
+Note that not having an entry in the dict for a file will raise an error
+while a value of `None` will skip the checksum verification for that file.
+But even in the latter case the `--enforce_checksums` option will raise an error.
 
 ##### Adding or replacing checksums using `--inject-checksums` {: #inject_checksums }
 
@@ -430,7 +489,7 @@ cannot be automated. Reasons for this include:
 You can use the `download_instructions` parameter to specify steps for
 the user to do. This parameter takes string value and prints it whenever
 build fails because any file needed was not found. If
-`download_instructions` is not specified, Easybuild prints the default
+`download_instructions` is not specified, EasyBuild prints the default
 message stating the paths that were tested.
 
 ``` python
