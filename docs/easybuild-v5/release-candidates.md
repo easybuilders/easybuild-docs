@@ -5,7 +5,7 @@ we will tag a couple of beta releases and release candidates before releasing Ea
 
 **Please consider testing these and providing feedback!**
 
-## Beta release `5.0.0beta1` (19 Dec 2024)
+## Beta release `5.0.0beta1` (24 Dec 2024)
 
 !!! warning
     This is an early pre-release that includes the majority of changes that will be included
