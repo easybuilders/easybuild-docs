@@ -25,7 +25,7 @@ as they incorporate new features, changes of behavior or deprecations that can i
 This includes (but is not limited to):
 
 - **Python >= 3.6** is required to run EasyBuild (Python >= 3.9 is recommended);
-- using **Lmod >= v8.0** or **Environment Modules v4.3.0** is required as modules tool (check with `module --version`);
+- using **Lmod >= v8.0** or **Environment Modules >= v4.3.0** is required as modules tool (check with `module --version`);
 - a new function named `run_shell_cmd` is used to run shell commands like `cmake`, `make`, `pip`, etc. (more info [here](run_shell_cmd.md));
 - the **default setting of some configuration options has changed**:
     - **RPATH linking** is used by default (can be disabled with `--disable-rpath`);
