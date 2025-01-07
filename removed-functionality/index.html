@@ -9149,7 +9149,7 @@ key-value tuples.</p>
 the <code>extra_options</code> function of parent easyblock.</p>
 <p>For example (taken from the generic easyblock <code>Binary</code>):</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@staticmethod</span>
-<span class="k">def</span> <span class="nf">extra_options</span><span class="p">(</span><span class="n">extra_vars</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">extra_options</span><span class="p">(</span><span class="n">extra_vars</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Extra easyconfig parameters specific to Binary easyblock.&quot;&quot;&quot;</span>
     <span class="n">extra_vars</span> <span class="o">=</span> <span class="n">EasyBlock</span><span class="o">.</span><span class="n">extra_options</span><span class="p">(</span><span class="n">extra_vars</span><span class="p">)</span>
     <span class="n">extra_vars</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>

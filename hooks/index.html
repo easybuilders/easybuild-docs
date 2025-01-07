@@ -8704,7 +8704,7 @@ those functions.</p>
 using the <code>*args</code> and <code>**kwargs</code> mechanism commonly used in Python. This
 avoids that your hook implementations may break when updating to future EasyBuild versions. For example:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># example pre-configure hook that anticipates changes in provided arguments</span>
-<span class="k">def</span> <span class="nf">pre_configure_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">pre_configure_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="o">...</span>
 </code></pre></div>
 <h3 id="hooks-return-value">Return value of hooks<a class="headerlink" href="#hooks-return-value" title="Permanent link">&para;</a></h3>
@@ -8758,7 +8758,7 @@ are simply ignored.</p>
 changes to easyconfig parameters with non-string values (i.e. lists, dictionaries, etc.) will go up
 in smoke if not done correctly.</p>
 <p>More specifically, the following approach will <em>not</em> work in any of the (step) hooks, except for <code>parse_hook</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">pre_fetch_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">pre_fetch_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
      <span class="s2">&quot;Example of pre-fetch hook to manipulate list of patches.&quot;</span>
      <span class="c1"># this does NOT have the intended affect in any pre- or post-step hook</span>
      <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;patches&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;example.patch&#39;</span><span class="p">)</span>
@@ -8770,7 +8770,7 @@ hence any updates on the copy are effectively lost immediately.</p>
 <ul>
 <li>
 <p>temporarily disable the templating mechanism:</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">pre_fetch_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">pre_fetch_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="s2">&quot;Example of pre-fetch hook to manipulate list of patches.&quot;</span>
     <span class="c1"># temporarily disable templating, so changes to &#39;patches&#39; easyconfig parameter are picked up</span>
     <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">disable_templating</span><span class="p">:</span>
@@ -8781,7 +8781,7 @@ hence any updates on the copy are effectively lost immediately.</p>
 </li>
 <li>
 <p>or replace the original value entirely:</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">pre_fetch_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">pre_fetch_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="s2">&quot;Example of pre-fetch hook to manipulate list of patches.&quot;</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;patches&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;patches&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;example.patch&#39;</span><span class="p">]</span>
 </code></pre></div>
@@ -8806,14 +8806,14 @@ If subtoolchains were used to resolve dependencies, they will also be hardwired 
 of the software installation directory.</p>
 <h2 id="examples-of-hook-implementations">Examples of hook implementations<a class="headerlink" href="#examples-of-hook-implementations" title="Permanent link">&para;</a></h2>
 <h3 id="replace-with-verbs-with-without-verbs-in-openmpi-configure-options">Replace <code>--with-verbs</code> with <code>--without-verbs</code> in OpenMPI configure options<a class="headerlink" href="#replace-with-verbs-with-without-verbs-in-openmpi-configure-options" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">pre_configure_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">pre_configure_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Example pre-configure hook to replace --with-verbs with --without -verbs for OpenMPI.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;OpenMPI&#39;</span> <span class="ow">and</span> <span class="s1">&#39;--with-verbs&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;configopts&#39;</span><span class="p">]:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;[pre-configure hook] Replacing --with-verbs with --without-verbs&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;configopts&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;configopts&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;--with-verbs&#39;</span><span class="p">,</span> <span class="s1">&#39;--without-verbs&#39;</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="inject-a-custom-patch-file">Inject a custom patch file<a class="headerlink" href="#inject-a-custom-patch-file" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">parse_hook</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">parse_hook</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Example parse hook to inject a patch file for a fictive software package named &#39;Example&#39;.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">ec</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;Example&#39;</span><span class="p">:</span>
         <span class="n">patch_file</span> <span class="o">=</span> <span class="s1">&#39;example.patch&#39;</span>
@@ -8821,7 +8821,7 @@ of the software installation directory.</p>
         <span class="n">ec</span><span class="p">[</span><span class="s1">&#39;patches&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">patch_file</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="replace-pythonpath-by-ebpythonprefixes-in-lua-modules">Replace <code>PYTHONPATH</code> by <code>EBPYTHONPREFIXES</code> in (Lua) modules<a class="headerlink" href="#replace-pythonpath-by-ebpythonprefixes-in-lua-modules" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">module_write_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filepath</span><span class="p">,</span> <span class="n">module_txt</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">module_write_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filepath</span><span class="p">,</span> <span class="n">module_txt</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="c1"># note: if `self.mod_filepath == filepath` =&gt; final module file</span>
     <span class="k">if</span> <span class="s1">&#39;Python&#39;</span> <span class="ow">in</span> <span class="p">(</span><span class="n">dep</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">dep</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">dependencies</span><span class="p">()):</span>
         <span class="n">search</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;prepend_path\(&quot;PYTHONPATH&quot;, pathJoin\(root, &quot;lib/python\d.\d/site-packages&quot;\)\)&#39;</span>
@@ -8831,7 +8831,7 @@ of the software installation directory.</p>
 <h3 id="log-running-of-shell-commands-prepend-make-install-with-sudo">Log running of shell commands + prepend <code>make install</code> with <code>sudo</code><a class="headerlink" href="#log-running-of-shell-commands-prepend-make-install-with-sudo" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">shell_cmds_log</span> <span class="o">=</span> <span class="s1">&#39;/tmp/eb_shell_cmds.log&#39;</span>
 
-<span class="k">def</span> <span class="nf">pre_run_shell_cmd_hook</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">work_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">interactive</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">pre_run_shell_cmd_hook</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">work_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">interactive</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Log shell commands before they are run,</span>
 <span class="sd">    and replace &#39;make install&#39; with &#39;sudo make install&#39;.</span>
@@ -8844,7 +8844,7 @@ of the software installation directory.</p>
         <span class="k">return</span> <span class="s2">&quot;sudo make install&quot;</span>
 
 
-<span class="k">def</span> <span class="nf">post_run_shell_cmd_hook</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">work_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">interactive</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">exit_code</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">post_run_shell_cmd_hook</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">work_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">interactive</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">exit_code</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Log shell commands that were run.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -8855,10 +8855,10 @@ of the software installation directory.</p>
 <h3 id="adding-a-hook-conditional-on-easybuild-version">Adding a hook conditional on EasyBuild version<a class="headerlink" href="#adding-a-hook-conditional-on-easybuild-version" title="Permanent link">&para;</a></h3>
 <p>If an unknown hook is used then EasyBuild will error (see <a href="#available-hooks">Available hooks</a>). The following example only
 adds the <code>pre_build_and_install_loop_hook</code> if the EasyBuild version is <code>&gt;= "4.8.1"</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">easybuild.tools.version</span> <span class="kn">import</span> <span class="n">VERSION</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">easybuild.tools.version</span><span class="w"> </span><span class="kn">import</span> <span class="n">VERSION</span>
 
 <span class="k">if</span> <span class="n">VERSION</span> <span class="o">&gt;=</span> <span class="s2">&quot;4.8.1&quot;</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">pre_build_and_install_loop_hook</span><span class="p">(</span><span class="n">ecs</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">pre_build_and_install_loop_hook</span><span class="p">(</span><span class="n">ecs</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">pass</span>
 </code></pre></div>
 

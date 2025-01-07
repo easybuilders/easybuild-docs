@@ -9191,9 +9191,9 @@ suffices to check the <code>self.dry_run</code> class variable.</p>
 <p>Additional messages can be included in the dry run output using the
 <code>self.dry_run_msg</code> method.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Example</span><span class="p">(</span><span class="n">EasyBlock</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Example</span><span class="p">(</span><span class="n">EasyBlock</span><span class="p">):</span>
 
-    <span class="k">def</span> <span class="nf">configure_step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">configure_step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dry_run</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">dry_run_msg</span><span class="p">(</span><span class="s2">&quot;Dry run mode detected, not reading template configuration files&quot;</span><span class="p">)</span>
