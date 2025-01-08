@@ -977,7 +977,8 @@ This manual process can be partially automated:
 1. Optionally, but recommended, update the version of the software for each created easyconfig to the latest available one.
 1. **Important**: Verify the newly created easyconfigs by comparing each of them against the existing one for that software.
    Only the version of the software, toolchain and dependencies should have been changed.
-   EasyBuild often replaces local variables or templates by their value when updating easyconfigs.
+   EasyBuild often replaces local variables or templates like `name` or `%(version)s` by their value when updating easyconfigs.
+   This is undesirable as the values might become out of sync with what they are supposed to be, e.g. after changing the version variable.
    It might be easier to use those easyconfigs just for getting the versions of each dependency required
    and still copy & update the easyconfigs from existing ones manually.
 
@@ -990,7 +991,7 @@ The latest version of a single Python package can usually be found on [PyPI](htt
 To find the list of Python dependencies for another Python package to be installed by an easyconfig you can use the `findPythonDeps` script
 distributed with EasyBuild.
 This will also output the latest, compatible version of the found packages.
-A good approach is to start from an easyconfig just containing the dependency on Python but no Python packages and then run the `findPythonDeps`.
+A good approach is to start from an easyconfig just containing the dependency on Python but no Python packages and then run e.g. `findPythonDeps.py --ec foo-1.2.3.eb foo==1.2.3`.
 For every Python package displayed by the script first search for a suitable easyconfig containing that package and add it as a dependency one by one.
 That might require updating it from another toolchain.
 Then run the script again to honor Python packages from that dependency and its dependencies.
