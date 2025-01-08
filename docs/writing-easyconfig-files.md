@@ -985,6 +985,18 @@ When updating a software version the patches in the easyconfig need to be checke
 If they don't apply they might not be required anymore, when the upstream software fixed the issue, and can be removed.
 Otherwise, they need to be adjusted for the changes in the source code.
 
+For updates to easyconfigs containing Python packages (`PythonBundle`) you should check each of them if there is a newer version and if it is still required.
+The latest version of a single Python package can usually be found on [PyPI](https://pypi.org).
+To find the list of Python dependencies for another Python package to be installed by an easyconfig you can use the `findPythonDeps` script
+distributed with EasyBuild.
+This will also output the latest, compatible version of the found packages.
+A good approach is to start from an easyconfig just containing the dependency on Python but no Python packages and then run the `findPythonDeps`.
+For every Python package displayed by the script first search for a suitable easyconfig containing that package and add it as a dependency one by one.
+That might require updating it from another toolchain.
+Then run the script again to honor Python packages from that dependency and its dependencies.
+Repeat until none of the remaining packages displayed are in any easyconfig and/or unique enough to the specific software that an own easyconfig would be useful.
+Those can then be added to the `ext_list` of the easyconfig.
+
 Also keep in mind that changing the version of the software and/or the toolchain might reveal new bugs or incompatibilities.
 Some can be fixed or worked around by patches, often even with help from the maintainers of the software.
 But some software is simply not compatible with specific versions of compilers or other software.
