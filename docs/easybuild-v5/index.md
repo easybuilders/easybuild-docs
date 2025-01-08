@@ -61,7 +61,7 @@ Functionality that was deprecated a while ago has been removed:
 
 ## Deprecated functionality {: #deprecated-functionality }
 
-Some functionality is being deprecated in EasyBuild v5.0, and will no longer be supported in EasyBuild v6.0:
+Some functionality is being deprecated in EasyBuild v5.0, and is scheduled to be removed in EasyBuild v6.0:
 
 - [`run_cmd` and `run_cmd_qa` functions](deprecated-functionality.md#run_cmd)
 - [`easybuild.tools.py2vs3` module](deprecated-functionality.md#py2vs3)

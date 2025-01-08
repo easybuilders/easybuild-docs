@@ -9,7 +9,7 @@ The default value for several EasyBuild configuration settings has been changed 
 
 ---
 
-## Enable RPATH linking by default {: #rpath }
+## RPATH linking is enabled by default (`--rpath`) {: #rpath }
 
 [RPATH linking][rpath_support] is enabled by default in EasyBuild v5.0.
 
@@ -37,7 +37,7 @@ To disable RPATH linking, either:
 
 ---
 
-## Enable `--trace` by default {: #trace }
+## Trace output is enabled by default (`--trace`) {: #trace }
 
 The [`--trace` option](../tracing-progress.md) is enabled by default.
 

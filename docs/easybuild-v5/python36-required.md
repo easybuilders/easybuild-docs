@@ -2,7 +2,7 @@
 
 EasyBuild 5.0 requires Python >= 3.6 to run.
 
-Running EasyBuild with Python 2.7 or a Python 3 version older than Python 3.6 is no longer supported.
+EasyBuild will not run with any Python older than 3.6, including Python 2.7.
 
 Trying to run EasyBuild with a Python version that is too old will result in an error:
 
