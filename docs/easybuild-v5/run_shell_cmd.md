@@ -1,6 +1,6 @@
 # `run_shell_cmd` function
 
-*(for a full overview of changes in EasyBuild v5.0, see [here](overview-of-changes.md))*
+*(for a full overview of changes in EasyBuild v5.0, see [here](index.md))*
 
 In EasyBuild v5.0, a new function named `run_shell_cmd` is introduced to run shell commands.
 
