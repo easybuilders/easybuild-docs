@@ -958,20 +958,20 @@ So the process of updating an easyconfig to a newer toolchain version could look
    I.e. a dependency of an easyconfig for the `foss` toolchain might use the `GCC` or `GCCcore` toolchain.
    Check the toolchain easyconfig file (e.g. `foss-2023b.eb`) to find the versions of the sub-toolchain.
    For very recent toolchains you can also check the `develop` branch of the [easyconfigs git repository](https://github.com/easybuilders/easybuild-easyconfigs) and open PRs.
-1. If an easyconfig of the dependency for the new toolchain already exists use its version in your new easyconfig.
-   Otherwise, you need to create a new easyconfig for the new toolchain version based on that of another toolchain version.
-   The steps are the same and need to also be repeated for each dependency of this dependency.
+1. If an easyconfig for the listed dependency with the new toolchain already exists use its version in your new easyconfig.
+   Otherwise, you need to create a new easyconfig for the listed dependency with the new toolchain version (based on that of another toolchain version).
+   The steps are the same and also need to be repeated for each dependency of this dependency.
 1. Finally, build and test your easyconfig and consider [contributing](contributing.md#contributing-easyconfig-files--contributing_easyconfigs) it.
 
 Especially when creating easyconfigs for dependencies it is a good idea to put all of them into a new folder.
-To allow EasyBuild to find those, pass its path via `easybuild --robot <path>`.
+To allow EasyBuild to find these easyconfigs in your folder, pass its path via `eb --robot <path> ...`.
 
 This manual process can be partially automated:
 
 1. Create a new folder for the new easyconfig and its dependencies.
 1. Run `easybuild <current_easyconfig.eb> --try-toolchain-version=<new-version> --try-update-deps --copy-ec <folder>`.
    This will update the toolchain version, search for the versions of dependencies in the new toolchain and use them if available.
-   If a dependency for then new toolchain is not available this will create a new easyconfig for this toolchain
+   If a dependency with the new toolchain is not available this will create a new easyconfig for this toolchain
    based on an existing one for another toolchain (version).
    All newly create easyconfigs will be copied to the specified folder.
 1. Optionally, but recommended, update the version of the software for each created easyconfig to the latest available one.
