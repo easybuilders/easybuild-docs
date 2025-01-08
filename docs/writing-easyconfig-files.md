@@ -997,6 +997,7 @@ That might require updating it from another toolchain.
 Then run the script again to honor Python packages from that dependency and its dependencies.
 Repeat until none of the remaining packages displayed are in any easyconfig and/or unique enough to the specific software that an own easyconfig would be useful.
 Those can then be added to the `ext_list` of the easyconfig.
+More information about that script can be found at the top of the script file and via `findPythonDeps.py --help`.
 
 Also keep in mind that changing the version of the software and/or the toolchain might reveal new bugs or incompatibilities.
 Some can be fixed or worked around by patches, often even with help from the maintainers of the software.
