@@ -11,7 +11,6 @@ theme:
     - navigation.top
     - navigation.tracking
     - toc.follow
-    - toc.integrate
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search
     - search.highlight
     - search.suggest
