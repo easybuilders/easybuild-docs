@@ -969,7 +969,7 @@ To allow EasyBuild to find these easyconfigs in your folder, pass its path via `
 This manual process can be partially automated:
 
 1. Create a new folder for the new easyconfig and its dependencies.
-1. Run `easybuild <current_easyconfig.eb> --try-toolchain-version=<new-version> --try-update-deps --copy-ec <folder>`.
+1. Run `eb <current_easyconfig.eb> --try-toolchain-version=<new-version> --try-update-deps --experimental --copy-ec <folder>`.
    This will update the toolchain version, search for the versions of dependencies in the new toolchain and use them if available.
    If a dependency with the new toolchain is not available this will create a new easyconfig for this toolchain
    based on an existing one for another toolchain (version).
