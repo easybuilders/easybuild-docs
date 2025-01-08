@@ -1,11 +1,11 @@
 # Deprecated functionality in EasyBuild v5.0
 
-*(for a full overview of changes in EasyBuild v5.0, see [here](overview-of-changes.md))*
+*(for a full overview of changes in EasyBuild v5.0, see [here](index.md))*
 
 Some functionality is being deprecated in EasyBuild v5.0, and will no longer be supported in EasyBuild v6.0:
 
-* [`run_cmd` and `run_cmd_qa` functions][run_cmd]
-* [`easybuild.tools.py2vs3` module][py2vs3]
+- [`run_cmd` and `run_cmd_qa` functions][run_cmd]
+- [`easybuild.tools.py2vs3` module][py2vs3]
 
 If you trigger any deprecated functionality when using EasyBuild v5.0, a warning message will be printed.
 
@@ -13,7 +13,8 @@ If you trigger any deprecated functionality when using EasyBuild v5.0, a warning
 
 ## `run_cmd` and `run_cmd_qa` functions {: #run_cmd }
 
-The `run_cmd` and `run_cmd_qa` functions will be deprecated.
+The `run_cmd` and `run_cmd_qa` functions have been deprecated,
+and are scheduled to be removed in EasyBuild v6.0.
 
 You should migrate to the new [`run_shell_cmd`](run_shell_cmd.md) function instead.
 
@@ -21,8 +22,6 @@ You should migrate to the new [`run_shell_cmd`](run_shell_cmd.md) function inste
 ---
 
 ## `easybuild.tools.py2vs3` module {: #py2vs3 }
-
-[easybuild-framework PR #4229](https://github.com/easybuilders/easybuild-framework/pull/4229)
 
 The following table lists the changes required to replace imports from the the `py2vs3` module.
 

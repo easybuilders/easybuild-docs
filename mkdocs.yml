@@ -127,6 +127,7 @@ nav:
       - Installing Lmod: installing-lmod-without-root-permissions.md
       - Removed functionality: removed-functionality.md
       - Useful scripts: useful-scripts.md
+  - EasyBuild v5.0: easybuild-v5/index.md
 
 markdown_extensions:
   # add attributes to html elements
@@ -201,7 +202,10 @@ plugins:
   - redirects:
       redirect_maps:
         # redirect removed pages to sensible alternative
+        easybuild-v5/backwards-incompatible-changes/: easybuild-v5/index.md
+        easybuild-v5/overview-of-changes/: easybuild-v5/index.md
         easybuild-v5/proposed-changes/: easybuild-v5/index.md
+        easybuild-v5/policies/: policies/toolchains.md
         # redirects for original EasyBuild documentation to avoid broken URLs
         en/latest/Archived-easyconfigs.html: archived-easyconfigs.md
         en/latest/Backup_modules.html: backup-modules.md
