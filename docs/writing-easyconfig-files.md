@@ -953,6 +953,11 @@ So the process of updating an easyconfig to a newer toolchain version could look
 1. Copy the easyconfig and change the toolchain version
 1. Usually, especially when updating to the latest toolchain,
    you should search for the most recent version of the software too and use that.
+   When you update the version, the checksum for the softwares sources will
+   become incorrect and should be removed. You can automatically inject the
+   checksums for the new sources with `eb --inject-checksums <easyconfig>`
+   (see [checksums documentation](writing-easyconfig-files.md#common_easyconfig_param_sources_checksums)
+   for more details).
 1. For each listed dependency find the easyconfig for the new toolchain version.
    Here you need to take [toolchain hierarchy](common-toolchains.md#toolchains_diagram) into account.
    I.e. a dependency of an easyconfig for the `foss` toolchain might use the `GCC` or `GCCcore` toolchain.
