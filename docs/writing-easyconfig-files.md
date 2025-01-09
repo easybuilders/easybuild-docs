@@ -953,7 +953,7 @@ So the process of updating an easyconfig to a newer toolchain version could look
 1. Copy the easyconfig and change the toolchain version
 1. Usually, especially when updating to the latest toolchain,
    you should search for the most recent version of the software too and use that.
-   When you update the version, the checksum for the softwares sources will
+   When you update the version, the checksum for the software sources will
    become incorrect and should be removed. You can automatically inject the
    checksums for the new sources with `eb --inject-checksums <easyconfig>`
    (see [checksums documentation](writing-easyconfig-files.md#common_easyconfig_param_sources_checksums)
@@ -983,9 +983,9 @@ This manual process can be partially automated:
 1. **Important**: Verify the newly created easyconfigs by comparing each of them against the existing one for that software.
    Only the version of the software, toolchain and dependencies should have been changed. However, this approach
    can lead to unwanted changes to formatting as well as the replacement local variables or templates (such as `name`,
-   `version` or `%(version)s`) by their _value_ when updating easyconfigs.
+   `version` or `%(version)s`) by their *value* when updating easyconfigs.
    This is undesirable as the values might become out of sync with what they are supposed to be, e.g. when we update
-   the `version` variable the old _value_ may still exist elsewhere in the easyconfig.
+   the `version` variable the old *value* may still exist elsewhere in the easyconfig.
    Depending on the situation, it might be easier to use the newly created easyconfigs just for getting the versions of
    each dependency required and still copy & update the easyconfigs from existing ones manually.
 
