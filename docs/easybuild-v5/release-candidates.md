@@ -43,26 +43,26 @@ This includes (but is not limited to):
 To install the initial beta release of EasyBuild v5.0.0 (`5.0.0beta1`), you can either:
 
 - use the [provided easyconfig file](https://github.com/easybuilders/easybuild-easyconfigs/pull/22049), for example using:
-  
-  ```shell
-  eb --from-pr 22049
-  ```
-  
-- install into a Python virtual environment:
-  
-  ```shell
-  venv_name='venv-eb-5.0.0beta1'
-  python3 -m venv ${venv_name}
-  unset PYTHONPATH
-  source ${venv_name}/bin/activate
 
-  tag='5.0.0beta1'
-  pip install https://github.com/easybuilders/easybuild-framework/archive/easybuild-framework-v${tag}.tar.gz
-  pip install https://github.com/easybuilders/easybuild-easyblocks/archive/easybuild-easyblocks-v${tag}.tar.gz
-  pip install https://github.com/easybuilders/easybuild-easyconfigs/archive/easybuild-easyconfigs-v${tag}.tar.gz
-  # optional dependencies for EasyBuild
-  pip install archspec rich
-  ```
+    ```shell
+    eb --from-pr 22049
+    ```
+
+- install into a Python virtual environment:
+
+    ```shell
+    venv_name='venv-eb-5.0.0beta1'
+    python3 -m venv ${venv_name}
+    unset PYTHONPATH
+    source ${venv_name}/bin/activate
+    
+    tag='5.0.0beta1'
+    pip install https://github.com/easybuilders/easybuild-framework/archive/easybuild-framework-v${tag}.tar.gz
+    pip install https://github.com/easybuilders/easybuild-easyblocks/archive/easybuild-easyblocks-v${tag}.tar.gz
+    pip install https://github.com/easybuilders/easybuild-easyconfigs/archive/easybuild-easyconfigs-v${tag}.tar.gz
+    # optional dependencies for EasyBuild
+    pip install archspec rich
+    ```
 
 ### Planned additional changes {: #beta1_planned_changes }
 
