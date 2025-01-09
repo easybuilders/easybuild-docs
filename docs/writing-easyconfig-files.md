@@ -981,11 +981,13 @@ This manual process can be partially automated:
    All newly create easyconfigs will be copied to the specified folder.
 1. Optionally, but recommended, update the version of the software for each created easyconfig to the latest available one.
 1. **Important**: Verify the newly created easyconfigs by comparing each of them against the existing one for that software.
-   Only the version of the software, toolchain and dependencies should have been changed.
-   EasyBuild often replaces local variables or templates like `name` or `%(version)s` by their value when updating easyconfigs.
-   This is undesirable as the values might become out of sync with what they are supposed to be, e.g. after changing the version variable.
-   It might be easier to use those easyconfigs just for getting the versions of each dependency required
-   and still copy & update the easyconfigs from existing ones manually.
+   Only the version of the software, toolchain and dependencies should have been changed. However, this approach
+   can lead to unwanted changes to formatting as well as the replacement local variables or templates (such as `name`,
+   `version` or `%(version)s`) by their _value_ when updating easyconfigs.
+   This is undesirable as the values might become out of sync with what they are supposed to be, e.g. when we update
+   the `version` variable the old _value_ may still exist elsewhere in the easyconfig.
+   Depending on the situation, it might be easier to use the newly created easyconfigs just for getting the versions of
+   each dependency required and still copy & update the easyconfigs from existing ones manually.
 
 When updating a software version the patches in the easyconfig need to be checked too.
 If they don't apply they might not be required anymore, when the upstream software fixed the issue, and can be removed.
