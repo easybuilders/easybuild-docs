@@ -990,6 +990,7 @@ For updates to easyconfigs containing Python packages (`PythonBundle`) you shoul
 The latest version of a single Python package can usually be found on [PyPI](https://pypi.org).
 To find the list of Python dependencies for another Python package to be installed by an easyconfig you can use the `findPythonDeps` script
 distributed with EasyBuild.
+For a typical installation it can be run using `$(dirname $(which eb))/../easybuild/scripts/findPythonDeps.py` which automatically finds the standard path for it.
 This will also output the latest, compatible version of the found packages.
 A good approach is to start from an easyconfig just containing the dependency on Python but no Python packages and then run e.g. `findPythonDeps.py --ec foo-1.2.3.eb foo==1.2.3`.
 For every Python package displayed by the script first search for a suitable easyconfig containing that package and add it as a dependency one by one.
