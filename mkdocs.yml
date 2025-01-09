@@ -6,6 +6,8 @@ theme:
   logo: img/easybuild_logo.png
   favicon: favicon.ico
   features:
+    # https://squidfunk.github.io/mkdocs-material/reference/code-blocks
+    - content.code.copy
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/
     - navigation.instant
     - navigation.top
