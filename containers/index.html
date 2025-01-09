@@ -238,9 +238,7 @@
 
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
       
@@ -8613,12 +8611,301 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild-v5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EasyBuild v5.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
             
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#containers_req" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#containers_usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#containers_usage_containerize" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating container recipes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containers_usage_template_recipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Container template recipe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containers_usage_config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Container configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Container configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#container_bootstrap_agent_image_based" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image-based bootstrap agents
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Image-based bootstrap agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#containers_usage_container_base_image_requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements for base container image
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container_bootstrap_agent_linux_distro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux distro bootstrap agents
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linux distro bootstrap agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#container_bootstrap_agent_linux_distro_include" class="md-nav__link">
+    <span class="md-ellipsis">
+      include keyword: OS packages to include
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container_bootstrap_agent_linux_distro_mirrorurl" class="md-nav__link">
+    <span class="md-ellipsis">
+      mirrorurl keyword: mirror URL to use to download OS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container_bootstrap_agent_linux_distro_osversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      osversion keyword: OS version to use
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containers_usage_build_image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building container images
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containers_usage_example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#containers_example_recipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of a generated container recipe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containers_example_build_image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of building container image
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#containers_cfg_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Location for generated container recipes &amp; images
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containers_cfg_image_format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Container image format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containers_cfg_image_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Name for container recipe &amp; image
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containers_tmpdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temporary directory for creating container images
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#containers_cfg_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type of container recipe/image to generate
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#containers_stacking" class="md-nav__link">
+    <span class="md-ellipsis">
+      'Stacking' container images
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#containers_seeding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seeding in source files for container build process
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
             
           
           
@@ -9383,7 +9670,7 @@ building the container image into <code>/tmp/easybuild/sources/</code>.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>

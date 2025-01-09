@@ -11,6 +11,8 @@
         <link rel="canonical" href="https://docs.easybuild.io/easybuild-v5/">
       
       
+        <link rel="prev" href="../useful-scripts/">
+      
       
       
       <link rel="icon" href="../favicon.ico">
@@ -234,9 +236,7 @@
 
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
       
@@ -8324,12 +8324,242 @@
   
 
     
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    EasyBuild v5.0
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    EasyBuild v5.0
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking changes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changes-in-default-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changes in default configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhancements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removed-functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removed functionality
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deprecated-functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deprecated functionality
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other changes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAQ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other links
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
             
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking changes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changes-in-default-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changes in default configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhancements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removed-functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removed functionality
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deprecated-functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deprecated functionality
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other changes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAQ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other links
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
             
           
           
@@ -8343,21 +8573,66 @@
 
 
 <h1 id="easybuild-v50">EasyBuild v5.0<a class="headerlink" href="#easybuild-v50" title="Permanent link">&para;</a></h1>
+<p>A high-level overview of changes in EasyBuild version 5.0 is listed below.</p>
+<p>Click on a particular item for more information.</p>
+<div class="admonition warning">
+<p class="admonition-title">EasyBuild version 5.0.0 is not released yet</p>
+<p>EasyBuild v5.0.0 is still under active development via the <code>5.0.x</code> branches in the EasyBuild GitHub repositories.</p>
+<p>Shortly before the release of EasyBuild v5.0.0, the <code>5.0.x</code> branches will be collapsed in the corresponding
+<code>develop</code> branches, and the <code>5.0.x</code> branches will then only be used as a staging area for additional EasyBuild
+v5.0.x releases.</p>
+<p>The overview below is known to be incomplete, and will be gradually completed as we approach
+the release of EasyBuild v5.0.0.</p>
+</div>
+<hr />
+<h2 id="breaking-changes">Breaking changes<a class="headerlink" href="#breaking-changes" title="Permanent link">&para;</a></h2>
+<p>EasyBuild v5.0 includes a number of backwards-incompatible changes:</p>
+<ul>
+<li><a href="python36-required/">Python 3.6+ is required to run EasyBuild v5.0.0</a></li>
+</ul>
+<p>See also the <a class="autorefs autorefs-internal" href="#removed-functionality">overview of removed functionality</a> below.</p>
+<hr />
+<h2 id="changes-in-default-configuration">Changes in default configuration<a class="headerlink" href="#changes-in-default-configuration" title="Permanent link">&para;</a></h2>
+<p>The default value for several EasyBuild configuration settings has been changed in EasyBuild v5.0:</p>
+<ul>
+<li><a href="changes-in-default-configuration/#rpath">RPATH linking is enabled by default (<code>--rpath</code>)</a></li>
+<li><a href="changes-in-default-configuration/#trace">Trace output is enabled by default (<code>--trace</code>)</a></li>
+</ul>
+<hr />
+<h2 id="enhancements">Enhancements<a class="headerlink" href="#enhancements" title="Permanent link">&para;</a></h2>
+<p>Various significant enhancements are included in EasyBuild v5.0, including:</p>
+<ul>
+<li><a href="run_shell_cmd/"><code>run_shell_cmd</code> function</a></li>
+<li><a href="enhancements/#granular_exit_codes">Granular exit codes</a></li>
+<li><a href="enhancements/#reproducible_tarballs">Reproducible tarballs</a></li>
+</ul>
+<hr />
+<h2 id="removed-functionality">Removed functionality<a class="headerlink" href="#removed-functionality" title="Permanent link">&para;</a></h2>
+<p>Functionality that was deprecated a while ago has been removed:</p>
+<ul>
+<li><a href="removed-functionality/#bootstrap_script">EasyBuild bootstrap script is removed</a> </li>
+<li><a href="removed-functionality/#yeb">Experimental support for <code>.yeb</code> easyconfig format is removed</a></li>
+</ul>
+<hr />
+<h2 id="deprecated-functionality">Deprecated functionality<a class="headerlink" href="#deprecated-functionality" title="Permanent link">&para;</a></h2>
+<p>Some functionality is being deprecated in EasyBuild v5.0, and is scheduled to be removed in EasyBuild v6.0:</p>
+<ul>
+<li><a href="deprecated-functionality/#run_cmd"><code>run_cmd</code> and <code>run_cmd_qa</code> functions</a></li>
+<li><a href="deprecated-functionality/#py2vs3"><code>easybuild.tools.py2vs3</code> module</a></li>
+</ul>
+<hr />
+<h2 id="other-changes">Other changes<a class="headerlink" href="#other-changes" title="Permanent link">&para;</a></h2>
+<p><em>(coming soon)</em></p>
+<hr />
+<h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
+<p><em>(coming soon)</em></p>
+<hr />
+<h2 id="other-links">Other links<a class="headerlink" href="#other-links" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="release-candidates/">Beta releases and release candidates</a></li>
-<li><a href="overview-of-changes/">Overview of changes</a><ul>
-<li><a href="backwards-incompatible-changes/">Backwards-incompatible changes</a></li>
-<li><a href="changes-in-default-configuration/">Changes in default configuration</a></li>
-<li><a href="enhancements/">Enhancements</a><ul>
-<li><a href="run_shell_cmd/"><code>run_shell_cmd</code> function</a></li>
-</ul>
-</li>
-<li><a href="deprecated-functionality/">Deprecated functionality</a></li>
-<li><a href="policies/">Policies</a></li>
-</ul>
-</li>
-<li><a href="https://github.com/orgs/easybuilders/projects/18">GitHub Project board</a></li>
+<li><a href="https://github.com/orgs/easybuilders/projects/18">GitHub Project board for EasyBuild v5.0</a></li>
 <li><a href="https://easybuild.io/eum23/#easybuild5">Talk on EasyBuild 5.0 at EasyBuild User Meeting 2023</a></li>
+<li><a href="https://easybuild.io/eum24/#eb5">Talk on EasyBuild 5.0 at EasyBuild User Meeting 2024</a></li>
 </ul>
 
 
@@ -8379,7 +8654,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 18, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 8, 2025</span>
   </span>
 
     
@@ -8471,7 +8746,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>

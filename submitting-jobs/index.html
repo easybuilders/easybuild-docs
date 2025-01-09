@@ -238,9 +238,7 @@
 
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
       
@@ -8574,12 +8572,262 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild-v5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EasyBuild v5.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
             
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#submitting_jobs_quick_intro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick introduction to --job
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submitting_jobs_configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring --job
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring --job">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selecting-the-job-backend-job-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selecting the job backend (--job-backend)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submitting_jobs_cfg_job_backend_config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring the job backend (--job-backend-config)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submitting_jobs_cfg_job_cores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number of requested cores per job (--job-cores)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submitting_jobs_job_dependency_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Job dependency type (-job-deps-type)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submitting_jobs_cfg_job_max_walltime" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maximum walltime of jobs (--job-max-walltime)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submitting_jobs_cfg_job_output_dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Job output directory (--job-output-dir)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submitting_jobs_cfg_job_polling_interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      Job polling interval (--job-polling-interval)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submitting_jobs_cfg_job_target_resource" class="md-nav__link">
+    <span class="md-ellipsis">
+      Target resource for job backend (--job-target-resource)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submitting_jobs_usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage of --job
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage of --job">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#submitting_jobs_usage_pbs_python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submitting jobs to a PbsPython or Slurm backend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submitting_jobs_usage_gc3pie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submitting jobs to a GC3Pie backend
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submitting_jobs_examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#submitting_jobs_examples_gc3pie_cfg" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example configurations for GC3Pie job backend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example configurations for GC3Pie job backend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-gc3pie-configuration-for-local-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example GC3Pie configuration for local system
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-gc3pie-configuration-for-torquepbs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example GC3Pie configuration for TORQUE/PBS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-gc3pie-configuration-for-slurm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example GC3Pie configuration for SLURM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submitting_jobs_examples_gc3pie_backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: submitting installations to SLURM via GC3Pie
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submitting_jobs_examples_pbs_python_backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: submitting installations to TORQUE via pbs_python
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
             
           
           
@@ -9004,7 +9252,7 @@ These holds are released by the TORQUE server as soon as they jobs on which they
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>

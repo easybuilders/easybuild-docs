@@ -238,9 +238,7 @@
 
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../../.." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
       
@@ -8682,12 +8680,368 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../easybuild-v5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EasyBuild v5.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
             
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config" class="md-nav__link">
+    <span class="md-ellipsis">
+      config
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.BuildOptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      BuildOptions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.ConfigurationVariables" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConfigurationVariables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ConfigurationVariables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.tools.config.ConfigurationVariables.get_items_check_required" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_items_check_required
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.Singleton" class="md-nav__link">
+    <span class="md-ellipsis">
+      Singleton
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.build_option" class="md-nav__link">
+    <span class="md-ellipsis">
+      build_option
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.build_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      build_path
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.container_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      container_path
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.find_last_log" class="md-nav__link">
+    <span class="md-ellipsis">
+      find_last_log
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.get_build_log_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_build_log_path
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.get_job_backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_job_backend
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.get_log_filename" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_log_filename
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.get_module_naming_scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_module_naming_scheme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.get_module_syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_module_syntax
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.get_modules_tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_modules_tool
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.get_output_style" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_output_style
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.get_package_naming_scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_package_naming_scheme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.get_pretend_installpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_pretend_installpath
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.get_repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.get_repositorypath" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_repositorypath
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.init" class="md-nav__link">
+    <span class="md-ellipsis">
+      init
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.init_build_options" class="md-nav__link">
+    <span class="md-ellipsis">
+      init_build_options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.install_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      install_path
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.log_file_format" class="md-nav__link">
+    <span class="md-ellipsis">
+      log_file_format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.log_format" class="md-nav__link">
+    <span class="md-ellipsis">
+      log_format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.log_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      log_path
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.mk_full_default_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      mk_full_default_path
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.module_classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      module_classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.package_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      package_path
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.read_environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      read_environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.source_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      source_path
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.source_paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      source_paths
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.update_build_option" class="md-nav__link">
+    <span class="md-ellipsis">
+      update_build_option
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.config.update_build_options" class="md-nav__link">
+    <span class="md-ellipsis">
+      update_build_options
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
             
           
           
@@ -9680,7 +10034,7 @@ Returns dictionary with original values for the updated build options.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>

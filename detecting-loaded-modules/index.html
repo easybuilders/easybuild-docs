@@ -238,9 +238,7 @@
 
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
       
@@ -8508,12 +8506,196 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild-v5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EasyBuild v5.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
             
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#detecting_loaded_modules_motivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motivation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detecting_loaded_modules_mechanism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detection mechanism
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detecting_loaded_modules_action" class="md-nav__link">
+    <span class="md-ellipsis">
+      Action to take if loaded modules are detected
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Action to take if loaded modules are detected">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#detecting_loaded_modules_action_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      error: report error and stop EasyBuild upon detection of loaded modules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detecting_loaded_modules_action_ignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      ignore: ignore any loaded modules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detecting_loaded_modules_action_purge" class="md-nav__link">
+    <span class="md-ellipsis">
+      purge: run 'module purge' to clean environment of loaded modules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detecting_loaded_modules_action_unload" class="md-nav__link">
+    <span class="md-ellipsis">
+      unload: unload loaded modules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detecting_loaded_modules_action_warn" class="md-nav__link">
+    <span class="md-ellipsis">
+      warn: print warning and continue upon detection of loaded modules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detecting_loaded_modules_allow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allowing particular loaded modules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detecting_loaded_modules_EBROOT_env_vars" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking of $EBROOT* environment variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Checking of $EBROOT* environment variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#detecting_loaded_modules_EBROOT_env_vars_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      error: report error and stop EasyBuild on unknown $EBROOT* environment variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detecting_loaded_modules_EBROOT_env_vars_ignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      ignore: ignore unknown $EBROOT* environment variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detecting_loaded_modules_EBROOT_env_vars_unset" class="md-nav__link">
+    <span class="md-ellipsis">
+      unset: unset unknown $EBROOT* environment variables and print warning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detecting_loaded_modules_EBROOT_env_vars_warn" class="md-nav__link">
+    <span class="md-ellipsis">
+      warn: print warning for unknown $EBROOT* environment variables and continue
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
             
           
           
@@ -8866,7 +9048,7 @@ found:</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>

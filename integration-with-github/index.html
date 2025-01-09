@@ -238,9 +238,7 @@
 
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
       
@@ -8748,12 +8746,436 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild-v5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EasyBuild v5.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
             
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#github_requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github_configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github_user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Providing a GitHub username
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github_token" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing a GitHub token
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github_git_working_dirs_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specify location of working directories
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github_requirements_check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking status of GitHub integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github_from_pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using easyconfigs from pull requests
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using easyconfigs from pull requests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github_from_pr_vs_develop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relation between pull requests and current develop branch
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relation between pull requests and current develop branch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github_from_pr_vs_develop_open_stable_prs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open stable pull requests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github_from_pr_vs_develop_merged_prs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merged pull requests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github_from_pr_vs_develop_closed_unstable_prs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closed or unstable pull requests
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github_from_pr_robot_synergy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Synergy with --robot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github_from_pr_specifying_easyconfigs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specifying particular easyconfig files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github_from_commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using easyconfigs from a commit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github_include_easyblocks_from_pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using easyblocks from pull requests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github_include_easyblocks_from_commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using easyblocks from a commit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github_upload_test_report" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uploading test reports
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Uploading test reports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github_test_report_env_filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering the environment details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github_review_pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reviewing easyconfig pull requests
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reviewing easyconfig pull requests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#search-criteria-for-similar-easyconfigs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search criteria for similar easyconfigs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github_merge_pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merging easyconfig pull requests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github_new_update_pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submitting new and updating pull requests
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Submitting new and updating pull requests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github_preview_pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Previewing easyconfig pull requests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github_new_pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submitting pull requests
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Submitting pull requests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github_update_pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating existing pull requests
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Updating existing pull requests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github_new_update_pr_patches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Including patch files in easyconfigs pull requests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github_new_update_pr_delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting easyconfig files or patches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github_controlling_pr_metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controlling pull request metadata
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Controlling pull request metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-branch-name-for-new-pull-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default branch name for new pull requests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-commit-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default commit message
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-pull-request-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default pull request description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-pull-request-title" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default pull request title
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github_configuring_new_update_pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring --new-pr and --update-pr
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github_synergy_new_update_pr_dry_run" class="md-nav__link">
+    <span class="md-ellipsis">
+      Synergy with --dry-run/-D and --extended-dry-run/-x
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
             
           
           
@@ -9712,7 +10134,7 @@ is that the latter will show the full diff of the changes (equivalent to
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>

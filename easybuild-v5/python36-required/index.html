@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://docs.easybuild.io/easybuild-v5/policies/">
+        <link rel="canonical" href="https://docs.easybuild.io/easybuild-v5/python36-required/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>Policies related to EasyBuild v5.0 - EasyBuild - building software with ease</title>
+        <title>Python 3.6+ is required to run EasyBuild v5.0.0 - EasyBuild - building software with ease</title>
       
     
     
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#policies-related-to-easybuild-v50" class="md-skip">
+        <a href="#python-36-is-required-to-run-easybuild-v500" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Policies related to EasyBuild v5.0
+              Python 3.6+ is required to run EasyBuild v5.0.0
             
           </span>
         </div>
@@ -234,9 +234,7 @@
 
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
       
@@ -8324,12 +8322,50 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EasyBuild v5.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
             
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
             
           
           
@@ -8342,9 +8378,27 @@
   
 
 
-<h1 id="policies-related-to-easybuild-v50">Policies related to EasyBuild v5.0<a class="headerlink" href="#policies-related-to-easybuild-v50" title="Permanent link">&para;</a></h1>
-<p><em>(for a full overview of changes in EasyBuild v5.0, see <a href="../overview-of-changes/">here</a>)</em></p>
-<p>Starting with EasyBuild v5.0, we will enforce the new <a href="../../policies/toolchains/">toolchain support policy</a>.</p>
+<h1 id="python-36-is-required-to-run-easybuild-v500">Python 3.6+ is required to run EasyBuild v5.0.0<a class="headerlink" href="#python-36-is-required-to-run-easybuild-v500" title="Permanent link">&para;</a></h1>
+<p>EasyBuild 5.0 requires Python &gt;= 3.6 to run.</p>
+<p>EasyBuild will not run with any Python older than 3.6, including Python 2.7.</p>
+<p>Trying to run EasyBuild with a Python version that is too old will result in an error:</p>
+<div class="highlight"><pre><span></span><code>ERROR: No compatible &#39;python&#39; command found via $PATH (EasyBuild requires Python 3.6+)
+</code></pre></div>
+<p>Python 2.7 has been <a href="https://www.python.org/doc/sunset-python-2">end-of-life since 1 Jan 2020</a>,
+and dropping compatibility with Python 2.7 and Python 3.5 enabled some significant code cleanup
+(see <a href="https://github.com/easybuilders/easybuild-framework/pull/4229">easybuild-framework PR #4229</a>).</p>
+<p>The <a href="https://easybuild.io/user_survey">results of the 6th EasyBuild User Survey (2022)</a> show that the impact of
+this breaking change on the EasyBuild community should be very limited, since:</p>
+<ul>
+<li>Only ~13% of survey participants were still running EasyBuild on top of Python 2.7;</li>
+<li>No survey participants reported using Python 3.5;</li>
+<li>Over 85% of survey participants reported using Python 3.6, or a more recent version of Python 3;</li>
+<li>Only 3 out of 118 survey participants (~2.5%) reported that dropping support for running EasyBuild
+  on top of Python 2 would be <em>problematic</em> for them;</li>
+</ul>
+<p>Along with actively removing code that was only required to retain compatibility with Python 2.7 or 3.5,
+the <code>easybuild.tools.py2vs3</code> module that was introduced to facilitate supporting both Python 2.7 and Python 3
+has been deprecated (see also <a href="../deprecated-functionality/#py2vs3">here</a>).</p>
 
 
 
@@ -8365,7 +8419,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 20, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 8, 2025</span>
   </span>
 
     
@@ -8457,7 +8511,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>

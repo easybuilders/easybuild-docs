@@ -238,9 +238,7 @@
 
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../../.." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
       
@@ -8787,12 +8785,473 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../easybuild-v5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EasyBuild v5.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
             
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger" class="md-nav__link">
+    <span class="md-ellipsis">
+      fancylogger
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger--will-log-to-screen-by-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      will log to screen by default
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger--if-you-want-the-logger-to-be-showing-modulenamefunctionname-as-the-name-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      If you want the logger to be showing modulename.functionname as the name, use
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger--you-can-use-the-handler-to-set-a-different-formatter-by-using" class="md-nav__link">
+    <span class="md-ellipsis">
+      you can use the handler to set a different formatter by using
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger--setting-a-global-loglevel-will-impact-all-logers" class="md-nav__link">
+    <span class="md-ellipsis">
+      setting a global loglevel will impact all logers:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.FancyLogRecord" class="md-nav__link">
+    <span class="md-ellipsis">
+      FancyLogRecord
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.FancyLogger" class="md-nav__link">
+    <span class="md-ellipsis">
+      FancyLogger
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FancyLogger">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.FancyLogger.__copy__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __copy__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.FancyLogger.__deepcopy__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __deepcopy__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.FancyLogger.deprecated" class="md-nav__link">
+    <span class="md-ellipsis">
+      deprecated
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.FancyLogger.fail" class="md-nav__link">
+    <span class="md-ellipsis">
+      fail
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.FancyLogger.get_parent_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_parent_info
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.FancyLogger.makeRecord" class="md-nav__link">
+    <span class="md-ellipsis">
+      makeRecord
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.FancyLogger.raiseException" class="md-nav__link">
+    <span class="md-ellipsis">
+      raiseException
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.FancyLogger.setLevelName" class="md-nav__link">
+    <span class="md-ellipsis">
+      setLevelName
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.FancyLogger.streamDebug" class="md-nav__link">
+    <span class="md-ellipsis">
+      streamDebug
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.FancyLogger.streamError" class="md-nav__link">
+    <span class="md-ellipsis">
+      streamError
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.FancyLogger.streamInfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      streamInfo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.FancyLogger.streamLog" class="md-nav__link">
+    <span class="md-ellipsis">
+      streamLog
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.FancyStreamHandler" class="md-nav__link">
+    <span class="md-ellipsis">
+      FancyStreamHandler
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FancyStreamHandler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.FancyStreamHandler.__init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.disableDefaultHandlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      disableDefaultHandlers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.enableDefaultHandlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      enableDefaultHandlers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.getAllExistingLoggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      getAllExistingLoggers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.getAllFancyloggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      getAllFancyloggers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.getAllNonFancyloggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      getAllNonFancyloggers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.getDetailsLogLevels" class="md-nav__link">
+    <span class="md-ellipsis">
+      getDetailsLogLevels
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.getLevelInt" class="md-nav__link">
+    <span class="md-ellipsis">
+      getLevelInt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.getLogger" class="md-nav__link">
+    <span class="md-ellipsis">
+      getLogger
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.getRootLoggerName" class="md-nav__link">
+    <span class="md-ellipsis">
+      getRootLoggerName
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.is_fancyroot" class="md-nav__link">
+    <span class="md-ellipsis">
+      is_fancyroot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.logToDevLog" class="md-nav__link">
+    <span class="md-ellipsis">
+      logToDevLog
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.logToFile" class="md-nav__link">
+    <span class="md-ellipsis">
+      logToFile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.logToScreen" class="md-nav__link">
+    <span class="md-ellipsis">
+      logToScreen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.logToUDP" class="md-nav__link">
+    <span class="md-ellipsis">
+      logToUDP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.resetroot" class="md-nav__link">
+    <span class="md-ellipsis">
+      resetroot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.setLogFormat" class="md-nav__link">
+    <span class="md-ellipsis">
+      setLogFormat
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.setLogLevel" class="md-nav__link">
+    <span class="md-ellipsis">
+      setLogLevel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.setLogLevelDebug" class="md-nav__link">
+    <span class="md-ellipsis">
+      setLogLevelDebug
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.setLogLevelError" class="md-nav__link">
+    <span class="md-ellipsis">
+      setLogLevelError
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.setLogLevelInfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      setLogLevelInfo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.setLogLevelWarning" class="md-nav__link">
+    <span class="md-ellipsis">
+      setLogLevelWarning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.setTestLogFormat" class="md-nav__link">
+    <span class="md-ellipsis">
+      setTestLogFormat
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.setroot" class="md-nav__link">
+    <span class="md-ellipsis">
+      setroot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.base.fancylogger.thread_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      thread_name
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
             
           
           
@@ -9941,7 +10400,7 @@ with (effective)loglevel of current root FancyLogger</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>

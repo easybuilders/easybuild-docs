@@ -238,9 +238,7 @@
 
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
       
@@ -9735,12 +9733,1423 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../easybuild-v5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EasyBuild v5.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
             
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#binariestarball" class="md-nav__link">
+    <span class="md-ellipsis">
+      BinariesTarball
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BinariesTarball">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-binariestarball-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to BinariesTarball easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-binariestarball-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in BinariesTarball easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Binary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-binary-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to Binary easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-binary-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in Binary easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-easyconfig-for-binary-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example easyconfig for Binary easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buildenv" class="md-nav__link">
+    <span class="md-ellipsis">
+      BuildEnv
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BuildEnv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-buildenv-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to BuildEnv easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bundle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bundle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bundle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-bundle-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to Bundle easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-bundle-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in Bundle easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-easyconfig-for-bundle-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example easyconfig for Bundle easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cmakemake" class="md-nav__link">
+    <span class="md-ellipsis">
+      CMakeMake
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CMakeMake">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-cmakemake-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to CMakeMake easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-cmakemake-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in CMakeMake easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-easyconfig-for-cmakemake-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example easyconfig for CMakeMake easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cmakemakecp" class="md-nav__link">
+    <span class="md-ellipsis">
+      CMakeMakeCp
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CMakeMakeCp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-cmakemakecp-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to CMakeMakeCp easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-cmakemakecp-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in CMakeMakeCp easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cmakeninja" class="md-nav__link">
+    <span class="md-ellipsis">
+      CMakeNinja
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CMakeNinja">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-cmakeninja-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to CMakeNinja easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-cmakeninja-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in CMakeNinja easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cmakepythonpackage" class="md-nav__link">
+    <span class="md-ellipsis">
+      CMakePythonPackage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CMakePythonPackage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-cmakepythonpackage-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to CMakePythonPackage easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-cmakepythonpackage-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in CMakePythonPackage easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cargo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cargo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cargo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-cargo-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to Cargo easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-cargo-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in Cargo easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cargopythonbundle" class="md-nav__link">
+    <span class="md-ellipsis">
+      CargoPythonBundle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CargoPythonBundle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-cargopythonbundle-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to CargoPythonBundle easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cargopythonpackage" class="md-nav__link">
+    <span class="md-ellipsis">
+      CargoPythonPackage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CargoPythonPackage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-cargopythonpackage-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to CargoPythonPackage easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cmdcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      CmdCp
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CmdCp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-cmdcp-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to CmdCp easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-cmdcp-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in CmdCp easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conda
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conda">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-conda-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to Conda easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-conda-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in Conda easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuremake" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConfigureMake
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ConfigureMake">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-configuremake-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to ConfigureMake easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commonly-used-easyconfig-parameters-with-configuremake-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commonly used easyconfig parameters with ConfigureMake easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-configuremake-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in ConfigureMake easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-easyconfig-for-configuremake-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example easyconfig for ConfigureMake easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuremakepythonpackage" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConfigureMakePythonPackage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ConfigureMakePythonPackage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-configuremakepythonpackage-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to ConfigureMakePythonPackage easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-configuremakepythonpackage-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in ConfigureMakePythonPackage easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-easyconfig-for-configuremakepythonpackage-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example easyconfig for ConfigureMakePythonPackage easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#craytoolchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      CrayToolchain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CrayToolchain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-craytoolchain-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to CrayToolchain easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fortranpythonpackage" class="md-nav__link">
+    <span class="md-ellipsis">
+      FortranPythonPackage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FortranPythonPackage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-fortranpythonpackage-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to FortranPythonPackage easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-fortranpythonpackage-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in FortranPythonPackage easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gopackage" class="md-nav__link">
+    <span class="md-ellipsis">
+      GoPackage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GoPackage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-gopackage-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to GoPackage easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-gopackage-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in GoPackage easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intelbase" class="md-nav__link">
+    <span class="md-ellipsis">
+      IntelBase
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IntelBase">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-intelbase-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to IntelBase easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-intelbase-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in IntelBase easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jar" class="md-nav__link">
+    <span class="md-ellipsis">
+      JAR
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JAR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-jar-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to JAR easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#juliabundle" class="md-nav__link">
+    <span class="md-ellipsis">
+      JuliaBundle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JuliaBundle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-juliabundle-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to JuliaBundle easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-juliabundle-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in JuliaBundle easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#juliapackage" class="md-nav__link">
+    <span class="md-ellipsis">
+      JuliaPackage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JuliaPackage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-juliapackage-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to JuliaPackage easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-juliapackage-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in JuliaPackage easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#makecp" class="md-nav__link">
+    <span class="md-ellipsis">
+      MakeCp
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MakeCp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-makecp-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to MakeCp easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-makecp-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in MakeCp easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mesonninja" class="md-nav__link">
+    <span class="md-ellipsis">
+      MesonNinja
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MesonNinja">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-mesonninja-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to MesonNinja easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-mesonninja-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in MesonNinja easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulerc" class="md-nav__link">
+    <span class="md-ellipsis">
+      ModuleRC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ModuleRC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-modulerc-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to ModuleRC easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-modulerc-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in ModuleRC easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ocamlpackage" class="md-nav__link">
+    <span class="md-ellipsis">
+      OCamlPackage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OCamlPackage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-ocamlpackage-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to OCamlPackage easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-ocamlpackage-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in OCamlPackage easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#octavepackage" class="md-nav__link">
+    <span class="md-ellipsis">
+      OctavePackage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OctavePackage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-octavepackage-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to OctavePackage easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-octavepackage-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in OctavePackage easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packedbinary" class="md-nav__link">
+    <span class="md-ellipsis">
+      PackedBinary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PackedBinary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-packedbinary-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to PackedBinary easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-packedbinary-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in PackedBinary easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perlbundle" class="md-nav__link">
+    <span class="md-ellipsis">
+      PerlBundle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PerlBundle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-perlbundle-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to PerlBundle easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perlmodule" class="md-nav__link">
+    <span class="md-ellipsis">
+      PerlModule
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PerlModule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-perlmodule-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to PerlModule easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-perlmodule-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in PerlModule easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pythonbundle" class="md-nav__link">
+    <span class="md-ellipsis">
+      PythonBundle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PythonBundle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-pythonbundle-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to PythonBundle easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pythonpackage" class="md-nav__link">
+    <span class="md-ellipsis">
+      PythonPackage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PythonPackage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-pythonpackage-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to PythonPackage easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-pythonpackage-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in PythonPackage easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rpackage" class="md-nav__link">
+    <span class="md-ellipsis">
+      RPackage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RPackage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-rpackage-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to RPackage easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-rpackage-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in RPackage easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rpm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rpm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rpm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-rpm-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to Rpm easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-rpm-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in Rpm easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rubygem" class="md-nav__link">
+    <span class="md-ellipsis">
+      RubyGem
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RubyGem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-rubygem-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to RubyGem easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-rubygem-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in RubyGem easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scons" class="md-nav__link">
+    <span class="md-ellipsis">
+      SCons
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SCons">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-scons-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to SCons easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-scons-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in SCons easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systemcompiler" class="md-nav__link">
+    <span class="md-ellipsis">
+      SystemCompiler
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SystemCompiler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-systemcompiler-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to SystemCompiler easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systemmpi" class="md-nav__link">
+    <span class="md-ellipsis">
+      SystemMPI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SystemMPI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-systemmpi-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to SystemMPI easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tarball" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tarball
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tarball">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-tarball-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to Tarball easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-tarball-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in Tarball easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toolchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Toolchain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Toolchain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-toolchain-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to Toolchain easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vscpythonpackage" class="md-nav__link">
+    <span class="md-ellipsis">
+      VSCPythonPackage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VSCPythonPackage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-vscpythonpackage-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to VSCPythonPackage easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#versionindependentpythonpackage" class="md-nav__link">
+    <span class="md-ellipsis">
+      VersionIndependentPythonPackage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VersionIndependentPythonPackage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-easyconfig-parameters-specific-to-versionindependentpythonpackage-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extra easyconfig parameters specific to VersionIndependentPythonPackage easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-versionindependentpythonpackage-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in VersionIndependentPythonPackage easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Waf
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Waf">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#customised-steps-in-waf-easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customised steps in Waf easyblock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
             
           
           
@@ -13856,7 +15265,7 @@ if an actual version is specified, it is checked against the derived version of 
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>

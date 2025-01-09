@@ -238,9 +238,7 @@
 
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
       
@@ -8610,12 +8608,298 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild-v5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EasyBuild v5.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
             
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#specifying_easyconfigs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specifying what to install
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Specifying what to install">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#specifying_easyconfigs_single" class="md-nav__link">
+    <span class="md-ellipsis">
+      By providing a single easyconfig file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specifying_easyconfigs_command_line" class="md-nav__link">
+    <span class="md-ellipsis">
+      Via command line options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specifying_easyconfigs_set_of_easyconfigs" class="md-nav__link">
+    <span class="md-ellipsis">
+      By providing a set of easyconfig files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commonly-used-command-line-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commonly used command line options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Commonly used command line options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-line-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command line help
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#report-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Report version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list_toolchains" class="md-nav__link">
+    <span class="md-ellipsis">
+      List of known toolchains
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list_easyblocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      List of available easyblocks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avail_easyconfig_params" class="md-nav__link">
+    <span class="md-ellipsis">
+      All available easyconfig parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="All available easyconfig parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-debug-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable debug logging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rebuild_option" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rebuild installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force_option" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forced reinstallation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searching_for_easyconfigs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Searching for easyconfigs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use_robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling dependency resolution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robot_search_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Searching for easyconfigs: the robot search path
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Searching for easyconfigs: the robot search path">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-robot-search-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default robot search path
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controlling_robot_search_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controlling the robot search path
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robot_search_path_prepend_append" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepending/appending to the default robot search path
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-use-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example use case
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_an_overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting an overview of planned installations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eb_missing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting an overview of missing installations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tweaking_easyconfigs_using_try" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tweaking existing easyconfig files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module_cmds_overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview of basic module commands
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
             
           
           
@@ -9047,6 +9331,23 @@ For each entry in the robot search path, a couple of different filepaths are con
 <li><code>o/OpenMPI/OpenMPI-4.1.4-GCC-11.3.0-test.eb</code></li>
 <li><code>OpenMPI-4.1.4-GCC-11.3.0-test.eb</code></li>
 </ul>
+<p>If no match is found sub-toolchains are also considered,
+see [the toolchain diagram][common-toolchains#toolchains_diagram] for an overview of the toolchain hierarchy.
+In this case the following filepaths (also relative to each entry in the robot search path) are considered if none of the above was found:</p>
+<ul>
+<li><code>OpenMPI/4.1.4-GCCcore-11.3.0-test.eb</code></li>
+<li><code>OpenMPI/OpenMPI-4.1.4-GCCcore-11.3.0-test.eb</code></li>
+<li><code>o/OpenMPI/OpenMPI-4.1.4-GCCcore-11.3.0-test.eb</code></li>
+<li><code>OpenMPI-4.1.4-GCCcore-11.3.0-test.eb</code></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The search for those paths is <strong>not recursive</strong>.
+I.e. for <code>--robot-path=/my/robot_path</code> the filepath <code>/my/robot_path/easyconfigs/OpenMPI</code> and similar is <strong>NOT</strong> considered.
+You would need to set <code>--robot-path=/my/robot_path/easyconfigs</code> instead.
+Note that you likely want to include the default search path by including a colon (see <a class="autorefs autorefs-internal" href="#robot_search_path_prepend_append">below</a>),
+like <code>--robot-path=/my/robot_path/easyconfigs:</code>.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Sometimes easyconfig files are needed even when the modules for the dependencies are already available,
@@ -9271,7 +9572,7 @@ since a software version is tied to a particular software package.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 19, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 4, 2024</span>
   </span>
 
     
@@ -9363,7 +9664,7 @@ since a software version is tied to a particular software package.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>

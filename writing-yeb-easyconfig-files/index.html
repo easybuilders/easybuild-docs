@@ -238,9 +238,7 @@
 
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
       
@@ -8583,12 +8581,271 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild-v5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EasyBuild v5.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
             
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#easyconfig_yeb_format_requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easyconfig_yeb_format_syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syntax
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Syntax">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#easyconfig_yeb_format_syntax_YAML_header" class="md-nav__link">
+    <span class="md-ellipsis">
+      YAML header (optional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easyconfig_yeb_format_syntax_comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easyconfig_yeb_format_syntax_internal_variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internal variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easyconfig_yeb_format_syntax_string_concatenation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concatenating strings and/or variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easyconfig_yeb_format_syntax_escaping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escaping string values with single or double quotes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easyconfig_yeb_format_syntax_easyconfig_parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Easyconfig parameter values
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Easyconfig parameter values">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#easyconfig_yeb_format_syntax_scalars" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scalar values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easyconfig_yeb_format_syntax_sequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easyconfig_yeb_format_syntax_mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mappings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easyconfig_yeb_format_syntax_nesting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nesting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easyconfig_yeb_format_syntax_template_values_constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Templates values and constants
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easyconfig_yeb_format_syntax_dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easyconfig_yeb_format_new" class="md-nav__link">
+    <span class="md-ellipsis">
+      OS dependencies and sanity check paths
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shorthands-for-common-easyconfig-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shorthands for common easyconfig parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shorthands for common easyconfig parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toolchain-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Toolchain format
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easyconfig_yeb_format_examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#easyconfig_yeb_format_examples_gzip16_GCC492" class="md-nav__link">
+    <span class="md-ellipsis">
+      gzip-1.6-GCC-4.9.2.yeb
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easyconfig_yeb_format_examples_goolf1410" class="md-nav__link">
+    <span class="md-ellipsis">
+      goolf-1.4.10.yeb
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-2710-intel-2015byeb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python-2.7.10-intel-2015b.yeb
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
             
           
           
@@ -8604,7 +8861,7 @@
 <h1 id="easyconfig_yeb_format">Writing easyconfig files in YAML syntax (<code>.yeb</code> format) <strong>Deprecated</strong><a class="headerlink" href="#easyconfig_yeb_format" title="Permanent link">&para;</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Use of <code>.yeb</code> easyconfigs is deprecated and <a class="autorefs autorefs-internal" href="../easybuild-v5/backwards-incompatible-changes/#yeb">will be removed in EasyBuild v5.0</a>.</p>
+<p>Use of <code>.yeb</code> easyconfigs is deprecated and <a class="autorefs autorefs-internal" href="../easybuild-v5/removed-functionality/#yeb">will be removed in EasyBuild v5.0</a>.</p>
 </div>
 <p>Useful links:</p>
 <ul>
@@ -9148,7 +9405,7 @@ the .yeb format, this can be done much easier by just using <code>name, version<
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>

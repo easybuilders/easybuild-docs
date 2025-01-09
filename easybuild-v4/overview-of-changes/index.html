@@ -238,9 +238,7 @@
 
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
       
@@ -8537,12 +8535,223 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../easybuild-v5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EasyBuild v5.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
             
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#eb4_changes_significant_enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Significant enhancements in EasyBuild v4.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Significant enhancements in EasyBuild v4.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eb4_no_required_deps" class="md-nav__link">
+    <span class="md-ellipsis">
+      No more required Python packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eb4_python3_support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support for running EasyBuild on top of Python 3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eb4_custom_easyblocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom software-specific easyblocks for iccifort, numexpr, OpenMPI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eb4_2019b_common_toolchains" class="md-nav__link">
+    <span class="md-ellipsis">
+      2019b update of common toolchains
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eb4_changes_local_variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local variables in easyconfigs should follow recommended naming scheme
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eb4_changes_backwards_incompatible" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backwards-incompatible changes in EasyBuild v4.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backwards-incompatible changes in EasyBuild v4.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eb4_changes_fixed_installdir_naming_scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      --fixed-installdir-naming-scheme enabled by default
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="--fixed-installdir-naming-scheme enabled by default">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eb4_changes_fixed_installdir_naming_scheme_disabling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disabling --fixed-installdir-naming-scheme
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eb4_changes_relocated_stuff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relocated functions, classes and constants in EasyBuild framework
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eb4_changes_ingested_vsc_base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ingested functionality from vsc-base and vsc-install
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ingested functionality from vsc-base and vsc-install">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eb4_changes_ingested_vsc_base_fake_vsc_namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fake vsc namespace
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eb4_changes_py2vs3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions &amp; classes that must be imported from the easybuild.tools.py2vs3 namespace
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eb4_changes_deprecated" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deprecated functionality in EasyBuild v4.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deprecated functionality in EasyBuild v4.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eb4_changes_dummy_tc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deprecated dummy toolchain
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
             
           
           
@@ -8813,7 +9022,7 @@ to ensure compatibility with Python 2 and 3.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>

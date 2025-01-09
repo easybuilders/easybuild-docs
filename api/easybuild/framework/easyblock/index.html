@@ -238,9 +238,7 @@
 
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../../.." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
       
@@ -9357,12 +9355,1043 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../easybuild-v5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EasyBuild v5.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
             
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      easyblock
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock" class="md-nav__link">
+    <span class="md-ellipsis">
+      EasyBlock
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EasyBlock">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.full_mod_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      full_mod_name
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.mod_subdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      mod_subdir
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.moduleGenerator" class="md-nav__link">
+    <span class="md-ellipsis">
+      moduleGenerator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.name" class="md-nav__link">
+    <span class="md-ellipsis">
+      name
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.short_mod_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      short_mod_name
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.start_dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      start_dir
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.toolchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      toolchain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.version" class="md-nav__link">
+    <span class="md-ellipsis">
+      version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.__init__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __init__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.apply_post_install_patches" class="md-nav__link">
+    <span class="md-ellipsis">
+      apply_post_install_patches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.banned_linked_shared_libs" class="md-nav__link">
+    <span class="md-ellipsis">
+      banned_linked_shared_libs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.bin_lib_subdirs" class="md-nav__link">
+    <span class="md-ellipsis">
+      bin_lib_subdirs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.build_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      build_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.check_accepted_eula" class="md-nav__link">
+    <span class="md-ellipsis">
+      check_accepted_eula
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.check_checksums" class="md-nav__link">
+    <span class="md-ellipsis">
+      check_checksums
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.check_checksums_for" class="md-nav__link">
+    <span class="md-ellipsis">
+      check_checksums_for
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.check_readiness_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      check_readiness_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.checksum_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      checksum_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.clean_up_fake_module" class="md-nav__link">
+    <span class="md-ellipsis">
+      clean_up_fake_module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.cleanup_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      cleanup_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.close_log" class="md-nav__link">
+    <span class="md-ellipsis">
+      close_log
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.collect_exts_file_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      collect_exts_file_info
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.configure_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      configure_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.det_iter_cnt" class="md-nav__link">
+    <span class="md-ellipsis">
+      det_iter_cnt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.dry_run_msg" class="md-nav__link">
+    <span class="md-ellipsis">
+      dry_run_msg
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.extensions_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      extensions_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.extra_options" class="md-nav__link">
+    <span class="md-ellipsis">
+      extra_options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.extract_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      extract_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.fetch_extension_sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      fetch_extension_sources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.fetch_patches" class="md-nav__link">
+    <span class="md-ellipsis">
+      fetch_patches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.fetch_source" class="md-nav__link">
+    <span class="md-ellipsis">
+      fetch_source
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.fetch_sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      fetch_sources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.fetch_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      fetch_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.fix_shebang" class="md-nav__link">
+    <span class="md-ellipsis">
+      fix_shebang
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.gen_builddir" class="md-nav__link">
+    <span class="md-ellipsis">
+      gen_builddir
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.gen_installdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      gen_installdir
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.get_checksum_for" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_checksum_for
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.get_checksums_from_json" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_checksums_from_json
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.get_steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.guess_start_dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      guess_start_dir
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.handle_iterate_opts" class="md-nav__link">
+    <span class="md-ellipsis">
+      handle_iterate_opts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.init_dry_run" class="md-nav__link">
+    <span class="md-ellipsis">
+      init_dry_run
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.init_ext_instances" class="md-nav__link">
+    <span class="md-ellipsis">
+      init_ext_instances
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.install_extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      install_extensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.install_extensions_parallel" class="md-nav__link">
+    <span class="md-ellipsis">
+      install_extensions_parallel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.install_extensions_sequential" class="md-nav__link">
+    <span class="md-ellipsis">
+      install_extensions_sequential
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.install_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      install_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.invalidate_module_caches" class="md-nav__link">
+    <span class="md-ellipsis">
+      invalidate_module_caches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.load_dependency_modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      load_dependency_modules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.load_fake_module" class="md-nav__link">
+    <span class="md-ellipsis">
+      load_fake_module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.load_module" class="md-nav__link">
+    <span class="md-ellipsis">
+      load_module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_builddir" class="md-nav__link">
+    <span class="md-ellipsis">
+      make_builddir
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_devel_module" class="md-nav__link">
+    <span class="md-ellipsis">
+      make_devel_module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      make_dir
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_extension_string" class="md-nav__link">
+    <span class="md-ellipsis">
+      make_extension_string
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_installdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      make_installdir
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_module_dep" class="md-nav__link">
+    <span class="md-ellipsis">
+      make_module_dep
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_module_deppaths" class="md-nav__link">
+    <span class="md-ellipsis">
+      make_module_deppaths
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_module_description" class="md-nav__link">
+    <span class="md-ellipsis">
+      make_module_description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_module_extend_modpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      make_module_extend_modpath
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_module_extra" class="md-nav__link">
+    <span class="md-ellipsis">
+      make_module_extra
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_module_extra_extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      make_module_extra_extensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_module_footer" class="md-nav__link">
+    <span class="md-ellipsis">
+      make_module_footer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_module_group_check" class="md-nav__link">
+    <span class="md-ellipsis">
+      make_module_group_check
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_module_req" class="md-nav__link">
+    <span class="md-ellipsis">
+      make_module_req
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_module_req_guess" class="md-nav__link">
+    <span class="md-ellipsis">
+      make_module_req_guess
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_module_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      make_module_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.obtain_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      obtain_file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.package_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      package_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.patch_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      patch_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.permissions_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      permissions_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.post_init" class="md-nav__link">
+    <span class="md-ellipsis">
+      post_init
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.post_install_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      post_install_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.post_iter_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      post_iter_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.prepare_for_extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      prepare_for_extensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.prepare_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      prepare_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.print_post_install_messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      print_post_install_messages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.remove_module_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove_module_file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.report_test_failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      report_test_failure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.required_linked_shared_libs" class="md-nav__link">
+    <span class="md-ellipsis">
+      required_linked_shared_libs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.reset_env" class="md-nav__link">
+    <span class="md-ellipsis">
+      reset_env
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.run_all_steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      run_all_steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.run_post_install_commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      run_post_install_commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.run_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      run_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.sanity_check_linked_shared_libs" class="md-nav__link">
+    <span class="md-ellipsis">
+      sanity_check_linked_shared_libs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.sanity_check_load_module" class="md-nav__link">
+    <span class="md-ellipsis">
+      sanity_check_load_module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.sanity_check_rpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      sanity_check_rpath
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.sanity_check_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      sanity_check_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.set_parallel" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_parallel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.set_up_cuda_cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_up_cuda_cache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.skip_extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      skip_extensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.skip_extensions_parallel" class="md-nav__link">
+    <span class="md-ellipsis">
+      skip_extensions_parallel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.skip_extensions_sequential" class="md-nav__link">
+    <span class="md-ellipsis">
+      skip_extensions_sequential
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.skip_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      skip_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.stage_install_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      stage_install_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.test_cases_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_cases_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.test_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      test_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.update_config_template_run_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      update_config_template_run_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.update_exts_progress_bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      update_exts_progress_bar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.StopException" class="md-nav__link">
+    <span class="md-ellipsis">
+      StopException
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.build_and_install_one" class="md-nav__link">
+    <span class="md-ellipsis">
+      build_and_install_one
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.build_easyconfigs" class="md-nav__link">
+    <span class="md-ellipsis">
+      build_easyconfigs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.get_easyblock_instance" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_easyblock_instance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.inject_checksums" class="md-nav__link">
+    <span class="md-ellipsis">
+      inject_checksums
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.inject_checksums_to_json" class="md-nav__link">
+    <span class="md-ellipsis">
+      inject_checksums_to_json
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.print_dry_run_note" class="md-nav__link">
+    <span class="md-ellipsis">
+      print_dry_run_note
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.reproduce_build" class="md-nav__link">
+    <span class="md-ellipsis">
+      reproduce_build
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
             
           
           
@@ -12478,7 +13507,7 @@ by removing them from list of Extension instances to install (self.ext_instances
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>

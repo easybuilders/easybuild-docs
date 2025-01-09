@@ -238,9 +238,7 @@
 
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
       
@@ -8586,12 +8584,274 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild-v5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EasyBuild v5.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
             
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#py2_py3_compatibility_EB_VERBOSE" class="md-nav__link">
+    <span class="md-ellipsis">
+      Determining which Python version EasyBuild is using via $EB_VERBOSE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py2_py3_compatibility_EB_PYTHON" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controlling which python command EasyBuild will use via $EB_PYTHON
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-easybuildtoolspy2vs3-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      The easybuild.tools.py2vs3 package
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py2vs3_ascii_letters" class="md-nav__link">
+    <span class="md-ellipsis">
+      ascii_letters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py2vs3_ascii_lowercase" class="md-nav__link">
+    <span class="md-ellipsis">
+      ascii_lowercase
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py2vs3_build_opener" class="md-nav__link">
+    <span class="md-ellipsis">
+      build_opener
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py2vs3_configparser" class="md-nav__link">
+    <span class="md-ellipsis">
+      configparser
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py2vs3_create_base_metaclass" class="md-nav__link">
+    <span class="md-ellipsis">
+      create_base_metaclass
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py2vs3_extract_method_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      extract_method_name
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py2vs3_HTTPError" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTPError
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py2vs3_HTTPSHandler" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTPSHandler
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py2vs3_json_loads" class="md-nav__link">
+    <span class="md-ellipsis">
+      json_loads
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py2vs3_mk_wrapper_baseclass" class="md-nav__link">
+    <span class="md-ellipsis">
+      mk_wrapper_baseclass
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py2vs3_OrderedDict" class="md-nav__link">
+    <span class="md-ellipsis">
+      OrderedDict
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py2vs3_reload" class="md-nav__link">
+    <span class="md-ellipsis">
+      reload
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py2vs3_raise_with_traceback" class="md-nav__link">
+    <span class="md-ellipsis">
+      raise_with_traceback
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py2vs3_Request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py2vs3_subprocess_popen_text" class="md-nav__link">
+    <span class="md-ellipsis">
+      subprocess_popen_text
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py2vs3_std_urllib" class="md-nav__link">
+    <span class="md-ellipsis">
+      std_urllib
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py2vs3_string_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      string_type
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py2vs3_StringIO" class="md-nav__link">
+    <span class="md-ellipsis">
+      StringIO
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py2vs3_urlencode" class="md-nav__link">
+    <span class="md-ellipsis">
+      urlencode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py2vs3_URLError" class="md-nav__link">
+    <span class="md-ellipsis">
+      URLError
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#py2vs3_urlopen" class="md-nav__link">
+    <span class="md-ellipsis">
+      urlopen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
             
           
           
@@ -8610,8 +8870,8 @@ compatible with both Python versions 2 and 3. More specifically, the
 following Python versions are currently supported:</p>
 <ul>
 <li>Python 2.6.x (support was removed in EasyBuild v4.4.0)</li>
-<li>Python 2.7.x (<a href="../easybuild-v5/overview-of-changes/">support will be removed in EasyBuild v5.0.0</a>)</li>
-<li>Python 3.5.x (<a href="../easybuild-v5/overview-of-changes/">support will be removed in EasyBuild v5.0.0</a>)</li>
+<li>Python 2.7.x (<a href="../easybuild-v5/">support will be removed in EasyBuild v5.0.0</a>)</li>
+<li>Python 3.5.x (<a href="../easybuild-v5/">support will be removed in EasyBuild v5.0.0</a>)</li>
 <li>Python 3.6.x</li>
 <li>Python 3.7.x</li>
 <li>Python 3.8.x (requires EasyBuild v4.1.0)</li>
@@ -8799,7 +9059,7 @@ implemented in a way that is compatible with both Python 2 and 3.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 17, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 8, 2025</span>
   </span>
 
     
@@ -8891,7 +9151,7 @@ implemented in a way that is compatible with both Python 2 and 3.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>

@@ -238,9 +238,7 @@
 
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
       
@@ -8733,12 +8731,421 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild-v5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EasyBuild v5.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
             
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview_removed_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview of removed functionality since EasyBuild v4.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview of removed functionality since EasyBuild v4.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#depr_fftw_use_fma4" class="md-nav__link">
+    <span class="md-ellipsis">
+      use_fma custom easyconfig parameter for FFTW
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depr_sources_2_element_tuple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specifying source files as 2-element tuples to provide a custom extraction command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depr_pythonpackage_use_easy_install_setup_py_develop" class="md-nav__link">
+    <span class="md-ellipsis">
+      use_easy_install and use_setup_py_develop custom easyconfig parameters for PythonPackage easyblock
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depr_copytree_function" class="md-nav__link">
+    <span class="md-ellipsis">
+      copytree function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depr_adjust_permissions_skip_symlinks" class="md-nav__link">
+    <span class="md-ellipsis">
+      skip_symlinks named argument for adjust_permissions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depr_get_easyblock_class_default_fallback" class="md-nav__link">
+    <span class="md-ellipsis">
+      default_fallback named argument for get_easyblock_class
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depr_toolchain_add_dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_dependencies method in Toolchain class
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview_removed_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview of removed functionality since EasyBuild v3.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview of removed functionality since EasyBuild v3.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#depr_error_reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      error and exception log methods no longer raise an exception
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depr_lapack_get_blas_lib" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_blas_lib function provided by LAPACK easyblock has been removed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depr_get_netcdf_module_set_cmds" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_netcdf_module_set_cmds function provided by netCDF easyblock was removed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview_removed_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview of removed functionality since EasyBuild v2.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview of removed functionality since EasyBuild v2.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#depr_python_version_compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python version compatibility
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depr_easybuild_configuration_eb1" class="md-nav__link">
+    <span class="md-ellipsis">
+      EasyBuild configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EasyBuild configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#location-of-default-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Location of default configuration file
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depr_ConfigureMake_fallback_eb1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automagic fallback to ConfigureMake
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depr_easyconfig_parameters_eb1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Easyconfig parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Easyconfig parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#depr_premakeopts_makeopts_eb1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options for build command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depr_shared_lib_ext_eb1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shared library extension
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depr_license_eb1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software license
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depr_mrbayes_beagle_eb1" class="md-nav__link">
+    <span class="md-ellipsis">
+      BEAGLE dependency in MrBayes easyblock replaced by beagle-lib
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild-api-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      EasyBuild API changes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EasyBuild API changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#depr_easyblocks_API_eb1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Easyblocks API (EasyBlock class from easybuild.framework.easyblock)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Easyblocks API (EasyBlock class from easybuild.framework.easyblock)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#return-type-of-extra_options-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Return type of extra_options method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extension-filter-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extension filter template
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-path-of-default-class-for-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module path of default class for extensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-path-for-easyblocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module path for easyblocks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depr_easybuild_tools_modules_eb1" class="md-nav__link">
+    <span class="md-ellipsis">
+      easybuild.tools.modules Python module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depr_softroot_version_env_vars_eb1" class="md-nav__link">
+    <span class="md-ellipsis">
+      $SOFTX environment variables in generated module files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depr_renamed_relocated_functions_eb1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Renamed/relocated functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depr_changes_generic_easyblocks_eb1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changes in (generic) easyblocks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Changes in (generic) easyblocks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#srcdir-replaces-builddir-as-named-argument-in-cmakemakeconfigure_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      srcdir replaces builddir as named argument in CMakeMake.configure_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#versionindependentpythonpackage-replaces-versionindependendpythonpackage" class="md-nav__link">
+    <span class="md-ellipsis">
+      VersionIndependentPythonPackage replaces VersionIndependendPythonPackage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_sitearch_suffix-function-in-perl-easyblock-is-removed" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_sitearch_suffix function in Perl easyblock is removed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
             
           
           
@@ -9438,7 +9845,7 @@ replaced by the more generic <code>get_site_suffix</code> function.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>

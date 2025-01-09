@@ -238,9 +238,7 @@
 
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
       
@@ -1163,6 +1161,15 @@
   <a href="#tweaking-existing-easyconfig-files" class="md-nav__link">
     <span class="md-ellipsis">
       Tweaking existing easyconfig files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-existing-easyconfigs-for-another-toolchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating existing easyconfigs for another toolchain
     </span>
   </a>
   
@@ -8667,12 +8674,364 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild-v5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EasyBuild v5.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
             
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what_is_an_easyconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an easyconfig (file)?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-easyconfig-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available easyconfig parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mandatory-easyconfig-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mandatory easyconfig parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-easyconfig-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common easyconfig parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common easyconfig parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common_easyconfig_param_sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source files, patches and checksums
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Source files, patches and checksums">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common_easyconfig_param_sources_patches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common_easyconfig_param_sources_checksums" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checksums
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Checksums">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inject_checksums" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding or replacing checksums using --inject-checksums
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding or replacing checksums using --inject-checksums">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inject_checksums_adding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding checksums when none are specified yet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inject_checksums_replacing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Replacing existing checksums
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inject_checksums_robot_synergy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Synergy between --inject-checksums and --robot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inject_checksums_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type of checksum to inject
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common_easyconfig_param_sources_alt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternative formats for sources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-download_instructions-for-user-side-part-of-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using download_instructions for user-side part of installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common_easyconfig_param_sources_git_config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Downloading from a Git repository
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependency_specs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loading-of-modules-for-dependencies-with-a-system-toolchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loading of modules for dependencies with a system toolchain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specifying-dependencies-using-system-toolchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specifying dependencies using system toolchain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-external-modules-as-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using external modules as dependencies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module_extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure_build_install_command_options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure/build/install command options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure/build/install command options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure_build_install_command_options_iterate" class="md-nav__link">
+    <span class="md-ellipsis">
+      List of configure/build/install options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sanity-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sanity check
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing_easyconfigs_easyblock_spec" class="md-nav__link">
+    <span class="md-ellipsis">
+      Easyblock specification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module class
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tweaking-existing-easyconfig-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tweaking existing easyconfig files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-existing-easyconfigs-for-another-toolchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating existing easyconfigs for another toolchain
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easyconfig_param_templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic values for easyconfig parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-specific-documentation-relevant-to-easyconfigs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version-specific documentation relevant to easyconfigs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing-easyconfigs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contributing easyconfigs
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
             
           
           
@@ -9481,6 +9840,74 @@ lines options. See <a class="autorefs autorefs-internal" href="../using-easybuil
 </code></pre></div>
 </li>
 </ul>
+<h2 id="updating-existing-easyconfigs-for-another-toolchain">Updating existing easyconfigs for another toolchain<a class="headerlink" href="#updating-existing-easyconfigs-for-another-toolchain" title="Permanent link">&para;</a></h2>
+<p>While <code>try-toolchain</code> is a convenient way of testing existing software versions with another toolchain
+you rarely want this behavior.
+Usually when using a newer toolchain you also want to use newer versions of (at least) the dependencies.
+Often there are already at least easyconfigs available for the dependencies in the new toolchain,
+and especially if those are already installed you should use those as dependencies for the updated easyconfig.</p>
+<p>So the process of updating an easyconfig to a newer toolchain version could look like:</p>
+<ol>
+<li>Copy the easyconfig and change the toolchain version</li>
+<li>Usually, especially when updating to the latest toolchain,
+   you should search for the most recent version of the software too and use that.
+   When you update the version, the checksum for the software sources will
+   become incorrect and should be removed. You can automatically inject the
+   checksums for the new sources with <code>eb --inject-checksums &lt;easyconfig&gt;</code>
+   (see <a href="./#common_easyconfig_param_sources_checksums">checksums documentation</a>
+   for more details).</li>
+<li>For each listed dependency find the easyconfig for the new toolchain version.
+   Here you need to take <a href="../common-toolchains/#toolchains_diagram">toolchain hierarchy</a> into account.
+   I.e. a dependency of an easyconfig for the <code>foss</code> toolchain might use the <code>GCC</code> or <code>GCCcore</code> toolchain.
+   Check the toolchain easyconfig file (e.g. <code>foss-2023b.eb</code>) to find the versions of the sub-toolchain.
+   For very recent toolchains you can also check the <code>develop</code> branch of the <a href="https://github.com/easybuilders/easybuild-easyconfigs">easyconfigs git repository</a> and open PRs.</li>
+<li>If an easyconfig for the listed dependency with the new toolchain already exists use its version in your new easyconfig.
+   Otherwise, you need to create a new easyconfig for the listed dependency with the new toolchain version (based on that of another toolchain version).
+   The steps are the same and also need to be repeated for each dependency of this dependency.</li>
+<li>Finally, build and test your easyconfig and consider <a href="../contributing/#contributing-easyconfig-files--contributing_easyconfigs">contributing</a> it.</li>
+</ol>
+<p>Especially when creating easyconfigs for dependencies it is a good idea to put all of them into a new folder.
+To allow EasyBuild to find these easyconfigs in your folder, pass its path via <code>eb --robot &lt;path&gt; ...</code>.</p>
+<p>This manual process can be partially automated:</p>
+<ol>
+<li>Create a new folder for the new easyconfig and its dependencies.</li>
+<li>Run <code>eb &lt;current_easyconfig.eb&gt; --try-toolchain-version=&lt;new-version&gt; --try-update-deps --experimental --copy-ec &lt;folder&gt;</code>.
+   This will update the toolchain version, search for the versions of dependencies in the new toolchain and use them if available.
+   If a dependency with the new toolchain is not available this will create a new easyconfig for this toolchain
+   based on an existing one for another toolchain (version).
+   All newly create easyconfigs will be copied to the specified folder.</li>
+<li>Optionally, but recommended, update the version of the software for each created easyconfig to the latest available one.</li>
+<li><strong>Important</strong>: Verify the newly created easyconfigs by comparing each of them against the existing one for that software.
+   Only the version of the software, toolchain and dependencies should have been changed. However, this approach
+   can lead to unwanted changes to formatting as well as the replacement local variables or templates (such as <code>name</code>,
+   <code>version</code> or <code>%(version)s</code>) by their <em>value</em> when updating easyconfigs.
+   This is undesirable as the values might become out of sync with what they are supposed to be, e.g. when we update
+   the <code>version</code> variable the old <em>value</em> may still exist elsewhere in the easyconfig.
+   Depending on the situation, it might be easier to use the newly created easyconfigs just for getting the versions of
+   each dependency required and still copy &amp; update the easyconfigs from existing ones manually.</li>
+</ol>
+<p>When updating a software version the patches in the easyconfig need to be checked too.
+If they don't apply they might not be required anymore, when the upstream software fixed the issue, and can be removed.
+Otherwise, they need to be adjusted for the changes in the source code.</p>
+<p>For updates to easyconfigs containing Python packages (<code>PythonBundle</code>) you should check each of them if there is a newer version and if it is still required.
+The latest version of a single Python package can usually be found on <a href="https://pypi.org">PyPI</a>.
+To find the list of Python dependencies for another Python package to be installed by an easyconfig you can use the <code>findPythonDeps</code> script
+distributed with EasyBuild.
+For a typical installation it can be run using <code>$(dirname $(which eb))/../easybuild/scripts/findPythonDeps.py</code> which automatically finds the standard path for it.
+This will also output the latest, compatible version of the found packages.
+A good approach is to start from an easyconfig just containing the dependency on Python but no Python packages and then run e.g. <code>findPythonDeps.py --ec foo-1.2.3.eb foo==1.2.3</code>.
+For every Python package displayed by the script first search for a suitable easyconfig containing that package and add it as a dependency one by one.
+That might require updating it from another toolchain.
+Then run the script again to honor Python packages from that dependency and its dependencies.
+Repeat until none of the remaining packages displayed are in any easyconfig and/or unique enough to the specific software that an own easyconfig would be useful.
+Those can then be added to the <code>ext_list</code> of the easyconfig.
+More information about that script can be found at the top of the script file and via <code>findPythonDeps.py --help</code>.</p>
+<p>Also keep in mind that changing the version of the software and/or the toolchain might reveal new bugs or incompatibilities.
+Some can be fixed or worked around by patches, often even with help from the maintainers of the software.
+But some software is simply not compatible with specific versions of compilers or other software.
+Feel free to ask for help in the <a href="https://easybuild.io/join-slack">EasyBuild Slack channel</a>.
+Also filing an issue or bug report against the software in question helps in getting more information or the bug being fixed in later versions.
+This fix can then also be applied to the earlier version of necessary.</p>
 <h2 id="easyconfig_param_templates">Dynamic values for easyconfig parameters<a class="headerlink" href="#easyconfig_param_templates" title="Permanent link">&para;</a></h2>
 <p>String templates are completed using the value of particular easyconfig
 parameters, typically <code>name</code> and/or <code>version</code>. These help to avoid
@@ -9551,7 +9978,7 @@ especially if:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 16, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 9, 2025</span>
   </span>
 
     
@@ -9643,7 +10070,7 @@ especially if:</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>

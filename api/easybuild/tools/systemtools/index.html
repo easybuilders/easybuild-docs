@@ -238,9 +238,7 @@
 
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../../.." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
       
@@ -8703,12 +8701,389 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../easybuild-v5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EasyBuild v5.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
             
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools" class="md-nav__link">
+    <span class="md-ellipsis">
+      systemtools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.SystemToolsException" class="md-nav__link">
+    <span class="md-ellipsis">
+      SystemToolsException
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.check_easybuild_deps" class="md-nav__link">
+    <span class="md-ellipsis">
+      check_easybuild_deps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.check_linked_shared_libs" class="md-nav__link">
+    <span class="md-ellipsis">
+      check_linked_shared_libs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.check_os_dependency" class="md-nav__link">
+    <span class="md-ellipsis">
+      check_os_dependency
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.check_python_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      check_python_version
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.det_parallelism" class="md-nav__link">
+    <span class="md-ellipsis">
+      det_parallelism
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.det_pypkg_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      det_pypkg_version
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.det_terminal_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      det_terminal_size
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.find_library_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      find_library_path
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.get_avail_core_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_avail_core_count
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.get_core_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_core_count
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.get_cpu_arch_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_cpu_arch_name
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.get_cpu_architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_cpu_architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.get_cpu_family" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_cpu_family
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.get_cpu_features" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_cpu_features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.get_cpu_model" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_cpu_model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.get_cpu_speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_cpu_speed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.get_cpu_vendor" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_cpu_vendor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.get_gcc_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_gcc_version
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.get_glibc_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_glibc_version
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.get_gpu_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_gpu_info
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.get_kernel_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_kernel_name
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.get_linked_libs_raw" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_linked_libs_raw
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.get_os_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_os_name
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.get_os_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_os_type
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.get_os_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_os_version
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.get_platform_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_platform_name
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.get_shared_lib_ext" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_shared_lib_ext
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.get_system_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_system_info
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.get_tool_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_tool_version
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.get_total_memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_total_memory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.locate_solib" class="md-nav__link">
+    <span class="md-ellipsis">
+      locate_solib
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.pick_dep_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      pick_dep_version
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.pick_system_specific_value" class="md-nav__link">
+    <span class="md-ellipsis">
+      pick_system_specific_value
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.sched_getaffinity" class="md-nav__link">
+    <span class="md-ellipsis">
+      sched_getaffinity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.systemtools.use_group" class="md-nav__link">
+    <span class="md-ellipsis">
+      use_group
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
             
           
           
@@ -9700,7 +10075,7 @@ Input can either be:
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>

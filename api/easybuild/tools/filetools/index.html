@@ -238,9 +238,7 @@
 
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../../.." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
       
@@ -9195,12 +9193,881 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../easybuild-v5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EasyBuild v5.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
             
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools" class="md-nav__link">
+    <span class="md-ellipsis">
+      filetools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.ZlibChecksum" class="md-nav__link">
+    <span class="md-ellipsis">
+      ZlibChecksum
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ZlibChecksum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.ZlibChecksum.hexdigest" class="md-nav__link">
+    <span class="md-ellipsis">
+      hexdigest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.ZlibChecksum.update" class="md-nav__link">
+    <span class="md-ellipsis">
+      update
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.adjust_permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      adjust_permissions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.apply_patch" class="md-nav__link">
+    <span class="md-ellipsis">
+      apply_patch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.apply_regex_substitutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      apply_regex_substitutions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.back_up_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      back_up_file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.calc_block_checksum" class="md-nav__link">
+    <span class="md-ellipsis">
+      calc_block_checksum
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.change_dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      change_dir
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.check_lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      check_lock
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.clean_up_locks" class="md-nav__link">
+    <span class="md-ellipsis">
+      clean_up_locks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.clean_up_locks_signal_handler" class="md-nav__link">
+    <span class="md-ellipsis">
+      clean_up_locks_signal_handler
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.cleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      cleanup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.compute_checksum" class="md-nav__link">
+    <span class="md-ellipsis">
+      compute_checksum
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.convert_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      convert_name
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.copy" class="md-nav__link">
+    <span class="md-ellipsis">
+      copy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.copy_dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      copy_dir
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.copy_easyblocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      copy_easyblocks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.copy_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      copy_file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.copy_files" class="md-nav__link">
+    <span class="md-ellipsis">
+      copy_files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.copy_framework_files" class="md-nav__link">
+    <span class="md-ellipsis">
+      copy_framework_files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.copytree" class="md-nav__link">
+    <span class="md-ellipsis">
+      copytree
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.create_index" class="md-nav__link">
+    <span class="md-ellipsis">
+      create_index
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.create_lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      create_lock
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.create_patch_info" class="md-nav__link">
+    <span class="md-ellipsis">
+      create_patch_info
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.create_unused_dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      create_unused_dir
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.decode_class_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      decode_class_name
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.decode_string" class="md-nav__link">
+    <span class="md-ellipsis">
+      decode_string
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.derive_alt_pypi_url" class="md-nav__link">
+    <span class="md-ellipsis">
+      derive_alt_pypi_url
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.det_common_path_prefix" class="md-nav__link">
+    <span class="md-ellipsis">
+      det_common_path_prefix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.det_file_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      det_file_size
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.det_lock_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      det_lock_path
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.det_patched_files" class="md-nav__link">
+    <span class="md-ellipsis">
+      det_patched_files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.det_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      det_size
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.diff_files" class="md-nav__link">
+    <span class="md-ellipsis">
+      diff_files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.dir_contains_files" class="md-nav__link">
+    <span class="md-ellipsis">
+      dir_contains_files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.download_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      download_file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.dump_index" class="md-nav__link">
+    <span class="md-ellipsis">
+      dump_index
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.encode_class_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      encode_class_name
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.encode_string" class="md-nav__link">
+    <span class="md-ellipsis">
+      encode_string
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.expand_glob_paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      expand_glob_paths
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.extract_cmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      extract_cmd
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.extract_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      extract_file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.find_backup_name_candidate" class="md-nav__link">
+    <span class="md-ellipsis">
+      find_backup_name_candidate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.find_base_dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      find_base_dir
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.find_easyconfigs" class="md-nav__link">
+    <span class="md-ellipsis">
+      find_easyconfigs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.find_eb_script" class="md-nav__link">
+    <span class="md-ellipsis">
+      find_eb_script
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.find_extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      find_extension
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.find_flexlm_license" class="md-nav__link">
+    <span class="md-ellipsis">
+      find_flexlm_license
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.find_glob_pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      find_glob_pattern
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.get_easyblock_class_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_easyblock_class_name
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.get_source_tarball_from_git" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_source_tarball_from_git
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.guess_patch_level" class="md-nav__link">
+    <span class="md-ellipsis">
+      guess_patch_level
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.has_recursive_symlinks" class="md-nav__link">
+    <span class="md-ellipsis">
+      has_recursive_symlinks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.install_fake_vsc" class="md-nav__link">
+    <span class="md-ellipsis">
+      install_fake_vsc
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.is_alt_pypi_url" class="md-nav__link">
+    <span class="md-ellipsis">
+      is_alt_pypi_url
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.is_binary" class="md-nav__link">
+    <span class="md-ellipsis">
+      is_binary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.is_generic_easyblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      is_generic_easyblock
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.is_patch_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      is_patch_file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.is_readable" class="md-nav__link">
+    <span class="md-ellipsis">
+      is_readable
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.is_sha256_checksum" class="md-nav__link">
+    <span class="md-ellipsis">
+      is_sha256_checksum
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.load_index" class="md-nav__link">
+    <span class="md-ellipsis">
+      load_index
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.locate_files" class="md-nav__link">
+    <span class="md-ellipsis">
+      locate_files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.mkdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      mkdir
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.modify_env" class="md-nav__link">
+    <span class="md-ellipsis">
+      modify_env
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.move_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      move_file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.move_logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      move_logs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.normalize_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      normalize_path
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.open_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      open_file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.parse_http_header_fields_urlpat" class="md-nav__link">
+    <span class="md-ellipsis">
+      parse_http_header_fields_urlpat
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.parse_log_for_error" class="md-nav__link">
+    <span class="md-ellipsis">
+      parse_log_for_error
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.path_matches" class="md-nav__link">
+    <span class="md-ellipsis">
+      path_matches
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.pypi_source_urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      pypi_source_urls
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.read_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      read_file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.register_lock_cleanup_signal_handlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      register_lock_cleanup_signal_handlers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.remove_dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove_dir
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.remove_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove_file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.remove_lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove_lock
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.resolve_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      resolve_path
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.rmtree2" class="md-nav__link">
+    <span class="md-ellipsis">
+      rmtree2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.run_cmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      run_cmd
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.run_cmd_qa" class="md-nav__link">
+    <span class="md-ellipsis">
+      run_cmd_qa
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.search_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      search_file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.set_gid_sticky_bits" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_gid_sticky_bits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.symlink" class="md-nav__link">
+    <span class="md-ellipsis">
+      symlink
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.verify_checksum" class="md-nav__link">
+    <span class="md-ellipsis">
+      verify_checksum
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.weld_paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      weld_paths
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.which" class="md-nav__link">
+    <span class="md-ellipsis">
+      which
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.filetools.write_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      write_file
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
             
           
           
@@ -12661,7 +13528,7 @@ overwrites current file contents without backup by default!</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>

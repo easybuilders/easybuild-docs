@@ -238,9 +238,7 @@
 
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
       
@@ -8595,12 +8593,283 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../easybuild-v5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EasyBuild v5.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
                 </div>
               </div>
             
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#implementing_easyblocks_basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The basics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementing_easyblocks_generic_vs_software_specific" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generic vs software-specific easyblocks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementing_easyblocks_vs_easyconfigs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Easyblocks vs easyconfigs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementing_easyblocks_naming_scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Naming scheme for easyblocks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Naming scheme for easyblocks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementing_easyblocks_naming_scheme_class_name_specific" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class name for software-specific easyblocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing_easyblocks_naming_scheme_class_name_generic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class name for generic easyblocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing_easyblocks_naming_scheme_module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module name/location
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementing_easyblocks_structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structure of an easyblock
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementing_easyblocks_deriving" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deriving from existing (generic) easyblocks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementing_easyblocks_specifics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specific aspects of easyblocks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Specific aspects of easyblocks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementing_easyblocks_default_parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default easyconfig parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing_easyblocks_custom_parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom easyconfig parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing_easyblocks_constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Easyblock constructor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing_easyblocks_files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading/writing/copying/patching files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing_easyblocks_commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executing (interactive) shell commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing_easyblocks_environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manipulating the environment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing_easyblocks_logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log statements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing_easyblocks_sanity_check" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom (default) sanity check
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing_easyblocks_version_specific" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version-specific parts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementing_easyblocks_module_only_compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compatibility with --extended-dry-run/-x and --module-only
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementing_easyblocks_using" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using new/custom easyblocks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementing_easyblocks_testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing easyblocks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementing_easyblocks_use_case_tensorlow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use case: an easyblock for Tensorflow
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
             
           
           
@@ -9071,7 +9340,7 @@ performend).</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
