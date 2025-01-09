@@ -940,6 +940,80 @@ Example:
     eb WRF-3.5.1-ictce-5.3.0-dmpar.eb --try-toolchain=intel,2014b -r
     ```
 
+## Updating existing easyconfigs for another toolchain
+
+While `try-toolchain` is a convenient way of testing existing software versions with another toolchain
+you rarely want this behavior.
+Usually when using a newer toolchain you also want to use newer versions of (at least) the dependencies.
+Often there are already at least easyconfigs available for the dependencies in the new toolchain,
+and especially if those are already installed you should use those as dependencies for the updated easyconfig.
+
+So the process of updating an easyconfig to a newer toolchain version could look like:
+
+1. Copy the easyconfig and change the toolchain version
+1. Usually, especially when updating to the latest toolchain,
+   you should search for the most recent version of the software too and use that.
+   When you update the version, the checksum for the software sources will
+   become incorrect and should be removed. You can automatically inject the
+   checksums for the new sources with `eb --inject-checksums <easyconfig>`
+   (see [checksums documentation](writing-easyconfig-files.md#common_easyconfig_param_sources_checksums)
+   for more details).
+1. For each listed dependency find the easyconfig for the new toolchain version.
+   Here you need to take [toolchain hierarchy](common-toolchains.md#toolchains_diagram) into account.
+   I.e. a dependency of an easyconfig for the `foss` toolchain might use the `GCC` or `GCCcore` toolchain.
+   Check the toolchain easyconfig file (e.g. `foss-2023b.eb`) to find the versions of the sub-toolchain.
+   For very recent toolchains you can also check the `develop` branch of the [easyconfigs git repository](https://github.com/easybuilders/easybuild-easyconfigs) and open PRs.
+1. If an easyconfig for the listed dependency with the new toolchain already exists use its version in your new easyconfig.
+   Otherwise, you need to create a new easyconfig for the listed dependency with the new toolchain version (based on that of another toolchain version).
+   The steps are the same and also need to be repeated for each dependency of this dependency.
+1. Finally, build and test your easyconfig and consider [contributing](contributing.md#contributing-easyconfig-files--contributing_easyconfigs) it.
+
+Especially when creating easyconfigs for dependencies it is a good idea to put all of them into a new folder.
+To allow EasyBuild to find these easyconfigs in your folder, pass its path via `eb --robot <path> ...`.
+
+This manual process can be partially automated:
+
+1. Create a new folder for the new easyconfig and its dependencies.
+1. Run `eb <current_easyconfig.eb> --try-toolchain-version=<new-version> --try-update-deps --experimental --copy-ec <folder>`.
+   This will update the toolchain version, search for the versions of dependencies in the new toolchain and use them if available.
+   If a dependency with the new toolchain is not available this will create a new easyconfig for this toolchain
+   based on an existing one for another toolchain (version).
+   All newly create easyconfigs will be copied to the specified folder.
+1. Optionally, but recommended, update the version of the software for each created easyconfig to the latest available one.
+1. **Important**: Verify the newly created easyconfigs by comparing each of them against the existing one for that software.
+   Only the version of the software, toolchain and dependencies should have been changed. However, this approach
+   can lead to unwanted changes to formatting as well as the replacement local variables or templates (such as `name`,
+   `version` or `%(version)s`) by their *value* when updating easyconfigs.
+   This is undesirable as the values might become out of sync with what they are supposed to be, e.g. when we update
+   the `version` variable the old *value* may still exist elsewhere in the easyconfig.
+   Depending on the situation, it might be easier to use the newly created easyconfigs just for getting the versions of
+   each dependency required and still copy & update the easyconfigs from existing ones manually.
+
+When updating a software version the patches in the easyconfig need to be checked too.
+If they don't apply they might not be required anymore, when the upstream software fixed the issue, and can be removed.
+Otherwise, they need to be adjusted for the changes in the source code.
+
+For updates to easyconfigs containing Python packages (`PythonBundle`) you should check each of them if there is a newer version and if it is still required.
+The latest version of a single Python package can usually be found on [PyPI](https://pypi.org).
+To find the list of Python dependencies for another Python package to be installed by an easyconfig you can use the `findPythonDeps` script
+distributed with EasyBuild.
+For a typical installation it can be run using `$(dirname $(which eb))/../easybuild/scripts/findPythonDeps.py` which automatically finds the standard path for it.
+This will also output the latest, compatible version of the found packages.
+A good approach is to start from an easyconfig just containing the dependency on Python but no Python packages and then run e.g. `findPythonDeps.py --ec foo-1.2.3.eb foo==1.2.3`.
+For every Python package displayed by the script first search for a suitable easyconfig containing that package and add it as a dependency one by one.
+That might require updating it from another toolchain.
+Then run the script again to honor Python packages from that dependency and its dependencies.
+Repeat until none of the remaining packages displayed are in any easyconfig and/or unique enough to the specific software that an own easyconfig would be useful.
+Those can then be added to the `ext_list` of the easyconfig.
+More information about that script can be found at the top of the script file and via `findPythonDeps.py --help`.
+
+Also keep in mind that changing the version of the software and/or the toolchain might reveal new bugs or incompatibilities.
+Some can be fixed or worked around by patches, often even with help from the maintainers of the software.
+But some software is simply not compatible with specific versions of compilers or other software.
+Feel free to ask for help in the [EasyBuild Slack channel](https://easybuild.io/join-slack).
+Also filing an issue or bug report against the software in question helps in getting more information or the bug being fixed in later versions.
+This fix can then also be applied to the earlier version of necessary.
+
 ## Dynamic values for easyconfig parameters {: #easyconfig_param_templates }
 
 String templates are completed using the value of particular easyconfig
