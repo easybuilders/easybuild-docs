@@ -155,17 +155,14 @@ echo "* [List of known toolchains](toolchains.md)" >> $overview
 
 ###################################################################################################
 
+tmp_software_json="$(mktemp)"
 echo "eb --list-software=detailed"
 skip_lines='Temporary log file|Processed.*easyconfigs|Found.*different software packages|^# List of supported software'
-echo "# List of supported software" > supported-software.md
-echo >> supported-software.md
-echo "!!! note" >> supported-software.md
-echo >> supported-software.md
-echo "    This page contains a lot of information, it may take a while to load." >> supported-software.md
-echo >> supported-software.md
-eb --list-software=detailed --output-format=md | egrep -v $skip_lines >> supported-software.md
+eb --list-software=detailed --output-format=json | egrep -v "$skip_lines" > ${tmp_software_json}
+python3 software-markdown-pages.py --jsonfile ${tmp_software_json} --output-base supported-software --delete-existing-output
+rm ${tmp_software_json}
 
-echo "* [List of supported software](supported-software.md)" >> $overview
+echo "* [List of supported software](supported-software/index.md)" >> $overview
 
 ###################################################################################################
 

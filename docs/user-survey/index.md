@@ -16,7 +16,7 @@ but they should be interpreted with a grain of salt, since there is no doubt sig
 
 ## Survey participation
 
-![00. Survey particpation over the years](img/00-survey-participation.png){: align=center style="width:500px"}
+![00. Survey participation over the years](img/00-survey-participation.png){: align=center style="width:500px"}
 
 Participation in the EasyBuild User Survey has been growing steadily over the years, to 118 participants in the 6th
 survey which was held March 2023.

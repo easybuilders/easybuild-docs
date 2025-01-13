@@ -357,3 +357,16 @@ def post_run_shell_cmd_hook(cmd, work_dir=None, interactive=None, exit_code=None
         cmd_type = 'interactive' if interactive else 'non-interactive'
         fp.write("%s command '%s' in %s exited with %s - output: %s\n" % (cmd_type, cmd, work_dir, exit_code, output))
 ```
+
+### Adding a hook conditional on EasyBuild version
+
+If an unknown hook is used then EasyBuild will error (see [Available hooks](#available-hooks)). The following example only
+adds the `pre_build_and_install_loop_hook` if the EasyBuild version is `>= "4.8.1"`.
+
+```py
+from easybuild.tools.version import VERSION
+
+if VERSION >= "4.8.1":
+    def pre_build_and_install_loop_hook(ecs, *args, **kwargs):
+        pass
+```

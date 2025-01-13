@@ -139,10 +139,12 @@ Option flag                                            |Option description
 ``--close-pr-msg=CLOSE-PR-MSG``                        |Custom close message for pull request closed with --close-pr;  (type <class 'str'>)
 ``--close-pr-reasons=CLOSE-PR-REASONS``                |Close reason for pull request closed with --close-pr; supported values: archived, inactive, obsolete, retest (type <class 'str'>)
 ``--dump-test-report=DUMP-TEST-REPORT``                |Dump test report to specified path (default: test_report.md)
+``--from-commit=commit_SHA``                           |Obtain easyconfigs from specified commit (type str)
 ``--from-pr=PR#``                                      |Obtain easyconfigs from specified PR (type comma-separated list)
 ``--git-working-dirs-path=GIT-WORKING-DIRS-PATH``      |Path to Git working directories for EasyBuild repositories (type <class 'str'>)
 ``--github-org=GITHUB-ORG``                            |GitHub organization (type <class 'str'>)
 ``--github-user=GITHUB-USER``                          |GitHub username (type <class 'str'>)
+``--include-easyblocks-from-commit=commit_SHA``        |Include easyblocks from specified commit (type str)
 ``--include-easyblocks-from-pr=PR#``                   |Include easyblocks from specified PR (type comma-separated list)
 ``--install-github-token``                             |Install GitHub token (requires --github-user) (default: False)
 ``--list-prs=STATE,ORDER,DIRECTION``                   |List pull requests (type <class 'str'>; default: open,created,desc)
@@ -181,7 +183,7 @@ Option flag                                          |Option description
 ``--avail-toolchain-opts=AVAIL-TOOLCHAIN-OPTS``      |Show options for toolchain (type str)
 ``--check-conflicts``                                |Check for version conflicts in dependency graphs (default: False)
 ``--check-eb-deps``                                  |Check presence and version of (required and optional) EasyBuild dependencies (default: False)
-``--dep-graph=depgraph.<ext>``                       |Create dependency graph
+``--dep-graph=depgraph.<ext>``                       |Create dependency graph. Output format depends on <ext>, e.g. 'dot', 'png', 'pdf', 'gv'.
 ``--dump-env-script``                                |Dump source script to set up build environment based on toolchain/dependencies (default: False)
 ``--easystack=EASYSTACK``                            |Path to easystack file in YAML format, specifying details of a software stack
 ``--last-log``                                       |Print location to EasyBuild log file of last (failed) session (default: False)
@@ -225,7 +227,7 @@ Option flag                                                              |Option
 ``--allow-loaded-modules=ALLOW-LOADED-MODULES``                          |List of software names for which to allow loaded modules in initial environment (type comma-separated list; default: EasyBuild)
 ``--allow-modules-tool-mismatch``                                        |Allow mismatch of modules tool and definition of 'module' function (default: False)
 ``--allow-use-as-root-and-accept-consequences``                          |Allow using of EasyBuild as root (NOT RECOMMENDED!) (default: False)
-``--backup-modules``                                                     |Back up an existing module file, if any. Only works when using --module-only
+``--backup-modules``                                                     |Back up an existing module file, if any. Auto-enabled when using --module-only or --skip
 ``--backup-patched-files``                                               |Create a backup (*.orig) file when applying a patch (default: False)
 ``--banned-linked-shared-libs=BANNED-LINKED-SHARED-LIBS``                |Comma-separated list of shared libraries (names, file names, or paths) which are not allowed to be linked in any installed binary/library (type comma-separated list)
 ``--check-ebroot-env-vars=CHECK-EBROOT-ENV-VARS``                        |Action to take when defined $EBROOT* environment variables are found for which there is no matching loaded module; supported values: error, ignore, unset, warn (default: warn)
@@ -251,6 +253,7 @@ Option flag                                                              |Option
 ``--env-for-shebang=ENV-FOR-SHEBANG``                                    |Define the env command to use when fixing shebangs (default: /usr/bin/env)
 ``--experimental``                                                       |Allow experimental code (with behaviour that can be changed/removed at any given time). (default: False)
 ``--extra-modules=EXTRA-MODULES``                                        |List of extra modules to load after setting up the build environment (type comma-separated list)
+``--extra-source-urls=URL[|URL]``                                        |Specify URLs to fetch sources from in addition to those in the easyconfig (type |-separated tuple; default: https://sources.easybuild.io)
 ``--fetch``                                                              |Allow downloading sources ignoring OS and modules tool dependencies, implies --stop=fetch, --ignore-osdeps and ignore modules tool (default: False)
 ``--filter-deps=FILTER-DEPS``                                            |List of dependencies that you do *not* want to install with EasyBuild, because equivalent OS packages are installed. (e.g. --filter-deps=zlib,ncurses) (type comma-separated list)
 ``--filter-ecs=FILTER-ECS``                                              |List of easyconfigs (given as glob patterns) to *ignore* when given on command line or auto-selected when building with --from-pr. (e.g. --filter-ecs=*intel*) (type comma-separated list)
@@ -264,7 +267,7 @@ Option flag                                                              |Option
 ``--hidden``                                                             |Install 'hidden' module file(s) by prefixing their version with '.' (default: False)
 ``--hide-deps=HIDE-DEPS``                                                |Comma separated list of dependencies that you want automatically hidden, (e.g. --hide-deps=zlib,ncurses) (type comma-separated list)
 ``--hide-toolchains=HIDE-TOOLCHAINS``                                    |Comma separated list of toolchains that you want automatically hidden, (e.g. --hide-toolchains=GCCcore) (type comma-separated list)
-``--http-header-fields-urlpat=[URLPAT::][HEADER:]FILE|FIELD``            |Set extra HTTP header FIELDs when downloading files from URL PATterns. To not log sensitive values, specify a file containing newline separated FIELDs. e.g. "^https://www.example.com::/path/to/headers.txt" or "client[A-z0-9]*.example.com': ['Authorization: Basic token']".
+``--http-header-fields-urlpat=[URLPAT::][HEADER:]FIELDVALUE|FILE``       |Set extra HTTP header FIELD when downloading files from URL PATterns. Use FILE (to hide sensitive values) and newline separated FIELDs in the same format. e.g. "^https://www.example.com::path/to/headers.txt" or "client[A-z0-9]*.example.com:: Authorization: Basic token".
 ``--ignore-checksums``                                                   |Ignore failing checksum verification (default: False)
 ``--ignore-osdeps``                                                      |Ignore any listed OS dependencies (default: False)
 ``--ignore-test-failure``                                                |Ignore a failing test step (default: False)
@@ -301,8 +304,10 @@ Option flag                                                              |Option
 ``--silence-deprecation-warnings=SILENCE-DEPRECATION-WARNINGS``          |Silence specified deprecation warnings out of (python2, Lmod6, easyconfig, toolchain) (type comma-separated list)
 ``--silence-hook-trigger``                                               |Suppress printing of debug message every time a hook is triggered (default: False)
 ``--skip-extensions``                                                    |Skip installation of extensions (default: False)
+``--skip-sanity-check``                                                  |Skip running the sanity check step (e.g. testing for installed files or running basic commands) (default: False)
 ``-t, --skip-test-cases``                                                |Skip running test cases (default: False)
 ``--skip-test-step``                                                     |Skip running the test step (e.g. unit tests) (default: False)
+``--software-commit=SOFTWARE-COMMIT``                                    |Git commit to use for the target software build (robot capabilities are automatically disabled)
 ``--sticky-bit``                                                         |Set sticky bit on newly created directories (default: False)
 ``--sysroot=SYSROOT``                                                    |Location root directory of system, prefix for standard paths like /usr/lib and /usr/include
 ``-T, --trace``                                                          |Provide more information in output to stdout on progress (default: False)

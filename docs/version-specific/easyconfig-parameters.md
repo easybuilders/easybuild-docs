@@ -42,6 +42,7 @@
 `hidden`                     |Install module file as 'hidden' by prefixing its version with '.'                                                                        |`False`
 `installopts`                |Extra options for installation                                                                                                           |`""`
 `maxparallel`                |Max degree of parallelism                                                                                                                |`None`
+`module_only`                |Only generate module file                                                                                                                |`False`
 `parallel`                   |Degree of parallelism for e.g. make (default: based on the number of cores, active cpuset and restrictions in ulimit)                    |`None`
 `patches`                    |List of patches to apply                                                                                                                 |`[]`
 `postinstallcmds`            |Commands to run after the install step.                                                                                                  |`[]`
@@ -118,6 +119,7 @@
 
 **Parameter name**          |**Description**                                                                                                                                                                   |**Default value**
 ----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------
+`allow_append_abs_path`     |Allow specifying absolute paths to append in modextrapaths_append                                                                                                                 |`False`
 `allow_prepend_abs_path`    |Allow specifying absolute paths to prepend in modextrapaths                                                                                                                       |`False`
 `citing`                    |Free-form text that describes how the software should be cited in publications                                                                                                    |`None`
 `docpaths`                  |List of paths for documentation relative to installation directory                                                                                                                |`None`
@@ -126,6 +128,7 @@
 `modaliases`                |Aliases to be defined in module file                                                                                                                                              |`{}`
 `modaltsoftname`            |Module name to use (rather than using software name                                                                                                                               |`None`
 `modextrapaths`             |Extra paths to be prepended in module file                                                                                                                                        |`{}`
+`modextrapaths_append`      |Extra paths to be appended in module file                                                                                                                                         |`{}`
 `modextravars`              |Extra environment variables to be added to module file                                                                                                                            |`{}`
 `modloadmsg`                |Message that should be printed when generated module is loaded                                                                                                                    |`{}`
 `modluafooter`              |Footer to include in generated module file (Lua syntax)                                                                                                                           |`""`

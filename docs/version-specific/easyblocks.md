@@ -22,6 +22,7 @@
     - EB_TensorRT
     - JAR
     - PackedBinary
+      - EB_AEDT
       - EB_ANSYS
       - EB_ant
       - EB_AOCC
@@ -37,6 +38,7 @@
       - EB_MCR
       - EB_MotionCor2
       - EB_NVHPC
+      - EB_optiSLang
       - EB_ORCA
       - EB_PGI
       - EB_Samcef
@@ -60,6 +62,7 @@
   - ConfigureMake
     - CMakeMake
       - CMakeMakeCp
+        - EB_DualSPHysics
       - CMakeNinja
       - CMakePythonPackage
         - EB_DOLFIN
@@ -86,6 +89,7 @@
       - EB_OpenBabel
       - EB_OpenCV
       - EB_PSI
+      - EB_QuantumESPRESSOcmake
       - EB_ROOT
       - EB_ScaLAPACK
       - EB_SuperLU
@@ -168,7 +172,7 @@
       - EB_Tkinter
     - EB_QScintilla
     - EB_Qt
-    - EB_QuantumESPRESSO
+    - EB_QuantumESPRESSOconfig
     - EB_R
     - EB_Ruby
     - EB_Rust
@@ -191,12 +195,14 @@
     - EB_XCrySDen
     - MakeCp
       - CMakeMakeCp
+        - EB_DualSPHysics
       - CmdCp
         - EB_fastStructure
       - EB_BamTools
       - EB_BLAT
       - EB_Bowtie2
       - EB_BWISE
+      - EB_MetalWalls
       - EB_MSM
       - EB_mutil
       - EB_MXNet
@@ -226,6 +232,7 @@
   - EB_OpenIFS
   - EB_PALM
   - EB_ParMETIS
+  - EB_QuantumESPRESSO
   - EB_Rosetta
   - EB_SAS
   - EB_SCOTCH
@@ -244,6 +251,7 @@
       - CargoPythonPackage
     - EB_Scipion
     - JuliaPackage
+      - JuliaBundle
     - OCamlPackage
     - OctavePackage
     - PerlModule
@@ -330,6 +338,7 @@
     - EB_scipy
   - ModuleRC
   - PackedBinary
+    - EB_AEDT
     - EB_ANSYS
     - EB_ant
     - EB_AOCC
@@ -345,6 +354,7 @@
     - EB_MCR
     - EB_MotionCor2
     - EB_NVHPC
+    - EB_optiSLang
     - EB_ORCA
     - EB_PGI
     - EB_Samcef
@@ -361,6 +371,7 @@
       - CargoPythonPackage
     - EB_Scipion
     - JuliaPackage
+      - JuliaBundle
     - OCamlPackage
     - OctavePackage
     - PerlModule
