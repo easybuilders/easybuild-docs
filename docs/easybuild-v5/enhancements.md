@@ -7,7 +7,7 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 - [`run_shell_cmd` function][run_shell_cmd]
 - [Granular exit codes][granular_exit_codes]
 - [Reproducible tarballs][reproducible_tarballs]
-* [Require `download_instructions` to be specified][require_download_instructions]
+- [Require `download_instructions` to be specified][require_download_instructions]
 
 ---
 
