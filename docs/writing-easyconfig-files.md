@@ -677,13 +677,13 @@ respectively), not from the easyconfig values.
 To generate a crates list for a package:
 
 1. Download and unpack the source code for the package you wish to build
-1. Change into the directory containing the top level `Cargo.toml.
+1. Change into the directory containing the top level `Cargo.toml`.
 1. Run `python -m easybuild.easyblocks.generic.cargo .`
 
 If there is not already a lockfile then you may need to do the following to generate it:
 
 1. Load a recent Rust module
-1. cargo generate-lockfile
+1. `cargo generate-lockfile`
 
 ### Configure/build/install command options {: #configure_build_install_command_options }
 
