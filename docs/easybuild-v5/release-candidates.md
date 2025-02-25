@@ -13,7 +13,7 @@ we will tag a couple of pre-releases before releasing EasyBuild v5.0.0.
 
     It can be used for testing and providing feedback (reporting bugs or unexpected behaviour, etc.).
 
-    Additional changes can still be made before the release of EasyBuild v5.0.0, [see below][beta1_planned_changes].
+    Additional changes can still be made before the release of EasyBuild v5.0.0, [see below][beta2_planned_changes].
 
 ### Highlighted changes
 
