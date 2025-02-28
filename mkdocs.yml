@@ -60,7 +60,7 @@ nav:
       - Locks: locks.md
       - Manipulating dependencies: manipulating-dependencies.md
       - Partial installations: partial-installations.md
-      - Compatibility with Python 2 + 3: python-2-3-compatibility.md
+      - Compatibility with Python 3: python-2-3-compatibility.md
       - Progress bars: progress-bars.md
       - Search index for easyconfigs: easyconfigs-search-index.md
       - System toolchain: system-toolchain.md
