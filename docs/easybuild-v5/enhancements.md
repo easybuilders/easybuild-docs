@@ -7,6 +7,7 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 - [`run_shell_cmd` function][run_shell_cmd]
 - [Granular exit codes][granular_exit_codes]
 - [Reproducible tarballs][reproducible_tarballs]
+- [Require `download_instructions` to be specified][require_download_instructions]
 
 ---
 
@@ -14,6 +15,7 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 
 See dedicated page on the new [`run_shell_cmd` function](run_shell_cmd.md).
 
+---
 
 ## Granular exit codes { : #granular_exit_codes }
 
@@ -28,6 +30,7 @@ EasyBuild will always return its own exit codes on termination. Other exit
 codes from external processes executed through `run_shell_cmd` or HTTP response
 status codes are reported in the corresponding logs.
 
+---
 
 ## Reproducible tarballs { : #reproducible_tarballs}
 
@@ -42,3 +45,17 @@ This new feature does not apply to sources cloned with `keep_git_dir` enabled.
 Including the `.git` folder in the sources is inherently time-dependent as it
 contains information about the clone action itself, which hinders the creation
 of a reproducible tarball.
+
+---
+
+## Require `download_instructions` to be specified {: require_download_instructions }
+
+[`download_instructions`][download_instructions] is used in easyconfigs to specify instructions, or information, on
+how to obtain sources that are not directly downloadable. In EasyBuild 5, we've updated the testsuite for the `easybuild-easyconfigs`
+repository to require that all easyconfigs for which sources can not be downloaded automatically must specify these
+(see [easybuild-easyconfigs PR #19881](https://github.com/easybuilders/easybuild-easyconfigs/pull/19881)).
+
+As part of this enhancement we also added `download_instructions` to all easyconfigs that require them (see the PRs linked from 
+[easybuild-easyconfigs PR #19881](https://github.com/easybuilders/easybuild-easyconfigs/pull/19881)). In addition to the
+`download_instructions` we also clearly specify the active source path (see
+[easybuild-framework PR #4459](https://github.com/easybuilders/easybuild-framework/pull/4459)).
