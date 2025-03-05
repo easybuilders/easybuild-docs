@@ -22,6 +22,8 @@ Click on a particular item for more information.
 EasyBuild v5.0 includes a number of backwards-incompatible changes:
 
 - [Python 3.6+ is required to run EasyBuild v5.0.0](python36-required.md)
+- Require Lmod >=8 <https://github.com/easybuilders/easybuild-framework/pull/4424>
+- If using Tmod 4.x, then require >= 4.3.0 <https://github.com/easybuilders/easybuild-framework/pull/4425>
 
 See also the [overview of removed functionality][removed-functionality] below.
 
