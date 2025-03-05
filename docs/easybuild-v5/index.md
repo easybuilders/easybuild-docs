@@ -36,6 +36,7 @@ The default value for several EasyBuild configuration settings has been changed 
 
 - [RPATH linking is enabled by default (`--rpath`)](changes-in-default-configuration.md#rpath)
 - [Trace output is enabled by default (`--trace`)](changes-in-default-configuration.md#trace)
+- [Use `sha256` as the default checksum type](changes-in-default-configuration.md#sha256)
 
 
 ---
@@ -47,6 +48,7 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 - [`run_shell_cmd` function](run_shell_cmd.md)
 - [Granular exit codes](enhancements.md#granular_exit_codes)
 - [Reproducible tarballs](enhancements.md#reproducible_tarballs)
+- [Detect Fortran `.mod` files in `GCCcore` installations](enhancements.md#mod_files)
  
 
 ---
@@ -67,7 +69,7 @@ Some functionality is being deprecated in EasyBuild v5.0, and is scheduled to be
 
 - [`run_cmd` and `run_cmd_qa` functions](deprecated-functionality.md#run_cmd)
 - [`easybuild.tools.py2vs3` module](deprecated-functionality.md#py2vs3)
-
+- [Deprecation of older checksums types](deprecated-functionality.md#checksums)
 
 ---
 

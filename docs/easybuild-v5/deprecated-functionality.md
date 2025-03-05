@@ -6,6 +6,7 @@ Some functionality is being deprecated in EasyBuild v5.0, and will no longer be 
 
 - [`run_cmd` and `run_cmd_qa` functions][run_cmd]
 - [`easybuild.tools.py2vs3` module][py2vs3]
+- [Deprecation of older checksums types][checksums]
 
 If you trigger any deprecated functionality when using EasyBuild v5.0, a warning message will be printed.
 
@@ -53,3 +54,8 @@ The following table lists the changes required to replace imports from the the `
 | `URLError` | `from urllib.request import URLError` |
 | `urlopen` | `from urllib.request import urlopen` |
 
+---
+
+## Deprecation of older checksums types {: #checksums }
+
+The following checksum types are deprecated and should no longer be used: `md5`, `adler32`, `crc32`, `sha1`, and `size`.

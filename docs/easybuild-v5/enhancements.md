@@ -7,6 +7,7 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 - [`run_shell_cmd` function][run_shell_cmd]
 - [Granular exit codes][granular_exit_codes]
 - [Reproducible tarballs][reproducible_tarballs]
+- [Detect Fortran `.mod` files in `GCCcore` installations][mod_files]
 
 ---
 
@@ -14,6 +15,7 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 
 See dedicated page on the new [`run_shell_cmd` function](run_shell_cmd.md).
 
+---
 
 ## Granular exit codes { : #granular_exit_codes }
 
@@ -28,6 +30,7 @@ EasyBuild will always return its own exit codes on termination. Other exit
 codes from external processes executed through `run_shell_cmd` or HTTP response
 status codes are reported in the corresponding logs.
 
+---
 
 ## Reproducible tarballs { : #reproducible_tarballs}
 
@@ -42,3 +45,17 @@ This new feature does not apply to sources cloned with `keep_git_dir` enabled.
 Including the `.git` folder in the sources is inherently time-dependent as it
 contains information about the clone action itself, which hinders the creation
 of a reproducible tarball.
+
+---
+
+## Detect Fortran `.mod` files in `GCCcore` installations { : #mod_files }
+
+Fortran `.mod` files should not be mixed between compilers. As `GCCcore` installed software is
+available for use by software installed with other compilers, such as the Intel Fortran compiler,
+this means that software that produces Fortran `.mod` files should not be at the `GCCcore` level.
+
+By default `.mod` there will be a warning if `.mod` files are detected. This can be changed to a
+build failure with the command line option `--fail-on-mod-files-gcccore`.
+
+If the software uses the `.mod` extension for a different type of file then the EasyConfig variable
+`skip_mod_files_sanity_check` can be set to mark that this use is expected.

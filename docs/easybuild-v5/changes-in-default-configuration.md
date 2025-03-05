@@ -4,8 +4,9 @@
 
 The default value for several EasyBuild configuration settings has been changed in EasyBuild v5.0:
 
-- [RPATH linking is enabled by default (`--rpath`)](rpath)
-- [Trace output is enabled by default (`--trace`)](trace)
+- [RPATH linking is enabled by default (`--rpath`)][path]
+- [Trace output is enabled by default (`--trace`)][trace)]
+- [Use `sha256` as the default checksum type][sha256]
 
 ---
 
@@ -53,3 +54,10 @@ To disable trace output, either:
     [override]
     trace=0
     ```
+
+---
+
+## Use `sha256` as the default checksum type {: #sha256 }
+
+The default checksum type, used in EasyConfigs, is now set to `sha256`. We have also
+[deprecated the older checksums types](deprecated-functionality.md#checksums).
