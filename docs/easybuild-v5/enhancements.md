@@ -7,6 +7,7 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 - [`run_shell_cmd` function][run_shell_cmd]
 - [Granular exit codes][granular_exit_codes]
 - [Reproducible tarballs][reproducible_tarballs]
+- [`download_dep_fail`, `use_pip`, `sanity_pip_check` enabled by default for `PythonPackage` easyblock][pythonpackage]
 - [Detect Fortran `.mod` files in `GCCcore` installations][mod_files]
 
 ---
@@ -45,6 +46,13 @@ This new feature does not apply to sources cloned with `keep_git_dir` enabled.
 Including the `.git` folder in the sources is inherently time-dependent as it
 contains information about the clone action itself, which hinders the creation
 of a reproducible tarball.
+
+---
+
+## `download_dep_fail`, `use_pip`, `sanity_pip_check` enabled by default for `PythonPackage` easyblock { : #pythonpackage }
+
+The `PythonPackage` options `download_dep_fail`, `use_pip`, and `sanity_pip_check` are now enabled by default.
+This means that these should no longer be set to `True` in `PythonPackage` / `PythonBundle` easyconfigs.
 
 ---
 

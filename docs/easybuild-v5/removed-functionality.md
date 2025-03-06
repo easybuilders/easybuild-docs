@@ -27,6 +27,8 @@ format and little suggestion that anyone was using it at all.
 
 ---
 
+TODO: sort out this list
+
 - 4279  removed deprecated `mod_exists_regex_template` options in `ModulesTool.exist` <https://github.com/easybuilders/easybuild-framework/pull/4279>
 - 4278  remove deprecated options from `easyconfig.py`: `disable_templating` + `default_fallback` option in `get_easyblock_class` <https://github.com/easybuilders/easybuild-framework/pull/4278>
 - 4277  remove deprecated `skip_lower` option from `template_constant_dict` <https://github.com/easybuilders/easybuild-framework/pull/4277>

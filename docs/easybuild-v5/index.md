@@ -38,7 +38,6 @@ The default value for several EasyBuild configuration settings has been changed 
 - [Trace output is enabled by default (`--trace`)](changes-in-default-configuration.md#trace)
 - [Use `sha256` as the default checksum type](changes-in-default-configuration.md#sha256)
 
-
 ---
 
 ## Enhancements
@@ -48,7 +47,9 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 - [`run_shell_cmd` function](run_shell_cmd.md)
 - [Granular exit codes](enhancements.md#granular_exit_codes)
 - [Reproducible tarballs](enhancements.md#reproducible_tarballs)
+- [`download_dep_fail`, `use_pip`, `sanity_pip_check` enabled by default for `PythonPackage` easyblock][enhancements.md#pythonpackage]
 - [Detect Fortran `.mod` files in `GCCcore` installations](enhancements.md#mod_files)
+- TODO: `module_load_environment` / `--module-search-path-headers`
  
 
 ---
@@ -75,7 +76,7 @@ Some functionality is being deprecated in EasyBuild v5.0, and is scheduled to be
 
 ## Other changes
 
-*(coming soon)*
+- TODO: Archiving / toolchain policy / removed blocks
 
 
 ---
