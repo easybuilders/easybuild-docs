@@ -37,6 +37,8 @@ The default value for several EasyBuild configuration settings has been changed 
 - [RPATH linking is enabled by default (`--rpath`)](changes-in-default-configuration.md#rpath)
 - [Trace output is enabled by default (`--trace`)](changes-in-default-configuration.md#trace)
 - [Use `sha256` as the default checksum type](changes-in-default-configuration.md#sha256)
+- TODO: default max parallel build is now 16 cores
+- TODO: set CMake installation `LIBDIR` to `lib` by default in `CMakeMake` easyblock <https://github.com/easybuilders/easybuild-easyblocks/pull/3227>
 
 ---
 
@@ -50,6 +52,8 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 - [`download_dep_fail`, `use_pip`, `sanity_pip_check` enabled by default for `PythonPackage` easyblock][enhancements.md#pythonpackage]
 - [Detect Fortran `.mod` files in `GCCcore` installations](enhancements.md#mod_files)
 - TODO: `module_load_environment` / `--module-search-path-headers`
+- TODO: enhance `ConfigureMake` easyblock to error out on unknown configure options
+- TODO: `EBPYTHONPREFIXES`
  
 
 ---
@@ -76,7 +80,12 @@ Some functionality is being deprecated in EasyBuild v5.0, and is scheduled to be
 
 ## Other changes
 
-- TODO: Archiving / toolchain policy / removed blocks
+TODO: decide if these should be in another section...
+
+- TODO: Archiving / toolchain policy / removed blocks & ecs
+- TODO: Rename:
+   - `post_install_step` to `post_processing_step` <https://github.com/easybuilders/easybuild-easyblocks/pull/3525>
+   - rename `run` method to `install_extension`, and likewise for `prerun` to `pre_install_extension`, `postrun` to `post_install_extension`, and `run_async` to `install_extension_async` <https://github.com/easybuilders/easybuild-easyblocks/pull/3064>
 
 
 ---
