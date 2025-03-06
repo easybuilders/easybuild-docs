@@ -30,9 +30,9 @@ See also the [overview of removed functionality][removed-functionality] below.
 
 ---
 
-## Changes in default configuration
+## Changes in default configuration or behaviour
 
-The default value for several EasyBuild configuration settings has been changed in EasyBuild v5.0:
+The default value for several EasyBuild configuration settings or EasyBuild behaviour has been changed in EasyBuild v5.0:
 
 - [RPATH linking is enabled by default (`--rpath`)](changes-in-default-configuration.md#rpath)
 - [Trace output is enabled by default (`--trace`)](changes-in-default-configuration.md#trace)
@@ -46,7 +46,7 @@ The default value for several EasyBuild configuration settings has been changed 
 
 Various significant enhancements are included in EasyBuild v5.0, including:
 
-- [`run_shell_cmd` function](run_shell_cmd.md)
+- [`run_shell_cmd` function and the `env.sh` and `cmd.sh` scripts](run_shell_cmd.md)
 - [Granular exit codes](enhancements.md#granular_exit_codes)
 - [Reproducible tarballs](enhancements.md#reproducible_tarballs)
 - [`download_dep_fail`, `use_pip`, `sanity_pip_check` enabled by default for `PythonPackage` easyblock][enhancements.md#pythonpackage]
@@ -85,7 +85,7 @@ TODO: decide if these should be in another section...
 - TODO: Archiving / toolchain policy / removed blocks & ecs
 - TODO: Rename:
    - `post_install_step` to `post_processing_step` <https://github.com/easybuilders/easybuild-easyblocks/pull/3525>
-   - rename `run` method to `install_extension`, and likewise for `prerun` to `pre_install_extension`, `postrun` to `post_install_extension`, and `run_async` to `install_extension_async` <https://github.com/easybuilders/easybuild-easyblocks/pull/3064>
+   - rename `run` method to `install_extension`, and likewise for `prerun` to `pre_install_extension`, `postrun` to `post_install_extension`, and `run_async` to `install_extension_async` <https://github.com/easybuilders/easybuild-easyblocks/pull/3064> / <https://github.com/easybuilders/easybuild-framework/pull/4400>
 
 
 ---
