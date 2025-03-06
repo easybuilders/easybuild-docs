@@ -39,6 +39,11 @@ The default value for several EasyBuild configuration settings or EasyBuild beha
 - [Use `sha256` as the default checksum type](changes-in-default-configuration.md#sha256)
 - TODO: default max parallel build is now 16 cores
 - TODO: set CMake installation `LIBDIR` to `lib` by default in `CMakeMake` easyblock <https://github.com/easybuilders/easybuild-easyblocks/pull/3227>
+- TODO: change default for change_into_dir to False for extract_file <https://github.com/easybuilders/easybuild-framework/pull/4246>
+- TODO: create `lib` -> `lib64` symlink (or vice versa) *before* running `postinstallcmds` <https://github.com/easybuilders/easybuild-framework/pull/4435>
+- TODO: enable `--module-extensions` by default (+ resolve template values used in extension version) <https://github.com/easybuilders/easybuild-framework/pull/4501>
+- TODO: Enable `module-depends-on` by default <https://github.com/easybuilders/easybuild-framework/pull/4500>
+- TODO: don't allow unresolved templates in easyconfig parameters by default + add support for `--allow-unresolved-templates` configuration option <https://github.com/easybuilders/easybuild-framework/pull/4516>
 
 ---
 
@@ -75,6 +80,7 @@ Some functionality is being deprecated in EasyBuild v5.0, and is scheduled to be
 - [`run_cmd` and `run_cmd_qa` functions](deprecated-functionality.md#run_cmd)
 - [`easybuild.tools.py2vs3` module](deprecated-functionality.md#py2vs3)
 - [Deprecation of older checksums types](deprecated-functionality.md#checksums)
+- deprecate support for `EnvironmentModulesC` and `EnvironmentModulesTcl` module tools <https://github.com/easybuilders/easybuild-framework/pull/4439>
 
 ---
 
