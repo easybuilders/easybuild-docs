@@ -44,6 +44,12 @@ The default value for several EasyBuild configuration settings or EasyBuild beha
 - TODO: enable `--module-extensions` by default (+ resolve template values used in extension version) <https://github.com/easybuilders/easybuild-framework/pull/4501>
 - TODO: Enable `module-depends-on` by default <https://github.com/easybuilders/easybuild-framework/pull/4500>
 - TODO: don't allow unresolved templates in easyconfig parameters by default + add support for `--allow-unresolved-templates` configuration option <https://github.com/easybuilders/easybuild-framework/pull/4516>
+- TODO: Use default value `$XDG_CONFIG_DIRS` from XDG basedir spec: `/etc/xdg` (instead of `/etc`) <https://github.com/easybuilders/easybuild-framework/pull/4591> and Reverse order for parsing files in `XDG_CONFIG_DIRS` <https://github.com/easybuilders/easybuild-framework/pull/4630>
+- TODO: move verifying of checksums from `source` to `fetch` step, to include it with `--fetch` <https://github.com/easybuilders/easybuild-framework/pull/4624>
+- TODO: use Slurm as the default job backend + deprecate support for GC3Pie as job backend <https://github.com/easybuilders/easybuild-framework/pull/4659>
+- TODO: change semantics of `--dry-run`, so it doesn't imply `--robot` <https://github.com/easybuilders/easybuild-framework/pull/4704>
+- TODO: change `Toolchain.get_flag` so it doesn't automatically prepend a dash (`-`) to compiler flags, add deprecation warning for `optarch` value without leading dash, renam... <https://github.com/easybuilders/easybuild-framework/pull/4698>
+- TODO: run sanity checks commands from an empty temporary directory (rather than the software install directory) <https://github.com/easybuilders/easybuild-framework/pull/4723>
 
 ---
 
@@ -57,8 +63,10 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 - [`download_dep_fail`, `use_pip`, `sanity_pip_check` enabled by default for `PythonPackage` easyblock][enhancements.md#pythonpackage]
 - [Detect Fortran `.mod` files in `GCCcore` installations](enhancements.md#mod_files)
 - TODO: `module_load_environment` / `--module-search-path-headers`
+- TODO: add `--search-path-cpp-headers` configuration option to control how EasyBuild sets paths to headers at build time <https://github.com/easybuilders/easybuild-framework/pull/4645> / add `--search-path-linker` option to control linker options at build time <https://github.com/easybuilders/easybuild-framework/pull/4697>
 - TODO: enhance `ConfigureMake` easyblock to error out on unknown configure options
 - TODO: `EBPYTHONPREFIXES`
+- TODO: use more granular exit codes when `EasyBuildError` is raised <https://github.com/easybuilders/easybuild-framework/pull/4534>
  
 
 ---
@@ -92,7 +100,10 @@ TODO: decide if these should be in another section...
 - TODO: Rename:
    - `post_install_step` to `post_processing_step` <https://github.com/easybuilders/easybuild-easyblocks/pull/3525>
    - rename `run` method to `install_extension`, and likewise for `prerun` to `pre_install_extension`, `postrun` to `post_install_extension`, and `run_async` to `install_extension_async` <https://github.com/easybuilders/easybuild-easyblocks/pull/3064> / <https://github.com/easybuilders/easybuild-framework/pull/4400>
-
+   - Rename '`source`' step to '`extract`' (affects `skipsteps` easyconfig parameter + `--stop` option) <https://github.com/easybuilders/easybuild-framework/pull/4629>
+   - Rename `post_install_step` to `post_processing_step` + deprecate use of `post_install_step` <https://github.com/easybuilders/easybuild-framework/pull/4715>
+- TODO: add `--keep-debug-symbols` configuration option to set default value of '`debug`' toolchain option, ~and enable it by default so `-g` is included in `$CXXFLAGS` & co~ <https://github.com/easybuilders/easybuild-framework/pull/4688>
+   - this needs documenting, to include a warning that we disabled it due to large build sizes
 
 ---
 
