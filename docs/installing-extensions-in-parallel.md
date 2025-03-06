@@ -1,13 +1,10 @@
-# Installing extensions in parallel *(experimental!)* {: #installing_extensions_in_parallel }
+# Installing extensions in parallel {: #installing_extensions_in_parallel }
 
-Since EasyBuild v4.5.0 (initial) support is available for installing
-extensions in parallel, that is to run the installation command for
-multiple extensions that are ready to install at the same time in the
-background, to exploit the availability of multiple cores.
+Since EasyBuild v4.5.0 support is available for installing R libraries
+(extensions in an easyconfig) in parallel, that is to run the installation
+command for multiple extensions that are ready to install at the same time
+in the background, to exploit the availability of multiple cores.
 
-**Note: this is an**
-[experimental feature][experimental_features]. **Some of the mentioned functionality may be subject to
-change or be prone to errors.**
 
 ## Configuration {: #installing_extensions_in_parallel_configuration }
 
@@ -42,7 +39,7 @@ easyblock.
 
 ## Caveats and Known issues {: #installing_extensions_in_parallel_caveats_known_issues }
 
-*(last update: EasyBuild v4.5.0)*
+*(last update: EasyBuild v5.0.0)*
 
 There are a couple of caveats and known issues with installing
 extensions in parallel, which we hope to resolve in future EasyBuild
