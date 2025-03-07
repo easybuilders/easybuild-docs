@@ -57,7 +57,8 @@ The default value for several EasyBuild configuration settings or EasyBuild beha
 
 Various significant enhancements are included in EasyBuild v5.0, including:
 
-- [`run_shell_cmd` function and the `env.sh` and `cmd.sh` scripts](run_shell_cmd.md)
+- [new function to run shell commands: `run_shell_cmd`](run_shell_cmd.md)
+- [support for interactive debugging of failing shell commands via `env.sh` and `cmd.sh` scripts](shell_cmd_env_scripts.md)
 - [Granular exit codes](enhancements.md#granular_exit_codes)
 - [Reproducible tarballs](enhancements.md#reproducible_tarballs)
 - [`download_dep_fail`, `use_pip`, `sanity_pip_check` enabled by default for `PythonPackage` easyblock][enhancements.md#pythonpackage]
