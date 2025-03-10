@@ -4,11 +4,20 @@
 
 Various significant enhancements are included in EasyBuild v5.0, including:
 
+**framework**
+
 - [`run_shell_cmd` function][run_shell_cmd]
-- [Granular exit codes][granular_exit_codes]
-- [Reproducible tarballs][reproducible_tarballs]
-- [`download_dep_fail`, `use_pip`, `sanity_pip_check` enabled by default for `PythonPackage` easyblock][pythonpackage]
-- [Detect Fortran `.mod` files in `GCCcore` installations][mod_files]
+- [Granular exit codes][granular-exit-codes]
+- [Reproducible tarballs][reproducible-tarballs]
+- [Provide control over how generated modules update search path for header files (via `--module-search-path-headers`)][module-search-path-headers]
+- [Provide control over how EasyBuild specifies path to header files during installation (via `--search-path-cpp-headers`)][search-path-cpp-headers]
+- [Provide control over how EasyBuild specifies path to libraries during installation (via `--search-path-linker`)][search-path-linker]
+- [Support not using `$PYTHONPATH` to specify the location of installed Python packages (via `--prefer-python-search-path`)][PYTHONPATH-vs-EBPYTHONPREFIXES]
+
+**easyblocks**
+
+- [Let `ConfigureMake` generic easyblock error out on unknown `configure` options][configuremake-unknown-configure-options]
+- [Detect Fortran `.mod` files in `GCCcore` installations][mod-files]
 
 ---
 
@@ -18,7 +27,7 @@ See dedicated page on the new [`run_shell_cmd` function](run_shell_cmd.md).
 
 ---
 
-## Granular exit codes { : #granular_exit_codes }
+## Granular exit codes { : #granular-exit-codes }
 
 EasyBuild v5 now uses a range of ~50 exit codes instead of just 0 for normal
 termination and 1 for unexpected termination. Each non-zero exit code
@@ -33,7 +42,7 @@ status codes are reported in the corresponding logs.
 
 ---
 
-## Reproducible tarballs { : #reproducible_tarballs}
+## Reproducible tarballs { : #reproducible-tarballs}
 
 EasyBuild can now generate reproducible tarballs of sources cloned from Git
 repositories. This means that those sources using the `git_config` option will
@@ -49,14 +58,37 @@ of a reproducible tarball.
 
 ---
 
-## `download_dep_fail`, `use_pip`, `sanity_pip_check` enabled by default for `PythonPackage` easyblock { : #pythonpackage }
+## Provide control over how generated modules update search path for header files (via `--module-search-path-headers`) { : #module-search-path-headers }
 
-The `PythonPackage` options `download_dep_fail`, `use_pip`, and `sanity_pip_check` are now enabled by default.
-This means that these should no longer be set to `True` in `PythonPackage` / `PythonBundle` easyconfigs.
+*(more info soon)*
 
 ---
 
-## Detect Fortran `.mod` files in `GCCcore` installations { : #mod_files }
+## Provide control over how EasyBuild specifies path to header files during installation (via `--search-path-cpp-headers`) { : #search-path-cpp-headers}
+
+*(more info soon)*
+
+---
+
+## Provide control over how EasyBuild specifies path to libraries during installation (via `--search-path-linker`) { : #search-path-linker }
+
+*(more info soon)*
+
+---
+
+## Support not using `$PYTHONPATH` to specify the location of installed Python packages (via `--prefer-python-search-path`) { : #PYTHONPATH-vs-EBPYTHONPREFIXES }
+
+*(more info soon)*
+
+---
+
+## Let `ConfigureMake` generic easyblock error out on unknown `configure` options { : #configuremake-unknown-configure-options }
+
+*(more info soon)*
+
+---
+
+## Detect Fortran `.mod` files in `GCCcore` installations { : #mod-files }
 
 Fortran `.mod` files should not be mixed between compilers. As `GCCcore` installed software is
 available for use by software installed with other compilers, such as the Intel Fortran compiler,

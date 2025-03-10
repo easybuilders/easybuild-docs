@@ -1,4 +1,4 @@
-# `run_shell_cmd` function and the `env.sh` and `cmd.sh` scripts
+# `run_shell_cmd` function to run shell commands
 
 *(for a full overview of changes in EasyBuild v5.0, see [here](index.md))*
 
@@ -55,10 +55,6 @@ Examples:
   out = res.output
   ec = res.exit_code
   ```
-
-## `env.sh` and `cmd.sh`
-
-TODO
 
 ## Transitioning from `run_cmd` and `run_cmd_qa` to `run_shell_cmd`
 
