@@ -8,7 +8,7 @@ Click on a particular item for more information.
 
     EasyBuild v5.0.0 is still under active development via the `5.0.x` branches in the EasyBuild GitHub repositories.
 
-    Shortly before the release of EasyBuild v5.0.0, the `5.0.x` branches will be collapsed in the corresponding
+    Shortly after the release of EasyBuild v5.0.0, the `5.0.x` branches will be collapsed in the corresponding
     `develop` branches, and the `5.0.x` branches will then only be used as a staging area for additional EasyBuild
     v5.0.x releases.
 
@@ -22,8 +22,8 @@ Click on a particular item for more information.
 EasyBuild v5.0 includes a number of backwards-incompatible changes:
 
 - [Python 3.6+ is required to run EasyBuild v5.0.0](python36-required.md)
-- Require Lmod >=8 <https://github.com/easybuilders/easybuild-framework/pull/4424>
-- If using Tmod 4.x, then require >= 4.3.0 <https://github.com/easybuilders/easybuild-framework/pull/4425>
+- If Lmod is used as modules tool, then version >= 8.0 is required;
+- If Environment Modules is used as modules tool, then version >= 4.3.0 is required;
 
 See also the [overview of removed functionality][removed-functionality] below.
 
@@ -32,13 +32,15 @@ See also the [overview of removed functionality][removed-functionality] below.
 
 ## Changes in default configuration or behaviour
 
-The default value for several EasyBuild configuration settings or EasyBuild behaviour has been changed in EasyBuild v5.0:
+The default value for several EasyBuild configuration settings or EasyBuild behaviour has been changed in EasyBuild v5.0.
+
+### Changes to default configuration in EasyBuild framework
 
 - [RPATH linking is enabled by default (`--rpath`)](changes-in-default-configuration.md#rpath)
 - [Trace output is enabled by default (`--trace`)](changes-in-default-configuration.md#trace)
-- [Use `sha256` as the default checksum type](changes-in-default-configuration.md#sha256)
-- TODO: default max parallel build is now 16 cores
-- TODO: set CMake installation `LIBDIR` to `lib` by default in `CMakeMake` easyblock <https://github.com/easybuilders/easybuild-easyblocks/pull/3227>
+- [`sha256` is used as the default checksum type](changes-in-default-configuration.md#sha256)
+- [Default maximum build parallelism is set to 16 (`--parallel`)](changes-in-default-configuration.md#parallel-16)
+
 - TODO: change default for change_into_dir to False for extract_file <https://github.com/easybuilders/easybuild-framework/pull/4246>
 - TODO: create `lib` -> `lib64` symlink (or vice versa) *before* running `postinstallcmds` <https://github.com/easybuilders/easybuild-framework/pull/4435>
 - TODO: enable `--module-extensions` by default (+ resolve template values used in extension version) <https://github.com/easybuilders/easybuild-framework/pull/4501>
@@ -49,7 +51,18 @@ The default value for several EasyBuild configuration settings or EasyBuild beha
 - TODO: use Slurm as the default job backend + deprecate support for GC3Pie as job backend <https://github.com/easybuilders/easybuild-framework/pull/4659>
 - TODO: change semantics of `--dry-run`, so it doesn't imply `--robot` <https://github.com/easybuilders/easybuild-framework/pull/4704>
 - TODO: change `Toolchain.get_flag` so it doesn't automatically prepend a dash (`-`) to compiler flags, add deprecation warning for `optarch` value without leading dash, renam... <https://github.com/easybuilders/easybuild-framework/pull/4698>
+
+### Changed behaviour in EasyBuild framework
+
 - TODO: run sanity checks commands from an empty temporary directory (rather than the software install directory) <https://github.com/easybuilders/easybuild-framework/pull/4723>
+
+### Changed defaults in easyblocks
+
+- [`download_dep_fail`, `use_pip`, `sanity_pip_check` enabled by default for `PythonPackage` easyblock](changes-in-default-configuration.md#python-pkgs-defaults)
+- [`CMakeMake` easyblock sets `LIBDIR` configuration option to `lib` by default](changes-in-default-configuration.md#cmakemake-libdir)
+
+
+
 
 ---
 
@@ -57,17 +70,17 @@ The default value for several EasyBuild configuration settings or EasyBuild beha
 
 Various significant enhancements are included in EasyBuild v5.0, including:
 
-- [new function to run shell commands: `run_shell_cmd`](run_shell_cmd.md)
-- [support for interactive debugging of failing shell commands via `env.sh` and `cmd.sh` scripts](shell_cmd_env_scripts.md)
-- [Granular exit codes](enhancements.md#granular_exit_codes)
-- [Reproducible tarballs](enhancements.md#reproducible_tarballs)
-- [`download_dep_fail`, `use_pip`, `sanity_pip_check` enabled by default for `PythonPackage` easyblock][enhancements.md#pythonpackage]
-- [Detect Fortran `.mod` files in `GCCcore` installations](enhancements.md#mod_files)
-- TODO: `module_load_environment` / `--module-search-path-headers`
-- TODO: add `--search-path-cpp-headers` configuration option to control how EasyBuild sets paths to headers at build time <https://github.com/easybuilders/easybuild-framework/pull/4645> / add `--search-path-linker` option to control linker options at build time <https://github.com/easybuilders/easybuild-framework/pull/4697>
-- TODO: enhance `ConfigureMake` easyblock to error out on unknown configure options
-- TODO: `EBPYTHONPREFIXES`
-- TODO: use more granular exit codes when `EasyBuildError` is raised <https://github.com/easybuilders/easybuild-framework/pull/4534>
+- [New function to run shell commands: `run_shell_cmd`](run_shell_cmd.md)
+- [Interactive debugging of failing shell commands via `env.sh` and `cmd.sh` scripts](../interactive-debugging-failing-shell-commands.md)
+- [Granular exit codes](enhancements.md#granular-exit-codes)
+- [Reproducible tarballs](enhancements.md#reproducible-tarballs)
+- [Detect Fortran `.mod` files in `GCCcore` installations](enhancements.md#mod-files)
+- [Specifying changes that should be made by generated module files via `module_load_environment`](../implementing-easyblocks.md#module_load_environment)
+- [Provide control over how generated modules update search path for header files (via `--module-search-path-headers`)](enhancements.md#module-search-path-headers)
+- [Provide control over how EasyBuild specifies path to header files during installation (via `--search-path-cpp-headers`)](enhancements.md#search-path-cpp-headers)
+- [Provide control over how EasyBuild specifies path to libraries during installation (via `--search-path-linker`)](enhancements.md#search-path-linker)
+- [Let `ConfigureMake` generic easyblock error out on unknown `configure` options](enhancements.md#configuremake-unknown-configure-options)
+- [Support not using `$PYTHONPATH` to specify the location of installed Python packages (via `--prefer-python-search-path`)](enhancements.md#PYTHONPATH-vs-EBPYTHONPREFIXES)
  
 
 ---

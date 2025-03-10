@@ -57,6 +57,7 @@ nav:
       - Detecting loaded modules: detecting-loaded-modules.md
       - EasyBuild log files: log-files.md
       - Extended dry run: extended-dry-run.md
+      - Interactive debugging of failing shell commands: interactive-debugging-failing-shell-commands.md
       - Locks: locks.md
       - Manipulating dependencies: manipulating-dependencies.md
       - Partial installations: partial-installations.md

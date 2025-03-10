@@ -2,11 +2,25 @@
 
 *(for a full overview of changes in EasyBuild v5.0, see [here](index.md))*
 
-The default value for several EasyBuild configuration settings has been changed in EasyBuild v5.0:
+The default value for several EasyBuild configuration settings has been changed in EasyBuild v5.0.
 
+**Changed defaults in EasyBuild framework:**
+
+- [Default maximum build parallelism is set to 16 (`--parallel`)][parallel-16]
 - [RPATH linking is enabled by default (`--rpath`)][path]
 - [Trace output is enabled by default (`--trace`)][trace)]
 - [Use `sha256` as the default checksum type][sha256]
+
+**Changed defaults in easyblocks**
+
+- [`download_dep_fail`, `use_pip`, `sanity_pip_check` are enabled by default for Python package installations][python-pkgs-defaults]
+- [`CMakeMake` easyblock sets `LIBDIR` configuration option to `lib` by default][cmakemake-libdir]
+
+---
+
+## Default maximum build parallelism is set to 16 (`--parallel`) {: #parallel-16 }
+
+*(more info soon, ideally including some "scaling" data for long-running builds like GCC, LLVM, OpenFOAM, ...)*
 
 ---
 
@@ -59,5 +73,25 @@ To disable trace output, either:
 
 ## Use `sha256` as the default checksum type {: #sha256 }
 
-The default checksum type, used in EasyConfigs, is now set to `sha256`. We have also
-[deprecated the older checksums types](deprecated-functionality.md#checksums).
+The default checksum type, used in EasyConfigs, is now set to `sha256`.
+
+We have also [deprecated the older checksums types](deprecated-functionality.md#checksums).
+
+---
+
+## `download_dep_fail`, `use_pip`, `sanity_pip_check` are enabled by default for Python package installations { : #python-pkgs-defaults }
+
+The `download_dep_fail`, `use_pip`, and `sanity_pip_check` easyconfig parameters are now enabled by default
+in the `PythonPackage` and `PythonBundle` generic easyblocks (and the easyblocks that derive from them).
+
+This means that these should no longer be explicitly set to `True` in easyconfig files using these easyblocks.
+
+---
+
+## `CMakeMake` easyblock sets `LIBDIR` configuration option to `lib` by default { : #cmakemake-libdir }
+
+The generic `CMakeMake` easyblock will use `-DCMAKE_INSTALL_LIBDIR=lib` by default as option to the `cmake` command.
+Easyconfig files that specify this via `configopts` should be adjusted accordingly.
+
+A custom easyconfig parameter named `install_libdir` has been added to `CMakeMake` to specify a custom value should that
+be required.
