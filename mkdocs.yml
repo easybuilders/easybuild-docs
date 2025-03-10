@@ -133,7 +133,7 @@ nav:
   - EasyBuild v5.0:
       - (overview): easybuild-v5/index.md
       - Enhancements in EasyBuild v5.0: easybuild-v5/enhancements.md
-      - `run_shell_cmd` function to run shell commands: easybuild-v5/run_shell_cmd.md
+      - Run shell commands function (`run_shell_cmd`): easybuild-v5/run_shell_cmd.md
       - Changes in default configuration in EasyBuild v5.0: easybuild-v5/changes-in-default-configuration.md
       - Deprecated functionality in EasyBuild v5.0: easybuild-v5/deprecated-functionality.md
       - Removed functionality in EasyBuild v5.0: easybuild-v5/removed-functionality.md
