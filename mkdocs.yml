@@ -111,7 +111,7 @@ nav:
   - Getting help: getting-help.md
   - User survey: user-survey/index.md
   - Policies:
-      Supported Toolchain Generations: policies/toolchains.md
+      - Supported Toolchain Generations: policies/toolchains.md
   - Other topics:
       - Alternative installation methods: installation-alternative.md
       - Configuration (legacy): legacy/configuration.md

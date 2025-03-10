@@ -43,7 +43,7 @@ This includes (but is not limited to):
     - `parallel` easyconfig parameter (`maxparallel` easyconfig parameter or `parallel` property in easyblocks should be used instead);
 - easyconfigs using an old [unsupported toolchain](../policies/toolchains.md) have been moved to the [easyconfigs archive](https://github.com/easybuilders/easybuild-easyconfigs-archive);
 
-### Installation
+### Installation  {: #eb5.0.0beta2_installation }
 
 To install the 2nd beta release of EasyBuild v5.0.0 (`5.0.0beta2`), you can either:
 
