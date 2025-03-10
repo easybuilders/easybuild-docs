@@ -137,6 +137,7 @@ nav:
       - Changes in default configuration in EasyBuild v5.0: easybuild-v5/changes-in-default-configuration.md
       - Deprecated functionality in EasyBuild v5.0: easybuild-v5/deprecated-functionality.md
       - Removed functionality in EasyBuild v5.0: easybuild-v5/removed-functionality.md
+      - Known issues in EasyBuild v5.0: easybuild-v5/known-issues.md
 
 markdown_extensions:
   # add attributes to html elements
