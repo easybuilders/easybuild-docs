@@ -43,7 +43,7 @@ jobs:
           pip install -r requirements.txt
           mkdocs --version
 
-      - name: build tutorial
+      - name: build docs
         # can't use --strict due to warnings being produced by mkdocs-redirect plugin
         # because we are re-directing .html pages
         # run: mkdocs build --strict
