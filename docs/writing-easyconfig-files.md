@@ -130,7 +130,7 @@ Remarks:
 - patches need to be EasyBuild-compatible
     - unified diff format (`diff -ruN`)
     - patched locations relative to unpacked sources
-- see [Patches][common_easyconfig_param_sources_patches] for more information on `patches`
+- for more information on `patches`, see [separate page on patch files](patch-files.md)
 - see [Checksums][common_easyconfig_param_sources_checksums] for more information on `checksums`
 - `sources` is usually specified as a list of strings representing
     filenames for source files, but other formats are supported too, see
@@ -162,60 +162,7 @@ checksums = ['ac7534163a09e21a5fa763e4e16dfc119bc84043f6e6a807aba666518f8df440']
 
 #### Patches {: #common_easyconfig_param_sources_patches }
 
-Patches can be provided via the `patches` easyconfig parameter (list). A
-patch can be defined as:
-
-- a `string`,
-- a `tuple` of 2 elements, or
-- a `dict`
-
-The most straight-forward use-case is `string`, which contains the name
-of the patch file (and must have `.patch` extension).
-
-A `tuple` adds the possibility to specify where patch should be applied.
-This is mostly needed if a patch file adds new files or it is generally
-not possible to determine the starting directory. The first element is
-the patch file and the second is either the patch level (as an integer)
-which is used in the patch command (`patch -p<n>`) or a directory
-relative to the unpacked source dir.
-
-!!! note
-    `tuple` also has a special use case if the patch file has any other extension than `.patch`.
-    In this case, the first tuple argument is a file which should be
-    copied to the unpacked source dir and the second tuple argument is
-    the target path, where the files should be copied to (relative to
-    the unpacked source dir). See below for an example of this use case.
-
-A `dict` adds the ability to pass the `patch` command additional
-arguments. For example, the `--binary` flag is needed to patch files
-with CRLF endings. The `dict` has a required `filename` key, with
-`level` and `opts` being optional ones.
-
-!!! note
-    Specifying only `filename` in `dict` is the same as using a plain `string` definition.
-    Specifying `filename` and `level` is same as using a `tuple`
-    definition.
-
-Example:
-
-``` python
-patches = [
-  # a simple patch file
-  'name-versions-fix.patch',
-
-  # when creating only new files by patch file, you need to specify the level:
-  ('name-versions-fix.patch', 1),
-
-  # apply the patch in a (sub-)subdirectory inside the source tree
-  ('name-versions-fix.patch', 'src/subfolder'),
-
-  # copy file to target_path folder
-  ('Makefile', 'target_path'),
-
-  # specify patch file and optionally level and opts for patch command
-  {'filename': 'name-versions-fix.patch', 'level': 1, 'opts': '-l'}
-]
-```
+See [separate page dedicated to creating and using patch files](patch-files.md).
 
 #### Checksums {: #common_easyconfig_param_sources_checksums }
 
@@ -232,8 +179,7 @@ highly recommended.
 If checksums are provided, the checksum of the corresponding source
 files and patches is verified to match.
 
-The `checksums` easyconfig parameter is usually defined as a list of
-strings.
+The `checksums` easyconfig parameter is a list usually containing strings.
 
 Until EasyBuild v3.3.0, only MD5 checksums could be provided through a
 list of strings. Since EasyBuild v3.3.0, the checksum type is determined
@@ -256,6 +202,66 @@ example:
 ``` python
 checksums = [('sha512', 'f962008105639f58e9a4455c8057933ab0a5e2f43db8340ae1e1afe6dc2d24105bfca3b2e1f79cb242495ca4eb363c9820d8cea6084df9d62c4c3e5211d99266')]
 ```
+
+It is also possible to specify alternative checksums using a tuple of
+checksum elements where any match is sufficient (logical OR).
+This is helpful when the release was updated with changes that don't affect the behavior of the software in any way
+(e.g. only doc changes).
+
+``` python
+checksums = [('0123456789...abcdef', 'fedcba...9876543210')]
+```
+
+The opposite is also possible:
+A list instead of a tuple denotes that **all** checksums must match (logical AND).
+In both cases each element can also be a type-value-tuple:
+
+``` python
+checksums = [[('sha256', '0123456789...abcdef'), 'fedcba...9876543210']]
+```
+
+Finally, a checksum can be specified as a dictionary mapping filenames to checksums, removing any ambiguity.
+This style is used by EasyBuild with `eb --inject-checksums` when 2 or more source files are specified,
+and is particularly useful when the source file is specified using a template value like `%(arch)s`.
+Especially when many source files and patches are used this also directly documents the file each checksum is for.  
+Again, elements (values) can be strings or type-value-tuples.
+For example:
+
+``` python
+checksums = [{
+  'src_x86_64.tgz': '0123456789...abcdef',
+  'src_aarch64.tgz': ('sha256', 'fedcba...9876543210'),
+}]
+```
+
+Of course this can be combined with the logical AND/OR semantics using lists or tuples:
+
+``` python
+checksums = [{
+  'src_x86_64.tgz': ('0123456789...abcdef', 'fedcba...9876543210'), # Match either one
+  'src_aarch64.tgz': [('sha256', '9876543210...fedcba'), 'abcdef...0123456789'], # Match both
+}]
+```
+
+When the checksum cannot be specified for a file
+(e.g. when using a git clone instead of an archive),
+a value of `None` can be used to skip the checksum check.
+This is possible in the list of checksums as well as a value in a dictionary, e.g.:
+
+``` python
+checksums = [
+  None, # No checksum for first source file
+  '0123456789...abcdef', # checksum for 2nd file
+  {
+    'third_file_x86_64.tgz': 'fedcba...9876543210',
+    'third_file_aarch64.tgz': None,
+  },
+]
+```
+
+Note that not having an entry in the dict for a file will raise an error
+while a value of `None` will skip the checksum verification for that file.
+But even in the latter case the `--enforce_checksums` option will raise an error.
 
 ##### Adding or replacing checksums using `--inject-checksums` {: #inject_checksums }
 
@@ -443,7 +449,7 @@ filename that should be used to download the source file.
 This can be specified using a Python dictionary value in the `sources`
 easyconfig parameter.
 
-Since EasyBuild v3.3.0, three keys are supported:
+The following keys are supported:
 
 - `filename` (*mandatory*): filename of source file
 - `download_filename`: filename that should be used when downloading
@@ -483,7 +489,7 @@ cannot be automated. Reasons for this include:
 You can use the `download_instructions` parameter to specify steps for
 the user to do. This parameter takes string value and prints it whenever
 build fails because any file needed was not found. If
-`download_instructions` is not specified, Easybuild prints the default
+`download_instructions` is not specified, EasyBuild prints the default
 message stating the paths that were tested.
 
 ``` python
@@ -725,6 +731,19 @@ Here, the template strings `%(name)s` and `%(version)s` will be
 substituted from the `exts_list` entry elements ("pyCAP" and "0.1",
 respectively), not from the easyconfig values.
 
+### Generate a crates list {: #generate_crates_list }
+
+To generate a crates list for a package:
+
+1. Download and unpack the source code for the package you wish to build
+1. Change into the directory containing the top level `Cargo.toml`.
+1. Run `python -m easybuild.easyblocks.generic.cargo .`
+
+If there is not already a lockfile then you may need to do the following to generate it:
+
+1. Load a recent Rust module
+1. `cargo generate-lockfile`
+
 ### Configure/build/install command options {: #configure_build_install_command_options }
 
 - **configopts**: options for configure command
@@ -933,6 +952,80 @@ Example:
     ``` shell
     eb WRF-3.5.1-ictce-5.3.0-dmpar.eb --try-toolchain=intel,2014b -r
     ```
+
+## Updating existing easyconfigs for another toolchain
+
+While `try-toolchain` is a convenient way of testing existing software versions with another toolchain
+you rarely want this behavior.
+Usually when using a newer toolchain you also want to use newer versions of (at least) the dependencies.
+Often there are already at least easyconfigs available for the dependencies in the new toolchain,
+and especially if those are already installed you should use those as dependencies for the updated easyconfig.
+
+So the process of updating an easyconfig to a newer toolchain version could look like:
+
+1. Copy the easyconfig and change the toolchain version
+1. Usually, especially when updating to the latest toolchain,
+   you should search for the most recent version of the software too and use that.
+   When you update the version, the checksum for the software sources will
+   become incorrect and should be removed. You can automatically inject the
+   checksums for the new sources with `eb --inject-checksums <easyconfig>`
+   (see [checksums documentation](writing-easyconfig-files.md#common_easyconfig_param_sources_checksums)
+   for more details).
+1. For each listed dependency find the easyconfig for the new toolchain version.
+   Here you need to take [toolchain hierarchy](common-toolchains.md#toolchains_diagram) into account.
+   I.e. a dependency of an easyconfig for the `foss` toolchain might use the `GCC` or `GCCcore` toolchain.
+   Check the toolchain easyconfig file (e.g. `foss-2023b.eb`) to find the versions of the sub-toolchain.
+   For very recent toolchains you can also check the `develop` branch of the [easyconfigs git repository](https://github.com/easybuilders/easybuild-easyconfigs) and open PRs.
+1. If an easyconfig for the listed dependency with the new toolchain already exists use its version in your new easyconfig.
+   Otherwise, you need to create a new easyconfig for the listed dependency with the new toolchain version (based on that of another toolchain version).
+   The steps are the same and also need to be repeated for each dependency of this dependency.
+1. Finally, build and test your easyconfig and consider [contributing](contributing.md#contributing-easyconfig-files--contributing_easyconfigs) it.
+
+Especially when creating easyconfigs for dependencies it is a good idea to put all of them into a new folder.
+To allow EasyBuild to find these easyconfigs in your folder, pass its path via `eb --robot <path> ...`.
+
+This manual process can be partially automated:
+
+1. Create a new folder for the new easyconfig and its dependencies.
+1. Run `eb <current_easyconfig.eb> --try-toolchain-version=<new-version> --try-update-deps --experimental --copy-ec <folder>`.
+   This will update the toolchain version, search for the versions of dependencies in the new toolchain and use them if available.
+   If a dependency with the new toolchain is not available this will create a new easyconfig for this toolchain
+   based on an existing one for another toolchain (version).
+   All newly create easyconfigs will be copied to the specified folder.
+1. Optionally, but recommended, update the version of the software for each created easyconfig to the latest available one.
+1. **Important**: Verify the newly created easyconfigs by comparing each of them against the existing one for that software.
+   Only the version of the software, toolchain and dependencies should have been changed. However, this approach
+   can lead to unwanted changes to formatting as well as the replacement local variables or templates (such as `name`,
+   `version` or `%(version)s`) by their *value* when updating easyconfigs.
+   This is undesirable as the values might become out of sync with what they are supposed to be, e.g. when we update
+   the `version` variable the old *value* may still exist elsewhere in the easyconfig.
+   Depending on the situation, it might be easier to use the newly created easyconfigs just for getting the versions of
+   each dependency required and still copy & update the easyconfigs from existing ones manually.
+
+When updating a software version the patches in the easyconfig need to be checked too.
+If they don't apply they might not be required anymore, when the upstream software fixed the issue, and can be removed.
+Otherwise, they need to be adjusted for the changes in the source code.
+
+For updates to easyconfigs containing Python packages (`PythonBundle`) you should check each of them if there is a newer version and if it is still required.
+The latest version of a single Python package can usually be found on [PyPI](https://pypi.org).
+To find the list of Python dependencies for another Python package to be installed by an easyconfig you can use the `findPythonDeps` script
+distributed with EasyBuild.
+For a typical installation it can be run using `$(dirname $(which eb))/../easybuild/scripts/findPythonDeps.py` which automatically finds the standard path for it.
+This will also output the latest, compatible version of the found packages.
+A good approach is to start from an easyconfig just containing the dependency on Python but no Python packages and then run e.g. `findPythonDeps.py --ec foo-1.2.3.eb foo==1.2.3`.
+For every Python package displayed by the script first search for a suitable easyconfig containing that package and add it as a dependency one by one.
+That might require updating it from another toolchain.
+Then run the script again to honor Python packages from that dependency and its dependencies.
+Repeat until none of the remaining packages displayed are in any easyconfig and/or unique enough to the specific software that an own easyconfig would be useful.
+Those can then be added to the `ext_list` of the easyconfig.
+More information about that script can be found at the top of the script file and via `findPythonDeps.py --help`.
+
+Also keep in mind that changing the version of the software and/or the toolchain might reveal new bugs or incompatibilities.
+Some can be fixed or worked around by patches, often even with help from the maintainers of the software.
+But some software is simply not compatible with specific versions of compilers or other software.
+Feel free to ask for help in the [EasyBuild Slack channel](https://easybuild.io/join-slack).
+Also filing an issue or bug report against the software in question helps in getting more information or the bug being fixed in later versions.
+This fix can then also be applied to the earlier version of necessary.
 
 ## Dynamic values for easyconfig parameters {: #easyconfig_param_templates }
 
