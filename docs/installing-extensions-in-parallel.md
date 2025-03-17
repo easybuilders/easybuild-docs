@@ -61,29 +61,6 @@ the corresponding easyblocks that are used to install those extensions
 required dependencies and starting the installation command
 asynchronously.
 
-### List of extensions must be self-contained {: #installing_extensions_in_parallel_caveats_known_issues_exts_list }
-
-The EasyBuild framework currently enforces that all required
-dependencies for a particular extension are included in the list of
-extensions that is being installed (specified via the `exts_list`
-easyconfig parameter). Extensions provided by dependencies are not taken
-into account (yet).
-
-As a result, trying to install an
-[R-bundle-Bioconductor](https://github.com/easybuilders/easybuild-easyconfigs/tree/main/easybuild/easyconfigs/r/R-bundle-Bioconductor)
-easyconfig with `parallel-extensions-install` enabled will result in an
-error reporting missing required dependencies.
-
-### Skipping of installed extensions is still done sequentially {: #installing_extensions_in_parallel_caveats_known_issues_skip }
-
-Checking which extensions are already installed for which the
-installation can be skipped when `--skip` (see
-[Installing additional extensions using `-k`/`-skip`][partial_installation_skip]) is being used
-is still done sequentially.
-
-Additional work is needed to also run these checks in parallel across
-the cores that are available to EasyBuild.
-
 ### Sanity check for extensions is still run sequentially {: #installing_extensions_in_parallel_caveats_known_issues_sanity_check }
 
 The sanity checks that are done for each extension are still done
