@@ -1,4 +1,4 @@
-# `run_shell_cmd` function
+# `run_shell_cmd` function to run shell commands
 
 *(for a full overview of changes in EasyBuild v5.0, see [here](index.md))*
 

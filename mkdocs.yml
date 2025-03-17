@@ -57,6 +57,7 @@ nav:
       - Detecting loaded modules: detecting-loaded-modules.md
       - EasyBuild log files: log-files.md
       - Extended dry run: extended-dry-run.md
+      - Interactive debugging of failing shell commands: interactive-debugging-failing-shell-commands.md
       - Locks: locks.md
       - Manipulating dependencies: manipulating-dependencies.md
       - Partial installations: partial-installations.md
@@ -128,7 +129,14 @@ nav:
       - Installing Lmod: installing-lmod-without-root-permissions.md
       - Removed functionality: removed-functionality.md
       - Useful scripts: useful-scripts.md
-  - EasyBuild v5.0: easybuild-v5/index.md
+  - EasyBuild v5.0:
+      - (overview): easybuild-v5/index.md
+      - Enhancements in EasyBuild v5.0: easybuild-v5/enhancements.md
+      - Run shell commands function (`run_shell_cmd`): easybuild-v5/run_shell_cmd.md
+      - Changes in default configuration in EasyBuild v5.0: easybuild-v5/changes-in-default-configuration.md
+      - Deprecated functionality in EasyBuild v5.0: easybuild-v5/deprecated-functionality.md
+      - Removed functionality in EasyBuild v5.0: easybuild-v5/removed-functionality.md
+      - Known issues in EasyBuild v5.0: easybuild-v5/known-issues.md
 
 markdown_extensions:
   # add attributes to html elements
@@ -204,6 +212,7 @@ plugins:
       redirect_maps:
         # redirect removed pages to sensible alternative
         easybuild-v5/backwards-incompatible-changes/: easybuild-v5/index.md
+        easybuild-v5/changes-in-default-configuration.html: easybuild-v5/changes.md
         easybuild-v5/overview-of-changes/: easybuild-v5/index.md
         easybuild-v5/proposed-changes/: easybuild-v5/index.md
         easybuild-v5/policies/: policies/toolchains.md
