@@ -58,10 +58,10 @@ You should migrate to the new [`run_shell_cmd`](run_shell_cmd.md) function inste
 
 ## `run`, `prerun`, `postrun`, `run_async` methods in `EasyBlock` class {: #run-methods-extensions }
 
-* `run` method has been replaced with `install_extension`
-* `prerun` method has been replaced with `pre_install_extension`
-* `postrun` method has been replaced with `post_install_extension`
-* `run_async` has been replaced with `install_extension_async`
+- `run` method has been replaced with `install_extension`
+- `prerun` method has been replaced with `pre_install_extension`
+- `postrun` method has been replaced with `post_install_extension`
+- `run_async` has been replaced with `install_extension_async`
 
 ---
 
