@@ -729,7 +729,7 @@ have in place already (cfr. [Specify location of working directories][github_git
     you *must* specify a (meaningful) commit message using
     `--pr-commit-msg`, see [Controlling pull request metadata][github_controlling_pr_metadata].
 
-#### Example
+**Example**
 
 For example, to create a pull request for a new version of, let's say,
 EasyBuild:
@@ -802,7 +802,7 @@ the repository, no changes are made to a possible existing working copy.
     When using `--update-pr` you *must* specify a (meaningful) commit message  
     via `--pr-commit-msg`, see [Controlling pull request metadata][github_controlling_pr_metadata].
 
-#### Example
+**Example**
 
 For example, to update pull request \#3153 with a changed easyconfig
 file:
