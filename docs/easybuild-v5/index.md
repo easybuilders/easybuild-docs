@@ -112,9 +112,7 @@ Functionality that was deprecated a while ago in EasyBuild v4.x has been ***remo
 - [`dummy` toolchain](removed-functionality.md#dummy-toolchain)
 - [Support for 32-bit targets](removed-functionality.md#32-bit-targets)
 
-In addition, several software-specific easyblocks that were no longer used have been removed, including:
-
-FIXME
+In addition, several software-specific easyblocks that were no longer used have been removed: ACML, ALADIN, Allinea, ARB, ATLAS, BamTools, Bioconductor, BiSearch, BLACS, Blender , BWISE, CFDEMcoupling, Chapel, CHARMM, cppcheck, DL_POLY_Classic, DOLFIN, Doris, Doxygen, EggLib, EPD, ESPResSo, fastStructure, FoldX, FreeFEM, HEALPix, IMOD, IPP, IronPython, libsmm, MetaVelvet, Modeller, Molpro, Mono, Mothur, MSM, MTL4, MyMediaLite, mutil, MVAPICH2, ncurses, NEMO, OpenIFS, Pasha, pbdMPI, pbdSLAP, PGI, picard, pplacer, Primer3, PyQuante, python_meep, Samcef, SAS, Scalasca v1.x, SHRiMP, SNPhylo, SOAPdenovo, TAU, TotalView, UFC, VSC-tools, and WRF-Fire.
 
 Easyconfig files for unsupported toolchains were archived in the [`easyconfigs-archive`](https://github.com/easybuilders/easybuild-easyconfigs-archive) repository.
 
