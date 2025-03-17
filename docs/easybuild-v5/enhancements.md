@@ -12,8 +12,7 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 - [Reproducible tarballs for sources created via `git_config`][reproducible-tarballs-git_config]
 - [Granular exit codes][granular-exit-codes]
 - [Copy build directory and/or log file(s) if installation failed to path specified via `--failed-install-build-dirs-path` or `--failed-install-logs-path`][copy-build-log-failed-installs]
-- [Specify changes that should be made by generated module files via `module_load_environment`][module_load_environment]
-(../implementing-easyblocks.md#module_load_environment)
+- [Specify changes that should be made by generated module files via `module_load_environment`][module-load-environment]
 - [Add support for alternate easyconfig parameters/templates/constants][alternative-easyconfig-parameters-templates-constants]
 - [`keep-debug-symbols` configuration option to set default value of '`debug`' toolchain option][keep-debug-symbols]
 - [Provide control over how generated modules update search path for header files (via `--module-search-path-headers`)][module-search-path-headers]
@@ -97,7 +96,7 @@ of a reproducible tarball.
 ---
 
 
-## Specify changes that should be made by generated module files via `module_load_environment` {: #module_load_environment }
+## Specify changes that should be made by generated module files via `module_load_environment` {: #module-load-environment }
 
 See [separate dedicated section](../implementing-easyblocks.md#module_load_environment).
 
