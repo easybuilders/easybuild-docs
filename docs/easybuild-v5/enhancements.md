@@ -204,7 +204,36 @@ This option is also available as easyconfig parameter
 
 ## Provide control over how EasyBuild specifies path to libraries during installation (via `--search-path-linker`) { : #search-path-linker }
 
-*(more info soon)*
+EasyBuild 5.0 introduces a new option called `--search-path-linker`
+that controls the method used at build time to pass search paths to libraries
+to the linker.
+
+Available settings:
+
+* `flags` (default): EasyBuild sets the environment variable `LDFLAGS` in the
+build environment with the list of search paths to libraries as `-L` options.
+Passing search paths through `LDFLAGS` has the highest precedence as
+[GNU Make](https://www.gnu.org/software/make/) will inject its contents
+directly in the linker and compiler commands. Hence, this method
+minimizes the risk that the build process could be perturbed by the environment
+of the host system. This is the traditional mode of operation of EasyBuild.
+
+* `cpath`: EasyBuild adds search paths to libraries to the environment variable
+[LIBRARY_PATH](https://gcc.gnu.org/onlinedocs/gcc/Environment-Variables.html#index-LIBRARY_005fPATH)
+in the build environment. This option has less precedence than the `-L` options
+injected by `flags`.
+
+Search paths added by EasyBuild at build time are independent to those that
+might be defined by the modules of loaded dependencies. EasyBuild will generate
+a new list of search paths from scratch to existing library sub-directories in
+installations of loaded dependencies. This approach improves the resilience of
+the build by detaching the build process from modifications done by modules to
+the environment. Nonetheless, changes to the environment made by loaded modules
+still come into play, but with less precedence by default.
+
+This option is also available as easyconfig parameter
+`search_path_linker`. Which has precedence over the global
+`--search-path-linker` build option.
 
 ---
 
