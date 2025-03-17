@@ -96,7 +96,7 @@ Since EasyBuild 4.2.0, easyblocks from a pull request on GitHub can also
 be included, using `--include-easyblocks-from-pr` (see
 [Using easyblocks from pull requests][github_include_easyblocks_from_pr]).
 
-### Example
+**Example**
 
 The example below shows how all self-implemented easyblocks (both
 software-specific and generic) located in the `$HOME/myeasyblocks`
@@ -123,7 +123,7 @@ path to the corresponding Python modules can be specified via
 To verify that EasyBuild is aware of the additional module naming
 schemes, the `--avail-module-naming-schemes` option can be used.
 
-### Example
+**Example**
 
 The example below shows how all custom module naming schemes located in
 the `$HOME/myebmns` can be included:
@@ -156,7 +156,8 @@ directory named according to the type of component (`compiler`, `mpi`,
 To verify that EasyBuild is aware of the included toolchains,
 `--list-toolchains` can be used.
 
-### Example
+
+**Example**
 
 The example below shows how the support for additional toolchains and
 the required additional compiler/MPI toolchain components implemented by
