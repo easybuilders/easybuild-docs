@@ -75,6 +75,8 @@ nav:
       - RPATH support: rpath-support.md
       - Using external modules: using-external-modules.md
       - Wrapping dependencies: wrapping-dependencies.md
+      - Easystack files: easystack-files.md
+      - Installing extensions in parallel: installing-extensions-in-parallel.md
   - For developers/contributors:
       - Archived easyconfigs: archived-easyconfigs.md
       - Code style: code-style.md
@@ -88,9 +90,6 @@ nav:
   - Experimental features:
       - (overview): experimental-features.md
       - Creating container images/recipes: containers.md
-      - Easystack files: easystack-files.md
-      - Easyconfig files in YAML syntax: writing-yeb-easyconfig-files.md
-      - Installing extensions in parallel: installing-extensions-in-parallel.md
   - Version-specific info:
       - (overview): version-specific/index.md
       - Constants for config files: version-specific/config-file-constants.md

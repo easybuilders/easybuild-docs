@@ -1,13 +1,10 @@
-# Installing extensions in parallel *(experimental!)* {: #installing_extensions_in_parallel }
+# Installing extensions in parallel {: #installing_extensions_in_parallel }
 
-Since EasyBuild v4.5.0 (initial) support is available for installing
-extensions in parallel, that is to run the installation command for
-multiple extensions that are ready to install at the same time in the
-background, to exploit the availability of multiple cores.
+Since EasyBuild v4.5.0 support is available for installing R libraries
+(extensions in an easyconfig) in parallel, that is to run the installation
+command for multiple extensions that are ready to install at the same time
+in the background, to exploit the availability of multiple cores.
 
-**Note: this is an**
-[experimental feature][experimental_features]. **Some of the mentioned functionality may be subject to
-change or be prone to errors.**
 
 ## Configuration {: #installing_extensions_in_parallel_configuration }
 
@@ -42,7 +39,7 @@ easyblock.
 
 ## Caveats and Known issues {: #installing_extensions_in_parallel_caveats_known_issues }
 
-*(last update: EasyBuild v4.5.0)*
+*(last update: EasyBuild v5.0.0)*
 
 There are a couple of caveats and known issues with installing
 extensions in parallel, which we hope to resolve in future EasyBuild
@@ -63,29 +60,6 @@ the corresponding easyblocks that are used to install those extensions
 (like `PythonPackage`, `PerlModule`) are enhanced to support determining
 required dependencies and starting the installation command
 asynchronously.
-
-### List of extensions must be self-contained {: #installing_extensions_in_parallel_caveats_known_issues_exts_list }
-
-The EasyBuild framework currently enforces that all required
-dependencies for a particular extension are included in the list of
-extensions that is being installed (specified via the `exts_list`
-easyconfig parameter). Extensions provided by dependencies are not taken
-into account (yet).
-
-As a result, trying to install an
-[R-bundle-Bioconductor](https://github.com/easybuilders/easybuild-easyconfigs/tree/main/easybuild/easyconfigs/r/R-bundle-Bioconductor)
-easyconfig with `parallel-extensions-install` enabled will result in an
-error reporting missing required dependencies.
-
-### Skipping of installed extensions is still done sequentially {: #installing_extensions_in_parallel_caveats_known_issues_skip }
-
-Checking which extensions are already installed for which the
-installation can be skipped when `--skip` (see
-[Installing additional extensions using `-k`/`-skip`][partial_installation_skip]) is being used
-is still done sequentially.
-
-Additional work is needed to also run these checks in parallel across
-the cores that are available to EasyBuild.
 
 ### Sanity check for extensions is still run sequentially {: #installing_extensions_in_parallel_caveats_known_issues_sanity_check }
 
