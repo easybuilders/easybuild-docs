@@ -4,26 +4,37 @@
 
 Various significant enhancements are included in EasyBuild v5.0, including:
 
-**framework**
-
-- [`run_shell_cmd` function][run_shell_cmd]
+- [New function to run shell commands: `run_shell_cmd`][run_shell_cmd]
+- [Interactive debugging of failing shell commands via `env.sh` and `cmd.sh` scripts][interactive-debugging-failing-shell-commands]
+- [Don't raise error when required extensions are not found when installing extensions in parallel][parallel-extensions-install]
+- [Mark support for installing extensions in parallel as stable (no longer experimental)][parallel-extensions-install-stable]
+- [Mark easystack support as stable (no longer experimental)][easystack-stable]
+- [Reproducible tarballs for sources created via `git_config`][reproducible-tarballs-git_config]
 - [Granular exit codes][granular-exit-codes]
-- [Reproducible tarballs][reproducible-tarballs]
+- [Copy build directory and/or log file(s) if installation failed to path specified via `--failed-install-build-dirs-path` or `--failed-install-logs-path`][copy-build-log-failed-installs]
+- [Specify changes that should be made by generated module files via `module_load_environment`][module_load_environment]
+(../implementing-easyblocks.md#module_load_environment)
+- [Add support for alternate easyconfig parameters/templates/constants][alternative-easyconfig-parameters-templates-constants]
+- [`keep-debug-symbols` configuration option to set default value of '`debug`' toolchain option][keep-debug-symbols]
 - [Provide control over how generated modules update search path for header files (via `--module-search-path-headers`)][module-search-path-headers]
 - [Provide control over how EasyBuild specifies path to header files during installation (via `--search-path-cpp-headers`)][search-path-cpp-headers]
 - [Provide control over how EasyBuild specifies path to libraries during installation (via `--search-path-linker`)][search-path-linker]
 - [Support not using `$PYTHONPATH` to specify the location of installed Python packages (via `--prefer-python-search-path`)][PYTHONPATH-vs-EBPYTHONPREFIXES]
-
-**easyblocks**
-
-- [Let `ConfigureMake` generic easyblock error out on unknown `configure` options][configuremake-unknown-configure-options]
 - [Detect Fortran `.mod` files in `GCCcore` installations][mod-files]
+- [Let `ConfigureMake` generic easyblock error out on unknown `configure` options][configuremake-unknown-configure-options]
 
 ---
 
-## `run_shell_cmd` function { : #run_shell_cmd }
+## New function to run shell commands: `run_shell_cmd` { : #run_shell_cmd }
 
 See dedicated page on the new [`run_shell_cmd` function](run_shell_cmd.md).
+
+---
+
+## Interactive debugging of failing shell commands via `env.sh` and `cmd.sh` scripts {: #interactive-debugging-failing-shell-commands }
+
+
+See [dedicated page](../interactive-debugging-failing-shell-commands.md).
 
 ---
 
@@ -42,7 +53,28 @@ status codes are reported in the corresponding logs.
 
 ---
 
-## Reproducible tarballs { : #reproducible-tarballs}
+## Don't raise error when required extensions are not found when installing extensions in parallel {: #parallel-extensions-install }
+
+*(more info soon)*
+
+---
+
+
+## Mark support for installing extensions in parallel as stable (no longer experimental) {: #parallel-extensions-install-stable }
+
+*(more info soon)*
+
+---
+
+
+## Mark easystack support as stable (no longer experimental) {: #easystack-stable }
+
+*(more info soon)*
+
+---
+
+
+## Reproducible tarballs for sources created via `git_config` { : #reproducible-tarballs-git_config }
 
 EasyBuild can now generate reproducible tarballs of sources cloned from Git
 repositories. This means that those sources using the `git_config` option will
@@ -55,6 +87,32 @@ This new feature does not apply to sources cloned with `keep_git_dir` enabled.
 Including the `.git` folder in the sources is inherently time-dependent as it
 contains information about the clone action itself, which hinders the creation
 of a reproducible tarball.
+
+---
+
+## Copy build directory and/or log file(s) if installation failed to path specified via `--failed-install-build-dirs-path` or `--failed-install-logs-path` {: #copy-build-log-failed-installs }
+
+*(more info soon)*
+
+---
+
+
+## Specify changes that should be made by generated module files via `module_load_environment` {: #module_load_environment }
+
+See [separate dedicated section](../implementing-easyblocks.md#module_load_environment).
+
+---
+
+## Add support for alternate easyconfig parameters/templates/constants {: #alternative-easyconfig-parameters-templates-constants }
+
+*(more info soon)*
+
+---
+
+
+## `keep-debug-symbols` configuration option to set default value of '`debug`' toolchain option {: #keep-debug-symbols }
+
+*(more info soon)*
 
 ---
 
@@ -82,7 +140,7 @@ of a reproducible tarball.
 
 ---
 
-## Let `ConfigureMake` generic easyblock error out on unknown `configure` options { : #configuremake-unknown-configure-options }
+## Let `ConfigureMake` generic easyblock error out on unrecognized `configure` options { : #configuremake-unrecognized-configure-options }
 
 *(more info soon)*
 

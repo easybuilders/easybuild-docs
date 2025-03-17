@@ -30,39 +30,39 @@ See also the [overview of removed functionality][removed-functionality] below.
 
 ---
 
-## Changes in default configuration or behaviour
+## Changed default configuration or behaviour
 
-The default value for several EasyBuild configuration settings or EasyBuild behaviour has been changed in EasyBuild v5.0.
+The default value for several EasyBuild configuration settings + default behaviour of EasyBuild has been changed in EasyBuild v5.0.
 
-### Changes to default configuration in EasyBuild framework
+### Changed default configuration in EasyBuild framework
 
-- [RPATH linking is enabled by default (`--rpath`)](changes-in-default-configuration.md#rpath)
-- [Trace output is enabled by default (`--trace`)](changes-in-default-configuration.md#trace)
-- [`sha256` is used as the default checksum type](changes-in-default-configuration.md#sha256)
-- [Default maximum build parallelism is set to 16 (`--parallel`)](changes-in-default-configuration.md#parallel-16)
-
-- TODO: change default for change_into_dir to False for extract_file <https://github.com/easybuilders/easybuild-framework/pull/4246>
-- TODO: create `lib` -> `lib64` symlink (or vice versa) *before* running `postinstallcmds` <https://github.com/easybuilders/easybuild-framework/pull/4435>
-- TODO: enable `--module-extensions` by default (+ resolve template values used in extension version) <https://github.com/easybuilders/easybuild-framework/pull/4501>
-- TODO: Enable `module-depends-on` by default <https://github.com/easybuilders/easybuild-framework/pull/4500>
-- TODO: don't allow unresolved templates in easyconfig parameters by default + add support for `--allow-unresolved-templates` configuration option <https://github.com/easybuilders/easybuild-framework/pull/4516>
-- TODO: Use default value `$XDG_CONFIG_DIRS` from XDG basedir spec: `/etc/xdg` (instead of `/etc`) <https://github.com/easybuilders/easybuild-framework/pull/4591> and Reverse order for parsing files in `XDG_CONFIG_DIRS` <https://github.com/easybuilders/easybuild-framework/pull/4630>
-- TODO: move verifying of checksums from `source` to `fetch` step, to include it with `--fetch` <https://github.com/easybuilders/easybuild-framework/pull/4624>
-- TODO: use Slurm as the default job backend + deprecate support for GC3Pie as job backend <https://github.com/easybuilders/easybuild-framework/pull/4659>
-- TODO: change semantics of `--dry-run`, so it doesn't imply `--robot` <https://github.com/easybuilders/easybuild-framework/pull/4704>
-- TODO: change `Toolchain.get_flag` so it doesn't automatically prepend a dash (`-`) to compiler flags, add deprecation warning for `optarch` value without leading dash, renam... <https://github.com/easybuilders/easybuild-framework/pull/4698>
+- [RPATH linking is enabled by default (`rpath`)](changes.md#rpath)
+- [Trace output is enabled by default (`trace`)](changes.md#trace)
+- [Including `extensions` statement in generated modules is enabled by default (`module-extensions`)](changes.md#module-extensions)
+- [Using `depends_on` for dependencies in generated modules is enabled by default (`module-depends-on`)](changes.md#module-depends-on)
+- [Use Slurm as default job backend (`job-backend`)](changes.md#job-backend)
+- [Default maximum build parallelism is set to 16 (`max-parallel`)](changes.md#max-parallel-16)
 
 ### Changed behaviour in EasyBuild framework
 
-- TODO: run sanity checks commands from an empty temporary directory (rather than the software install directory) <https://github.com/easybuilders/easybuild-framework/pull/4723>
+- [Change semantics of `--dry-run` (`-D`), so it doesn't imply `--robot` (`-r`)](changes.md#dry-run-robot)
+- [Move verifying of checksums from `source` to `fetch` step, to include it with `--fetch`](changes.md#verifying-checksums)
+- [Create `lib` to `lib64` symlink (and vice versa) *before* running `postinstallcmds`](changes.md#lib-lib64-symlink)
+- [Use `sha256` as the default checksum type](changes.md#sha256)
+- [Use default value `$XDG_CONFIG_DIRS` from XDG basedir spec: `/etc/xdg` (instead of `/etc`)](changes.md#XDG_CONFIG_DIRS_default)
+- [Reverse order for parsing files in `$XDG_CONFIG_DIRS`](changes.md#XDG_CONFIG_DIRS_order)
+- [Don't allow unresolved templates in easyconfig parameters by default](changes.md#unresolved-templates)
+- [Refactor `make_extension_string` method in `EasyBlock` class](changes.md#make_extension_string)
+- [Change default for `change_into_dir` option in `extract_file` function to to `False`](changes.md#extract_file)
+- [Change `Toolchain.get_flag` so it doesn't automatically prepend a dash (`-`) to compiler flags](changes.md#toolchain-get-flag-dash)
+- [Enforce correct `.patch(.*)` extension for patch files](changes.md#patch-extension)
+- [Run sanity checks commands from an empty temporary directory rather than the software install directory](changes.md#sanity-check-commands)
+- [Only allow use of `rpath` toolchain option when `system` toolchain is used](changes.md#system-toolchain-options)
 
 ### Changed defaults in easyblocks
 
-- [`download_dep_fail`, `use_pip`, `sanity_pip_check` enabled by default for `PythonPackage` easyblock](changes-in-default-configuration.md#python-pkgs-defaults)
-- [`CMakeMake` easyblock sets `LIBDIR` configuration option to `lib` by default](changes-in-default-configuration.md#cmakemake-libdir)
-
-
-
+- [`download_dep_fail`, `use_pip`, `sanity_pip_check` enabled by default for `PythonPackage` easyblock](changes.md#python-pkgs-defaults)
+- [`CMakeMake` easyblock sets `LIBDIR` configuration option to `lib` by default](changes.md#cmakemake-libdir)
 
 ---
 
@@ -72,25 +72,51 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 
 - [New function to run shell commands: `run_shell_cmd`](run_shell_cmd.md)
 - [Interactive debugging of failing shell commands via `env.sh` and `cmd.sh` scripts](../interactive-debugging-failing-shell-commands.md)
+- [Don't raise error when required extensions are not found when installing extensions in parallel](enhancements.md#parallel-extensions-install)
+- [Mark support for installing extensions in parallel as stable (no longer experimental)](enhancements.md#parallel-extensions-install-stable)
+- [Mark easystack support as stable (no longer experimental)](enhancements.md#easystack-stable)
+- [Reproducible tarballs for sources created via `git_config`](enhancements.md#reproducible-tarballs-git_config)
 - [Granular exit codes](enhancements.md#granular-exit-codes)
-- [Reproducible tarballs](enhancements.md#reproducible-tarballs)
-- [Detect Fortran `.mod` files in `GCCcore` installations](enhancements.md#mod-files)
-- [Specifying changes that should be made by generated module files via `module_load_environment`](../implementing-easyblocks.md#module_load_environment)
+- [Copy build directory and/or log file(s) if installation failed to path specified via `--failed-install-build-dirs-path` or `--failed-install-logs-path`](enhancements.md#copy-build-log-failed-installs)
+- [Specify changes that should be made by generated module files via `module_load_environment`](../implementing-easyblocks.md#module_load_environment)
+- [Add support for alternate easyconfig parameters/templates/constants](enhancements.md#alternative-easyconfig-parameters-templates-constants)
+- [`keep-debug-symbols` configuration option to set default value of '`debug`' toolchain option](enhancements.md#keep-debug-symbols)
 - [Provide control over how generated modules update search path for header files (via `--module-search-path-headers`)](enhancements.md#module-search-path-headers)
 - [Provide control over how EasyBuild specifies path to header files during installation (via `--search-path-cpp-headers`)](enhancements.md#search-path-cpp-headers)
 - [Provide control over how EasyBuild specifies path to libraries during installation (via `--search-path-linker`)](enhancements.md#search-path-linker)
-- [Let `ConfigureMake` generic easyblock error out on unknown `configure` options](enhancements.md#configuremake-unknown-configure-options)
 - [Support not using `$PYTHONPATH` to specify the location of installed Python packages (via `--prefer-python-search-path`)](enhancements.md#PYTHONPATH-vs-EBPYTHONPREFIXES)
- 
+- [Detect Fortran `.mod` files in `GCCcore` installations](enhancements.md#mod-files)
+- [Let `ConfigureMake` generic easyblock error out on unrecognized `configure` options](enhancements.md#configuremake-unrecognized-configure-options)
 
 ---
 
 ## Removed functionality {: #removed-functionality }
 
-Functionality that was deprecated a while ago has been removed:
+Functionality that was deprecated a while ago in EasyBuild v4.x has been ***removed*** in EasyBuild v5.0:
 
-- [EasyBuild bootstrap script is removed](removed-functionality.md#bootstrap_script) 
-- [Experimental support for `.yeb` easyconfig format is removed](removed-functionality.md#yeb)
+- [EasyBuild bootstrap script](removed-functionality.md#bootstrap_script) 
+- [Experimental support for `.yeb` easyconfig](removed-functionality.md#yeb)
+- [`accept-eula` configuration setting](removed-functionality.md#accept-eula)
+- [`--wait-on-lock` configuration setting](removed-functionality.md#wait-on-lock)
+- [`is_generic_easyblock` function from `easybuild.framework.easyconfig.easyconfig`](removed-functionality.md#easyconfig-is_generic_easyblock)
+- [`copytree`, `rmtree2` functions from `easybuild.filetools`](removed-functionality.md#filetools-copytree-rmtree2)
+- [`fetch_extension_sources` method in `EasyBlock` class](removed-functionality.md#EasyBlock-fetch_extension_sources)
+- [`mod_exists_regex_template` options in `ModulesTool.exist` method](removed-functionality.md#ModulesTool-exist-mod_exists_regex_template)
+- [`Toolchain.add_dependencies` method](removed-functionality.md#Toolchain-add_dependencies)
+- [`disable_templating` + `default_fallback` options in `get_easyblock_class` function](removed-functionality.md#get_easyblock_class)
+- [`skip_lower` option from `template_constant_dict` function](removed-functionality.md#template_constant_dict)
+- [`use_git_am` option for `apply_patch` function](removed-functionality.md#apply_patch-use_git_am)
+- [`skip_symlinks` option for `adjust_permissions` function](removed-functionality.md#adjust_permissions-skip_symlinks)
+- [`log_error` option in `which` function](removed-functionality.md#which-log_error)
+- [`descr` option for `simple_option` function](removed-functionality.md#simple_option-descr)
+- [`dummy` toolchain](removed-functionality.md#dummy-toolchain)
+- [Support for 32-bit targets](removed-functionality.md#32-bit-targets)
+
+In addition, several software-specific easyblocks that were no longer used have been removed, including:
+
+FIXME
+
+Easyconfig files for unsupported toolchains were archived in the [`easyconfigs-archive`](https://github.com/easybuilders/easybuild-easyconfigs-archive) repository.
 
 
 ---
@@ -99,25 +125,24 @@ Functionality that was deprecated a while ago has been removed:
 
 Some functionality is being deprecated in EasyBuild v5.0, and is scheduled to be removed in EasyBuild v6.0:
 
-- [`run_cmd` and `run_cmd_qa` functions](deprecated-functionality.md#run_cmd)
+- [`parallel` easyconfig parameter](deprecated-functionality.md#parallel-easyconfig-parameter)
+- [`run_cmd` and `run_cmd_qa` functions](deprecated-functionality.md#run_cmd) (replaced with [`run_shell_cmd`](run_shell_cmd.md))
+- [`'source'` step](deprecated-functionality.md#source-step) (renamed to `'extract'`)
+- [`post_install_step` method in `EasyBlock` class](deprecated-functionality.md#post_install_step) (renamed to `post_processing_step`)
+- [`make_module_req_guess` method in `EasyBlock` class](deprecated-functionality.md#make_module_req_guess) (replaced with `module_load_environment` class attribute)
+- [`run`, `prerun`, `postrun`, `run_async` methods in `EasyBlock` class](deprecated-functionality.md#run-methods-extensions)
 - [`easybuild.tools.py2vs3` module](deprecated-functionality.md#py2vs3)
-- [Deprecation of older checksums types](deprecated-functionality.md#checksums)
-- deprecate support for `EnvironmentModulesC` and `EnvironmentModulesTcl` module tools <https://github.com/easybuilders/easybuild-framework/pull/4439>
+- [Older checksum types](deprecated-functionality.md#checksum-types)
+- [`EnvironmentModulesC` or `EnvironmentModulesTcl` modules tools](deprecated-functionality.md#modules-tools)
+- [GC3Pie as job backend](deprecated-functionality.md#gc3pie-job-backend)
+- [Using `optarch` value without leading dash](deprecated-functionality.md#optarch-dash)
+- [`COMPILER*_FLAGS` attributes in `Compiler` class](deprecated-functionality.md#compiler-constants) (replaced with `COMPILER*_OPTIONS`)
 
 ---
 
 ## Other changes
 
-TODO: decide if these should be in another section...
-
-- TODO: Archiving / toolchain policy / removed blocks & ecs
-- TODO: Rename:
-   - `post_install_step` to `post_processing_step` <https://github.com/easybuilders/easybuild-easyblocks/pull/3525>
-   - rename `run` method to `install_extension`, and likewise for `prerun` to `pre_install_extension`, `postrun` to `post_install_extension`, and `run_async` to `install_extension_async` <https://github.com/easybuilders/easybuild-easyblocks/pull/3064> / <https://github.com/easybuilders/easybuild-framework/pull/4400>
-   - Rename '`source`' step to '`extract`' (affects `skipsteps` easyconfig parameter + `--stop` option) <https://github.com/easybuilders/easybuild-framework/pull/4629>
-   - Rename `post_install_step` to `post_processing_step` + deprecate use of `post_install_step` <https://github.com/easybuilders/easybuild-framework/pull/4715>
-- TODO: add `--keep-debug-symbols` configuration option to set default value of '`debug`' toolchain option, ~and enable it by default so `-g` is included in `$CXXFLAGS` & co~ <https://github.com/easybuilders/easybuild-framework/pull/4688>
-   - this needs documenting, to include a warning that we disabled it due to large build sizes
+- [Toolchain support policy](../policies/toolchains.md)
 
 ---
 

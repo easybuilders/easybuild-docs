@@ -213,6 +213,7 @@ plugins:
       redirect_maps:
         # redirect removed pages to sensible alternative
         easybuild-v5/backwards-incompatible-changes/: easybuild-v5/index.md
+        easybuild-v5/changes-in-default-configuration.html: easybuild-v5/changes.md
         easybuild-v5/overview-of-changes/: easybuild-v5/index.md
         easybuild-v5/proposed-changes/: easybuild-v5/index.md
         easybuild-v5/policies/: policies/toolchains.md
