@@ -61,7 +61,7 @@ nav:
       - Locks: locks.md
       - Manipulating dependencies: manipulating-dependencies.md
       - Partial installations: partial-installations.md
-      - Compatibility with Python 2 + 3: python-2-3-compatibility.md
+      - Compatibility with Python 3: python-2-3-compatibility.md
       - Progress bars: progress-bars.md
       - Search index for easyconfigs: easyconfigs-search-index.md
       - System toolchain: system-toolchain.md
@@ -76,6 +76,8 @@ nav:
       - RPATH support: rpath-support.md
       - Using external modules: using-external-modules.md
       - Wrapping dependencies: wrapping-dependencies.md
+      - Easystack files: easystack-files.md
+      - Installing extensions in parallel: installing-extensions-in-parallel.md
   - For developers/contributors:
       - Archived easyconfigs: archived-easyconfigs.md
       - Code style: code-style.md
@@ -89,9 +91,6 @@ nav:
   - Experimental features:
       - (overview): experimental-features.md
       - Creating container images/recipes: containers.md
-      - Easystack files: easystack-files.md
-      - Easyconfig files in YAML syntax: writing-yeb-easyconfig-files.md
-      - Installing extensions in parallel: installing-extensions-in-parallel.md
   - Version-specific info:
       - (overview): version-specific/index.md
       - Constants for config files: version-specific/config-file-constants.md
@@ -112,7 +111,7 @@ nav:
   - Getting help: getting-help.md
   - User survey: user-survey/index.md
   - Policies:
-      Supported Toolchain Generations: policies/toolchains.md
+      - Supported Toolchain Generations: policies/toolchains.md
   - Other topics:
       - Alternative installation methods: installation-alternative.md
       - Configuration (legacy): legacy/configuration.md

@@ -19,11 +19,7 @@ The only strict requirements are:
 * a **GNU/Linux** distribution as operating system
     * some common shell tools are expected to be available, see [Required shell tools][required_shell_tools]
 * [Python](https://python.org):
-    * Python 2.7, or Python 3.x (>= 3.5);
-    * since [Python 2 is end-of-life](https://www.python.org/doc/sunset-python-2/) we strongly recommend
-      using Python 3 if it is available;
-    * only EasyBuild v4.0 (or newer) is compatible with Python 3, earlier EasyBuild releases require Python 2;
-    * EasyBuild 5.0 will require Python >= 3.6;
+    * Python >= 3.6 is required for EasyBuild 5.0;
     * no third-party Python packages are strictly required (the Python standard library is sufficient);
     * for some *specific* EasyBuild features additional Python packages are required however, see [Optional Python packages][optional_python_packages];
 * a **modules tool**: Tcl(/C) environment modules or Lmod
@@ -58,22 +54,9 @@ Compare the version of `eb`, the main EasyBuild command, with the version of the
 For example::
 
 ``` console
-$ module load EasyBuild
-$ module list
-
-Currently Loaded Modules:
-  1) EasyBuild/4.8.0
-
 $ eb --version
-This is EasyBuild 4.8.0 (framework: 4.8.0, easyblocks: 4.8.0) on host example.local
+This is EasyBuild 5.0.0 (framework: 5.0.0, easyblocks: 5.0.0) on host example.local
 ```
-
-!!! tip
-    The Tcl/C Environment Modules (version <= 3.2.10) does its default sorting differently than
-    newer versions of Environment Modules and Lmod. The former will normally sort in the
-    lexicographic order, while the latters follow an approach that is closer to Python's construct
-    `LooseVersion` way of ordering. Such aspects may make a big difference, if you have installed
-    both versions 1.9.0 and 1.15.2, with respect to what is the version being loaded by default.
 
 You can also run `eb --show-system-info` to see system information relevant to EasyBuild,
 or run`eb --show-config` to see the default EasyBuild configuration (see also [Configuring EasyBuild][configuring_easybuild]).
@@ -89,12 +72,6 @@ To upgrade to a newer EasyBuild version than the one currently installed:
 ### Additional pip install options {: #more_pip }
 
 For the `pip` install, you may wish to slightly change this command depending on the context and your personal preferences:
-
-* to install EasyBuild *system-wide*, you can use `sudo` (if you have admin privileges):
-
-    ``` shell
-    sudo pip install easybuild
-    ```
 
 * To install EasyBuild *in your personal home directory*, you can use the `--user` option:
 
@@ -131,7 +108,7 @@ above:
 pip3 install easybuild
 ```
 
-If you want to ensure that you are using the `pip` installation that corresponds to the Python 3 installation
+If you want to ensure that you are using the `pip` installation that corresponds a specific Python installation
 that you intend to use, you can use `python3 -m pip` rather than `pip3`.
 
 ``` shell
@@ -225,10 +202,10 @@ you can define the `$EB_VERBOSE` environment variable. For example:
 ``` console
 $ EB_VERBOSE=1 eb --version
 >> Considering 'python3.6'...
->> 'python3' version: 3.6.8, which matches Python 3 version requirement (>= 3.5)
+>> 'python3' version: 3.6.8, which matches Python 3 version requirement (>= 3.6)
 >> Selected Python command: python3 (/usr/bin/python3.6)
 >> python3.6 -m easybuild.main --version
-This is EasyBuild 4.8.0 (framework: 4.8.0, easyblocks: 4.8.0) on host example
+This is EasyBuild 5.0.0 (framework: 5.0.0, easyblocks: 5.0.0) on host example
 ```
 
 
@@ -299,7 +276,14 @@ module use _PREFIX_/modules/all
 Then, load the EasyBuild module to update your environment and make EasyBuild available for use:
 
 ``` shell
-module load EasyBuild
+$ module load EasyBuild
+$ module list
+
+Currently Loaded Modules:
+  1) EasyBuild/5.0.0
+
+$ eb --version
+This is EasyBuild 5.0.0 (framework: 5.0.0, easyblocks: 5.0.0) on host example.local
 ```
 
 !!! note
@@ -340,16 +324,14 @@ Hence, a modules tool must be available to consume module files with.
 
 Supported module tools:
 
-* [Tcl/C environment-modules](https://modules.sourceforge.net/) (version >= 3.2.10)
-* [Tcl-only variant of environment modules](https://sourceforge.net/projects/modules/files/Modules-Tcl)
-* [Lmod](https://lmod.sourceforge.net) (version >= 6.5.1), *highly recommended*
+* [Tcl/C environment-modules](https://modules.sourceforge.net/) (version >= 4.3.0)
+* [Lmod](https://lmod.sourceforge.net) (version >= 8.0.0)
 
 !!! note
     The path to the actual modules tool binary/script used *must* be included in `$PATH`,
     to make it readily available to EasyBuild.
 
     * for Tcl/C environment modules: `modulecmd`
-    * for Tcl-only environment modules: `modulecmd.tcl`
     * for Lmod: `lmod`
 
     The path where the modules tool binary/script is located can be determined via the definition of
@@ -358,9 +340,6 @@ Supported module tools:
 !!! note
     For Lmod, EasyBuild will try to fall back to finding the `lmod` binary via the `$LMOD_CMD`
     environment variable, in case `lmod` is not available in `$PATH`.
-
-    In EasyBuild versions *prior* to 2.1.1, the path specified by `$LMOD_CMD` was (erroneously) preferred over the
-    (first) `lmod` binary available via `$PATH`.
 
     For modern Tcl-only environment modules (version >= 4.0.0), EasyBuild will try to fall back to finding the
     `modulecmd.tcl` binary via the `$MODULES_CMD` environment variable, in case `modulecmd.tcl` is not available
@@ -382,7 +361,7 @@ Additional notes:
 
 ### Required Python packages {: #required_python_packages }
 
-Since EasyBuild v4.0, *no* Python packages outside of the Python standard library are required.
+EasyBuild requires *no* Python packages outside of the Python standard library.
 
 ## Optional dependencies
 
@@ -391,8 +370,6 @@ Some dependencies are optional and are only required to support certain features
 
 ### Optional Python packages {: #optional_python_packages }
 
-* [GC3Pie](https://pypi.org/project/gc3pie), only needed when using `GC3Pie` as a backend for `--job`,
-  see also [Submitting jobs using --job][submitting_jobs];
 * [GitPython](https://github.com/gitpython-developers/GitPython), only needed if
   EasyBuild is hosted in a git repository or if you’re using a git
   repository for easyconfig files (.eb);
@@ -412,13 +389,13 @@ Some dependencies are optional and are only required to support certain features
 EasyBuild is split up into three different packages, which are available
 from the Python Package Index (PyPi):
 
-* [easybuild-framework](http://pypi.python.org/pypi/easybuild-framework) - the EasyBuild framework, which includes the
+* [easybuild-framework](https://pypi.python.org/pypi/easybuild-framework) - the EasyBuild framework, which includes the
   easybuild.framework and easybuild.tools Python packages that provide
   general support for building and installing software
-* [easybuild-easyblocks](http://pypi.python.org/pypi/easybuild-easyblocks) - a collection of easyblocks that implement
+* [easybuild-easyblocks](https://pypi.python.org/pypi/easybuild-easyblocks) - a collection of easyblocks that implement
   support for building and installing (collections of) software
   packages
-* [easybuild-easyconfigs](http://pypi.python.org/pypi/easybuild-easyconfigs) - a collection of example easyconfig files
+* [easybuild-easyconfigs](https://pypi.python.org/pypi/easybuild-easyconfigs) - a collection of example easyconfig files
   that specify which software to build, and using which build options;
   these easyconfigs will be well tested with the latest compatible
   versions of the easybuild-framework and easybuild-easyblocks packages

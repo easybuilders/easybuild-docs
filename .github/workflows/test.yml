@@ -9,17 +9,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # 4.2.2
+
         with:
           fetch-depth: 0
 
       - name: set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5.4.0
         with:
           python-version: '3.10'
 
       - name: Codespell action
-        uses: codespell-project/actions-codespell@master
+        uses: codespell-project/actions-codespell@406322ec52dd7b488e48c1c4b82e2a8b3a1bf630 # v2.1
         with:
           check_filenames: true
           ignore_words_list: atleast,ninjs,simpy,proovread,namd,precice,crate,ake
@@ -32,7 +33,7 @@ jobs:
         run: python ./.github/workflows/link_check.py
 
       - name: checkout easybuild framework
-        uses: actions/checkout@v3
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # 4.2.2
         with:
           repository: easybuilders/easybuild-framework
           path: src/easybuild-framework
@@ -43,7 +44,7 @@ jobs:
           pip install -r requirements.txt
           mkdocs --version
 
-      - name: build tutorial
+      - name: build docs
         # can't use --strict due to warnings being produced by mkdocs-redirect plugin
         # because we are re-directing .html pages
         # run: mkdocs build --strict

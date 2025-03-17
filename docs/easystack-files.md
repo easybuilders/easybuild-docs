@@ -3,10 +3,6 @@
 This documentation covers aspects of specifying a software stack to
 install with Easybuild with *easystack files*.
 
-**Note: this is an**
-[experimental feature][experimental_features]. **Some of the mentioned functionality may be subject to
-change or be prone to errors.**
-
 !!! note
     Some breaking changes were made to the experimental easystack support in EasyBuild v4.7.0.
 
