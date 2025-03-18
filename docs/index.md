@@ -30,7 +30,7 @@ To contribute to this documentation, [open a pull request](https://github.com/ea
 - List of [common toolchains](common-toolchains.md) and [supported software](version-specific/supported-software/index.md)
 - [Contributing to EasyBuild](contributing.md) | [GitHub integration features](integration-with-github.md)
 - [EasyBuild release notes](release-notes.md) | [EasyBuild v5.0](easybuild-v5/index.md)
-- For [end users](roles/end-users) | [user support](roles/user-support) | [contributors](roles/contributors) | [developers](roles/developers) | [maintainers](roles/maintainers)
+- For [end users](roles/end-users.md) | [user support](roles/user-support.md) | [contributors](roles/contributors.md) | [developers](roles/developers.md) | [maintainers](roles/maintainers.md)
 - [Getting help](getting-help.md): [mailing list](https://lists.ugent.be/wws/info/easybuild) - [Slack](https://easybuild.io/join-slack) - [conference calls](https://github.com/easybuilders/easybuild/wiki/Conference-calls) - [GitHub](https://github.com/easybuilders)
 
 ---

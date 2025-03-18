@@ -346,6 +346,11 @@ should be used.
 This makes sure that the changes being made to the specified environment variable are kept track of,
 and that they are handled correctly under `--extended-dry-run`.
 
+### Specifying changes that should be made by generated module files via `module_load_environment` {: #module_load_environment }
+
+!!! note
+    *New in EasyBuild v5.0, more info soon...*
+
 
 ### Log statements {: #implementing_easyblocks_logging }
 
