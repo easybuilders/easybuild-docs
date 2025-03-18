@@ -84,7 +84,7 @@ EasyBuild follows the [archival guidelines from reproducible-builds.org](https:/
 to generate reproducible tarballs. The new method to create archives in
 EasyBuild 5.0 is fully implemented in Python, which removes our dependency on
 external tools such as [GNU Tar](https://www.gnu.org/software/tar/) or file
-compressors for this tasks. However, extraction of archives continues to work
+compressors for this task. However, extraction of archives continues to work
 by executing external commands on the host system.
 
 Reproducible tarballs have the following restrictions:
