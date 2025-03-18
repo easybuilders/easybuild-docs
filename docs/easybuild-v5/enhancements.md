@@ -76,16 +76,43 @@ status codes are reported in the corresponding logs.
 ## Reproducible tarballs for sources created via `git_config` { : #reproducible-tarballs-git_config }
 
 EasyBuild can now generate reproducible tarballs of sources cloned from Git
-repositories. This means that those sources using the `git_config` option will
-now have consistent contents across different systems and across time, allowing
-to reliably validate them with checksums. EasyBuild follows the
-[archival guidelines from reproducible-builds.org](https://reproducible-builds.org/docs/archives/) 
-to generate those reproducible tarballs.
+repositories. This means that easyconfigs with sources using the `git_config`
+option can now have consistent contents across different systems and across
+time, allowing to reliably validate them with checksums.
 
-This new feature does not apply to sources cloned with `keep_git_dir` enabled.
-Including the `.git` folder in the sources is inherently time-dependent as it
-contains information about the clone action itself, which hinders the creation
-of a reproducible tarball.
+EasyBuild follows the [archival guidelines from reproducible-builds.org](https://reproducible-builds.org/docs/archives/) 
+to generate reproducible tarballs. The new method to create archives in
+EasyBuild 5.0 is fully implemented in Python, which removes our dependency on
+external tools such as [GNU Tar](https://www.gnu.org/software/tar/) or file
+compressors for this task. However, extraction of archives continues to work
+by executing external commands on the host system.
+
+Reproducible tarballs have the following restrictions:
+
+- Sources cloned with `keep_git_dir` enabled cannot be archived in a
+reproducible manner. Including the `.git` folder in the sources is inherently
+time-dependent as it contains information about the clone action itself, which
+hinders the creation of a reproducible tarball. Hence, EasyBuild 5.0 will
+create the archive of sources with `keep_git_dir`, but their checksums cannot
+be validated across systems.
+
+- Reproducible archives are supported in uncompressed TAR format (`.tar`) or
+for tarballs compressed with [XZ compression](https://en.wikipedia.org/wiki/XZ_Utils)
+(`.tar.zx`). The wide-spread [GZip compression](https://en.wikipedia.org/wiki/Gzip)
+is not currently supported because its implementation injects metadata in the
+compressed archive that is time dependent.
+
+- Systems running EasyBuild with Python < 3.9 will skip checksum validation for
+sources from Git repos. Due to changes in the low-level code of the `tarfile`
+module in the Python base distribution, tarballs generated before version 3.9
+result in archives with different contents than those generated in Python 3.9+.
+
+Easyconfigs found in the repository of EasyBuild that contain sources from Git
+repos without `keep_git_dir` have already been updated to use reproducible
+tarballs. Archives will be created in `.tar.xz` format and checksums will be
+validated on Python 3.9+. Therefore, beware that EasyBuild 5.0 might generate
+new archives for sources that were already cloned in your system due to this
+changes in format.
 
 ---
 
