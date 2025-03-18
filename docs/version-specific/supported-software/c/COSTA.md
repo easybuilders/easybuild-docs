@@ -4,7 +4,7 @@ search:
 ---
 # COSTA
 
-OSTA is a communication-optimal, highly-optimised algorithm for data redistribution  accross multiple processors, using MPI and OpenMP and offering the possibility  to transpose and scale some or all data.
+OSTA is a communication-optimal, highly-optimised algorithm for data redistribution accross multiple processors, using MPI and OpenMP and offering the possibility to transpose and scale some or all data.
 
 *homepage*: <https://github.com/eth-cscs/COSTA>
 

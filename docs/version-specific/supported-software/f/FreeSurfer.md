@@ -4,16 +4,12 @@ search:
 ---
 # FreeSurfer
 
-FreeSurfer is a set of tools for analysis and visualization of structural and functional brain imaging data. FreeSurfer contains a fully automatic structural imaging stream for processing cross sectional and longitudinal data.
+FreeSurfer is a set of tools for analysis and visualization of structural and functional brain imaging data.  FreeSurfer contains a fully automatic structural imaging stream for processing cross sectional and longitudinal data.
 
-*homepage*: <http://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferWiki>
+*homepage*: <https://surfer.nmr.mgh.harvard.edu/>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``5.3.0`` | ``-centos4_x86_64`` | ``system``
-``5.3.0`` | ``-centos6_x86_64`` | ``system``
-``6.0.0`` | ``-centos6_x86_64`` | ``system``
-``6.0.1`` | ``-centos6_x86_64`` | ``system``
 ``7.1.1`` | ``-centos6_x86_64`` | ``system``
 ``7.1.1`` | ``-centos7_x86_64`` | ``system``
 ``7.1.1`` | ``-centos8_x86_64`` | ``system``

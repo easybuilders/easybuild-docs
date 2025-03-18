@@ -10,7 +10,6 @@ High-performance MongoDB client based on 'mongo-c-driver' and 'jsonlite'.  Inclu
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.3.0`` | ``-R-4.0.0`` | ``foss/2020a``
 ``2.3.0`` | ``-R-4.0.3`` | ``foss/2020b``
 ``2.3.0`` | ``-R-4.0.4`` | ``foss/2020b``
 

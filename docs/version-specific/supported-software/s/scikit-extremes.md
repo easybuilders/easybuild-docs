@@ -4,7 +4,7 @@ search:
 ---
 # scikit-extremes
 
-scikit-extremes is a basic statistical package to  perform univariate extreme value calculations using Python
+scikit-extremes is a basic statistical package to perform univariate extreme value calculations using Python
 
 *homepage*: <https://github.com/kikocorreoso/scikit-extremes>
 

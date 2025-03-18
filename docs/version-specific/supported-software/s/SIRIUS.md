@@ -4,7 +4,7 @@ search:
 ---
 # SIRIUS
 
-SIRIUS is a domain specific library for electronic structure calculations.  It implements pseudopotential plane wave (PP-PW) and  full potential linearized augmented plane wave (FP-LAPW) methods.
+SIRIUS is a domain specific library for electronic structure calculations. It implements pseudopotential plane wave (PP-PW) and full potential linearized augmented plane wave (FP-LAPW) methods.
 
 *homepage*: <https://github.com/electronic-structure/SIRIUS>
 

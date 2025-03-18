@@ -10,7 +10,6 @@ PaStiX (Parallel Sparse matriX package) is a scientific library that provides a 
 
 version | toolchain
 --------|----------
-``5.2.3`` | ``foss/2017b``
 ``6.3.2`` | ``foss/2023b``
 ``6.3.2`` | ``intel/2023b``
 

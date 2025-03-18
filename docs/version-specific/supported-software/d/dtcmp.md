@@ -4,16 +4,12 @@ search:
 ---
 # dtcmp
 
-Datatype Compare (DTCMP) Library for sorting and ranking distributed  data using MPI
+The Datatype Comparison (DTCMP) Library provides pre-defined and user-defined comparison operations to compare the values of two items which can be arbitrary MPI datatypes. Using these comparison operations, the library provides various routines for manipulating data, which may be distributed over the processes of an MPI communicator.
 
-*homepage*: <https://github.com/llnl/dtcmp>
+*homepage*: <https://github.com/LLNL/dtcmp>
 
 version | toolchain
 --------|----------
-``1.1.0`` | ``gompi/2019a``
-``1.1.0`` | ``gompi/2020a``
-``1.1.0`` | ``iimpi/2019a``
-``1.1.0`` | ``iimpi/2020a``
 ``1.1.2`` | ``gompi/2020b``
 ``1.1.4`` | ``gompi/2022a``
 ``1.1.4`` | ``gompi/2023a``

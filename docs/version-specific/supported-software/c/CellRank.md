@@ -11,6 +11,7 @@ CellRank is a toolkit to uncover cellular dynamics based on  Markov state modeli
 version | versionsuffix | toolchain
 --------|---------------|----------
 ``1.4.0`` |  | ``foss/2021a``
+``2.0.2`` |  | ``foss/2022a``
 ``2.0.2`` | ``-CUDA-12.1.1`` | ``foss/2023a``
 ``2.0.2`` |  | ``foss/2023a``
 

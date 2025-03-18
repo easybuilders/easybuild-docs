@@ -10,7 +10,6 @@ libmaus2 is a collection of data structures and algorithms.
 
 version | toolchain
 --------|----------
-``2.0.453`` | ``intel/2018a``
 ``2.0.499`` | ``GCC/11.3.0``
 ``2.0.813`` | ``GCC/12.3.0``
 

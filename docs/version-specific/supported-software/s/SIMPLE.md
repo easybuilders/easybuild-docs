@@ -4,13 +4,12 @@ search:
 ---
 # SIMPLE
 
-Single-particle IMage Processing Linux Engine is a program package  for cryo-EM image processing, focusing on ab initio 3D reconstruction of low-symmetry single-particles.
+Single-particle IMage Processing Linux Engine SIMPLE is an open-source software package for analysis of cryogenic transmission electron microscopy (cryo-EM) movies of single-particles (Single-Particle Analysis, SPA).
 
-*homepage*: <http://simplecryoem.com/>
+*homepage*: <https://simplecryoem.com/>
 
 version | toolchain
 --------|----------
-``2.5`` | ``foss/2018a``
 ``3.0.0`` | ``foss/2020b``
 
 

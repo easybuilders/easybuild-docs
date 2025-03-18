@@ -10,8 +10,8 @@ libzip is a C library for reading, creating, and modifying zip archives.
 
 version | toolchain
 --------|----------
+``1.10.1`` | ``GCCcore/12.3.0``
 ``1.10.1`` | ``GCCcore/13.2.0``
-``1.5.2`` | ``GCCcore/8.2.0``
 ``1.7.3`` | ``GCCcore/10.2.0``
 ``1.7.3`` | ``GCCcore/10.3.0``
 ``1.7.3`` | ``GCCcore/11.2.0``

@@ -10,7 +10,6 @@ Stata is a complete, integrated statistical software package that provides every
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``15`` |  | ``system``
 ``16`` | ``-legacy`` | ``system``
 ``17`` |  | ``system``
 

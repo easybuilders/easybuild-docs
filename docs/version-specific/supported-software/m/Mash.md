@@ -10,14 +10,13 @@ Fast genome and metagenome distance estimation using MinHash
 
 version | toolchain
 --------|----------
-``2.0`` | ``foss/2018a``
-``2.1`` | ``foss/2018b``
-``2.2`` | ``GCC/9.3.0``
 ``2.3`` | ``GCC/10.3.0``
 ``2.3`` | ``GCC/11.2.0``
 ``2.3`` | ``GCC/11.3.0``
 ``2.3`` | ``GCC/12.2.0``
 ``2.3`` | ``GCC/12.3.0``
+``2.3`` | ``GCC/13.2.0``
+``2.3`` | ``GCC/13.3.0``
 ``2.3`` | ``intel-compilers/2021.4.0``
 
 

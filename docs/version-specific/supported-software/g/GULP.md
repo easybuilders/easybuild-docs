@@ -10,7 +10,6 @@ GULP is a program for performing a variety of types of simulation on materials  
 
 version | toolchain
 --------|----------
-``5.1`` | ``intel/2019a``
 ``6.1`` | ``foss/2021b``
 
 

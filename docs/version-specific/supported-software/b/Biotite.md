@@ -10,6 +10,7 @@ Biotite is your Swiss army knife for bioinformatics. Whether you want to identif
 
 version | toolchain
 --------|----------
+``0.41.0`` | ``foss/2022a``
 ``0.41.0`` | ``gfbf/2023a``
 
 

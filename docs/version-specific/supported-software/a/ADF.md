@@ -4,16 +4,12 @@ search:
 ---
 # ADF
 
-ADF is a premium-quality quantum chemistry software package based on Density Functional Theory (DFT).
+ADF is an accurate, parallelized, powerful computational chemistry program to understand and  predict chemical structure and reactivity with density functional theory (DFT).
 
-*homepage*: <http://www.scm.com/>
+*homepage*: <https://www.scm.com/ADF/>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2009.01a.pc64_linux.intelmpi`` |  | ``system``
-``2014.02`` |  | ``system``
-``2014.11.r48287`` |  | ``intel/2016a``
-``2016.101`` |  | ``system``
 ``2019.303`` | ``-intelmpi`` | ``system``
 
 

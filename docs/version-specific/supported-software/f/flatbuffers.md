@@ -11,8 +11,6 @@ FlatBuffers: Memory Efficient Serialization Library
 version | toolchain
 --------|----------
 ``1.12.0`` | ``GCCcore/10.2.0``
-``1.12.0`` | ``GCCcore/8.3.0``
-``1.12.0`` | ``GCCcore/9.3.0``
 ``2.0.0`` | ``GCCcore/10.3.0``
 ``2.0.0`` | ``GCCcore/11.2.0``
 ``2.0.0`` | ``GCCcore/11.3.0``

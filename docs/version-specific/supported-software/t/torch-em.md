@@ -4,7 +4,7 @@ search:
 ---
 # torch-em
 
-Deep-learning based semantic and instance segmentation for 3D Electron Microscopy and  other bioimage analysis problems based on pytorch.
+Deep-learning based semantic and instance segmentation for 3D Electron Microscopy and other bioimage analysis problems based on pytorch.
 
 *homepage*: <https://github.com/constantinpape/torch-em/>
 

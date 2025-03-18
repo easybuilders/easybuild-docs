@@ -10,12 +10,6 @@ Open Knowledgebase of Interatomic Models.  KIM is an API and OpenKIM is a collec
 
 version | toolchain
 --------|----------
-``2.1.2`` | ``foss/2019a``
-``2.1.2`` | ``intel/2019a``
-``2.1.3`` | ``foss/2019b``
-``2.1.3`` | ``foss/2020a``
-``2.1.3`` | ``intel/2019b``
-``2.1.3`` | ``intel/2020a``
 ``2.2.1`` | ``GCC/10.2.0``
 ``2.2.1`` | ``GCC/10.3.0``
 ``2.2.1`` | ``iccifort/2020.4.304``
@@ -23,6 +17,7 @@ version | toolchain
 ``2.3.0`` | ``GCC/11.3.0``
 ``2.3.0`` | ``GCC/12.2.0``
 ``2.3.0`` | ``GCC/12.3.0``
+``2.3.0`` | ``GCC/13.2.0``
 ``2.3.0`` | ``intel-compilers/2023.1.0``
 
 

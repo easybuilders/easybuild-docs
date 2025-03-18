@@ -10,10 +10,6 @@ This module sets a group of environment variables for compilers, linkers, maths 
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``default`` |  | ``foss/2017b``
-``default`` |  | ``foss/2018b``
-``default`` |  | ``foss/2019b``
-``default`` |  | ``foss/2020a``
 ``default`` |  | ``foss/2020b``
 ``default`` | ``-CUDA-11.3.1`` | ``foss/2021a``
 ``default`` |  | ``foss/2021a``
@@ -25,14 +21,11 @@ version | versionsuffix | toolchain
 ``default`` |  | ``foss/2022b``
 ``default`` | ``-CUDA-12.1.1`` | ``foss/2023a``
 ``default`` |  | ``foss/2023a``
+``default`` | ``-CUDA-12.4.0`` | ``foss/2023b``
 ``default`` |  | ``foss/2023b``
-``default`` |  | ``fosscuda/2019b``
-``default`` |  | ``fosscuda/2020a``
+``default`` | ``-CUDA-12.6.0`` | ``foss/2024a``
+``default`` |  | ``foss/2024a``
 ``default`` |  | ``fosscuda/2020b``
-``default`` |  | ``intel/2016b``
-``default`` |  | ``intel/2017a``
-``default`` |  | ``intel/2019b``
-``default`` |  | ``intel/2020a``
 ``default`` |  | ``intel/2020b``
 ``default`` |  | ``intel/2021a``
 ``default`` |  | ``intel/2021b``
@@ -40,8 +33,7 @@ version | versionsuffix | toolchain
 ``default`` |  | ``intel/2022b``
 ``default`` |  | ``intel/2023a``
 ``default`` |  | ``intel/2023b``
-``default`` |  | ``intelcuda/2019b``
-``default`` |  | ``intelcuda/2020a``
+``default`` |  | ``intel/2024a``
 ``default`` |  | ``intelcuda/2020b``
 ``default`` |  | ``nvompi/2022.07``
 

@@ -10,8 +10,6 @@ Scipion is an image processing framework to obtain 3D models of macromolecular c
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``3.19.04-Apollo`` | ``-Python-2.7.15`` | ``foss/2019a``
-``3.19.04-Apollo`` | ``-Python-2.7.15`` | ``fosscuda/2019a``
 ``3.22.07-Helios`` | ``-CUDA-11.7.0`` | ``foss/2022a``
 ``3.22.07-Helios`` |  | ``foss/2022a``
 

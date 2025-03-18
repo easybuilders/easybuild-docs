@@ -6,29 +6,10 @@ search:
 
 Eigenvalue SoLvers for Petaflop-Applications .
 
-*homepage*: <http://elpa.mpcdf.mpg.de>
+*homepage*: <https://elpa.mpcdf.mpg.de>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2015.02.002`` |  | ``foss/2018a``
-``2015.02.002`` |  | ``gimkl/2017a``
-``2015.02.002`` |  | ``intel/2018a``
-``2016.05.004`` |  | ``intel/2016b``
-``2016.05.004`` |  | ``intel/2017a``
-``2016.11.001.pre`` |  | ``foss/2018b``
-``2016.11.001.pre`` |  | ``intel/2018b``
-``2017.11.001`` |  | ``foss/2018b``
-``2017.11.001`` |  | ``intel/2018a``
-``2017.11.001`` |  | ``intel/2018b``
-``2018.05.001`` |  | ``foss/2018b``
-``2018.05.001`` |  | ``intel/2018b``
-``2018.11.001`` |  | ``intel/2019a``
-``2019.11.001`` |  | ``foss/2019b``
-``2019.11.001`` |  | ``foss/2020a``
-``2019.11.001`` |  | ``intel/2019b``
-``2019.11.001`` |  | ``intel/2020a``
-``2019.11.001`` |  | ``iomkl/2019b``
-``2020.05.001`` |  | ``intel/2020a``
 ``2020.11.001`` |  | ``foss/2020b``
 ``2020.11.001`` |  | ``intel/2020b``
 ``2021.05.001`` |  | ``foss/2021a``
@@ -51,6 +32,8 @@ version | versionsuffix | toolchain
 ``2023.05.001`` |  | ``intel/2023a``
 ``2023.11.001`` |  | ``foss/2023b``
 ``2023.11.001`` |  | ``intel/2023b``
+``2024.05.001`` |  | ``foss/2024a``
+``2024.05.001`` |  | ``intel/2024a``
 
 
 *(quick links: [(all)](../index.md) - [0](../0/index.md) - [a](../a/index.md) - [b](../b/index.md) - [c](../c/index.md) - [d](../d/index.md) - [e](../e/index.md) - [f](../f/index.md) - [g](../g/index.md) - [h](../h/index.md) - [i](../i/index.md) - [j](../j/index.md) - [k](../k/index.md) - [l](../l/index.md) - [m](../m/index.md) - [n](../n/index.md) - [o](../o/index.md) - [p](../p/index.md) - [q](../q/index.md) - [r](../r/index.md) - [s](../s/index.md) - [t](../t/index.md) - [u](../u/index.md) - [v](../v/index.md) - [w](../w/index.md) - [x](../x/index.md) - [y](../y/index.md) - [z](../z/index.md))*

@@ -4,30 +4,13 @@ search:
 ---
 # PROJ
 
-Program proj is a standard Unix filter function which converts  geographic longitude and latitude coordinates into cartesian coordinates
+Program proj is a standard Unix filter function which converts geographic longitude and latitude coordinates into cartesian coordinates
 
-*homepage*: <http://trac.osgeo.org/proj/>
+*homepage*: <https://proj.org>
 
 version | toolchain
 --------|----------
-``4.9.2`` | ``foss/2016a``
-``4.9.2`` | ``foss/2016b``
-``4.9.2`` | ``intel/2016a``
-``4.9.2`` | ``intel/2016b``
-``4.9.3`` | ``foss/2016b``
-``4.9.3`` | ``foss/2017b``
-``4.9.3`` | ``intel/2016b``
-``4.9.3`` | ``intel/2017a``
-``4.9.3`` | ``intel/2017b``
-``5.0.0`` | ``foss/2018a``
-``5.0.0`` | ``foss/2018b``
-``5.0.0`` | ``intel/2018a``
-``5.0.0`` | ``intel/2018b``
-``5.0.0`` | ``iomkl/2018a``
-``6.0.0`` | ``GCCcore/8.2.0``
-``6.2.1`` | ``GCCcore/8.3.0``
 ``6.3.1`` | ``GCCcore/10.3.0``
-``7.0.0`` | ``GCCcore/9.3.0``
 ``7.2.1`` | ``GCCcore/10.2.0``
 ``8.0.1`` | ``GCCcore/10.3.0``
 ``8.1.0`` | ``GCCcore/11.2.0``

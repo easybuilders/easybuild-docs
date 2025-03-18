@@ -4,7 +4,7 @@ search:
 ---
 # pypmt
 
-PMT is a high-level software library capable of      collecting power consumption measurements on various hardware.
+PMT is a high-level software library capable of     collecting power consumption measurements on various hardware.
 
 *homepage*: <https://git.astron.nl/RD/pmt>
 

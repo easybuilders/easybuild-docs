@@ -4,7 +4,7 @@ search:
 ---
 # CellBender
 
-CellBender is a software package for eliminating technical  artifacts from high-throughput single-cell RNA sequencing (scRNA-seq) data
+CellBender is a software package for eliminating technical artifacts from high-throughput single-cell RNA sequencing (scRNA-seq) data
 
 *homepage*: <https://github.com/broadinstitute/CellBender>
 

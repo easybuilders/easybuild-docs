@@ -10,8 +10,6 @@ bbFTP is a file transfer software. It implements its own transfer protocol,   wh
 
 version | toolchain
 --------|----------
-``3.2.1`` | ``GCCcore/9.3.0``
-``3.2.1`` | ``intel/2016a``
 ``3.2.1`` | ``system``
 
 

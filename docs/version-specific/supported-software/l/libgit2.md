@@ -10,10 +10,8 @@ libgit2 is a portable, pure C implementation of the Git core methods provided as
 
 version | toolchain
 --------|----------
-``1.0.0`` | ``GCCcore/8.3.0``
 ``1.1.0`` | ``GCCcore/10.2.0``
 ``1.1.0`` | ``GCCcore/10.3.0``
-``1.1.0`` | ``GCCcore/9.3.0``
 ``1.1.1`` | ``GCCcore/11.2.0``
 ``1.4.3`` | ``GCCcore/11.3.0``
 ``1.5.0`` | ``GCCcore/12.2.0``
