@@ -4,7 +4,7 @@ search:
 ---
 # Umpire
 
-Umpire is a resource management library that allows the discovery, provision,  and management of memory on machines with multiple memory devices like NUMA and GPUs.
+Umpire is a resource management library that allows the discovery, provision, and management of memory on machines with multiple memory devices like NUMA and GPUs.
 
 *homepage*: <https://github.com/LLNL/Umpire>
 

@@ -10,7 +10,7 @@ This is a repackaged version of the DFTD3 program by S. Grimme and his coworkers
 
 version | toolchain
 --------|----------
-``0.9`` | ``GCC/8.3.0``
+``0.10`` | ``GCC/11.3.0``
 ``0.9`` | ``intel-compilers/2021.2.0``
 
 

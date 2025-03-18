@@ -4,7 +4,7 @@ search:
 ---
 # WCSLIB
 
-The FITS "World Coordinate System" (WCS) standard defines keywords  and usage that provide for the description of astronomical coordinate systems in a  FITS image header.
+The FITS "World Coordinate System" (WCS) standard defines keywords and usage that provide for the description of astronomical coordinate systems in a FITS image header.
 
 *homepage*: <https://www.atnf.csiro.au/people/mcalabre/WCS/>
 

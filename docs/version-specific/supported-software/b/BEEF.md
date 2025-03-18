@@ -10,7 +10,6 @@ BEEF is a library-based implementation of the Bayesian Error Estimation Function
 
 version | toolchain
 --------|----------
-``0.1.1`` | ``iccifort/2019.5.281``
 ``0.1.1`` | ``iccifort/2020.4.304``
 
 

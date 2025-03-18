@@ -4,7 +4,7 @@ search:
 ---
 # libbaseencode
 
-Library written in C for encoding and decoding  data using base32 or base64 according to RFC-4648
+Library written in C for encoding and decoding data using base32 or base64 according to RFC-4648
 
 *homepage*: <https://github.com/paolostivanin/libbaseencode>
 

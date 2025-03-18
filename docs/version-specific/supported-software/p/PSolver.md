@@ -4,18 +4,12 @@ search:
 ---
 # PSolver
 
-Poisson Solver from the BigDFT code compiled as a standalone library.
+Interpolating scaling function Poisson Solver Library
 
-*homepage*: <http://bigdft.org/Wiki/index.php?title=BigDFT_website>
+*homepage*: <http://bigdft.org/devel-doc/d1/d81/group__PSOLVER.html>
 
 version | toolchain
 --------|----------
-``1.7.6`` | ``foss/2017b``
-``1.7.6`` | ``foss/2018a``
-``1.7.6`` | ``foss/2018b``
-``1.7.6`` | ``intel/2017b``
-``1.7.6`` | ``intel/2018a``
-``1.7.6`` | ``intel/2018b``
 ``1.8.3`` | ``foss/2020b``
 ``1.8.3`` | ``foss/2021a``
 ``1.8.3`` | ``foss/2021b``

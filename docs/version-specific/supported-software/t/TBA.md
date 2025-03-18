@@ -4,7 +4,7 @@ search:
 ---
 # TBA
 
-TBA (a Transcription factor Binding Analysis): TBA is a multi-functional machine learning tool for identifying  transcription factors associated with genomic features
+TBA (a Transcription factor Binding Analysis): TBA is a multi-functional machine learning tool for identifying transcription factors associated with genomic features
 
 *homepage*: <https://github.com/jenhantao/tba>
 

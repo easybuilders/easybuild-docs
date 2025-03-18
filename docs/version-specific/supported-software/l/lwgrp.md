@@ -4,16 +4,12 @@ search:
 ---
 # lwgrp
 
-The Light-weight Group Library provides methods for MPI codes to quickly create  and destroy process groups
+The light-weight group library defines data structures and collective operations to group MPI processes as an ordered set.  Such groups are useful as substitutes for MPI communicators when the overhead of communicator creation is too costly.  For example, certain sorting algorithms recursively divide processes into subgroups as the sort algorithm progresses.  These groups may be different with each invocation, so that it is inefficient to create and destroy communicators during the sort routine.
 
-*homepage*: <https://github.com/llnl/lwgrp>
+*homepage*: <https://github.com/LLNL/lwgrp>
 
 version | toolchain
 --------|----------
-``1.0.2`` | ``gompi/2019a``
-``1.0.2`` | ``gompi/2020a``
-``1.0.2`` | ``iimpi/2019a``
-``1.0.2`` | ``iimpi/2020a``
 ``1.0.3`` | ``gompi/2020b``
 ``1.0.5`` | ``gompi/2022a``
 ``1.0.5`` | ``gompi/2023a``

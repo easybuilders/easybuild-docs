@@ -4,7 +4,7 @@ search:
 ---
 # crypt4gh
 
-crypt4gh is a Python tool to encrypt, decrypt or re-encrypt files,  according to the GA4GH encryption file format.
+crypt4gh is a Python tool to encrypt, decrypt or re-encrypt files, according to the GA4GH encryption file format.
 
 *homepage*: <https://github.com/EGA-archive/crypt4gh>
 

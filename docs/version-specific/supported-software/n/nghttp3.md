@@ -4,7 +4,7 @@ search:
 ---
 # nghttp3
 
-nghttp3 is an implementation of RFC 9114 HTTP/3  mapping over QUIC and RFC 9204 QPACK in C. It does not depend on any particular QUIC transport implementation.
+nghttp3 is an implementation of RFC 9114 HTTP/3 mapping over QUIC and RFC 9204 QPACK in C. It does not depend on any particular QUIC transport implementation.
 
 *homepage*: <https://github.com/ngtcp2/nghttp3>
 

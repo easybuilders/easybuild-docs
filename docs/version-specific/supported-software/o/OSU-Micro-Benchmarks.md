@@ -6,24 +6,12 @@ search:
 
 OSU Micro-Benchmarks
 
-*homepage*: <http://mvapich.cse.ohio-state.edu/benchmarks/>
+*homepage*: <https://mvapich.cse.ohio-state.edu/benchmarks/>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``5.3.2`` |  | ``foss/2016a``
-``5.3.2`` |  | ``foss/2017a``
-``5.6.2`` |  | ``gompi/2019a``
-``5.6.3`` |  | ``gompi/2019b``
-``5.6.3`` |  | ``gompi/2020a``
 ``5.6.3`` |  | ``gompi/2020b``
-``5.6.3`` |  | ``gompic/2019b``
-``5.6.3`` |  | ``gompic/2020a``
-``5.6.3`` |  | ``iimpi/2019a``
-``5.6.3`` |  | ``iimpi/2019b``
-``5.6.3`` |  | ``iimpi/2020a``
 ``5.6.3`` |  | ``iimpi/2020b``
-``5.6.3`` |  | ``iimpic/2019b``
-``5.6.3`` |  | ``iimpic/2020a``
 ``5.7`` |  | ``gompi/2020b``
 ``5.7`` |  | ``gompic/2020b``
 ``5.7`` |  | ``iimpi/2020b``
@@ -52,6 +40,8 @@ version | versionsuffix | toolchain
 ``7.4`` |  | ``gompi/2024.05``
 ``7.4`` |  | ``gompi/2024a``
 ``7.4`` |  | ``iimpi/2024a``
+``7.5`` | ``-CUDA-12.4.0`` | ``gompi/2023b``
+``7.5`` | ``-CUDA-12.6.0`` | ``gompi/2024a``
 
 
 *(quick links: [(all)](../index.md) - [0](../0/index.md) - [a](../a/index.md) - [b](../b/index.md) - [c](../c/index.md) - [d](../d/index.md) - [e](../e/index.md) - [f](../f/index.md) - [g](../g/index.md) - [h](../h/index.md) - [i](../i/index.md) - [j](../j/index.md) - [k](../k/index.md) - [l](../l/index.md) - [m](../m/index.md) - [n](../n/index.md) - [o](../o/index.md) - [p](../p/index.md) - [q](../q/index.md) - [r](../r/index.md) - [s](../s/index.md) - [t](../t/index.md) - [u](../u/index.md) - [v](../v/index.md) - [w](../w/index.md) - [x](../x/index.md) - [y](../y/index.md) - [z](../z/index.md))*

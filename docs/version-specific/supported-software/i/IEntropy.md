@@ -4,7 +4,7 @@ search:
 ---
 # IEntropy
 
-Here, by deriving entropy decomposition formula, we proposed a feature selection method,  intrinsic entropy (IE) model, to identify the informative genes for accurately clustering analysis.
+Here, by deriving entropy decomposition formula, we proposed a feature selection method, intrinsic entropy (IE) model, to identify the informative genes for accurately clustering analysis.
 
 *homepage*: <https://github.com/LinLi-0909/IEntropy>
 

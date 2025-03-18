@@ -10,7 +10,6 @@ Intel C/C++ and Fortran compilers, alongside Intel Math Kernel Library (MKL).
 
 version | toolchain
 --------|----------
-``2018a`` | ``system``
 ``2022a`` | ``system``
 ``2022b`` | ``system``
 ``2023a`` | ``system``

@@ -12,9 +12,8 @@ version | versionsuffix | toolchain
 --------|---------------|----------
 ``0.10.0`` | ``-PyTorch-1.9.0`` | ``fosscuda/2020b``
 ``0.14.1`` | ``-PyTorch-1.12.0`` | ``foss/2022a``
-``0.5.0`` | ``-PyTorch-1.4.0-Python-3.7.4`` | ``fosscuda/2019b``
-``0.7.0`` | ``-Python-3.7.4-PyTorch-1.6.0`` | ``foss/2019b``
-``0.7.0`` | ``-Python-3.7.4-PyTorch-1.6.0`` | ``fosscuda/2019b``
+``0.14.1`` | ``-PyTorch-1.13.1`` | ``foss/2022b``
+``0.16.2`` | ``-PyTorch-2.1.2`` | ``foss/2023b``
 ``0.8.1`` | ``-PyTorch-1.7.1`` | ``fosscuda/2020b``
 ``0.9.1`` | ``-PyTorch-1.8.1`` | ``fosscuda/2020b``
 

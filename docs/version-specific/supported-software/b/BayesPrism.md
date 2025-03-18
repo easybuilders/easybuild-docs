@@ -4,7 +4,7 @@ search:
 ---
 # BayesPrism
 
-Bayesian cell Proportion Reconstruction Inferred using Statistical Marginalization   (BayesPrism): A Fully Bayesian Inference of Tumor Microenvironment composition and gene expression
+Bayesian cell Proportion Reconstruction Inferred using Statistical Marginalization  (BayesPrism): A Fully Bayesian Inference of Tumor Microenvironment composition and gene expression
 
 *homepage*: <https://github.com/Danko-Lab/BayesPrism>
 

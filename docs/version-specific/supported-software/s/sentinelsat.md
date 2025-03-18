@@ -4,7 +4,7 @@ search:
 ---
 # sentinelsat
 
-Sentinelsat makes searching, downloading and retrieving the metadata of Sentinel  satellite images from the Copernicus Open Access Hub easy.
+Sentinelsat makes searching, downloading and retrieving the metadata of Sentinel satellite images from the Copernicus Open Access Hub easy.
 
 *homepage*: <https://github.com/sentinelsat/sentinelsat>
 

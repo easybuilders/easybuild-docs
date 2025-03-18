@@ -10,7 +10,6 @@ Yambo is a FORTRAN/C code for Many-Body calculations in solid state and molecula
 
 version | toolchain
 --------|----------
-``3.4.2`` | ``intel/2016.02-GCC-4.9``
 ``5.0.4`` | ``intel/2021a``
 ``5.1.2`` | ``intel/2021b``
 

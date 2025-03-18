@@ -9,12 +9,10 @@ search:
 
 
  * [YACS](YACS.md)
- * [Yade](Yade.md)
  * [yaff](yaff.md)
+ * [YaHS](YaHS.md)
  * [Yambo](Yambo.md)
  * [yaml-cpp](yaml-cpp.md)
- * [YANK](YANK.md)
- * [YAPS](YAPS.md)
  * [Yasm](Yasm.md)
  * [YAXT](YAXT.md)
  * [yell](yell.md)

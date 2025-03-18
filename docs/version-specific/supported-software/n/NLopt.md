@@ -4,28 +4,12 @@ search:
 ---
 # NLopt
 
-NLopt is a free/open-source library for nonlinear optimization,   providing a common interface for a number of different free optimization routines   available online as well as original implementations of various other algorithms.
+NLopt is a free/open-source library for nonlinear optimization,  providing a common interface for a number of different free optimization routines  available online as well as original implementations of various other algorithms.
 
 *homepage*: <http://ab-initio.mit.edu/wiki/index.php/NLopt>
 
 version | toolchain
 --------|----------
-``2.4.2`` | ``GCC/5.4.0-2.26``
-``2.4.2`` | ``GCCcore/7.3.0``
-``2.4.2`` | ``foss/2016a``
-``2.4.2`` | ``foss/2016b``
-``2.4.2`` | ``foss/2017b``
-``2.4.2`` | ``foss/2018a``
-``2.4.2`` | ``iccifort/2016.3.210-GCC-5.4.0-2.26``
-``2.4.2`` | ``intel/2016a``
-``2.4.2`` | ``intel/2016b``
-``2.4.2`` | ``intel/2017a``
-``2.4.2`` | ``intel/2017b``
-``2.4.2`` | ``intel/2018a``
-``2.4.2`` | ``iomkl/2018a``
-``2.6.1`` | ``GCCcore/8.2.0``
-``2.6.1`` | ``GCCcore/8.3.0``
-``2.6.1`` | ``GCCcore/9.3.0``
 ``2.6.2`` | ``GCCcore/10.2.0``
 ``2.7.0`` | ``GCCcore/10.3.0``
 ``2.7.0`` | ``GCCcore/11.2.0``

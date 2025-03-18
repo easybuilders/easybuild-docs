@@ -10,7 +10,6 @@ A package for population structure inference from RAD-seq data
 
 version | toolchain
 --------|----------
-``20180709`` | ``intel/2018a``
 ``20210514`` | ``GCC/12.3.0``
 
 

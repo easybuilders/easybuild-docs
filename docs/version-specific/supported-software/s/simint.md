@@ -4,7 +4,7 @@ search:
 ---
 # simint
 
-Simint is a vectorized implementation of the Obara-Saika (OS)  method of calculating electron repulsion integrals. Speedup is gained by  vectorizing the primitive loop of the OS algorithm, with additional vectorization  and optimizations left to the compiler.
+Simint is a vectorized implementation of the Obara-Saika (OS) method of calculating electron repulsion integrals. Speedup is gained by vectorizing the primitive loop of the OS algorithm, with additional vectorization and optimizations left to the compiler.
 
 *homepage*: <https://www.bennyp.org/research/simint/>
 

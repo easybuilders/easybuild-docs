@@ -4,7 +4,7 @@ search:
 ---
 # NVSHMEM
 
-NVSHMEM is a parallel programming interface based on OpenSHMEM that provides  efficient and scalable communication for NVIDIA GPU clusters. NVSHMEM creates a  global address space for data that spans the memory of multiple GPUs and can be  accessed with fine-grained GPU-initiated operations, CPU-initiated operations,  and operations on CUDA streams.
+NVSHMEM is a parallel programming interface based on OpenSHMEM that provides efficient and scalable communication for NVIDIA GPU clusters. NVSHMEM creates a global address space for data that spans the memory of multiple GPUs and can be accessed with fine-grained GPU-initiated operations, CPU-initiated operations, and operations on CUDA streams.
 
 *homepage*: <https://developer.nvidia.com/nvshmem>
 

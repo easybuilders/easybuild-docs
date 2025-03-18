@@ -21,22 +21,10 @@ version | versionsuffix | toolchain
 ``0.14.1`` |  | ``foss/2022b``
 ``0.16.0`` | ``-CUDA-12.1.1`` | ``foss/2023a``
 ``0.16.0`` |  | ``foss/2023a``
-``0.2.0`` | ``-Python-3.6.4-CUDA-9.1.85`` | ``foss/2018a``
-``0.2.0`` | ``-Python-3.6.4`` | ``intel/2018a``
-``0.2.2`` | ``-Python-3.6.6`` | ``foss/2018b``
-``0.2.2`` | ``-Python-3.6.6`` | ``fosscuda/2018b``
-``0.3.0`` | ``-Python-3.7.2`` | ``foss/2019a``
-``0.4.2`` | ``-Python-3.7.4`` | ``foss/2019b``
-``0.4.2`` | ``-Python-3.7.4`` | ``fosscuda/2019b``
+``0.17.0`` |  | ``foss/2023b``
 ``0.4.2`` | ``-PyTorch-1.3.1`` | ``fosscuda/2020b``
-``0.5.0`` | ``-Python-3.7.4-PyTorch-1.4.0`` | ``fosscuda/2019b``
-``0.7.0`` | ``-Python-3.7.4-PyTorch-1.6.0`` | ``foss/2019b``
-``0.7.0`` | ``-Python-3.7.4-PyTorch-1.6.0-imkl`` | ``fosscuda/2019b``
-``0.7.0`` | ``-Python-3.7.4-PyTorch-1.6.0`` | ``fosscuda/2019b``
 ``0.8.2`` | ``-PyTorch-1.7.1`` | ``foss/2020b``
-``0.8.2`` | ``-Python-3.7.4-PyTorch-1.7.1`` | ``fosscuda/2019b``
 ``0.8.2`` | ``-PyTorch-1.7.1`` | ``fosscuda/2020b``
-``0.9.1`` | ``-Python-3.7.4-PyTorch-1.8.1`` | ``fosscuda/2019b``
 ``0.9.1`` | ``-PyTorch-1.8.1`` | ``fosscuda/2020b``
 
 

@@ -10,7 +10,6 @@ Steel Bank Common Lisp (SBCL) is a high performance Common Lisp compiler. It is 
 
 version | toolchain
 --------|----------
-``2.0.9`` | ``GCCcore/9.3.0``
 ``2.2.1`` | ``GCCcore/10.3.0``
 ``2.3.11`` | ``GCCcore/11.3.0``
 ``2.4.1`` | ``GCCcore/12.3.0``

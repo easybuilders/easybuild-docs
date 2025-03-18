@@ -10,7 +10,6 @@ The Soil & Water Assessment Tool (SWAT) is a small watershed to river basin-scal
 
 version | toolchain
 --------|----------
-``60.4.1`` | ``GCC/9.3.0``
 ``60.5.1`` | ``iccifort/2020.4.304``
 
 

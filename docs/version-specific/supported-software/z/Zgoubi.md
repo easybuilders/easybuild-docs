@@ -4,7 +4,7 @@ search:
 ---
 # Zgoubi
 
-Zgoubi is a ray-tracing code in use for charged particle beam dynamics simulations.  It can simulate beam dynamics in a large variety of machines and optical systems.
+Zgoubi is a ray-tracing code in use for charged particle beam dynamics simulations. It can simulate beam dynamics in a large variety of machines and optical systems.
 
 *homepage*: <https://zgoubi.sourceforge.io>
 

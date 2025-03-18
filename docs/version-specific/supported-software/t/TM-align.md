@@ -10,8 +10,6 @@ This package unifies protein structure alignment and RNA structure alignment  in
 
 version | toolchain
 --------|----------
-``20180426`` | ``foss/2018b``
-``20180426`` | ``intel/2019a``
 ``20190822`` | ``GCC/11.3.0``
 
 

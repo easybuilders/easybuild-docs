@@ -11,7 +11,6 @@ Filtlong is a tool for filtering long reads by quality. It can take a set  of lo
 version | toolchain
 --------|----------
 ``0.2.0`` | ``GCC/10.2.0``
-``0.2.0`` | ``foss/2016b``
 ``0.2.1`` | ``GCC/10.3.0``
 ``0.2.1`` | ``GCC/12.3.0``
 

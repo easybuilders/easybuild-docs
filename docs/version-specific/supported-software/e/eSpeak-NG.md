@@ -10,7 +10,6 @@ The eSpeak NG is a compact open source software text-to-speech synthesizer for L
 
 version | toolchain
 --------|----------
-``1.50`` | ``gompi/2020a``
 ``1.51`` | ``gfbf/2023a``
 
 

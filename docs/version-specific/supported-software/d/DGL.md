@@ -10,7 +10,6 @@ DGL is an easy-to-use, high performance and scalable Python package for deep lea
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.6.1`` | ``-Python-3.7.4-PyTorch-1.8.1`` | ``fosscuda/2019b``
 ``0.9.1`` | ``-CUDA-11.3.1`` | ``foss/2021a``
 
 

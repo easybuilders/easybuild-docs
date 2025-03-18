@@ -4,7 +4,7 @@ search:
 ---
 # oceanspy
 
-OceanSpy - A Python package to facilitate ocean model data analysis  and visualization.
+OceanSpy - A Python package to facilitate ocean model data analysis and visualization.
 
 *homepage*: <https://github.com/hainegroup/oceanspy>
 

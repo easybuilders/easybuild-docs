@@ -10,9 +10,6 @@ C++ bindings for Glib
 
 version | toolchain
 --------|----------
-``2.49.7`` | ``GCCcore/7.3.0``
-``2.49.7`` | ``GCCcore/8.2.0``
-``2.49.7`` | ``GCCcore/8.3.0``
 ``2.66.4`` | ``GCCcore/10.3.0``
 ``2.72.1`` | ``GCCcore/11.3.0``
 ``2.75.0`` | ``GCCcore/12.2.0``
