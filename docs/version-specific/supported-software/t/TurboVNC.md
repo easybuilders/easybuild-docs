@@ -10,7 +10,6 @@ TurboVNC is a derivative of VNC (Virtual Network Computing) that is tuned to pro
 
 version | toolchain
 --------|----------
-``2.2.3`` | ``GCCcore/8.2.0``
 ``3.0.1`` | ``GCCcore/11.3.0``
 ``3.1.2`` | ``GCCcore/13.3.0``
 

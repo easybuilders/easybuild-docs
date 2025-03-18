@@ -38,7 +38,7 @@ Option flag                              |Option description
 ## Basic options
 
 Option flag                                |Option description
--------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ``--dry-run``                              |Print build overview incl. dependencies (full paths) (default: False)
 ``-D, --dry-run-short``                    |Print build overview incl. dependencies (short paths) (default: False)
 ``-x, --extended-dry-run``                 |Print build environment and (expected) build procedure that will be performed (default: False)
@@ -55,7 +55,7 @@ Option flag                                |Option description
 ``--robot-paths=PATH[:PATH]``              |Additional paths to consider by robot for easyconfigs (--robot paths get priority) (type pathsep-separated list; default: /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs)
 ``--search-paths=PATH[:PATH]``             |Additional locations to consider in --search (next to --robot and --robot-paths paths) (type pathsep-separated list)
 ``-k, --skip``                             |Skip existing software (useful for installing additional packages) (default: False)
-``-s STOP, --stop=STOP``                   |Stop the installation after certain step (type choice; default: source) (choices: fetch, ready, source, patch, prepare, configure, build, test, install, extensions, postiter, postproc, sanitycheck, cleanup, module, permissions, package, testcases)
+``-s STOP, --stop=STOP``                   |Stop the installation after certain step (type choice; default: extract) (choices: fetch, ready, extract, patch, prepare, configure, build, test, install, extensions, postiter, postproc, sanitycheck, cleanup, module, permissions, package, testcases)
 ``--strict=STRICT``                        |Set strictness level (type choice; default: warn) (choices: ignore, warn, error)
 
 ## Configuration options
@@ -69,6 +69,8 @@ Option flag                                                      |Option descrip
 ``--containerpath=CONTAINERPATH``                                |Location where container recipe & image will be stored (default: /home/example/.local/easybuild/containers)
 ``--envvars-user-modules=ENVVARS-USER-MODULES``                  |List of environment variables that hold the base paths for which user-specific modules will be installed relative to (type comma-separated list; default: HOME)
 ``--external-modules-metadata=EXTERNAL-MODULES-METADATA``        |List of (glob patterns for) paths to files specifying metadata for external modules (INI format) (type comma-separated list)
+``--failed-install-build-dirs-path=PATH``                        |Location where build directories are copied if installation fails; an empty value disables copying of build directories
+``--failed-install-logs-path=PATH``                              |Location where log files are copied if installation fails; an empty value disables copying of log files
 ``--hooks=HOOKS``                                                |Location of Python module with hook implementations (type str)
 ``--ignore-dirs=IGNORE-DIRS``                                    |Directory names to ignore when searching for files/dirs (type comma-separated list; default: .git,.svn)
 ``--include-easyblocks=INCLUDE-EASYBLOCKS``                      |Location(s) of extra or customized easyblocks (type comma-separated list)
@@ -77,11 +79,12 @@ Option flag                                                      |Option descrip
 ``--installpath=INSTALLPATH``                                    |Install path for software and modules (default: /home/example/.local/easybuild)
 ``--installpath-modules=INSTALLPATH-MODULES``                    |Install path for modules (if None, combine --installpath and --subdir-modules)
 ``--installpath-software=INSTALLPATH-SOFTWARE``                  |Install path for software (if None, combine --installpath and --subdir-software)
-``--job-backend=JOB-BACKEND``                                    |Backend to use for submitting jobs (type choice; default: GC3Pie) (choices: GC3Pie, PbsPython, Slurm)
+``--job-backend=JOB-BACKEND``                                    |Backend to use for submitting jobs (type choice; default: Slurm) (choices: GC3Pie, PbsPython, Slurm)
 ``--logfile-format=DIR,FORMAT``                                  |Directory name and format of the log file (type comma-separated tuple; default: easybuild,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log)
-``--module-depends-on``                                          |Use depends_on (Lmod 7.6.1+) for dependencies in all generated modules (implies recursive unloading of modules). (default: False)
-``--module-extensions``                                          |Include 'extensions' statement in generated module file (Lua syntax only) (default: False)
+``--module-depends-on``                                          |Use depends_on (Lmod 7.6.1+) for dependencies in all generated modules (implies recursive unloading of modules). (default: True; disable with --disable-module-depends-on)
+``--module-extensions``                                          |Include 'extensions' statement in generated module file (Lua syntax only) (default: True; disable with --disable-module-extensions)
 ``--module-naming-scheme=MODULE-NAMING-SCHEME``                  |Module naming scheme to use (default: EasyBuildMNS)
+``--module-search-path-headers=MODULE-SEARCH-PATH-HEADERS``      |Environment variable set by modules on load with search paths to header files (type choice; default: cpath) (choices: cpath, include_paths)
 ``--module-syntax=MODULE-SYNTAX``                                |Syntax to be used for module files (type choice; default: Lua) (choices: Lua, Tcl)
 ``--moduleclasses=MODULECLASSES``                                |Extend supported module classes (For more info on the default classes, use --show-default-moduleclasses) (type comma-separated list; default: base,ai,astro,bio,cae,chem,compiler,data,debugger,devel,geo,ide,lang,lib,math,mpi,numlib,perf,quantum,phys,system,toolchain,tools,vis)
 ``--modules-footer=PATH``                                        |Path to file containing footer to be added to all generated module files
@@ -93,6 +96,8 @@ Option flag                                                      |Option descrip
 ``--recursive-module-unload``                                    |Enable generating of modules that unload recursively. (default: False)
 ``--repository=REPOSITORY``                                      |Repository type, using repositorypath (type choice; default: FileRepository) (choices: FileRepository, GitRepository)
 ``--repositorypath=REPOSITORYPATH``                              |Repository path, used by repository (is passed as list of arguments to create the repository instance). For more info, use --avail-repositories. (type comma-separated list; default: /home/example/.local/easybuild/ebfiles_repo)
+``--search-path-cpp-headers=SEARCH-PATH-CPP-HEADERS``            |Search path used at build time for include directories (type choice; default: flags) (choices: flags, cpath, include_paths)
+``--search-path-linker=SEARCH-PATH-LINKER``                      |Search path used at build time by the linker for libraries (type choice; default: flags) (choices: flags, library_path)
 ``--sourcepath=SOURCEPATH``                                      |Path(s) to where sources should be downloaded (string, colon-separated) (default: /home/example/.local/easybuild/sources)
 ``--subdir-modules=SUBDIR-MODULES``                              |Installpath subdir for modules (default: modules)
 ``--subdir-software=SUBDIR-SOFTWARE``                            |Installpath subdir for software (default: software)
@@ -220,12 +225,11 @@ Option flag                                |Option description
 
 Option flag                                                              |Option description
 -------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-``--accept-eula=ACCEPT-EULA``                                            |Accept EULA for specified software [DEPRECATED, use --accept-eula-for instead!] (type comma-separated list)
 ``--accept-eula-for=ACCEPT-EULA-FOR``                                    |Accept EULA for specified software (type comma-separated list)
-``--add-dummy-to-minimal-toolchains``                                    |Include dummy toolchain in minimal toolchain searches [DEPRECATED, use --add-system-to-minimal-toolchains instead!] (default: False)
 ``--add-system-to-minimal-toolchains``                                   |Include system toolchain in minimal toolchain searches (default: False)
 ``--allow-loaded-modules=ALLOW-LOADED-MODULES``                          |List of software names for which to allow loaded modules in initial environment (type comma-separated list; default: EasyBuild)
 ``--allow-modules-tool-mismatch``                                        |Allow mismatch of modules tool and definition of 'module' function (default: False)
+``--allow-unresolved-templates``                                         |Don't error out when templates such as %(name)s in EasyConfigs could not be resolved (default: False)
 ``--allow-use-as-root-and-accept-consequences``                          |Allow using of EasyBuild as root (NOT RECOMMENDED!) (default: False)
 ``--backup-modules``                                                     |Back up an existing module file, if any. Auto-enabled when using --module-only or --skip
 ``--backup-patched-files``                                               |Create a backup (*.orig) file when applying a patch (default: False)
@@ -254,6 +258,7 @@ Option flag                                                              |Option
 ``--experimental``                                                       |Allow experimental code (with behaviour that can be changed/removed at any given time). (default: False)
 ``--extra-modules=EXTRA-MODULES``                                        |List of extra modules to load after setting up the build environment (type comma-separated list)
 ``--extra-source-urls=URL[|URL]``                                        |Specify URLs to fetch sources from in addition to those in the easyconfig (type |-separated tuple; default: https://sources.easybuild.io)
+``--fail-on-mod-files-gcccore``                                          |Fail if .mod files are detected in a GCCcore install (default: False)
 ``--fetch``                                                              |Allow downloading sources ignoring OS and modules tool dependencies, implies --stop=fetch, --ignore-osdeps and ignore modules tool (default: False)
 ``--filter-deps=FILTER-DEPS``                                            |List of dependencies that you do *not* want to install with EasyBuild, because equivalent OS packages are installed. (e.g. --filter-deps=zlib,ncurses) (type comma-separated list)
 ``--filter-ecs=FILTER-ECS``                                              |List of easyconfigs (given as glob patterns) to *ignore* when given on command line or auto-selected when building with --from-pr. (e.g. --filter-ecs=*intel*) (type comma-separated list)
@@ -273,10 +278,12 @@ Option flag                                                              |Option
 ``--ignore-test-failure``                                                |Ignore a failing test step (default: False)
 ``--insecure-download``                                                  |Don't check the server certificate against the available certificate authorities. (default: False)
 ``--install-latest-eb-release``                                          |Install latest known version of easybuild (default: False)
+``--keep-debug-symbols``                                                 |Sets default value of debug toolchain option (default: False)
 ``--lib-lib64-symlink``                                                  |Automatically create symlinks for lib/ pointing to lib64/ if the former is missing (default: True; disable with --disable-lib-lib64-symlink)
 ``--lib64-fallback-sanity-check``                                        |Fallback in sanity check to lib64/ equivalent for missing libraries (default: True; disable with --disable-lib64-fallback-sanity-check)
 ``--lib64-lib-symlink``                                                  |Automatically create symlinks for lib64/ pointing to lib/ if the former is missing (default: True; disable with --disable-lib64-lib-symlink)
 ``--max-fail-ratio-adjust-permissions=MAX-FAIL-RATIO-ADJUST-PERMISSIONS``|Maximum ratio for failures to allow when adjusting permissions (type float; default: 0.5)
+``--max-parallel=MAX-PARALLEL``                                          |Specify maximum level of parallelism that should be used during build procedure (type int; default: 16)
 ``--minimal-build-env=MINIMAL-BUILD-ENV``                                |Minimal build environment to define when using system toolchain, specified as a comma-separated list that defines a mapping between name of environment variable and its value separated by a colon (':') (default: CC:gcc,CXX:g++)
 ``--minimal-toolchains``                                                 |Use minimal toolchain when resolving dependencies (default: False)
 ``--module-cache-suffix=MODULE-CACHE-SUFFIX``                            |Suffix to add to the cache file name (before the extension) when updating the modules tool cache
@@ -287,9 +294,10 @@ Option flag                                                              |Option
 ``--optarch=OPTARCH``                                                    |Set architecture optimization, overriding native architecture optimizations
 ``--output-format=OUTPUT-FORMAT``                                        |Set output format (type choice; default: txt) (choices: json, md, rst, txt)
 ``--output-style=OUTPUT-STYLE``                                          |Control output style; auto implies using Rich if available to produce rich output, with fallback to basic colored output (type choice; default: auto) (choices: auto, basic, no_color, rich)
-``--parallel=PARALLEL``                                                  |Specify (maximum) level of parallelism used during build procedure (type int)
+``--parallel=PARALLEL``                                                  |Specify level of parallelism that should be used during build procedure, (bypasses auto-detection of number of available cores; actual value is determined by this value + 'max_parallel' easyconfig parameter) (type int)
 ``--parallel-extensions-install``                                        |Install list of extensions in parallel (if supported) (default: False)
 ``--pre-create-installdir``                                              |Create installation directory before submitting build jobs (default: True; disable with --disable-pre-create-installdir)
+``--prefer-python-search-path=PREFER-PYTHON-SEARCH-PATH``                |Prefer using specified environment variable when possible to specify where Python packages were installed; see also https://docs.easybuild.io/python-search-path (type choice; default: PYTHONPATH) (choices: PYTHONPATH, EBPYTHONPREFIXES)
 ``-p, --pretend``                                                        |Does the build/installation in a test directory located in $HOME/easybuildinstall (default: False)
 ``--read-only-installdir``                                               |Set read-only permissions on installation directory after installation (default: False)
 ``--remove-ghost-install-dirs``                                          |Remove ghost installation directories when --force or --rebuild is used, rather than just warning about them (default: False)
@@ -301,7 +309,7 @@ Option flag                                                              |Option
 ``--set-default-module``                                                 |Set the generated module as default (default: False)
 ``--set-gid-bit``                                                        |Set group ID bit on newly created directories (default: False)
 ``--show-progress-bar``                                                  |Show progress bar in terminal output (default: True; disable with --disable-show-progress-bar)
-``--silence-deprecation-warnings=SILENCE-DEPRECATION-WARNINGS``          |Silence specified deprecation warnings out of (python2, Lmod6, easyconfig, toolchain) (type comma-separated list)
+``--silence-deprecation-warnings=SILENCE-DEPRECATION-WARNINGS``          |Silence specified deprecation warnings out of (easyconfig, toolchain) (type comma-separated list)
 ``--silence-hook-trigger``                                               |Suppress printing of debug message every time a hook is triggered (default: False)
 ``--skip-extensions``                                                    |Skip installation of extensions (default: False)
 ``--skip-sanity-check``                                                  |Skip running the sanity check step (e.g. testing for installed files or running basic commands) (default: False)
@@ -309,8 +317,9 @@ Option flag                                                              |Option
 ``--skip-test-step``                                                     |Skip running the test step (e.g. unit tests) (default: False)
 ``--software-commit=SOFTWARE-COMMIT``                                    |Git commit to use for the target software build (robot capabilities are automatically disabled)
 ``--sticky-bit``                                                         |Set sticky bit on newly created directories (default: False)
+``--strict-rpath-sanity-check``                                          |Perform strict RPATH sanity check, which involces unsetting $LD_LIBRARY_PATH before checking whether all required libraries are found (default: False)
 ``--sysroot=SYSROOT``                                                    |Location root directory of system, prefix for standard paths like /usr/lib and /usr/include
-``-T, --trace``                                                          |Provide more information in output to stdout on progress (default: False)
+``-T, --trace``                                                          |Provide more information in output to stdout on progress (default: True; disable with --disable-trace)
 ``--umask=UMASK``                                                        |umask to use (e.g. '022'); non-user write permissions on install directories are removed
 ``--unit-testing-mode``                                                  |Run in unit test mode (default: False)
 ``--update-modules-tool-cache``                                          |Update modules tool cache file(s) after generating module file (default: False)
@@ -318,7 +327,6 @@ Option flag                                                              |Option
 ``--use-existing-modules``                                               |Use existing modules when resolving dependencies with minimal toolchains (default: False)
 ``--use-f90cache=PATH``                                                  |Enable use of f90cache to speed up compilation, with specified cache dir (type <class 'str'>; default: False)
 ``--verify-easyconfig-filenames``                                        |Verify whether filename of specified easyconfigs matches with contents (default: False)
-``--wait-on-lock=WAIT-ON-LOCK``                                          |Wait for lock to be released; 0 implies no waiting (exit with an error if the lock already exists), non-zero value specified waiting interval [DEPRECATED: use --wait-on-lock-interval and --wait-on-lock-limit instead] (type <class 'int'>)
 ``--wait-on-lock-interval=WAIT-ON-LOCK-INTERVAL``                        |Wait interval (in seconds) to use when waiting for existing lock to be removed (type <class 'int'>; default: 60)
 ``--wait-on-lock-limit=WAIT-ON-LOCK-LIMIT``                              |Maximum amount of time (in seconds) to wait until lock is released (0 means no waiting at all, exit with error; -1 means no waiting limit, keep waiting) (type <class 'int'>; default: 0)
 ``--zip-logs=ZIP-LOGS``                                                  |Zip logs that are copied to install directory, using specified command (default: gzip)

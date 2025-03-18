@@ -4,14 +4,16 @@ search:
 ---
 # jedi
 
-Jedi is a static analysis tool for Python that is typically used in IDEs/editors plugins.
+Jedi - an awesome autocompletion, static analysis and refactoring library for Python.   It is typically used in IDEs/editors plugins. Jedi has a focus on autocompletion and goto functionality.   Other features include refactoring, code search and finding references.
 
-*homepage*: <https://jedi.readthedocs.io/en/latest/>
+*homepage*: <https://github.com/davidhalter/jedi>
 
 version | toolchain
 --------|----------
 ``0.18.1`` | ``GCCcore/11.3.0``
+``0.19.0`` | ``GCCcore/12.3.0``
 ``0.19.1`` | ``GCCcore/13.2.0``
+``0.19.1`` | ``GCCcore/13.3.0``
 
 
 *(quick links: [(all)](../index.md) - [0](../0/index.md) - [a](../a/index.md) - [b](../b/index.md) - [c](../c/index.md) - [d](../d/index.md) - [e](../e/index.md) - [f](../f/index.md) - [g](../g/index.md) - [h](../h/index.md) - [i](../i/index.md) - [j](../j/index.md) - [k](../k/index.md) - [l](../l/index.md) - [m](../m/index.md) - [n](../n/index.md) - [o](../o/index.md) - [p](../p/index.md) - [q](../q/index.md) - [r](../r/index.md) - [s](../s/index.md) - [t](../t/index.md) - [u](../u/index.md) - [v](../v/index.md) - [w](../w/index.md) - [x](../x/index.md) - [y](../y/index.md) - [z](../z/index.md))*

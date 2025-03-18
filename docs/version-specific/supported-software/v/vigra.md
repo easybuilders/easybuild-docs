@@ -4,7 +4,7 @@ search:
 ---
 # vigra
 
-Vision with Generic Algorithms is an image processing and analysis library  that puts its main emphasis on customizable algorithms and data structures.
+Vision with Generic Algorithms is an image processing and analysis library that puts its main emphasis on customizable algorithms and data structures.
 
 *homepage*: <https://ukoethe.github.io/vigra/>
 

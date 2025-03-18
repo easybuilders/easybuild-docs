@@ -4,13 +4,12 @@ search:
 ---
 # SDL2_image
 
-SDL_image is an image file loading library.
+This is a simple library to load images of various formats as SDL surfaces.  It can load BMP, GIF, JPEG, LBM, PCX, PNG, PNM (PPM/PGM/PBM), QOI, TGA, XCF, XPM, and simple SVG format images. It can also load AVIF, JPEG-XL, TIFF, and WebP images, depending on build options (see the note below for details.)
 
-*homepage*: <https://www.libsdl.org/projects/SDL_image/>
+*homepage*: <https://github.com/libsdl-org/SDL_image>
 
 version | toolchain
 --------|----------
-``2.0.3`` | ``GCCcore/6.4.0``
 ``2.6.3`` | ``GCCcore/11.3.0``
 ``2.8.2`` | ``GCCcore/12.3.0``
 

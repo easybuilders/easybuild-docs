@@ -10,6 +10,7 @@ Fast, correct Python JSON library supporting dataclasses, datetimes, and numpy.
 
 version | toolchain
 --------|----------
+``3.10.10`` | ``GCCcore/13.2.0``
 ``3.9.15`` | ``GCCcore/12.3.0``
 
 

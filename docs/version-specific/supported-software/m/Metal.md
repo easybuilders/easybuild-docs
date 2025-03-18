@@ -10,7 +10,6 @@ Metal - Meta Analysis Helper. The METAL software is designed to facilitate meta-
 
 version | toolchain
 --------|----------
-``2011-03-25`` | ``foss/2016a``
 ``2020-05-05`` | ``GCC/10.2.0``
 
 

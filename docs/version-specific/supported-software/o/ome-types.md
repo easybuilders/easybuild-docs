@@ -4,7 +4,7 @@ search:
 ---
 # ome-types
 
-ome_types provides a set of python dataclasses and utility functions for parsing  the OME-XML format into fully-typed python objects for interactive or programmatic access in python.
+ome_types provides a set of python dataclasses and utility functions for parsing the OME-XML format into fully-typed python objects for interactive or programmatic access in python.
 
 *homepage*: <https://github.com/tlambert03/ome-types/>
 

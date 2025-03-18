@@ -6,22 +6,10 @@ search:
 
 SUNDIALS: SUite of Nonlinear and DIfferential/ALgebraic Equation Solvers
 
-*homepage*: <http://computation.llnl.gov/projects/sundials>
+*homepage*: <https://computing.llnl.gov/projects/sundials>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.6.2`` |  | ``intel/2016b``
-``2.6.2`` |  | ``intel/2018b``
-``2.7.0`` |  | ``foss/2016b``
-``2.7.0`` |  | ``foss/2017b``
-``2.7.0`` |  | ``foss/2018a``
-``2.7.0`` |  | ``foss/2018b``
-``2.7.0`` |  | ``intel/2016b``
-``2.7.0`` |  | ``intel/2017a``
-``2.7.0`` |  | ``intel/2017b``
-``2.7.0`` |  | ``intel/2018a``
-``5.1.0`` |  | ``foss/2019b``
-``5.1.0`` |  | ``intel/2019b``
 ``5.7.0`` |  | ``foss/2020b``
 ``5.7.0`` |  | ``fosscuda/2020b``
 ``5.7.0`` |  | ``intel/2020b``

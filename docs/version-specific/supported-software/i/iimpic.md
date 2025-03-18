@@ -4,17 +4,12 @@ search:
 ---
 # iimpic
 
-Intel C/C++ and Fortran compilers, alongside Intel MPI.
+Intel C/C++ and Fortran compilers, alongside Intel MPI and CUDA.
 
-*homepage*: <http://software.intel.com/en-us/intel-cluster-toolkit-compiler/>
+*homepage*: <(none)>
 
 version | toolchain
 --------|----------
-``2016.10`` | ``system``
-``2017b`` | ``system``
-``2019a`` | ``system``
-``2019b`` | ``system``
-``2020a`` | ``system``
 ``2020b`` | ``system``
 
 

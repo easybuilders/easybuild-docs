@@ -4,15 +4,17 @@ search:
 ---
 # lifelines
 
-lifelines is a pure Python implementation of the best parts of survival analysis
+lifelines is a complete survival analysis library, written in pure Python.
 
-*homepage*: <https://lifelines.readthedocs.io>
+*homepage*: <https://lifelines.readthedocs.io/en/latest/>
 
-version | versionsuffix | toolchain
---------|---------------|----------
-``0.22.8`` | ``-Python-3.7.2`` | ``fosscuda/2019a``
-``0.26.3`` |  | ``fosscuda/2020b``
-``0.27.4`` |  | ``foss/2022a``
+version | toolchain
+--------|----------
+``0.26.3`` | ``fosscuda/2020b``
+``0.27.4`` | ``foss/2022a``
+``0.27.7`` | ``foss/2022b``
+``0.28.0`` | ``gfbf/2023a``
+``0.29.0`` | ``gfbf/2023b``
 
 
 *(quick links: [(all)](../index.md) - [0](../0/index.md) - [a](../a/index.md) - [b](../b/index.md) - [c](../c/index.md) - [d](../d/index.md) - [e](../e/index.md) - [f](../f/index.md) - [g](../g/index.md) - [h](../h/index.md) - [i](../i/index.md) - [j](../j/index.md) - [k](../k/index.md) - [l](../l/index.md) - [m](../m/index.md) - [n](../n/index.md) - [o](../o/index.md) - [p](../p/index.md) - [q](../q/index.md) - [r](../r/index.md) - [s](../s/index.md) - [t](../t/index.md) - [u](../u/index.md) - [v](../v/index.md) - [w](../w/index.md) - [x](../x/index.md) - [y](../y/index.md) - [z](../z/index.md))*

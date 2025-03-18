@@ -4,7 +4,7 @@ search:
 ---
 # jax
 
-Composable transformations of Python+NumPy programs:  differentiate, vectorize, JIT to GPU/TPU, and more
+Composable transformations of Python+NumPy programs: differentiate, vectorize, JIT to GPU/TPU, and more
 
 *homepage*: <https://pypi.python.org/pypi/jax>
 

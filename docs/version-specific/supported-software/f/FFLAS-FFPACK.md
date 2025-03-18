@@ -10,7 +10,6 @@ Finite Field Linear Algebra Subroutines / Package
 
 version | toolchain
 --------|----------
-``2.2.0`` | ``foss/2016a``
 ``2.5.0`` | ``gfbf/2022a``
 ``2.5.0`` | ``gfbf/2023b``
 

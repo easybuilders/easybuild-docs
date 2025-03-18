@@ -10,9 +10,6 @@ Spack is a package manager for supercomputers, Linux, and macOS. It makes instal
 
 version | toolchain
 --------|----------
-``0.10.0`` | ``system``
-``0.11.2`` | ``system``
-``0.12.1`` | ``system``
 ``0.16.2`` | ``system``
 ``0.17.0`` | ``system``
 ``0.17.2`` | ``system``

@@ -4,18 +4,13 @@ search:
 ---
 # libwebp
 
-WebP is a modern image format that provides superior  lossless and lossy compression for images on the web. Using WebP, webmasters  and web developers can create smaller, richer images that make the web  faster.
+WebP is a modern image format that provides superior lossless and lossy compression for images on the web. Using WebP, webmasters and web developers can create smaller, richer images that make the web faster.
 
-*homepage*: <https://developers.google.com/speed/webp>
+*homepage*: <https://developers.google.com/speed/webp/>
 
 version | toolchain
 --------|----------
-``1.0.0`` | ``foss/2018b``
-``1.0.2`` | ``GCCcore/7.3.0``
-``1.0.2`` | ``GCCcore/8.2.0``
 ``1.1.0`` | ``GCCcore/10.2.0``
-``1.1.0`` | ``GCCcore/8.3.0``
-``1.1.0`` | ``GCCcore/9.3.0``
 ``1.2.0`` | ``GCCcore/10.3.0``
 ``1.2.0`` | ``GCCcore/11.2.0``
 ``1.2.4`` | ``GCCcore/11.3.0``

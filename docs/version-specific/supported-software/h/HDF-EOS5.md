@@ -10,8 +10,6 @@ HDF-EOS libraries are software libraries built on HDF libraries.  It supports th
 
 version | toolchain
 --------|----------
-``1.16`` | ``foss/2018b``
-``1.16`` | ``gompi/2019b``
 ``1.16`` | ``gompi/2020b``
 
 

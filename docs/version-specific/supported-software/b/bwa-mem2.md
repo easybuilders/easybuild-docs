@@ -10,6 +10,8 @@ The tool bwa-mem2 is the next version of the bwa-mem algorithm in bwa. It produc
 
 version | toolchain
 --------|----------
+``2.2.1`` | ``GCC/11.2.0``
+``2.2.1`` | ``GCC/13.3.0``
 ``2.2.1`` | ``intel-compilers/2023.1.0``
 
 

@@ -6,13 +6,10 @@ search:
 
 GnuTLS is a secure communications library implementing the SSL, TLS  and DTLS protocols and technologies around them. It provides a simple  C language application programming interface (API) to access the secure  communications protocols as well as APIs to parse and write X.509, PKCS #12,  OpenPGP and other required structures. It is aimed to be portable  and efficient with focus on security and interoperability.
 
-*homepage*: <http://www.gnutls.org/>
+*homepage*: <https://www.gnutls.org>
 
 version | toolchain
 --------|----------
-``3.3.21`` | ``intel/2016a``
-``3.4.11`` | ``foss/2016a``
-``3.4.7`` | ``GNU/4.9.3-2.25``
 ``3.7.2`` | ``GCCcore/10.3.0``
 ``3.7.3`` | ``GCCcore/11.2.0``
 ``3.7.8`` | ``GCCcore/11.3.0``

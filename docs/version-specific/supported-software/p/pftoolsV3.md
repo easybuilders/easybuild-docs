@@ -4,13 +4,12 @@ search:
 ---
 # pftoolsV3
 
-The pftools package contains all the software necessary to build protein and DNA generalized profiles and use  them to scan and align sequences, and search databases.
+A suite of tools to build and search generalized profiles (protein and DNA).
 
-*homepage*: <http://web.expasy.org/pftools/>
+*homepage*: <https://github.com/sib-swiss/pftools3>
 
 version | toolchain
 --------|----------
-``20160324`` | ``foss/2016a``
 ``3.2.11`` | ``GCCcore/10.3.0``
 ``3.2.11`` | ``foss/2021a``
 ``3.2.12`` | ``GCCcore/11.2.0``

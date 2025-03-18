@@ -4,7 +4,7 @@ search:
 ---
 # giac
 
-Giac is a C++ library, it is the CAS computing kernel.   It may be used inside other C++ programs, and also Python, Java and Javascript programs.
+Giac is a C++ library, it is the CAS computing kernel.  It may be used inside other C++ programs, and also Python, Java and Javascript programs.
 
 *homepage*: <https://www-fourier.ujf-grenoble.fr/~parisse/giac.html>
 

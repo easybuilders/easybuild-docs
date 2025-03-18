@@ -10,7 +10,6 @@ GapFiller is a seed-and-extend local assembler to fill the gap within paired rea
 
 version | toolchain
 --------|----------
-``2.1.1`` | ``intel/2017a``
 ``2.1.2`` | ``GCC/11.3.0``
 
 

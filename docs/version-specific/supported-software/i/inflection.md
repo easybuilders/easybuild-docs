@@ -4,7 +4,7 @@ search:
 ---
 # inflection
 
-inflection is a package that finds the inflection point of a planar curve which is given as a data frame  of discrete (xi,yi) points
+inflection is a package that finds the inflection point of a planar curve which is given as  a data frame of discrete (xi,yi) points
 
 *homepage*: <https://github.com/dchristop/inflection>
 
