@@ -1,19 +1,14 @@
 # EasyBuild v5.0
 
-A high-level overview of changes in EasyBuild version 5.0 is listed below.
+A high-level overview of changes in EasyBuild version 5.0.0 is listed below.
 
 Click on a particular item for more information.
 
-!!! warning "EasyBuild version 5.0.0 is not released yet"
+!!! warning
 
-    EasyBuild v5.0.0 is still under active development via the `5.0.x` branches in the EasyBuild GitHub repositories.
-
-    Shortly after the release of EasyBuild v5.0.0, the `5.0.x` branches will be collapsed in the corresponding
-    `develop` branches, and the `5.0.x` branches will then only be used as a staging area for additional EasyBuild
-    v5.0.x releases.
-
-    The overview below is known to be incomplete, and will be gradually completed as we approach
-    the release of EasyBuild v5.0.0.
+    (Tue 18 March 2025)
+    The sections linked to from this overview below are known to be incomplete.
+    Extra information will be gradually added over the next couple of days.
 
 ---
 
@@ -155,5 +150,6 @@ Some functionality is being deprecated in EasyBuild v5.0, and is scheduled to be
 
 - [Beta releases and release candidates](release-candidates.md)
 - [GitHub Project board for EasyBuild v5.0](https://github.com/orgs/easybuilders/projects/18)
-- [Talk on EasyBuild 5.0 at EasyBuild User Meeting 2023](https://easybuild.io/eum23/#easybuild5)
-- [Talk on EasyBuild 5.0 at EasyBuild User Meeting 2024](https://easybuild.io/eum24/#eb5)
+- [Talk on EasyBuild 5.0 at 8th EasyBuild User Meeting (EUM'23)](https://easybuild.io/eum23/#easybuild5)
+- [Talk on EasyBuild 5.0 at 9th EasyBuild User Meeting (EUM'24)](https://easybuild.io/eum24/#eb5)
+- [Talk on EasyBuild 5.0 at 10th EasyBuild User Meeting (EUM'25)](https://easybuild.io/eum25/#eb5)
