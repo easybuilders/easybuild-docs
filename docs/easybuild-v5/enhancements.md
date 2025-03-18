@@ -147,7 +147,7 @@ The Easyconfig parameter `modextrapaths` has a new special key called
 `MODULE_LOAD_ENV_HEADERS` that allows to add search paths in the generated
 module according to `--module-search-path-headers`.
 
-```
+```python
 modextrapaths = {
     MODULE_LOAD_ENV_HEADERS: 'include/extra_dir',
 }
