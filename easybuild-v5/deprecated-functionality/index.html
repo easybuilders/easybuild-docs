@@ -8870,6 +8870,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#deprec_modextrapaths_append" class="md-nav__link">
+    <span class="md-ellipsis">
+      Easyconfig parameter modextrapaths_append
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deprec_allow_append_abs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Easyconfig parameter allow_append_abs_path
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deprec_allow_prepend_abs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Easyconfig parameter allow_prepend_abs_path
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -9064,6 +9091,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#deprec_modextrapaths_append" class="md-nav__link">
+    <span class="md-ellipsis">
+      Easyconfig parameter modextrapaths_append
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deprec_allow_append_abs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Easyconfig parameter allow_append_abs_path
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deprec_allow_prepend_abs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Easyconfig parameter allow_prepend_abs_path
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -9101,6 +9155,9 @@
 <li><a class="autorefs autorefs-internal" href="#gc3pie-job-backend">GC3Pie as job backend</a></li>
 <li><a class="autorefs autorefs-internal" title="Using optarch value without leading dash" href="#optarch-dash">Using <code>optarch</code> value without leading dash</a></li>
 <li><a class="autorefs autorefs-internal" title="COMPILER*_FLAGS attributes in Compiler class" href="#compiler-constants"><code>COMPILER*_FLAGS</code> attributes in <code>Compiler</code> class</a></li>
+<li><a class="autorefs autorefs-internal" title="Easyconfig parameter modextrapaths_append" href="#deprec_modextrapaths_append">Easyconfig parameter <code>modextrapaths_append</code></a></li>
+<li><a class="autorefs autorefs-internal" title="Easyconfig parameter allow_append_abs_path" href="#deprec_allow_append_abs">Easyconfig parameter <code>allow_append_abs_path</code></a></li>
+<li><a class="autorefs autorefs-internal" title="Easyconfig parameter allow_prepend_abs_path" href="#deprec_allow_prepend_abs">Easyconfig parameter <code>allow_prepend_abs_path</code></a></li>
 </ul>
 <p>If you trigger any deprecated functionality when using EasyBuild v5.0, a warning message will be printed.</p>
 <hr />
@@ -9256,6 +9313,37 @@ and are scheduled to be removed in EasyBuild v6.0.</p>
 <hr />
 <h2 id="compiler-constants"><code>COMPILER*_FLAGS</code> attributes in <code>Compiler</code> class<a class="headerlink" href="#compiler-constants" title="Permanent link">&para;</a></h2>
 <p><em>(replaced by <code>Compiler.COMPILER*_OPTIONS</code>, more info soon)</em></p>
+<hr />
+<h2 id="deprec_modextrapaths_append">Easyconfig parameter <code>modextrapaths_append</code><a class="headerlink" href="#deprec_modextrapaths_append" title="Permanent link">&para;</a></h2>
+<p>The functionality of <code>modextrapaths_append</code> is now implemented in
+<code>modextrapaths</code> through its <code>prepend</code> option:</p>
+<div class="highlight"><pre><span></span><code><span class="n">modextrapaths</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;ENV_VAR_NAME&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;paths&#39;</span><span class="p">:</span> <span class="s1">&#39;path/to/extra/subdir&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;prepend&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="deprec_allow_append_abs">Easyconfig parameter <code>allow_append_abs_path</code><a class="headerlink" href="#deprec_allow_append_abs" title="Permanent link">&para;</a></h2>
+<p>The functionality of <code>allow_append_abs_path</code> is now implemented in
+<code>modextrapaths</code>, which now accepts absolute paths by default and the position
+of paths can be controlled through its <code>prepend</code> option:</p>
+<div class="highlight"><pre><span></span><code><span class="n">modextrapaths</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;ENV_VAR_NAME&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;paths&#39;</span><span class="p">:</span> <span class="s1">&#39;/absolute/path/to/extra/subdir&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;prepend&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="deprec_allow_prepend_abs">Easyconfig parameter <code>allow_prepend_abs_path</code><a class="headerlink" href="#deprec_allow_prepend_abs" title="Permanent link">&para;</a></h2>
+<p>The functionality of <code>allow_prepend_abs_path</code> is now implemented in
+<code>modextrapaths</code>, which now accepts absolute paths by default:</p>
+<div class="highlight"><pre><span></span><code><span class="n">modextrapaths</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;ENV_VAR_NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;/absolute/path/to/extra/subdir&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
 
 
 
@@ -9276,7 +9364,7 @@ and are scheduled to be removed in EasyBuild v6.0.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 17, 2025 22:03:49">March 17, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 19, 2025 18:11:47">March 19, 2025</span>
   </span>
 
     

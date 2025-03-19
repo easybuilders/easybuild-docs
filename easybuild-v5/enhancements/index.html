@@ -8841,6 +8841,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#modextrapaths-revamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Revamp of easyconfig parameter modextrapaths
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configuremake-unrecognized-configure-options" class="md-nav__link">
     <span class="md-ellipsis">
       Let ConfigureMake generic easyblock error out on unrecognized configure options
@@ -9155,6 +9164,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#modextrapaths-revamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Revamp of easyconfig parameter modextrapaths
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configuremake-unrecognized-configure-options" class="md-nav__link">
     <span class="md-ellipsis">
       Let ConfigureMake generic easyblock error out on unrecognized configure options
@@ -9211,6 +9229,7 @@
 <li><a class="autorefs autorefs-internal" title="Provide control over how EasyBuild specifies path to header files during installation (via --search-path-cpp-headers)" href="#search-path-cpp-headers">Provide control over how EasyBuild specifies path to header files during installation (via <code>--search-path-cpp-headers</code>)</a></li>
 <li><a class="autorefs autorefs-internal" title="Provide control over how EasyBuild specifies path to libraries during installation (via --search-path-linker)" href="#search-path-linker">Provide control over how EasyBuild specifies path to libraries during installation (via <code>--search-path-linker</code>)</a></li>
 <li><a class="autorefs autorefs-internal" title="Support not using $PYTHONPATH to specify the location of installed Python packages (via --prefer-python-search-path)" href="#PYTHONPATH-vs-EBPYTHONPREFIXES">Support not using <code>$PYTHONPATH</code> to specify the location of installed Python packages (via <code>--prefer-python-search-path</code>)</a></li>
+<li><a class="autorefs autorefs-internal" title="Revamp of easyconfig parameter modextrapaths" href="#modextrapaths-revamp">Revamp of easyconfig parameter <code>modextrapaths</code></a></li>
 <li><a class="autorefs autorefs-internal" title="Detect Fortran .mod files in GCCcore installations" href="#mod-files">Detect Fortran <code>.mod</code> files in <code>GCCcore</code> installations</a></li>
 <li>[Let <code>ConfigureMake</code> generic easyblock error out on unknown <code>configure</code> options][configuremake-unknown-configure-options]</li>
 </ul>
@@ -9427,6 +9446,49 @@ still come into play, but with less precedence by default.</p>
 <h2 :=":" id="PYTHONPATH-vs-EBPYTHONPREFIXES">Support not using <code>$PYTHONPATH</code> to specify the location of installed Python packages (via <code>--prefer-python-search-path</code>)<a class="headerlink" href="#PYTHONPATH-vs-EBPYTHONPREFIXES" title="Permanent link">&para;</a></h2>
 <p><em>(more info soon)</em></p>
 <hr />
+<h2 :=":" id="modextrapaths-revamp">Revamp of easyconfig parameter <code>modextrapaths</code><a class="headerlink" href="#modextrapaths-revamp" title="Permanent link">&para;</a></h2>
+<p>The easyconfig parameter <code>modextrapaths</code> has become in EasyBuild 5.0 the only
+tool needed in easyconfigs to add extra search paths into the generated module
+file. The environment variables targeted in <code>modextrapaths</code> now can also be
+defined with a dictionary of options to fully control how their extra search
+paths will be added into the environment.</p>
+<div class="highlight"><pre><span></span><code><span class="n">modextrapaths</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;ENV_VAR_NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;extra/subdir&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;WEIRD_ENV_VAR&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;paths&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;another/subdir1&#39;</span><span class="p">,</span> <span class="s1">&#39;another/subdir2&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;delimiter&#39;</span><span class="p">:</span> <span class="s1">&#39;+&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;prepend&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The example above shows the standard definition of an environment variable
+<code>$ENV_VAR_NAME</code> that will get an extra path prepended to it. So the result in
+the environment once the module file is loaded will look like <code>$ENV_VAR_NAME =
+"/path/to/softwareroot/extra/subdir:/existing/path"</code>. On the other hand, the
+environment variable <code>$WEIRD_ENV_VAR</code> uses a custom delimiter <code>+</code> and its paths
+will be appended. So we can expect as result an environment variable that looks
+like <code>$WEIRD_ENV_VAR = "/existing/path+/path/to/softwareroot/another/subdir1+/path/to/softwareroot/another/subdir2"</code>.</p>
+<p>Complete list of options to <code>modextrapaths</code>:</p>
+<ul>
+<li><code>paths</code>: string with a single path or list of strings with multiple paths.
+  Paths are glob patterns and can be relative or absolute.</li>
+<li><code>delimiter</code>: character used as search path separator (default: <code>:</code>)</li>
+<li><code>prepend</code>: position of paths in the environment variable (default: <code>True</code>)</li>
+<li><code>var_type</code>: type of contents as defined in <code>easybuild.tools.modules.ModEnvVarType</code>
+  (default:<code>ModEnvVarType.PATH_WITH_FILES</code>)</li>
+</ul>
+<p>Another improvement in EasyBuild 5.0 is the addition of a global variable
+called <code>MODULE_LOAD_ENV_HEADERS</code> that can be used as a special key in
+<code>modextrapaths</code> to add extra search paths for headers according to <a class="autorefs autorefs-internal" title="Provide control over how generated modules update search path for header files (via --module-search-path-headers)" href="#module-search-path-headers">new option
+<code>--module-search-path-headers</code></a>.</p>
+<p>The revamp of <code>modextrapaths</code> renders several easyconfig parameters obsolete,
+which have become deprecated in EasyBuild 5.0:</p>
+<ul>
+<li><a class="autorefs autorefs-internal" title="Easyconfig parameter modextrapaths_append" href="../deprecated-functionality/#deprec_modextrapaths_append"><code>modextrapaths_append</code></a></li>
+<li><a class="autorefs autorefs-internal" title="Easyconfig parameter allow_append_abs_path" href="../deprecated-functionality/#deprec_allow_append_abs"><code>allow_append_abs_path</code></a></li>
+<li><a class="autorefs autorefs-internal" title="Easyconfig parameter allow_prepend_abs_path" href="../deprecated-functionality/#deprec_allow_prepend_abs"><code>allow_prepend_abs_path</code></a></li>
+</ul>
+<hr />
 <h2 :=":" id="configuremake-unrecognized-configure-options">Let <code>ConfigureMake</code> generic easyblock error out on unrecognized <code>configure</code> options<a class="headerlink" href="#configuremake-unrecognized-configure-options" title="Permanent link">&para;</a></h2>
 <p><em>(more info soon)</em></p>
 <hr />
@@ -9458,7 +9520,7 @@ build failure with the command line option <code>--fail-on-mod-files-gcccore</co
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 19, 2025 01:59:19">March 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 19, 2025 18:15:44">March 19, 2025</span>
   </span>
 
     
