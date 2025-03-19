@@ -126,3 +126,19 @@ The following checksum types are deprecated and should no longer be used: `md5`,
 ## `COMPILER*_FLAGS` attributes in `Compiler` class {: #compiler-constants }
 
 *(replaced by `Compiler.COMPILER*_OPTIONS`, more info soon)*
+
+---
+
+## Easyconfig parameter `modextrapaths_append` {: #deprec_modextrapaths_append }
+
+The functionality of `modextrapaths_append` is now implemented in
+`modextrapaths` through its `prepend` option:
+
+```python
+modextrapaths = {
+    'ENV_VAR_NAME': {
+        'paths': 'path/to/extra/subdir',
+        'preprend': False,
+    },
+}
+```
