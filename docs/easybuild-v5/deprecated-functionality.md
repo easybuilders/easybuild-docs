@@ -159,3 +159,16 @@ modextrapaths = {
     },
 }
 ```
+
+---
+
+## Easyconfig parameter `allow_prepend_abs_path` {: #deprec_allow_prepend_abs }
+
+The functionality of `allow_prepend_abs_path` is now implemented in
+`modextrapaths`, which now accepts absolute paths by default:
+
+```python
+modextrapaths = {
+    'ENV_VAR_NAME': '/absolute/path/to/extra/subdir',
+}
+```
