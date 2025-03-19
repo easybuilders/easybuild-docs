@@ -6,8 +6,8 @@ The default value for several EasyBuild configuration settings has been changed 
 
 **Changed default configuration in EasyBuild framework**
 
-- [RPATH linking is enabled by default (`--rpath`)][path]
-- [Trace output is enabled by default (`--trace`)][trace)]
+- [RPATH linking is enabled by default (`--rpath`)][rpath]
+- [Trace output is enabled by default (`--trace`)][trace]
 - [Including `extensions` statement in generated modules is enabled by default (`--module-extensions`)][module-extensions]
 - [Using `depends_on` for dependencies in generated modules is enabled by default (`module-depends-on`)][module-depends-on]
 - [Use Slurm as default job backend (`--job-backend`)][job-backend]
