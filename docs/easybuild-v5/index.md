@@ -81,6 +81,7 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 - [Provide control over how EasyBuild specifies path to header files during installation (via `--search-path-cpp-headers`)](enhancements.md#search-path-cpp-headers)
 - [Provide control over how EasyBuild specifies path to libraries during installation (via `--search-path-linker`)](enhancements.md#search-path-linker)
 - [Support not using `$PYTHONPATH` to specify the location of installed Python packages (via `--prefer-python-search-path`)](enhancements.md#PYTHONPATH-vs-EBPYTHONPREFIXES)
+- [Revamp of easyconfig parameter `modextrapaths`](enhancements.md#modextrapaths-revamp)
 - [Detect Fortran `.mod` files in `GCCcore` installations](enhancements.md#mod-files)
 - [Let `ConfigureMake` generic easyblock error out on unrecognized `configure` options](enhancements.md#configuremake-unrecognized-configure-options)
 
@@ -131,6 +132,9 @@ Some functionality is being deprecated in EasyBuild v5.0, and is scheduled to be
 - [GC3Pie as job backend](deprecated-functionality.md#gc3pie-job-backend)
 - [Using `optarch` value without leading dash](deprecated-functionality.md#optarch-dash)
 - [`COMPILER*_FLAGS` attributes in `Compiler` class](deprecated-functionality.md#compiler-constants) (replaced with `COMPILER*_OPTIONS`)
+- [Easyconfig parameter `modextrapaths_append`](deprecated-functionality.md#deprec_modextrapaths_append) (integrated in `modextrapaths`)
+- [Easyconfig parameter `allow_append_abs_path`](deprecated-functionality.md#deprec_allow_append_abs) (integrated in `modextrapaths`)
+- [Easyconfig parameter `allow_prepend_abs_path`](deprecated-functionality.md#deprec_allow_prepend_abs) (integrated in `modextrapaths`)
 
 ---
 
