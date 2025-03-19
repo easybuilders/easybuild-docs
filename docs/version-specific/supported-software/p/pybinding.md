@@ -4,7 +4,7 @@ search:
 ---
 # pybinding
 
-Pybinding is a Python package for numerical tight-binding  calculations in solid state physics.
+Pybinding is a Python package for numerical tight-binding calculations in solid state physics.
 
 *homepage*: <https://github.com/dean0x7d/pybinding>
 

@@ -4,7 +4,7 @@ search:
 ---
 # nifty
 
-A nifty library for 2D and 3D image segmentation, graph based segmentation an opt.  This library provided building blocks for segmentation algorithms and complex segmentation pipelines.
+A nifty library for 2D and 3D image segmentation, graph based segmentation an opt. This library provided building blocks for segmentation algorithms and complex segmentation pipelines.
 
 *homepage*: <https://github.com/DerThorsten/nifty/>
 

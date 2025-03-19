@@ -12,10 +12,6 @@ version | versionsuffix | toolchain
 --------|---------------|----------
 ``2.1.0`` |  | ``GCCcore/10.2.0``
 ``2.1.0`` |  | ``GCCcore/10.3.0``
-``2.1.0`` |  | ``GCCcore/8.2.0``
-``2.1.0`` |  | ``GCCcore/8.3.0``
-``2.1.0`` |  | ``GCCcore/9.3.0``
-``2.1.0`` |  | ``foss/2018b``
 ``2.2.0`` | ``-egl`` | ``GCCcore/10.2.0``
 ``2.2.0`` | ``-glx`` | ``GCCcore/10.2.0``
 ``2.2.0`` | ``-osmesa`` | ``GCCcore/10.2.0``
@@ -24,6 +20,7 @@ version | versionsuffix | toolchain
 ``2.2.0`` | ``-osmesa`` | ``GCCcore/11.2.0``
 ``2.2.0`` | ``-egl`` | ``GCCcore/11.3.0``
 ``2.2.0`` | ``-osmesa`` | ``GCCcore/11.3.0``
+``2.2.0`` | ``-egl`` | ``GCCcore/12.2.0``
 ``2.2.0`` | ``-egl`` | ``GCCcore/12.3.0``
 ``2.2.0`` | ``-osmesa`` | ``GCCcore/12.3.0``
 

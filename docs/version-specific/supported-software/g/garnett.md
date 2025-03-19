@@ -4,7 +4,7 @@ search:
 ---
 # garnett
 
-Garnett is a software package that faciliates automated cell type classification from single-cell expression data.
+Garnett is a software package that facilitates automated cell type classification from single-cell expression data.
 
 *homepage*: <https://cole-trapnell-lab.github.io/garnett>
 

@@ -11,12 +11,6 @@ Libsndfile is a C library for reading and writing files containing sampled sound
 version | toolchain
 --------|----------
 ``1.0.28`` | ``GCCcore/10.2.0``
-``1.0.28`` | ``GCCcore/6.4.0``
-``1.0.28`` | ``GCCcore/7.3.0``
-``1.0.28`` | ``GCCcore/8.2.0``
-``1.0.28`` | ``GCCcore/8.3.0``
-``1.0.28`` | ``GCCcore/9.3.0``
-``1.0.28`` | ``intel/2017a``
 ``1.0.31`` | ``GCCcore/10.3.0``
 ``1.0.31`` | ``GCCcore/11.2.0``
 ``1.1.0`` | ``GCCcore/11.3.0``

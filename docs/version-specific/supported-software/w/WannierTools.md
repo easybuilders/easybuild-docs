@@ -4,13 +4,12 @@ search:
 ---
 # WannierTools
 
-an open-source software package for novel topological materials
+WannierTools is an open source software that studies the physical properties of given tight-binding  model.
 
-*homepage*: <http://www.wanniertools.com/>
+*homepage*: <http://www.wanniertools.com>
 
 version | toolchain
 --------|----------
-``2.3.0`` | ``intel/2018a``
 ``2.5.1`` | ``intel/2020b``
 
 

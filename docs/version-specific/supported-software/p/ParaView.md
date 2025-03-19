@@ -6,15 +6,10 @@ search:
 
 ParaView is a scientific parallel visualizer.
 
-*homepage*: <http://www.paraview.org>
+*homepage*: <https://www.paraview.org>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``4.4.0`` |  | ``foss/2016a``
-``4.4.0`` | ``-mpi`` | ``gimkl/2.11.5``
-``4.4.0`` |  | ``intel/2016a``
-``5.1.2`` | ``-mpi`` | ``foss/2016b``
-``5.1.2`` | ``-mpi`` | ``intel/2016b``
 ``5.10.1`` | ``-mpi`` | ``foss/2022a``
 ``5.11.0`` | ``-mpi`` | ``foss/2022b``
 ``5.11.1`` | ``-mpi`` | ``foss/2022a``
@@ -23,21 +18,8 @@ version | versionsuffix | toolchain
 ``5.11.2`` |  | ``foss/2023a``
 ``5.12.0`` | ``-Qt5`` | ``foss/2023b``
 ``5.12.0`` |  | ``foss/2023b``
-``5.2.0`` | ``-mpi`` | ``foss/2016b``
-``5.2.0`` | ``-mpi`` | ``intel/2017a``
-``5.3.0`` | ``-mpi`` | ``foss/2016b``
-``5.4.1`` | ``-mpi`` | ``foss/2017b``
-``5.4.1`` | ``-mpi`` | ``foss/2018a``
-``5.4.1`` | ``-mpi`` | ``foss/2018b``
-``5.4.1`` | ``-Python-2.7.16-mpi`` | ``foss/2019b``
-``5.4.1`` | ``-mpi`` | ``intel/2017a``
-``5.4.1`` | ``-mpi`` | ``intel/2017b``
-``5.4.1`` | ``-mpi`` | ``intel/2018a``
-``5.5.2`` | ``-Python-2.7.15-mpi`` | ``foss/2018b``
-``5.6.2`` | ``-Python-3.7.4-mpi`` | ``foss/2019b``
-``5.6.2`` | ``-Python-3.7.4-mpi`` | ``intel/2019b``
-``5.8.0`` | ``-Python-3.8.2-mpi`` | ``foss/2020a``
-``5.8.0`` | ``-Python-3.8.2-mpi`` | ``intel/2020a``
+``5.13.2`` | ``-CUDA-12.1.1`` | ``foss/2023a``
+``5.13.2`` |  | ``foss/2023a``
 ``5.8.1`` | ``-mpi`` | ``foss/2020b``
 ``5.9.1`` | ``-mpi`` | ``foss/2021a``
 ``5.9.1`` | ``-mpi`` | ``foss/2021b``

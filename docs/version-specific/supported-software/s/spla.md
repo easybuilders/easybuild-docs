@@ -4,7 +4,7 @@ search:
 ---
 # spla
 
-SPLA provides specialized functions for linear algebra computations with a C++ and C interface,  which are inspired by requirements in computational material science codes.
+SPLA provides specialized functions for linear algebra computations with a C++ and C interface, which are inspired by requirements in computational material science codes.
 
 *homepage*: <https://github.com/eth-cscs/spla/>
 

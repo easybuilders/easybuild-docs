@@ -13,6 +13,7 @@ version | toolchain
 ``6.0.420`` | ``system``
 ``6.0`` | ``system``
 ``8.0.203`` | ``system``
+``8.0.302`` | ``system``
 ``8.0`` | ``system``
 
 

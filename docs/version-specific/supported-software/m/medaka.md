@@ -10,19 +10,12 @@ medaka is a tool to create a consensus sequence from nanopore sequencing data.
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.11.4`` | ``-Python-3.6.6`` | ``foss/2018b``
-``0.12.0`` | ``-Python-3.6.6`` | ``foss/2018b``
-``0.4.3`` | ``-Python-3.6.6`` | ``foss/2018b``
-``1.1.1`` | ``-Python-3.7.4`` | ``foss/2019b``
-``1.1.3`` | ``-Python-3.7.4`` | ``foss/2019b``
 ``1.11.3`` |  | ``foss/2022a``
 ``1.11.3`` |  | ``foss/2023a``
 ``1.12.0`` | ``-CUDA-12.1.1`` | ``foss/2023a``
 ``1.12.0`` |  | ``foss/2023a``
 ``1.12.1`` | ``-CUDA-12.1.1`` | ``foss/2023a``
 ``1.12.1`` |  | ``foss/2023a``
-``1.2.0`` | ``-Python-3.7.4`` | ``foss/2019b``
-``1.4.3`` | ``-Python-3.7.4`` | ``foss/2019b``
 ``1.4.3`` |  | ``foss/2020b``
 ``1.5.0`` |  | ``foss/2021a``
 ``1.6.0`` |  | ``foss/2021b``

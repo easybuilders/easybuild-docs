@@ -4,13 +4,12 @@ search:
 ---
 # IntelClusterChecker
 
-Verifies cluster components work together ― for   - better uptime and productivity and lower total  - cost of ownership (TCO)
+Intel Cluster Checker verifies the configuration and performance of Linux OS-based clusters. Anomalies and performance differences can be identified and practical resolutions provided.
 
-*homepage*: <https://software.intel.com/en-us/intel-cluster-checker>
+*homepage*: <https://software.intel.com/en-us/cluster-checker>
 
 version | toolchain
 --------|----------
-``2017.1.016`` | ``system``
 ``2021.5.0`` | ``system``
 
 

@@ -10,7 +10,6 @@ SLiM is an evolutionary simulation framework that combines a powerful engine for
 
 version | toolchain
 --------|----------
-``3.4`` | ``GCC/9.3.0``
 ``4.0`` | ``GCC/11.2.0``
 ``4.0.1`` | ``GCC/11.3.0``
 

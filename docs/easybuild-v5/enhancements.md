@@ -6,6 +6,7 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 
 - [New function to run shell commands: `run_shell_cmd`][run_shell_cmd]
 - [Interactive debugging of failing shell commands via `env.sh` and `cmd.sh` scripts][interactive-debugging-failing-shell-commands]
+- [New collection of easyconfig templates][collection-easyconfig-templates]
 - [Don't raise error when required extensions are not found when installing extensions in parallel][parallel-extensions-install]
 - [Mark support for installing extensions in parallel as stable (no longer experimental)][parallel-extensions-install-stable]
 - [Mark easystack support as stable (no longer experimental)][easystack-stable]
@@ -19,6 +20,7 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 - [Provide control over how EasyBuild specifies path to header files during installation (via `--search-path-cpp-headers`)][search-path-cpp-headers]
 - [Provide control over how EasyBuild specifies path to libraries during installation (via `--search-path-linker`)][search-path-linker]
 - [Support not using `$PYTHONPATH` to specify the location of installed Python packages (via `--prefer-python-search-path`)][PYTHONPATH-vs-EBPYTHONPREFIXES]
+- [Revamp of easyconfig parameter `modextrapaths`][modextrapaths-revamp]
 - [Detect Fortran `.mod` files in `GCCcore` installations][mod-files]
 - [Let `ConfigureMake` generic easyblock error out on unknown `configure` options][configuremake-unknown-configure-options]
 - [Require `download_instructions` to be specified][require_download_instructions]
@@ -35,6 +37,27 @@ See dedicated page on the new [`run_shell_cmd` function](run_shell_cmd.md).
 
 
 See [dedicated page](../interactive-debugging-failing-shell-commands.md).
+
+---
+
+## New collection of easyconfig templates {: #collection-easyconfig-templates}
+
+The veteran `TEMPLATE.eb` is replaced in EasyBuild 5.0 with a much larger
+[collection of easyconfig templates](https://github.com/easybuilders/easybuild-easyconfigs/tree/main/contrib/easyconfig-templates)
+for commonly used package archetypes.
+
+These templates are designed to be used as starting points for the development
+of new easyconfigs. Some are minimal with basic functionality and others are
+more complete and complex. All of them will help you save time by providing the
+structure of the easyconfig and several basic requirements already filled in. 
+
+The templates are located in the `contrib` folder of easyconfigs repository,
+aside from regular easyconfigs. They are organized in folders per toolchain
+generation. All of them are already adapted to the requirements of their
+generation, including the versions of toolchains and dependencies for instance.
+
+If you would like to see other types of easyconfigs added as templates, please
+[open an issue or pull request with your suggestion][contributing].
 
 ---
 
@@ -268,6 +291,57 @@ This option is also available as easyconfig parameter
 ## Support not using `$PYTHONPATH` to specify the location of installed Python packages (via `--prefer-python-search-path`) { : #PYTHONPATH-vs-EBPYTHONPREFIXES }
 
 *(more info soon)*
+
+---
+
+## Revamp of easyconfig parameter `modextrapaths` { : #modextrapaths-revamp }
+
+The easyconfig parameter `modextrapaths` has become in EasyBuild 5.0 the only
+tool needed in easyconfigs to add extra search paths into the generated module
+file. The environment variables targeted in `modextrapaths` now can also be
+defined with a dictionary of options to fully control how their extra search
+paths will be added into the environment.
+
+```python
+modextrapaths = {
+    'ENV_VAR_NAME': 'extra/subdir',
+    'WEIRD_ENV_VAR': {
+        'paths': ['another/subdir1', 'another/subdir2'],
+        'delimiter': '+',
+        'prepend': False,
+    },
+}
+```
+
+The example above shows the standard definition of an environment variable
+`$ENV_VAR_NAME` that will get an extra path prepended to it. So the result in
+the environment once the module file is loaded will look like `$ENV_VAR_NAME =
+"/path/to/softwareroot/extra/subdir:/existing/path"`. On the other hand, the
+environment variable `$WEIRD_ENV_VAR` uses a custom delimiter `+` and its paths
+will be appended. So we can expect as result an environment variable that looks
+like `$WEIRD_ENV_VAR = "/existing/path+/path/to/softwareroot/another/subdir1+/path/to/softwareroot/another/subdir2"`.
+
+Complete list of options to `modextrapaths`:
+
+- `paths`: string with a single path or list of strings with multiple paths.
+  Paths are glob patterns and can be relative or absolute.
+- `delimiter`: character used as search path separator (default: `:`)
+- `prepend`: position of paths in the environment variable (default: `True`)
+- `var_type`: type of contents as defined in `easybuild.tools.modules.ModEnvVarType`
+  (default:`ModEnvVarType.PATH_WITH_FILES`)
+
+Another improvement in EasyBuild 5.0 is the addition of a global variable
+called `MODULE_LOAD_ENV_HEADERS` that can be used as a special key in
+`modextrapaths` to add extra search paths for headers according to [new option
+`--module-search-path-headers`][module-search-path-headers].
+
+The revamp of `modextrapaths` renders several easyconfig parameters obsolete,
+which have become deprecated in EasyBuild 5.0:
+
+- [`modextrapaths_append`][deprec_modextrapaths_append]
+- [`allow_append_abs_path`][deprec_allow_append_abs]
+- [`allow_prepend_abs_path`][deprec_allow_prepend_abs]
+
 
 ---
 

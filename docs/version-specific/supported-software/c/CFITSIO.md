@@ -6,22 +6,10 @@ search:
 
 CFITSIO is a library of C and Fortran subroutines for reading and writing data files in FITS (Flexible Image Transport System) data format.
 
-*homepage*: <http://heasarc.gsfc.nasa.gov/fitsio/>
+*homepage*: <https://heasarc.gsfc.nasa.gov/fitsio/>
 
 version | toolchain
 --------|----------
-``3.38`` | ``foss/2016a``
-``3.38`` | ``intel/2016a``
-``3.41`` | ``GCCcore/5.4.0``
-``3.41`` | ``GCCcore/6.3.0``
-``3.41`` | ``intel/2016b``
-``3.42`` | ``GCCcore/6.4.0``
-``3.42`` | ``intel/2017b``
-``3.45`` | ``GCCcore/7.3.0``
-``3.45`` | ``intel/2018b``
-``3.47`` | ``GCCcore/8.2.0``
-``3.47`` | ``GCCcore/8.3.0``
-``3.48`` | ``GCCcore/9.3.0``
 ``3.49`` | ``GCCcore/10.2.0``
 ``3.49`` | ``GCCcore/10.3.0``
 ``3.49`` | ``GCCcore/11.2.0``

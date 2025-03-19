@@ -4,13 +4,12 @@ search:
 ---
 # smafa
 
-Smafa attempts to align or cluster pre-aligned biological sequences, handling sequences  which are all the same length.
+Biological sequence aligner for pre-aligned sequences.
 
 *homepage*: <https://github.com/wwood/smafa>
 
 version | toolchain
 --------|----------
-``0.4.0`` | ``GCCcore/8.2.0``
 ``0.8.0`` | ``GCC/12.3.0``
 
 

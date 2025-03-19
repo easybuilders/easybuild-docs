@@ -4,7 +4,7 @@ search:
 ---
 # cell2location
 
-Comprehensive mapping of tissue cell architecture via integrated  single cell and spatial transcriptomics (cell2location model)
+Comprehensive mapping of tissue cell architecture via integrated single cell and spatial transcriptomics (cell2location model)
 
 *homepage*: <https://github.com/BayraktarLab/cell2location/>
 

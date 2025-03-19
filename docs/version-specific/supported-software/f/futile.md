@@ -4,7 +4,7 @@ search:
 ---
 # futile
 
-The FUTILE project (Fortran Utilities for the Treatment of Innermost Level of Executables) is a set of modules   and wrapper that encapsulate the most common low-level operations of a Fortran code.
+The FUTILE project (Fortran Utilities for the Treatment of Innermost Level of Executables) is a set of modules  and wrapper that encapsulate the most common low-level operations of a Fortran code.
 
 *homepage*: <https://launchpad.net/futile>
 

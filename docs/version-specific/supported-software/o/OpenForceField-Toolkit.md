@@ -4,7 +4,7 @@ search:
 ---
 # OpenForceField-Toolkit
 
-The Open Force Field Toolkit provides implementations of the SMIRNOFF format,  parameterization engine, and other tools.
+The Open Force Field Toolkit provides implementations of the SMIRNOFF format, parameterization engine, and other tools.
 
 *homepage*: <https://github.com/openforcefield/openff-toolkit>
 

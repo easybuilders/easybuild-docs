@@ -4,7 +4,7 @@ search:
 ---
 # mandrake
 
-Fast visualisation of the population structure of pathogens  using Stochastic Cluster Embedding.
+Fast visualisation of the population structure of pathogens using Stochastic Cluster Embedding.
 
 *homepage*: <https://mandrake.readthedocs.io>
 

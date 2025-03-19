@@ -4,7 +4,7 @@ search:
 ---
 # nellie
 
-Napari plugin for automated organelle segmentation,  tracking, and hierarchical feature extraction in 2D/3D live-cell microscopy.
+Napari plugin for automated organelle segmentation, tracking, and hierarchical feature extraction in 2D/3D live-cell microscopy.
 
 *homepage*: <https://github.com/aelefebv/nellie/>
 

@@ -1,19 +1,14 @@
 # EasyBuild v5.0
 
-A high-level overview of changes in EasyBuild version 5.0 is listed below.
+A high-level overview of changes in EasyBuild version 5.0.0 is listed below.
 
 Click on a particular item for more information.
 
-!!! warning "EasyBuild version 5.0.0 is not released yet"
+!!! warning
 
-    EasyBuild v5.0.0 is still under active development via the `5.0.x` branches in the EasyBuild GitHub repositories.
-
-    Shortly after the release of EasyBuild v5.0.0, the `5.0.x` branches will be collapsed in the corresponding
-    `develop` branches, and the `5.0.x` branches will then only be used as a staging area for additional EasyBuild
-    v5.0.x releases.
-
-    The overview below is known to be incomplete, and will be gradually completed as we approach
-    the release of EasyBuild v5.0.0.
+    (Tue 18 March 2025)
+    The sections linked to from this overview below are known to be incomplete.
+    Extra information will be gradually added over the next couple of days.
 
 ---
 
@@ -72,6 +67,7 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 
 - [New function to run shell commands: `run_shell_cmd`](run_shell_cmd.md)
 - [Interactive debugging of failing shell commands via `env.sh` and `cmd.sh` scripts](../interactive-debugging-failing-shell-commands.md)
+- [New collection of easyconfig templates](enhancements.md#collection-easyconfig-templates)
 - [Don't raise error when required extensions are not found when installing extensions in parallel](enhancements.md#parallel-extensions-install)
 - [Mark support for installing extensions in parallel as stable (no longer experimental)](enhancements.md#parallel-extensions-install-stable)
 - [Mark easystack support as stable (no longer experimental)](enhancements.md#easystack-stable)
@@ -85,6 +81,7 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 - [Provide control over how EasyBuild specifies path to header files during installation (via `--search-path-cpp-headers`)](enhancements.md#search-path-cpp-headers)
 - [Provide control over how EasyBuild specifies path to libraries during installation (via `--search-path-linker`)](enhancements.md#search-path-linker)
 - [Support not using `$PYTHONPATH` to specify the location of installed Python packages (via `--prefer-python-search-path`)](enhancements.md#PYTHONPATH-vs-EBPYTHONPREFIXES)
+- [Revamp of easyconfig parameter `modextrapaths`](enhancements.md#modextrapaths-revamp)
 - [Detect Fortran `.mod` files in `GCCcore` installations](enhancements.md#mod-files)
 - [Let `ConfigureMake` generic easyblock error out on unrecognized `configure` options](enhancements.md#configuremake-unrecognized-configure-options)
 
@@ -135,6 +132,9 @@ Some functionality is being deprecated in EasyBuild v5.0, and is scheduled to be
 - [GC3Pie as job backend](deprecated-functionality.md#gc3pie-job-backend)
 - [Using `optarch` value without leading dash](deprecated-functionality.md#optarch-dash)
 - [`COMPILER*_FLAGS` attributes in `Compiler` class](deprecated-functionality.md#compiler-constants) (replaced with `COMPILER*_OPTIONS`)
+- [Easyconfig parameter `modextrapaths_append`](deprecated-functionality.md#deprec_modextrapaths_append) (integrated in `modextrapaths`)
+- [Easyconfig parameter `allow_append_abs_path`](deprecated-functionality.md#deprec_allow_append_abs) (integrated in `modextrapaths`)
+- [Easyconfig parameter `allow_prepend_abs_path`](deprecated-functionality.md#deprec_allow_prepend_abs) (integrated in `modextrapaths`)
 
 ---
 
@@ -155,5 +155,6 @@ Some functionality is being deprecated in EasyBuild v5.0, and is scheduled to be
 
 - [Beta releases and release candidates](release-candidates.md)
 - [GitHub Project board for EasyBuild v5.0](https://github.com/orgs/easybuilders/projects/18)
-- [Talk on EasyBuild 5.0 at EasyBuild User Meeting 2023](https://easybuild.io/eum23/#easybuild5)
-- [Talk on EasyBuild 5.0 at EasyBuild User Meeting 2024](https://easybuild.io/eum24/#eb5)
+- [Talk on EasyBuild 5.0 at 8th EasyBuild User Meeting (EUM'23)](https://easybuild.io/eum23/#easybuild5)
+- [Talk on EasyBuild 5.0 at 9th EasyBuild User Meeting (EUM'24)](https://easybuild.io/eum24/#eb5)
+- [Talk on EasyBuild 5.0 at 10th EasyBuild User Meeting (EUM'25)](https://easybuild.io/eum25/#eb5)

@@ -4,7 +4,7 @@ search:
 ---
 # LIANA
 
-LIANA: a LIgand-receptor ANalysis frAmework. LIANA enables the use of any   combination of ligand-receptor methods and resources, and their consensus.
+LIANA: a LIgand-receptor ANalysis frAmework. LIANA enables the use of any  combination of ligand-receptor methods and resources, and their consensus.
 
 *homepage*: <https://saezlab.github.io/liana/>
 

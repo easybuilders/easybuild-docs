@@ -18,6 +18,9 @@ Some functionality is being deprecated in EasyBuild v5.0, and will no longer be 
 - [GC3Pie as job backend][gc3pie-job-backend]
 - [Using `optarch` value without leading dash][optarch-dash]
 - [`COMPILER*_FLAGS` attributes in `Compiler` class][compiler-constants]
+- [Easyconfig parameter `modextrapaths_append`][deprec_modextrapaths_append]
+- [Easyconfig parameter `allow_append_abs_path`][deprec_allow_append_abs]
+- [Easyconfig parameter `allow_prepend_abs_path`][deprec_allow_prepend_abs]
 
 If you trigger any deprecated functionality when using EasyBuild v5.0, a warning message will be printed.
 
@@ -126,3 +129,49 @@ The following checksum types are deprecated and should no longer be used: `md5`,
 ## `COMPILER*_FLAGS` attributes in `Compiler` class {: #compiler-constants }
 
 *(replaced by `Compiler.COMPILER*_OPTIONS`, more info soon)*
+
+---
+
+## Easyconfig parameter `modextrapaths_append` {: #deprec_modextrapaths_append }
+
+The functionality of `modextrapaths_append` is now implemented in
+`modextrapaths` through its `prepend` option:
+
+```python
+modextrapaths = {
+    'ENV_VAR_NAME': {
+        'paths': 'path/to/extra/subdir',
+        'prepend': False,
+    },
+}
+```
+
+---
+
+## Easyconfig parameter `allow_append_abs_path` {: #deprec_allow_append_abs }
+
+The functionality of `allow_append_abs_path` is now implemented in
+`modextrapaths`, which now accepts absolute paths by default and the position
+of paths can be controlled through its `prepend` option:
+
+```python
+modextrapaths = {
+    'ENV_VAR_NAME': {
+        'paths': '/absolute/path/to/extra/subdir',
+        'prepend': False,
+    },
+}
+```
+
+---
+
+## Easyconfig parameter `allow_prepend_abs_path` {: #deprec_allow_prepend_abs }
+
+The functionality of `allow_prepend_abs_path` is now implemented in
+`modextrapaths`, which now accepts absolute paths by default:
+
+```python
+modextrapaths = {
+    'ENV_VAR_NAME': '/absolute/path/to/extra/subdir',
+}
+```

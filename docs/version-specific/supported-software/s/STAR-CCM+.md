@@ -4,13 +4,12 @@ search:
 ---
 # STAR-CCM+
 
-STAR-CCM+ is a complete multidisciplinary platform for the simulation of products and  designs operating under real-world conditions.
+STAR-CCM+ is a multiphysics computational fluid dynamics (CFD) software for the simulation of products operating under real-world conditions.
 
 *homepage*: <https://mdx.plm.automation.siemens.com/star-ccm-plus>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``13.04.011`` |  | ``system``
 ``17.02.008`` | ``-r8`` | ``system``
 ``17.02.008`` |  | ``system``
 ``17.04.008`` | ``-r8`` | ``system``

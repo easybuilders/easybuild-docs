@@ -4,7 +4,7 @@ search:
 ---
 # jupyter-server-proxy
 
-Jupyter Server Proxy lets you run arbitrary external processes (such as RStudio, Shiny Server, Syncthing, PostgreSQL, Code Server, etc) alongside your notebook server and provide authenticated web access to them     using a path like /rstudio next to others like /lab. Alongside the python package that provides the main functionality, the JupyterLab extension (@jupyterlab/server-proxy) provides buttons in the JupyterLab launcher window to get to RStudio for example.
+Jupyter Server Proxy lets you run arbitrary external processes (such as RStudio, Shiny Server, Syncthing, PostgreSQL, Code Server, etc) alongside your notebook server and provide authenticated web access to them using a path like /rstudio next to others like /lab. Alongside the python package that provides the main functionality, the JupyterLab extension (@jupyterlab/server-proxy) provides buttons in the JupyterLab launcher window to get to RStudio for example.
 
 *homepage*: <https://github.com/jupyterhub/jupyter-server-proxy>
 

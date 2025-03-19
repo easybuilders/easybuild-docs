@@ -10,8 +10,6 @@ bustools is a program for manipulating BUS files for single cell RNA-Seq dataset
 
 version | toolchain
 --------|----------
-``0.40.0`` | ``GCCcore/9.3.0``
-``0.40.0`` | ``foss/2018b``
 ``0.43.1`` | ``GCCcore/11.3.0``
 
 

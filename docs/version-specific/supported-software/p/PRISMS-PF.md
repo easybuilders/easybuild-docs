@@ -10,8 +10,6 @@ PRISMS-PF is a powerful, massively parallel finite element code for conducting p
 
 version | toolchain
 --------|----------
-``2.1.1`` | ``foss/2019a``
-``2.1.1`` | ``intel/2019a``
 ``2.2`` | ``foss/2021a``
 
 

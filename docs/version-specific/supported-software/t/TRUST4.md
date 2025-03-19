@@ -4,7 +4,7 @@ search:
 ---
 # TRUST4
 
-Tcr Receptor Utilities for Solid Tissue (TRUST) is a computational tool to  analyze TCR and BCR sequences using unselected RNA sequencing data, profiled  from solid tissues, including tumors. TRUST4 performs de novo assembly on V, J,  C genes including the hypervariable complementarity-determining region 3 (CDR3)  and reports consensus of BCR/TCR sequences.
+Tcr Receptor Utilities for Solid Tissue (TRUST) is a computational tool to analyze TCR and BCR sequences using unselected RNA sequencing data, profiled from solid tissues, including tumors. TRUST4 performs de novo assembly on V, J, C genes including the hypervariable complementarity-determining region 3 (CDR3) and reports consensus of BCR/TCR sequences.
 
 *homepage*: <https://github.com/liulab-dfci/TRUST4>
 

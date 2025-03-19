@@ -10,8 +10,6 @@ DIRAC: Program for Atomic and Molecular Direct Iterative Relativistic All-electr
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``19.0`` | ``-Python-2.7.18-int64`` | ``intel/2020a``
-``19.0`` | ``-Python-2.7.18-mpi-int64`` | ``intel/2020a``
 ``22.0`` |  | ``foss/2021a``
 ``22.0`` | ``-int64`` | ``intel/2021a``
 ``22.0`` |  | ``intel/2021a``

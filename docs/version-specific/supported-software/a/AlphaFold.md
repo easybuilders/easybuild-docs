@@ -24,6 +24,7 @@ version | versionsuffix | toolchain
 ``2.3.0`` | ``-CUDA-11.4.1`` | ``foss/2021b``
 ``2.3.1`` | ``-CUDA-11.7.0`` | ``foss/2022a``
 ``2.3.1`` |  | ``foss/2022a``
+``2.3.2`` | ``-CUDA-12.1.1`` | ``foss/2023a``
 ``2.3.4`` | ``-CUDA-11.7.0-ColabFold`` | ``foss/2022a``
 ``2.3.4`` | ``-ColabFold`` | ``foss/2022a``
 

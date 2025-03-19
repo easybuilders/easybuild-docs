@@ -6,20 +6,10 @@ search:
 
 A parallel sparse direct solver
 
-*homepage*: <http://graal.ens-lyon.fr/MUMPS/>
+*homepage*: <https://mumps-solver.org>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``5.1.2`` | ``-metis`` | ``foss/2017b``
-``5.2.1`` | ``-metis`` | ``foss/2018b``
-``5.2.1`` | ``-metis-seq`` | ``foss/2019a``
-``5.2.1`` | ``-metis`` | ``foss/2019a``
-``5.2.1`` | ``-metis`` | ``foss/2019b``
-``5.2.1`` | ``-metis`` | ``foss/2020a``
-``5.2.1`` | ``-metis-seq`` | ``intel/2019a``
-``5.2.1`` | ``-metis`` | ``intel/2019a``
-``5.2.1`` | ``-metis`` | ``intel/2019b``
-``5.2.1`` | ``-metis`` | ``intel/2020a``
 ``5.3.5`` | ``-metis`` | ``foss/2020b``
 ``5.3.5`` | ``-metis`` | ``intel/2020b``
 ``5.4.0`` | ``-metis`` | ``foss/2021a``
@@ -33,6 +23,7 @@ version | versionsuffix | toolchain
 ``5.6.1`` | ``-metis`` | ``foss/2023b``
 ``5.6.1`` | ``-metis-seq`` | ``gomkl/2023a``
 ``5.7.2`` | ``-parmetis`` | ``foss/2023b``
+``5.7.2`` | ``-metis`` | ``foss/2024a``
 ``5.7.2`` | ``-parmetis`` | ``intel/2023b``
 
 

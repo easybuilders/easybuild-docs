@@ -6,29 +6,11 @@ search:
 
 FLTK is a cross-platform C++ GUI toolkit for UNIX/Linux (X11), Microsoft Windows,  and MacOS X. FLTK provides modern GUI functionality without the bloat and supports 3D graphics via OpenGL  and its built-in GLUT emulation.
 
-*homepage*: <http://www.fltk.org>
+*homepage*: <https://www.fltk.org>
 
 version | toolchain
 --------|----------
-``1.3.3`` | ``foss/2016a``
-``1.3.3`` | ``foss/2016b``
-``1.3.3`` | ``intel/2016a``
-``1.3.3`` | ``intel/2016b``
-``1.3.4`` | ``foss/2017b``
-``1.3.4`` | ``foss/2018a``
-``1.3.4`` | ``foss/2018b``
-``1.3.4`` | ``fosscuda/2017b``
-``1.3.4`` | ``fosscuda/2018a``
-``1.3.4`` | ``fosscuda/2018b``
-``1.3.4`` | ``intel/2017a``
-``1.3.4`` | ``intel/2017b``
-``1.3.4`` | ``intel/2018a``
-``1.3.4`` | ``intel/2018b``
-``1.3.4`` | ``intelcuda/2017b``
-``1.3.5`` | ``GCC/8.2.0-2.31.1``
-``1.3.5`` | ``GCC/8.3.0``
 ``1.3.5`` | ``GCCcore/10.2.0``
-``1.3.5`` | ``GCCcore/9.3.0``
 ``1.3.6`` | ``GCCcore/10.3.0``
 ``1.3.7`` | ``GCCcore/11.2.0``
 ``1.3.8`` | ``GCCcore/11.3.0``

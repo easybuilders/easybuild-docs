@@ -4,12 +4,14 @@ search:
 ---
 # NECAT
 
-NECAT is an error correction and de-novo assembly tool for Nanopore long noisy reads.).
+NECAT is an error correction and de-novo assembly tool for Nanopore long noisy reads.
 
 *homepage*: <https://github.com/xiaochuanle/NECAT>
 
 version | toolchain
 --------|----------
+``0.0.1`` | ``GCCcore/12.3.0``
+``0.0.1`` | ``GCCcore/13.2.0``
 ``0.0.1`` | ``foss/2023a``
 
 

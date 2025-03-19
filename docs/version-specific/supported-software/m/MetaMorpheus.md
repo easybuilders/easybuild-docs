@@ -10,7 +10,6 @@ MetaMorpheus is a bottom-up proteomics database search software  with integrated
 
 version | toolchain
 --------|----------
-``0.0.320`` | ``GCCcore/10.3.0``
 ``1.0.5`` | ``system``
 
 

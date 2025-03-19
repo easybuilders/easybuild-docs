@@ -10,7 +10,6 @@ FIRESTARTER: A Processor Stress Test Utility. FIRESTARTER maximizes the energy c
 
 version | toolchain
 --------|----------
-``2.0`` | ``gcccuda/2020a``
 ``2.0`` | ``gcccuda/2020b``
 
 

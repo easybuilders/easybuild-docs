@@ -10,6 +10,8 @@ A library for generating and evaluating synthetic tabular data.
 
 version | toolchain
 --------|----------
+``0.2.10`` | ``foss/2022b``
+``0.2.11`` | ``foss/2023b``
 ``0.2.4`` | ``foss/2022a``
 
 

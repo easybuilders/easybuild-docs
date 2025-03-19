@@ -4,7 +4,7 @@ search:
 ---
 # e3nn
 
-Euclidean neural networks (e3nn) is a python library based on pytorch to create equivariant  neural networks for the group O(3).
+Euclidean neural networks (e3nn) is a python library based on pytorch to create equivariant neural networks for the group O(3).
 
 *homepage*: <https://e3nn.org/>
 

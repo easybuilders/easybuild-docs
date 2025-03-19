@@ -10,7 +10,6 @@ PyOpenCL lets you access GPUs and other massively parallel compute devices from 
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2020.2.2`` | ``-Python-3.7.4`` | ``fosscuda/2019b``
 ``2021.1.2`` |  | ``foss/2020b``
 ``2021.1.2`` |  | ``fosscuda/2020b``
 ``2021.1.2`` |  | ``intel/2020b``

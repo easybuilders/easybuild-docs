@@ -4,14 +4,14 @@ search:
 ---
 # Cluster-Buster
 
-Cluster-Buster: Finding dense clusters of motifs in DNA sequences
+Cluster-Buster is a program for finding interesting functional regions,  such as transcriptional enhancers, in DNA sequences.
 
-*homepage*: <https://github.com/weng-lab/cluster-buster/>
+*homepage*: <https://github.com/weng-lab/cluster-buster>
 
 version | toolchain
 --------|----------
-``20160106`` | ``intel/2016a``
 ``20200507`` | ``GCC/12.2.0``
+``20240927`` | ``GCC/12.3.0``
 
 
 *(quick links: [(all)](../index.md) - [0](../0/index.md) - [a](../a/index.md) - [b](../b/index.md) - [c](../c/index.md) - [d](../d/index.md) - [e](../e/index.md) - [f](../f/index.md) - [g](../g/index.md) - [h](../h/index.md) - [i](../i/index.md) - [j](../j/index.md) - [k](../k/index.md) - [l](../l/index.md) - [m](../m/index.md) - [n](../n/index.md) - [o](../o/index.md) - [p](../p/index.md) - [q](../q/index.md) - [r](../r/index.md) - [s](../s/index.md) - [t](../t/index.md) - [u](../u/index.md) - [v](../v/index.md) - [w](../w/index.md) - [x](../x/index.md) - [y](../y/index.md) - [z](../z/index.md))*

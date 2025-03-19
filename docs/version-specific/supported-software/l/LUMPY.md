@@ -10,7 +10,6 @@ A probabilistic framework for structural variant discovery.
 
 version | toolchain
 --------|----------
-``0.2.13`` | ``foss/2016b``
 ``0.3.1`` | ``foss/2020b``
 
 

@@ -132,7 +132,7 @@ nav:
       - (overview): easybuild-v5/index.md
       - Enhancements in EasyBuild v5.0: easybuild-v5/enhancements.md
       - Run shell commands function (`run_shell_cmd`): easybuild-v5/run_shell_cmd.md
-      - Changes in default configuration in EasyBuild v5.0: easybuild-v5/changes-in-default-configuration.md
+      - Changes in default configuration in EasyBuild v5.0: easybuild-v5/changes.md
       - Deprecated functionality in EasyBuild v5.0: easybuild-v5/deprecated-functionality.md
       - Removed functionality in EasyBuild v5.0: easybuild-v5/removed-functionality.md
       - Known issues in EasyBuild v5.0: easybuild-v5/known-issues.md
@@ -166,7 +166,7 @@ extra:
     provider: google
     property: G-BLVCH6991S
   easybuild:
-    version: 4.9.4
+    version: 5.0.0
   # add links in bottom right
   social:
     - icon: fontawesome/brands/twitter
