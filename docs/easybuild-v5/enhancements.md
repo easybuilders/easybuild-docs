@@ -6,7 +6,6 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 
 - [New function to run shell commands: `run_shell_cmd`][run_shell_cmd]
 - [Interactive debugging of failing shell commands via `env.sh` and `cmd.sh` scripts][interactive-debugging-failing-shell-commands]
-- [Don't raise error when required extensions are not found when installing extensions in parallel][parallel-extensions-install]
 - [Mark support for installing extensions in parallel as stable (no longer experimental)][parallel-extensions-install-stable]
 - [Mark easystack support as stable (no longer experimental)][easystack-stable]
 - [Reproducible tarballs for sources created via `git_config`][reproducible-tarballs-git_config]
@@ -51,13 +50,6 @@ codes from external processes executed through `run_shell_cmd` or HTTP response
 status codes are reported in the corresponding logs.
 
 ---
-
-## Don't raise error when required extensions are not found when installing extensions in parallel {: #parallel-extensions-install }
-
-*(more info soon)*
-
----
-
 
 ## Mark support for installing extensions in parallel as stable (no longer experimental) {: #parallel-extensions-install-stable }
 
