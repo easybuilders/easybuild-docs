@@ -285,7 +285,7 @@ modextrapaths = {
     'WEIRD_ENV_VAR': {
         'paths': ['another/subdir1', 'another/subdir2'],
         'delimiter': '+',
-        'preprend': False,
+        'prepend': False,
     },
 }
 ```
@@ -301,11 +301,11 @@ like `$WEIRD_ENV_VAR = "/existing/path+/path/to/softwareroot/another/subdir1+/pa
 Complete list of options to `modextrapaths`:
 
 - `paths`: string with a single path or list of strings with multiple paths.
-Paths are glob patterns and can be relative or absolute.
+  Paths are glob patterns and can be relative or absolute.
 - `delimiter`: character used as search path separator (default: `:`)
 - `prepend`: position of paths in the environment variable (default: `True`)
 - `var_type`: type of contents as defined in `easybuild.tools.modules.ModEnvVarType`
-(default:`ModEnvVarType.PATH_WITH_FILES`)
+  (default:`ModEnvVarType.PATH_WITH_FILES`)
 
 Another improvement in EasyBuild 5.0 is the addition of a global variable
 called `MODULE_LOAD_ENV_HEADERS` that can be used as a special key in

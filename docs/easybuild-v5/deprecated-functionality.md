@@ -141,7 +141,7 @@ The functionality of `modextrapaths_append` is now implemented in
 modextrapaths = {
     'ENV_VAR_NAME': {
         'paths': 'path/to/extra/subdir',
-        'preprend': False,
+        'prepend': False,
     },
 }
 ```
@@ -158,7 +158,7 @@ of paths can be controlled through its `prepend` option:
 modextrapaths = {
     'ENV_VAR_NAME': {
         'paths': '/absolute/path/to/extra/subdir',
-        'preprend': False,
+        'prepend': False,
     },
 }
 ```
