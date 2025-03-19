@@ -6,6 +6,7 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 
 - [New function to run shell commands: `run_shell_cmd`][run_shell_cmd]
 - [Interactive debugging of failing shell commands via `env.sh` and `cmd.sh` scripts][interactive-debugging-failing-shell-commands]
+- [New collection of easyconfig templates][collection-easyconfig-templates]
 - [Don't raise error when required extensions are not found when installing extensions in parallel][parallel-extensions-install]
 - [Mark support for installing extensions in parallel as stable (no longer experimental)][parallel-extensions-install-stable]
 - [Mark easystack support as stable (no longer experimental)][easystack-stable]
@@ -34,6 +35,27 @@ See dedicated page on the new [`run_shell_cmd` function](run_shell_cmd.md).
 
 
 See [dedicated page](../interactive-debugging-failing-shell-commands.md).
+
+---
+
+## New collection of easyconfig templates {: #collection-easyconfig-templates}
+
+The veteran `TEMPLATE.eb` is replaced in EasyBuild 5.0 with a much larger
+[collection of easyconfig templates](https://github.com/easybuilders/easybuild-easyconfigs/tree/main/contrib/easyconfig-templates)
+for commonly used package archetypes.
+
+These templates are designed to be used as starting points for the development
+of new easyconfigs. Some are minimal with basic functionality and others are
+more complete and complex. All of them will help you save time by providing the
+structure of the easyconfig and several basic requirements already filled in. 
+
+The templates are located in the `contrib` folder of easyconfigs repository,
+aside from regular easyconfigs. They are organized in folders per toolchain
+generation. All of them are already adapted to the requirements of their
+generation, including the versions of toolchains and dependencies for instance.
+
+If you would like to see other types of easyconfigs added as templates, please
+[open an issue or pull request with your suggestion][contributing].
 
 ---
 

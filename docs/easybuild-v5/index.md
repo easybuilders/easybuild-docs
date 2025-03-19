@@ -67,6 +67,7 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 
 - [New function to run shell commands: `run_shell_cmd`](run_shell_cmd.md)
 - [Interactive debugging of failing shell commands via `env.sh` and `cmd.sh` scripts](../interactive-debugging-failing-shell-commands.md)
+- [New collection of easyconfig templates](enhancements.md#collection-easyconfig-templates)
 - [Don't raise error when required extensions are not found when installing extensions in parallel](enhancements.md#parallel-extensions-install)
 - [Mark support for installing extensions in parallel as stable (no longer experimental)](enhancements.md#parallel-extensions-install-stable)
 - [Mark easystack support as stable (no longer experimental)](enhancements.md#easystack-stable)
