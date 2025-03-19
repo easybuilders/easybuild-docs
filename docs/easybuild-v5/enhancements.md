@@ -270,6 +270,56 @@ This option is also available as easyconfig parameter
 
 ---
 
+## Revamp of easyconfig parameter `modextrapaths` { : #modextrapaths-revamp }
+
+The easyconfig parameter `modextrapaths` has become in EasyBuild 5.0 the only
+tool needed in easyconfigs to add extra search paths into the generated module
+file. The environment variables targeted in `modextrapaths` now can also be
+defined with a dictionary of options to fully control how their extra search
+paths will be added into the environment.
+
+```python
+modextrapaths = {
+    'ENV_VAR_NAME': 'extra/subdir',
+    'WEIRD_ENV_VAR': {
+        'paths': ['another/subdir1', 'another/subdir2'],
+        'delimiter': '+',
+        'preprend': False,
+    },
+}
+```
+
+The example above shows the standard definition of an environment variable
+`$ENV_VAR_NAME` that will get an extra path prepended to it. So the result in
+the environment once the module file is loaded will look like `$ENV_VAR_NAME =
+"/path/to/softwareroot/extra/subdir:/existing/path"`. On the other hand, the
+environment variable `$WEIRD_ENV_VAR` uses a custom delimiter `+` and its paths
+will be appended. So we can expect as result an environment variable that looks
+like `$WEIRD_ENV_VAR = "/existing/path+/path/to/softwareroot/another/subdir1+/path/to/softwareroot/another/subdir2"`.
+
+Complete list of options to `modextrapaths`:
+
+- `paths`: string with a single path or list of strings with multiple paths.
+Paths are glob patterns and can be relative or absolute.
+- `delimiter`: character used as search path separator (default: `:`)
+- `prepend`: position of paths in the environment variable (default: `True`)
+- `var_type`: type of contents as defined in `easybuild.tools.modules.ModEnvVarType`
+(default:`ModEnvVarType.PATH_WITH_FILES`)
+
+Another improvement in EasyBuild 5.0 is the addition of a global variable
+called `MODULE_LOAD_ENV_HEADERS` that can be used as a special key in
+`modextrapaths` to add extra search paths for headers according to [new option
+`--module-search-path-headers`][module-search-path-headers].
+
+The revamp of `modextrapaths` renders several easyconfig parameters obsolete,
+which have become deprecated in EasyBuild 5.0:
+
+- [`modextrapaths_append`][deprec_modextrapaths_append]
+- [`allow_append_abs_path`][deprec_allow_append_abs]
+- [`allow_prepend_abs_path`][deprec_allow_prepend_abs]
+
+---
+
 ## Let `ConfigureMake` generic easyblock error out on unrecognized `configure` options { : #configuremake-unrecognized-configure-options }
 
 *(more info soon)*
