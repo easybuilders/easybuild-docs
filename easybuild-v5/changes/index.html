@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://docs.easybuild.io/easybuild-v5/changes/">
       
       
+        <link rel="prev" href="../run_shell_cmd/">
+      
+      
+        <link rel="next" href="../deprecated-functionality/">
       
       
       <link rel="icon" href="../../favicon.ico">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Changed default configuration or behaviour in EasyBuild v5.0 - EasyBuild - building software with ease</title>
+        <title>Changes in default configuration in EasyBuild v5.0 - EasyBuild - building software with ease</title>
       
     
     
@@ -121,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Changed default configuration or behaviour in EasyBuild v5.0
+              Changes in default configuration in EasyBuild v5.0
             
           </span>
         </div>
@@ -8582,17 +8586,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" checked>
         
           
           <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
@@ -8607,7 +8613,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_17">
             <span class="md-nav__icon md-icon"></span>
             EasyBuild v5.0
@@ -8684,10 +8690,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../changes-in-default-configuration.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Changes in default configuration in EasyBuild v5.0
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -8697,6 +8724,215 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      RPATH linking is enabled by default (--rpath)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trace output is enabled by default (--trace)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Including extensions statement in generated modules is enabled by default (module-extensions)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-depends-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using depends_on for dependencies in generated modules is enabled by default (module-depends-on)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#job-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Slurm as default job backend (job-backend)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#max-parallel-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default maximum build parallelism is set to 16 (max-parallel)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dry-run-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change semantics of --dry-run (-D), so it doesn't imply --robot (-r)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifying-checksums" class="md-nav__link">
+    <span class="md-ellipsis">
+      Move verifying of checksums from source to fetch step, to include it with --fetch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lib-lib64-symlink" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create lib to lib64 symlink (and vice versa) before running postinstallcmds
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sha256" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use sha256 as the default checksum type
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#XDG_CONFIG_DIRS_default" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use default value $XDG_CONFIG_DIRS from XDG basedir spec: /etc/xdg (instead of /etc)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#XDG_CONFIG_DIRS_order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reverse order for parsing files in $XDG_CONFIG_DIRS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unresolved-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Don't allow unresolved templates in easyconfig parameters by default
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make_extension_string" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refactor make_extension_string method in EasyBlock class
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extract_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change default for change_into_dir option in extract_file function to to False
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toolchain-get-flag-dash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change Toolchain.get_flag so it doesn't automatically prepend a dash (-) to compiler
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changes.md#patch-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enforce correct .patch(.*) extension for patch files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sanity-check-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run sanity checks commands from an empty temporary directory rather than the software install directory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-toolchain-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Only allow use of rpath toolchain option when system toolchain is used
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-pkgs-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      download_dep_fail, use_pip, sanity_pip_check are enabled by default for Python package installations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cmakemake-libdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      CMakeMake easyblock sets LIBDIR configuration option to lib by default
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -9014,8 +9250,8 @@
 <p>The default value for several EasyBuild configuration settings has been changed in EasyBuild v5.0.</p>
 <p><strong>Changed default configuration in EasyBuild framework</strong></p>
 <ul>
-<li>[RPATH linking is enabled by default (<code>--rpath</code>)][path]</li>
-<li>[Trace output is enabled by default (<code>--trace</code>)][trace)]</li>
+<li><a class="autorefs autorefs-internal" title="RPATH linking is enabled by default (--rpath)" href="#rpath">RPATH linking is enabled by default (<code>--rpath</code>)</a></li>
+<li><a class="autorefs autorefs-internal" title="Trace output is enabled by default (--trace)" href="#trace">Trace output is enabled by default (<code>--trace</code>)</a></li>
 <li><a class="autorefs autorefs-internal" title="Including extensions statement in generated modules is enabled by default (module-extensions)" href="#module-extensions">Including <code>extensions</code> statement in generated modules is enabled by default (<code>--module-extensions</code>)</a></li>
 <li><a class="autorefs autorefs-internal" title="Using depends_on for dependencies in generated modules is enabled by default (module-depends-on)" href="#module-depends-on">Using <code>depends_on</code> for dependencies in generated modules is enabled by default (<code>module-depends-on</code>)</a></li>
 <li><a class="autorefs autorefs-internal" title="Use Slurm as default job backend (job-backend)" href="#job-backend">Use Slurm as default job backend (<code>--job-backend</code>)</a></li>
@@ -9162,7 +9398,7 @@ be required.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 17, 2025 21:44:31">March 17, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 19, 2025 02:19:47">March 19, 2025</span>
   </span>
 
     
