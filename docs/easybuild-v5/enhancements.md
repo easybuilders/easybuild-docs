@@ -19,6 +19,7 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 - [Provide control over how EasyBuild specifies path to header files during installation (via `--search-path-cpp-headers`)][search-path-cpp-headers]
 - [Provide control over how EasyBuild specifies path to libraries during installation (via `--search-path-linker`)][search-path-linker]
 - [Support not using `$PYTHONPATH` to specify the location of installed Python packages (via `--prefer-python-search-path`)][PYTHONPATH-vs-EBPYTHONPREFIXES]
+- [Revamp of easyconfig parameter `modextrapaths`][modextrapaths-revamp]
 - [Detect Fortran `.mod` files in `GCCcore` installations][mod-files]
 - [Let `ConfigureMake` generic easyblock error out on unknown `configure` options][configuremake-unknown-configure-options]
 
