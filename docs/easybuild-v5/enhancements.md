@@ -23,6 +23,7 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 - [Revamp of easyconfig parameter `modextrapaths`][modextrapaths-revamp]
 - [Detect Fortran `.mod` files in `GCCcore` installations][mod-files]
 - [Let `ConfigureMake` generic easyblock error out on unknown `configure` options][configuremake-unknown-configure-options]
+- [Require `download_instructions` for non-public sources][require_download_instructions]
 
 ---
 
@@ -341,11 +342,6 @@ which have become deprecated in EasyBuild 5.0:
 - [`allow_append_abs_path`][deprec_allow_append_abs]
 - [`allow_prepend_abs_path`][deprec_allow_prepend_abs]
 
----
-
-## Let `ConfigureMake` generic easyblock error out on unrecognized `configure` options { : #configuremake-unrecognized-configure-options }
-
-*(more info soon)*
 
 ---
 
@@ -360,3 +356,30 @@ build failure with the command line option `--fail-on-mod-files-gcccore`.
 
 If the software uses the `.mod` extension for a different type of file then the EasyConfig variable
 `skip_mod_files_sanity_check` can be set to mark that this use is expected.
+
+---
+
+## Let `ConfigureMake` generic easyblock error out on unrecognized `configure` options { : #configuremake-unrecognized-configure-options }
+
+*(more info soon)*
+
+
+---
+
+## Require `download_instructions` for non-public sources {: require_download_instructions }
+
+[`download_instructions`][download_instructions] is a new easyconfig parameter
+in EasyBuild 5.0 used to specify instructions, or information, on
+how to obtain software sources that are not directly downloadable. This is
+usually the case for licensed software without public sources.
+
+We've updated the testsuite for our `easybuild-easyconfigs` repository to
+require that all its easyconfigs must specify the download instructions
+of any non-public sources in them
+(see [easybuild-easyconfigs PR #19881](https://github.com/easybuilders/easybuild-easyconfigs/pull/19881)).
+
+As part of this enhancement we also added `download_instructions` to all easyconfigs that require them (see the PRs linked from 
+[easybuild-easyconfigs PR #19881](https://github.com/easybuilders/easybuild-easyconfigs/pull/19881)). In addition to the
+`download_instructions` we also clearly specify the active source path (see
+[easybuild-framework PR #4459](https://github.com/easybuilders/easybuild-framework/pull/4459)).
+
