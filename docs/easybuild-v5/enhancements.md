@@ -370,6 +370,7 @@ failures. Therefore, `ConfigureMake` will error out and stop the installation
 whenever such a warning is found, 
 
 The following example shows the relevant log messages for such a case:
+
 ```log
 == INFO Running shell command './configure --prefix=/software/MPICH/4.2.1-GCC-12.3.0  --build=x86_64-pc-linux-gnu  --host=x86_64-pc-linux-gnu FFLAGS="-w -fallow-argument-mismatch -O2" --with-device=ch4:ucx --with-ucx=$EBROOTUCX --with-thread-package=pthreads --enable-fast --enable-shared --enable-sharedlibs=gcc --enable-static --enable-f77 --enable-fc --enable-cxx' in /build/MPICH/4.2.1/GCC-12.3.0/mpich-4.2.1
 == INFO Output of './configure ...' shell command (stdout + stderr):
@@ -379,7 +380,6 @@ configure: WARNING: unrecognized options: --with-thread-package, --enable-shared
   >> command completed: exit 0, ran in 00h02m03s
 == ERROR EasyBuild encountered an error (at easybuild/easybuild-framework/easybuild/base/exceptions.py:126 in __init__): Found unrecognized configure options: --with-thread-package, --enable-sharedlibs, --enable-fc (at easybuild/easybuild-easyblocks/easybuild/easyblocks/generic/configuremake.py:355 in configure_step)
 ```
-
 
 ---
 
