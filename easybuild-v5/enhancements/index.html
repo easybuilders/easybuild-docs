@@ -8850,6 +8850,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mod-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detect Fortran .mod files in GCCcore installations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configuremake-unrecognized-configure-options" class="md-nav__link">
     <span class="md-ellipsis">
       Let ConfigureMake generic easyblock error out on unrecognized configure options
@@ -8859,9 +8868,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mod-files" class="md-nav__link">
+  <a href="#require-download_instructions-for-non-public-sources" class="md-nav__link">
     <span class="md-ellipsis">
-      Detect Fortran .mod files in GCCcore installations
+      Require download_instructions for non-public sources
     </span>
   </a>
   
@@ -9173,6 +9182,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mod-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detect Fortran .mod files in GCCcore installations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configuremake-unrecognized-configure-options" class="md-nav__link">
     <span class="md-ellipsis">
       Let ConfigureMake generic easyblock error out on unrecognized configure options
@@ -9182,9 +9200,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mod-files" class="md-nav__link">
+  <a href="#require-download_instructions-for-non-public-sources" class="md-nav__link">
     <span class="md-ellipsis">
-      Detect Fortran .mod files in GCCcore installations
+      Require download_instructions for non-public sources
     </span>
   </a>
   
@@ -9232,6 +9250,7 @@
 <li><a class="autorefs autorefs-internal" title="Revamp of easyconfig parameter modextrapaths" href="#modextrapaths-revamp">Revamp of easyconfig parameter <code>modextrapaths</code></a></li>
 <li><a class="autorefs autorefs-internal" title="Detect Fortran .mod files in GCCcore installations" href="#mod-files">Detect Fortran <code>.mod</code> files in <code>GCCcore</code> installations</a></li>
 <li>[Let <code>ConfigureMake</code> generic easyblock error out on unknown <code>configure</code> options][configuremake-unknown-configure-options]</li>
+<li>[Require <code>download_instructions</code> for non-public sources][require_download_instructions]</li>
 </ul>
 <hr />
 <h2 :=":" id="run_shell_cmd">New function to run shell commands: <code>run_shell_cmd</code><a class="headerlink" href="#run_shell_cmd" title="Permanent link">&para;</a></h2>
@@ -9489,9 +9508,6 @@ which have become deprecated in EasyBuild 5.0:</p>
 <li><a class="autorefs autorefs-internal" title="Easyconfig parameter allow_prepend_abs_path" href="../deprecated-functionality/#deprec_allow_prepend_abs"><code>allow_prepend_abs_path</code></a></li>
 </ul>
 <hr />
-<h2 :=":" id="configuremake-unrecognized-configure-options">Let <code>ConfigureMake</code> generic easyblock error out on unrecognized <code>configure</code> options<a class="headerlink" href="#configuremake-unrecognized-configure-options" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
-<hr />
 <h2 :=":" id="mod-files">Detect Fortran <code>.mod</code> files in <code>GCCcore</code> installations<a class="headerlink" href="#mod-files" title="Permanent link">&para;</a></h2>
 <p>Fortran <code>.mod</code> files should not be mixed between compilers. As <code>GCCcore</code> installed software is
 available for use by software installed with other compilers, such as the Intel Fortran compiler,
@@ -9500,6 +9516,23 @@ this means that software that produces Fortran <code>.mod</code> files should no
 build failure with the command line option <code>--fail-on-mod-files-gcccore</code>.</p>
 <p>If the software uses the <code>.mod</code> extension for a different type of file then the EasyConfig variable
 <code>skip_mod_files_sanity_check</code> can be set to mark that this use is expected.</p>
+<hr />
+<h2 :=":" id="configuremake-unrecognized-configure-options">Let <code>ConfigureMake</code> generic easyblock error out on unrecognized <code>configure</code> options<a class="headerlink" href="#configuremake-unrecognized-configure-options" title="Permanent link">&para;</a></h2>
+<p><em>(more info soon)</em></p>
+<hr />
+<h2 id="require-download_instructions-for-non-public-sources" require_download_instructions="require_download_instructions">Require <code>download_instructions</code> for non-public sources<a class="headerlink" href="#require-download_instructions-for-non-public-sources" title="Permanent link">&para;</a></h2>
+<p>[<code>download_instructions</code>][] is a new easyconfig parameter
+in EasyBuild 5.0 used to specify instructions, or information, on
+how to obtain software sources that are not directly downloadable. This is
+usually the case for licensed software without public sources.</p>
+<p>We've updated the testsuite for our <code>easybuild-easyconfigs</code> repository to
+require that all its easyconfigs must specify the download instructions
+of any non-public sources in them
+(see <a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/19881">easybuild-easyconfigs PR #19881</a>).</p>
+<p>As part of this enhancement we also added <code>download_instructions</code> to all easyconfigs that require them (see the PRs linked from 
+<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/19881">easybuild-easyconfigs PR #19881</a>). In addition to the
+<code>download_instructions</code> we also clearly specify the active source path (see
+<a href="https://github.com/easybuilders/easybuild-framework/pull/4459">easybuild-framework PR #4459</a>).</p>
 
 
 
@@ -9520,7 +9553,7 @@ build failure with the command line option <code>--fail-on-mod-files-gcccore</co
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 19, 2025 18:15:44">March 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 20, 2025 00:46:28">March 20, 2025</span>
   </span>
 
     
