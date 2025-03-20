@@ -84,6 +84,7 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 - [Revamp of easyconfig parameter `modextrapaths`](enhancements.md#modextrapaths-revamp)
 - [Detect Fortran `.mod` files in `GCCcore` installations](enhancements.md#mod-files)
 - [Let `ConfigureMake` generic easyblock error out on unrecognized `configure` options](enhancements.md#configuremake-unknown-configure-options)
+- [Require `download_instructions` for non-public sources](enhancements.md#require_download_instructions)
 
 ---
 

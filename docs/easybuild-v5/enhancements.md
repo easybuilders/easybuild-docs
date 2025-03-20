@@ -365,7 +365,7 @@ If the software uses the `.mod` extension for a different type of file then the 
 
 ---
 
-## Require `download_instructions` for non-public sources {: require_download_instructions }
+## Require `download_instructions` for non-public sources { : #require_download_instructions }
 
 [`download_instructions`][download_instructions] is a new easyconfig parameter
 in EasyBuild 5.0 used to specify instructions, or information, on
