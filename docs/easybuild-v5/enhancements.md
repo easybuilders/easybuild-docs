@@ -370,8 +370,11 @@ If the software uses the `.mod` extension for a different type of file then the 
 
 [`download_instructions`][download_instructions] is a new easyconfig parameter
 in EasyBuild 5.0 used to specify instructions, or information, on
-how to obtain sources that are not directly downloadable. In EasyBuild 5, we've updated the testsuite for the `easybuild-easyconfigs`
-repository to require that all easyconfigs for which sources can not be downloaded automatically must specify these
+how to obtain software sources that are not directly downloadable. This is
+usually the case for licensed software without public sources. In EasyBuild 5,
+we've updated the testsuite for our `easybuild-easyconfigs` repository to
+require that all its easyconfigs must specify the download instructions
+of any non-public sources in them
 (see [easybuild-easyconfigs PR #19881](https://github.com/easybuilders/easybuild-easyconfigs/pull/19881)).
 
 As part of this enhancement we also added `download_instructions` to all easyconfigs that require them (see the PRs linked from 
