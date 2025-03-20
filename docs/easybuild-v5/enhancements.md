@@ -359,10 +359,9 @@ If the software uses the `.mod` extension for a different type of file then the 
 
 ---
 
-## Let `ConfigureMake` generic easyblock error out on unrecognized `configure` options { : #configuremake-unrecognized-configure-options }
+## Let `ConfigureMake` generic easyblock error out on unrecognized `configure` options { : #configuremake-unknown-configure-options }
 
 *(more info soon)*
-
 
 ---
 

@@ -83,7 +83,7 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 - [Support not using `$PYTHONPATH` to specify the location of installed Python packages (via `--prefer-python-search-path`)](enhancements.md#PYTHONPATH-vs-EBPYTHONPREFIXES)
 - [Revamp of easyconfig parameter `modextrapaths`](enhancements.md#modextrapaths-revamp)
 - [Detect Fortran `.mod` files in `GCCcore` installations](enhancements.md#mod-files)
-- [Let `ConfigureMake` generic easyblock error out on unrecognized `configure` options](enhancements.md#configuremake-unrecognized-configure-options)
+- [Let `ConfigureMake` generic easyblock error out on unrecognized `configure` options](enhancements.md#configuremake-unknown-configure-options)
 
 ---
 
