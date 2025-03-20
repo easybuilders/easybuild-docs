@@ -361,7 +361,25 @@ If the software uses the `.mod` extension for a different type of file then the 
 
 ## Let `ConfigureMake` generic easyblock error out on unrecognized `configure` options { : #configuremake-unknown-configure-options }
 
-*(more info soon)*
+The generic easyblock `ConfigureMake` in EasyBuild 5.0 will catch warnings from
+the `configure` command about unrecognized options being passed to it. Such
+options often reveal old configuration options that do not apply to the current
+version of the software being installed. Since `configure` just ignores
+unrecognized options, this situation can lead to misconfigured software and
+failures. Therefore, `ConfigureMake` will error out and stop the installation
+whenever such a warning is found, 
+
+The following example shows the relevant log messages for such a case:
+```log
+== INFO Running shell command './configure --prefix=/software/MPICH/4.2.1-GCC-12.3.0  --build=x86_64-pc-linux-gnu  --host=x86_64-pc-linux-gnu FFLAGS="-w -fallow-argument-mismatch -O2" --with-device=ch4:ucx --with-ucx=$EBROOTUCX --with-thread-package=pthreads --enable-fast --enable-shared --enable-sharedlibs=gcc --enable-static --enable-f77 --enable-fc --enable-cxx' in /build/MPICH/4.2.1/GCC-12.3.0/mpich-4.2.1
+== INFO Output of './configure ...' shell command (stdout + stderr):
+configure: WARNING: unrecognized options: --with-thread-package, --enable-sharedlibs, --enable-fc
+[...]
+== INFO Shell command completed successfully (see output above): ./configure ...
+  >> command completed: exit 0, ran in 00h02m03s
+== ERROR EasyBuild encountered an error (at easybuild/easybuild-framework/easybuild/base/exceptions.py:126 in __init__): Found unrecognized configure options: --with-thread-package, --enable-sharedlibs, --enable-fc (at easybuild/easybuild-easyblocks/easybuild/easyblocks/generic/configuremake.py:355 in configure_step)
+```
+
 
 ---
 
