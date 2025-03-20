@@ -71,6 +71,7 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 - [Mark support for installing extensions in parallel as stable (no longer experimental)](enhancements.md#parallel-extensions-install-stable)
 - [Mark easystack support as stable (no longer experimental)](enhancements.md#easystack-stable)
 - [Reproducible tarballs for sources created via `git_config`](enhancements.md#reproducible-tarballs-git_config)
+- [New house for the archive of easyconfigs](enhancements.md#new-easyconfig-archive)
 - [Granular exit codes](enhancements.md#granular-exit-codes)
 - [Copy build directory and/or log file(s) if installation failed to path specified via `--failed-install-build-dirs-path` or `--failed-install-logs-path`](enhancements.md#copy-build-log-failed-installs)
 - [Specify changes that should be made by generated module files via `module_load_environment`](../implementing-easyblocks.md#module_load_environment)
