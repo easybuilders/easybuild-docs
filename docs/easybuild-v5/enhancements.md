@@ -359,7 +359,7 @@ options often reveal old configuration options that do not apply to the current
 version of the software being installed. Since `configure` just ignores
 unrecognized options, this situation can lead to misconfigured software and
 failures. Therefore, `ConfigureMake` will error out and stop the installation
-whenever such a warning is found, 
+whenever such a warning is found.
 
 The following example shows the relevant log messages for such a case:
 
