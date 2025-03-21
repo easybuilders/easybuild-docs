@@ -8733,15 +8733,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#parallel-extensions-install" class="md-nav__link">
-    <span class="md-ellipsis">
-      Don't raise error when required extensions are not found when installing extensions in parallel
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#parallel-extensions-install-stable" class="md-nav__link">
     <span class="md-ellipsis">
       Mark support for installing extensions in parallel as stable (no longer experimental)
@@ -8859,7 +8850,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuremake-unrecognized-configure-options" class="md-nav__link">
+  <a href="#configuremake-unknown-configure-options" class="md-nav__link">
     <span class="md-ellipsis">
       Let ConfigureMake generic easyblock error out on unrecognized configure options
     </span>
@@ -8868,7 +8859,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#require-download_instructions-for-non-public-sources" class="md-nav__link">
+  <a href="#require_download_instructions" class="md-nav__link">
     <span class="md-ellipsis">
       Require download_instructions for non-public sources
     </span>
@@ -9065,15 +9056,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#parallel-extensions-install" class="md-nav__link">
-    <span class="md-ellipsis">
-      Don't raise error when required extensions are not found when installing extensions in parallel
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#parallel-extensions-install-stable" class="md-nav__link">
     <span class="md-ellipsis">
       Mark support for installing extensions in parallel as stable (no longer experimental)
@@ -9191,7 +9173,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuremake-unrecognized-configure-options" class="md-nav__link">
+  <a href="#configuremake-unknown-configure-options" class="md-nav__link">
     <span class="md-ellipsis">
       Let ConfigureMake generic easyblock error out on unrecognized configure options
     </span>
@@ -9200,7 +9182,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#require-download_instructions-for-non-public-sources" class="md-nav__link">
+  <a href="#require_download_instructions" class="md-nav__link">
     <span class="md-ellipsis">
       Require download_instructions for non-public sources
     </span>
@@ -9234,7 +9216,6 @@
 <li><a class="autorefs autorefs-internal" title="New function to run shell commands: run_shell_cmd" href="#run_shell_cmd">New function to run shell commands: <code>run_shell_cmd</code></a></li>
 <li><a class="autorefs autorefs-internal" title="Interactive debugging of failing shell commands via env.sh and cmd.sh scripts" href="#interactive-debugging-failing-shell-commands">Interactive debugging of failing shell commands via <code>env.sh</code> and <code>cmd.sh</code> scripts</a></li>
 <li><a class="autorefs autorefs-internal" href="#collection-easyconfig-templates">New collection of easyconfig templates</a></li>
-<li><a class="autorefs autorefs-internal" href="#parallel-extensions-install">Don't raise error when required extensions are not found when installing extensions in parallel</a></li>
 <li><a class="autorefs autorefs-internal" href="#parallel-extensions-install-stable">Mark support for installing extensions in parallel as stable (no longer experimental)</a></li>
 <li><a class="autorefs autorefs-internal" href="#easystack-stable">Mark easystack support as stable (no longer experimental)</a></li>
 <li><a class="autorefs autorefs-internal" title="Reproducible tarballs for sources created via git_config" href="#reproducible-tarballs-git_config">Reproducible tarballs for sources created via <code>git_config</code></a></li>
@@ -9249,8 +9230,8 @@
 <li><a class="autorefs autorefs-internal" title="Support not using $PYTHONPATH to specify the location of installed Python packages (via --prefer-python-search-path)" href="#PYTHONPATH-vs-EBPYTHONPREFIXES">Support not using <code>$PYTHONPATH</code> to specify the location of installed Python packages (via <code>--prefer-python-search-path</code>)</a></li>
 <li><a class="autorefs autorefs-internal" title="Revamp of easyconfig parameter modextrapaths" href="#modextrapaths-revamp">Revamp of easyconfig parameter <code>modextrapaths</code></a></li>
 <li><a class="autorefs autorefs-internal" title="Detect Fortran .mod files in GCCcore installations" href="#mod-files">Detect Fortran <code>.mod</code> files in <code>GCCcore</code> installations</a></li>
-<li>[Let <code>ConfigureMake</code> generic easyblock error out on unknown <code>configure</code> options][configuremake-unknown-configure-options]</li>
-<li>[Require <code>download_instructions</code> for non-public sources][require_download_instructions]</li>
+<li><a class="autorefs autorefs-internal" title="Let ConfigureMake generic easyblock error out on unrecognized configure options" href="#configuremake-unknown-configure-options">Let <code>ConfigureMake</code> generic easyblock error out on unknown <code>configure</code> options</a></li>
+<li><a class="autorefs autorefs-internal" title="Require download_instructions for non-public sources" href="#require_download_instructions">Require <code>download_instructions</code> for non-public sources</a></li>
 </ul>
 <hr />
 <h2 :=":" id="run_shell_cmd">New function to run shell commands: <code>run_shell_cmd</code><a class="headerlink" href="#run_shell_cmd" title="Permanent link">&para;</a></h2>
@@ -9284,9 +9265,6 @@ checksum check. The full list of exit codes is defined in the class
 <p>EasyBuild will always return its own exit codes on termination. Other exit
 codes from external processes executed through <code>run_shell_cmd</code> or HTTP response
 status codes are reported in the corresponding logs.</p>
-<hr />
-<h2 id="parallel-extensions-install">Don't raise error when required extensions are not found when installing extensions in parallel<a class="headerlink" href="#parallel-extensions-install" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
 <hr />
 <h2 id="parallel-extensions-install-stable">Mark support for installing extensions in parallel as stable (no longer experimental)<a class="headerlink" href="#parallel-extensions-install-stable" title="Permanent link">&para;</a></h2>
 <p><em>(more info soon)</em></p>
@@ -9517,11 +9495,26 @@ build failure with the command line option <code>--fail-on-mod-files-gcccore</co
 <p>If the software uses the <code>.mod</code> extension for a different type of file then the EasyConfig variable
 <code>skip_mod_files_sanity_check</code> can be set to mark that this use is expected.</p>
 <hr />
-<h2 :=":" id="configuremake-unrecognized-configure-options">Let <code>ConfigureMake</code> generic easyblock error out on unrecognized <code>configure</code> options<a class="headerlink" href="#configuremake-unrecognized-configure-options" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
+<h2 :=":" id="configuremake-unknown-configure-options">Let <code>ConfigureMake</code> generic easyblock error out on unrecognized <code>configure</code> options<a class="headerlink" href="#configuremake-unknown-configure-options" title="Permanent link">&para;</a></h2>
+<p>The generic easyblock <code>ConfigureMake</code> in EasyBuild 5.0 will catch warnings from
+the <code>configure</code> command about unrecognized options being passed to it. Such
+options often reveal old configuration options that do not apply to the current
+version of the software being installed. Since <code>configure</code> just ignores
+unrecognized options, this situation can lead to misconfigured software and
+failures. Therefore, <code>ConfigureMake</code> will error out and stop the installation
+whenever such a warning is found.</p>
+<p>The following example shows the relevant log messages for such a case:</p>
+<div class="highlight"><pre><span></span><code>== INFO Running shell command &#39;./configure --prefix=/software/MPICH/4.2.1-GCC-12.3.0  --build=x86_64-pc-linux-gnu  --host=x86_64-pc-linux-gnu FFLAGS=&quot;-w -fallow-argument-mismatch -O2&quot; --with-device=ch4:ucx --with-ucx=$EBROOTUCX --with-thread-package=pthreads --enable-fast --enable-shared --enable-sharedlibs=gcc --enable-static --enable-f77 --enable-fc --enable-cxx&#39; in /build/MPICH/4.2.1/GCC-12.3.0/mpich-4.2.1
+== INFO Output of &#39;./configure ...&#39; shell command (stdout + stderr):
+configure: WARNING: unrecognized options: --with-thread-package, --enable-sharedlibs, --enable-fc
+[...]
+== INFO Shell command completed successfully (see output above): ./configure ...
+  &gt;&gt; command completed: exit 0, ran in 00h02m03s
+== ERROR EasyBuild encountered an error (at easybuild/easybuild-framework/easybuild/base/exceptions.py:126 in __init__): Found unrecognized configure options: --with-thread-package, --enable-sharedlibs, --enable-fc (at easybuild/easybuild-easyblocks/easybuild/easyblocks/generic/configuremake.py:355 in configure_step)
+</code></pre></div>
 <hr />
-<h2 id="require-download_instructions-for-non-public-sources" require_download_instructions="require_download_instructions">Require <code>download_instructions</code> for non-public sources<a class="headerlink" href="#require-download_instructions-for-non-public-sources" title="Permanent link">&para;</a></h2>
-<p>[<code>download_instructions</code>][] is a new easyconfig parameter
+<h2 :=":" id="require_download_instructions">Require <code>download_instructions</code> for non-public sources<a class="headerlink" href="#require_download_instructions" title="Permanent link">&para;</a></h2>
+<p><a class="autorefs autorefs-internal" title="Using download_instructions for user-side part of installation" href="../../writing-easyconfig-files/#download_instructions"><code>download_instructions</code></a> is a new easyconfig parameter
 in EasyBuild 5.0 used to specify instructions, or information, on
 how to obtain software sources that are not directly downloadable. This is
 usually the case for licensed software without public sources.</p>
@@ -9553,7 +9546,7 @@ of any non-public sources in them
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 20, 2025 00:46:28">March 20, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 21, 2025 09:52:57">March 21, 2025</span>
   </span>
 
     
