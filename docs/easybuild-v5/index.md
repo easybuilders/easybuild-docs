@@ -68,7 +68,6 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 - [New function to run shell commands: `run_shell_cmd`](run_shell_cmd.md)
 - [Interactive debugging of failing shell commands via `env.sh` and `cmd.sh` scripts](../interactive-debugging-failing-shell-commands.md)
 - [New collection of easyconfig templates](enhancements.md#collection-easyconfig-templates)
-- [Don't raise error when required extensions are not found when installing extensions in parallel](enhancements.md#parallel-extensions-install)
 - [Mark support for installing extensions in parallel as stable (no longer experimental)](enhancements.md#parallel-extensions-install-stable)
 - [Mark easystack support as stable (no longer experimental)](enhancements.md#easystack-stable)
 - [Reproducible tarballs for sources created via `git_config`](enhancements.md#reproducible-tarballs-git_config)
@@ -83,7 +82,8 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 - [Support not using `$PYTHONPATH` to specify the location of installed Python packages (via `--prefer-python-search-path`)](enhancements.md#PYTHONPATH-vs-EBPYTHONPREFIXES)
 - [Revamp of easyconfig parameter `modextrapaths`](enhancements.md#modextrapaths-revamp)
 - [Detect Fortran `.mod` files in `GCCcore` installations](enhancements.md#mod-files)
-- [Let `ConfigureMake` generic easyblock error out on unrecognized `configure` options](enhancements.md#configuremake-unrecognized-configure-options)
+- [Let `ConfigureMake` generic easyblock error out on unrecognized `configure` options](enhancements.md#configuremake-unknown-configure-options)
+- [Require `download_instructions` for non-public sources](enhancements.md#require_download_instructions)
 
 ---
 

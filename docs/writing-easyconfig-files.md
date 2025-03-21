@@ -477,7 +477,7 @@ sources = [{
     in favour of the Python dictionary format described above; see also
     [Specifying source files as 2-element tuples to provide a custom extraction command][depr_sources_2_element_tuple].
 
-#### Using `download_instructions` for user-side part of installation {: download_instructions }
+#### Using `download_instructions` for user-side part of installation { : #download_instructions }
 
 In some cases, getting some of the files required for an installation
 cannot be automated. Reasons for this include:
