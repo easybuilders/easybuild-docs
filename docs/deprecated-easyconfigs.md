@@ -55,7 +55,7 @@ repository.
 ## Obsolete toolchains {: #obsolete_easyconfigs_toolchains }
 
 Some toolchains might become obsolete, this means that they will not receive
-any new versions and ultimately be completely archived. Overview of obselete
+any new versions and ultimately be completely archived. Overview of obsolete
 toolchains:
 
 ### Toolchains with CUDA {: #obsolete_easyconfigs_toolchains_cuda }
