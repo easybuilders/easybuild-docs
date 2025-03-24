@@ -58,7 +58,7 @@ contents of the `__archive__` subdirectory.
 python -m pip install easybuild-easyconfigs[archive]
 ```
 
-Easyconfig files in the archive are _hidden_ from plain sight, meaning that the
+Easyconfig files in the archive are *hidden* from plain sight, meaning that the
 `eb` command will not use those files by default. You need to use the
 `--consider-archived-easyconfigs` configuration option to make EasyBuild look
 into the archive when it seeks easyconfigs (e.g., with `--search` or

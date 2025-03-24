@@ -136,13 +136,14 @@ smaller than in v4.9.4, 58% of the size
 faster
 
 The archive of old easyconfigs is now an opt-in installation that can be easily
-enabled in `pip` with the `archive` _extra_ of the `easybuild-easyconfigs`
+enabled in `pip` with the `archive` *extra* of the `easybuild-easyconfigs`
 package:
 
 ```shell
 python -m pip install easybuild-easyconfigs[archive]
 ```
-This will result in the same installation layout as in v4.9. All _active_
+
+This will result in the same installation layout as in v4.9. All *active*
 easyconfigs will be placed in alphabetical folders and the archive of
 easyconfigs will be placed inside the `__archive__` folder.
 

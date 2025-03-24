@@ -154,7 +154,7 @@ available in [Overview of common toolchains][common_toolchains_overview].
 The intention is to revise and update the common toolchains every 6
 months: once in late December/early January (version `<year>a`), and
 once in late June/early July (version `<year>b`). Each one of these
-versions is a so-called _toolchain generation_.
+versions is a so-called *toolchain generation*.
 
 Each new version is meant be to be a community effort, in the sense that a
 proposal for an updated composition is shared and discussed before it is set in
