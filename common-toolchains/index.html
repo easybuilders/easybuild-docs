@@ -724,39 +724,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#common_toolchains_overview_deprecated" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview of common toolchains (deprecated versions)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Overview of common toolchains (deprecated versions)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#common_toolchains_overview_foss_deprecated" class="md-nav__link">
-    <span class="md-ellipsis">
-      Component versions in foss toolchain (deprecated versions)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#common_toolchains_overview_intel_deprecated" class="md-nav__link">
-    <span class="md-ellipsis">
-      Component versions in intel toolchain (deprecated versions)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#common_toolchains_customizing" class="md-nav__link">
     <span class="md-ellipsis">
       Customizing common toolchains
@@ -9137,39 +9104,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#common_toolchains_overview_deprecated" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview of common toolchains (deprecated versions)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Overview of common toolchains (deprecated versions)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#common_toolchains_overview_foss_deprecated" class="md-nav__link">
-    <span class="md-ellipsis">
-      Component versions in foss toolchain (deprecated versions)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#common_toolchains_overview_intel_deprecated" class="md-nav__link">
-    <span class="md-ellipsis">
-      Component versions in intel toolchain (deprecated versions)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#common_toolchains_customizing" class="md-nav__link">
     <span class="md-ellipsis">
       Customizing common toolchains
@@ -9333,22 +9267,35 @@ toolchain composition was defined.</p>
 <h2 id="common_toolchains_update_cycle">Update cycle for common toolchains<a class="headerlink" href="#common_toolchains_update_cycle" title="Permanent link">&para;</a></h2>
 <p>The intention is to revise and update the common toolchains every 6
 months: once in late December/early January (version <code>&lt;year&gt;a</code>), and
-once in late June/early July (version <code>&lt;year&gt;b</code>).</p>
-<p>This is meant be to be a community effort, in the sense that a proposal
-for an updated composition is shared and discussed before it is set in
-stone.</p>
+once in late June/early July (version <code>&lt;year&gt;b</code>). Each one of these
+versions is a so-called <em>toolchain generation</em>.</p>
+<p>Each new version is meant be to be a community effort, in the sense that a
+proposal for an updated composition is shared and discussed before it is set in
+stone. Usually, discussion about new toolchains takes place initially in the
+<a href="https://easybuild.slack.com/archives/C02FU5Y5CDT">toolchain-wg</a> in Slack, the
+bi-weekly conf calls and later in respective pull requests in the
+<a href="https://github.com/easybuilders/easybuild-easyconfigs">easybuild-easyconfigs</a>
+repository.</p>
 <p>Recent versions of each of the toolchain components are considered,
 taking into account stability, performance improvements, added features,
 known bugs/issues and experiences with those versions.</p>
 <p>Moreover, the proposed toolchain compositions are tested extensively,
 typically by rebuilding all available easyconfigs that are using the
 most recent revision of the common toolchains at that time.</p>
+<p>Once a new toolchain generation is released, it will be supported by the
+maintainers of Easybuild for a limited period of time. Which is determined by
+our <a class="autorefs autorefs-internal" title="Supported Toolchain Generations Policy" href="../policies/toolchains/#policy_toolchains">support policy on toolchain</a>.</p>
 <h2 id="common_toolchains_overview">Overview of common toolchains<a class="headerlink" href="#common_toolchains_overview" title="Permanent link">&para;</a></h2>
+<p>We support the <a class="autorefs autorefs-internal" title="Supported Toolchain Generations Policy" href="../policies/toolchains/#policy_toolchains">last 6 generations</a> of common toolchains.</p>
+<p>Archived toolchains can be found in the
+<a href="https://github.com/easybuilders/easybuild-easyconfigs-archive">easybuild-easyconfigs-archive</a>
+repository.</p>
 <h3 id="common_toolchains_overview_foss">Component versions in <code>foss</code> toolchain<a class="headerlink" href="#common_toolchains_overview_foss" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
 <th><code>foss</code></th>
+<th><em>support</em></th>
 <th><em>date</em></th>
 <th><em>binutils</em></th>
 <th><em>GCC</em></th>
@@ -9362,67 +9309,21 @@ most recent revision of the common toolchains at that time.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>2021a</code></td>
-<td>May '21</td>
-<td>2.36.1</td>
-<td>10.3.0</td>
-<td>4.1.1</td>
-<td>3.0.4</td>
-<td>0.3.15</td>
-<td>(incl. with FlexiBLAS)</td>
-<td>2.1.0</td>
-<td>3.3.9</td>
-</tr>
-<tr>
-<td><code>2021b</code></td>
-<td>Oct '21</td>
-<td>2.37</td>
-<td>11.2.0</td>
-<td>4.1.1</td>
-<td>3.0.4</td>
-<td>0.3.18</td>
-<td>(incl. with FlexiBLAS)</td>
-<td>2.1.0</td>
-<td>3.3.10</td>
-</tr>
-<tr>
-<td><code>2022a</code></td>
-<td>Jun '22</td>
-<td>2.38</td>
-<td>11.3.0</td>
-<td>4.1.4</td>
-<td>3.2.0</td>
-<td>0.3.20</td>
-<td>(incl. with FlexiBLAS)</td>
-<td>2.2.0</td>
-<td>3.3.10</td>
-</tr>
-<tr>
-<td><code>2022b</code></td>
-<td>Dec '22</td>
-<td>2.39</td>
-<td>12.2.0</td>
-<td>4.1.4</td>
-<td>3.2.1</td>
-<td>0.3.21</td>
-<td>(incl. with FlexiBLAS)</td>
-<td>2.2.0</td>
-<td>3.3.10</td>
-</tr>
-<tr>
-<td><code>2023a</code></td>
-<td>Jun '23</td>
-<td>2.40</td>
-<td>12.3.0</td>
-<td>4.1.5</td>
-<td>3.3.1</td>
-<td>0.3.23</td>
+<td><code>2024a</code></td>
+<td>active</td>
+<td>Aug '24</td>
+<td>2.42</td>
+<td>13.3.0</td>
+<td>5.0.3</td>
+<td>3.4.4</td>
+<td>0.3.27</td>
 <td>(incl. with FlexiBLAS)</td>
 <td>2.2.0</td>
 <td>3.3.10</td>
 </tr>
 <tr>
 <td><code>2023b</code></td>
+<td>active</td>
 <td>Dec '23</td>
 <td>2.40</td>
 <td>13.2.0</td>
@@ -9434,250 +9335,86 @@ most recent revision of the common toolchains at that time.</p>
 <td>3.3.10</td>
 </tr>
 <tr>
-<td><code>2024a</code></td>
-<td>Aug '24</td>
-<td>2.42</td>
-<td>13.3.0</td>
-<td>5.0.3</td>
-<td>3.4.4</td>
-<td>0.3.27</td>
+<td><code>2023a</code></td>
+<td>active</td>
+<td>Jun '23</td>
+<td>2.40</td>
+<td>12.3.0</td>
+<td>4.1.5</td>
+<td>3.3.1</td>
+<td>0.3.23</td>
 <td>(incl. with FlexiBLAS)</td>
 <td>2.2.0</td>
 <td>3.3.10</td>
 </tr>
-</tbody>
-</table>
-<h3 id="common_toolchains_overview_intel">Component versions in <code>intel</code> toolchain<a class="headerlink" href="#common_toolchains_overview_intel" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th><code>intel</code></th>
-<th><em>date</em></th>
-<th><em>binutils</em></th>
-<th><em>GCC</em></th>
-<th><em>Intel compilers</em></th>
-<th><em>Intel MPI</em></th>
-<th><em>Intel MKL</em></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>2021a</code></td>
-<td>May '21</td>
-<td>2.36.1</td>
-<td>10.3.0</td>
-<td>2021.2.0</td>
-<td>2021.2.0</td>
-<td>2021.2.0</td>
-</tr>
-<tr>
-<td><code>2021b</code></td>
-<td>Oct '21</td>
-<td>2.37</td>
-<td>11.2.0</td>
-<td>2021.4.0</td>
-<td>2021.4.0</td>
-<td>2021.4.0</td>
-</tr>
-<tr>
-<td><code>2022a</code></td>
-<td>Jun '22</td>
-<td>2.38</td>
-<td>11.3.0</td>
-<td>2022.1.0</td>
-<td>2021.6.0</td>
-<td>2022.1.0</td>
-</tr>
 <tr>
 <td><code>2022b</code></td>
+<td>active</td>
 <td>Dec '22</td>
 <td>2.39</td>
 <td>12.2.0</td>
-<td>2022.2.1</td>
-<td>2021.7.1</td>
-<td>2022.2.1</td>
+<td>4.1.4</td>
+<td>3.2.1</td>
+<td>0.3.21</td>
+<td>(incl. with FlexiBLAS)</td>
+<td>2.2.0</td>
+<td>3.3.10</td>
 </tr>
 <tr>
-<td><code>2023a</code></td>
-<td>Jun '23</td>
-<td>2.40</td>
-<td>12.3.0</td>
-<td>2023.1.0</td>
-<td>2021.9.1</td>
-<td>2023.1.0</td>
+<td><code>2022a</code></td>
+<td>active</td>
+<td>Jun '22</td>
+<td>2.38</td>
+<td>11.3.0</td>
+<td>4.1.4</td>
+<td>3.2.0</td>
+<td>0.3.20</td>
+<td>(incl. with FlexiBLAS)</td>
+<td>2.2.0</td>
+<td>3.3.10</td>
 </tr>
 <tr>
-<td><code>2023b</code></td>
-<td>Dec '23</td>
-<td>2.40</td>
-<td>13.2.0</td>
-<td>2023.2.1</td>
-<td>2021.10.1</td>
-<td>2023.2.0</td>
+<td><code>2021b</code></td>
+<td>active</td>
+<td>Oct '21</td>
+<td>2.37</td>
+<td>11.2.0</td>
+<td>4.1.1</td>
+<td>3.0.4</td>
+<td>0.3.18</td>
+<td>(incl. with FlexiBLAS)</td>
+<td>2.1.0</td>
+<td>3.3.10</td>
 </tr>
 <tr>
-<td><code>2024a</code></td>
-<td>Aug '24</td>
-<td>2.42</td>
-<td>13.3.0</td>
-<td>2024.2.0</td>
-<td>2021.13.0</td>
-<td>2024.2.0</td>
+<td><code>2021a</code></td>
+<td>deprecated</td>
+<td>May '21</td>
+<td>2.36.1</td>
+<td>10.3.0</td>
+<td>4.1.1</td>
+<td>3.0.4</td>
+<td>0.3.15</td>
+<td>(incl. with FlexiBLAS)</td>
+<td>2.1.0</td>
+<td>3.3.9</td>
 </tr>
-</tbody>
-</table>
-<h2 id="common_toolchains_overview_deprecated">Overview of common toolchains (deprecated versions)<a class="headerlink" href="#common_toolchains_overview_deprecated" title="Permanent link">&para;</a></h2>
-<h3 id="common_toolchains_overview_foss_deprecated">Component versions in <code>foss</code> toolchain (deprecated versions)<a class="headerlink" href="#common_toolchains_overview_foss_deprecated" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
 <tr>
-<th><code>foss</code></th>
-<th><em>date</em></th>
-<th><em>binutils</em></th>
-<th><em>GCC</em></th>
-<th><em>Open MPI</em></th>
-<th><em>FlexiBLAS</em></th>
-<th><em>OpenBLAS</em></th>
-<th><em>LAPACK</em></th>
-<th><em>ScaLAPACK</em></th>
-<th><em>FFTW</em></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>2014b</code></td>
-<td>Jul '14</td>
-<td>'<em>(none)</em></td>
-<td>4.8.3</td>
-<td>1.8.1</td>
+<td><code>2020b</code></td>
+<td>deprecated</td>
+<td>Nov '20</td>
+<td>2.35</td>
+<td>10.2.0</td>
+<td>4.0.5</td>
 <td><em>(none)</em></td>
-<td>0.2.9</td>
-<td>3.5.0</td>
-<td>2.0.2</td>
-<td>3.3.4</td>
-</tr>
-<tr>
-<td><code>2015a</code></td>
-<td>Jan '15</td>
-<td>'<em>(none)</em></td>
-<td>4.9.2</td>
-<td>1.8.4</td>
-<td><em>(none)</em></td>
-<td>0.2.13</td>
-<td>3.5.0</td>
-<td>2.0.2</td>
-<td>3.3.4</td>
-</tr>
-<tr>
-<td><code>2015b</code></td>
-<td>Jul '15</td>
-<td>2.25</td>
-<td>4.9.3</td>
-<td>1.8.8</td>
-<td><em>(none)</em></td>
-<td>0.2.14</td>
-<td>3.5.0</td>
-<td>2.0.2</td>
-<td>3.3.4</td>
-</tr>
-<tr>
-<td><code>2016a</code></td>
-<td>Jan '16</td>
-<td>2.25</td>
-<td>4.9.3</td>
-<td>1.10.2</td>
-<td><em>(none)</em></td>
-<td>0.2.15</td>
-<td>3.6.0</td>
-<td>2.0.2</td>
-<td>3.3.4</td>
-</tr>
-<tr>
-<td><code>2016b</code></td>
-<td>Jul '16</td>
-<td>2.26</td>
-<td>5.4.0</td>
-<td>1.10.3</td>
-<td><em>(none)</em></td>
-<td>0.2.18</td>
-<td>3.6.1</td>
-<td>2.0.2</td>
-<td>3.3.4</td>
-</tr>
-<tr>
-<td><code>2017a</code></td>
-<td>Jan '17</td>
-<td>2.27</td>
-<td>6.3.0</td>
-<td>2.0.2</td>
-<td><em>(none)</em></td>
-<td>0.2.19</td>
-<td>3.7.0</td>
-<td>2.0.2</td>
-<td>3.3.6(-pl2)</td>
-</tr>
-<tr>
-<td><code>2017b</code></td>
-<td>Jul '17</td>
-<td>2.28</td>
-<td>6.4.0</td>
-<td>2.1.1</td>
-<td><em>(none)</em></td>
-<td>0.2.20*</td>
+<td>0.3.12</td>
 <td>(incl. with OpenBLAS)</td>
-<td>2.0.2</td>
-<td>3.3.6(-pl2)</td>
-</tr>
-<tr>
-<td><code>2018a</code></td>
-<td>Jan '18</td>
-<td>2.28</td>
-<td>6.4.0</td>
-<td>2.1.2</td>
-<td><em>(none)</em></td>
-<td>0.2.20*</td>
-<td>(incl. with OpenBLAS)</td>
-<td>2.0.2</td>
-<td>3.3.7</td>
-</tr>
-<tr>
-<td><code>2018b</code></td>
-<td>Jul '18</td>
-<td>2.30</td>
-<td>7.3.0</td>
-<td>3.1.1</td>
-<td><em>(none)</em></td>
-<td>0.3.1</td>
-<td>(incl. with OpenBLAS)</td>
-<td>2.0.2</td>
-<td>3.3.8</td>
-</tr>
-<tr>
-<td><code>2019a</code></td>
-<td>Jan '19</td>
-<td>2.31.1</td>
-<td>8.2.0</td>
-<td>3.1.3</td>
-<td><em>(none)</em></td>
-<td>0.3.5</td>
-<td>(incl. with OpenBLAS)</td>
-<td>2.0.2</td>
-<td>3.3.8</td>
-</tr>
-<tr>
-<td><code>2019b</code></td>
-<td>Sept '19</td>
-<td>2.32</td>
-<td>8.3.0</td>
-<td>3.1.4</td>
-<td><em>(none)</em></td>
-<td>0.3.7</td>
-<td>(incl. with OpenBLAS)</td>
-<td>2.0.2</td>
+<td>2.1.0</td>
 <td>3.3.8</td>
 </tr>
 <tr>
 <td><code>2020a</code></td>
+<td>archived</td>
 <td>May '20</td>
 <td>2.34</td>
 <td>9.3.0</td>
@@ -9689,25 +9426,157 @@ most recent revision of the common toolchains at that time.</p>
 <td>3.3.8</td>
 </tr>
 <tr>
-<td><code>2020b</code></td>
-<td>Nov '20</td>
-<td>2.35</td>
-<td>10.2.0</td>
-<td>4.0.5</td>
+<td><code>2019b</code></td>
+<td>archived</td>
+<td>Sept '19</td>
+<td>2.32</td>
+<td>8.3.0</td>
+<td>3.1.4</td>
 <td><em>(none)</em></td>
-<td>0.3.12</td>
+<td>0.3.7</td>
 <td>(incl. with OpenBLAS)</td>
-<td>2.1.0</td>
+<td>2.0.2</td>
 <td>3.3.8</td>
+</tr>
+<tr>
+<td><code>2019a</code></td>
+<td>archived</td>
+<td>Jan '19</td>
+<td>2.31.1</td>
+<td>8.2.0</td>
+<td>3.1.3</td>
+<td><em>(none)</em></td>
+<td>0.3.5</td>
+<td>(incl. with OpenBLAS)</td>
+<td>2.0.2</td>
+<td>3.3.8</td>
+</tr>
+<tr>
+<td><code>2018b</code></td>
+<td>archived</td>
+<td>Jul '18</td>
+<td>2.30</td>
+<td>7.3.0</td>
+<td>3.1.1</td>
+<td><em>(none)</em></td>
+<td>0.3.1</td>
+<td>(incl. with OpenBLAS)</td>
+<td>2.0.2</td>
+<td>3.3.8</td>
+</tr>
+<tr>
+<td><code>2018a</code></td>
+<td>archived</td>
+<td>Jan '18</td>
+<td>2.28</td>
+<td>6.4.0</td>
+<td>2.1.2</td>
+<td><em>(none)</em></td>
+<td>0.2.20*</td>
+<td>(incl. with OpenBLAS)</td>
+<td>2.0.2</td>
+<td>3.3.7</td>
+</tr>
+<tr>
+<td><code>2017b</code></td>
+<td>archived</td>
+<td>Jul '17</td>
+<td>2.28</td>
+<td>6.4.0</td>
+<td>2.1.1</td>
+<td><em>(none)</em></td>
+<td>0.2.20*</td>
+<td>(incl. with OpenBLAS)</td>
+<td>2.0.2</td>
+<td>3.3.6(-pl2)</td>
+</tr>
+<tr>
+<td><code>2017a</code></td>
+<td>archived</td>
+<td>Jan '17</td>
+<td>2.27</td>
+<td>6.3.0</td>
+<td>2.0.2</td>
+<td><em>(none)</em></td>
+<td>0.2.19</td>
+<td>3.7.0</td>
+<td>2.0.2</td>
+<td>3.3.6(-pl2)</td>
+</tr>
+<tr>
+<td><code>2016b</code></td>
+<td>archived</td>
+<td>Jul '16</td>
+<td>2.26</td>
+<td>5.4.0</td>
+<td>1.10.3</td>
+<td><em>(none)</em></td>
+<td>0.2.18</td>
+<td>3.6.1</td>
+<td>2.0.2</td>
+<td>3.3.4</td>
+</tr>
+<tr>
+<td><code>2016a</code></td>
+<td>archived</td>
+<td>Jan '16</td>
+<td>2.25</td>
+<td>4.9.3</td>
+<td>1.10.2</td>
+<td><em>(none)</em></td>
+<td>0.2.15</td>
+<td>3.6.0</td>
+<td>2.0.2</td>
+<td>3.3.4</td>
+</tr>
+<tr>
+<td><code>2015b</code></td>
+<td>archived</td>
+<td>Jul '15</td>
+<td>2.25</td>
+<td>4.9.3</td>
+<td>1.8.8</td>
+<td><em>(none)</em></td>
+<td>0.2.14</td>
+<td>3.5.0</td>
+<td>2.0.2</td>
+<td>3.3.4</td>
+</tr>
+<tr>
+<td><code>2015a</code></td>
+<td>archived</td>
+<td>Jan '15</td>
+<td>'<em>(none)</em></td>
+<td>4.9.2</td>
+<td>1.8.4</td>
+<td><em>(none)</em></td>
+<td>0.2.13</td>
+<td>3.5.0</td>
+<td>2.0.2</td>
+<td>3.3.4</td>
+</tr>
+<tr>
+<td><code>2014b</code></td>
+<td>archived</td>
+<td>Jul '14</td>
+<td>'<em>(none)</em></td>
+<td>4.8.3</td>
+<td>1.8.1</td>
+<td><em>(none)</em></td>
+<td>0.2.9</td>
+<td>3.5.0</td>
+<td>2.0.2</td>
+<td>3.3.4</td>
 </tr>
 </tbody>
 </table>
 <p><em>(components marked with</em> * <em>were patched)</em></p>
-<h3 id="common_toolchains_overview_intel_deprecated">Component versions in <code>intel</code> toolchain (deprecated versions)<a class="headerlink" href="#common_toolchains_overview_intel_deprecated" title="Permanent link">&para;</a></h3>
+<h3 id="common_toolchains_overview_intel">Component versions in <code>intel</code> toolchain<a class="headerlink" href="#common_toolchains_overview_intel" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
 <th><code>intel</code></th>
+<th><em>support</em></th>
 <th><em>date</em></th>
 <th><em>binutils</em></th>
 <th><em>GCC</em></th>
@@ -9718,106 +9587,88 @@ most recent revision of the common toolchains at that time.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>2014b</code></td>
-<td>Jul '14</td>
-<td>'<em>(none)</em></td>
-<td>4.8.3</td>
-<td>2013.5.192</td>
-<td>4.1.3.049</td>
-<td>11.1.2.144</td>
+<td><code>2024a</code></td>
+<td>active</td>
+<td>Aug '24</td>
+<td>2.42</td>
+<td>13.3.0</td>
+<td>2024.2.0</td>
+<td>2021.13.0</td>
+<td>2024.2.0</td>
 </tr>
 <tr>
-<td><code>2015a</code></td>
-<td>Jan '15</td>
-<td>'<em>(none)</em></td>
-<td>4.9.2</td>
-<td>2015.1.133</td>
-<td>5.0.2.044</td>
-<td>11.2.1.133</td>
+<td><code>2023b</code></td>
+<td>active</td>
+<td>Dec '23</td>
+<td>2.40</td>
+<td>13.2.0</td>
+<td>2023.2.1</td>
+<td>2021.10.1</td>
+<td>2023.2.0</td>
 </tr>
 <tr>
-<td><code>2015b</code></td>
-<td>Jul '15</td>
-<td>2.25</td>
-<td>4.9.3</td>
-<td>2015.3.187</td>
-<td>5.0.3.048</td>
-<td>11.2.3.187</td>
+<td><code>2023a</code></td>
+<td>active</td>
+<td>Jun '23</td>
+<td>2.40</td>
+<td>12.3.0</td>
+<td>2023.1.0</td>
+<td>2021.9.1</td>
+<td>2023.1.0</td>
 </tr>
 <tr>
-<td><code>2016a</code></td>
-<td>Jan '16</td>
-<td>2.26</td>
-<td>4.9.3</td>
-<td>2016.1.150</td>
-<td>5.1.2.150</td>
-<td>11.3.1.150</td>
+<td><code>2022b</code></td>
+<td>active</td>
+<td>Dec '22</td>
+<td>2.39</td>
+<td>12.2.0</td>
+<td>2022.2.1</td>
+<td>2021.7.1</td>
+<td>2022.2.1</td>
 </tr>
 <tr>
-<td><code>2016b</code></td>
-<td>Jul '16</td>
-<td>2.26</td>
-<td>5.4.0</td>
-<td>2016.3.210</td>
-<td>5.1.3.181</td>
-<td>11.3.3.210</td>
+<td><code>2022a</code></td>
+<td>active</td>
+<td>Jun '22</td>
+<td>2.38</td>
+<td>11.3.0</td>
+<td>2022.1.0</td>
+<td>2021.6.0</td>
+<td>2022.1.0</td>
 </tr>
 <tr>
-<td><code>2017a</code></td>
-<td>Jan '17</td>
-<td>2.27</td>
-<td>6.3.0</td>
-<td>2017.1.132</td>
-<td>2017.1.132</td>
-<td>2017.1.132</td>
+<td><code>2021b</code></td>
+<td>active</td>
+<td>Oct '21</td>
+<td>2.37</td>
+<td>11.2.0</td>
+<td>2021.4.0</td>
+<td>2021.4.0</td>
+<td>2021.4.0</td>
 </tr>
 <tr>
-<td><code>2017b</code></td>
-<td>Jul '17</td>
-<td>2.28</td>
-<td>6.4.0</td>
-<td>2017.4.196</td>
-<td>2017.3.196</td>
-<td>2017.3.196</td>
+<td><code>2021a</code></td>
+<td>deprecated</td>
+<td>May '21</td>
+<td>2.36.1</td>
+<td>10.3.0</td>
+<td>2021.2.0</td>
+<td>2021.2.0</td>
+<td>2021.2.0</td>
 </tr>
 <tr>
-<td><code>2018a</code></td>
-<td>Jan '18</td>
-<td>2.28</td>
-<td>6.4.0</td>
-<td>2018.1.163</td>
-<td>2018.1.163</td>
-<td>2018.1.163</td>
-</tr>
-<tr>
-<td><code>2018b</code></td>
-<td>Jul '18</td>
-<td>2.30</td>
-<td>7.3.0</td>
-<td>2018.3.222</td>
-<td>2018.3.222</td>
-<td>2018.3.222</td>
-</tr>
-<tr>
-<td><code>2019a</code></td>
-<td>Jan '19</td>
-<td>2.31.1</td>
-<td>8.2.0</td>
-<td>2019.1.144</td>
-<td>2018.4.274</td>
-<td>2019.1.144</td>
-</tr>
-<tr>
-<td><code>2019b</code></td>
-<td>Sept '19</td>
-<td>2.32</td>
-<td>8.3.0</td>
-<td>2019.5.281</td>
-<td>2018.5.288</td>
-<td>2019.5.281</td>
+<td><code>2020b</code></td>
+<td>deprecated</td>
+<td>Nov '20</td>
+<td>2.35</td>
+<td>10.2.0</td>
+<td>2020.4.304</td>
+<td>2019.9.304</td>
+<td>2020.4.304</td>
 </tr>
 <tr>
 <td><code>2020a</code></td>
+<td>archived</td>
 <td>May '20</td>
 <td>2.34</td>
 <td>9.3.0</td>
@@ -9826,13 +9677,114 @@ most recent revision of the common toolchains at that time.</p>
 <td>2020.1.217</td>
 </tr>
 <tr>
-<td><code>2020b</code></td>
-<td>Nov '20</td>
-<td>2.35</td>
-<td>10.2.0</td>
-<td>2020.4.304</td>
-<td>2019.9.304</td>
-<td>2020.4.304</td>
+<td><code>2019b</code></td>
+<td>archived</td>
+<td>Sept '19</td>
+<td>2.32</td>
+<td>8.3.0</td>
+<td>2019.5.281</td>
+<td>2018.5.288</td>
+<td>2019.5.281</td>
+</tr>
+<tr>
+<td><code>2019a</code></td>
+<td>archived</td>
+<td>Jan '19</td>
+<td>2.31.1</td>
+<td>8.2.0</td>
+<td>2019.1.144</td>
+<td>2018.4.274</td>
+<td>2019.1.144</td>
+</tr>
+<tr>
+<td><code>2018b</code></td>
+<td>archived</td>
+<td>Jul '18</td>
+<td>2.30</td>
+<td>7.3.0</td>
+<td>2018.3.222</td>
+<td>2018.3.222</td>
+<td>2018.3.222</td>
+</tr>
+<tr>
+<td><code>2018a</code></td>
+<td>archived</td>
+<td>Jan '18</td>
+<td>2.28</td>
+<td>6.4.0</td>
+<td>2018.1.163</td>
+<td>2018.1.163</td>
+<td>2018.1.163</td>
+</tr>
+<tr>
+<td><code>2017b</code></td>
+<td>archived</td>
+<td>Jul '17</td>
+<td>2.28</td>
+<td>6.4.0</td>
+<td>2017.4.196</td>
+<td>2017.3.196</td>
+<td>2017.3.196</td>
+</tr>
+<tr>
+<td><code>2017a</code></td>
+<td>archived</td>
+<td>Jan '17</td>
+<td>2.27</td>
+<td>6.3.0</td>
+<td>2017.1.132</td>
+<td>2017.1.132</td>
+<td>2017.1.132</td>
+</tr>
+<tr>
+<td><code>2016b</code></td>
+<td>archived</td>
+<td>Jul '16</td>
+<td>2.26</td>
+<td>5.4.0</td>
+<td>2016.3.210</td>
+<td>5.1.3.181</td>
+<td>11.3.3.210</td>
+</tr>
+<tr>
+<td><code>2016a</code></td>
+<td>archived</td>
+<td>Jan '16</td>
+<td>2.26</td>
+<td>4.9.3</td>
+<td>2016.1.150</td>
+<td>5.1.2.150</td>
+<td>11.3.1.150</td>
+</tr>
+<tr>
+<td><code>2015b</code></td>
+<td>archived</td>
+<td>Jul '15</td>
+<td>2.25</td>
+<td>4.9.3</td>
+<td>2015.3.187</td>
+<td>5.0.3.048</td>
+<td>11.2.3.187</td>
+</tr>
+<tr>
+<td><code>2015a</code></td>
+<td>archived</td>
+<td>Jan '15</td>
+<td>'<em>(none)</em></td>
+<td>4.9.2</td>
+<td>2015.1.133</td>
+<td>5.0.2.044</td>
+<td>11.2.1.133</td>
+</tr>
+<tr>
+<td><code>2014b</code></td>
+<td>archived</td>
+<td>Jul '14</td>
+<td>'<em>(none)</em></td>
+<td>4.8.3</td>
+<td>2013.5.192</td>
+<td>4.1.3.049</td>
+<td>11.1.2.144</td>
 </tr>
 </tbody>
 </table>
@@ -9871,7 +9823,7 @@ toolchain, please see <a href="../version-specific/toolchain-opts/">Available to
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 12, 2024 20:07:32">September 12, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 24, 2025 03:01:29">March 24, 2025</span>
   </span>
 
     

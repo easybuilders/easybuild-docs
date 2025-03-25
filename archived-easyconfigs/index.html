@@ -1285,9 +1285,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#archived_easyconfigs_consider" class="md-nav__link">
+  <a href="#use_archived_easyconfigs" class="md-nav__link">
     <span class="md-ellipsis">
-      Using --consider-archived-easyconfigs
+      Using archived easyconfigs
     </span>
   </a>
   
@@ -8945,9 +8945,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#archived_easyconfigs_consider" class="md-nav__link">
+  <a href="#use_archived_easyconfigs" class="md-nav__link">
     <span class="md-ellipsis">
-      Using --consider-archived-easyconfigs
+      Using archived easyconfigs
     </span>
   </a>
   
@@ -8975,46 +8975,52 @@
 <h1 id="archived_easyconfigs">Archived easyconfigs<a class="headerlink" href="#archived_easyconfigs" title="Permanent link">&para;</a></h1>
 <p>Since EasyBuild v3.0.0, easyconfig files using deprecated (i.e., old and
 inactive) toolchains are <em>archived</em>.</p>
+<p>Since EasyBuild v5.0.0, archived easyconfig files are transferred to the
+<a href="https://github.com/easybuilders/easybuild-easyconfigs-archive">easybuild-easyconfigs-archive</a>
+repository.</p>
 <h2 id="archived_easyconfigs_toolchain_deprecation">Toolchain deprecation<a class="headerlink" href="#archived_easyconfigs_toolchain_deprecation" title="Permanent link">&para;</a></h2>
-<p>Once in a blue moon, we review the list of toolchains (&amp; versions) that
-are included in EasyBuild.</p>
-<p>Easyconfig files that use toolchains that become <em>deprecated</em> are then
-moved to the <em>easyconfigs archive</em>, i.e. the <code>__archive__</code> subdirectory
-in the <code>easybuild-easyconfigs</code> repository (see
-<a href="https://github.com/easybuilders/easybuild-easyconfigs/tree/main/easybuild/easyconfigs/__archive__">https://github.com/easybuilders/easybuild-easyconfigs/tree/main/easybuild/easyconfigs/__archive__</a>).</p>
+<p>Support for toolchains included in EasyBuild is defined in our
+<a class="autorefs autorefs-internal" title="Supported Toolchain Generations Policy" href="../policies/toolchains/#policy_toolchains">support policy on toolchain generations</a>.</p>
+<p>Once a new toolchain generation is released, it will be supported by the
+maintainers of Easybuild for a limited period of time. Afterwards, it becomes
+deprecated and at some point it will be archived including all easyconfig files
+using that toolchain.</p>
 <h3 id="archived_easyconfigs_deprecated_toolchains_what">What are deprecated toolchains?<a class="headerlink" href="#archived_easyconfigs_deprecated_toolchains_what" title="Permanent link">&para;</a></h3>
-<p>Toolchains become deprecated if:</p>
-<ul>
-<li>no easyconfig files using that toolchain have been contributed
-  recently (e.g., in the last year)</li>
-<li>that toolchain is considered to be inactive, after consulting the
-  EasyBuild community (via mailing list, bi-weekly conf calls)</li>
-</ul>
-<p>Deprecating a toolchain implies that all easyconfigs using that
-toolchain are moved to the easyconfigs archive, and that they are no
-longer included in the EasyBuild regression test. In addition, these
-easyconfigs are 'hidden' from plain sight, in the sense that you need to
-use <code>--consider-archived-easyconfigs</code> to make EasyBuild consider them
-when it is looking for easyconfigs (e.g., with <code>--search</code> or
-<code>--robot</code>).</p>
-<p>This does <em>not</em> mean that the support for using these toolchains is
-removed from the EasyBuild framework, although not testing them anymore
+<p>A deprecated toolchain is a toolchain version or generation that is no longer
+recommended for use in production systems.</p>
+<p>Initially, deprecated toolchains are removed from the EasyBuild regression
+tests and new contributions in the form of easyconfigs become restricted.
+After a period of time defined in our <a class="autorefs autorefs-internal" title="Supported Toolchain Generations Policy" href="../policies/toolchains/#policy_toolchains">support policy</a>,
+all easyconfig files using that deprecated toolchain are moved to the
+<em>easyconfigs archive</em>, i.e. the <code>__archive__</code> subdirectory in the
+<a href="https://github.com/easybuilders/easybuild-easyconfigs-archive">easybuild-easyconfigs-archive</a>
+repository.</p>
+<p>This does <em>not</em> mean that the support for using deprecated toolchains is
+removed from the EasyBuild framework, although the lack of testing
 may imply that using them may no longer work at some point in time.</p>
-<p>For toolchains for which no active versions are available (outside of
-the easyconfigs archive), it is possible that they will be reactivated,
-if a new toolchain version is contributed.</p>
 <h3 id="archived_easyconfigs_deprecated_toolchains_why">Why are toolchains being deprecated?<a class="headerlink" href="#archived_easyconfigs_deprecated_toolchains_why" title="Permanent link">&para;</a></h3>
+<p>Toolchain generations are deprecated if:</p>
 <ul>
-<li>using old toolchains (incl. old compilers and/or libraries) is
-  likely to become more and more difficult on modern operating systems</li>
-<li>these toolchains put a significant burden on the regression testing
-  for EasyBuild releases</li>
-<li>easyconfigs using old toolchains are likely to be for old software
-  versions, which may no longer be relevant anyway</li>
+<li>it is established in our <a class="autorefs autorefs-internal" title="Supported Toolchain Generations Policy" href="../policies/toolchains/#policy_toolchains">support policy</a></li>
+<li>they become inactive, meaning that no easyconfig files using that toolchain
+  have been contributed for a long period of time (e.g., in the last year)</li>
+<li>they become <a class="autorefs autorefs-internal" title="Obsolete toolchains" href="../deprecated-easyconfigs/#obsolete_easyconfigs_toolchains">obsolete</a>, which usually
+  happens when a toolchain is replaced by some other newer toolchain</li>
 </ul>
-<h2 id="archived_easyconfigs_consider">Using <code>--consider-archived-easyconfigs</code><a class="headerlink" href="#archived_easyconfigs_consider" title="Permanent link">&para;</a></h2>
-<p>To make EasyBuild consider archived easyconfig files, you need to enable
-the <code>--consider-archived-easyconfigs</code> configuration option:</p>
+<p>Inactive toolchains may become re-activated in the future if a new toolchain
+version is contributed to <code>easybuild-easyconfigs</code>.</p>
+<h2 id="use_archived_easyconfigs">Using archived easyconfigs<a class="headerlink" href="#use_archived_easyconfigs" title="Permanent link">&para;</a></h2>
+<p>The archive of easyconfigs is not installed by default. You need to install the
+<code>easybuild-easyconfigs</code> package with the <code>archive</code> extra option in <code>pip</code>. This
+will pull in the <code>easybuild-easyconfigs-archive</code> package, which provides the
+contents of the <code>__archive__</code> subdirectory.</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>easybuild-easyconfigs<span class="o">[</span>archive<span class="o">]</span>
+</code></pre></div>
+<p>Easyconfig files in the archive are <em>hidden</em> from plain sight, meaning that the
+<code>eb</code> command will not use those files by default. You need to use the
+<code>--consider-archived-easyconfigs</code> configuration option to make EasyBuild look
+into the archive when it seeks easyconfigs (e.g., with <code>--search</code> or
+<code>--robot</code>).</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>-S<span class="w"> </span><span class="s1">&#39;^goolfc&#39;</span>
 <span class="go">CFGS=/home/example/work/easybuild-easyconfigs/easybuild/easyconfigs</span>
 <span class="go">  * $CFGS1/g/goolfc/goolfc-2016.08.eb</span>
@@ -9053,7 +9059,7 @@ the <code>--consider-archived-easyconfigs</code> configuration option:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 4, 2022 15:04:27">November 4, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 24, 2025 03:01:29">March 24, 2025</span>
   </span>
 
     

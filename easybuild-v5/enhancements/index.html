@@ -8724,15 +8724,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#granular-exit-codes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Granular exit codes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#parallel-extensions-install-stable" class="md-nav__link">
     <span class="md-ellipsis">
       Mark support for installing extensions in parallel as stable (no longer experimental)
@@ -8754,6 +8745,24 @@
   <a href="#reproducible-tarballs-git_config" class="md-nav__link">
     <span class="md-ellipsis">
       Reproducible tarballs for sources created via git_config
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-easyconfig-archive" class="md-nav__link">
+    <span class="md-ellipsis">
+      New house for the archive of easyconfigs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#granular-exit-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Granular exit codes
     </span>
   </a>
   
@@ -9068,15 +9077,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#granular-exit-codes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Granular exit codes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#parallel-extensions-install-stable" class="md-nav__link">
     <span class="md-ellipsis">
       Mark support for installing extensions in parallel as stable (no longer experimental)
@@ -9098,6 +9098,24 @@
   <a href="#reproducible-tarballs-git_config" class="md-nav__link">
     <span class="md-ellipsis">
       Reproducible tarballs for sources created via git_config
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-easyconfig-archive" class="md-nav__link">
+    <span class="md-ellipsis">
+      New house for the archive of easyconfigs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#granular-exit-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Granular exit codes
     </span>
   </a>
   
@@ -9240,6 +9258,7 @@
 <li><a class="autorefs autorefs-internal" href="#parallel-extensions-install-stable">Mark support for installing extensions in parallel as stable (no longer experimental)</a></li>
 <li><a class="autorefs autorefs-internal" href="#easystack-stable">Mark easystack support as stable (no longer experimental)</a></li>
 <li><a class="autorefs autorefs-internal" title="Reproducible tarballs for sources created via git_config" href="#reproducible-tarballs-git_config">Reproducible tarballs for sources created via <code>git_config</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#new-easyconfig-archive">New house for the archive of easyconfigs</a></li>
 <li><a class="autorefs autorefs-internal" href="#granular-exit-codes">Granular exit codes</a></li>
 <li><a class="autorefs autorefs-internal" title="Copy build directory and/or log file(s) if installation failed to path specified via --failed-install-build-dirs-path or --failed-install-logs-path" href="#copy-build-log-failed-installs">Copy build directory and/or log file(s) if installation failed to path specified via <code>--failed-install-build-dirs-path</code> or <code>--failed-install-logs-path</code></a></li>
 <li><a class="autorefs autorefs-internal" title="Specify changes that should be made by generated module files via module_load_environment" href="#module-load-environment">Specify changes that should be made by generated module files via <code>module_load_environment</code></a></li>
@@ -9275,17 +9294,6 @@ generation. All of them are already adapted to the requirements of their
 generation, including the versions of toolchains and dependencies for instance.</p>
 <p>If you would like to see other types of easyconfigs added as templates, please
 <a class="autorefs autorefs-internal" title="Contributing" href="../../contributing/#contributing">open an issue or pull request with your suggestion</a>.</p>
-<hr />
-<h2 :=":" id="granular-exit-codes">Granular exit codes<a class="headerlink" href="#granular-exit-codes" title="Permanent link">&para;</a></h2>
-<p>EasyBuild v5 now uses a range of ~50 exit codes instead of just 0 for normal
-termination and 1 for unexpected termination. Each non-zero exit code
-correlates to the specific type of error or failure that caused the
-termination of the program. For instance, a missing easyconfig or a failed
-checksum check. The full list of exit codes is defined in the class
-<a href="https://github.com/easybuilders/easybuild-framework/blob/main/easybuild/tools/build_log.py#L74">easybuild.tools.build_log.EasyBuildExit</a>.</p>
-<p>EasyBuild will always return its own exit codes on termination. Other exit
-codes from external processes executed through <code>run_shell_cmd</code> or HTTP response
-status codes are reported in the corresponding logs.</p>
 <hr />
 <h2 id="parallel-extensions-install-stable">Mark support for installing extensions in parallel as stable (no longer experimental)<a class="headerlink" href="#parallel-extensions-install-stable" title="Permanent link">&para;</a></h2>
 <p><em>(more info soon)</em></p>
@@ -9334,6 +9342,45 @@ tarballs. Archives will be created in <code>.tar.xz</code> format and checksums 
 validated on Python 3.9+. Therefore, beware that EasyBuild 5.0 might generate
 new archives for sources that were already cloned in your system due to this
 changes in format.</p>
+<hr />
+<h2 :=":" id="new-easyconfig-archive">New house for the archive of easyconfigs<a class="headerlink" href="#new-easyconfig-archive" title="Permanent link">&para;</a></h2>
+<p>The collection of old unsupported easyconfig files located inside the <code>__archive__</code> folder in our
+<a href="https://github.com/easybuilders/easybuild-easyconfigs">easybuilders/easybuild-easyconfigs</a>
+repository has been moved into its own repository at
+<a href="https://github.com/easybuilders/easybuild-easyconfigs-archive">easybuilders/easybuild-easyconfigs-archive</a>.</p>
+<p>This operation has reduced the number of files in the <code>easybuild-easyconfigs</code>
+repository by 12765 files (11378 easyconfigs and 1387 patch files). Such a
+drastic reduction in the number of files has two main advantages:</p>
+<ul>
+<li>
+<p>the tarball of easyconfigs (<code>easybuild_easyconfigs-5.0.0.tar.gz</code>) is 4.5 MB
+smaller than in v4.9.4, 58% of the size</p>
+</li>
+<li>
+<p>the execution of Git commands on the <code>easybuild_easyconfigs</code> repository is much
+faster</p>
+</li>
+</ul>
+<p>The archive of old easyconfigs is now an opt-in installation that can be easily
+enabled in <code>pip</code> with the <code>archive</code> <em>extra</em> of the <code>easybuild-easyconfigs</code>
+package:</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>easybuild-easyconfigs<span class="o">[</span>archive<span class="o">]</span>
+</code></pre></div>
+<p>This will result in the same installation layout as in v4.9. All <em>active</em>
+easyconfigs will be placed in alphabetical folders and the archive of
+easyconfigs will be placed inside the <code>__archive__</code> folder.</p>
+<p>See <a class="autorefs autorefs-internal" href="../../archived-easyconfigs/#archived_easyconfigs">Archived easyconfigs</a> for more information.</p>
+<hr />
+<h2 :=":" id="granular-exit-codes">Granular exit codes<a class="headerlink" href="#granular-exit-codes" title="Permanent link">&para;</a></h2>
+<p>EasyBuild v5 now uses a range of ~50 exit codes instead of just 0 for normal
+termination and 1 for unexpected termination. Each non-zero exit code
+correlates to the specific type of error or failure that caused the
+termination of the program. For instance, a missing easyconfig or a failed
+checksum check. The full list of exit codes is defined in the class
+<a href="https://github.com/easybuilders/easybuild-framework/blob/main/easybuild/tools/build_log.py#L74">easybuild.tools.build_log.EasyBuildExit</a>.</p>
+<p>EasyBuild will always return its own exit codes on termination. Other exit
+codes from external processes executed through <code>run_shell_cmd</code> or HTTP response
+status codes are reported in the corresponding logs.</p>
 <hr />
 <h2 id="copy-build-log-failed-installs">Copy build directory and/or log file(s) if installation failed to path specified via <code>--failed-install-build-dirs-path</code> or <code>--failed-install-logs-path</code><a class="headerlink" href="#copy-build-log-failed-installs" title="Permanent link">&para;</a></h2>
 <p><em>(more info soon)</em></p>
@@ -9567,7 +9614,7 @@ of any non-public sources in them
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 21, 2025 09:52:57">March 21, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 24, 2025 03:01:29">March 24, 2025</span>
   </span>
 
     
