@@ -10,7 +10,7 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 - [Mark support for installing extensions in parallel as stable (no longer experimental)][parallel-extensions-install-stable]
 - [Mark easystack support as stable (no longer experimental)][easystack-stable]
 - [Reproducible tarballs for sources created via `git_config`][reproducible-tarballs-git_config]
-- [New house for the archive of easyconfigs][new-easyconfig-archive]
+- [New home for the archive of easyconfigs][new-easyconfig-archive]
 - [Granular exit codes][granular-exit-codes]
 - [Copy build directory and/or log file(s) if installation failed to path specified via `--failed-install-build-dirs-path` or `--failed-install-logs-path`][copy-build-log-failed-installs]
 - [Specify changes that should be made by generated module files via `module_load_environment`][module-load-environment]
@@ -118,7 +118,7 @@ changes in format.
 
 ---
 
-## New house for the archive of easyconfigs { : #new-easyconfig-archive }
+## New home for the archive of easyconfigs { : #new-easyconfig-archive }
 
 The collection of old unsupported easyconfig files located inside the `__archive__` folder in our
 [easybuilders/easybuild-easyconfigs](https://github.com/easybuilders/easybuild-easyconfigs)
