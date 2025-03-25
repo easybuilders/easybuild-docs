@@ -10,6 +10,7 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 - [Mark support for installing extensions in parallel as stable (no longer experimental)][parallel-extensions-install-stable]
 - [Mark easystack support as stable (no longer experimental)][easystack-stable]
 - [Reproducible tarballs for sources created via `git_config`][reproducible-tarballs-git_config]
+- [New house for the archive of easyconfigs][new-easyconfig-archive]
 - [Granular exit codes][granular-exit-codes]
 - [Copy build directory and/or log file(s) if installation failed to path specified via `--failed-install-build-dirs-path` or `--failed-install-logs-path`][copy-build-log-failed-installs]
 - [Specify changes that should be made by generated module files via `module_load_environment`][module-load-environment]
@@ -57,21 +58,6 @@ generation, including the versions of toolchains and dependencies for instance.
 
 If you would like to see other types of easyconfigs added as templates, please
 [open an issue or pull request with your suggestion][contributing].
-
----
-
-## Granular exit codes { : #granular-exit-codes }
-
-EasyBuild v5 now uses a range of ~50 exit codes instead of just 0 for normal
-termination and 1 for unexpected termination. Each non-zero exit code
-correlates to the specific type of error or failure that caused the
-termination of the program. For instance, a missing easyconfig or a failed
-checksum check. The full list of exit codes is defined in the class
-[easybuild.tools.build_log.EasyBuildExit](https://github.com/easybuilders/easybuild-framework/blob/main/easybuild/tools/build_log.py#L74).
-
-EasyBuild will always return its own exit codes on termination. Other exit
-codes from external processes executed through `run_shell_cmd` or HTTP response
-status codes are reported in the corresponding logs.
 
 ---
 
@@ -129,6 +115,54 @@ tarballs. Archives will be created in `.tar.xz` format and checksums will be
 validated on Python 3.9+. Therefore, beware that EasyBuild 5.0 might generate
 new archives for sources that were already cloned in your system due to this
 changes in format.
+
+---
+
+## New house for the archive of easyconfigs { : #new-easyconfig-archive }
+
+The collection of old unsupported easyconfig files located inside the `__archive__` folder in our
+[easybuilders/easybuild-easyconfigs](https://github.com/easybuilders/easybuild-easyconfigs)
+repository has been moved into its own repository at
+[easybuilders/easybuild-easyconfigs-archive](https://github.com/easybuilders/easybuild-easyconfigs-archive).
+
+This operation has reduced the number of files in the `easybuild-easyconfigs`
+repository by 12765 files (11378 easyconfigs and 1387 patch files). Such a
+drastic reduction in the number of files has two main advantages:
+
+- the tarball of easyconfigs (`easybuild_easyconfigs-5.0.0.tar.gz`) is 4.5 MB
+smaller than in v4.9.4, 58% of the size
+
+- the execution of Git commands on the `easybuild_easyconfigs` repository is much
+faster
+
+The archive of old easyconfigs is now an opt-in installation that can be easily
+enabled in `pip` with the `archive` *extra* of the `easybuild-easyconfigs`
+package:
+
+```shell
+python -m pip install easybuild-easyconfigs[archive]
+```
+
+This will result in the same installation layout as in v4.9. All *active*
+easyconfigs will be placed in alphabetical folders and the archive of
+easyconfigs will be placed inside the `__archive__` folder.
+
+See [Archived easyconfigs][archived_easyconfigs] for more information.
+
+---
+
+## Granular exit codes { : #granular-exit-codes }
+
+EasyBuild v5 now uses a range of ~50 exit codes instead of just 0 for normal
+termination and 1 for unexpected termination. Each non-zero exit code
+correlates to the specific type of error or failure that caused the
+termination of the program. For instance, a missing easyconfig or a failed
+checksum check. The full list of exit codes is defined in the class
+[easybuild.tools.build_log.EasyBuildExit](https://github.com/easybuilders/easybuild-framework/blob/main/easybuild/tools/build_log.py#L74).
+
+EasyBuild will always return its own exit codes on termination. Other exit
+codes from external processes executed through `run_shell_cmd` or HTTP response
+status codes are reported in the corresponding logs.
 
 ---
 

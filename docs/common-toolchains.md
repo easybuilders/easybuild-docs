@@ -153,11 +153,16 @@ available in [Overview of common toolchains][common_toolchains_overview].
 
 The intention is to revise and update the common toolchains every 6
 months: once in late December/early January (version `<year>a`), and
-once in late June/early July (version `<year>b`).
+once in late June/early July (version `<year>b`). Each one of these
+versions is a so-called *toolchain generation*.
 
-This is meant be to be a community effort, in the sense that a proposal
-for an updated composition is shared and discussed before it is set in
-stone.
+Each new version is meant be to be a community effort, in the sense that a
+proposal for an updated composition is shared and discussed before it is set in
+stone. Usually, discussion about new toolchains takes place initially in the
+[toolchain-wg](https://easybuild.slack.com/archives/C02FU5Y5CDT) in Slack, the
+bi-weekly conf calls and later in respective pull requests in the
+[easybuild-easyconfigs](https://github.com/easybuilders/easybuild-easyconfigs)
+repository.
 
 Recent versions of each of the toolchain components are considered,
 taking into account stability, performance improvements, added features,
@@ -167,71 +172,69 @@ Moreover, the proposed toolchain compositions are tested extensively,
 typically by rebuilding all available easyconfigs that are using the
 most recent revision of the common toolchains at that time.
 
+Once a new toolchain generation is released, it will be supported by the
+maintainers of Easybuild for a limited period of time. Which is determined by
+our [support policy on toolchain][policy_toolchains].
+
 ## Overview of common toolchains {: #common_toolchains_overview }
+
+We support the [last 6 generations][policy_toolchains] of common toolchains.
+
+Archived toolchains can be found in the
+[easybuild-easyconfigs-archive](https://github.com/easybuilders/easybuild-easyconfigs-archive)
+repository.
 
 ### Component versions in `foss` toolchain {: #common_toolchains_overview_foss }
 
-| `foss`  | *date*   | *binutils* | *GCC*  | *Open MPI* | *FlexiBLAS* | *OpenBLAS* | *LAPACK*               | *ScaLAPACK* | *FFTW* |
-|---------|----------|------------|--------|------------|-------------|------------|------------------------|-------------|--------|
-| `2021a` | May '21  | 2.36.1     | 10.3.0 | 4.1.1      | 3.0.4       | 0.3.15     | (incl. with FlexiBLAS) | 2.1.0       | 3.3.9  |
-| `2021b` | Oct '21  | 2.37       | 11.2.0 | 4.1.1      | 3.0.4       | 0.3.18     | (incl. with FlexiBLAS) | 2.1.0       | 3.3.10 |
-| `2022a` | Jun '22  | 2.38       | 11.3.0 | 4.1.4      | 3.2.0       | 0.3.20     | (incl. with FlexiBLAS) | 2.2.0       | 3.3.10 |
-| `2022b` | Dec '22  | 2.39       | 12.2.0 | 4.1.4      | 3.2.1       | 0.3.21     | (incl. with FlexiBLAS) | 2.2.0       | 3.3.10 |
-| `2023a` | Jun '23  | 2.40       | 12.3.0 | 4.1.5      | 3.3.1       | 0.3.23     | (incl. with FlexiBLAS) | 2.2.0       | 3.3.10 |
-| `2023b` | Dec '23  | 2.40       | 13.2.0 | 4.1.6      | 3.3.1       | 0.3.24     | (incl. with FlexiBLAS) | 2.2.0       | 3.3.10 |
-| `2024a` | Aug '24  | 2.42       | 13.3.0 | 5.0.3      | 3.4.4       | 0.3.27     | (incl. with FlexiBLAS) | 2.2.0       | 3.3.10 |
-
-### Component versions in `intel` toolchain {: #common_toolchains_overview_intel }
-
-| `intel` | *date*   | *binutils* | *GCC*  | *Intel compilers* | *Intel MPI* | *Intel MKL* |
-|---------|----------|------------|--------|-------------------|-------------|-------------|
-| `2021a` | May '21  | 2.36.1     | 10.3.0 | 2021.2.0          | 2021.2.0    | 2021.2.0    |
-| `2021b` | Oct '21  | 2.37       | 11.2.0 | 2021.4.0          | 2021.4.0    | 2021.4.0    |
-| `2022a` | Jun '22  | 2.38       | 11.3.0 | 2022.1.0          | 2021.6.0    | 2022.1.0    |
-| `2022b` | Dec '22  | 2.39       | 12.2.0 | 2022.2.1          | 2021.7.1    | 2022.2.1    |
-| `2023a` | Jun '23  | 2.40       | 12.3.0 | 2023.1.0          | 2021.9.1    | 2023.1.0    |
-| `2023b` | Dec '23  | 2.40       | 13.2.0 | 2023.2.1          | 2021.10.1   | 2023.2.0    |
-| `2024a` | Aug '24  | 2.42       | 13.3.0 | 2024.2.0          | 2021.13.0   | 2024.2.0    |
-
-## Overview of common toolchains (deprecated versions) {: #common_toolchains_overview_deprecated }
-
-### Component versions in `foss` toolchain (deprecated versions) {: #common_toolchains_overview_foss_deprecated }
-
-| `foss`  | *date*   | *binutils* | *GCC*  | *Open MPI* | *FlexiBLAS* | *OpenBLAS* | *LAPACK*               | *ScaLAPACK* | *FFTW*      |
-|---------|----------|------------|--------|------------|-------------|------------|------------------------|-------------|-------------|
-| `2014b` | Jul '14  | '*(none)*  | 4.8.3  | 1.8.1      | *(none)*    | 0.2.9      | 3.5.0                  | 2.0.2       | 3.3.4       |
-| `2015a` | Jan '15  | '*(none)*  | 4.9.2  | 1.8.4      | *(none)*    | 0.2.13     | 3.5.0                  | 2.0.2       | 3.3.4       |
-| `2015b` | Jul '15  | 2.25       | 4.9.3  | 1.8.8      | *(none)*    | 0.2.14     | 3.5.0                  | 2.0.2       | 3.3.4       |
-| `2016a` | Jan '16  | 2.25       | 4.9.3  | 1.10.2     | *(none)*    | 0.2.15     | 3.6.0                  | 2.0.2       | 3.3.4       |
-| `2016b` | Jul '16  | 2.26       | 5.4.0  | 1.10.3     | *(none)*    | 0.2.18     | 3.6.1                  | 2.0.2       | 3.3.4       |
-| `2017a` | Jan '17  | 2.27       | 6.3.0  | 2.0.2      | *(none)*    | 0.2.19     | 3.7.0                  | 2.0.2       | 3.3.6(-pl2) |
-| `2017b` | Jul '17  | 2.28       | 6.4.0  | 2.1.1      | *(none)*    | 0.2.20\*   | (incl. with OpenBLAS)  | 2.0.2       | 3.3.6(-pl2) |
-| `2018a` | Jan '18  | 2.28       | 6.4.0  | 2.1.2      | *(none)*    | 0.2.20\*   | (incl. with OpenBLAS)  | 2.0.2       | 3.3.7       |
-| `2018b` | Jul '18  | 2.30       | 7.3.0  | 3.1.1      | *(none)*    | 0.3.1      | (incl. with OpenBLAS)  | 2.0.2       | 3.3.8       |
-| `2019a` | Jan '19  | 2.31.1     | 8.2.0  | 3.1.3      | *(none)*    | 0.3.5      | (incl. with OpenBLAS)  | 2.0.2       | 3.3.8       |
-| `2019b` | Sept '19 | 2.32       | 8.3.0  | 3.1.4      | *(none)*    | 0.3.7      | (incl. with OpenBLAS)  | 2.0.2       | 3.3.8       |
-| `2020a` | May '20  | 2.34       | 9.3.0  | 4.0.3      | *(none)*    | 0.3.9      | (incl. with OpenBLAS)  | 2.1.0       | 3.3.8       |
-| `2020b` | Nov '20  | 2.35       | 10.2.0 | 4.0.5      | *(none)*    | 0.3.12     | (incl. with OpenBLAS)  | 2.1.0       | 3.3.8       |
+| `foss`  | *support*  | *date*   | *binutils* | *GCC*  | *Open MPI* | *FlexiBLAS* | *OpenBLAS* | *LAPACK*               | *ScaLAPACK* | *FFTW*      |
+|---------|------------|----------|------------|--------|------------|-------------|------------|------------------------|-------------|-------------|
+| `2024a` | active     | Aug '24  | 2.42       | 13.3.0 | 5.0.3      | 3.4.4       | 0.3.27     | (incl. with FlexiBLAS) | 2.2.0       | 3.3.10      |
+| `2023b` | active     | Dec '23  | 2.40       | 13.2.0 | 4.1.6      | 3.3.1       | 0.3.24     | (incl. with FlexiBLAS) | 2.2.0       | 3.3.10      |
+| `2023a` | active     | Jun '23  | 2.40       | 12.3.0 | 4.1.5      | 3.3.1       | 0.3.23     | (incl. with FlexiBLAS) | 2.2.0       | 3.3.10      |
+| `2022b` | active     | Dec '22  | 2.39       | 12.2.0 | 4.1.4      | 3.2.1       | 0.3.21     | (incl. with FlexiBLAS) | 2.2.0       | 3.3.10      |
+| `2022a` | active     | Jun '22  | 2.38       | 11.3.0 | 4.1.4      | 3.2.0       | 0.3.20     | (incl. with FlexiBLAS) | 2.2.0       | 3.3.10      |
+| `2021b` | active     | Oct '21  | 2.37       | 11.2.0 | 4.1.1      | 3.0.4       | 0.3.18     | (incl. with FlexiBLAS) | 2.1.0       | 3.3.10      |
+| `2021a` | deprecated | May '21  | 2.36.1     | 10.3.0 | 4.1.1      | 3.0.4       | 0.3.15     | (incl. with FlexiBLAS) | 2.1.0       | 3.3.9       |
+| `2020b` | deprecated | Nov '20  | 2.35       | 10.2.0 | 4.0.5      | *(none)*    | 0.3.12     | (incl. with OpenBLAS)  | 2.1.0       | 3.3.8       |
+| `2020a` | archived   | May '20  | 2.34       | 9.3.0  | 4.0.3      | *(none)*    | 0.3.9      | (incl. with OpenBLAS)  | 2.1.0       | 3.3.8       |
+| `2019b` | archived   | Sept '19 | 2.32       | 8.3.0  | 3.1.4      | *(none)*    | 0.3.7      | (incl. with OpenBLAS)  | 2.0.2       | 3.3.8       |
+| `2019a` | archived   | Jan '19  | 2.31.1     | 8.2.0  | 3.1.3      | *(none)*    | 0.3.5      | (incl. with OpenBLAS)  | 2.0.2       | 3.3.8       |
+| `2018b` | archived   | Jul '18  | 2.30       | 7.3.0  | 3.1.1      | *(none)*    | 0.3.1      | (incl. with OpenBLAS)  | 2.0.2       | 3.3.8       |
+| `2018a` | archived   | Jan '18  | 2.28       | 6.4.0  | 2.1.2      | *(none)*    | 0.2.20\*   | (incl. with OpenBLAS)  | 2.0.2       | 3.3.7       |
+| `2017b` | archived   | Jul '17  | 2.28       | 6.4.0  | 2.1.1      | *(none)*    | 0.2.20\*   | (incl. with OpenBLAS)  | 2.0.2       | 3.3.6(-pl2) |
+| `2017a` | archived   | Jan '17  | 2.27       | 6.3.0  | 2.0.2      | *(none)*    | 0.2.19     | 3.7.0                  | 2.0.2       | 3.3.6(-pl2) |
+| `2016b` | archived   | Jul '16  | 2.26       | 5.4.0  | 1.10.3     | *(none)*    | 0.2.18     | 3.6.1                  | 2.0.2       | 3.3.4       |
+| `2016a` | archived   | Jan '16  | 2.25       | 4.9.3  | 1.10.2     | *(none)*    | 0.2.15     | 3.6.0                  | 2.0.2       | 3.3.4       |
+| `2015b` | archived   | Jul '15  | 2.25       | 4.9.3  | 1.8.8      | *(none)*    | 0.2.14     | 3.5.0                  | 2.0.2       | 3.3.4       |
+| `2015a` | archived   | Jan '15  | '*(none)*  | 4.9.2  | 1.8.4      | *(none)*    | 0.2.13     | 3.5.0                  | 2.0.2       | 3.3.4       |
+| `2014b` | archived   | Jul '14  | '*(none)*  | 4.8.3  | 1.8.1      | *(none)*    | 0.2.9      | 3.5.0                  | 2.0.2       | 3.3.4       |
 
 *(components marked with* \* *were patched)*
 
-### Component versions in `intel` toolchain (deprecated versions) {: #common_toolchains_overview_intel_deprecated }
+### Component versions in `intel` toolchain {: #common_toolchains_overview_intel }
 
-| `intel` | *date*   | *binutils* | *GCC*  | *Intel compilers* | *Intel MPI* | *Intel MKL* |
-|---------|----------|------------|--------|-------------------|-------------|-------------|
-| `2014b` | Jul '14  | '*(none)*  | 4.8.3  | 2013.5.192        | 4.1.3.049   | 11.1.2.144  |
-| `2015a` | Jan '15  | '*(none)*  | 4.9.2  | 2015.1.133        | 5.0.2.044   | 11.2.1.133  |
-| `2015b` | Jul '15  | 2.25       | 4.9.3  | 2015.3.187        | 5.0.3.048   | 11.2.3.187  |
-| `2016a` | Jan '16  | 2.26       | 4.9.3  | 2016.1.150        | 5.1.2.150   | 11.3.1.150  |
-| `2016b` | Jul '16  | 2.26       | 5.4.0  | 2016.3.210        | 5.1.3.181   | 11.3.3.210  |
-| `2017a` | Jan '17  | 2.27       | 6.3.0  | 2017.1.132        | 2017.1.132  | 2017.1.132  |
-| `2017b` | Jul '17  | 2.28       | 6.4.0  | 2017.4.196        | 2017.3.196  | 2017.3.196  |
-| `2018a` | Jan '18  | 2.28       | 6.4.0  | 2018.1.163        | 2018.1.163  | 2018.1.163  |
-| `2018b` | Jul '18  | 2.30       | 7.3.0  | 2018.3.222        | 2018.3.222  | 2018.3.222  |
-| `2019a` | Jan '19  | 2.31.1     | 8.2.0  | 2019.1.144        | 2018.4.274  | 2019.1.144  |
-| `2019b` | Sept '19 | 2.32       | 8.3.0  | 2019.5.281        | 2018.5.288  | 2019.5.281  |
-| `2020a` | May '20  | 2.34       | 9.3.0  | 2020.1.217        | 2019.7.217  | 2020.1.217  |
-| `2020b` | Nov '20  | 2.35       | 10.2.0 | 2020.4.304        | 2019.9.304  | 2020.4.304  |
+| `intel` | *support*  | *date*   | *binutils* | *GCC*  | *Intel compilers* | *Intel MPI* | *Intel MKL* |
+|---------|------------|----------|------------|--------|-------------------|-------------|-------------|
+| `2024a` | active     | Aug '24  | 2.42       | 13.3.0 | 2024.2.0          | 2021.13.0   | 2024.2.0    |
+| `2023b` | active     | Dec '23  | 2.40       | 13.2.0 | 2023.2.1          | 2021.10.1   | 2023.2.0    |
+| `2023a` | active     | Jun '23  | 2.40       | 12.3.0 | 2023.1.0          | 2021.9.1    | 2023.1.0    |
+| `2022b` | active     | Dec '22  | 2.39       | 12.2.0 | 2022.2.1          | 2021.7.1    | 2022.2.1    |
+| `2022a` | active     | Jun '22  | 2.38       | 11.3.0 | 2022.1.0          | 2021.6.0    | 2022.1.0    |
+| `2021b` | active     | Oct '21  | 2.37       | 11.2.0 | 2021.4.0          | 2021.4.0    | 2021.4.0    |
+| `2021a` | deprecated | May '21  | 2.36.1     | 10.3.0 | 2021.2.0          | 2021.2.0    | 2021.2.0    |
+| `2020b` | deprecated | Nov '20  | 2.35       | 10.2.0 | 2020.4.304        | 2019.9.304  | 2020.4.304  |
+| `2020a` | archived   | May '20  | 2.34       | 9.3.0  | 2020.1.217        | 2019.7.217  | 2020.1.217  |
+| `2019b` | archived   | Sept '19 | 2.32       | 8.3.0  | 2019.5.281        | 2018.5.288  | 2019.5.281  |
+| `2019a` | archived   | Jan '19  | 2.31.1     | 8.2.0  | 2019.1.144        | 2018.4.274  | 2019.1.144  |
+| `2018b` | archived   | Jul '18  | 2.30       | 7.3.0  | 2018.3.222        | 2018.3.222  | 2018.3.222  |
+| `2018a` | archived   | Jan '18  | 2.28       | 6.4.0  | 2018.1.163        | 2018.1.163  | 2018.1.163  |
+| `2017b` | archived   | Jul '17  | 2.28       | 6.4.0  | 2017.4.196        | 2017.3.196  | 2017.3.196  |
+| `2017a` | archived   | Jan '17  | 2.27       | 6.3.0  | 2017.1.132        | 2017.1.132  | 2017.1.132  |
+| `2016b` | archived   | Jul '16  | 2.26       | 5.4.0  | 2016.3.210        | 5.1.3.181   | 11.3.3.210  |
+| `2016a` | archived   | Jan '16  | 2.26       | 4.9.3  | 2016.1.150        | 5.1.2.150   | 11.3.1.150  |
+| `2015b` | archived   | Jul '15  | 2.25       | 4.9.3  | 2015.3.187        | 5.0.3.048   | 11.2.3.187  |
+| `2015a` | archived   | Jan '15  | '*(none)*  | 4.9.2  | 2015.1.133        | 5.0.2.044   | 11.2.1.133  |
+| `2014b` | archived   | Jul '14  | '*(none)*  | 4.8.3  | 2013.5.192        | 4.1.3.049   | 11.1.2.144  |
 
 ## Customizing common toolchains {: #common_toolchains_customizing }
 

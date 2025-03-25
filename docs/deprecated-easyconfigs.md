@@ -43,99 +43,41 @@ changes to the EasyBuild framework or relevant easyblocks).
 In a future major version of EasyBuild, these easyconfig files will be
 archived (see also [Archived easyconfigs][archived_easyconfigs]).
 
-## Deprecated toolchains {: #deprecated_easyconfigs_toolchains }
+## Deprecated and archived toolchains {: #deprecated_easyconfigs_toolchains }
 
-Overview of deprecated toolchains:
+Our [support policy on toolchain generations][policy_toolchains] determines the
+lifespan of toolchains in EasyBuild repositories. Once a toolchain becomes
+deprecated, it will stop being actively developed and tested. Once it becomes
+archived, it is transferred into the
+[easybuild-easyconfigs-archive](https://github.com/easybuilders/easybuild-easyconfigs-archive)
+repository.
 
-- [`foss` and `fosscuda` toolchain][deprecated_easyconfigs_toolchains_foss]
-- [`GCCcore` and `GCC` toolchains][deprecated_easyconfigs_toolchains_gcc]
-- [`gcccuda` toolchain][deprecated_easyconfigs_toolchains_gcccuda]
-- [`gompi` and `gompic` toolchains][deprecated_easyconfigs_toolchains_gompi]
-- [`goolf` and `goolfc` toolchains][deprecated_easyconfigs_toolchains_goolf]
-- [`ictce` toolchain][deprecated_easyconfigs_toolchains_ictce]
-- [`iccifort`, `iimpi`, `iimpic`, `intel`, and `intelcuda` toolchains][deprecated_easyconfigs_toolchains_intel]
-- [`iompi`, `iompic`, `iomkl`, and `iomklc` toolchains][deprecated_easyconfigs_toolchains_iomkl]
+## Obsolete toolchains {: #obsolete_easyconfigs_toolchains }
 
-### `foss` and `fosscuda` toolchain {: #deprecated_easyconfigs_toolchains_foss }
+Some toolchains might become obsolete, this means that they will not receive
+any new versions and ultimately be completely archived. Overview of obsolete
+toolchains:
 
-- *deprecated since:* EasyBuild v4.5.0
-- *will be archived in:* EasyBuild v5.0.0
+### Toolchains with CUDA {: #obsolete_easyconfigs_toolchains_cuda }
 
-The oldest versions of the `foss` and `fosscuda` toolchains have been
-deprecated, which currently includes any version older than `foss/2019a`
-and `fosscuda/2019a`.
+- *deprecated since:* EasyBuild v4.9.0
+- *will be archived in:* EasyBuild v5.1.0
 
-### `GCCcore` and `GCC` toolchains {: #deprecated_easyconfigs_toolchains_gcc }
+The following toolchains are obsolete: `gcccuda`, `gompic`, `goolfc`,
+`intelcuda`, `iomklc`.
 
-- *deprecated since:* EasyBuild v4.5.0
-- *will be archived in:* EasyBuild v5.0.0
+Since the `2021a` toolchain generation, CUDA is included as a regular
+dependency in common toolchains instead of having specific toolchains including
+CUDA in their definition. This approach is more flexible and avoids duplication
+of identical easyconfigs between CUDA and non-CUDA toolchains.
 
-The oldest versions of the `GCCcore` and `GCC` toolchains have been
-deprecated, which currently includes any version older than `8.0`.
+### Toolchains with legacy Intel compilers {: #obsolete_easyconfigs_toolchains_iccifort }
 
-### `gcccuda` toolchain {: #deprecated_easyconfigs_toolchains_gcccuda }
+- *deprecated since:* EasyBuild v4.9.0
+- *will be archived in:* EasyBuild v5.1.0
 
-- *deprecated since:* EasyBuild v4.5.0
-- *will be archived in:* EasyBuild v5.0.0
+The following toolchains are obsolete: `icc`, `ifort`, `iccifort`.
 
-The oldest versions of the `gcccuda` toolchains have been deprecated,
-which currently includes any version older than `gcccuda/2019a`.
-
-### `gompi` and `gompic` toolchains {: #deprecated_easyconfigs_toolchains_gompi }
-
-- *deprecated since:* EasyBuild v4.5.0
-- *will be archived in:* EasyBuild v5.0.0
-
-Versions of the `gompi` and `gompic` toolchains that were used as a
-subtoolchain for a deprecated toolchain have also been deprecated; this
-includes versions older than `gompi/2019a` and `gompic/2019a`.
-
-### `goolf` and `goolfc` toolchains {: #deprecated_easyconfigs_toolchains_goolf }
-
-- *deprecated since:* EasyBuild v3.8.0
-- *archived in:* EasyBuild v4.0.0
-
-The `goolf` and `goolfc` toolchains have been deprecated, since they are
-superseded by the [`foss` toolchain][common_toolchains_foss]
-and `fosscuda` toolchains, respectively.
-
-The `foss*` toolchains are equivalent to the `goolf*` toolchains, except
-that `binutils` is also included as a companion to `GCC(core)` in the
-`foss*` toolchains.
-
-### `ictce` toolchain {: #deprecated_easyconfigs_toolchains_ictce }
-
-- *deprecated since:* EasyBuild v3.8.0
-- *archived in:* EasyBuild v4.0.0
-
-The `ictce` toolchain has been deprecated, since it is superseded by the
-[`intel` toolchain][common_toolchains_intel].
-
-The `ictce` toolchain is equivalent to `intel` w.r.t. toolchain
-components, except that `binutils` is also included as a companion to
-`GCC(core)` (which serves as a base for the Intel compilers) in the
-`intel` toolchain.
-
-### `iccifort`, `iimpi`, `iimpic`, `intel`, and `intelcuda` toolchains {: #deprecated_easyconfigs_toolchains_intel }
-
-- *deprecated since:* EasyBuild v4.5.0
-- *will be archived in:* EasyBuild v5.0.0
-
-The oldest versions of the `iccifort`, `iimpi` and
-[`intel` toolchain][common_toolchains_intel] have been
-deprecated.
-
-Deprecated versions include:
-
-- `iccifort` versions older than `2019.0`
-- `iimpi` and `iimpic` versions older than `2019a`
-- `intel` and `intelcuda` versions older than `2019a`
-
-### `iompi`, `iompic`, `iomkl`, and `iomklc` toolchains {: #deprecated_easyconfigs_toolchains_iomkl }
-
-- *deprecated since:* EasyBuild v4.5.0
-- *will be archived in:* EasyBuild v5.0.0
-
-The oldest versions of the `iompi`, `iompic`, `iomkl` and `iomklc`
-toolchains have been deprecated, which currently includes any version
-older than `2019a`.
+Since the `2021a` toolchain generation, toolchains based on legacy Intel
+compilers have been replaced by the new `intel-compilers` toolchain based on
+the oneAPI compilers from Intel.

@@ -1,6 +1,6 @@
 # Supported Toolchain Generations Policy {: #policy_toolchains }
 
-For the central EasyBuild repositories, we support a set of toolchain generations.
+For the central EasyBuild repositories, we support a set of [common toolchain][common_toolchains] generations.
 
 * Accept PRs only for the 6 most recent toolchain generations.
 * Deprecate toolchains generations 7 and 8, including closing PRs and issues for these toolchains.
