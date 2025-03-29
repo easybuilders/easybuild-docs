@@ -1,7 +1,6 @@
 # Configuring EasyBuild {: #configuring_easybuild }
 
-This page discusses the recommended style of configuring
-EasyBuild, which is supported since EasyBuild v1.3.0.
+This page discusses the recommended style of configuring EasyBuild.
 
 See [a demo on configuring EasyBuild][demo_configuring].
 
@@ -82,8 +81,7 @@ configuration files at `/etc/easybuild.d/*.cfg` and `$HOME/.config/easybuild/con
 The configuration file located in `$XDG_CONFIG_HOME` will be listed *after* the ones obtained via `$XDG_CONFIG_DIRS`,
 such that user-defined configuration settings have preference over system defaults.
 
-A detailed overview of the list of default configuration files is available via `eb --show-default-configfiles`
-(available since EasyBuild v2.1.0). For example::
+A detailed overview of the list of default configuration files is available via `eb --show-default-configfiles`. For example:
 
 ``` console
 $ XDG_CONFIG_DIRS=/tmp/etc:/tmp/moreetc eb --show-default-configfiles
@@ -184,7 +182,7 @@ See also [Controlling the robot search path][controlling_robot_search_path].
 
 #### Generating a template configuration file
 
-Since EasyBuild v1.10, a command line option `--confighelp` is
+A command line option `--confighelp` is
 available that prints out the help text as an annotated configuration
 file. This can be used as an empty template configuration file:
 
@@ -316,28 +314,7 @@ A couple of selected configuration settings are discussed below,
 in particular the mandatory settings.
 
 
-### Mandatory configuration settings {: #configuration_mandatory_settings }
-
-A handful of configuration settings are **mandatory**, and should be
-provided using one of the supported configuration types.
-
-The following configuration settings are currently mandatory
-(more details in the sections below):
-
-* [Source path (--sourcepath)][sourcepath]
-* [Build path (--buildpath)][buildpath]
-* [Software and modules install path (--installpath, --installpath-software, --installpath-modules)][installpath]
-* [Easyconfigs repository (--repository, --repositorypath)][easyconfigs_repo]
-* [Logfile format (--logfile-format)][logfile_format]
-
-
-If any of these configuration settings is not provided in one way or another, EasyBuild will complain and exit.
-
-In practice, all of these have reasonable defaults (see `eb --help` for the default settings).
-
-!!! note
-    The mandatory path-related options can be tweaked collectively via `--prefix`, see [Overall prefix path (`--prefix`)][prefix] for more
-    information.
+### Important configuration settings {: #important_configuration_settings }
 
 #### Source path (`--sourcepath`) {: #sourcepath }
 
@@ -379,7 +356,7 @@ when the installation is completed (by default).
     Using `/dev/shm` as build path can significantly speed up builds,
     if it is available and provides a sufficient amount of space. Setting up
     the variable `EASYBUILD_BUILDPATH` in your shell startup files makes this default.
-    However be aware that, fi., two parallel GCC builds may fill up `/dev/shm` !
+    However be aware that multiple parallel builds may fill up `/dev/shm` !
 
 
 #### Software and modules install path {: #installpath }
@@ -462,101 +439,6 @@ so you do not need to adjust `$MODULEPATH` every time you start a new session.
     Updating `$MODULEPATH` is not required for EasyBuild itself, since `eb` updates `$MODULEPATH` itself at
     runtime according to the modules install path it is configured with.
 
-
-#### Easyconfigs repository (`--repository`, `--repositorypath`) {: #easyconfigs_repo }
-
-*default*: `FileRepository` at `$HOME/.local/easybuild/ebfiles_repo`
-(determined via [Overall prefix path (`--prefix`)][prefix])
-
-EasyBuild has support for archiving (tested) `.eb` easyconfig files.
-After successfully installing a software package using EasyBuild, the
-corresponding `.eb` file is uploaded to a repository defined by the
-`repository` and `repositorypath` configuration settings.
-
-Currently, EasyBuild supports the following repository types (see also
-`eb --avail-repositories`):
-
-* `FileRepository('path', 'subdir')`: a plain flat file repository;
-  `path` is the path where files will be stored, `subdir` is an
-  *optional* subdirectory of that path where the files should be stored
-* `GitRepository('path', 'subdir/in/repo'`: a *non-empty* **bare**
-  git repository (created with `git init --bare` or `git clone --bare`);
-  `path` is the path to the git repository (can also be a URL);
-  `subdir/in/repo` is optional, and specifies a subdirectory of the
-  repository where files should be stored in
-* `SvnRepository('path', 'subdir/in/repo')`: an SVN repository;
-  `path` contains the subversion repository location (directory or
-  URL), the optional second value specifies a subdirectory in the repository
-
-You need to set the `repository` setting inside a configuration file like this:
-
-``` python
-[config]
-repository = FileRepository
-repositorypath = <path>
-```
-
-Or, optionally an extra argument representing a subdirectory can be specified, e.g.:
-
-``` shell
-export EASYBUILD_REPOSITORY=GitRepository
-export EASYBUILD_REPOSITORYPATH=<path>,<subdir>
-```
-
-You do not have to worry about importing these classes,
-EasyBuild will make them available to the configuration file.
-
-Using `git` requires the `GitPython` Python modules, using `svn`
-requires the `pysvn` Python module (see [Dependencies][dependencies]).
-
-If access to the easyconfigs repository fails for some reason
-(e.g., no network or a missing required Python module), EasyBuild will
-issue a warning. The software package will still be installed, but the
-(successful) easyconfig will not be automatically added to the archive
-(i.e., it is not considered a fatal error).
-
-
-#### Logfile format (`--logfile-format`) {: #logfile_format }
-
-*default*:
-`easybuild, easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log`
-
-The `logfile format` configuration setting contains a tuple
-specifying a log directory name and a template log file name.
-In both of these values, using the following string templates
-is supported:
-
-* `%(name)s`: the name of the software package to install
-* `%(version)s`: the version of the software package to install
-* `%(date)s`: the date on which the installation was performed (in `YYYYMMDD` format, e.g. `20120324`)
-* `%(time)s`: the time at which the installation was started (in `HHMMSS` format, e.g. `214359`)
-
-!!! note
-    Because templating is supported in configuration files themselves (see
-    [Templates and constants supported in configuration files][configuration_file_templates_constants]), the
-    '`%`' character in these template values must be escaped when used in a configuration file (and only then),
-    e.g., '`%%(name)s`'. Without escaping, an error like `InterpolationMissingOptionError: Bad value
-    substitution` will be thrown by `ConfigParser`.
-
-For example, configuring EasyBuild to generate a log file mentioning only the software name in a directory named
-`easybuild` can be done via the `--logfile-format` command line option:
-
-``` shell
-eb --logfile-format="easybuild,easybuild-%(name)s.log" ...
-```
-
-or the `$EASYBUILD_LOGFILE_FORMAT` environment variable:
-
-``` shell
-export EASYBUILD_LOGFILE_FORMAT="easybuild,easybuild-%(name)s.log"
-```
-
-or by including the following in an EasyBuild configuration file (note the use of '`%%`' to escape the `name`
-template value here):
-
-``` ini
-logfile-format = easybuild,easybuild-%%(name)s.log
-```
 
 
 ### Optional configuration settings {: #configuration_optional_settings }

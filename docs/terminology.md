@@ -21,6 +21,7 @@ which is split up into different `steps`:
 * unpacking sources
 * configuration
 * build
+* testing
 * installation
 * module generation
 * etc.
@@ -64,8 +65,8 @@ enabling code reuse across build procedure implementations.
 For each software package being built, the EasyBuild framework will determine which easyblock
 should be used, based on the name of the software package or the value of the `easyblock`
 specification parameter (see [Easyblock specification][writing_easyconfigs_easyblock_spec]).
-Since EasyBuild v2.0, an easyblock *must* be specified in case no matching easyblock is found based on the
-software name (cfr. [Automagic fallback to ConfigureMake][depr_ConfigureMake_fallback_eb1]).
+An easyblock *must* be specified in case no matching easyblock is found based on the
+software name.
 
 
 ## Toolchains {: #toolchains }
@@ -90,7 +91,7 @@ Recent releases of EasyBuild include out-of-the-box toolchain support for:
 
 * various compilers, including GCC, Intel, Clang, CUDA
 * common MPI libraries, such as Intel MPI, MPICH, MVAPICH2, OpenMPI
-* various numerical libraries, including ATLAS, Intel MKL, OpenBLAS, ScalaPACK, FFTW
+* various numerical libraries, including Intel MKL, OpenBLAS, ScalaPACK, FFTW
 
 Please see the [Common toolchains][common_toolchains] page for details about the two most common toolchains,
 one for "free and open source software" (`foss`) based on GCC and one based on the Intel compilers
@@ -105,12 +106,6 @@ system, or by modules which were loaded before issuing the `eb` command).
 
 When the `system` toolchain is used, a corresponding `system` module file is not required/loaded and no build
 environment is being defined.
-
-
-
-### `dummy` toolchain *(DEPRECATED)* {: #dummy_toolchain }
-
-The `dummy` toolchain has been deprecated in EasyBuild v4.0, and replaced by the [`system` toolchain][system_toolchain].
 
 
 ### Common toolchains
