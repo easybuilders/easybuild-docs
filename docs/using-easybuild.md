@@ -670,10 +670,14 @@ Matching setup:
 You can do a "dry-run" overview by supplying `-D/--dry-run`:
 
 ```console
-$ eb binutils-2.39.eb -D
+$ eb binutils-2.39.eb -Dr
 == Temporary log file in case of crash /tmp/eb-3lh496ml/easybuild-hxmie76g.log
 Dry run: printing build status of easyconfigs and dependencies
 CFGS=/Volumes/work/easybuild-easyconfigs/easybuild/easyconfigs
+ * [x] $CFGS/z/zlib/zlib-1.2.12.eb (module: zlib/1.2.12)
+ * [x] $CFGS/m/M4/M4-1.4.19.eb (module: M4/1.4.19)
+ * [x] $CFGS/b/Bison/Bison-3.8.2.eb (module: Bison/3.8.2)
+ * [ ] $CFGS/f/flex/flex-2.6.4.eb (module: flex/2.6.4)
  * [ ] $CFGS/b/binutils/binutils-2.39.eb (module: binutils/2.39)
 ```
 
