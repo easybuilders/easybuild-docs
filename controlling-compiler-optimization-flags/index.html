@@ -704,6 +704,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#controlling_compiler_optimization_flags_optarch_caveats_robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using --optarch with --robot
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -9367,6 +9376,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#controlling_compiler_optimization_flags_optarch_caveats_robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using --optarch with --robot
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -9469,20 +9487,21 @@ the desired <code>TARGET</code> to use. For this you will need to modify the <co
 <li><a href="https://github.com/xianyi/OpenBLAS/blob/develop/TargetList.txt">https://github.com/xianyi/OpenBLAS/blob/develop/TargetList.txt</a></li>
 <li><a href="https://github.com/xianyi/OpenBLAS/issues/685">https://github.com/xianyi/OpenBLAS/issues/685</a></li>
 </ul>
+<h4 id="controlling_compiler_optimization_flags_optarch_caveats_robot">Using <code>--optarch</code> with <code>--robot</code><a class="headerlink" href="#controlling_compiler_optimization_flags_optarch_caveats_robot" title="Permanent link">&para;</a></h4>
+<p>Keep in mind, when using <code>--optarch=&lt;flags&gt;</code> as described below in combination with <code>--robot</code>, any dependencies that
+haven’t been installed yet will also be built with <code>--optarch=&lt;flags&gt;</code>. To specify compiler flags only for
+the given easyconfig, use the <a class="autorefs autorefs-internal" title="Available easyconfig parameters" href="../version-specific/easyconfig-parameters/#vsd_avail_easyconfig_params"><code>toolchainopts</code></a> easyconfig parameter, for example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">toolchainopts</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;optarch&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;flags&gt;&#39;</span><span class="p">}</span>
+</code></pre></div>
 <h3 id="controlling_compiler_optimization_flags_optarch_flags">Specifying target architecture specific optimization flags to use via <code>--optarch=&lt;flags&gt;</code><a class="headerlink" href="#controlling_compiler_optimization_flags_optarch_flags" title="Permanent link">&para;</a></h3>
 <p>Using the <code>--optarch</code> EasyBuild configuration option, specific compiler flags can be provided that EasyBuild
 should use, rather than the ones used by default (depending on the compiler in the toolchain being used).</p>
 <p>Like any other configuration setting, this can also be specified via <code>$EASYBUILD_OPTARCH</code>, or by defining <code>optarch</code>
 in an EasyBuild configuration file (cfr. <a class="autorefs autorefs-internal" href="../configuration/#configuration_consistency">Consistency across supported configuration types</a>).</p>
-<p>For example, by specifying <code>--optarch=march=core2</code>, EasyBuild will use <code>-march=core2</code> rather than the default
+<p>For example, by specifying <code>--optarch=-march=core2</code>, EasyBuild will use <code>-march=core2</code> rather than the default
 flag <code>--march=native</code> (when using GCC compilers).</p>
 <p>Likewise, to avoid using the default <code>-xHost</code> flag with the Intel compilers and using <code>-xSSSE3</code> instead,
-you can define <code>$EASYBUILD_OPTARCH</code> to be equal to <code>xSSSE3</code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The first dash (<code>-</code>) is added automagically to the value specified to <code>--optarch</code>,
-because of technicalities with the current implementation.</p>
-</div>
+you can define <code>$EASYBUILD_OPTARCH</code> to be equal to <code>-xSSSE3</code>.</p>
 <p>The <code>--optarch</code> configuration option gives you flexibility to define the specific target architecture optimization
 flags you want, but requires that you take care of specifying different flags for different compilers and choose
 the right flags depending on your specific processor architecture.</p>
@@ -9507,14 +9526,12 @@ the necessary compiler flags will be defined in later EasyBuild versions.</p>
 compiler used on the packages to be installed.</p>
 <p>The syntax is <code>&lt;compiler:flags&gt;;&lt;compiler:flags&gt;</code>, where <code>:</code> separates the compiler name from the compiler flags,
 and <code>;</code> separates different compilers. This is an example for the Intel and GCC compilers:
-<code>--optarch='Intel:xHost;GCC:march=x86-64 -mtune=generic'</code>. As in the simple cases, EasyBuild adds one <code>-</code> to the
-flags specified, so the flags passed to the Intel and GCC compilers in this case are <code>-xHost</code> and
-<code>-march=x86-64 -mtune=generic</code>. Please note the quotes to escape the space in the GCC flags.</p>
+<code>--optarch='Intel:-xHost;GCC:-march=x86-64 -mtune=generic'</code>. Please note the quotes to escape the space in the GCC flags.</p>
 <p>Additionally, <code>GENERIC</code> is also supported on a compiler basis, allowing to specify a generic compilation for the
-desired compilers. This is an example of this usage: <code>--optarch=Intel:xHost;GCC:GENERIC</code>. Of course, this is
+desired compilers. This is an example of this usage: <code>--optarch=Intel:-xHost;GCC:GENERIC</code>. Of course, this is
 supported just for compiler toolchains that recognize <code>GENERIC</code>.</p>
 <p>The options for each compiler are set independently. That means that if a GCC-based toolchain is used, but the only
-compiler specified is <code>Intel</code> (for example with <code>--optarch=Intel:xCORE-AVX2</code>), then EasyBuild will behave as if
+compiler specified is <code>Intel</code> (for example with <code>--optarch=Intel:-xCORE-AVX2</code>), then EasyBuild will behave as if
 <code>--optarch</code> was not specified for this toolchain.</p>
 <p>The compiler name corresponds to the value of the <code>COMPILER_FAMILY</code> constant of the toolchain. Two common examples
 are <code>GCC</code> and <code>Intel</code>.</p>
@@ -9539,7 +9556,7 @@ are <code>GCC</code> and <code>Intel</code>.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 31, 2023 01:37:01">May 31, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 7, 2025 12:54:40">April 7, 2025</span>
   </span>
 
     
