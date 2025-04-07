@@ -30,12 +30,6 @@ These locations are only considered for easyconfig files that are specified only
 *not* for easyconfig files that are specified via an absolute path. The dependencies are resolved using the
 robot search path (see [robot search path][robot_search_path]).
 
-!!! note
-
-    For easyconfig files specified on the `eb` command line, the *full* robot search path is only considered since
-    EasyBuild v2.0.0. Earlier versions only considered the local working directory and the easyconfig files that are
-    part of the active EasyBuild installation for *explicitly specified* easyconfig files.
-
 
 ### By providing a single easyconfig file {: #specifying_easyconfigs_single }
 
@@ -437,7 +431,7 @@ CFGS1=/home/example/easybuild-easyconfigs/easybuild/easyconfigs/m/Mesquite
 * $CFGS1/Mesquite-2.3.0-GCCcore-8.3.0.eb
 ```
 
-For more specific searching, a regular expression pattern can be supplied (since EasyBuild v2.1.1).
+For more specific searching, a regular expression pattern can be supplied.
 
 For example, to search which easyconfig files are available for GCC v11.x, without listing easyconfig files that use
 GCC v11.x as a toolchain:
@@ -676,7 +670,7 @@ Matching setup:
 You can do a "dry-run" overview by supplying `-D/--dry-run`:
 
 ```console
-$ eb binutils-2.39.eb -D
+$ eb binutils-2.39.eb -Dr
 == Temporary log file in case of crash /tmp/eb-3lh496ml/easybuild-hxmie76g.log
 Dry run: printing build status of easyconfigs and dependencies
 CFGS=/Volumes/work/easybuild-easyconfigs/easybuild/easyconfigs
@@ -697,7 +691,7 @@ Note how the different status symbols denote distinct handling states by EasyBui
 
 !!! note
 
-    Since EasyBuild v2.4.0, a detailed overview of the build and install procedure that EasyBuild
+    A detailed overview of the build and install procedure that EasyBuild
     will be execute can be obtained using `--extended-dry-run` or `-x`, see [Extended dry run][extended_dry_run].
 
 
@@ -705,7 +699,7 @@ Note how the different status symbols denote distinct handling states by EasyBui
 
 *(`--missing-modules` / `-M`)*
 
-Since EasyBuild v3.9.1, you can obtain a list of missing installations (i.e. easyconfigs for which
+You can obtain a list of missing installations (i.e. easyconfigs for which
 no corresponding environment module file is available yet) using `eb --missing-modules` (or `-eb -M` for short):
 
 ```console
