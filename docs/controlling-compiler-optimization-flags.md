@@ -73,7 +73,7 @@ Keep in mind, when using `--optarch=<flags>` as described below in combination w
 haven’t been installed yet will also be built with `--optarch=<flags>`. To specify compiler flags only for
 the given easyconfig, use the [`toolchainopts`][vsd_avail_easyconfig_params] easyconfig parameter, for example:
 
-```
+```python
 toolchainopts = {'optarch': '<flags>'}
 ```
 
