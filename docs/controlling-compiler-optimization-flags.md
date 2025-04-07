@@ -67,6 +67,15 @@ See these links for more details w.r.t. OpenBLAS:
 * <https://github.com/xianyi/OpenBLAS/blob/develop/TargetList.txt>
 * <https://github.com/xianyi/OpenBLAS/issues/685>
 
+#### Using `--optarch` with `--robot` {: #controlling_compiler_optimization_flags_optarch_caveats_robot }
+
+Keep in mind, when using `--optarch=<flags>` as described below in combination with `--robot`, any dependencies that
+haven’t been installed yet will also be built with `--optarch=<flags>`. To specify compiler flags only for
+the given easyconfig, use the [`toolchainopts`][vsd_avail_easyconfig_params] easyconfig parameter, for example:
+
+```
+toolchainopts = {'optarch': '<flags>'}
+```
 
 ### Specifying target architecture specific optimization flags to use via `--optarch=<flags>` {: #controlling_compiler_optimization_flags_optarch_flags }
 
