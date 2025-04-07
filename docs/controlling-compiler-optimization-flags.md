@@ -67,6 +67,15 @@ See these links for more details w.r.t. OpenBLAS:
 * <https://github.com/xianyi/OpenBLAS/blob/develop/TargetList.txt>
 * <https://github.com/xianyi/OpenBLAS/issues/685>
 
+#### Using `--optarch` with `--robot` {: #controlling_compiler_optimization_flags_optarch_caveats_robot }
+
+Keep in mind, when using `--optarch=<flags>` as described below in combination with `--robot`, any dependencies that
+haven’t been installed yet will also be built with `--optarch=<flags>`. To specify compiler flags only for
+the given easyconfig, use the [`toolchainopts`][vsd_avail_easyconfig_params] easyconfig parameter, for example:
+
+```python
+toolchainopts = {'optarch': '<flags>'}
+```
 
 ### Specifying target architecture specific optimization flags to use via `--optarch=<flags>` {: #controlling_compiler_optimization_flags_optarch_flags }
 
@@ -76,20 +85,15 @@ should use, rather than the ones used by default (depending on the compiler in t
 Like any other configuration setting, this can also be specified via `$EASYBUILD_OPTARCH`, or by defining `optarch`
 in an EasyBuild configuration file (cfr. [Consistency across supported configuration types][configuration_consistency]).
 
-For example, by specifying `--optarch=march=core2`, EasyBuild will use `-march=core2` rather than the default
+For example, by specifying `--optarch=-march=core2`, EasyBuild will use `-march=core2` rather than the default
 flag `--march=native` (when using GCC compilers).
 
 Likewise, to avoid using the default `-xHost` flag with the Intel compilers and using `-xSSSE3` instead,
-you can define `$EASYBUILD_OPTARCH` to be equal to `xSSSE3`.
-
-!!! note
-    The first dash (`-`) is added automagically to the value specified to `--optarch`,
-    because of technicalities with the current implementation.
+you can define `$EASYBUILD_OPTARCH` to be equal to `-xSSSE3`.
 
 The `--optarch` configuration option gives you flexibility to define the specific target architecture optimization
 flags you want, but requires that you take care of specifying different flags for different compilers and choose
 the right flags depending on your specific processor architecture.
-
 
 
 ### Optimizing for a generic processor architecture via `--optarch=GENERIC` {: #controlling_compiler_optimization_flags_optarch_generic }
@@ -121,16 +125,14 @@ compiler used on the packages to be installed.
 
 The syntax is `<compiler:flags>;<compiler:flags>`, where `:` separates the compiler name from the compiler flags,
 and `;` separates different compilers. This is an example for the Intel and GCC compilers:
-`--optarch='Intel:xHost;GCC:march=x86-64 -mtune=generic'`. As in the simple cases, EasyBuild adds one `-` to the
-flags specified, so the flags passed to the Intel and GCC compilers in this case are `-xHost` and
-`-march=x86-64 -mtune=generic`. Please note the quotes to escape the space in the GCC flags.
+`--optarch='Intel:-xHost;GCC:-march=x86-64 -mtune=generic'`. Please note the quotes to escape the space in the GCC flags.
 
 Additionally, `GENERIC` is also supported on a compiler basis, allowing to specify a generic compilation for the
-desired compilers. This is an example of this usage: `--optarch=Intel:xHost;GCC:GENERIC`. Of course, this is
+desired compilers. This is an example of this usage: `--optarch=Intel:-xHost;GCC:GENERIC`. Of course, this is
 supported just for compiler toolchains that recognize `GENERIC`.
 
 The options for each compiler are set independently. That means that if a GCC-based toolchain is used, but the only
-compiler specified is `Intel` (for example with `--optarch=Intel:xCORE-AVX2`), then EasyBuild will behave as if
+compiler specified is `Intel` (for example with `--optarch=Intel:-xCORE-AVX2`), then EasyBuild will behave as if
 `--optarch` was not specified for this toolchain.
 
 The compiler name corresponds to the value of the `COMPILER_FAMILY` constant of the toolchain. Two common examples
