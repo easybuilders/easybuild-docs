@@ -104,7 +104,19 @@ To disable trace output, either:
 
 ## Default maximum build parallelism is set to 16 (`max-parallel`) {: #max-parallel-16 }
 
-*(more info soon, ideally including some "scaling" data for long-running builds like GCC, LLVM, OpenFOAM, ...)*
+For EasyBuild 5.0, we have changed to using at most 16 cores by default for builds. If there are fewer cores
+available then the number of available cores will be used. Where an easyconfig or easyblock specifies a lower level
+of parallelism to be used, then that is respected.
+
+In recent years we have seen a large rise in the core counts of the systems used to build software. Before, we used
+all available cores for the build. This, however, can lead to problems with many threads building at once leads to
+poor performance for the filesystem or a build failure due to exhausting the available memory.
+
+Tests were performed on two systems and the data from those tests is in the
+[initial pull request for the change](https://github.com/easybuilders/easybuild-framework/pull/4606). As can be seen
+from those tests, there was limited speed up seen when using more than 16 cores and anyone considering increasing this
+from the default of 16 should run selective tests to see if this will give a noticeable improvement in build times on
+their system.
 
 ---
 
