@@ -93,4 +93,5 @@ The EasyBuild maintainers all have admin access to the different EasyBuild GitHu
     * GitHub: [@vanzod](https://github.com/vanzod) - e-mail: `davide.vanzo (at) microsoft.com` - IRC/Slack: `vanzod`
 * **Lars Viklund** ([Umeå University, Sweden](https://www.umu.se/english/))
     * GitHub: [@zao](https://github.com/zao) - e-mail: `lars.viklund (at) umu.se` - IRC/Slack: `zao`
-
+* **Cintia Willemyns** ([Vrije Universiteit Brussel](https://hpc.vub.be))
+    * GitHub: [@WilleBell](https://github.com/WilleBell) - e-mail: `cintia.willemyns (at) vub.be` - IRC/Slack: `Cintia Willemyns`
