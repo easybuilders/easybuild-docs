@@ -67,6 +67,8 @@ The EasyBuild maintainers all have admin access to the different EasyBuild GitHu
     * GitHub: [@pescobar](https://github.com/pescobar) - e-mail: `pablo.escobarlopez (at) unibas.ch` - IRC/Slack: `pescobar`
 * **Fotis Georgatos** ([SDSC](https://datascience.ch/))
     * GitHub: [@fgeorgatos](https://github.com/fgeorgatos) - e-mail: `kefalonia (at) gmail.com` - IRC/Slack: `fotis`
+* **Davide Grassano** ([CECAM](https://www.cecam.org/))
+    * GitHub: [@Crivella](https://github.com/Crivella) - e-mail: `davide.grassano (at) epfl.ch` - IRC/Slack: `Davide Grassano`
 * **Jasper Grimm** ([University or York](https://www.york.ac.uk/it-services/research-computing/))
     * GitHub: [@jfgrimm](https://github.com/jfgrimm) - e-mail: `jasper.grimm (at) york.ac.uk` - IRC/Slack: `Jasper`
 * **Balázs Hajgató** ([HPC-UGent](http://www.ugent.be/hpc/en))
