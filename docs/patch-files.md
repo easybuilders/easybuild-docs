@@ -33,12 +33,12 @@ which is used in the patch command (`patch -p<level>`), or a directory relative 
 
 A `dict` value can be used pass additional arguments to the `patch` command.
 For example, the `--binary` flag may be needed for patch files
-with CRLF endings. For a `dict` value the `filename` key is required.
+with CRLF endings. For a `dict` value the `name` key is required.
 `level` and `opts` are supported (optional) keys.
 
 !!! note
-    Specifying only `filename` in `dict` is the same as using a plain `string` definition.
-    Specifying `filename` and `level` is same as using a `tuple`
+    Specifying only `name` in `dict` is the same as using a plain `string` definition.
+    Specifying `name` and `level` is same as using a `tuple`
     definition.
 
 Example:
@@ -58,7 +58,7 @@ patches = [
   ('Makefile', 'path/to/target/'),
 
   # specify patch file and optionally level and opts for patch command
-  {'filename': 'example.patch', 'level': 1, 'opts': '--binary'}
+  {'name': 'example.patch', 'level': 1, 'opts': '--binary'}
 ]
 ```
 
