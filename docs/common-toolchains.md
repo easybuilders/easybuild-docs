@@ -179,7 +179,7 @@ most recent revision of the common toolchains at that time.
 | `2023b` | Dec '23   | 2.40       | 13.2.0 | 4.1.6      | 3.3.1       | 0.3.24     | (incl. with FlexiBLAS) | 2.2.0       | 3.3.10 |
 | `2024a` | Aug '24   | 2.42       | 13.3.0 | 5.0.3      | 3.4.4       | 0.3.27     | (incl. with FlexiBLAS) | 2.2.0       | 3.3.10 |
 | `2024b` | *skipped* | -          | -      | -          | -           | -          | -                      | -           | -      |
-| `2025a` | May '25   | 2.42       | 14.2.0 | 5.0.7      | 3.4.5       | 0.3.279    | (incl. with FlexiBLAS) | 2.2.2       | 3.3.10 |
+| `2025a` | May '25   | 2.42       | 14.2.0 | 5.0.7      | 3.4.5       | 0.3.29     | (incl. with FlexiBLAS) | 2.2.2       | 3.3.10 |
 
 ### Component versions in `intel` toolchain {: #common_toolchains_overview_intel }
 
