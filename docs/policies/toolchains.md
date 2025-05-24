@@ -25,11 +25,11 @@ collection is added via the [robot search path][robot_search_path].
 As of September 2024 (EasyBuild 4.9.4) the latest toolchain generation is `2024a`.
 
 * Supported:
+    * 2025a (GCC 14.2.0)
     * 2024a (GCC 13.3.0)
     * 2023b (GCC 13.2.0)
     * 2023a (GCC 12.3.0)
     * 2022b (GCC 12.2.0)
     * 2022a (GCC 11.3.0)
-    * 2021b (GCC 11.2.0)
-* Deprecated: 2021a (GCC 10.3.0), 2020b (GCC 10.2.0)
-* Archived (and unsupported): 2020a (GCC 9.3.0), and older
+* Deprecated: 2021b (GCC 11.2.0), 2021a (GCC 10.3.0)
+* Archived (and unsupported): 202b (GCC 10.2.0), and older
