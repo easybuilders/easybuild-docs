@@ -10,6 +10,7 @@ HMMER is a biological sequence analysis tool that uses profile hidden Markov mod
 
 version | toolchain
 --------|----------
+``0.10.15`` | ``gompi/2023a``
 ``0.10.15`` | ``gompi/2023b``
 ``0.10.6`` | ``gompi/2023a``
 

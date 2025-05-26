@@ -10,6 +10,7 @@ The PhiPack software package implements (in C) a few tests for recombination and
 
 version | toolchain
 --------|----------
+``2016.06.14`` | ``GCC/12.3.0``
 ``2016.06.14`` | ``GCC/13.2.0``
 
 

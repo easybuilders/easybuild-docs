@@ -10,6 +10,7 @@ HarvestTools is a utility for creating and interfacing with Gingr files, which a
 
 version | toolchain
 --------|----------
+``1.3`` | ``GCCcore/12.3.0``
 ``1.3`` | ``GCCcore/13.2.0``
 
 

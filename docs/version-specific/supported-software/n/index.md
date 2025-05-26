@@ -84,6 +84,7 @@ search:
  * [Nilearn](Nilearn.md)
  * [Nim](Nim.md)
  * [Ninja](Ninja.md)
+ * [ninja-python](ninja-python.md)
  * [Nipype](Nipype.md)
  * [nlohmann_json](nlohmann_json.md)
  * [NLopt](NLopt.md)

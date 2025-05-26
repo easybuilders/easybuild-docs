@@ -11,6 +11,7 @@ Robust design optimization of renewable Hydrogen and dErIved energy cArrier syst
 version | toolchain
 --------|----------
 ``1.1.11`` | ``foss/2023a``
+``1.1.13`` | ``foss/2024a``
 ``1.1.6`` | ``foss/2022a``
 
 

@@ -15,6 +15,8 @@ version | versionsuffix | toolchain
 ``2022`` | ``-hotfix-2214`` | ``system``
 ``2022`` | ``-hotfix-2223`` | ``system``
 ``2022`` |  | ``system``
+``2023`` | ``-hotfix-2324`` | ``system``
+``2023`` |  | ``system``
 ``2024`` | ``-hotfix-2405`` | ``system``
 ``2024`` | ``-hotfix-2424`` | ``system``
 ``2024`` | ``-hotfix-2441`` | ``system``

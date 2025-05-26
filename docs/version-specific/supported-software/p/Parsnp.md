@@ -10,6 +10,7 @@ Parsnp was designed to align the core genome of hundreds to thousands of bacteri
 
 version | toolchain
 --------|----------
+``2.1.1`` | ``foss/2023a``
 ``2.1.1`` | ``foss/2023b``
 
 

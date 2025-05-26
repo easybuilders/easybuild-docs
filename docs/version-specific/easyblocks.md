@@ -3,6 +3,7 @@
 - **EasyBlock**
   - Binary
     - Conda
+    - Dataset
     - EB_ABAQUS
     - EB_Anaconda
       - EB_Mamba
@@ -157,6 +158,7 @@
       - CMakeMakeCp
         - EB_DualSPHysics
       - CmdCp
+        - EB_fastStructure
       - EB_BLAT
       - EB_Bowtie2
       - EB_MetalWalls
@@ -164,6 +166,7 @@
       - EB_NAMD
       - EB_ORCA
     - PerlModule
+      - EB_Term_colon__colon_ReadLine_colon__colon_Gnu
     - SystemMPI
   - EB_ADF
   - EB_Bazel
@@ -199,6 +202,7 @@
     - OCamlPackage
     - OctavePackage
     - PerlModule
+      - EB_Term_colon__colon_ReadLine_colon__colon_Gnu
     - PythonPackage
       - CargoPythonPackage
       - CMakePythonPackage
@@ -242,6 +246,7 @@
       - EB_Hadoop
       - EB_RepeatMasker
       - EB_RepeatModeler
+      - EB_VSCode
   - GoPackage
   - IntelBase
     - EB_Advisor
@@ -298,6 +303,7 @@
     - OCamlPackage
     - OctavePackage
     - PerlModule
+      - EB_Term_colon__colon_ReadLine_colon__colon_Gnu
     - PythonPackage
       - CargoPythonPackage
       - CMakePythonPackage
@@ -341,5 +347,6 @@
       - EB_Hadoop
       - EB_RepeatMasker
       - EB_RepeatModeler
+      - EB_VSCode
 
 *(see also* ``eb --list-easyblocks`` and* [*overview of generic easyblocks*][generic_easyblocks] *)*
