@@ -46,6 +46,7 @@ version | versionsuffix | toolchain
 ``2.3`` |  | ``intel/2023a``
 ``2.3`` |  | ``intel/2023b``
 ``2.3`` |  | ``intel/2024a``
+``2.3`` |  | ``intel/2025a``
 ``2.3`` |  | ``iomkl/2021a``
 ``2.3`` |  | ``iomkl/2021b``
 

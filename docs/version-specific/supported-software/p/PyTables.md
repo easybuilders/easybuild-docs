@@ -4,12 +4,13 @@ search:
 ---
 # PyTables
 
-PyTables is a package for managing hierarchical datasets and designed to efficiently and easily cope  with extremely large amounts of data. PyTables is built on top of the HDF5 library, using the Python language and the  NumPy package. It features an object-oriented interface that, combined with C extensions for the performance-critical  parts of the code (generated using Cython), makes it a fast, yet extremely easy to use tool for interactively browse,  process and search very large amounts of data. One important feature of PyTables is that it optimizes memory and disk  resources so that data takes much less space (specially if on-flight compression is used) than other solutions such as  relational or object oriented databases.
+PyTables is a package for managing hierarchical datasets and designed to efficiently and easily cope  with extremely large amounts of data. PyTables is built on top of the HDF5 library, using the Python language and the  NumPy package. It features an object-oriented interface that, combined with C extensions for the performance-critical  parts of the code (generated using Cython), makes it a fast, yet extremely easy to use tool for interactively browsing,  processing and searching very large amounts of data. One important feature of PyTables is that it optimizes memory and  disk resources so that data takes much less space (specially if on-flight compression is used) than other solutions  such as relational or object oriented databases.
 
 *homepage*: <https://www.pytables.org>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``3.10.2`` |  | ``foss/2024a``
 ``3.5.2`` | ``-Python-2.7.18`` | ``foss/2020b``
 ``3.6.1`` |  | ``foss/2020b``
 ``3.6.1`` |  | ``foss/2021a``

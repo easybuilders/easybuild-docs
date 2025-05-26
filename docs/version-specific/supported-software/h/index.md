@@ -32,6 +32,7 @@ search:
  * [hdWGCNA](hdWGCNA.md)
  * [Health-GPS](Health-GPS.md)
  * [hector](hector.md)
+ * [HEEDS](HEEDS.md)
  * [HeFFTe](HeFFTe.md)
  * [help2man](help2man.md)
  * [HepMC](HepMC.md)

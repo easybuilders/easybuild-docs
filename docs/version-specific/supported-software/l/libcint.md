@@ -16,6 +16,7 @@ version | versionsuffix | toolchain
 ``5.1.6`` |  | ``foss/2022a``
 ``5.4.0`` | ``-pypzpx`` | ``gfbf/2023a``
 ``5.4.0`` |  | ``gfbf/2023a``
+``5.4.0`` |  | ``gfbf/2023b``
 ``5.5.0`` |  | ``gfbf/2022b``
 ``6.1.2`` |  | ``gfbf/2024a``
 

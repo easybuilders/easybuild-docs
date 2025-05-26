@@ -45,6 +45,7 @@ search:
  * [jupyter-vscode-proxy](jupyter-vscode-proxy.md)
  * [JupyterHub](JupyterHub.md)
  * [JupyterLab](JupyterLab.md)
+ * [jupyterlab-h5web](jupyterlab-h5web.md)
  * [jupyterlab-lmod](jupyterlab-lmod.md)
  * [jupyterlmod](jupyterlmod.md)
  * [JupyterNotebook](JupyterNotebook.md)

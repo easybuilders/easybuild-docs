@@ -11,6 +11,7 @@ Scikit-build-core is a complete ground-up rewrite of scikit-build on top of mode
 version | toolchain
 --------|----------
 ``0.10.6`` | ``GCCcore/13.3.0``
+``0.11.1`` | ``GCCcore/14.2.0``
 ``0.5.0`` | ``GCCcore/12.3.0``
 ``0.9.3`` | ``GCCcore/12.3.0``
 ``0.9.3`` | ``GCCcore/13.2.0``

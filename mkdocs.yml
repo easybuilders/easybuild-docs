@@ -167,7 +167,7 @@ extra:
     provider: google
     property: G-BLVCH6991S
   easybuild:
-    version: 5.0.0
+    version: 5.1.0
   # add links in bottom right
   social:
     - icon: fontawesome/brands/twitter

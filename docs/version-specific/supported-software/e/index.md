@@ -72,6 +72,7 @@ search:
  * [EVidenceModeler](EVidenceModeler.md)
  * [EvidentialGene](EvidentialGene.md)
  * [evince](evince.md)
+ * [Evo](Evo.md)
  * [ExaML](ExaML.md)
  * [Excel-Writer-XLSX](Excel-Writer-XLSX.md)
  * [exiv2](exiv2.md)

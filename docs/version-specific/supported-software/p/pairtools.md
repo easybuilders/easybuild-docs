@@ -10,6 +10,7 @@ pairtools is a simple and fast command-line framework to process sequencing data
 
 version | toolchain
 --------|----------
+``1.1.2`` | ``gfbf/2023a``
 ``1.1.2`` | ``gfbf/2024a``
 
 

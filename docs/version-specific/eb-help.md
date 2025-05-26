@@ -61,7 +61,7 @@ Option flag                                |Option description
 ## Configuration options
 
 Option flag                                                      |Option description
------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ``--avail-module-naming-schemes``                                |Show all supported module naming schemes (default: False)
 ``--avail-modules-tools``                                        |Show all supported module tools (default: False)
 ``--avail-repositories``                                         |Show all repository types (incl. non-usable) (default: False)
@@ -77,6 +77,7 @@ Option flag                                                      |Option descrip
 ``--include-module-naming-schemes=INCLUDE-MODULE-NAMING-SCHEMES``|Location(s) of extra or customized module naming schemes (type comma-separated list)
 ``--include-toolchains=INCLUDE-TOOLCHAINS``                      |Location(s) of extra or customized toolchains or toolchain components (type comma-separated list)
 ``--installpath=INSTALLPATH``                                    |Install path for software and modules (default: /home/example/.local/easybuild)
+``--installpath-data=INSTALLPATH-DATA``                          |Install path for data (if None, combine --installpath and --subdir-data)
 ``--installpath-modules=INSTALLPATH-MODULES``                    |Install path for modules (if None, combine --installpath and --subdir-modules)
 ``--installpath-software=INSTALLPATH-SOFTWARE``                  |Install path for software (if None, combine --installpath and --subdir-software)
 ``--job-backend=JOB-BACKEND``                                    |Backend to use for submitting jobs (type choice; default: Slurm) (choices: GC3Pie, PbsPython, Slurm)
@@ -86,19 +87,21 @@ Option flag                                                      |Option descrip
 ``--module-naming-scheme=MODULE-NAMING-SCHEME``                  |Module naming scheme to use (default: EasyBuildMNS)
 ``--module-search-path-headers=MODULE-SEARCH-PATH-HEADERS``      |Environment variable set by modules on load with search paths to header files (type choice; default: cpath) (choices: cpath, include_paths)
 ``--module-syntax=MODULE-SYNTAX``                                |Syntax to be used for module files (type choice; default: Lua) (choices: Lua, Tcl)
-``--moduleclasses=MODULECLASSES``                                |Extend supported module classes (For more info on the default classes, use --show-default-moduleclasses) (type comma-separated list; default: base,ai,astro,bio,cae,chem,compiler,data,debugger,devel,geo,ide,lang,lib,math,mpi,numlib,perf,quantum,phys,system,toolchain,tools,vis)
+``--moduleclasses=MODULECLASSES``                                |Extend supported module classes (For more info on the default classes, use --show-default-moduleclasses) (type comma-separated list; default: base,ai,astro,bio,cae,chem,compiler,data,dataset,debugger,devel,geo,ide,lang,lib,math,mpi,numlib,perf,quantum,phys,system,toolchain,tools,vis)
 ``--modules-footer=PATH``                                        |Path to file containing footer to be added to all generated module files
 ``--modules-header=PATH``                                        |Path to file containing header to be added to all generated module files
 ``--modules-tool=MODULES-TOOL``                                  |Modules tool to use (type choice; default: Lmod) (choices: EnvironmentModules, EnvironmentModulesC, EnvironmentModulesTcl, Lmod)
 ``--package-naming-scheme=PACKAGE-NAMING-SCHEME``                |Packaging naming scheme choice (type choice; default: EasyBuildPNS) (choices: EasyBuildDebFriendlyPNS, EasyBuildPNS)
 ``--packagepath=PACKAGEPATH``                                    |The destination path for the packages built by package-tool (default: /home/example/.local/easybuild/packages)
-``--prefix=PREFIX``                                              |Change prefix for buildpath, installpath, sourcepath and repositorypath (used prefix for defaults /home/example/.local/easybuild)
+``--prefix=PREFIX``                                              |Change prefix for buildpath, installpath, sourcepath, sourcepath-data, and repositorypath (used prefix for defaults /home/example/.local/easybuild)
 ``--recursive-module-unload``                                    |Enable generating of modules that unload recursively. (default: False)
 ``--repository=REPOSITORY``                                      |Repository type, using repositorypath (type choice; default: FileRepository) (choices: FileRepository, GitRepository)
 ``--repositorypath=REPOSITORYPATH``                              |Repository path, used by repository (is passed as list of arguments to create the repository instance). For more info, use --avail-repositories. (type comma-separated list; default: /home/example/.local/easybuild/ebfiles_repo)
 ``--search-path-cpp-headers=SEARCH-PATH-CPP-HEADERS``            |Search path used at build time for include directories (type choice; default: flags) (choices: flags, cpath, include_paths)
 ``--search-path-linker=SEARCH-PATH-LINKER``                      |Search path used at build time by the linker for libraries (type choice; default: flags) (choices: flags, library_path)
-``--sourcepath=SOURCEPATH``                                      |Path(s) to where sources should be downloaded (string, colon-separated) (default: /home/example/.local/easybuild/sources)
+``--sourcepath=SOURCEPATH``                                      |Path(s) to where software sources should be downloaded (string, colon-separated) (default: /home/example/.local/easybuild/sources)
+``--sourcepath-data=SOURCEPATH-DATA``                            |Path(s) to where data sources should be downloaded (string, colon-separated) (same as sourcepath if not specified)
+``--subdir-data=SUBDIR-DATA``                                    |Installpath subdir for data (default: data)
 ``--subdir-modules=SUBDIR-MODULES``                              |Installpath subdir for modules (default: modules)
 ``--subdir-software=SUBDIR-SOFTWARE``                            |Installpath subdir for software (default: software)
 ``--subdir-user-modules=SUBDIR-USER-MODULES``                    |Base path of user-specific modules relative to --envvars-user-modules
@@ -224,7 +227,7 @@ Option flag                                |Option description
 ## Override options
 
 Option flag                                                              |Option description
--------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ``--accept-eula-for=ACCEPT-EULA-FOR``                                    |Accept EULA for specified software (type comma-separated list)
 ``--add-system-to-minimal-toolchains``                                   |Include system toolchain in minimal toolchain searches (default: False)
 ``--allow-loaded-modules=ALLOW-LOADED-MODULES``                          |List of software names for which to allow loaded modules in initial environment (type comma-separated list; default: EasyBuild)
@@ -244,7 +247,11 @@ Option flag                                                              |Option
 ``--copy-ec``                                                            |Copy specified easyconfig(s) to specified location (default: False)
 ``--cuda-cache-dir=PATH``                                                |Path to CUDA cache dir to use if enabled. Defaults to a path inside the build dir. (type <class 'str'>)
 ``--cuda-cache-maxsize=CUDA-CACHE-MAXSIZE``                              |Maximum size of the CUDA cache (in MiB) used for JIT compilation of PTX code. Leave value empty to let EasyBuild choose a value or '0' to disable the cache (type <class 'int'>)
-``--cuda-compute-capabilities=CUDA-COMPUTE-CAPABILITIES``                |List of CUDA compute capabilities to use when building GPU software; values should be specified as digits separated by a dot, for example: 3.5,5.0,7.2 (type comma-separated list)
+``--cuda-compute-capabilities=CUDA-COMPUTE-CAPABILITIES``                |List of CUDA compute capabilities to use when building GPU software; values should be specified as digits separated by a dot, for example: 3.5,5.0,7.2. EasyBuild will (where possible) compile fat binaries with support for (at least) all requested CUDA compute capabilities, and PTX code for the highest CUDA compute capability (for forwards compatibility). The check on this behavior may be relaxed using --cuda-sanity-check-accept-missing-ptx, --cuda-sanity-check-accept-ptx-as-devcode, or made more stringent using --cuda-sanity-check-strict. (type comma-separated list)
+``--cuda-sanity-check-accept-missing-ptx``                               |Relax CUDA sanity check to accept that PTX code for the highest requested CUDA compute capability is not present (but will print a warning) (default: False)
+``--cuda-sanity-check-accept-ptx-as-devcode``                            |Relax CUDA sanity check to accept that requested device code is not present, as long as PTX code is present that can be JIT-compiled for each target in --cuda-compute-capabilities. For example, if --cuda-compute-capabilities=8.0 and a binary is found in the installation that does not have device code for 8.0, but it does have PTX code for 7.0, the sanity check will pass if, and only if, this option is enabled. Note that JIT-compiling means the binary will work on the requested architecture, but is it not necessarily as well optimized as when actual device code is present for the requested architecture  (default: False)
+``--cuda-sanity-check-error-on-failed-checks``                           |If enabled, failures in the CUDA sanity check will produce an error. If disabled, the CUDA sanity check will be performed and failures will be reported through warnings, but they will not result in an error (default: False)
+``--cuda-sanity-check-strict``                                           |Perform strict CUDA sanity check. Without this option, the CUDA sanity check will fail if the CUDA binaries don't contain code for (at least) all compute capabilities defined in --cude-compute-capabilities, but will accept if code for additional compute capabilities is present. With this setting, the sanity check will also fail if code is present for more compute capabilities than defined in --cuda-compute-capabilities. (default: False)
 ``--debug-lmod``                                                         |Run Lmod modules tool commands in debug module (default: False)
 ``--default-opt-level=DEFAULT-OPT-LEVEL``                                |Specify default optimisation level (type choice; default: defaultopt) (choices: noopt, lowopt, defaultopt, opt)
 ``--deprecated=DEPRECATED``                                              |Run pretending to be (future) version, to test removal of deprecated code.
@@ -317,7 +324,7 @@ Option flag                                                              |Option
 ``--skip-test-step``                                                     |Skip running the test step (e.g. unit tests) (default: False)
 ``--software-commit=SOFTWARE-COMMIT``                                    |Git commit to use for the target software build (robot capabilities are automatically disabled)
 ``--sticky-bit``                                                         |Set sticky bit on newly created directories (default: False)
-``--strict-rpath-sanity-check``                                          |Perform strict RPATH sanity check, which involces unsetting $LD_LIBRARY_PATH before checking whether all required libraries are found (default: False)
+``--strict-rpath-sanity-check``                                          |Perform strict RPATH sanity check, which involves unsetting $LD_LIBRARY_PATH before checking whether all required libraries are found (default: False)
 ``--sysroot=SYSROOT``                                                    |Location root directory of system, prefix for standard paths like /usr/lib and /usr/include
 ``-T, --trace``                                                          |Provide more information in output to stdout on progress (default: True; disable with --disable-trace)
 ``--umask=UMASK``                                                        |umask to use (e.g. '022'); non-user write permissions on install directories are removed

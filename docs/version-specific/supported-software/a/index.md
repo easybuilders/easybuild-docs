@@ -22,6 +22,7 @@ search:
  * [AdapterRemoval](AdapterRemoval.md)
  * [ADF](ADF.md)
  * [adjustText](adjustText.md)
+ * [ADMIXTURE](ADMIXTURE.md)
  * [Advisor](Advisor.md)
  * [AEDT](AEDT.md)
  * [affinity](affinity.md)

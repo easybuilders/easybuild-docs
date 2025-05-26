@@ -10,6 +10,7 @@ Psycopg is the most popular PostgreSQL adapter for the Python programming langua
 
 version | toolchain
 --------|----------
+``2.9.10`` | ``GCCcore/13.3.0``
 ``2.9.5`` | ``GCCcore/11.2.0``
 ``2.9.6`` | ``GCCcore/11.3.0``
 ``2.9.9`` | ``GCCcore/12.3.0``

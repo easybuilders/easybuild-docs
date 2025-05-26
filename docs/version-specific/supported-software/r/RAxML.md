@@ -15,6 +15,8 @@ version | versionsuffix | toolchain
 ``8.2.12`` | ``-hybrid-avx2`` | ``gompi/2021a``
 ``8.2.12`` | ``-hybrid-avx2`` | ``gompi/2021b``
 ``8.2.12`` | ``-avx2`` | ``gompi/2022b``
+``8.2.13`` | ``-avx2`` | ``gompi/2023a``
+``8.2.13`` | ``-standard`` | ``gompi/2023a``
 ``8.2.13`` | ``-avx2`` | ``gompi/2023b``
 
 

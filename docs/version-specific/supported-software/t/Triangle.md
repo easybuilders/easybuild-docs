@@ -10,6 +10,7 @@ Triangle generates exact Delaunay triangulations, constrained Delaunay triangula
 
 version | toolchain
 --------|----------
+``1.6`` | ``GCCcore/12.3.0``
 ``1.6`` | ``GCCcore/13.2.0``
 
 

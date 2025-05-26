@@ -10,6 +10,7 @@ polymake is open source software for research in polyhedral geometry. It deals w
 
 version | toolchain
 --------|----------
+``4.10`` | ``foss/2022b``
 ``4.8`` | ``foss/2021b``
 ``4.8`` | ``gfbf/2022a``
 

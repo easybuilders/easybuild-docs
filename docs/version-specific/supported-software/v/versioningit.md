@@ -10,6 +10,7 @@ versioningit is yet another Python packaging plugin for automatically determinin
 
 version | toolchain
 --------|----------
+``3.1.2`` | ``GCCcore/12.3.0``
 ``3.1.2`` | ``GCCcore/13.2.0``
 ``3.1.2`` | ``GCCcore/13.3.0``
 
