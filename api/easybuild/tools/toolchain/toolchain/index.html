@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -10094,8 +10094,6 @@
 
 
     <div class="doc doc-contents ">
-            <p class="doc doc-class-bases">
-              Bases: <code><span title="object">object</span></code></p>
 
 
         <p>General toolchain class</p>
@@ -10751,7 +10749,7 @@ typ: indicates what type of return value is expected</p>
 
 
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.prepare" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">prepare</span><span class="p">(</span><span class="n">onlymod</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">deps</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">loadmod</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rpath_filter_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rpath_include_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">prepare</span><span class="p">(</span><span class="n">onlymod</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">deps</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">loadmod</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rpath_filter_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rpath_include_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rpath_wrappers_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.prepare" class="headerlink" title="Permanent link">&para;</a></h3>
 
@@ -10867,6 +10865,22 @@ typ: indicates what type of return value is expected</p>
               </p>
             </td>
           </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>rpath_wrappers_dir</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>directory in which to create RPATH wrappers</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
       </tbody>
     </table>
 
@@ -10921,7 +10935,7 @@ typ: indicates what type of return value is expected</p>
 
 
 <h3 id="easybuild.tools.toolchain.toolchain.Toolchain.prepare_rpath_wrappers" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">prepare_rpath_wrappers</span><span class="p">(</span><span class="n">rpath_filter_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rpath_include_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">prepare_rpath_wrappers</span><span class="p">(</span><span class="n">rpath_filter_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rpath_include_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rpath_wrappers_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.toolchain.toolchain.Toolchain.prepare_rpath_wrappers" class="headerlink" title="Permanent link">&para;</a></h3>
 
@@ -10946,6 +10960,38 @@ typ: indicates what type of return value is expected</p>
             <td class="doc-param-details">
               <div class="doc-md-description">
                 <p>extra directories to include in RPATH filter (e.g. build dir, tmpdir, ...)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>rpath_include_dirs</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>extra directories to include in RPATH</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>rpath_wrappers_dir</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>directory in which to create RPATH wrappers (tmpdir is created if None)</p>
               </div>
               <p>
                   <span class="doc-param-default">
@@ -11300,10 +11346,10 @@ based on the provided name, version and metadata.</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../../../../js/asciinema-player-2.6.1.js"></script>
       

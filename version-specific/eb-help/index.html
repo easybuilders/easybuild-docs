@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -9790,6 +9790,10 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 <td>Install path for software and modules (default: /home/example/.local/easybuild)</td>
 </tr>
 <tr>
+<td><code>--installpath-data=INSTALLPATH-DATA</code></td>
+<td>Install path for data (if None, combine --installpath and --subdir-data)</td>
+</tr>
+<tr>
 <td><code>--installpath-modules=INSTALLPATH-MODULES</code></td>
 <td>Install path for modules (if None, combine --installpath and --subdir-modules)</td>
 </tr>
@@ -9827,7 +9831,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--moduleclasses=MODULECLASSES</code></td>
-<td>Extend supported module classes (For more info on the default classes, use --show-default-moduleclasses) (type comma-separated list; default: base,ai,astro,bio,cae,chem,compiler,data,debugger,devel,geo,ide,lang,lib,math,mpi,numlib,perf,quantum,phys,system,toolchain,tools,vis)</td>
+<td>Extend supported module classes (For more info on the default classes, use --show-default-moduleclasses) (type comma-separated list; default: base,ai,astro,bio,cae,chem,compiler,data,dataset,debugger,devel,geo,ide,lang,lib,math,mpi,numlib,perf,quantum,phys,system,toolchain,tools,vis)</td>
 </tr>
 <tr>
 <td><code>--modules-footer=PATH</code></td>
@@ -9851,7 +9855,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--prefix=PREFIX</code></td>
-<td>Change prefix for buildpath, installpath, sourcepath and repositorypath (used prefix for defaults /home/example/.local/easybuild)</td>
+<td>Change prefix for buildpath, installpath, sourcepath, sourcepath-data, and repositorypath (used prefix for defaults /home/example/.local/easybuild)</td>
 </tr>
 <tr>
 <td><code>--recursive-module-unload</code></td>
@@ -9875,7 +9879,15 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--sourcepath=SOURCEPATH</code></td>
-<td>Path(s) to where sources should be downloaded (string, colon-separated) (default: /home/example/.local/easybuild/sources)</td>
+<td>Path(s) to where software sources should be downloaded (string, colon-separated) (default: /home/example/.local/easybuild/sources)</td>
+</tr>
+<tr>
+<td><code>--sourcepath-data=SOURCEPATH-DATA</code></td>
+<td>Path(s) to where data sources should be downloaded (string, colon-separated) (same as sourcepath if not specified)</td>
+</tr>
+<tr>
+<td><code>--subdir-data=SUBDIR-DATA</code></td>
+<td>Installpath subdir for data (default: data)</td>
 </tr>
 <tr>
 <td><code>--subdir-modules=SUBDIR-MODULES</code></td>
@@ -10405,7 +10417,23 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--cuda-compute-capabilities=CUDA-COMPUTE-CAPABILITIES</code></td>
-<td>List of CUDA compute capabilities to use when building GPU software; values should be specified as digits separated by a dot, for example: 3.5,5.0,7.2 (type comma-separated list)</td>
+<td>List of CUDA compute capabilities to use when building GPU software; values should be specified as digits separated by a dot, for example: 3.5,5.0,7.2. EasyBuild will (where possible) compile fat binaries with support for (at least) all requested CUDA compute capabilities, and PTX code for the highest CUDA compute capability (for forwards compatibility). The check on this behavior may be relaxed using --cuda-sanity-check-accept-missing-ptx, --cuda-sanity-check-accept-ptx-as-devcode, or made more stringent using --cuda-sanity-check-strict. (type comma-separated list)</td>
+</tr>
+<tr>
+<td><code>--cuda-sanity-check-accept-missing-ptx</code></td>
+<td>Relax CUDA sanity check to accept that PTX code for the highest requested CUDA compute capability is not present (but will print a warning) (default: False)</td>
+</tr>
+<tr>
+<td><code>--cuda-sanity-check-accept-ptx-as-devcode</code></td>
+<td>Relax CUDA sanity check to accept that requested device code is not present, as long as PTX code is present that can be JIT-compiled for each target in --cuda-compute-capabilities. For example, if --cuda-compute-capabilities=8.0 and a binary is found in the installation that does not have device code for 8.0, but it does have PTX code for 7.0, the sanity check will pass if, and only if, this option is enabled. Note that JIT-compiling means the binary will work on the requested architecture, but is it not necessarily as well optimized as when actual device code is present for the requested architecture  (default: False)</td>
+</tr>
+<tr>
+<td><code>--cuda-sanity-check-error-on-failed-checks</code></td>
+<td>If enabled, failures in the CUDA sanity check will produce an error. If disabled, the CUDA sanity check will be performed and failures will be reported through warnings, but they will not result in an error (default: False)</td>
+</tr>
+<tr>
+<td><code>--cuda-sanity-check-strict</code></td>
+<td>Perform strict CUDA sanity check. Without this option, the CUDA sanity check will fail if the CUDA binaries don't contain code for (at least) all compute capabilities defined in --cude-compute-capabilities, but will accept if code for additional compute capabilities is present. With this setting, the sanity check will also fail if code is present for more compute capabilities than defined in --cuda-compute-capabilities. (default: False)</td>
 </tr>
 <tr>
 <td><code>--debug-lmod</code></td>
@@ -10697,7 +10725,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--strict-rpath-sanity-check</code></td>
-<td>Perform strict RPATH sanity check, which involces unsetting $LD_LIBRARY_PATH before checking whether all required libraries are found (default: False)</td>
+<td>Perform strict RPATH sanity check, which involves unsetting $LD_LIBRARY_PATH before checking whether all required libraries are found (default: False)</td>
 </tr>
 <tr>
 <td><code>--sysroot=SYSROOT</code></td>
@@ -10922,7 +10950,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 18, 2025 16:17:40">March 18, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 26, 2025 13:50:44 UTC">May 26, 2025</span>
   </span>
 
     
@@ -11016,10 +11044,10 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../js/asciinema-player-2.6.1.js"></script>
       

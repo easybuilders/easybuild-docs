@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -2982,6 +2982,15 @@
   <a href="#easybuild.main.run_contrib_style_checks" class="md-nav__link">
     <span class="md-ellipsis">
       run_contrib_style_checks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.main.summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      summary
     </span>
   </a>
   
@@ -9394,6 +9403,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#easybuild.main.summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      summary
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -9459,7 +9477,7 @@
 
 
 <h2 id="easybuild.main.build_and_install_software" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">build_and_install_software</span><span class="p">(</span><span class="n">ecs</span><span class="p">,</span> <span class="n">init_session_state</span><span class="p">,</span> <span class="n">exit_on_failure</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">build_and_install_software</span><span class="p">(</span><span class="n">ecs</span><span class="p">,</span> <span class="n">init_session_state</span><span class="p">,</span> <span class="n">exit_on_failure</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">testing</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.main.build_and_install_software" class="headerlink" title="Permanent link">&para;</a></h2>
 
@@ -10039,6 +10057,51 @@ according to specified options.</p>
 
 </div>
 
+<div class="doc doc-object doc-function">
+
+
+<h2 id="easybuild.main.summary" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">summary</span><span class="p">(</span><span class="n">ecs_with_res</span><span class="p">)</span></code>
+
+<a href="#easybuild.main.summary" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Compose summary of the build:
+* [SUCCESS] for a successful build
+* [FAILED] for a failed build
+* [SKIPPED] for a build that didn’t run</p>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>ecs_with_res</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>list of tuples (ec, ec_res), ec is an EasyConfig object, and ec_res is a dict of the result</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
 
 
   </div>
@@ -10142,10 +10205,10 @@ according to specified options.</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../../js/asciinema-player-2.6.1.js"></script>
       

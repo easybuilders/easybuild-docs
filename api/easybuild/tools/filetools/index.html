@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -10958,8 +10958,6 @@
 
 
     <div class="doc doc-contents ">
-            <p class="doc doc-class-bases">
-              Bases: <code><span title="object">object</span></code></p>
 
 
         <p>wrapper class for adler32 and crc32 checksums to
@@ -11175,7 +11173,7 @@ match the interface of the hashlib module</p>
 
 
 <h2 id="easybuild.tools.filetools.apply_patch" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">apply_patch</span><span class="p">(</span><span class="n">patch_file</span><span class="p">,</span> <span class="n">dest</span><span class="p">,</span> <span class="n">fn</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">use_git</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">apply_patch</span><span class="p">(</span><span class="n">patch_file</span><span class="p">,</span> <span class="n">dest</span><span class="p">,</span> <span class="n">fn</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">use_git</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.apply_patch" class="headerlink" title="Permanent link">&para;</a></h2>
 
@@ -11183,7 +11181,8 @@ match the interface of the hashlib module</p>
     <div class="doc doc-contents ">
 
         <p>Apply a patch to source code in directory dest
-- assume unified diff created with "diff -ru old new"</p>
+- assume unified diff created with "diff -ru old new"
+- options are additional CLI options to pass to patch command</p>
 <p>Raises EasyBuildError on any error and returns True on success</p>
 
 
@@ -12543,7 +12542,7 @@ Note: does not correctly handle filepaths with spaces.</p>
 
 
 <h2 id="easybuild.tools.filetools.download_file" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">download_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">forced</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">trace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">download_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">forced</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">trace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">max_attempts</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">initial_wait_time</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.tools.filetools.download_file" class="headerlink" title="Permanent link">&para;</a></h2>
 
@@ -12551,6 +12550,118 @@ Note: does not correctly handle filepaths with spaces.</p>
     <div class="doc doc-contents ">
 
         <p>Download a file from the given URL, to the specified path.</p>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>filename</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>name of file to download</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>url</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>URL of file to download</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>path</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>path to download file to</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>forced</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>boolean to indicate whether force should be used to write the file</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>trace</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>boolean to indicate whether trace output should be printed</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>max_attempts</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>max. number of attempts to download file from specified URL</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>initial_wait_time</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>wait time (in seconds) after first attempt (doubled at each attempt)</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
     </div>
@@ -14582,10 +14693,10 @@ overwrites current file contents without backup by default!</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       
