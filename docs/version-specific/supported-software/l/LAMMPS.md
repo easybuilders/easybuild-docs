@@ -17,6 +17,7 @@ version | versionsuffix | toolchain
 ``23Jun2022`` | ``-kokkos`` | ``foss/2022a``
 ``28Oct2024`` | ``-kokkos-mace-CUDA-12.1.1`` | ``foss/2023a``
 ``29Aug2024`` | ``-kokkos`` | ``foss/2023b``
+``29Aug2024_update2`` | ``-kokkos`` | ``foss/2023a``
 ``2Aug2023_update2`` | ``-kokkos-CUDA-12.1.1`` | ``foss/2023a``
 ``2Aug2023_update2`` | ``-kokkos`` | ``foss/2023a``
 

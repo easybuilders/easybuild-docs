@@ -10,9 +10,11 @@ Cython is an optimising static compiler for both the Python programming language
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``0.27.3`` | ``-Python-2.7.18`` | ``GCCcore/12.3.0``
 ``0.29.22`` |  | ``GCCcore/10.2.0``
 ``0.29.33`` |  | ``GCCcore/11.3.0``
 ``0.29.37`` | ``-Python-2.7.18`` | ``GCCcore/12.3.0``
+``3.0.10`` |  | ``GCCcore/12.3.0``
 ``3.0.10`` |  | ``GCCcore/13.2.0``
 ``3.0.10`` |  | ``GCCcore/13.3.0``
 ``3.0.7`` |  | ``GCCcore/12.3.0``

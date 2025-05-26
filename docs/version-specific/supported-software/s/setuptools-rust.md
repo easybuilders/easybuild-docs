@@ -10,6 +10,7 @@ setuptools-rust is a plugin for setuptools to build Rust Python extensions imple
 
 version | toolchain
 --------|----------
+``1.11.0`` | ``GCCcore/14.2.0``
 ``1.6.0`` | ``GCCcore/12.3.0``
 ``1.8.0`` | ``GCCcore/13.2.0``
 ``1.9.0`` | ``GCCcore/13.3.0``

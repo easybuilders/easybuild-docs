@@ -8,6 +8,7 @@ search:
 
 
 
+ * [yacrd](yacrd.md)
  * [YACS](YACS.md)
  * [yaff](yaff.md)
  * [YaHS](YaHS.md)

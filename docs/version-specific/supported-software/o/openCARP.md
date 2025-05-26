@@ -10,6 +10,7 @@ openCARP is an open cardiac electrophysiology simulator for in-silico experiment
 
 version | toolchain
 --------|----------
+``17.0`` | ``foss/2023b``
 ``6.0`` | ``foss/2020b``
 ``8.2`` | ``foss/2021a``
 

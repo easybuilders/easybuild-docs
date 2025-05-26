@@ -10,6 +10,7 @@ A simple packaging tool for simple packages.
 
 version | toolchain
 --------|----------
+``3.10.1`` | ``GCCcore/14.2.0``
 ``3.9.0`` | ``GCCcore/12.3.0``
 ``3.9.0`` | ``GCCcore/13.2.0``
 ``3.9.0`` | ``GCCcore/13.3.0``

@@ -72,6 +72,8 @@ search:
  * [RevBayes](RevBayes.md)
  * [REViewer](REViewer.md)
  * [RFdiffusion](RFdiffusion.md)
+ * [RFdiffusion-models](RFdiffusion-models.md)
+ * [RFdiffusion-schedules](RFdiffusion-schedules.md)
  * [rgdal](rgdal.md)
  * [rgeos](rgeos.md)
  * [Rgurobi](Rgurobi.md)

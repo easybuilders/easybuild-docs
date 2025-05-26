@@ -20,6 +20,7 @@ version | versionsuffix | toolchain
 ``11.0.16`` |  | ``system``
 ``11.0.18`` |  | ``system``
 ``11.0.20`` |  | ``system``
+``11.0.27`` |  | ``system``
 ``11.0.8`` | ``-aarch64`` | ``system``
 ``11`` |  | ``system``
 ``13.0.2`` |  | ``system``
@@ -29,6 +30,7 @@ version | versionsuffix | toolchain
 ``16.0.1`` |  | ``system``
 ``16`` |  | ``system``
 ``17.0.1`` |  | ``system``
+``17.0.15`` |  | ``system``
 ``17.0.2`` |  | ``system``
 ``17.0.4`` |  | ``system``
 ``17.0.6`` |  | ``system``
@@ -37,10 +39,15 @@ version | versionsuffix | toolchain
 ``19`` |  | ``system``
 ``21.0.2`` |  | ``system``
 ``21.0.5`` |  | ``system``
+``21.0.7`` |  | ``system``
 ``21`` |  | ``system``
+``23.0.1`` |  | ``system``
+``23.0.2`` |  | ``system``
+``23`` |  | ``system``
 ``8.345`` |  | ``system``
 ``8.362`` |  | ``system``
 ``8.402`` |  | ``system``
+``8.452`` |  | ``system``
 ``8`` |  | ``system``
 
 

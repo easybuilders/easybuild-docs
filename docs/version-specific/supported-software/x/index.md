@@ -15,6 +15,7 @@ search:
  * [xarray](xarray.md)
  * [XBeach](XBeach.md)
  * [XCFun](XCFun.md)
+ * [xclim](xclim.md)
  * [xclip](xclip.md)
  * [XCrySDen](XCrySDen.md)
  * [xdotool](xdotool.md)

@@ -6,7 +6,7 @@ search:
 
 The OpenGL Utility Library (GLU) is a computer graphics library for OpenGL.
 
-*homepage*: <https://mesa.freedesktop.org/archive/glu/>
+*homepage*: <https://gitlab.freedesktop.org/mesa/glu>
 
 version | toolchain
 --------|----------
