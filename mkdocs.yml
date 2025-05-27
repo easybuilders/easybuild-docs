@@ -54,7 +54,7 @@ nav:
       - Backing up existing modules: backup-modules.md
       - Common toolchains: common-toolchains.md
       - Controlling optimization flags: controlling-compiler-optimization-flags.md
-      - Installing datasets: datasets.md
+      - Datasets: datasets.md
       - Detecting loaded modules: detecting-loaded-modules.md
       - EasyBuild log files: log-files.md
       - Extended dry run: extended-dry-run.md
