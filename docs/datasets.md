@@ -1,3 +1,5 @@
+# Datasets
+
 EasyBuild v5.1.0 adds support for installing datasets as modules.
 
 Sam Moors (VUB) gave a talk about this idea at EUM'24 (see [slides](https://users.ugent.be/~kehoste/eum24/019_eum24_datasets.pdf) + [recording](https://www.youtube.com/watch?v=13q_aKDDv9k&list=PLhnGtSmEGEQild9FmlP8Qmz9Csc_gOJKF&index=20&pp=gAQBiAQB)).
