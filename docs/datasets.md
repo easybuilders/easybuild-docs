@@ -48,18 +48,18 @@ Since a module file is generated for the installed dataset, it can be used as a 
 
 EasyBuild provides separate configuration settings for the location of data installations and the source files for datasets, for two reasons:
 
-- Datasets can be large, and you may want to install them on a different filesystem than software installations;
-- Datasets are often exactly the same across different software versions, and so the "source" files for them should be only downloaded and stored once, even if their filenames are different;
+* Datasets can be large, and you may want to install them on a different filesystem than software installations;
+* Datasets are often exactly the same across different software versions, and so the "source" files for them should be only downloaded and stored once, even if their filenames are different;
 
 Because of the latter, EasyBuild will store the "source" files for datasets in an object storage hierarchy, where the actual location of the file is determined by the SHA256 checksum of the file. For example:
 
-```
+```txt
 /sources/data/RFdiffusion-models/object_storage/7/6/e/4/e/2/6/0/76e4e260aefee3b582bd76b77ab95d2592e64f00c51bf344968ab9239f3250bc
 ```
 
 Symlinks are created to have a version-specific path to the dataset, without storing it multiple times on disk:
 
-```
+```shell
 $ ls -l /sources/data/RFdiffusion-models/1.1.0/Complex_base_ckpt.pt
 lrwxrwxrwx 1 vsc40023 vsc40023 98 May 27 16:46 /sources/data/RFdiffusion-models/1.1.0/Complex_base_ckpt.pt -> ../object_storage/7/6/e/4/e/2/6/0/76e4e260aefee3b582bd76b77ab95d2592e64f00c51bf344968ab9239f3250bc
 ```
