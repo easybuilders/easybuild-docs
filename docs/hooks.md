@@ -87,7 +87,7 @@ which can also be consulted using `eb --avail-hooks`, is:
 * `pre_permissions_hook`, `post_permissions_hook`
 * `pre_package_hook`, `post_package_hook`
 * `pre_testcases_hook`, `post_testcases_hook`
-* `post_build_and_install_loop` *(available since EasyBuild v4.8.1)*
+* `post_build_and_install_loop_hook` *(available since EasyBuild v4.8.1)*
 * `end_hook` *(only called once in an EasyBuild session)*
 * `cancel_hook` *(available since EasyBuild v4.8.1)*
 * `fail_hook` *(available since EasyBuild v4.8.1)*
