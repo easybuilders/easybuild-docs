@@ -43,12 +43,14 @@ eb ...
 
 ## Available hooks
 
-Since EasyBuild v4.8.1, six different types of hooks are supported:
+Since EasyBuild v5.1.1, seven different types of hooks are supported:
 
 * `start_hook`, `pre_build_and_install_loop_hook`, `post_build_and_install_loop_hook`, and `end_hook` which are triggered *once* right after
   EasyBuild starts, *once* before looping over the easyconfigs to be built, *once* after completing the loop over the eayconfigs to be installed,
   and *once* shortly before EasyBuild completes, respectively.
 * `parse_hook`, which is triggered when an easyconfig file is being parsed
+* `pre_easyblock_hook` and `post_easyblock_hook`, which are triggered before starting an installation
+   and after completing an installation;
 * `module_write_hook`, which is triggered right before a module file is written.
   This includes the temporary module file used when installing extensions and during the sanity check,
   as well as the devel module.
@@ -64,7 +66,8 @@ which can also be consulted using `eb --avail-hooks`, is:
 
 * `start_hook` *(only called once in an EasyBuild session)*
 * `parse_hook` *(available since EasyBuild v3.7.0)*
-* `pre_build_and_install_loop` *(available since EasyBuild v4.8.1)*
+* `pre_build_and_install_loop_hook` *(available since EasyBuild v4.8.1)*
+* `pre_easyblock_hook` *(available since EasyBuild v5.1.1)*
 * `pre_fetch_hook`, `post_fetch_hook`
 * `pre_ready_hook`, `post_ready_hook`
 * `pre_source_hook`, `post_source_hook`
@@ -87,7 +90,8 @@ which can also be consulted using `eb --avail-hooks`, is:
 * `pre_permissions_hook`, `post_permissions_hook`
 * `pre_package_hook`, `post_package_hook`
 * `pre_testcases_hook`, `post_testcases_hook`
-* `post_build_and_install_loop` *(available since EasyBuild v4.8.1)*
+* `post_easyblock_hook` *(available since EasyBuild v5.1.1)*
+* `post_build_and_install_loop_hook` *(available since EasyBuild v4.8.1)*
 * `end_hook` *(only called once in an EasyBuild session)*
 * `cancel_hook` *(available since EasyBuild v4.8.1)*
 * `fail_hook` *(available since EasyBuild v4.8.1)*
@@ -139,6 +143,7 @@ Do take into account the following:
   (usually referred to as `ec`) is passed as an argument.
 * For `pre_build_and_install_loop_hook` a list of easyconfigs is provided as an argument.
 * For `post_build_and_install_loop_hook` a list of easyconfigs with build results is provided as an argument.
+* For `pre_easyblock_hook` and `post_easyblock_hook` an `EasyBlock` instance is provided as an argument.
 * For `pre_run_shell_cmd_hook`, multiple arguments are passed:
     * An unnamed argument (often called `cmd`) that corresponds to the shell command that will be run,
       which could be provided either as a string value (like `"echo hello"`) or a list value (like `['echo', 'hello']`).
