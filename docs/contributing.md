@@ -266,6 +266,41 @@ git checkout develop
 git pull upstream develop
 ```
 
+##### Running your development instance {: #running_your_development_instance }
+
+To run your development instance locally access to a copy of the
+[easybuild-easyblocks](https://github.com/easybuilders/easybuild-easyblocks) and
+the [easybuild-easyconfigs](https://github.com/easybuilders/easybuild-easyconfigs)
+repositories is required. Assuming that you have cloned `easybuild-framework`,
+`easybuild-easyblocks`, and `easybuild-easyconfigs` repositories in the safe
+directory, say `EasyBuild`, your directory structure should resemble the
+following:
+
+```
+EasyBuild
+|
++- easybuild-framework
++- easybuild-easyblocks
++- easybuild-easyconfigs
+```
+
+To run the development instance, you need to add the framework and easyblocks
+directories in the Python path, and the easyconfigs in the robot search path.
+
+You can also define the `PYTHONPATH` in inline format:
+
+```bash
+PYTHONPATH=/path/to/EasyBuild/easybuild-framework:/path/to/EasyBuild/easybuild-easyblocks:${PYTHONPATH} /path/to/EasyBuild/easybuild-framework/eb --dry-run --robot=/path/to/EasyBuild/easybuild-easyconfigs/easybuild/easyconfigs ReFrame-4.3.3.eb
+```
+
+For convenience, you can define an alias for the development instance of
+EasyBuild as follows:
+
+```bash
+alias eb="PYTHONPATH=/path/to/EasyBuild/easybuild-framework:/path/to/EasyBuild/easybuild-easyblocks:${PYTHONPATH} /path/to/EasyBuild/easybuild-framework/eb --robot-paths=/path/to/EasyBuild/easybuild-easyconfigs/easybuild/easyconfigs:"
+```
+
+
 ### Opening a new pull request {: #contributing_creating_pull_requests }
 
 !!! note
