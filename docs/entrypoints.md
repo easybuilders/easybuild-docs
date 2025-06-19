@@ -52,7 +52,7 @@ EG: `myblock = "my_module.sub_module:MyBlock"` requires that `from my_module.sub
 
 For the following examples we are going to assume a package with the following folder structure:
 
-```
+```text
 my_package/
 ├── my_module
 │   ├── __init__.py
