@@ -10,7 +10,6 @@ Extrae is the core instrumentation package developed by the Performance Tools gr
 
 version | toolchain
 --------|----------
-``3.8.0`` | ``gompi/2020b``
 ``3.8.3`` | ``gompi/2021a``
 ``4.0.4`` | ``gompi/2022a``
 ``4.2.0`` | ``gompi/2023b``

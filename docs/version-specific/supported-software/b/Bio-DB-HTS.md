@@ -10,7 +10,6 @@ Read files using HTSlib including BAM/CRAM, Tabix and BCF database files
 
 version | toolchain
 --------|----------
-``3.01`` | ``GCC/10.2.0``
 ``3.01`` | ``GCC/11.2.0``
 ``3.01`` | ``GCC/11.3.0``
 ``3.01`` | ``GCC/12.2.0``

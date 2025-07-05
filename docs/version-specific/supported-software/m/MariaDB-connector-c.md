@@ -10,7 +10,6 @@ MariaDB Connector/C is used to connect applications developed in C/C++ to MariaD
 
 version | toolchain
 --------|----------
-``3.1.11`` | ``GCCcore/10.2.0``
 ``3.2.2`` | ``GCCcore/10.3.0``
 
 

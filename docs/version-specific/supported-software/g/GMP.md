@@ -10,7 +10,6 @@ GMP is a free library for arbitrary precision arithmetic, operating on signed  i
 
 version | toolchain
 --------|----------
-``6.2.0`` | ``GCCcore/10.2.0``
 ``6.2.1`` | ``GCCcore/10.3.0``
 ``6.2.1`` | ``GCCcore/11.2.0``
 ``6.2.1`` | ``GCCcore/11.3.0``

@@ -10,7 +10,6 @@ wxWidgets is a C++ library that lets developers create applications for Windows,
 
 version | toolchain
 --------|----------
-``3.1.4`` | ``GCC/10.2.0``
 ``3.1.5`` | ``GCC/10.3.0``
 ``3.1.5`` | ``GCC/11.2.0``
 ``3.2.0`` | ``GCC/11.2.0``

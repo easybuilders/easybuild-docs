@@ -10,7 +10,6 @@ Clustering cONtigs with COverage and ComposiTion (CONCOCT) is a program for unsu
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.1.0`` | ``-Python-2.7.18`` | ``foss/2020b``
 ``1.1.0`` | ``-Python-2.7.18`` | ``foss/2023a``
 
 

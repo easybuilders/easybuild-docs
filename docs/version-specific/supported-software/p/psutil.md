@@ -10,7 +10,6 @@ A cross-platform process and system utilities module for Python
 
 version | toolchain
 --------|----------
-``5.9.3`` | ``GCCcore/10.2.0``
 ``5.9.3`` | ``GCCcore/11.3.0``
 ``5.9.4`` | ``GCCcore/11.2.0``
 ``5.9.5`` | ``GCCcore/12.2.0``

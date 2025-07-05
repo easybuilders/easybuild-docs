@@ -10,7 +10,6 @@ Mesh-Quality Improvement Library
 
 version | toolchain
 --------|----------
-``2.3.0`` | ``GCCcore/10.2.0``
 ``2.3.0`` | ``GCCcore/12.3.0``
 
 

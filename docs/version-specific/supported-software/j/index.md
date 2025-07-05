@@ -8,6 +8,7 @@ search:
 
 
 
+ * [JACUSA2](JACUSA2.md)
  * [JACUSA2helper](JACUSA2helper.md)
  * [JAGS](JAGS.md)
  * [Jansson](Jansson.md)
@@ -23,7 +24,6 @@ search:
  * [jemalloc](jemalloc.md)
  * [jiter](jiter.md)
  * [Jmol](Jmol.md)
- * [Jorg](Jorg.md)
  * [joypy](joypy.md)
  * [jq](jq.md)
  * [json-c](json-c.md)
@@ -31,6 +31,7 @@ search:
  * [JSON-GLib](JSON-GLib.md)
  * [JsonCpp](JsonCpp.md)
  * [Judy](Judy.md)
+ * [Juicebox](Juicebox.md)
  * [Julia](Julia.md)
  * [juliaup](juliaup.md)
  * [junos-eznc](junos-eznc.md)

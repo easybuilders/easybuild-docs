@@ -10,10 +10,8 @@ Python Bindings for the Parasail C Library
 
 version | toolchain
 --------|----------
-``1.2.4`` | ``foss/2020b``
 ``1.2.4`` | ``foss/2021a``
 ``1.2.4`` | ``foss/2021b``
-``1.2.4`` | ``fosscuda/2020b``
 ``1.3.3`` | ``foss/2022a``
 ``1.3.4`` | ``foss/2022b``
 ``1.3.4`` | ``foss/2023a``

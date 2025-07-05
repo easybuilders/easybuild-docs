@@ -10,7 +10,6 @@ Zstandard is a real-time compression algorithm, providing high compression ratio
 
 version | toolchain
 --------|----------
-``1.4.5`` | ``GCCcore/10.2.0``
 ``1.4.9`` | ``GCCcore/10.3.0``
 ``1.5.0`` | ``GCCcore/11.2.0``
 ``1.5.2`` | ``GCCcore/11.3.0``

@@ -10,7 +10,6 @@ SSW is a fast implementation of the Smith-Waterman algorithm, which uses the  Si
 
 version | toolchain
 --------|----------
-``1.1`` | ``GCCcore/10.2.0``
 ``1.1`` | ``GCCcore/10.3.0``
 ``1.1`` | ``GCCcore/11.2.0``
 ``1.1`` | ``GCCcore/12.3.0``

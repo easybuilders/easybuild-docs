@@ -10,7 +10,6 @@ Unimap is a fork of minimap2 optimized for assembly-to-reference alignment. It i
 
 version | toolchain
 --------|----------
-``0.1`` | ``GCCcore/10.2.0``
 ``0.1`` | ``GCCcore/11.3.0``
 
 

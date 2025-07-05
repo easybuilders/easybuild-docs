@@ -10,7 +10,6 @@ Subversion is an open source version control system.
 
 version | toolchain
 --------|----------
-``1.14.0`` | ``GCCcore/10.2.0``
 ``1.14.1`` | ``GCCcore/10.3.0``
 ``1.14.1`` | ``GCCcore/11.2.0``
 ``1.14.2`` | ``GCCcore/11.3.0``

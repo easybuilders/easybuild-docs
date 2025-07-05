@@ -10,7 +10,6 @@ OpenEXR is a high dynamic-range (HDR) image file format developed by Industrial 
 
 version | toolchain
 --------|----------
-``2.5.5`` | ``GCCcore/10.2.0``
 ``3.0.1`` | ``GCCcore/10.3.0``
 ``3.1.1`` | ``GCCcore/11.2.0``
 ``3.1.5`` | ``GCCcore/11.3.0``

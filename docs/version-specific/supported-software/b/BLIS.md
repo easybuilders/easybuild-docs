@@ -10,7 +10,6 @@ BLIS is a portable software framework for instantiating high-performance BLAS-li
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.8.0`` |  | ``GCCcore/10.2.0``
 ``0.8.1`` |  | ``GCC/10.3.0``
 ``0.8.1`` |  | ``GCC/11.2.0``
 ``0.8.1`` |  | ``GCCcore/10.3.0``
@@ -24,7 +23,6 @@ version | versionsuffix | toolchain
 ``1.1`` |  | ``GCC/14.2.0``
 ``3.0`` | ``-amd`` | ``GCCcore/10.3.0``
 ``3.0.1`` | ``-amd`` | ``GCC/11.2.0``
-``3.0.1`` | ``-amd`` | ``GCCcore/10.2.0``
 ``3.0.1`` | ``-amd`` | ``GCCcore/10.3.0``
 ``3.1`` | ``-amd`` | ``GCCcore/11.2.0``
 

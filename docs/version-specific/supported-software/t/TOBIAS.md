@@ -11,7 +11,6 @@ TOBIAS is a collection of command-line bioinformatics tools for performing footp
 version | toolchain
 --------|----------
 ``0.12.12`` | ``foss/2021b``
-``0.14.0`` | ``foss/2020b``
 ``0.16.1`` | ``foss/2022b``
 ``0.16.1`` | ``foss/2023a``
 

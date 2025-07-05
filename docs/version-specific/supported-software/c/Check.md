@@ -10,7 +10,6 @@ Check is a unit testing framework for C. It features a simple interface for defi
 
 version | toolchain
 --------|----------
-``0.15.2`` | ``GCCcore/10.2.0``
 ``0.15.2`` | ``GCCcore/10.3.0``
 ``0.15.2`` | ``GCCcore/11.2.0``
 ``0.15.2`` | ``GCCcore/11.3.0``

@@ -4,14 +4,12 @@ search:
 ---
 # SeqAn
 
-SeqAn is an open source C++ library of efficient algorithms and data structures  for the analysis of sequences with the focus on biological data
+SeqAn is an open source C++ library of efficient algorithms and data structures  for the analysis of sequences with the focus on biological data.
 
-*homepage*: <https://www.seqan.de/>
+*homepage*: <https://github.com/seqan/seqan>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.4.2`` | ``-library`` | ``system``
-``2.4.0`` |  | ``GCCcore/10.2.0``
 ``2.4.0`` |  | ``GCCcore/11.2.0``
 ``2.4.0`` | ``-Python-%(pyver)s`` | ``GCCcore/12.3.0``
 

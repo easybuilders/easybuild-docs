@@ -10,8 +10,6 @@ Scanpy is a scalable toolkit for analyzing single-cell gene expression data buil
 
 version | toolchain
 --------|----------
-``1.7.2`` | ``foss/2020b``
-``1.8.1`` | ``foss/2020b``
 ``1.8.1`` | ``foss/2021a``
 ``1.8.2`` | ``foss/2021b``
 ``1.9.1`` | ``foss/2021b``

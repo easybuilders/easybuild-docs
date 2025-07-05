@@ -10,7 +10,6 @@ OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.3.12`` |  | ``GCC/10.2.0``
 ``0.3.15`` |  | ``GCC/10.3.0``
 ``0.3.17`` |  | ``GCC/10.3.0``
 ``0.3.17`` |  | ``GCC/11.2.0``
@@ -21,6 +20,7 @@ version | versionsuffix | toolchain
 ``0.3.20`` |  | ``NVHPC/22.7-CUDA-11.7.0``
 ``0.3.21`` |  | ``GCC/12.2.0``
 ``0.3.23`` |  | ``GCC/12.3.0``
+``0.3.23`` |  | ``intel-compilers/2023.1.0``
 ``0.3.24`` |  | ``GCC/13.2.0``
 ``0.3.27`` | ``-seq-iface64`` | ``GCC/13.2.0``
 ``0.3.27`` | ``-seq-iface64`` | ``GCC/13.3.0``

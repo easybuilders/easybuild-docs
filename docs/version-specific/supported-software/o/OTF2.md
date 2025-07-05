@@ -10,7 +10,6 @@ The Open Trace Format 2 is a highly scalable, memory efficient event trace  data
 
 version | toolchain
 --------|----------
-``2.3`` | ``GCCcore/10.2.0``
 ``2.3`` | ``GCCcore/10.3.0``
 ``3.0`` | ``GCCcore/11.3.0``
 ``3.0.2`` | ``GCCcore/11.2.0``

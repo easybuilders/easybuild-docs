@@ -10,7 +10,6 @@ An ultra-fast single-node solution for large and complex metagenomics assembly v
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.2.9`` | ``-Python-2.7.18`` | ``GCCcore/10.2.0``
 ``1.2.9`` |  | ``GCCcore/10.3.0``
 ``1.2.9`` |  | ``GCCcore/11.2.0``
 ``1.2.9`` |  | ``GCCcore/11.3.0``

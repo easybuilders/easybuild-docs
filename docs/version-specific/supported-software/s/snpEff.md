@@ -6,13 +6,10 @@ search:
 
 SnpEff is a variant annotation and effect prediction tool.  It annotates and predicts the effects of genetic variants (such as amino acid changes).
 
-*homepage*: <http://sourceforge.net/projects/snpeff/>
+*homepage*: <https://pcingola.github.io/SnpEff/>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``4.3t`` | ``-Java-1.8`` | ``system``
-``5.0`` | ``-Java-13`` | ``system``
-``5.0e`` | ``-Java-13`` | ``GCCcore/10.2.0``
 ``5.0e`` | ``-Java-11`` | ``GCCcore/11.2.0``
 ``5.2c`` | ``-Java-11`` | ``GCCcore/12.2.0``
 ``5.2c`` | ``-Java-11`` | ``GCCcore/12.3.0``

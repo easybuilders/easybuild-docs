@@ -10,7 +10,6 @@ Numdiff (which I will also write numdiff) is a little program that can be used t
 
 version | toolchain
 --------|----------
-``5.9.0`` | ``GCCcore/10.2.0``
 ``5.9.0`` | ``GCCcore/12.2.0``
 
 

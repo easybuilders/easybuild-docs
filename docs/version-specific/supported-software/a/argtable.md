@@ -10,7 +10,6 @@ Argtable is an ANSI C library for parsing GNU style  command line options with a
 
 version | toolchain
 --------|----------
-``2.13`` | ``GCCcore/10.2.0``
 ``2.13`` | ``GCCcore/10.3.0``
 ``2.13`` | ``GCCcore/11.2.0``
 ``2.13`` | ``GCCcore/12.3.0``

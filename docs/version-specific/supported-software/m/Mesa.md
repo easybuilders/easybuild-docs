@@ -10,7 +10,6 @@ Mesa is an open-source implementation of the OpenGL specification -  a system fo
 
 version | toolchain
 --------|----------
-``20.2.1`` | ``GCCcore/10.2.0``
 ``21.1.1`` | ``GCCcore/10.3.0``
 ``21.1.7`` | ``GCCcore/11.2.0``
 ``22.0.3`` | ``GCCcore/11.3.0``

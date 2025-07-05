@@ -10,7 +10,6 @@ bsddb3 is a nearly complete Python binding of the Oracle/Sleepycat C API for the
 
 version | toolchain
 --------|----------
-``6.2.9`` | ``GCCcore/10.2.0``
 ``6.2.9`` | ``GCCcore/11.3.0``
 
 

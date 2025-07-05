@@ -10,7 +10,6 @@ LERC is an open-source image or raster format which supports rapid encoding and 
 
 version | toolchain
 --------|----------
-``3.0`` | ``GCCcore/10.2.0``
 ``3.0`` | ``GCCcore/10.3.0``
 ``4.0.0`` | ``GCCcore/11.3.0``
 ``4.0.0`` | ``GCCcore/12.2.0``

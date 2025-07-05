@@ -10,9 +10,7 @@ GMP/MPIR, MPFR, and MPC interface to Python 2.6+ and 3.x
 
 version | toolchain
 --------|----------
-``2.1.0b5`` | ``GCC/10.2.0``
 ``2.1.0b5`` | ``GCC/10.3.0``
-``2.1.0b5`` | ``iccifort/2020.4.304``
 ``2.1.2`` | ``GCC/11.2.0``
 ``2.1.2`` | ``GCC/11.3.0``
 ``2.1.2`` | ``intel-compilers/2021.4.0``

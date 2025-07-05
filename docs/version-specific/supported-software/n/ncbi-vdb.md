@@ -10,7 +10,6 @@ The SRA Toolkit and SDK from NCBI is a collection of tools and libraries for  us
 
 version | toolchain
 --------|----------
-``2.10.9`` | ``gompi/2020b``
 ``2.10.9`` | ``gompi/2021a``
 ``2.11.2`` | ``gompi/2021b``
 ``3.0.0`` | ``gompi/2021b``

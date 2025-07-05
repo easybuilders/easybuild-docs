@@ -11,7 +11,6 @@ Rasterio reads and writes geospatial raster data.
 version | toolchain
 --------|----------
 ``1.2.10`` | ``foss/2021b``
-``1.2.3`` | ``foss/2020b``
 ``1.3.4`` | ``foss/2022a``
 ``1.3.8`` | ``foss/2022b``
 ``1.3.9`` | ``foss/2023a``

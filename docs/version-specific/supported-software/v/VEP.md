@@ -10,7 +10,6 @@ Variant Effect Predictor (VEP) determines the effect of your  variants (SNPs, in
 
 version | toolchain
 --------|----------
-``103.1`` | ``GCC/10.2.0``
 ``105`` | ``GCC/11.2.0``
 ``107`` | ``GCC/11.3.0``
 ``111`` | ``GCC/12.2.0``

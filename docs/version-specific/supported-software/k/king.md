@@ -10,7 +10,6 @@ KING is a toolset that makes use of high-throughput SNP data typically seen in a
 
 version | toolchain
 --------|----------
-``2.2.4`` | ``system``
 ``2.2.7`` | ``system``
 ``2.3.2`` | ``system``
 

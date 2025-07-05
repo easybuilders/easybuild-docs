@@ -11,7 +11,6 @@ Read and write Generic Feature Format (GFF) with Biopython integration.
 version | toolchain
 --------|----------
 ``0.6.7`` | ``foss/2021a``
-``0.7.0`` | ``foss/2020b``
 ``0.7.0`` | ``foss/2022a``
 ``0.7.0`` | ``foss/2022b``
 ``0.7.1`` | ``foss/2023a``

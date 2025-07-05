@@ -10,11 +10,7 @@ The OpenGL Extension Wrangler Library (GLEW) is a cross-platform open-source C/C
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.1.0`` |  | ``GCCcore/10.2.0``
 ``2.1.0`` |  | ``GCCcore/10.3.0``
-``2.2.0`` | ``-egl`` | ``GCCcore/10.2.0``
-``2.2.0`` | ``-glx`` | ``GCCcore/10.2.0``
-``2.2.0`` | ``-osmesa`` | ``GCCcore/10.2.0``
 ``2.2.0`` | ``-egl`` | ``GCCcore/11.2.0``
 ``2.2.0`` | ``-glx`` | ``GCCcore/11.2.0``
 ``2.2.0`` | ``-osmesa`` | ``GCCcore/11.2.0``

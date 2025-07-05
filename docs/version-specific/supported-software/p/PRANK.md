@@ -10,7 +10,6 @@ PRANK is a probabilistic multiple alignment program for DNA,  codon and amino-ac
 
 version | toolchain
 --------|----------
-``170427`` | ``GCC/10.2.0``
 ``170427`` | ``GCC/10.3.0``
 ``170427`` | ``GCC/11.2.0``
 ``170427`` | ``GCC/11.3.0``

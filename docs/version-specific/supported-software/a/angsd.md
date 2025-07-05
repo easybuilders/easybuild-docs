@@ -10,7 +10,6 @@ Program for analysing NGS data.
 
 version | toolchain
 --------|----------
-``0.935`` | ``GCC/10.2.0``
 ``0.940`` | ``GCC/11.2.0``
 ``0.940`` | ``GCC/12.3.0``
 

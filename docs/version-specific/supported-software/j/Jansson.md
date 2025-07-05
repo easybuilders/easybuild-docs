@@ -10,7 +10,6 @@ Jansson is a C library for encoding, decoding and manipulating JSON data.  Its m
 
 version | toolchain
 --------|----------
-``2.13.1`` | ``GCC/10.2.0``
 ``2.13.1`` | ``GCC/11.2.0``
 ``2.14`` | ``GCC/11.3.0``
 ``2.14`` | ``GCC/12.3.0``

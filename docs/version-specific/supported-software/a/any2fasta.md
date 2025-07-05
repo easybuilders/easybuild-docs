@@ -10,7 +10,6 @@ Convert various sequence formats to FASTA
 
 version | toolchain
 --------|----------
-``0.4.2`` | ``GCCcore/10.2.0``
 ``0.4.2`` | ``GCCcore/10.3.0``
 ``0.4.2`` | ``GCCcore/11.2.0``
 ``0.4.2`` | ``GCCcore/12.3.0``

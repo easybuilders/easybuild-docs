@@ -10,7 +10,6 @@ Python bindings for xxHash. xxHash is an extremely fast non-cryptographic hash a
 
 version | toolchain
 --------|----------
-``2.0.2`` | ``GCCcore/10.2.0``
 ``3.1.0`` | ``GCCcore/11.3.0``
 ``3.2.0`` | ``GCCcore/12.2.0``
 ``3.4.1`` | ``GCCcore/12.3.0``

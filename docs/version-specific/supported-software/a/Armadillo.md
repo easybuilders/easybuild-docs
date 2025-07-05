@@ -10,7 +10,6 @@ Armadillo is an open-source C++ linear algebra library (matrix maths) aiming tow
 
 version | toolchain
 --------|----------
-``10.5.3`` | ``foss/2020b``
 ``10.7.5`` | ``foss/2021a``
 ``11.4.3`` | ``foss/2022a``
 ``11.4.3`` | ``foss/2022b``

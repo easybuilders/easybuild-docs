@@ -11,7 +11,7 @@ Yet Another eXchange Tool
 version | toolchain
 --------|----------
 ``0.10.0`` | ``gompi/2022b``
-``0.9.0`` | ``gompi/2020b``
+``0.11.3`` | ``gompi/2024a``
 ``0.9.1`` | ``gompi/2021a``
 ``0.9.2`` | ``iimpi/2021b``
 ``0.9.2.1`` | ``gompi/2021b``

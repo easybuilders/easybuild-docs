@@ -10,7 +10,6 @@ An extremely memory-efficient hash_map implementation. 2 bits/entry overhead!  T
 
 version | toolchain
 --------|----------
-``2.0.4`` | ``GCCcore/10.2.0``
 ``2.0.4`` | ``GCCcore/11.3.0``
 ``2.0.4`` | ``GCCcore/12.3.0``
 ``2.0.4`` | ``GCCcore/13.3.0``

@@ -10,7 +10,6 @@ PAL2NAL is a program that converts a multiple sequence alignment of proteins and
 
 version | toolchain
 --------|----------
-``14`` | ``GCCcore/10.2.0``
 ``14`` | ``GCCcore/10.3.0``
 
 

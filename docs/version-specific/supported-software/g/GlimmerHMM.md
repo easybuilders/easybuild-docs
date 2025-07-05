@@ -10,7 +10,6 @@ GlimmerHMM is a new gene finder based on a Generalized Hidden Markov Model.  Alt
 
 version | toolchain
 --------|----------
-``3.0.4c`` | ``GCC/10.2.0``
 ``3.0.4c`` | ``GCC/11.2.0``
 ``3.0.4c`` | ``GCC/12.3.0``
 

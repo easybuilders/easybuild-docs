@@ -10,7 +10,6 @@ Nearly Infinite Neighbor Joining Application.
 
 version | toolchain
 --------|----------
-``0.97-cluster_only`` | ``GCC/10.2.0``
 ``0.98-cluster_only`` | ``GCC/11.3.0``
 ``1.00-cluster_only`` | ``GCC/12.3.0``
 

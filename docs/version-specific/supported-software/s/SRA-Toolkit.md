@@ -10,8 +10,6 @@ The SRA Toolkit, and the source-code SRA System Development  Kit (SDK), will all
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.10.5`` | ``-centos_linux64`` | ``system``
-``2.10.9`` |  | ``gompi/2020b``
 ``3.0.0`` | ``-centos_linux64`` | ``system``
 ``3.0.0`` |  | ``gompi/2021b``
 ``3.0.10`` |  | ``gompi/2023a``

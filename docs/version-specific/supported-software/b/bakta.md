@@ -10,6 +10,7 @@ Bakta is a tool for the rapid & standardized annotation of bacterial genomes and
 
 version | toolchain
 --------|----------
+``1.10.1`` | ``foss/2023a``
 ``1.10.1`` | ``foss/2023b``
 
 

@@ -4,19 +4,12 @@ search:
 ---
 # imkl
 
-Intel Math Kernel Library is a library of highly optimized,  extensively threaded math routines for science, engineering, and financial  applications that require maximum performance. Core math functions include  BLAS, LAPACK, ScaLAPACK, Sparse Solvers, Fast Fourier Transforms, Vector Math, and more.
+Intel oneAPI Math Kernel Library
 
-*homepage*: <https://software.intel.com/mkl>
+*homepage*: <https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/onemkl.html>
 
 version | toolchain
 --------|----------
-``2020.4.304`` | ``NVHPC/21.2``
-``2020.4.304`` | ``gompi/2020b``
-``2020.4.304`` | ``gompic/2020b``
-``2020.4.304`` | ``iimpi/2020b``
-``2020.4.304`` | ``iimpic/2020b``
-``2020.4.304`` | ``iompi/2020b``
-``2021.1.1`` | ``iimpi/2020.12``
 ``2021.2.0`` | ``gompi/2021a``
 ``2021.2.0`` | ``iimpi/2021a``
 ``2021.2.0`` | ``iompi/2021a``

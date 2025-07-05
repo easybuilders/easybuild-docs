@@ -10,7 +10,6 @@ Ultrafast consensus module for raw de novo genome assembly of long uncorrected r
 
 version | toolchain
 --------|----------
-``1.4.21`` | ``GCCcore/10.2.0``
 ``1.4.21`` | ``GCCcore/10.3.0``
 ``1.5.0`` | ``GCCcore/11.2.0``
 ``1.5.0`` | ``GCCcore/11.3.0``

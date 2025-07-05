@@ -10,7 +10,6 @@ matio is an C library for reading and writing Matlab MAT files.
 
 version | toolchain
 --------|----------
-``1.5.21`` | ``GCCcore/10.2.0``
 ``1.5.22`` | ``GCCcore/11.2.0``
 ``1.5.23`` | ``GCCcore/11.3.0``
 ``1.5.23`` | ``GCCcore/12.1.0``

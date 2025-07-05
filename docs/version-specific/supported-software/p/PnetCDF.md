@@ -10,9 +10,7 @@ Parallel netCDF: A Parallel I/O Library for NetCDF File Access
 
 version | toolchain
 --------|----------
-``1.12.2`` | ``gompi/2020b``
 ``1.12.2`` | ``gompi/2021a``
-``1.12.2`` | ``gompic/2020b``
 ``1.12.2`` | ``iimpi/2021a``
 ``1.12.3`` | ``gompi/2021b``
 ``1.12.3`` | ``gompi/2022a``

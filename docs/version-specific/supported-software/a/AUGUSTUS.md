@@ -10,13 +10,13 @@ AUGUSTUS is a program that predicts genes in eukaryotic genomic sequences
 
 version | toolchain
 --------|----------
-``3.4.0`` | ``foss/2020b``
 ``3.4.0`` | ``foss/2021a``
 ``3.4.0`` | ``foss/2021b``
 ``3.5.0-20240612`` | ``foss/2023a``
 ``3.5.0`` | ``foss/2022a``
 ``3.5.0`` | ``foss/2022b``
 ``3.5.0`` | ``foss/2023a``
+``3.5.0`` | ``foss/2023b``
 ``3.5.0`` | ``foss/2024a``
 
 

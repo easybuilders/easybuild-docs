@@ -10,7 +10,6 @@ HMMER is used for searching sequence databases for sequence homologs,  and for m
 
 version | toolchain
 --------|----------
-``2.3.2`` | ``GCC/10.2.0``
 ``2.3.2`` | ``GCC/10.3.0``
 
 

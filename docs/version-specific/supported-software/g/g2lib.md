@@ -10,7 +10,6 @@ Library contains GRIB2 encoder/decoder and search/indexing routines.
 
 version | toolchain
 --------|----------
-``3.2.0`` | ``GCCcore/10.2.0``
 ``3.2.0`` | ``GCCcore/10.3.0``
 ``3.2.0`` | ``GCCcore/13.2.0``
 

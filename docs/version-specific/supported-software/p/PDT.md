@@ -10,7 +10,6 @@ Program Database Toolkit (PDT) is a framework for analyzing source code  written
 
 version | toolchain
 --------|----------
-``3.25`` | ``GCCcore/10.2.0``
 ``3.25.1`` | ``GCCcore/10.3.0``
 ``3.25.1`` | ``GCCcore/11.2.0``
 ``3.25.1`` | ``GCCcore/11.3.0``

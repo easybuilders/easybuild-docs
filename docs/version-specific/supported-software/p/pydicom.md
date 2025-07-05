@@ -10,7 +10,6 @@ Pure python package for DICOM medical file reading and writing.
 
 version | toolchain
 --------|----------
-``2.1.2`` | ``GCCcore/10.2.0``
 ``2.2.2`` | ``GCCcore/10.3.0``
 ``2.2.2`` | ``GCCcore/11.2.0``
 ``2.3.0`` | ``GCCcore/11.3.0``

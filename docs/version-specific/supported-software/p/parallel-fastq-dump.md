@@ -10,7 +10,6 @@ parallel fastq-dump wrapper
 
 version | toolchain
 --------|----------
-``0.6.7`` | ``gompi/2020b``
 ``0.6.7`` | ``gompi/2022a``
 ``0.6.7`` | ``gompi/2023a``
 

@@ -10,7 +10,6 @@ The file command is 'a file type guesser', that is, a command-line tool  that te
 
 version | toolchain
 --------|----------
-``5.39`` | ``GCCcore/10.2.0``
 ``5.40`` | ``GCCcore/10.3.0``
 ``5.41`` | ``GCCcore/11.2.0``
 ``5.43`` | ``GCCcore/11.3.0``

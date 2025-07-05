@@ -10,9 +10,7 @@ GNU Emacs is an extensible, customizable text editor--and more.  At its core is 
 
 version | toolchain
 --------|----------
-``27.1`` | ``GCCcore/10.2.0``
 ``27.2`` | ``GCCcore/11.2.0``
-``28.1`` | ``GCCcore/10.2.0``
 ``28.2`` | ``GCCcore/12.2.0``
 
 

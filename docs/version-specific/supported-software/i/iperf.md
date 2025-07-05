@@ -4,13 +4,12 @@ search:
 ---
 # iperf
 
-Iperf 2: TCP and UDP bandwidth performance measurement tool
+iperf is a tool for active measurements of the maximum achievable bandwidth on IP networks.
 
-*homepage*: <https://sourceforge.net/projects/iperf2/>
+*homepage*: <https://software.es.net/iperf>
 
 version | toolchain
 --------|----------
-``2.1.9`` | ``GCCcore/10.2.0``
 ``3.15`` | ``system``
 ``3.16`` | ``system``
 

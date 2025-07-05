@@ -10,6 +10,7 @@ Black is the uncompromising Python code formatter. By using it, you agree to ced
 
 version | toolchain
 --------|----------
+``24.1.1`` | ``GCCcore/12.3.0``
 ``24.10.0`` | ``GCCcore/13.2.0``
 
 

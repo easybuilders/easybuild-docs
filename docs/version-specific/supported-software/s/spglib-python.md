@@ -10,9 +10,6 @@ Spglib for Python. Spglib is a library for finding and handling crystal symmetri
 
 version | toolchain
 --------|----------
-``1.16.0`` | ``foss/2020b``
-``1.16.0`` | ``fosscuda/2020b``
-``1.16.0`` | ``intel/2020b``
 ``1.16.1`` | ``foss/2021a``
 ``1.16.1`` | ``gomkl/2021a``
 ``1.16.1`` | ``intel/2021a``

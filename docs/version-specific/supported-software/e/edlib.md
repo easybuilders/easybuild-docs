@@ -10,7 +10,6 @@ Lightweight, super fast library for sequence alignment using edit (Levenshtein) 
 
 version | toolchain
 --------|----------
-``1.3.9`` | ``GCC/10.2.0``
 ``1.3.9`` | ``GCC/10.3.0``
 ``1.3.9`` | ``GCC/11.2.0``
 ``1.3.9`` | ``GCC/11.3.0``

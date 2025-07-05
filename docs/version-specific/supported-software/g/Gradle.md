@@ -10,8 +10,8 @@ Complete Gradle install. From mobile apps to microservices, from small startups 
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``6.1.1`` |  | ``system``
 ``6.9.1`` |  | ``system``
+``8.14.2`` | ``-Java-17`` | ``system``
 ``8.6`` | ``-Java-17`` | ``system``
 
 

@@ -4,13 +4,12 @@ search:
 ---
 # NCO
 
-manipulates and analyzes data stored in netCDF-accessible formats, including DAP, HDF4, and HDF5
+The NCO toolkit manipulates and analyzes data stored in netCDF-accessible formats, including DAP, HDF4, and HDF5.
 
-*homepage*: <https://nco.sourceforge.net>
+*homepage*: <https://github.com/nco/nco>
 
 version | toolchain
 --------|----------
-``4.9.7`` | ``foss/2020b``
 ``5.0.1`` | ``foss/2021a``
 ``5.0.3`` | ``foss/2021b``
 ``5.0.3`` | ``intel/2021b``

@@ -10,7 +10,6 @@ Package containing functions to:      perform a negative binomial test on allele
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.0.0`` | ``-R-4.0.3`` | ``foss/2020b``
 ``1.0.1`` | ``-R-4.1.2`` | ``foss/2021b``
 
 

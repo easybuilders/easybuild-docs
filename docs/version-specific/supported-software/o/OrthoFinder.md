@@ -10,8 +10,7 @@ OrthoFinder is a fast, accurate and comprehensive platform for comparative genom
 
 version | toolchain
 --------|----------
-``2.5.2`` | ``foss/2020b``
-``2.5.4`` | ``foss/2020b``
+``2.5.5`` | ``foss/2022a``
 ``2.5.5`` | ``foss/2023a``
 
 

@@ -10,7 +10,6 @@ An analysis toolkit for single-cell RNA-seq.
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.2.3`` | ``-R-4.0.3`` | ``foss/2020b``
 ``1.3.1`` | ``-R-4.2.1`` | ``foss/2022a``
 ``1.3.1`` | ``-R-4.2.2`` | ``foss/2022b``
 ``1.3.1`` | ``-R-4.3.2`` | ``foss/2023a``

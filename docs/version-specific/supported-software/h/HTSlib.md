@@ -10,9 +10,6 @@ A C library for reading/writing high-throughput sequencing data.  This package i
 
 version | toolchain
 --------|----------
-``1.11`` | ``GCC/10.2.0``
-``1.11`` | ``iccifort/2020.4.304``
-``1.12`` | ``GCC/10.2.0``
 ``1.12`` | ``GCC/10.3.0``
 ``1.14`` | ``GCC/11.2.0``
 ``1.15.1`` | ``GCC/11.3.0``

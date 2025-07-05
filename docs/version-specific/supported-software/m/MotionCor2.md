@@ -10,8 +10,6 @@ MotionCor2 correct anisotropic image motion at the single pixel level across the
 
 version | toolchain
 --------|----------
-``1.4.2`` | ``GCCcore/10.2.0``
-``1.4.4`` | ``GCCcore/10.2.0``
 ``1.4.4`` | ``GCCcore/10.3.0``
 ``1.5.0`` | ``GCCcore/11.3.0``
 

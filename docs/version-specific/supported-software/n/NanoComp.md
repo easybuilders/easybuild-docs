@@ -10,7 +10,6 @@ Comparing runs of Oxford Nanopore sequencing data and alignments
 
 version | toolchain
 --------|----------
-``1.13.1`` | ``intel/2020b``
 ``1.24.0`` | ``foss/2023a``
 
 

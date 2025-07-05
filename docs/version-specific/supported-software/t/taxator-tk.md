@@ -10,7 +10,6 @@ A set of programs for the taxonomic analysis of nucleotide sequence data
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.3.3`` |  | ``GCC/10.2.0``
 ``1.5.0`` | ``-Python-2.7.18`` | ``GCC/12.3.0``
 
 

@@ -13,6 +13,7 @@ version | toolchain
 ``2.6.2`` | ``GCCcore/11.2.0``
 ``2.7`` | ``GCCcore/11.2.0``
 ``2.9`` | ``GCCcore/10.3.0``
+``2.9`` | ``GCCcore/12.3.0``
 ``3.1`` | ``GCCcore/13.3.0``
 
 

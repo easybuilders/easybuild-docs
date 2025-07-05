@@ -10,10 +10,8 @@ JAGS is Just Another Gibbs Sampler.  It is a program for analysis  of Bayesian h
 
 version | toolchain
 --------|----------
-``4.3.0`` | ``foss/2020b``
 ``4.3.0`` | ``foss/2021a``
 ``4.3.0`` | ``foss/2021b``
-``4.3.0`` | ``fosscuda/2020b``
 ``4.3.1`` | ``foss/2022a``
 ``4.3.2`` | ``foss/2022b``
 ``4.3.2`` | ``foss/2023a``

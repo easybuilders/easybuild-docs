@@ -11,7 +11,6 @@ GraphicsMagick is the swiss army knife of image processing.
 version | toolchain
 --------|----------
 ``1.3.36`` | ``GCCcore/11.2.0``
-``1.3.36`` | ``foss/2020b``
 ``1.3.45`` | ``GCCcore/13.3.0``
 
 

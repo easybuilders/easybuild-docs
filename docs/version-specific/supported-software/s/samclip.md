@@ -10,8 +10,8 @@ Filter SAM file for soft and hard clipped alignments.
 
 version | toolchain
 --------|----------
-``0.4.0`` | ``GCCcore/10.2.0``
 ``0.4.0`` | ``GCCcore/11.2.0``
+``0.4.0`` | ``GCCcore/12.3.0``
 ``0.4.0`` | ``GCCcore/13.3.0``
 
 

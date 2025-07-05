@@ -10,9 +10,6 @@ Statsmodels is a Python module that allows users to explore data, estimate stati
 
 version | toolchain
 --------|----------
-``0.12.1`` | ``foss/2020b``
-``0.12.1`` | ``fosscuda/2020b``
-``0.12.1`` | ``intel/2020b``
 ``0.12.2`` | ``foss/2021a``
 ``0.13.1`` | ``foss/2021b``
 ``0.13.1`` | ``foss/2022a``

@@ -11,7 +11,6 @@ Clp (Coin-or linear programming) is an open-source linear programming solver. It
 version | toolchain
 --------|----------
 ``1.17.10`` | ``foss/2024a``
-``1.17.6`` | ``foss/2020b``
 ``1.17.6`` | ``foss/2021a``
 ``1.17.7`` | ``foss/2021b``
 ``1.17.8`` | ``foss/2022b``

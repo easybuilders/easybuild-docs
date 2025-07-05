@@ -11,7 +11,6 @@ The Ncurses (new curses) library is a free software emulation of curses in Syste
 version | toolchain
 --------|----------
 ``5.9`` | ``system``
-``6.2`` | ``GCCcore/10.2.0``
 ``6.2`` | ``GCCcore/10.3.0``
 ``6.2`` | ``GCCcore/11.2.0``
 ``6.2`` | ``system``
@@ -25,6 +24,7 @@ version | toolchain
 ``6.4`` | ``system``
 ``6.5`` | ``GCCcore/13.3.0``
 ``6.5`` | ``GCCcore/14.2.0``
+``6.5`` | ``GCCcore/14.3.0``
 ``6.5`` | ``system``
 
 

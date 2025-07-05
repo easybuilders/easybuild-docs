@@ -10,8 +10,6 @@ Flye is a de novo assembler for long and noisy reads, such as those produced by 
 
 version | toolchain
 --------|----------
-``2.8.3`` | ``GCC/10.2.0``
-``2.8.3`` | ``iccifort/2020.4.304``
 ``2.9`` | ``GCC/10.3.0``
 ``2.9`` | ``intel-compilers/2021.2.0``
 ``2.9.1`` | ``GCC/11.2.0``

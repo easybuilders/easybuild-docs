@@ -10,7 +10,6 @@ Graphics Language Interpreter
 
 version | toolchain
 --------|----------
-``4.5.31`` | ``GCCcore/10.2.0``
 ``4.5.31`` | ``GCCcore/12.2.0``
 
 

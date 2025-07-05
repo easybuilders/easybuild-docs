@@ -10,7 +10,6 @@ A Python library for Gene Ontology analyses
 
 version | toolchain
 --------|----------
-``1.1.6`` | ``foss/2020b``
 ``1.3.1`` | ``foss/2021b``
 ``1.3.1`` | ``foss/2022a``
 ``1.4.12`` | ``foss/2024a``

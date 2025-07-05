@@ -10,7 +10,6 @@ GNU version of make utility
 
 version | toolchain
 --------|----------
-``4.3`` | ``GCCcore/10.2.0``
 ``4.3`` | ``GCCcore/10.3.0``
 ``4.3`` | ``GCCcore/11.2.0``
 ``4.3`` | ``GCCcore/11.3.0``

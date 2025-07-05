@@ -10,8 +10,6 @@ Python implementation of fast azimuthal integration.
 
 version | toolchain
 --------|----------
-``0.20.0`` | ``foss/2020b``
-``0.20.0`` | ``fosscuda/2020b``
 ``0.21.3`` | ``foss/2021b``
 
 

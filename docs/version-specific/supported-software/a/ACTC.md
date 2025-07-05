@@ -10,7 +10,6 @@ ACTC converts independent triangles into triangle strips or fans.
 
 version | toolchain
 --------|----------
-``1.1`` | ``GCCcore/10.2.0``
 ``1.1`` | ``GCCcore/11.3.0``
 ``1.1`` | ``GCCcore/12.3.0``
 

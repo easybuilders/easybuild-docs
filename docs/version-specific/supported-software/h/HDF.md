@@ -10,7 +10,6 @@ HDF (also known as HDF4) is a library and multi-object file format for  storing 
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``4.2.15`` |  | ``GCCcore/10.2.0``
 ``4.2.15`` |  | ``GCCcore/10.3.0``
 ``4.2.15`` |  | ``GCCcore/11.2.0``
 ``4.2.15`` |  | ``GCCcore/11.3.0``

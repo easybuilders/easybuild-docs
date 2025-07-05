@@ -10,7 +10,6 @@ Kent utilities: collection of tools used by the UCSC genome browser.
 
 version | toolchain
 --------|----------
-``411`` | ``GCC/10.2.0``
 ``418`` | ``GCC/10.3.0``
 ``422`` | ``GCC/11.2.0``
 ``442`` | ``GCC/11.3.0``

@@ -10,7 +10,6 @@ Single Read Paired Read Indel Substitution Minimizer
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``3.1.2`` |  | ``GCCcore/10.2.0``
 ``3.3.2`` | ``-Java-11`` | ``GCCcore/12.3.0``
 
 

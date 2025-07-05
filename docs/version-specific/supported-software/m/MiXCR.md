@@ -4,13 +4,12 @@ search:
 ---
 # MiXCR
 
-MiXCR processes big immunome data from raw sequences to quantitated clonotypes
+MiXCR is a universal software for fast and accurate extraction of T- and B- cell receptor repertoires from any type of sequencing data.
 
-*homepage*: <https://milaboratory.com/software/mixcr/>
+*homepage*: <https://milaboratory.com/software/mixcr>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``3.0.13`` | ``-Java-1.8`` | ``system``
 ``3.0.13`` | ``-Java-11`` | ``system``
 ``4.6.0`` | ``-Java-17`` | ``system``
 

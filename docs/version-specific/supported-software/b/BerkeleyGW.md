@@ -10,7 +10,6 @@ The BerkeleyGW Package is a set of computer codes that calculates the quasiparti
 
 version | toolchain
 --------|----------
-``3.0.1`` | ``foss/2020b``
 ``3.0.1`` | ``foss/2021a``
 ``3.1.0`` | ``foss/2022a``
 ``3.1.0`` | ``intel/2022a``

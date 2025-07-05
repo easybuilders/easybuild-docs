@@ -10,17 +10,14 @@ Hypothesis is an advanced testing library for Python. It lets you write tests wh
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``4.53.1`` |  | ``GCCcore/10.2.0``
 ``4.57.1`` | ``-Python-2.7.18`` | ``GCCcore/11.2.0``
 ``4.57.1`` | ``-Python-2.7.18`` | ``GCCcore/12.3.0``
-``5.41.2`` |  | ``GCCcore/10.2.0``
-``5.41.5`` |  | ``GCCcore/10.2.0``
 ``6.103.1`` |  | ``GCCcore/13.3.0``
 ``6.13.1`` |  | ``GCCcore/10.3.0``
+``6.133.2`` |  | ``GCCcore/14.2.0``
 ``6.14.6`` |  | ``GCCcore/11.2.0``
 ``6.46.7`` |  | ``GCCcore/11.3.0``
 ``6.68.2`` |  | ``GCCcore/12.2.0``
-``6.7.0`` |  | ``GCCcore/10.2.0``
 ``6.82.0`` |  | ``GCCcore/12.3.0``
 ``6.90.0`` |  | ``GCCcore/13.2.0``
 

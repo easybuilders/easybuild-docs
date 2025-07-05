@@ -10,7 +10,6 @@ Spaln (space-efficient spliced alignment) is a stand-alone program that maps  an
 
 version | toolchain
 --------|----------
-``2.4.12`` | ``GCC/10.2.0``
 ``2.4.12`` | ``GCC/11.2.0``
 ``2.4.13f`` | ``GCC/11.3.0``
 ``3.0.6b`` | ``GCC/12.3.0``

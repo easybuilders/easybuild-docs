@@ -10,7 +10,6 @@ Prodigal (Prokaryotic Dynamic Programming Genefinding Algorithm)    is a microbi
 
 version | toolchain
 --------|----------
-``2.6.3`` | ``GCCcore/10.2.0``
 ``2.6.3`` | ``GCCcore/10.3.0``
 ``2.6.3`` | ``GCCcore/11.2.0``
 ``2.6.3`` | ``GCCcore/11.3.0``

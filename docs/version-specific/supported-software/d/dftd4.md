@@ -10,7 +10,9 @@ Generally Applicable Atomic-Charge Dependent London Dispersion Correction.
 
 version | toolchain
 --------|----------
+``3.4.0`` | ``gfbf/2022a``
 ``3.4.0`` | ``gfbf/2022b``
+``3.4.0`` | ``iimkl/2022a``
 ``3.4.0`` | ``iimkl/2022b``
 ``3.7.0`` | ``foss/2023a``
 ``3.7.0`` | ``gfbf/2023b``

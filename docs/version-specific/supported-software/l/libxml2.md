@@ -6,7 +6,7 @@ search:
 
 Libxml2 is the XML C parser and toolchain developed for the Gnome project  (but usable outside of the Gnome platform).
 
-*homepage*: <http://xmlsoft.org/>
+*homepage*: <https://gitlab.gnome.org/GNOME/libxml2/-/wikis>
 
 version | toolchain
 --------|----------
@@ -15,7 +15,7 @@ version | toolchain
 ``2.11.5`` | ``GCCcore/13.2.0``
 ``2.12.7`` | ``GCCcore/13.3.0``
 ``2.13.4`` | ``GCCcore/14.2.0``
-``2.9.10`` | ``GCCcore/10.2.0``
+``2.14.3`` | ``GCCcore/14.3.0``
 ``2.9.10`` | ``GCCcore/10.3.0``
 ``2.9.10`` | ``GCCcore/11.2.0``
 ``2.9.13`` | ``GCCcore/11.3.0``

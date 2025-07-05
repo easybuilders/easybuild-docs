@@ -10,7 +10,6 @@ A Python library for Quandl’s RESTful API.
 
 version | toolchain
 --------|----------
-``3.6.1`` | ``foss/2020b``
 ``3.6.1`` | ``foss/2021a``
 
 

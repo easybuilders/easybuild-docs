@@ -10,7 +10,6 @@ Least-squares methods to estimate rates and dates from phylogenies
 
 version | toolchain
 --------|----------
-``2.2`` | ``GCCcore/10.2.0``
 ``2.3`` | ``GCCcore/10.3.0``
 ``2.3`` | ``GCCcore/11.2.0``
 ``2.3`` | ``GCCcore/11.3.0``

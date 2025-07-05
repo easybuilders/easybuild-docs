@@ -6,14 +6,10 @@ search:
 
 Intel MPI Library, compatible with MPICH ABI
 
-*homepage*: <https://software.intel.com/en-us/intel-mpi-library/>
+*homepage*: <https://software.intel.com/content/www/us/en/develop/tools/mpi-library.html>
 
 version | toolchain
 --------|----------
-``2019.12.320`` | ``iccifort/2020.4.304``
-``2019.9.304`` | ``iccifort/2020.4.304``
-``2019.9.304`` | ``iccifortcuda/2020b``
-``2021.1.1`` | ``intel-compilers/2021.1.2``
 ``2021.10.0`` | ``intel-compilers/2023.2.1``
 ``2021.11.0`` | ``intel-compilers/2024.0.0``
 ``2021.13.0`` | ``intel-compilers/2024.2.0``

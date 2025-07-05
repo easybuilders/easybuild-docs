@@ -10,10 +10,6 @@ Seaborn is a Python visualization library based on matplotlib.  It provides a hi
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.10.1`` |  | ``intel/2020b``
-``0.11.1`` |  | ``foss/2020b``
-``0.11.1`` |  | ``fosscuda/2020b``
-``0.11.1`` |  | ``intel/2020b``
 ``0.11.2`` |  | ``foss/2021a``
 ``0.11.2`` |  | ``foss/2021b``
 ``0.11.2`` |  | ``intel/2021b``
@@ -22,7 +18,6 @@ version | versionsuffix | toolchain
 ``0.13.2`` |  | ``gfbf/2023a``
 ``0.13.2`` |  | ``gfbf/2023b``
 ``0.13.2`` |  | ``gfbf/2024a``
-``0.9.1`` | ``-Python-2.7.18`` | ``foss/2020b``
 ``0.9.1`` | ``-Python-2.7.18`` | ``foss/2023a``
 
 

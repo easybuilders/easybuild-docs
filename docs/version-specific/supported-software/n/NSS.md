@@ -11,7 +11,7 @@ Network Security Services (NSS) is a set of libraries designed to support cross-
 version | toolchain
 --------|----------
 ``3.104`` | ``GCCcore/13.3.0``
-``3.57`` | ``GCCcore/10.2.0``
+``3.113`` | ``GCCcore/14.2.0``
 ``3.65`` | ``GCCcore/10.3.0``
 ``3.69`` | ``GCCcore/11.2.0``
 ``3.79`` | ``GCCcore/11.3.0``

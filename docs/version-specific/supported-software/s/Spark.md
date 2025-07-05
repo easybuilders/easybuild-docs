@@ -10,8 +10,6 @@ Spark is Hadoop MapReduce done in memory
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``3.1.1`` |  | ``foss/2020b``
-``3.1.1`` |  | ``fosscuda/2020b``
 ``3.2.1`` |  | ``foss/2021b``
 ``3.3.1`` |  | ``foss/2022a``
 ``3.5.0`` |  | ``foss/2023a``

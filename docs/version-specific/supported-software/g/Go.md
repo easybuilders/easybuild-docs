@@ -24,6 +24,7 @@ version | toolchain
 ``1.21.2`` | ``system``
 ``1.21.6`` | ``system``
 ``1.22.1`` | ``system``
+``1.22.4`` | ``system``
 ``1.23.6`` | ``system``
 
 

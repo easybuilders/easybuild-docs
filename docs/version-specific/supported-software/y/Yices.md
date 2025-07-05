@@ -10,7 +10,6 @@ Yices 2 is an SMT solver that decides the satisfiability of formulas containing 
 
 version | toolchain
 --------|----------
-``2.6.2`` | ``GCCcore/10.2.0``
 ``2.6.4`` | ``GCCcore/12.2.0``
 
 

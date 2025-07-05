@@ -10,7 +10,6 @@ Reverb is an efficient and easy-to-use data storage and transport system designe
 
 version | toolchain
 --------|----------
-``0.2.0`` | ``foss/2020b``
 ``0.7.0`` | ``foss/2021b``
 
 

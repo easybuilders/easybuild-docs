@@ -10,10 +10,7 @@ A toolkit for assigning objective taxonomic classifications to bacterial and arc
 
 version | toolchain
 --------|----------
-``1.5.0`` | ``intel/2020b``
-``1.7.0`` | ``foss/2020b``
 ``1.7.0`` | ``foss/2021a``
-``1.7.0`` | ``intel/2020b``
 ``2.0.0`` | ``foss/2021a``
 ``2.0.0`` | ``intel/2021b``
 ``2.1.1`` | ``foss/2021b``

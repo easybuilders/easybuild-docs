@@ -10,7 +10,6 @@ Libaec provides fast lossless compression of 1 up to 32 bit wide signed or unsig
 
 version | toolchain
 --------|----------
-``1.0.6`` | ``GCCcore/10.2.0``
 ``1.0.6`` | ``GCCcore/10.3.0``
 ``1.0.6`` | ``GCCcore/11.2.0``
 ``1.0.6`` | ``GCCcore/11.3.0``

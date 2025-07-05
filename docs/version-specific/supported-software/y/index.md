@@ -20,6 +20,7 @@ search:
  * [yelp-tools](yelp-tools.md)
  * [yelp-xsl](yelp-xsl.md)
  * [Yices](Yices.md)
+ * [yMMSL-dot](yMMSL-dot.md)
  * [YODA](YODA.md)
  * [yt](yt.md)
 

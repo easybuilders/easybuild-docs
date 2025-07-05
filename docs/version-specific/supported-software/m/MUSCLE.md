@@ -10,8 +10,6 @@ MUSCLE is one of the best-performing multiple alignment programs  according to p
 
 version | toolchain
 --------|----------
-``3.8.1551`` | ``GCC/10.2.0``
-``3.8.31`` | ``GCCcore/10.2.0``
 ``3.8.31`` | ``GCCcore/10.3.0``
 ``3.8.31`` | ``GCCcore/11.2.0``
 ``5.0.1428`` | ``GCCcore/10.3.0``

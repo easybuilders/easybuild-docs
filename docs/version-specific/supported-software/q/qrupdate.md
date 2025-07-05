@@ -10,7 +10,6 @@ qrupdate is a Fortran library for fast updates of QR and Cholesky decompositions
 
 version | toolchain
 --------|----------
-``1.1.2`` | ``GCCcore/10.2.0``
 ``1.1.2`` | ``GCCcore/11.2.0``
 ``1.1.2`` | ``GCCcore/11.3.0``
 ``1.1.2`` | ``GCCcore/12.3.0``

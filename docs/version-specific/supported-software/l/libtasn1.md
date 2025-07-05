@@ -10,7 +10,6 @@ Libtasn1 is the ASN.1 library used by GnuTLS, GNU Shishi and  some other package
 
 version | toolchain
 --------|----------
-``4.16.0`` | ``GCCcore/10.2.0``
 ``4.17.0`` | ``GCCcore/10.3.0``
 ``4.18.0`` | ``GCCcore/11.2.0``
 ``4.19.0`` | ``GCCcore/11.3.0``

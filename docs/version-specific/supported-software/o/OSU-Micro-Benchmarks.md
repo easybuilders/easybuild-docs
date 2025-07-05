@@ -10,11 +10,6 @@ OSU Micro-Benchmarks
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``5.6.3`` |  | ``gompi/2020b``
-``5.6.3`` |  | ``iimpi/2020b``
-``5.7`` |  | ``gompi/2020b``
-``5.7`` |  | ``gompic/2020b``
-``5.7`` |  | ``iimpi/2020b``
 ``5.7.1`` | ``-CUDA-11.3.1`` | ``gompi/2021a``
 ``5.7.1`` |  | ``gompi/2021a``
 ``5.7.1`` |  | ``gompi/2021b``

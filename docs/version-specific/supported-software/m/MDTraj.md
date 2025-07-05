@@ -10,9 +10,8 @@ Read, write and analyze MD trajectories with only a few lines of Python code.
 
 version | toolchain
 --------|----------
-``1.9.5`` | ``foss/2020b``
-``1.9.5`` | ``fosscuda/2020b``
-``1.9.5`` | ``intel/2020b``
+``1.10.3`` | ``foss/2023b``
+``1.10.3`` | ``foss/2024a``
 ``1.9.7`` | ``foss/2021a``
 ``1.9.7`` | ``foss/2021b``
 ``1.9.7`` | ``foss/2022a``

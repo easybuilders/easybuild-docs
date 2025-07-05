@@ -10,8 +10,6 @@ The silx project provides a collection of Python packages to support the develop
 
 version | toolchain
 --------|----------
-``0.14.0`` | ``foss/2020b``
-``0.14.0`` | ``fosscuda/2020b``
 ``1.0.0`` | ``foss/2021b``
 
 

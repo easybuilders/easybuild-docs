@@ -4,15 +4,12 @@ search:
 ---
 # GROMACS
 
-GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles.  This is a CPU only build, containing both MPI and threadMPI builds for both single and double precision.  It also contains the gmxapi extension for the single precision MPI build.
+GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles.  This is a GPU enabled build, containing both MPI and threadMPI builds.  It also contains the gmxapi extension for the single precision MPI build.
 
 *homepage*: <https://www.gromacs.org>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2021`` |  | ``foss/2020b``
-``2021`` |  | ``fosscuda/2020b``
-``2021.2`` |  | ``fosscuda/2020b``
 ``2021.3`` | ``-CUDA-11.3.1-PLUMED-2.7.2`` | ``foss/2021a``
 ``2021.3`` | ``-CUDA-11.3.1`` | ``foss/2021a``
 ``2021.3`` | ``-PLUMED-2.7.2`` | ``foss/2021a``

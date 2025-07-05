@@ -10,7 +10,7 @@ Library for portable access to PCI bus configuration registers from PCI Utils.
 
 version | toolchain
 --------|----------
-``3.7.0`` | ``GCCcore/10.2.0``
+``3.14.0`` | ``GCCcore/14.2.0``
 ``3.7.0`` | ``GCCcore/10.3.0``
 ``3.7.0`` | ``GCCcore/11.2.0``
 

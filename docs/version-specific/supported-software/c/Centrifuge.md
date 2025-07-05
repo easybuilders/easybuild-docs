@@ -10,7 +10,6 @@ Classifier for metagenomic sequences
 
 version | toolchain
 --------|----------
-``1.0.4`` | ``gompi/2020b``
 ``1.0.4`` | ``gompi/2021a``
 
 

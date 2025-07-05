@@ -10,7 +10,6 @@ lifelines is a complete survival analysis library, written in pure Python.
 
 version | toolchain
 --------|----------
-``0.26.3`` | ``fosscuda/2020b``
 ``0.27.4`` | ``foss/2022a``
 ``0.27.7`` | ``foss/2022b``
 ``0.28.0`` | ``gfbf/2023a``

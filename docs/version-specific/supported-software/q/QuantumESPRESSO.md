@@ -4,14 +4,12 @@ search:
 ---
 # QuantumESPRESSO
 
-Quantum ESPRESSO  is an integrated suite of computer codes  for electronic-structure calculations and materials modeling at the nanoscale.  It is based on density-functional theory, plane waves, and pseudopotentials   (both norm-conserving and ultrasoft).
+Quantum ESPRESSO  is an integrated suite of computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials (both norm-conserving and ultrasoft).
 
 *homepage*: <https://www.quantum-espresso.org>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``6.6`` |  | ``foss/2020b``
-``6.7`` |  | ``foss/2020b``
 ``6.7`` |  | ``foss/2021a``
 ``6.7`` |  | ``intel/2021a``
 ``6.8`` |  | ``foss/2021a``

@@ -10,7 +10,6 @@ Singular is a computer algebra system for polynomial computations, with special 
 
 version | toolchain
 --------|----------
-``4.1.2`` | ``system``
 ``4.3.2p10`` | ``gfbf/2022a``
 ``4.4.0`` | ``gfbf/2023b``
 

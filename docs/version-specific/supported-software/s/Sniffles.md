@@ -11,6 +11,7 @@ A fast structural variant caller for long-read sequencing,  Sniffles2 accurately
 version | toolchain
 --------|----------
 ``2.0.7`` | ``GCC/11.3.0``
+``2.4`` | ``GCC/12.3.0``
 ``2.4`` | ``GCC/13.3.0``
 
 

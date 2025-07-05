@@ -10,8 +10,6 @@ DL_POLY is a general purpose classical molecular dynamics (MD) simulation softwa
 
 version | toolchain
 --------|----------
-``5.0.0`` | ``foss/2020b``
-``5.0.0`` | ``intel/2020b``
 ``5.1.0`` | ``foss/2022b``
 ``5.1.0`` | ``foss/2023a``
 ``5.1.0`` | ``intel/2022b``

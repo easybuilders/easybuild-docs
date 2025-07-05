@@ -10,7 +10,6 @@ Barrnap (BAsic Rapid Ribosomal RNA Predictor) predicts the location of ribosomal
 
 version | toolchain
 --------|----------
-``0.9`` | ``gompi/2020b``
 ``0.9`` | ``gompi/2021b``
 ``0.9`` | ``gompi/2022a``
 

@@ -10,7 +10,6 @@ idemux - inline barcode demultiplexing Idemux is a command line tool designed to
 
 version | toolchain
 --------|----------
-``0.1.6`` | ``GCCcore/10.2.0``
 ``0.1.6`` | ``GCCcore/12.3.0``
 
 

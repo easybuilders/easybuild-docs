@@ -10,7 +10,6 @@ Eukaryotic gene prediction suite with automatic training
 
 version | toolchain
 --------|----------
-``4.65`` | ``GCCcore/10.2.0``
 ``4.71`` | ``GCCcore/11.2.0``
 ``4.71`` | ``GCCcore/11.3.0``
 ``4.72`` | ``GCCcore/12.3.0``

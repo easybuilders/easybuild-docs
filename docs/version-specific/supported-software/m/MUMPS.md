@@ -10,8 +10,6 @@ A parallel sparse direct solver
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``5.3.5`` | ``-metis`` | ``foss/2020b``
-``5.3.5`` | ``-metis`` | ``intel/2020b``
 ``5.4.0`` | ``-metis`` | ``foss/2021a``
 ``5.4.0`` | ``-metis`` | ``intel/2021a``
 ``5.4.1`` | ``-metis`` | ``foss/2021b``
@@ -24,6 +22,7 @@ version | versionsuffix | toolchain
 ``5.6.1`` | ``-metis-seq`` | ``gomkl/2023a``
 ``5.7.2`` | ``-parmetis`` | ``foss/2023b``
 ``5.7.2`` | ``-metis`` | ``foss/2024a``
+``5.7.2`` | ``-metis`` | ``intel/2023b``
 ``5.7.2`` | ``-parmetis`` | ``intel/2023b``
 
 

@@ -6,11 +6,10 @@ search:
 
 Molden is a package for displaying Molecular Density from the  Ab Initio packages GAMESS-UK, GAMESS-US and GAUSSIAN and the Semi-Empirical  packages Mopac/Ampac
 
-*homepage*: <https://www3.cmbi.umcn.nl/molden/>
+*homepage*: <https://www.theochem.ru.nl/molden/>
 
 version | toolchain
 --------|----------
-``6.8`` | ``GCCcore/10.2.0``
 ``7.1`` | ``GCCcore/11.3.0``
 ``7.3`` | ``GCCcore/12.3.0``
 ``7.3`` | ``GCCcore/13.3.0``

@@ -10,7 +10,6 @@ fast, memory-efficient, pythonic (and command-line) access to fasta sequence fil
 
 version | toolchain
 --------|----------
-``0.5.2`` | ``foss/2020b``
 ``0.5.2`` | ``foss/2023a``
 
 

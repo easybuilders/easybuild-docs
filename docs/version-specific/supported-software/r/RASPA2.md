@@ -10,7 +10,6 @@ RASPA is a software package for simulating adsorption and diffusion of molecules
 
 version | toolchain
 --------|----------
-``2.0.41`` | ``foss/2020b``
 ``2.0.47`` | ``foss/2022a``
 
 

@@ -10,7 +10,6 @@ Nipype is a Python project that provides a uniform interface to existing neuroim
 
 version | toolchain
 --------|----------
-``1.6.0`` | ``foss/2020b``
 ``1.8.5`` | ``foss/2021a``
 
 

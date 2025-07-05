@@ -10,6 +10,7 @@ ELFIO is a header-only C++ library intended  for reading and generating files in
 
 version | toolchain
 --------|----------
+``3.12`` | ``system``
 ``3.9`` | ``system``
 
 

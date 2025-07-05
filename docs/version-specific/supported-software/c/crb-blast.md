@@ -11,6 +11,7 @@ Conditional Reciprocal Best BLAST - high confidence ortholog assignment.
 version | toolchain
 --------|----------
 ``0.6.9`` | ``GCC/12.3.0``
+``0.6.9`` | ``GCC/13.2.0``
 ``0.6.9`` | ``gompi/2021a``
 ``0.6.9`` | ``gompi/2021b``
 

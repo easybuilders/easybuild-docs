@@ -10,7 +10,6 @@ This package provides utilities for exploratory analysis of large scale genetic 
 
 version | toolchain
 --------|----------
-``1.3.2`` | ``foss/2020b``
 ``1.3.3`` | ``foss/2021a``
 
 

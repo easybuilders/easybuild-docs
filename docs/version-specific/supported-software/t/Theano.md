@@ -10,10 +10,7 @@ Theano is a Python library that allows you to define, optimize, and evaluate mat
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.1.2`` | ``-PyMC`` | ``foss/2020b``
 ``1.1.2`` | ``-PyMC`` | ``foss/2021b``
-``1.1.2`` | ``-PyMC`` | ``fosscuda/2020b``
-``1.1.2`` | ``-PyMC`` | ``intel/2020b``
 ``1.1.2`` | ``-PyMC`` | ``intel/2021b``
 
 

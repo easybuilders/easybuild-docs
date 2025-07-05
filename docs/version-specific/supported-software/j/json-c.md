@@ -10,7 +10,6 @@ JSON-C implements a reference counting object model that allows you to easily co
 
 version | toolchain
 --------|----------
-``0.15`` | ``GCCcore/10.2.0``
 ``0.15`` | ``GCCcore/10.3.0``
 ``0.15`` | ``GCCcore/11.2.0``
 ``0.16`` | ``GCCcore/11.3.0``

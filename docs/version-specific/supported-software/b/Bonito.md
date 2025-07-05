@@ -10,8 +10,6 @@ Convolution Basecaller for Oxford Nanopore Reads
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.3.8`` |  | ``fosscuda/2020b``
-``0.4.0`` |  | ``fosscuda/2020b``
 ``0.8.1`` | ``-CUDA-12.1.1`` | ``foss/2023a``
 
 

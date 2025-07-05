@@ -11,8 +11,6 @@ Probabilistic Programming in Python: Bayesian Modeling and Probabilistic Machine
 version | toolchain
 --------|----------
 ``3.11.1`` | ``foss/2021b``
-``3.11.1`` | ``fosscuda/2020b``
-``3.11.1`` | ``intel/2020b``
 ``3.11.1`` | ``intel/2021b``
 
 

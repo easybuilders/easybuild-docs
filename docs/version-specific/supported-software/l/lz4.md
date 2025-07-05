@@ -11,7 +11,6 @@ LZ4 is lossless compression algorithm, providing compression speed at 400 MB/s p
 version | toolchain
 --------|----------
 ``1.10.0`` | ``GCCcore/14.2.0``
-``1.9.2`` | ``GCCcore/10.2.0``
 ``1.9.3`` | ``GCCcore/10.3.0``
 ``1.9.3`` | ``GCCcore/11.2.0``
 ``1.9.3`` | ``GCCcore/11.3.0``

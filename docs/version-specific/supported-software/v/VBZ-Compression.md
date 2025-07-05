@@ -10,7 +10,6 @@ VBZ compression HDF5 plugin for nanopolish
 
 version | toolchain
 --------|----------
-``1.0.1`` | ``gompi/2020b``
 ``1.0.3`` | ``gompi/2022a``
 ``1.0.3`` | ``gompi/2023a``
 

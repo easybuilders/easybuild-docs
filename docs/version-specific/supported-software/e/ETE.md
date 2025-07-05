@@ -10,11 +10,11 @@ A Python framework for the analysis and visualization of trees
 
 version | toolchain
 --------|----------
-``3.1.2`` | ``foss/2020b``
 ``3.1.2`` | ``foss/2021a``
 ``3.1.2`` | ``foss/2021b``
 ``3.1.3`` | ``foss/2022b``
 ``3.1.3`` | ``foss/2023a``
+``3.1.3`` | ``foss/2023b``
 ``3.1.3`` | ``foss/2024a``
 
 

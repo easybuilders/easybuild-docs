@@ -10,7 +10,6 @@ CheckM provides a set of tools for assessing the quality of genomes recovered fr
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.0.18`` | ``-Python-2.7.18`` | ``foss/2020b``
 ``1.0.18`` | ``-Python-2.7.18`` | ``foss/2023a``
 ``1.1.3`` |  | ``foss/2021a``
 ``1.1.3`` |  | ``foss/2021b``

@@ -10,7 +10,6 @@ Rapid haploid variant calling and core genome alignment
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``4.6.0`` |  | ``GCC/10.2.0``
 ``4.6.0`` | ``-R-4.1.2`` | ``foss/2021b``
 
 

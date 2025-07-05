@@ -4,13 +4,12 @@ search:
 ---
 # Hyperopt
 
-Distributed Asynchronous Hyperparameter Optimization in Python
+hyperopt is a Python library for optimizing over awkward search spaces with real-valued,  discrete, and conditional dimensions.
 
-*homepage*: <https://github.com/hyperopt/hyperopt>
+*homepage*: <http://hyperopt.github.io/hyperopt/>
 
 version | toolchain
 --------|----------
-``0.2.5`` | ``fosscuda/2020b``
 ``0.2.7`` | ``foss/2021a``
 ``0.2.7`` | ``foss/2022a``
 

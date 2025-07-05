@@ -11,7 +11,6 @@ Apache Ant is a Java library and command-line tool whose mission is to drive pro
 version | versionsuffix | toolchain
 --------|---------------|----------
 ``1.10.11`` | ``-Java-11`` | ``system``
-``1.10.11`` | ``-Java-13`` | ``system``
 ``1.10.12`` | ``-Java-11`` | ``system``
 ``1.10.12`` | ``-Java-17`` | ``system``
 ``1.10.14`` | ``-Java-11`` | ``system``

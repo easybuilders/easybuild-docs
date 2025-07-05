@@ -10,7 +10,6 @@ libcint is an open source library for analytical Gaussian integrals.
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``4.4.0`` |  | ``foss/2020b``
 ``4.4.0`` |  | ``foss/2021a``
 ``4.4.0`` |  | ``gomkl/2021a``
 ``5.1.6`` |  | ``foss/2022a``

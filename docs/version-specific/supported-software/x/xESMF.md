@@ -10,7 +10,6 @@ xESMF: Universal Regridder for Geospatial Data
 
 version | toolchain
 --------|----------
-``0.3.0`` | ``intel/2020b``
 ``0.8.6`` | ``foss/2023a``
 
 

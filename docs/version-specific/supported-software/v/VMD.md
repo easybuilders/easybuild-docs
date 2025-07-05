@@ -10,8 +10,6 @@ VMD is a molecular visualization program for displaying, animating, and analyzin
 
 version | toolchain
 --------|----------
-``1.9.4a51`` | ``foss/2020b``
-``1.9.4a51`` | ``fosscuda/2020b``
 ``1.9.4a57`` | ``foss/2022a``
 ``1.9.4a57`` | ``foss/2023a``
 

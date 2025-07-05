@@ -10,13 +10,10 @@ HMMER is used for searching sequence databases for homologs  of protein sequence
 
 version | toolchain
 --------|----------
-``3.3.2`` | ``gompi/2020b``
 ``3.3.2`` | ``gompi/2021a``
 ``3.3.2`` | ``gompi/2021b``
 ``3.3.2`` | ``gompi/2022a``
 ``3.3.2`` | ``gompi/2022b``
-``3.3.2`` | ``gompic/2020b``
-``3.3.2`` | ``iimpi/2020b``
 ``3.3.2`` | ``iimpi/2021b``
 ``3.4`` | ``gompi/2023a``
 ``3.4`` | ``gompi/2023b``

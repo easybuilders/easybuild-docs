@@ -10,12 +10,10 @@ BEDTools: a powerful toolset for genome arithmetic. The BEDTools utilities allow
 
 version | toolchain
 --------|----------
-``2.30.0`` | ``GCC/10.2.0``
 ``2.30.0`` | ``GCC/10.3.0``
 ``2.30.0`` | ``GCC/11.2.0``
 ``2.30.0`` | ``GCC/11.3.0``
 ``2.30.0`` | ``GCC/12.2.0``
-``2.30.0`` | ``iccifort/2020.4.304``
 ``2.31.0`` | ``GCC/12.3.0``
 ``2.31.1`` | ``GCC/13.2.0``
 ``2.31.1`` | ``GCC/13.3.0``

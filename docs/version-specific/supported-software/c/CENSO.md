@@ -11,6 +11,7 @@ Commandline Energetic SOrting (CENSO) is a sorting algorithm for efficient evalu
 version | toolchain
 --------|----------
 ``1.2.0`` | ``GCCcore/12.3.0``
+``1.2.0`` | ``foss/2022b``
 ``1.2.0`` | ``intel/2022a``
 
 

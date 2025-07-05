@@ -10,7 +10,6 @@ PyCUDA lets you access Nvidia’s CUDA parallel computation API from Python.
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2020.1`` |  | ``fosscuda/2020b``
 ``2024.1`` | ``-CUDA-11.7.0`` | ``foss/2022a``
 ``2024.1`` | ``-CUDA-12.1.1`` | ``gfbf/2023a``
 

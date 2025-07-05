@@ -10,9 +10,6 @@ Apache Arrow (incl. PyArrow Python bindings), a cross-language development platf
 
 version | toolchain
 --------|----------
-``0.17.1`` | ``foss/2020b``
-``0.17.1`` | ``fosscuda/2020b``
-``0.17.1`` | ``intel/2020b``
 ``11.0.0`` | ``gfbf/2022b``
 ``14.0.1`` | ``gfbf/2023a``
 ``16.1.0`` | ``gfbf/2023b``

@@ -10,7 +10,6 @@ ecCodes is a package developed by ECMWF which provides an application programmin
 
 version | toolchain
 --------|----------
-``2.20.0`` | ``gompi/2020b``
 ``2.22.1`` | ``gompi/2021a``
 ``2.24.2`` | ``gompi/2021b``
 ``2.24.2`` | ``iimpi/2021b``

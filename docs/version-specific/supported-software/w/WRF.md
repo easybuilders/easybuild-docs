@@ -6,13 +6,10 @@ search:
 
 The Weather Research and Forecasting (WRF) Model is a next-generation mesoscale  numerical weather prediction system designed to serve both operational forecasting and atmospheric  research needs.
 
-*homepage*: <https://www.mmm.ucar.edu/weather-research-and-forecasting-model>
+*homepage*: <https://www.wrf-model.org>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``3.9.1.1`` | ``-dmpar`` | ``foss/2020b``
-``3.9.1.1`` | ``-dmpar`` | ``intel/2020b``
-``4.2.2`` | ``-dmpar`` | ``foss/2020b``
 ``4.3`` | ``-dmpar`` | ``foss/2021a``
 ``4.4`` | ``-dmpar`` | ``foss/2022a``
 ``4.4.1`` | ``-dmpar`` | ``foss/2022b``

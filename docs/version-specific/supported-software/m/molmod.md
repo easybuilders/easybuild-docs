@@ -10,11 +10,11 @@ MolMod is a Python library with many components that are useful to write molecul
 
 version | toolchain
 --------|----------
-``1.4.8`` | ``foss/2020b``
 ``1.4.8`` | ``foss/2021a``
 ``1.4.8`` | ``foss/2021b``
 ``1.4.8`` | ``foss/2022a``
 ``1.4.8`` | ``foss/2023a``
+``1.4.8`` | ``foss/2023b``
 ``1.4.8`` | ``gfbf/2022b``
 
 

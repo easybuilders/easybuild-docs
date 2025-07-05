@@ -6,11 +6,10 @@ search:
 
 Python Materials Genomics is a robust materials analysis code that defines core object  representations for structures and molecules with support for many electronic structure codes.
 
-*homepage*: <https://pypi.python.org/pypi/pymatgen>
+*homepage*: <https://pymatgen.org/>
 
 version | toolchain
 --------|----------
-``2022.0.4`` | ``foss/2020b``
 ``2023.12.18`` | ``foss/2023a``
 ``2023.3.10`` | ``foss/2022a``
 ``2024.5.1`` | ``foss/2023b``

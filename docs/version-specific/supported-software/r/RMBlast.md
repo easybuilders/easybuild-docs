@@ -6,11 +6,10 @@ search:
 
 RMBlast is a RepeatMasker compatible version of the standard NCBI BLAST suite. The primary  difference between this distribution and the NCBI distribution is the addition of a new program 'rmblastn'  for use with RepeatMasker and RepeatModeler.
 
-*homepage*: <https://www.repeatmasker.org/RMBlast.html>
+*homepage*: <https://www.repeatmasker.org/rmblast/>
 
 version | toolchain
 --------|----------
-``2.11.0`` | ``gompi/2020b``
 ``2.13.0`` | ``gompi/2022a``
 ``2.14.0`` | ``gompi/2021a``
 ``2.14.1`` | ``gompi/2023a``

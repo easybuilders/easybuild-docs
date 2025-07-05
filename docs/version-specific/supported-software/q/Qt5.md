@@ -10,7 +10,6 @@ Qt is a comprehensive cross-platform C++ application framework.
 
 version | toolchain
 --------|----------
-``5.14.2`` | ``GCCcore/10.2.0``
 ``5.15.10`` | ``GCCcore/12.3.0``
 ``5.15.13`` | ``GCCcore/13.2.0``
 ``5.15.16`` | ``GCCcore/13.3.0``
