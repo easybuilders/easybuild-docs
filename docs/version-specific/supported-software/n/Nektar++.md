@@ -10,7 +10,6 @@ Nektar++ is a tensor product based finite element package designed to allow one 
 
 version | toolchain
 --------|----------
-``5.0.1`` | ``foss/2020b``
 ``5.7.0`` | ``foss/2023a``
 
 

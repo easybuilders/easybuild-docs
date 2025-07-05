@@ -10,7 +10,6 @@ Trimmomatic performs a variety of useful trimming tasks for illumina  paired-end
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.39`` | ``-Java-1.8`` | ``system``
 ``0.39`` | ``-Java-11`` | ``system``
 ``0.39`` | ``-Java-17`` | ``system``
 

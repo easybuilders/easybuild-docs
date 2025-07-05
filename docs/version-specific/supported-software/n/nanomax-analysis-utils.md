@@ -10,8 +10,6 @@ A set of tools for handling and analysing data at the NanoMAX beamline.
 
 version | toolchain
 --------|----------
-``0.4.3`` | ``foss/2020b``
-``0.4.3`` | ``fosscuda/2020b``
 ``0.4.4`` | ``foss/2021b``
 
 

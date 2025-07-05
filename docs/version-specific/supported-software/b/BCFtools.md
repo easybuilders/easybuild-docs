@@ -10,8 +10,6 @@ Samtools is a suite of programs for interacting with high-throughput sequencing 
 
 version | toolchain
 --------|----------
-``1.11`` | ``GCC/10.2.0``
-``1.12`` | ``GCC/10.2.0``
 ``1.12`` | ``GCC/10.3.0``
 ``1.14`` | ``GCC/11.2.0``
 ``1.15.1`` | ``GCC/11.3.0``

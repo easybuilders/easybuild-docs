@@ -10,8 +10,6 @@ RAxML search algorithm for maximum likelihood based inference of phylogenetic tr
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``8.2.12`` | ``-pthreads-avx2`` | ``GCC/10.2.0``
-``8.2.12`` | ``-hybrid-avx2`` | ``gompi/2020b``
 ``8.2.12`` | ``-hybrid-avx2`` | ``gompi/2021a``
 ``8.2.12`` | ``-hybrid-avx2`` | ``gompi/2021b``
 ``8.2.12`` | ``-avx2`` | ``gompi/2022b``

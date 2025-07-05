@@ -10,7 +10,6 @@ GStreamer is a library for constructing graphs of media-handling  components. Th
 
 version | toolchain
 --------|----------
-``1.18.4`` | ``GCC/10.2.0``
 ``1.18.4`` | ``GCC/10.3.0``
 ``1.18.5`` | ``GCC/11.2.0``
 ``1.20.2`` | ``GCC/11.3.0``

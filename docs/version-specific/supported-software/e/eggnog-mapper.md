@@ -10,10 +10,9 @@ EggNOG-mapper is a tool for fast functional annotation of novel sequences. It us
 
 version | toolchain
 --------|----------
-``2.1.10`` | ``foss/2020b``
 ``2.1.12`` | ``foss/2023a``
+``2.1.12`` | ``foss/2023b``
 ``2.1.12`` | ``foss/2024a``
-``2.1.4`` | ``foss/2020b``
 ``2.1.7`` | ``foss/2021b``
 ``2.1.9`` | ``foss/2022a``
 

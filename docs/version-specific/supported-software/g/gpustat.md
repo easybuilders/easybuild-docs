@@ -11,7 +11,6 @@ dstat-like utilization monitor for NVIDIA GPUs
 version | toolchain
 --------|----------
 ``0.6.0`` | ``GCCcore/10.3.0``
-``0.6.0`` | ``gcccuda/2020b``
 ``1.0.0b1`` | ``GCCcore/11.2.0``
 ``1.1`` | ``GCCcore/11.3.0``
 ``1.1.1`` | ``GCCcore/12.3.0``

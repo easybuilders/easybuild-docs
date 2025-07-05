@@ -10,12 +10,12 @@ Motif refers to both a graphical user interface (GUI) specification and the widg
 
 version | toolchain
 --------|----------
-``2.3.8`` | ``GCCcore/10.2.0``
 ``2.3.8`` | ``GCCcore/10.3.0``
 ``2.3.8`` | ``GCCcore/11.2.0``
 ``2.3.8`` | ``GCCcore/11.3.0``
 ``2.3.8`` | ``GCCcore/12.2.0``
 ``2.3.8`` | ``GCCcore/12.3.0``
+``2.3.8`` | ``GCCcore/13.2.0``
 ``2.3.8`` | ``GCCcore/13.3.0``
 
 

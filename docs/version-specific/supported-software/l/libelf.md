@@ -10,7 +10,6 @@ libelf is a free ELF object file access library
 
 version | toolchain
 --------|----------
-``0.8.13`` | ``GCCcore/10.2.0``
 ``0.8.13`` | ``GCCcore/10.3.0``
 ``0.8.13`` | ``GCCcore/11.2.0``
 ``0.8.13`` | ``GCCcore/11.3.0``

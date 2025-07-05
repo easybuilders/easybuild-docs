@@ -10,7 +10,6 @@ RagTag is a collection of software tools for scaffolding and improving modern ge
 
 version | toolchain
 --------|----------
-``2.0.1`` | ``foss/2020b``
 ``2.1.0`` | ``foss/2022a``
 
 

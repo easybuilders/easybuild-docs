@@ -10,7 +10,6 @@ help2man produces simple manual pages from the '--help' and '--version' output o
 
 version | toolchain
 --------|----------
-``1.47.16`` | ``GCCcore/10.2.0``
 ``1.48.3`` | ``GCCcore/10.3.0``
 ``1.48.3`` | ``GCCcore/11.1.0``
 ``1.48.3`` | ``GCCcore/11.2.0``

@@ -4,16 +4,13 @@ search:
 ---
 # AOCC
 
-AMD Optimized C/C++ & Fortran compilers (AOCC) based on LLVM 11.0
+AMD Optimized C/C++ & Fortran compilers (AOCC) based on LLVM 12.0
 
 *homepage*: <https://developer.amd.com/amd-aocc/>
 
 version | toolchain
 --------|----------
-``2.3.0`` | ``GCCcore/10.2.0``
-``3.0.0`` | ``GCCcore/10.2.0``
 ``3.0.0`` | ``GCCcore/10.3.0``
-``3.1.0`` | ``GCCcore/10.2.0``
 ``3.1.0`` | ``GCCcore/10.3.0``
 ``3.1.0`` | ``GCCcore/11.2.0``
 ``3.2.0`` | ``GCCcore/11.2.0``

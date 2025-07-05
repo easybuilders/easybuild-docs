@@ -19,7 +19,6 @@ search:
  * [Qhull](Qhull.md)
  * [QIIME2](QIIME2.md)
  * [Qiskit](Qiskit.md)
- * [QJson](QJson.md)
  * [qmflows](qmflows.md)
  * [qnorm](qnorm.md)
  * [qrupdate](qrupdate.md)
@@ -29,7 +28,6 @@ search:
  * [Qt6](Qt6.md)
  * [Qtconsole](Qtconsole.md)
  * [QtKeychain](QtKeychain.md)
- * [QTLtools](QTLtools.md)
  * [QtPy](QtPy.md)
  * [Qualimap](Qualimap.md)
  * [Quandl](Quandl.md)
@@ -42,7 +40,6 @@ search:
  * [QuickTree](QuickTree.md)
  * [QuPath](QuPath.md)
  * [Qwt](Qwt.md)
- * [QwtPolar](QwtPolar.md)
 
 
 *(quick links: [(all)](../index.md) - [0](../0/index.md) - [a](../a/index.md) - [b](../b/index.md) - [c](../c/index.md) - [d](../d/index.md) - [e](../e/index.md) - [f](../f/index.md) - [g](../g/index.md) - [h](../h/index.md) - [i](../i/index.md) - [j](../j/index.md) - [k](../k/index.md) - [l](../l/index.md) - [m](../m/index.md) - [n](../n/index.md) - [o](../o/index.md) - [p](../p/index.md) - *q* - [r](../r/index.md) - [s](../s/index.md) - [t](../t/index.md) - [u](../u/index.md) - [v](../v/index.md) - [w](../w/index.md) - [x](../x/index.md) - [y](../y/index.md) - [z](../z/index.md))*

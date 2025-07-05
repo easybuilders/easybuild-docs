@@ -10,7 +10,6 @@ Zip is a compression and file packaging/archive utility. Although highly compati
 
 version | toolchain
 --------|----------
-``3.0`` | ``GCCcore/10.2.0``
 ``3.0`` | ``GCCcore/10.3.0``
 ``3.0`` | ``GCCcore/11.2.0``
 ``3.0`` | ``GCCcore/11.3.0``

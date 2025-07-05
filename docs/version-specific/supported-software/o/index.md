@@ -15,7 +15,6 @@ search:
  * [occt](occt.md)
  * [oceanspy](oceanspy.md)
  * [Octave](Octave.md)
- * [Octopus-vcf](Octopus-vcf.md)
  * [OGDF](OGDF.md)
  * [olaFlow](olaFlow.md)
  * [olego](olego.md)

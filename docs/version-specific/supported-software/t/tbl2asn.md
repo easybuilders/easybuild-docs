@@ -10,7 +10,6 @@ Tbl2asn is a command-line program that automates the creation of  sequence recor
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``20200302`` | ``-linux64`` | ``system``
 ``20220427`` | ``-linux64`` | ``system``
 ``20230713`` |  | ``GCCcore/12.3.0``
 ``20230713`` |  | ``GCCcore/13.2.0``

@@ -282,6 +282,7 @@ Option flag                                                              |Option
 ``--http-header-fields-urlpat=[URLPAT::][HEADER:]FIELDVALUE|FILE``       |Set extra HTTP header FIELD when downloading files from URL PATterns. Use FILE (to hide sensitive values) and newline separated FIELDs in the same format. e.g. "^https://www.example.com::path/to/headers.txt" or "client[A-z0-9]*.example.com:: Authorization: Basic token".
 ``--ignore-checksums``                                                   |Ignore failing checksum verification (default: False)
 ``--ignore-osdeps``                                                      |Ignore any listed OS dependencies (default: False)
+``--ignore-pip-unversioned-pkgs=IGNORE-PIP-UNVERSIONED-PKGS``            |List of installed unversioned (0.0.0) python packages to ignore in the sanity check (type comma-separated list)
 ``--ignore-test-failure``                                                |Ignore a failing test step (default: False)
 ``--insecure-download``                                                  |Don't check the server certificate against the available certificate authorities. (default: False)
 ``--install-latest-eb-release``                                          |Install latest known version of easybuild (default: False)

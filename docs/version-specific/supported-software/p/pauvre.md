@@ -10,7 +10,6 @@ Tools for plotting Oxford Nanopore and other long-read data
 
 version | toolchain
 --------|----------
-``0.1924`` | ``intel/2020b``
 ``0.2.3`` | ``foss/2021a``
 ``0.2.3`` | ``foss/2022a``
 ``0.2.3`` | ``foss/2022b``

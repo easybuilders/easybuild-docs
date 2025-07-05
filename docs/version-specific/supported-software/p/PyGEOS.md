@@ -10,7 +10,6 @@ PyGEOS is a C/Python library with vectorized geometry functions. The geometry op
 
 version | toolchain
 --------|----------
-``0.10.2`` | ``intel/2020b``
 ``0.14`` | ``gfbf/2022b``
 ``0.14`` | ``gfbf/2023a``
 

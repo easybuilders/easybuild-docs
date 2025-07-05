@@ -6,11 +6,10 @@ search:
 
 Intel C/C++ and Fortran compilers, alongside Open MPI.
 
-*homepage*: <https://software.intel.com/en-us/intel-cluster-toolkit-compiler/>
+*homepage*: <https://software.intel.com/content/www/us/en/develop/tools/oneapi/hpc-toolkit.html>
 
 version | toolchain
 --------|----------
-``2020b`` | ``system``
 ``2021a`` | ``system``
 ``2021b`` | ``system``
 ``2022b`` | ``system``

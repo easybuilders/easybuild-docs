@@ -10,7 +10,6 @@ Python hooks for Intel(R) Math Kernel Library runtime control settings.
 
 version | toolchain
 --------|----------
-``2.3.0`` | ``intel/2020b``
 ``2.3.0`` | ``intel/2021b``
 
 

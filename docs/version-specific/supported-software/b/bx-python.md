@@ -11,6 +11,9 @@ The bx-python project is a Python library and associated set of scripts to allow
 version | toolchain
 --------|----------
 ``0.10.0`` | ``foss/2023a``
+``0.10.0`` | ``gfbf/2023a``
+``0.13.0`` | ``foss/2023b``
+``0.13.0`` | ``gfbf/2024a``
 ``0.8.11`` | ``foss/2021a``
 ``0.8.13`` | ``foss/2021b``
 ``0.9.0`` | ``foss/2022a``

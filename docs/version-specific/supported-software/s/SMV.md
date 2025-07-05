@@ -10,7 +10,6 @@ Smokeview is a visualization program that displays output of FDS and CFAST simul
 
 version | toolchain
 --------|----------
-``6.7.17`` | ``iccifort/2020.4.304``
 ``6.9.5`` | ``GCCcore/12.3.0``
 
 

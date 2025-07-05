@@ -10,7 +10,6 @@ Valgrind: Debugging and profiling tools
 
 version | toolchain
 --------|----------
-``3.16.1`` | ``gompi/2020b``
 ``3.17.0`` | ``gompi/2021a``
 ``3.18.1`` | ``gompi/2021b``
 ``3.18.1`` | ``iimpi/2021b``

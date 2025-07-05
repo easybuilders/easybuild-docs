@@ -10,7 +10,6 @@ Exonerate is a generic tool for pairwise sequence comparison.  It allows you to 
 
 version | toolchain
 --------|----------
-``2.4.0`` | ``GCC/10.2.0``
 ``2.4.0`` | ``GCC/10.3.0``
 ``2.4.0`` | ``GCC/11.2.0``
 ``2.4.0`` | ``GCC/11.3.0``

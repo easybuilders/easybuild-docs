@@ -10,7 +10,6 @@ RepeatModeler is a de novo transposable element (TE) family identification and m
 
 version | toolchain
 --------|----------
-``2.0.2a`` | ``foss/2020b``
 ``2.0.4`` | ``foss/2022a``
 ``2.0.6`` | ``foss/2023a``
 

@@ -10,8 +10,6 @@ Bazel is a build tool that builds code quickly and reliably. It is used to build
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.0.0`` |  | ``GCCcore/10.2.0``
-``3.7.2`` |  | ``GCCcore/10.2.0``
 ``3.7.2`` |  | ``GCCcore/10.3.0``
 ``3.7.2`` |  | ``GCCcore/11.2.0``
 ``4.2.2`` |  | ``GCCcore/11.2.0``
@@ -19,6 +17,7 @@ version | versionsuffix | toolchain
 ``6.1.0`` |  | ``GCCcore/12.3.0``
 ``6.3.1`` |  | ``GCCcore/12.2.0``
 ``6.3.1`` |  | ``GCCcore/12.3.0``
+``6.5.0`` | ``-Java-11`` | ``GCCcore/13.3.0``
 ``7.4.1`` | ``-Java-21`` | ``GCCcore/13.3.0``
 
 

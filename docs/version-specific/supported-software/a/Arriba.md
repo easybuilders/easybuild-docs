@@ -10,7 +10,6 @@ Arriba is a command-line tool for the detection of gene fusions from RNA-Seq dat
 
 version | toolchain
 --------|----------
-``2.1.0`` | ``GCC/10.2.0``
 ``2.1.0`` | ``GCC/10.3.0``
 ``2.2.1`` | ``GCC/11.2.0``
 ``2.3.0`` | ``GCC/11.2.0``

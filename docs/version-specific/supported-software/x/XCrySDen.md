@@ -4,13 +4,12 @@ search:
 ---
 # XCrySDen
 
-XCrySDen is a crystalline and molecular structure visualisation program aiming  at display of isosurfaces and contours, which can be superimposed on crystalline structures and  interactively rotated and manipulated.
+XCrySDen is a crystalline and molecular structure visualisation program aiming at display of isosurfaces and contours, which can be superimposed on crystalline structures and interactively rotated and manipulated. It also possesses some tools for analysis of properties in reciprocal space such as interactive selection of k-paths in the Brillouin zone for the band-structure plots, and visualisation of Fermi surfaces.
 
 *homepage*: <http://www.xcrysden.org/>
 
 version | toolchain
 --------|----------
-``1.6.2`` | ``foss/2020b``
 ``1.6.2`` | ``foss/2022a``
 ``1.6.2`` | ``foss/2024a``
 ``1.6.2`` | ``intel/2021b``

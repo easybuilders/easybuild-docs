@@ -10,7 +10,6 @@ DFT-D3 implements a dispersion correction for density functionals, Hartree-Fock 
 
 version | toolchain
 --------|----------
-``3.2.0`` | ``iccifort/2020.4.304``
 ``3.2.0`` | ``intel/2023a``
 ``3.2.0`` | ``intel-compilers/2021.2.0``
 ``3.2.0`` | ``intel-compilers/2021.4.0``

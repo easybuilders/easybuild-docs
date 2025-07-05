@@ -10,7 +10,6 @@ PatchELF is a small utility to modify the dynamic linker and RPATH of ELF execut
 
 version | toolchain
 --------|----------
-``0.12`` | ``GCCcore/10.2.0``
 ``0.12`` | ``GCCcore/10.3.0``
 ``0.13`` | ``GCCcore/11.2.0``
 ``0.15.0`` | ``GCCcore/11.3.0``

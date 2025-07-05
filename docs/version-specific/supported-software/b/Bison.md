@@ -11,10 +11,6 @@ Bison is a general-purpose parser generator that converts an annotated  context-
 version | toolchain
 --------|----------
 ``3.3.2`` | ``system``
-``3.5.2`` | ``system``
-``3.5.3`` | ``GCCcore/10.2.0``
-``3.5.3`` | ``system``
-``3.7.1`` | ``GCCcore/10.2.0``
 ``3.7.1`` | ``system``
 ``3.7.6`` | ``GCCcore/10.3.0``
 ``3.7.6`` | ``GCCcore/11.1.0``

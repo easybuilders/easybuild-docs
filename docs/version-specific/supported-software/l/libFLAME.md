@@ -11,7 +11,6 @@ libFLAME is a portable library for dense matrix computations, providing much of 
 version | toolchain
 --------|----------
 ``5.2.0`` | ``GCC/10.3.0``
-``5.2.0`` | ``GCCcore/10.2.0``
 ``5.2.0`` | ``GCCcore/10.3.0``
 
 

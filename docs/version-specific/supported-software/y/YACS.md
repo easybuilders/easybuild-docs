@@ -10,7 +10,6 @@ YACS was created as a lightweight library to define and manage system configurat
 
 version | toolchain
 --------|----------
-``0.1.8`` | ``GCCcore/10.2.0``
 ``0.1.8`` | ``GCCcore/10.3.0``
 ``0.1.8`` | ``GCCcore/11.2.0``
 ``0.1.8`` | ``GCCcore/11.3.0``

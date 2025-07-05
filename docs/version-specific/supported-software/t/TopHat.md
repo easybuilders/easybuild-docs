@@ -10,7 +10,6 @@ TopHat is a fast splice junction mapper for RNA-Seq reads.
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.1.2`` | ``-Python-2.7.18`` | ``GCC/10.2.0``
 ``2.1.2`` | ``-Python-2.7.18`` | ``GCC/11.2.0``
 ``2.1.2`` | ``-Python-2.7.18`` | ``GCC/11.3.0``
 ``2.1.2`` | ``-Python-2.7.18`` | ``GCC/12.3.0``

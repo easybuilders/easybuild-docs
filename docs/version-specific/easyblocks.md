@@ -83,6 +83,7 @@
     - ConfigureMakePythonPackage
     - EB_BerkeleyGW
     - EB_binutils
+    - EB_BLIS
     - EB_Bowtie
     - EB_BWA
     - EB_bzip2

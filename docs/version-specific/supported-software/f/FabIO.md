@@ -10,8 +10,6 @@ FabIO is an I/O library for images produced by 2D X-ray detectors and written in
 
 version | toolchain
 --------|----------
-``0.11.0`` | ``foss/2020b``
-``0.11.0`` | ``fosscuda/2020b``
 ``0.14.0`` | ``foss/2021b``
 
 

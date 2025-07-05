@@ -4,27 +4,18 @@ search:
 ---
 # Java
 
-Java Platform, Standard Edition (Java SE) lets you develop and deploy  Java applications on desktops and servers.
+Java Platform, Standard Edition (Java SE) lets you develop and deploy Java applications on desktops and servers.
 
-*homepage*: <https://java.com/>
+*homepage*: <http://openjdk.java.net>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.8.0_241`` |  | ``system``
-``1.8.0_271`` |  | ``system``
-``1.8.0_281`` |  | ``system``
-``1.8.0_292`` | ``-OpenJDK`` | ``system``
-``1.8.0_311`` |  | ``system``
-``1.8`` |  | ``system``
-``1.8_265`` | ``-b01-OpenJDK-aarch64`` | ``system``
 ``11.0.16`` |  | ``system``
 ``11.0.18`` |  | ``system``
 ``11.0.20`` |  | ``system``
 ``11.0.27`` |  | ``system``
 ``11.0.8`` | ``-aarch64`` | ``system``
 ``11`` |  | ``system``
-``13.0.2`` |  | ``system``
-``13`` |  | ``system``
 ``15.0.1`` |  | ``system``
 ``15`` |  | ``system``
 ``16.0.1`` |  | ``system``

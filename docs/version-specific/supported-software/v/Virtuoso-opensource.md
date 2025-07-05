@@ -10,6 +10,7 @@ Virtuoso is a high-performance and scalable Multi-Model RDBMS, Data Integration 
 
 version | toolchain
 --------|----------
+``7.2.14`` | ``GCC/13.2.0``
 ``7.2.6.1`` | ``GCC/10.3.0``
 
 

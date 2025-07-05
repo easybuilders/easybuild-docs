@@ -10,7 +10,6 @@ WhatsHap is a software for phasing genomic variants using DNA sequencing reads, 
 
 version | toolchain
 --------|----------
-``1.1`` | ``foss/2020b``
 ``1.1`` | ``foss/2021a``
 ``1.4`` | ``foss/2021b``
 ``1.7`` | ``foss/2022a``

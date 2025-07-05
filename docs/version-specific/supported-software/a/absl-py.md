@@ -11,6 +11,7 @@ absl-py is a collection of Python library code for building Python applications.
 version | toolchain
 --------|----------
 ``2.1.0`` | ``GCCcore/12.3.0``
+``2.1.0`` | ``GCCcore/13.2.0``
 ``2.1.0`` | ``GCCcore/13.3.0``
 
 

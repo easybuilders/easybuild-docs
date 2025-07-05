@@ -10,7 +10,6 @@ Resource monitor that shows usage and stats for processor, memory, disks, networ
 
 version | toolchain
 --------|----------
-``1.0.60`` | ``GCCcore/10.2.0``
 ``1.0.67`` | ``GCCcore/10.3.0``
 
 

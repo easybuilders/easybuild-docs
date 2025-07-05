@@ -10,8 +10,6 @@ STRUMPACK - STRUctured Matrix PACKage - Fast linear solvers and preconditioner  
 
 version | toolchain
 --------|----------
-``6.1.0`` | ``foss/2020b``
-``6.1.0`` | ``intel/2020b``
 ``7.1.0`` | ``foss/2023b``
 ``7.1.0`` | ``intel/2023b``
 

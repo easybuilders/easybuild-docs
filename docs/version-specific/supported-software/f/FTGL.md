@@ -6,11 +6,10 @@ search:
 
 FTGL is a free open source library to enable developers to use arbitrary fonts in their OpenGL (www.opengl.org) applications.
 
-*homepage*: <http://ftgl.sourceforge.net/docs/html/>
+*homepage*: <https://github.com/frankheckenbach/ftgl>
 
 version | toolchain
 --------|----------
-``2.1.3-rc5`` | ``GCCcore/10.2.0``
 ``2.4.0`` | ``GCCcore/11.3.0``
 
 

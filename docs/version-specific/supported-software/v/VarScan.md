@@ -10,7 +10,6 @@ Variant calling and somatic mutation/CNV detection for next-generation sequencin
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.4.4`` | ``-Java-1.8`` | ``system``
 ``2.4.4`` | ``-Java-11`` | ``system``
 
 

@@ -10,7 +10,6 @@ Arbitrary order exchange-correlation functional library
 
 version | toolchain
 --------|----------
-``2.1.1`` | ``GCCcore/10.2.0``
 ``2.1.1`` | ``GCCcore/10.3.0``
 ``2.1.1`` | ``GCCcore/11.3.0``
 ``2.1.1`` | ``GCCcore/12.2.0``

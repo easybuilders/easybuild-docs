@@ -10,7 +10,6 @@ A Quality Tetrahedral Mesh Generator and a 3D Delaunay Triangulator
 
 version | toolchain
 --------|----------
-``1.6.0`` | ``GCCcore/10.2.0``
 ``1.6.0`` | ``GCCcore/12.3.0``
 
 

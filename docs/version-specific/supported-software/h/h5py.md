@@ -10,12 +10,9 @@ HDF5 for Python (h5py) is a general-purpose Python interface to the Hierarchical
 
 version | toolchain
 --------|----------
-``3.1.0`` | ``foss/2020b``
-``3.1.0`` | ``fosscuda/2020b``
-``3.1.0`` | ``intel/2020b``
-``3.1.0`` | ``intelcuda/2020b``
 ``3.11.0`` | ``foss/2023b``
 ``3.12.1`` | ``foss/2024a``
+``3.14.0`` | ``foss/2025a``
 ``3.2.1`` | ``foss/2021a``
 ``3.2.1`` | ``gomkl/2021a``
 ``3.6.0`` | ``foss/2021b``

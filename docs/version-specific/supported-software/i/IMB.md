@@ -10,7 +10,6 @@ The Intel MPI Benchmarks perform a set of MPI performance measurements for point
 
 version | toolchain
 --------|----------
-``2021.3`` | ``gompi/2020b``
 ``2021.3`` | ``gompi/2021b``
 ``2021.3`` | ``gompi/2022a``
 ``2021.3`` | ``gompi/2022b``

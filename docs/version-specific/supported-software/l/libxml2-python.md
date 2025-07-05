@@ -6,11 +6,12 @@ search:
 
 Libxml2 is the XML C parser and toolchain developed for the Gnome project  (but usable outside of the Gnome platform). This is the Python binding.
 
-*homepage*: <http://xmlsoft.org/>
+*homepage*: <https://gitlab.gnome.org/GNOME/libxml2/-/wikis/Python-bindings>
 
 version | toolchain
 --------|----------
 ``2.11.4`` | ``GCCcore/12.3.0``
+``2.11.5`` | ``GCCcore/13.2.0``
 ``2.9.13`` | ``GCCcore/11.3.0``
 
 

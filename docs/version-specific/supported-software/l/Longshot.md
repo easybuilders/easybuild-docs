@@ -10,7 +10,6 @@ Longshot is a variant calling tool for diploid genomes using long error prone re
 
 version | toolchain
 --------|----------
-``0.4.3`` | ``GCCcore/10.2.0``
 ``0.4.5`` | ``GCCcore/11.3.0``
 ``1.0.0`` | ``GCCcore/12.3.0``
 ``1.0.0`` | ``GCCcore/13.2.0``

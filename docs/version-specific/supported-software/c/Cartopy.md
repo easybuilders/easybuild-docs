@@ -10,12 +10,11 @@ Cartopy is a Python package designed to make drawing maps for data analysis and 
 
 version | toolchain
 --------|----------
-``0.19.0.post1`` | ``foss/2020b``
-``0.19.0.post1`` | ``intel/2020b``
 ``0.20.0`` | ``foss/2021a``
 ``0.20.3`` | ``foss/2021b``
 ``0.20.3`` | ``foss/2022a``
 ``0.22.0`` | ``foss/2023a``
+``0.22.0`` | ``foss/2023b``
 ``0.24.1`` | ``foss/2024a``
 
 

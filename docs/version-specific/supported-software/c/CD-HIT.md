@@ -10,7 +10,6 @@ CD-HIT is a very widely used program for clustering and  comparing protein or nu
 
 version | toolchain
 --------|----------
-``4.8.1`` | ``GCC/10.2.0``
 ``4.8.1`` | ``GCC/10.3.0``
 ``4.8.1`` | ``GCC/11.2.0``
 ``4.8.1`` | ``GCC/11.3.0``

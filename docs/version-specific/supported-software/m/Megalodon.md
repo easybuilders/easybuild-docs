@@ -10,8 +10,6 @@ Megalodon is a research command line tool to extract high accuracy modified base
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.3.5`` |  | ``foss/2020b``
-``2.3.5`` |  | ``fosscuda/2020b``
 ``2.5.0`` | ``-CUDA-11.3.1`` | ``foss/2021a``
 ``2.5.0`` |  | ``foss/2021a``
 

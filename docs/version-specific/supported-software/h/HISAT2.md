@@ -10,7 +10,6 @@ HISAT2 is a fast and sensitive alignment program for mapping next-generation seq
 
 version | toolchain
 --------|----------
-``2.2.1`` | ``gompi/2020b``
 ``2.2.1`` | ``gompi/2021a``
 ``2.2.1`` | ``gompi/2021b``
 ``2.2.1`` | ``gompi/2022a``

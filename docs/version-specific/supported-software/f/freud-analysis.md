@@ -10,7 +10,6 @@ The freud Python library provides a simple, flexible, powerful set of tools for 
 
 version | toolchain
 --------|----------
-``2.6.2`` | ``foss/2020b``
 ``2.6.2`` | ``foss/2021a``
 
 

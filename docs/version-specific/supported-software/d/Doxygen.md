@@ -11,7 +11,7 @@ Doxygen is a documentation system for C++, C, Java, Objective-C, Python,  IDL (C
 version | toolchain
 --------|----------
 ``1.11.0`` | ``GCCcore/13.3.0``
-``1.8.20`` | ``GCCcore/10.2.0``
+``1.14.0`` | ``GCCcore/14.2.0``
 ``1.9.1`` | ``GCCcore/10.3.0``
 ``1.9.1`` | ``GCCcore/11.2.0``
 ``1.9.4`` | ``GCCcore/11.3.0``

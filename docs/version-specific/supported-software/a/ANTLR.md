@@ -10,7 +10,6 @@ ANTLR, ANother Tool for Language Recognition, (formerly PCCTS)  is a language to
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.7.7`` | ``-Java-11`` | ``GCCcore/10.2.0``
 ``2.7.7`` | ``-Java-11`` | ``GCCcore/10.3.0``
 ``2.7.7`` | ``-Java-11`` | ``GCCcore/11.2.0``
 ``2.7.7`` | ``-Java-11`` | ``GCCcore/11.3.0``

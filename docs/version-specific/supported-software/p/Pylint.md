@@ -11,7 +11,6 @@ Pylint is a tool that checks for errors in Python code, tries to enforce  a codi
 version | toolchain
 --------|----------
 ``2.17.4`` | ``GCCcore/12.2.0``
-``2.7.4`` | ``GCCcore/10.2.0``
 ``3.2.5`` | ``GCCcore/13.2.0``
 
 

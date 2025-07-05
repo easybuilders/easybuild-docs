@@ -10,7 +10,6 @@ A std::streambuf wrapper for compression formats.
 
 version | toolchain
 --------|----------
-``1.1.0`` | ``GCCcore/10.2.0``
 ``1.2.0`` | ``GCCcore/12.3.0``
 
 

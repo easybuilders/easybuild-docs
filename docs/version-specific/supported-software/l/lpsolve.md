@@ -10,7 +10,6 @@ Mixed Integer Linear Programming (MILP) solver
 
 version | toolchain
 --------|----------
-``5.5.2.11`` | ``GCC/10.2.0``
 ``5.5.2.11`` | ``GCC/10.3.0``
 ``5.5.2.11`` | ``GCC/11.2.0``
 ``5.5.2.11`` | ``GCC/11.3.0``

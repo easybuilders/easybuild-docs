@@ -10,8 +10,6 @@ SimpleITK is a simplified programming interface to the algorithms and data struc
 
 version | toolchain
 --------|----------
-``2.1.0`` | ``foss/2020b``
-``2.1.0`` | ``fosscuda/2020b``
 ``2.1.1`` | ``foss/2021a``
 ``2.1.1.2`` | ``foss/2021b``
 ``2.1.1.2`` | ``foss/2022a``

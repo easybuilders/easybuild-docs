@@ -10,7 +10,6 @@ MPICH is a high-performance and widely portable implementation of the Message Pa
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``3.3.2`` |  | ``GCC/10.2.0``
 ``3.4.2`` |  | ``GCC/10.3.0``
 ``4.2.1`` |  | ``GCC/12.3.0``
 ``4.2.2`` |  | ``GCC/13.3.0``

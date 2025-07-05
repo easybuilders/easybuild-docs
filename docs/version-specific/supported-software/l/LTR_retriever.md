@@ -10,7 +10,6 @@ LTR_retriever is a highly accurate and sensitive program for  identification of 
 
 version | toolchain
 --------|----------
-``2.9.0`` | ``foss/2020b``
 ``2.9.0`` | ``foss/2022a``
 ``3.0.1`` | ``foss/2023a``
 

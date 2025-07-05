@@ -10,8 +10,6 @@ Seurat is an R package designed for QC, analysis, and exploration of single cell
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``4.0.1`` | ``-R-4.0.3`` | ``foss/2020b``
-``4.0.3`` | ``-R-4.0.3`` | ``foss/2020b``
 ``4.1.0`` | ``-R-4.1.0`` | ``foss/2021a``
 ``4.2.0`` | ``-R-4.2.1`` | ``foss/2022a``
 ``4.3.0`` | ``-R-4.1.2`` | ``foss/2021b``

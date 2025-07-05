@@ -10,7 +10,6 @@ MetaWRAP aims to be an easy-to-use metagenomic wrapper suite that accomplishes t
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.3`` | ``-Python-2.7.18`` | ``foss/2020b``
 ``1.4-20230728`` | ``-Python-2.7.18`` | ``foss/2023a``
 
 

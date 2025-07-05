@@ -6,19 +6,14 @@ search:
 
 Libxc is a library of exchange-correlation functionals for density-functional theory.  The aim is to provide a portable, well tested and reliable set of exchange and correlation functionals.
 
-*homepage*: <https://www.tddft.org/programs/libxc>
+*homepage*: <https://libxc.gitlab.io>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``3.0.1`` |  | ``foss/2020b``
-``4.3.4`` |  | ``GCC/10.2.0``
 ``4.3.4`` |  | ``GCC/10.3.0``
 ``4.3.4`` |  | ``GCC/11.2.0``
-``4.3.4`` |  | ``iccifort/2020.4.304``
 ``4.3.4`` |  | ``intel-compilers/2021.2.0``
 ``4.3.4`` |  | ``intel-compilers/2021.4.0``
-``5.1.2`` |  | ``GCC/10.2.0``
-``5.1.3`` |  | ``GCC/10.2.0``
 ``5.1.5`` |  | ``GCC/10.3.0``
 ``5.1.5`` |  | ``intel-compilers/2021.2.0``
 ``5.1.6`` |  | ``GCC/11.2.0``

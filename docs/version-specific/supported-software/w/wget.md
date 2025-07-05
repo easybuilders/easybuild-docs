@@ -10,13 +10,13 @@ GNU Wget is a free software package for retrieving files using HTTP, HTTPS and F
 
 version | toolchain
 --------|----------
-``1.20.3`` | ``GCCcore/10.2.0``
 ``1.21.1`` | ``GCCcore/10.3.0``
 ``1.21.2`` | ``GCCcore/11.2.0``
 ``1.21.3`` | ``GCCcore/11.3.0``
 ``1.21.4`` | ``GCCcore/12.2.0``
 ``1.21.4`` | ``GCCcore/13.2.0``
 ``1.24.5`` | ``GCCcore/12.3.0``
+``1.24.5`` | ``GCCcore/13.2.0``
 ``1.25.0`` | ``GCCcore/13.3.0``
 
 

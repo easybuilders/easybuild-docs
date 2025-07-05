@@ -10,7 +10,6 @@ The awk utility interprets a special-purpose programming language that makes it 
 
 version | toolchain
 --------|----------
-``5.1.0`` | ``GCC/10.2.0``
 ``5.1.1`` | ``GCC/10.3.0``
 ``5.1.1`` | ``GCC/11.2.0``
 ``5.1.1`` | ``GCC/11.3.0``

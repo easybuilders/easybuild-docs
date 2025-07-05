@@ -10,7 +10,6 @@ Git is a free and open source distributed version control system designed to han
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.28.0`` | ``-nodocs`` | ``GCCcore/10.2.0``
 ``2.32.0`` | ``-nodocs`` | ``GCCcore/10.3.0``
 ``2.33.1`` | ``-nodocs`` | ``GCCcore/11.2.0``
 ``2.36.0`` | ``-nodocs`` | ``GCCcore/11.3.0``

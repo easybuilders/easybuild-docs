@@ -10,12 +10,12 @@ OpenGL Mathematics (GLM) is a header only C++ mathematics library for graphics s
 
 version | toolchain
 --------|----------
-``0.9.9.8`` | ``GCCcore/10.2.0``
 ``0.9.9.8`` | ``GCCcore/10.3.0``
 ``0.9.9.8`` | ``GCCcore/11.2.0``
 ``0.9.9.8`` | ``GCCcore/11.3.0``
 ``0.9.9.8`` | ``GCCcore/12.2.0``
 ``0.9.9.8`` | ``GCCcore/12.3.0``
+``1.0.1`` | ``GCCcore/13.2.0``
 ``1.0.1`` | ``GCCcore/13.3.0``
 
 

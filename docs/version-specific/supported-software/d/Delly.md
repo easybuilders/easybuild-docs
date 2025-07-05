@@ -10,7 +10,6 @@ Delly is an integrated structural variant (SV) prediction method that can discov
 
 version | toolchain
 --------|----------
-``0.8.7`` | ``gompi/2020b``
 ``1.1.5`` | ``GCC/11.3.0``
 ``1.1.6`` | ``GCC/12.2.0``
 

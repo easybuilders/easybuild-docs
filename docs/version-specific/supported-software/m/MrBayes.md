@@ -10,8 +10,6 @@ MrBayes is a program for Bayesian inference and model choice across  a wide rang
 
 version | toolchain
 --------|----------
-``3.2.6`` | ``gompi/2020b``
-``3.2.7`` | ``gompi/2020b``
 ``3.2.7`` | ``gompi/2022a``
 ``3.2.7`` | ``gompi/2023a``
 

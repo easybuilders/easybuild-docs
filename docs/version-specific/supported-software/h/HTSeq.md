@@ -10,7 +10,6 @@ HTSeq is a Python library to facilitate processing and analysis  of data from hi
 
 version | toolchain
 --------|----------
-``0.11.3`` | ``foss/2020b``
 ``0.11.3`` | ``foss/2021b``
 ``2.0.2`` | ``foss/2022a``
 ``2.0.7`` | ``foss/2023a``

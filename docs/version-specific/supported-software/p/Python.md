@@ -10,7 +10,6 @@ Python is a programming language that lets you work more quickly and integrate y
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.7.18`` |  | ``GCCcore/10.2.0``
 ``2.7.18`` | ``-bare`` | ``GCCcore/10.3.0``
 ``2.7.18`` | ``-bare`` | ``GCCcore/11.2.0``
 ``2.7.18`` |  | ``GCCcore/11.2.0``
@@ -26,7 +25,7 @@ version | versionsuffix | toolchain
 ``3.11.5`` |  | ``GCCcore/13.2.0``
 ``3.12.3`` |  | ``GCCcore/13.3.0``
 ``3.13.1`` |  | ``GCCcore/14.2.0``
-``3.8.6`` |  | ``GCCcore/10.2.0``
+``3.13.5`` |  | ``GCCcore/14.3.0``
 ``3.9.5`` | ``-bare`` | ``GCCcore/10.3.0``
 ``3.9.5`` |  | ``GCCcore/10.3.0``
 ``3.9.6`` | ``-bare`` | ``GCCcore/11.2.0``

@@ -10,8 +10,6 @@ A pythonic wrapper around FFTW, the FFT library, presenting a unified interface 
 
 version | toolchain
 --------|----------
-``0.12.0`` | ``foss/2020b``
-``0.12.0`` | ``fosscuda/2020b``
 ``0.13.1`` | ``foss/2022a``
 
 

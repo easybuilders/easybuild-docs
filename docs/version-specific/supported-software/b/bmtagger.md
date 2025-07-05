@@ -10,7 +10,6 @@ Best Match Tagger for removing human reads from metagenomics datasets
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``3.101`` |  | ``gompi/2020b``
 ``3.101`` | ``-Java-11`` | ``gompi/2023a``
 
 

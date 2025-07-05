@@ -10,11 +10,9 @@ PyQt5 is a set of Python bindings for v5 of the Qt application framework from Th
 
 version | toolchain
 --------|----------
-``5.15.1`` | ``GCCcore/10.2.0``
 ``5.15.10`` | ``GCCcore/12.3.0``
 ``5.15.10`` | ``GCCcore/13.2.0``
 ``5.15.11`` | ``GCCcore/13.3.0``
-``5.15.4`` | ``GCCcore/10.2.0``
 ``5.15.4`` | ``GCCcore/10.3.0``
 ``5.15.4`` | ``GCCcore/11.2.0``
 ``5.15.5`` | ``GCCcore/11.3.0``

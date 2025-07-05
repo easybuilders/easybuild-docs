@@ -10,7 +10,6 @@ The h4toh5 software consists of the h4toh5 and h5toh4 command-line utilities,  a
 
 version | toolchain
 --------|----------
-``2.2.3`` | ``gompi/2020b``
 ``2.2.5`` | ``gompi/2022a``
 
 

@@ -10,7 +10,6 @@ Clustal Omega is a multiple sequence alignment  program for proteins. It produce
 
 version | toolchain
 --------|----------
-``1.2.4`` | ``GCC/10.2.0``
 ``1.2.4`` | ``GCC/10.3.0``
 ``1.2.4`` | ``GCC/11.2.0``
 ``1.2.4`` | ``GCC/12.3.0``

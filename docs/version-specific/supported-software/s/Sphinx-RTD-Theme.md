@@ -10,7 +10,6 @@ Sphinx theme designed to provide a great reader experience  for documentation us
 
 version | toolchain
 --------|----------
-``1.1.1`` | ``GCCcore/10.2.0``
 ``2.0.0`` | ``GCCcore/12.3.0``
 ``2.0.0`` | ``GCCcore/13.2.0``
 

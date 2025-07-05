@@ -6,13 +6,10 @@ search:
 
 Uniform Manifold Approximation and Projection (UMAP) is a dimension reduction technique that can be used for visualisation similarly to t-SNE, but also for general non-linear dimension reduction.
 
-*homepage*: <https://pypi.org/project/umap-learn/>
+*homepage*: <https://umap-learn.readthedocs.io/en/latest/>
 
 version | toolchain
 --------|----------
-``0.4.6`` | ``foss/2020b``
-``0.4.6`` | ``fosscuda/2020b``
-``0.5.3`` | ``foss/2020b``
 ``0.5.3`` | ``foss/2021a``
 ``0.5.3`` | ``foss/2021b``
 ``0.5.3`` | ``foss/2022a``

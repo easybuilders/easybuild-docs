@@ -10,7 +10,6 @@ filevercmp function as in sort --version-sort.
 
 version | toolchain
 --------|----------
-``20191210`` | ``GCCcore/10.2.0``
 ``20191210`` | ``GCCcore/10.3.0``
 ``20191210`` | ``GCCcore/11.2.0``
 ``20191210`` | ``GCCcore/11.3.0``

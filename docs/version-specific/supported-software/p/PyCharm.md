@@ -10,7 +10,6 @@ PyCharm Community Edition: Python IDE for Professional Developers
 
 version | toolchain
 --------|----------
-``2019.3.1`` | ``system``
 ``2021.1.1`` | ``system``
 ``2022.2.2`` | ``system``
 ``2022.3.2`` | ``system``

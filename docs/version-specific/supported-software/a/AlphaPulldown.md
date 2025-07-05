@@ -10,8 +10,6 @@ AlphaPulldown is a Python package that streamlines protein-protein interaction s
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.30.4`` |  | ``foss/2020b``
-``0.30.4`` |  | ``fosscuda/2020b``
 ``2.0.0`` | ``-CUDA-12.1.1`` | ``foss/2023a``
 ``2.0.0b4`` | ``-CUDA-11.7.0`` | ``foss/2022a``
 ``2.0.0b4`` |  | ``foss/2022a``

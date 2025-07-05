@@ -10,7 +10,6 @@ Joyplots in Python with matplotlib & pandas
 
 version | toolchain
 --------|----------
-``0.2.4`` | ``intel/2020b``
 ``0.2.6`` | ``foss/2023a``
 
 

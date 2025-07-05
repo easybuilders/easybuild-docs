@@ -10,8 +10,6 @@ The PyMca X-Ray Fluorescence Toolkit, including PyMca5 and fisx.
 
 version | toolchain
 --------|----------
-``5.6.3`` | ``foss/2020b``
-``5.6.3`` | ``fosscuda/2020b``
 ``5.7.6`` | ``foss/2021b``
 
 

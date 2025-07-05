@@ -10,9 +10,6 @@ The Astropy Project is a community effort to develop a single core package for A
 
 version | toolchain
 --------|----------
-``4.2.1`` | ``foss/2020b``
-``4.2.1`` | ``intel/2020b``
-``4.2.1`` | ``intelcuda/2020b``
 ``4.3.1`` | ``foss/2021a``
 ``4.3.1`` | ``foss/2021b``
 ``4.3.1`` | ``intel/2021a``

@@ -4,13 +4,12 @@ search:
 ---
 # PhyML
 
-Phylogenetic estimation using (Maximum) Likelihood
+PhyML is a software package that uses modern statistical approaches to analyse alignments of nucleotide or amino acid sequences in a phylogenetic framework.
 
 *homepage*: <https://github.com/stephaneguindon/phyml>
 
 version | toolchain
 --------|----------
-``3.3.20200621`` | ``foss/2020b``
 ``3.3.20220408`` | ``foss/2023a``
 
 

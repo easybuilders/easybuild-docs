@@ -11,7 +11,6 @@ Spektral is a Python library for graph deep learning. The main goal of this  pro
 version | versionsuffix | toolchain
 --------|---------------|----------
 ``1.1.0`` | ``-CUDA-11.4.1`` | ``foss/2021b``
-``1.2.0`` | ``-TensorFlow-2.5.0`` | ``fosscuda/2020b``
 ``1.3.1`` | ``-CUDA-12.1.1`` | ``foss/2023a``
 ``1.3.1`` |  | ``foss/2023a``
 

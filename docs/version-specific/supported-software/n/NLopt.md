@@ -6,11 +6,11 @@ search:
 
 NLopt is a free/open-source library for nonlinear optimization,  providing a common interface for a number of different free optimization routines  available online as well as original implementations of various other algorithms.
 
-*homepage*: <http://ab-initio.mit.edu/wiki/index.php/NLopt>
+*homepage*: <https://nlopt.readthedocs.io/en/latest/>
 
 version | toolchain
 --------|----------
-``2.6.2`` | ``GCCcore/10.2.0``
+``2.10.0`` | ``GCCcore/14.2.0``
 ``2.7.0`` | ``GCCcore/10.3.0``
 ``2.7.0`` | ``GCCcore/11.2.0``
 ``2.7.1`` | ``GCCcore/11.3.0``

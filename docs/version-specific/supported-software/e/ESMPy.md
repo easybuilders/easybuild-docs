@@ -10,7 +10,6 @@ Earth System Modeling Framework (ESMF) Python Interface
 
 version | toolchain
 --------|----------
-``8.0.1`` | ``intel/2020b``
 ``8.6.0`` | ``foss/2023a``
 
 

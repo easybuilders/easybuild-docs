@@ -10,8 +10,6 @@ Spoa (SIMD POA) is a c++ implementation of the partial order alignment (POA) alg
 
 version | toolchain
 --------|----------
-``3.4.0`` | ``GCC/10.2.0``
-``4.0.7`` | ``GCC/10.2.0``
 ``4.0.7`` | ``GCC/10.3.0``
 ``4.0.7`` | ``GCC/11.2.0``
 ``4.0.7`` | ``GCC/11.3.0``

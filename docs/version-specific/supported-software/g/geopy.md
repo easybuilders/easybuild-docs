@@ -6,11 +6,10 @@ search:
 
 geopy is a Python client for several popular geocoding web services. geopy makes it easy for Python developers to locate the coordinates of addresses, cities, countries, and landmarks across the globe using third-party geocoders and other data sources.
 
-*homepage*: <https://geopy.readthedocs.io/en/stable/>
+*homepage*: <https://geopy.readthedocs.io/>
 
 version | toolchain
 --------|----------
-``2.1.0`` | ``GCCcore/10.2.0``
 ``2.4.1`` | ``GCCcore/12.3.0``
 
 

@@ -10,7 +10,6 @@ MaxBin is software for binning assembled metagenomic sequences based on an Expec
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.2.7`` |  | ``gompi/2020b``
 ``2.2.7`` |  | ``gompi/2021a``
 ``2.2.7`` |  | ``gompi/2021b``
 ``2.2.7`` | ``-Python-2.7.18`` | ``gompi/2023a``

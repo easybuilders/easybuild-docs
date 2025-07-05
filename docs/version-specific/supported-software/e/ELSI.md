@@ -11,8 +11,6 @@ ELSI provides and enhances scalable, open-source software library solutions for 
 version | versionsuffix | toolchain
 --------|---------------|----------
 ``2.11.0`` | ``-PEXSI`` | ``foss/2023a``
-``2.6.4`` | ``-PEXSI`` | ``foss/2020b``
-``2.6.4`` | ``-PEXSI`` | ``intel/2020b``
 ``2.7.1`` | ``-PEXSI`` | ``foss/2021a``
 ``2.7.1`` | ``-PEXSI`` | ``intel/2021a``
 ``2.9.1`` | ``-PEXSI`` | ``foss/2022a``

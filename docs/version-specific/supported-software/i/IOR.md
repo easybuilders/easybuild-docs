@@ -10,7 +10,6 @@ The IOR software is used for benchmarking parallel file systems using POSIX, MPI
 
 version | toolchain
 --------|----------
-``3.3.0`` | ``gompi/2020b``
 ``3.3.0`` | ``gompi/2021a``
 ``3.3.0`` | ``gompi/2022a``
 ``4.0.0`` | ``gompi/2023b``

@@ -11,7 +11,6 @@ Scalasca is a software tool that supports the performance optimization of  paral
 version | toolchain
 --------|----------
 ``2.6`` | ``gompi/2021a``
-``2.6`` | ``gompic/2020b``
 ``2.6.1`` | ``gompi/2022a``
 ``2.6.1`` | ``gompi/2023b``
 ``2.6.2`` | ``gompi/2025a``

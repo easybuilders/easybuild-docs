@@ -10,7 +10,6 @@ GCC and GFortran based compiler toolchain with OpenMPI, BLIS, libFLAME, ScaLAPAC
 
 version | toolchain
 --------|----------
-``2020b`` | ``system``
 ``2021a`` | ``system``
 
 

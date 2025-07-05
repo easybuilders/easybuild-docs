@@ -10,7 +10,6 @@ Portable interactive, function plotting utility
 
 version | toolchain
 --------|----------
-``5.4.1`` | ``GCCcore/10.2.0``
 ``5.4.2`` | ``GCCcore/10.3.0``
 ``5.4.2`` | ``GCCcore/11.2.0``
 ``5.4.4`` | ``GCCcore/11.3.0``

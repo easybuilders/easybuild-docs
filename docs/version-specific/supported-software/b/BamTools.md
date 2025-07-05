@@ -10,8 +10,6 @@ BamTools provides both a programmer's API and an end-user's toolkit for handling
 
 version | toolchain
 --------|----------
-``2.5.1`` | ``GCC/10.2.0``
-``2.5.1`` | ``iccifort/2020.4.304``
 ``2.5.2`` | ``GCC/10.3.0``
 ``2.5.2`` | ``GCC/11.2.0``
 ``2.5.2`` | ``GCC/11.3.0``

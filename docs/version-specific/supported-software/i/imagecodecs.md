@@ -10,7 +10,6 @@ Imagecodecs is a Python library that provides block-oriented, in-memory buffer t
 
 version | toolchain
 --------|----------
-``2021.8.26`` | ``foss/2020b``
 ``2022.9.26`` | ``foss/2021a``
 ``2022.9.26`` | ``foss/2022a``
 ``2024.1.1`` | ``foss/2023a``

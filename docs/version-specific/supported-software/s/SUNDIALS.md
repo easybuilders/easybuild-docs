@@ -10,11 +10,6 @@ SUNDIALS: SUite of Nonlinear and DIfferential/ALgebraic Equation Solvers
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``5.7.0`` |  | ``foss/2020b``
-``5.7.0`` |  | ``fosscuda/2020b``
-``5.7.0`` |  | ``intel/2020b``
-``6.2.0`` |  | ``foss/2020b``
-``6.2.0`` |  | ``intel/2020b``
 ``6.3.0`` |  | ``foss/2021b``
 ``6.3.0`` |  | ``foss/2022a``
 ``6.5.1`` |  | ``foss/2022a``

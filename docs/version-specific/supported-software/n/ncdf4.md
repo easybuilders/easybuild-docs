@@ -10,7 +10,6 @@ ncdf4: Interface to Unidata netCDF (version 4 or earlier) format data files
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.17`` | ``-R-4.0.3`` | ``foss/2020b``
 ``1.17`` | ``-R-4.1.0`` | ``foss/2021a``
 
 

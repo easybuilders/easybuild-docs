@@ -10,7 +10,6 @@ The GNU Autoconf Archive is a collection of more than 500 macros for GNU Autocon
 
 version | toolchain
 --------|----------
-``2021.02.19`` | ``GCCcore/10.2.0``
 ``2023.02.20`` | ``GCCcore/11.3.0``
 ``2023.02.20`` | ``GCCcore/12.2.0``
 

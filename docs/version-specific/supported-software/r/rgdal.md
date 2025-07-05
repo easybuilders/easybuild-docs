@@ -10,7 +10,6 @@ Provides bindings to the 'Geospatial' Data Abstraction Library ('GDAL') (>= 1.11
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.5-23`` | ``-R-4.0.4`` | ``foss/2020b``
 ``1.5-23`` | ``-R-4.1.0`` | ``foss/2021a``
 ``1.6-6`` |  | ``foss/2022a``
 

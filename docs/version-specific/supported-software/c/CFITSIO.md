@@ -10,7 +10,6 @@ CFITSIO is a library of C and Fortran subroutines for reading and writing data f
 
 version | toolchain
 --------|----------
-``3.49`` | ``GCCcore/10.2.0``
 ``3.49`` | ``GCCcore/10.3.0``
 ``3.49`` | ``GCCcore/11.2.0``
 ``4.2.0`` | ``GCCcore/11.3.0``

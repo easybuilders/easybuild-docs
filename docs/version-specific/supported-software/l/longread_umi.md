@@ -10,7 +10,6 @@ A collection of scripts for processing longread UMI data.
 
 version | toolchain
 --------|----------
-``0.3.2`` | ``foss/2020b``
 ``0.3.2`` | ``foss/2023a``
 
 

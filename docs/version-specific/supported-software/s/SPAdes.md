@@ -11,8 +11,6 @@ Genome assembler for single-cell and isolates data sets
 version | versionsuffix | toolchain
 --------|---------------|----------
 ``3.13.0`` |  | ``GCC/10.3.0``
-``3.15.2`` | ``-Python-2.7.18`` | ``GCC/10.2.0``
-``3.15.2`` |  | ``GCC/10.2.0``
 ``3.15.3`` |  | ``GCC/10.3.0``
 ``3.15.3`` |  | ``GCC/11.2.0``
 ``3.15.4`` |  | ``GCC/12.2.0``

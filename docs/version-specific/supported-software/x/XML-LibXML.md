@@ -10,7 +10,6 @@ Perl binding for libxml2
 
 version | toolchain
 --------|----------
-``2.0206`` | ``GCCcore/10.2.0``
 ``2.0207`` | ``GCCcore/10.3.0``
 ``2.0207`` | ``GCCcore/11.2.0``
 ``2.0207`` | ``GCCcore/11.3.0``

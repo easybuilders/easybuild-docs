@@ -10,7 +10,6 @@ Gemmi is a library, accompanied by a set of programs, developed primarily for us
 
 version | toolchain
 --------|----------
-``0.4.5`` | ``GCCcore/10.2.0``
 ``0.6.5`` | ``GCCcore/12.3.0``
 
 

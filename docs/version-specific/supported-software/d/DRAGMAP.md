@@ -10,6 +10,7 @@ Dragmap is the Dragen mapper/aligner Open Source Software.
 
 version | toolchain
 --------|----------
+``1.3.0`` | ``GCC/13.2.0``
 ``1.3.0`` | ``foss/2021b``
 
 

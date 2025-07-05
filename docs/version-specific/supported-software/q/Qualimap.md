@@ -10,7 +10,6 @@ Qualimap 2 is a platform-independent application written in Java and R that prov
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.2.1`` | ``-R-4.0.3`` | ``foss/2020b``
 ``2.2.1`` | ``-R-4.1.2`` | ``foss/2021b``
 ``2.3`` | ``-R-4.2.2`` | ``foss/2022b``
 

@@ -10,7 +10,6 @@ smith-waterman-gotoh alignment algorithm.
 
 version | toolchain
 --------|----------
-``20160702`` | ``GCCcore/10.2.0``
 ``20160702`` | ``GCCcore/10.3.0``
 ``20160702`` | ``GCCcore/11.2.0``
 ``20160702`` | ``GCCcore/11.3.0``

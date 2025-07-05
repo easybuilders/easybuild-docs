@@ -10,7 +10,6 @@ Python bindings for the cairo library
 
 version | toolchain
 --------|----------
-``1.20.0`` | ``GCCcore/10.2.0``
 ``1.20.1`` | ``GCCcore/10.3.0``
 ``1.20.1`` | ``GCCcore/11.2.0``
 ``1.21.0`` | ``GCCcore/11.3.0``

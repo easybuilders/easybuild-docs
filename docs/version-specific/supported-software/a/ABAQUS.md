@@ -6,11 +6,10 @@ search:
 
 Finite Element Analysis software for modeling, visualization and best-in-class implicit and explicit  dynamics FEA.
 
-*homepage*: <https://www.3ds.com/products-services/simulia/products/abaqus/>
+*homepage*: <https://www.simulia.com/products/abaqus_fea.html>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2020`` |  | ``system``
 ``2021`` | ``-hotfix-2132`` | ``system``
 ``2022`` | ``-hotfix-2214`` | ``system``
 ``2022`` | ``-hotfix-2223`` | ``system``

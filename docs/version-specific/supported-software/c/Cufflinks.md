@@ -10,7 +10,6 @@ Transcript assembly, differential expression, and differential regulation for RN
 
 version | toolchain
 --------|----------
-``20190706`` | ``GCC/10.2.0``
 ``20190706`` | ``GCC/11.2.0``
 ``20190706`` | ``GCC/12.3.0``
 

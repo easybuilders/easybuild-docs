@@ -4,14 +4,12 @@ search:
 ---
 # RAxML-NG
 
-RAxML-NG is a phylogenetic tree inference tool which uses maximum-likelihood (ML) optimality criterion. Its search heuristic  is based on iteratively performing a series of Subtree Pruning and Regrafting  (SPR) moves, which allows to quickly navigate to the best-known ML tree.
+RAxML-NG is a phylogenetic tree inference tool which uses maximum-likelihood (ML)  optimality criterion. Its search heuristic is based on iteratively performing a series of Subtree  Pruning and Regrafting (SPR) moves, which allows to quickly navigate to the best-known ML tree.
 
 *homepage*: <https://github.com/amkozlov/raxml-ng>
 
 version | toolchain
 --------|----------
-``1.0.2`` | ``gompi/2020b``
-``1.0.3`` | ``GCC/10.2.0``
 ``1.1.0`` | ``GCC/11.2.0``
 ``1.2.0`` | ``GCC/12.2.0``
 ``1.2.0`` | ``GCC/12.3.0``

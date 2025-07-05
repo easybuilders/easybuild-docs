@@ -10,7 +10,6 @@ GNU libsigsegv is a library for handling page faults in user mode.
 
 version | toolchain
 --------|----------
-``2.13`` | ``GCCcore/10.2.0``
 ``2.14`` | ``GCCcore/12.2.0``
 
 

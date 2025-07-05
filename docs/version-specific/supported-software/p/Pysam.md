@@ -10,10 +10,7 @@ Pysam is a python module for reading and manipulating Samfiles.  It's a lightwei
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.16.0.1`` | ``-Python-2.7.18`` | ``GCC/10.2.0``
-``0.16.0.1`` |  | ``GCC/10.2.0``
 ``0.16.0.1`` |  | ``GCC/10.3.0``
-``0.16.0.1`` |  | ``iccifort/2020.4.304``
 ``0.17.0`` | ``-Python-2.7.18`` | ``GCC/11.2.0``
 ``0.17.0`` |  | ``GCC/11.2.0``
 ``0.18.0`` |  | ``GCC/11.2.0``

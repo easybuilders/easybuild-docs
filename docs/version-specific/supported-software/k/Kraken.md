@@ -10,7 +10,6 @@ Kraken is a system for assigning taxonomic labels to short DNA sequences,  usual
 
 version | toolchain
 --------|----------
-``1.1.1`` | ``GCCcore/10.2.0``
 ``1.1.1`` | ``GCCcore/10.3.0``
 ``1.1.1`` | ``GCCcore/11.3.0``
 

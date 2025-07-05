@@ -10,7 +10,6 @@ SNAP is a general purpose gene finding program suitable for both eukaryotic and 
 
 version | toolchain
 --------|----------
-``20190603`` | ``GCC/10.2.0``
 ``20221022`` | ``GCC/11.3.0``
 ``20221022`` | ``GCC/12.3.0``
 ``20221022`` | ``GCC/13.3.0``

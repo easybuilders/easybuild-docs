@@ -10,7 +10,6 @@ CDB (Constant DataBase) indexing and retrieval tools for FASTA files
 
 version | toolchain
 --------|----------
-``0.99`` | ``GCC/10.2.0``
 ``0.99`` | ``GCC/11.3.0``
 ``0.99`` | ``GCC/12.3.0``
 

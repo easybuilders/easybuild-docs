@@ -10,8 +10,6 @@ Cube, which is used as performance report explorer for Scalasca and Score-P,  is
 
 version | toolchain
 --------|----------
-``4.4.3`` | ``GCCcore/10.2.0``
-``4.6`` | ``GCCcore/10.2.0``
 ``4.6`` | ``GCCcore/10.3.0``
 ``4.8`` | ``GCCcore/11.2.0``
 ``4.8`` | ``GCCcore/11.3.0``

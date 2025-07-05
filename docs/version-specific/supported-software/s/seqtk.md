@@ -10,7 +10,6 @@ Seqtk is a fast and lightweight tool for processing sequences in the FASTA or FA
 
 version | toolchain
 --------|----------
-``1.3`` | ``GCC/10.2.0``
 ``1.3`` | ``GCC/10.3.0``
 ``1.3`` | ``GCC/11.2.0``
 ``1.3`` | ``GCC/11.3.0``

@@ -10,10 +10,9 @@ Fiona is designed to be simple and dependable. It focuses on reading and writing
 
 version | toolchain
 --------|----------
+``1.10.1`` | ``foss/2023b``
 ``1.10.1`` | ``foss/2024a``
-``1.8.20`` | ``foss/2020b``
 ``1.8.20`` | ``foss/2021a``
-``1.8.20`` | ``intel/2020b``
 ``1.8.21`` | ``foss/2021b``
 ``1.8.21`` | ``foss/2022a``
 ``1.9.2`` | ``foss/2022b``

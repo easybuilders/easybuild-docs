@@ -10,10 +10,6 @@ Statistical and novel interactive HTML plots for Python
 
 version | toolchain
 --------|----------
-``2.2.3`` | ``foss/2020b``
-``2.2.3`` | ``fosscuda/2020b``
-``2.2.3`` | ``intel/2020b``
-``2.2.3`` | ``intelcuda/2020b``
 ``2.4.1`` | ``foss/2021a``
 ``2.4.2`` | ``foss/2021b``
 ``2.4.3`` | ``foss/2022a``

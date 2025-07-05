@@ -10,8 +10,10 @@ ANSYS simulation software enables organizations to confidently predict     how t
 
 version | toolchain
 --------|----------
+``2022R1`` | ``system``
 ``2022R2`` | ``system``
 ``2023R1`` | ``system``
+``2024R1`` | ``system``
 ``2025R1`` | ``system``
 
 

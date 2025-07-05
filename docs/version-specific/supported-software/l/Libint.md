@@ -6,14 +6,11 @@ search:
 
 Libint library is used to evaluate the traditional (electron repulsion) and certain novel two-body  matrix elements (integrals) over Cartesian Gaussian functions used in modern atomic and molecular theory.
 
-*homepage*: <https://sourceforge.net/p/libint/>
+*homepage*: <https://github.com/evaleev/libint>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.1.6`` |  | ``foss/2020b``
-``2.6.0`` | ``-lmax-6-cp2k`` | ``GCC/10.2.0``
 ``2.6.0`` | ``-lmax-6-cp2k`` | ``GCC/10.3.0``
-``2.6.0`` | ``-lmax-6-cp2k`` | ``iccifort/2020.4.304``
 ``2.6.0`` | ``-lmax-6-cp2k`` | ``iimpi/2021a``
 ``2.7.2`` | ``-lmax-6-cp2k`` | ``GCC/11.3.0``
 ``2.7.2`` | ``-lmax-6-cp2k`` | ``GCC/12.2.0``

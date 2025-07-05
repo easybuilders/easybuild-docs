@@ -10,7 +10,6 @@ gzip (GNU zip) is a popular data compression program as a replacement for compre
 
 version | toolchain
 --------|----------
-``1.10`` | ``GCCcore/10.2.0``
 ``1.10`` | ``GCCcore/10.3.0``
 ``1.10`` | ``GCCcore/11.2.0``
 ``1.12`` | ``GCCcore/11.3.0``

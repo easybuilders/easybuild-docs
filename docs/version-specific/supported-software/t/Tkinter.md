@@ -10,7 +10,6 @@ Tkinter module, built with the Python buildsystem
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.7.18`` |  | ``GCCcore/10.2.0``
 ``2.7.18`` |  | ``GCCcore/11.2.0``
 ``2.7.18`` | ``-Python-2.7.18`` | ``GCCcore/12.3.0``
 ``3.10.4`` |  | ``GCCcore/11.3.0``
@@ -18,7 +17,7 @@ version | versionsuffix | toolchain
 ``3.11.3`` |  | ``GCCcore/12.3.0``
 ``3.11.5`` |  | ``GCCcore/13.2.0``
 ``3.12.3`` |  | ``GCCcore/13.3.0``
-``3.8.6`` |  | ``GCCcore/10.2.0``
+``3.13.1`` |  | ``GCCcore/14.2.0``
 ``3.9.5`` |  | ``GCCcore/10.3.0``
 ``3.9.6`` |  | ``GCCcore/11.2.0``
 

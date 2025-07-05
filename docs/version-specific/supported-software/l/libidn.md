@@ -10,7 +10,6 @@ GNU Libidn is a fully documented implementation of the Stringprep, Punycode and 
 
 version | toolchain
 --------|----------
-``1.36`` | ``GCCcore/10.2.0``
 ``1.36`` | ``GCCcore/10.3.0``
 ``1.38`` | ``GCCcore/11.2.0``
 ``1.41`` | ``GCCcore/11.3.0``

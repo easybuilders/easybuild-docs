@@ -10,7 +10,6 @@ Useful set of classes for creating statistical genetic programs.
 
 version | toolchain
 --------|----------
-``1.0.15`` | ``GCCcore/10.2.0``
 ``1.0.15`` | ``GCCcore/12.3.0``
 
 

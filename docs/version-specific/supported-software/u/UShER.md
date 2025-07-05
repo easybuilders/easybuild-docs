@@ -10,7 +10,6 @@ UShER is now a package consisting of a family of programs for rapid phylogenetic
 
 version | toolchain
 --------|----------
-``0.4.1`` | ``gompi/2020b``
 ``0.5.0`` | ``gompi/2021b``
 
 

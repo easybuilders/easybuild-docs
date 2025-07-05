@@ -10,7 +10,6 @@ Xerces-C++ is a validating XML parser written in a portable subset of C++. Xerce
 
 version | toolchain
 --------|----------
-``3.2.3`` | ``GCCcore/10.2.0``
 ``3.2.3`` | ``GCCcore/10.3.0``
 ``3.2.3`` | ``GCCcore/11.2.0``
 ``3.2.4`` | ``GCCcore/11.3.0``

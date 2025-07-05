@@ -10,7 +10,6 @@ Software package for signal-level analysis of Oxford Nanopore sequencing data.
 
 version | toolchain
 --------|----------
-``0.13.3`` | ``foss/2020b``
 ``0.14.0`` | ``foss/2022a``
 ``0.14.0`` | ``foss/2023a``
 

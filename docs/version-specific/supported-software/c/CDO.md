@@ -10,7 +10,6 @@ CDO is a collection of command line Operators to manipulate and analyse Climate 
 
 version | toolchain
 --------|----------
-``1.9.10`` | ``gompi/2020b``
 ``1.9.10`` | ``gompi/2021a``
 ``1.9.10`` | ``iimpi/2021b``
 ``2.0.5`` | ``gompi/2021b``

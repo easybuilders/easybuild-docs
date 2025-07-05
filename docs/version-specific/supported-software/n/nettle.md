@@ -11,7 +11,7 @@ Nettle is a cryptographic library that is designed to fit easily  in more or les
 version | toolchain
 --------|----------
 ``3.10`` | ``GCCcore/13.3.0``
-``3.6`` | ``GCCcore/10.2.0``
+``3.10.1`` | ``GCCcore/14.2.0``
 ``3.7.2`` | ``GCCcore/10.3.0``
 ``3.7.3`` | ``GCCcore/11.2.0``
 ``3.8`` | ``GCCcore/11.3.0``

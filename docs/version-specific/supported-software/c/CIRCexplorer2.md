@@ -10,7 +10,6 @@ CIRCexplorer2 is a comprehensive and integrative circular RNA analysis toolset.
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.3.8`` | ``-Python-2.7.18`` | ``foss/2020b``
 ``2.3.8`` | ``-Python-2.7.18`` | ``foss/2021b``
 
 

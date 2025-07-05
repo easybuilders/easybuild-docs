@@ -10,7 +10,6 @@ Kraken is a system for assigning taxonomic labels to short DNA sequences,  usual
 
 version | toolchain
 --------|----------
-``2.1.1`` | ``gompi/2020b``
 ``2.1.2`` | ``gompi/2021a``
 ``2.1.2`` | ``gompi/2021b``
 ``2.1.2`` | ``gompi/2022a``

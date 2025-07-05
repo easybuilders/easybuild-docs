@@ -10,7 +10,6 @@ Exploratory analysis of Bayesian models with Python
 
 version | toolchain
 --------|----------
-``0.11.1`` | ``intel/2020b``
 ``0.11.4`` | ``foss/2021b``
 ``0.11.4`` | ``intel/2021b``
 ``0.12.1`` | ``foss/2021a``

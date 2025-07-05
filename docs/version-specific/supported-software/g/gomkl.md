@@ -10,7 +10,6 @@ GNU Compiler Collection (GCC) based compiler toolchain with OpenMPI and MKL
 
 version | toolchain
 --------|----------
-``2020b`` | ``system``
 ``2021a`` | ``system``
 ``2021b`` | ``system``
 ``2022a`` | ``system``

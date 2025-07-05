@@ -6,13 +6,11 @@ search:
 
 Software package and libraries for sequential and parallel graph partitioning, static mapping, and sparse matrix block ordering, and sequential mesh and hypergraph partitioning.
 
-*homepage*: <https://gforge.inria.fr/projects/scotch/>
+*homepage*: <https://www.labri.fr/perso/pelegrin/scotch/>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``6.1.0`` |  | ``gompi/2020b``
 ``6.1.0`` |  | ``gompi/2021a``
-``6.1.0`` |  | ``iimpi/2020b``
 ``6.1.0`` |  | ``iimpi/2021a``
 ``6.1.2`` |  | ``gompi/2021b``
 ``6.1.2`` |  | ``iimpi/2021b``

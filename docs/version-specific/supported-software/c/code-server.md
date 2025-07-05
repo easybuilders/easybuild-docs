@@ -11,6 +11,7 @@ Run VS Code on any machine anywhere and access it in the browser.
 version | toolchain
 --------|----------
 ``3.7.3`` | ``system``
+``4.100.2`` | ``system``
 ``4.16.1`` | ``system``
 ``4.21.1`` | ``system``
 ``4.22.1`` | ``system``

@@ -10,7 +10,6 @@ Functions to extract information from Oxford Nanopore sequencing data and alignm
 
 version | toolchain
 --------|----------
-``1.15.0`` | ``intel/2020b``
 ``1.18.1`` | ``foss/2021a``
 ``1.18.1`` | ``foss/2022a``
 ``1.18.1`` | ``foss/2022b``
