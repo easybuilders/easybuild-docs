@@ -122,19 +122,24 @@ their system.
 
 ## Change semantics of `--dry-run` (`-D`), so it doesn't imply `--robot` (`-r`) {: #dry-run-robot }
 
-*(more info soon)*
+For EasyBuild 5.0, we have changed so that `--dry-run` (`-D`) no longer implies `--robot` (`-r`).
+Those wanting the previous behaviour should use both options together `--dry-run --robot` (`-Dr`). 
 
 ---
 
 ## Move verifying of checksums from `source` to `fetch` step, to include it with `--fetch` {: #verifying-checksums }
 
-*(more info soon)*
+Checksums are now verified in the `fetch` step, instead of the `source` step.
+This means that the checksums are verified at the point EasyBuild checks that the file is present or downloads it if it is not.
+
+Note, also, that the [`source` step has been renamed][source-step].
 
 ---
 
 ## Create `lib` to `lib64` symlink (and vice versa) *before* running `postinstallcmds` {: #lib-lib64-symlink }
 
-*(more info soon)*
+In EasyBuild 5.0 the `lib` / `lib64` symlink is created before running the `postinstallcmds`.
+This allows `postinstallcommands` to be written knowing that `lib` will exist, which simplifies the writing of `postinstallcmds`.
 
 ---
 
