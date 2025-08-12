@@ -48,7 +48,7 @@ In the output of the failed build we see:
 The interactive shell can be entered by running the script mentioned.
 This will place you in an environment where you can debug the failed build:
 
-* The previous command in the shell history should be the failing command.
+* The previous command in the shell history (e.g. via arrow-up key) should be the failing command.
 * You can also explore the environment, such as checking environment variables or loaded modules.
 * You can repeat the last command to see the failure.
 
