@@ -132,7 +132,7 @@ Those wanting the previous behaviour should use both options together `--dry-run
 Checksums are now verified in the `fetch` step, instead of the `source` step.
 This means that the checksums are verified at the point EasyBuild checks that the file is present or downloads it if it is not.
 
-Note, also, that the [`source` step has been renamed][source-step].
+Note, also, that the [`source` step has been renamed to `extract` step][source-step].
 
 ---
 
