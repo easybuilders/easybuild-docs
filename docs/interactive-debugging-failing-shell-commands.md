@@ -53,7 +53,7 @@ This will place you in an environment where you can debug the failed build:
 * You can repeat the last command to see the failure.
 
 ```sh
-$ source /tmp/eb-lm7cwh0o/run-shell-cmd-output/make-f4_mwpk1/cmd.sh
+$ /tmp/eb-lm7cwh0o/run-shell-cmd-output/make-f4_mwpk1/cmd.sh
 # Shell for the command: 'make  -j 12 CC=gcc CFLAGS='-Wall -Winline -O3 -fPIC -g $(BIGFILES)''
 # Use command history, exit to stop
 eb-shell>
