@@ -139,7 +139,7 @@ Note, also, that the [`source` step has been renamed to `extract` step][source-s
 ## Create `lib` to `lib64` symlink (and vice versa) *before* running `postinstallcmds` {: #lib-lib64-symlink }
 
 In EasyBuild 5.0 the `lib` / `lib64` symlink is created before running the `postinstallcmds`.
-This allows `postinstallcommands` to be written knowing that `lib` will exist, which simplifies the writing of `postinstallcmds`.
+This change simplifies writing postinstallcmds because it ensures the `lib` directory already exists.
 
 ---
 
