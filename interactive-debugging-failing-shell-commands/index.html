@@ -732,6 +732,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Interactive debugging of failing shell commands
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -743,6 +756,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#envsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      env.sh
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmdsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      cmd.sh
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -9221,6 +9286,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#envsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      env.sh
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmdsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      cmd.sh
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -9239,10 +9345,69 @@
 
 
 <h1 id="interactive-debugging-of-failing-shell-commands-via-envsh-and-cmdsh-scripts">Interactive debugging of failing shell commands via <code>env.sh</code> and <code>cmd.sh</code> scripts<a class="headerlink" href="#interactive-debugging-of-failing-shell-commands-via-envsh-and-cmdsh-scripts" title="Permanent link">&para;</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><em>New in EasyBuild v5.0, more info soon...</em></p>
-</div>
+<p>When a build fails, EasyBuild provides a method of entering an interactive shell environment of the build to help debug the failure.</p>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<p>In the following demo, <code>bzip2-1.0.8.eb</code> is being built on an Ubuntu 25.04 (Plucky Puffin) system.
+This build uses the <code>SYSTEM</code> toolchain, which means that the OS default compiler is used - in this case <code>gcc</code> v13.3.0.
+The failure is because of an incompatibility between the older <code>binutils</code> (v2.37, as defined in the easyconfig) and the newer <code>gcc</code>.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>eb<span class="w"> </span>bzip2-1.0.8.eb<span class="w"> </span>--disable-trace
+<span class="o">==</span><span class="w"> </span>Temporary<span class="w"> </span>log<span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">case</span><span class="w"> </span>of<span class="w"> </span>crash<span class="w"> </span>/tmp/eb-lm7cwh0o/easybuild-1ujtoy7x.log
+<span class="o">==</span><span class="w"> </span>processing<span class="w"> </span>EasyBuild<span class="w"> </span>easyconfig<span class="w"> </span>/home/eb/easybuild-easyconfigs/easybuild/easyconfigs/b/bzip2/bzip2-1.0.8.eb
+<span class="o">==</span><span class="w"> </span>building<span class="w"> </span>and<span class="w"> </span>installing<span class="w"> </span>bzip2/1.0.8...
+<span class="o">==</span><span class="w"> </span>fetching<span class="w"> </span>files<span class="w"> </span>and<span class="w"> </span>verifying<span class="w"> </span>checksums...
+<span class="o">==</span><span class="w"> </span>creating<span class="w"> </span>build<span class="w"> </span>dir,<span class="w"> </span>resetting<span class="w"> </span>environment...
+<span class="o">==</span><span class="w"> </span>unpacking...
+<span class="o">==</span><span class="w"> </span>patching...
+<span class="o">==</span><span class="w"> </span>preparing...
+<span class="o">==</span><span class="w"> </span>configuring...
+<span class="o">==</span><span class="w"> </span>building...
+∙∙∙<span class="w"> </span>Installing<span class="w"> </span>bzip2/1.0.8:<span class="w"> </span>building<span class="w"> </span><span class="o">(</span><span class="m">6</span><span class="w"> </span>out<span class="w"> </span>of<span class="w"> </span><span class="m">17</span><span class="w"> </span>steps<span class="w"> </span><span class="k">done</span><span class="o">)</span><span class="w"> </span>━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━<span class="w"> </span><span class="m">0</span>:00:02
+
+ERROR:<span class="w"> </span>Shell<span class="w"> </span><span class="nb">command</span><span class="w"> </span>failed!
+<span class="w">    </span>full<span class="w"> </span><span class="nb">command</span><span class="w">              </span>-&gt;<span class="w">  </span>make<span class="w">  </span>-j<span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="nv">CC</span><span class="o">=</span>gcc<span class="w"> </span><span class="nv">CFLAGS</span><span class="o">=</span><span class="s1">&#39;-Wall -Winline -O3 -fPIC -g $(BIGFILES)&#39;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span>code<span class="w">                 </span>-&gt;<span class="w">  </span><span class="m">2</span>
+<span class="w">    </span>called<span class="w"> </span>from<span class="w">               </span>-&gt;<span class="w">  </span><span class="s1">&#39;build_step&#39;</span><span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>/home/eb/easybuild-easyblocks/easybuild/easyblocks/generic/configuremake.py<span class="w"> </span><span class="o">(</span>line<span class="w"> </span><span class="m">382</span><span class="o">)</span>
+<span class="w">    </span>working<span class="w"> </span>directory<span class="w">         </span>-&gt;<span class="w">  </span>/dev/shm/eb/bzip2/1.0.8/system-system/bzip2-1.0.8
+<span class="w">    </span>output<span class="w"> </span><span class="o">(</span>stdout<span class="w"> </span>+<span class="w"> </span>stderr<span class="o">)</span><span class="w">  </span>-&gt;<span class="w">  </span>/tmp/eb-lm7cwh0o/run-shell-cmd-output/make-f4_mwpk1/out.txt
+<span class="w">    </span>interactive<span class="w"> </span>shell<span class="w"> </span>script<span class="w">  </span>-&gt;<span class="w">  </span>/tmp/eb-lm7cwh0o/run-shell-cmd-output/make-f4_mwpk1/cmd.sh
+
+<span class="o">==</span><span class="w"> </span>...<span class="w"> </span><span class="o">(</span>took<span class="w"> </span><span class="m">2</span><span class="w"> </span>secs<span class="o">)</span>
+<span class="o">==</span><span class="w"> </span>FAILED:<span class="w"> </span>Installation<span class="w"> </span>ended<span class="w"> </span>unsuccessfully:<span class="w"> </span>shell<span class="w"> </span><span class="nb">command</span><span class="w"> </span><span class="s1">&#39;make ...&#39;</span><span class="w"> </span>failed<span class="w"> </span>with<span class="w"> </span><span class="nb">exit</span><span class="w"> </span>code<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>build<span class="w"> </span>step<span class="w"> </span><span class="k">for</span><span class="w"> </span>bzip2-1.0.8.eb<span class="w"> </span><span class="o">(</span>took<span class="w"> </span><span class="m">2</span><span class="w"> </span>secs<span class="o">)</span>
+<span class="o">==</span><span class="w"> </span>Results<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>build<span class="w"> </span>can<span class="w"> </span>be<span class="w"> </span>found<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>log<span class="w"> </span>file<span class="o">(</span>s<span class="o">)</span><span class="w"> </span>/tmp/eb-lm7cwh0o/easybuild-bzip2-1.0.8-20250811.134024.IRIIQ.log
+<span class="o">==</span><span class="w"> </span>Summary:
+<span class="w">   </span>*<span class="w"> </span><span class="o">[</span>FAILED<span class="o">]</span><span class="w">  </span>bzip2/1.0.8
+
+ERROR:<span class="w"> </span>Installation<span class="w"> </span>of<span class="w"> </span>bzip2-1.0.8.eb<span class="w"> </span>failed:<span class="w"> </span><span class="s2">&quot;shell command &#39;make ...&#39; failed with exit code 2 in build step for bzip2-1.0.8.eb</span>
+</code></pre></div>
+<p>In the output of the failed build we see:</p>
+<ul>
+<li>We see the full command being run when the failure occurred: <code>full command              -&gt;  make  -j 12 CC=gcc CFLAGS='-Wall -Winline -O3 -fPIC -g $(BIGFILES)'</code></li>
+<li>A link to a file containing the output of just the command being run: <code>output (stdout + stderr)  -&gt;  /tmp/eb-lm7cwh0o/run-shell-cmd-output/make-f4_mwpk1/out.txt</code></li>
+<li>A link to the file that allows access to the interactive shell environment to debug the failure: <code>interactive shell script  -&gt;  /tmp/eb-lm7cwh0o/run-shell-cmd-output/make-f4_mwpk1/cmd.sh</code></li>
+</ul>
+<p>The interactive shell can be entered by running the script mentioned.
+This will place you in an environment where you can debug the failed build:</p>
+<ul>
+<li>The previous command in the shell history (e.g. via arrow-up key) should be the failing command.</li>
+<li>You can also explore the environment, such as checking environment variables or loaded modules.</li>
+<li>You can repeat the last command to see the failure.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>/tmp/eb-lm7cwh0o/run-shell-cmd-output/make-f4_mwpk1/cmd.sh
+<span class="c1"># Shell for the command: &#39;make  -j 12 CC=gcc CFLAGS=&#39;-Wall -Winline -O3 -fPIC -g $(BIGFILES)&#39;&#39;</span>
+<span class="c1"># Use command history, exit to stop</span>
+eb-shell&gt;
+</code></pre></div>
+<p>Once you have finished debugging then exiting the shell will return you to your previous environment.</p>
+<h3 id="envsh"><code>env.sh</code><a class="headerlink" href="#envsh" title="Permanent link">&para;</a></h3>
+<p>This file will contain the details of your environment:</p>
+<ol>
+<li>Environment variables that were set.</li>
+<li><code>bash</code> functions that were available.</li>
+</ol>
+<p>This file will also contain the commands required to change to the working directory for the failed command and set the history and <code>PS1</code> for the session.</p>
+<h3 id="cmdsh"><code>cmd.sh</code><a class="headerlink" href="#cmdsh" title="Permanent link">&para;</a></h3>
+<p>This file is run to enter the interactive environment.
+This will use the <code>env.sh</code> file to setup the environment. </p>
 
 
 
@@ -9263,7 +9428,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 10, 2025 12:30:29 UTC">March 10, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 12, 2025 12:12:48 UTC">August 12, 2025</span>
   </span>
 
     
