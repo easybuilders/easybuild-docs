@@ -7,16 +7,16 @@ Mac OS X system, together with Tcl on which it depends.
 ## Tcl
 
 1. Go to <https://www.tcl-lang.org> and download the latest Tcl sources. At
-    the time of writing, the latest available Tcl version was 8.6.14,
+    the time of writing, the latest available Tcl version was 8.6.16,
     which can be downloaded from
-    [here](https://prdownloads.sourceforge.net/tcl/tcl8.6.14-src.tar.gz).
-    The remainder of these commands will assume Tcl v8.6.14 is being
+    [here](https://prdownloads.sourceforge.net/tcl/tcl8.6.16-src.tar.gz).
+    The remainder of these commands will assume Tcl v8.6.16 is being
     installed, you may need to adjust them accordingly.
 
 1. Unpack the Tcl source tarball:
 
     ``` shell
-    tar xfvz tcl8.6.14-src.tar.gz
+    tar xfvz tcl8.6.16-src.tar.gz
     ```
 
 1. Pick a location where you will install Tcl. It should be a directory
@@ -27,12 +27,12 @@ Mac OS X system, together with Tcl on which it depends.
     the `configure` script using the `--prefix` option:
 
     ``` shell
-    cd tcl8.6.14/unix
+    cd tcl8.6.16/unix
     ./configure --prefix=$HOME/.local/Tcl
     ```
 
     If you're building Tcl and Environment Modules on Mac, you should
-    run `configure` in the `tcl8.6.14/macosx` directory instead.
+    run `configure` in the `tcl8.6.16/macosx` directory instead.
 
 1. Next, build Tcl using the `make` command. If the system you are
     building on has multiple cores, running make in parallel will speed
@@ -57,14 +57,14 @@ package, which requires Tcl.
 ## Environment Modules
 
 1. Download the latest source tarball for the Environment Modules tools
-    from <https://modules.sourceforge.net>. At the time of writing, the
-    latest available version is 5.4.0 which can be downloaded [from
-    here](https://prdownloads.sourceforge.net/modules/modules-5.4.0.tar.gz).
+    from <https://envmodules.github.io/modules/>. At the time of writing, the
+    latest available version is 5.6.0 which can be downloaded [from
+    here](https://github.com/envmodules/modules/releases/download/v5.6.0/modules-5.6.0.tar.gz).
 
 1. Unpack the downloaded source tarball:
 
     ``` shell
-    tar xfvz modules-5.4.0.tar.gz
+    tar xfvz modules-5.6.0.tar.gz
     ```
 
 1. Configure the build, again use `--prefix` to specify where to
@@ -74,8 +74,8 @@ package, which requires Tcl.
     option:
 
     ``` shell
-    cd modules-5.4.0
-    ./configure --prefix=$HOME/.local/environment-modules --with-tcl=$HOME/.local/Tcl/lib
+    cd modules-5.6.0
+    ./configure --prefix=$HOME/.local/environment-modules --with-tcl=$HOME/.local/Tcl/lib --with-tclsh=$HOME/.local/Tcl/bin/tclsh8.6
     ```
 
 1. Build with `make`:
@@ -110,3 +110,8 @@ source $HOME/.local/environment-modules/init/bash
 !!! tip
     Add these three lines in your `.bashrc` file, that way they'll
     be executed every time you log in.
+
+You may look at Environment Modules installation guide to learn how to [enable
+it in other shells](https://modules.readthedocs.io/en/stable/INSTALL.html#enable-modules-in-shells)
+or [adapt the configuration](https://modules.readthedocs.io/en/stable/INSTALL.html#configuration)
+to fit your needs.
