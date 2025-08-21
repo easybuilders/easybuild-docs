@@ -492,19 +492,18 @@ A list of supported modules tools can be obtained using `eb --avail-modules-tool
 
 Currently, the following modules tools are supported:
 
-* `Lmod` *(default)*: Lmod, an modern alternative to Environment Modules, written in Lua (`lmod`)
-* `EnvironmentModules`: modern Tcl-only version of Environment Modules (4.x) (`modulecmd.tcl`)
-* `EnvironmentModulesC`: Tcl/C version of Environment Modules, usually version 3.2.10 (`modulecmd`)
-* `EnvironmentModulesTcl`: (ancient) Tcl-only version of Environment Modules (`modulecmd.tcl`)
+* `Lmod` *(default)*: Lmod, an alternative to Environment Modules, written in Lua (`lmod`)
+* `EnvironmentModules`: Environment Modules, written in Tcl (`modulecmd.tcl`)
 
 You can determine which modules tool you are using by checking the
 output of `type -f module` (in a `bash` shell), or `alias module` (in a `tcsh` shell).
 
-The actual module command (i.e., `modulecmd`, `modulecmd.tcl`,
-`lmod`, ...) must be available via `$PATH` (which is not standard), except when using Lmod
-(in that case the `lmod` binary can also be located via `$LMOD_CMD`) or when using
-Environment Modules (in that case the `modulecmd.tcl` binary can also be located via
-`$MODULES_CMD`).
+The actual module command (i.e., `modulecmd.tcl`, `lmod`, ...) must be
+available via `$PATH` (which is not standard) or:
+
+* when using Lmod, the `lmod` binary can also be located via `$LMOD_CMD`
+* when using Environment Modules, the `modulecmd.tcl` binary can also be
+  located via `$MODULES_CMD`
 
 For example, to indicate that EasyBuild should be using `Lmod` as modules tool:
 
