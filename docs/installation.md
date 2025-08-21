@@ -22,7 +22,7 @@ The only strict requirements are:
     * Python >= 3.6 is required for EasyBuild 5.0;
     * no third-party Python packages are strictly required (the Python standard library is sufficient);
     * for some *specific* EasyBuild features additional Python packages are required however, see [Optional Python packages][optional_python_packages];
-* a **modules tool**: Tcl(/C) environment modules or Lmod
+* a **modules tool**: Environment Modules or Lmod
     * the actual modules tool *must* be available via `$PATH`, see [Required modules tool][required_modules_tool]
 * a C/C++ compiler (e.g., `gcc` and `g++`)
     * only required to build and install GCC with, or as a dependency for the Intel compilers, for example
@@ -324,14 +324,14 @@ Hence, a modules tool must be available to consume module files with.
 
 Supported module tools:
 
-* [Tcl/C environment-modules](https://modules.sourceforge.net/) (version >= 4.3.0)
+* [Environment Modules](https://modules.sourceforge.net/) (version >= 4.3.0)
 * [Lmod](https://lmod.sourceforge.net) (version >= 8.0.0)
 
 !!! note
     The path to the actual modules tool binary/script used *must* be included in `$PATH`,
     to make it readily available to EasyBuild.
 
-    * for Tcl/C environment modules: `modulecmd`
+    * for Environment Modules: `modulecmd.tcl`
     * for Lmod: `lmod`
 
     The path where the modules tool binary/script is located can be determined via the definition of
@@ -341,20 +341,20 @@ Supported module tools:
     For Lmod, EasyBuild will try to fall back to finding the `lmod` binary via the `$LMOD_CMD`
     environment variable, in case `lmod` is not available in `$PATH`.
 
-    For modern Tcl-only environment modules (version >= 4.0.0), EasyBuild will try to fall back to finding the
+    For Environment Modules (version >= 4.0.0), EasyBuild will try to fall back to finding the
     `modulecmd.tcl` binary via the `$MODULES_CMD` environment variable, in case `modulecmd.tcl` is not available
     in `$PATH`.
 
 
 Additional notes:
 
-* Tcl(/C) environment-modules requires [Tcl](https://www.tcl-lang.org/) to be
-  installed (with header files and development libraries)
+* Environment Modules requires [Tcl](https://www.tcl-lang.org/) to be installed
+  (with header files and development libraries)
 * Lmod requires [Lua](https://www.lua.org/) and a couple of non-standard Lua libraries
   (`lua-posix`, `lua-filesystem`) to be available
     * Tcl (`tclsh`) must also be available for Lmod to support module files in `Tcl` syntax
-* a guide to installing Tcl/C environment modules without having root
-  permissions is available at [Installing environment modules without root permissions][installing_env_mod].
+* a guide to installing Environment Modules without having root
+  permissions is available at [Installing Environment Modules without root permissions][installing_env_mod].
 * a guide to installing Lmod without having root permissions is available at
   [Installing Lmod without root permissions][installing_lmod].
 

@@ -492,10 +492,10 @@ A list of supported modules tools can be obtained using `eb --avail-modules-tool
 
 Currently, the following modules tools are supported:
 
-* `Lmod` *(default)*: Lmod, an modern alternative to environment modules, written in Lua (`lmod`)
-* `EnvironmentModules`: modern Tcl-only version of environment modules (4.x) (`modulecmd.tcl`)
-* `EnvironmentModulesC`: Tcl/C version of environment modules, usually version 3.2.10 (`modulecmd`)
-* `EnvironmentModulesTcl`: (ancient) Tcl-only version of environment modules (`modulecmd.tcl`)
+* `Lmod` *(default)*: Lmod, an modern alternative to Environment Modules, written in Lua (`lmod`)
+* `EnvironmentModules`: modern Tcl-only version of Environment Modules (4.x) (`modulecmd.tcl`)
+* `EnvironmentModulesC`: Tcl/C version of Environment Modules, usually version 3.2.10 (`modulecmd`)
+* `EnvironmentModulesTcl`: (ancient) Tcl-only version of Environment Modules (`modulecmd.tcl`)
 
 You can determine which modules tool you are using by checking the
 output of `type -f module` (in a `bash` shell), or `alias module` (in a `tcsh` shell).
@@ -548,7 +548,7 @@ Possible values are:
 !!! note
     Lmod is able to deal with having module files in place in both Tcl and Lua syntax. When a module file in Lua
     syntax (i.e., with a `.lua` file name extension) is available, a Tcl module file with the same name will be
-    ignored. The Tcl-based environment modules tool will simply ignore module files in Lua syntax, since they do not
+    ignored. Environment Modules tool will simply ignore module files in Lua syntax, since they do not
     contain the header string that is included in Tcl module files.
 
 !!! note
