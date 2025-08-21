@@ -357,7 +357,11 @@ Additional notes:
   permissions is available at [Installing Environment Modules without root permissions][installing_env_mod].
 * a guide to installing Lmod without having root permissions is available at
   [Installing Lmod without root permissions][installing_lmod].
-
+* when using a hierarchical [module naming scheme][module_naming_scheme] with
+  Environment Modules, it is advised to activate the
+  [conflict_unload](https://modules.readthedocs.io/en/stable/module.html#mconfig-conflict_unload)
+  and [require_via](https://modules.readthedocs.io/en/stable/module.html#mconfig-require_via)
+  options of this modules tool
 
 ### Required Python packages {: #required_python_packages }
 
