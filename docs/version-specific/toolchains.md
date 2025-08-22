@@ -15,7 +15,7 @@ Name               |Compiler(s)     |MPI          |Linear algebra           |FFT
 **CrayPGI**        |PrgEnv-pgi      |cray-mpich   |cray-libsci              |*(none)*
 **FCC**            |lang            |*(none)*     |*(none)*                 |*(none)*
 **ffmpi**          |FCC             |*(none)*     |*(none)*                 |*(none)*
-**foss**           |GCC             |OpenMPI      |OpenBLAS, ScaLAPACK      |FFTW
+**foss**           |GCC             |OpenMPI      |FlexiBLAS, ScaLAPACK     |FFTW
 **fosscuda**       |GCC, CUDA       |OpenMPI      |OpenBLAS, ScaLAPACK      |FFTW
 **Fujitsu**        |FCC             |*(none)*     |*(none)*                 |FFTW
 **GCC**            |GCC             |*(none)*     |*(none)*                 |*(none)*
