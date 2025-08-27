@@ -22,14 +22,14 @@ collection is added via the [robot search path][robot_search_path].
 
 ## Current situation
 
-As of September 2024 (EasyBuild 4.9.4) the latest toolchain generation is `2024a`.
+As of August 2025 (EasyBuild 5.1.2) the latest toolchain generation is `2025b`.
 
 * Supported:
+    * 2025b (GCC 14.3.0)
     * 2025a (GCC 14.2.0)
     * 2024a (GCC 13.3.0)
     * 2023b (GCC 13.2.0)
     * 2023a (GCC 12.3.0)
     * 2022b (GCC 12.2.0)
-    * 2022a (GCC 11.3.0)
-* Deprecated: 2021b (GCC 11.2.0), 2021a (GCC 10.3.0)
-* Archived (and unsupported): 2020b (GCC 10.2.0), and older
+* Deprecated: 2022a (GCC 11.3.0), 2021b (GCC 11.2.0)
+* Archived (and unsupported): 2021a (GCC 10.3.0), and older
