@@ -118,8 +118,8 @@ WARNING: Found non-allowed loaded (EasyBuild-generated) modules (Spack/0.10.0), 
 !!! note
     Whether or not `module purge` is a suitable action is site-specific,
     since this will unload *all* loaded modules (except for 'sticky'
-    modules when Lmod is used), including modules that were not
-    installed with EasyBuild and which may be always required.
+    modules), including modules that were not installed with EasyBuild
+    and which may be always required.
 
     Configuring EasyBuild to use `module purge` when (non-allowed)
     loaded modules are found should *not* be done on Cray systems, since
