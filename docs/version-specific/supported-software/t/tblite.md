@@ -11,6 +11,8 @@ Light-weight tight-binding framework
 version | toolchain
 --------|----------
 ``0.4.0`` | ``foss/2022b``
+``0.4.0`` | ``gfbf/2023b``
+``0.4.0`` | ``gfbf/2024a``
 ``0.4.0`` | ``intel/2022b``
 
 

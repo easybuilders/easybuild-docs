@@ -263,6 +263,7 @@
       - SystemMPI
     - EB_Inspector
     - EB_intel_minus_compilers
+    - EB_ipp
     - EB_itac
     - EB_tbb
     - EB_VTune

@@ -11,6 +11,7 @@ anndata is a Python package for handling annotated data matrices in memory and o
 version | toolchain
 --------|----------
 ``0.10.5.post1`` | ``foss/2023a``
+``0.10.9`` | ``foss/2024a``
 ``0.11.1`` | ``foss/2023b``
 ``0.8.0`` | ``foss/2022a``
 ``0.9.2`` | ``foss/2021a``

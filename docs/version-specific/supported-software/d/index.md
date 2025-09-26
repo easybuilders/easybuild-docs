@@ -90,6 +90,7 @@ search:
  * [DoubletFinder](DoubletFinder.md)
  * [Doxygen](Doxygen.md)
  * [DP3](DP3.md)
+ * [dpcpp](dpcpp.md)
  * [draco](draco.md)
  * [DRAGMAP](DRAGMAP.md)
  * [dRep](dRep.md)

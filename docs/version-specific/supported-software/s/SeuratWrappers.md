@@ -10,6 +10,7 @@ SeuratWrappers is a collection of community-provided methods and extensions for 
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``0.4.0-20241122`` | ``-R-4.4.1`` | ``foss/2023b``
 ``20221022`` | ``-R-4.2.1`` | ``foss/2022a``
 
 

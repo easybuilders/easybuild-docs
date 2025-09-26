@@ -15,6 +15,7 @@ version | toolchain
 ``2021.13.0`` | ``intel-compilers/2024.2.0``
 ``2021.15.0`` | ``intel-compilers/2025.1.0``
 ``2021.15.0`` | ``intel-compilers/2025.1.1``
+``2021.16.1`` | ``intel-compilers/2025.2.0``
 ``2021.2.0`` | ``intel-compilers/2021.2.0``
 ``2021.3.0`` | ``intel-compilers/2021.3.0``
 ``2021.4.0`` | ``intel-compilers/2021.4.0``

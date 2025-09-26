@@ -10,6 +10,8 @@ Python interface to Stan, a package for Bayesian inference  using the No-U-Turn 
 
 version | toolchain
 --------|----------
+``3.10.0`` | ``foss/2024a``
+``3.10.0`` | ``foss/2025a``
 ``3.5.0`` | ``foss/2021b``
 
 

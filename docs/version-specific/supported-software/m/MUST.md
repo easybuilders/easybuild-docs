@@ -11,6 +11,8 @@ MUST detects usage errors of the Message Passing Interface (MPI) and reports the
 version | toolchain
 --------|----------
 ``1.10.0`` | ``foss/2024a``
+``1.11.0`` | ``iimpi/2025b``
+``1.11.1`` | ``iimpi/2025b``
 ``1.7.2`` | ``foss/2021a``
 
 

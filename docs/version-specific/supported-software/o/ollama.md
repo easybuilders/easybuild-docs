@@ -10,6 +10,8 @@ Get up and running with large language models.
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``0.11.10`` | ``-CUDA-12.9.1`` | ``GCCcore/14.3.0``
+``0.11.10`` |  | ``GCCcore/14.3.0``
 ``0.5.12`` | ``-CUDA-12.6.0`` | ``GCCcore/13.3.0``
 ``0.5.12`` |  | ``GCCcore/13.3.0``
 ``0.6.0`` | ``-CUDA-12.6.0`` | ``GCCcore/13.3.0``

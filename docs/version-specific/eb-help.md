@@ -83,7 +83,7 @@ Option flag                                                      |Option descrip
 ``--job-backend=JOB-BACKEND``                                    |Backend to use for submitting jobs (type choice; default: Slurm) (choices: GC3Pie, PbsPython, Slurm)
 ``--logfile-format=DIR,FORMAT``                                  |Directory name and format of the log file (type comma-separated tuple; default: easybuild,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log)
 ``--module-depends-on``                                          |Use depends_on (Lmod 7.6.1+) for dependencies in all generated modules (implies recursive unloading of modules). (default: True; disable with --disable-module-depends-on)
-``--module-extensions``                                          |Include 'extensions' statement in generated module file (Lua syntax only) (default: True; disable with --disable-module-extensions)
+``--module-extensions``                                          |Include 'extensions' statement in generated module file (default: True; disable with --disable-module-extensions)
 ``--module-naming-scheme=MODULE-NAMING-SCHEME``                  |Module naming scheme to use (default: EasyBuildMNS)
 ``--module-search-path-headers=MODULE-SEARCH-PATH-HEADERS``      |Environment variable set by modules on load with search paths to header files (type choice; default: cpath) (choices: cpath, include_paths)
 ``--module-syntax=MODULE-SYNTAX``                                |Syntax to be used for module files (type choice; default: Lua) (choices: Lua, Tcl)
@@ -234,6 +234,7 @@ Option flag                                                              |Option
 ``--allow-modules-tool-mismatch``                                        |Allow mismatch of modules tool and definition of 'module' function (default: False)
 ``--allow-unresolved-templates``                                         |Don't error out when templates such as %(name)s in EasyConfigs could not be resolved (default: False)
 ``--allow-use-as-root-and-accept-consequences``                          |Allow using of EasyBuild as root (NOT RECOMMENDED!) (default: False)
+``--amdgcn-capabilities=AMDGCN-CAPABILITIES``                            |List of AMDGCN capabilities to use when building GPU software; values should be specified as gfx[xyz], as defined by the LLVM targets, for example: gfx1101,gfx90a,gfx1030 (type comma-separated list)
 ``--backup-modules``                                                     |Back up an existing module file, if any. Auto-enabled when using --module-only or --skip
 ``--backup-patched-files``                                               |Create a backup (*.orig) file when applying a patch (default: False)
 ``--banned-linked-shared-libs=BANNED-LINKED-SHARED-LIBS``                |Comma-separated list of shared libraries (names, file names, or paths) which are not allowed to be linked in any installed binary/library (type comma-separated list)

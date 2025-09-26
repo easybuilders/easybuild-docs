@@ -15,6 +15,7 @@ version | versionsuffix | toolchain
 ``1.10.4`` | ``-linux-x86_64`` | ``system``
 ``1.10.5`` | ``-linux-x86_64`` | ``system``
 ``1.11.3`` | ``-linux-x86_64`` | ``system``
+``1.11.6`` | ``-linux-x86_64`` | ``system``
 ``1.4.2`` | ``-linux-x86_64`` | ``system``
 ``1.5.1`` | ``-linux-x86_64`` | ``system``
 ``1.5.3`` | ``-linux-x86_64`` | ``system``
