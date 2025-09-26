@@ -19,6 +19,7 @@ search:
  * [WebDataset](WebDataset.md)
  * [WebKitGTK+](WebKitGTK+.md)
  * [weblogo](weblogo.md)
+ * [websockify](websockify.md)
  * [webvtt-py](webvtt-py.md)
  * [WEKA](WEKA.md)
  * [Wengan](Wengan.md)
@@ -44,6 +45,7 @@ search:
  * [WSClean](WSClean.md)
  * [wtdbg2](wtdbg2.md)
  * [wurlitzer](wurlitzer.md)
+ * [wxMacMolPlt](wxMacMolPlt.md)
  * [wxPython](wxPython.md)
  * [wxWidgets](wxWidgets.md)
 

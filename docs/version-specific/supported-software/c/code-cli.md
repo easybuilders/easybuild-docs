@@ -4,12 +4,14 @@ search:
 ---
 # code-cli
 
-Visual Studio Code is a lightweight but powerful source code editor     which runs on your desktop and is available for Windows, macOS and     Linux. It comes with built-in support for JavaScript, TypeScript and     Node.js and has a rich ecosystem of extensions for other languages     and runtimes (such as C++, C#, Java, Python, PHP, Go, .NET). Begin     your journey with VS Code with these introductory videos.
+Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages and runtimes (such as C++, C#, Java, Python, PHP, Go, .NET). Begin your journey with VS Code with these introductory videos.  This module provides the command-line interface of Visual Studio Code that lets you control how you launch the editor. You can open files, install extensions, change the display language, and output diagnostics through command-line options.
 
 *homepage*: <https://code.visualstudio.com/>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``1.103.2`` |  | ``system``
+``1.104.1`` |  | ``system``
 ``1.85.1`` | ``-x64`` | ``system``
 ``1.93.1`` | ``-x64`` | ``system``
 ``1.97.2`` |  | ``system``

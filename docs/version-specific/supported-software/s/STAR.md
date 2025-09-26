@@ -10,6 +10,7 @@ STAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays
 
 version | toolchain
 --------|----------
+``2.7.10a`` | ``GCC/11.3.0``
 ``2.7.10a_alpha_220601`` | ``GCC/10.3.0``
 ``2.7.10b`` | ``GCC/11.3.0``
 ``2.7.10b`` | ``GCC/12.2.0``

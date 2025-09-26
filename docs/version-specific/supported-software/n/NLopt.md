@@ -11,6 +11,7 @@ NLopt is a free/open-source library for nonlinear optimization,  providing a com
 version | toolchain
 --------|----------
 ``2.10.0`` | ``GCCcore/14.2.0``
+``2.10.0`` | ``GCCcore/14.3.0``
 ``2.7.0`` | ``GCCcore/10.3.0``
 ``2.7.0`` | ``GCCcore/11.2.0``
 ``2.7.1`` | ``GCCcore/11.3.0``

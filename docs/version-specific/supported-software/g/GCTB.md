@@ -10,6 +10,7 @@ GCTB is a software tool that comprises a family of Bayesian linear mixed models 
 
 version | toolchain
 --------|----------
+``2.5.2`` | ``GCC/12.3.0``
 ``2.5.2`` | ``GCC/13.2.0``
 
 

@@ -10,6 +10,7 @@ HighFive is a modern header-only C++11 friendly interface for libhdf5.
 
 version | toolchain
 --------|----------
+``2.10.1`` | ``gompi/2024a``
 ``2.6.2`` | ``gompi/2021a``
 ``2.6.2`` | ``gompi/2022a``
 ``2.7.1`` | ``gompi/2023a``

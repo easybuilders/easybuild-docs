@@ -10,6 +10,8 @@ Open Source SAXON XSLT processor developed by Saxonica Limited.
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``11.4`` | ``-Java-11`` | ``system``
+``11.4`` | ``-Java-17`` | ``system``
 ``12.4`` | ``-Java-21`` | ``system``
 
 

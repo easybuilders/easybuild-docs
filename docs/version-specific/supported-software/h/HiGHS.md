@@ -10,6 +10,7 @@ Open source serial and parallel solvers for large-scale sparse linear programmin
 
 version | toolchain
 --------|----------
+``1.11.0`` | ``gfbf/2024a``
 ``1.7.0`` | ``gfbf/2023b``
 
 

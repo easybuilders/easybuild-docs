@@ -12,6 +12,7 @@ search:
  * [QCA](QCA.md)
  * [qcat](qcat.md)
  * [QCG-PilotJob](QCG-PilotJob.md)
+ * [QCMaquis](QCMaquis.md)
  * [QCxMS](QCxMS.md)
  * [QD](QD.md)
  * [qforce](qforce.md)

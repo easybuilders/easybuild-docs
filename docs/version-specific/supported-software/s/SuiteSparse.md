@@ -24,6 +24,7 @@ version | versionsuffix | toolchain
 ``7.7.0`` |  | ``foss/2023b``
 ``7.7.0`` |  | ``gfbf/2023b``
 ``7.7.0`` |  | ``iimkl/2023b``
+``7.7.0`` |  | ``intel/2023b``
 ``7.8.2`` | ``-METIS-5.1.0`` | ``foss/2024a``
 
 

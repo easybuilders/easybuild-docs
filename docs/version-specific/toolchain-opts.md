@@ -2,7 +2,7 @@
 
 *(see also* ``eb --avail-toolchain-opts <tcname>`` *)*
 
-[cgmpich](#cgmpich) - [cgmpolf](#cgmpolf) - [cgmvapich2](#cgmvapich2) - [cgmvolf](#cgmvolf) - [cgompi](#cgompi) - [cgoolf](#cgoolf) - [ClangGCC](#clanggcc) - [CrayCCE](#craycce) - [CrayGNU](#craygnu) - [CrayIntel](#crayintel) - [CrayPGI](#craypgi) - [FCC](#fcc) - [ffmpi](#ffmpi) - [foss](#foss) - [fosscuda](#fosscuda) - [Fujitsu](#fujitsu) - [GCC](#gcc) - [GCCcore](#gcccore) - [gcccuda](#gcccuda) - [gfbf](#gfbf) - [gimkl](#gimkl) - [gimpi](#gimpi) - [gimpic](#gimpic) - [giolf](#giolf) - [giolfc](#giolfc) - [gmacml](#gmacml) - [gmkl](#gmkl) - [gmklc](#gmklc) - [gmpflf](#gmpflf) - [gmpich2](#gmpich2) - [gmpich](#gmpich) - [gmpit](#gmpit) - [gmpolf](#gmpolf) - [gmvapich2](#gmvapich2) - [gmvolf](#gmvolf) - [GNU](#gnu) - [goalf](#goalf) - [gobff](#gobff) - [goblf](#goblf) - [gofbf](#gofbf) - [golf](#golf) - [golfc](#golfc) - [gomkl](#gomkl) - [gomklc](#gomklc) - [gompi](#gompi) - [gompic](#gompic) - [goolf](#goolf) - [goolfc](#goolfc) - [gpsmpi](#gpsmpi) - [gpsolf](#gpsolf) - [gqacml](#gqacml) - [gsmpi](#gsmpi) - [gsolf](#gsolf) - [iccifort](#iccifort) - [iccifortcuda](#iccifortcuda) - [ictce](#ictce) - [ifbf](#ifbf) - [iibff](#iibff) - [iimkl](#iimkl) - [iimklc](#iimklc) - [iimpi](#iimpi) - [iimpic](#iimpic) - [iiqmpi](#iiqmpi) - [impich](#impich) - [impmkl](#impmkl) - [intel-compilers](#intel-compilers) - [intel-para](#intel-para) - [intel](#intel) - [intelcuda](#intelcuda) - [iofbf](#iofbf) - [iomkl](#iomkl) - [iomklc](#iomklc) - [iompi](#iompi) - [iompic](#iompic) - [ipsmpi](#ipsmpi) - [iqacml](#iqacml) - [ismkl](#ismkl) - [NVHPC](#nvhpc) - [nvofbf](#nvofbf) - [nvompi](#nvompi) - [nvompic](#nvompic) - [nvpsmpi](#nvpsmpi) - [nvpsmpic](#nvpsmpic) - [PGI](#pgi) - [pmkl](#pmkl) - [pomkl](#pomkl) - [pompi](#pompi) - [system](#system) - [xlcxlf](#xlcxlf) - [xlmpich2](#xlmpich2) - [xlmpich](#xlmpich) - [xlmvapich2](#xlmvapich2) - [xlompi](#xlompi)
+[cgmpich](#cgmpich) - [cgmpolf](#cgmpolf) - [cgmvapich2](#cgmvapich2) - [cgmvolf](#cgmvolf) - [cgompi](#cgompi) - [cgoolf](#cgoolf) - [ClangGCC](#clanggcc) - [CrayCCE](#craycce) - [CrayGNU](#craygnu) - [CrayIntel](#crayintel) - [CrayPGI](#craypgi) - [FCC](#fcc) - [ffmpi](#ffmpi) - [foss](#foss) - [fosscuda](#fosscuda) - [Fujitsu](#fujitsu) - [GCC](#gcc) - [GCCcore](#gcccore) - [gcccuda](#gcccuda) - [gfbf](#gfbf) - [gimkl](#gimkl) - [gimpi](#gimpi) - [gimpic](#gimpic) - [giolf](#giolf) - [giolfc](#giolfc) - [gmacml](#gmacml) - [gmkl](#gmkl) - [gmklc](#gmklc) - [gmpflf](#gmpflf) - [gmpich](#gmpich) - [gmpich2](#gmpich2) - [gmpit](#gmpit) - [gmpolf](#gmpolf) - [gmvapich2](#gmvapich2) - [gmvolf](#gmvolf) - [GNU](#gnu) - [goalf](#goalf) - [gobff](#gobff) - [goblf](#goblf) - [gofbf](#gofbf) - [golf](#golf) - [golfc](#golfc) - [gomkl](#gomkl) - [gomklc](#gomklc) - [gompi](#gompi) - [gompic](#gompic) - [goolf](#goolf) - [goolfc](#goolfc) - [gpsmpi](#gpsmpi) - [gpsolf](#gpsolf) - [gqacml](#gqacml) - [gsmpi](#gsmpi) - [gsolf](#gsolf) - [iccifort](#iccifort) - [iccifortcuda](#iccifortcuda) - [ictce](#ictce) - [ifbf](#ifbf) - [iibff](#iibff) - [iimkl](#iimkl) - [iimklc](#iimklc) - [iimpi](#iimpi) - [iimpic](#iimpic) - [iiqmpi](#iiqmpi) - [impich](#impich) - [impmkl](#impmkl) - [intel-compilers](#intel-compilers) - [intel-para](#intel-para) - [intel](#intel) - [intelcuda](#intelcuda) - [iofbf](#iofbf) - [iomkl](#iomkl) - [iomklc](#iomklc) - [iompi](#iompi) - [iompic](#iompic) - [ipsmpi](#ipsmpi) - [iqacml](#iqacml) - [ismkl](#ismkl) - [NVHPC](#nvhpc) - [nvofbf](#nvofbf) - [nvompi](#nvompi) - [nvompic](#nvompic) - [nvpsmpi](#nvpsmpi) - [nvpsmpic](#nvpsmpic) - [PGI](#pgi) - [pmkl](#pmkl) - [pomkl](#pomkl) - [pompi](#pompi) - [system](#system) - [xlcxlf](#xlcxlf) - [xlmpich](#xlmpich) - [xlmpich2](#xlmpich2) - [xlmvapich2](#xlmvapich2) - [xlompi](#xlompi)
 
 ## cgmpich
 
@@ -1223,9 +1223,9 @@ option                     |description                                         
 ``verbose``                |Verbose output                                                         |``False``
 ``veryloose``              |Very loose precision                                                   |``False``
 
-## gmpich2
+## gmpich
 
-### Available options for gmpich2 toolchain
+### Available options for gmpich toolchain
 
 option                     |description                                                            |default
 ---------------------------|-----------------------------------------------------------------------|---------
@@ -1266,9 +1266,9 @@ option                     |description                                         
 ``verbose``                |Verbose output                                                         |``False``
 ``veryloose``              |Very loose precision                                                   |``False``
 
-## gmpich
+## gmpich2
 
-### Available options for gmpich toolchain
+### Available options for gmpich2 toolchain
 
 option                     |description                                                            |default
 ---------------------------|-----------------------------------------------------------------------|---------
@@ -3757,9 +3757,9 @@ option                     |description                                         
 ``verbose``                |Verbose output                                                         |``False``
 ``veryloose``              |Very loose precision                                                   |``False``
 
-## xlmpich2
+## xlmpich
 
-### Available options for xlmpich2 toolchain
+### Available options for xlmpich toolchain
 
 option                     |description                                                            |default
 ---------------------------|-----------------------------------------------------------------------|---------
@@ -3799,9 +3799,9 @@ option                     |description                                         
 ``verbose``                |Verbose output                                                         |``False``
 ``veryloose``              |Very loose precision                                                   |``False``
 
-## xlmpich
+## xlmpich2
 
-### Available options for xlmpich toolchain
+### Available options for xlmpich2 toolchain
 
 option                     |description                                                            |default
 ---------------------------|-----------------------------------------------------------------------|---------

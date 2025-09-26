@@ -11,6 +11,7 @@ HarfBuzz is an OpenType text shaping engine.
 version | toolchain
 --------|----------
 ``11.2.1`` | ``GCCcore/14.2.0``
+``11.4.1`` | ``GCCcore/14.3.0``
 ``2.8.1`` | ``GCCcore/10.3.0``
 ``2.8.2`` | ``GCCcore/11.2.0``
 ``4.2.1`` | ``GCCcore/11.3.0``

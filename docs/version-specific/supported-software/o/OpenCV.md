@@ -10,6 +10,7 @@ OpenCV (Open Source Computer Vision Library) is an open source computer vision  
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``4.11.0`` | ``-contrib`` | ``foss/2024a``
 ``4.5.3`` | ``-CUDA-11.3.1-contrib`` | ``foss/2021a``
 ``4.5.3`` | ``-contrib`` | ``foss/2021a``
 ``4.5.5`` | ``-CUDA-11.4.1-contrib`` | ``foss/2021b``

@@ -64,6 +64,9 @@ Template name     |Template value
 Template name                      |Template value
 -----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ``%(arch)s``                       |System architecture (e.g. x86_64, aarch64, ppc64le, ...)
+``%(amdgcn_capabilities)s``        |Comma-separated list of AMDGCN capabilities, as specified via --amdgcn-capabilities configuration option or via amdgcn_capabilities easyconfig parameter
+``%(amdgcn_cc_space_sep)s``        |Space-separated list of AMDGCN capabilities
+``%(amdgcn_cc_semicolon_sep)s``    |Semicolon-separated list of AMDGCN capabilities
 ``%(cuda_compute_capabilities)s``  |Comma-separated list of CUDA compute capabilities, as specified via --cuda-compute-capabilities configuration option or via cuda_compute_capabilities easyconfig parameter
 ``%(cuda_cc_cmake)s``              |List of CUDA compute capabilities suitable for use with $CUDAARCHS in CMake 3.18+
 ``%(cuda_cc_space_sep)s``          |Space-separated list of CUDA compute capabilities

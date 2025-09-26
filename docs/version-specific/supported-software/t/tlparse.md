@@ -10,6 +10,7 @@ Parse structured PT2 (PyTorch 2) logs
 
 version | toolchain
 --------|----------
+``0.3.37`` | ``GCCcore/13.3.0``
 ``0.3.5`` | ``GCCcore/13.2.0``
 
 

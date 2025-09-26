@@ -10,6 +10,8 @@ A CMake-based build system, consisting of a collection of CMake macros and funct
 
 version | toolchain
 --------|----------
+``3.11.0`` | ``GCCcore/14.2.0``
+``3.11.0`` | ``GCCcore/14.3.0``
 ``3.7.0`` | ``system``
 ``3.8.0`` | ``system``
 ``3.8.5`` | ``GCCcore/13.3.0``

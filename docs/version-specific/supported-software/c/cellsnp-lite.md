@@ -10,6 +10,7 @@ Cellsnp-lite is a C/C++ tool for efficient genotyping bi-allelic SNPs on single 
 
 version | toolchain
 --------|----------
+``1.2.3`` | ``GCC/12.3.0``
 ``1.2.3`` | ``GCC/13.2.0``
 
 

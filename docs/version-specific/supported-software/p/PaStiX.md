@@ -6,7 +6,7 @@ search:
 
 PaStiX (Parallel Sparse matriX package) is a scientific library that provides a high performance  parallel solver for very large sparse linear systems based on direct methods.
 
-*homepage*: <http://pastix.gforge.inria.fr/>
+*homepage*: <https://solverstack.gitlabpages.inria.fr/pastix/>
 
 version | toolchain
 --------|----------

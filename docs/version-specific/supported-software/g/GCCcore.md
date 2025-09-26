@@ -25,6 +25,7 @@ version | toolchain
 ``14.2.0`` | ``system``
 ``14.3.0`` | ``system``
 ``15.1.0`` | ``system``
+``15.2.0`` | ``system``
 ``system`` | ``system``
 
 

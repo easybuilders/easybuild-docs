@@ -22,6 +22,8 @@ version | versionsuffix | toolchain
 ``2.3`` |  | ``foss/2023b``
 ``2.3`` |  | ``foss/2024.05``
 ``2.3`` |  | ``foss/2024a``
+``2.3`` |  | ``foss/2025a``
+``2.3`` |  | ``foss/2025b``
 ``2.3`` |  | ``gmpflf/2024.06``
 ``2.3`` |  | ``gobff/2021a``
 ``2.3`` |  | ``gomkl/2021a``
@@ -40,6 +42,7 @@ version | versionsuffix | toolchain
 ``2.3`` |  | ``intel/2023b``
 ``2.3`` |  | ``intel/2024a``
 ``2.3`` |  | ``intel/2025a``
+``2.3`` |  | ``intel/2025b``
 ``2.3`` |  | ``iomkl/2021a``
 ``2.3`` |  | ``iomkl/2021b``
 

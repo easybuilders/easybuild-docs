@@ -11,6 +11,7 @@ PyTables is a package for managing hierarchical datasets and designed to efficie
 version | toolchain
 --------|----------
 ``3.10.2`` | ``foss/2024a``
+``3.10.2`` | ``foss/2025a``
 ``3.6.1`` | ``foss/2021a``
 ``3.6.1`` | ``foss/2021b``
 ``3.8.0`` | ``foss/2022a``

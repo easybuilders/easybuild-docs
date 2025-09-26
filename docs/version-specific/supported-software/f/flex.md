@@ -25,6 +25,7 @@ version | toolchain
 ``2.6.4`` | ``GCCcore/14.2.0``
 ``2.6.4`` | ``GCCcore/14.3.0``
 ``2.6.4`` | ``GCCcore/15.1.0``
+``2.6.4`` | ``GCCcore/15.2.0``
 ``2.6.4`` | ``system``
 
 

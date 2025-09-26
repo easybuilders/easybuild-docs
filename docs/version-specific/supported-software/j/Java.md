@@ -31,6 +31,7 @@ version | versionsuffix | toolchain
 ``21.0.2`` |  | ``system``
 ``21.0.5`` |  | ``system``
 ``21.0.7`` |  | ``system``
+``21.0.8`` |  | ``system``
 ``21`` |  | ``system``
 ``23.0.1`` |  | ``system``
 ``23.0.2`` |  | ``system``
