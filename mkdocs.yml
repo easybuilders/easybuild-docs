@@ -73,6 +73,7 @@ nav:
       - Cray support: cray-support.md
       - Customizing EasyBuild via hooks: hooks.md
       - Including Python modules: including-additional-python-modules.md
+      - Customize Python search path: python-search-path.md
       - Packaging support: packaging-support.md
       - RPATH support: rpath-support.md
       - Using external modules: using-external-modules.md
