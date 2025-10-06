@@ -2,7 +2,7 @@
 
 In order to locate python packages in modules, before v5.0.0, EasyBuild conventionally used the `PYTHONPATH` environment variable. However, this has several issues:
 
-1. `PYTHONPATH` has highest priority; it prevents users from makinga custom virtual environment on top of modules and shadowing packages.
+1. `PYTHONPATH` has highest priority; it prevents users from making a custom virtual environment on top of modules and shadowing packages.
 2. Packages are picked up even for incompatible python versions, e.g. an OS installed old python 3.6 will break if packages from 3.12 exists in `PYTHONPATH`.
 3. Modules can't have optional dependencies on different Python versions, as PYTHONPATH points directly to the `site-packages` subdirectory.
 4. Packages with `pth` files can't work with PYTHONPATH and requires being added to the site dir.
