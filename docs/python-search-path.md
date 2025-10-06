@@ -15,7 +15,7 @@ This does the correct thing by only considering the correct Python version, and 
 
 ## Using `--prefer-python-search-path` 
 
-Since v5.0.0 the new global configuration option `--prefer-python-search-path` can be used to EasyBuild prefer the use of either `PYTHONPATH` or `EBPYTHONPREFIXES`.
+Since v5.0.0 the new global configuration option `--prefer-python-search-path` can be used for EasyBuild to prefer the use of either `PYTHONPATH` or `EBPYTHONPREFIXES`.
 For backwards compatibility with existing modules, EasyBuild was unfortunately required to keep `PYTHONPATH` as the default.
 Note that the option is just the preferred option, if the package path doesn't follow the standard `lib/pythonY.X/site-packages` format then `PYTHONPATH` must be used. If multi-deps is used, then `EBPYTHONPREFIXES` is required.
 
