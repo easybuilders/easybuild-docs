@@ -7,7 +7,7 @@ In order to locate python packages in modules, easybuild has conventionally used
 3. Modules can't have optional dependencies on different Python versions, as PYTHONPATH points directly to the `site-packages` subdirectory.
 4. Packages with `pth` files can't work with PYTHONPATH and requires being added to the site dir.
 
-Unfortuanately, Python offers to environment variables to do the correct thing here.
+Unfortunately, Python offers no environment variables to do the correct thing here.
 To solve this (initially for multi-deps) EasyBuild has for a long time supported the use of the custom `EBPYTHONPREFIXES` via a `sitecustomize.py` script for the Python modules we build. 
 It is included in standard Python installations made with easybuild. You can opt out of having this `sitecustomize.py` if you have strong technical reasons to avoid it.
 
