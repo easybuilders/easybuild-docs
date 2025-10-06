@@ -22,7 +22,7 @@ Note that the option is just the preferred option, if the package path doesn't f
 If you wish to switch to `EBPYTHONPREFIXES`, you should also traverse the existing Python bundles you have installed and make sure to rebuild the modules.
 Failure to do so might leave you with a few easyconfigs that require shadowing of older package versions not working correctly due to the import priority changing.
 
-If you are switching to building a new tree, you can safely switch this option to `EBPYTHONPREFIXES` and enjoy the benefits.
+If you are building a new software stack from scratch, you can safely switch this option to `EBPYTHONPREFIXES` and enjoy the benefits.
 
 ## Fixing existing modules
 
