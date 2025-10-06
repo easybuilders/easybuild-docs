@@ -1,6 +1,6 @@
 # Python search path
 
-In order to locate python packages in modules, easybuild has conventionally used the `PYTHONPATH` environment variable. However, this has several issues:
+In order to locate python packages in modules, before v5.0.0, EasyBuild conventionally used the `PYTHONPATH` environment variable. However, this has several issues:
 
 1. `PYTHONPATH` has highest priority; it prevents users from makinga custom virtual environment on top of modules and shadowing packages.
 2. Packages are picked up even for incompatible python versions, e.g. an OS installed old python 3.6 will break if packages from 3.12 exists in `PYTHONPATH`.
