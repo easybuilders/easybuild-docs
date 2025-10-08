@@ -11,7 +11,7 @@ Unfortunately, Python offers no environment variables to do the correct thing he
 To solve this (initially for Python `multi_deps`) EasyBuild has for a long time supported the use of the custom `EBPYTHONPREFIXES` via a `sitecustomize.py` script for the Python modules we build. 
 It is included in standard Python installations made with EasyBuild. You can opt out of using `sitecustomize.py` if you have strong technical reasons to avoid it.
 
-This does the correct thing by only considering the correct Python version, and puts Python packages provided by the environment module at the lowest priority, allowing a user venv to override them.
+The `sitecustomize.py` script does the correct thing by only considering the correct Python version, and puts Python packages provided by the environment module at the lowest priority, allowing a user venv to override them.
 
 ## Using `--prefer-python-search-path` 
 
