@@ -1,4 +1,4 @@
-# Python search path
+# Customizing Python search path
 
 In order to locate python packages in modules, before v5.0.0, EasyBuild conventionally used the `PYTHONPATH` environment variable. However, this has several issues:
 
