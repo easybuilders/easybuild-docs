@@ -285,7 +285,7 @@ EasyBuild
 ```
 
 To run the development instance, you need to add the framework and easyblocks
-directories in the Python path, and the easyconfigs in the robot search path.
+directories in the Python path, and the easyconfigs to the robot search path.
 
 You can also define the `PYTHONPATH` in inline format:
 
