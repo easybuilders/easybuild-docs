@@ -299,6 +299,7 @@ EasyBuild as follows:
 ```bash
 alias eb_devel="PYTHONPATH=/path/to/EasyBuild/easybuild-framework:/path/to/EasyBuild/easybuild-easyblocks:${PYTHONPATH} /path/to/EasyBuild/easybuild-framework/eb --robot-paths=/path/to/EasyBuild/easybuild-easyconfigs/easybuild/easyconfigs:"
 ```
+`--robot-paths` updates the paths accessible to easybuild for searching, the `:` at the end of the value indicates to EasyBuild to retain it's default robot search paths. This approach still allows for further customisation via `--robot`.
 
 
 ### Opening a new pull request {: #contributing_creating_pull_requests }
