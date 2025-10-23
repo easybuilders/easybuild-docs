@@ -297,7 +297,7 @@ For convenience, you can define an alias for the development instance of
 EasyBuild as follows:
 
 ```bash
-alias eb="PYTHONPATH=/path/to/EasyBuild/easybuild-framework:/path/to/EasyBuild/easybuild-easyblocks:${PYTHONPATH} /path/to/EasyBuild/easybuild-framework/eb --robot-paths=/path/to/EasyBuild/easybuild-easyconfigs/easybuild/easyconfigs:"
+alias eb_devel="PYTHONPATH=/path/to/EasyBuild/easybuild-framework:/path/to/EasyBuild/easybuild-easyblocks:${PYTHONPATH} /path/to/EasyBuild/easybuild-framework/eb --robot-paths=/path/to/EasyBuild/easybuild-easyconfigs/easybuild/easyconfigs:"
 ```
 
 
