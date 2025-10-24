@@ -317,8 +317,8 @@ maintaining a clean shell environment, an alias can be defined as follows.
 alias eb_devel='PYTHONPATH="${EB_DEVEL_ROOT}/easybuild-framework:${EB_DEVEL_ROOT}/easybuild-easyblocks:${PYTHONPATH}" EASYBUILD_ROBOT_PATHS="${EB_DEVEL_ROOT}/easybuild-easyconfigs/easybuild/easyconfigs" ${EB_DEVEL_ROOT}/easybuild-framework/eb'
 ```
 
-With the alias defined the command to install `ReFrame-4.3.3.ed` and its
-dependencies becomes the following.
+With the alias defined, the command to install `ReFrame-4.3.3.eb` and its
+dependencies now becomes the following:
 
 ``` shell
 eb_devel --robot ReFrame-4.3.3.eb
