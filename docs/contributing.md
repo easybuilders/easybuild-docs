@@ -311,7 +311,7 @@ PYTHONPATH=${EB_DEVEL_ROOT}/easybuild-framework:${EB_DEVEL_ROOT}/easybuild-easyb
 ```
 
 To avoid adding the variables in the environment of every single command while
-maintaining the shell environment clean, an alias can be defined as follows.
+maintaining a clean shell environment, an alias can be defined as follows.
 
 ``` shell
 alias eb_devel='PYTHONPATH="${EB_DEVEL_ROOT}/easybuild-framework:${EB_DEVEL_ROOT}/easybuild-easyblocks:${PYTHONPATH}" EASYBUILD_ROBOT_PATHS="${EB_DEVEL_ROOT}/easybuild-easyconfigs/easybuild/easyconfigs" ${EB_DEVEL_ROOT}/easybuild-framework/eb'
