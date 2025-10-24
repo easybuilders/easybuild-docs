@@ -276,8 +276,9 @@ To deploy a local copy of EasyBuild clone the
 [easybuild-framework](https://github.com/easybuilders/easybuild-framework),
 [easybuild-easyblocks](https://github.com/easybuilders/easybuild-easyblocks), and
 [easybuild-easyconfigs](https://github.com/easybuilders/easybuild-easyconfigs)
-repositories in the same directory, say `EasyBuild`. After cloning these
-repositories the content of the `EasyBuild` directory should be the following.
+repositories in the same directory, for instance a directory name `EasyBuild`.
+After cloning these repositories the content of the `EasyBuild` directory
+should be the following.
 
 ```
 $ tree -L 1 EasyBuild
@@ -289,8 +290,9 @@ EasyBuild
 3 directories, 0 files
 ```
 
-Export an environment variable with the path to the `EasyBuild` directory to
-simplify commands calling the development instance of EasyBuild.
+An environment variable with the path to the `EasyBuild` directory simplifies
+calls to the development instance of EasyBuild significantly; define this
+variable in the following manner.
 
 ``` shell
 export EB_DEVEL_ROOT=/path/to/EasyBuild
@@ -300,18 +302,26 @@ To run the development instance, add the paths of the framework and easyblock
 repositories to the Python path, and the path of the easyconfig repository to
 the robot search path.
 
-For instance a command to install `ReFrame-4.3.3.ed` in inline format would be
-the following.
+For instance, a command to install `ReFrame-4.3.3.ed` and its dependencies with
+the required variables defined for in the command environment would be the
+following.
 
 ``` shell
-PYTHONPATH=${EB_DEVEL_ROOT}/easybuild-framework:${EB_DEVEL_ROOT}/easybuild-easyblocks:${PYTHONPATH} EASYBUILD_ROBOT_PATHS=${EB_DEVEL_ROOT}/easybuild-easyconfigs/easybuild/easyconfigs ${EB_DEVEL_ROOT}/easybuild-framework/eb --dry-run --robot ReFrame-4.3.3.eb
+PYTHONPATH=${EB_DEVEL_ROOT}/easybuild-framework:${EB_DEVEL_ROOT}/easybuild-easyblocks:${PYTHONPATH} EASYBUILD_ROBOT_PATHS=${EB_DEVEL_ROOT}/easybuild-easyconfigs/easybuild/easyconfigs ${EB_DEVEL_ROOT}/easybuild-framework/eb --robot ReFrame-4.3.3.eb
 ```
 
-Define an alias if you prefer to avoid defining all these variables each time
-the development version EasyBuild is called.
+To avoid adding the variables in the environment of every single command while
+maintaining the shell environment clean, an alias can be defined as follows.
 
 ``` shell
 alias eb_devel='PYTHONPATH="${EB_DEVEL_ROOT}/easybuild-framework:${EB_DEVEL_ROOT}/easybuild-easyblocks:${PYTHONPATH}" EASYBUILD_ROBOT_PATHS="${EB_DEVEL_ROOT}/easybuild-easyconfigs/easybuild/easyconfigs" ${EB_DEVEL_ROOT}/easybuild-framework/eb'
+```
+
+With the alias defined the command to install `ReFrame-4.3.3.ed` and its
+dependencies becomes the following.
+
+``` shell
+eb_devel --robot ReFrame-4.3.3.eb
 ```
 
 ??? note "Controlling the robot search path in development instances"
@@ -331,7 +341,7 @@ alias eb_devel='PYTHONPATH="${EB_DEVEL_ROOT}/easybuild-framework:${EB_DEVEL_ROOT
     - you cannot append in the default robot search path, with `--robot-paths`,
       as it overrides the `EASYBUILD_ROBOT_PATHS` environment option.
 
-    As a workarroun,
+    As a workaround,
 
     - use `--robot-paths` to override the robot search path, and
     - use the environment variable `EASYBUILD_ROBOT_PATHS` to explicitly modify
@@ -341,7 +351,7 @@ alias eb_devel='PYTHONPATH="${EB_DEVEL_ROOT}/easybuild-framework:${EB_DEVEL_ROOT
     following command.
 
     ``` shell
-    eb_devel --robot-paths=${EASYBUILD_ROBOT_PATHS}:/path/0:/path/1
+    eb_devel --robot-paths=${EASYBUILD_ROBOT_PATHS}:/path/to/dir_0:/path/to/dir_1 --robot ReFrame-4.3.3.eb
     ```
 
 ### Opening a new pull request {: #contributing_creating_pull_requests }
