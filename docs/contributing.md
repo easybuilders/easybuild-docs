@@ -331,7 +331,7 @@ eb_devel --robot ReFrame-4.3.3.eb
     instance. The robot search path is set explicitly using the
     `EASYBUILD_ROBOT_PATHS` environment variable. As a result, expect that some
     features of the `EASYBUILD_ROBOT_PATHS` and its accompanying command line
-    option, `--robot-paths` will not work with, `eb_devel`, the alias for the
+    option, `--robot-paths` will not work with `eb_devel`, the alias for the
     EasyBuild development version.
 
     For instance,
