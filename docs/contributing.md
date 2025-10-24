@@ -338,7 +338,7 @@ eb_devel --robot ReFrame-4.3.3.eb
 
     - you cannot use `EASYBUILD_ROBOT_PATHS` to set the robot path as it is
       overridden in the alias `eb_devel`, and
-    - you cannot append in the default robot search path, with `--robot-paths`,
+    - you cannot append to the default robot search path, with `--robot-paths`,
       as it overrides the `EASYBUILD_ROBOT_PATHS` environment option.
 
     As a workaround,
