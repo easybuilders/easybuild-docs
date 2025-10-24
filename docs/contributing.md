@@ -302,9 +302,9 @@ To run the development instance, add the paths of the framework and easyblock
 repositories to the Python path, and the path of the easyconfig repository to
 the robot search path.
 
-For instance, a command to install `ReFrame-4.3.3.ed` and its dependencies with
-the required variables defined for in the command environment would be the
-following.
+For instance, a command to install `ReFrame-4.3.3.eb` and its dependencies with
+the necessary variables defined for the command environment would be the
+following:
 
 ``` shell
 PYTHONPATH=${EB_DEVEL_ROOT}/easybuild-framework:${EB_DEVEL_ROOT}/easybuild-easyblocks:${PYTHONPATH} EASYBUILD_ROBOT_PATHS=${EB_DEVEL_ROOT}/easybuild-easyconfigs/easybuild/easyconfigs ${EB_DEVEL_ROOT}/easybuild-framework/eb --robot ReFrame-4.3.3.eb
