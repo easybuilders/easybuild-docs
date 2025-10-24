@@ -280,7 +280,7 @@ repositories in the same directory, for instance a directory name `EasyBuild`.
 After cloning these repositories the content of the `EasyBuild` directory
 should be the following.
 
-```
+``` console
 $ tree -L 1 EasyBuild
 EasyBuild
 ├── easybuild-easyblocks
