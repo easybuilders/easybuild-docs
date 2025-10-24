@@ -343,7 +343,7 @@ eb_devel --robot ReFrame-4.3.3.eb
 
     As a workaround,
 
-    - use `--robot-paths` to override the robot search path, and
+    - use `--robot-paths` to override the robot search path set via the alias, and
     - use the environment variable `EASYBUILD_ROBOT_PATHS` to explicitly modify
       the robot search path.
 
