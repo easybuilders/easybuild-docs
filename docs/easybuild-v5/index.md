@@ -93,7 +93,7 @@ Functionality that was deprecated a while ago in EasyBuild v4.x has been ***remo
 - [`is_generic_easyblock` function from `easybuild.framework.easyconfig.easyconfig`](removed-functionality.md#easyconfig-is_generic_easyblock)
 - [`copytree`, `rmtree2` functions from `easybuild.filetools`](removed-functionality.md#filetools-copytree-rmtree2)
 - [`fetch_extension_sources` method in `EasyBlock` class](removed-functionality.md#EasyBlock-fetch_extension_sources)
-- [`mod_exists_regex_template` options in `ModulesTool.exist` method](removed-functionality.md#ModulesTool-exist-mod_exists_regex_template)
+- [`mod_exists_regex_template` option in `ModulesTool.exist` method](removed-functionality.md#ModulesTool-exist-mod_exists_regex_template)
 - [`Toolchain.add_dependencies` method](removed-functionality.md#Toolchain-add_dependencies)
 - [`disable_templating` + `default_fallback` options in `get_easyblock_class` function](removed-functionality.md#get_easyblock_class)
 - [`skip_lower` option from `template_constant_dict` function](removed-functionality.md#template_constant_dict)

@@ -77,27 +77,30 @@ Use of `rmtree2` and `copytree`, from `easybuild.filetools`, has now been remove
 
 ---
 
-## `mod_exists_regex_template` options in `ModulesTool.exist` method {: #ModulesTool-exist-mod_exists_regex_template }
+## `mod_exists_regex_template` option in `ModulesTool.exist` method {: #ModulesTool-exist-mod_exists_regex_template }
 
-*(more info soon)*
+The `mod_exists_regex_template` option in `ModulesTool.exist` was unused and has now been removed.
 
 ---
 
 ## `Toolchain.add_dependencies` method {: #Toolchain-add_dependencies }
 
-*(more info soon)*
+`Toolchain.add_dependencies` has been removed. The dependencies should be passed to the `prepare`
+method instead, using the `deps` argument.
 
 ---
 
 ## `disable_templating` + `default_fallback` options in `get_easyblock_class` function {: #get_easyblock_class }
 
-*(more info soon)*
+`disable_templating` was changed to be a function on the EasyConfig class in EasyBuild 4.4.0.
+`disable_templating` and the `default_fallback` option for `get_easyblock_class` have now been removed.
 
 ---
 
 ## `skip_lower` option from `template_constant_dict` function {: #template_constant_dict }
 
-*(more info soon)*
+The `skip_lower` option in `template_constant_dict` had no effect in EasyBuild 4 and has now been
+removed.
 
 ---
 
