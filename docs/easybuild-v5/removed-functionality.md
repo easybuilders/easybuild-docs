@@ -106,37 +106,44 @@ removed.
 
 ## `use_git_am` option for `apply_patch` function {: #apply_patch-use_git_am }
 
-*(more info soon)*
+The `use_git_am` option for `apply_patch` was renamed to `use_git` in EasyBuild 4.3.0 . This option
+has now been removed.
 
 ---
 
 ## `skip_symlinks` option for `adjust_permissions` function {: #adjust_permissions-skip_symlinks }
 
-*(more info soon)*
+The `skip_symlinks` option in the `adjust_permissions` function has been removed. Symlinks are not
+been followed in this function.
 
 ---
 
 ## `log_error` option in `which` function {: #which-log_error }
 
-*(more info soon)*
+The `log_error` option in the `which` function was changed to `on_error` in EasyBuild 4.4.0 to allow
+enhanced options on what to do when an error is encountered in this function. This option has now
+been removed.
 
 ---
 
 ## `descr` option for `simple_option` function {: #simple_option-descr }
 
-*(more info soon)*
+The `descr` option in the `simple_option` function was removed. This has been unused in EasyBuild for
+a long time.
 
 ---
 
 ## `dummy` toolchain {: #dummy-toolchain }
 
-*(more info soon)*
+The `dummy` toolchain was replaced y the `SYSTEM` toolchain in EasyBuild 4. The `dummy` toolchain has
+now been removed. As part of this the `--add-system-to-minimal-toolchains` option replaces
+`--add-dummy-to-minimal-toolchains`.
 
 ---
 
 ## Support for 32-bit targets {: #32-bit-targets }
 
-*(more info soon)*
+EasyBuild has support for 32-bit targets for `imkl` versions before 11. These have now been removed.
 
 ---
 
