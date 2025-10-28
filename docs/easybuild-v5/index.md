@@ -4,12 +4,6 @@ A high-level overview of changes in EasyBuild version 5.0.0 is listed below.
 
 Click on a particular item for more information.
 
-!!! warning
-
-    (Tue 18 March 2025)
-    The sections linked to from this overview below are known to be incomplete.
-    Extra information will be gradually added over the next couple of days.
-
 ---
 
 ## Breaking changes {: #breaking-changes }
@@ -94,7 +88,7 @@ Functionality that was deprecated a while ago in EasyBuild v4.x has been ***remo
 
 - [EasyBuild bootstrap script](removed-functionality.md#bootstrap_script) 
 - [Experimental support for `.yeb` easyconfig](removed-functionality.md#yeb)
-- [`accept-eula` configuration setting](removed-functionality.md#accept-eula)
+- [`--accept-eula` configuration setting](removed-functionality.md#accept-eula)
 - [`--wait-on-lock` configuration setting](removed-functionality.md#wait-on-lock)
 - [`is_generic_easyblock` function from `easybuild.framework.easyconfig.easyconfig`](removed-functionality.md#easyconfig-is_generic_easyblock)
 - [`copytree`, `rmtree2` functions from `easybuild.filetools`](removed-functionality.md#filetools-copytree-rmtree2)
@@ -142,13 +136,6 @@ Some functionality is being deprecated in EasyBuild v5.0, and is scheduled to be
 ## Other changes
 
 - [Toolchain support policy](../policies/toolchains.md)
-
----
-
-## FAQ
-
-*(coming soon)*
-
 
 ---
 

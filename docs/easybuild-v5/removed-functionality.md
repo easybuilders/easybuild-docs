@@ -42,33 +42,38 @@ format and little suggestion that anyone was using it at all.
 
 ---
 
-## `accept-eula` configuration setting] {: #accept-eula }
+## `--accept-eula` configuration setting] {: #accept-eula }
 
-*(more info soon)*
+The `--accept-eula` option was changed to `--accept_eula_for` in EasyBuild 4.3.4 where it was also enhanced to
+support reular expressions. Use of `--accept-eula` has now been removed.
 
 ---
 
 ## `--wait-on-lock` configuration setting {: #wait-on-lock }
 
-*(more info soon)*
+The `--wait-on-lock` option was replaced and split into `--wait-on-lock-limit` and `--wait-on-lock-interval` in
+EasyBuild 4.2.1. Use of `--wait-on-lock` has now been removed.
 
 ---
 
 ## `is_generic_easyblock` function from `easybuild.framework.easyconfig.easyconfig` {: #easyconfig-is_generic_easyblock }
 
-*(more info soon)*
+`is_generic_easyblock` was moved to `easybuild.tools.filetools` in EasyBuild 4.2.0. Use of `is_generic_easyblock`
+from `easybuild.framework.easyconfig.easyconfig` has been removed.
 
 ---
 
 ## `copytree`, `rmtree2` functions from `easybuild.filetools` {: #filetools-copytree-rmtree2 }
 
-*(more info soon)*
+The use of `rmtree2` was replaced by `remove_dir` and the use of `copytree` by `copy_dir` in EasyBuild 4.2.0.
+Use of `rmtree2` and `copytree`, from `easybuild.filetools`, has now been removed.
 
 ---
 
 ## `fetch_extension_sources` method in `EasyBlock` class {: #EasyBlock-fetch_extension_sources }
 
-*(more info soon)*
+`fetch_extension_sources` was replaced by `collect_exts_file_info`. in EasyBuild 4.5.0. Use of
+`fetch_extension_sources` has now been removed.
 
 ---
 
