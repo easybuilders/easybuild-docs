@@ -11,10 +11,6 @@ in the background, to exploit the availability of multiple cores.
 To let EasyBuild install extensions in parallel, the
 `parallel-extensions-install` configuration option must be enabled.
 
-In addition, since the support for installing extensions in parallel is
-an experimental feature, the `experimental` configuration option must be
-also be enabled (see also [Experimental features][experimental_features]).
-
 How many extension installations should be started (at maximum) at the
 same time is controlled by the `parallel` configuration option.
 
@@ -44,9 +40,6 @@ easyblock.
 There are a couple of caveats and known issues with installing
 extensions in parallel, which we hope to resolve in future EasyBuild
 releases.
-
-This is also why the support for installing extensions in parallel is
-currently marked as an experimental feature.
 
 ### Only works for R extensions {: #installing_extensions_in_parallel_caveats_known_issues_only_r }
 

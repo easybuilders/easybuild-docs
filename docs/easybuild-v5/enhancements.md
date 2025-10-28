@@ -63,14 +63,16 @@ If you would like to see other types of easyconfigs added as templates, please
 
 ## Mark support for installing extensions in parallel as stable (no longer experimental) {: #parallel-extensions-install-stable }
 
-*(more info soon)*
+The support for [installing extensions in parallel][installing_extensions_in_parallel]
+no longer requires the use of the `--experimental` option.
 
 ---
 
 
 ## Mark easystack support as stable (no longer experimental) {: #easystack-stable }
 
-*(more info soon)*
+[Easystack files][easystack] are now considered stable and no longer require the use
+of the `--experimental` option.
 
 ---
 
