@@ -199,7 +199,7 @@ A configuration option `--keep-debug-symbols` was added to set the default value
 Enabling this will add `-g` to flags such as `$CXXFLAGS`.
 
 !!! Warning
-    For some software enabling debug symbols will result in significant increase in disk space.
+    For some software enabling debug symbols will result in significant increase in disk space usage.
 
 ---
 
