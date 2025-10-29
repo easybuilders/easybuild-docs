@@ -110,13 +110,18 @@ The following checksum types are deprecated and should no longer be used: `md5`,
 
 ## `EnvironmentModulesC` or `EnvironmentModulesTcl` modules tools {: #modules-tools }
 
-*(more info soon)*
+The use of the older [Environment Modules](https://modules.readthedocs.io/) versions is deprecated.
+This corresponds to setting the module tool in EasyBuild to either `EnvironmentModulesC` or
+`EnvironmentModulesTcl`.
+
+Those using Environment Modules should use at least version 4.3 or newer.
 
 ---
 
 ## GC3Pie as job backend {: #gc3pie-job-backend }
 
-*(more info soon)*
+The use of the GC3Pie job backend is deprecated. Those [generating jobs][submitting_jobs] from
+EasyBuild should use one of the other available backends instead, such as Slurm or PBS Python.
 
 ---
 
@@ -128,7 +133,8 @@ The following checksum types are deprecated and should no longer be used: `md5`,
 
 ## `COMPILER*_FLAGS` attributes in `Compiler` class {: #compiler-constants }
 
-*(replaced by `Compiler.COMPILER*_OPTIONS`, more info soon)*
+In the `Compiler` class, the `COMPILER*_FLAGS attributes` were renamed to change `FLAGS` to `OPTIONS`.
+This change was made to make it clearer as to the function of these attributes.
 
 ---
 

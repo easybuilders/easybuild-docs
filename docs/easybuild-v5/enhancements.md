@@ -63,14 +63,17 @@ If you would like to see other types of easyconfigs added as templates, please
 
 ## Mark support for installing extensions in parallel as stable (no longer experimental) {: #parallel-extensions-install-stable }
 
-*(more info soon)*
+The support for [installing extensions in parallel][installing_extensions_in_parallel]
+no longer requires the use of the `--experimental` option. Currently this supports
+installing R extensions in parallel.
 
 ---
 
 
 ## Mark easystack support as stable (no longer experimental) {: #easystack-stable }
 
-*(more info soon)*
+[Easystack files][easystack] are now considered stable and no longer require the use
+of the `--experimental` option.
 
 ---
 
@@ -168,7 +171,12 @@ status codes are reported in the corresponding logs.
 
 ## Copy build directory and/or log file(s) if installation failed to path specified via `--failed-install-build-dirs-path` or `--failed-install-logs-path` {: #copy-build-log-failed-installs }
 
-*(more info soon)*
+Often local storage (such as `/tmp`) or `/dev/shm` is used for the build path. When these are used with `--job`
+then the build files and log files will be removed when the job finishes. If a build fails this can make
+determining the reason for failure difficult. The options `--failed-install-build-dirs-path` and
+`--failed-install-logs-path` have been added to copy the build directory of log files to a specified path in
+the event of a failed build.
+
 
 ---
 
@@ -186,9 +194,13 @@ See [separate dedicated section](../implementing-easyblocks.md#module_load_envir
 ---
 
 
-## `keep-debug-symbols` configuration option to set default value of '`debug`' toolchain option {: #keep-debug-symbols }
+## `--keep-debug-symbols` configuration option to set default value of '`debug`' toolchain option {: #keep-debug-symbols }
 
-*(more info soon)*
+A configuration option `--keep-debug-symbols` was added to set the default value for the `debug` toolchain option.
+Enabling this will add `-g` to flags such as `$CXXFLAGS`.
+
+!!! Warning
+    For some software enabling debug symbols will result in significant increase in disk space usage.
 
 ---
 
@@ -316,7 +328,7 @@ This option is also available as easyconfig parameter
 
 ## Support not using `$PYTHONPATH` to specify the location of installed Python packages (via `--prefer-python-search-path`) { : #PYTHONPATH-vs-EBPYTHONPREFIXES }
 
-*(more info soon)*
+See [dedicated page](../python-search-path.md).
 
 ---
 

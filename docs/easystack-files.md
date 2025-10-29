@@ -4,7 +4,7 @@ This documentation covers aspects of specifying a software stack to
 install with Easybuild with *easystack files*.
 
 !!! note
-    Some breaking changes were made to the experimental easystack support in EasyBuild v4.7.0.
+    Some breaking changes were made to the easystack support in EasyBuild v4.7.0.
 
     Easystack files must now use the `easyconfigs` top-level key to list *easyconfig filenames*,
     as opposed to the `software` top-level key and separate subkeys like `version`, `versionsuffix` and
@@ -21,7 +21,7 @@ specify to EasyBuild what to install.
 To build software with *Easystack*, type:
 
 ``` shell
-eb --easystack example.yaml --experimental
+eb --easystack example.yaml
 ```
 
 where `example.yaml` is the file with specifications that you just
@@ -136,7 +136,7 @@ easyconfigs:
 and you run with
 
 ``` shell
-eb --experimental --easystack my_easystack.yaml --dry-run
+eb --easystack my_easystack.yaml --dry-run
 ```
 
 this will have the same effect as running
@@ -163,7 +163,7 @@ they take priority over the the ones on the command line, if the same configurat
 For example, running:
 
 ``` shell
-eb --experimental --easystack my_easystack.yaml --disable-debug
+eb --easystack my_easystack.yaml --disable-debug
 ```
 
 will effectively cause `PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb` to be installed with debug logging enabled,

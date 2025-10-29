@@ -4,12 +4,6 @@ A high-level overview of changes in EasyBuild version 5.0.0 is listed below.
 
 Click on a particular item for more information.
 
-!!! warning
-
-    (Tue 18 March 2025)
-    The sections linked to from this overview below are known to be incomplete.
-    Extra information will be gradually added over the next couple of days.
-
 ---
 
 ## Breaking changes {: #breaking-changes }
@@ -76,7 +70,7 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 - [Copy build directory and/or log file(s) if installation failed to path specified via `--failed-install-build-dirs-path` or `--failed-install-logs-path`](enhancements.md#copy-build-log-failed-installs)
 - [Specify changes that should be made by generated module files via `module_load_environment`](../implementing-easyblocks.md#module_load_environment)
 - [Add support for alternate easyconfig parameters/templates/constants](enhancements.md#alternative-easyconfig-parameters-templates-constants)
-- [`keep-debug-symbols` configuration option to set default value of '`debug`' toolchain option](enhancements.md#keep-debug-symbols)
+- [`--keep-debug-symbols` configuration option to set default value of '`debug`' toolchain option](enhancements.md#keep-debug-symbols)
 - [Provide control over how generated modules update search path for header files (via `--module-search-path-headers`)](enhancements.md#module-search-path-headers)
 - [Provide control over how EasyBuild specifies path to header files during installation (via `--search-path-cpp-headers`)](enhancements.md#search-path-cpp-headers)
 - [Provide control over how EasyBuild specifies path to libraries during installation (via `--search-path-linker`)](enhancements.md#search-path-linker)
@@ -94,12 +88,12 @@ Functionality that was deprecated a while ago in EasyBuild v4.x has been ***remo
 
 - [EasyBuild bootstrap script](removed-functionality.md#bootstrap_script) 
 - [Experimental support for `.yeb` easyconfig](removed-functionality.md#yeb)
-- [`accept-eula` configuration setting](removed-functionality.md#accept-eula)
+- [`--accept-eula` configuration setting](removed-functionality.md#accept-eula)
 - [`--wait-on-lock` configuration setting](removed-functionality.md#wait-on-lock)
 - [`is_generic_easyblock` function from `easybuild.framework.easyconfig.easyconfig`](removed-functionality.md#easyconfig-is_generic_easyblock)
 - [`copytree`, `rmtree2` functions from `easybuild.filetools`](removed-functionality.md#filetools-copytree-rmtree2)
 - [`fetch_extension_sources` method in `EasyBlock` class](removed-functionality.md#EasyBlock-fetch_extension_sources)
-- [`mod_exists_regex_template` options in `ModulesTool.exist` method](removed-functionality.md#ModulesTool-exist-mod_exists_regex_template)
+- [`mod_exists_regex_template` option in `ModulesTool.exist` method](removed-functionality.md#ModulesTool-exist-mod_exists_regex_template)
 - [`Toolchain.add_dependencies` method](removed-functionality.md#Toolchain-add_dependencies)
 - [`disable_templating` + `default_fallback` options in `get_easyblock_class` function](removed-functionality.md#get_easyblock_class)
 - [`skip_lower` option from `template_constant_dict` function](removed-functionality.md#template_constant_dict)
@@ -142,13 +136,6 @@ Some functionality is being deprecated in EasyBuild v5.0, and is scheduled to be
 ## Other changes
 
 - [Toolchain support policy](../policies/toolchains.md)
-
----
-
-## FAQ
-
-*(coming soon)*
-
 
 ---
 

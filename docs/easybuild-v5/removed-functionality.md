@@ -42,93 +42,108 @@ format and little suggestion that anyone was using it at all.
 
 ---
 
-## `accept-eula` configuration setting] {: #accept-eula }
+## `--accept-eula` configuration setting] {: #accept-eula }
 
-*(more info soon)*
+The `--accept-eula` option was changed to `--accept_eula_for` in EasyBuild 4.3.4 where it was also enhanced to
+support reular expressions. Use of `--accept-eula` has now been removed.
 
 ---
 
 ## `--wait-on-lock` configuration setting {: #wait-on-lock }
 
-*(more info soon)*
+The `--wait-on-lock` option was replaced and split into `--wait-on-lock-limit` and `--wait-on-lock-interval` in
+EasyBuild 4.2.1. Use of `--wait-on-lock` has now been removed.
 
 ---
 
 ## `is_generic_easyblock` function from `easybuild.framework.easyconfig.easyconfig` {: #easyconfig-is_generic_easyblock }
 
-*(more info soon)*
+`is_generic_easyblock` was moved to `easybuild.tools.filetools` in EasyBuild 4.2.0. Use of `is_generic_easyblock`
+from `easybuild.framework.easyconfig.easyconfig` has been removed.
 
 ---
 
 ## `copytree`, `rmtree2` functions from `easybuild.filetools` {: #filetools-copytree-rmtree2 }
 
-*(more info soon)*
+The use of `rmtree2` was replaced by `remove_dir` and the use of `copytree` by `copy_dir` in EasyBuild 4.2.0.
+Use of `rmtree2` and `copytree`, from `easybuild.filetools`, has now been removed.
 
 ---
 
 ## `fetch_extension_sources` method in `EasyBlock` class {: #EasyBlock-fetch_extension_sources }
 
-*(more info soon)*
+`fetch_extension_sources` was replaced by `collect_exts_file_info`. in EasyBuild 4.5.0. Use of
+`fetch_extension_sources` has now been removed.
 
 ---
 
-## `mod_exists_regex_template` options in `ModulesTool.exist` method {: #ModulesTool-exist-mod_exists_regex_template }
+## `mod_exists_regex_template` option in `ModulesTool.exist` method {: #ModulesTool-exist-mod_exists_regex_template }
 
-*(more info soon)*
+The `mod_exists_regex_template` option in `ModulesTool.exist` was unused and has now been removed.
 
 ---
 
 ## `Toolchain.add_dependencies` method {: #Toolchain-add_dependencies }
 
-*(more info soon)*
+`Toolchain.add_dependencies` has been removed. The dependencies should be passed to the `prepare`
+method instead, using the `deps` argument.
 
 ---
 
 ## `disable_templating` + `default_fallback` options in `get_easyblock_class` function {: #get_easyblock_class }
 
-*(more info soon)*
+`disable_templating` was changed to be a function on the EasyConfig class in EasyBuild 4.4.0.
+`disable_templating` and the `default_fallback` option for `get_easyblock_class` have now been removed.
 
 ---
 
 ## `skip_lower` option from `template_constant_dict` function {: #template_constant_dict }
 
-*(more info soon)*
+The `skip_lower` option in `template_constant_dict` had no effect in EasyBuild 4 and has now been
+removed.
 
 ---
 
 ## `use_git_am` option for `apply_patch` function {: #apply_patch-use_git_am }
 
-*(more info soon)*
+The `use_git_am` option for `apply_patch` was renamed to `use_git` in EasyBuild 4.3.0 . This option
+has now been removed.
 
 ---
 
 ## `skip_symlinks` option for `adjust_permissions` function {: #adjust_permissions-skip_symlinks }
 
-*(more info soon)*
+The `skip_symlinks` option in the `adjust_permissions` function has been removed. Symlinks are not
+followed in this function.
 
 ---
 
 ## `log_error` option in `which` function {: #which-log_error }
 
-*(more info soon)*
+The `log_error` option in the `which` function was changed to `on_error` in EasyBuild 4.4.0 to allow
+enhanced options on what to do when an error is encountered in this function. This option has now
+been removed.
 
 ---
 
 ## `descr` option for `simple_option` function {: #simple_option-descr }
 
-*(more info soon)*
+The `descr` option in the `simple_option` function was removed. This has been unused in EasyBuild for
+a long time.
 
 ---
 
 ## `dummy` toolchain {: #dummy-toolchain }
 
-*(more info soon)*
+The `dummy` toolchain was replaced by the `SYSTEM` toolchain in EasyBuild 4. The `dummy` toolchain has
+now been removed. As part of this the `--add-system-to-minimal-toolchains` option replaces
+`--add-dummy-to-minimal-toolchains`.
 
 ---
 
 ## Support for 32-bit targets {: #32-bit-targets }
 
-*(more info soon)*
+EasyBuild has support for 32-bit targets for `imkl` versions before 11. These have now been removed.
 
 ---
 
