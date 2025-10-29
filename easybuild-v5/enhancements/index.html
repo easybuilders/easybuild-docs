@@ -9205,7 +9205,7 @@
         <li class="md-nav__item">
   <a href="#keep-debug-symbols" class="md-nav__link">
     <span class="md-ellipsis">
-      keep-debug-symbols configuration option to set default value of 'debug' toolchain option
+      --keep-debug-symbols configuration option to set default value of 'debug' toolchain option
     </span>
   </a>
   
@@ -9564,7 +9564,7 @@
         <li class="md-nav__item">
   <a href="#keep-debug-symbols" class="md-nav__link">
     <span class="md-ellipsis">
-      keep-debug-symbols configuration option to set default value of 'debug' toolchain option
+      --keep-debug-symbols configuration option to set default value of 'debug' toolchain option
     </span>
   </a>
   
@@ -9676,7 +9676,7 @@
 <li><a class="autorefs autorefs-internal" title="Copy build directory and/or log file(s) if installation failed to path specified via --failed-install-build-dirs-path or --failed-install-logs-path" href="#copy-build-log-failed-installs">Copy build directory and/or log file(s) if installation failed to path specified via <code>--failed-install-build-dirs-path</code> or <code>--failed-install-logs-path</code></a></li>
 <li><a class="autorefs autorefs-internal" title="Specify changes that should be made by generated module files via module_load_environment" href="#module-load-environment">Specify changes that should be made by generated module files via <code>module_load_environment</code></a></li>
 <li><a class="autorefs autorefs-internal" href="#alternative-easyconfig-parameters-templates-constants">Add support for alternate easyconfig parameters/templates/constants</a></li>
-<li><a class="autorefs autorefs-internal" title="keep-debug-symbols configuration option to set default value of 'debug' toolchain option" href="#keep-debug-symbols"><code>keep-debug-symbols</code> configuration option to set default value of '<code>debug</code>' toolchain option</a></li>
+<li><a class="autorefs autorefs-internal" title="--keep-debug-symbols configuration option to set default value of 'debug' toolchain option" href="#keep-debug-symbols"><code>keep-debug-symbols</code> configuration option to set default value of '<code>debug</code>' toolchain option</a></li>
 <li><a class="autorefs autorefs-internal" title="Provide control over how generated modules update search path for header files (via --module-search-path-headers)" href="#module-search-path-headers">Provide control over how generated modules update search path for header files (via <code>--module-search-path-headers</code>)</a></li>
 <li><a class="autorefs autorefs-internal" title="Provide control over how EasyBuild specifies path to header files during installation (via --search-path-cpp-headers)" href="#search-path-cpp-headers">Provide control over how EasyBuild specifies path to header files during installation (via <code>--search-path-cpp-headers</code>)</a></li>
 <li><a class="autorefs autorefs-internal" title="Provide control over how EasyBuild specifies path to libraries during installation (via --search-path-linker)" href="#search-path-linker">Provide control over how EasyBuild specifies path to libraries during installation (via <code>--search-path-linker</code>)</a></li>
@@ -9709,10 +9709,13 @@ generation, including the versions of toolchains and dependencies for instance.<
 <a class="autorefs autorefs-internal" title="Contributing" href="../../contributing/#contributing">open an issue or pull request with your suggestion</a>.</p>
 <hr />
 <h2 id="parallel-extensions-install-stable">Mark support for installing extensions in parallel as stable (no longer experimental)<a class="headerlink" href="#parallel-extensions-install-stable" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
+<p>The support for <a class="autorefs autorefs-internal" title="Installing extensions in parallel" href="../../installing-extensions-in-parallel/#installing_extensions_in_parallel">installing extensions in parallel</a>
+no longer requires the use of the <code>--experimental</code> option. Currently this supports
+installing R extensions in parallel.</p>
 <hr />
 <h2 id="easystack-stable">Mark easystack support as stable (no longer experimental)<a class="headerlink" href="#easystack-stable" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
+<p><a class="autorefs autorefs-internal" href="../../easystack-files/#easystack">Easystack files</a> are now considered stable and no longer require the use
+of the <code>--experimental</code> option.</p>
 <hr />
 <h2 :=":" id="reproducible-tarballs-git_config">Reproducible tarballs for sources created via <code>git_config</code><a class="headerlink" href="#reproducible-tarballs-git_config" title="Permanent link">&para;</a></h2>
 <p>EasyBuild can now generate reproducible tarballs of sources cloned from Git
@@ -9796,7 +9799,11 @@ codes from external processes executed through <code>run_shell_cmd</code> or HTT
 status codes are reported in the corresponding logs.</p>
 <hr />
 <h2 id="copy-build-log-failed-installs">Copy build directory and/or log file(s) if installation failed to path specified via <code>--failed-install-build-dirs-path</code> or <code>--failed-install-logs-path</code><a class="headerlink" href="#copy-build-log-failed-installs" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
+<p>Often local storage (such as <code>/tmp</code>) or <code>/dev/shm</code> is used for the build path. When these are used with <code>--job</code>
+then the build files and log files will be removed when the job finishes. If a build fails this can make
+determining the reason for failure difficult. The options <code>--failed-install-build-dirs-path</code> and
+<code>--failed-install-logs-path</code> have been added to copy the build directory of log files to a specified path in
+the event of a failed build.</p>
 <hr />
 <h2 id="module-load-environment">Specify changes that should be made by generated module files via <code>module_load_environment</code><a class="headerlink" href="#module-load-environment" title="Permanent link">&para;</a></h2>
 <p>See <a href="../../implementing-easyblocks/#module_load_environment">separate dedicated section</a>.</p>
@@ -9804,8 +9811,13 @@ status codes are reported in the corresponding logs.</p>
 <h2 id="alternative-easyconfig-parameters-templates-constants">Add support for alternate easyconfig parameters/templates/constants<a class="headerlink" href="#alternative-easyconfig-parameters-templates-constants" title="Permanent link">&para;</a></h2>
 <p><em>(more info soon)</em></p>
 <hr />
-<h2 id="keep-debug-symbols"><code>keep-debug-symbols</code> configuration option to set default value of '<code>debug</code>' toolchain option<a class="headerlink" href="#keep-debug-symbols" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
+<h2 id="keep-debug-symbols"><code>--keep-debug-symbols</code> configuration option to set default value of '<code>debug</code>' toolchain option<a class="headerlink" href="#keep-debug-symbols" title="Permanent link">&para;</a></h2>
+<p>A configuration option <code>--keep-debug-symbols</code> was added to set the default value for the <code>debug</code> toolchain option.
+Enabling this will add <code>-g</code> to flags such as <code>$CXXFLAGS</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>For some software enabling debug symbols will result in significant increase in disk space usage.</p>
+</div>
 <hr />
 <h2 :=":" id="module-search-path-headers">Provide control over how generated modules update search path for header files (via <code>--module-search-path-headers</code>)<a class="headerlink" href="#module-search-path-headers" title="Permanent link">&para;</a></h2>
 <p>EasyBuild 5.0 introduces a new option called <code>--module-search-path-headers</code>.
@@ -9922,7 +9934,7 @@ still come into play, but with less precedence by default.</p>
 <code>--search-path-linker</code> build option.</p>
 <hr />
 <h2 :=":" id="PYTHONPATH-vs-EBPYTHONPREFIXES">Support not using <code>$PYTHONPATH</code> to specify the location of installed Python packages (via <code>--prefer-python-search-path</code>)<a class="headerlink" href="#PYTHONPATH-vs-EBPYTHONPREFIXES" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
+<p>See <a href="../../python-search-path/">dedicated page</a>.</p>
 <hr />
 <h2 :=":" id="modextrapaths-revamp">Revamp of easyconfig parameter <code>modextrapaths</code><a class="headerlink" href="#modextrapaths-revamp" title="Permanent link">&para;</a></h2>
 <p>The easyconfig parameter <code>modextrapaths</code> has become in EasyBuild 5.0 the only
@@ -10027,7 +10039,7 @@ of any non-public sources in them
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 25, 2025 16:23:45 UTC">March 25, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 29, 2025 10:54:23 UTC">October 29, 2025</span>
   </span>
 
     

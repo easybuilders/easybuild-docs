@@ -9737,16 +9737,21 @@ and are scheduled to be removed in EasyBuild v6.0.</p>
 <p>The following checksum types are deprecated and should no longer be used: <code>md5</code>, <code>adler32</code>, <code>crc32</code>, <code>sha1</code>, and <code>size</code>.</p>
 <hr />
 <h2 id="modules-tools"><code>EnvironmentModulesC</code> or <code>EnvironmentModulesTcl</code> modules tools<a class="headerlink" href="#modules-tools" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
+<p>The use of the older <a href="https://modules.readthedocs.io/">Environment Modules</a> versions is deprecated.
+This corresponds to setting the module tool in EasyBuild to either <code>EnvironmentModulesC</code> or
+<code>EnvironmentModulesTcl</code>.</p>
+<p>Those using Environment Modules should use at least version 4.3 or newer.</p>
 <hr />
 <h2 id="gc3pie-job-backend">GC3Pie as job backend<a class="headerlink" href="#gc3pie-job-backend" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
+<p>The use of the GC3Pie job backend is deprecated. Those <a class="autorefs autorefs-internal" title="Submitting jobs using --job" href="../../submitting-jobs/#submitting_jobs">generating jobs</a> from
+EasyBuild should use one of the other available backends instead, such as Slurm or PBS Python.</p>
 <hr />
 <h2 id="optarch-dash">Using <code>optarch</code> value without leading dash<a class="headerlink" href="#optarch-dash" title="Permanent link">&para;</a></h2>
 <p><em>(more info soon)</em></p>
 <hr />
 <h2 id="compiler-constants"><code>COMPILER*_FLAGS</code> attributes in <code>Compiler</code> class<a class="headerlink" href="#compiler-constants" title="Permanent link">&para;</a></h2>
-<p><em>(replaced by <code>Compiler.COMPILER*_OPTIONS</code>, more info soon)</em></p>
+<p>In the <code>Compiler</code> class, the <code>COMPILER*_FLAGS attributes</code> were renamed to change <code>FLAGS</code> to <code>OPTIONS</code>.
+This change was made to make it clearer as to the function of these attributes.</p>
 <hr />
 <h2 id="deprec_modextrapaths_append">Easyconfig parameter <code>modextrapaths_append</code><a class="headerlink" href="#deprec_modextrapaths_append" title="Permanent link">&para;</a></h2>
 <p>The functionality of <code>modextrapaths_append</code> is now implemented in
@@ -9798,7 +9803,7 @@ of paths can be controlled through its <code>prepend</code> option:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 19, 2025 18:11:47 UTC">March 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 29, 2025 10:52:44 UTC">October 29, 2025</span>
   </span>
 
     

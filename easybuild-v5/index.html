@@ -9168,15 +9168,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#faq" class="md-nav__link">
-    <span class="md-ellipsis">
-      FAQ
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#other-links" class="md-nav__link">
     <span class="md-ellipsis">
       Other links
@@ -9475,15 +9466,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#faq" class="md-nav__link">
-    <span class="md-ellipsis">
-      FAQ
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#other-links" class="md-nav__link">
     <span class="md-ellipsis">
       Other links
@@ -9514,12 +9496,6 @@
 <h1 id="easybuild-v50">EasyBuild v5.0<a class="headerlink" href="#easybuild-v50" title="Permanent link">&para;</a></h1>
 <p>A high-level overview of changes in EasyBuild version 5.0.0 is listed below.</p>
 <p>Click on a particular item for more information.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>(Tue 18 March 2025)
-The sections linked to from this overview below are known to be incomplete.
-Extra information will be gradually added over the next couple of days.</p>
-</div>
 <hr />
 <h2 id="breaking-changes">Breaking changes<a class="headerlink" href="#breaking-changes" title="Permanent link">&para;</a></h2>
 <p>EasyBuild v5.0 includes a number of backwards-incompatible changes:</p>
@@ -9577,7 +9553,7 @@ Extra information will be gradually added over the next couple of days.</p>
 <li><a href="enhancements/#copy-build-log-failed-installs">Copy build directory and/or log file(s) if installation failed to path specified via <code>--failed-install-build-dirs-path</code> or <code>--failed-install-logs-path</code></a></li>
 <li><a href="../implementing-easyblocks/#module_load_environment">Specify changes that should be made by generated module files via <code>module_load_environment</code></a></li>
 <li><a href="enhancements/#alternative-easyconfig-parameters-templates-constants">Add support for alternate easyconfig parameters/templates/constants</a></li>
-<li><a href="enhancements/#keep-debug-symbols"><code>keep-debug-symbols</code> configuration option to set default value of '<code>debug</code>' toolchain option</a></li>
+<li><a href="enhancements/#keep-debug-symbols"><code>--keep-debug-symbols</code> configuration option to set default value of '<code>debug</code>' toolchain option</a></li>
 <li><a href="enhancements/#module-search-path-headers">Provide control over how generated modules update search path for header files (via <code>--module-search-path-headers</code>)</a></li>
 <li><a href="enhancements/#search-path-cpp-headers">Provide control over how EasyBuild specifies path to header files during installation (via <code>--search-path-cpp-headers</code>)</a></li>
 <li><a href="enhancements/#search-path-linker">Provide control over how EasyBuild specifies path to libraries during installation (via <code>--search-path-linker</code>)</a></li>
@@ -9593,12 +9569,12 @@ Extra information will be gradually added over the next couple of days.</p>
 <ul>
 <li><a href="removed-functionality/#bootstrap_script">EasyBuild bootstrap script</a> </li>
 <li><a href="removed-functionality/#yeb">Experimental support for <code>.yeb</code> easyconfig</a></li>
-<li><a href="removed-functionality/#accept-eula"><code>accept-eula</code> configuration setting</a></li>
+<li><a href="removed-functionality/#accept-eula"><code>--accept-eula</code> configuration setting</a></li>
 <li><a href="removed-functionality/#wait-on-lock"><code>--wait-on-lock</code> configuration setting</a></li>
 <li><a href="removed-functionality/#easyconfig-is_generic_easyblock"><code>is_generic_easyblock</code> function from <code>easybuild.framework.easyconfig.easyconfig</code></a></li>
 <li><a href="removed-functionality/#filetools-copytree-rmtree2"><code>copytree</code>, <code>rmtree2</code> functions from <code>easybuild.filetools</code></a></li>
 <li><a href="removed-functionality/#EasyBlock-fetch_extension_sources"><code>fetch_extension_sources</code> method in <code>EasyBlock</code> class</a></li>
-<li><a href="removed-functionality/#ModulesTool-exist-mod_exists_regex_template"><code>mod_exists_regex_template</code> options in <code>ModulesTool.exist</code> method</a></li>
+<li><a href="removed-functionality/#ModulesTool-exist-mod_exists_regex_template"><code>mod_exists_regex_template</code> option in <code>ModulesTool.exist</code> method</a></li>
 <li><a href="removed-functionality/#Toolchain-add_dependencies"><code>Toolchain.add_dependencies</code> method</a></li>
 <li><a href="removed-functionality/#get_easyblock_class"><code>disable_templating</code> + <code>default_fallback</code> options in <code>get_easyblock_class</code> function</a></li>
 <li><a href="removed-functionality/#template_constant_dict"><code>skip_lower</code> option from <code>template_constant_dict</code> function</a></li>
@@ -9637,9 +9613,6 @@ Extra information will be gradually added over the next couple of days.</p>
 <li><a href="../policies/toolchains/">Toolchain support policy</a></li>
 </ul>
 <hr />
-<h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
-<p><em>(coming soon)</em></p>
-<hr />
 <h2 id="other-links">Other links<a class="headerlink" href="#other-links" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="release-candidates/">Beta releases and release candidates</a></li>
@@ -9668,7 +9641,7 @@ Extra information will be gradually added over the next couple of days.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 25, 2025 16:23:45 UTC">March 25, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 29, 2025 09:50:50 UTC">October 29, 2025</span>
   </span>
 
     

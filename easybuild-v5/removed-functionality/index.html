@@ -9216,7 +9216,7 @@
         <li class="md-nav__item">
   <a href="#accept-eula" class="md-nav__link">
     <span class="md-ellipsis">
-      accept-eula configuration setting]
+      --accept-eula configuration setting]
     </span>
   </a>
   
@@ -9261,7 +9261,7 @@
         <li class="md-nav__item">
   <a href="#ModulesTool-exist-mod_exists_regex_template" class="md-nav__link">
     <span class="md-ellipsis">
-      mod_exists_regex_template options in ModulesTool.exist method
+      mod_exists_regex_template option in ModulesTool.exist method
     </span>
   </a>
   
@@ -9456,7 +9456,7 @@
         <li class="md-nav__item">
   <a href="#accept-eula" class="md-nav__link">
     <span class="md-ellipsis">
-      accept-eula configuration setting]
+      --accept-eula configuration setting]
     </span>
   </a>
   
@@ -9501,7 +9501,7 @@
         <li class="md-nav__item">
   <a href="#ModulesTool-exist-mod_exists_regex_template" class="md-nav__link">
     <span class="md-ellipsis">
-      mod_exists_regex_template options in ModulesTool.exist method
+      mod_exists_regex_template option in ModulesTool.exist method
     </span>
   </a>
   
@@ -9613,12 +9613,12 @@
 <ul>
 <li><a class="autorefs autorefs-internal" href="#bootstrap_script">EasyBuild bootstrap script</a></li>
 <li><a class="autorefs autorefs-internal" title="Experimental support for .yeb easyconfig format" href="#yeb">Experimental support for <code>.yeb</code> easyconfig format</a></li>
-<li><a class="autorefs autorefs-internal" title="accept-eula configuration setting]" href="#accept-eula"><code>accept-eula</code> configuration setting</a></li>
+<li><a class="autorefs autorefs-internal" title="--accept-eula configuration setting]" href="#accept-eula"><code>accept-eula</code> configuration setting</a></li>
 <li><a class="autorefs autorefs-internal" title="--wait-on-lock configuration setting" href="#wait-on-lock"><code>--wait-on-lock</code> configuration setting</a></li>
 <li><a class="autorefs autorefs-internal" title="is_generic_easyblock function from easybuild.framework.easyconfig.easyconfig" href="#easyconfig-is_generic_easyblock"><code>is_generic_easyblock</code> function from <code>easybuild.framework.easyconfig.easyconfig</code></a></li>
 <li><a class="autorefs autorefs-internal" title="copytree, rmtree2 functions from easybuild.filetools" href="#filetools-copytree-rmtree2"><code>copytree</code>, <code>rmtree2</code> functions from <code>easybuild.filetools</code></a></li>
 <li><a class="autorefs autorefs-internal" title="fetch_extension_sources method in EasyBlock class" href="#EasyBlock-fetch_extension_sources"><code>fetch_extension_sources</code> method in <code>EasyBlock</code> class</a></li>
-<li><a class="autorefs autorefs-internal" title="mod_exists_regex_template options in ModulesTool.exist method" href="#ModulesTool-exist-mod_exists_regex_template"><code>mod_exists_regex_template</code> options in <code>ModulesTool.exist</code> method</a></li>
+<li><a class="autorefs autorefs-internal" title="mod_exists_regex_template option in ModulesTool.exist method" href="#ModulesTool-exist-mod_exists_regex_template"><code>mod_exists_regex_template</code> options in <code>ModulesTool.exist</code> method</a></li>
 <li><a class="autorefs autorefs-internal" title="Toolchain.add_dependencies method" href="#Toolchain-add_dependencies"><code>Toolchain.add_dependencies</code> method</a></li>
 <li><a class="autorefs autorefs-internal" title="disable_templating + default_fallback options in get_easyblock_class function" href="#get_easyblock_class"><code>disable_templating</code> + <code>default_fallback</code> options in <code>get_easyblock_class</code> function</a></li>
 <li><a class="autorefs autorefs-internal" title="skip_lower option from template_constant_dict function" href="#template_constant_dict"><code>skip_lower</code> option from <code>template_constant_dict</code> function</a></li>
@@ -9639,50 +9639,65 @@
 <p>This format allowed easyconfigs to be specified in YAML. However, there has been no recent development of this
 format and little suggestion that anyone was using it at all.</p>
 <hr />
-<h2 id="accept-eula"><code>accept-eula</code> configuration setting]<a class="headerlink" href="#accept-eula" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
+<h2 id="accept-eula"><code>--accept-eula</code> configuration setting]<a class="headerlink" href="#accept-eula" title="Permanent link">&para;</a></h2>
+<p>The <code>--accept-eula</code> option was changed to <code>--accept_eula_for</code> in EasyBuild 4.3.4 where it was also enhanced to
+support reular expressions. Use of <code>--accept-eula</code> has now been removed.</p>
 <hr />
 <h2 id="wait-on-lock"><code>--wait-on-lock</code> configuration setting<a class="headerlink" href="#wait-on-lock" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
+<p>The <code>--wait-on-lock</code> option was replaced and split into <code>--wait-on-lock-limit</code> and <code>--wait-on-lock-interval</code> in
+EasyBuild 4.2.1. Use of <code>--wait-on-lock</code> has now been removed.</p>
 <hr />
 <h2 id="easyconfig-is_generic_easyblock"><code>is_generic_easyblock</code> function from <code>easybuild.framework.easyconfig.easyconfig</code><a class="headerlink" href="#easyconfig-is_generic_easyblock" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
+<p><code>is_generic_easyblock</code> was moved to <code>easybuild.tools.filetools</code> in EasyBuild 4.2.0. Use of <code>is_generic_easyblock</code>
+from <code>easybuild.framework.easyconfig.easyconfig</code> has been removed.</p>
 <hr />
 <h2 id="filetools-copytree-rmtree2"><code>copytree</code>, <code>rmtree2</code> functions from <code>easybuild.filetools</code><a class="headerlink" href="#filetools-copytree-rmtree2" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
+<p>The use of <code>rmtree2</code> was replaced by <code>remove_dir</code> and the use of <code>copytree</code> by <code>copy_dir</code> in EasyBuild 4.2.0.
+Use of <code>rmtree2</code> and <code>copytree</code>, from <code>easybuild.filetools</code>, has now been removed.</p>
 <hr />
 <h2 id="EasyBlock-fetch_extension_sources"><code>fetch_extension_sources</code> method in <code>EasyBlock</code> class<a class="headerlink" href="#EasyBlock-fetch_extension_sources" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
+<p><code>fetch_extension_sources</code> was replaced by <code>collect_exts_file_info</code>. in EasyBuild 4.5.0. Use of
+<code>fetch_extension_sources</code> has now been removed.</p>
 <hr />
-<h2 id="ModulesTool-exist-mod_exists_regex_template"><code>mod_exists_regex_template</code> options in <code>ModulesTool.exist</code> method<a class="headerlink" href="#ModulesTool-exist-mod_exists_regex_template" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
+<h2 id="ModulesTool-exist-mod_exists_regex_template"><code>mod_exists_regex_template</code> option in <code>ModulesTool.exist</code> method<a class="headerlink" href="#ModulesTool-exist-mod_exists_regex_template" title="Permanent link">&para;</a></h2>
+<p>The <code>mod_exists_regex_template</code> option in <code>ModulesTool.exist</code> was unused and has now been removed.</p>
 <hr />
 <h2 id="Toolchain-add_dependencies"><code>Toolchain.add_dependencies</code> method<a class="headerlink" href="#Toolchain-add_dependencies" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
+<p><code>Toolchain.add_dependencies</code> has been removed. The dependencies should be passed to the <code>prepare</code>
+method instead, using the <code>deps</code> argument.</p>
 <hr />
 <h2 id="get_easyblock_class"><code>disable_templating</code> + <code>default_fallback</code> options in <code>get_easyblock_class</code> function<a class="headerlink" href="#get_easyblock_class" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
+<p><code>disable_templating</code> was changed to be a function on the EasyConfig class in EasyBuild 4.4.0.
+<code>disable_templating</code> and the <code>default_fallback</code> option for <code>get_easyblock_class</code> have now been removed.</p>
 <hr />
 <h2 id="template_constant_dict"><code>skip_lower</code> option from <code>template_constant_dict</code> function<a class="headerlink" href="#template_constant_dict" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
+<p>The <code>skip_lower</code> option in <code>template_constant_dict</code> had no effect in EasyBuild 4 and has now been
+removed.</p>
 <hr />
 <h2 id="apply_patch-use_git_am"><code>use_git_am</code> option for <code>apply_patch</code> function<a class="headerlink" href="#apply_patch-use_git_am" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
+<p>The <code>use_git_am</code> option for <code>apply_patch</code> was renamed to <code>use_git</code> in EasyBuild 4.3.0 . This option
+has now been removed.</p>
 <hr />
 <h2 id="adjust_permissions-skip_symlinks"><code>skip_symlinks</code> option for <code>adjust_permissions</code> function<a class="headerlink" href="#adjust_permissions-skip_symlinks" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
+<p>The <code>skip_symlinks</code> option in the <code>adjust_permissions</code> function has been removed. Symlinks are not
+followed in this function.</p>
 <hr />
 <h2 id="which-log_error"><code>log_error</code> option in <code>which</code> function<a class="headerlink" href="#which-log_error" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
+<p>The <code>log_error</code> option in the <code>which</code> function was changed to <code>on_error</code> in EasyBuild 4.4.0 to allow
+enhanced options on what to do when an error is encountered in this function. This option has now
+been removed.</p>
 <hr />
 <h2 id="simple_option-descr"><code>descr</code> option for <code>simple_option</code> function<a class="headerlink" href="#simple_option-descr" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
+<p>The <code>descr</code> option in the <code>simple_option</code> function was removed. This has been unused in EasyBuild for
+a long time.</p>
 <hr />
 <h2 id="dummy-toolchain"><code>dummy</code> toolchain<a class="headerlink" href="#dummy-toolchain" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
+<p>The <code>dummy</code> toolchain was replaced by the <code>SYSTEM</code> toolchain in EasyBuild 4. The <code>dummy</code> toolchain has
+now been removed. As part of this the <code>--add-system-to-minimal-toolchains</code> option replaces
+<code>--add-dummy-to-minimal-toolchains</code>.</p>
 <hr />
 <h2 id="32-bit-targets">Support for 32-bit targets<a class="headerlink" href="#32-bit-targets" title="Permanent link">&para;</a></h2>
-<p><em>(more info soon)</em></p>
+<p>EasyBuild has support for 32-bit targets for <code>imkl</code> versions before 11. These have now been removed.</p>
 <hr />
 
 
@@ -9704,7 +9719,7 @@ format and little suggestion that anyone was using it at all.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 17, 2025 21:44:31 UTC">March 17, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 29, 2025 10:36:38 UTC">October 29, 2025</span>
   </span>
 
     

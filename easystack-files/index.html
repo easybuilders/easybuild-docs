@@ -9396,7 +9396,7 @@
 install with Easybuild with <em>easystack files</em>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Some breaking changes were made to the experimental easystack support in EasyBuild v4.7.0.</p>
+<p>Some breaking changes were made to the easystack support in EasyBuild v4.7.0.</p>
 <p>Easystack files must now use the <code>easyconfigs</code> top-level key to list <em>easyconfig filenames</em>,
 as opposed to the <code>software</code> top-level key and separate subkeys like <code>version</code>, <code>versionsuffix</code> and
 <code>toolchain</code> to specify aspects of an easyconfig file that were supported before.</p>
@@ -9406,7 +9406,7 @@ as opposed to the <code>software</code> top-level key and separate subkeys like 
 specify to EasyBuild what to install.</p>
 <h2 id="easystack_usage">Usage<a class="headerlink" href="#easystack_usage" title="Permanent link">&para;</a></h2>
 <p>To build software with <em>Easystack</em>, type:</p>
-<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--easystack<span class="w"> </span>example.yaml<span class="w"> </span>--experimental
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--easystack<span class="w"> </span>example.yaml
 </code></pre></div>
 <p>where <code>example.yaml</code> is the file with specifications that you just
 created (more about this in the next section).</p>
@@ -9490,7 +9490,7 @@ These apply to <em>all</em> items in the easystack file. For example, if you hav
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">OpenFOAM-v2206-foss-2022a.eb</span><span class="p">:</span>
 </code></pre></div>
 <p>and you run with</p>
-<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--experimental<span class="w"> </span>--easystack<span class="w"> </span>my_easystack.yaml<span class="w"> </span>--dry-run
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--easystack<span class="w"> </span>my_easystack.yaml<span class="w"> </span>--dry-run
 </code></pre></div>
 <p>this will have the same effect as running</p>
 <div class="highlight"><pre><span></span><code>eb<span class="w"> </span>PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb<span class="w"> </span>--dry-run<span class="w"> </span>--from-pr<span class="w"> </span><span class="m">15924</span><span class="w"> </span>--debug
@@ -9505,7 +9505,7 @@ EasyBuild will always respect the argument that was put <em>last</em>.</p>
 <p>Since easyconfig-specific configuration options specified in the easystack file are put <em>last</em>,
 they take priority over the the ones on the command line, if the same configuration option is specified in both.</p>
 <p>For example, running:</p>
-<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--experimental<span class="w"> </span>--easystack<span class="w"> </span>my_easystack.yaml<span class="w"> </span>--disable-debug
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--easystack<span class="w"> </span>my_easystack.yaml<span class="w"> </span>--disable-debug
 </code></pre></div>
 <p>will effectively cause <code>PyTorch-1.12.0-foss-2022a-CUDA-11.7.0.eb</code> to be installed with debug logging enabled,
 while <code>OpenFOAM-v2206-foss-2022a.eb</code> will be effectively installed <em>without</em> debug logging.</p>
@@ -9548,7 +9548,7 @@ one could easily choose to <em>not</em> build anything labeled <code>gpu</code> 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 6, 2025 14:58:44 UTC">March 6, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 28, 2025 14:54:26 UTC">October 28, 2025</span>
   </span>
 
     
