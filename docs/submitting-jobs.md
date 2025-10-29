@@ -24,17 +24,17 @@ by the software dependency graph(s).
 
 The job backend to be used can be specified using the `--job-backend` EasyBuild configuration option.
 
-Since EasyBuild 3.8.0, three backends are supported:
+Three backends are supported:
 
-* `GC3Pie` *(default)* (supported since EasyBuild 2.2.0)
-    * `GC3Pie` version 2.5.0 (or more recent) required (<https://gc3pie.readthedocs.org>)
-    * works with different resource managers and job schedulers, including TORQUE/PBS, Slurm, etc.
-    * **note**: requires that a GC3Pie configuration file is provided, see [Configuring the job backend][submitting_jobs_cfg_job_backend_config]
+* `Slurm` *(default)*
+    * requires Slurm version 17.0 (or more recent), (<https://slurm.schedmd.com/>)
 * `PbsPython`
     * `pbs_python` version 4.1.0 (or more recent) required (<https://oss.trac.surfsara.nl/pbs_python>)
     * **note**: requires TORQUE resource manager (<https://adaptivecomputing.com/cherry-services/torque-resource-manager>)
-* `Slurm` (supported since EasyBuild 3.8.0)
-    * requires Slurm version 17.0 (or more recent), (<https://slurm.schedmd.com/>)
+* `GC3Pie` *(deprecated)*
+    * `GC3Pie` version 2.5.0 (or more recent) required (<https://gc3pie.readthedocs.org>)
+    * works with different resource managers and job schedulers, including TORQUE/PBS, Slurm, etc.
+    * **note**: requires that a GC3Pie configuration file is provided, see [Configuring the job backend][submitting_jobs_cfg_job_backend_config]
 
 
 ### Configuring the job backend (`--job-backend-config`) {: #submitting_jobs_cfg_job_backend_config }
@@ -59,8 +59,8 @@ which job backend is being used:
 * if the `PbsPython` job backend is used, the (most common) number of available cores per workernode in the
   target resource is determined; this usually results in jobs requesting full workernodes (at least in terms of cores)
   by default
-* if the `GC3Pie` or `Slurm` job backend is used, the requested number of cores is left unspecified,
-  which results in falling back to the default mechanism used by GC3Pie/Slurm to pick a number of cores;
+* if the `Slurm` or `GC3Pie` job backend is used, the requested number of cores is left unspecified,
+  which results in falling back to the default mechanism used by Slurm/GC3Pie to pick a number of cores;
   most likely, this results in single-core jobs to be submitted by default
 
 
@@ -79,7 +79,7 @@ can be specified via the `--job-deps-type` configuration setting:
 The default value for `-job-deps-type` depends on the job backend being used
 (see [Configuring the job backend][submitting_jobs_cfg_job_backend_config):
 
-* for the `GC3Pie` and `Slurm` backends, `--job-deps-type=abort_on_error` is the default;
+* for the `Slurm` and `GC3Pie` backends, `--job-deps-type=abort_on_error` is the default;
 * for the `PbsPython` backend, `--job-deps-type=always_run` is the default (because of historical reasons,
   and for the sake of backward compatibility)
 

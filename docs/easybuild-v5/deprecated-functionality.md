@@ -120,8 +120,8 @@ Those using Environment Modules should use at least version 4.3 or newer.
 
 ## GC3Pie as job backend {: #gc3pie-job-backend }
 
-The use of the GC3Pie job backend is deprecated. Those generating jobs from EasyBuild should use one
-of the other available backends instead, such as Slurm or PBS Python.
+The use of the GC3Pie job backend is deprecated. Those [generating jobs][submitting_jobs] from
+EasyBuild should use one of the other available backends instead, such as Slurm or PBS Python.
 
 ---
 
