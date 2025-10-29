@@ -10,9 +10,9 @@ naming scheme).
 To stop the installation procedure *after* a specific step in the installation procedure, the `-s`/`--stop`
 command line option can be used; the name of the step must be supplied as an argument.
 
-The following step names are recognized (listed in execution order): `fetch`, `ready`, `source`, `patch`,
-`prepare`, `configure`, `build`, `test`, `install`, `extensions`, `package`, `postproc`,
-`sanitycheck`, `cleanup`, `module`, `testcases`.
+The following step names are recognized (listed in execution order): `fetch`, `ready`, `extract`, `patch`,
+`prepare`, `configure`, `build`, `test`, `install`, `extensions`, `postiter`, `postproc`,
+`sanitycheck`, `cleanup`, `module`, `permissions`, `package`, `testcases`.
 
 Example usage:
 
