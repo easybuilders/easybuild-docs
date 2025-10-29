@@ -318,7 +318,7 @@ This option is also available as easyconfig parameter
 
 ## Support not using `$PYTHONPATH` to specify the location of installed Python packages (via `--prefer-python-search-path`) { : #PYTHONPATH-vs-EBPYTHONPREFIXES }
 
-*(more info soon)*
+See [dedicated page](../python-search-path.md).
 
 ---
 
