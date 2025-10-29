@@ -135,7 +135,7 @@ a long time.
 
 ## `dummy` toolchain {: #dummy-toolchain }
 
-The `dummy` toolchain was replaced y the `SYSTEM` toolchain in EasyBuild 4. The `dummy` toolchain has
+The `dummy` toolchain was replaced by the `SYSTEM` toolchain in EasyBuild 4. The `dummy` toolchain has
 now been removed. As part of this the `--add-system-to-minimal-toolchains` option replaces
 `--add-dummy-to-minimal-toolchains`.
 
