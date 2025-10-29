@@ -64,7 +64,8 @@ If you would like to see other types of easyconfigs added as templates, please
 ## Mark support for installing extensions in parallel as stable (no longer experimental) {: #parallel-extensions-install-stable }
 
 The support for [installing extensions in parallel][installing_extensions_in_parallel]
-no longer requires the use of the `--experimental` option.
+no longer requires the use of the `--experimental` option. Currently this supports
+installing R extensions in parallel.
 
 ---
 
