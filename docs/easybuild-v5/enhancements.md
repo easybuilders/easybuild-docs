@@ -170,7 +170,12 @@ status codes are reported in the corresponding logs.
 
 ## Copy build directory and/or log file(s) if installation failed to path specified via `--failed-install-build-dirs-path` or `--failed-install-logs-path` {: #copy-build-log-failed-installs }
 
-*(more info soon)*
+Often local storage (such as `/tmp`) or `/dev/shm` is used for the build path. When these are used with `--job`
+then the build files and log files will be removed when the job finishes. If a build fails this can make
+determining the reason for failure difficult. The options `--failed-install-build-dirs-path` and
+`--failed-install-logs-path` have been added to copy the build directory of log files to a specified path in
+the event of a failed build.
+
 
 ---
 
