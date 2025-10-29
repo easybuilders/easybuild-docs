@@ -133,7 +133,8 @@ of the other available backends instead, such as Slurm or PBS Python.
 
 ## `COMPILER*_FLAGS` attributes in `Compiler` class {: #compiler-constants }
 
-*(replaced by `Compiler.COMPILER*_OPTIONS`, more info soon)*
+In the `Compiler` class, the `COMPILER*_FLAGS attributes` were renamed to change `FLAGS` to `OPTIONS`.
+This change was made to make it clearer as to the function of these attributes.
 
 ---
 

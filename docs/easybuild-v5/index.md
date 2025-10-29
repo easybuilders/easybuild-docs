@@ -70,7 +70,7 @@ Various significant enhancements are included in EasyBuild v5.0, including:
 - [Copy build directory and/or log file(s) if installation failed to path specified via `--failed-install-build-dirs-path` or `--failed-install-logs-path`](enhancements.md#copy-build-log-failed-installs)
 - [Specify changes that should be made by generated module files via `module_load_environment`](../implementing-easyblocks.md#module_load_environment)
 - [Add support for alternate easyconfig parameters/templates/constants](enhancements.md#alternative-easyconfig-parameters-templates-constants)
-- [`keep-debug-symbols` configuration option to set default value of '`debug`' toolchain option](enhancements.md#keep-debug-symbols)
+- [`--keep-debug-symbols` configuration option to set default value of '`debug`' toolchain option](enhancements.md#keep-debug-symbols)
 - [Provide control over how generated modules update search path for header files (via `--module-search-path-headers`)](enhancements.md#module-search-path-headers)
 - [Provide control over how EasyBuild specifies path to header files during installation (via `--search-path-cpp-headers`)](enhancements.md#search-path-cpp-headers)
 - [Provide control over how EasyBuild specifies path to libraries during installation (via `--search-path-linker`)](enhancements.md#search-path-linker)

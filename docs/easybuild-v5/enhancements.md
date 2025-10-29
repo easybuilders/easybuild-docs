@@ -193,9 +193,13 @@ See [separate dedicated section](../implementing-easyblocks.md#module_load_envir
 ---
 
 
-## `keep-debug-symbols` configuration option to set default value of '`debug`' toolchain option {: #keep-debug-symbols }
+## `--keep-debug-symbols` configuration option to set default value of '`debug`' toolchain option {: #keep-debug-symbols }
 
-*(more info soon)*
+A configuration option `--keep-debug-symbols` was added to set the default value for the `debug` toolchain option.
+Enabling this will add `-g` to flags such as `$CXXFLAGS`.
+
+!!! Warning
+    For some software enabling debug symbols will result in significant increase in disk space.
 
 ---
 
