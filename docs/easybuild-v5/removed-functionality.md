@@ -114,7 +114,7 @@ has now been removed.
 ## `skip_symlinks` option for `adjust_permissions` function {: #adjust_permissions-skip_symlinks }
 
 The `skip_symlinks` option in the `adjust_permissions` function has been removed. Symlinks are not
-been followed in this function.
+followed in this function.
 
 ---
 
