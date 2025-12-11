@@ -79,6 +79,12 @@ Name               |Compiler(s)     |MPI          |Linear algebra           |FFT
 **ipsmpi**         |icc, ifort      |psmpi        |*(none)*                 |*(none)*
 **iqacml**         |icc, ifort      |QLogicMPI    |ACML, ScaLAPACK          |FFTW
 **ismkl**          |icc, ifort      |MPICH2       |imkl                     |imkl
+**lfbf**           |Clang, Flang    |*(none)*     |FlexiBLAS                |FFTW
+**lfoss**          |Clang, Flang    |OpenMPI      |FlexiBLAS, ScaLAPACK     |FFTW
+**llvm-compilers** |Clang, Flang    |*(none)*     |*(none)*                 |*(none)*
+**lmpflf**         |Clang, Flang    |MPICH        |FlexiBLAS, ScaLAPACK     |FFTW
+**lmpich**         |Clang, Flang    |MPICH        |*(none)*                 |*(none)*
+**lompi**          |Clang, Flang    |OpenMPI      |*(none)*                 |*(none)*
 **NVHPC**          |NVHPC           |*(none)*     |*(none)*                 |*(none)*
 **nvofbf**         |NVHPC           |OpenMPI      |FlexiBLAS, ScaLAPACK     |FFTW
 **nvompi**         |NVHPC           |OpenMPI      |*(none)*                 |*(none)*
