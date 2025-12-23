@@ -137,7 +137,7 @@ Option flag                                            |Option description
 ## GitHub integration options
 
 Option flag                                            |Option description
--------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------
 ``--add-pr-labels=PR#``                                |Try to add labels to PR based on files changed (type <class 'int'>)
 ``--check-contrib``                                    |Runs checks to see whether the given easyconfigs are ready to be contributed back (default: False)
 ``--check-github``                                     |Check status of GitHub integration, and report back (default: False)
@@ -155,6 +155,7 @@ Option flag                                            |Option description
 ``--include-easyblocks-from-commit=commit_SHA``        |Include easyblocks from specified commit (type str)
 ``--include-easyblocks-from-pr=PR#``                   |Include easyblocks from specified PR (type comma-separated list)
 ``--install-github-token``                             |Install GitHub token (requires --github-user) (default: False)
+``--keep-going``                                       |Continue installation of remaining software after a failed installation. Implied by --dump-test-report and --upload-test-report (default: False)
 ``--list-prs=STATE,ORDER,DIRECTION``                   |List pull requests (type <class 'str'>; default: open,created,desc)
 ``--merge-pr=PR#``                                     |Merge pull request (type <class 'int'>)
 ``--new-branch-github``                                |Create new branch in GitHub in preparation for a PR (default: False)

@@ -11,6 +11,8 @@ Osi (Open Solver Interface) provides an abstract base class to a generic linear 
 version | toolchain
 --------|----------
 ``0.108.11`` | ``GCC/13.3.0``
+``0.108.11`` | ``GCC/14.2.0``
+``0.108.11`` | ``GCC/14.3.0``
 ``0.108.6`` | ``GCC/10.3.0``
 ``0.108.7`` | ``GCC/11.2.0``
 ``0.108.8`` | ``GCC/12.2.0``

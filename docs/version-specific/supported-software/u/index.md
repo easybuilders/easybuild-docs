@@ -12,7 +12,9 @@ search:
  * [UCC-CUDA](UCC-CUDA.md)
  * [UCX](UCX.md)
  * [UCX-CUDA](UCX-CUDA.md)
+ * [ucx-py](ucx-py.md)
  * [UCX-ROCm](UCX-ROCm.md)
+ * [UDA](UDA.md)
  * [UDUNITS](UDUNITS.md)
  * [UFCG](UFCG.md)
  * [Ultralytics](Ultralytics.md)
@@ -35,6 +37,7 @@ search:
  * [USEARCH](USEARCH.md)
  * [UShER](UShER.md)
  * [utf8proc](utf8proc.md)
+ * [uthash](uthash.md)
  * [util-linux](util-linux.md)
  * [uv](uv.md)
 

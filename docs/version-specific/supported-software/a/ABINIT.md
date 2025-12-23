@@ -11,6 +11,8 @@ ABINIT is a package whose main program allows one to find the total energy, char
 version | toolchain
 --------|----------
 ``10.2.5`` | ``intel/2023a``
+``10.4.7`` | ``foss/2025b``
+``9.10.3`` | ``foss/2023a``
 ``9.10.3`` | ``intel/2022a``
 ``9.4.2`` | ``foss/2021a``
 ``9.4.2`` | ``intel/2021a``

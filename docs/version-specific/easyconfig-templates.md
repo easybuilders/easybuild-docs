@@ -2,15 +2,18 @@
 
 ## Template names/values derived from easyconfig instance
 
-Template name              |Template value
----------------------------|-----------------------------
-``%(module_name)s``        |Module name
-``%(nameletter)s``         |First letter of software name
-``%(toolchain_name)s``     |Toolchain name
-``%(toolchain_version)s``  |Toolchain version
-``%(version_major_minor)s``|Major.Minor version
-``%(version_major)s``      |Major version
-``%(version_minor)s``      |Minor version
+Template name                    |Template value
+---------------------------------|-----------------------------
+``%(module_name)s``              |Module name
+``%(nameletter)s``               |First letter of software name
+``%(toolchain_name)s``           |Toolchain name
+``%(toolchain_version)s``        |Toolchain version
+``%(version_major_minor_patch)s``|Major.Minor.Patch version
+``%(version_major_minor)s``      |Major.Minor version
+``%(version_major)s``            |Major version
+``%(version_minor_patch)s``      |Minor.Patch version
+``%(version_minor)s``            |Minor version
+``%(version_patch)s``            |Patch version
 
 ## Template names/values for (short) software versions
 
@@ -69,6 +72,7 @@ Template name                      |Template value
 ``%(amdgcn_cc_semicolon_sep)s``    |Semicolon-separated list of AMDGCN capabilities
 ``%(cuda_compute_capabilities)s``  |Comma-separated list of CUDA compute capabilities, as specified via --cuda-compute-capabilities configuration option or via cuda_compute_capabilities easyconfig parameter
 ``%(cuda_cc_cmake)s``              |List of CUDA compute capabilities suitable for use with $CUDAARCHS in CMake 3.18+
+``%(cuda_cc_nvhpc)s``              |List of CUDA compute capabilities suitable for use with -gpu option in NVHPC compilers
 ``%(cuda_cc_space_sep)s``          |Space-separated list of CUDA compute capabilities
 ``%(cuda_cc_space_sep_no_period)s``|Space-separated list of CUDA compute capabilities, without periods (e.g. '80 90').
 ``%(cuda_cc_semicolon_sep)s``      |Semicolon-separated list of CUDA compute capabilities
@@ -113,28 +117,52 @@ Constant                |Template description                                   
 ``SHLIB_EXT``           |extension for shared libraries                                                                                                  |``dylib``
 ``SOURCE_TAR_GZ``       |Source .tar.gz bundle                                                                                                           |``%(name)s-%(version)s.tar.gz``
 ``SOURCELOWER_TAR_GZ``  |Source .tar.gz bundle with lowercase name                                                                                       |``%(namelower)s-%(version)s.tar.gz``
+``VERSION_TAR_GZ``      |Source filename <version>.tar.gz common at GitHub                                                                               |``%(version)s.tar.gz``
+``V_VERSION_TAR_GZ``    |Source filename v<version>.tar.gz common at GitHub                                                                              |``v%(version)s.tar.gz``
 ``SOURCE_TAR_XZ``       |Source .tar.xz bundle                                                                                                           |``%(name)s-%(version)s.tar.xz``
 ``SOURCELOWER_TAR_XZ``  |Source .tar.xz bundle with lowercase name                                                                                       |``%(namelower)s-%(version)s.tar.xz``
+``VERSION_TAR_XZ``      |Source filename <version>.tar.xz common at GitHub                                                                               |``%(version)s.tar.xz``
+``V_VERSION_TAR_XZ``    |Source filename v<version>.tar.xz common at GitHub                                                                              |``v%(version)s.tar.xz``
 ``SOURCE_TAR_BZ2``      |Source .tar.bz2 bundle                                                                                                          |``%(name)s-%(version)s.tar.bz2``
 ``SOURCELOWER_TAR_BZ2`` |Source .tar.bz2 bundle with lowercase name                                                                                      |``%(namelower)s-%(version)s.tar.bz2``
+``VERSION_TAR_BZ2``     |Source filename <version>.tar.bz2 common at GitHub                                                                              |``%(version)s.tar.bz2``
+``V_VERSION_TAR_BZ2``   |Source filename v<version>.tar.bz2 common at GitHub                                                                             |``v%(version)s.tar.bz2``
 ``SOURCE_TGZ``          |Source .tgz bundle                                                                                                              |``%(name)s-%(version)s.tgz``
 ``SOURCELOWER_TGZ``     |Source .tgz bundle with lowercase name                                                                                          |``%(namelower)s-%(version)s.tgz``
+``VERSION_TGZ``         |Source filename <version>.tgz common at GitHub                                                                                  |``%(version)s.tgz``
+``V_VERSION_TGZ``       |Source filename v<version>.tgz common at GitHub                                                                                 |``v%(version)s.tgz``
 ``SOURCE_TXZ``          |Source .txz bundle                                                                                                              |``%(name)s-%(version)s.txz``
 ``SOURCELOWER_TXZ``     |Source .txz bundle with lowercase name                                                                                          |``%(namelower)s-%(version)s.txz``
+``VERSION_TXZ``         |Source filename <version>.txz common at GitHub                                                                                  |``%(version)s.txz``
+``V_VERSION_TXZ``       |Source filename v<version>.txz common at GitHub                                                                                 |``v%(version)s.txz``
 ``SOURCE_TBZ2``         |Source .tbz2 bundle                                                                                                             |``%(name)s-%(version)s.tbz2``
 ``SOURCELOWER_TBZ2``    |Source .tbz2 bundle with lowercase name                                                                                         |``%(namelower)s-%(version)s.tbz2``
+``VERSION_TBZ2``        |Source filename <version>.tbz2 common at GitHub                                                                                 |``%(version)s.tbz2``
+``V_VERSION_TBZ2``      |Source filename v<version>.tbz2 common at GitHub                                                                                |``v%(version)s.tbz2``
 ``SOURCE_TB2``          |Source .tb2 bundle                                                                                                              |``%(name)s-%(version)s.tb2``
 ``SOURCELOWER_TB2``     |Source .tb2 bundle with lowercase name                                                                                          |``%(namelower)s-%(version)s.tb2``
+``VERSION_TB2``         |Source filename <version>.tb2 common at GitHub                                                                                  |``%(version)s.tb2``
+``V_VERSION_TB2``       |Source filename v<version>.tb2 common at GitHub                                                                                 |``v%(version)s.tb2``
 ``SOURCE_GTGZ``         |Source .gtgz bundle                                                                                                             |``%(name)s-%(version)s.gtgz``
 ``SOURCELOWER_GTGZ``    |Source .gtgz bundle with lowercase name                                                                                         |``%(namelower)s-%(version)s.gtgz``
+``VERSION_GTGZ``        |Source filename <version>.gtgz common at GitHub                                                                                 |``%(version)s.gtgz``
+``V_VERSION_GTGZ``      |Source filename v<version>.gtgz common at GitHub                                                                                |``v%(version)s.gtgz``
 ``SOURCE_ZIP``          |Source .zip bundle                                                                                                              |``%(name)s-%(version)s.zip``
 ``SOURCELOWER_ZIP``     |Source .zip bundle with lowercase name                                                                                          |``%(namelower)s-%(version)s.zip``
+``VERSION_ZIP``         |Source filename <version>.zip common at GitHub                                                                                  |``%(version)s.zip``
+``V_VERSION_ZIP``       |Source filename v<version>.zip common at GitHub                                                                                 |``v%(version)s.zip``
 ``SOURCE_TAR``          |Source .tar bundle                                                                                                              |``%(name)s-%(version)s.tar``
 ``SOURCELOWER_TAR``     |Source .tar bundle with lowercase name                                                                                          |``%(namelower)s-%(version)s.tar``
+``VERSION_TAR``         |Source filename <version>.tar common at GitHub                                                                                  |``%(version)s.tar``
+``V_VERSION_TAR``       |Source filename v<version>.tar common at GitHub                                                                                 |``v%(version)s.tar``
 ``SOURCE_XZ``           |Source .xz bundle                                                                                                               |``%(name)s-%(version)s.xz``
 ``SOURCELOWER_XZ``      |Source .xz bundle with lowercase name                                                                                           |``%(namelower)s-%(version)s.xz``
+``VERSION_XZ``          |Source filename <version>.xz common at GitHub                                                                                   |``%(version)s.xz``
+``V_VERSION_XZ``        |Source filename v<version>.xz common at GitHub                                                                                  |``v%(version)s.xz``
 ``SOURCE_TAR_Z``        |Source .tar.Z bundle                                                                                                            |``%(name)s-%(version)s.tar.Z``
 ``SOURCELOWER_TAR_Z``   |Source .tar.Z bundle with lowercase name                                                                                        |``%(namelower)s-%(version)s.tar.Z``
+``VERSION_TAR_Z``       |Source filename <version>.tar.Z common at GitHub                                                                                |``%(version)s.tar.Z``
+``V_VERSION_TAR_Z``     |Source filename v<version>.tar.Z common at GitHub                                                                               |``v%(version)s.tar.Z``
 ``SOURCE_WHL``          |Generic (non-compiled) Python 2 & Python 3 wheel package                                                                        |``%(name)s-%(version)s-py2.py3-none-any.whl``
 ``SOURCELOWER_WHL``     |Generic (non-compiled) Python 2 & Python 3 wheel package with lowercase name                                                    |``%(namelower)s-%(version)s-py2.py3-none-any.whl``
 ``SOURCE_PY2_WHL``      |Generic (non-compiled) Python 2 wheel package                                                                                   |``%(name)s-%(version)s-py2-none-any.whl``

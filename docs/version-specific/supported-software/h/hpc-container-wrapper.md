@@ -10,6 +10,7 @@ hpc-container-wrapper (formerly known as Tykky) is a tool for wrapping a softwar
 
 version | toolchain
 --------|----------
+``0.4.2`` | ``GCCcore/13.3.0``
 ``0.4.2`` | ``system``
 
 

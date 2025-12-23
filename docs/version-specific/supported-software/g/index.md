@@ -8,6 +8,7 @@ search:
 
 
 
+ * [g-xtb](g-xtb.md)
  * [g2clib](g2clib.md)
  * [g2lib](g2lib.md)
  * [GADGET](GADGET.md)
@@ -136,6 +137,7 @@ search:
  * [GOMC](GOMC.md)
  * [gomkl](gomkl.md)
  * [gompi](gompi.md)
+ * [googleapis-python](googleapis-python.md)
  * [googlebenchmark](googlebenchmark.md)
  * [googletest](googletest.md)
  * [GoPeaks](GoPeaks.md)
@@ -185,6 +187,7 @@ search:
  * [GTDB-Tk](GTDB-Tk.md)
  * [GTK+](GTK+.md)
  * [gtk-doc](gtk-doc.md)
+ * [gtk-layer-shell](gtk-layer-shell.md)
  * [GTK2](GTK2.md)
  * [GTK3](GTK3.md)
  * [GTK4](GTK4.md)

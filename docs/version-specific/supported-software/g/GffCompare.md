@@ -10,6 +10,7 @@ GffCompare provides classification and reference annotation mapping and  matchin
 
 version | toolchain
 --------|----------
+``0.12.10`` | ``GCC/14.3.0``
 ``0.12.2`` | ``GCC/10.3.0``
 ``0.12.6`` | ``GCC/11.2.0``
 

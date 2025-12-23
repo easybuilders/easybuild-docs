@@ -17,6 +17,7 @@ version | versionsuffix | toolchain
 ``7.0.1`` | ``-int64`` | ``gompi/2022a``
 ``7.0.1`` |  | ``gompi/2022a``
 ``7.0.1`` |  | ``iimpi/2022a``
+``7.0.10`` |  | ``gompi/2025b``
 ``7.0.3`` |  | ``gompi/2022b``
 ``7.0.3`` |  | ``gompi/2023a``
 ``7.0.4`` |  | ``gompi/2023b``

@@ -11,6 +11,7 @@ Minimalistic protocol buffer decoder and encoder in C++.
 version | toolchain
 --------|----------
 ``1.8.1`` | ``GCCcore/13.3.0``
+``1.8.1`` | ``GCCcore/14.2.0``
 ``1.8.1`` | ``GCCcore/14.3.0``
 
 

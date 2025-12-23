@@ -15,6 +15,7 @@ search:
  * [QCMaquis](QCMaquis.md)
  * [QCxMS](QCxMS.md)
  * [QD](QD.md)
+ * [QEMU](QEMU.md)
  * [qforce](qforce.md)
  * [QGIS](QGIS.md)
  * [Qhull](Qhull.md)
@@ -24,6 +25,7 @@ search:
  * [qnorm](qnorm.md)
  * [qrupdate](qrupdate.md)
  * [QScintilla](QScintilla.md)
+ * [qsimcirq](qsimcirq.md)
  * [Qt5](Qt5.md)
  * [Qt5Webkit](Qt5Webkit.md)
  * [Qt6](Qt6.md)
@@ -40,6 +42,7 @@ search:
  * [QuickPIC](QuickPIC.md)
  * [QuickTree](QuickTree.md)
  * [QuPath](QuPath.md)
+ * [Qutip](Qutip.md)
  * [Qwt](Qwt.md)
 
 

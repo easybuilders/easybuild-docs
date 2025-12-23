@@ -10,6 +10,9 @@ VPx are open and royalty free video compression formats owned by Google.
 
 version | toolchain
 --------|----------
+``1.15.2`` | ``GCCcore/13.2.0``
+``1.15.2`` | ``GCCcore/13.3.0``
+``1.15.2`` | ``GCCcore/14.2.0``
 ``1.15.2`` | ``GCCcore/14.3.0``
 
 

@@ -11,6 +11,7 @@ SIP is a tool that makes it very easy to create Python bindings for C and C++ li
 version | toolchain
 --------|----------
 ``6.10.0`` | ``GCCcore/13.3.0``
+``6.13.1`` | ``GCCcore/14.3.0``
 ``6.8.1`` | ``GCCcore/12.3.0``
 ``6.8.3`` | ``GCCcore/13.2.0``
 

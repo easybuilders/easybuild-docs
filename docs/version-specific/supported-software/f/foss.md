@@ -6,7 +6,7 @@ search:
 
 GNU Compiler Collection (GCC) based compiler toolchain, including  OpenMPI for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.
 
-*homepage*: <https://easybuild.readthedocs.io/en/master/Common-toolchains.html#foss-toolchain>
+*homepage*: <https://docs.easybuild.io/common-toolchains/#common_toolchains_foss>
 
 version | toolchain
 --------|----------

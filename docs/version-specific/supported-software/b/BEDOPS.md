@@ -10,6 +10,7 @@ BEDOPS is an open-source command-line toolkit that performs highly efficient and
 
 version | toolchain
 --------|----------
+``2.4.35`` | ``foss/2022b``
 ``2.4.41`` | ``foss/2021b``
 ``2.4.41`` | ``foss/2023a``
 ``2.4.41`` | ``foss/2023b``

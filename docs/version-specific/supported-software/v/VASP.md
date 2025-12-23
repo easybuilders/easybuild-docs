@@ -11,6 +11,8 @@ The Vienna Ab initio Simulation Package (VASP) is a computer program for atomic 
 version | toolchain
 --------|----------
 ``6.3.2`` | ``nvofbf/2022.07``
+``6.4.3`` | ``intel/2024a``
+``6.5.0`` | ``NVHPC/25.1``
 ``6.5.0`` | ``foss/2024a``
 ``6.5.0`` | ``intel/2024a``
 

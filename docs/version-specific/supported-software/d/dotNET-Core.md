@@ -10,6 +10,8 @@ search:
 
 version | toolchain
 --------|----------
+``10.0.100`` | ``system``
+``10.0`` | ``system``
 ``6.0.420`` | ``system``
 ``6.0`` | ``system``
 ``8.0.203`` | ``system``

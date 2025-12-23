@@ -10,6 +10,7 @@ SymEngine is a standalone fast C++ symbolic manipulation library
 
 version | toolchain
 --------|----------
+``0.11.2`` | ``gfbf/2023a``
 ``0.11.2`` | ``gfbf/2023b``
 ``0.7.0`` | ``GCC/10.3.0``
 

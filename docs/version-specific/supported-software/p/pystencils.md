@@ -10,6 +10,7 @@ pystencils uses sympy to define stencil operations, that can be executed on nump
 
 version | toolchain
 --------|----------
+``1.3.4`` | ``gfbf/2023a``
 ``1.3.4`` | ``gfbf/2023b``
 
 

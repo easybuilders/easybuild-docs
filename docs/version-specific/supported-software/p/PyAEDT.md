@@ -10,6 +10,7 @@ PyAEDT is a Python library that interacts directly with the Ansys Electronics De
 
 version | toolchain
 --------|----------
+``0.15.0`` | ``foss/2024a``
 ``0.8.7`` | ``GCCcore/12.3.0``
 ``0.9.9`` | ``gfbf/2023b``
 

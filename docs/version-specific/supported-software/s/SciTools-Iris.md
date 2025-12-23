@@ -10,6 +10,7 @@ A powerful, format-agnostic, community-driven Python package for analysing and v
 
 version | toolchain
 --------|----------
+``3.13.0`` | ``foss/2024a``
 ``3.2.1`` | ``foss/2022a``
 ``3.9.0`` | ``foss/2023a``
 
