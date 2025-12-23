@@ -11,6 +11,7 @@ Command line tool for working with OpenStreetMap data based on the Osmium librar
 version | toolchain
 --------|----------
 ``1.18.0`` | ``foss/2024a``
+``1.18.0`` | ``foss/2025a``
 ``1.18.0`` | ``foss/2025b``
 
 

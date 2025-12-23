@@ -6,7 +6,7 @@ search:
 
 Selection of conserved blocks from multiple alignments for their use in phylogenetic analysis
 
-*homepage*: <https://www.biologiaevolutiva.org/jcastresana/Gblocks.html>
+*homepage*: <https://molevol-ibe.csic.es/Gblocks.html>
 
 version | toolchain
 --------|----------

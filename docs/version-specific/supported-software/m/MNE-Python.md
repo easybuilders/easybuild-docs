@@ -11,6 +11,7 @@ MNE-Python software is an open-source Python package for exploring, visualizing,
 version | toolchain
 --------|----------
 ``0.24.1`` | ``foss/2021a``
+``1.10.2`` | ``foss/2024a``
 ``1.6.1`` | ``foss/2023a``
 
 

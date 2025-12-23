@@ -11,6 +11,8 @@ Coverage.py is a tool for measuring code coverage of Python programs.  It monito
 version | toolchain
 --------|----------
 ``5.5`` | ``GCCcore/10.3.0``
+``7.10.7`` | ``GCCcore/14.2.0``
+``7.10.7`` | ``GCCcore/14.3.0``
 ``7.2.3`` | ``GCCcore/12.2.0``
 ``7.2.3`` | ``GCCcore/12.3.0``
 ``7.2.7`` | ``GCCcore/11.3.0``

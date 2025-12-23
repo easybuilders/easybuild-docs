@@ -11,6 +11,7 @@ The Intel X86 Encoder Decoder (Intel XED) is a software library (and associated 
 version | toolchain
 --------|----------
 ``2025.03.02`` | ``GCCcore/13.3.0``
+``2025.06.08`` | ``GCCcore/14.2.0``
 ``2025.06.08`` | ``GCCcore/14.3.0``
 
 

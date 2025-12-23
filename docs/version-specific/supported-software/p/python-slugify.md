@@ -4,12 +4,13 @@ search:
 ---
 # python-slugify
 
-Best attempt to create slugs from unicode strings while keeping it DRY.
+A Python slugify application that also handles Unicode Best attempt to create slugs from unicode strings while keeping it DRY.
 
 *homepage*: <https://github.com/un33k/python-slugify>
 
 version | toolchain
 --------|----------
+``8.0.4`` | ``GCCcore/12.3.0``
 ``8.0.4`` | ``GCCcore/13.2.0``
 
 

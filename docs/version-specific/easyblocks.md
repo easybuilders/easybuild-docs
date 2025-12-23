@@ -31,16 +31,19 @@
       - EB_MATLAB
       - EB_MCR
       - EB_MotionCor2
-      - EB_NVHPC
       - EB_optiSLang
       - EB_ORCA
       - EB_Stata
       - EB_Tornado
+      - NvidiaBase
+        - EB_NVHPC
+        - EB_nvidia_minus_compilers
     - Rpm
   - Bundle
     - BuildEnv
     - CrayToolchain
     - EB_Clang_minus_AOMP
+    - EB_gnupg_minus_bundle
     - EB_OpenSSL_wrapper
     - JuliaBundle
     - PerlBundle
@@ -55,6 +58,7 @@
       - CMakeMakeCp
         - EB_DualSPHysics
       - CMakeNinja
+        - EB_pocl
       - CMakePythonPackage
         - EB_pybind11
       - EB_Amber
@@ -67,6 +71,7 @@
       - EB_GATE
       - EB_Geant4
       - EB_GROMACS
+      - EB_Kokkos
       - EB_LAMMPS
       - EB_Libint
       - EB_LLVM
@@ -269,7 +274,9 @@
     - EB_VTune
   - MesonNinja
     - CMakeNinja
+      - EB_pocl
     - EB_Mesa
+    - EB_QEMU
     - EB_scipy
   - ModuleRC
   - PackedBinary
@@ -286,11 +293,13 @@
     - EB_MATLAB
     - EB_MCR
     - EB_MotionCor2
-    - EB_NVHPC
     - EB_optiSLang
     - EB_ORCA
     - EB_Stata
     - EB_Tornado
+    - NvidiaBase
+      - EB_NVHPC
+      - EB_nvidia_minus_compilers
   - SCons
     - EB_Xmipp
   - Waf

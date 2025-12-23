@@ -8,6 +8,7 @@ search:
 
 
 
+ * [k8](k8.md)
  * [kaggle](kaggle.md)
  * [KaHIP](KaHIP.md)
  * [Kaleido](Kaleido.md)
@@ -26,6 +27,7 @@ search:
  * [KMCLib](KMCLib.md)
  * [KMCP](KMCP.md)
  * [kneaddata](kneaddata.md)
+ * [Kokkos](Kokkos.md)
  * [koopmans](koopmans.md)
  * [koopmans-kcp](koopmans-kcp.md)
  * [koopmans-qe-utils](koopmans-qe-utils.md)

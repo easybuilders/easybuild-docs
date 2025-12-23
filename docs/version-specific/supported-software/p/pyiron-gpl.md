@@ -11,6 +11,8 @@ Additional modules for the pyiron IDE licensed under GPLv3. Sources are from for
 version | versionsuffix | toolchain
 --------|---------------|----------
 ``0.0.5-20250512`` | ``-mbocus`` | ``foss/2023b``
+``0.0.5-20250512`` | ``-mbocus`` | ``foss/2024a``
+``0.0.5-20251021`` | ``-mbocus`` | ``foss/2025b``
 ``0.0.5`` |  | ``foss/2023b``
 
 

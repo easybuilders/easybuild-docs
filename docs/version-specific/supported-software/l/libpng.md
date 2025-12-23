@@ -11,6 +11,7 @@ libpng is the official PNG reference library
 version | toolchain
 --------|----------
 ``1.5.30`` | ``system``
+``1.6.34`` | ``system``
 ``1.6.37`` | ``GCCcore/10.3.0``
 ``1.6.37`` | ``GCCcore/11.2.0``
 ``1.6.37`` | ``GCCcore/11.3.0``

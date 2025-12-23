@@ -11,6 +11,7 @@ Ccache (or “ccache”) is a compiler cache. It speeds up recompilation by cach
 version | toolchain
 --------|----------
 ``4.10.2`` | ``GCCcore/13.3.0``
+``4.11.3`` | ``GCCcore/14.2.0``
 ``4.11.3`` | ``GCCcore/14.3.0``
 ``4.6.1`` | ``GCCcore/11.2.0``
 ``4.6.3`` | ``GCCcore/11.3.0``

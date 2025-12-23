@@ -10,6 +10,7 @@ libdivsufsort is a software library that implements a lightweight suffix  array 
 
 version | toolchain
 --------|----------
+``2.0.1`` | ``GCCcore/13.3.0``
 ``2.0.1`` | ``foss/2023a``
 
 

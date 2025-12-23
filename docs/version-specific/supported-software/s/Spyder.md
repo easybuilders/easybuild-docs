@@ -10,6 +10,7 @@ Spyder is an interactive Python development environment providing MATLAB-like fe
 
 version | toolchain
 --------|----------
+``5.5.1`` | ``GCCcore/12.3.0``
 ``6.0.1`` | ``GCCcore/13.2.0``
 
 

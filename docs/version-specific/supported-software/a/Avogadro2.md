@@ -10,6 +10,7 @@ Avogadro is an advanced molecule editor and visualizer designed for cross-platfo
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``1.101.0`` | ``-linux-x86_64`` | ``system``
 ``1.97.0`` | ``-linux-x86_64`` | ``system``
 
 

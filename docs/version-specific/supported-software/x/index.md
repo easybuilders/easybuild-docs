@@ -9,6 +9,7 @@ search:
 
 
  * [X11](X11.md)
+ * [x11vnc](x11vnc.md)
  * [x13as](x13as.md)
  * [x264](x264.md)
  * [x265](x265.md)
@@ -42,6 +43,7 @@ search:
  * [xtb](xtb.md)
  * [xtb-IFF](xtb-IFF.md)
  * [xtensor](xtensor.md)
+ * [xterm](xterm.md)
  * [xtrans](xtrans.md)
  * [Xvfb](Xvfb.md)
  * [xxd](xxd.md)

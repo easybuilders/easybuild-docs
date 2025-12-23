@@ -10,6 +10,8 @@ utf8proc is a small, clean C library that provides Unicode normalization, case-f
 
 version | toolchain
 --------|----------
+``2.10.0`` | ``GCCcore/14.2.0``
+``2.10.0`` | ``GCCcore/14.3.0``
 ``2.6.1`` | ``GCCcore/10.3.0``
 ``2.6.1`` | ``GCCcore/11.2.0``
 ``2.7.0`` | ``GCCcore/11.3.0``

@@ -11,6 +11,9 @@ An integrated development environment (IDE) for computational materials science.
 version | toolchain
 --------|----------
 ``0.5.1`` | ``foss/2023a``
+``0.5.2-20250921`` | ``foss/2024a``
+``0.5.2-20251013`` | ``foss/2024a``
+``0.5.2-20251013`` | ``foss/2025b``
 ``0.5.2`` | ``foss/2023b``
 
 

@@ -11,6 +11,7 @@ Plotting suite for long read sequencing data and alignments
 version | toolchain
 --------|----------
 ``1.33.0`` | ``foss/2021a``
+``1.41.0`` | ``foss/2022b``
 ``1.42.0`` | ``foss/2022a``
 ``1.43.0`` | ``foss/2023a``
 

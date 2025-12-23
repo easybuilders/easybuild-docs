@@ -6,7 +6,7 @@
 
 # Overview of generic easyblocks {: #generic_easyblocks }
 
-[BinariesTarball](#binariestarball) - [Binary](#binary) - [BuildEnv](#buildenv) - [Bundle](#bundle) - [CMakeMake](#cmakemake) - [CMakeMakeCp](#cmakemakecp) - [CMakeNinja](#cmakeninja) - [CMakePythonPackage](#cmakepythonpackage) - [Cargo](#cargo) - [CargoPythonBundle](#cargopythonbundle) - [CargoPythonPackage](#cargopythonpackage) - [CmdCp](#cmdcp) - [Conda](#conda) - [ConfigureMake](#configuremake) - [ConfigureMakePythonPackage](#configuremakepythonpackage) - [CrayToolchain](#craytoolchain) - [Dataset](#dataset) - [FortranPythonPackage](#fortranpythonpackage) - [GoPackage](#gopackage) - [IntelBase](#intelbase) - [JAR](#jar) - [JuliaBundle](#juliabundle) - [JuliaPackage](#juliapackage) - [MakeCp](#makecp) - [MesonNinja](#mesonninja) - [ModuleRC](#modulerc) - [OCamlPackage](#ocamlpackage) - [OctavePackage](#octavepackage) - [PackedBinary](#packedbinary) - [PerlBundle](#perlbundle) - [PerlModule](#perlmodule) - [PythonBundle](#pythonbundle) - [PythonPackage](#pythonpackage) - [RPackage](#rpackage) - [Rpm](#rpm) - [RubyGem](#rubygem) - [SCons](#scons) - [SystemCompiler](#systemcompiler) - [SystemCompilerGCC](#systemcompilergcc) - [SystemMPI](#systemmpi) - [Tarball](#tarball) - [Toolchain](#toolchain) - [VSCPythonPackage](#vscpythonpackage) - [VersionIndependentPythonPackage](#versionindependentpythonpackage) - [Waf](#waf)
+[BinariesTarball](#binariestarball) - [Binary](#binary) - [BuildEnv](#buildenv) - [Bundle](#bundle) - [CMakeMake](#cmakemake) - [CMakeMakeCp](#cmakemakecp) - [CMakeNinja](#cmakeninja) - [CMakePythonPackage](#cmakepythonpackage) - [Cargo](#cargo) - [CargoPythonBundle](#cargopythonbundle) - [CargoPythonPackage](#cargopythonpackage) - [CmdCp](#cmdcp) - [Conda](#conda) - [ConfigureMake](#configuremake) - [ConfigureMakePythonPackage](#configuremakepythonpackage) - [CrayToolchain](#craytoolchain) - [Dataset](#dataset) - [FortranPythonPackage](#fortranpythonpackage) - [GoPackage](#gopackage) - [IntelBase](#intelbase) - [JAR](#jar) - [JuliaBundle](#juliabundle) - [JuliaPackage](#juliapackage) - [MakeCp](#makecp) - [MesonNinja](#mesonninja) - [ModuleRC](#modulerc) - [NvidiaBase](#nvidiabase) - [OCamlPackage](#ocamlpackage) - [OctavePackage](#octavepackage) - [PackedBinary](#packedbinary) - [PerlBundle](#perlbundle) - [PerlModule](#perlmodule) - [PythonBundle](#pythonbundle) - [PythonPackage](#pythonpackage) - [RPackage](#rpackage) - [Rpm](#rpm) - [RubyGem](#rubygem) - [SCons](#scons) - [SystemCompiler](#systemcompiler) - [SystemCompilerGCC](#systemcompilergcc) - [SystemMPI](#systemmpi) - [Tarball](#tarball) - [Toolchain](#toolchain) - [VSCPythonPackage](#vscpythonpackage) - [VersionIndependentPythonPackage](#versionindependentpythonpackage) - [Waf](#waf)
 
 ## ``BinariesTarball``
 
@@ -14,6 +14,7 @@
 
 
 Support for installing a tarball of binaries
+
 
 ### Extra easyconfig parameters specific to ``BinariesTarball`` easyblock
 
@@ -25,10 +26,6 @@ easyconfig parameter|description                                                
 
 ### Customised steps in ``BinariesTarball`` easyblock
 
-* ``build_step`` - The type of the None singleton.
-
-* ``configure_step`` - The type of the None singleton.
-
 * ``install_step`` - Install by copying unzipped binaries to 'bin' subdir of installation dir, and fixing permissions.
 
 
@@ -39,6 +36,7 @@ easyconfig parameter|description                                                
 
 Support for installing software that comes in binary form.
 Just copy the sources to the install dir, or use the specified install command.
+
 
 ### Extra easyconfig parameters specific to ``Binary`` easyblock
 
@@ -93,26 +91,24 @@ moduleclass = 'bio'
 
 Build environment of toolchain: only generate module file
 
+
 ### Extra easyconfig parameters specific to ``BuildEnv`` easyblock
 
-easyconfig parameter           |description                                                                                             |default value
--------------------------------|--------------------------------------------------------------------------------------------------------|-------------
-``altroot``                    |Software name of dependency to use to define $EBROOT for this bundle                                    |``None``
-``altversion``                 |Software name of dependency to use to define $EBVERSION for this bundle                                 |``None``
-``components``                 |List of components to install: tuples w/ name, version and easyblock to use                             |``()``
-``default_component_specs``    |Default specs to use for every component                                                                |``{}``
-``default_easyblock``          |Default easyblock to use for components                                                                 |``None``
-``python_executable``          |Python executable to use for the wrappers (use None to use path to Python executable used by EasyBuild).|``"python3"``
-``sanity_check_all_components``|Enable sanity checks for all components                                                                 |``False``
-``sanity_check_components``    |List of components for which to run sanity checks                                                       |``[]``
+easyconfig parameter           |description                                                                                                                                |default value
+-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------
+``altroot``                    |Software name of dependency to use to define $EBROOT for this bundle                                                                       |``None``
+``altversion``                 |Software name of dependency to use to define $EBVERSION for this bundle                                                                    |``None``
+``build_env_vars``             |Export environment variables related to compilers, compilation flags, optimisations, math libaries, etc. (overwriting any existing values).|``True``
+``components``                 |List of components to install: tuples w/ name, version and easyblock to use                                                                |``()``
+``default_component_specs``    |Default specs to use for every component                                                                                                   |``{}``
+``default_easyblock``          |Default easyblock to use for components                                                                                                    |``None``
+``python_executable``          |Python executable to use for the wrappers (use None to use path to Python executable used by EasyBuild).                                   |``"python3"``
+``sanity_check_all_components``|Enable sanity checks for all components                                                                                                    |``False``
+``sanity_check_components``    |List of components for which to run sanity checks                                                                                          |``[]``
 
 ### Customised steps in ``BuildEnv`` easyblock
 
-* ``build_step`` - The type of the None singleton.
-
-* ``configure_step`` - The type of the None singleton.
-
-* ``install_step`` - Custom install step for buildenv: copy RPATH wrapper scripts to install dir, if desired
+* ``install_step`` - Custom install step for buildenv: copy RPATH wrapper scripts to install dir (if they exist)
 
 
 ## ``Bundle``
@@ -121,6 +117,7 @@ easyconfig parameter           |description                                     
 
 
 Bundle of modules: only generate module files, nothing to build/install
+
 
 ### Extra easyconfig parameters specific to ``Bundle`` easyblock
 
@@ -200,11 +197,19 @@ easyconfig parameter              |description                                  
 
 ### Customised steps in ``CMakeMake`` easyblock
 
-* ``build_step`` - The type of the None singleton.
+* ``configure_step`` - Configure build using 'cmake'
 
-* ``configure_step`` - Configure build using cmake
+        :param srcdir: custom source directory to use (if None, use 'srcdir' easyconfig parameter, or start dir)
+        :param builddir: custom build directory to use (if None, 'easybuild_obj' in build directory will be used)
+        :param fail_on_error: raise error if cmake command failed with non-zero exit code (enabled by default)
+        :param return_full_cmd_result: return full result of running cmake command (not just the output)
 
-* ``install_step`` - Configure build using cmake
+* ``install_step`` - Configure build using 'cmake'
+
+        :param srcdir: custom source directory to use (if None, use 'srcdir' easyconfig parameter, or start dir)
+        :param builddir: custom build directory to use (if None, 'easybuild_obj' in build directory will be used)
+        :param fail_on_error: raise error if cmake command failed with non-zero exit code (enabled by default)
+        :param return_full_cmd_result: return full result of running cmake command (not just the output)
 
 
 ### Example easyconfig for ``CMakeMake`` easyblock
@@ -251,6 +256,7 @@ Software configured with CMake but without 'make install' step
 
 We use the default CMakeMake implementation, and use install_step from MakeCp.
 
+
 ### Extra easyconfig parameters specific to ``CMakeMakeCp`` easyblock
 
 easyconfig parameter              |description                                                                                                                                                                                                                               |default value
@@ -280,8 +286,6 @@ easyconfig parameter              |description                                  
 ``with_configure``                |Run configure script before building                                                                                                                                                                                                      |``False``
 
 ### Customised steps in ``CMakeMakeCp`` easyblock
-
-* ``build_step`` - The type of the None singleton.
 
 * ``configure_step`` - Configure build using CMake
 
@@ -342,6 +346,7 @@ and then put the Python package in lib/pythonX.Y/site-packages.
 We use the default CMake implementation, and use make_module_extra from PythonPackage
 to generate a module file which sets the PYTHONPATH.
 
+
 ### Extra easyconfig parameters specific to ``CMakePythonPackage`` easyblock
 
 easyconfig parameter              |description                                                                                                                                                                                                                                                                                                             |default value
@@ -370,6 +375,7 @@ easyconfig parameter              |description                                  
 ``max_py_minver``                 |Maximum minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
 ``options``                       |Dictionary with extension options.                                                                                                                                                                                                                                                                                      |``{}``
 ``pip_ignore_installed``          |Let pip ignore installed Python packages (i.e. don't remove them)                                                                                                                                                                                                                                                       |``True``
+``pip_no_build_isolation``        |Use --no-build-isolation with pip install                                                                                                                                                                                                                                                                               |``True``
 ``pip_no_index``                  |Pass --no-index to pip to disable connecting to PyPi entirely which also disables the pip version check. Enabled by default when pip_ignore_installed=True                                                                                                                                                              |``None``
 ``pip_verbose``                   |Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.                                                                                                                                                                                                                  |``None``
 ``prefix_opt``                    |Prefix command line option for configure script ('--prefix=' if None)                                                                                                                                                                                                                                                   |``None``
@@ -394,8 +400,6 @@ easyconfig parameter              |description                                  
 ``zipped_egg``                    |Install as a zipped eggs                                                                                                                                                                                                                                                                                                |``False``
 
 ### Customised steps in ``CMakePythonPackage`` easyblock
-
-* ``build_step`` - The type of the None singleton.
 
 * ``configure_step`` - Main configuration using cmake
 
@@ -437,6 +441,7 @@ Builds just like PythonBundle with setup for Rust and crates from Cargo easybloc
 The cargo init step will set up the environment variables for rustc and vendor sources
 but all the build steps are triggered like normal.
 
+
 ### Extra easyconfig parameters specific to ``CargoPythonBundle`` easyblock
 
 easyconfig parameter           |description                                                                                                                                                                                                                                                                                                             |default value
@@ -460,6 +465,7 @@ easyconfig parameter           |description                                     
 ``offline``                    |Build offline                                                                                                                                                                                                                                                                                                           |``True``
 ``options``                    |Dictionary with extension options.                                                                                                                                                                                                                                                                                      |``{}``
 ``pip_ignore_installed``       |Let pip ignore installed Python packages (i.e. don't remove them)                                                                                                                                                                                                                                                       |``True``
+``pip_no_build_isolation``     |Use --no-build-isolation with pip install                                                                                                                                                                                                                                                                               |``True``
 ``pip_no_index``               |Pass --no-index to pip to disable connecting to PyPi entirely which also disables the pip version check. Enabled by default when pip_ignore_installed=True                                                                                                                                                              |``None``
 ``pip_verbose``                |Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.                                                                                                                                                                                                                  |``None``
 ``req_py_majver``              |Required major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
@@ -479,15 +485,6 @@ easyconfig parameter           |description                                     
 ``use_pip_requirement``        |Install using 'python -m pip install --requirement'. The sources is expected to be the requirements file.                                                                                                                                                                                                               |``False``
 ``zipped_egg``                 |Install as a zipped eggs                                                                                                                                                                                                                                                                                                |``False``
 
-### Customised steps in ``CargoPythonBundle`` easyblock
-
-* ``build_step`` - The type of the None singleton.
-
-* ``configure_step`` - The type of the None singleton.
-
-* ``install_step`` - The type of the None singleton.
-
-
 ## ``CargoPythonPackage``
 
 (derives from [``PythonPackage``](#pythonpackage), [``Cargo``](#cargo))
@@ -496,6 +493,7 @@ Build a Python package with setup from Cargo but build/install step from PythonP
 
 The cargo init step will set up the environment variables for rustc and vendor sources
 but all the build steps are triggered via normal PythonPackage steps like normal.
+
 
 ### Extra easyconfig parameters specific to ``CargoPythonPackage`` easyblock
 
@@ -515,6 +513,7 @@ easyconfig parameter      |description                                          
 ``offline``               |Build offline                                                                                                                                                                                                                                                                                                           |``True``
 ``options``               |Dictionary with extension options.                                                                                                                                                                                                                                                                                      |``{}``
 ``pip_ignore_installed``  |Let pip ignore installed Python packages (i.e. don't remove them)                                                                                                                                                                                                                                                       |``True``
+``pip_no_build_isolation``|Use --no-build-isolation with pip install                                                                                                                                                                                                                                                                               |``True``
 ``pip_no_index``          |Pass --no-index to pip to disable connecting to PyPi entirely which also disables the pip version check. Enabled by default when pip_ignore_installed=True                                                                                                                                                              |``None``
 ``pip_verbose``           |Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.                                                                                                                                                                                                                  |``None``
 ``req_py_majver``         |Required major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
@@ -532,15 +531,6 @@ easyconfig parameter      |description                                          
 ``use_pip_requirement``   |Install using 'python -m pip install --requirement'. The sources is expected to be the requirements file.                                                                                                                                                                                                               |``False``
 ``zipped_egg``            |Install as a zipped eggs                                                                                                                                                                                                                                                                                                |``False``
 
-### Customised steps in ``CargoPythonPackage`` easyblock
-
-* ``build_step`` - The type of the None singleton.
-
-* ``configure_step`` - The type of the None singleton.
-
-* ``install_step`` - The type of the None singleton.
-
-
 ## ``CmdCp``
 
 (derives from [``MakeCp``](#makecp))
@@ -548,6 +538,7 @@ easyconfig parameter      |description                                          
 
 Software with no configure, no make, and no make install step.
 Just run the specified command for all sources, and copy specified files to the install dir
+
 
 ### Extra easyconfig parameters specific to ``CmdCp`` easyblock
 
@@ -600,12 +591,8 @@ easyconfig parameter  |description                                              
 
 ### Customised steps in ``Conda`` easyblock
 
-* ``build_step`` - The type of the None singleton.
-
-* ``configure_step`` - The type of the None singleton.
-
 * ``install_step`` - Install software using 'conda env create' or 'conda create' & 'conda install'
-(or the 'mamba', etc., equivalent).
+        (or the 'mamba', etc., equivalent).
 
 
 ## ``ConfigureMake``
@@ -614,6 +601,7 @@ easyconfig parameter  |description                                              
 
 
 Support for building and installing applications with configure/make/make install
+
 
 ### Extra easyconfig parameters specific to ``ConfigureMake`` easyblock
 
@@ -643,13 +631,13 @@ installopts         |Extra options for installation
 ### Customised steps in ``ConfigureMake`` easyblock
 
 * ``build_step`` - Start the actual build
-- typical: make -j X
+        - typical: make -j X
 
 * ``configure_step`` - Configure step
-- typically ./configure --prefix=/install/path style
+        - typically ./configure --prefix=/install/path style
 
 * ``install_step`` - Create the installation in correct location
-- typical: make install
+        - typical: make install
 
 
 ### Example easyconfig for ``ConfigureMake`` easyblock
@@ -690,6 +678,7 @@ Implemented by using:
 - using the build_step and install_step from ConfigureMake
 - using the sanity_check_step and make_module_extra from PythonPackage
 
+
 ### Extra easyconfig parameters specific to ``ConfigureMakePythonPackage`` easyblock
 
 easyconfig parameter              |description                                                                                                                                                                                                                                                                                                             |default value
@@ -712,6 +701,7 @@ easyconfig parameter              |description                                  
 ``max_py_minver``                 |Maximum minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
 ``options``                       |Dictionary with extension options.                                                                                                                                                                                                                                                                                      |``{}``
 ``pip_ignore_installed``          |Let pip ignore installed Python packages (i.e. don't remove them)                                                                                                                                                                                                                                                       |``True``
+``pip_no_build_isolation``        |Use --no-build-isolation with pip install                                                                                                                                                                                                                                                                               |``True``
 ``pip_no_index``                  |Pass --no-index to pip to disable connecting to PyPi entirely which also disables the pip version check. Enabled by default when pip_ignore_installed=True                                                                                                                                                              |``None``
 ``pip_verbose``                   |Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.                                                                                                                                                                                                                  |``None``
 ``prefix_opt``                    |Prefix command line option for configure script ('--prefix=' if None)                                                                                                                                                                                                                                                   |``None``
@@ -784,6 +774,7 @@ moduleclass = 'vis'
 
 Compiler toolchain: generate module file only, nothing to build/install
 
+
 ### Extra easyconfig parameters specific to ``CrayToolchain`` easyblock
 
 easyconfig parameter           |description                                                                |default value
@@ -795,15 +786,6 @@ easyconfig parameter           |description                                     
 ``default_easyblock``          |Default easyblock to use for components                                    |``None``
 ``sanity_check_all_components``|Enable sanity checks for all components                                    |``False``
 ``sanity_check_components``    |List of components for which to run sanity checks                          |``[]``
-
-### Customised steps in ``CrayToolchain`` easyblock
-
-* ``build_step`` - The type of the None singleton.
-
-* ``configure_step`` - The type of the None singleton.
-
-* ``install_step`` - The type of the None singleton.
-
 
 ## ``Dataset``
 
@@ -820,10 +802,6 @@ easyconfig parameter    |description                                            
 ``extract_sources``     |Whether or not to extract data sources                      |``True``
 
 ### Customised steps in ``Dataset`` easyblock
-
-* ``build_step`` - The type of the None singleton.
-
-* ``configure_step`` - The type of the None singleton.
 
 * ``install_step`` - No install step, datasets are extracted directly into installdir
 
@@ -848,6 +826,7 @@ easyconfig parameter      |description                                          
 ``max_py_minver``         |Maximum minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
 ``options``               |Dictionary with extension options.                                                                                                                                                                                                                                                                                      |``{}``
 ``pip_ignore_installed``  |Let pip ignore installed Python packages (i.e. don't remove them)                                                                                                                                                                                                                                                       |``True``
+``pip_no_build_isolation``|Use --no-build-isolation with pip install                                                                                                                                                                                                                                                                               |``True``
 ``pip_no_index``          |Pass --no-index to pip to disable connecting to PyPi entirely which also disables the pip version check. Enabled by default when pip_ignore_installed=True                                                                                                                                                              |``None``
 ``pip_verbose``           |Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.                                                                                                                                                                                                                  |``None``
 ``req_py_majver``         |Required major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
@@ -906,6 +885,7 @@ Base class for Intel software
 - no configure/make : binary release
 - add license_file variable
 
+
 ### Extra easyconfig parameters specific to ``IntelBase`` easyblock
 
 easyconfig parameter        |description                                                    |default value
@@ -940,15 +920,6 @@ easyconfig parameter|description                                                
 ``prepend_to_path`` |Prepend the given directories (relative to install-dir) to the environment variable PATH in the module file. Default is the install-dir itself.|``['']``
 ``staged_install``  |Perform staged installation via subdirectory of build directory                                                                                |``False``
 
-### Customised steps in ``JAR`` easyblock
-
-* ``build_step`` - The type of the None singleton.
-
-* ``configure_step`` - The type of the None singleton.
-
-* ``install_step`` - The type of the None singleton.
-
-
 ## ``JuliaBundle``
 
 (derives from [``Bundle``](#bundle), [``JuliaPackage``](#juliapackage))
@@ -956,6 +927,7 @@ easyconfig parameter|description                                                
 
 Bundle of JuliaPackages: install Julia packages as extensions in a bundle
 Defines custom sanity checks and module environment
+
 
 ### Extra easyconfig parameters specific to ``JuliaBundle`` easyblock
 
@@ -972,10 +944,6 @@ easyconfig parameter           |description                                     
 ``sanity_check_components``    |List of components for which to run sanity checks                          |``[]``
 
 ### Customised steps in ``JuliaBundle`` easyblock
-
-* ``build_step`` - The type of the None singleton.
-
-* ``configure_step`` - The type of the None singleton.
 
 * ``install_step`` - Prepare installation environment and dd all dependencies to project environment.
 
@@ -1004,6 +972,7 @@ provided by the module. Effectively, this translates to:
 - append installation directory to list of DEPOT_PATH, only really needed to load artifacts (JLL packages)
 - append installation Project.toml file to list of LOAD_PATH, needed to load packages with `using` command
 
+
 ### Extra easyconfig parameters specific to ``JuliaPackage`` easyblock
 
 easyconfig parameter |description                                                                |default value
@@ -1027,6 +996,7 @@ easyconfig parameter |description                                               
 
 Software with no configure and no make install step.
 
+
 ### Extra easyconfig parameters specific to ``MakeCp`` easyblock
 
 easyconfig parameter              |description                                                                                                                                                                                                                               |default value
@@ -1048,8 +1018,6 @@ easyconfig parameter              |description                                  
 
 ### Customised steps in ``MakeCp`` easyblock
 
-* ``build_step`` - The type of the None singleton.
-
 * ``configure_step`` - Configure build if required
 
 * ``install_step`` - Install by copying specified files and directories.
@@ -1061,6 +1029,7 @@ easyconfig parameter              |description                                  
 
 
 Support for building and installing software with 'meson' and 'ninja'.
+
 
 ### Extra easyconfig parameters specific to ``MesonNinja`` easyblock
 
@@ -1090,6 +1059,7 @@ easyconfig parameter  |description                                              
 
 Generic easyblock to create a software-specific .modulerc file
 
+
 ### Extra easyconfig parameters specific to ``ModuleRC`` easyblock
 
 easyconfig parameter|description                          |default value
@@ -1105,6 +1075,37 @@ easyconfig parameter|description                          |default value
 * ``install_step`` - Do nothing.
 
 
+## ``NvidiaBase``
+
+(derives from [``PackedBinary``](#packedbinary))
+
+
+Core support for installing the NVIDIA HPC SDK (NVHPC)
+
+
+### Extra easyconfig parameters specific to ``NvidiaBase`` easyblock
+
+easyconfig parameter    |description                                                                                                                                    |default value
+------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|-------------
+``default_cuda_version``|CUDA version used by default in this toolchain                                                                                                 |``None``
+``extract_sources``     |Whether or not to extract sources                                                                                                              |``False``
+``install_cmd``         |Install command to be used.                                                                                                                    |``None``
+``install_cmds``        |List of install commands to be used.                                                                                                           |``None``
+``module_add_cuda``     |Add NVHPC's CUDA to module                                                                                                                     |``False``
+``module_add_math_libs``|Add NVHPC's math libraries to module                                                                                                           |``False``
+``module_add_nccl``     |Add NVHPC's NCCL library to module                                                                                                             |``False``
+``module_add_nvshmem``  |Add NVHPC's NVSHMEM library to module                                                                                                          |``False``
+``module_add_profilers``|Add NVHPC's NVIDIA Profilers to module                                                                                                         |``False``
+``module_byo_compilers``|BYO Compilers: Remove compilers from module                                                                                                    |``False``
+``module_nvhpc_own_mpi``|Add NVHPC's packaged OpenMPI to module                                                                                                         |``False``
+``prepend_to_path``     |Prepend the given directories (relative to install-dir) to the environment variable PATH in the module file. Default is the install-dir itself.|``['']``
+``staged_install``      |Perform staged installation via subdirectory of build directory                                                                                |``False``
+
+### Customised steps in ``NvidiaBase`` easyblock
+
+* ``install_step`` - Install by running install command.
+
+
 ## ``OCamlPackage``
 
 (derives from ``ExtensionEasyBlock``)
@@ -1118,8 +1119,6 @@ easyconfig parameter|description                       |default value
 ``options``         |Dictionary with extension options.|``{}``
 
 ### Customised steps in ``OCamlPackage`` easyblock
-
-* ``build_step`` - The type of the None singleton.
 
 * ``configure_step`` - Raise error when configure step is run: installing OCaml packages stand-alone is not supported (yet)
 
@@ -1140,8 +1139,6 @@ easyconfig parameter|description                       |default value
 
 ### Customised steps in ``OctavePackage`` easyblock
 
-* ``build_step`` - The type of the None singleton.
-
 * ``configure_step`` - Raise error when configure step is run: installing Octave toolboxes stand-alone is not supported (yet)
 
 * ``install_step`` - Raise error when configure step is run: installing Octave toolboxes stand-alone is not supported (yet)
@@ -1153,6 +1150,7 @@ easyconfig parameter|description                       |default value
 
 Support for installing packed binary software.
 Just unpack the sources in the install dir
+
 
 ### Extra easyconfig parameters specific to ``PackedBinary`` easyblock
 
@@ -1166,10 +1164,6 @@ easyconfig parameter|description                                                
 
 ### Customised steps in ``PackedBinary`` easyblock
 
-* ``build_step`` - The type of the None singleton.
-
-* ``configure_step`` - The type of the None singleton.
-
 * ``install_step`` - Copy all unpacked source directories to install directory, one-by-one.
 
 
@@ -1179,6 +1173,7 @@ easyconfig parameter|description                                                
 
 
 Bundle of perl modules
+
 
 ### Extra easyconfig parameters specific to ``PerlBundle`` easyblock
 
@@ -1194,15 +1189,6 @@ easyconfig parameter           |description                                     
 ``runtest``                    |Run unit tests.                                                            |``"test"``
 ``sanity_check_all_components``|Enable sanity checks for all components                                    |``False``
 ``sanity_check_components``    |List of components for which to run sanity checks                          |``[]``
-
-### Customised steps in ``PerlBundle`` easyblock
-
-* ``build_step`` - The type of the None singleton.
-
-* ``configure_step`` - The type of the None singleton.
-
-* ``install_step`` - The type of the None singleton.
-
 
 ## ``PerlModule``
 
@@ -1235,6 +1221,7 @@ easyconfig parameter|description                                                
 Bundle of PythonPackages: install Python packages as extensions in a bundle
 Defines custom sanity checks and module environment
 
+
 ### Extra easyconfig parameters specific to ``PythonBundle`` easyblock
 
 easyconfig parameter           |description                                                                                                                                                                                                                                                                                                             |default value
@@ -1254,6 +1241,7 @@ easyconfig parameter           |description                                     
 ``max_py_minver``              |Maximum minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
 ``options``                    |Dictionary with extension options.                                                                                                                                                                                                                                                                                      |``{}``
 ``pip_ignore_installed``       |Let pip ignore installed Python packages (i.e. don't remove them)                                                                                                                                                                                                                                                       |``True``
+``pip_no_build_isolation``     |Use --no-build-isolation with pip install                                                                                                                                                                                                                                                                               |``True``
 ``pip_no_index``               |Pass --no-index to pip to disable connecting to PyPi entirely which also disables the pip version check. Enabled by default when pip_ignore_installed=True                                                                                                                                                              |``None``
 ``pip_verbose``                |Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.                                                                                                                                                                                                                  |``None``
 ``req_py_majver``              |Required major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
@@ -1272,15 +1260,6 @@ easyconfig parameter           |description                                     
 ``use_pip_for_deps``           |Install dependencies using '%(python)s -m pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                                                                                                      |``False``
 ``use_pip_requirement``        |Install using 'python -m pip install --requirement'. The sources is expected to be the requirements file.                                                                                                                                                                                                               |``False``
 ``zipped_egg``                 |Install as a zipped eggs                                                                                                                                                                                                                                                                                                |``False``
-
-### Customised steps in ``PythonBundle`` easyblock
-
-* ``build_step`` - The type of the None singleton.
-
-* ``configure_step`` - The type of the None singleton.
-
-* ``install_step`` - The type of the None singleton.
-
 
 ## ``PythonPackage``
 
@@ -1302,6 +1281,7 @@ easyconfig parameter      |description                                          
 ``max_py_minver``         |Maximum minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
 ``options``               |Dictionary with extension options.                                                                                                                                                                                                                                                                                      |``{}``
 ``pip_ignore_installed``  |Let pip ignore installed Python packages (i.e. don't remove them)                                                                                                                                                                                                                                                       |``True``
+``pip_no_build_isolation``|Use --no-build-isolation with pip install                                                                                                                                                                                                                                                                               |``True``
 ``pip_no_index``          |Pass --no-index to pip to disable connecting to PyPi entirely which also disables the pip version check. Enabled by default when pip_ignore_installed=True                                                                                                                                                              |``None``
 ``pip_verbose``           |Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.                                                                                                                                                                                                                  |``None``
 ``req_py_majver``         |Required major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
@@ -1335,6 +1315,7 @@ easyconfig parameter      |description                                          
 
 Install an R package as a separate module, or as an extension.
 
+
 ### Extra easyconfig parameters specific to ``RPackage`` easyblock
 
 easyconfig parameter|description                                             |default value
@@ -1362,6 +1343,7 @@ Support for installing RPM files.
 - sources is a list of rpms
 - installation is with --nodeps (so the sources list has to be complete)
 
+
 ### Extra easyconfig parameters specific to ``Rpm`` easyblock
 
 easyconfig parameter|description                                                                                                                                    |default value
@@ -1377,8 +1359,6 @@ easyconfig parameter|description                                                
 ``staged_install``  |Perform staged installation via subdirectory of build directory                                                                                |``False``
 
 ### Customised steps in ``Rpm`` easyblock
-
-* ``build_step`` - The type of the None singleton.
 
 * ``configure_step`` - Custom configuration procedure for RPMs: rebuild RPMs for relocation if required.
 
@@ -1438,6 +1418,7 @@ The compiler is expected to be available in $PATH, required libraries are assume
 Specifying 'system' as a version leads to using the derived compiler version in the generated module;
 if an actual version is specified, it is checked against the derived version of the system compiler that was found.
 
+
 ### Extra easyconfig parameters specific to ``SystemCompiler`` easyblock
 
 easyconfig parameter           |description                                                                                     |default value
@@ -1451,15 +1432,6 @@ easyconfig parameter           |description                                     
 ``sanity_check_all_components``|Enable sanity checks for all components                                                         |``False``
 ``sanity_check_components``    |List of components for which to run sanity checks                                               |``[]``
 
-### Customised steps in ``SystemCompiler`` easyblock
-
-* ``build_step`` - The type of the None singleton.
-
-* ``configure_step`` - The type of the None singleton.
-
-* ``install_step`` - The type of the None singleton.
-
-
 ## ``SystemCompilerGCC``
 
 (derives from [``SystemCompiler``](#systemcompiler), ``EB_GCC``)
@@ -1471,6 +1443,7 @@ The compiler is expected to be available in $PATH, required libraries are assume
 
 Specifying 'system' as a version leads to using the derived compiler version in the generated module;
 if an actual version is specified, it is checked against the derived version of the system compiler that was found.
+
 
 ### Extra easyconfig parameters specific to ``SystemCompilerGCC`` easyblock
 
@@ -1513,15 +1486,6 @@ easyconfig parameter              |description                                  
 ``withnvptx``                     |Build GCC with NVPTX offload support                                                                                                                                                                                                                                                                                                |``False``
 ``withppl``                       |Build GCC with PPL support                                                                                                                                                                                                                                                                                                          |``False``
 
-### Customised steps in ``SystemCompilerGCC`` easyblock
-
-* ``build_step`` - The type of the None singleton.
-
-* ``configure_step`` - The type of the None singleton.
-
-* ``install_step`` - The type of the None singleton.
-
-
 ## ``SystemMPI``
 
 (derives from [``Bundle``](#bundle), [``ConfigureMake``](#configuremake), ``EB_impi``)
@@ -1533,6 +1497,7 @@ The mpi compiler is expected to be available in $PATH, required libraries are as
 
 Specifying 'system' as a version leads to using the derived mpi version in the generated module;
 if an actual version is specified, it is checked against the derived version of the system mpi that was found.
+
 
 ### Extra easyconfig parameters specific to ``SystemMPI`` easyblock
 
@@ -1570,21 +1535,13 @@ easyconfig parameter              |description                                  
 ``test_cmd``                      |Test command to use ('runtest' value is appended, default: 'make')                                                                                                                                                                        |``None``
 ``unrecognized_configure_options``|Action to do when unrecognized options passed to ./configure are detected, defaults to aborting the build. Can be set to 'warn' or 'ignore' (NOT RECOMMENDED! It might hide actual errors e.g. misspelling of intended or changed options)|``"error"``
 
-### Customised steps in ``SystemMPI`` easyblock
-
-* ``build_step`` - The type of the None singleton.
-
-* ``configure_step`` - The type of the None singleton.
-
-* ``install_step`` - The type of the None singleton.
-
-
 ## ``Tarball``
 
 (derives from ``ExtensionEasyBlock``)
 
 
 Precompiled software supplied as a tarball: will unpack binary and copy it to the install dir
+
 
 ### Extra easyconfig parameters specific to ``Tarball`` easyblock
 
@@ -1622,15 +1579,6 @@ easyconfig parameter           |description                                     
 ``sanity_check_components``    |List of components for which to run sanity checks                                                          |``[]``
 ``set_env_external_modules``   |Include setenv statements for toolchain components that use an external module, based on available metadata|``False``
 
-### Customised steps in ``Toolchain`` easyblock
-
-* ``build_step`` - The type of the None singleton.
-
-* ``configure_step`` - The type of the None singleton.
-
-* ``install_step`` - The type of the None singleton.
-
-
 ## ``VSCPythonPackage``
 
 (derives from [``VersionIndependentPythonPackage``](#versionindependentpythonpackage))
@@ -1651,6 +1599,7 @@ easyconfig parameter      |description                                          
 ``max_py_minver``         |Maximum minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
 ``options``               |Dictionary with extension options.                                                                                                                                                                                                                                                                                      |``{}``
 ``pip_ignore_installed``  |Let pip ignore installed Python packages (i.e. don't remove them)                                                                                                                                                                                                                                                       |``True``
+``pip_no_build_isolation``|Use --no-build-isolation with pip install                                                                                                                                                                                                                                                                               |``True``
 ``pip_no_index``          |Pass --no-index to pip to disable connecting to PyPi entirely which also disables the pip version check. Enabled by default when pip_ignore_installed=True                                                                                                                                                              |``None``
 ``pip_verbose``           |Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.                                                                                                                                                                                                                  |``None``
 ``req_py_majver``         |Required major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
@@ -1667,15 +1616,6 @@ easyconfig parameter      |description                                          
 ``use_pip_for_deps``      |Install dependencies using '%(python)s -m pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                                                                                                      |``False``
 ``use_pip_requirement``   |Install using 'python -m pip install --requirement'. The sources is expected to be the requirements file.                                                                                                                                                                                                               |``False``
 ``zipped_egg``            |Install as a zipped eggs                                                                                                                                                                                                                                                                                                |``False``
-
-### Customised steps in ``VSCPythonPackage`` easyblock
-
-* ``build_step`` - The type of the None singleton.
-
-* ``configure_step`` - The type of the None singleton.
-
-* ``install_step`` - The type of the None singleton.
-
 
 ## ``VersionIndependentPythonPackage``
 
@@ -1697,6 +1637,7 @@ easyconfig parameter      |description                                          
 ``max_py_minver``         |Maximum minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
 ``options``               |Dictionary with extension options.                                                                                                                                                                                                                                                                                      |``{}``
 ``pip_ignore_installed``  |Let pip ignore installed Python packages (i.e. don't remove them)                                                                                                                                                                                                                                                       |``True``
+``pip_no_build_isolation``|Use --no-build-isolation with pip install                                                                                                                                                                                                                                                                               |``True``
 ``pip_no_index``          |Pass --no-index to pip to disable connecting to PyPi entirely which also disables the pip version check. Enabled by default when pip_ignore_installed=True                                                                                                                                                              |``None``
 ``pip_verbose``           |Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.                                                                                                                                                                                                                  |``None``
 ``req_py_majver``         |Required major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
@@ -1729,6 +1670,7 @@ easyconfig parameter      |description                                          
 
 
 Support for building and installing applications with waf
+
 
 ### Customised steps in ``Waf`` easyblock
 
