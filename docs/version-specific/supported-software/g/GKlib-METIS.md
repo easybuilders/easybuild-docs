@@ -10,6 +10,9 @@ A library of various helper routines and frameworks used by many of the lab's so
 
 version | toolchain
 --------|----------
+``5.1.1`` | ``GCC/13.3.0``
+``5.1.1`` | ``GCC/14.2.0``
+``5.1.1`` | ``GCC/14.3.0``
 ``5.1.1`` | ``GCCcore/11.3.0``
 ``5.1.1`` | ``GCCcore/12.3.0``
 

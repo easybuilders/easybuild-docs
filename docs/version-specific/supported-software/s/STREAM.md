@@ -11,6 +11,7 @@ The STREAM benchmark is a simple synthetic benchmark program that measures susta
 version | toolchain
 --------|----------
 ``5.10`` | ``GCC/11.3.0``
+``5.10`` | ``GCC/13.3.0``
 ``5.10`` | ``intel-compilers/2022.2.1``
 ``5.10`` | ``intel-compilers/2024.2.0``
 

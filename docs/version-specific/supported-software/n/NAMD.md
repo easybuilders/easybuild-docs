@@ -16,6 +16,7 @@ version | versionsuffix | toolchain
 ``2.14`` | ``-mpi`` | ``foss/2023a``
 ``3.0`` | ``-mpi`` | ``foss/2024a``
 ``3.0.1`` | ``-CUDA-12.6.0`` | ``foss/2024a``
+``3.0.1`` | ``-mpi`` | ``foss/2024a``
 ``3.0.2`` | ``-CUDA-12.8.0`` | ``foss/2025a``
 
 

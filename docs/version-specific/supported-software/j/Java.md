@@ -36,6 +36,8 @@ version | versionsuffix | toolchain
 ``23.0.1`` |  | ``system``
 ``23.0.2`` |  | ``system``
 ``23`` |  | ``system``
+``25.36`` |  | ``system``
+``25`` |  | ``system``
 ``8.345`` |  | ``system``
 ``8.362`` |  | ``system``
 ``8.402`` |  | ``system``

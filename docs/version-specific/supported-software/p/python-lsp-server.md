@@ -10,6 +10,7 @@ Python Language Server for the Language Server Protocol A Python 3.8+ implementa
 
 version | toolchain
 --------|----------
+``1.10.1`` | ``GCCcore/12.3.0``
 ``1.12.0`` | ``GCCcore/13.2.0``
 
 

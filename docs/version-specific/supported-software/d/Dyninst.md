@@ -11,6 +11,7 @@ DyninstAPI: Tools for binary instrumentation, analysis, and modification
 version | toolchain
 --------|----------
 ``13.0.0`` | ``GCC/13.3.0``
+``13.0.0`` | ``GCC/14.2.0``
 ``13.0.0`` | ``GCC/14.3.0``
 
 

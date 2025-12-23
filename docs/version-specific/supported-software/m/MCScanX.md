@@ -10,6 +10,7 @@ The MCScanX package has two major components: a modified version of MCscan algor
 
 version | toolchain
 --------|----------
+``1.0.0`` | ``GCC/14.2.0``
 ``20221101`` | ``GCC/11.3.0``
 
 

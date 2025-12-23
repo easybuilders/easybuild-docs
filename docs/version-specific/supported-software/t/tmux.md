@@ -20,6 +20,7 @@ version | toolchain
 ``3.4`` | ``GCCcore/13.2.0``
 ``3.4`` | ``GCCcore/13.3.0``
 ``3.4`` | ``system``
+``3.5a`` | ``GCCcore/14.2.0``
 ``3.5a`` | ``GCCcore/14.3.0``
 ``3.5a`` | ``system``
 

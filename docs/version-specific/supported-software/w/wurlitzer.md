@@ -10,6 +10,7 @@ Capture C-level output in context managers  For more details on why this is need
 
 version | toolchain
 --------|----------
+``3.1.1`` | ``GCCcore/12.3.0``
 ``3.1.1`` | ``GCCcore/13.2.0``
 
 

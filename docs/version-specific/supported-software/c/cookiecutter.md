@@ -10,6 +10,7 @@ A command-line utility that creates projects from project templates. E.g. creati
 
 version | toolchain
 --------|----------
+``2.6.0`` | ``GCCcore/12.3.0``
 ``2.6.0`` | ``GCCcore/13.2.0``
 
 

@@ -10,6 +10,7 @@ Cell Ranger is a set of analysis pipelines that process Chromium  single-cell RN
 
 version | toolchain
 --------|----------
+``10.0.0`` | ``system``
 ``4.0.0`` | ``system``
 ``5.0.0`` | ``system``
 ``5.0.1`` | ``system``

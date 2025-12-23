@@ -113,7 +113,7 @@
 ------------------------|----------------------------------------------------------------------------------------------------------|-----------------|--------------------
 `exts_classmap`         |Map of extension name to class for handling build and installation.                                       |`{}`             |`exts_class_map`
 `exts_default_options`  |List of default options for extensions                                                                    |`{}`             |`exts_default_opts`
-`exts_defaultclass`     |List of module for and name of the default extension class                                                |`None`           |`exts_default_class`
+`exts_defaultclass`     |Name of default easyblock for extensions                                                                  |`None`           |`exts_default_class`
 `exts_download_dep_fail`|Fail if downloaded dependencies are detected for extensions                                               |`False`          |
 `exts_filter`           |Extension filter details: template for cmd and input to cmd (templates for ext_name, ext_version and src).|`None`           |
 `exts_list`             |List with extensions added to the base installation                                                       |`[]`             |

@@ -10,6 +10,7 @@ GPflow is a package for building Gaussian process models in Python. It implement
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``2.10.0`` |  | ``foss/2024a``
 ``2.9.2`` | ``-CUDA-11.7.0`` | ``foss/2022a``
 ``2.9.2`` |  | ``foss/2022a``
 ``2.9.2`` |  | ``foss/2023a``

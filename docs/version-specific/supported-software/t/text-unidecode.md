@@ -4,12 +4,13 @@ search:
 ---
 # text-unidecode
 
-Text-unidecode is the most basic port of the Text::Unidecode Perl library.
+text-unidecode is the most basic port of the Text::Unidecode Perl library.
 
 *homepage*: <https://github.com/kmike/text-unidecode>
 
 version | toolchain
 --------|----------
+``1.3`` | ``GCCcore/12.3.0``
 ``1.3`` | ``GCCcore/13.2.0``
 
 
