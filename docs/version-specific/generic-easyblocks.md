@@ -94,17 +94,17 @@ Build environment of toolchain: only generate module file
 
 ### Extra easyconfig parameters specific to ``BuildEnv`` easyblock
 
-easyconfig parameter           |description                                                                                                                                |default value
--------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------
-``altroot``                    |Software name of dependency to use to define $EBROOT for this bundle                                                                       |``None``
-``altversion``                 |Software name of dependency to use to define $EBVERSION for this bundle                                                                    |``None``
-``build_env_vars``             |Export environment variables related to compilers, compilation flags, optimisations, math libaries, etc. (overwriting any existing values).|``True``
-``components``                 |List of components to install: tuples w/ name, version and easyblock to use                                                                |``()``
-``default_component_specs``    |Default specs to use for every component                                                                                                   |``{}``
-``default_easyblock``          |Default easyblock to use for components                                                                                                    |``None``
-``python_executable``          |Python executable to use for the wrappers (use None to use path to Python executable used by EasyBuild).                                   |``"python3"``
-``sanity_check_all_components``|Enable sanity checks for all components                                                                                                    |``False``
-``sanity_check_components``    |List of components for which to run sanity checks                                                                                          |``[]``
+easyconfig parameter           |description                                                                                                                                 |default value
+-------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|-------------
+``altroot``                    |Software name of dependency to use to define $EBROOT for this bundle                                                                        |``None``
+``altversion``                 |Software name of dependency to use to define $EBVERSION for this bundle                                                                     |``None``
+``build_env_vars``             |Export environment variables related to compilers, compilation flags, optimisations, math libraries, etc. (overwriting any existing values).|``True``
+``components``                 |List of components to install: tuples w/ name, version and easyblock to use                                                                 |``()``
+``default_component_specs``    |Default specs to use for every component                                                                                                    |``{}``
+``default_easyblock``          |Default easyblock to use for components                                                                                                     |``None``
+``python_executable``          |Python executable to use for the wrappers (use None to use path to Python executable used by EasyBuild).                                    |``"python3"``
+``sanity_check_all_components``|Enable sanity checks for all components                                                                                                     |``False``
+``sanity_check_components``    |List of components for which to run sanity checks                                                                                           |``[]``
 
 ### Customised steps in ``BuildEnv`` easyblock
 
