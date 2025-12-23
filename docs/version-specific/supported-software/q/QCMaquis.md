@@ -4,13 +4,12 @@ search:
 ---
 # QCMaquis
 
-QCMaquis is written in C++ (C++14 standard) and parallelizes the computationally heavy steps of a DMRG simulation with shared-memory parallelism (OpenMP).
+QCMaquis parallelizes the computationally heavy steps of a DMRG simulation with shared-memory parallelism (OpenMP).
 
 *homepage*: <https://github.com/qcscine/qcmaquis>
 
 version | toolchain
 --------|----------
-``3.1.4`` | ``iomkl/2023a``
 ``4.0.0`` | ``iomkl/2023a``
 
 

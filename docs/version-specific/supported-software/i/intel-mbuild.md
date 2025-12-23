@@ -11,6 +11,7 @@ python-based build system used for building XED
 version | toolchain
 --------|----------
 ``2024.11.04`` | ``GCCcore/13.3.0``
+``2024.11.04`` | ``GCCcore/14.2.0``
 ``2024.11.04`` | ``GCCcore/14.3.0``
 
 

@@ -10,6 +10,7 @@ Applet for cargo to build and install C-ABI compatible dynamic and static librar
 
 version | toolchain
 --------|----------
+``0.10.13`` | ``GCCcore/14.2.0``
 ``0.10.15`` | ``GCCcore/14.3.0``
 ``0.9.32`` | ``GCCcore/13.3.0``
 

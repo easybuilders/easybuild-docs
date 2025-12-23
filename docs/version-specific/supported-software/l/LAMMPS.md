@@ -10,6 +10,8 @@ LAMMPS is a classical molecular dynamics code, and an acronym for Large-scale At
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``22Jul2025`` | ``-kokkos-CUDA-12.6.0`` | ``foss/2024a``
+``22Jul2025`` | ``-kokkos`` | ``foss/2024a``
 ``23Jun2022`` | ``-kokkos-CUDA-11.3.1`` | ``foss/2021a``
 ``23Jun2022`` | ``-kokkos`` | ``foss/2021a``
 ``23Jun2022`` | ``-kokkos-CUDA-11.4.1`` | ``foss/2021b``

@@ -22,6 +22,7 @@ search:
  * [Yices](Yices.md)
  * [yMMSL-dot](yMMSL-dot.md)
  * [YODA](YODA.md)
+ * [yq](yq.md)
  * [yt](yt.md)
 
 

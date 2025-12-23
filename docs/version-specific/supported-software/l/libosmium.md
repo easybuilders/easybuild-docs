@@ -11,6 +11,7 @@ A fast and flexible C++ library for working with OpenStreetMap data.  The Osmium
 version | toolchain
 --------|----------
 ``2.22.0`` | ``foss/2024a``
+``2.22.0`` | ``foss/2025a``
 ``2.22.0`` | ``foss/2025b``
 
 

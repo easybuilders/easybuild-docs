@@ -10,6 +10,7 @@ Open, Scalable, and Portable Ray Tracing Engine
 
 version | toolchain
 --------|----------
+``2.12.0`` | ``system``
 ``2.5.0`` | ``system``
 ``3.2.0`` | ``system``
 

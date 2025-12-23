@@ -22,6 +22,7 @@ version | versionsuffix | toolchain
 ``23.0`` | ``-int64`` | ``intel/2023a``
 ``23.0`` |  | ``intel/2023a``
 ``24.0`` |  | ``foss/2022b``
+``24.0`` | ``-int64`` | ``intel/2022b``
 ``25.0`` | ``-int64`` | ``intel/2022b``
 ``25.0`` | ``-serial`` | ``intel/2023a``
 ``25.0`` |  | ``intel/2023a``

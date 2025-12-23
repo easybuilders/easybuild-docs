@@ -39,6 +39,8 @@ version | versionsuffix | toolchain
 ``7.5`` | ``-CUDA-12.6.0`` | ``gompi/2024a``
 ``7.5`` | ``-CUDA-12.8.0`` | ``gompi/2025a``
 ``7.5`` |  | ``gompi/2025a``
+``7.5`` |  | ``iimpi/2025a``
+``7.5.1`` | ``-CUDA-12.9.1`` | ``gompi/2025b``
 ``7.5.1`` |  | ``gompi/2025b``
 ``7.5.1`` |  | ``iimpi/2025b``
 

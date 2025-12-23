@@ -10,6 +10,8 @@ HPCToolkit is an integrated suite of tools for measurement and analysis of progr
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``2025.0.1`` | ``-CUDA-12.8.0`` | ``gompi/2025a``
+``2025.0.1`` |  | ``gompi/2025a``
 ``2025.0.1`` | ``-CUDA-12.9.1`` | ``gompi/2025b``
 ``2025.0.1`` |  | ``gompi/2025b``
 

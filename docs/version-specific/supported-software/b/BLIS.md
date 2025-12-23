@@ -22,6 +22,7 @@ version | versionsuffix | toolchain
 ``1.0`` |  | ``GCC/13.3.0``
 ``1.1`` |  | ``GCC/14.2.0``
 ``2.0`` |  | ``GCC/14.3.0``
+``2.0`` |  | ``llvm-compilers/20.1.8``
 ``3.0`` | ``-amd`` | ``GCCcore/10.3.0``
 ``3.0.1`` | ``-amd`` | ``GCC/11.2.0``
 ``3.0.1`` | ``-amd`` | ``GCCcore/10.3.0``

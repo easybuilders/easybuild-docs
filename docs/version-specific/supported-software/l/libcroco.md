@@ -11,6 +11,7 @@ Libcroco is a standalone css2 parsing and manipulation library.
 version | toolchain
 --------|----------
 ``0.6.13`` | ``GCCcore/13.3.0``
+``0.6.13`` | ``GCCcore/14.2.0``
 ``0.6.13`` | ``GCCcore/14.3.0``
 
 

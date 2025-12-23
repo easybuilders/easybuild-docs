@@ -11,6 +11,7 @@ PyEVTK (Python Export VTK) exports data to binary VTK files for visualization/an
 version | toolchain
 --------|----------
 ``1.4.1`` | ``foss/2021b``
+``1.6.0`` | ``gfbf/2023a``
 ``2.0.0`` | ``foss/2021b``
 
 

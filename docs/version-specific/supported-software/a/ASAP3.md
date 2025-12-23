@@ -10,6 +10,8 @@ ASAP is a calculator for doing large-scale classical molecular dynamics within t
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``3.13.10`` |  | ``foss/2025b``
+``3.13.10`` |  | ``intel/2025b``
 ``3.13.2`` |  | ``foss/2023a``
 ``3.13.3`` |  | ``foss/2023a``
 ``3.13.3`` |  | ``intel/2023a``

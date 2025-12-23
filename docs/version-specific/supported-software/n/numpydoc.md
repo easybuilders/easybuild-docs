@@ -10,6 +10,7 @@ Sphinx extension to support docstrings in Numpy format  This package provides th
 
 version | toolchain
 --------|----------
+``1.8.0`` | ``GCCcore/12.3.0``
 ``1.8.0`` | ``GCCcore/13.2.0``
 
 
