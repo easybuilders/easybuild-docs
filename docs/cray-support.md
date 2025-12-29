@@ -64,9 +64,9 @@ see <https://github.com/eth-cscs/production/tree/master/jenkins-builds>.
 ### Modules tool 
 
 * Sisu: self-installed Lmod 5.8
-* Piz Daint, Dora, Swan, Santis, Brisi: system-provided environment modules 3.2.10 
+* Piz Daint, Dora, Swan, Santis, Brisi: system-provided Environment Modules 3.2.10
 
-Example for environment modules 3.2.10:
+Example for Environment Modules 3.2.10:
 
 ``` shell
 source /opt/modules/3.2.10.3/init/bash
