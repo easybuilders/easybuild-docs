@@ -79,6 +79,7 @@ nav:
       - Using external modules: using-external-modules.md
       - Wrapping dependencies: wrapping-dependencies.md
       - Easystack files: easystack-files.md
+      - Entrypoints: entrypoints.md
       - Installing extensions in parallel: installing-extensions-in-parallel.md
   - For developers/contributors:
       - Archived easyconfigs: archived-easyconfigs.md
