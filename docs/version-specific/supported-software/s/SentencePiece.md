@@ -10,7 +10,6 @@ Unsupervised text tokenizer for Neural Network-based text generation.
 
 version | toolchain
 --------|----------
-``0.1.96`` | ``GCC/10.3.0``
 ``0.1.97`` | ``GCC/11.3.0``
 ``0.1.99`` | ``GCC/12.2.0``
 ``0.2.0`` | ``GCC/12.3.0``

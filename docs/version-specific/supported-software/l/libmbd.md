@@ -10,8 +10,6 @@ Libmbd implements the many-body dispersion (MBD) method in several programming l
 
 version | toolchain
 --------|----------
-``0.10.4`` | ``foss/2021a``
-``0.10.4`` | ``intel/2021a``
 ``0.12.6`` | ``foss/2022a``
 ``0.12.6`` | ``foss/2023a``
 

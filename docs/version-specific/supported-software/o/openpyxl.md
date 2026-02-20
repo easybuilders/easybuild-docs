@@ -11,7 +11,6 @@ A Python library to read/write Excel 2010 xlsx/xlsm files
 version | toolchain
 --------|----------
 ``3.0.10`` | ``GCCcore/11.3.0``
-``3.0.7`` | ``GCCcore/10.3.0``
 ``3.0.9`` | ``GCCcore/11.2.0``
 ``3.1.2`` | ``GCCcore/12.2.0``
 ``3.1.2`` | ``GCCcore/12.3.0``

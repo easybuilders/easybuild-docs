@@ -10,7 +10,6 @@ Generic PCI access library.
 
 version | toolchain
 --------|----------
-``0.16`` | ``GCCcore/10.3.0``
 ``0.16`` | ``GCCcore/11.2.0``
 ``0.16`` | ``GCCcore/11.3.0``
 ``0.17`` | ``GCCcore/12.2.0``

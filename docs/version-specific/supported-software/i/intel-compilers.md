@@ -10,8 +10,6 @@ Intel C, C++ & Fortran compilers (classic and oneAPI)
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2021.2.0`` |  | ``system``
-``2021.3.0`` |  | ``system``
 ``2021.4.0`` |  | ``system``
 ``2022.0.1`` |  | ``system``
 ``2022.0.2`` |  | ``system``

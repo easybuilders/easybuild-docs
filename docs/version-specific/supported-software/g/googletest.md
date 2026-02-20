@@ -10,7 +10,6 @@ Google's framework for writing C++ tests on a variety of platforms
 
 version | toolchain
 --------|----------
-``1.11.0`` | ``GCCcore/10.3.0``
 ``1.11.0`` | ``GCCcore/11.2.0``
 ``1.11.0`` | ``GCCcore/11.3.0``
 ``1.12.1`` | ``GCCcore/12.2.0``

@@ -10,6 +10,8 @@ Compute differentially bound sites from multiple ChIP-seq experiments using  aff
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``3.14.0`` | ``-R-4.4.1`` | ``foss/2023b``
+``3.20.0`` | ``-R-4.5.1`` | ``foss/2025a``
 ``3.6.5`` | ``-R-4.2.1`` | ``foss/2022a``
 
 

@@ -10,7 +10,6 @@ SOCI is a database access library for C++ that makes the illusion of embedding S
 
 version | toolchain
 --------|----------
-``4.0.2`` | ``GCC/10.3.0``
 ``4.0.3`` | ``GCC/11.2.0``
 ``4.0.3`` | ``GCC/11.3.0``
 ``4.0.3`` | ``GCC/12.2.0``

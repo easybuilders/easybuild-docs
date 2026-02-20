@@ -10,7 +10,6 @@ Mmg is an open source software for simplicial remeshing. It provides 3 applicati
 
 version | toolchain
 --------|----------
-``5.6.0`` | ``gompi/2021a``
 ``5.6.0`` | ``gompi/2021b``
 ``5.7.2`` | ``gompi/2022a``
 ``5.8.0`` | ``gompi/2024a``

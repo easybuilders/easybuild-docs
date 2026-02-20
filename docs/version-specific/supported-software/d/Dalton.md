@@ -10,7 +10,6 @@ The Dalton code is a powerful tool for a wide range of molecular properties  at 
 
 version | toolchain
 --------|----------
-``2020.0`` | ``foss/2021a``
 ``2020.1`` | ``foss/2022b``
 
 

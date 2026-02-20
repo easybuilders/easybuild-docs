@@ -10,7 +10,6 @@ Build a comprehensive benchmark of popular Brain-Computer Interface (BCI) algori
 
 version | toolchain
 --------|----------
-``0.4.6`` | ``foss/2021a``
 ``1.0.0`` | ``foss/2023a``
 ``1.2.0`` | ``foss/2024a``
 

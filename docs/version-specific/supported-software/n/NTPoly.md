@@ -10,8 +10,6 @@ is a massively parallel library for computing the functions of sparse, symmetric
 
 version | toolchain
 --------|----------
-``2.7.0`` | ``foss/2021a``
-``2.7.0`` | ``intel/2021a``
 ``2.7.1`` | ``foss/2022a``
 ``3.1.0`` | ``foss/2023a``
 

@@ -10,7 +10,6 @@ The Weather Research and Forecasting (WRF) Model is a next-generation mesoscale 
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``4.3`` | ``-dmpar`` | ``foss/2021a``
 ``4.4`` | ``-dmpar`` | ``foss/2022a``
 ``4.4.1`` | ``-dmpar`` | ``foss/2022b``
 ``4.5.1`` | ``-dmpar`` | ``foss/2023a``

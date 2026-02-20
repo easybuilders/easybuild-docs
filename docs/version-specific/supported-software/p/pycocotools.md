@@ -10,7 +10,6 @@ Official APIs for the MS-COCO dataset
 
 version | toolchain
 --------|----------
-``2.0.4`` | ``foss/2021a``
 ``2.0.6`` | ``foss/2022a``
 ``2.0.7`` | ``foss/2023a``
 

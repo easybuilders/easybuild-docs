@@ -10,7 +10,6 @@ Little CMS intends to be an OPEN SOURCE small-footprint color management engine,
 
 version | toolchain
 --------|----------
-``2.12`` | ``GCCcore/10.3.0``
 ``2.12`` | ``GCCcore/11.2.0``
 ``2.13.1`` | ``GCCcore/11.3.0``
 ``2.14`` | ``GCCcore/12.2.0``

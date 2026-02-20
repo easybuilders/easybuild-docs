@@ -10,9 +10,7 @@ xmlf90 is a basic XML parsing library written in Fortran.
 
 version | toolchain
 --------|----------
-``1.5.4`` | ``GCC/10.3.0``
 ``1.5.4`` | ``GCC/11.2.0``
-``1.5.4`` | ``intel-compilers/2021.2.0``
 ``1.5.4`` | ``intel-compilers/2021.4.0``
 ``1.5.6`` | ``GCC/11.3.0``
 ``1.6.3`` | ``GCC/12.3.0``

@@ -6,14 +6,11 @@ search:
 
 SAM Tools provide various utilities for manipulating alignments in the SAM format,  including sorting, merging, indexing and generating alignments in a per-position format.
 
-*homepage*: <http://www.htslib.org/>
+*homepage*: <https://www.htslib.org/>
 
 version | toolchain
 --------|----------
-``0.1.19`` | ``GCC/10.3.0``
 ``0.1.20`` | ``GCC/12.3.0``
-``1.12`` | ``GCC/10.3.0``
-``1.13`` | ``GCC/10.3.0``
 ``1.13`` | ``GCC/11.3.0``
 ``1.13`` | ``GCC/12.3.0``
 ``1.14`` | ``GCC/11.2.0``

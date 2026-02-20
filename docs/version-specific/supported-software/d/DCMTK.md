@@ -10,7 +10,6 @@ DCMTK is a collection of libraries and applications implementing large parts the
 
 version | toolchain
 --------|----------
-``3.6.6`` | ``GCCcore/10.3.0``
 ``3.6.6`` | ``GCCcore/11.2.0``
 ``3.6.7`` | ``GCCcore/11.3.0``
 ``3.6.9`` | ``GCCcore/13.3.0``

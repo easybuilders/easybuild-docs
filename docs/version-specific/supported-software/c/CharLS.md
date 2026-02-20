@@ -10,7 +10,6 @@ CharLS is a C++ implementation of the JPEG-LS standard for lossless and near-los
 
 version | toolchain
 --------|----------
-``2.3.4`` | ``GCCcore/10.3.0``
 ``2.4.1`` | ``GCCcore/11.3.0``
 ``2.4.2`` | ``GCCcore/12.2.0``
 ``2.4.2`` | ``GCCcore/12.3.0``

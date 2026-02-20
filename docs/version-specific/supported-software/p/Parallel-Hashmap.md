@@ -11,7 +11,6 @@ Parallel Hashmap is built on a modified version of Abseil's flat_hash_map. Paral
 version | toolchain
 --------|----------
 ``1.3.12`` | ``GCCcore/12.3.0``
-``1.33`` | ``GCCcore/10.3.0``
 ``1.36`` | ``GCCcore/11.3.0``
 ``1.36`` | ``GCCcore/12.3.0``
 ``2.0.0`` | ``GCCcore/13.3.0``

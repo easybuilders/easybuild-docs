@@ -10,11 +10,9 @@ libHaru is a free, cross platform, open source library for generating PDF files.
 
 version | toolchain
 --------|----------
-``2.3.0`` | ``GCCcore/10.3.0``
 ``2.3.0`` | ``GCCcore/11.2.0``
 ``2.3.0`` | ``GCCcore/11.3.0``
 ``2.3.0`` | ``GCCcore/12.3.0``
-``2.3.0`` | ``foss/2021a``
 ``2.3.0`` | ``foss/2021b``
 ``2.4.5`` | ``GCCcore/13.3.0``
 ``2.4.5`` | ``GCCcore/14.2.0``

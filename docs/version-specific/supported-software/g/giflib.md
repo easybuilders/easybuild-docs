@@ -10,7 +10,6 @@ giflib is a library for reading and writing gif images. It is API and ABI compat
 
 version | toolchain
 --------|----------
-``5.2.1`` | ``GCCcore/10.3.0``
 ``5.2.1`` | ``GCCcore/11.2.0``
 ``5.2.1`` | ``GCCcore/11.3.0``
 ``5.2.1`` | ``GCCcore/12.2.0``

@@ -10,8 +10,6 @@ The primary goal of libunwind is to define a portable and efficient C programmin
 
 version | toolchain
 --------|----------
-``1.4.0`` | ``GCCcore/10.3.0``
-``1.5.0`` | ``GCCcore/10.3.0``
 ``1.5.0`` | ``GCCcore/11.2.0``
 ``1.6.2`` | ``GCCcore/11.3.0``
 ``1.6.2`` | ``GCCcore/12.2.0``

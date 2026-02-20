@@ -10,7 +10,6 @@ Python bindings for ZeroMQ
 
 version | toolchain
 --------|----------
-``22.3.0`` | ``GCCcore/10.3.0``
 ``24.0.1`` | ``GCCcore/11.3.0``
 ``25.1.0`` | ``GCCcore/12.2.0``
 ``25.1.1`` | ``GCCcore/12.3.0``

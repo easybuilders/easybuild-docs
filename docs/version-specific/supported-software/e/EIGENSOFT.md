@@ -10,7 +10,6 @@ The EIGENSOFT package combines functionality from our population genetics method
 
 version | toolchain
 --------|----------
-``7.2.1`` | ``foss/2021a``
 ``7.2.1`` | ``foss/2023a``
 ``7.2.1`` | ``gfbf/2024a``
 

@@ -11,6 +11,7 @@ FastQC is a quality control application for high throughput sequence data. It re
 version | versionsuffix | toolchain
 --------|---------------|----------
 ``0.11.9`` | ``-Java-11`` | ``system``
+``0.12.1`` | ``-Java-21`` | ``GCCcore/14.3.0``
 ``0.12.1`` | ``-Java-11`` | ``system``
 
 

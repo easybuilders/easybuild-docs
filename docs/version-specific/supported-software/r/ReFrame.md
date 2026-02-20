@@ -10,14 +10,11 @@ ReFrame is a framework for writing regression tests for HPC systems.
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``3.0`` |  | ``system``
 ``3.10.1`` |  | ``system``
 ``3.11.0`` |  | ``system``
 ``3.11.1`` |  | ``system``
 ``3.11.2`` |  | ``system``
 ``3.12.0`` |  | ``system``
-``3.2`` |  | ``system``
-``3.3`` |  | ``system``
 ``3.4.1`` |  | ``system``
 ``3.5.0`` |  | ``system``
 ``3.5.1`` |  | ``system``

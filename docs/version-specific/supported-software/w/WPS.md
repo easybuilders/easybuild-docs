@@ -10,7 +10,6 @@ WRF Preprocessing System (WPS) for WRF. The Weather Research and Forecasting (WR
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``4.3.1`` | ``-dmpar`` | ``foss/2021a``
 ``4.4`` | ``-dmpar`` | ``foss/2022a``
 ``4.6.0`` | ``-dmpar`` | ``foss/2024a``
 

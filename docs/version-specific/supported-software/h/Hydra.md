@@ -10,7 +10,6 @@ Hydra is an open-source Python framework that simplifies the development of rese
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.1.1`` |  | ``GCCcore/10.3.0``
 ``1.3.2`` |  | ``GCCcore/11.3.0``
 ``1.3.2`` |  | ``GCCcore/12.3.0``
 ``1.3.2`` |  | ``GCCcore/13.3.0``

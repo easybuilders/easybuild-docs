@@ -10,7 +10,6 @@ Protein ALignment And Detection INterface  PALADIN is a protein sequence alignme
 
 version | toolchain
 --------|----------
-``1.4.6`` | ``GCCcore/10.3.0``
 ``1.4.6`` | ``GCCcore/11.2.0``
 
 

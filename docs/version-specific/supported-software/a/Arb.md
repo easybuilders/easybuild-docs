@@ -10,7 +10,6 @@ Arb is a C library for arbitrary-precision interval arithmetic.  It has full sup
 
 version | toolchain
 --------|----------
-``2.19.0`` | ``GCC/10.3.0``
 ``2.22.1`` | ``foss/2021b``
 ``2.23.0`` | ``gfbf/2022a``
 

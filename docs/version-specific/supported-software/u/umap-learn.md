@@ -10,7 +10,6 @@ Uniform Manifold Approximation and Projection (UMAP) is a dimension reduction te
 
 version | toolchain
 --------|----------
-``0.5.3`` | ``foss/2021a``
 ``0.5.3`` | ``foss/2021b``
 ``0.5.3`` | ``foss/2022a``
 ``0.5.5`` | ``foss/2023a``

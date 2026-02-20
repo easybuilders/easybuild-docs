@@ -10,7 +10,6 @@ pigz, which stands for parallel implementation of gzip, is a fully  functional r
 
 version | toolchain
 --------|----------
-``2.6`` | ``GCCcore/10.3.0``
 ``2.6`` | ``GCCcore/11.2.0``
 ``2.7`` | ``GCCcore/11.3.0``
 ``2.7`` | ``GCCcore/12.2.0``

@@ -10,7 +10,6 @@ mrcfile is a Python implementation of the MRC2014 file format, which is used in 
 
 version | toolchain
 --------|----------
-``1.3.0`` | ``foss/2021a``
 ``1.4.3`` | ``foss/2022a``
 ``1.4.3`` | ``gfbf/2022b``
 ``1.5.0`` | ``foss/2023a``

@@ -10,7 +10,6 @@ CVXOPT is a free software package for convex optimization based on the Python pr
 
 version | toolchain
 --------|----------
-``1.2.6`` | ``foss/2021a``
 ``1.3.1`` | ``foss/2022a``
 ``1.3.2`` | ``foss/2023a``
 ``1.3.2`` | ``gfbf/2025b``

@@ -11,7 +11,6 @@ The Snakemake workflow management system is a tool to create reproducible and sc
 version | toolchain
 --------|----------
 ``6.10.0`` | ``foss/2021b``
-``6.6.1`` | ``foss/2021a``
 ``7.18.2`` | ``foss/2021b``
 ``7.22.0`` | ``foss/2022a``
 ``7.32.3`` | ``foss/2022b``

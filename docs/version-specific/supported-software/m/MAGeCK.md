@@ -10,7 +10,6 @@ Model-based Analysis of Genome-wide CRISPR-Cas9 Knockout (MAGeCK) is a computati
 
 version | toolchain
 --------|----------
-``0.5.9.4`` | ``foss/2021a``
 ``0.5.9.4`` | ``foss/2022a``
 ``0.5.9.5`` | ``gfbf/2022b``
 

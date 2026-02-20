@@ -10,7 +10,6 @@ dm-tree provides tree, a library for working with nested data structures. In a w
 
 version | toolchain
 --------|----------
-``0.1.6`` | ``GCCcore/10.3.0``
 ``0.1.6`` | ``GCCcore/11.2.0``
 ``0.1.8`` | ``GCCcore/11.3.0``
 ``0.1.8`` | ``GCCcore/12.3.0``

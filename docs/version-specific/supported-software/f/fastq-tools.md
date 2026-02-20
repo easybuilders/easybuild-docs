@@ -10,7 +10,6 @@ This package provides a number of small and efficient programs to perform  commo
 
 version | toolchain
 --------|----------
-``0.8.3`` | ``GCC/10.3.0``
 ``0.8.3`` | ``GCC/11.2.0``
 
 

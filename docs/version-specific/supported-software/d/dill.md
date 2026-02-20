@@ -10,7 +10,6 @@ dill extends python's pickle module for serializing and de-serializing python ob
 
 version | toolchain
 --------|----------
-``0.3.4`` | ``GCCcore/10.3.0``
 ``0.3.4`` | ``GCCcore/11.2.0``
 ``0.3.6`` | ``GCCcore/11.3.0``
 ``0.3.7`` | ``GCCcore/12.2.0``

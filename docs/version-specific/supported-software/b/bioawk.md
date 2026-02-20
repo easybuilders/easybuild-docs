@@ -10,7 +10,6 @@ Bioawk is an extension to Brian Kernighan's awk,  adding the support of several 
 
 version | toolchain
 --------|----------
-``1.0`` | ``GCC/10.3.0``
 ``1.0`` | ``GCC/11.2.0``
 
 

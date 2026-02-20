@@ -10,7 +10,6 @@ The GLPK (GNU Linear Programming Kit) package is intended for  solving large-sca
 
 version | toolchain
 --------|----------
-``5.0`` | ``GCCcore/10.3.0``
 ``5.0`` | ``GCCcore/11.2.0``
 ``5.0`` | ``GCCcore/11.3.0``
 ``5.0`` | ``GCCcore/12.2.0``

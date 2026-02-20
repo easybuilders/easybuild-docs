@@ -10,7 +10,6 @@ p7zip is a quick port of 7z.exe and 7za.exe (CLI version of 7zip) for Unix. 7-Zi
 
 version | toolchain
 --------|----------
-``17.04`` | ``GCCcore/10.3.0``
 ``17.04`` | ``GCCcore/11.2.0``
 ``17.04`` | ``GCCcore/11.3.0``
 ``17.04`` | ``GCCcore/12.3.0``

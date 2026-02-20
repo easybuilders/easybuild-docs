@@ -10,7 +10,6 @@ Insight Segmentation and Registration Toolkit (ITK) provides  an extensive suite
 
 version | toolchain
 --------|----------
-``5.2.1`` | ``foss/2021a``
 ``5.2.1`` | ``foss/2021b``
 ``5.2.1`` | ``foss/2022a``
 ``5.3.0`` | ``foss/2022b``

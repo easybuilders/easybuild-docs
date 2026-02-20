@@ -10,7 +10,6 @@ Python bindings for SLEPc, the Scalable Library for Eigenvalue Problem Computati
 
 version | toolchain
 --------|----------
-``3.15.1`` | ``foss/2021a``
 ``3.17.2`` | ``foss/2022a``
 ``3.20.2`` | ``foss/2023a``
 ``3.22.2`` | ``foss/2023b``

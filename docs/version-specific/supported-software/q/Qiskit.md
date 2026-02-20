@@ -10,7 +10,6 @@ Qiskit is an open-source framework for working with noisy quantum computers  at 
 
 version | toolchain
 --------|----------
-``0.31.0`` | ``foss/2021a``
 ``2.0.2`` | ``foss/2023a``
 
 

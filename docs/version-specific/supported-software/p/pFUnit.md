@@ -10,7 +10,6 @@ pFUnit is a unit testing framework enabling JUnit-like testing of serial  and MP
 
 version | toolchain
 --------|----------
-``4.2.0`` | ``iimpi/2021a``
 ``4.7.3`` | ``gompi/2022a``
 
 

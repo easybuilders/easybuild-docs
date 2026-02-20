@@ -10,7 +10,6 @@ Provides a way to load and enumerate PKCS#11 modules.  Provides a standard confi
 
 version | toolchain
 --------|----------
-``0.24.0`` | ``GCCcore/10.3.0``
 ``0.24.1`` | ``GCCcore/11.2.0``
 ``0.24.1`` | ``GCCcore/11.3.0``
 ``0.25.10`` | ``GCCcore/14.2.0``

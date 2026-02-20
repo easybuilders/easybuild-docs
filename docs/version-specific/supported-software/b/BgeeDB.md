@@ -10,7 +10,6 @@ Annotation and gene expression data retrieval from Bgee database. TopAnat, an an
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.26.0`` | ``-R-%(rver)s`` | ``foss/2021a``
 ``2.36.0`` | ``-R-%(rver)s`` | ``foss/2025a``
 
 

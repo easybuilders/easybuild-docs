@@ -10,11 +10,8 @@ GROMACS constant pH  GROMACS is a versatile package to perform molecular dynamic
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``2021.0`` | ``-20250409-constant-pH-CUDA-12.1.1-PLUMED`` | ``foss/2023a``
 ``2021.0`` | ``-20250409-constant-pH`` | ``foss/2023a``
-``2021.3`` | ``-CUDA-11.3.1-PLUMED-2.7.2`` | ``foss/2021a``
-``2021.3`` | ``-CUDA-11.3.1`` | ``foss/2021a``
-``2021.3`` | ``-PLUMED-2.7.2`` | ``foss/2021a``
-``2021.3`` |  | ``foss/2021a``
 ``2021.5`` | ``-CUDA-11.4.1-PLUMED-2.8.0`` | ``foss/2021b``
 ``2021.5`` | ``-CUDA-11.4.1`` | ``foss/2021b``
 ``2021.5`` | ``-PLUMED-2.8.0`` | ``foss/2021b``

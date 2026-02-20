@@ -10,7 +10,6 @@ Krona Tools is a set of scripts to create Krona charts from several Bioinformati
 
 version | toolchain
 --------|----------
-``2.8`` | ``GCC/10.3.0``
 ``2.8.1`` | ``GCCcore/11.2.0``
 ``2.8.1`` | ``GCCcore/11.3.0``
 ``2.8.1`` | ``GCCcore/12.2.0``

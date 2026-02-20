@@ -11,6 +11,7 @@ GNU Octave is a high-level interpreted language, primarily intended for numerica
 version | toolchain
 --------|----------
 ``10.1.0`` | ``foss/2023a``
+``10.3.0`` | ``foss/2025a``
 ``7.1.0`` | ``foss/2021b``
 ``9.2.0`` | ``foss/2023b``
 

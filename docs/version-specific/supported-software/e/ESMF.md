@@ -10,8 +10,6 @@ The Earth System Modeling Framework (ESMF) is a suite of software tools for deve
 
 version | toolchain
 --------|----------
-``8.1.1`` | ``foss/2021a``
-``8.1.1`` | ``intel/2021a``
 ``8.2.0`` | ``foss/2021b``
 ``8.2.0`` | ``intel/2021b``
 ``8.3.0`` | ``foss/2022a``

@@ -11,6 +11,7 @@ A framework for managing and maintaining multi-language pre-commit hooks.  Git h
 version | toolchain
 --------|----------
 ``3.7.0`` | ``GCCcore/13.2.0``
+``4.3.0`` | ``GCCcore/13.3.0``
 ``4.3.0`` | ``GCCcore/14.2.0``
 ``4.3.0`` | ``GCCcore/14.3.0``
 

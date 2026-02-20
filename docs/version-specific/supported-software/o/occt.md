@@ -10,7 +10,6 @@ Open CASCADE Technology (OCCT) is an object-oriented C++ class library designed 
 
 version | toolchain
 --------|----------
-``7.5.0p1`` | ``foss/2021a``
 ``7.5.0p1`` | ``foss/2022a``
 ``7.8.0`` | ``GCCcore/12.3.0``
 ``7.8.0`` | ``GCCcore/13.2.0``

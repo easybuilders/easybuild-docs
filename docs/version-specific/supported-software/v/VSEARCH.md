@@ -10,7 +10,6 @@ VSEARCH supports de novo and reference based chimera detection,  clustering, ful
 
 version | toolchain
 --------|----------
-``2.21.1`` | ``GCC/10.3.0``
 ``2.22.1`` | ``GCC/11.3.0``
 ``2.25.0`` | ``GCC/12.3.0``
 ``2.30.0`` | ``GCC/13.2.0``

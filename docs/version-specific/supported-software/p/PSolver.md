@@ -10,9 +10,7 @@ Interpolating scaling function Poisson Solver Library
 
 version | toolchain
 --------|----------
-``1.8.3`` | ``foss/2021a``
 ``1.8.3`` | ``foss/2021b``
-``1.8.3`` | ``intel/2021a``
 ``1.8.3`` | ``intel/2021b``
 
 

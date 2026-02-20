@@ -10,7 +10,6 @@ PRSice (pronounced 'precise') is a Polygenic Risk Score software for calculating
 
 version | toolchain
 --------|----------
-``2.3.3`` | ``GCCcore/10.3.0``
 ``2.3.5`` | ``GCCcore/11.3.0``
 ``2.3.5`` | ``GCCcore/12.3.0``
 ``2.3.5`` | ``GCCcore/13.3.0``

@@ -10,7 +10,6 @@ mimalloc is a general purpose allocator with excellent performance characteristi
 
 version | toolchain
 --------|----------
-``1.7.2`` | ``GCCcore/10.3.0``
 ``1.7.2`` | ``GCCcore/11.2.0``
 
 

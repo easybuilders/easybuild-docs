@@ -10,7 +10,6 @@ p4est is a C library to manage a collection (a forest) of multiple connected ada
 
 version | toolchain
 --------|----------
-``2.8`` | ``foss/2021a``
 ``2.8.6`` | ``foss/2023a``
 ``2.8.7`` | ``foss/2024a``
 

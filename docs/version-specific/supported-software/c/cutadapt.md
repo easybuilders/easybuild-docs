@@ -11,7 +11,6 @@ Cutadapt finds and removes adapter sequences, primers, poly-A tails and other ty
 version | versionsuffix | toolchain
 --------|---------------|----------
 ``1.18`` | ``-Python-2.7.18`` | ``GCCcore/12.3.0``
-``3.4`` |  | ``GCCcore/10.3.0``
 ``3.5`` |  | ``GCCcore/11.2.0``
 ``4.2`` |  | ``GCCcore/11.3.0``
 ``4.4`` |  | ``GCCcore/12.2.0``

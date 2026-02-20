@@ -10,7 +10,6 @@ ARPACK is a collection of Fortran77 subroutines designed to solve large scale ei
 
 version | toolchain
 --------|----------
-``3.8.0`` | ``foss/2021a``
 ``3.8.0`` | ``foss/2021b``
 ``3.8.0`` | ``foss/2022a``
 ``3.8.0`` | ``foss/2022b``

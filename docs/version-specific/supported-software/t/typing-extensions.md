@@ -10,14 +10,12 @@ Typing Extensions – Backported and Experimental Type Hints for Python
 
 version | toolchain
 --------|----------
-``3.10.0.0`` | ``GCCcore/10.3.0``
 ``3.10.0.2`` | ``GCCcore/11.2.0``
 ``4.10.0`` | ``GCCcore/13.2.0``
 ``4.11.0`` | ``GCCcore/13.3.0``
 ``4.14.0`` | ``GCCcore/14.2.0``
 ``4.14.1`` | ``GCCcore/14.3.0``
 ``4.3.0`` | ``GCCcore/11.3.0``
-``4.4.0`` | ``GCCcore/10.3.0``
 ``4.9.0`` | ``GCCcore/12.2.0``
 ``4.9.0`` | ``GCCcore/12.3.0``
 

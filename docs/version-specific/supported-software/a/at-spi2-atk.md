@@ -10,7 +10,6 @@ AT-SPI 2 toolkit bridge
 
 version | toolchain
 --------|----------
-``2.38.0`` | ``GCCcore/10.3.0``
 ``2.38.0`` | ``GCCcore/11.2.0``
 ``2.38.0`` | ``GCCcore/11.3.0``
 ``2.38.0`` | ``GCCcore/12.2.0``

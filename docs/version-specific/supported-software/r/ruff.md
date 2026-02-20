@@ -10,6 +10,7 @@ An extremely fast Python linter and code formatter, written in Rust.
 
 version | toolchain
 --------|----------
+``0.12.1`` | ``GCCcore/14.2.0``
 ``0.14.3`` | ``GCCcore/14.3.0``
 ``0.7.0`` | ``GCCcore/13.3.0``
 

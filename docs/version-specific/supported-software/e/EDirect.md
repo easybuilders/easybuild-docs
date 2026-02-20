@@ -10,7 +10,6 @@ Entrez Direct (EDirect) provides access to the NCBI's suite of interconnected da
 
 version | toolchain
 --------|----------
-``19.7.20230531`` | ``GCCcore/10.3.0``
 ``20.5.20231006`` | ``GCCcore/12.2.0``
 ``20.5.20231006`` | ``GCCcore/12.3.0``
 

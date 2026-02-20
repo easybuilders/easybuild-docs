@@ -10,7 +10,6 @@ StringTie is a fast and highly efficient assembler of RNA-Seq alignments into po
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.1.7`` |  | ``GCC/10.3.0``
 ``2.2.1`` | ``-Python-2.7.18`` | ``GCC/11.2.0``
 ``2.2.1`` |  | ``GCC/11.2.0``
 ``2.2.3`` |  | ``GCC/12.3.0``

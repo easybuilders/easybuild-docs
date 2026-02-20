@@ -10,7 +10,6 @@ Leptonica is a collection of pedagogically-oriented open source software  that i
 
 version | toolchain
 --------|----------
-``1.82.0`` | ``GCCcore/10.3.0``
 ``1.83.0`` | ``GCCcore/11.3.0``
 ``1.84.1`` | ``GCCcore/12.3.0``
 ``1.85.0`` | ``GCCcore/13.3.0``

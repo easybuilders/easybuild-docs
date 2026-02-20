@@ -10,7 +10,6 @@ deepTools is a suite of python tools particularly developed for the efficient an
 
 version | toolchain
 --------|----------
-``3.5.0`` | ``foss/2021a``
 ``3.5.1`` | ``foss/2021b``
 ``3.5.2`` | ``foss/2022a``
 ``3.5.5`` | ``gfbf/2023a``

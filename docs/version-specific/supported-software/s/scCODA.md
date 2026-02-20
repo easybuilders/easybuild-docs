@@ -10,7 +10,6 @@ scCODA allows for identification of compositional changes in high-throughput seq
 
 version | toolchain
 --------|----------
-``0.1.9`` | ``foss/2021a``
 ``0.1.9`` | ``foss/2023a``
 
 

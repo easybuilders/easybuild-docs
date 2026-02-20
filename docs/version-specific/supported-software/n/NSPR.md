@@ -10,7 +10,6 @@ Netscape Portable Runtime (NSPR) provides a platform-neutral API for system leve
 
 version | toolchain
 --------|----------
-``4.30`` | ``GCCcore/10.3.0``
 ``4.32`` | ``GCCcore/11.2.0``
 ``4.34`` | ``GCCcore/11.3.0``
 ``4.35`` | ``GCCcore/12.2.0``

@@ -6,12 +6,10 @@ search:
 
 GitPython is a python library used to interact with Git repositories
 
-*homepage*: <https://github.com/gitpython-developers/GitPython>
+*homepage*: <https://gitpython.readthedocs.org>
 
 version | toolchain
 --------|----------
-``2.1.15`` | ``system``
-``3.1.18`` | ``GCCcore/10.3.0``
 ``3.1.24`` | ``GCCcore/11.2.0``
 ``3.1.27`` | ``GCCcore/11.3.0``
 ``3.1.31`` | ``GCCcore/12.2.0``

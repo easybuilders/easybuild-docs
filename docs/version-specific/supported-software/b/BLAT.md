@@ -10,7 +10,6 @@ BLAT on DNA is designed to quickly find sequences of 95% and greater similarity 
 
 version | toolchain
 --------|----------
-``3.7`` | ``GCC/10.3.0``
 ``3.7`` | ``GCC/11.2.0``
 ``3.7`` | ``GCC/11.3.0``
 ``3.7`` | ``GCC/12.3.0``

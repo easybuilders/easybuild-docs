@@ -10,7 +10,6 @@ Pixman is a low-level software library for pixel manipulation, providing  featur
 
 version | toolchain
 --------|----------
-``0.40.0`` | ``GCCcore/10.3.0``
 ``0.40.0`` | ``GCCcore/11.2.0``
 ``0.40.0`` | ``GCCcore/11.3.0``
 ``0.42.2`` | ``GCCcore/12.2.0``

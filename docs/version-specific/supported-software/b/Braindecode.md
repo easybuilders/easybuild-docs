@@ -10,8 +10,6 @@ Braindecode is an open-source Python toolbox for decoding raw electrophysiologic
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.7`` | ``-PyTorch-1.10.0-CUDA-11.3.1`` | ``foss/2021a``
-``0.7`` | ``-PyTorch-1.10.0`` | ``foss/2021a``
 ``0.8.1`` | ``-PyTorch-2.1.2-CUDA-12.1.1`` | ``foss/2023a``
 ``0.8.1`` | ``-PyTorch-2.1.2`` | ``foss/2023a``
 

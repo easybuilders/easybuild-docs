@@ -10,9 +10,7 @@ A library to compute the exchange and correlation energy  and potential in spher
 
 version | toolchain
 --------|----------
-``0.9.6`` | ``gompi/2021a``
 ``0.9.6`` | ``gompi/2021b``
-``0.9.6`` | ``iimpi/2021a``
 ``0.9.6`` | ``iimpi/2021b``
 ``1.1.0`` | ``gompi/2022a``
 ``2.0.2`` | ``gompi/2023a``

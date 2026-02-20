@@ -10,7 +10,6 @@ The MCL algorithm is short for the Markov Cluster Algorithm, a fast and scalable
 
 version | toolchain
 --------|----------
-``14.137`` | ``GCCcore/10.3.0``
 ``14.137`` | ``GCCcore/11.3.0``
 ``22.282`` | ``GCCcore/11.2.0``
 ``22.282`` | ``GCCcore/11.3.0``

@@ -10,7 +10,6 @@ CWIPI (Coupling With Interpolation Parallel Interface) library helps in chaining
 
 version | toolchain
 --------|----------
-``0.12.0`` | ``gompi/2021a``
 ``0.12.0`` | ``gompi/2022a``
 
 

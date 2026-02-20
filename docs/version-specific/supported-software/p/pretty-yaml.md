@@ -10,7 +10,6 @@ PyYAML-based python module to produce pretty and readable YAML-serialized data. 
 
 version | toolchain
 --------|----------
-``21.10.1`` | ``GCCcore/10.3.0``
 ``23.9.5`` | ``GCCcore/11.3.0``
 ``24.7.0`` | ``GCCcore/12.3.0``
 ``24.7.0`` | ``GCCcore/13.3.0``

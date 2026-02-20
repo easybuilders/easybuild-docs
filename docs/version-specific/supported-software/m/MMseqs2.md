@@ -10,7 +10,6 @@ MMseqs2: ultra fast and sensitive search and clustering suite
 
 version | toolchain
 --------|----------
-``13-45111`` | ``gompi/2021a``
 ``13-45111`` | ``gompi/2021b``
 ``14-7e284`` | ``gompi/2022a``
 ``14-7e284`` | ``gompi/2023a``

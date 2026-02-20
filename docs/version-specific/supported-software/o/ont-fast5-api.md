@@ -10,8 +10,6 @@ ont_fast5_api is a simple interface to HDF5 files of the Oxford Nanopore .fast5 
 
 version | toolchain
 --------|----------
-``4.0.0`` | ``foss/2021a``
-``4.0.2`` | ``foss/2021a``
 ``4.0.2`` | ``foss/2021b``
 ``4.1.1`` | ``foss/2022a``
 ``4.1.1`` | ``foss/2022b``

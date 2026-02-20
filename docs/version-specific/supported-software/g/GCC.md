@@ -10,8 +10,6 @@ The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran
 
 version | toolchain
 --------|----------
-``10.3.0`` | ``system``
-``11.1.0`` | ``system``
 ``11.2.0`` | ``system``
 ``11.3.0`` | ``system``
 ``11.4.0`` | ``system``

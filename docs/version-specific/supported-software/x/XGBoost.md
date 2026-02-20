@@ -10,7 +10,6 @@ XGBoost is an optimized distributed gradient boosting library designed to be hig
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.5.0`` |  | ``foss/2021a``
 ``1.7.1`` |  | ``foss/2022a``
 ``1.7.2`` | ``-CUDA-11.7.0`` | ``foss/2022a``
 ``1.7.2`` |  | ``foss/2022a``

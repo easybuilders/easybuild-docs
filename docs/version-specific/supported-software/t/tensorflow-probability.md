@@ -10,7 +10,6 @@ TensorFlow Probability (TFP) is a library for probabilistic reasoning and statis
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.14.0`` |  | ``foss/2021a``
 ``0.16.0`` |  | ``foss/2021b``
 ``0.19.0`` | ``-CUDA-11.7.0`` | ``foss/2022a``
 ``0.19.0`` |  | ``foss/2022a``

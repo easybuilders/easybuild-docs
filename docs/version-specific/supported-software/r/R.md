@@ -10,7 +10,6 @@ R is a free software environment for statistical computing  and graphics.
 
 version | toolchain
 --------|----------
-``4.1.0`` | ``foss/2021a``
 ``4.1.2`` | ``foss/2021b``
 ``4.2.0`` | ``foss/2021b``
 ``4.2.1`` | ``foss/2022a``

@@ -10,7 +10,6 @@ Pyomo is a Python-based open-source software package that supports a diverse set
 
 version | toolchain
 --------|----------
-``6.0.1`` | ``foss/2021a``
 ``6.4.2`` | ``foss/2022a``
 ``6.5.0`` | ``foss/2022b``
 ``6.7.3`` | ``foss/2023a``

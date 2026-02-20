@@ -4,13 +4,12 @@ search:
 ---
 # polars
 
-Lightning-fast DataFrame library for Rust and Python.
+Polars is a blazingly fast DataFrame library for manipulating structured data. The core is written in Rust and this module provides its interface for Python.
 
 *homepage*: <https://pola.rs/>
 
 version | toolchain
 --------|----------
-``0.15.6`` | ``foss/2022a``
 ``0.19.19`` | ``gfbf/2023a``
 ``0.20.2`` | ``gfbf/2023a``
 ``1.28.1`` | ``gfbf/2023b``

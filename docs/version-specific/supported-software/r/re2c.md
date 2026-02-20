@@ -10,7 +10,6 @@ re2c is a free and open-source lexer generator for C and C++. Its main goal is g
 
 version | toolchain
 --------|----------
-``2.1.1`` | ``GCCcore/10.3.0``
 ``2.2`` | ``GCCcore/11.2.0``
 ``2.2`` | ``GCCcore/11.3.0``
 ``3.0`` | ``GCCcore/12.2.0``

@@ -10,7 +10,6 @@ A comprehensive software library for efficient processing of structured genome a
 
 version | toolchain
 --------|----------
-``1.6.2`` | ``GCC/10.3.0``
 ``1.6.2`` | ``GCC/11.3.0``
 ``1.6.2`` | ``GCC/12.2.0``
 ``1.6.5`` | ``GCC/12.3.0``

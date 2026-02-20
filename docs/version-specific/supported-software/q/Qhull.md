@@ -10,7 +10,6 @@ Qhull computes the convex hull, Delaunay triangulation, Voronoi diagram,  halfsp
 
 version | toolchain
 --------|----------
-``2020.2`` | ``GCCcore/10.3.0``
 ``2020.2`` | ``GCCcore/11.2.0``
 ``2020.2`` | ``GCCcore/11.3.0``
 ``2020.2`` | ``GCCcore/12.2.0``

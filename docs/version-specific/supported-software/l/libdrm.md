@@ -10,7 +10,6 @@ Direct Rendering Manager runtime library.
 
 version | toolchain
 --------|----------
-``2.4.106`` | ``GCCcore/10.3.0``
 ``2.4.107`` | ``GCCcore/11.2.0``
 ``2.4.110`` | ``GCCcore/11.3.0``
 ``2.4.114`` | ``GCCcore/12.2.0``

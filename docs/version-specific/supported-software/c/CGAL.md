@@ -10,10 +10,8 @@ The goal of the CGAL Open Source Project is to provide easy access to efficient 
 
 version | toolchain
 --------|----------
-``4.14.3`` | ``gompi/2021a``
 ``4.14.3`` | ``gompi/2021b``
 ``4.14.3`` | ``gompi/2022a``
-``4.14.3`` | ``iimpi/2021a``
 ``5.4`` | ``GCCcore/12.3.0``
 ``5.5.2`` | ``GCCcore/12.2.0``
 ``5.6`` | ``GCCcore/12.3.0``

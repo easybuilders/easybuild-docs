@@ -10,7 +10,6 @@ The IUPAC International Chemical Identifier (InChI TM) is a non-proprietary iden
 
 version | toolchain
 --------|----------
-``1.06`` | ``GCC/10.3.0``
 ``1.07.4`` | ``GCC/14.2.0``
 
 

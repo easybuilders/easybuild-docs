@@ -4,12 +4,15 @@ search:
 ---
 # libaom
 
-
+AV1 video codec library reference implementation, published by the Alliance for Open Media.
 
 *homepage*: <https://aomedia.googlesource.com/aom/>
 
 version | toolchain
 --------|----------
+``3.10.0`` | ``GCCcore/13.2.0``
+``3.10.0`` | ``GCCcore/13.3.0``
+``3.10.0`` | ``GCCcore/14.2.0``
 ``3.10.0`` | ``GCCcore/14.3.0``
 
 

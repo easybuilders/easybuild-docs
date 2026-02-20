@@ -10,8 +10,6 @@ C, C++, Objective-C compiler, based on LLVM.  Does not  include C++ standard lib
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``12.0.1`` | ``-CUDA-11.3.1`` | ``GCCcore/10.3.0``
-``12.0.1`` |  | ``GCCcore/10.3.0``
 ``12.0.1`` |  | ``GCCcore/11.2.0``
 ``13.0.1`` | ``-CUDA-11.4.1`` | ``GCCcore/11.2.0``
 ``13.0.1`` |  | ``GCCcore/11.2.0``

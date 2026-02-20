@@ -10,7 +10,6 @@ libjpeg-turbo is a fork of the original IJG libjpeg which uses SIMD to  accelera
 
 version | toolchain
 --------|----------
-``2.0.6`` | ``GCCcore/10.3.0``
 ``2.0.6`` | ``GCCcore/11.2.0``
 ``2.1.3`` | ``GCCcore/11.3.0``
 ``2.1.4`` | ``GCCcore/12.2.0``

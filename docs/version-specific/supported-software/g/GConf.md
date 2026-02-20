@@ -6,11 +6,10 @@ search:
 
 GConf is a system for storing application preferences.  It is intended for user preferences; not configuration  of something like Apache, or arbitrary data storage.
 
-*homepage*: <https://developer.gnome.org/gconf/>
+*homepage*: <https://gitlab.gnome.org/iainl/gconf>
 
 version | toolchain
 --------|----------
-``3.2.6`` | ``GCCcore/10.3.0``
 ``3.2.6`` | ``GCCcore/11.2.0``
 ``3.2.6`` | ``GCCcore/11.3.0``
 ``3.2.6`` | ``GCCcore/12.3.0``

@@ -10,7 +10,6 @@ The xprop utility is for displaying window and font properties in an X server.  
 
 version | toolchain
 --------|----------
-``1.2.5`` | ``GCCcore/10.3.0``
 ``1.2.5`` | ``GCCcore/11.2.0``
 ``1.2.5`` | ``GCCcore/11.3.0``
 ``1.2.5`` | ``GCCcore/12.2.0``

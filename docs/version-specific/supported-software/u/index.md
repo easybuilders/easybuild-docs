@@ -23,6 +23,8 @@ search:
  * [Umpire](Umpire.md)
  * [uncertainties](uncertainties.md)
  * [uncertainty-calibration](uncertainty-calibration.md)
+ * [uncrustify](uncrustify.md)
+ * [Underworld](Underworld.md)
  * [Uni-Core](Uni-Core.md)
  * [unicore-uftp](unicore-uftp.md)
  * [Unicycler](Unicycler.md)

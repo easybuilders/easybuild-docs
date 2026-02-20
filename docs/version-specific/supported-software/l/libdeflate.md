@@ -17,8 +17,6 @@ version | toolchain
 ``1.20`` | ``GCCcore/13.3.0``
 ``1.24`` | ``GCCcore/14.2.0``
 ``1.24`` | ``GCCcore/14.3.0``
-``1.7`` | ``GCCcore/10.3.0``
-``1.8`` | ``GCCcore/10.3.0``
 ``1.8`` | ``GCCcore/11.2.0``
 
 

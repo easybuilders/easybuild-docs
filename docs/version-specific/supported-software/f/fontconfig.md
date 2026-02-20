@@ -10,7 +10,6 @@ Fontconfig is a library designed to provide system-wide font configuration,  cus
 
 version | toolchain
 --------|----------
-``2.13.93`` | ``GCCcore/10.3.0``
 ``2.13.94`` | ``GCCcore/11.2.0``
 ``2.14.0`` | ``GCCcore/11.3.0``
 ``2.14.1`` | ``GCCcore/12.2.0``

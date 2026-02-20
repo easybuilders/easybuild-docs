@@ -10,7 +10,6 @@ Mercurial is a free, distributed source control management tool. It efficiently 
 
 version | toolchain
 --------|----------
-``5.8`` | ``GCCcore/10.3.0``
 ``6.2`` | ``GCCcore/11.3.0``
 ``6.4.5`` | ``GCCcore/12.3.0``
 ``6.8.1`` | ``GCCcore/13.3.0``

@@ -10,7 +10,6 @@ libglvnd is a vendor-neutral dispatch layer for arbitrating OpenGL API calls bet
 
 version | toolchain
 --------|----------
-``1.3.3`` | ``GCCcore/10.3.0``
 ``1.3.3`` | ``GCCcore/11.2.0``
 ``1.4.0`` | ``GCCcore/11.3.0``
 ``1.6.0`` | ``GCCcore/12.2.0``

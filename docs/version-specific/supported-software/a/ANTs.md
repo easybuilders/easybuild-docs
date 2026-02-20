@@ -10,7 +10,6 @@ ANTs extracts information from complex datasets that include imaging. ANTs is us
 
 version | toolchain
 --------|----------
-``2.3.5`` | ``foss/2021a``
 ``2.5.0`` | ``foss/2022b``
 ``2.6.2`` | ``foss/2024a``
 

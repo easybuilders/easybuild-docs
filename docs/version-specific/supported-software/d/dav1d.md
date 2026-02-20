@@ -10,6 +10,9 @@ dav1d is an AV1 cross-platform decoder, open-source, and focused on speed and co
 
 version | toolchain
 --------|----------
+``1.5.2`` | ``GCCcore/13.2.0``
+``1.5.2`` | ``GCCcore/13.3.0``
+``1.5.2`` | ``GCCcore/14.2.0``
 ``1.5.2`` | ``GCCcore/14.3.0``
 
 

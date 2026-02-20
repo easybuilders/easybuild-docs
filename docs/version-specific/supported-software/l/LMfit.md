@@ -10,7 +10,6 @@ Lmfit provides a high-level interface to non-linear optimization and curve fitti
 
 version | toolchain
 --------|----------
-``1.0.3`` | ``foss/2021a``
 ``1.0.3`` | ``foss/2022a``
 ``1.0.3`` | ``intel/2022a``
 ``1.2.1`` | ``foss/2021b``

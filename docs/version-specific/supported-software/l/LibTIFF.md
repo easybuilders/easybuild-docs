@@ -10,7 +10,6 @@ tiff: Library and tools for reading and writing TIFF data files
 
 version | toolchain
 --------|----------
-``4.2.0`` | ``GCCcore/10.3.0``
 ``4.3.0`` | ``GCCcore/11.2.0``
 ``4.3.0`` | ``GCCcore/11.3.0``
 ``4.4.0`` | ``GCCcore/12.2.0``

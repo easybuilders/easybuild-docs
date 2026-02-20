@@ -10,9 +10,6 @@ DIRAC: Program for Atomic and Molecular Direct Iterative Relativistic All-electr
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``22.0`` |  | ``foss/2021a``
-``22.0`` | ``-int64`` | ``intel/2021a``
-``22.0`` |  | ``intel/2021a``
 ``23.0`` |  | ``foss/2022a``
 ``23.0`` |  | ``foss/2022b``
 ``23.0`` |  | ``foss/2023a``
@@ -23,6 +20,8 @@ version | versionsuffix | toolchain
 ``23.0`` |  | ``intel/2023a``
 ``24.0`` |  | ``foss/2022b``
 ``24.0`` | ``-int64`` | ``intel/2022b``
+``25.0`` |  | ``foss/2024a``
+``25.0`` |  | ``foss/2025a``
 ``25.0`` | ``-int64`` | ``intel/2022b``
 ``25.0`` | ``-serial`` | ``intel/2023a``
 ``25.0`` |  | ``intel/2023a``

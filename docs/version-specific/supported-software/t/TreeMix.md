@@ -10,7 +10,6 @@ TreeMix is a method for inferring the patterns of population splits and mixtures
 
 version | toolchain
 --------|----------
-``1.13`` | ``GCC/10.3.0``
 ``1.13`` | ``GCC/11.2.0``
 ``1.13`` | ``GCC/12.3.0``
 

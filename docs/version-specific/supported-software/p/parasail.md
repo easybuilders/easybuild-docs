@@ -10,7 +10,6 @@ parasail is a SIMD C (C99) library containing implementations  of the Smith-Wate
 
 version | toolchain
 --------|----------
-``2.4.3`` | ``GCC/10.3.0``
 ``2.5`` | ``GCC/11.2.0``
 ``2.6`` | ``GCC/11.3.0``
 ``2.6.2`` | ``GCC/12.2.0``

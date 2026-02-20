@@ -10,7 +10,6 @@ Perl5 access to Berkeley DB version 1.x.
 
 version | toolchain
 --------|----------
-``1.856`` | ``GCCcore/10.3.0``
 ``1.857`` | ``GCCcore/11.2.0``
 ``1.858`` | ``GCCcore/11.3.0``
 ``1.859`` | ``GCCcore/12.3.0``

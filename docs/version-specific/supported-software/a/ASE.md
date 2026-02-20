@@ -10,13 +10,10 @@ ASE is a python package providing an open source Atomic Simulation Environment  
 
 version | toolchain
 --------|----------
-``3.22.0`` | ``foss/2021a``
-``3.22.0`` | ``intel/2021a``
 ``3.22.1`` | ``foss/2021b``
 ``3.22.1`` | ``foss/2022a``
 ``3.22.1`` | ``gfbf/2022b``
 ``3.22.1`` | ``gfbf/2023a``
-``3.22.1`` | ``gomkl/2021a``
 ``3.22.1`` | ``iimkl/2023a``
 ``3.22.1`` | ``intel/2021b``
 ``3.22.1`` | ``intel/2022a``

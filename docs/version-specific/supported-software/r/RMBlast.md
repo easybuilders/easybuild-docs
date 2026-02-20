@@ -11,7 +11,6 @@ RMBlast is a RepeatMasker compatible version of the standard NCBI BLAST suite. T
 version | toolchain
 --------|----------
 ``2.13.0`` | ``gompi/2022a``
-``2.14.0`` | ``gompi/2021a``
 ``2.14.1`` | ``gompi/2023a``
 ``2.14.1`` | ``gompi/2024a``
 

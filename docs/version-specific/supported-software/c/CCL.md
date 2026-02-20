@@ -10,7 +10,6 @@ Clozure CL (often called CCL for short) is a free Common Lisp  implementation wi
 
 version | toolchain
 --------|----------
-``1.12.1`` | ``GCCcore/10.3.0``
 ``1.12.2`` | ``GCCcore/11.3.0``
 ``1.12.2`` | ``GCCcore/12.3.0``
 ``1.12.2`` | ``GCCcore/13.2.0``

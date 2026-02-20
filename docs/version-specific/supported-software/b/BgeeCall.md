@@ -10,7 +10,6 @@ Automatic RNA-Seq present/absent gene expression calls generation
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.16.0`` | ``-R-%(rver)s`` | ``foss/2021a``
 ``1.26.0`` | ``-R-%(rver)s`` | ``foss/2025a``
 
 

@@ -10,7 +10,6 @@ Library contains GRIB2 encoder/decoder ('C' version).
 
 version | toolchain
 --------|----------
-``1.6.3`` | ``GCCcore/10.3.0``
 ``1.6.3`` | ``GCCcore/11.2.0``
 ``1.7.0`` | ``GCCcore/11.3.0``
 ``2.3.0`` | ``GCCcore/14.3.0``

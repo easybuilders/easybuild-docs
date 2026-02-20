@@ -10,7 +10,6 @@ Unified Communication X An open-source production grade communication framework 
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.10.0`` | ``-CUDA-11.3.1`` | ``GCCcore/10.3.0``
 ``1.11.0`` | ``-CUDA-11.4.1`` | ``GCCcore/11.2.0``
 ``1.11.2`` | ``-CUDA-11.4.1`` | ``GCCcore/11.2.0``
 ``1.11.2`` | ``-CUDA-11.5.2`` | ``GCCcore/11.2.0``

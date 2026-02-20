@@ -10,7 +10,6 @@ This tool will calculate the bidirectional average nucleotide identity (gANI) an
 
 version | toolchain
 --------|----------
-``1.0`` | ``GCCcore/10.3.0``
 ``1.0`` | ``GCCcore/11.3.0``
 
 

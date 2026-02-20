@@ -10,11 +10,6 @@ Datasets, Transforms and Models specific to Computer Vision
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.11.1`` | ``-CUDA-11.3.1`` | ``foss/2021a``
-``0.11.1`` |  | ``foss/2021a``
-``0.11.3`` | ``-CUDA-11.3.1`` | ``foss/2021a``
-``0.11.3`` |  | ``foss/2021a``
-``0.12.0`` | ``-PyTorch-1.11.0-CUDA-11.3.1`` | ``foss/2021a``
 ``0.13.1`` | ``-CUDA-11.7.0`` | ``foss/2022a``
 ``0.13.1`` |  | ``foss/2022a``
 ``0.14.1`` |  | ``foss/2022b``

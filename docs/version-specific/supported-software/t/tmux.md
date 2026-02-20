@@ -10,7 +10,6 @@ tmux is a terminal multiplexer: it enables a number of terminals to be created, 
 
 version | toolchain
 --------|----------
-``3.2a`` | ``GCCcore/10.3.0``
 ``3.2a`` | ``GCCcore/11.2.0``
 ``3.2a`` | ``system``
 ``3.3a`` | ``GCCcore/11.3.0``

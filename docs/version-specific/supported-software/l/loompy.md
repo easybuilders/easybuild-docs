@@ -10,7 +10,6 @@ Python implementation of the Loom file format, an efficient file format for larg
 
 version | toolchain
 --------|----------
-``3.0.7`` | ``foss/2021a``
 ``3.0.7`` | ``foss/2021b``
 ``3.0.7`` | ``foss/2022a``
 ``3.0.7`` | ``foss/2023a``

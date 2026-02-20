@@ -10,7 +10,6 @@ PEAR is an ultrafast, memory-efficient and highly accurate pair-end read merger.
 
 version | toolchain
 --------|----------
-``0.9.11`` | ``GCC/10.3.0``
 ``0.9.11`` | ``GCC/11.2.0``
 ``0.9.11`` | ``GCC/11.3.0``
 ``0.9.11`` | ``GCC/12.2.0``

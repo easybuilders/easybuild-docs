@@ -10,7 +10,6 @@ kallisto is a program for quantifying abundances of transcripts from RNA-Seq dat
 
 version | toolchain
 --------|----------
-``0.48.0`` | ``gompi/2021a``
 ``0.48.0`` | ``gompi/2021b``
 ``0.48.0`` | ``gompi/2022a``
 ``0.50.1`` | ``gompi/2022b``

@@ -10,10 +10,6 @@ Intel oneAPI Math Kernel Library
 
 version | toolchain
 --------|----------
-``2021.2.0`` | ``gompi/2021a``
-``2021.2.0`` | ``iimpi/2021a``
-``2021.2.0`` | ``iompi/2021a``
-``2021.3.0`` | ``gompi/2021a``
 ``2021.4.0`` | ``iompi/2021b``
 ``2021.4.0`` | ``system``
 ``2022.0.1`` | ``system``

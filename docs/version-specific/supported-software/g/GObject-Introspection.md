@@ -10,7 +10,6 @@ GObject introspection is a middleware layer between C libraries  (using GObject)
 
 version | toolchain
 --------|----------
-``1.68.0`` | ``GCCcore/10.3.0``
 ``1.68.0`` | ``GCCcore/11.2.0``
 ``1.72.0`` | ``GCCcore/11.3.0``
 ``1.74.0`` | ``GCCcore/12.2.0``

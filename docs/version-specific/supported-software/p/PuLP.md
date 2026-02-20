@@ -10,7 +10,6 @@ PuLP is an LP modeler written in Python. PuLP can generate MPS or LP files and c
 
 version | toolchain
 --------|----------
-``2.5.1`` | ``foss/2021a``
 ``2.7.0`` | ``foss/2022b``
 ``2.8.0`` | ``foss/2023a``
 ``2.8.0`` | ``foss/2023b``

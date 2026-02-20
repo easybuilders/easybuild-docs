@@ -10,9 +10,7 @@ Likwid stands for Like I knew what I am doing. This project contributes easy to 
 
 version | toolchain
 --------|----------
-``5.2.0`` | ``GCC/10.3.0``
 ``5.2.0`` | ``GCC/11.2.0``
-``5.2.0`` | ``intel-compilers/2021.2.0``
 ``5.2.1`` | ``GCC/11.2.0``
 ``5.2.2`` | ``GCC/11.3.0``
 ``5.2.2`` | ``GCC/12.3.0``

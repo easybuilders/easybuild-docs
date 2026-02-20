@@ -10,7 +10,6 @@ Data augmentation toolkit developed at the Division of Medical Image Computing a
 
 version | toolchain
 --------|----------
-``0.25`` | ``foss/2021a``
 ``0.25.1`` | ``foss/2023a``
 
 

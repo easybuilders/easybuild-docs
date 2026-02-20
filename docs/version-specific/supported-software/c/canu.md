@@ -11,8 +11,6 @@ Canu is a fork of the Celera Assembler designed for high-noise single-molecule s
 version | versionsuffix | toolchain
 --------|---------------|----------
 ``2.2`` |  | ``GCC/12.2.0``
-``2.2`` | ``-Java-11`` | ``GCCcore/10.3.0``
-``2.2`` |  | ``GCCcore/10.3.0``
 ``2.2`` |  | ``GCCcore/11.2.0``
 ``2.2`` |  | ``GCCcore/11.3.0``
 ``2.3`` | ``-Java-11`` | ``GCCcore/13.3.0``

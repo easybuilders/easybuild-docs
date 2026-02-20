@@ -10,7 +10,6 @@ Library for reading and writing coordinate system information from/to GeoTIFF fi
 
 version | toolchain
 --------|----------
-``1.6.0`` | ``GCCcore/10.3.0``
 ``1.7.0`` | ``GCCcore/11.2.0``
 ``1.7.1`` | ``GCCcore/11.3.0``
 ``1.7.1`` | ``GCCcore/12.2.0``

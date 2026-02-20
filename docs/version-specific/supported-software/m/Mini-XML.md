@@ -10,7 +10,6 @@ Mini-XML is a small XML parsing library that you can use to read XML data files 
 
 version | toolchain
 --------|----------
-``3.2`` | ``GCCcore/10.3.0``
 ``3.3.1`` | ``GCCcore/11.2.0``
 
 

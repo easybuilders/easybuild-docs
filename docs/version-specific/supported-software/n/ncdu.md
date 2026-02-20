@@ -10,7 +10,6 @@ Ncdu is a disk usage analyzer with an ncurses interface. It is designed to find 
 
 version | toolchain
 --------|----------
-``1.16`` | ``GCC/10.3.0``
 ``1.16`` | ``GCC/11.2.0``
 ``1.17`` | ``GCC/11.3.0``
 ``1.18`` | ``GCC/12.3.0``

@@ -10,7 +10,6 @@ Python/numpy interface to netCDF.
 
 version | toolchain
 --------|----------
-``1.5.7`` | ``foss/2021a``
 ``1.5.7`` | ``foss/2021b``
 ``1.5.7`` | ``intel/2021b``
 ``1.6.1`` | ``foss/2022a``

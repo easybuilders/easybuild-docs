@@ -10,7 +10,6 @@ Prokka is a software tool for the rapid annotation of prokaryotic genomes.
 
 version | toolchain
 --------|----------
-``1.14.5`` | ``gompi/2021a``
 ``1.14.5`` | ``gompi/2021b``
 ``1.14.5`` | ``gompi/2022a``
 ``1.14.5`` | ``gompi/2022b``

@@ -10,7 +10,6 @@ Wraps the wxWidgets C++ toolkit and provides access to the user interface portio
 
 version | toolchain
 --------|----------
-``4.1.1`` | ``foss/2021a``
 ``4.2.0`` | ``foss/2021b``
 ``4.2.1`` | ``foss/2022a``
 ``4.2.1`` | ``foss/2023a``
