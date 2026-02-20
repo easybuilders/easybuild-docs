@@ -10,7 +10,6 @@ ZeroMQ looks like an embeddable networking library but acts like a concurrency f
 
 version | toolchain
 --------|----------
-``4.3.4`` | ``GCCcore/10.3.0``
 ``4.3.4`` | ``GCCcore/11.2.0``
 ``4.3.4`` | ``GCCcore/11.3.0``
 ``4.3.4`` | ``GCCcore/12.2.0``

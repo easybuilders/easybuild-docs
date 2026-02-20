@@ -11,7 +11,6 @@ IPython provides a rich architecture for interactive computing with:  Powerful i
 version | versionsuffix | toolchain
 --------|---------------|----------
 ``5.10.0`` | ``-Python-2.7.18`` | ``foss/2021b``
-``7.25.0`` |  | ``GCCcore/10.3.0``
 ``7.26.0`` |  | ``GCCcore/11.2.0``
 ``8.14.0`` |  | ``GCCcore/12.2.0``
 ``8.14.0`` |  | ``GCCcore/12.3.0``

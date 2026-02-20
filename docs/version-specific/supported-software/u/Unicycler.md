@@ -10,7 +10,6 @@ Unicycler is an assembly pipeline for bacterial genomes. It can assemble Illumin
 
 version | toolchain
 --------|----------
-``0.4.9`` | ``gompi/2021a``
 ``0.5.0`` | ``gompi/2021b``
 ``0.5.0`` | ``gompi/2023a``
 ``0.5.1`` | ``gompi/2024a``

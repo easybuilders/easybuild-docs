@@ -11,6 +11,7 @@ This bundle contains all dependencies needed to test astropy using pytest.
 version | toolchain
 --------|----------
 ``7.0.0`` | ``gfbf/2023b``
+``7.1.0`` | ``gfbf/2024a``
 ``7.1.0`` | ``gfbf/2025b``
 
 

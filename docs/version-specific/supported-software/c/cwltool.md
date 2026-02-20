@@ -4,14 +4,12 @@ search:
 ---
 # cwltool
 
-Common workflow language (CWL) reference implementation.
+This is the reference implementation of the Common Workflow Language open standards. It is intended to be feature complete and provide comprehensive validation of CWL files as well as provide other tools related to working with CWL.
 
-*homepage*: <https://github.com/common-workflow-language/cwltool>
+*homepage*: <https://cwltool.readthedocs.io/>
 
 version | toolchain
 --------|----------
-``3.1.20221008225030`` | ``foss/2021a``
-``3.1.20221018083734`` | ``foss/2021a``
 ``3.1.20250110105449`` | ``foss/2023b``
 
 

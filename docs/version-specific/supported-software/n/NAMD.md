@@ -10,7 +10,6 @@ NAMD is a parallel molecular dynamics code designed for high-performance simulat
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.14`` | ``-CUDA-11.3.1`` | ``foss/2021a``
 ``2.14`` | ``-CUDA-11.7.0`` | ``foss/2022a``
 ``2.14`` | ``-mpi`` | ``foss/2022a``
 ``2.14`` | ``-mpi`` | ``foss/2023a``

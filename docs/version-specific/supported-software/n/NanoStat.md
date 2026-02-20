@@ -10,7 +10,6 @@ Calculate various statistics from a long read sequencing dataset in fastq,  bam 
 
 version | toolchain
 --------|----------
-``1.6.0`` | ``foss/2021a``
 ``1.6.0`` | ``foss/2022a``
 ``1.6.0`` | ``foss/2023a``
 

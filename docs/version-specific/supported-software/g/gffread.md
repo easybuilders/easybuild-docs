@@ -10,7 +10,6 @@ GFF/GTF parsing utility providing format conversions, region filtering, FASTA se
 
 version | toolchain
 --------|----------
-``0.12.7`` | ``GCCcore/10.3.0``
 ``0.12.7`` | ``GCCcore/11.2.0``
 ``0.12.7`` | ``GCCcore/12.2.0``
 ``0.12.7`` | ``GCCcore/12.3.0``

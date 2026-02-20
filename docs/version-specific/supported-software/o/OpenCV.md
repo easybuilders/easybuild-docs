@@ -16,8 +16,6 @@ version | versionsuffix | toolchain
 ``4.12.0`` | ``-contrib`` | ``foss/2025a``
 ``4.12.0`` | ``-CUDA-12.9.1-contrib`` | ``foss/2025b``
 ``4.12.0`` | ``-contrib`` | ``foss/2025b``
-``4.5.3`` | ``-CUDA-11.3.1-contrib`` | ``foss/2021a``
-``4.5.3`` | ``-contrib`` | ``foss/2021a``
 ``4.5.5`` | ``-CUDA-11.4.1-contrib`` | ``foss/2021b``
 ``4.5.5`` | ``-contrib`` | ``foss/2021b``
 ``4.6.0`` | ``-CUDA-11.7.0-contrib`` | ``foss/2022a``

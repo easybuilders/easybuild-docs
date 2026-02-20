@@ -10,7 +10,6 @@ SATe-enabled Phylogenetic Placement - addresses the problem of phylogenetic plac
 
 version | toolchain
 --------|----------
-``4.5.0`` | ``foss/2021a``
 ``4.5.1`` | ``foss/2021b``
 ``4.5.1`` | ``foss/2022a``
 ``4.5.1`` | ``foss/2022b``

@@ -18,7 +18,6 @@ version | versionsuffix | toolchain
 ``2.12.0`` |  | ``intel-compilers/2024.2.0``
 ``2.13.6`` |  | ``GCC/13.3.0``
 ``2.13.6`` |  | ``GCC/14.2.0``
-``2.6.2`` |  | ``GCCcore/10.3.0``
 ``2.7.1`` | ``-Python-2.7.18`` | ``GCCcore/11.2.0``
 ``2.7.1`` |  | ``GCCcore/11.2.0``
 ``2.9.2`` |  | ``GCCcore/11.3.0``

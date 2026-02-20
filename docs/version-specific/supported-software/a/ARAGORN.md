@@ -6,10 +6,11 @@ search:
 
 a program to detect tRNA genes and tmRNA genes in nucleotide sequences
 
-*homepage*: <http://www.ansikte.se/ARAGORN/>
+*homepage*: <https://www.trna.se/ARAGORN/>
 
 version | toolchain
 --------|----------
+``1.2.41`` | ``GCC/14.2.0``
 ``1.2.41`` | ``foss/2021b``
 
 

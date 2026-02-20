@@ -10,7 +10,6 @@ Assistive Technology Service Provider Interface.
 
 version | toolchain
 --------|----------
-``2.40.2`` | ``GCCcore/10.3.0``
 ``2.40.3`` | ``GCCcore/11.2.0``
 ``2.44.1`` | ``GCCcore/11.3.0``
 ``2.46.0`` | ``GCCcore/12.2.0``

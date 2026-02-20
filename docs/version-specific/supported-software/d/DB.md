@@ -10,7 +10,6 @@ Berkeley DB enables the development of custom data management  solutions, withou
 
 version | toolchain
 --------|----------
-``18.1.40`` | ``GCCcore/10.3.0``
 ``18.1.40`` | ``GCCcore/11.2.0``
 ``18.1.40`` | ``GCCcore/11.3.0``
 ``18.1.40`` | ``GCCcore/12.1.0``

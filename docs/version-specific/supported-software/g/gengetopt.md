@@ -10,7 +10,6 @@ Gengetopt is a tool to write command line option parsing code for C programs.
 
 version | toolchain
 --------|----------
-``2.23`` | ``GCCcore/10.3.0``
 ``2.23`` | ``GCCcore/11.3.0``
 ``2.23`` | ``GCCcore/13.2.0``
 

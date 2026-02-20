@@ -10,8 +10,6 @@ This python library helps you with augmenting images for your machine learning p
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.4.0`` | ``-CUDA-11.3.1`` | ``foss/2021a``
-``0.4.0`` |  | ``foss/2021a``
 ``0.4.0`` | ``-CUDA-11.4.1`` | ``foss/2021b``
 ``0.4.0`` |  | ``foss/2021b``
 ``0.4.0`` | ``-CUDA-11.7.0`` | ``foss/2022a``

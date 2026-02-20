@@ -10,6 +10,7 @@ libclc is an open source, BSD/MIT dual licensed implementation of the library re
 
 version | toolchain
 --------|----------
+``20.1.8`` | ``GCCcore/14.2.0``
 ``20.1.8`` | ``GCCcore/14.3.0``
 
 

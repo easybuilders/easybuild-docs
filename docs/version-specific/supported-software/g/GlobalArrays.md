@@ -10,8 +10,6 @@ Global Arrays (GA) is a Partitioned Global Address Space (PGAS) programming mode
 
 version | toolchain
 --------|----------
-``5.8`` | ``intel/2021a``
-``5.8`` | ``iomkl/2021a``
 ``5.8.1`` | ``intel/2022a``
 ``5.8.2`` | ``intel/2022a``
 ``5.8.2`` | ``intel/2023a``

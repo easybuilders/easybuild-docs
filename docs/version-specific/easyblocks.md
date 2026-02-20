@@ -62,6 +62,7 @@
       - CMakePythonPackage
         - EB_pybind11
       - EB_Amber
+      - EB_AOCL_minus_LAPACK
       - EB_Armadillo
       - EB_CGAL
       - EB_Clang
@@ -75,6 +76,7 @@
       - EB_LAMMPS
       - EB_Libint
       - EB_LLVM
+        - EB_ROCm_minus_LLVM
       - EB_netCDF
       - EB_NEURON
       - EB_OpenBabel

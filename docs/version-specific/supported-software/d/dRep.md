@@ -10,7 +10,6 @@ dRep is a python program which performs rapid pair-wise comparison of genome set
 
 version | toolchain
 --------|----------
-``3.0.0`` | ``foss/2021a``
 ``3.4.2`` | ``foss/2022a``
 
 

@@ -10,7 +10,6 @@ retworkx is a general purpose graph library for python3 written in Rust to take 
 
 version | toolchain
 --------|----------
-``0.9.0`` | ``foss/2021a``
 ``0.9.0`` | ``foss/2023a``
 
 

@@ -10,7 +10,6 @@ Compiler toolchain including Intel compilers, Open MPI and Intel Math Kernel Lib
 
 version | toolchain
 --------|----------
-``2021a`` | ``system``
 ``2021b`` | ``system``
 ``2022b`` | ``system``
 ``2023a`` | ``system``

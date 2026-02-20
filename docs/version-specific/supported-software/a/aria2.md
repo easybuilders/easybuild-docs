@@ -10,7 +10,6 @@ aria2 is a lightweight multi-protocol & multi-source command-line download utili
 
 version | toolchain
 --------|----------
-``1.35.0`` | ``GCCcore/10.3.0``
 ``1.36.0`` | ``GCCcore/11.3.0``
 ``1.37.0`` | ``GCCcore/13.3.0``
 

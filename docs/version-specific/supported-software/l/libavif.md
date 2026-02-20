@@ -10,7 +10,6 @@ This library aims to be a friendly, portable C implementation of the AV1 Image F
 
 version | toolchain
 --------|----------
-``0.11.1`` | ``GCCcore/10.3.0``
 ``0.11.1`` | ``GCCcore/11.3.0``
 ``1.0.4`` | ``GCCcore/12.3.0``
 ``1.1.1`` | ``GCCcore/13.2.0``

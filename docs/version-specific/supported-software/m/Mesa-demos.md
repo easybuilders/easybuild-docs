@@ -10,7 +10,6 @@ Mesa utility and demo programs, including glxinfo and eglinfo.
 
 version | toolchain
 --------|----------
-``8.4.0`` | ``GCCcore/10.3.0``
 ``9.0.0`` | ``GCCcore/13.3.0``
 
 

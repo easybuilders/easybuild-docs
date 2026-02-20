@@ -10,7 +10,6 @@ Groff (GNU troff) is a typesetting system that reads plain text mixed with forma
 
 version | toolchain
 --------|----------
-``1.22.4`` | ``GCCcore/10.3.0``
 ``1.22.4`` | ``GCCcore/11.2.0``
 ``1.22.4`` | ``GCCcore/11.3.0``
 ``1.22.4`` | ``GCCcore/12.1.0``

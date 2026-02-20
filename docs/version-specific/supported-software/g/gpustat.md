@@ -4,13 +4,12 @@ search:
 ---
 # gpustat
 
-dstat-like utilization monitor for NVIDIA GPUs
+A simple command-line utility for querying and monitoring GPU status
 
 *homepage*: <https://github.com/wookayin/gpustat>
 
 version | toolchain
 --------|----------
-``0.6.0`` | ``GCCcore/10.3.0``
 ``1.0.0b1`` | ``GCCcore/11.2.0``
 ``1.1`` | ``GCCcore/11.3.0``
 ``1.1.1`` | ``GCCcore/12.3.0``

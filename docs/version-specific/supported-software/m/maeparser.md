@@ -10,11 +10,11 @@ maeparser is a parser for Schrodinger Maestro files.
 
 version | toolchain
 --------|----------
-``1.3.0`` | ``gompi/2021a``
 ``1.3.0`` | ``gompi/2022a``
 ``1.3.1`` | ``gompi/2023a``
 ``1.3.1`` | ``gompi/2024a``
 ``1.3.3`` | ``gompi/2023b``
+``1.3.3`` | ``gompi/2025a``
 ``1.3.3`` | ``gompi/2025b``
 
 

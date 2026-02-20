@@ -10,7 +10,6 @@ DaliLite is a light version of the software run by the Dali server. The web serv
 
 version | toolchain
 --------|----------
-``4.1`` | ``gompi/2021a``
 ``5.0`` | ``gompi/2024a``
 
 

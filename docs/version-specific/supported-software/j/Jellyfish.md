@@ -10,7 +10,6 @@ Jellyfish is a tool for fast, memory-efficient counting of k-mers in DNA.
 
 version | toolchain
 --------|----------
-``2.3.0`` | ``GCC/10.3.0``
 ``2.3.0`` | ``GCC/11.2.0``
 ``2.3.0`` | ``GCC/11.3.0``
 ``2.3.0`` | ``GCC/12.2.0``

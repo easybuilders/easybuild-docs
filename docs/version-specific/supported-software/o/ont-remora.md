@@ -10,10 +10,6 @@ Methylation/modified base calling separated from basecalling. Remora primarily p
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.1.2`` | ``-CUDA-11.3.1`` | ``foss/2021a``
-``0.1.2`` |  | ``foss/2021a``
-``1.0.0`` | ``-CUDA-11.3.1`` | ``foss/2021a``
-``1.0.0`` |  | ``foss/2021a``
 ``3.3.0`` | ``-CUDA-12.1.1`` | ``foss/2023a``
 ``3.3.0`` |  | ``foss/2023a``
 

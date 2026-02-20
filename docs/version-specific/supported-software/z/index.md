@@ -15,7 +15,6 @@ search:
  * [ZeroMQ](ZeroMQ.md)
  * [zeus-mcmc](zeus-mcmc.md)
  * [zfp](zfp.md)
- * [Zgoubi](Zgoubi.md)
  * [ZIMPL](ZIMPL.md)
  * [Zip](Zip.md)
  * [zlib](zlib.md)

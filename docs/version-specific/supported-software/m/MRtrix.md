@@ -10,7 +10,6 @@ MRtrix provides a set of tools to perform diffusion-weighted MR white-matter tra
 
 version | toolchain
 --------|----------
-``3.0.3`` | ``foss/2021a``
 ``3.0.4`` | ``foss/2022b``
 
 

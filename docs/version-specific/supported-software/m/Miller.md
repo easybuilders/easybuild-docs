@@ -11,6 +11,7 @@ Miller is like awk, sed, cut, join, and sort for name-indexed data such as CSV, 
 version | toolchain
 --------|----------
 ``6.15.0`` | ``system``
+``6.16.0`` | ``system``
 ``6.4.0`` | ``system``
 
 

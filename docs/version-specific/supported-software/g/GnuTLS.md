@@ -10,7 +10,6 @@ GnuTLS is a secure communications library implementing the SSL, TLS  and DTLS pr
 
 version | toolchain
 --------|----------
-``3.7.2`` | ``GCCcore/10.3.0``
 ``3.7.3`` | ``GCCcore/11.2.0``
 ``3.7.8`` | ``GCCcore/11.3.0``
 ``3.7.8`` | ``GCCcore/12.3.0``

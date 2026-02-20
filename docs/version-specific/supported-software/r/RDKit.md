@@ -10,10 +10,8 @@ RDKit is a collection of cheminformatics and machine-learning software written i
 
 version | toolchain
 --------|----------
-``2021.03.4`` | ``foss/2021a``
 ``2022.03.5`` | ``foss/2021b``
 ``2022.09.4`` | ``foss/2022a``
-``2023.03.3`` | ``foss/2021a``
 ``2024.03.3`` | ``foss/2023a``
 ``2024.09.6`` | ``foss/2023b``
 ``2025.03.3`` | ``foss/2024a``

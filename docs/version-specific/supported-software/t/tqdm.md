@@ -10,8 +10,6 @@ A fast, extensible progress bar for Python and CLI
 
 version | toolchain
 --------|----------
-``4.61.1`` | ``GCCcore/10.3.0``
-``4.61.2`` | ``GCCcore/10.3.0``
 ``4.62.3`` | ``GCCcore/11.2.0``
 ``4.64.0`` | ``GCCcore/11.3.0``
 ``4.64.1`` | ``GCCcore/12.2.0``

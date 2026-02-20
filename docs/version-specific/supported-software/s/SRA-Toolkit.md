@@ -14,7 +14,6 @@ version | versionsuffix | toolchain
 ``3.0.0`` |  | ``gompi/2021b``
 ``3.0.10`` |  | ``gompi/2023a``
 ``3.0.3`` |  | ``gompi/2022a``
-``3.0.5`` |  | ``gompi/2021a``
 ``3.0.5`` |  | ``gompi/2022b``
 ``3.1.1`` |  | ``gompi/2023b``
 ``3.2.0`` |  | ``gompi/2024a``

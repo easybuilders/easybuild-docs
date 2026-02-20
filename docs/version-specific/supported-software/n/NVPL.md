@@ -10,6 +10,7 @@ NVIDIA Performance Libraries (NVPL) are a collection of essential mathematical l
 
 version | toolchain
 --------|----------
+``25.11`` | ``system``
 ``25.5`` | ``system``
 
 

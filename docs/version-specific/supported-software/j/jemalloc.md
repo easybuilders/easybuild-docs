@@ -10,7 +10,6 @@ jemalloc is a general purpose malloc(3) implementation that emphasizes fragmenta
 
 version | toolchain
 --------|----------
-``5.2.1`` | ``GCCcore/10.3.0``
 ``5.2.1`` | ``GCCcore/11.2.0``
 ``5.2.1`` | ``GCCcore/11.3.0``
 ``5.3.0`` | ``GCCcore/11.3.0``

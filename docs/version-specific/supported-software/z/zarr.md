@@ -4,13 +4,12 @@ search:
 ---
 # zarr
 
-Zarr is a Python package providing an implementation of compressed, chunked, N-dimensional arrays,  designed for use in parallel computing.
+Zarr is a Python package providing an implementation of compressed, chunked, N-dimensional arrays, designed for use in parallel computing.
 
 *homepage*: <https://zarr.readthedocs.io/en/stable/>
 
 version | toolchain
 --------|----------
-``2.10.1`` | ``foss/2021a``
 ``2.13.3`` | ``foss/2021b``
 ``2.13.3`` | ``foss/2022a``
 ``2.16.0`` | ``foss/2022b``

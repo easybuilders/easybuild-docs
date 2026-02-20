@@ -11,7 +11,6 @@ Guile is the GNU Ubiquitous Intelligent Language for Extensions, the official ex
 version | toolchain
 --------|----------
 ``2.0.14`` | ``GCCcore/13.3.0``
-``2.2.7`` | ``GCCcore/10.3.0``
 ``3.0.10`` | ``GCCcore/13.3.0``
 ``3.0.10`` | ``GCCcore/14.2.0``
 ``3.0.10`` | ``GCCcore/14.3.0``

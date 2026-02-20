@@ -11,6 +11,7 @@ pybedtools wraps and extends BEDTools and offers feature-level manipulations fro
 version | versionsuffix | toolchain
 --------|---------------|----------
 ``0.10.0`` |  | ``foss/2023b``
+``0.12.0`` |  | ``foss/2025a``
 ``0.8.2`` | ``-Python-2.7.18`` | ``GCC/11.2.0``
 ``0.8.2`` |  | ``GCC/11.2.0``
 ``0.9.0`` |  | ``GCC/11.3.0``

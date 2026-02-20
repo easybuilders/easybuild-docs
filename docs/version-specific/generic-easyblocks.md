@@ -15,7 +15,6 @@
 
 Support for installing a tarball of binaries
 
-
 ### Extra easyconfig parameters specific to ``BinariesTarball`` easyblock
 
 easyconfig parameter|description                                                                                                                                                  |default value
@@ -25,6 +24,10 @@ easyconfig parameter|description                                                
 ``preinstall_cmd``  |Command to execute before installation                                                                                                                       |``None``
 
 ### Customised steps in ``BinariesTarball`` easyblock
+
+* ``build_step`` - The type of the None singleton.
+
+* ``configure_step`` - The type of the None singleton.
 
 * ``install_step`` - Install by copying unzipped binaries to 'bin' subdir of installation dir, and fixing permissions.
 
@@ -36,7 +39,6 @@ easyconfig parameter|description                                                
 
 Support for installing software that comes in binary form.
 Just copy the sources to the install dir, or use the specified install command.
-
 
 ### Extra easyconfig parameters specific to ``Binary`` easyblock
 
@@ -91,7 +93,6 @@ moduleclass = 'bio'
 
 Build environment of toolchain: only generate module file
 
-
 ### Extra easyconfig parameters specific to ``BuildEnv`` easyblock
 
 easyconfig parameter           |description                                                                                                                                 |default value
@@ -108,6 +109,10 @@ easyconfig parameter           |description                                     
 
 ### Customised steps in ``BuildEnv`` easyblock
 
+* ``build_step`` - The type of the None singleton.
+
+* ``configure_step`` - The type of the None singleton.
+
 * ``install_step`` - Custom install step for buildenv: copy RPATH wrapper scripts to install dir (if they exist)
 
 
@@ -117,7 +122,6 @@ easyconfig parameter           |description                                     
 
 
 Bundle of modules: only generate module files, nothing to build/install
-
 
 ### Extra easyconfig parameters specific to ``Bundle`` easyblock
 
@@ -197,19 +201,21 @@ easyconfig parameter              |description                                  
 
 ### Customised steps in ``CMakeMake`` easyblock
 
+* ``build_step`` - The type of the None singleton.
+
 * ``configure_step`` - Configure build using 'cmake'
 
-        :param srcdir: custom source directory to use (if None, use 'srcdir' easyconfig parameter, or start dir)
-        :param builddir: custom build directory to use (if None, 'easybuild_obj' in build directory will be used)
-        :param fail_on_error: raise error if cmake command failed with non-zero exit code (enabled by default)
-        :param return_full_cmd_result: return full result of running cmake command (not just the output)
+:param srcdir: custom source directory to use (if None, use 'srcdir' easyconfig parameter, or start dir)
+:param builddir: custom build directory to use (if None, 'easybuild_obj' in build directory will be used)
+:param fail_on_error: raise error if cmake command failed with non-zero exit code (enabled by default)
+:param return_full_cmd_result: return full result of running cmake command (not just the output)
 
 * ``install_step`` - Configure build using 'cmake'
 
-        :param srcdir: custom source directory to use (if None, use 'srcdir' easyconfig parameter, or start dir)
-        :param builddir: custom build directory to use (if None, 'easybuild_obj' in build directory will be used)
-        :param fail_on_error: raise error if cmake command failed with non-zero exit code (enabled by default)
-        :param return_full_cmd_result: return full result of running cmake command (not just the output)
+:param srcdir: custom source directory to use (if None, use 'srcdir' easyconfig parameter, or start dir)
+:param builddir: custom build directory to use (if None, 'easybuild_obj' in build directory will be used)
+:param fail_on_error: raise error if cmake command failed with non-zero exit code (enabled by default)
+:param return_full_cmd_result: return full result of running cmake command (not just the output)
 
 
 ### Example easyconfig for ``CMakeMake`` easyblock
@@ -256,7 +262,6 @@ Software configured with CMake but without 'make install' step
 
 We use the default CMakeMake implementation, and use install_step from MakeCp.
 
-
 ### Extra easyconfig parameters specific to ``CMakeMakeCp`` easyblock
 
 easyconfig parameter              |description                                                                                                                                                                                                                               |default value
@@ -286,6 +291,8 @@ easyconfig parameter              |description                                  
 ``with_configure``                |Run configure script before building                                                                                                                                                                                                      |``False``
 
 ### Customised steps in ``CMakeMakeCp`` easyblock
+
+* ``build_step`` - The type of the None singleton.
 
 * ``configure_step`` - Configure build using CMake
 
@@ -346,7 +353,6 @@ and then put the Python package in lib/pythonX.Y/site-packages.
 We use the default CMake implementation, and use make_module_extra from PythonPackage
 to generate a module file which sets the PYTHONPATH.
 
-
 ### Extra easyconfig parameters specific to ``CMakePythonPackage`` easyblock
 
 easyconfig parameter              |description                                                                                                                                                                                                                                                                                                             |default value
@@ -359,6 +365,7 @@ easyconfig parameter              |description                                  
 ``build_type``                    |Build type for CMake, e.g. Release.Defaults to 'Release', 'RelWithDebInfo' or 'Debug' depending on toolchainopts[debug,noopt]                                                                                                                                                                                           |``None``
 ``buildcmd``                      |Command for building the package (e.g. for custom builds resulting in a whl file). When using setup.py this will be passed to setup.py and defaults to 'build'. Otherwise it will be used as-is. A value of None then skips the build step. The template %(python)s will be replace by the currently used Python binary.|``None``
 ``check_ldshared``                |Check Python value of $LDSHARED, correct if needed to "$CC -shared"                                                                                                                                                                                                                                                     |``None``
+``click_autocomplete_bins``       |List of command line tools installed by the package that use the 'click' package and for which autocompletion scripts should be generated                                                                                                                                                                               |``None``
 ``configure_cmd``                 |Configure command to use                                                                                                                                                                                                                                                                                                |``"cmake"``
 ``configure_cmd_prefix``          |Prefix to be glued before ./configure                                                                                                                                                                                                                                                                                   |``""``
 ``configure_without_installdir``  |Avoid passing an install directory to the configure command (such as via --prefix)                                                                                                                                                                                                                                      |``False``
@@ -401,6 +408,8 @@ easyconfig parameter              |description                                  
 
 ### Customised steps in ``CMakePythonPackage`` easyblock
 
+* ``build_step`` - The type of the None singleton.
+
 * ``configure_step`` - Main configuration using cmake
 
 * ``install_step`` - Main configuration using cmake
@@ -426,7 +435,7 @@ easyconfig parameter|description                                        |default
 
 * ``build_step`` - Build with cargo
 
-* ``configure_step`` - Empty configuration step.
+* ``configure_step`` - Create lockfile if it doesn't exist
 
 * ``install_step`` - Install with cargo
 
@@ -441,7 +450,6 @@ Builds just like PythonBundle with setup for Rust and crates from Cargo easybloc
 The cargo init step will set up the environment variables for rustc and vendor sources
 but all the build steps are triggered like normal.
 
-
 ### Extra easyconfig parameters specific to ``CargoPythonBundle`` easyblock
 
 easyconfig parameter           |description                                                                                                                                                                                                                                                                                                             |default value
@@ -450,10 +458,11 @@ easyconfig parameter           |description                                     
 ``altversion``                 |Software name of dependency to use to define $EBVERSION for this bundle                                                                                                                                                                                                                                                 |``None``
 ``buildcmd``                   |Command for building the package (e.g. for custom builds resulting in a whl file). When using setup.py this will be passed to setup.py and defaults to 'build'. Otherwise it will be used as-is. A value of None then skips the build step. The template %(python)s will be replace by the currently used Python binary.|``None``
 ``check_ldshared``             |Check Python value of $LDSHARED, correct if needed to "$CC -shared"                                                                                                                                                                                                                                                     |``None``
+``click_autocomplete_bins``    |List of command line tools installed by the package that use the 'click' package and for which autocompletion scripts should be generated                                                                                                                                                                               |``None``
 ``components``                 |List of components to install: tuples w/ name, version and easyblock to use                                                                                                                                                                                                                                             |``()``
 ``crates``                     |List of (crate, version, [repo, rev]) tuples to use                                                                                                                                                                                                                                                                     |``[]``
 ``default_component_specs``    |Default specs to use for every component                                                                                                                                                                                                                                                                                |``{}``
-``default_easyblock``          |Default easyblock to use for components                                                                                                                                                                                                                                                                                 |``"PythonPackage"``
+``default_easyblock``          |Default easyblock to use for components                                                                                                                                                                                                                                                                                 |``"CargoPythonPackage"``
 ``download_dep_fail``          |Fail if downloaded dependencies are detected. Defaults to True unless 'use_pip_for_deps' or 'use_pip_requirement' is True.                                                                                                                                                                                              |``None``
 ``enable_tests``               |Enable building of tests                                                                                                                                                                                                                                                                                                |``True``
 ``fix_python_shebang_for``     |List of files for which Python shebang should be fixed to '#!/usr/bin/env python' (glob patterns supported) (default: ['bin/*'])                                                                                                                                                                                        |``['bin/*']``
@@ -485,6 +494,15 @@ easyconfig parameter           |description                                     
 ``use_pip_requirement``        |Install using 'python -m pip install --requirement'. The sources is expected to be the requirements file.                                                                                                                                                                                                               |``False``
 ``zipped_egg``                 |Install as a zipped eggs                                                                                                                                                                                                                                                                                                |``False``
 
+### Customised steps in ``CargoPythonBundle`` easyblock
+
+* ``build_step`` - The type of the None singleton.
+
+* ``configure_step`` - The type of the None singleton.
+
+* ``install_step`` - The type of the None singleton.
+
+
 ## ``CargoPythonPackage``
 
 (derives from [``PythonPackage``](#pythonpackage), [``Cargo``](#cargo))
@@ -494,42 +512,51 @@ Build a Python package with setup from Cargo but build/install step from PythonP
 The cargo init step will set up the environment variables for rustc and vendor sources
 but all the build steps are triggered via normal PythonPackage steps like normal.
 
-
 ### Extra easyconfig parameters specific to ``CargoPythonPackage`` easyblock
 
-easyconfig parameter      |description                                                                                                                                                                                                                                                                                                             |default value
---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------
-``buildcmd``              |Command for building the package (e.g. for custom builds resulting in a whl file). When using setup.py this will be passed to setup.py and defaults to 'build'. Otherwise it will be used as-is. A value of None then skips the build step. The template %(python)s will be replace by the currently used Python binary.|``None``
-``check_ldshared``        |Check Python value of $LDSHARED, correct if needed to "$CC -shared"                                                                                                                                                                                                                                                     |``None``
-``crates``                |List of (crate, version, [repo, rev]) tuples to use                                                                                                                                                                                                                                                                     |``[]``
-``download_dep_fail``     |Fail if downloaded dependencies are detected. Defaults to True unless 'use_pip_for_deps' or 'use_pip_requirement' is True.                                                                                                                                                                                              |``None``
-``enable_tests``          |Enable building of tests                                                                                                                                                                                                                                                                                                |``True``
-``fix_python_shebang_for``|List of files for which Python shebang should be fixed to '#!/usr/bin/env python' (glob patterns supported) (default: ['bin/*'])                                                                                                                                                                                        |``['bin/*']``
-``install_src``           |Source path to pass to the install command (e.g. a whl file).Defaults to '.' for unpacked sources or the first source file specified                                                                                                                                                                                    |``None``
-``install_target``        |Option to pass to setup.py                                                                                                                                                                                                                                                                                              |``"install"``
-``lto``                   |Override default LTO flag ('fat', 'thin', 'off')                                                                                                                                                                                                                                                                        |``None``
-``max_py_majver``         |Maximum major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
-``max_py_minver``         |Maximum minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
-``offline``               |Build offline                                                                                                                                                                                                                                                                                                           |``True``
-``options``               |Dictionary with extension options.                                                                                                                                                                                                                                                                                      |``{}``
-``pip_ignore_installed``  |Let pip ignore installed Python packages (i.e. don't remove them)                                                                                                                                                                                                                                                       |``True``
-``pip_no_build_isolation``|Use --no-build-isolation with pip install                                                                                                                                                                                                                                                                               |``True``
-``pip_no_index``          |Pass --no-index to pip to disable connecting to PyPi entirely which also disables the pip version check. Enabled by default when pip_ignore_installed=True                                                                                                                                                              |``None``
-``pip_verbose``           |Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.                                                                                                                                                                                                                  |``None``
-``req_py_majver``         |Required major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
-``req_py_minver``         |Required minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
-``runtest``               |Run unit tests.                                                                                                                                                                                                                                                                                                         |``True``
-``sanity_pip_check``      |Run 'python -m pip check' to ensure all required Python packages are installed and check for any package with an invalid (0.0.0) version.                                                                                                                                                                               |``True``
-``source_urls``           |List of URLs for source files                                                                                                                                                                                                                                                                                           |``['https://pypi.python.org/packages/source/%(nameletter)s/%(name)s']``
-``testinstall``           |Install into temporary directory prior to running the tests.                                                                                                                                                                                                                                                            |``False``
-``unpack_sources``        |Unpack sources prior to build/install. Defaults to 'True' except for whl files                                                                                                                                                                                                                                          |``None``
-``unversioned_packages``  |List of packages that don't have a version at all, i.e. show 0.0.0                                                                                                                                                                                                                                                      |``[]``
-``use_pip``               |Install using '%(python)s -m pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                                                                                                                   |``True``
-``use_pip_editable``      |Install using 'pip install --editable'                                                                                                                                                                                                                                                                                  |``False``
-``use_pip_extras``        |String with comma-separated list of 'extras' to install via pip                                                                                                                                                                                                                                                         |``None``
-``use_pip_for_deps``      |Install dependencies using '%(python)s -m pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                                                                                                      |``False``
-``use_pip_requirement``   |Install using 'python -m pip install --requirement'. The sources is expected to be the requirements file.                                                                                                                                                                                                               |``False``
-``zipped_egg``            |Install as a zipped eggs                                                                                                                                                                                                                                                                                                |``False``
+easyconfig parameter       |description                                                                                                                                                                                                                                                                                                             |default value
+---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------
+``buildcmd``               |Command for building the package (e.g. for custom builds resulting in a whl file). When using setup.py this will be passed to setup.py and defaults to 'build'. Otherwise it will be used as-is. A value of None then skips the build step. The template %(python)s will be replace by the currently used Python binary.|``None``
+``check_ldshared``         |Check Python value of $LDSHARED, correct if needed to "$CC -shared"                                                                                                                                                                                                                                                     |``None``
+``click_autocomplete_bins``|List of command line tools installed by the package that use the 'click' package and for which autocompletion scripts should be generated                                                                                                                                                                               |``None``
+``crates``                 |List of (crate, version, [repo, rev]) tuples to use                                                                                                                                                                                                                                                                     |``[]``
+``download_dep_fail``      |Fail if downloaded dependencies are detected. Defaults to True unless 'use_pip_for_deps' or 'use_pip_requirement' is True.                                                                                                                                                                                              |``None``
+``enable_tests``           |Enable building of tests                                                                                                                                                                                                                                                                                                |``True``
+``fix_python_shebang_for`` |List of files for which Python shebang should be fixed to '#!/usr/bin/env python' (glob patterns supported) (default: ['bin/*'])                                                                                                                                                                                        |``['bin/*']``
+``install_src``            |Source path to pass to the install command (e.g. a whl file).Defaults to '.' for unpacked sources or the first source file specified                                                                                                                                                                                    |``None``
+``install_target``         |Option to pass to setup.py                                                                                                                                                                                                                                                                                              |``"install"``
+``lto``                    |Override default LTO flag ('fat', 'thin', 'off')                                                                                                                                                                                                                                                                        |``None``
+``max_py_majver``          |Maximum major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
+``max_py_minver``          |Maximum minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
+``offline``                |Build offline                                                                                                                                                                                                                                                                                                           |``True``
+``options``                |Dictionary with extension options.                                                                                                                                                                                                                                                                                      |``{}``
+``pip_ignore_installed``   |Let pip ignore installed Python packages (i.e. don't remove them)                                                                                                                                                                                                                                                       |``True``
+``pip_no_build_isolation`` |Use --no-build-isolation with pip install                                                                                                                                                                                                                                                                               |``True``
+``pip_no_index``           |Pass --no-index to pip to disable connecting to PyPi entirely which also disables the pip version check. Enabled by default when pip_ignore_installed=True                                                                                                                                                              |``None``
+``pip_verbose``            |Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.                                                                                                                                                                                                                  |``None``
+``req_py_majver``          |Required major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
+``req_py_minver``          |Required minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
+``runtest``                |Run unit tests.                                                                                                                                                                                                                                                                                                         |``True``
+``sanity_pip_check``       |Run 'python -m pip check' to ensure all required Python packages are installed and check for any package with an invalid (0.0.0) version.                                                                                                                                                                               |``True``
+``source_urls``            |List of URLs for source files                                                                                                                                                                                                                                                                                           |``['https://pypi.python.org/packages/source/%(nameletter)s/%(name)s']``
+``testinstall``            |Install into temporary directory prior to running the tests.                                                                                                                                                                                                                                                            |``False``
+``unpack_sources``         |Unpack sources prior to build/install. Defaults to 'True' except for whl files                                                                                                                                                                                                                                          |``None``
+``unversioned_packages``   |List of packages that don't have a version at all, i.e. show 0.0.0                                                                                                                                                                                                                                                      |``[]``
+``use_pip``                |Install using '%(python)s -m pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                                                                                                                   |``True``
+``use_pip_editable``       |Install using 'pip install --editable'                                                                                                                                                                                                                                                                                  |``False``
+``use_pip_extras``         |String with comma-separated list of 'extras' to install via pip                                                                                                                                                                                                                                                         |``None``
+``use_pip_for_deps``       |Install dependencies using '%(python)s -m pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                                                                                                      |``False``
+``use_pip_requirement``    |Install using 'python -m pip install --requirement'. The sources is expected to be the requirements file.                                                                                                                                                                                                               |``False``
+``zipped_egg``             |Install as a zipped eggs                                                                                                                                                                                                                                                                                                |``False``
+
+### Customised steps in ``CargoPythonPackage`` easyblock
+
+* ``build_step`` - The type of the None singleton.
+
+* ``configure_step`` - Run configure for Cargo and PythonPackage
+
+* ``install_step`` - Run configure for Cargo and PythonPackage
+
 
 ## ``CmdCp``
 
@@ -538,7 +565,6 @@ easyconfig parameter      |description                                          
 
 Software with no configure, no make, and no make install step.
 Just run the specified command for all sources, and copy specified files to the install dir
-
 
 ### Extra easyconfig parameters specific to ``CmdCp`` easyblock
 
@@ -591,8 +617,12 @@ easyconfig parameter  |description                                              
 
 ### Customised steps in ``Conda`` easyblock
 
+* ``build_step`` - The type of the None singleton.
+
+* ``configure_step`` - The type of the None singleton.
+
 * ``install_step`` - Install software using 'conda env create' or 'conda create' & 'conda install'
-        (or the 'mamba', etc., equivalent).
+(or the 'mamba', etc., equivalent).
 
 
 ## ``ConfigureMake``
@@ -601,7 +631,6 @@ easyconfig parameter  |description                                              
 
 
 Support for building and installing applications with configure/make/make install
-
 
 ### Extra easyconfig parameters specific to ``ConfigureMake`` easyblock
 
@@ -631,13 +660,13 @@ installopts         |Extra options for installation
 ### Customised steps in ``ConfigureMake`` easyblock
 
 * ``build_step`` - Start the actual build
-        - typical: make -j X
+- typical: make -j X
 
 * ``configure_step`` - Configure step
-        - typically ./configure --prefix=/install/path style
+- typically ./configure --prefix=/install/path style
 
 * ``install_step`` - Create the installation in correct location
-        - typical: make install
+- typical: make install
 
 
 ### Example easyconfig for ``ConfigureMake`` easyblock
@@ -678,7 +707,6 @@ Implemented by using:
 - using the build_step and install_step from ConfigureMake
 - using the sanity_check_step and make_module_extra from PythonPackage
 
-
 ### Extra easyconfig parameters specific to ``ConfigureMakePythonPackage`` easyblock
 
 easyconfig parameter              |description                                                                                                                                                                                                                                                                                                             |default value
@@ -688,6 +716,7 @@ easyconfig parameter              |description                                  
 ``build_type``                    |Value to provide to --build option of configure script, e.g., x86_64-pc-linux-gnu (determined by config.guess shipped with EasyBuild if None, False implies to leave it up to the configure script)                                                                                                                     |``None``
 ``buildcmd``                      |Command for building the package (e.g. for custom builds resulting in a whl file). When using setup.py this will be passed to setup.py and defaults to 'build'. Otherwise it will be used as-is. A value of None then skips the build step. The template %(python)s will be replace by the currently used Python binary.|``None``
 ``check_ldshared``                |Check Python value of $LDSHARED, correct if needed to "$CC -shared"                                                                                                                                                                                                                                                     |``None``
+``click_autocomplete_bins``       |List of command line tools installed by the package that use the 'click' package and for which autocompletion scripts should be generated                                                                                                                                                                               |``None``
 ``configure_cmd``                 |Configure command to use                                                                                                                                                                                                                                                                                                |``"./configure"``
 ``configure_cmd_prefix``          |Prefix to be glued before ./configure                                                                                                                                                                                                                                                                                   |``""``
 ``configure_without_installdir``  |Avoid passing an install directory to the configure command (such as via --prefix)                                                                                                                                                                                                                                      |``False``
@@ -774,7 +803,6 @@ moduleclass = 'vis'
 
 Compiler toolchain: generate module file only, nothing to build/install
 
-
 ### Extra easyconfig parameters specific to ``CrayToolchain`` easyblock
 
 easyconfig parameter           |description                                                                |default value
@@ -786,6 +814,15 @@ easyconfig parameter           |description                                     
 ``default_easyblock``          |Default easyblock to use for components                                    |``None``
 ``sanity_check_all_components``|Enable sanity checks for all components                                    |``False``
 ``sanity_check_components``    |List of components for which to run sanity checks                          |``[]``
+
+### Customised steps in ``CrayToolchain`` easyblock
+
+* ``build_step`` - The type of the None singleton.
+
+* ``configure_step`` - The type of the None singleton.
+
+* ``install_step`` - The type of the None singleton.
+
 
 ## ``Dataset``
 
@@ -803,6 +840,10 @@ easyconfig parameter    |description                                            
 
 ### Customised steps in ``Dataset`` easyblock
 
+* ``build_step`` - The type of the None singleton.
+
+* ``configure_step`` - The type of the None singleton.
+
 * ``install_step`` - No install step, datasets are extracted directly into installdir
 
 
@@ -814,35 +855,36 @@ Extends PythonPackage to add a Fortran compiler to the make call
 
 ### Extra easyconfig parameters specific to ``FortranPythonPackage`` easyblock
 
-easyconfig parameter      |description                                                                                                                                                                                                                                                                                                             |default value
---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------
-``buildcmd``              |Command for building the package (e.g. for custom builds resulting in a whl file). When using setup.py this will be passed to setup.py and defaults to 'build'. Otherwise it will be used as-is. A value of None then skips the build step. The template %(python)s will be replace by the currently used Python binary.|``None``
-``check_ldshared``        |Check Python value of $LDSHARED, correct if needed to "$CC -shared"                                                                                                                                                                                                                                                     |``None``
-``download_dep_fail``     |Fail if downloaded dependencies are detected. Defaults to True unless 'use_pip_for_deps' or 'use_pip_requirement' is True.                                                                                                                                                                                              |``None``
-``fix_python_shebang_for``|List of files for which Python shebang should be fixed to '#!/usr/bin/env python' (glob patterns supported) (default: ['bin/*'])                                                                                                                                                                                        |``['bin/*']``
-``install_src``           |Source path to pass to the install command (e.g. a whl file).Defaults to '.' for unpacked sources or the first source file specified                                                                                                                                                                                    |``None``
-``install_target``        |Option to pass to setup.py                                                                                                                                                                                                                                                                                              |``"install"``
-``max_py_majver``         |Maximum major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
-``max_py_minver``         |Maximum minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
-``options``               |Dictionary with extension options.                                                                                                                                                                                                                                                                                      |``{}``
-``pip_ignore_installed``  |Let pip ignore installed Python packages (i.e. don't remove them)                                                                                                                                                                                                                                                       |``True``
-``pip_no_build_isolation``|Use --no-build-isolation with pip install                                                                                                                                                                                                                                                                               |``True``
-``pip_no_index``          |Pass --no-index to pip to disable connecting to PyPi entirely which also disables the pip version check. Enabled by default when pip_ignore_installed=True                                                                                                                                                              |``None``
-``pip_verbose``           |Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.                                                                                                                                                                                                                  |``None``
-``req_py_majver``         |Required major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
-``req_py_minver``         |Required minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
-``runtest``               |Run unit tests.                                                                                                                                                                                                                                                                                                         |``True``
-``sanity_pip_check``      |Run 'python -m pip check' to ensure all required Python packages are installed and check for any package with an invalid (0.0.0) version.                                                                                                                                                                               |``True``
-``source_urls``           |List of URLs for source files                                                                                                                                                                                                                                                                                           |``['https://pypi.python.org/packages/source/%(nameletter)s/%(name)s']``
-``testinstall``           |Install into temporary directory prior to running the tests.                                                                                                                                                                                                                                                            |``False``
-``unpack_sources``        |Unpack sources prior to build/install. Defaults to 'True' except for whl files                                                                                                                                                                                                                                          |``None``
-``unversioned_packages``  |List of packages that don't have a version at all, i.e. show 0.0.0                                                                                                                                                                                                                                                      |``[]``
-``use_pip``               |Install using '%(python)s -m pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                                                                                                                   |``True``
-``use_pip_editable``      |Install using 'pip install --editable'                                                                                                                                                                                                                                                                                  |``False``
-``use_pip_extras``        |String with comma-separated list of 'extras' to install via pip                                                                                                                                                                                                                                                         |``None``
-``use_pip_for_deps``      |Install dependencies using '%(python)s -m pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                                                                                                      |``False``
-``use_pip_requirement``   |Install using 'python -m pip install --requirement'. The sources is expected to be the requirements file.                                                                                                                                                                                                               |``False``
-``zipped_egg``            |Install as a zipped eggs                                                                                                                                                                                                                                                                                                |``False``
+easyconfig parameter       |description                                                                                                                                                                                                                                                                                                             |default value
+---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------
+``buildcmd``               |Command for building the package (e.g. for custom builds resulting in a whl file). When using setup.py this will be passed to setup.py and defaults to 'build'. Otherwise it will be used as-is. A value of None then skips the build step. The template %(python)s will be replace by the currently used Python binary.|``None``
+``check_ldshared``         |Check Python value of $LDSHARED, correct if needed to "$CC -shared"                                                                                                                                                                                                                                                     |``None``
+``click_autocomplete_bins``|List of command line tools installed by the package that use the 'click' package and for which autocompletion scripts should be generated                                                                                                                                                                               |``None``
+``download_dep_fail``      |Fail if downloaded dependencies are detected. Defaults to True unless 'use_pip_for_deps' or 'use_pip_requirement' is True.                                                                                                                                                                                              |``None``
+``fix_python_shebang_for`` |List of files for which Python shebang should be fixed to '#!/usr/bin/env python' (glob patterns supported) (default: ['bin/*'])                                                                                                                                                                                        |``['bin/*']``
+``install_src``            |Source path to pass to the install command (e.g. a whl file).Defaults to '.' for unpacked sources or the first source file specified                                                                                                                                                                                    |``None``
+``install_target``         |Option to pass to setup.py                                                                                                                                                                                                                                                                                              |``"install"``
+``max_py_majver``          |Maximum major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
+``max_py_minver``          |Maximum minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
+``options``                |Dictionary with extension options.                                                                                                                                                                                                                                                                                      |``{}``
+``pip_ignore_installed``   |Let pip ignore installed Python packages (i.e. don't remove them)                                                                                                                                                                                                                                                       |``True``
+``pip_no_build_isolation`` |Use --no-build-isolation with pip install                                                                                                                                                                                                                                                                               |``True``
+``pip_no_index``           |Pass --no-index to pip to disable connecting to PyPi entirely which also disables the pip version check. Enabled by default when pip_ignore_installed=True                                                                                                                                                              |``None``
+``pip_verbose``            |Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.                                                                                                                                                                                                                  |``None``
+``req_py_majver``          |Required major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
+``req_py_minver``          |Required minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
+``runtest``                |Run unit tests.                                                                                                                                                                                                                                                                                                         |``True``
+``sanity_pip_check``       |Run 'python -m pip check' to ensure all required Python packages are installed and check for any package with an invalid (0.0.0) version.                                                                                                                                                                               |``True``
+``source_urls``            |List of URLs for source files                                                                                                                                                                                                                                                                                           |``['https://pypi.python.org/packages/source/%(nameletter)s/%(name)s']``
+``testinstall``            |Install into temporary directory prior to running the tests.                                                                                                                                                                                                                                                            |``False``
+``unpack_sources``         |Unpack sources prior to build/install. Defaults to 'True' except for whl files                                                                                                                                                                                                                                          |``None``
+``unversioned_packages``   |List of packages that don't have a version at all, i.e. show 0.0.0                                                                                                                                                                                                                                                      |``[]``
+``use_pip``                |Install using '%(python)s -m pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                                                                                                                   |``True``
+``use_pip_editable``       |Install using 'pip install --editable'                                                                                                                                                                                                                                                                                  |``False``
+``use_pip_extras``         |String with comma-separated list of 'extras' to install via pip                                                                                                                                                                                                                                                         |``None``
+``use_pip_for_deps``       |Install dependencies using '%(python)s -m pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                                                                                                      |``False``
+``use_pip_requirement``    |Install using 'python -m pip install --requirement'. The sources is expected to be the requirements file.                                                                                                                                                                                                               |``False``
+``zipped_egg``             |Install as a zipped eggs                                                                                                                                                                                                                                                                                                |``False``
 
 ### Customised steps in ``FortranPythonPackage`` easyblock
 
@@ -885,7 +927,6 @@ Base class for Intel software
 - no configure/make : binary release
 - add license_file variable
 
-
 ### Extra easyconfig parameters specific to ``IntelBase`` easyblock
 
 easyconfig parameter        |description                                                    |default value
@@ -920,6 +961,15 @@ easyconfig parameter|description                                                
 ``prepend_to_path`` |Prepend the given directories (relative to install-dir) to the environment variable PATH in the module file. Default is the install-dir itself.|``['']``
 ``staged_install``  |Perform staged installation via subdirectory of build directory                                                                                |``False``
 
+### Customised steps in ``JAR`` easyblock
+
+* ``build_step`` - The type of the None singleton.
+
+* ``configure_step`` - The type of the None singleton.
+
+* ``install_step`` - The type of the None singleton.
+
+
 ## ``JuliaBundle``
 
 (derives from [``Bundle``](#bundle), [``JuliaPackage``](#juliapackage))
@@ -927,7 +977,6 @@ easyconfig parameter|description                                                
 
 Bundle of JuliaPackages: install Julia packages as extensions in a bundle
 Defines custom sanity checks and module environment
-
 
 ### Extra easyconfig parameters specific to ``JuliaBundle`` easyblock
 
@@ -944,6 +993,10 @@ easyconfig parameter           |description                                     
 ``sanity_check_components``    |List of components for which to run sanity checks                          |``[]``
 
 ### Customised steps in ``JuliaBundle`` easyblock
+
+* ``build_step`` - The type of the None singleton.
+
+* ``configure_step`` - The type of the None singleton.
 
 * ``install_step`` - Prepare installation environment and dd all dependencies to project environment.
 
@@ -972,7 +1025,6 @@ provided by the module. Effectively, this translates to:
 - append installation directory to list of DEPOT_PATH, only really needed to load artifacts (JLL packages)
 - append installation Project.toml file to list of LOAD_PATH, needed to load packages with `using` command
 
-
 ### Extra easyconfig parameters specific to ``JuliaPackage`` easyblock
 
 easyconfig parameter |description                                                                |default value
@@ -996,7 +1048,6 @@ easyconfig parameter |description                                               
 
 Software with no configure and no make install step.
 
-
 ### Extra easyconfig parameters specific to ``MakeCp`` easyblock
 
 easyconfig parameter              |description                                                                                                                                                                                                                               |default value
@@ -1018,6 +1069,8 @@ easyconfig parameter              |description                                  
 
 ### Customised steps in ``MakeCp`` easyblock
 
+* ``build_step`` - The type of the None singleton.
+
 * ``configure_step`` - Configure build if required
 
 * ``install_step`` - Install by copying specified files and directories.
@@ -1029,7 +1082,6 @@ easyconfig parameter              |description                                  
 
 
 Support for building and installing software with 'meson' and 'ninja'.
-
 
 ### Extra easyconfig parameters specific to ``MesonNinja`` easyblock
 
@@ -1059,7 +1111,6 @@ easyconfig parameter  |description                                              
 
 Generic easyblock to create a software-specific .modulerc file
 
-
 ### Extra easyconfig parameters specific to ``ModuleRC`` easyblock
 
 easyconfig parameter|description                          |default value
@@ -1082,7 +1133,6 @@ easyconfig parameter|description                          |default value
 
 Core support for installing the NVIDIA HPC SDK (NVHPC)
 
-
 ### Extra easyconfig parameters specific to ``NvidiaBase`` easyblock
 
 easyconfig parameter    |description                                                                                                                                    |default value
@@ -1103,6 +1153,10 @@ easyconfig parameter    |description                                            
 
 ### Customised steps in ``NvidiaBase`` easyblock
 
+* ``build_step`` - The type of the None singleton.
+
+* ``configure_step`` - The type of the None singleton.
+
 * ``install_step`` - Install by running install command.
 
 
@@ -1119,6 +1173,8 @@ easyconfig parameter|description                       |default value
 ``options``         |Dictionary with extension options.|``{}``
 
 ### Customised steps in ``OCamlPackage`` easyblock
+
+* ``build_step`` - The type of the None singleton.
 
 * ``configure_step`` - Raise error when configure step is run: installing OCaml packages stand-alone is not supported (yet)
 
@@ -1139,6 +1195,8 @@ easyconfig parameter|description                       |default value
 
 ### Customised steps in ``OctavePackage`` easyblock
 
+* ``build_step`` - The type of the None singleton.
+
 * ``configure_step`` - Raise error when configure step is run: installing Octave toolboxes stand-alone is not supported (yet)
 
 * ``install_step`` - Raise error when configure step is run: installing Octave toolboxes stand-alone is not supported (yet)
@@ -1150,7 +1208,6 @@ easyconfig parameter|description                       |default value
 
 Support for installing packed binary software.
 Just unpack the sources in the install dir
-
 
 ### Extra easyconfig parameters specific to ``PackedBinary`` easyblock
 
@@ -1164,6 +1221,10 @@ easyconfig parameter|description                                                
 
 ### Customised steps in ``PackedBinary`` easyblock
 
+* ``build_step`` - The type of the None singleton.
+
+* ``configure_step`` - The type of the None singleton.
+
 * ``install_step`` - Copy all unpacked source directories to install directory, one-by-one.
 
 
@@ -1173,7 +1234,6 @@ easyconfig parameter|description                                                
 
 
 Bundle of perl modules
-
 
 ### Extra easyconfig parameters specific to ``PerlBundle`` easyblock
 
@@ -1189,6 +1249,15 @@ easyconfig parameter           |description                                     
 ``runtest``                    |Run unit tests.                                                            |``"test"``
 ``sanity_check_all_components``|Enable sanity checks for all components                                    |``False``
 ``sanity_check_components``    |List of components for which to run sanity checks                          |``[]``
+
+### Customised steps in ``PerlBundle`` easyblock
+
+* ``build_step`` - The type of the None singleton.
+
+* ``configure_step`` - The type of the None singleton.
+
+* ``install_step`` - The type of the None singleton.
+
 
 ## ``PerlModule``
 
@@ -1221,7 +1290,6 @@ easyconfig parameter|description                                                
 Bundle of PythonPackages: install Python packages as extensions in a bundle
 Defines custom sanity checks and module environment
 
-
 ### Extra easyconfig parameters specific to ``PythonBundle`` easyblock
 
 easyconfig parameter           |description                                                                                                                                                                                                                                                                                                             |default value
@@ -1230,6 +1298,7 @@ easyconfig parameter           |description                                     
 ``altversion``                 |Software name of dependency to use to define $EBVERSION for this bundle                                                                                                                                                                                                                                                 |``None``
 ``buildcmd``                   |Command for building the package (e.g. for custom builds resulting in a whl file). When using setup.py this will be passed to setup.py and defaults to 'build'. Otherwise it will be used as-is. A value of None then skips the build step. The template %(python)s will be replace by the currently used Python binary.|``None``
 ``check_ldshared``             |Check Python value of $LDSHARED, correct if needed to "$CC -shared"                                                                                                                                                                                                                                                     |``None``
+``click_autocomplete_bins``    |List of command line tools installed by the package that use the 'click' package and for which autocompletion scripts should be generated                                                                                                                                                                               |``None``
 ``components``                 |List of components to install: tuples w/ name, version and easyblock to use                                                                                                                                                                                                                                             |``()``
 ``default_component_specs``    |Default specs to use for every component                                                                                                                                                                                                                                                                                |``{}``
 ``default_easyblock``          |Default easyblock to use for components                                                                                                                                                                                                                                                                                 |``"PythonPackage"``
@@ -1261,6 +1330,15 @@ easyconfig parameter           |description                                     
 ``use_pip_requirement``        |Install using 'python -m pip install --requirement'. The sources is expected to be the requirements file.                                                                                                                                                                                                               |``False``
 ``zipped_egg``                 |Install as a zipped eggs                                                                                                                                                                                                                                                                                                |``False``
 
+### Customised steps in ``PythonBundle`` easyblock
+
+* ``build_step`` - The type of the None singleton.
+
+* ``configure_step`` - The type of the None singleton.
+
+* ``install_step`` - The type of the None singleton.
+
+
 ## ``PythonPackage``
 
 (derives from ``ExtensionEasyBlock``)
@@ -1269,35 +1347,36 @@ Builds and installs a Python package, and provides a dedicated module file.
 
 ### Extra easyconfig parameters specific to ``PythonPackage`` easyblock
 
-easyconfig parameter      |description                                                                                                                                                                                                                                                                                                             |default value
---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------
-``buildcmd``              |Command for building the package (e.g. for custom builds resulting in a whl file). When using setup.py this will be passed to setup.py and defaults to 'build'. Otherwise it will be used as-is. A value of None then skips the build step. The template %(python)s will be replace by the currently used Python binary.|``None``
-``check_ldshared``        |Check Python value of $LDSHARED, correct if needed to "$CC -shared"                                                                                                                                                                                                                                                     |``None``
-``download_dep_fail``     |Fail if downloaded dependencies are detected. Defaults to True unless 'use_pip_for_deps' or 'use_pip_requirement' is True.                                                                                                                                                                                              |``None``
-``fix_python_shebang_for``|List of files for which Python shebang should be fixed to '#!/usr/bin/env python' (glob patterns supported) (default: ['bin/*'])                                                                                                                                                                                        |``['bin/*']``
-``install_src``           |Source path to pass to the install command (e.g. a whl file).Defaults to '.' for unpacked sources or the first source file specified                                                                                                                                                                                    |``None``
-``install_target``        |Option to pass to setup.py                                                                                                                                                                                                                                                                                              |``"install"``
-``max_py_majver``         |Maximum major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
-``max_py_minver``         |Maximum minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
-``options``               |Dictionary with extension options.                                                                                                                                                                                                                                                                                      |``{}``
-``pip_ignore_installed``  |Let pip ignore installed Python packages (i.e. don't remove them)                                                                                                                                                                                                                                                       |``True``
-``pip_no_build_isolation``|Use --no-build-isolation with pip install                                                                                                                                                                                                                                                                               |``True``
-``pip_no_index``          |Pass --no-index to pip to disable connecting to PyPi entirely which also disables the pip version check. Enabled by default when pip_ignore_installed=True                                                                                                                                                              |``None``
-``pip_verbose``           |Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.                                                                                                                                                                                                                  |``None``
-``req_py_majver``         |Required major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
-``req_py_minver``         |Required minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
-``runtest``               |Run unit tests.                                                                                                                                                                                                                                                                                                         |``True``
-``sanity_pip_check``      |Run 'python -m pip check' to ensure all required Python packages are installed and check for any package with an invalid (0.0.0) version.                                                                                                                                                                               |``True``
-``source_urls``           |List of URLs for source files                                                                                                                                                                                                                                                                                           |``['https://pypi.python.org/packages/source/%(nameletter)s/%(name)s']``
-``testinstall``           |Install into temporary directory prior to running the tests.                                                                                                                                                                                                                                                            |``False``
-``unpack_sources``        |Unpack sources prior to build/install. Defaults to 'True' except for whl files                                                                                                                                                                                                                                          |``None``
-``unversioned_packages``  |List of packages that don't have a version at all, i.e. show 0.0.0                                                                                                                                                                                                                                                      |``[]``
-``use_pip``               |Install using '%(python)s -m pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                                                                                                                   |``True``
-``use_pip_editable``      |Install using 'pip install --editable'                                                                                                                                                                                                                                                                                  |``False``
-``use_pip_extras``        |String with comma-separated list of 'extras' to install via pip                                                                                                                                                                                                                                                         |``None``
-``use_pip_for_deps``      |Install dependencies using '%(python)s -m pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                                                                                                      |``False``
-``use_pip_requirement``   |Install using 'python -m pip install --requirement'. The sources is expected to be the requirements file.                                                                                                                                                                                                               |``False``
-``zipped_egg``            |Install as a zipped eggs                                                                                                                                                                                                                                                                                                |``False``
+easyconfig parameter       |description                                                                                                                                                                                                                                                                                                             |default value
+---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------
+``buildcmd``               |Command for building the package (e.g. for custom builds resulting in a whl file). When using setup.py this will be passed to setup.py and defaults to 'build'. Otherwise it will be used as-is. A value of None then skips the build step. The template %(python)s will be replace by the currently used Python binary.|``None``
+``check_ldshared``         |Check Python value of $LDSHARED, correct if needed to "$CC -shared"                                                                                                                                                                                                                                                     |``None``
+``click_autocomplete_bins``|List of command line tools installed by the package that use the 'click' package and for which autocompletion scripts should be generated                                                                                                                                                                               |``None``
+``download_dep_fail``      |Fail if downloaded dependencies are detected. Defaults to True unless 'use_pip_for_deps' or 'use_pip_requirement' is True.                                                                                                                                                                                              |``None``
+``fix_python_shebang_for`` |List of files for which Python shebang should be fixed to '#!/usr/bin/env python' (glob patterns supported) (default: ['bin/*'])                                                                                                                                                                                        |``['bin/*']``
+``install_src``            |Source path to pass to the install command (e.g. a whl file).Defaults to '.' for unpacked sources or the first source file specified                                                                                                                                                                                    |``None``
+``install_target``         |Option to pass to setup.py                                                                                                                                                                                                                                                                                              |``"install"``
+``max_py_majver``          |Maximum major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
+``max_py_minver``          |Maximum minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
+``options``                |Dictionary with extension options.                                                                                                                                                                                                                                                                                      |``{}``
+``pip_ignore_installed``   |Let pip ignore installed Python packages (i.e. don't remove them)                                                                                                                                                                                                                                                       |``True``
+``pip_no_build_isolation`` |Use --no-build-isolation with pip install                                                                                                                                                                                                                                                                               |``True``
+``pip_no_index``           |Pass --no-index to pip to disable connecting to PyPi entirely which also disables the pip version check. Enabled by default when pip_ignore_installed=True                                                                                                                                                              |``None``
+``pip_verbose``            |Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.                                                                                                                                                                                                                  |``None``
+``req_py_majver``          |Required major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
+``req_py_minver``          |Required minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
+``runtest``                |Run unit tests.                                                                                                                                                                                                                                                                                                         |``True``
+``sanity_pip_check``       |Run 'python -m pip check' to ensure all required Python packages are installed and check for any package with an invalid (0.0.0) version.                                                                                                                                                                               |``True``
+``source_urls``            |List of URLs for source files                                                                                                                                                                                                                                                                                           |``['https://pypi.python.org/packages/source/%(nameletter)s/%(name)s']``
+``testinstall``            |Install into temporary directory prior to running the tests.                                                                                                                                                                                                                                                            |``False``
+``unpack_sources``         |Unpack sources prior to build/install. Defaults to 'True' except for whl files                                                                                                                                                                                                                                          |``None``
+``unversioned_packages``   |List of packages that don't have a version at all, i.e. show 0.0.0                                                                                                                                                                                                                                                      |``[]``
+``use_pip``                |Install using '%(python)s -m pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                                                                                                                   |``True``
+``use_pip_editable``       |Install using 'pip install --editable'                                                                                                                                                                                                                                                                                  |``False``
+``use_pip_extras``         |String with comma-separated list of 'extras' to install via pip                                                                                                                                                                                                                                                         |``None``
+``use_pip_for_deps``       |Install dependencies using '%(python)s -m pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                                                                                                      |``False``
+``use_pip_requirement``    |Install using 'python -m pip install --requirement'. The sources is expected to be the requirements file.                                                                                                                                                                                                               |``False``
+``zipped_egg``             |Install as a zipped eggs                                                                                                                                                                                                                                                                                                |``False``
 
 ### Customised steps in ``PythonPackage`` easyblock
 
@@ -1314,7 +1393,6 @@ easyconfig parameter      |description                                          
 
 
 Install an R package as a separate module, or as an extension.
-
 
 ### Extra easyconfig parameters specific to ``RPackage`` easyblock
 
@@ -1343,7 +1421,6 @@ Support for installing RPM files.
 - sources is a list of rpms
 - installation is with --nodeps (so the sources list has to be complete)
 
-
 ### Extra easyconfig parameters specific to ``Rpm`` easyblock
 
 easyconfig parameter|description                                                                                                                                    |default value
@@ -1359,6 +1436,8 @@ easyconfig parameter|description                                                
 ``staged_install``  |Perform staged installation via subdirectory of build directory                                                                                |``False``
 
 ### Customised steps in ``Rpm`` easyblock
+
+* ``build_step`` - The type of the None singleton.
 
 * ``configure_step`` - Custom configuration procedure for RPMs: rebuild RPMs for relocation if required.
 
@@ -1418,7 +1497,6 @@ The compiler is expected to be available in $PATH, required libraries are assume
 Specifying 'system' as a version leads to using the derived compiler version in the generated module;
 if an actual version is specified, it is checked against the derived version of the system compiler that was found.
 
-
 ### Extra easyconfig parameters specific to ``SystemCompiler`` easyblock
 
 easyconfig parameter           |description                                                                                     |default value
@@ -1432,6 +1510,15 @@ easyconfig parameter           |description                                     
 ``sanity_check_all_components``|Enable sanity checks for all components                                                         |``False``
 ``sanity_check_components``    |List of components for which to run sanity checks                                               |``[]``
 
+### Customised steps in ``SystemCompiler`` easyblock
+
+* ``build_step`` - The type of the None singleton.
+
+* ``configure_step`` - The type of the None singleton.
+
+* ``install_step`` - The type of the None singleton.
+
+
 ## ``SystemCompilerGCC``
 
 (derives from [``SystemCompiler``](#systemcompiler), ``EB_GCC``)
@@ -1443,7 +1530,6 @@ The compiler is expected to be available in $PATH, required libraries are assume
 
 Specifying 'system' as a version leads to using the derived compiler version in the generated module;
 if an actual version is specified, it is checked against the derived version of the system compiler that was found.
-
 
 ### Extra easyconfig parameters specific to ``SystemCompilerGCC`` easyblock
 
@@ -1486,6 +1572,15 @@ easyconfig parameter              |description                                  
 ``withnvptx``                     |Build GCC with NVPTX offload support                                                                                                                                                                                                                                                                                                |``False``
 ``withppl``                       |Build GCC with PPL support                                                                                                                                                                                                                                                                                                          |``False``
 
+### Customised steps in ``SystemCompilerGCC`` easyblock
+
+* ``build_step`` - The type of the None singleton.
+
+* ``configure_step`` - The type of the None singleton.
+
+* ``install_step`` - The type of the None singleton.
+
+
 ## ``SystemMPI``
 
 (derives from [``Bundle``](#bundle), [``ConfigureMake``](#configuremake), ``EB_impi``)
@@ -1497,7 +1592,6 @@ The mpi compiler is expected to be available in $PATH, required libraries are as
 
 Specifying 'system' as a version leads to using the derived mpi version in the generated module;
 if an actual version is specified, it is checked against the derived version of the system mpi that was found.
-
 
 ### Extra easyconfig parameters specific to ``SystemMPI`` easyblock
 
@@ -1535,13 +1629,21 @@ easyconfig parameter              |description                                  
 ``test_cmd``                      |Test command to use ('runtest' value is appended, default: 'make')                                                                                                                                                                        |``None``
 ``unrecognized_configure_options``|Action to do when unrecognized options passed to ./configure are detected, defaults to aborting the build. Can be set to 'warn' or 'ignore' (NOT RECOMMENDED! It might hide actual errors e.g. misspelling of intended or changed options)|``"error"``
 
+### Customised steps in ``SystemMPI`` easyblock
+
+* ``build_step`` - The type of the None singleton.
+
+* ``configure_step`` - The type of the None singleton.
+
+* ``install_step`` - The type of the None singleton.
+
+
 ## ``Tarball``
 
 (derives from ``ExtensionEasyBlock``)
 
 
 Precompiled software supplied as a tarball: will unpack binary and copy it to the install dir
-
 
 ### Extra easyconfig parameters specific to ``Tarball`` easyblock
 
@@ -1579,6 +1681,15 @@ easyconfig parameter           |description                                     
 ``sanity_check_components``    |List of components for which to run sanity checks                                                          |``[]``
 ``set_env_external_modules``   |Include setenv statements for toolchain components that use an external module, based on available metadata|``False``
 
+### Customised steps in ``Toolchain`` easyblock
+
+* ``build_step`` - The type of the None singleton.
+
+* ``configure_step`` - The type of the None singleton.
+
+* ``install_step`` - The type of the None singleton.
+
+
 ## ``VSCPythonPackage``
 
 (derives from [``VersionIndependentPythonPackage``](#versionindependentpythonpackage))
@@ -1587,35 +1698,45 @@ Support for install VSC Python packages.
 
 ### Extra easyconfig parameters specific to ``VSCPythonPackage`` easyblock
 
-easyconfig parameter      |description                                                                                                                                                                                                                                                                                                             |default value
---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------
-``buildcmd``              |Command for building the package (e.g. for custom builds resulting in a whl file). When using setup.py this will be passed to setup.py and defaults to 'build'. Otherwise it will be used as-is. A value of None then skips the build step. The template %(python)s will be replace by the currently used Python binary.|``None``
-``check_ldshared``        |Check Python value of $LDSHARED, correct if needed to "$CC -shared"                                                                                                                                                                                                                                                     |``None``
-``download_dep_fail``     |Fail if downloaded dependencies are detected. Defaults to True unless 'use_pip_for_deps' or 'use_pip_requirement' is True.                                                                                                                                                                                              |``None``
-``fix_python_shebang_for``|List of files for which Python shebang should be fixed to '#!/usr/bin/env python' (glob patterns supported) (default: ['bin/*'])                                                                                                                                                                                        |``['bin/*']``
-``install_src``           |Source path to pass to the install command (e.g. a whl file).Defaults to '.' for unpacked sources or the first source file specified                                                                                                                                                                                    |``None``
-``install_target``        |Option to pass to setup.py                                                                                                                                                                                                                                                                                              |``"install"``
-``max_py_majver``         |Maximum major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
-``max_py_minver``         |Maximum minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
-``options``               |Dictionary with extension options.                                                                                                                                                                                                                                                                                      |``{}``
-``pip_ignore_installed``  |Let pip ignore installed Python packages (i.e. don't remove them)                                                                                                                                                                                                                                                       |``True``
-``pip_no_build_isolation``|Use --no-build-isolation with pip install                                                                                                                                                                                                                                                                               |``True``
-``pip_no_index``          |Pass --no-index to pip to disable connecting to PyPi entirely which also disables the pip version check. Enabled by default when pip_ignore_installed=True                                                                                                                                                              |``None``
-``pip_verbose``           |Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.                                                                                                                                                                                                                  |``None``
-``req_py_majver``         |Required major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
-``req_py_minver``         |Required minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
-``runtest``               |Run unit tests.                                                                                                                                                                                                                                                                                                         |``True``
-``sanity_pip_check``      |Run 'python -m pip check' to ensure all required Python packages are installed and check for any package with an invalid (0.0.0) version.                                                                                                                                                                               |``True``
-``source_urls``           |List of URLs for source files                                                                                                                                                                                                                                                                                           |``['https://pypi.python.org/packages/source/%(nameletter)s/%(name)s']``
-``testinstall``           |Install into temporary directory prior to running the tests.                                                                                                                                                                                                                                                            |``False``
-``unpack_sources``        |Unpack sources prior to build/install. Defaults to 'True' except for whl files                                                                                                                                                                                                                                          |``None``
-``unversioned_packages``  |List of packages that don't have a version at all, i.e. show 0.0.0                                                                                                                                                                                                                                                      |``[]``
-``use_pip``               |Install using '%(python)s -m pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                                                                                                                   |``True``
-``use_pip_editable``      |Install using 'pip install --editable'                                                                                                                                                                                                                                                                                  |``False``
-``use_pip_extras``        |String with comma-separated list of 'extras' to install via pip                                                                                                                                                                                                                                                         |``None``
-``use_pip_for_deps``      |Install dependencies using '%(python)s -m pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                                                                                                      |``False``
-``use_pip_requirement``   |Install using 'python -m pip install --requirement'. The sources is expected to be the requirements file.                                                                                                                                                                                                               |``False``
-``zipped_egg``            |Install as a zipped eggs                                                                                                                                                                                                                                                                                                |``False``
+easyconfig parameter       |description                                                                                                                                                                                                                                                                                                             |default value
+---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------
+``buildcmd``               |Command for building the package (e.g. for custom builds resulting in a whl file). When using setup.py this will be passed to setup.py and defaults to 'build'. Otherwise it will be used as-is. A value of None then skips the build step. The template %(python)s will be replace by the currently used Python binary.|``None``
+``check_ldshared``         |Check Python value of $LDSHARED, correct if needed to "$CC -shared"                                                                                                                                                                                                                                                     |``None``
+``click_autocomplete_bins``|List of command line tools installed by the package that use the 'click' package and for which autocompletion scripts should be generated                                                                                                                                                                               |``None``
+``download_dep_fail``      |Fail if downloaded dependencies are detected. Defaults to True unless 'use_pip_for_deps' or 'use_pip_requirement' is True.                                                                                                                                                                                              |``None``
+``fix_python_shebang_for`` |List of files for which Python shebang should be fixed to '#!/usr/bin/env python' (glob patterns supported) (default: ['bin/*'])                                                                                                                                                                                        |``['bin/*']``
+``install_src``            |Source path to pass to the install command (e.g. a whl file).Defaults to '.' for unpacked sources or the first source file specified                                                                                                                                                                                    |``None``
+``install_target``         |Option to pass to setup.py                                                                                                                                                                                                                                                                                              |``"install"``
+``max_py_majver``          |Maximum major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
+``max_py_minver``          |Maximum minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
+``options``                |Dictionary with extension options.                                                                                                                                                                                                                                                                                      |``{}``
+``pip_ignore_installed``   |Let pip ignore installed Python packages (i.e. don't remove them)                                                                                                                                                                                                                                                       |``True``
+``pip_no_build_isolation`` |Use --no-build-isolation with pip install                                                                                                                                                                                                                                                                               |``True``
+``pip_no_index``           |Pass --no-index to pip to disable connecting to PyPi entirely which also disables the pip version check. Enabled by default when pip_ignore_installed=True                                                                                                                                                              |``None``
+``pip_verbose``            |Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.                                                                                                                                                                                                                  |``None``
+``req_py_majver``          |Required major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
+``req_py_minver``          |Required minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
+``runtest``                |Run unit tests.                                                                                                                                                                                                                                                                                                         |``True``
+``sanity_pip_check``       |Run 'python -m pip check' to ensure all required Python packages are installed and check for any package with an invalid (0.0.0) version.                                                                                                                                                                               |``True``
+``source_urls``            |List of URLs for source files                                                                                                                                                                                                                                                                                           |``['https://pypi.python.org/packages/source/%(nameletter)s/%(name)s']``
+``testinstall``            |Install into temporary directory prior to running the tests.                                                                                                                                                                                                                                                            |``False``
+``unpack_sources``         |Unpack sources prior to build/install. Defaults to 'True' except for whl files                                                                                                                                                                                                                                          |``None``
+``unversioned_packages``   |List of packages that don't have a version at all, i.e. show 0.0.0                                                                                                                                                                                                                                                      |``[]``
+``use_pip``                |Install using '%(python)s -m pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                                                                                                                   |``True``
+``use_pip_editable``       |Install using 'pip install --editable'                                                                                                                                                                                                                                                                                  |``False``
+``use_pip_extras``         |String with comma-separated list of 'extras' to install via pip                                                                                                                                                                                                                                                         |``None``
+``use_pip_for_deps``       |Install dependencies using '%(python)s -m pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                                                                                                      |``False``
+``use_pip_requirement``    |Install using 'python -m pip install --requirement'. The sources is expected to be the requirements file.                                                                                                                                                                                                               |``False``
+``zipped_egg``             |Install as a zipped eggs                                                                                                                                                                                                                                                                                                |``False``
+
+### Customised steps in ``VSCPythonPackage`` easyblock
+
+* ``build_step`` - The type of the None singleton.
+
+* ``configure_step`` - The type of the None singleton.
+
+* ``install_step`` - The type of the None singleton.
+
 
 ## ``VersionIndependentPythonPackage``
 
@@ -1625,35 +1746,36 @@ Support for building/installing python packages without requiring a specific pyt
 
 ### Extra easyconfig parameters specific to ``VersionIndependentPythonPackage`` easyblock
 
-easyconfig parameter      |description                                                                                                                                                                                                                                                                                                             |default value
---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------
-``buildcmd``              |Command for building the package (e.g. for custom builds resulting in a whl file). When using setup.py this will be passed to setup.py and defaults to 'build'. Otherwise it will be used as-is. A value of None then skips the build step. The template %(python)s will be replace by the currently used Python binary.|``None``
-``check_ldshared``        |Check Python value of $LDSHARED, correct if needed to "$CC -shared"                                                                                                                                                                                                                                                     |``None``
-``download_dep_fail``     |Fail if downloaded dependencies are detected. Defaults to True unless 'use_pip_for_deps' or 'use_pip_requirement' is True.                                                                                                                                                                                              |``None``
-``fix_python_shebang_for``|List of files for which Python shebang should be fixed to '#!/usr/bin/env python' (glob patterns supported) (default: ['bin/*'])                                                                                                                                                                                        |``['bin/*']``
-``install_src``           |Source path to pass to the install command (e.g. a whl file).Defaults to '.' for unpacked sources or the first source file specified                                                                                                                                                                                    |``None``
-``install_target``        |Option to pass to setup.py                                                                                                                                                                                                                                                                                              |``"install"``
-``max_py_majver``         |Maximum major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
-``max_py_minver``         |Maximum minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
-``options``               |Dictionary with extension options.                                                                                                                                                                                                                                                                                      |``{}``
-``pip_ignore_installed``  |Let pip ignore installed Python packages (i.e. don't remove them)                                                                                                                                                                                                                                                       |``True``
-``pip_no_build_isolation``|Use --no-build-isolation with pip install                                                                                                                                                                                                                                                                               |``True``
-``pip_no_index``          |Pass --no-index to pip to disable connecting to PyPi entirely which also disables the pip version check. Enabled by default when pip_ignore_installed=True                                                                                                                                                              |``None``
-``pip_verbose``           |Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.                                                                                                                                                                                                                  |``None``
-``req_py_majver``         |Required major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
-``req_py_minver``         |Required minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
-``runtest``               |Run unit tests.                                                                                                                                                                                                                                                                                                         |``True``
-``sanity_pip_check``      |Run 'python -m pip check' to ensure all required Python packages are installed and check for any package with an invalid (0.0.0) version.                                                                                                                                                                               |``True``
-``source_urls``           |List of URLs for source files                                                                                                                                                                                                                                                                                           |``['https://pypi.python.org/packages/source/%(nameletter)s/%(name)s']``
-``testinstall``           |Install into temporary directory prior to running the tests.                                                                                                                                                                                                                                                            |``False``
-``unpack_sources``        |Unpack sources prior to build/install. Defaults to 'True' except for whl files                                                                                                                                                                                                                                          |``None``
-``unversioned_packages``  |List of packages that don't have a version at all, i.e. show 0.0.0                                                                                                                                                                                                                                                      |``[]``
-``use_pip``               |Install using '%(python)s -m pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                                                                                                                   |``True``
-``use_pip_editable``      |Install using 'pip install --editable'                                                                                                                                                                                                                                                                                  |``False``
-``use_pip_extras``        |String with comma-separated list of 'extras' to install via pip                                                                                                                                                                                                                                                         |``None``
-``use_pip_for_deps``      |Install dependencies using '%(python)s -m pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                                                                                                      |``False``
-``use_pip_requirement``   |Install using 'python -m pip install --requirement'. The sources is expected to be the requirements file.                                                                                                                                                                                                               |``False``
-``zipped_egg``            |Install as a zipped eggs                                                                                                                                                                                                                                                                                                |``False``
+easyconfig parameter       |description                                                                                                                                                                                                                                                                                                             |default value
+---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------
+``buildcmd``               |Command for building the package (e.g. for custom builds resulting in a whl file). When using setup.py this will be passed to setup.py and defaults to 'build'. Otherwise it will be used as-is. A value of None then skips the build step. The template %(python)s will be replace by the currently used Python binary.|``None``
+``check_ldshared``         |Check Python value of $LDSHARED, correct if needed to "$CC -shared"                                                                                                                                                                                                                                                     |``None``
+``click_autocomplete_bins``|List of command line tools installed by the package that use the 'click' package and for which autocompletion scripts should be generated                                                                                                                                                                               |``None``
+``download_dep_fail``      |Fail if downloaded dependencies are detected. Defaults to True unless 'use_pip_for_deps' or 'use_pip_requirement' is True.                                                                                                                                                                                              |``None``
+``fix_python_shebang_for`` |List of files for which Python shebang should be fixed to '#!/usr/bin/env python' (glob patterns supported) (default: ['bin/*'])                                                                                                                                                                                        |``['bin/*']``
+``install_src``            |Source path to pass to the install command (e.g. a whl file).Defaults to '.' for unpacked sources or the first source file specified                                                                                                                                                                                    |``None``
+``install_target``         |Option to pass to setup.py                                                                                                                                                                                                                                                                                              |``"install"``
+``max_py_majver``          |Maximum major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
+``max_py_minver``          |Maximum minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                   |``None``
+``options``                |Dictionary with extension options.                                                                                                                                                                                                                                                                                      |``{}``
+``pip_ignore_installed``   |Let pip ignore installed Python packages (i.e. don't remove them)                                                                                                                                                                                                                                                       |``True``
+``pip_no_build_isolation`` |Use --no-build-isolation with pip install                                                                                                                                                                                                                                                                               |``True``
+``pip_no_index``           |Pass --no-index to pip to disable connecting to PyPi entirely which also disables the pip version check. Enabled by default when pip_ignore_installed=True                                                                                                                                                              |``None``
+``pip_verbose``            |Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.                                                                                                                                                                                                                  |``None``
+``req_py_majver``          |Required major Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
+``req_py_minver``          |Required minor Python version (only relevant when using system Python)                                                                                                                                                                                                                                                  |``None``
+``runtest``                |Run unit tests.                                                                                                                                                                                                                                                                                                         |``True``
+``sanity_pip_check``       |Run 'python -m pip check' to ensure all required Python packages are installed and check for any package with an invalid (0.0.0) version.                                                                                                                                                                               |``True``
+``source_urls``            |List of URLs for source files                                                                                                                                                                                                                                                                                           |``['https://pypi.python.org/packages/source/%(nameletter)s/%(name)s']``
+``testinstall``            |Install into temporary directory prior to running the tests.                                                                                                                                                                                                                                                            |``False``
+``unpack_sources``         |Unpack sources prior to build/install. Defaults to 'True' except for whl files                                                                                                                                                                                                                                          |``None``
+``unversioned_packages``   |List of packages that don't have a version at all, i.e. show 0.0.0                                                                                                                                                                                                                                                      |``[]``
+``use_pip``                |Install using '%(python)s -m pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                                                                                                                   |``True``
+``use_pip_editable``       |Install using 'pip install --editable'                                                                                                                                                                                                                                                                                  |``False``
+``use_pip_extras``         |String with comma-separated list of 'extras' to install via pip                                                                                                                                                                                                                                                         |``None``
+``use_pip_for_deps``       |Install dependencies using '%(python)s -m pip install --prefix=%(prefix)s %(installopts)s %(loc)s'                                                                                                                                                                                                                      |``False``
+``use_pip_requirement``    |Install using 'python -m pip install --requirement'. The sources is expected to be the requirements file.                                                                                                                                                                                                               |``False``
+``zipped_egg``             |Install as a zipped eggs                                                                                                                                                                                                                                                                                                |``False``
 
 ### Customised steps in ``VersionIndependentPythonPackage`` easyblock
 
@@ -1670,7 +1792,6 @@ easyconfig parameter      |description                                          
 
 
 Support for building and installing applications with waf
-
 
 ### Customised steps in ``Waf`` easyblock
 

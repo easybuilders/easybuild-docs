@@ -10,7 +10,6 @@ MoviePy (full documentation) is a Python library for video editing: cutting, con
 
 version | toolchain
 --------|----------
-``1.0.3`` | ``foss/2021a``
 ``1.0.3`` | ``foss/2021b``
 ``1.0.3`` | ``foss/2022b``
 ``2.2.1`` | ``foss/2025b``

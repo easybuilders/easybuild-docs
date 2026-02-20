@@ -10,7 +10,6 @@ Ray is a fast and simple framework for building and running distributed applicat
 
 version | toolchain
 --------|----------
-``1.13.0`` | ``foss/2021a``
 ``1.13.0`` | ``foss/2021b``
 ``1.9.2`` | ``foss/2021b``
 ``2.2.0`` | ``foss/2022a``

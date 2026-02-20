@@ -10,7 +10,6 @@ Voro++ is a software library for carrying out three-dimensional computations of 
 
 version | toolchain
 --------|----------
-``0.4.6`` | ``GCCcore/10.3.0``
 ``0.4.6`` | ``GCCcore/11.2.0``
 ``0.4.6`` | ``GCCcore/11.3.0``
 ``0.4.6`` | ``GCCcore/12.2.0``

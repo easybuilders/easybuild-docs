@@ -10,7 +10,6 @@ The Natural Bond Orbital (NBO) program is a discovery tool for chemical insights
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``7.0.10`` |  | ``GCC/10.3.0``
 ``7.0.10`` | ``-i4`` | ``GCC/11.2.0``
 ``7.0.10`` |  | ``GCC/11.2.0``
 ``7.0.10`` | ``-i4`` | ``gfbf/2022a``

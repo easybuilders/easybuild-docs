@@ -10,7 +10,6 @@ Python interface to Graphviz's Dot language.
 
 version | toolchain
 --------|----------
-``1.4.2`` | ``GCCcore/10.3.0``
 ``1.4.2`` | ``GCCcore/11.2.0``
 ``1.4.2`` | ``GCCcore/11.3.0``
 ``2.0.0`` | ``GCCcore/12.2.0``

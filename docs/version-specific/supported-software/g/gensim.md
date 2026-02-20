@@ -10,7 +10,6 @@ Gensim is a Python library for topic modelling, document indexing and similarity
 
 version | toolchain
 --------|----------
-``4.2.0`` | ``foss/2021a``
 ``4.3.2`` | ``foss/2023a``
 
 

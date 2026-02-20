@@ -10,7 +10,6 @@ Jupyter Server Proxy lets you run arbitrary external processes (such as RStudio,
 
 version | toolchain
 --------|----------
-``3.2.1`` | ``GCCcore/10.3.0``
 ``3.2.2`` | ``GCCcore/11.3.0``
 ``3.2.2`` | ``GCCcore/12.2.0``
 ``4.0.0`` | ``GCCcore/12.3.0``

@@ -10,7 +10,6 @@ Convert 10x BAM files to the original FASTQs compatible with 10x pipelines.
 
 version | toolchain
 --------|----------
-``1.4.0`` | ``GCCcore/10.3.0``
 ``1.4.1`` | ``GCCcore/12.3.0``
 
 

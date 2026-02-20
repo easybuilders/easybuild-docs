@@ -10,12 +10,6 @@ Horovod is a distributed training framework for TensorFlow.
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.22.1`` | ``-CUDA-11.3.1-TensorFlow-2.5.3`` | ``foss/2021a``
-``0.22.1`` | ``-CUDA-11.3.1-TensorFlow-2.6.0`` | ``foss/2021a``
-``0.23.0`` | ``-CUDA-11.3.1-PyTorch-1.10.0`` | ``foss/2021a``
-``0.25.0`` | ``-CUDA-11.3.1-PyTorch-1.10.0`` | ``foss/2021a``
-``0.28.1`` | ``-CUDA-11.3.1-PyTorch-1.11.0`` | ``foss/2021a``
-``0.28.1`` | ``-CUDA-11.3.1-PyTorch-1.12.1`` | ``foss/2021a``
 ``0.28.1`` | ``-CUDA-11.4.1-TensorFlow-2.7.1`` | ``foss/2021b``
 ``0.28.1`` | ``-CUDA-11.4.1-TensorFlow-2.8.4`` | ``foss/2021b``
 ``0.28.1`` | ``-CUDA-11.5.2-PyTorch-1.12.1`` | ``foss/2021b``

@@ -11,7 +11,6 @@ RNA-SeQC is a java program which computes a series of quality control metrics fo
 version | versionsuffix | toolchain
 --------|---------------|----------
 ``1.1.8`` | ``-Java-11`` | ``GCCcore/11.2.0``
-``2.4.2`` |  | ``foss/2021a``
 ``2.4.2`` |  | ``foss/2021b``
 
 

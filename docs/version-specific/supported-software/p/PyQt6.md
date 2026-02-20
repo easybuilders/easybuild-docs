@@ -10,6 +10,7 @@ PyQt6 is a comprehensive set of Python bindings for Qt v6. It is implemented as 
 
 version | toolchain
 --------|----------
+``6.9.1`` | ``GCCcore/14.2.0``
 ``6.9.1`` | ``GCCcore/14.3.0``
 
 

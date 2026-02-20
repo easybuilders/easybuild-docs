@@ -10,7 +10,6 @@ PAUP* (Phylogenetic Analysis Using Parsimony *and other methods) is a computatio
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``4.0a166`` | ``-centos64`` | ``system``
 ``4.0a168`` | ``-centos64`` | ``system``
 
 

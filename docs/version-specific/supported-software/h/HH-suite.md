@@ -4,13 +4,12 @@ search:
 ---
 # HH-suite
 
-The HH-suite is an open-source software package for sensitive protein sequence searching based on the pairwise alignment of hidden Markov models (HMMs).
+The HH-suite is an open-source software package  for sensitive protein sequence searching based on the pairwise  alignment of hidden Markov models (HMMs).
 
 *homepage*: <https://github.com/soedinglab/hh-suite>
 
 version | toolchain
 --------|----------
-``3.3.0`` | ``gompi/2021a``
 ``3.3.0`` | ``gompi/2021b``
 ``3.3.0`` | ``gompi/2022a``
 ``3.3.0`` | ``gompi/2023a``

@@ -10,7 +10,6 @@ DFTB+ is a fast and efficient versatile quantum mechanical simulation package. I
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``21.1`` |  | ``intel/2021a``
 ``24.1`` | ``-PLUMED-2.9.0`` | ``foss/2023a``
 ``24.1`` |  | ``foss/2023a``
 

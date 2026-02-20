@@ -10,7 +10,6 @@ GNU Compiler Collection (GCC) based compiler toolchain,  including OpenMPI for M
 
 version | toolchain
 --------|----------
-``2021a`` | ``system``
 ``2021b`` | ``system``
 ``2022.05`` | ``system``
 ``2022.10`` | ``system``

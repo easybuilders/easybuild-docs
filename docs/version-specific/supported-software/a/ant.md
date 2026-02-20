@@ -17,7 +17,6 @@ version | versionsuffix | toolchain
 ``1.10.14`` | ``-Java-21`` | ``system``
 ``1.10.15`` | ``-Java-17`` | ``system``
 ``1.10.15`` | ``-Java-21`` | ``system``
-``1.10.8`` | ``-Java-11`` | ``system``
 ``1.10.9`` | ``-Java-11`` | ``system``
 
 

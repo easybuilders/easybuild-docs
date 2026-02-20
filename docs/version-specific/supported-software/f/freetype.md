@@ -10,7 +10,6 @@ FreeType 2 is a software font engine that is designed to be small, efficient,  h
 
 version | toolchain
 --------|----------
-``2.10.4`` | ``GCCcore/10.3.0``
 ``2.11.0`` | ``GCCcore/11.2.0``
 ``2.12.1`` | ``GCCcore/11.3.0``
 ``2.12.1`` | ``GCCcore/12.2.0``

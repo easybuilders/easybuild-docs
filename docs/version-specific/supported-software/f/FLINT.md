@@ -10,7 +10,6 @@ FLINT (Fast Library for Number Theory) is a C library in support of computations
 
 version | toolchain
 --------|----------
-``2.7.1`` | ``GCC/10.3.0``
 ``2.8.4`` | ``foss/2021b``
 ``2.9.0`` | ``gfbf/2022a``
 ``2.9.0`` | ``gfbf/2022b``

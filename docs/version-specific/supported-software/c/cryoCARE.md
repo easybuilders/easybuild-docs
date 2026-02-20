@@ -10,7 +10,6 @@ This package is a memory efficient implementation of cryoCARE.  This setup train
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.2.1`` | ``-CUDA-11.3.1`` | ``foss/2021a``
 ``0.3.0`` | ``-CUDA-11.7.0`` | ``foss/2022a``
 
 

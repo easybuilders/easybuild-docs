@@ -10,7 +10,6 @@ libSBML (Systems Biology Markup Language library) is a free, open-source program
 
 version | toolchain
 --------|----------
-``5.19.0`` | ``GCC/10.3.0``
 ``5.19.7`` | ``GCC/11.3.0``
 ``5.20.5`` | ``GCC/14.2.0``
 

@@ -10,8 +10,6 @@ Program proj is a standard Unix filter function which converts geographic longit
 
 version | toolchain
 --------|----------
-``6.3.1`` | ``GCCcore/10.3.0``
-``8.0.1`` | ``GCCcore/10.3.0``
 ``8.1.0`` | ``GCCcore/11.2.0``
 ``9.0.0`` | ``GCCcore/11.3.0``
 ``9.1.1`` | ``GCCcore/12.2.0``

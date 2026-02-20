@@ -11,6 +11,7 @@ MOKIT offers various utilities and modules to transfer MOs among various quantum
 version | toolchain
 --------|----------
 ``1.2.6`` | ``gfbf/2023a``
+``1.2.6`` | ``gfbf/2025a``
 ``1.2.6_20240830`` | ``gfbf/2023a``
 
 

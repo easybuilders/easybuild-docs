@@ -10,7 +10,6 @@ freeglut is a completely OpenSourced alternative to the OpenGL Utility Toolkit (
 
 version | toolchain
 --------|----------
-``3.2.1`` | ``GCCcore/10.3.0``
 ``3.2.1`` | ``GCCcore/11.2.0``
 ``3.2.2`` | ``GCCcore/11.3.0``
 ``3.4.0`` | ``GCCcore/12.2.0``

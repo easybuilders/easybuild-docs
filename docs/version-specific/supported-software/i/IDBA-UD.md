@@ -10,7 +10,6 @@ IDBA-UD is a iterative De Bruijn Graph De Novo Assembler for Short Reads Sequenc
 
 version | toolchain
 --------|----------
-``1.1.3`` | ``GCC/10.3.0``
 ``1.1.3`` | ``GCC/11.2.0``
 ``1.1.3`` | ``GCCcore/12.3.0``
 ``1.1.3`` | ``GCCcore/13.2.0``

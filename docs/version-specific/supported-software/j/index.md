@@ -23,6 +23,7 @@ search:
  * [jedi-language-server](jedi-language-server.md)
  * [Jellyfish](Jellyfish.md)
  * [jemalloc](jemalloc.md)
+ * [Jena](Jena.md)
  * [jgmenu](jgmenu.md)
  * [jiter](jiter.md)
  * [Jmol](Jmol.md)
@@ -31,8 +32,8 @@ search:
  * [jq](jq.md)
  * [json-c](json-c.md)
  * [json-fortran](json-fortran.md)
- * [JSON-GLib](JSON-GLib.md)
  * [JsonCpp](JsonCpp.md)
+ * [jsonschema](jsonschema.md)
  * [JUBE](JUBE.md)
  * [Judy](Judy.md)
  * [Juicebox](Juicebox.md)
@@ -57,6 +58,7 @@ search:
  * [jupyterlab-lmod](jupyterlab-lmod.md)
  * [jupyterlmod](jupyterlmod.md)
  * [JupyterNotebook](JupyterNotebook.md)
+ * [jupyterview](jupyterview.md)
  * [jxrlib](jxrlib.md)
 
 

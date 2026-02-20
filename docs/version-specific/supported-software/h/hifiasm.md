@@ -10,10 +10,9 @@ Hifiasm: a haplotype-resolved assembler for accurate Hifi reads.
 
 version | toolchain
 --------|----------
-``0.15.2`` | ``GCCcore/10.3.0``
-``0.16.1`` | ``GCCcore/10.3.0``
 ``0.19.5`` | ``GCCcore/11.2.0``
 ``0.19.7`` | ``GCCcore/12.2.0``
+``0.23.0`` | ``GCCcore/12.3.0``
 ``0.23.0`` | ``GCCcore/13.2.0``
 ``0.25.0`` | ``GCCcore/14.3.0``
 

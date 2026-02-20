@@ -10,7 +10,6 @@ JSON-Fortran: A Modern Fortran JSON API
 
 version | toolchain
 --------|----------
-``8.3.0`` | ``GCC/10.3.0``
 ``8.3.0`` | ``GCC/11.2.0``
 ``8.3.0`` | ``GCC/11.3.0``
 ``8.3.0`` | ``GCC/12.2.0``

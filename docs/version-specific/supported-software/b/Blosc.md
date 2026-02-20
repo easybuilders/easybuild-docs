@@ -10,7 +10,6 @@ Blosc, an extremely fast, multi-threaded, meta-compressor library
 
 version | toolchain
 --------|----------
-``1.21.0`` | ``GCCcore/10.3.0``
 ``1.21.1`` | ``GCCcore/11.2.0``
 ``1.21.3`` | ``GCCcore/11.3.0``
 ``1.21.3`` | ``GCCcore/12.2.0``

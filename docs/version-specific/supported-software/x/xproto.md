@@ -10,7 +10,6 @@ X protocol and ancillary headers
 
 version | toolchain
 --------|----------
-``7.0.31`` | ``GCCcore/10.3.0``
 ``7.0.31`` | ``GCCcore/11.2.0``
 ``7.0.31`` | ``GCCcore/11.3.0``
 ``7.0.31`` | ``GCCcore/12.3.0``

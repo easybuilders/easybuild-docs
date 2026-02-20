@@ -11,7 +11,6 @@ Burrows-Wheeler Aligner (BWA) is an efficient program that aligns relatively  sh
 version | toolchain
 --------|----------
 ``0.7.17-20220923`` | ``GCCcore/12.3.0``
-``0.7.17`` | ``GCC/10.3.0``
 ``0.7.17`` | ``GCCcore/11.2.0``
 ``0.7.17`` | ``GCCcore/11.3.0``
 ``0.7.17`` | ``GCCcore/12.2.0``

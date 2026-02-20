@@ -10,7 +10,6 @@ NWChem aims to provide its users with computational chemistry tools that are sca
 
 version | toolchain
 --------|----------
-``7.0.2`` | ``intel/2021a``
 ``7.0.2`` | ``intel/2022a``
 ``7.2.2`` | ``intel/2023a``
 ``7.2.3`` | ``intel/2024a``

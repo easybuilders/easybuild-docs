@@ -10,7 +10,6 @@ A Free Software Three-Dimensional Structural Finite Element Program
 
 version | toolchain
 --------|----------
-``2.20`` | ``foss/2021a``
 ``2.20`` | ``foss/2022b``
 ``2.20`` | ``foss/2023a``
 

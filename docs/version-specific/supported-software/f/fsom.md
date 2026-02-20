@@ -10,7 +10,6 @@ A tiny C library for managing SOM (Self-Organizing Maps) neural networks.
 
 version | toolchain
 --------|----------
-``20141119`` | ``GCCcore/10.3.0``
 ``20141119`` | ``GCCcore/11.2.0``
 ``20151117`` | ``GCCcore/11.3.0``
 ``20151117`` | ``GCCcore/12.2.0``

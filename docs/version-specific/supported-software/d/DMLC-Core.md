@@ -10,7 +10,6 @@ DMLC-Core is the backbone library to support all DMLC projects, offers the brick
 
 version | toolchain
 --------|----------
-``0.5`` | ``GCC/10.3.0``
 ``0.5`` | ``GCC/11.3.0``
 ``0.5`` | ``GCC/12.3.0``
 

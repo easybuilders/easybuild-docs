@@ -10,7 +10,6 @@ Intel C/C++ and Fortran compilers, alongside Intel MPI.
 
 version | toolchain
 --------|----------
-``2021a`` | ``system``
 ``2021b`` | ``system``
 ``2022.00`` | ``system``
 ``2022.05`` | ``system``

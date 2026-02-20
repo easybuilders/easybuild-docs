@@ -10,7 +10,6 @@ Coin is an OpenGL-based, 3D graphics library that has its roots in the Open Inve
 
 version | toolchain
 --------|----------
-``4.0.0`` | ``GCC/10.3.0``
 ``4.0.0`` | ``GCC/11.2.0``
 
 

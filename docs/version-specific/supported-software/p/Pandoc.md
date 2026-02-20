@@ -10,7 +10,6 @@ If you need to convert files from one markup format into another, pandoc is your
 
 version | toolchain
 --------|----------
-``2.10`` | ``system``
 ``2.13`` | ``system``
 ``3.1.2`` | ``system``
 ``3.6.2`` | ``system``

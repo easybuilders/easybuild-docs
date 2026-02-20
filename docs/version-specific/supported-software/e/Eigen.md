@@ -10,7 +10,6 @@ Eigen is a C++ template library for linear algebra: matrices, vectors, numerical
 
 version | toolchain
 --------|----------
-``3.3.9`` | ``GCCcore/10.3.0``
 ``3.3.9`` | ``GCCcore/11.2.0``
 ``3.4.0`` | ``GCCcore/11.2.0``
 ``3.4.0`` | ``GCCcore/11.3.0``

@@ -10,13 +10,11 @@ The HPCG Benchmark project is an effort to create a more relevant metric for ran
 
 version | toolchain
 --------|----------
-``3.1`` | ``foss/2021a``
 ``3.1`` | ``foss/2021b``
 ``3.1`` | ``foss/2022a``
 ``3.1`` | ``foss/2022b``
 ``3.1`` | ``foss/2023a``
 ``3.1`` | ``foss/2025b``
-``3.1`` | ``intel/2021a``
 ``3.1`` | ``intel/2021b``
 ``3.1`` | ``intel/2022a``
 ``3.1`` | ``intel/2022b``

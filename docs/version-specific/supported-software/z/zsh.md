@@ -6,11 +6,10 @@ search:
 
 Zsh is a shell designed for interactive use, although it is also a powerful scripting language.
 
-*homepage*: <https://www.zsh.org/>
+*homepage*: <http://www.zsh.org/>
 
 version | toolchain
 --------|----------
-``5.8`` | ``system``
 ``5.9`` | ``GCCcore/13.3.0``
 ``5.9`` | ``system``
 

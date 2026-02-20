@@ -10,7 +10,6 @@ Libgpg-error is a small library that defines common error values for all GnuPG c
 
 version | toolchain
 --------|----------
-``1.42`` | ``GCCcore/10.3.0``
 ``1.42`` | ``GCCcore/11.2.0``
 ``1.46`` | ``GCCcore/11.3.0``
 ``1.48`` | ``GCCcore/12.3.0``

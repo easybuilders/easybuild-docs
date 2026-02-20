@@ -10,7 +10,6 @@ Sodium is a modern, easy-to-use software library for encryption, decryption,  si
 
 version | toolchain
 --------|----------
-``1.0.18`` | ``GCCcore/10.3.0``
 ``1.0.18`` | ``GCCcore/11.2.0``
 ``1.0.18`` | ``GCCcore/11.3.0``
 ``1.0.18`` | ``GCCcore/12.2.0``

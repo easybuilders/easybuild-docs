@@ -10,7 +10,6 @@ OptiX is NVIDIA SDK for easy ray tracing performance.  It provides a simple fram
 
 version | toolchain
 --------|----------
-``6.5.0`` | ``system``
 ``7.2.0`` | ``system``
 ``9.0.0`` | ``system``
 

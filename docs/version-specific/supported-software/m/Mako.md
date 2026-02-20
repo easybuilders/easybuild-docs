@@ -10,7 +10,6 @@ A super-fast templating language that borrows the best ideas from the existing t
 
 version | toolchain
 --------|----------
-``1.1.4`` | ``GCCcore/10.3.0``
 ``1.1.4`` | ``GCCcore/11.2.0``
 ``1.2.0`` | ``GCCcore/11.3.0``
 ``1.2.4`` | ``GCCcore/12.2.0``

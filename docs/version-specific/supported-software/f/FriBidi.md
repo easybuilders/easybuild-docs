@@ -10,7 +10,6 @@ The Free Implementation of the Unicode Bidirectional Algorithm.
 
 version | toolchain
 --------|----------
-``1.0.10`` | ``GCCcore/10.3.0``
 ``1.0.10`` | ``GCCcore/11.2.0``
 ``1.0.12`` | ``GCCcore/11.3.0``
 ``1.0.12`` | ``GCCcore/12.2.0``

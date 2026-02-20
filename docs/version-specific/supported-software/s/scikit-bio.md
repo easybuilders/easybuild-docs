@@ -10,7 +10,6 @@ scikit-bio is an open-source, BSD-licensed Python 3 package providing data struc
 
 version | toolchain
 --------|----------
-``0.5.7`` | ``foss/2021a``
 ``0.5.7`` | ``foss/2021b``
 ``0.5.7`` | ``foss/2022a``
 ``0.6.0`` | ``foss/2023a``

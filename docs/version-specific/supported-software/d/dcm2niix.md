@@ -10,7 +10,6 @@ dcm2niix is designed to convert neuroimaging data from the DICOM format to the N
 
 version | toolchain
 --------|----------
-``1.0.20211006`` | ``GCCcore/10.3.0``
 ``1.0.20220720`` | ``GCCcore/11.3.0``
 ``1.0.20230411`` | ``GCCcore/12.2.0``
 ``1.0.20241211`` | ``GCCcore/13.3.0``

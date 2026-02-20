@@ -10,7 +10,6 @@ NASM: General-purpose x86 assembler
 
 version | toolchain
 --------|----------
-``2.15.05`` | ``GCCcore/10.3.0``
 ``2.15.05`` | ``GCCcore/11.2.0``
 ``2.15.05`` | ``GCCcore/11.3.0``
 ``2.15.05`` | ``GCCcore/12.2.0``

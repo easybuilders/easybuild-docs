@@ -10,7 +10,6 @@ TensorFlow Datasets is a collection of datasets ready to use, with TensorFlow or
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``4.7.0`` | ``-CUDA-11.3.1`` | ``foss/2021a``
 ``4.8.3`` | ``-CUDA-11.4.1`` | ``foss/2021b``
 
 

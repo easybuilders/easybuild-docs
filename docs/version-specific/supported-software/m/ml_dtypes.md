@@ -11,6 +11,7 @@ ml_dtypes is a stand-alone implementation of several NumPy dtype extensions used
 version | toolchain
 --------|----------
 ``0.3.2`` | ``gfbf/2023a``
+``0.4.0`` | ``gfbf/2023b``
 ``0.5.0`` | ``gfbf/2024a``
 ``0.5.1`` | ``gfbf/2025a``
 ``0.5.3`` | ``gfbf/2025b``

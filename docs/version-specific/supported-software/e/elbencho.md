@@ -10,7 +10,6 @@ A distributed storage benchmark for files, objects & blocks with support for GPU
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.0-3`` |  | ``GCC/10.3.0``
 ``3.0-19`` |  | ``GCC/13.2.0``
 ``3.0-27`` | ``-CUDA-12.6.0`` | ``GCC/13.3.0``
 ``3.0-27`` |  | ``GCC/13.3.0``

@@ -6,11 +6,10 @@ search:
 
 COMSOL Multiphysics is a general-purpose software platform, based on advanced numerical methods, for modeling and simulating physics-based problems.
 
-*homepage*: <https://www.comsol.com>
+*homepage*: <https://www.comsol.se/>
 
 version | toolchain
 --------|----------
-``5.4.0.225`` | ``system``
 ``6.1.0.357`` | ``system``
 ``6.2.0.290`` | ``system``
 ``6.3.0.290`` | ``system``

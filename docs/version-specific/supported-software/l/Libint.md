@@ -11,8 +11,6 @@ Libint library is used to evaluate the traditional (electron repulsion) and cert
 version | versionsuffix | toolchain
 --------|---------------|----------
 ``2.11.1`` | ``-lmax-6-cp2k`` | ``GCC/14.2.0``
-``2.6.0`` | ``-lmax-6-cp2k`` | ``GCC/10.3.0``
-``2.6.0`` | ``-lmax-6-cp2k`` | ``iimpi/2021a``
 ``2.7.2`` | ``-lmax-6-cp2k`` | ``GCC/11.3.0``
 ``2.7.2`` | ``-lmax-6-cp2k`` | ``GCC/12.2.0``
 ``2.7.2`` | ``-lmax-6-cp2k`` | ``GCC/12.3.0``

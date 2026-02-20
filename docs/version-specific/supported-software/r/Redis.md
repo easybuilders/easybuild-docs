@@ -10,7 +10,6 @@ Redis is an open source (BSD licensed), in-memory data structure store, used as 
 
 version | toolchain
 --------|----------
-``6.2.6`` | ``GCC/10.3.0``
 ``6.2.6`` | ``GCC/11.2.0``
 ``7.0.8`` | ``GCC/11.3.0``
 ``7.2.3`` | ``GCCcore/12.2.0``

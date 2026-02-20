@@ -10,7 +10,6 @@ HyPhy (Hypothesis Testing using Phylogenies) is an open-source software package 
 
 version | toolchain
 --------|----------
-``2.5.33`` | ``gompi/2021a``
 ``2.5.60`` | ``gompi/2022a``
 
 

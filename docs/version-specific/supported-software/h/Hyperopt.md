@@ -10,7 +10,6 @@ hyperopt is a Python library for optimizing over awkward search spaces with real
 
 version | toolchain
 --------|----------
-``0.2.7`` | ``foss/2021a``
 ``0.2.7`` | ``foss/2022a``
 
 

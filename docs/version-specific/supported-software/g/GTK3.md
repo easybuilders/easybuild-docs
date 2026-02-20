@@ -10,7 +10,6 @@ GTK+ is the primary library used to construct user interfaces in GNOME. It  prov
 
 version | toolchain
 --------|----------
-``3.24.29`` | ``GCCcore/10.3.0``
 ``3.24.31`` | ``GCCcore/11.2.0``
 ``3.24.33`` | ``GCCcore/11.3.0``
 ``3.24.35`` | ``GCCcore/12.2.0``

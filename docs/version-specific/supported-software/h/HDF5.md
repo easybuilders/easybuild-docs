@@ -10,12 +10,8 @@ HDF5 is a data model, library, and file format for storing and managing data.  I
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.10.7`` |  | ``gompi/2021a``
-``1.10.7`` |  | ``iimpi/2021a``
-``1.10.7`` |  | ``iompi/2021a``
 ``1.10.8`` |  | ``gompi/2021b``
 ``1.10.8`` |  | ``gompi/2022a``
-``1.12.1`` |  | ``gompi/2021a``
 ``1.12.1`` |  | ``gompi/2021b``
 ``1.12.1`` |  | ``iimpi/2021b``
 ``1.12.2`` | ``-serial`` | ``GCC/11.3.0``

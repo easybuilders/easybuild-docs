@@ -10,7 +10,6 @@ Accelerated and Python-only metrics for benchmarking single-cell integration out
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.3.3`` |  | ``foss/2021a``
 ``0.5.1`` | ``-CUDA-12.1.1`` | ``foss/2023a``
 ``0.5.1`` |  | ``foss/2023a``
 

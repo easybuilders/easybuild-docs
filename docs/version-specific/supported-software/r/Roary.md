@@ -10,7 +10,6 @@ Rapid large-scale prokaryote pan genome analysis
 
 version | toolchain
 --------|----------
-``3.13.0`` | ``foss/2021a``
 ``3.13.0`` | ``foss/2022a``
 
 

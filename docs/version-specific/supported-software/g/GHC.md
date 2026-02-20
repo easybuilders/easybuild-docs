@@ -10,9 +10,9 @@ The Glorious/Glasgow Haskell Compiler
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``8.6.5`` | ``-x86_64`` | ``system``
 ``9.10.1`` | ``-x86_64`` | ``system``
 ``9.12.2`` |  | ``system``
+``9.12.3`` |  | ``system``
 ``9.2.2`` | ``-x86_64`` | ``system``
 ``9.4.6`` | ``-x86_64`` | ``system``
 

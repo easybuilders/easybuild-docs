@@ -10,7 +10,6 @@ Remove reads mapping to the lambda phage genome from a fastq file.
 
 version | toolchain
 --------|----------
-``1.2.1`` | ``foss/2021a``
 ``1.2.1`` | ``foss/2023a``
 
 

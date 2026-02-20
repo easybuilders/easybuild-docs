@@ -10,7 +10,6 @@ This is a Perl extension interface to James Clark's XML parser, expat.
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.46`` | ``-Perl-5.32.1`` | ``GCCcore/10.3.0``
 ``2.46`` | ``-Perl-5.34.1`` | ``GCCcore/11.3.0``
 ``2.46`` | ``-Perl-5.36.1`` | ``GCCcore/12.3.0``
 ``2.47`` | ``-Perl-5.38.2`` | ``GCCcore/13.3.0``

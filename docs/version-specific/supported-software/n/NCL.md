@@ -10,7 +10,6 @@ NCL is an interpreted language designed specifically for scientific data analysi
 
 version | toolchain
 --------|----------
-``6.6.2`` | ``foss/2021a``
 ``6.6.2`` | ``intel/2025b``
 
 

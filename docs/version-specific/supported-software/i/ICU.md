@@ -10,7 +10,6 @@ ICU is a mature, widely used set of C/C++ and Java libraries providing Unicode a
 
 version | toolchain
 --------|----------
-``69.1`` | ``GCCcore/10.3.0``
 ``69.1`` | ``GCCcore/11.2.0``
 ``71.1`` | ``GCCcore/11.3.0``
 ``72.1`` | ``GCCcore/12.2.0``

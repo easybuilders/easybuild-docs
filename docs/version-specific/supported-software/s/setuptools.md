@@ -11,6 +11,7 @@ Easily download, build, install, upgrade, and uninstall Python packages
 version | toolchain
 --------|----------
 ``64.0.3`` | ``GCCcore/12.2.0``
+``80.10.1`` | ``GCCcore/14.3.0``
 ``80.9.0`` | ``GCCcore/12.3.0``
 ``80.9.0`` | ``GCCcore/13.2.0``
 ``80.9.0`` | ``GCCcore/13.3.0``

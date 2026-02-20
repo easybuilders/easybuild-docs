@@ -10,6 +10,7 @@ TBLIS is a library and framework for performing tensor  operations, especially t
 
 version | toolchain
 --------|----------
+``1.3.0`` | ``foss/2025a``
 ``20230422`` | ``foss/2023a``
 
 

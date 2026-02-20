@@ -10,8 +10,6 @@ ESM-2 outperforms all tested single-sequence protein language models  across a r
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.0.0`` | ``-CUDA-11.3.1`` | ``foss/2021a``
-``2.0.0`` |  | ``foss/2021a``
 ``2.0.0`` |  | ``foss/2022b``
 ``2.0.0`` | ``-CUDA-12.1.1`` | ``foss/2023a``
 ``2.0.0`` |  | ``foss/2023a``

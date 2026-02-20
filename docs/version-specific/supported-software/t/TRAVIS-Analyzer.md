@@ -10,7 +10,6 @@ TRAVIS is a free tool for analyzing and visualizing trajectories from all kinds 
 
 version | toolchain
 --------|----------
-``210521`` | ``GCC/10.3.0``
 ``220729`` | ``GCC/11.3.0``
 ``220729`` | ``GCC/13.3.0``
 

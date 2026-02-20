@@ -10,7 +10,6 @@ The Intel Trace Collector is a low-overhead tracing library that performs  event
 
 version | toolchain
 --------|----------
-``2019.4.036`` | ``system``
 ``2021.10.0`` | ``system``
 ``2021.2.0`` | ``system``
 ``2021.5.0`` | ``system``

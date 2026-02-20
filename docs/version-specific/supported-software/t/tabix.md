@@ -10,7 +10,6 @@ Generic indexer for TAB-delimited genome position files
 
 version | toolchain
 --------|----------
-``0.2.6`` | ``GCCcore/10.3.0``
 ``0.2.6`` | ``GCCcore/11.2.0``
 ``0.2.6`` | ``GCCcore/11.3.0``
 ``0.2.6`` | ``GCCcore/12.3.0``

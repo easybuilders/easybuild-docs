@@ -6,11 +6,10 @@ search:
 
 SimpleITK is a simplified programming interface to the algorithms and data structures of  the Insight Toolkit (ITK).
 
-*homepage*: <http://www.simpleitk.org>
+*homepage*: <https://www.simpleitk.org>
 
 version | toolchain
 --------|----------
-``2.1.1`` | ``foss/2021a``
 ``2.1.1.2`` | ``foss/2021b``
 ``2.1.1.2`` | ``foss/2022a``
 ``2.3.1`` | ``foss/2023a``

@@ -10,7 +10,6 @@ Ruby is a dynamic, open source programming language with  a focus on simplicity 
 
 version | toolchain
 --------|----------
-``3.0.1`` | ``GCCcore/10.3.0``
 ``3.0.1`` | ``GCCcore/11.2.0``
 ``3.0.3`` | ``GCCcore/11.3.0``
 ``3.0.3`` | ``GCCcore/12.3.0``
@@ -18,6 +17,7 @@ version | toolchain
 ``3.2.2`` | ``GCCcore/12.2.0``
 ``3.3.0`` | ``GCCcore/12.3.0``
 ``3.4.2`` | ``GCCcore/13.2.0``
+``3.4.7`` | ``GCCcore/13.3.0``
 ``3.4.7`` | ``GCCcore/14.2.0``
 ``3.4.7`` | ``GCCcore/14.3.0``
 

@@ -10,7 +10,6 @@ Pango is a library for laying out and rendering of text, with an emphasis on int
 
 version | toolchain
 --------|----------
-``1.48.5`` | ``GCCcore/10.3.0``
 ``1.48.8`` | ``GCCcore/11.2.0``
 ``1.50.12`` | ``GCCcore/12.2.0``
 ``1.50.14`` | ``GCCcore/12.3.0``

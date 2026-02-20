@@ -11,7 +11,6 @@ A Command Line Wrapper over the Globus SDK for Python, which provides an interfa
 version | toolchain
 --------|----------
 ``3.16.0`` | ``GCCcore/12.3.0``
-``3.2.0`` | ``GCCcore/10.3.0``
 ``3.34.0`` | ``GCCcore/13.3.0``
 ``3.6.0`` | ``GCCcore/11.2.0``
 

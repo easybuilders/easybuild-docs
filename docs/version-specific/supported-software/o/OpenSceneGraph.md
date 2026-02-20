@@ -10,7 +10,6 @@ The OpenSceneGraph is an open source high performance 3D graphics toolkit, used 
 
 version | toolchain
 --------|----------
-``3.6.5`` | ``foss/2021a``
 ``3.6.5`` | ``foss/2021b``
 ``3.6.5`` | ``foss/2022a``
 ``3.6.5`` | ``foss/2024a``

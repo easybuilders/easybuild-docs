@@ -10,7 +10,6 @@ GeoPandas is a project to add support for geographic data to pandas objects. It 
 
 version | toolchain
 --------|----------
-``0.10.2`` | ``foss/2021a``
 ``0.11.0`` | ``foss/2021b``
 ``0.12.2`` | ``foss/2022a``
 ``0.12.2`` | ``foss/2022b``

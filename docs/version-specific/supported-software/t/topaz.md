@@ -4,14 +4,12 @@ search:
 ---
 # topaz
 
-A pipeline for particle detection in cryo-electron microscopy  images using convolutional neural networks trained from positive and unlabeled  examples. Topaz also includes methods for micrograph denoising using deep de-  noising models.
+Particle picking software for single particle cryo-electron microscopy using convolutional neural networks and positive-unlabeled learning. Includes methods for micrograph denoising.
 
-*homepage*: <https://github.com/tbepler/topaz>
+*homepage*: <http://cb.csail.mit.edu/cb/topaz/>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.2.5`` | ``-CUDA-11.3.1`` | ``foss/2021a``
-``0.2.5`` |  | ``foss/2021a``
 ``0.2.5.20230926`` | ``-CUDA-11.7.0`` | ``foss/2022a``
 ``0.2.5.20231120`` | ``-CUDA-12.1.1`` | ``foss/2023a``
 

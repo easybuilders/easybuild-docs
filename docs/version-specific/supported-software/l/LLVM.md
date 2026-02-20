@@ -10,8 +10,6 @@ The LLVM Core libraries provide a modern source- and target-independent  optimiz
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``11.1.0`` |  | ``GCCcore/10.3.0``
-``12.0.1`` |  | ``GCCcore/10.3.0``
 ``12.0.1`` |  | ``GCCcore/11.2.0``
 ``14.0.3`` |  | ``GCCcore/11.3.0``
 ``14.0.6`` | ``-llvmlite`` | ``GCCcore/12.2.0``

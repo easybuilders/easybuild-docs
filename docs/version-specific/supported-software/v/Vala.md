@@ -10,7 +10,6 @@ Vala is a programming language using modern high level abstractions without impo
 
 version | toolchain
 --------|----------
-``0.52.4`` | ``GCCcore/10.3.0``
 ``0.56.14`` | ``GCCcore/12.3.0``
 ``0.56.18`` | ``GCCcore/13.3.0``
 ``0.56.18`` | ``GCCcore/14.2.0``

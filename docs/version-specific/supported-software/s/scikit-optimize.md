@@ -11,7 +11,6 @@ Scikit-Optimize, or skopt, is a simple and efficient library to minimize (very) 
 version | toolchain
 --------|----------
 ``0.10.2`` | ``foss/2023a``
-``0.9.0`` | ``foss/2021a``
 ``0.9.0`` | ``foss/2022a``
 
 

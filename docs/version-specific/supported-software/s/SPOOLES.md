@@ -10,7 +10,6 @@ SPOOLES is a library for solving sparse real and complex linear  systems of equa
 
 version | toolchain
 --------|----------
-``2.2`` | ``gompi/2021a``
 ``2.2`` | ``gompi/2022b``
 ``2.2`` | ``gompi/2023a``
 

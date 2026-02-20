@@ -18,7 +18,6 @@ version | toolchain
 ``25.5.1-1`` | ``system``
 ``25.7.0-2`` | ``system``
 ``4.12.0`` | ``system``
-``4.8.3`` | ``system``
 ``4.9.2`` | ``system``
 
 

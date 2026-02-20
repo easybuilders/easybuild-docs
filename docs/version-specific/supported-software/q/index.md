@@ -9,12 +9,12 @@ search:
 
 
  * [q2-krona](q2-krona.md)
+ * [qc-grid](qc-grid.md)
  * [QCA](QCA.md)
  * [qcat](qcat.md)
  * [QCG-PilotJob](QCG-PilotJob.md)
  * [QCMaquis](QCMaquis.md)
  * [QCxMS](QCxMS.md)
- * [QD](QD.md)
  * [QEMU](QEMU.md)
  * [qforce](qforce.md)
  * [QGIS](QGIS.md)
@@ -33,7 +33,6 @@ search:
  * [QtKeychain](QtKeychain.md)
  * [QtPy](QtPy.md)
  * [Qualimap](Qualimap.md)
- * [Quandl](Quandl.md)
  * [QuantumESPRESSO](QuantumESPRESSO.md)
  * [quaqc](quaqc.md)
  * [quarto](quarto.md)

@@ -10,7 +10,6 @@ Library for Digital Pathology Image Processing
 
 version | toolchain
 --------|----------
-``0.4.1`` | ``foss/2021a``
 ``0.4.1`` | ``foss/2021b``
 ``0.6.0`` | ``foss/2022a``
 ``0.7.0`` | ``foss/2023a``

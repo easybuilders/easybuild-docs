@@ -10,8 +10,6 @@ QIIME is an open-source bioinformatics pipeline for performing microbiome analys
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2020.11`` |  | ``system``
-``2020.8`` |  | ``system``
 ``2021.8`` |  | ``system``
 ``2022.11`` |  | ``system``
 ``2022.8`` |  | ``system``

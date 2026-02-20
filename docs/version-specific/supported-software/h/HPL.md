@@ -11,7 +11,6 @@ HPL is a software package that solves a (random) dense linear system in double p
 version | versionsuffix | toolchain
 --------|---------------|----------
 ``2.0.15`` | ``-CUDA-11.7.0`` | ``intel/2022a``
-``2.3`` |  | ``foss/2021a``
 ``2.3`` |  | ``foss/2021b``
 ``2.3`` |  | ``foss/2022.05``
 ``2.3`` |  | ``foss/2022.10``
@@ -25,10 +24,7 @@ version | versionsuffix | toolchain
 ``2.3`` |  | ``foss/2025a``
 ``2.3`` |  | ``foss/2025b``
 ``2.3`` |  | ``gmpflf/2024.06``
-``2.3`` |  | ``gobff/2021a``
-``2.3`` |  | ``gomkl/2021a``
 ``2.3`` |  | ``gomkl/2022a``
-``2.3`` |  | ``intel/2021a``
 ``2.3`` |  | ``intel/2021b``
 ``2.3`` |  | ``intel/2022.00``
 ``2.3`` |  | ``intel/2022.09``
@@ -43,7 +39,6 @@ version | versionsuffix | toolchain
 ``2.3`` |  | ``intel/2024a``
 ``2.3`` |  | ``intel/2025a``
 ``2.3`` |  | ``intel/2025b``
-``2.3`` |  | ``iomkl/2021a``
 ``2.3`` |  | ``iomkl/2021b``
 ``2.3`` |  | ``lfoss/2025b``
 ``2.3`` |  | ``lmpflf/2025b``

@@ -6,11 +6,10 @@ search:
 
 The GTK+ 2 package contains libraries used for creating graphical user interfaces for applications.
 
-*homepage*: <https://developer.gnome.org/gtk+/stable/>
+*homepage*: <https://www.gtk.org>
 
 version | toolchain
 --------|----------
-``2.24.33`` | ``GCCcore/10.3.0``
 ``2.24.33`` | ``GCCcore/11.3.0``
 
 

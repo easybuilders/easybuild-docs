@@ -10,8 +10,6 @@ An automated pipeline for analyses of fungal internal transcribed spacer (ITS) s
 
 version | toolchain
 --------|----------
-``2.8`` | ``foss/2021a``
-``3.0`` | ``foss/2021a``
 ``3.0`` | ``foss/2022a``
 
 

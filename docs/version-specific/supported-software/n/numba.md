@@ -10,7 +10,6 @@ Numba is an Open Source NumPy-aware optimizing compiler for Python sponsored by 
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.53.1`` |  | ``foss/2021a``
 ``0.54.1`` | ``-CUDA-11.4.1`` | ``foss/2021b``
 ``0.54.1`` |  | ``foss/2021b``
 ``0.54.1`` |  | ``intel/2021b``

@@ -10,14 +10,12 @@ The Astropy Project is a community effort to develop a single core package for A
 
 version | toolchain
 --------|----------
-``4.3.1`` | ``foss/2021a``
 ``4.3.1`` | ``foss/2021b``
-``4.3.1`` | ``intel/2021a``
-``5.0.4`` | ``foss/2021a``
 ``5.1.1`` | ``foss/2022a``
 ``5.1.1`` | ``intel/2022a``
 ``5.2.2`` | ``gfbf/2022b``
 ``7.0.0`` | ``gfbf/2023b``
+``7.1.0`` | ``gfbf/2024a``
 ``7.1.0`` | ``gfbf/2025b``
 
 

@@ -10,7 +10,6 @@ LAME is a high quality MPEG Audio Layer III (MP3) encoder licensed under the LGP
 
 version | toolchain
 --------|----------
-``3.100`` | ``GCCcore/10.3.0``
 ``3.100`` | ``GCCcore/11.2.0``
 ``3.100`` | ``GCCcore/11.3.0``
 ``3.100`` | ``GCCcore/12.2.0``

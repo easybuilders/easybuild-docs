@@ -10,6 +10,7 @@ A lightweight scientific visualisation tool with a python interface for fast and
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``1.9.9`` | ``-egl`` | ``foss/2023b``
 ``1.9.9`` | ``-egl`` | ``foss/2024a``
 
 

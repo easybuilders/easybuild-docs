@@ -10,7 +10,6 @@ A python extension, written in C, for quick access to bigBed  files and access t
 
 version | toolchain
 --------|----------
-``0.3.18`` | ``foss/2021a``
 ``0.3.18`` | ``foss/2021b``
 ``0.3.18`` | ``foss/2022a``
 ``0.3.22`` | ``foss/2022b``

@@ -10,7 +10,6 @@ Basic Local Alignment Search Tool, or BLAST, is an algorithm  for comparing prim
 
 version | toolchain
 --------|----------
-``2.11.0`` | ``gompi/2021a``
 ``2.12.0`` | ``gompi/2021b``
 ``2.13.0`` | ``gompi/2022a``
 ``2.14.0`` | ``gompi/2022b``
@@ -18,6 +17,7 @@ version | toolchain
 ``2.16.0`` | ``gompi/2023b``
 ``2.16.0`` | ``gompi/2024a``
 ``2.17.0`` | ``gompi/2025a``
+``2.17.0`` | ``gompi/2025b``
 ``2.9.0`` | ``gompi/2021b``
 
 

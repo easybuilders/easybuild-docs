@@ -10,7 +10,6 @@ RSeQC provides a number of useful modules that can  comprehensively evaluate hig
 
 version | toolchain
 --------|----------
-``4.0.0`` | ``foss/2021a``
 ``4.0.0`` | ``foss/2021b``
 ``5.0.1`` | ``foss/2023a``
 ``5.0.4`` | ``foss/2024a``

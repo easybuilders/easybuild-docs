@@ -10,6 +10,7 @@ Pyzstd module provides classes and functions for compressing and decompressing d
 
 version | toolchain
 --------|----------
+``0.16.2`` | ``GCCcore/13.3.0``
 ``0.19.0`` | ``GCCcore/14.3.0``
 
 

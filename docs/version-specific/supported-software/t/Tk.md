@@ -10,7 +10,6 @@ Tk is an open source, cross-platform widget toolchain that provides a library of
 
 version | toolchain
 --------|----------
-``8.6.11`` | ``GCCcore/10.3.0``
 ``8.6.11`` | ``GCCcore/11.2.0``
 ``8.6.12`` | ``GCCcore/11.3.0``
 ``8.6.12`` | ``GCCcore/12.2.0``

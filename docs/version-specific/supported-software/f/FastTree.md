@@ -10,7 +10,6 @@ FastTree infers approximately-maximum-likelihood phylogenetic trees from alignme
 
 version | toolchain
 --------|----------
-``2.1.11`` | ``GCCcore/10.3.0``
 ``2.1.11`` | ``GCCcore/11.2.0``
 ``2.1.11`` | ``GCCcore/11.3.0``
 ``2.1.11`` | ``GCCcore/12.2.0``

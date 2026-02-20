@@ -6,11 +6,10 @@ search:
 
 Portable interactive, function plotting utility
 
-*homepage*: <http://gnuplot.sourceforge.net/>
+*homepage*: <http://gnuplot.sourceforge.net>
 
 version | toolchain
 --------|----------
-``5.4.2`` | ``GCCcore/10.3.0``
 ``5.4.2`` | ``GCCcore/11.2.0``
 ``5.4.4`` | ``GCCcore/11.3.0``
 ``5.4.6`` | ``GCCcore/12.2.0``

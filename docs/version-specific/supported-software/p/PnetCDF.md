@@ -6,12 +6,10 @@ search:
 
 Parallel netCDF: A Parallel I/O Library for NetCDF File Access
 
-*homepage*: <https://trac.mcs.anl.gov/projects/parallel-netcdf>
+*homepage*: <https://parallel-netcdf.github.io/>
 
 version | toolchain
 --------|----------
-``1.12.2`` | ``gompi/2021a``
-``1.12.2`` | ``iimpi/2021a``
 ``1.12.3`` | ``gompi/2021b``
 ``1.12.3`` | ``gompi/2022a``
 ``1.12.3`` | ``gompi/2023a``
@@ -19,6 +17,7 @@ version | toolchain
 ``1.13.0`` | ``gompi/2023b``
 ``1.13.0`` | ``gompi/2024a``
 ``1.13.0`` | ``iimpi/2023a``
+``1.13.0`` | ``iimpi/2023b``
 ``1.14.0`` | ``gompi/2024a``
 ``1.14.0`` | ``gompi/2025a``
 ``1.14.0`` | ``iimpi/2024a``

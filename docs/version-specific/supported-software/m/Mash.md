@@ -10,7 +10,6 @@ Fast genome and metagenome distance estimation using MinHash
 
 version | toolchain
 --------|----------
-``2.3`` | ``GCC/10.3.0``
 ``2.3`` | ``GCC/11.2.0``
 ``2.3`` | ``GCC/11.3.0``
 ``2.3`` | ``GCC/12.2.0``

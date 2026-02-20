@@ -10,7 +10,6 @@ Miniasm is a very fast OLC-based de novo assembler for noisy long reads. It take
 
 version | toolchain
 --------|----------
-``0.3-20191007`` | ``GCCcore/10.3.0``
 ``0.3-20191007`` | ``GCCcore/11.2.0``
 ``0.3-20191007`` | ``GCCcore/12.3.0``
 

@@ -6,11 +6,10 @@ search:
 
 Armadillo is an open-source C++ linear algebra library (matrix maths) aiming towards  a good balance between speed and ease of use. Integer, floating point and complex numbers are supported,  as well as a subset of trigonometric and statistics functions.
 
-*homepage*: <http://arma.sourceforge.net/>
+*homepage*: <https://arma.sourceforge.net/>
 
 version | toolchain
 --------|----------
-``10.7.5`` | ``foss/2021a``
 ``11.4.3`` | ``foss/2022a``
 ``11.4.3`` | ``foss/2022b``
 ``12.6.2`` | ``foss/2023a``

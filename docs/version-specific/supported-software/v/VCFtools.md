@@ -10,7 +10,6 @@ The aim of VCFtools is to provide  easily accessible methods for working with co
 
 version | toolchain
 --------|----------
-``0.1.16`` | ``GCC/10.3.0``
 ``0.1.16`` | ``GCC/11.2.0``
 ``0.1.16`` | ``GCC/11.3.0``
 ``0.1.16`` | ``GCC/12.2.0``

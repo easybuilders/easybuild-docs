@@ -10,7 +10,6 @@ A mutable, self-balancing interval tree. Queries may be by  point, by range over
 
 version | toolchain
 --------|----------
-``3.1.0`` | ``GCCcore/10.3.0``
 ``3.1.0`` | ``GCCcore/11.2.0``
 ``3.1.0`` | ``GCCcore/11.3.0``
 ``3.1.0`` | ``GCCcore/12.2.0``

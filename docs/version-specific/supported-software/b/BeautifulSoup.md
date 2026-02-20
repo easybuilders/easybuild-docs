@@ -10,7 +10,6 @@ Beautiful Soup is a Python library designed for quick turnaround projects like s
 
 version | toolchain
 --------|----------
-``4.10.0`` | ``GCCcore/10.3.0``
 ``4.10.0`` | ``GCCcore/11.2.0``
 ``4.10.0`` | ``GCCcore/11.3.0``
 ``4.11.1`` | ``GCCcore/12.2.0``

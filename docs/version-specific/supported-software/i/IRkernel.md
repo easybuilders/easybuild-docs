@@ -10,7 +10,6 @@ The R kernel for the 'Jupyter' environment executes R code  which the front-end 
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.2`` | ``-R-4.1.0`` | ``foss/2021a``
 ``1.3`` | ``-R-4.2.0`` | ``foss/2021b``
 ``1.3.2`` | ``-R-4.2.1`` | ``foss/2022a``
 ``1.3.2`` | ``-R-4.3.2`` | ``gfbf/2023a``

@@ -10,7 +10,6 @@ Kalign is a fast multiple sequence alignment program for biological sequences.
 
 version | toolchain
 --------|----------
-``3.3.1`` | ``GCCcore/10.3.0``
 ``3.3.2`` | ``GCCcore/11.2.0``
 ``3.3.5`` | ``GCCcore/11.3.0``
 ``3.4.0`` | ``GCCcore/12.3.0``

@@ -10,7 +10,6 @@ D-Bus is a message bus system, a simple way for applications to talk to one anot
 
 version | toolchain
 --------|----------
-``0.112`` | ``GCCcore/10.3.0``
 ``0.112`` | ``GCCcore/11.2.0``
 ``0.112`` | ``GCCcore/11.3.0``
 ``0.112`` | ``GCCcore/12.3.0``

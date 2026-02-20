@@ -10,11 +10,11 @@ petsc4py are Python bindings for PETSc, the Portable, Extensible Toolchain for S
 
 version | toolchain
 --------|----------
-``3.15.0`` | ``foss/2021a``
 ``3.17.4`` | ``foss/2022a``
 ``3.20.3`` | ``foss/2023a``
 ``3.22.5`` | ``foss/2023b``
 ``3.23.5`` | ``foss/2024a``
+``3.23.5`` | ``foss/2025a``
 ``3.24.0`` | ``foss/2025b``
 
 

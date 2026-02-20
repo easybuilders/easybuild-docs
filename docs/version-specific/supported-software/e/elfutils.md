@@ -10,7 +10,6 @@ The elfutils project provides libraries and tools for ELF files  and DWARF data.
 
 version | toolchain
 --------|----------
-``0.185`` | ``GCCcore/10.3.0``
 ``0.185`` | ``GCCcore/11.2.0``
 ``0.187`` | ``GCCcore/11.3.0``
 ``0.189`` | ``GCCcore/12.2.0``

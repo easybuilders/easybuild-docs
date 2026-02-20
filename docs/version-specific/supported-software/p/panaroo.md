@@ -10,7 +10,6 @@ A pangenome analysis pipeline.
 
 version | toolchain
 --------|----------
-``1.2.9`` | ``foss/2021a``
 ``1.3.2`` | ``foss/2021b``
 ``1.5.1`` | ``foss/2023a``
 

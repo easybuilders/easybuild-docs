@@ -10,7 +10,6 @@ NLTK is a leading platform for building Python programs to work with human langu
 
 version | toolchain
 --------|----------
-``3.6.7`` | ``foss/2021a``
 ``3.7`` | ``foss/2021b``
 ``3.8.1`` | ``foss/2022b``
 ``3.8.1`` | ``foss/2023a``

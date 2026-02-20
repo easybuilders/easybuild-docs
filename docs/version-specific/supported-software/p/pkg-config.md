@@ -10,7 +10,6 @@ pkg-config is a helper tool used when compiling applications and libraries.  It 
 
 version | toolchain
 --------|----------
-``0.29.2`` | ``GCCcore/10.3.0``
 ``0.29.2`` | ``GCCcore/11.2.0``
 ``0.29.2`` | ``GCCcore/11.3.0``
 ``0.29.2`` | ``GCCcore/12.2.0``

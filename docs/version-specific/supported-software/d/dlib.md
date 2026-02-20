@@ -10,8 +10,6 @@ Dlib is a modern C++ toolkit containing machine learning algorithms and tools fo
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``19.22`` | ``-CUDA-11.3.1`` | ``foss/2021a``
-``19.22`` |  | ``foss/2021a``
 ``19.24.6`` | ``-CUDA-12.1.1`` | ``foss/2023a``
 
 

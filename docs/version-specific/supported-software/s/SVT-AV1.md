@@ -10,6 +10,9 @@ The Scalable Video Technology for AV1 (SVT-AV1 Encoder) is an AV1-compliant soft
 
 version | toolchain
 --------|----------
+``3.1.2`` | ``GCCcore/13.2.0``
+``3.1.2`` | ``GCCcore/13.3.0``
+``3.1.2`` | ``GCCcore/14.2.0``
 ``3.1.2`` | ``GCCcore/14.3.0``
 
 
