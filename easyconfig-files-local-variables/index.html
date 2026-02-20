@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
@@ -4356,6 +4356,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../api/easybuild/toolchains/compiler/nvhpc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    nvhpc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../api/easybuild/toolchains/compiler/nvidia_compilers/" class="md-nav__link">
         
   
@@ -7203,6 +7231,62 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../api/easybuild/toolchains/lpsflf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsflf
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/easybuild/toolchains/lpsmpi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsmpi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -7212,7 +7296,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_87" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_89" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -7234,14 +7318,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_6_87" id="__nav_11_1_6_87_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11_1_6_89" id="__nav_11_1_6_89_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_87_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_6_87">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_89_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1_6_89">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -11972,11 +12056,11 @@ named local variables:</p>
     <a class="autorefs autorefs-internal" href="#easyconfig_files_local_variables_naming_warning">Warning for local variables that do not follow the recommended naming scheme</a></li>
 <li>EasyBuild can be configured to report an error for local variables
     that do not follow the recommended naming scheme; see
-    <a class="autorefs autorefs-internal" title="Specifying what should be done when non-confirming local variables are found via --local-var-naming-check" href="#easyconfig_files_local_variables_check_mode">Specifying what should be done when non-confirming local variables are found via <code>--local-var-naming-check</code></a></li>
+    <a class="autorefs autorefs-internal" href="#easyconfig_files_local_variables_check_mode">Specifying what should be done when non-confirming local variables are found via <code>--local-var-naming-check</code></a></li>
 <li>using <code>eb --fix-deprecated-easyconfigs</code>, the names of local
     variables can be changed automatically to match the recommended
     naming scheme; see
-    <a class="autorefs autorefs-internal" title="Renaming local variables to match the recommended naming scheme using eb --fix-deprecated-easyconfigs" href="#easyconfig_files_local_variables_fix_deprecated_easyconfigs">Renaming local variables to match the recommended naming scheme using <code>eb --fix-deprecated-easyconfigs</code></a></li>
+    <a class="autorefs autorefs-internal" href="#easyconfig_files_local_variables_fix_deprecated_easyconfigs">Renaming local variables to match the recommended naming scheme using <code>eb --fix-deprecated-easyconfigs</code></a></li>
 </ul>
 <h2 id="easyconfig_files_local_variables_naming_scheme">Recommended naming scheme for local variables in easyconfig files<a class="headerlink" href="#easyconfig_files_local_variables_naming_scheme" title="Permanent link">&para;</a></h2>
 <p>To ensure that local variables used in easyconfig files do not clash
@@ -12016,12 +12100,12 @@ variable named <code>var</code>:</p>
 <li>rename the local variable, either manually to something like
     <code>local_var</code> or using <code>eb --fix-deprecated-easyconfigs example.eb</code>
     (see also
-    <a class="autorefs autorefs-internal" title="Renaming local variables to match the recommended naming scheme using eb --fix-deprecated-easyconfigs" href="#easyconfig_files_local_variables_fix_deprecated_easyconfigs">Renaming local variables to match the recommended naming scheme using <code>eb --fix-deprecated-easyconfigs</code></a>)</li>
+    <a class="autorefs autorefs-internal" href="#easyconfig_files_local_variables_fix_deprecated_easyconfigs">Renaming local variables to match the recommended naming scheme using <code>eb --fix-deprecated-easyconfigs</code></a>)</li>
 <li>configure EasyBuild to only log the warning (not print it), via
     <code>--local-var-naming-check=log</code> (see also
-    <a class="autorefs autorefs-internal" title="Specifying what should be done when non-confirming local variables are found via --local-var-naming-check" href="#easyconfig_files_local_variables_check_mode">Specifying what should be done when non-confirming local variables are found via <code>--local-var-naming-check</code></a>; note that silencing the printed warning is <strong>not
+    <a class="autorefs autorefs-internal" href="#easyconfig_files_local_variables_check_mode">Specifying what should be done when non-confirming local variables are found via <code>--local-var-naming-check</code></a>; note that silencing the printed warning is <strong>not
     recommended</strong>, see the motivation in
-    <a class="autorefs autorefs-internal" href="#easyconfig_files_local_variables_motivation">Motivation &amp; context</a></li>
+    <a class="autorefs autorefs-internal" title="Motivation & context" href="#easyconfig_files_local_variables_motivation">Motivation &amp; context</a></li>
 </ul>
 <h2 id="easyconfig_files_local_variables_check_mode">Specifying what should be done when non-confirming local variables are found via <code>--local-var-naming-check</code><a class="headerlink" href="#easyconfig_files_local_variables_check_mode" title="Permanent link">&para;</a></h2>
 <p>Using the <code>--local-var-naming-check</code> configuration option, you can

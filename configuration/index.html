@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
@@ -4651,6 +4651,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../api/easybuild/toolchains/compiler/nvhpc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    nvhpc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../api/easybuild/toolchains/compiler/nvidia_compilers/" class="md-nav__link">
         
   
@@ -7498,6 +7526,62 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../api/easybuild/toolchains/lpsflf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsflf
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/easybuild/toolchains/lpsmpi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsmpi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -7507,7 +7591,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_87" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_89" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -7529,14 +7613,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_6_87" id="__nav_11_1_6_87_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11_1_6_89" id="__nav_11_1_6_89_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_87_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_6_87">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_89_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1_6_89">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -12732,11 +12816,11 @@ you can use <code>eb --show-config</code>.</p>
 <ul>
 <li>any configuration setting for which the current value is different from the default value </li>
 <li>a couple of selected important configuration settings (even if they are still set to the default value), i.e.:<ul>
-<li><a class="autorefs autorefs-internal" title="Build path (--buildpath)" href="#buildpath">build path</a></li>
+<li><a class="autorefs autorefs-internal" title="Build path (" href="#buildpath">build path</a></li>
 <li><a class="autorefs autorefs-internal" title="Software and modules install path" href="#installpath">install path</a></li>
 <li>[path to easyconfigs repository][easyconfigs_repo]</li>
 <li><a class="autorefs autorefs-internal" title="Searching for easyconfigs: the robot search path" href="../using-easybuild/#robot_search_path">the robot search path</a></li>
-<li><a class="autorefs autorefs-internal" title="Source path (--sourcepath)" href="#sourcepath">source path</a></li>
+<li><a class="autorefs autorefs-internal" title="Source path (" href="#sourcepath">source path</a></li>
 </ul>
 </li>
 <li>through which configuration type each setting was defined<ul>
@@ -12775,7 +12859,7 @@ settings, see <code>eb --help</code>. We refrain from listing all available conf
 in particular the mandatory settings.</p>
 <h3 id="important_configuration_settings">Important configuration settings<a class="headerlink" href="#important_configuration_settings" title="Permanent link">&para;</a></h3>
 <h4 id="sourcepath">Source path (<code>--sourcepath</code>)<a class="headerlink" href="#sourcepath" title="Permanent link">&para;</a></h4>
-<p><em>default</em>: <code>$HOME/.local/easybuild/sources/</code> (determined via <a class="autorefs autorefs-internal" title="Overall prefix path (--prefix)" href="#prefix">Overall prefix path (<code>--prefix</code>)</a>)</p>
+<p><em>default</em>: <code>$HOME/.local/easybuild/sources/</code> (determined via <a class="autorefs autorefs-internal" href="#prefix">Overall prefix path (<code>--prefix</code>)</a>)</p>
 <p>The <code>sourcepath</code> configuration setting specifies the parent path of
 the directory in which EasyBuild looks for software source and install files.</p>
 <p>Looking for the files specified via the <code>sources</code> parameter in the .eb
@@ -12791,7 +12875,7 @@ files in addition to the various <code>easybuild/easyconfigs</code> directories 
 <p>You can specify multiple paths, separated with <code>:</code>, in which EasyBuild will look for sources, but only the first one
 will be used for downloading, so one needs to make sure at least the first path is writable by the user invoking <code>eb</code>.</p>
 <h4 id="buildpath">Build path (<code>--buildpath</code>)<a class="headerlink" href="#buildpath" title="Permanent link">&para;</a></h4>
-<p><em>default</em>: <code>$HOME/.local/easybuild/build/</code> (determined via <a class="autorefs autorefs-internal" title="Overall prefix path (--prefix)" href="#prefix">Overall prefix path (<code>--prefix</code>)</a>)</p>
+<p><em>default</em>: <code>$HOME/.local/easybuild/build/</code> (determined via <a class="autorefs autorefs-internal" href="#prefix">Overall prefix path (<code>--prefix</code>)</a>)</p>
 <p>The <code>buildpath</code> configuration setting specifies the parent path of the
 (temporary) directories in which EasyBuild builds its software packages.</p>
 <p>Each software package is (by default) built in a subdirectory of the
@@ -12810,15 +12894,15 @@ However be aware that multiple parallel builds may fill up <code>/dev/shm</code>
 <p><em>(<code>--installpath</code>, <code>--installpath-software</code>, <code>--installpath-modules</code>)</em></p>
 <p>defaults:</p>
 <ul>
-<li><em>software install path:</em> <code>$HOME/.local/easybuild/software</code>  (determined via <a class="autorefs autorefs-internal" title="Overall prefix path (--prefix)" href="#prefix">Overall prefix path (<code>--prefix</code>)</a> and <code>--subdir-software</code>)</li>
-<li><em>modules install path:</em> <code>$HOME/.local/easybuild/modules/all</code>  (determined via <a class="autorefs autorefs-internal" title="Overall prefix path (--prefix)" href="#prefix">Overall prefix path (<code>--prefix</code>)</a>,
+<li><em>software install path:</em> <code>$HOME/.local/easybuild/software</code>  (determined via <a class="autorefs autorefs-internal" href="#prefix">Overall prefix path (<code>--prefix</code>)</a> and <code>--subdir-software</code>)</li>
+<li><em>modules install path:</em> <code>$HOME/.local/easybuild/modules/all</code>  (determined via <a class="autorefs autorefs-internal" href="#prefix">Overall prefix path (<code>--prefix</code>)</a>,
   <code>--subdir-modules</code> and <code>--suffix-modules-path</code>)</li>
 </ul>
 <p>There are several ways in which the software and modules install path used by EasyBuild can be configured:</p>
 <ul>
 <li>using the direct configuration options <code>--installpath-software</code> and <code>--installpath-modules</code> (see below)</li>
 <li>via the parent install path configuration option <code>--installpath</code> (see below)</li>
-<li>via the overall prefix path configuration option <code>--prefix</code> (see <a class="autorefs autorefs-internal" title="Overall prefix path (--prefix)" href="#prefix">Overall prefix path (<code>--prefix</code>)</a>)</li>
+<li>via the overall prefix path configuration option <code>--prefix</code> (see <a class="autorefs autorefs-internal" href="#prefix">Overall prefix path (<code>--prefix</code>)</a>)</li>
 </ul>
 <h5 id="installpath_direct_options">Direct options<a class="headerlink" href="#installpath_direct_options" title="Permanent link">&para;</a></h5>
 <p><em>(<code>--installpath-software</code> and <code>--installpath-modules</code>)</em></p>
@@ -12846,7 +12930,7 @@ install path named according to the active module naming scheme (default format:
 Additionally, symlinks to the actual module file are installed in a subdirectory of the modules install path
 named according to the value of the <code>moduleclass</code> easyconfig parameter.</p>
 <p>For more information on the module naming scheme used by EasyBuild, see
-<a class="autorefs autorefs-internal" title="Active module naming scheme (--module-naming-scheme)" href="#module_naming_scheme">Active module naming scheme (<code>--module-naming-scheme</code>)</a>.</p>
+<a class="autorefs autorefs-internal" href="#module_naming_scheme">Active module naming scheme (<code>--module-naming-scheme</code>)</a>.</p>
 <h5 id="updating-modulepath">Updating <code>$MODULEPATH</code><a class="headerlink" href="#updating-modulepath" title="Permanent link">&para;</a></h5>
 <p>To make the modules generated by EasyBuild available, the <code>$MODULEPATH</code> environment variable must be updated
 to include the modules install path.</p>
@@ -12870,8 +12954,8 @@ runtime according to the modules install path it is configured with.</p>
 <p>The overall prefix path used by EasyBuild can be specified using the <code>--prefix</code> configuration option.</p>
 <p>This affects the default value of several configuration options:</p>
 <ul>
-<li><a class="autorefs autorefs-internal" title="Source path (--sourcepath)" href="#sourcepath">source path</a></li>
-<li><a class="autorefs autorefs-internal" title="Build path (--buildpath)" href="#buildpath">build path</a></li>
+<li><a class="autorefs autorefs-internal" title="Source path (" href="#sourcepath">source path</a></li>
+<li><a class="autorefs autorefs-internal" title="Build path (" href="#buildpath">build path</a></li>
 <li><a class="autorefs autorefs-internal" title="Software and modules install path" href="#installpath">software and modules install path</a></li>
 <li>[easyconfigs repository path][easyconfigs_repo]</li>
 <li><a class="autorefs autorefs-internal" title="Configuration options" href="../packaging-support/#packaging_config">package path</a></li>
@@ -12928,7 +13012,7 @@ specified using the <code>module-naming-scheme</code> configuration setting.</p>
 <p>Possible values are:</p>
 <ul>
 <li><code>Lua</code>: generate module files in Lua syntax<ul>
-<li>this requires the use of Lmod as a modules tool to consume the module files (see <a class="autorefs autorefs-internal" title="Modules tool (--modules-tool)" href="#modules_tool">modules tool</a>)</li>
+<li>this requires the use of Lmod as a modules tool to consume the module files (see <a class="autorefs autorefs-internal" title="Modules tool (" href="#modules_tool">modules tool</a>)</li>
 <li>module file names will have the <code>.lua</code> extension</li>
 </ul>
 </li>

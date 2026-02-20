@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
@@ -4456,6 +4456,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../api/easybuild/toolchains/compiler/nvhpc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    nvhpc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../api/easybuild/toolchains/compiler/nvidia_compilers/" class="md-nav__link">
         
   
@@ -7303,6 +7331,62 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../api/easybuild/toolchains/lpsflf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsflf
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/easybuild/toolchains/lpsmpi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsmpi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -7312,7 +7396,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_87" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_89" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -7334,14 +7418,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_6_87" id="__nav_11_1_6_87_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11_1_6_89" id="__nav_11_1_6_89_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_87_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_6_87">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_89_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1_6_89">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -12170,18 +12254,18 @@ found, the corresponding loaded module is determined for better
 reporting.</p>
 <p>In case defined <code>$EBROOT*</code> environment variables are found that do not
 match a loaded modules, action is taken as well; see
-<a class="autorefs autorefs-internal" title="Checking of $EBROOT* environment variables" href="#detecting_loaded_modules_EBROOT_env_vars">Checking of <code>$EBROOT*</code> environment variables</a>.</p>
+<a class="autorefs autorefs-internal" href="#detecting_loaded_modules_EBROOT_env_vars">Checking of <code>$EBROOT*</code> environment variables</a>.</p>
 <h2 id="detecting_loaded_modules_action">Action to take if loaded modules are detected<a class="headerlink" href="#detecting_loaded_modules_action" title="Permanent link">&para;</a></h2>
 <p>The action that should be taken when one or more loaded
 (EasyBuild-generated) modules are detected can be specified via the
 <code>--detect-loaded-modules</code> configuration option.</p>
 <p>Supported values include:</p>
 <ul>
-<li><a class="autorefs autorefs-internal" title="error: report error and stop EasyBuild upon detection of loaded modules" href="#detecting_loaded_modules_action_error"><code>error</code>: report error and stop EasyBuild upon detection of loaded modules</a></li>
-<li><a class="autorefs autorefs-internal" title="ignore: ignore any loaded modules" href="#detecting_loaded_modules_action_ignore"><code>ignore</code>: ignore any loaded modules</a></li>
-<li><a class="autorefs autorefs-internal" title="purge: run 'module purge' to clean environment of loaded modules" href="#detecting_loaded_modules_action_purge"><code>purge</code>: run '<code>module purge</code>' to clean environment of loaded modules</a></li>
-<li><a class="autorefs autorefs-internal" title="unload: unload loaded modules" href="#detecting_loaded_modules_action_unload"><code>unload</code>: unload loaded modules</a></li>
-<li><a class="autorefs autorefs-internal" title="warn: print warning and continue upon detection of loaded modules" href="#detecting_loaded_modules_action_warn"><code>warn</code>: print warning and continue upon detection of loaded modules</a>
+<li><a class="autorefs autorefs-internal" href="#detecting_loaded_modules_action_error"><code>error</code>: report error and stop EasyBuild upon detection of loaded modules</a></li>
+<li><a class="autorefs autorefs-internal" href="#detecting_loaded_modules_action_ignore"><code>ignore</code>: ignore any loaded modules</a></li>
+<li><a class="autorefs autorefs-internal" href="#detecting_loaded_modules_action_purge"><code>purge</code>: run '<code>module purge</code>' to clean environment of loaded modules</a></li>
+<li><a class="autorefs autorefs-internal" href="#detecting_loaded_modules_action_unload"><code>unload</code>: unload loaded modules</a></li>
+<li><a class="autorefs autorefs-internal" href="#detecting_loaded_modules_action_warn"><code>warn</code>: print warning and continue upon detection of loaded modules</a>
     (current default)</li>
 </ul>
 <p>The specified action is only taken for non-allowed loaded modules, see
@@ -12302,10 +12386,10 @@ problems.</p>
 <p>Hence, EasyBuild will detect this and act on it, according to the value
 specified to <code>--check-ebroot-env-vars</code>:</p>
 <ul>
-<li><a class="autorefs autorefs-internal" title="error: report error and stop EasyBuild on unknown $EBROOT* environment variables" href="#detecting_loaded_modules_EBROOT_env_vars_error"><code>error</code>: report error and stop EasyBuild on unknown <code>$EBROOT*</code> environment variables</a></li>
-<li><a class="autorefs autorefs-internal" title="ignore: ignore unknown $EBROOT* environment variables" href="#detecting_loaded_modules_EBROOT_env_vars_ignore"><code>ignore</code>: ignore unknown <code>$EBROOT*</code> environment variables</a></li>
-<li><a class="autorefs autorefs-internal" title="unset: unset unknown $EBROOT* environment variables and print warning" href="#detecting_loaded_modules_EBROOT_env_vars_unset"><code>unset</code>: unset unknown <code>$EBROOT*</code> environment variables and print warning</a></li>
-<li><a class="autorefs autorefs-internal" title="warn: print warning for unknown $EBROOT* environment variables and continue" href="#detecting_loaded_modules_EBROOT_env_vars_warn"><code>warn</code>: print warning for unknown <code>$EBROOT*</code> environment variables and continue</a> (current default)</li>
+<li><a class="autorefs autorefs-internal" href="#detecting_loaded_modules_EBROOT_env_vars_error"><code>error</code>: report error and stop EasyBuild on unknown <code>$EBROOT*</code> environment variables</a></li>
+<li><a class="autorefs autorefs-internal" href="#detecting_loaded_modules_EBROOT_env_vars_ignore"><code>ignore</code>: ignore unknown <code>$EBROOT*</code> environment variables</a></li>
+<li><a class="autorefs autorefs-internal" href="#detecting_loaded_modules_EBROOT_env_vars_unset"><code>unset</code>: unset unknown <code>$EBROOT*</code> environment variables and print warning</a></li>
+<li><a class="autorefs autorefs-internal" href="#detecting_loaded_modules_EBROOT_env_vars_warn"><code>warn</code>: print warning for unknown <code>$EBROOT*</code> environment variables and continue</a> (current default)</li>
 </ul>
 <h3 id="detecting_loaded_modules_EBROOT_env_vars_error"><code>error</code>: report error and stop EasyBuild on unknown <code>$EBROOT*</code> environment variables<a class="headerlink" href="#detecting_loaded_modules_EBROOT_env_vars_error" title="Permanent link">&para;</a></h3>
 <p>When configured with <code>--check-ebroot-env-vars=error</code>, EasyBuild will

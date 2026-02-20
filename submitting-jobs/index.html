@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
@@ -4534,6 +4534,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../api/easybuild/toolchains/compiler/nvhpc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    nvhpc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../api/easybuild/toolchains/compiler/nvidia_compilers/" class="md-nav__link">
         
   
@@ -7381,6 +7409,62 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../api/easybuild/toolchains/lpsflf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsflf
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/easybuild/toolchains/lpsmpi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsmpi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -7390,7 +7474,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_87" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_89" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -7412,14 +7496,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_6_87" id="__nav_11_1_6_87_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11_1_6_89" id="__nav_11_1_6_89_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_87_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_6_87">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_89_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1_6_89">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -12293,9 +12377,9 @@
 <h1 id="submitting_jobs">Submitting jobs using <code>--job</code><a class="headerlink" href="#submitting_jobs" title="Permanent link">&para;</a></h1>
 <p>Topics:</p>
 <ul>
-<li><a class="autorefs autorefs-internal" title="Quick introduction to --job" href="#submitting_jobs_quick_intro">Quick introduction to <code>--job</code></a></li>
-<li><a class="autorefs autorefs-internal" title="Configuring --job" href="#submitting_jobs_configuration">Configuring <code>--job</code></a></li>
-<li><a class="autorefs autorefs-internal" title="Usage of --job" href="#submitting_jobs_usage">Usage of <code>--job</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#submitting_jobs_quick_intro">Quick introduction to <code>--job</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#submitting_jobs_configuration">Configuring <code>--job</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#submitting_jobs_usage">Usage of <code>--job</code></a></li>
 <li><a class="autorefs autorefs-internal" href="#submitting_jobs_examples">Examples</a></li>
 </ul>
 <h2 id="submitting_jobs_quick_intro">Quick introduction to <code>--job</code><a class="headerlink" href="#submitting_jobs_quick_intro" title="Permanent link">&para;</a></h2>
@@ -12321,7 +12405,7 @@ by the software dependency graph(s).</p>
 <li><code>GC3Pie</code> <em>(deprecated)</em><ul>
 <li><code>GC3Pie</code> version 2.5.0 (or more recent) required (<a href="https://gc3pie.readthedocs.org">https://gc3pie.readthedocs.org</a>)</li>
 <li>works with different resource managers and job schedulers, including TORQUE/PBS, Slurm, etc.</li>
-<li><strong>note</strong>: requires that a GC3Pie configuration file is provided, see <a class="autorefs autorefs-internal" title="Configuring the job backend (--job-backend-config)" href="#submitting_jobs_cfg_job_backend_config">Configuring the job backend</a></li>
+<li><strong>note</strong>: requires that a GC3Pie configuration file is provided, see <a class="autorefs autorefs-internal" title="Configuring the job backend (" href="#submitting_jobs_cfg_job_backend_config">Configuring the job backend</a></li>
 </ul>
 </li>
 </ul>
@@ -12400,12 +12484,12 @@ using a floating-point value representing the number of seconds between two chec
 <p>To make EasyBuild submit jobs to the job backend rather than performing the installations directly, the <code>--job</code>
 command line option can be used.</p>
 <p>This following assumes that the required configuration settings w.r.t. the job backend to use are in place, see
-<a class="autorefs autorefs-internal" title="Configuring --job" href="#submitting_jobs_configuration">Configuring <code>--job</code></a>.</p>
+<a class="autorefs autorefs-internal" href="#submitting_jobs_configuration">Configuring <code>--job</code></a>.</p>
 <h3 id="submitting_jobs_usage_pbs_python">Submitting jobs to a <code>PbsPython</code> or <code>Slurm</code> backend<a class="headerlink" href="#submitting_jobs_usage_pbs_python" title="Permanent link">&para;</a></h3>
 <p>When using the <code>PbsPython</code> or <code>Slurm</code> backend, EasyBuild will submit separate jobs for each installation
 to be performed, and then exit reporting a list of submitted jobs.</p>
 <p>To ensure that the installations are performed in the order dictated by the software dependency graph, dependencies
-between installations are specified via <em>job dependencies</em> (see also <a class="autorefs autorefs-internal" title="Job dependency type (-job-deps-type)" href="#submitting_jobs_job_dependency_type">Job dependency type (<code>-job-deps-type</code>)</a>).</p>
+between installations are specified via <em>job dependencies</em> (see also <a class="autorefs autorefs-internal" href="#submitting_jobs_job_dependency_type">Job dependency type (<code>-job-deps-type</code>)</a>).</p>
 <p>See also <a class="autorefs autorefs-internal" href="#submitting_jobs_examples_pbs_python_backend">Example: submitting installations to TORQUE via pbs_python</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -12416,7 +12500,7 @@ depend on it were submitted, the submission process may fail.</p>
 <h3 id="submitting_jobs_usage_gc3pie">Submitting jobs to a <code>GC3Pie</code> backend<a class="headerlink" href="#submitting_jobs_usage_gc3pie" title="Permanent link">&para;</a></h3>
 <p>When using the <code>GC3Pie</code> backend, EasyBuild will create separate tasks for each installation to be performed and
 supply them to GC3Pie, which will then take over and pass the installations through as jobs to the available
-resource(s) (see also <a class="autorefs autorefs-internal" title="Configuring the job backend (--job-backend-config)" href="#submitting_jobs_cfg_job_backend_config">Configuring the job backend</a>).</p>
+resource(s) (see also <a class="autorefs autorefs-internal" title="Configuring the job backend (" href="#submitting_jobs_cfg_job_backend_config">Configuring the job backend</a>).</p>
 <p>To ensure that the installations are performed in the order dictated by the software dependency graph, dependencies
 between installations are specified to GC3Pie as inter-task dependencies. GC3Pie will then gradually feed the
 installations to its available resources as their dependencies have been satisfied.</p>
@@ -12425,7 +12509,7 @@ installations to its available resources as their dependencies have been satisfi
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <code>eb</code> process will not exit until the full set of tasks that GC3Pie was provided with has been processed.
-An overall progress report will be printed regularly (see also <a class="autorefs autorefs-internal" title="Job polling interval (--job-polling-interval)" href="#submitting_jobs_cfg_job_polling_interval">Job polling interval (<code>--job-polling-interval</code>)</a>).
+An overall progress report will be printed regularly (see also <a class="autorefs autorefs-internal" href="#submitting_jobs_cfg_job_polling_interval">Job polling interval (<code>--job-polling-interval</code>)</a>).
 As such, it is advised to run the <code>eb</code> process in a screen/tmux session when using the GC3Pie backend for
 <code>--job</code>.</p>
 </div>
@@ -12494,7 +12578,7 @@ This section includes a couple of examples of GC3Pie configuration files (see al
 </code></pre></div>
 <h3 id="submitting_jobs_examples_gc3pie_backend">Example: submitting installations to SLURM via GC3Pie<a class="headerlink" href="#submitting_jobs_examples_gc3pie_backend" title="Permanent link">&para;</a></h3>
 <p>When submitting jobs to the <code>GC3Pie</code> job backend, the <code>eb</code> process will not exit until all tasks have been
-completed. A job overview will be printed every N seconds (see <a class="autorefs autorefs-internal" title="Job polling interval (--job-polling-interval)" href="#submitting_jobs_cfg_job_polling_interval">Job polling interval (<code>--job-polling-interval</code>)</a>).</p>
+completed. A job overview will be printed every N seconds (see <a class="autorefs autorefs-internal" href="#submitting_jobs_cfg_job_polling_interval">Job polling interval (<code>--job-polling-interval</code>)</a>).</p>
 <p>Jobs are only submitted to the resource manager (SLURM, in this case) when all task dependencies have been resolved.</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_JOB_BACKEND</span><span class="o">=</span>GC3Pie
 <span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_JOB_BACKEND_CONFIG</span><span class="o">=</span><span class="nv">$PWD</span>/gc3pie.cfg

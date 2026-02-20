@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
@@ -4384,6 +4384,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../api/easybuild/toolchains/compiler/nvhpc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    nvhpc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../api/easybuild/toolchains/compiler/nvidia_compilers/" class="md-nav__link">
         
   
@@ -7231,6 +7259,62 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../api/easybuild/toolchains/lpsflf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsflf
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/easybuild/toolchains/lpsmpi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsmpi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -7240,7 +7324,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_87" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_89" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -7262,14 +7346,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_6_87" id="__nav_11_1_6_87_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11_1_6_89" id="__nav_11_1_6_89_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_87_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_6_87">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_89_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1_6_89">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -12043,15 +12127,15 @@ It has been replaced with the <code>--add-system-to-minimal-toolchains</code> co
 <h2 id="system_toolchain_updating_dummy">Updating easyconfig files that use the <code>dummy</code> toolchain<a class="headerlink" href="#system_toolchain_updating_dummy" title="Permanent link">&para;</a></h2>
 <p>To update easyconfig files that still use the <code>dummy</code> toolchain, you should simply change the definition
 of the <code>toolchain</code> parameter to use <code>'system'</code> as a toolchain name (see also <a class="autorefs autorefs-internal" href="#system_toolchain_usage">Using the system compiler</a>).</p>
-<p>We recommend using the <code>SYSTEM</code> constant for this, see <a class="autorefs autorefs-internal" title="SYSTEM constant" href="#system_toolchain_SYSTEM_constant"><code>SYSTEM</code> constant</a>.</p>
+<p>We recommend using the <code>SYSTEM</code> constant for this, see <a class="autorefs autorefs-internal" href="#system_toolchain_SYSTEM_constant"><code>SYSTEM</code> constant</a>.</p>
 <p>To automatically update easyconfig files still using the <code>dummy</code> toolchain, you can also use
 <code>eb --fix-deprecated-easyconfigs</code>. Do take into account that this option could also result in
 additional changes being made to the easyconfig files,
-see <a class="autorefs autorefs-internal" title="Renaming local variables to match the recommended naming scheme using eb --fix-deprecated-easyconfigs" href="../easyconfig-files-local-variables/#easyconfig_files_local_variables_fix_deprecated_easyconfigs">Renaming local variables to match the recommended naming scheme using <code>eb --fix-deprecated-easyconfigs</code></a>.</p>
+see <a class="autorefs autorefs-internal" href="../easyconfig-files-local-variables/#easyconfig_files_local_variables_fix_deprecated_easyconfigs">Renaming local variables to match the recommended naming scheme using <code>eb --fix-deprecated-easyconfigs</code></a>.</p>
 <h2 id="system_toolchain_motivation_deprecating_dummy">Motivation for deprecating the <code>dummy</code> toolchain<a class="headerlink" href="#system_toolchain_motivation_deprecating_dummy" title="Permanent link">&para;</a></h2>
 <p>Deprecating the <code>dummy</code> toolchain was done for a number of reasons:</p>
 <ul>
-<li><a class="autorefs autorefs-internal" title="dummy toolchain name" href="#system_toolchain_motivation_deprecating_dummy_name"><code>dummy</code> toolchain name</a></li>
+<li><a class="autorefs autorefs-internal" href="#system_toolchain_motivation_deprecating_dummy_name"><code>dummy</code> toolchain name</a></li>
 <li><a class="autorefs autorefs-internal" href="#system_toolchain_motivation_deprecating_dummy_version_and_deps">Impact of version of dummy toolchain w.r.t. dependencies</a></li>
 </ul>
 <h3 id="system_toolchain_motivation_deprecating_dummy_name"><code>dummy</code> toolchain name<a class="headerlink" href="#system_toolchain_motivation_deprecating_dummy_name" title="Permanent link">&para;</a></h3>

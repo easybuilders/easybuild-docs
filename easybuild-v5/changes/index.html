@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
@@ -4241,6 +4241,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api/easybuild/toolchains/compiler/nvhpc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    nvhpc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api/easybuild/toolchains/compiler/nvidia_compilers/" class="md-nav__link">
         
   
@@ -7088,6 +7116,62 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../api/easybuild/toolchains/lpsflf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsflf
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/easybuild/toolchains/lpsmpi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsmpi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -7097,7 +7181,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_87" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_89" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -7119,14 +7203,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_6_87" id="__nav_11_1_6_87_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11_1_6_89" id="__nav_11_1_6_89_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_87_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_6_87">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_89_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1_6_89">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -12269,33 +12353,33 @@
 <p>The default value for several EasyBuild configuration settings has been changed in EasyBuild v5.0.</p>
 <p><strong>Changed default configuration in EasyBuild framework</strong></p>
 <ul>
-<li><a class="autorefs autorefs-internal" title="RPATH linking is enabled by default (--rpath)" href="#rpath">RPATH linking is enabled by default (<code>--rpath</code>)</a></li>
-<li><a class="autorefs autorefs-internal" title="Trace output is enabled by default (--trace)" href="#trace">Trace output is enabled by default (<code>--trace</code>)</a></li>
-<li><a class="autorefs autorefs-internal" title="Including extensions statement in generated modules is enabled by default (module-extensions)" href="#module-extensions">Including <code>extensions</code> statement in generated modules is enabled by default (<code>--module-extensions</code>)</a></li>
-<li><a class="autorefs autorefs-internal" title="Using depends_on for dependencies in generated modules is enabled by default (module-depends-on)" href="#module-depends-on">Using <code>depends_on</code> for dependencies in generated modules is enabled by default (<code>module-depends-on</code>)</a></li>
-<li><a class="autorefs autorefs-internal" title="Use Slurm as default job backend (job-backend)" href="#job-backend">Use Slurm as default job backend (<code>--job-backend</code>)</a></li>
-<li><a class="autorefs autorefs-internal" title="Default maximum build parallelism is set to 16 (max-parallel)" href="#max-parallel-16">Default maximum build parallelism is set to 16 (<code>--max-parallel</code>)</a></li>
+<li><a class="autorefs autorefs-internal" href="#rpath">RPATH linking is enabled by default (<code>--rpath</code>)</a></li>
+<li><a class="autorefs autorefs-internal" href="#trace">Trace output is enabled by default (<code>--trace</code>)</a></li>
+<li><a class="autorefs autorefs-internal" href="#module-extensions">Including <code>extensions</code> statement in generated modules is enabled by default (<code>--module-extensions</code>)</a></li>
+<li><a class="autorefs autorefs-internal" href="#module-depends-on">Using <code>depends_on</code> for dependencies in generated modules is enabled by default (<code>module-depends-on</code>)</a></li>
+<li><a class="autorefs autorefs-internal" href="#job-backend">Use Slurm as default job backend (<code>--job-backend</code>)</a></li>
+<li><a class="autorefs autorefs-internal" href="#max-parallel-16">Default maximum build parallelism is set to 16 (<code>--max-parallel</code>)</a></li>
 </ul>
 <p><strong>Changed behaviour in EasyBuild framework</strong></p>
 <ul>
-<li><a class="autorefs autorefs-internal" title="Change semantics of --dry-run (-D), so it doesn't imply --robot (-r)" href="#dry-run-robot">Change semantics of <code>--dry-run</code> (<code>-D</code>), so it doesn't imply <code>--robot</code> (<code>-r</code>)</a></li>
-<li><a class="autorefs autorefs-internal" title="Move verifying of checksums from source to fetch step, to include it with --fetch" href="#verifying-checksums">Move verifying of checksums from <code>source</code> to <code>fetch</code> step, to include it with <code>--fetch</code></a></li>
-<li><a class="autorefs autorefs-internal" title="Create lib to lib64 symlink (and vice versa) before running postinstallcmds" href="#lib-lib64-symlink">Create <code>lib</code> to <code>lib64</code> symlink (and vice versa) <em>before</em> running <code>postinstallcmds</code></a></li>
-<li><a class="autorefs autorefs-internal" title="Use sha256 as the default checksum type" href="#sha256">Use <code>sha256</code> as the default checksum type</a></li>
-<li><a class="autorefs autorefs-internal" title="Use default value $XDG_CONFIG_DIRS from XDG basedir spec: /etc/xdg (instead of /etc)" href="#XDG_CONFIG_DIRS_default">Use default value <code>$XDG_CONFIG_DIRS</code> from XDG basedir spec: <code>/etc/xdg</code> (instead of <code>/etc</code>)</a></li>
-<li><a class="autorefs autorefs-internal" title="Reverse order for parsing files in $XDG_CONFIG_DIRS" href="#XDG_CONFIG_DIRS_order">Reverse order for parsing files in <code>$XDG_CONFIG_DIRS</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#dry-run-robot">Change semantics of <code>--dry-run</code> (<code>-D</code>), so it doesn't imply <code>--robot</code> (<code>-r</code>)</a></li>
+<li><a class="autorefs autorefs-internal" href="#verifying-checksums">Move verifying of checksums from <code>source</code> to <code>fetch</code> step, to include it with <code>--fetch</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#lib-lib64-symlink">Create <code>lib</code> to <code>lib64</code> symlink (and vice versa) <em>before</em> running <code>postinstallcmds</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#sha256">Use <code>sha256</code> as the default checksum type</a></li>
+<li><a class="autorefs autorefs-internal" href="#XDG_CONFIG_DIRS_default">Use default value <code>$XDG_CONFIG_DIRS</code> from XDG basedir spec: <code>/etc/xdg</code> (instead of <code>/etc</code>)</a></li>
+<li><a class="autorefs autorefs-internal" href="#XDG_CONFIG_DIRS_order">Reverse order for parsing files in <code>$XDG_CONFIG_DIRS</code></a></li>
 <li><a class="autorefs autorefs-internal" href="#unresolved-templates">Don't allow unresolved templates in easyconfig parameters by default</a></li>
-<li><a class="autorefs autorefs-internal" title="Refactor make_extension_string method in EasyBlock class" href="#make_extension_string">Refactor <code>make_extension_string</code> method in <code>EasyBlock</code> class</a></li>
-<li><a class="autorefs autorefs-internal" title="Change default for change_into_dir option in extract_file function to to False" href="#extract_file">Change default for <code>change_into_dir</code> option in <code>extract_file</code> function to to <code>False</code></a></li>
-<li><a class="autorefs autorefs-internal" title="Change Toolchain.get_flag so it doesn't automatically prepend a dash (-) to compiler" href="#toolchain-get-flag-dash">Change <code>Toolchain.get_flag</code> so it doesn't automatically prepend a dash (<code>-</code>) to compiler</a></li>
+<li><a class="autorefs autorefs-internal" href="#make_extension_string">Refactor <code>make_extension_string</code> method in <code>EasyBlock</code> class</a></li>
+<li><a class="autorefs autorefs-internal" href="#extract_file">Change default for <code>change_into_dir</code> option in <code>extract_file</code> function to to <code>False</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#toolchain-get-flag-dash">Change <code>Toolchain.get_flag</code> so it doesn't automatically prepend a dash (<code>-</code>) to compiler</a></li>
 <li>[Enforce correct <code>.patch(.*)</code> extension for patch files][patch-extension]</li>
 <li><a class="autorefs autorefs-internal" href="#sanity-check-commands">Run sanity checks commands from an empty temporary directory rather than the software install directory</a></li>
-<li><a class="autorefs autorefs-internal" title="Only allow use of rpath toolchain option when system toolchain is used" href="#system-toolchain-options">Only allow use of <code>rpath</code> toolchain option when <code>system</code> toolchain is used</a></li>
+<li><a class="autorefs autorefs-internal" href="#system-toolchain-options">Only allow use of <code>rpath</code> toolchain option when <code>system</code> toolchain is used</a></li>
 </ul>
 <p><strong>Changed defaults in easyblocks</strong></p>
 <ul>
-<li><a class="autorefs autorefs-internal" title="download_dep_fail, use_pip, sanity_pip_check are enabled by default for Python package installations" href="#python-pkgs-defaults"><code>download_dep_fail</code>, <code>use_pip</code>, <code>sanity_pip_check</code> are enabled by default for Python package installations</a></li>
-<li><a class="autorefs autorefs-internal" title="CMakeMake easyblock sets LIBDIR configuration option to lib by default" href="#cmakemake-libdir"><code>CMakeMake</code> easyblock sets <code>LIBDIR</code> configuration option to <code>lib</code> by default</a></li>
+<li><a class="autorefs autorefs-internal" href="#python-pkgs-defaults"><code>download_dep_fail</code>, <code>use_pip</code>, <code>sanity_pip_check</code> are enabled by default for Python package installations</a></li>
+<li><a class="autorefs autorefs-internal" href="#cmakemake-libdir"><code>CMakeMake</code> easyblock sets <code>LIBDIR</code> configuration option to <code>lib</code> by default</a></li>
 </ul>
 <hr />
 <h2 id="rpath">RPATH linking is enabled by default (<code>--rpath</code>)<a class="headerlink" href="#rpath" title="Permanent link">&para;</a></h2>
@@ -12304,7 +12388,7 @@
 <p>This enhancement <strong>does not</strong> add any filtering of environment variables. This means <code>$LD_LIBRARY_PATH</code>
 will continue to be appended by the environment module files EasyBuild generates,
 unless it is configured to filter these variables (via <code>--filter-env-vars</code>,
-see also <a class="autorefs autorefs-internal" title="Relation to $LD_LIBRARY_PATH" href="../../rpath-support/#rpath_support_LD_LIBRARY_PATH">Relation to <code>$LD_LIBRARY_PATH</code></a>).</p>
+see also <a class="autorefs autorefs-internal" href="../../rpath-support/#rpath_support_LD_LIBRARY_PATH">Relation to <code>$LD_LIBRARY_PATH</code></a>).</p>
 <p>The RPATH part of the EasyBuild sanity check has been relaxed (by default,
 to allow for installing software that uses RPATH linking on top of existing software installations that do not use RPATH.
 The RPATH sanity check can be made strict again via the <code>strict-rpath-sanity-check</code> EasyBuild configuration setting.</p>
@@ -12364,7 +12448,7 @@ Those wanting the previous behaviour should use both options together <code>--dr
 <h2 id="verifying-checksums">Move verifying of checksums from <code>source</code> to <code>fetch</code> step, to include it with <code>--fetch</code><a class="headerlink" href="#verifying-checksums" title="Permanent link">&para;</a></h2>
 <p>Checksums are now verified in the <code>fetch</code> step, instead of the <code>source</code> step.
 This means that the checksums are verified at the point EasyBuild checks that the file is present or downloads it if it is not.</p>
-<p>Note, also, that the <a class="autorefs autorefs-internal" title="'source' step" href="../deprecated-functionality/#source-step"><code>source</code> step has been renamed to <code>extract</code> step</a>.</p>
+<p>Note, also, that the <a class="autorefs autorefs-internal" href="../deprecated-functionality/#source-step"><code>source</code> step has been renamed to <code>extract</code> step</a>.</p>
 <hr />
 <h2 id="lib-lib64-symlink">Create <code>lib</code> to <code>lib64</code> symlink (and vice versa) <em>before</em> running <code>postinstallcmds</code><a class="headerlink" href="#lib-lib64-symlink" title="Permanent link">&para;</a></h2>
 <p>In EasyBuild 5.0 the <code>lib</code> / <code>lib64</code> symlink is created before running the <code>postinstallcmds</code>.

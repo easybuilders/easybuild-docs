@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
@@ -4725,6 +4725,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../toolchains/compiler/nvhpc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    nvhpc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../toolchains/compiler/nvidia_compilers/" class="md-nav__link">
         
   
@@ -7572,6 +7600,62 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../../../toolchains/lpsflf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsflf
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../toolchains/lpsmpi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsmpi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -7581,7 +7665,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_87" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_89" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -7603,14 +7687,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_6_87" id="__nav_11_1_6_87_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11_1_6_89" id="__nav_11_1_6_89_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_87_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_6_87">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_89_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1_6_89">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -12943,7 +13027,8 @@ it will update the data (if not None) (and not raise an error)</p>
             </td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>if versop_new already exist and has data set, try to update the existing data with the new data; instead of overriding the existing data with the new data (method used for updating is .update)</p>
+                <p>if versop_new already exist and has data set, try to update the existing data with the new data;
+instead of overriding the existing data with the new data (method used for updating is .update)</p>
               </div>
               <p>
                   <span class="doc-param-default">
@@ -13370,7 +13455,17 @@ Returns None in case of conflict.</p>
             </td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>a VersionOperator instance  Examples: '&gt; 2' &gt; '&gt; 1' : True, order by strictness equals order by boundaries for &gt;, &gt;= '&lt; 8' &gt; '&lt; 10': True, order by strictness equals inversed order by boundaries for &lt;, &lt;= '== 4' &gt; '&gt; 3' : equality is more strict than inequality, but this order by boundaries '&gt; 3' &gt; '== 2' : there is no overlap, so just order the intervals according their boundaries '&gt; 1' &gt; '== 1' &gt; '&lt; 1' : no overlap, same boundaries, order by operator suffix: '&gt; 2' &gt; '&gt; 1': both equal (both None), ordering like above '&gt; 2 suffix:-x1' &gt; '&gt; 1 suffix:-x1': both equal (both -x1), ordering like above '&gt; 2 suffix:-x1' &gt; '&gt; 1 suffix:-x2': not equal, conflict</p>
+                <p>a VersionOperator instance</p>
+<p>Examples:
+    '&gt; 2' &gt; '&gt; 1' : True, order by strictness equals order by boundaries for &gt;, &gt;=
+    '&lt; 8' &gt; '&lt; 10': True, order by strictness equals inversed order by boundaries for &lt;, &lt;=
+    '== 4' &gt; '&gt; 3' : equality is more strict than inequality, but this order by boundaries
+    '&gt; 3' &gt; '== 2' : there is no overlap, so just order the intervals according their boundaries
+    '&gt; 1' &gt; '== 1' &gt; '&lt; 1' : no overlap, same boundaries, order by operator
+    suffix:
+        '&gt; 2' &gt; '&gt; 1': both equal (both None), ordering like above
+        '&gt; 2 suffix:-x1' &gt; '&gt; 1 suffix:-x1': both equal (both -x1), ordering like above
+        '&gt; 2 suffix:-x1' &gt; '&gt; 1 suffix:-x2': not equal, conflict</p>
               </div>
               <p>
               </p>
@@ -13721,7 +13816,17 @@ Returns True in case of success, throws an error in case of parsing failure.</p>
             </td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>a VersionOperator instance  Examples: '&gt; 3' and '&gt; 3' : equal, and thus overlap (no conflict) '&gt; 3' and '&lt; 2' : no overlap '&lt; 3' and '&gt; 2' : overlap, and conflict (region between 2 and 3 is ambiguous) '&gt; 3' and '== 3' : no overlap '&gt;= 3' and '== 3' : overlap, and conflict (boundary 3 is ambigous) '&gt; 3' and '&gt;= 3' : overlap, no conflict ('&gt; 3' is more strict then '&gt;= 3')  # suffix '&gt; 2 suffix:-x1' &gt; '&gt; 1 suffix:-x2': suffix not equal, conflict</p>
+                <p>a VersionOperator instance</p>
+<p>Examples:
+    '&gt; 3' and '&gt; 3' : equal, and thus overlap (no conflict)
+    '&gt; 3' and '&lt; 2' : no overlap
+    '&lt; 3' and '&gt; 2' : overlap, and conflict (region between 2 and 3 is ambiguous)
+    '&gt; 3' and '== 3' : no overlap
+    '&gt;= 3' and '== 3' : overlap, and conflict (boundary 3 is ambigous)
+    '&gt; 3' and '&gt;= 3' : overlap, no conflict ('&gt; 3' is more strict then '&gt;= 3')</p>
+<pre><code># suffix
+'&gt; 2 suffix:-x1' &gt; '&gt; 1 suffix:-x2': suffix not equal, conflict
+</code></pre>
               </div>
               <p>
               </p>

@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
@@ -4237,6 +4237,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../api/easybuild/toolchains/compiler/nvhpc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    nvhpc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../api/easybuild/toolchains/compiler/nvidia_compilers/" class="md-nav__link">
         
   
@@ -7084,6 +7112,62 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../../../api/easybuild/toolchains/lpsflf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsflf
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api/easybuild/toolchains/lpsmpi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsmpi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -7093,7 +7177,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_87" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_89" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -7115,14 +7199,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_6_87" id="__nav_11_1_6_87_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11_1_6_89" id="__nav_11_1_6_89_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_87_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_6_87">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_89_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1_6_89">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -11742,7 +11826,7 @@
 
 
 <h1 id="rstudio-server">RStudio-Server<a class="headerlink" href="#rstudio-server" title="Permanent link">&para;</a></h1>
-<p>This is the RStudio Server version. RStudio is a set of integrated tools designed to help you be more productive with R.  The server can be started with:   rserver --server-daemonize=0 --www-port 8787 --rsession-which-r=$(which R)</p>
+<p>This is the RStudio Server version. RStudio is a set of integrated tools designed to help you be more productive with R.  The server can be started with:   rserver --server-daemonize=0 --www-port=8787  If you need a database config one can be created with:   MYTMP=<code>mktemp -d</code> &amp;&amp; echo -e "provider=sqlite\ndirectory=${MYTMP}/sqlite" &gt; "${MYTMP}/db.conf" and then used with:   rserver ... --database-config-file="${MYTMP}/db.conf"</p>
 <p><em>homepage</em>: <a href="https://www.rstudio.com/">https://www.rstudio.com/</a></p>
 <table>
 <thead>
@@ -11753,11 +11837,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>1.4.1717</code></td>
-<td><code>-Java-11-R-4.1.0</code></td>
-<td><code>foss/2021a</code></td>
-</tr>
 <tr>
 <td><code>2022.07.2+576</code></td>
 <td><code>-Java-11-R-4.2.1</code></td>
@@ -11782,6 +11861,11 @@
 <td><code>2024.12.0+467</code></td>
 <td><code>-R-4.4.2</code></td>
 <td><code>foss/2024a</code></td>
+</tr>
+<tr>
+<td><code>2025.09.2+418</code></td>
+<td><code>-R-4.5.1</code></td>
+<td><code>foss/2025a</code></td>
 </tr>
 </tbody>
 </table>

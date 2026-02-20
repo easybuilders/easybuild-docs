@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
@@ -4241,6 +4241,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api/easybuild/toolchains/compiler/nvhpc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    nvhpc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api/easybuild/toolchains/compiler/nvidia_compilers/" class="md-nav__link">
         
   
@@ -7088,6 +7116,62 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../api/easybuild/toolchains/lpsflf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsflf
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/easybuild/toolchains/lpsmpi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsmpi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -7097,7 +7181,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_87" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_89" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -7119,14 +7203,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_6_87" id="__nav_11_1_6_87_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11_1_6_89" id="__nav_11_1_6_89_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_87_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_6_87">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_89_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1_6_89">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -12246,26 +12330,26 @@
 <p><em>(for a full overview of changes in EasyBuild v5.0, see <a href="../">here</a>)</em></p>
 <p>Various significant enhancements are included in EasyBuild v5.0, including:</p>
 <ul>
-<li><a class="autorefs autorefs-internal" title="New function to run shell commands: run_shell_cmd" href="#run_shell_cmd">New function to run shell commands: <code>run_shell_cmd</code></a></li>
-<li><a class="autorefs autorefs-internal" title="Interactive debugging of failing shell commands via env.sh and cmd.sh scripts" href="#interactive-debugging-failing-shell-commands">Interactive debugging of failing shell commands via <code>env.sh</code> and <code>cmd.sh</code> scripts</a></li>
+<li><a class="autorefs autorefs-internal" href="#run_shell_cmd">New function to run shell commands: <code>run_shell_cmd</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#interactive-debugging-failing-shell-commands">Interactive debugging of failing shell commands via <code>env.sh</code> and <code>cmd.sh</code> scripts</a></li>
 <li><a class="autorefs autorefs-internal" href="#collection-easyconfig-templates">New collection of easyconfig templates</a></li>
 <li><a class="autorefs autorefs-internal" href="#parallel-extensions-install-stable">Mark support for installing extensions in parallel as stable (no longer experimental)</a></li>
 <li><a class="autorefs autorefs-internal" href="#easystack-stable">Mark easystack support as stable (no longer experimental)</a></li>
-<li><a class="autorefs autorefs-internal" title="Reproducible tarballs for sources created via git_config" href="#reproducible-tarballs-git_config">Reproducible tarballs for sources created via <code>git_config</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#reproducible-tarballs-git_config">Reproducible tarballs for sources created via <code>git_config</code></a></li>
 <li><a class="autorefs autorefs-internal" href="#new-easyconfig-archive">New home for the archive of easyconfigs</a></li>
 <li><a class="autorefs autorefs-internal" href="#granular-exit-codes">Granular exit codes</a></li>
-<li><a class="autorefs autorefs-internal" title="Copy build directory and/or log file(s) if installation failed to path specified via --failed-install-build-dirs-path or --failed-install-logs-path" href="#copy-build-log-failed-installs">Copy build directory and/or log file(s) if installation failed to path specified via <code>--failed-install-build-dirs-path</code> or <code>--failed-install-logs-path</code></a></li>
-<li><a class="autorefs autorefs-internal" title="Specify changes that should be made by generated module files via module_load_environment" href="#module-load-environment">Specify changes that should be made by generated module files via <code>module_load_environment</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#copy-build-log-failed-installs">Copy build directory and/or log file(s) if installation failed to path specified via <code>--failed-install-build-dirs-path</code> or <code>--failed-install-logs-path</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#module-load-environment">Specify changes that should be made by generated module files via <code>module_load_environment</code></a></li>
 <li><a class="autorefs autorefs-internal" href="#alternative-easyconfig-parameters-templates-constants">Add support for alternate easyconfig parameters/templates/constants</a></li>
-<li><a class="autorefs autorefs-internal" title="--keep-debug-symbols configuration option to set default value of 'debug' toolchain option" href="#keep-debug-symbols"><code>keep-debug-symbols</code> configuration option to set default value of '<code>debug</code>' toolchain option</a></li>
-<li><a class="autorefs autorefs-internal" title="Provide control over how generated modules update search path for header files (via --module-search-path-headers)" href="#module-search-path-headers">Provide control over how generated modules update search path for header files (via <code>--module-search-path-headers</code>)</a></li>
-<li><a class="autorefs autorefs-internal" title="Provide control over how EasyBuild specifies path to header files during installation (via --search-path-cpp-headers)" href="#search-path-cpp-headers">Provide control over how EasyBuild specifies path to header files during installation (via <code>--search-path-cpp-headers</code>)</a></li>
-<li><a class="autorefs autorefs-internal" title="Provide control over how EasyBuild specifies path to libraries during installation (via --search-path-linker)" href="#search-path-linker">Provide control over how EasyBuild specifies path to libraries during installation (via <code>--search-path-linker</code>)</a></li>
-<li><a class="autorefs autorefs-internal" title="Support not using $PYTHONPATH to specify the location of installed Python packages (via --prefer-python-search-path)" href="#PYTHONPATH-vs-EBPYTHONPREFIXES">Support not using <code>$PYTHONPATH</code> to specify the location of installed Python packages (via <code>--prefer-python-search-path</code>)</a></li>
-<li><a class="autorefs autorefs-internal" title="Revamp of easyconfig parameter modextrapaths" href="#modextrapaths-revamp">Revamp of easyconfig parameter <code>modextrapaths</code></a></li>
-<li><a class="autorefs autorefs-internal" title="Detect Fortran .mod files in GCCcore installations" href="#mod-files">Detect Fortran <code>.mod</code> files in <code>GCCcore</code> installations</a></li>
-<li><a class="autorefs autorefs-internal" title="Let ConfigureMake generic easyblock error out on unrecognized configure options" href="#configuremake-unknown-configure-options">Let <code>ConfigureMake</code> generic easyblock error out on unknown <code>configure</code> options</a></li>
-<li><a class="autorefs autorefs-internal" title="Require download_instructions for non-public sources" href="#require_download_instructions">Require <code>download_instructions</code> for non-public sources</a></li>
+<li><a class="autorefs autorefs-internal" href="#keep-debug-symbols"><code>keep-debug-symbols</code> configuration option to set default value of '<code>debug</code>' toolchain option</a></li>
+<li><a class="autorefs autorefs-internal" href="#module-search-path-headers">Provide control over how generated modules update search path for header files (via <code>--module-search-path-headers</code>)</a></li>
+<li><a class="autorefs autorefs-internal" href="#search-path-cpp-headers">Provide control over how EasyBuild specifies path to header files during installation (via <code>--search-path-cpp-headers</code>)</a></li>
+<li><a class="autorefs autorefs-internal" href="#search-path-linker">Provide control over how EasyBuild specifies path to libraries during installation (via <code>--search-path-linker</code>)</a></li>
+<li><a class="autorefs autorefs-internal" href="#PYTHONPATH-vs-EBPYTHONPREFIXES">Support not using <code>$PYTHONPATH</code> to specify the location of installed Python packages (via <code>--prefer-python-search-path</code>)</a></li>
+<li><a class="autorefs autorefs-internal" href="#modextrapaths-revamp">Revamp of easyconfig parameter <code>modextrapaths</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#mod-files">Detect Fortran <code>.mod</code> files in <code>GCCcore</code> installations</a></li>
+<li><a class="autorefs autorefs-internal" href="#configuremake-unknown-configure-options">Let <code>ConfigureMake</code> generic easyblock error out on unknown <code>configure</code> options</a></li>
+<li><a class="autorefs autorefs-internal" href="#require_download_instructions">Require <code>download_instructions</code> for non-public sources</a></li>
 </ul>
 <hr />
 <h2 :=":" id="run_shell_cmd">New function to run shell commands: <code>run_shell_cmd</code><a class="headerlink" href="#run_shell_cmd" title="Permanent link">&para;</a></h2>
@@ -12550,14 +12634,14 @@ like <code>$WEIRD_ENV_VAR = "/existing/path+/path/to/softwareroot/another/subdir
 </ul>
 <p>Another improvement in EasyBuild 5.0 is the addition of a global variable
 called <code>MODULE_LOAD_ENV_HEADERS</code> that can be used as a special key in
-<code>modextrapaths</code> to add extra search paths for headers according to <a class="autorefs autorefs-internal" title="Provide control over how generated modules update search path for header files (via --module-search-path-headers)" href="#module-search-path-headers">new option
+<code>modextrapaths</code> to add extra search paths for headers according to <a class="autorefs autorefs-internal" title="Provide control over how generated modules update search path for header files (via " href="#module-search-path-headers">new option
 <code>--module-search-path-headers</code></a>.</p>
 <p>The revamp of <code>modextrapaths</code> renders several easyconfig parameters obsolete,
 which have become deprecated in EasyBuild 5.0:</p>
 <ul>
-<li><a class="autorefs autorefs-internal" title="Easyconfig parameter modextrapaths_append" href="../deprecated-functionality/#deprec_modextrapaths_append"><code>modextrapaths_append</code></a></li>
-<li><a class="autorefs autorefs-internal" title="Easyconfig parameter allow_append_abs_path" href="../deprecated-functionality/#deprec_allow_append_abs"><code>allow_append_abs_path</code></a></li>
-<li><a class="autorefs autorefs-internal" title="Easyconfig parameter allow_prepend_abs_path" href="../deprecated-functionality/#deprec_allow_prepend_abs"><code>allow_prepend_abs_path</code></a></li>
+<li><a class="autorefs autorefs-internal" title="Easyconfig parameter " href="../deprecated-functionality/#deprec_modextrapaths_append"><code>modextrapaths_append</code></a></li>
+<li><a class="autorefs autorefs-internal" title="Easyconfig parameter " href="../deprecated-functionality/#deprec_allow_append_abs"><code>allow_append_abs_path</code></a></li>
+<li><a class="autorefs autorefs-internal" title="Easyconfig parameter " href="../deprecated-functionality/#deprec_allow_prepend_abs"><code>allow_prepend_abs_path</code></a></li>
 </ul>
 <hr />
 <h2 :=":" id="mod-files">Detect Fortran <code>.mod</code> files in <code>GCCcore</code> installations<a class="headerlink" href="#mod-files" title="Permanent link">&para;</a></h2>
@@ -12588,7 +12672,7 @@ configure: WARNING: unrecognized options: --with-thread-package, --enable-shared
 </code></pre></div>
 <hr />
 <h2 :=":" id="require_download_instructions">Require <code>download_instructions</code> for non-public sources<a class="headerlink" href="#require_download_instructions" title="Permanent link">&para;</a></h2>
-<p><a class="autorefs autorefs-internal" title="Using download_instructions for user-side part of installation" href="../../writing-easyconfig-files/#download_instructions"><code>download_instructions</code></a> is a new easyconfig parameter
+<p><a class="autorefs autorefs-internal" title="Using " href="../../writing-easyconfig-files/#download_instructions"><code>download_instructions</code></a> is a new easyconfig parameter
 in EasyBuild 5.0 used to specify instructions, or information, on
 how to obtain software sources that are not directly downloadable. This is
 usually the case for licensed software without public sources.</p>

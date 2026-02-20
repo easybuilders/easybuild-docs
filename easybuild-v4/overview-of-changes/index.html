@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
@@ -4241,6 +4241,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api/easybuild/toolchains/compiler/nvhpc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    nvhpc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api/easybuild/toolchains/compiler/nvidia_compilers/" class="md-nav__link">
         
   
@@ -7088,6 +7116,62 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../api/easybuild/toolchains/lpsflf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsflf
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/easybuild/toolchains/lpsmpi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsmpi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -7097,7 +7181,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_87" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_89" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -7119,14 +7203,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_6_87" id="__nav_11_1_6_87_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11_1_6_89" id="__nav_11_1_6_89_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_87_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_6_87">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_89_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1_6_89">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -12204,7 +12288,7 @@ compared to the latest EasyBuild v3.x (version 3.9.4).</p>
 <ul>
 <li><a class="autorefs autorefs-internal" href="#eb4_no_required_deps">No more required Python packages</a></li>
 <li><a class="autorefs autorefs-internal" href="#eb4_python3_support">Support for running EasyBuild on top of Python 3</a></li>
-<li><a class="autorefs autorefs-internal" title="Custom software-specific easyblocks for iccifort, numexpr, OpenMPI" href="#eb4_custom_easyblocks">Custom software-specific easyblocks for <code>iccifort</code>, <code>numexpr</code>, <code>OpenMPI</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#eb4_custom_easyblocks">Custom software-specific easyblocks for <code>iccifort</code>, <code>numexpr</code>, <code>OpenMPI</code></a></li>
 <li><a class="autorefs autorefs-internal" href="#eb4_2019b_common_toolchains">2019b update of common toolchains</a></li>
 <li><a class="autorefs autorefs-internal" href="#eb4_changes_local_variables">Local variables in easyconfigs should follow recommended naming scheme</a></li>
 </ul>
@@ -12217,7 +12301,7 @@ library are required</strong> for EasyBuild v4.0. More specifically:</p>
   often be attributed to <code>setuptools</code> in one way or another (ancient versions being installed via the OS package
   manager, quirky or broken functionality in specific versions, etc.).</li>
 <li><code>vsc-base</code> <strong>and</strong> <code>vsc-install</code> <strong>are no longer required dependencies</strong>. The relevant parts of these packages
-  were ingested into the EasyBuild framework codebase itself (see also <a class="autorefs autorefs-internal" title="Ingested functionality from vsc-base and vsc-install" href="#eb4_changes_ingested_vsc_base">Ingested functionality from <code>vsc-base</code> and <code>vsc-install</code></a>),
+  were ingested into the EasyBuild framework codebase itself (see also <a class="autorefs autorefs-internal" href="#eb4_changes_ingested_vsc_base">Ingested functionality from <code>vsc-base</code> and <code>vsc-install</code></a>),
   mostly to facilitate making EasyBuild compatible with Python 3.</li>
 </ul>
 <p>Note that specific Python packages may currently still be required for certain EasyBuild functionality outside
@@ -12249,10 +12333,10 @@ a warning will be printed (by default).</p>
 <h2 id="eb4_changes_backwards_incompatible">Backwards-incompatible changes in EasyBuild v4.0<a class="headerlink" href="#eb4_changes_backwards_incompatible" title="Permanent link">&para;</a></h2>
 <p>A couple of <em>backwards-incompatible</em> changes were made in EasyBuild v4.0:</p>
 <ul>
-<li><a class="autorefs autorefs-internal" title="--fixed-installdir-naming-scheme enabled by default" href="#eb4_changes_fixed_installdir_naming_scheme"><code>--fixed-installdir-naming-scheme</code> enabled by default</a></li>
+<li><a class="autorefs autorefs-internal" href="#eb4_changes_fixed_installdir_naming_scheme"><code>--fixed-installdir-naming-scheme</code> enabled by default</a></li>
 <li><a class="autorefs autorefs-internal" href="#eb4_changes_relocated_stuff">Relocated functions, classes and constants in EasyBuild framework</a></li>
-<li><a class="autorefs autorefs-internal" title="Ingested functionality from vsc-base and vsc-install" href="#eb4_changes_ingested_vsc_base">Ingested functionality from <code>vsc-base</code> and <code>vsc-install</code></a></li>
-<li><a class="autorefs autorefs-internal" title="Functions & classes that must be imported from the easybuild.tools.py2vs3 namespace" href="#eb4_changes_py2vs3">Functions &amp; classes that must be imported from the <code>easybuild.tools.py2vs3</code> namespace</a></li>
+<li><a class="autorefs autorefs-internal" href="#eb4_changes_ingested_vsc_base">Ingested functionality from <code>vsc-base</code> and <code>vsc-install</code></a></li>
+<li><a class="autorefs autorefs-internal" title="Functions & classes that must be imported from the " href="#eb4_changes_py2vs3">Functions &amp; classes that must be imported from the <code>easybuild.tools.py2vs3</code> namespace</a></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -12309,7 +12393,7 @@ fixed-installdir-naming-scheme = 0
 <p>This was done mostly to ensure that the <code>__init__.py</code> files that define packages are empty, other
 than the <code>pkgutil.extend_path</code> (which replaces the <code>pkg_resources.declare_namespace</code> which requires <code>setuptools</code>,
 see also <a class="autorefs autorefs-internal" href="#eb4_no_required_deps">No more required Python packages</a>).</p>
-<p>Making EasyBuild compatible with Python 3 also required some similar changes, see <a class="autorefs autorefs-internal" title="Functions & classes that must be imported from the easybuild.tools.py2vs3 namespace" href="#eb4_changes_py2vs3">Functions &amp; classes that must be imported from the <code>easybuild.tools.py2vs3</code> namespace</a>.</p>
+<p>Making EasyBuild compatible with Python 3 also required some similar changes, see <a class="autorefs autorefs-internal" title="Functions & classes that must be imported from the " href="#eb4_changes_py2vs3">Functions &amp; classes that must be imported from the <code>easybuild.tools.py2vs3</code> namespace</a>.</p>
 <p>A detailed overview of relocated functions and constants is available at <a class="autorefs autorefs-internal" href="../overview-relocated-functions-constants/#eb4_relocated_functions_classes_constants">Overview of relocated functions, classes and constants in EasyBuild v4.0</a>.</p>
 <h3 id="eb4_changes_ingested_vsc_base">Ingested functionality from <code>vsc-base</code> and <code>vsc-install</code><a class="headerlink" href="#eb4_changes_ingested_vsc_base" title="Permanent link">&para;</a></h3>
 <p>The <strong>functionality from the</strong> <code>vsc-base</code> <strong>and</strong> <code>vsc-install</code> <strong>packages required by EasyBuild has been ingested

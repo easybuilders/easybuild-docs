@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
@@ -4667,6 +4667,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../api/easybuild/toolchains/compiler/nvhpc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    nvhpc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../api/easybuild/toolchains/compiler/nvidia_compilers/" class="md-nav__link">
         
   
@@ -7514,6 +7542,62 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../api/easybuild/toolchains/lpsflf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsflf
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/easybuild/toolchains/lpsmpi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsmpi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -7523,7 +7607,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_87" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_89" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -7545,14 +7629,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_6_87" id="__nav_11_1_6_87_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11_1_6_89" id="__nav_11_1_6_89_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_87_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_6_87">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_89_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1_6_89">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -12674,7 +12758,7 @@ easyconfig parameters.</p>
 <li>see <a class="autorefs autorefs-internal" href="#common_easyconfig_param_sources_checksums">Checksums</a> for more information on <code>checksums</code></li>
 <li><code>sources</code> is usually specified as a list of strings representing
     filenames for source files, but other formats are supported too, see
-    <a class="autorefs autorefs-internal" title="Alternative formats for sources" href="#common_easyconfig_param_sources_alt">Alternative formats for <code>sources</code></a></li>
+    <a class="autorefs autorefs-internal" href="#common_easyconfig_param_sources_alt">Alternative formats for <code>sources</code></a></li>
 </ul>
 <p>Example:</p>
 <div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;HPL&#39;</span>
@@ -12801,7 +12885,7 @@ removed.</p>
 <p>Multiple easyconfigs can be specified when using <code>--inject-checksums</code>,
 they will be processed in sequence. In addition, you can also combine
 <code>--inject-checksums</code> with <code>--robot</code>, see
-<a class="autorefs autorefs-internal" title="Synergy between --inject-checksums and --robot" href="#inject_checksums_robot_synergy">Synergy between <code>--inject-checksums</code> and <code>--robot</code></a>.</p>
+<a class="autorefs autorefs-internal" href="#inject_checksums_robot_synergy">Synergy between <code>--inject-checksums</code> and <code>--robot</code></a>.</p>
 <h6 id="inject_checksums_adding">Adding checksums when none are specified yet<a class="headerlink" href="#inject_checksums_adding" title="Permanent link">&para;</a></h6>
 <p>If the easyconfig file does not specify any checksums yet, they are
 simply injected after the <code>sources</code> (or <code>patches</code>, if present)
@@ -12977,7 +13061,7 @@ message stating the paths that were tested.</p>
 <p>Since EasyBuild v3.7.0, support for downloading directly from a Git
 repository is available.</p>
 <p>When <code>git_config</code> is provided for a particular source file (see
-<a class="autorefs autorefs-internal" title="Alternative formats for sources" href="#common_easyconfig_param_sources_alt">Alternative formats for <code>sources</code></a>),
+<a class="autorefs autorefs-internal" href="#common_easyconfig_param_sources_alt">Alternative formats for <code>sources</code></a>),
 EasyBuild will create a source tarball after downloading the specified
 Git repository.</p>
 <p>The value for <code>git_config</code> is a Python dictionary, where the following
@@ -13051,7 +13135,7 @@ you to do so, <code>git_config</code> is intended for other Git repos.</p>
 <li><strong>dependencies</strong>: build/runtime dependencies</li>
 <li><strong>builddependencies</strong>: build-only dependencies (not in module)</li>
 <li><strong>hiddendependencies</strong>: dependencies via hidden modules (see also
-    <a class="autorefs autorefs-internal" title="Installing dependencies as hidden modules using --hide-deps" href="../manipulating-dependencies/#hide_deps">Installing dependencies as hidden modules using <code>--hide-deps</code></a>)</li>
+    <a class="autorefs autorefs-internal" href="../manipulating-dependencies/#hide_deps">Installing dependencies as hidden modules using <code>--hide-deps</code></a>)</li>
 <li><strong>osdependencies</strong>: system dependencies (package names)</li>
 </ul>
 <p>Remarks:</p>
@@ -13088,7 +13172,7 @@ search for the dependency using a compatible subtoolchain.</p>
 modules for each of the (build) dependencies are <em>always</em> loaded,
 regardless of the toolchain version (as opposed the behaviour with the
 <code>dummy</code> toolchain in EasyBuild versions prior to v4.0, see
-<a class="autorefs autorefs-internal" title="Motivation for deprecating the dummy toolchain" href="../system-toolchain/#system_toolchain_motivation_deprecating_dummy">Motivation for deprecating the <code>dummy</code> toolchain</a>).</p>
+<a class="autorefs autorefs-internal" href="../system-toolchain/#system_toolchain_motivation_deprecating_dummy">Motivation for deprecating the <code>dummy</code> toolchain</a>).</p>
 <h4 id="specifying-dependencies-using-system-toolchain">Specifying dependencies using <code>system</code> toolchain<a class="headerlink" href="#specifying-dependencies-using-system-toolchain" title="Permanent link">&para;</a></h4>
 <p>To make EasyBuild resolve a dependency using the <code>system</code> toolchain,
 simply use the <code>SYSTEM</code> template constant as the 4th value in the tuple
@@ -13154,7 +13238,7 @@ options, the following exceptions and special cases should be noted:</p>
 </code></pre></div>
 <p>That third instance uses the <code>name</code> and <code>version</code> variables defined in
 the easyconfig file. Since EasyBuild v4.2.2, a single-entry <code>sources</code>
-dictionary (see <a class="autorefs autorefs-internal" title="Alternative formats for sources" href="#common_easyconfig_param_sources_alt">Alternative formats for <code>sources</code></a>) may be included in an <code>exts_list</code> entry. For example, to
+dictionary (see <a class="autorefs autorefs-internal" href="#common_easyconfig_param_sources_alt">Alternative formats for <code>sources</code></a>) may be included in an <code>exts_list</code> entry. For example, to
 download Git sources from a private repository and convert them to a
 tar-ball for installation:</p>
 <div class="highlight"><pre><span></span><code><span class="n">exts_defaultclass</span> <span class="o">=</span> <span class="s1">&#39;PythonPackage&#39;</span>

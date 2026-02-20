@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
@@ -4241,6 +4241,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../api/easybuild/toolchains/compiler/nvhpc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    nvhpc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../api/easybuild/toolchains/compiler/nvidia_compilers/" class="md-nav__link">
         
   
@@ -7088,6 +7116,62 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../api/easybuild/toolchains/lpsflf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsflf
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/easybuild/toolchains/lpsmpi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsmpi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -7097,7 +7181,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_87" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_89" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -7119,14 +7203,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_6_87" id="__nav_11_1_6_87_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11_1_6_89" id="__nav_11_1_6_89_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_87_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_6_87">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_89_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1_6_89">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -12136,23 +12220,23 @@
 <p><em>(for a full overview of changes in EasyBuild v5.0, see <a href="../">here</a>)</em></p>
 <p>Some functionality is being deprecated in EasyBuild v5.0, and will no longer be supported in EasyBuild v6.0:</p>
 <ul>
-<li><a class="autorefs autorefs-internal" title="parallel easyconfig parameter" href="#parallel-easyconfig-parameter"><code>parallel</code> easyconfig parameter</a></li>
-<li><a class="autorefs autorefs-internal" title="run_cmd and run_cmd_qa functions" href="#run_cmd"><code>run_cmd</code> and <code>run_cmd_qa</code> functions</a></li>
-<li><a class="autorefs autorefs-internal" title="'source' step" href="#source-step"><code>'source'</code> step</a>
+<li><a class="autorefs autorefs-internal" href="#parallel-easyconfig-parameter"><code>parallel</code> easyconfig parameter</a></li>
+<li><a class="autorefs autorefs-internal" href="#run_cmd"><code>run_cmd</code> and <code>run_cmd_qa</code> functions</a></li>
+<li><a class="autorefs autorefs-internal" href="#source-step"><code>'source'</code> step</a>
 (renamed to <code>'extract'</code>)</li>
 <li>Rename '<code>source</code>' step to '<code>extract</code>' (affects <code>skipsteps</code> easyconfig parameter + <code>--stop</code> option) <a href="https://github.com/easybuilders/easybuild-framework/pull/4629">https://github.com/easybuilders/easybuild-framework/pull/4629</a></li>
-<li><a class="autorefs autorefs-internal" title="post_install_step method in EasyBlock class" href="#post_install_step"><code>post_install_step</code> method in <code>EasyBlock</code> class</a></li>
-<li><a class="autorefs autorefs-internal" title="make_module_req_guess method in EasyBlock class" href="#make_module_req_guess"><code>make_module_req_guess</code> method in <code>EasyBlock</code> class</a></li>
-<li><a class="autorefs autorefs-internal" title="run, prerun, postrun, run_async methods in EasyBlock class" href="#run-methods-extensions"><code>run</code>, <code>prerun</code>, <code>postrun</code>, <code>run_async</code> methods in <code>EasyBlock</code> class</a></li>
-<li><a class="autorefs autorefs-internal" title="easybuild.tools.py2vs3 module" href="#py2vs3"><code>easybuild.tools.py2vs3</code> module</a></li>
+<li><a class="autorefs autorefs-internal" href="#post_install_step"><code>post_install_step</code> method in <code>EasyBlock</code> class</a></li>
+<li><a class="autorefs autorefs-internal" href="#make_module_req_guess"><code>make_module_req_guess</code> method in <code>EasyBlock</code> class</a></li>
+<li><a class="autorefs autorefs-internal" href="#run-methods-extensions"><code>run</code>, <code>prerun</code>, <code>postrun</code>, <code>run_async</code> methods in <code>EasyBlock</code> class</a></li>
+<li><a class="autorefs autorefs-internal" href="#py2vs3"><code>easybuild.tools.py2vs3</code> module</a></li>
 <li><a class="autorefs autorefs-internal" href="#checksum-types">Older checksum types</a></li>
-<li><a class="autorefs autorefs-internal" title="EnvironmentModulesC or EnvironmentModulesTcl modules tools" href="#modules-tools"><code>EnvironmentModulesC</code> or <code>EnvironmentModulesTcl</code> modules tools</a></li>
+<li><a class="autorefs autorefs-internal" href="#modules-tools"><code>EnvironmentModulesC</code> or <code>EnvironmentModulesTcl</code> modules tools</a></li>
 <li><a class="autorefs autorefs-internal" href="#gc3pie-job-backend">GC3Pie as job backend</a></li>
-<li><a class="autorefs autorefs-internal" title="Using optarch value without leading dash" href="#optarch-dash">Using <code>optarch</code> value without leading dash</a></li>
-<li><a class="autorefs autorefs-internal" title="COMPILER*_FLAGS attributes in Compiler class" href="#compiler-constants"><code>COMPILER*_FLAGS</code> attributes in <code>Compiler</code> class</a></li>
-<li><a class="autorefs autorefs-internal" title="Easyconfig parameter modextrapaths_append" href="#deprec_modextrapaths_append">Easyconfig parameter <code>modextrapaths_append</code></a></li>
-<li><a class="autorefs autorefs-internal" title="Easyconfig parameter allow_append_abs_path" href="#deprec_allow_append_abs">Easyconfig parameter <code>allow_append_abs_path</code></a></li>
-<li><a class="autorefs autorefs-internal" title="Easyconfig parameter allow_prepend_abs_path" href="#deprec_allow_prepend_abs">Easyconfig parameter <code>allow_prepend_abs_path</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#optarch-dash">Using <code>optarch</code> value without leading dash</a></li>
+<li><a class="autorefs autorefs-internal" href="#compiler-constants"><code>COMPILER*_FLAGS</code> attributes in <code>Compiler</code> class</a></li>
+<li><a class="autorefs autorefs-internal" href="#deprec_modextrapaths_append">Easyconfig parameter <code>modextrapaths_append</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#deprec_allow_append_abs">Easyconfig parameter <code>allow_append_abs_path</code></a></li>
+<li><a class="autorefs autorefs-internal" href="#deprec_allow_prepend_abs">Easyconfig parameter <code>allow_prepend_abs_path</code></a></li>
 </ul>
 <p>If you trigger any deprecated functionality when using EasyBuild v5.0, a warning message will be printed.</p>
 <hr />
@@ -12304,7 +12388,7 @@ This corresponds to setting the module tool in EasyBuild to either <code>Environ
 <p>Those using Environment Modules should use at least version 4.3 or newer.</p>
 <hr />
 <h2 id="gc3pie-job-backend">GC3Pie as job backend<a class="headerlink" href="#gc3pie-job-backend" title="Permanent link">&para;</a></h2>
-<p>The use of the GC3Pie job backend is deprecated. Those <a class="autorefs autorefs-internal" title="Submitting jobs using --job" href="../../submitting-jobs/#submitting_jobs">generating jobs</a> from
+<p>The use of the GC3Pie job backend is deprecated. Those <a class="autorefs autorefs-internal" title="Submitting jobs using " href="../../submitting-jobs/#submitting_jobs">generating jobs</a> from
 EasyBuild should use one of the other available backends instead, such as Slurm or PBS Python.</p>
 <hr />
 <h2 id="optarch-dash">Using <code>optarch</code> value without leading dash<a class="headerlink" href="#optarch-dash" title="Permanent link">&para;</a></h2>

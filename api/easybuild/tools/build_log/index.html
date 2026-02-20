@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
@@ -4245,6 +4245,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../toolchains/compiler/nvhpc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    nvhpc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../toolchains/compiler/nvidia_compilers/" class="md-nav__link">
         
   
@@ -7092,6 +7120,62 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../toolchains/lpsflf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsflf
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toolchains/lpsmpi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lpsmpi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -7101,7 +7185,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_87" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_6_89" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -7123,14 +7207,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_6_87" id="__nav_11_1_6_87_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11_1_6_89" id="__nav_11_1_6_89_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_87_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_6_87">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_6_89_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_1_6_89">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -8447,6 +8531,17 @@
     <span class="md-ellipsis">
       
         print_error
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easybuild.tools.build_log.print_error_and_exit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        print_error_and_exit
       
     </span>
   </a>
@@ -12289,6 +12384,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#easybuild.tools.build_log.print_error_and_exit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        print_error_and_exit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#easybuild.tools.build_log.print_msg" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -12642,7 +12748,8 @@
             </td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>if max_ver is None: threshold for EasyBuild version to determine warning vs exception else: version to check against max_ver to determine warning vs exception</p>
+                <p>if max_ver is None: threshold for EasyBuild version to determine warning vs exception
+else: version to check against max_ver to determine warning vs exception</p>
               </div>
               <p>
               </p>
@@ -12975,6 +13082,50 @@
 <div class="doc doc-object doc-function">
 
 
+<h2 id="easybuild.tools.build_log.print_error_and_exit" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">print_error_and_exit</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">exit_code</span><span class="o">=</span><span class="n">EasyBuildExit</span><span class="o">.</span><span class="n">ERROR</span><span class="p">,</span> <span class="n">silent</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+<a href="#easybuild.tools.build_log.print_error_and_exit" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Print error message and exit EasyBuild, supports format strings</p>
+<p>:exit_code: EasyBuildExit or integer to exit with
+:silent: When True don't print to stderr</p>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>msg</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Message to show</p>
+              </div>
+              <p>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
 <h2 id="easybuild.tools.build_log.print_msg" class="doc doc-heading">
             <code class="highlight language-python"><span class="n">print_msg</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
@@ -13185,7 +13336,8 @@
             </td>
             <td class="doc-returns-details">
               <div class="doc-md-description">
-                <p>string value representing amount of time passed since start_time; format: "[[%d hours, ]%d mins, ]%d sec(s)"</p>
+                <p>string value representing amount of time passed since start_time;
+format: "[[%d hours, ]%d mins, ]%d sec(s)"</p>
               </div>
             </td>
           </tr>
