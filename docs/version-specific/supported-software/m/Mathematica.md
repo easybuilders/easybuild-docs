@@ -10,7 +10,6 @@ Mathematica is a computational software program used in many scientific, enginee
 
 version | toolchain
 --------|----------
-``12.1.1`` | ``system``
 ``13.0.0`` | ``system``
 ``13.1.0`` | ``system``
 

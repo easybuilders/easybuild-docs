@@ -10,7 +10,6 @@ Imageio is a Python library that provides an easy interface to read and write a 
 
 version | toolchain
 --------|----------
-``2.10.5`` | ``foss/2021a``
 ``2.13.5`` | ``foss/2021b``
 ``2.22.2`` | ``foss/2022a``
 ``2.31.1`` | ``foss/2022b``

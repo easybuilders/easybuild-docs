@@ -10,7 +10,6 @@ Highway is a C++ library for SIMD (Single Instruction, Multiple Data), i.e. appl
 
 version | toolchain
 --------|----------
-``0.12.2`` | ``GCCcore/10.3.0``
 ``1.0.3`` | ``GCCcore/11.3.0``
 ``1.0.3`` | ``GCCcore/12.2.0``
 ``1.0.4`` | ``GCCcore/11.3.0``

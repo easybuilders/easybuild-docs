@@ -10,7 +10,6 @@ scikit-image is a collection of algorithms for image processing.
 
 version | toolchain
 --------|----------
-``0.18.3`` | ``foss/2021a``
 ``0.19.1`` | ``foss/2021b``
 ``0.19.3`` | ``foss/2022a``
 ``0.21.0`` | ``foss/2022b``

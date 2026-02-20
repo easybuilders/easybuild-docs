@@ -10,7 +10,6 @@ QUAST evaluates genome assemblies by computing various metrics. It works both wi
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``5.0.2`` |  | ``foss/2021a``
 ``5.0.2`` |  | ``foss/2021b``
 ``5.2.0`` |  | ``foss/2022a``
 ``5.2.0`` | ``-Python-2.7.18`` | ``foss/2023a``

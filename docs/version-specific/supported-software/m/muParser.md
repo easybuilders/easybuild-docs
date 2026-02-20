@@ -10,7 +10,6 @@ muParser is an extensible high performance math expression parser library  writt
 
 version | toolchain
 --------|----------
-``2.3.3`` | ``GCCcore/10.3.0``
 ``2.3.4`` | ``GCCcore/11.3.0``
 ``2.3.4`` | ``GCCcore/12.2.0``
 ``2.3.4`` | ``GCCcore/12.3.0``

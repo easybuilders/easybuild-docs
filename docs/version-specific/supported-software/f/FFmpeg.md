@@ -10,7 +10,6 @@ A complete, cross-platform solution to record, convert and stream audio and vide
 
 version | toolchain
 --------|----------
-``4.3.2`` | ``GCCcore/10.3.0``
 ``4.3.2`` | ``GCCcore/11.2.0``
 ``4.4.2`` | ``GCCcore/11.3.0``
 ``5.0.1`` | ``GCCcore/11.3.0``

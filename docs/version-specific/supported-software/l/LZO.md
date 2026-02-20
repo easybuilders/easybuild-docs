@@ -10,7 +10,6 @@ Portable lossless data compression library
 
 version | toolchain
 --------|----------
-``2.10`` | ``GCCcore/10.3.0``
 ``2.10`` | ``GCCcore/11.2.0``
 ``2.10`` | ``GCCcore/11.3.0``
 ``2.10`` | ``GCCcore/12.2.0``

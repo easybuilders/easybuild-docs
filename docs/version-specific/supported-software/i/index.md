@@ -58,7 +58,6 @@ search:
  * [inflection](inflection.md)
  * [Infomap](Infomap.md)
  * [inih](inih.md)
- * [InParanoid](InParanoid.md)
  * [Inspector](Inspector.md)
  * [intel](intel.md)
  * [intel-compilers](intel-compilers.md)

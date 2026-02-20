@@ -10,8 +10,6 @@ NetCDF (network Common Data Form) is a set of software libraries  and machine-in
 
 version | toolchain
 --------|----------
-``4.8.0`` | ``gompi/2021a``
-``4.8.0`` | ``iimpi/2021a``
 ``4.8.1`` | ``gompi/2021b``
 ``4.8.1`` | ``iimpi/2021b``
 ``4.9.0`` | ``gompi/2022a``

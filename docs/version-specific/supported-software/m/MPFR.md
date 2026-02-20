@@ -10,7 +10,6 @@ The MPFR library is a C library for multiple-precision floating-point  computati
 
 version | toolchain
 --------|----------
-``4.1.0`` | ``GCCcore/10.3.0``
 ``4.1.0`` | ``GCCcore/11.2.0``
 ``4.1.0`` | ``GCCcore/11.3.0``
 ``4.2.0`` | ``GCCcore/12.2.0``

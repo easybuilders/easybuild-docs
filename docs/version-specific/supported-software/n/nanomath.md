@@ -10,7 +10,6 @@ A few simple math function for other Oxford Nanopore processing scripts
 
 version | toolchain
 --------|----------
-``1.2.1`` | ``foss/2021a``
 ``1.3.0`` | ``foss/2022a``
 ``1.3.0`` | ``foss/2022b``
 ``1.4.0`` | ``foss/2023a``

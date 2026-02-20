@@ -10,7 +10,6 @@ Finds SNP sites from a multi-FASTA alignment file.
 
 version | toolchain
 --------|----------
-``2.5.1`` | ``GCCcore/10.3.0``
 ``2.5.1`` | ``GCCcore/11.2.0``
 ``2.5.1`` | ``GCCcore/12.3.0``
 

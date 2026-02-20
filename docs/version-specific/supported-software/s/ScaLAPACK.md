@@ -10,8 +10,6 @@ The ScaLAPACK (or Scalable LAPACK) library includes a subset of LAPACK routines 
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.1.0`` | ``-bf`` | ``gompi/2021a``
-``2.1.0`` | ``-fb`` | ``gompi/2021a``
 ``2.1.0`` | ``-fb`` | ``gompi/2021b``
 ``2.2.0`` | ``-fb`` | ``gmpich/2024.06``
 ``2.2.0`` | ``-fb`` | ``gompi/2022.05``

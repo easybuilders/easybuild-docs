@@ -10,9 +10,7 @@ JupyterLab is the next-generation user interface for Project Jupyter offering al
 
 version | toolchain
 --------|----------
-``3.0.16`` | ``GCCcore/10.3.0``
 ``3.1.6`` | ``GCCcore/11.2.0``
-``3.2.8`` | ``GCCcore/10.3.0``
 ``3.5.0`` | ``GCCcore/11.3.0``
 ``4.0.3`` | ``GCCcore/12.2.0``
 ``4.0.5`` | ``GCCcore/12.3.0``

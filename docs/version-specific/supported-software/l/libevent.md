@@ -10,7 +10,6 @@ The libevent API provides a mechanism to execute a callback function when  a spe
 
 version | toolchain
 --------|----------
-``2.1.12`` | ``GCCcore/10.3.0``
 ``2.1.12`` | ``GCCcore/11.2.0``
 ``2.1.12`` | ``GCCcore/11.3.0``
 ``2.1.12`` | ``GCCcore/12.2.0``

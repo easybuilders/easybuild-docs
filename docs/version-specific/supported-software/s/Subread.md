@@ -10,7 +10,6 @@ High performance read alignment, quantification and mutation discovery
 
 version | toolchain
 --------|----------
-``2.0.3`` | ``GCC/10.3.0``
 ``2.0.3`` | ``GCC/11.2.0``
 ``2.0.4`` | ``GCC/11.3.0``
 ``2.0.6`` | ``GCC/12.3.0``

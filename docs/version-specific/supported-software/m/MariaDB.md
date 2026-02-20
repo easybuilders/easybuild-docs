@@ -11,7 +11,6 @@ MariaDB is an enhanced, drop-in replacement for MySQL. Included engines: myISAM,
 version | toolchain
 --------|----------
 ``10.11.2`` | ``GCC/12.2.0``
-``10.6.4`` | ``GCC/10.3.0``
 ``10.6.4`` | ``GCC/11.2.0``
 ``10.9.3`` | ``GCC/11.3.0``
 ``11.6.0`` | ``GCC/12.3.0``

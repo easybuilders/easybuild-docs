@@ -10,7 +10,6 @@ SCons is a software construction tool.
 
 version | toolchain
 --------|----------
-``4.1.0.post1`` | ``GCCcore/10.3.0``
 ``4.2.0`` | ``GCCcore/11.2.0``
 ``4.4.0`` | ``GCCcore/11.3.0``
 ``4.5.2`` | ``GCCcore/12.2.0``

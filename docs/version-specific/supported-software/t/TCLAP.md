@@ -10,7 +10,6 @@ TCLAP is a small, flexible library that provides a simple interface for defining
 
 version | toolchain
 --------|----------
-``1.2.5`` | ``GCCcore/10.3.0``
 ``1.2.5`` | ``GCCcore/11.2.0``
 ``1.4.0-rc2`` | ``GCCcore/14.3.0``
 

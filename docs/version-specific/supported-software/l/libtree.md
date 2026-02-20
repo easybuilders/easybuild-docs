@@ -10,7 +10,6 @@ libtree is a tool that turns ldd into a tree, explains why  shared libraries are
 
 version | toolchain
 --------|----------
-``2.0.0`` | ``GCCcore/10.3.0``
 ``3.0.3`` | ``system``
 ``3.1.1`` | ``system``
 

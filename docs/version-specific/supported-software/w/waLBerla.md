@@ -10,7 +10,6 @@ Widely applicable Lattics-Boltzmann from Erlangen is a block-structured high-per
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``6.1`` |  | ``foss/2021a``
 ``6.1`` |  | ``foss/2022b``
 ``6.1`` | ``-CUDA-12.1.1`` | ``foss/2023a``
 ``6.1`` |  | ``foss/2023a``

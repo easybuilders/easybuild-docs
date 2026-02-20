@@ -10,7 +10,6 @@ Nextflow is a reactive workflow framework and a programming DSL  that eases writ
 
 version | toolchain
 --------|----------
-``20.10.0`` | ``system``
 ``21.03.0`` | ``system``
 ``22.04.0`` | ``system``
 ``22.10.0`` | ``system``

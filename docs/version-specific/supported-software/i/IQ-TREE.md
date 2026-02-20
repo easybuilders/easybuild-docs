@@ -10,7 +10,6 @@ Efficient phylogenomic software by maximum likelihood
 
 version | toolchain
 --------|----------
-``2.1.3`` | ``gompi/2021a``
 ``2.2.1`` | ``gompi/2021b``
 ``2.2.2.3`` | ``gompi/2022a``
 ``2.2.2.6`` | ``gompi/2022a``

@@ -10,7 +10,6 @@ pagmo is a C++ scientific library for massively parallel optimization.
 
 version | toolchain
 --------|----------
-``2.18.0`` | ``foss/2021a``
 ``2.18.0`` | ``foss/2021b``
 ``2.18.0`` | ``foss/2022a``
 ``2.19.0`` | ``gfbf/2022b``

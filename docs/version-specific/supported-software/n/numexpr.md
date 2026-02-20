@@ -10,8 +10,6 @@ The numexpr package evaluates multiple-operator array expressions many times fas
 
 version | toolchain
 --------|----------
-``2.8.1`` | ``foss/2021a``
-``2.8.1`` | ``intel/2021a``
 ``2.8.4`` | ``foss/2022a``
 ``2.9.0`` | ``foss/2023a``
 

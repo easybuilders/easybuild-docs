@@ -10,7 +10,6 @@ CppUnit is the C++ port of the famous JUnit framework for unit testing.
 
 version | toolchain
 --------|----------
-``1.15.1`` | ``GCCcore/10.3.0``
 ``1.15.1`` | ``GCCcore/11.3.0``
 ``1.15.1`` | ``GCCcore/12.2.0``
 ``1.15.1`` | ``GCCcore/12.3.0``

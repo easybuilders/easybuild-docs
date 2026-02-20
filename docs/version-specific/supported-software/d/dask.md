@@ -10,7 +10,6 @@ Dask natively scales Python. Dask provides advanced parallelism for analytics, e
 
 version | toolchain
 --------|----------
-``2021.9.1`` | ``foss/2021a``
 ``2022.1.0`` | ``foss/2021b``
 ``2022.10.0`` | ``foss/2022a``
 ``2023.12.1`` | ``foss/2023a``

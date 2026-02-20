@@ -10,13 +10,13 @@ GL2PS: an OpenGL to PostScript printing library
 
 version | toolchain
 --------|----------
-``1.4.2`` | ``GCCcore/10.3.0``
 ``1.4.2`` | ``GCCcore/11.2.0``
 ``1.4.2`` | ``GCCcore/11.3.0``
 ``1.4.2`` | ``GCCcore/12.2.0``
 ``1.4.2`` | ``GCCcore/12.3.0``
 ``1.4.2`` | ``GCCcore/13.2.0``
 ``1.4.2`` | ``GCCcore/13.3.0``
+``1.4.2`` | ``GCCcore/14.2.0``
 ``1.4.2`` | ``GCCcore/14.3.0``
 
 

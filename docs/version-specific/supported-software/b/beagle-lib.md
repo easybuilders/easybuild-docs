@@ -10,11 +10,11 @@ beagle-lib is a high-performance library that can perform the core calculations 
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``3.1.2`` |  | ``GCC/10.3.0``
 ``4.0.0`` |  | ``GCC/11.3.0``
 ``4.0.1`` | ``-CUDA-12.1.1`` | ``GCC/12.3.0``
 ``4.0.1`` |  | ``GCC/12.3.0``
 ``4.0.1`` |  | ``GCC/13.3.0``
+``4.0.1`` | ``-CUDA-12.8.0`` | ``GCC/14.2.0``
 ``4.0.1`` |  | ``GCC/14.2.0``
 
 

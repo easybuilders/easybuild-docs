@@ -10,7 +10,6 @@ Gnu Mpc is a C library for the arithmetic of  complex numbers with arbitrarily h
 
 version | toolchain
 --------|----------
-``1.2.1`` | ``GCCcore/10.3.0``
 ``1.2.1`` | ``GCCcore/11.2.0``
 ``1.2.1`` | ``GCCcore/11.3.0``
 ``1.3.1`` | ``GCCcore/12.2.0``

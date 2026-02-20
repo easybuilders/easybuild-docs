@@ -10,7 +10,6 @@ RE2 is a fast, safe, thread-friendly alternative to backtracking regular express
 
 version | toolchain
 --------|----------
-``2022-02-01`` | ``GCCcore/10.3.0``
 ``2022-02-01`` | ``GCCcore/11.2.0``
 ``2022-06-01`` | ``GCCcore/11.3.0``
 ``2023-03-01`` | ``GCCcore/12.2.0``

@@ -10,7 +10,6 @@ deal.II is a C++ program library targeted at the computational solution of  part
 
 version | toolchain
 --------|----------
-``9.3.3`` | ``foss/2021a``
 ``9.5.2`` | ``foss/2023a``
 
 

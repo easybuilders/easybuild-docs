@@ -6,11 +6,10 @@ search:
 
 GD is an open source code library for the dynamic creation of images by programmers.
 
-*homepage*: <https://libgd.github.io/>
+*homepage*: <https://libgd.github.io>
 
 version | toolchain
 --------|----------
-``2.3.1`` | ``GCCcore/10.3.0``
 ``2.3.3`` | ``GCCcore/11.2.0``
 ``2.3.3`` | ``GCCcore/11.3.0``
 ``2.3.3`` | ``GCCcore/12.2.0``

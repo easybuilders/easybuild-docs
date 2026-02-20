@@ -2,7 +2,7 @@
 
 *(see also* ``eb --avail-toolchain-opts <tcname>`` *)*
 
-[cgmpich](#cgmpich) - [cgmpolf](#cgmpolf) - [cgmvapich2](#cgmvapich2) - [cgmvolf](#cgmvolf) - [cgompi](#cgompi) - [cgoolf](#cgoolf) - [ClangGCC](#clanggcc) - [CrayCCE](#craycce) - [CrayGNU](#craygnu) - [CrayIntel](#crayintel) - [CrayPGI](#craypgi) - [FCC](#fcc) - [ffmpi](#ffmpi) - [foss](#foss) - [fosscuda](#fosscuda) - [Fujitsu](#fujitsu) - [GCC](#gcc) - [GCCcore](#gcccore) - [gcccuda](#gcccuda) - [gfbf](#gfbf) - [gimkl](#gimkl) - [gimpi](#gimpi) - [gimpic](#gimpic) - [giolf](#giolf) - [giolfc](#giolfc) - [gmacml](#gmacml) - [gmkl](#gmkl) - [gmklc](#gmklc) - [gmpflf](#gmpflf) - [gmpich](#gmpich) - [gmpich2](#gmpich2) - [gmpit](#gmpit) - [gmpolf](#gmpolf) - [gmvapich2](#gmvapich2) - [gmvolf](#gmvolf) - [GNU](#gnu) - [goalf](#goalf) - [gobff](#gobff) - [goblf](#goblf) - [gofbf](#gofbf) - [golf](#golf) - [golfc](#golfc) - [gomkl](#gomkl) - [gomklc](#gomklc) - [gompi](#gompi) - [gompic](#gompic) - [goolf](#goolf) - [goolfc](#goolfc) - [gpsmpi](#gpsmpi) - [gpsolf](#gpsolf) - [gqacml](#gqacml) - [gsmpi](#gsmpi) - [gsolf](#gsolf) - [iccifort](#iccifort) - [iccifortcuda](#iccifortcuda) - [ictce](#ictce) - [ifbf](#ifbf) - [iibff](#iibff) - [iimkl](#iimkl) - [iimklc](#iimklc) - [iimpi](#iimpi) - [iimpic](#iimpic) - [iiqmpi](#iiqmpi) - [impich](#impich) - [impmkl](#impmkl) - [intel-compilers](#intel-compilers) - [intel-para](#intel-para) - [intel](#intel) - [intelcuda](#intelcuda) - [iofbf](#iofbf) - [iomkl](#iomkl) - [iomklc](#iomklc) - [iompi](#iompi) - [iompic](#iompic) - [ipsmpi](#ipsmpi) - [iqacml](#iqacml) - [ismkl](#ismkl) - [lfbf](#lfbf) - [lfoss](#lfoss) - [llvm-compilers](#llvm-compilers) - [lmpflf](#lmpflf) - [lmpich](#lmpich) - [lompi](#lompi) - [NVHPC](#nvhpc) - [nvidia-compilers](#nvidia-compilers) - [nvofbf](#nvofbf) - [nvompi](#nvompi) - [nvompic](#nvompic) - [nvpsmpi](#nvpsmpi) - [nvpsmpic](#nvpsmpic) - [PGI](#pgi) - [pmkl](#pmkl) - [pomkl](#pomkl) - [pompi](#pompi) - [system](#system) - [xlcxlf](#xlcxlf) - [xlmpich](#xlmpich) - [xlmpich2](#xlmpich2) - [xlmvapich2](#xlmvapich2) - [xlompi](#xlompi)
+[cgmpich](#cgmpich) - [cgmpolf](#cgmpolf) - [cgmvapich2](#cgmvapich2) - [cgmvolf](#cgmvolf) - [cgompi](#cgompi) - [cgoolf](#cgoolf) - [ClangGCC](#clanggcc) - [CrayCCE](#craycce) - [CrayGNU](#craygnu) - [CrayIntel](#crayintel) - [CrayPGI](#craypgi) - [FCC](#fcc) - [ffmpi](#ffmpi) - [foss](#foss) - [fosscuda](#fosscuda) - [Fujitsu](#fujitsu) - [GCC](#gcc) - [GCCcore](#gcccore) - [gcccuda](#gcccuda) - [gfbf](#gfbf) - [gimkl](#gimkl) - [gimpi](#gimpi) - [gimpic](#gimpic) - [giolf](#giolf) - [giolfc](#giolfc) - [gmacml](#gmacml) - [gmkl](#gmkl) - [gmklc](#gmklc) - [gmpflf](#gmpflf) - [gmpich](#gmpich) - [gmpich2](#gmpich2) - [gmpit](#gmpit) - [gmpolf](#gmpolf) - [gmvapich2](#gmvapich2) - [gmvolf](#gmvolf) - [GNU](#gnu) - [goalf](#goalf) - [gobff](#gobff) - [goblf](#goblf) - [gofbf](#gofbf) - [golf](#golf) - [golfc](#golfc) - [gomkl](#gomkl) - [gomklc](#gomklc) - [gompi](#gompi) - [gompic](#gompic) - [goolf](#goolf) - [goolfc](#goolfc) - [gpsmpi](#gpsmpi) - [gpsolf](#gpsolf) - [gqacml](#gqacml) - [gsmpi](#gsmpi) - [gsolf](#gsolf) - [iccifort](#iccifort) - [iccifortcuda](#iccifortcuda) - [ictce](#ictce) - [ifbf](#ifbf) - [iibff](#iibff) - [iimkl](#iimkl) - [iimklc](#iimklc) - [iimpi](#iimpi) - [iimpic](#iimpic) - [iiqmpi](#iiqmpi) - [impich](#impich) - [impmkl](#impmkl) - [intel-compilers](#intel-compilers) - [intel-para](#intel-para) - [intel](#intel) - [intelcuda](#intelcuda) - [iofbf](#iofbf) - [iomkl](#iomkl) - [iomklc](#iomklc) - [iompi](#iompi) - [iompic](#iompic) - [ipsmpi](#ipsmpi) - [iqacml](#iqacml) - [ismkl](#ismkl) - [lfbf](#lfbf) - [lfoss](#lfoss) - [llvm-compilers](#llvm-compilers) - [lmpflf](#lmpflf) - [lmpich](#lmpich) - [lompi](#lompi) - [lpsflf](#lpsflf) - [lpsmpi](#lpsmpi) - [NVHPC](#nvhpc) - [nvidia-compilers](#nvidia-compilers) - [nvofbf](#nvofbf) - [nvompi](#nvompi) - [nvompic](#nvompic) - [nvpsmpi](#nvpsmpi) - [nvpsmpic](#nvpsmpic) - [PGI](#pgi) - [pmkl](#pmkl) - [pomkl](#pomkl) - [pompi](#pompi) - [system](#system) - [xlcxlf](#xlcxlf) - [xlmpich](#xlmpich) - [xlmpich2](#xlmpich2) - [xlmvapich2](#xlmvapich2) - [xlompi](#xlompi)
 
 ## cgmpich
 
@@ -3537,6 +3537,96 @@ option                     |description                                         
 ## lompi
 
 ### Available options for lompi toolchain
+
+option                     |description                                                                                                          |default
+---------------------------|---------------------------------------------------------------------------------------------------------------------|---------
+``basic-block-vectorize``  |Basic block vectorization                                                                                            |``False``
+``cciscxx``                |Use CC as CXX                                                                                                        |``False``
+``cstd``                   |Specify C standard                                                                                                   |``None``
+``debug``                  |Keep debug symbols                                                                                                   |``None``
+``defaultopt``             |Default compiler optimizations                                                                                       |``False``
+``defaultprec``            |Default precision                                                                                                    |``False``
+``extra_cflags``           |Specify extra CFLAGS options.                                                                                        |``None``
+``extra_cxxflags``         |Specify extra CXXFLAGS options.                                                                                      |``None``
+``extra_f90flags``         |Specify extra F90FLAGS options.                                                                                      |``None``
+``extra_fcflags``          |Specify extra FCFLAGS options.                                                                                       |``None``
+``extra_fflags``           |Specify extra FFLAGS options.                                                                                        |``None``
+``i8``                     |Integers are 8 byte integers                                                                                         |``False``
+``ieee``                   |Adhere to IEEE-754 rules                                                                                             |``False``
+``lld_undefined_version``  |-Wl,--undefined-version - Allow unused version in version script                                                     |``False``
+``loop-vectorize``         |Loop vectorization                                                                                                   |``False``
+``loose``                  |Loose precision                                                                                                      |``False``
+``lowopt``                 |Low compiler optimizations                                                                                           |``False``
+``no_int_conversion_error``|-Wno-error=int-conversion - Avoid some failures that are normally ignored by GCC                                     |``True``
+``no_unused_args``         |-Wno-unused-command-line-argument - Avoid some failures in CMake correctly recognizing feature due to linker warnings|``True``
+``noopt``                  |Disable compiler optimizations                                                                                       |``False``
+``openmp``                 |Enable OpenMP                                                                                                        |``False``
+``opt``                    |High compiler optimizations                                                                                          |``False``
+``optarch``                |Enable architecture optimizations                                                                                    |``True``
+``packed-linker-options``  |Pack the linker options as comma separated list                                                                      |``False``
+``pic``                    |Use PIC                                                                                                              |``False``
+``precise``                |High precision                                                                                                       |``False``
+``r8``                     |Real is 8 byte real                                                                                                  |``False``
+``rpath``                  |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                |``True``
+``search-path-cpp-headers``|Search path used at build time for include directories                                                               |``None``
+``search-path-linker``     |Search path used at build time by the linker for libraries                                                           |``None``
+``shared``                 |Build shared library                                                                                                 |``False``
+``static``                 |Build static library                                                                                                 |``False``
+``strict``                 |Strict (highest) precision                                                                                           |``False``
+``unroll``                 |Unroll loops                                                                                                         |``False``
+``usempi``                 |Use MPI compiler as default compiler                                                                                 |``False``
+``vectorize``              |Enable compiler auto-vectorization, default except for noopt and lowopt                                              |``None``
+``verbose``                |Verbose output                                                                                                       |``False``
+``veryloose``              |Very loose precision                                                                                                 |``False``
+
+## lpsflf
+
+### Available options for lpsflf toolchain
+
+option                     |description                                                                                                          |default
+---------------------------|---------------------------------------------------------------------------------------------------------------------|---------
+``basic-block-vectorize``  |Basic block vectorization                                                                                            |``False``
+``cciscxx``                |Use CC as CXX                                                                                                        |``False``
+``cstd``                   |Specify C standard                                                                                                   |``None``
+``debug``                  |Keep debug symbols                                                                                                   |``None``
+``defaultopt``             |Default compiler optimizations                                                                                       |``False``
+``defaultprec``            |Default precision                                                                                                    |``False``
+``extra_cflags``           |Specify extra CFLAGS options.                                                                                        |``None``
+``extra_cxxflags``         |Specify extra CXXFLAGS options.                                                                                      |``None``
+``extra_f90flags``         |Specify extra F90FLAGS options.                                                                                      |``None``
+``extra_fcflags``          |Specify extra FCFLAGS options.                                                                                       |``None``
+``extra_fflags``           |Specify extra FFLAGS options.                                                                                        |``None``
+``i8``                     |Integers are 8 byte integers                                                                                         |``False``
+``ieee``                   |Adhere to IEEE-754 rules                                                                                             |``False``
+``lld_undefined_version``  |-Wl,--undefined-version - Allow unused version in version script                                                     |``False``
+``loop-vectorize``         |Loop vectorization                                                                                                   |``False``
+``loose``                  |Loose precision                                                                                                      |``False``
+``lowopt``                 |Low compiler optimizations                                                                                           |``False``
+``no_int_conversion_error``|-Wno-error=int-conversion - Avoid some failures that are normally ignored by GCC                                     |``True``
+``no_unused_args``         |-Wno-unused-command-line-argument - Avoid some failures in CMake correctly recognizing feature due to linker warnings|``True``
+``noopt``                  |Disable compiler optimizations                                                                                       |``False``
+``openmp``                 |Enable OpenMP                                                                                                        |``False``
+``opt``                    |High compiler optimizations                                                                                          |``False``
+``optarch``                |Enable architecture optimizations                                                                                    |``True``
+``packed-linker-options``  |Pack the linker options as comma separated list                                                                      |``False``
+``pic``                    |Use PIC                                                                                                              |``False``
+``precise``                |High precision                                                                                                       |``False``
+``r8``                     |Real is 8 byte real                                                                                                  |``False``
+``rpath``                  |Use RPATH wrappers when --rpath is enabled in EasyBuild configuration                                                |``True``
+``search-path-cpp-headers``|Search path used at build time for include directories                                                               |``None``
+``search-path-linker``     |Search path used at build time by the linker for libraries                                                           |``None``
+``shared``                 |Build shared library                                                                                                 |``False``
+``static``                 |Build static library                                                                                                 |``False``
+``strict``                 |Strict (highest) precision                                                                                           |``False``
+``unroll``                 |Unroll loops                                                                                                         |``False``
+``usempi``                 |Use MPI compiler as default compiler                                                                                 |``False``
+``vectorize``              |Enable compiler auto-vectorization, default except for noopt and lowopt                                              |``None``
+``verbose``                |Verbose output                                                                                                       |``False``
+``veryloose``              |Very loose precision                                                                                                 |``False``
+
+## lpsmpi
+
+### Available options for lpsmpi toolchain
 
 option                     |description                                                                                                          |default
 ---------------------------|---------------------------------------------------------------------------------------------------------------------|---------

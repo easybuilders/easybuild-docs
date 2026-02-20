@@ -10,7 +10,6 @@ The `time' command runs another program, then displays information about the res
 
 version | toolchain
 --------|----------
-``1.9`` | ``GCCcore/10.3.0``
 ``1.9`` | ``GCCcore/11.2.0``
 ``1.9`` | ``GCCcore/11.3.0``
 ``1.9`` | ``GCCcore/12.2.0``

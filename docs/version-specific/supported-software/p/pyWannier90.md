@@ -10,8 +10,6 @@ A Wannier90 Python interface for VASP and PySCF
 
 version | toolchain
 --------|----------
-``2021-12-07`` | ``foss/2021a``
-``2021-12-07`` | ``gomkl/2021a``
 ``2024-01-28`` | ``foss/2023a``
 
 

@@ -10,7 +10,6 @@ A low-latency GPU memory copy library based on NVIDIA GPUDirect RDMA technology.
 
 version | toolchain
 --------|----------
-``2.2`` | ``GCCcore/10.3.0``
 ``2.3`` | ``GCCcore/11.2.0``
 ``2.3`` | ``GCCcore/11.3.0``
 ``2.3`` | ``GCCcore/12.2.0``

@@ -85,6 +85,8 @@ Name                |Compiler(s)     |MPI          |Linear algebra           |FF
 **lmpflf**          |llvm-compilers  |MPICH        |FlexiBLAS, ScaLAPACK     |FFTW
 **lmpich**          |llvm-compilers  |MPICH        |*(none)*                 |*(none)*
 **lompi**           |llvm-compilers  |OpenMPI      |*(none)*                 |*(none)*
+**lpsflf**          |llvm-compilers  |psmpi        |FlexiBLAS, ScaLAPACK     |FFTW
+**lpsmpi**          |llvm-compilers  |psmpi        |*(none)*                 |*(none)*
 **NVHPC**           |nvidia-compilers|NVHPC        |NVHPC                    |*(none)*
 **nvidia-compilers**|nvidia-compilers|*(none)*     |*(none)*                 |*(none)*
 **nvofbf**          |nvidia-compilers|OpenMPI      |FlexiBLAS, ScaLAPACK     |FFTW

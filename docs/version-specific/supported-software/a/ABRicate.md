@@ -10,7 +10,6 @@ Mass screening of contigs for antimicrobial and virulence genes
 
 version | toolchain
 --------|----------
-``1.0.0`` | ``gompi/2021a``
 ``1.0.0`` | ``gompi/2023a``
 ``1.0.0`` | ``gompi/2023b``
 

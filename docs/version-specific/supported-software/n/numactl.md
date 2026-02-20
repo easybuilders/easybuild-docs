@@ -10,7 +10,6 @@ The numactl program allows you to run your application program on specific  cpu'
 
 version | toolchain
 --------|----------
-``2.0.14`` | ``GCCcore/10.3.0``
 ``2.0.14`` | ``GCCcore/11.2.0``
 ``2.0.14`` | ``GCCcore/11.3.0``
 ``2.0.16`` | ``GCCcore/12.2.0``

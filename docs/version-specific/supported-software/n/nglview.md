@@ -10,7 +10,6 @@ IPython widget to interactively view molecular structures and trajectories.
 
 version | toolchain
 --------|----------
-``3.0.3`` | ``foss/2021a``
 ``3.0.3`` | ``foss/2022a``
 ``3.1.2`` | ``foss/2023a``
 ``3.1.4`` | ``foss/2023b``

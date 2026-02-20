@@ -11,7 +11,6 @@ RepeatMasker is a program that screens DNA sequences for interspersed repeats  a
 version | toolchain
 --------|----------
 ``4.1.4`` | ``foss/2022a``
-``4.1.5`` | ``foss/2021a``
 ``4.1.5`` | ``foss/2022a``
 ``4.1.7-p1`` | ``foss/2023a``
 ``4.2.1`` | ``foss/2024a``

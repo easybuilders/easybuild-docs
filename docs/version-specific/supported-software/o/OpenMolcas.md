@@ -4,14 +4,12 @@ search:
 ---
 # OpenMolcas
 
-OpenMolcas is a quantum chemistry software package
+OpenMolcas is a quantum chemistry software package.
 
 *homepage*: <https://gitlab.com/Molcas/OpenMolcas>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``21.06`` |  | ``intel/2021a``
-``21.06`` |  | ``iomkl/2021a``
 ``21.06`` |  | ``iomkl/2023a``
 ``22.06`` |  | ``intel/2022a``
 ``22.10`` | ``-noGA`` | ``intel/2022a``

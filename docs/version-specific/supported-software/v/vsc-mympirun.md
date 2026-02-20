@@ -10,14 +10,8 @@ mympirun is a tool to make it easier for users of HPC clusters to run MPI progra
 
 version | toolchain
 --------|----------
-``5.1.0`` | ``system``
-``5.2.0`` | ``system``
 ``5.2.10`` | ``system``
 ``5.2.11`` | ``system``
-``5.2.2`` | ``system``
-``5.2.3`` | ``system``
-``5.2.4`` | ``system``
-``5.2.5`` | ``system``
 ``5.2.6`` | ``system``
 ``5.2.7`` | ``system``
 ``5.2.9`` | ``system``

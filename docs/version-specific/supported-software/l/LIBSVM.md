@@ -10,7 +10,6 @@ LIBSVM is an integrated software for support vector classification, (C-SVC, nu-S
 
 version | toolchain
 --------|----------
-``3.25`` | ``GCCcore/10.3.0``
 ``3.25`` | ``GCCcore/11.2.0``
 ``3.30`` | ``GCCcore/11.3.0``
 

@@ -10,7 +10,6 @@ SIONlib is a scalable I/O library for parallel access to task-local files.  The 
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.7.6`` | ``-tools`` | ``GCCcore/10.3.0``
 ``1.7.7`` | ``-tools`` | ``GCCcore/11.2.0``
 ``1.7.7`` | ``-tools`` | ``GCCcore/11.3.0``
 ``1.7.7`` | ``-tools`` | ``GCCcore/12.2.0``

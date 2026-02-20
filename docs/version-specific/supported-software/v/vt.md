@@ -10,7 +10,6 @@ A tool set for short variant discovery in genetic sequence data.
 
 version | toolchain
 --------|----------
-``0.57721`` | ``GCC/10.3.0``
 ``0.57721`` | ``GCC/11.2.0``
 
 

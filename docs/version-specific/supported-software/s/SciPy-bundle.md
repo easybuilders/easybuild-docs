@@ -10,9 +10,6 @@ Bundle of Python packages for scientific software
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2021.05`` |  | ``foss/2021a``
-``2021.05`` |  | ``gomkl/2021a``
-``2021.05`` |  | ``intel/2021a``
 ``2021.10`` | ``-Python-2.7.18`` | ``foss/2021b``
 ``2021.10`` |  | ``foss/2021b``
 ``2021.10`` |  | ``intel/2021b``

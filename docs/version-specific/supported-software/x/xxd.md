@@ -10,7 +10,6 @@ xxd is part of the VIM package and this will only install xxd, not vim! xxd conv
 
 version | toolchain
 --------|----------
-``8.2.4220`` | ``GCCcore/10.3.0``
 ``8.2.4220`` | ``GCCcore/11.2.0``
 ``8.2.4220`` | ``GCCcore/11.3.0``
 ``9.0.1696`` | ``GCCcore/12.2.0``

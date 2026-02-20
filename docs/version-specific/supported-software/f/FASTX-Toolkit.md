@@ -10,7 +10,6 @@ The FASTX-Toolkit is a collection of command line tools for  Short-Reads FASTA/F
 
 version | toolchain
 --------|----------
-``0.0.14`` | ``GCC/10.3.0``
 ``0.0.14`` | ``GCC/11.2.0``
 ``0.0.14`` | ``GCC/11.3.0``
 

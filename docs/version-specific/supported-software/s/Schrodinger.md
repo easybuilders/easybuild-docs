@@ -10,7 +10,6 @@ Schrodinger aims to provide integrated software solutions and services  that tru
 
 version | toolchain
 --------|----------
-``2020-4`` | ``system``
 ``2021-4`` | ``system``
 ``2022-1`` | ``system``
 ``2022-2`` | ``system``

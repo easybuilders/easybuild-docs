@@ -10,7 +10,6 @@ The NFFT (nonequispaced fast Fourier transform or nonuniform fast Fourier transf
 
 version | toolchain
 --------|----------
-``3.5.2`` | ``foss/2021a``
 ``3.5.2`` | ``foss/2021b``
 ``3.5.3`` | ``foss/2022a``
 ``3.5.3`` | ``foss/2023a``

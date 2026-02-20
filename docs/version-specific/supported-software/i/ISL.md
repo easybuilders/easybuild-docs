@@ -10,7 +10,6 @@ isl is a library for manipulating sets and relations of integer points bounded b
 
 version | toolchain
 --------|----------
-``0.23`` | ``GCCcore/10.3.0``
 ``0.24`` | ``GCCcore/11.2.0``
 ``0.24`` | ``GCCcore/11.3.0``
 ``0.26`` | ``GCCcore/12.2.0``

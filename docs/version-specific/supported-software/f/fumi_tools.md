@@ -10,7 +10,6 @@ This tool is intended to deduplicate UMIs from single-end and paired-end  sequen
 
 version | toolchain
 --------|----------
-``0.18.2`` | ``GCC/10.3.0``
 ``0.18.2`` | ``GCC/11.2.0``
 
 

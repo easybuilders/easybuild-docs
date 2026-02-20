@@ -10,7 +10,6 @@ NiBabel provides read/write access to some common medical and neuroimaging file 
 
 version | toolchain
 --------|----------
-``3.2.1`` | ``foss/2021a``
 ``3.2.2`` | ``foss/2021b``
 ``4.0.2`` | ``foss/2022a``
 ``5.2.0`` | ``gfbf/2022b``

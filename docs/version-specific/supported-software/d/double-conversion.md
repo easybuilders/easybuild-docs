@@ -10,7 +10,6 @@ Efficient binary-decimal and decimal-binary conversion routines for IEEE doubles
 
 version | toolchain
 --------|----------
-``3.1.5`` | ``GCCcore/10.3.0``
 ``3.1.5`` | ``GCCcore/11.2.0``
 ``3.2.0`` | ``GCCcore/11.3.0``
 ``3.2.1`` | ``GCCcore/12.2.0``

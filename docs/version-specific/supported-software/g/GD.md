@@ -10,7 +10,6 @@ GD.pm - Interface to Gd Graphics Library
 
 version | toolchain
 --------|----------
-``2.73`` | ``GCCcore/10.3.0``
 ``2.75`` | ``GCCcore/11.3.0``
 
 

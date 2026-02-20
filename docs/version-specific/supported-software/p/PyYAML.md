@@ -10,7 +10,6 @@ PyYAML is a YAML parser and emitter for the Python programming language.
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``5.4.1`` |  | ``GCCcore/10.3.0``
 ``5.4.1`` | ``-Python-2.7.18`` | ``GCCcore/11.2.0``
 ``5.4.1`` |  | ``GCCcore/11.2.0``
 ``6.0`` |  | ``GCCcore/11.3.0``

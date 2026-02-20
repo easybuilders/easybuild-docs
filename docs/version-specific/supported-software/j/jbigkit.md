@@ -10,7 +10,6 @@ JBIG-KIT is a software implementation of the JBIG1 data  compression standard (I
 
 version | toolchain
 --------|----------
-``2.1`` | ``GCCcore/10.3.0``
 ``2.1`` | ``GCCcore/11.2.0``
 ``2.1`` | ``GCCcore/11.3.0``
 ``2.1`` | ``GCCcore/12.2.0``

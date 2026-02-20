@@ -10,7 +10,6 @@ The hdbscan library is a suite of tools to use unsupervised learning to find clu
 
 version | toolchain
 --------|----------
-``0.8.27`` | ``foss/2021a``
 ``0.8.29`` | ``foss/2022a``
 ``0.8.38.post1`` | ``foss/2023a``
 ``0.8.40`` | ``foss/2023b``

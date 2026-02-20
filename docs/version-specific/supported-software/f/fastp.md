@@ -10,7 +10,6 @@ A tool designed to provide fast all-in-one preprocessing for FastQ files.  This 
 
 version | toolchain
 --------|----------
-``0.23.2`` | ``GCC/10.3.0``
 ``0.23.2`` | ``GCC/11.2.0``
 ``0.23.2`` | ``GCC/11.3.0``
 ``0.23.4`` | ``GCC/12.2.0``

@@ -10,7 +10,6 @@ Utility program for extracting sequences from a fasta/fastq file
 
 version | toolchain
 --------|----------
-``1.0.2`` | ``GCCcore/10.3.0``
 ``1.0.2`` | ``GCCcore/11.2.0``
 ``1.0.2`` | ``GCCcore/13.2.0``
 

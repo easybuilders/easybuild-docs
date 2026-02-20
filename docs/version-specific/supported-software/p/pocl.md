@@ -10,7 +10,6 @@ Pocl is a portable open source (MIT-licensed) implementation of the OpenCL stand
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.8`` |  | ``GCC/10.3.0``
 ``1.8`` |  | ``GCC/11.2.0``
 ``1.8`` | ``-CUDA-11.7.0`` | ``GCC/11.3.0``
 ``1.8`` |  | ``GCC/11.3.0``

@@ -14,6 +14,7 @@ version | toolchain
 ``3.11`` | ``GCCcore/12.3.0``
 ``3.11`` | ``GCCcore/13.2.0``
 ``3.11`` | ``GCCcore/13.3.0``
+``3.11`` | ``GCCcore/14.2.0``
 ``3.11`` | ``GCCcore/14.3.0``
 
 

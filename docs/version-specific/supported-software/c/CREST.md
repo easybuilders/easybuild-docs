@@ -10,8 +10,6 @@ CREST is an utility/driver program for the xtb program. Originally it was design
 
 version | toolchain
 --------|----------
-``2.11`` | ``intel/2021a``
-``2.11.2`` | ``intel/2021a``
 ``2.12`` | ``foss/2022b``
 ``2.12`` | ``gfbf/2023a``
 ``2.12`` | ``gfbf/2023b``

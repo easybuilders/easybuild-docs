@@ -6,11 +6,10 @@ search:
 
 Run VS Code on any machine anywhere and access it in the browser.
 
-*homepage*: <https://github.com/cdr/code-server>
+*homepage*: <https://github.com/coder/code-server>
 
 version | toolchain
 --------|----------
-``3.7.3`` | ``system``
 ``4.100.2`` | ``system``
 ``4.103.2`` | ``system``
 ``4.104.0`` | ``system``

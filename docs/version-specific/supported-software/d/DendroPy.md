@@ -10,7 +10,6 @@ A Python library for phylogenetics and phylogenetic computing: reading, writing,
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``4.5.2`` |  | ``GCCcore/10.3.0``
 ``4.5.2`` |  | ``GCCcore/11.2.0``
 ``4.5.2`` |  | ``GCCcore/11.3.0``
 ``4.5.2`` |  | ``GCCcore/12.2.0``

@@ -10,12 +10,6 @@ ORCA is a flexible, efficient and easy-to-use general purpose tool for quantum c
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``5.0.0`` | ``-static`` | ``gompi/2021a``
-``5.0.0`` |  | ``gompi/2021a``
-``5.0.1`` | ``-static`` | ``gompi/2021a``
-``5.0.1`` |  | ``gompi/2021a``
-``5.0.2`` | ``-static`` | ``gompi/2021a``
-``5.0.2`` |  | ``gompi/2021a``
 ``5.0.2`` | ``-static`` | ``gompi/2021b``
 ``5.0.2`` |  | ``gompi/2021b``
 ``5.0.3`` |  | ``gompi/2021b``

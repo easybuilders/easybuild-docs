@@ -10,7 +10,6 @@ GLFW is an Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan 
 
 version | toolchain
 --------|----------
-``3.3.4`` | ``GCCcore/10.3.0``
 ``3.3.4`` | ``GCCcore/11.2.0``
 ``3.3.8`` | ``GCCcore/11.3.0``
 ``3.4`` | ``GCCcore/12.2.0``

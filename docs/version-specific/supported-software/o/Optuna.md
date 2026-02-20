@@ -11,7 +11,6 @@ Optuna is an automatic hyperparameter optimization software framework, particula
 version | toolchain
 --------|----------
 ``2.10.0`` | ``foss/2021b``
-``2.9.1`` | ``foss/2021a``
 ``3.1.0`` | ``foss/2022a``
 ``3.5.0`` | ``foss/2022b``
 ``3.5.0`` | ``foss/2023a``

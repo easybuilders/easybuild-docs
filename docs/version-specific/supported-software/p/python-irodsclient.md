@@ -10,7 +10,6 @@ A python API for iRODS
 
 version | toolchain
 --------|----------
-``1.1.4`` | ``GCCcore/10.3.0``
 ``1.1.4`` | ``GCCcore/11.2.0``
 ``2.0.0`` | ``GCCcore/12.3.0``
 

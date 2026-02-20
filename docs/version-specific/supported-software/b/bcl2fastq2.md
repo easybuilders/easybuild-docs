@@ -10,7 +10,6 @@ bcl2fastq Conversion Software both demultiplexes data and converts BCL files gen
 
 version | toolchain
 --------|----------
-``2.20.0`` | ``GCC/10.3.0``
 ``2.20.0`` | ``GCC/11.2.0``
 ``2.20.0`` | ``GCC/11.3.0``
 ``2.20.0`` | ``GCC/12.2.0``

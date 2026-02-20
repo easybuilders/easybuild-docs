@@ -10,7 +10,6 @@ The Qwt library contains GUI Components and utility classes which are primarily 
 
 version | toolchain
 --------|----------
-``6.2.0`` | ``GCCcore/10.3.0``
 ``6.2.0`` | ``GCCcore/11.2.0``
 ``6.2.0`` | ``GCCcore/12.2.0``
 ``6.3.0`` | ``GCCcore/12.3.0``

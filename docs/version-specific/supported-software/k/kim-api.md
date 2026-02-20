@@ -10,7 +10,6 @@ Open Knowledgebase of Interatomic Models.  KIM is an API and OpenKIM is a collec
 
 version | toolchain
 --------|----------
-``2.2.1`` | ``GCC/10.3.0``
 ``2.3.0`` | ``GCC/11.2.0``
 ``2.3.0`` | ``GCC/11.3.0``
 ``2.3.0`` | ``GCC/12.2.0``

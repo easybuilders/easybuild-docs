@@ -10,7 +10,6 @@ UDUNITS supports conversion of unit specifications between formatted and binary 
 
 version | toolchain
 --------|----------
-``2.2.28`` | ``GCCcore/10.3.0``
 ``2.2.28`` | ``GCCcore/11.2.0``
 ``2.2.28`` | ``GCCcore/11.3.0``
 ``2.2.28`` | ``GCCcore/12.2.0``

@@ -11,10 +11,8 @@ The OpenSSL Project is a collaborative effort to develop a robust, commercial-gr
 version | toolchain
 --------|----------
 ``1.0`` | ``system``
-``1.1.1k`` | ``GCCcore/10.3.0``
 ``1.1.1k`` | ``GCCcore/11.2.0``
 ``1.1.1n`` | ``GCCcore/11.3.0``
-``1.1.1q`` | ``GCCcore/10.3.0``
 ``1.1`` | ``system``
 ``3`` | ``system``
 

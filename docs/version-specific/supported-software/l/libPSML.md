@@ -10,9 +10,7 @@ LibPSML provides a Fortran API to parse files in the  PSeudopotential Markup Lan
 
 version | toolchain
 --------|----------
-``1.1.10`` | ``GCC/10.3.0``
 ``1.1.10`` | ``GCC/11.2.0``
-``1.1.10`` | ``intel-compilers/2021.2.0``
 ``1.1.10`` | ``intel-compilers/2021.4.0``
 ``1.1.12`` | ``GCC/11.3.0``
 ``2.1.0`` | ``GCC/12.3.0``

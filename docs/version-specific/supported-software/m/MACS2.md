@@ -10,7 +10,6 @@ Model Based Analysis for ChIP-Seq data
 
 version | toolchain
 --------|----------
-``2.2.7.1`` | ``foss/2021a``
 ``2.2.7.1`` | ``foss/2021b``
 ``2.2.9.1`` | ``foss/2022a``
 ``2.2.9.1`` | ``foss/2022b``

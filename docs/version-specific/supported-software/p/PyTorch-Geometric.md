@@ -10,7 +10,6 @@ PyTorch Geometric (PyG) is a geometric deep learning extension library for PyTor
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.1.0`` | ``-PyTorch-1.12.1-CUDA-11.3.1`` | ``foss/2021a``
 ``2.1.0`` | ``-PyTorch-1.12.0-CUDA-11.7.0`` | ``foss/2022a``
 ``2.1.0`` | ``-PyTorch-1.12.0`` | ``foss/2022a``
 ``2.5.0`` | ``-PyTorch-2.1.2-CUDA-12.1.1`` | ``foss/2023a``

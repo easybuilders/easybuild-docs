@@ -10,7 +10,6 @@ If you need to mark a function or a method as deprecated, you can use the @depre
 
 version | toolchain
 --------|----------
-``1.2.13`` | ``foss/2021a``
 ``1.2.13`` | ``foss/2022a``
 ``1.2.14`` | ``GCCcore/13.2.0``
 ``1.2.14`` | ``foss/2023a``

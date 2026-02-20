@@ -10,7 +10,6 @@ libsoup is an HTTP client/server library for GNOME. It uses GObjects and the gli
 
 version | toolchain
 --------|----------
-``2.74.0`` | ``GCCcore/10.3.0``
 ``3.0.7`` | ``GCC/11.2.0``
 ``3.0.8`` | ``GCC/11.3.0``
 ``3.6.1`` | ``GCC/12.3.0``

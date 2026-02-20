@@ -11,7 +11,6 @@ This BSD-style licensed command line editor library provides generic line editin
 version | toolchain
 --------|----------
 ``20191231`` | ``GCCcore/12.3.0``
-``20210910`` | ``GCCcore/10.3.0``
 ``20210910`` | ``GCCcore/11.2.0``
 ``20240517`` | ``GCCcore/13.2.0``
 ``20240808`` | ``GCCcore/13.3.0``

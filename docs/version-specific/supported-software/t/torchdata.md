@@ -10,7 +10,6 @@ TorchData is a prototype library of common modular data loading primitives for e
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.3.0`` | ``-PyTorch-1.11.0-CUDA-11.3.1`` | ``foss/2021a``
 ``0.7.1`` | ``-PyTorch-2.1.2`` | ``foss/2023b``
 
 

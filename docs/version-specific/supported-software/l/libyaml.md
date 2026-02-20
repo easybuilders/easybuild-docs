@@ -10,7 +10,6 @@ LibYAML is a YAML parser and emitter written in C.
 
 version | toolchain
 --------|----------
-``0.2.5`` | ``GCCcore/10.3.0``
 ``0.2.5`` | ``GCCcore/11.2.0``
 ``0.2.5`` | ``GCCcore/11.3.0``
 ``0.2.5`` | ``GCCcore/12.2.0``

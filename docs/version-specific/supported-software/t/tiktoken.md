@@ -10,6 +10,8 @@ tiktoken is a fast BPE tokeniser for use with OpenAI's models
 
 version | toolchain
 --------|----------
+``0.12.0`` | ``GCCcore/14.2.0``
+``0.12.0`` | ``GCCcore/14.3.0``
 ``0.6.0`` | ``GCCcore/12.3.0``
 ``0.7.0`` | ``GCCcore/12.3.0``
 ``0.7.0`` | ``GCCcore/13.2.0``

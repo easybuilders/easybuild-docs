@@ -10,7 +10,6 @@ CUDA (formerly Compute Unified Device Architecture) is a parallel  computing pla
 
 version | toolchain
 --------|----------
-``11.0.2`` | ``system``
 ``11.1.1`` | ``system``
 ``11.2.1`` | ``system``
 ``11.2.2`` | ``system``

@@ -10,7 +10,6 @@ subset-bam is a tool to subset a 10x Genomics BAM file based on a tag, most comm
 
 version | toolchain
 --------|----------
-``1.1.0`` | ``GCCcore/10.3.0``
 ``1.1.0`` | ``system``
 
 

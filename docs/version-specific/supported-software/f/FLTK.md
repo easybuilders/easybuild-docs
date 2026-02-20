@@ -10,7 +10,6 @@ FLTK is a cross-platform C++ GUI toolkit for UNIX/Linux (X11), Microsoft Windows
 
 version | toolchain
 --------|----------
-``1.3.6`` | ``GCCcore/10.3.0``
 ``1.3.7`` | ``GCCcore/11.2.0``
 ``1.3.8`` | ``GCCcore/11.3.0``
 ``1.3.8`` | ``GCCcore/12.2.0``

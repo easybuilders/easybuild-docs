@@ -10,7 +10,6 @@ intltool is a set of tools to centralize translation of  many different file for
 
 version | toolchain
 --------|----------
-``0.51.0`` | ``GCCcore/10.3.0``
 ``0.51.0`` | ``GCCcore/11.2.0``
 ``0.51.0`` | ``GCCcore/11.3.0``
 ``0.51.0`` | ``GCCcore/12.2.0``

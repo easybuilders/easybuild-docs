@@ -10,7 +10,6 @@ The PCRE library is a set of functions that implement regular expression pattern
 
 version | toolchain
 --------|----------
-``10.36`` | ``GCCcore/10.3.0``
 ``10.37`` | ``GCCcore/11.2.0``
 ``10.40`` | ``GCCcore/11.3.0``
 ``10.40`` | ``GCCcore/12.2.0``

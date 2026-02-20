@@ -10,8 +10,6 @@ Software package and libraries for sequential and parallel graph partitioning, s
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``6.1.0`` |  | ``gompi/2021a``
-``6.1.0`` |  | ``iimpi/2021a``
 ``6.1.2`` |  | ``gompi/2021b``
 ``6.1.2`` |  | ``iimpi/2021b``
 ``7.0.1`` | ``-int64`` | ``gompi/2022a``

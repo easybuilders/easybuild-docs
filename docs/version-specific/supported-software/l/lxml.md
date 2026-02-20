@@ -10,7 +10,6 @@ The lxml XML toolkit is a Pythonic binding for the C libraries libxml2 and libxs
 
 version | toolchain
 --------|----------
-``4.6.3`` | ``GCCcore/10.3.0``
 ``4.6.3`` | ``GCCcore/11.2.0``
 ``4.9.1`` | ``GCCcore/11.3.0``
 ``4.9.2`` | ``GCCcore/12.2.0``

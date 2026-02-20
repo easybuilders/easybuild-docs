@@ -10,7 +10,6 @@ OpenCL and Cuda accelerated version of AutoDock. It leverages its embarrassingly
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.5.3`` | ``-CUDA-11.3.1`` | ``GCC/10.3.0``
 ``1.5.3`` | ``-CUDA-11.7.0`` | ``GCC/11.3.0``
 
 

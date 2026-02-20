@@ -10,7 +10,6 @@ The serf library is a high performance C-based HTTP client library  built upon t
 
 version | toolchain
 --------|----------
-``1.3.9`` | ``GCCcore/10.3.0``
 ``1.3.9`` | ``GCCcore/11.2.0``
 ``1.3.9`` | ``GCCcore/11.3.0``
 

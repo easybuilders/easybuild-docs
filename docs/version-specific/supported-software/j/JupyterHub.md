@@ -10,7 +10,6 @@ JupyterHub is a multiuser version of the Jupyter (IPython) notebook designed  fo
 
 version | toolchain
 --------|----------
-``1.4.1`` | ``GCCcore/10.3.0``
 ``3.0.0`` | ``GCCcore/11.3.0``
 ``4.0.1`` | ``GCCcore/12.2.0``
 ``4.0.2`` | ``GCCcore/12.3.0``

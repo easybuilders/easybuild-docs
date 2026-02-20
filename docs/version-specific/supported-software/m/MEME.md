@@ -10,7 +10,6 @@ The MEME Suite allows you to: * discover motifs using MEME, DREME (DNA only) or 
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``5.4.1`` |  | ``GCC/10.3.0``
 ``5.4.1`` | ``-Python-2.7.18`` | ``gompi/2021b``
 ``5.4.1`` |  | ``gompi/2021b``
 ``5.5.4`` |  | ``gompi/2022b``

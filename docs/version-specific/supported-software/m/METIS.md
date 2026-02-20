@@ -10,7 +10,6 @@ METIS is a set of serial programs for partitioning graphs, partitioning  finite 
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``5.1.0`` |  | ``GCCcore/10.3.0``
 ``5.1.0`` |  | ``GCCcore/11.2.0``
 ``5.1.0`` | ``-int64`` | ``GCCcore/11.3.0``
 ``5.1.0`` |  | ``GCCcore/11.3.0``

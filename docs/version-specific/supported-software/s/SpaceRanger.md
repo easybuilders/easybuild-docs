@@ -10,7 +10,6 @@ Space Ranger is a set of analysis pipelines that process Visium spatial RNA-seq 
 
 version | toolchain
 --------|----------
-``1.3.0`` | ``GCC/10.3.0``
 ``1.3.1`` | ``GCC/11.2.0``
 ``2.0.0`` | ``GCC/11.2.0``
 ``2.0.1`` | ``GCC/11.3.0``

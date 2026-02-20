@@ -10,7 +10,6 @@ GPAW is a density-functional theory (DFT) Python code based on the projector-aug
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``21.6.0`` |  | ``foss/2021a``
 ``22.8.0`` |  | ``foss/2021b``
 ``22.8.0`` |  | ``foss/2022a``
 ``22.8.0`` |  | ``intel/2021b``

@@ -10,7 +10,6 @@ TAMkin is a post-processing toolkit for normal mode analysis,  thermochemistry a
 
 version | toolchain
 --------|----------
-``1.2.6`` | ``foss/2021a``
 ``1.2.6`` | ``foss/2021b``
 ``1.2.6`` | ``foss/2022a``
 ``1.2.6`` | ``foss/2022b``

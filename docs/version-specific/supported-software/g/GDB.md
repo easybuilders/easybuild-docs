@@ -10,7 +10,6 @@ The GNU Project Debugger
 
 version | toolchain
 --------|----------
-``10.2`` | ``GCCcore/10.3.0``
 ``11.1`` | ``GCCcore/11.2.0``
 ``12.1`` | ``GCCcore/11.3.0``
 ``13.2`` | ``GCCcore/12.2.0``

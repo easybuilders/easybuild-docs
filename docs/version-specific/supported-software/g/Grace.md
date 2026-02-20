@@ -10,7 +10,6 @@ Grace is a WYSIWYG tool to make two-dimensional plots of numerical data.
 
 version | toolchain
 --------|----------
-``5.1.25`` | ``foss/2021a``
 ``5.1.25`` | ``foss/2021b``
 ``5.1.25`` | ``foss/2024a``
 

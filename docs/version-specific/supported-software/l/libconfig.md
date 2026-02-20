@@ -10,7 +10,6 @@ Libconfig is a simple library for processing structured configuration files
 
 version | toolchain
 --------|----------
-``1.7.3`` | ``GCCcore/10.3.0``
 ``1.7.3`` | ``GCCcore/11.2.0``
 ``1.8.1`` | ``GCCcore/13.3.0``
 

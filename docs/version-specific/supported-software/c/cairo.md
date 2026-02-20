@@ -10,7 +10,6 @@ Cairo is a 2D graphics library with support for multiple output devices.  Curren
 
 version | toolchain
 --------|----------
-``1.16.0`` | ``GCCcore/10.3.0``
 ``1.16.0`` | ``GCCcore/11.2.0``
 ``1.17.4`` | ``GCCcore/11.3.0``
 ``1.17.4`` | ``GCCcore/12.2.0``

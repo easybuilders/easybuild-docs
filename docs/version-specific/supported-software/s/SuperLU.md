@@ -10,7 +10,6 @@ SuperLU is a general purpose library for the direct solution of large, sparse, n
 
 version | toolchain
 --------|----------
-``5.3.0`` | ``foss/2021a``
 ``5.3.0`` | ``foss/2022a``
 ``5.3.0`` | ``intel/2022a``
 ``6.0.1`` | ``foss/2023b``

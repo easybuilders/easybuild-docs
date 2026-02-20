@@ -10,7 +10,6 @@ SDL: Simple DirectMedia Layer, a cross-platform multimedia library
 
 version | toolchain
 --------|----------
-``2.0.14`` | ``GCCcore/10.3.0``
 ``2.0.20`` | ``GCCcore/11.2.0``
 ``2.0.22`` | ``GCCcore/11.3.0``
 ``2.26.3`` | ``GCCcore/12.2.0``

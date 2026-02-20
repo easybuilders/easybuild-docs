@@ -10,7 +10,6 @@ Asynchronous input/output library that uses the kernels native interface.
 
 version | toolchain
 --------|----------
-``0.3.112`` | ``GCCcore/10.3.0``
 ``0.3.112`` | ``GCCcore/11.2.0``
 ``0.3.112`` | ``GCCcore/11.3.0``
 ``0.3.113`` | ``GCCcore/12.2.0``

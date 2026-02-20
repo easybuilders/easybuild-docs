@@ -10,7 +10,6 @@ libcurl is a free and easy-to-use client-side URL transfer library,  supporting 
 
 version | toolchain
 --------|----------
-``7.76.0`` | ``GCCcore/10.3.0``
 ``7.78.0`` | ``GCCcore/11.2.0``
 ``7.83.0`` | ``GCCcore/11.3.0``
 ``7.84.0`` | ``GCCcore/12.1.0``
@@ -19,6 +18,7 @@ version | toolchain
 ``8.0.1`` | ``GCCcore/13.1.0``
 ``8.11.1`` | ``GCCcore/14.2.0``
 ``8.14.1`` | ``GCCcore/14.3.0``
+``8.17.0`` | ``GCCcore/15.2.0``
 ``8.3.0`` | ``GCCcore/13.2.0``
 ``8.7.1`` | ``GCCcore/13.3.0``
 

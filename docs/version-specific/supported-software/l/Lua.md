@@ -10,7 +10,6 @@ Lua is a powerful, fast, lightweight, embeddable scripting language.  Lua combin
 
 version | toolchain
 --------|----------
-``5.4.3`` | ``GCCcore/10.3.0``
 ``5.4.3`` | ``GCCcore/11.2.0``
 ``5.4.4`` | ``GCCcore/11.3.0``
 ``5.4.4`` | ``GCCcore/12.2.0``

@@ -11,7 +11,6 @@ Fork of SWIG with support for MATLAB. SWIG is a software development tool that c
 version | versionsuffix | toolchain
 --------|---------------|----------
 ``20180415`` | ``-MATLAB`` | ``GCCcore/13.3.0``
-``4.0.2`` |  | ``GCCcore/10.3.0``
 ``4.0.2`` |  | ``GCCcore/11.2.0``
 ``4.0.2`` |  | ``GCCcore/11.3.0``
 ``4.1.1`` |  | ``GCCcore/12.2.0``

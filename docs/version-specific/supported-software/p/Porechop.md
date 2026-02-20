@@ -11,7 +11,6 @@ Porechop is a tool for finding and removing adapters from Oxford Nanopore reads.
 version | toolchain
 --------|----------
 ``0.2.4-20240119`` | ``GCCcore/12.3.0``
-``0.2.4`` | ``GCCcore/10.3.0``
 ``0.2.4`` | ``GCCcore/11.2.0``
 
 

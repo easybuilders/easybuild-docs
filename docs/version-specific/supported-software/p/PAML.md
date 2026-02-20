@@ -11,7 +11,6 @@ PAML is a package of programs for phylogenetic  analyses of DNA or protein seque
 version | toolchain
 --------|----------
 ``4.10.5`` | ``GCCcore/11.3.0``
-``4.9j`` | ``GCCcore/10.3.0``
 ``4.9j`` | ``GCCcore/11.2.0``
 ``4.9j`` | ``GCCcore/11.3.0``
 

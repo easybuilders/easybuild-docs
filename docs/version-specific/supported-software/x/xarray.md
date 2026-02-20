@@ -10,7 +10,6 @@ xarray (formerly xray) is an open source project and Python package that aims to
 
 version | toolchain
 --------|----------
-``0.19.0`` | ``foss/2021a``
 ``0.20.1`` | ``foss/2021b``
 ``0.20.1`` | ``intel/2021b``
 ``2022.6.0`` | ``foss/2022a``

@@ -10,8 +10,6 @@ Flex (Fast Lexical Analyzer) is a tool for generating scanners. A scanner,  some
 
 version | toolchain
 --------|----------
-``2.6.4`` | ``GCCcore/10.3.0``
-``2.6.4`` | ``GCCcore/11.1.0``
 ``2.6.4`` | ``GCCcore/11.2.0``
 ``2.6.4`` | ``GCCcore/11.3.0``
 ``2.6.4`` | ``GCCcore/11.4.0``

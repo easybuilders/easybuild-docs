@@ -10,7 +10,6 @@ PAPI provides the tool designer and application engineer with a consistent  inte
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``6.0.0.1`` |  | ``GCCcore/10.3.0``
 ``6.0.0.1`` |  | ``GCCcore/11.2.0``
 ``7.0.0`` |  | ``GCCcore/11.3.0``
 ``7.0.1`` |  | ``GCCcore/12.2.0``

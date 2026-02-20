@@ -10,12 +10,8 @@ Libxc is a library of exchange-correlation functionals for density-functional th
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``4.3.4`` |  | ``GCC/10.3.0``
 ``4.3.4`` |  | ``GCC/11.2.0``
-``4.3.4`` |  | ``intel-compilers/2021.2.0``
 ``4.3.4`` |  | ``intel-compilers/2021.4.0``
-``5.1.5`` |  | ``GCC/10.3.0``
-``5.1.5`` |  | ``intel-compilers/2021.2.0``
 ``5.1.6`` |  | ``GCC/11.2.0``
 ``5.1.6`` |  | ``intel-compilers/2021.4.0``
 ``5.2.3`` |  | ``GCC/11.3.0``

@@ -10,7 +10,6 @@ Trycycler is a tool for generating consensus long-read assemblies for bacterial 
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.5.2`` |  | ``foss/2021a``
 ``0.5.3`` |  | ``foss/2021b``
 ``0.5.5`` | ``-R-4.3.2`` | ``foss/2023a``
 

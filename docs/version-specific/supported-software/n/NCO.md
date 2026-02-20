@@ -10,11 +10,9 @@ The NCO toolkit manipulates and analyzes data stored in netCDF-accessible format
 
 version | toolchain
 --------|----------
-``5.0.1`` | ``foss/2021a``
 ``5.0.3`` | ``foss/2021b``
 ``5.0.3`` | ``intel/2021b``
 ``5.1.0`` | ``foss/2022a``
-``5.1.3`` | ``foss/2021a``
 ``5.1.3`` | ``foss/2022a``
 ``5.1.9`` | ``foss/2023a``
 ``5.1.9`` | ``intel/2022a``

@@ -10,7 +10,6 @@ HTTP proxy for node.js including a REST API for updating the routing table.  Dev
 
 version | toolchain
 --------|----------
-``4.4.0`` | ``GCCcore/10.3.0``
 ``4.5.3`` | ``GCCcore/11.3.0``
 ``4.5.5`` | ``GCCcore/12.2.0``
 ``4.5.6`` | ``GCCcore/12.3.0``

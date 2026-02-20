@@ -10,7 +10,6 @@ Libfabric is a core component of OFI. It is the library that defines and exports
 
 version | toolchain
 --------|----------
-``1.12.1`` | ``GCCcore/10.3.0``
 ``1.13.0`` | ``GCCcore/11.2.0``
 ``1.13.1`` | ``GCCcore/11.2.0``
 ``1.13.2`` | ``GCCcore/11.2.0``

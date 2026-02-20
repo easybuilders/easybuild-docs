@@ -11,10 +11,7 @@ plink-1.9-x86_64: Whole-genome association analysis toolset
 version | toolchain
 --------|----------
 ``1.90-beta-7.4-x86_64`` | ``system``
-``1.9b_6.17-x86_64`` | ``system``
-``1.9b_6.21-x86_64`` | ``system``
 ``2.0.0-a.6.9`` | ``gfbf/2023b``
-``2.00a2.3`` | ``GCC/10.3.0``
 ``2.00a2.3`` | ``GCC/11.2.0``
 ``2.00a3.1`` | ``GCC/11.2.0``
 ``2.00a3.6`` | ``GCC/11.3.0``

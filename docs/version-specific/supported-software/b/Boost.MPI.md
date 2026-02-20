@@ -10,7 +10,6 @@ Boost provides free peer-reviewed portable C++ source libraries.
 
 version | toolchain
 --------|----------
-``1.76.0`` | ``gompi/2021a``
 ``1.77.0`` | ``gompi/2021b``
 ``1.79.0`` | ``gompi/2022a``
 ``1.79.0`` | ``gompi/2022b``

@@ -10,7 +10,6 @@ The rjags package is an interface to the JAGS library.
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``4-10`` | ``-R-4.1.0`` | ``foss/2021a``
 ``4-12`` | ``-R-4.1.2`` | ``foss/2021b``
 ``4-13`` | ``-R-4.2.1`` | ``foss/2022a``
 ``4-13`` | ``-R-4.2.2`` | ``foss/2022b``

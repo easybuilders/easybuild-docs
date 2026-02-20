@@ -10,8 +10,6 @@ Single-cell architecture surgery (scArches) is a package for reference-based ana
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.5.6`` | ``-CUDA-11.3.1`` | ``foss/2021a``
-``0.5.6`` |  | ``foss/2021a``
 ``0.6.1`` | ``-CUDA-12.1.1`` | ``foss/2023a``
 ``0.6.1`` |  | ``foss/2023a``
 

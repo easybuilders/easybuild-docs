@@ -10,7 +10,6 @@ Tcsh is an enhanced, but completely compatible version of the Berkeley UNIX C sh
 
 version | toolchain
 --------|----------
-``6.22.04`` | ``GCCcore/10.3.0``
 ``6.24.01`` | ``GCCcore/11.2.0``
 ``6.24.01`` | ``GCCcore/11.3.0``
 ``6.24.07`` | ``GCCcore/12.2.0``

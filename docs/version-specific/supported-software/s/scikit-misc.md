@@ -10,7 +10,6 @@ Miscellaneous tools for data analysis and scientific computing
 
 version | toolchain
 --------|----------
-``0.1.4`` | ``foss/2021a``
 ``0.1.4`` | ``foss/2022a``
 ``0.3.1`` | ``foss/2023a``
 

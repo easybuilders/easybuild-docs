@@ -10,6 +10,7 @@ Open Graphics Library (OpenGL) is a cross-language, cross-platform application p
 
 version | toolchain
 --------|----------
+``2025.09`` | ``GCCcore/14.2.0``
 ``2025.09`` | ``GCCcore/14.3.0``
 
 
