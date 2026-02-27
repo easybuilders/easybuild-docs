@@ -113,6 +113,7 @@ nav:
   - User survey: user-survey/index.md
   - Policies:
       - Supported Toolchain Generations: policies/toolchains.md
+      - EasyBuild AI Policy: policies/ai.md
   - Other topics:
       - Alternative installation methods: installation-alternative.md
       - Configuration (legacy): legacy/configuration.md
