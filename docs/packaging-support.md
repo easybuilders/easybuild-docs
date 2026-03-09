@@ -20,22 +20,22 @@ required for FPM itself):
 ``` console
 $ export EASYBUILD_PREFIX=/home/example
 
-$ eb FPM-1.3.3-Ruby-2.1.6.eb --robot
+$ eb FPM-1.15.1-GCCcore-12.2.0.eb --robot
 [...]
-== building and installing Ruby/2.1.6...
-[...]
-== COMPLETED: Installation ended successfully
-[...]
-== building and installing FPM/1.3.3-Ruby-2.1.6...
+== building and installing Ruby/3.2.2...
 [...]
 == COMPLETED: Installation ended successfully
-== Results of the build can be found in the log file /home/example/software/FPM/1.3.3-Ruby-2.1.6/easybuild/easybuild-FPM-1.3.3-20150524.181859.log
+[...]
+== building and installing FPM/1.15.1-GCCcore-12.2.0...
+[...]
+== COMPLETED: Installation ended successfully
+== Results of the build can be found in the log file /home/example/software/FPM/1.15.1-GCCcore-12.2.0/easybuild/easybuild-FPM-1.15.1-20231103.101750.log
 == Build succeeded for 2 out of 2
 
-$ module load FPM/1.3.3-Ruby-2.1.6
+$ module load FPM/1.15.1-GCCcore-12.2.0
 
 $ fpm --version
-1.3.3
+1.15.1
 ```
 
 ## Configuration options {: #packaging_config }
@@ -77,9 +77,9 @@ this will make EasyBuild leverage FPM to create RPMs:
 
 ``` console
 $ export EASYBUILD_PREFIX=/home/example
-$ eb --package Perl-5.20.1-GCC-4.9.2-bare.eb --robot
+$ eb --package Perl-5.36.0-GCCcore-12.2.0-minimal.eb --robot
 [...]
-== building and installing Perl/5.20.1-GCC-4.9.2-bare...
+== building and installing Perl/5.36.0-GCCcore-12.2.0-minimal...
 == fetching files...
 == creating build dir, resetting environment...
 == unpacking...
@@ -96,7 +96,7 @@ $ eb --package Perl-5.20.1-GCC-4.9.2-bare.eb --robot
 == creating module...
 == packaging...
 == COMPLETED: Installation ended successfully
-== Results of the build can be found in the log file /home/example/software/Perl/5.20.1-GCC-4.9.2-bare/easybuild/easybuild-Perl-5.20.1-20150527.023522.log
+== Results of the build can be found in the log file /home/example/software/Perl/5.36.0-GCCcore-12.2.0-minimal/easybuild/easybuild-Perl-5.36.0-20231110.122738.log
 == Build succeeded for 1 out of 1
 ```
 
@@ -107,33 +107,37 @@ Packages will be located in the directory indicated by the
 By default, the package will have the following properties:
 
 ``` console
-$ rpm -qip --requires --provides /home/example/packages/Perl-5.20.1-GCC-4.9.2-bare.eb2.2.0-1.x86_64.rpm
-Name        : Perl-5.20.1-GCC-4.9.2-bare
-Version     : eb2.2.0
+$ rpm -qip --requires --provides /home/example/packages/Perl-5.36.0-GCCcore-12.2.0-minimal-eb_4.9.0.dev0-1.x86_64.rpm
+Name        : Perl-5.36.0-GCCcore-12.2.0-minimal
+Version     : eb_4.9.0.dev0
 Release     : 1
 Architecture: x86_64
 Install Date: (not installed)
 Group       : default
-Size        : 64539427
+Size        : 81520855
 License     : unknown
 Signature   : (none)
-Source RPM  : Perl-5.20.1-GCC-4.9.2-bare.eb2.2.0-1.x86_64.src.rpm
-Build Date  : Tue 07 Jul 2015 11:27:54 PM EDT
+Source RPM  : Perl-5.36.0-GCCcore-12.2.0-minimal-eb_4.9.0.dev0-1.src.rpm
+Build Date  : Fri 10 Nov 2023 12:27:25 PM CET
 Build Host  : 59e46bbf1cd0
 Relocations : /
 Packager    : <easybuild@59e46bbf1cd0>
-Vendor      : easybuild@59e46bbf1cd0
-URL         : http://example.com/no-uri-given
-Summary     : no description given
+Vendor      : none
+URL         : https://www.perl.org/
+Summary     : Larry Wall's Practical Extraction and Report Language
 Description :
-no description given
-GCC-4.9.2-dummy-dummy
+Larry Wall's Practical Extraction and Report Language
+ .
+This is a minimal build without any modules. Should only be used for build dependencies.
+GCCcore-12.2.0
+binutils-2.39-GCCcore-12.2.0
+rpmlib(CompressedFileNames) <= 3.0.4-1
 rpmlib(PartialHardlinkSets) <= 4.0.4-1
 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-rpmlib(CompressedFileNames) <= 3.0.4-1
-Perl-5.20.1-GCC-4.9.2-bare
-Perl-5.20.1-GCC-4.9.2-bare = eb2.2.0-1
-Perl-5.20.1-GCC-4.9.2-bare(x86-64) = eb2.2.0-1
+zlib-1.2.12-GCCcore-12.2.0
+Perl-5.36.0-GCCcore-12.2.0-minimal
+Perl-5.36.0-GCCcore-12.2.0-minimal = eb_4.9.0.dev0-1
+Perl-5.36.0-GCCcore-12.2.0-minimal(x86-64) = eb_4.9.0.dev0-1
 ```
 
 ## Packaging existing installations {: #packaging_skip }
@@ -142,9 +146,9 @@ To create packages for existing software installations (performed using
 EasyBuild), combine `--package` with `--skip --rebuild`:
 
 ``` console
-$ eb --package Perl-5.20.1-GCC-4.9.2-bare.eb --skip --rebuild
+$ eb --package Perl-5.36.0-GCCcore-12.2.0-minimal.eb --skip --rebuild
 [...]
-== building and installing Perl/5.20.1-GCC-4.9.2-bare...
+== building and installing Perl/5.36.0-GCCcore-12.2.0-minimal...
 == fetching files...
 == creating build dir, resetting environment...
 == unpacking [skipped]
@@ -161,6 +165,6 @@ $ eb --package Perl-5.20.1-GCC-4.9.2-bare.eb --skip --rebuild
 == creating module...
 == packaging...
 == COMPLETED: Installation ended successfully
-== Results of the build can be found in the log file /home/example/software/Perl/5.20.1-GCC-4.9.2-bare/easybuild/easybuild-Perl-5.20.1-20150527.041734.log
+== Results of the build can be found in the log file /home/example/software/Perl/5.36.0-GCCcore-12.2.0-minimal/easybuild/easybuild-Perl-5.36.0-20231110.124855.log
 == Build succeeded for 1 out of 1
 ```
