@@ -1101,6 +1101,15 @@ sanity_check_paths = {
 },
 ```
 
+Currently, the following values for architectures are supported:
+
+- `'AArch32'`
+- `'AArch64'`
+- `'POWER'`
+- `'x86_64'`
+- `'RISCV32'`
+- `'RISCV64'`
+
 ## Version-specific documentation relevant to easyconfigs
 
 - [Available config file constants][avail_cfgfile_constants]
