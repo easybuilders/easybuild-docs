@@ -1,8 +1,9 @@
 # EasyBuild AI Policy {: #policy_ai }
 
-This policy applies to the use of AI, such as generative AI, LLMs, and AI coding assists, for:
 
- * code and documentation provided to EasyBuild;
+This policy applies to the use of AI, such as generative AI, LLMs, and AI coding assistants, for:
+
+ * code and documentation contributed to EasyBuild;
  * functionality that EasyBuild provides;
  * reporting bugs to EasyBuild.
 
@@ -13,7 +14,7 @@ There are two parts to the policy:
 
 This policy is live as of (date) and contributions that were initiated prior to this do not have to retroactively comply with the *Policy for the use of AI in contributions to EasyBuild*.
 
-*EasyBuild supports the installation of AI software. These are welcome in EasyBuild and it is left to individual users and sites as to if they install this software.*
+*EasyBuild continues to provide support for the installation of AI software. These are welcome in EasyBuild, and it is left to individual users and sites as to if they install this software.*
 
 ## Policy for the provision of AI features in EasyBuild {: #policy_ai_features }
 
@@ -22,7 +23,7 @@ Functionality that adds AI features directly into the default EasyBuild installa
 The default EasyBuild installation is either:
 
 * `pip install easybuild`
-* Using EasyBuild to install `EasyBuild-x.y.z.eb` (for any version `x.y.z`)
+* Using EasyBuild to install EasyBuild, through an easyconfig file named `EasyBuild-x.y.z.eb` (for any version `x.y.z`)
 
 ### Reasoning for the policy for the provision of AI features in EasyBuild
 
@@ -31,29 +32,30 @@ By not accepting AI features in the default EasyBuild installation this will all
 Features that enhance EasyBuild using AI should be provided by optional installations or standalone tools. Options for this include:
 
 * Providing the AI feature as additional Python packages. These may be added as optional installs to the default EasyBuild install:
-    * `pip install easybuild[llm]`
-    * Installing `EasyBuild-x.y.z-with-llm.eb`
-    * [EasyBuild hooks](https://docs.easybuild.io/hooks/).
+    * Installing EasyBuild using `pip` and opting in to specific optional features, for example with `pip install easybuild[llm]`;
+    * Installing EasyBuild with EasyBuild using a customized easyconfig file, like `EasyBuild-x.y.z-with-llm.eb`;
+    * Using [hooks](https://docs.easybuild.io/hooks/) that customize the standard functionality of EasyBuild, for example to add AI features.
 
 ## Policy for the use of AI in contributions to EasyBuild {: #policy_ai_contributions }
 
 We ask that contributors:
 
-* declare when they have used AI in a contribution
-* declare the extent of that use of AI
-* declare which AI tool was used
-* keep a ["human in the loop"](https://www.phoronix.com/news/LLVM-Human-In-The-Loop) when using AI
+* Declare when they have used AI in a contribution;
+* If AI was used in a contribution, that they also:
+  * Declare which AI tool was used;
+  * Declare the extent of that use of AI;
+  * Keep a ["human in the loop"](https://www.phoronix.com/news/LLVM-Human-In-The-Loop) when using AI.
 
 Contributions to EasyBuild are:
 
-* GitHub pull requests - code, review, and information
-* GitHub issues
-* GitHub wiki
-* Producing documentation and tutorials hosted by EasyBuild
-* EasyBuild slack
-* Emails to the EasyBuild mailing list
-* EasyBuild User Meeting talks
-* Meeting notes
+* GitHub pull requests - code, review, and information;
+* GitHub issues;
+* GitHub wiki;
+* Producing documentation and tutorials hosted by EasyBuild;
+* Messages in EasyBuild Slack;
+* Emails to the EasyBuild mailing list;
+* EasyBuild User Meeting talks;
+* Meeting notes.
 
 ### Reasoning for the policy for the use of AI in contributions to EasyBuild
 
@@ -63,11 +65,11 @@ Also, there are potential ethical obligations relating to the data used to train
 
 ### Examples of contribution statements
 
-Examples:
+Examples of statements to declare the use of AI are:
 
 * I used CoPilot to code this PR.
 * ChatGPT was used to summarise the existing code, but the code was written by me.
-* Claude was used to produce documentation describing the CLI.
+* Claude was used to produce documentation describing the contribution.
 
 ## Changelog
 
