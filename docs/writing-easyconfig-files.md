@@ -8,7 +8,7 @@ easyconfig is all that you need to create in order to build and install
 the software and the corresponding module file.
 
 Luckily, the majority of software delivery mechanisms are being designed
-around either autotools or CMake or, perhaps, some simple file
+around either Autotools or CMake or, perhaps, some simple file
 extraction/copy pattern. In that case, a *generic easyblock* can be
 leveraged; see [Overview of generic easyblocks][generic_easyblocks].
 
@@ -194,7 +194,7 @@ The intention is to move towards making `sha256` the recommended and
 default checksum type.
 
 Other checksum types are also supported: `adler32`, `crc32`, `sha1`,
-`sha512`, `size` (filesize in bytes). To provide checksum values of a
+`sha512`, `size` (file size in bytes). To provide checksum values of a
 specific type, elements of the `checksums` list can also be 2-element
 tuples of the form `('<checksum type>', '<checksum value>')`. For
 example:
@@ -443,7 +443,7 @@ checksums, but a different checksum type can be specified as an argument
 
 In some cases, it can be required to provide additional information next
 to the name of a source file, e.g., a custom extraction command (because
-the one derived from the file extension is not correct), or an altername
+the one derived from the file extension is not correct), or an alternate
 filename that should be used to download the source file.
 
 This can be specified using a Python dictionary value in the `sources`
@@ -474,7 +474,7 @@ sources = [{
 
 !!! note
     Custom extraction commands can also be specified as a 2-element tuple, but this format has been deprecated
-    in favour of the Python dictionary format described above; see also
+    in favor of the Python dictionary format described above; see also
     [Specifying source files as 2-element tuples to provide a custom extraction command][depr_sources_2_element_tuple].
 
 #### Using `download_instructions` for user-side part of installation { : #download_instructions }
@@ -595,6 +595,8 @@ Remarks:
 - modules must exist for all (non-system) dependencies
 - (non-system) dependencies can be resolved via `--robot`
 - format: `(<name>, <version>[, <versionsuffix>[, <toolchain>]])`
+- An [architecture specific](#architecture-specific-values) version is possible.
+  This also allows adding or removing a dependency for a specific architecture.
 
 Example:
 
@@ -628,7 +630,7 @@ generated module file.
 
 When a [`system` toolchain][system_toolchain] is used, the
 modules for each of the (build) dependencies are *always* loaded,
-regardless of the toolchain version (as opposed the behaviour with the
+regardless of the toolchain version (as opposed the behavior with the
 `dummy` toolchain in EasyBuild versions prior to v4.0, see
 [Motivation for deprecating the `dummy` toolchain][system_toolchain_motivation_deprecating_dummy]).
 
@@ -822,7 +824,7 @@ would result in:
 - `./configure --prefix=... --two; make lib; TYPE=two make install`
 - `./configure --prefix=... --three; make lib; TYPE=three make install`
 
-An example use case of this is building FFTW with different precisions,
+An example use case of this is building FFTW with different precision,
 see the [FFTW easyconfig
 files](https://github.com/easybuilders/easybuild-easyconfigs/tree/main/easybuild/easyconfigs/f/FFTW).
 
@@ -845,6 +847,7 @@ Remarks:
     - paths are *relative* to installation directory
     - for a path specified as a tuple, only one of the specified paths
         must be available
+    - [architecture specific](#architecture-specific-values) lists are possible
 - default values:
     - paths: non-empty `bin` and `lib` or `lib64` directories
     - commands: none
@@ -1058,6 +1061,45 @@ sources = [SOURCELOWER_TAR_GZ]  # gcc-4.8.3.tar.gz
     in multiple locations of an easyconfig file; this is critical to
     make `--try-software-version` behave as expected (see also
     [Tweaking existing easyconfig files][tweaking_easyconfigs_using_try]).
+
+## Architecture specific values
+
+For some easyconfig parameters it is possible to provide architecture specific values by using a dictionary
+with keys in the format `arch=<val>`.  
+They key `arch=*` will be used when there was no other match.
+
+In `dependencies` this can be used as the *version* to use different ones, e.g. when a newer version has a known issue.
+Using `False` will cause the dependency to be removed.
+It is en **error** if no matching key (which includes `arch=*`) for the current architecture is found.
+
+In the values of `sanity_check_paths` this can be used to require files/folders that are only present on specific architectures.
+When the current architecture is missing in the keys, or the value is `None` the item will be skipped.
+
+Example:
+
+``` python
+dependencies=[
+  ('imkl', {
+    'arch=x86_64': '2021.4.0',
+    'arch=AArch32': '2021.3.0',
+    'arch=*': False
+    }, '', SYSTEM),
+]
+
+sanity_check_paths = {
+  'files': [{
+    'arch=AArch64': 'lib_arm.a',
+    'arch=x86_64': 'lib_intel.a',
+    },
+    'lib_generic.a', # Always checked (additionally)
+  ],
+  'dirs': [{
+    'arch=RISCV64': ('data/risc'),
+    'arch=*': 'data/other',
+    },
+  ],
+},
+```
 
 ## Version-specific documentation relevant to easyconfigs
 
