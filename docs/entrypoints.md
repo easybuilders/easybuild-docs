@@ -1,39 +1,40 @@
 # Entrypoints {: #entrypoints }
 
-[Entrypoints](https://packaging.python.org/en/latest/specifications/entry-points/) are a mechanism that can be used by python packages to expose functionalities. The most common use case is to expose a command line interface (CLI) to the user, but they can also be used to expose functions or classes that can be used by other python packages.
+[Entrypoints](https://packaging.python.org/en/latest/specifications/entry-points/) are a mechanism that can be used by Python packages to expose functionalities. The most common use case is to expose a command line interface (CLI) to the user, but they can also be used to expose functions or classes that can be used by other Python packages.
 
 Easybuild makes use of entrypoints for extending the following:
 
-- **hooks** (`easybuild.hooks`): Allow injecting multiple hooks for each [allowed step][available-hooks].
-  Furthermore, the order of execution can be enforced by setting a priority for each hook (higher priority will execute first).
+- **Hooks** (`easybuild.hooks`): Allow injecting multiple hooks for each [allowed step][available-hooks].
+  The order of execution can be enforced by setting a priority for each hook (higher priority will execute first).
   When the same priority is set, the order of execution is determined by the hook name.
-  The entrypoints hooks can be ran in conjunction with hooks detected using `--hooks` where the latter will always take precedence, regardless of the priority of the entrypoint hooks.
-- **easyblocks** (`easybuild.easyblocks`): Allow extending the set of available easyblocks, which are used to build and install software.
-- **toolchain** (`easybuild.toolchains`): Allow extending the set of available toolchains, which are used to build and install software.
+  The entrypoints hooks can be ran in conjunction with [standard hooks](hooks.md) detected using `--hooks` where the latter will always
+  take precedence, regardless of the priority of the entrypoint hooks.
+- **Easyblocks** (`easybuild.easyblocks`): Allow extending the set of available easyblocks, which are used to build and install software.
+- **Toolchains** (`easybuild.toolchains`): Allow extending the set of available toolchains, which are used to build and install software.
 
-The entrypoints needs to be decorated with the appropriate class in order for them to be recognized and used.
+The entrypoints needs to be decorated with the appropriate class in order for them to be recognized and used:
 
-- **Hooks**: `EntrypointHook`
-- **EasyBlocks**: `EntrypointEasyblock`
-- **Toolchains**: `EntrypointToolchain`
+- For hooks: `EntrypointHook`
+- For easyblocks: `EntrypointEasyblock`
+- For toolchains: `EntrypointToolchain`
 
 ## Validation {: #entrypoints_validation }
 
 Entrypoints are validated the moment they are registered:
 
-- **Hooks**: The entrypoint will check the the required combination of `step`, `pre_step` and `post_step` leads to a valid hook that will actually be ran.
-- **EasyBlocks**: The entrypoint will check that the easyblock is a subclass of `easybuild.framework.easyblock.EasyBlock`.
-  Furthermore, to avoid conflicts, an error will be raised if 2 separate modules attempts to register the same easyblock name. 
-  For if an entrypoint easyblock has the same name as an existing easyblock, the entrypoint will take precedence over the existing easyblock.
-- **Toolchains**: The entrypoint will check that the toolchain is a subclass of `easybuild.tools.toolchain.Toolchain`.
-  Furthermore, to avoid conflicts, an error will be raised if 2 separate modules attempts to register the same toolchain name (tc.NAME). 
-  The `prepend` argument used for the decorator class, will determine whether the entrypoint toolchain is prepended to the list of available toolchains or not.
+- **Hooks**: The entrypoint will check the the required combination of `step`, `pre_step` and `post_step` leads to a valid hook that will actually be run.
+- **EasyBlocks**: The entrypoint will check that the easyblock is a subclass of the `EasyBlock` class (provided by `easybuild.framework.easyblock`).
+  Furthermore, to avoid conflicts, an error will be raised if two separate modules attempt to register the same easyblock name.
+  If an entrypoint easyblock has the same name as an existing easyblock, the entrypoint will take precedence over the existing easyblock.
+- **Toolchains**: The entrypoint will check that the toolchain is a subclass of `Toolchain` (provided by `easybuild.tools.toolchain`).
+  Furthermore, to avoid conflicts, an error will be raised if two separate module attempts to register the same toolchain name (`tc.NAME`).
+  The `prepend` argument used for the decorator class will determine whether the entrypoint toolchain is prepended to the list of available toolchains.
   This allows to override an existing toolchain, or to only add a new one to the list of available toolchains.
 
 
 ## Examples {: #entrypoints_examples }
 
-Defining entrypoints can be done both through the `setup.py` file of a python package, or through the `pyproject.toml` file.
+Defining entrypoints can be done both through the `setup.py` file of a Python package, or through the `pyproject.toml` file.
 
 In the case of the `pyproject.toml`, the entrypoints can be defined using the following syntax:
 
@@ -47,8 +48,9 @@ In the case of the `pyproject.toml`, the entrypoints can be defined using the fo
 ...
 ```
 
-Where `GROUP_NAME` is the name of the entrypoint group (e.g. `easybuild.hooks`, `easybuild.easyblocks`, `easybuild.toolchains`), `ENTRYPOINT_NAME` is the name of the entrypoint, and `import_path:object` is the import path and object name that are being registered.
-EG: `myblock = "my_module.sub_module:MyBlock"` requires that `from my_module.sub_module import MyBlock` is possible.
+Here, `GROUP_NAME` is the name of the entrypoint group (e.g. `easybuild.hooks`, `easybuild.easyblocks`, `easybuild.toolchains`),
+`ENTRYPOINT_NAME` is the name of the entrypoint, and `import_path:object` is the import path and object name that are being registered.
+For example: `myblock = "my_module.sub_module:MyBlock"` requires that `from my_module.sub_module import MyBlock` is possible.
 
 For the following examples we are going to assume a package with the following folder structure:
 
