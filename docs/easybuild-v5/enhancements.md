@@ -103,7 +103,7 @@ be validated across systems.
 
 - Reproducible archives are supported in uncompressed TAR format (`.tar`) or
 for tarballs compressed with [XZ compression](https://en.wikipedia.org/wiki/XZ_Utils)
-(`.tar.zx`). The wide-spread [GZip compression](https://en.wikipedia.org/wiki/Gzip)
+(`.tar.xz`). The wide-spread [GZip compression](https://en.wikipedia.org/wiki/Gzip)
 is not currently supported because its implementation injects metadata in the
 compressed archive that is time dependent.
 
