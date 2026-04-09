@@ -4,13 +4,12 @@ search:
 ---
 # Trycycler
 
-Trycycler is a tool for generating consensus long-read assemblies for bacterial genomes.
+A tool for generating consensus long-read assemblies for bacterial genomes.
 
 *homepage*: <https://github.com/rrwick/Trycycler>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.5.3`` |  | ``foss/2021b``
 ``0.5.5`` | ``-R-4.3.2`` | ``foss/2023a``
 
 

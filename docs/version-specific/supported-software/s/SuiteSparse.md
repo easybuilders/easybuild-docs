@@ -10,13 +10,12 @@ SuiteSparse is a collection of libraries manipulate sparse matrices.
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``5.10.1`` | ``-METIS-5.1.0`` | ``foss/2021b``
-``5.10.1`` | ``-METIS-5.1.0`` | ``intel/2021b``
 ``5.13.0`` | ``-METIS-5.1.0`` | ``foss/2022a``
 ``5.13.0`` | ``-METIS-5.1.0`` | ``foss/2022b``
 ``7.1.0`` |  | ``foss/2023a``
 ``7.10.1`` |  | ``foss/2024a``
 ``7.10.3`` |  | ``foss/2025a``
+``7.11.0`` | ``-METIS-5.1.0`` | ``foss/2025b``
 ``7.11.0`` |  | ``gfbf/2025b``
 ``7.7.0`` |  | ``foss/2023b``
 ``7.7.0`` |  | ``gfbf/2023b``

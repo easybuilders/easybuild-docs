@@ -10,7 +10,6 @@ A full-featured and high-performance (see benchmark) event loop that is loosely 
 
 version | toolchain
 --------|----------
-``4.33`` | ``GCC/11.2.0``
 ``4.33`` | ``GCC/11.3.0``
 ``4.33`` | ``GCC/12.3.0``
 ``4.33`` | ``GCCcore/13.3.0``

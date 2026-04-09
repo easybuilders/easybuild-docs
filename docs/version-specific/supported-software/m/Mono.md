@@ -10,7 +10,6 @@ An open source, cross-platform, implementation of C# and the CLR that is  binary
 
 version | toolchain
 --------|----------
-``6.12.0.122`` | ``GCCcore/11.2.0``
 ``6.12.0.199`` | ``GCCcore/13.3.0``
 
 

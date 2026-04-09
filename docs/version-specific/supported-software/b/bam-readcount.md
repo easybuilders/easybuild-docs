@@ -10,7 +10,6 @@ Count DNA sequence reads in BAM files
 
 version | toolchain
 --------|----------
-``0.8.0`` | ``GCC/11.2.0``
 ``1.0.1`` | ``GCC/12.2.0``
 ``1.0.1`` | ``GCC/12.3.0``
 ``1.0.1`` | ``GCC/13.3.0``

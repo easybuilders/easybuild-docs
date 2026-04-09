@@ -10,7 +10,6 @@ A suite of tools to build and search generalized profiles (protein and DNA).
 
 version | toolchain
 --------|----------
-``3.2.12`` | ``GCCcore/11.2.0``
 ``3.2.12`` | ``GCCcore/11.3.0``
 ``3.2.13`` | ``GCCcore/14.2.0``
 

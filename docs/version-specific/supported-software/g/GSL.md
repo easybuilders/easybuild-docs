@@ -10,12 +10,10 @@ The GNU Scientific Library (GSL) is a numerical library for C and C++ programmer
 
 version | toolchain
 --------|----------
-``2.7`` | ``GCC/11.2.0``
 ``2.7`` | ``GCC/11.3.0``
 ``2.7`` | ``GCC/12.2.0``
 ``2.7`` | ``GCC/12.3.0``
 ``2.7`` | ``GCC/13.2.0``
-``2.7`` | ``intel-compilers/2021.4.0``
 ``2.7`` | ``intel-compilers/2022.1.0``
 ``2.7`` | ``intel-compilers/2023.1.0``
 ``2.7`` | ``intel-compilers/2023.2.1``

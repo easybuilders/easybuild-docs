@@ -6,11 +6,10 @@ search:
 
 Generic indexer for TAB-delimited genome position files
 
-*homepage*: <http://samtools.sourceforge.net>
+*homepage*: <https://samtools.sourceforge.net>
 
 version | toolchain
 --------|----------
-``0.2.6`` | ``GCCcore/11.2.0``
 ``0.2.6`` | ``GCCcore/11.3.0``
 ``0.2.6`` | ``GCCcore/12.3.0``
 ``0.2.6`` | ``GCCcore/13.2.0``

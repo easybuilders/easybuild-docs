@@ -11,6 +11,7 @@ Palantir is an algorithm to align cells along differentiation trajectories. Pala
 version | toolchain
 --------|----------
 ``1.4.1`` | ``foss/2023a``
+``1.4.1`` | ``foss/2024a``
 ``1.4.1`` | ``foss/2025a``
 
 

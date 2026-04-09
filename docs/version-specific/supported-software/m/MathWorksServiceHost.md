@@ -11,6 +11,7 @@ MathWorks Service Host is a collection of background processes that provide  req
 version | toolchain
 --------|----------
 ``2024.13.0.2`` | ``system``
+``2025.11.1.2`` | ``system``
 ``2025.5.1.1`` | ``system``
 ``2025.9.0.2`` | ``system``
 

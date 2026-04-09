@@ -10,7 +10,6 @@ strace is a diagnostic, debugging and instructional userspace utility for Linux.
 
 version | toolchain
 --------|----------
-``5.14`` | ``GCCcore/11.2.0``
 ``6.14`` | ``GCCcore/14.2.0``
 ``6.14`` | ``GCCcore/14.3.0``
 ``6.6`` | ``GCCcore/12.2.0``

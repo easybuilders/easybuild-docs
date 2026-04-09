@@ -10,7 +10,6 @@ The bdbag utilities are a collection of software programs for working with BagIt
 
 version | toolchain
 --------|----------
-``1.6.3`` | ``intel/2021b``
 ``1.7.3`` | ``foss/2023a``
 ``1.8.0`` | ``foss/2025a``
 

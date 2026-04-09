@@ -11,7 +11,7 @@ A tool for obtaining maximally-localised Wannier functions
 version | toolchain
 --------|----------
 ``3.1.0`` | ``NVHPC/25.1``
-``3.1.0`` | ``foss/2021b``
+``3.1.0`` | ``NVHPC/25.9-CUDA-12.9.1``
 ``3.1.0`` | ``foss/2022a``
 ``3.1.0`` | ``foss/2023a``
 ``3.1.0`` | ``foss/2024a``
@@ -20,7 +20,6 @@ version | toolchain
 ``3.1.0`` | ``gomkl/2022a``
 ``3.1.0`` | ``gomkl/2023a``
 ``3.1.0`` | ``gomkl/2023b``
-``3.1.0`` | ``intel/2021b``
 ``3.1.0`` | ``intel/2022a``
 ``3.1.0`` | ``intel/2022b``
 ``3.1.0`` | ``intel/2023a``

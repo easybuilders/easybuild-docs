@@ -10,7 +10,6 @@ pkgconf is a program which helps to configure compiler and linker flags for deve
 
 version | toolchain
 --------|----------
-``1.8.0`` | ``GCCcore/11.2.0``
 ``1.8.0`` | ``GCCcore/11.3.0``
 ``1.8.0`` | ``system``
 ``1.9.3`` | ``GCCcore/12.2.0``

@@ -10,7 +10,6 @@ cclib is a Python library that provides parsers for computational chemistry log 
 
 version | toolchain
 --------|----------
-``1.7.2`` | ``foss/2021b``
 ``1.8`` | ``foss/2023a``
 ``1.8.1`` | ``foss/2023b``
 

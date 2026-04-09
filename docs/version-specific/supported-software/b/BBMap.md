@@ -10,7 +10,6 @@ BBMap short read aligner, and other bioinformatic tools.
 
 version | toolchain
 --------|----------
-``38.98`` | ``GCC/11.2.0``
 ``39.01`` | ``GCC/11.3.0``
 ``39.01`` | ``GCC/12.2.0``
 ``39.19`` | ``GCC/12.3.0``

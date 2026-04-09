@@ -10,7 +10,6 @@ Platform-independent Qt API for storing passwords securely.
 
 version | toolchain
 --------|----------
-``0.13.2`` | ``GCCcore/11.2.0``
 ``0.14.3`` | ``GCCcore/12.3.0``
 
 

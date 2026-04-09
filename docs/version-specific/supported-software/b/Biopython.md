@@ -10,11 +10,8 @@ Biopython is a set of freely available tools for biological  computation written
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.76`` | ``-Python-2.7.18`` | ``foss/2021b``
 ``1.76`` | ``-Python-2.7.18`` | ``foss/2023a``
-``1.79`` |  | ``foss/2021b``
 ``1.79`` |  | ``foss/2022a``
-``1.79`` |  | ``intel/2021b``
 ``1.81`` |  | ``gfbf/2022b``
 ``1.83`` |  | ``gfbf/2023a``
 ``1.84`` |  | ``gfbf/2023b``

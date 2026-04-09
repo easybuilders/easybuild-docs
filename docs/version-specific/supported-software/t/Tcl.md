@@ -10,7 +10,6 @@ Tcl (Tool Command Language) is a very powerful but easy to learn dynamic  progra
 
 version | toolchain
 --------|----------
-``8.6.11`` | ``GCCcore/11.2.0``
 ``8.6.12`` | ``GCCcore/11.3.0``
 ``8.6.12`` | ``GCCcore/12.2.0``
 ``8.6.13`` | ``GCCcore/12.3.0``

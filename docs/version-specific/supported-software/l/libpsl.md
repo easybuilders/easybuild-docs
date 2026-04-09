@@ -10,7 +10,6 @@ C library for the Public Suffix List
 
 version | toolchain
 --------|----------
-``0.21.1`` | ``GCCcore/11.2.0``
 ``0.21.1`` | ``GCCcore/11.3.0``
 ``0.21.5`` | ``GCCcore/12.3.0``
 ``0.21.5`` | ``GCCcore/14.2.0``

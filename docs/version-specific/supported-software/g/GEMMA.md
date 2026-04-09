@@ -10,7 +10,6 @@ Genome-wide Efficient Mixed Model Association
 
 version | toolchain
 --------|----------
-``0.98.5`` | ``foss/2021b``
 ``0.98.5`` | ``foss/2022b``
 ``0.98.5`` | ``gfbf/2023b``
 

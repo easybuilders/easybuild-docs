@@ -6,11 +6,10 @@ search:
 
 Library contains GRIB2 encoder/decoder ('C' version).
 
-*homepage*: <https://www.nco.ncep.noaa.gov/pmb/codes/GRIB2/>
+*homepage*: <https://github.com/NOAA-EMC/NCEPLIBS-g2c>
 
 version | toolchain
 --------|----------
-``1.6.3`` | ``GCCcore/11.2.0``
 ``1.7.0`` | ``GCCcore/11.3.0``
 ``2.3.0`` | ``GCCcore/14.3.0``
 

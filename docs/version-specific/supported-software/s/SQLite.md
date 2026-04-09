@@ -10,7 +10,6 @@ SQLite: SQL Database Engine in a C Library
 
 version | toolchain
 --------|----------
-``3.36`` | ``GCCcore/11.2.0``
 ``3.38.3`` | ``GCCcore/11.3.0``
 ``3.39.4`` | ``GCCcore/12.2.0``
 ``3.41.2`` | ``GCCcore/13.1.0``

@@ -4,13 +4,12 @@ search:
 ---
 # zlib
 
-zlib is designed to be a free, general-purpose, legally unencumbered -- that is,  not covered by any patents -- lossless data-compression library for use on virtually any  computer hardware and operating system.
+zlib is designed to be a free, general-purpose, legally unencumbered -- that  is, not covered by any patents -- lossless data-compression library for use  on virtually any computer hardware and operating system.
 
 *homepage*: <https://www.zlib.net/>
 
 version | toolchain
 --------|----------
-``1.2.11`` | ``GCCcore/11.2.0``
 ``1.2.11`` | ``system``
 ``1.2.12`` | ``GCCcore/11.3.0``
 ``1.2.12`` | ``GCCcore/12.1.0``

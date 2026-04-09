@@ -10,7 +10,6 @@ FLASH (Fast Length Adjustment of SHort reads) is a very fast and accurate softwa
 
 version | toolchain
 --------|----------
-``2.2.00`` | ``GCC/11.2.0``
 ``2.2.00`` | ``GCCcore/12.2.0``
 ``2.2.00`` | ``GCCcore/13.3.0``
 

@@ -10,7 +10,6 @@ NVSHMEM is a parallel programming interface based on OpenSHMEM that provides eff
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.4.1`` | ``-CUDA-11.4.1`` | ``gompi/2021b``
 ``2.5.0`` | ``-CUDA-11.7.0`` | ``gompi/2022a``
 ``2.7.0`` | ``-CUDA-11.7.0`` | ``gompi/2022a``
 ``2.8.0`` | ``-CUDA-11.7.0`` | ``gompi/2022a``

@@ -10,7 +10,6 @@ Python bindings for libclang
 
 version | toolchain
 --------|----------
-``13.0.1`` | ``GCCcore/11.2.0``
 ``13.0.1`` | ``GCCcore/11.3.0``
 ``16.0.6`` | ``GCCcore/12.3.0``
 

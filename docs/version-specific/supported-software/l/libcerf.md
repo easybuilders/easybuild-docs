@@ -10,7 +10,6 @@ libcerf is a self-contained numeric library that provides an efficient and  accu
 
 version | toolchain
 --------|----------
-``1.17`` | ``GCCcore/11.2.0``
 ``2.1`` | ``GCCcore/11.3.0``
 ``2.3`` | ``GCCcore/12.2.0``
 ``2.3`` | ``GCCcore/12.3.0``

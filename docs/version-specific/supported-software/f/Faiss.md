@@ -10,6 +10,8 @@ Faiss is a library for efficient similarity search and clustering of dense  vect
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``1.13.2`` | ``-CUDA-12.6.0`` | ``foss/2024a``
+``1.13.2`` |  | ``foss/2024a``
 ``1.7.4`` | ``-CUDA-12.1.1`` | ``foss/2023a``
 ``1.7.4`` |  | ``foss/2023a``
 

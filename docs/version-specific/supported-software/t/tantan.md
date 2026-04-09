@@ -10,7 +10,6 @@ tantan identifies simple regions / low complexity / tandem repeats in DNA or pro
 
 version | toolchain
 --------|----------
-``40`` | ``GCC/11.2.0``
 ``50`` | ``GCC/12.3.0``
 ``51`` | ``GCC/13.3.0``
 

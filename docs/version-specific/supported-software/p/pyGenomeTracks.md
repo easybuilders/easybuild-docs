@@ -10,7 +10,6 @@ pyGenomeTracks aims to produce high-quality genome browser tracks that are highl
 
 version | toolchain
 --------|----------
-``3.7`` | ``foss/2021b``
 ``3.8`` | ``foss/2022a``
 ``3.9`` | ``foss/2023a``
 

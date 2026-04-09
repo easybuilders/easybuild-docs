@@ -10,7 +10,6 @@ C++ implementation of R*-tree, an MVR-tree and a TPR-tree with C API
 
 version | toolchain
 --------|----------
-``1.9.3`` | ``GCCcore/11.2.0``
 ``1.9.3`` | ``GCCcore/11.3.0``
 ``1.9.3`` | ``GCCcore/12.2.0``
 ``1.9.3`` | ``GCCcore/12.3.0``

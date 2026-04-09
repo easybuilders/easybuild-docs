@@ -11,6 +11,7 @@ pySCENIC is a lightning-fast python implementation of the SCENIC pipeline (Singl
 version | toolchain
 --------|----------
 ``0.12.1-20240311`` | ``foss/2023a``
+``0.12.1-20250109`` | ``foss/2024a``
 ``0.12.1`` | ``foss/2022a``
 
 

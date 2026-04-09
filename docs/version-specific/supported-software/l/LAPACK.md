@@ -10,7 +10,6 @@ LAPACK is written in Fortran90 and provides routines for solving systems of  sim
 
 version | toolchain
 --------|----------
-``3.10.1`` | ``GCC/11.2.0``
 ``3.10.1`` | ``GCC/11.3.0``
 ``3.12.0`` | ``GCC/12.3.0``
 ``3.12.0`` | ``GCC/13.2.0``

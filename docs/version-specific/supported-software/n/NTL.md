@@ -10,7 +10,6 @@ NTL is a high-performance, portable C++ library providing data structures and al
 
 version | toolchain
 --------|----------
-``11.5.1`` | ``GCC/11.2.0``
 ``11.5.1`` | ``GCC/11.3.0``
 ``11.5.1`` | ``GCC/12.2.0``
 ``11.5.1`` | ``GCC/12.3.0``

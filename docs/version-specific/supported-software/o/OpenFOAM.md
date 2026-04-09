@@ -25,7 +25,6 @@ version | versionsuffix | toolchain
 ``7`` | ``-20200508`` | ``foss/2022a``
 ``8`` |  | ``foss/2023a``
 ``9`` |  | ``foss/2023a``
-``v2112`` |  | ``foss/2021b``
 ``v2112`` |  | ``foss/2022a``
 ``v2112`` |  | ``foss/2023a``
 ``v2206`` | ``-int64`` | ``foss/2022a``

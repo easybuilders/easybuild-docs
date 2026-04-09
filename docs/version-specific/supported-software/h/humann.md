@@ -11,6 +11,7 @@ HUMAnN v3 is a pipeline for efficiently  and accurately determining the coverage
 version | toolchain
 --------|----------
 ``3.6`` | ``foss/2022a``
+``3.9`` | ``GCC/12.3.0``
 ``3.9`` | ``foss/2023a``
 ``3.9`` | ``foss/2024a``
 

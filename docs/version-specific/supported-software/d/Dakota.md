@@ -10,7 +10,6 @@ The Dakota project delivers both state-of-the-art research and robust, usable  s
 
 version | toolchain
 --------|----------
-``6.16.0`` | ``foss/2021b``
 ``6.22.0`` | ``foss/2023a``
 
 

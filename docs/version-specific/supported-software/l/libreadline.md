@@ -10,7 +10,6 @@ The GNU Readline library provides a set of functions for use by applications  th
 
 version | toolchain
 --------|----------
-``8.1`` | ``GCCcore/11.2.0``
 ``8.1`` | ``GCCcore/11.3.0``
 ``8.1.2`` | ``GCCcore/11.3.0``
 ``8.1.2`` | ``GCCcore/12.1.0``

@@ -10,9 +10,6 @@ Quantum ESPRESSO  is an integrated suite of computer codes for electronic-struct
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``6.8`` |  | ``foss/2021b``
-``7.0`` |  | ``foss/2021b``
-``7.0`` |  | ``intel/2021b``
 ``7.1`` |  | ``foss/2022a``
 ``7.1`` |  | ``intel/2022a``
 ``7.2`` |  | ``foss/2022b``
@@ -25,6 +22,7 @@ version | versionsuffix | toolchain
 ``7.3.1`` |  | ``intel/2023a``
 ``7.4`` | ``-minimal`` | ``foss/2024a``
 ``7.4`` |  | ``foss/2024a``
+``7.5`` |  | ``NVHPC/25.3-CUDA-12.8.0``
 ``7.5`` |  | ``foss/2025a``
 ``7.5`` |  | ``foss/2025b``
 ``7.5`` |  | ``lfoss/2025b``

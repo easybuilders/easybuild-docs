@@ -10,7 +10,6 @@ NetLogo is a multi-agent programmable modeling environment. It is used by tens o
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``6.2.0`` | ``-64`` | ``system``
 ``6.2.2`` | ``-64`` | ``system``
 ``6.3.0`` | ``-64`` | ``system``
 

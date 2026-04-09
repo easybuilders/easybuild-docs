@@ -10,7 +10,6 @@ GCTA (Genome-wide Complex Trait Analysis) is a software package, which was  init
 
 version | toolchain
 --------|----------
-``1.94.0beta`` | ``foss/2021b``
 ``1.94.0beta`` | ``gfbf/2022a``
 ``1.94.1`` | ``gfbf/2022a``
 ``1.94.1`` | ``gfbf/2023a``

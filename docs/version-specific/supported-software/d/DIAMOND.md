@@ -10,7 +10,6 @@ Accelerated BLAST compatible local sequence aligner
 
 version | toolchain
 --------|----------
-``2.0.13`` | ``GCC/11.2.0``
 ``2.1.0`` | ``GCC/11.3.0``
 ``2.1.11`` | ``GCC/13.3.0``
 ``2.1.14`` | ``GCC/14.2.0``

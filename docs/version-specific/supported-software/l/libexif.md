@@ -10,7 +10,6 @@ A library for parsing, editing, and saving EXIF data.
 
 version | toolchain
 --------|----------
-``0.6.24`` | ``GCCcore/11.2.0``
 ``0.6.25`` | ``GCCcore/14.3.0``
 
 

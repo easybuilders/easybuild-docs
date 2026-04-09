@@ -10,7 +10,6 @@ MATSim is an open-source framework to implement large-scale agent-based transpor
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``14.0`` | ``-Java-11`` | ``GCCcore/11.2.0``
 ``14.0`` | ``-Java-11`` | ``system``
 ``15.0`` | ``-Java-17`` | ``GCCcore/12.3.0``
 ``15.0`` | ``-Java-17`` | ``system``

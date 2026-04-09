@@ -10,7 +10,6 @@ LMDB is a fast, memory-efficient database. With memory-mapped files, it has the 
 
 version | toolchain
 --------|----------
-``0.9.29`` | ``GCCcore/11.2.0``
 ``0.9.29`` | ``GCCcore/11.3.0``
 ``0.9.29`` | ``GCCcore/12.2.0``
 ``0.9.31`` | ``GCCcore/12.3.0``

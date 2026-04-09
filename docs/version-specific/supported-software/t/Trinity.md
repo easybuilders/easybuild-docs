@@ -10,7 +10,6 @@ Trinity represents a novel method for the efficient and robust de novo reconstru
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.15.1`` |  | ``foss/2021b``
 ``2.15.1`` |  | ``foss/2022a``
 ``2.15.2`` |  | ``foss/2023a``
 ``2.15.2`` | ``-Java-17`` | ``foss/2024a``

@@ -10,7 +10,6 @@ TOML parser for Fortran projects
 
 version | toolchain
 --------|----------
-``0.3.1`` | ``GCC/11.2.0``
 ``0.3.1`` | ``GCC/11.3.0``
 ``0.4.1`` | ``GCC/12.2.0``
 ``0.4.1`` | ``intel-compilers/2022.2.1``

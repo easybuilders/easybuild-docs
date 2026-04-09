@@ -10,8 +10,6 @@ Shapely is a BSD-licensed Python package for manipulation and analysis of planar
 
 version | toolchain
 --------|----------
-``1.8.1.post1`` | ``GCC/11.2.0``
-``1.8.2`` | ``foss/2021b``
 ``1.8.2`` | ``foss/2022a``
 ``2.0.1`` | ``foss/2022b``
 ``2.0.1`` | ``gfbf/2023a``

@@ -12,7 +12,6 @@ search:
  * [YACS](YACS.md)
  * [yaff](yaff.md)
  * [YaHS](YaHS.md)
- * [Yambo](Yambo.md)
  * [yaml-cpp](yaml-cpp.md)
  * [Yasm](Yasm.md)
  * [YAXT](YAXT.md)

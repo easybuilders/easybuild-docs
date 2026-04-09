@@ -10,7 +10,6 @@ Node.js is a platform built on Chrome's JavaScript runtime  for easily building 
 
 version | toolchain
 --------|----------
-``14.17.6`` | ``GCCcore/11.2.0``
 ``16.15.1`` | ``GCCcore/11.3.0``
 ``18.12.1`` | ``GCCcore/12.2.0``
 ``18.17.1`` | ``GCCcore/12.3.0``

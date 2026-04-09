@@ -10,8 +10,6 @@ MetaBAT: A robust statistical framework for reconstructing genomes from metageno
 
 version | toolchain
 --------|----------
-``2.15`` | ``GCC/11.2.0``
-``2.15`` | ``gompi/2021b``
 ``2.17`` | ``GCC/12.3.0``
 ``2.17`` | ``GCC/13.2.0``
 ``2.17`` | ``GCC/13.3.0``

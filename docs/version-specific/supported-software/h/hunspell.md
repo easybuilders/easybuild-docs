@@ -6,11 +6,10 @@ search:
 
 Hunspell is a spell checker and morphological analyzer library and program designed for languageswith rich morphology and complex word compounding or character encoding.
 
-*homepage*: <http://hunspell.github.io/>
+*homepage*: <https://hunspell.github.io/>
 
 version | toolchain
 --------|----------
-``1.7.1`` | ``GCCcore/11.2.0``
 ``1.7.1`` | ``GCCcore/11.3.0``
 ``1.7.2`` | ``GCCcore/12.3.0``
 ``1.7.2`` | ``GCCcore/13.2.0``

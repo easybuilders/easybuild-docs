@@ -11,7 +11,6 @@ EvidentialGene is a genome informatics project for  "Evidence Directed Gene Cons
 version | toolchain
 --------|----------
 ``2018.01.01`` | ``gompi/2023a``
-``2022.01.14`` | ``gompi/2021b``
 ``2023.07.15`` | ``gompi/2023a``
 
 

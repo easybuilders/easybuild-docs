@@ -10,13 +10,10 @@ GDAL is a translator library for raster geospatial data formats that is released
 
 version | toolchain
 --------|----------
-``2.4.4`` | ``foss/2021b``
-``2.4.4`` | ``intel/2021b``
 ``3.10.0`` | ``foss/2024a``
 ``3.11.1`` | ``foss/2025a``
 ``3.11.3`` | ``foss/2025b``
 ``3.11.3`` | ``intel/2025b``
-``3.3.2`` | ``foss/2021b``
 ``3.5.0`` | ``foss/2022a``
 ``3.6.2`` | ``foss/2022b``
 ``3.7.1`` | ``foss/2023a``

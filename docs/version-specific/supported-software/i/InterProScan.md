@@ -11,6 +11,7 @@ InterProScan is a sequence analysis application (nucleotide and protein sequence
 version | toolchain
 --------|----------
 ``5.62-94.0`` | ``foss/2022b``
+``5.69-101.0`` | ``foss/2023a``
 ``5.73-104.0`` | ``GCC/13.3.0``
 ``5.77-108.0`` | ``GCC/14.2.0``
 

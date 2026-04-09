@@ -10,7 +10,6 @@ Python Flatbuffers runtime library.
 
 version | toolchain
 --------|----------
-``2.0`` | ``GCCcore/11.2.0``
 ``2.0`` | ``GCCcore/11.3.0``
 ``23.1.4`` | ``GCCcore/12.2.0``
 ``23.5.26`` | ``GCCcore/12.3.0``

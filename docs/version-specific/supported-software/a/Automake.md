@@ -10,7 +10,6 @@ Automake: GNU Standards-compliant Makefile generator
 
 version | toolchain
 --------|----------
-``1.16.4`` | ``GCCcore/11.2.0``
 ``1.16.5`` | ``GCCcore/11.3.0``
 ``1.16.5`` | ``GCCcore/12.2.0``
 ``1.16.5`` | ``GCCcore/12.3.0``

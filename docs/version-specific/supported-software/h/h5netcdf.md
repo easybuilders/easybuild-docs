@@ -10,7 +10,6 @@ A Python interface for the netCDF4 file-format that reads and writes local or re
 
 version | toolchain
 --------|----------
-``1.1.0`` | ``foss/2021b``
 ``1.2.0`` | ``foss/2022a``
 ``1.2.0`` | ``foss/2023a``
 ``1.5.0`` | ``foss/2023b``

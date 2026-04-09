@@ -10,7 +10,6 @@ It computes informative enrichment and quality measures for ChIP-seq/DNase-seq/F
 
 version | toolchain
 --------|----------
-``1.2.2`` | ``foss/2021b``
 ``1.2.2`` | ``foss/2023b``
 
 

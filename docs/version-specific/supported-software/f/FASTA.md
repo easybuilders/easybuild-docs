@@ -6,11 +6,10 @@ search:
 
 The FASTA programs find regions of local or global (new) similarity between protein or DNA sequences, either by searching Protein or DNA databases, or by identifying local duplications within a sequence.
 
-*homepage*: <http://fasta.bioch.virginia.edu>
+*homepage*: <https://fasta.bioch.virginia.edu/fasta_www2/fasta_list2.shtml>
 
 version | toolchain
 --------|----------
-``36.3.8i`` | ``GCC/11.2.0``
 ``36.3.8i`` | ``GCC/12.2.0``
 ``36.3.8i`` | ``GCC/12.3.0``
 ``36.3.8i-may-2023`` | ``GCC/13.3.0``

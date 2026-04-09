@@ -10,7 +10,6 @@ LIBXSMM is a library for small dense and small sparse matrix-matrix multiplicati
 
 version | toolchain
 --------|----------
-``1.17`` | ``GCC/11.2.0``
 ``1.17`` | ``GCC/11.3.0``
 ``1.17`` | ``GCC/12.2.0``
 ``1.17`` | ``GCC/12.3.0``

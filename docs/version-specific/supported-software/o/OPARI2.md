@@ -10,7 +10,6 @@ OPARI2, the successor of Forschungszentrum Juelich's OPARI, is a  source-to-sour
 
 version | toolchain
 --------|----------
-``2.0.7`` | ``GCCcore/11.2.0``
 ``2.0.7`` | ``GCCcore/11.3.0``
 ``2.0.7`` | ``GCCcore/12.2.0``
 ``2.0.7`` | ``GCCcore/12.3.0``

@@ -10,7 +10,6 @@ RNA-Seq by Expectation-Maximization
 
 version | toolchain
 --------|----------
-``1.3.3`` | ``foss/2021b``
 ``1.3.3`` | ``foss/2022a``
 ``1.3.3`` | ``foss/2023a``
 ``1.3.3`` | ``foss/2024a``

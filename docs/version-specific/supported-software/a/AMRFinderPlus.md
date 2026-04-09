@@ -10,7 +10,6 @@ This software and the accompanying database are designed to find acquired antimi
 
 version | toolchain
 --------|----------
-``3.11.18`` | ``gompi/2021b``
 ``3.11.18`` | ``gompi/2022b``
 ``3.12.8`` | ``gompi/2023a``
 ``4.0.23`` | ``gompi/2024a``

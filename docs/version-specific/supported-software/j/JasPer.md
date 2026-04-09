@@ -10,7 +10,6 @@ The JasPer Project is an open-source initiative to provide a free  software-base
 
 version | toolchain
 --------|----------
-``2.0.33`` | ``GCCcore/11.2.0``
 ``2.0.33`` | ``GCCcore/11.3.0``
 ``4.0.0`` | ``GCCcore/12.2.0``
 ``4.0.0`` | ``GCCcore/12.3.0``

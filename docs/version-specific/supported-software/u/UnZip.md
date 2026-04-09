@@ -10,7 +10,6 @@ UnZip is an extraction utility for archives compressed in .zip format (also call
 
 version | toolchain
 --------|----------
-``6.0`` | ``GCCcore/11.2.0``
 ``6.0`` | ``GCCcore/11.3.0``
 ``6.0`` | ``GCCcore/12.2.0``
 ``6.0`` | ``GCCcore/12.3.0``

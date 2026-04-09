@@ -10,6 +10,8 @@ COLMAP is a general-purpose Structure-from-Motion (SfM) and Multi-View Stereo (M
 
 version | toolchain
 --------|----------
+``3.12.6`` | ``foss/2024a``
+``3.13.0`` | ``foss/2025b``
 ``3.8`` | ``foss/2022b``
 
 

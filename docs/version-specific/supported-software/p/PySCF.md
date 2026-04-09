@@ -11,6 +11,7 @@ PySCF is an open-source collection of electronic structure modules powered by Py
 version | toolchain
 --------|----------
 ``2.1.1`` | ``foss/2022a``
+``2.11.0`` | ``foss/2025a``
 ``2.4.0`` | ``foss/2022b``
 ``2.7.0`` | ``foss/2023a``
 

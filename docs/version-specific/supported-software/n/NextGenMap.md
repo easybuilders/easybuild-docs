@@ -10,7 +10,6 @@ NextGenMap is a flexible highly sensitive short read mapping tool that  handles 
 
 version | toolchain
 --------|----------
-``0.5.5`` | ``GCC/11.2.0``
 ``0.5.5`` | ``GCC/12.3.0``
 
 

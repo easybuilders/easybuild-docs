@@ -10,7 +10,6 @@ Genome assembler for single-cell and isolates data sets
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``3.15.3`` |  | ``GCC/11.2.0``
 ``3.15.4`` |  | ``GCC/12.2.0``
 ``3.15.4`` |  | ``GCC/12.3.0``
 ``3.15.5`` |  | ``GCC/11.3.0``

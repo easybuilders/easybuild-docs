@@ -4,14 +4,12 @@ search:
 ---
 # xmlf90
 
-xmlf90 is a basic XML parsing library written in Fortran.
+A fast XML parser and generator in Fortran
 
-*homepage*: <https://launchpad.net/xmlf90>
+*homepage*: <https://gitlab.com/siesta-project/libraries/xmlf90>
 
 version | toolchain
 --------|----------
-``1.5.4`` | ``GCC/11.2.0``
-``1.5.4`` | ``intel-compilers/2021.4.0``
 ``1.5.6`` | ``GCC/11.3.0``
 ``1.6.3`` | ``GCC/12.3.0``
 ``1.6.3`` | ``GCC/13.3.0``

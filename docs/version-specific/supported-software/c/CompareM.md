@@ -10,7 +10,6 @@ A toolbox for comparative genomics.
 
 version | toolchain
 --------|----------
-``0.1.2`` | ``foss/2021b``
 ``0.1.2`` | ``gfbf/2023b``
 
 

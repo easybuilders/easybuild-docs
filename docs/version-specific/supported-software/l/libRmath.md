@@ -10,7 +10,6 @@ The routines supporting the distribution and special functions in R and a few ot
 
 version | toolchain
 --------|----------
-``4.1.2`` | ``GCCcore/11.2.0``
 ``4.2.1`` | ``GCCcore/11.3.0``
 ``4.5.1`` | ``GCCcore/12.3.0``
 

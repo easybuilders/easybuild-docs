@@ -10,7 +10,6 @@ A simple command-line utility for querying and monitoring GPU status
 
 version | toolchain
 --------|----------
-``1.0.0b1`` | ``GCCcore/11.2.0``
 ``1.1`` | ``GCCcore/11.3.0``
 ``1.1.1`` | ``GCCcore/12.3.0``
 

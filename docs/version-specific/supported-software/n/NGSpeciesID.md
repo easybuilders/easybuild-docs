@@ -10,7 +10,6 @@ NGSpeciesID is a tool for clustering and consensus forming of targeted ONT reads
 
 version | toolchain
 --------|----------
-``0.1.2.1`` | ``foss/2021b``
 ``0.3.0`` | ``foss/2022b``
 ``0.3.0`` | ``foss/2023a``
 

@@ -11,8 +11,6 @@ GATE is an advanced opensource software developed by the international OpenGATE 
 version | toolchain
 --------|----------
 ``10.0.2`` | ``foss/2023b``
-``9.1`` | ``foss/2021b``
-``9.2`` | ``foss/2021b``
 ``9.2`` | ``foss/2022a``
 ``9.4`` | ``foss/2023a``
 ``9.4.1`` | ``foss/2024a``

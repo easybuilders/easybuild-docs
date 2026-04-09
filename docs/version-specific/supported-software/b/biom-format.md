@@ -10,7 +10,6 @@ The BIOM file format (canonically pronounced biome) is designed to be  a general
 
 version | toolchain
 --------|----------
-``2.1.12`` | ``foss/2021b``
 ``2.1.14`` | ``foss/2022a``
 ``2.1.15`` | ``foss/2022b``
 ``2.1.15`` | ``foss/2023a``

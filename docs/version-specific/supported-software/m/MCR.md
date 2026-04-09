@@ -11,9 +11,6 @@ The MATLAB Runtime is a standalone set of shared libraries  that enables the exe
 version | versionsuffix | toolchain
 --------|---------------|----------
 ``R2019b`` | ``.8`` | ``system``
-``R2020a`` | ``.6`` | ``system``
-``R2020b`` | ``.5`` | ``system``
-``R2021a`` | ``.0`` | ``system``
 ``R2021a`` | ``.3`` | ``system``
 ``R2021b`` | ``.1`` | ``system``
 ``R2021b`` | ``.2`` | ``system``

@@ -10,7 +10,6 @@ Proteinortho is a tool to detect orthologous genes within different species.
 
 version | toolchain
 --------|----------
-``6.2.3`` | ``foss/2021b``
 ``6.3.2`` | ``foss/2023a``
 ``6.3.4`` | ``foss/2024a``
 

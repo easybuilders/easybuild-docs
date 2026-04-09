@@ -10,10 +10,10 @@ A rich Qt-based console for working with Jupyter kernels, supporting rich media 
 
 version | toolchain
 --------|----------
-``5.3.2`` | ``GCCcore/11.2.0``
 ``5.4.0`` | ``GCCcore/11.3.0``
 ``5.5.1`` | ``GCCcore/12.3.0``
 ``5.6.0`` | ``GCCcore/13.2.0``
+``5.6.0`` | ``GCCcore/13.3.0``
 ``5.7.0`` | ``GCCcore/14.2.0``
 ``5.7.0`` | ``GCCcore/14.3.0``
 

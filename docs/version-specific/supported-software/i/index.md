@@ -8,7 +8,6 @@ search:
 
 
 
- * [i7z](i7z.md)
  * [IcarusVerilog](IcarusVerilog.md)
  * [iced](iced.md)
  * [ichorCNA](ichorCNA.md)
@@ -17,6 +16,7 @@ search:
  * [IDBA-UD](IDBA-UD.md)
  * [idemux](idemux.md)
  * [IDG](IDG.md)
+ * [IDR](IDR.md)
  * [IEntropy](IEntropy.md)
  * [IgBLAST](IgBLAST.md)
  * [IGMPlot](IGMPlot.md)
@@ -33,7 +33,6 @@ search:
  * [imageio](imageio.md)
  * [ImageJ](ImageJ.md)
  * [ImageMagick](ImageMagick.md)
- * [imake](imake.md)
  * [IMAS-Data-Dictionary](IMAS-Data-Dictionary.md)
  * [IMAS-ParaView](IMAS-ParaView.md)
  * [IMAS-Python](IMAS-Python.md)
@@ -78,13 +77,13 @@ search:
  * [IOR](IOR.md)
  * [ip](ip.md)
  * [iperf](iperf.md)
+ * [Ipopt](Ipopt.md)
  * [ipp](ipp.md)
  * [ipympl](ipympl.md)
  * [ipyparallel](ipyparallel.md)
  * [IPython](IPython.md)
  * [ipywidgets](ipywidgets.md)
  * [IQ-TREE](IQ-TREE.md)
- * [Iris](Iris.md)
  * [IRkernel](IRkernel.md)
  * [irodsfs](irodsfs.md)
  * [ISA-L](ISA-L.md)

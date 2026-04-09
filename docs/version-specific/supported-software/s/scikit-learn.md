@@ -10,11 +10,7 @@ Scikit-learn integrates machine learning algorithms in the tightly-knit scientif
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.20.4`` | ``-Python-2.7.18`` | ``foss/2021b``
 ``0.20.4`` | ``-Python-2.7.18`` | ``foss/2023a``
-``1.0.1`` |  | ``foss/2021b``
-``1.0.1`` |  | ``intel/2021b``
-``1.0.2`` |  | ``foss/2021b``
 ``1.1.2`` |  | ``foss/2022a``
 ``1.1.2`` |  | ``intel/2022a``
 ``1.2.1`` |  | ``gfbf/2022b``

@@ -10,7 +10,6 @@ Faster SPAdes assembly of Illumina reads
 
 version | toolchain
 --------|----------
-``1.1.0`` | ``gompi/2021b``
 ``1.1.0`` | ``gompi/2024a``
 
 

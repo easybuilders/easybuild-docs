@@ -10,7 +10,6 @@ A tool to map bisulfite converted sequence reads and determine cytosine methylat
 
 version | toolchain
 --------|----------
-``0.23.1`` | ``foss/2021b``
 ``0.24.0`` | ``GCC/11.3.0``
 ``0.24.1`` | ``GCC/12.2.0``
 ``0.24.2`` | ``GCC/12.3.0``

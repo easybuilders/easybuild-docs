@@ -10,8 +10,6 @@ This toolkit assemblies organelle genome from genomic skimming data.
 
 version | toolchain
 --------|----------
-``1.7.5.3`` | ``foss/2021b``
-``1.7.6.1`` | ``foss/2021b``
 ``1.7.7.0`` | ``foss/2022a``
 ``1.7.7.1`` | ``foss/2023a``
 ``1.7.7.1`` | ``foss/2024a``

@@ -10,6 +10,7 @@ The Python pyperf module is a toolkit to write, run and analyze benchmarks
 
 version | toolchain
 --------|----------
+``2.10.0`` | ``GCCcore/13.3.0``
 ``2.5.0`` | ``GCCcore/11.3.0``
 ``2.6.0`` | ``GCCcore/12.2.0``
 ``2.7.0`` | ``GCCcore/12.3.0``

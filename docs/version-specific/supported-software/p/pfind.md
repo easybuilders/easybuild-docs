@@ -10,7 +10,6 @@ Drop-in replacement for find, implemented for using parallel access and MPI.
 
 version | toolchain
 --------|----------
-``20220613`` | ``gompi/2021b``
 ``20250510`` | ``gompi/2024a``
 
 

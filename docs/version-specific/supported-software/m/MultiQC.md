@@ -10,7 +10,6 @@ Aggregate results from bioinformatics analyses across many samples into a single
 
 version | toolchain
 --------|----------
-``1.12`` | ``foss/2021b``
 ``1.14`` | ``foss/2022a``
 ``1.14`` | ``foss/2022b``
 ``1.20`` | ``gfbf/2023a``

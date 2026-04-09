@@ -11,7 +11,6 @@ Autoconf is an extensible package of M4 macros that produce shell scripts  to au
 version | toolchain
 --------|----------
 ``2.69`` | ``system``
-``2.71`` | ``GCCcore/11.2.0``
 ``2.71`` | ``GCCcore/11.3.0``
 ``2.71`` | ``GCCcore/12.2.0``
 ``2.71`` | ``GCCcore/12.3.0``

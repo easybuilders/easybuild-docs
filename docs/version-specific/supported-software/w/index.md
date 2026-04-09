@@ -26,7 +26,6 @@ search:
  * [wfdb](wfdb.md)
  * [WGDgc](WGDgc.md)
  * [wget](wget.md)
- * [wgsim](wgsim.md)
  * [WhatsHap](WhatsHap.md)
  * [Whisper](Whisper.md)
  * [whisper-ctranslate2](whisper-ctranslate2.md)

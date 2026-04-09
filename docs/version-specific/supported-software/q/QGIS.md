@@ -4,13 +4,12 @@ search:
 ---
 # QGIS
 
-QGIS is a user friendly Open Source Geographic Information System (GIS)
+QGIS is a user friendly Open Source Geographic Information System (GIS).
 
 *homepage*: <http://www.qgis.org/>
 
 version | toolchain
 --------|----------
-``3.28.1`` | ``foss/2021b``
 ``3.40.2`` | ``foss/2023a``
 
 

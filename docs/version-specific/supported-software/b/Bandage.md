@@ -10,7 +10,6 @@ Bandage is a program for visualising de novo assembly graphs
 
 version | toolchain
 --------|----------
-``0.9.0`` | ``GCCcore/11.2.0``
 ``0.9.0`` | ``GCCcore/11.3.0``
 ``0.9.0`` | ``GCCcore/12.3.0``
 ``0.9.0`` | ``GCCcore/13.3.0``

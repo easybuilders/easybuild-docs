@@ -10,6 +10,8 @@ Vulkan headers, ICDs, and tools
 
 version | toolchain
 --------|----------
+``1.4.328`` | ``GCCcore/12.3.0``
+``1.4.328`` | ``GCCcore/13.3.0``
 ``1.4.328`` | ``GCCcore/14.2.0``
 ``1.4.328`` | ``GCCcore/14.3.0``
 

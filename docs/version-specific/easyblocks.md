@@ -15,6 +15,7 @@
     - EB_Maple
     - EB_Mathematica
     - EB_Molpro
+    - EB_Sentaurus
     - EB_TensorRT
     - JAR
     - PackedBinary
@@ -87,6 +88,7 @@
       - EB_ScaLAPACK
       - EB_SuperLU
       - EB_Trilinos
+      - ROCmComponent
     - ConfigureMakePythonPackage
     - EB_BerkeleyGW
     - EB_binutils

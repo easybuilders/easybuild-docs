@@ -10,7 +10,6 @@ GD is an open source code library for the dynamic creation of images by programm
 
 version | toolchain
 --------|----------
-``2.3.3`` | ``GCCcore/11.2.0``
 ``2.3.3`` | ``GCCcore/11.3.0``
 ``2.3.3`` | ``GCCcore/12.2.0``
 ``2.3.3`` | ``GCCcore/12.3.0``

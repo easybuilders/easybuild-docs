@@ -4,13 +4,12 @@ search:
 ---
 # Regenie
 
-Regenie is a C++ program for whole genome regression modelling of large genome-wide association studies.  It is developed and supported by a team of scientists at the Regeneron Genetics Center.
+Regenie is a C++ program for whole genome regression modelling of large genome-wide  association studies.  It is developed and supported by a team of scientists at the Regeneron Genetics Center.
 
 *homepage*: <https://rgcgithub.github.io/regenie>
 
 version | toolchain
 --------|----------
-``3.1.2`` | ``GCC/11.2.0``
 ``4.1`` | ``GCC/12.3.0``
 
 

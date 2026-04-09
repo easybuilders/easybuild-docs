@@ -10,7 +10,6 @@ Scalene is a high-performance CPU, GPU and memory profiler for Python that does 
 
 version | toolchain
 --------|----------
-``1.5.13`` | ``GCCcore/11.2.0``
 ``1.5.20`` | ``GCCcore/11.3.0``
 ``1.5.26`` | ``GCCcore/12.2.0``
 ``1.5.26`` | ``GCCcore/12.3.0``

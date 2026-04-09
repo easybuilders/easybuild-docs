@@ -10,8 +10,6 @@ NetworkX is a Python package for the creation, manipulation, and study of the st
 
 version | toolchain
 --------|----------
-``2.6.3`` | ``foss/2021b``
-``2.6.3`` | ``intel/2021b``
 ``2.8.4`` | ``foss/2022a``
 ``2.8.4`` | ``intel/2022a``
 ``2.8.8`` | ``gfbf/2022b``
