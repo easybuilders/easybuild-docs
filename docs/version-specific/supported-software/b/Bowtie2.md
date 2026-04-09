@@ -10,7 +10,6 @@ Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.4.4`` |  | ``GCC/11.2.0``
 ``2.4.5`` |  | ``GCC/11.3.0``
 ``2.5.1`` |  | ``GCC/12.2.0``
 ``2.5.1`` |  | ``GCC/12.3.0``

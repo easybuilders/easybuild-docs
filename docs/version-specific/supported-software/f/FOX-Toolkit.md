@@ -10,7 +10,6 @@ FOX is a C++ based Toolkit for developing Graphical User Interfaces easily and e
 
 version | toolchain
 --------|----------
-``1.6.57`` | ``GCCcore/11.2.0``
 ``1.6.58`` | ``GCCcore/12.3.0``
 
 

@@ -10,6 +10,8 @@ The PyFrag program is specially designed to facilitate the analysis of reaction 
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``1.0.0`` | ``-ASA`` | ``foss/2024a``
+``1.0.0`` | ``-ASA`` | ``foss/2025a``
 ``2023-dev.20240220`` | ``-ASA`` | ``intel/2022a``
 
 

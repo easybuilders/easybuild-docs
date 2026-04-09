@@ -10,10 +10,6 @@ Geant4 is a toolkit for the simulation of the passage of particles through matte
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``10.7.1`` |  | ``GCC/11.2.0``
-``11.0.0`` |  | ``GCC/11.2.0``
-``11.0.1`` |  | ``GCC/11.2.0``
-``11.0.2`` |  | ``GCC/11.2.0``
 ``11.0.2`` |  | ``GCC/11.3.0``
 ``11.1.2`` |  | ``GCC/11.3.0``
 ``11.2.2`` |  | ``GCC/12.3.0``

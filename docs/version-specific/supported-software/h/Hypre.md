@@ -10,7 +10,6 @@ Hypre is a library for solving large, sparse linear systems of equations on mass
 
 version | toolchain
 --------|----------
-``2.24.0`` | ``intel/2021b``
 ``2.25.0`` | ``foss/2022a``
 ``2.27.0`` | ``foss/2022b``
 ``2.29.0`` | ``foss/2023a``

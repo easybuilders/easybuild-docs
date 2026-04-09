@@ -10,7 +10,6 @@ Enchant aims to provide a simple but comprehensive abstraction for dealing with 
 
 version | toolchain
 --------|----------
-``2.3.3`` | ``GCCcore/11.2.0``
 ``2.3.3`` | ``GCCcore/11.3.0``
 ``2.6.5`` | ``GCCcore/12.3.0``
 ``2.8.12`` | ``GCCcore/13.3.0``

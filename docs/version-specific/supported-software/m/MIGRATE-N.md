@@ -10,7 +10,6 @@ Migrate estimates population parameters, effective population sizes and migratio
 
 version | toolchain
 --------|----------
-``5.0.4`` | ``foss/2021b``
 ``5.0.8`` | ``foss/2024a``
 
 

@@ -4,13 +4,12 @@ search:
 ---
 # molmod
 
-MolMod is a Python library with many components that are useful to write molecular modeling programs.
+MolMod is a Python library with many compoments that are useful to write molecular modeling programs.
 
 *homepage*: <https://molmod.github.io/molmod/>
 
 version | toolchain
 --------|----------
-``1.4.8`` | ``foss/2021b``
 ``1.4.8`` | ``foss/2022a``
 ``1.4.8`` | ``foss/2023a``
 ``1.4.8`` | ``foss/2023b``

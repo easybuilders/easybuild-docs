@@ -10,7 +10,6 @@ Fast and memory-efficient sequencing error corrector
 
 version | toolchain
 --------|----------
-``1.1.2`` | ``GCC/11.2.0``
 ``1.1.3`` | ``GCC/13.3.0``
 
 

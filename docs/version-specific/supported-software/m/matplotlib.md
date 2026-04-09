@@ -10,14 +10,10 @@ matplotlib is a python 2D plotting library which produces publication quality fi
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.2.5`` | ``-Python-2.7.18`` | ``foss/2021b``
 ``2.2.5`` | ``-Python-2.7.18`` | ``foss/2023a``
 ``3.10.3`` |  | ``gfbf/2025a``
 ``3.10.5`` |  | ``gfbf/2025b``
 ``3.10.5`` |  | ``iimkl/2025b``
-``3.4.3`` |  | ``foss/2021b``
-``3.4.3`` |  | ``intel/2021b``
-``3.5.2`` |  | ``foss/2021b``
 ``3.5.2`` |  | ``foss/2022a``
 ``3.5.2`` |  | ``intel/2022a``
 ``3.7.0`` |  | ``gfbf/2022b``

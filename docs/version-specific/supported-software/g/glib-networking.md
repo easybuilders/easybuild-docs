@@ -10,7 +10,6 @@ Network extensions for GLib
 
 version | toolchain
 --------|----------
-``2.72.1`` | ``GCCcore/11.2.0``
 ``2.72.1`` | ``GCCcore/11.3.0``
 ``2.72.1`` | ``GCCcore/12.3.0``
 ``2.80.1`` | ``GCCcore/14.2.0``

@@ -10,7 +10,6 @@ Infernal ("INFERence of RNA ALignment") is for searching DNA sequence databases 
 
 version | toolchain
 --------|----------
-``1.1.4`` | ``gompi/2021b``
 ``1.1.4`` | ``gompi/2022a``
 ``1.1.4`` | ``gompi/2022b``
 ``1.1.5`` | ``gompi/2023a``

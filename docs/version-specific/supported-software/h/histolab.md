@@ -4,13 +4,12 @@ search:
 ---
 # histolab
 
-Library for Digital Pathology Image Processing
+Library for Digital Pathology Image Processing.
 
 *homepage*: <https://github.com/histolab/histolab>
 
 version | toolchain
 --------|----------
-``0.4.1`` | ``foss/2021b``
 ``0.6.0`` | ``foss/2022a``
 ``0.7.0`` | ``foss/2023a``
 

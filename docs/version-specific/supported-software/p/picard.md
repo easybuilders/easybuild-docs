@@ -10,7 +10,6 @@ A set of tools (in Java) for working with next generation sequencing data in the
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.25.0`` | ``-Java-11`` | ``system``
 ``2.25.1`` | ``-Java-11`` | ``system``
 ``2.26.10`` | ``-Java-15`` | ``system``
 ``3.0.0`` | ``-Java-17`` | ``system``

@@ -10,8 +10,6 @@ MaxQuant is a quantitative proteomics software package designed for analyzing la
 
 version | toolchain
 --------|----------
-``2.0.3.0`` | ``GCCcore/11.2.0``
-``2.2.0.0`` | ``GCCcore/11.2.0``
 ``2.6.7.0`` | ``system``
 
 

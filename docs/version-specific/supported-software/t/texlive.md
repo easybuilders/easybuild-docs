@@ -10,8 +10,6 @@ TeX is a typesetting language. Instead of visually formatting your text, you ent
 
 version | toolchain
 --------|----------
-``20210324`` | ``GCC/11.2.0``
-``20220321`` | ``GCC/11.2.0``
 ``20230313`` | ``GCC/11.3.0``
 ``20230313`` | ``GCC/12.3.0``
 ``20230313`` | ``GCC/13.2.0``

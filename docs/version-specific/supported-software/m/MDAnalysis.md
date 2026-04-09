@@ -10,8 +10,6 @@ MDAnalysis is an object-oriented Python library to analyze trajectories from mol
 
 version | toolchain
 --------|----------
-``2.0.0`` | ``foss/2021b``
-``2.0.0`` | ``intel/2021b``
 ``2.10.0`` | ``foss/2025b``
 ``2.2.0`` | ``foss/2022a``
 ``2.4.2`` | ``foss/2022b``

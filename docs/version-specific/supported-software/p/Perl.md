@@ -10,8 +10,6 @@ Larry Wall's Practical Extraction and Report Language  This is a minimal build w
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``5.34.0`` | ``-minimal`` | ``GCCcore/11.2.0``
-``5.34.0`` |  | ``GCCcore/11.2.0``
 ``5.34.1`` | ``-minimal`` | ``GCCcore/11.3.0``
 ``5.34.1`` |  | ``GCCcore/11.3.0``
 ``5.36.0`` |  | ``GCCcore/12.1.0``

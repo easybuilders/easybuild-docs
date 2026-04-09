@@ -10,7 +10,6 @@ purge haplotigs and overlaps in an assembly based on read depth
 
 version | toolchain
 --------|----------
-``1.2.5`` | ``foss/2021b``
 ``1.2.6`` | ``foss/2023b``
 
 

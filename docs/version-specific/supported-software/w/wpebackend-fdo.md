@@ -10,7 +10,6 @@ WPE WebKit allows embedders to create simple and performant systems based on Web
 
 version | toolchain
 --------|----------
-``1.13.1`` | ``GCCcore/11.2.0``
 ``1.14.1`` | ``GCCcore/11.3.0``
 ``1.15.90`` | ``GCCcore/12.3.0``
 ``1.16.1`` | ``GCCcore/14.2.0``

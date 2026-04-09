@@ -10,7 +10,6 @@ GMAP: A Genomic Mapping and Alignment Program for mRNA and EST Sequences  GSNAP:
 
 version | toolchain
 --------|----------
-``2021-12-17`` | ``GCC/11.2.0``
 ``2023-02-17`` | ``GCC/11.3.0``
 ``2023-04-20`` | ``GCC/12.2.0``
 ``2023-04-20`` | ``GCC/12.3.0``

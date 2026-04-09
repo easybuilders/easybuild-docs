@@ -10,6 +10,7 @@ Interior-point solver for convex conic optimisation problems in Rust.
 
 version | toolchain
 --------|----------
+``0.11.1`` | ``gfbf/2024a``
 ``0.7.1`` | ``gfbf/2023a``
 
 

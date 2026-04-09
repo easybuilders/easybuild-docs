@@ -10,7 +10,6 @@ Software for predicting library complexity and genome coverage in high-throughpu
 
 version | toolchain
 --------|----------
-``3.1.2`` | ``GCC/11.2.0``
 ``3.2.0`` | ``GCC/11.3.0``
 ``3.2.0`` | ``GCC/12.2.0``
 ``3.2.0`` | ``GCC/14.3.0``

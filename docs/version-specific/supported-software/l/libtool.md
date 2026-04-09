@@ -10,7 +10,6 @@ GNU libtool is a generic library support script. Libtool hides the complexity  o
 
 version | toolchain
 --------|----------
-``2.4.6`` | ``GCCcore/11.2.0``
 ``2.4.7`` | ``GCCcore/11.3.0``
 ``2.4.7`` | ``GCCcore/12.2.0``
 ``2.4.7`` | ``GCCcore/12.3.0``

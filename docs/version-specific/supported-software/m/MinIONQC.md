@@ -10,6 +10,7 @@ Fast and effective quality control for MinION and PromethION sequencing data
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``1.4.2-20221020`` | ``-R-4.4.1`` | ``foss/2023b``
 ``1.4.2`` | ``-R-4.4.1`` | ``foss/2023b``
 
 

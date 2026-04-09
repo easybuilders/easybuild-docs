@@ -10,7 +10,6 @@ Rapidcsv is a C++ header-only library for CSV parsing. While the name admittedly
 
 version | toolchain
 --------|----------
-``8.62`` | ``GCCcore/11.2.0``
 ``8.64`` | ``GCCcore/11.3.0``
 ``8.87`` | ``GCCcore/12.3.0``
 

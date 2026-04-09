@@ -10,7 +10,6 @@ The MATLAB Engine API for Python provides a package for Python  to call MATLAB a
 
 version | toolchain
 --------|----------
-``2021b-9.11.19`` | ``GCCcore/11.2.0``
 ``2024b-24.2.2`` | ``GCCcore/13.2.0``
 
 

@@ -6,13 +6,13 @@ search:
 
 rpy2 is an interface to R running embedded in a Python process.
 
-*homepage*: <https://rpy2.bitbucket.io/>
+*homepage*: <https://rpy2.github.io>
 
 version | toolchain
 --------|----------
-``3.4.5`` | ``foss/2021b``
 ``3.5.15`` | ``foss/2022a``
 ``3.5.15`` | ``foss/2023a``
+``3.6.4`` | ``foss/2024a``
 ``3.6.4`` | ``foss/2025a``
 
 

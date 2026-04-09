@@ -10,7 +10,6 @@ Boost.Python is a C++ library which enables seamless interoperability between C+
 
 version | toolchain
 --------|----------
-``1.77.0`` | ``GCC/11.2.0``
 ``1.79.0`` | ``GCC/11.3.0``
 ``1.82.0`` | ``GCC/12.3.0``
 ``1.83.0`` | ``GCC/13.2.0``

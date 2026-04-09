@@ -10,7 +10,6 @@ ANSYS FLUENT software contains the broad physical modeling capabilities needed t
 
 version | toolchain
 --------|----------
-``2021R1`` | ``system``
 ``2021R2`` | ``system``
 ``2024R1`` | ``system``
 

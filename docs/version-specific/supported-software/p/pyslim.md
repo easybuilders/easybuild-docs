@@ -10,7 +10,6 @@ A Python API for reading and modifying tskit tree sequence files produced by SLi
 
 version | toolchain
 --------|----------
-``1.0.1`` | ``foss/2021b``
 ``1.0.1`` | ``foss/2022a``
 
 

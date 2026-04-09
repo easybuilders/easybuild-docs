@@ -39,6 +39,7 @@ Option flag                              |Option description
 
 Option flag                                |Option description
 -------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+``--bwrap``                                |Build/install in bubblewrap namespace, enabling installation to a temporary location before moving to the final destination (default: False)
 ``--dry-run``                              |Print build overview incl. dependencies (full paths) (default: False)
 ``-D, --dry-run-short``                    |Print build overview incl. dependencies (short paths) (default: False)
 ``-x, --extended-dry-run``                 |Print build environment and (expected) build procedure that will be performed (default: False)
@@ -52,11 +53,12 @@ Option flag                                |Option description
 ``-b BLOCKS, --only-blocks=BLOCKS``        |Only build listed blocks (type comma-separated list)
 ``--rebuild``                              |Rebuild software, even if module already exists (don't skip OS dependencies checks) (default: False)
 ``-r [PATH[:PATH]], --robot=[PATH[:PATH]]``|Enable dependency resolution, optionally consider additional paths to search for easyconfigs (type pathsep-separated list)
-``--robot-paths=PATH[:PATH]``              |Additional paths to consider by robot for easyconfigs (--robot paths get priority) (type pathsep-separated list; default: /home/example/work/easybuild-easyconfigs/easybuild/easyconfigs)
+``--robot-paths=PATH[:PATH]``              |Additional paths to consider by robot for easyconfigs (--robot paths get priority) (type pathsep-separated list; default: /home/example/work/EasyBuild/easybuild-easyconfigs/easybuild/easyconfigs)
 ``--search-paths=PATH[:PATH]``             |Additional locations to consider in --search (next to --robot and --robot-paths paths) (type pathsep-separated list)
 ``-k, --skip``                             |Skip existing software (useful for installing additional packages) (default: False)
 ``-s STOP, --stop=STOP``                   |Stop the installation after certain step (type choice; default: extract) (choices: fetch, ready, extract, patch, prepare, configure, build, test, install, extensions, postiter, postproc, sanitycheck, cleanup, module, permissions, package, testcases)
 ``--strict=STRICT``                        |Set strictness level (type choice; default: warn) (choices: ignore, warn, error)
+``--use-entrypoints``                      |Use entry points for easyblocks, toolchains, and hooks (default: False)
 
 ## Configuration options
 
@@ -66,6 +68,7 @@ Option flag                                                      |Option descrip
 ``--avail-modules-tools``                                        |Show all supported module tools (default: False)
 ``--avail-repositories``                                         |Show all repository types (incl. non-usable) (default: False)
 ``--buildpath=BUILDPATH``                                        |Temporary build path (default: /home/example/.local/easybuild/build)
+``--bwrap-installpath=BWRAP-INSTALLPATH``                        |Bubblewrap install path for software and modules (default: /home/example/.local/easybuild/bwrap)
 ``--containerpath=CONTAINERPATH``                                |Location where container recipe & image will be stored (default: /home/example/.local/easybuild/containers)
 ``--envvars-user-modules=ENVVARS-USER-MODULES``                  |List of environment variables that hold the base paths for which user-specific modules will be installed relative to (type comma-separated list; default: HOME)
 ``--external-modules-metadata=EXTERNAL-MODULES-METADATA``        |List of (glob patterns for) paths to files specifying metadata for external modules (INI format) (type comma-separated list)
@@ -214,14 +217,14 @@ Option flag                                          |Option description
 ## Options for job backend
 
 Option flag                                |Option description
--------------------------------------------|---------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------|------------------------------------------------------------------------------------------------------------------------------
 ``--job-backend-config=BACKEND-CONFIG``    |Configuration file for job backend
 ``--job-cores=CORES``                      |Number of cores to request per job (type int)
 ``--job-deps-type=DEPS-TYPE``              |Type of dependency to set between jobs (default depends on job backend) (type choice) (choices: abort_on_error, always_run)
 ``--job-eb-cmd=EB-CMD``                    |EasyBuild command to use in jobs (type str; default: eb)
 ``--job-max-jobs=MAX-JOBS``                |Maximum number of concurrent jobs (queued and running, 0 = unlimited) (type int; default: 0)
 ``--job-max-walltime=MAX-WALLTIME``        |Maximum walltime for jobs (in hours) (type int; default: 24)
-``--job-output-dir=OUTPUT-DIR``            |Output directory for jobs (default: current directory) (default: /Volumes/work/easybuild-docs/docs/version-specific)
+``--job-output-dir=OUTPUT-DIR``            |Output directory for jobs (default: current directory) (default: /Volumes/work/EasyBuild/easybuild-docs/docs/version-specific)
 ``--job-polling-interval=POLLING-INTERVAL``|Interval between polls for status of jobs (in seconds) (type <class 'float'>; default: 30.0)
 ``--job-target-resource=TARGET-RESOURCE``  |Target resource for jobs
 
@@ -255,6 +258,7 @@ Option flag                                                              |Option
 ``--cuda-sanity-check-error-on-failed-checks``                           |If enabled, failures in the CUDA sanity check will produce an error. If disabled, the CUDA sanity check will be performed and failures will be reported through warnings, but they will not result in an error (default: False)
 ``--cuda-sanity-check-strict``                                           |Perform strict CUDA sanity check. Without this option, the CUDA sanity check will fail if the CUDA binaries don't contain code for (at least) all compute capabilities defined in --cude-compute-capabilities, but will accept if code for additional compute capabilities is present. With this setting, the sanity check will also fail if code is present for more compute capabilities than defined in --cuda-compute-capabilities. (default: False)
 ``--debug-lmod``                                                         |Run Lmod modules tool commands in debug module (default: False)
+``--debug-module-cmds``                                                  |Show additional information of module commands (default: False)
 ``--default-opt-level=DEFAULT-OPT-LEVEL``                                |Specify default optimisation level (type choice; default: defaultopt) (choices: noopt, lowopt, defaultopt, opt)
 ``--deprecated=DEPRECATED``                                              |Run pretending to be (future) version, to test removal of deprecated code.
 ``--detect-loaded-modules=DETECT-LOADED-MODULES``                        |Detect loaded EasyBuild-generated modules, act accordingly; supported values: error, ignore, purge, unload, warn (default: warn)
@@ -269,6 +273,7 @@ Option flag                                                              |Option
 ``--extra-source-urls=URL[|URL]``                                        |Specify URLs to fetch sources from in addition to those in the easyconfig (type |-separated tuple; default: https://sources.easybuild.io)
 ``--fail-on-mod-files-gcccore``                                          |Fail if .mod files are detected in a GCCcore install (default: False)
 ``--fetch``                                                              |Allow downloading sources ignoring OS and modules tool dependencies, implies --stop=fetch, --ignore-osdeps and ignore modules tool (default: False)
+``--fetch-all``                                                          |Download sources (like --fetch), don't stop when download failed for one of the easyconfig (default: False)
 ``--filter-deps=FILTER-DEPS``                                            |List of dependencies that you do *not* want to install with EasyBuild, because equivalent OS packages are installed. (e.g. --filter-deps=zlib,ncurses) (type comma-separated list)
 ``--filter-ecs=FILTER-ECS``                                              |List of easyconfigs (given as glob patterns) to *ignore* when given on command line or auto-selected when building with --from-pr. (e.g. --filter-ecs=*intel*) (type comma-separated list)
 ``--filter-env-vars=FILTER-ENV-VARS``                                    |List of names of environment variables that should *not* be defined/updated by module files generated by EasyBuild (type comma-separated list)

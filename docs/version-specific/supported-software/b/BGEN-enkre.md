@@ -10,7 +10,6 @@ This repository contains a reference implementation of the BGEN format, written 
 
 version | toolchain
 --------|----------
-``1.1.7`` | ``GCC/11.2.0``
 ``1.1.7`` | ``GCC/12.3.0``
 
 

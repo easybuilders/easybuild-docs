@@ -10,7 +10,6 @@ funannotate is a pipeline for genome annotation (built specifically for fungi, b
 
 version | toolchain
 --------|----------
-``1.8.13`` | ``foss/2021b``
 ``1.8.17`` | ``foss/2023a``
 ``1.8.17`` | ``foss/2024a``
 

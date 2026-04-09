@@ -4,14 +4,12 @@ search:
 ---
 # py-cpuinfo
 
-Py-cpuinfo gets CPU info with pure Python. Py-cpuinfo should work without any extra programs or libraries, beyond what your OS provides. It does not require any compilation(C/C++, assembly, et cetera) to use. It works with Python 3.
+py-cpuinfo gets CPU info with pure Python.
 
 *homepage*: <https://github.com/workhorsy/py-cpuinfo>
 
 version | toolchain
 --------|----------
-``8.0.0`` | ``GCCcore/11.2.0``
-``9.0.0`` | ``GCCcore/11.2.0``
 ``9.0.0`` | ``GCCcore/11.3.0``
 ``9.0.0`` | ``GCCcore/12.2.0``
 ``9.0.0`` | ``GCCcore/12.3.0``

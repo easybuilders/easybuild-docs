@@ -10,7 +10,6 @@ Scalable Nucleotide Alignment Program -- a fast and accurate read aligner for  h
 
 version | toolchain
 --------|----------
-``2.0.1`` | ``GCC/11.2.0``
 ``2.0.1`` | ``GCC/11.3.0``
 ``2.0.1`` | ``GCC/12.2.0``
 

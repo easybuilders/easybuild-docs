@@ -6,11 +6,10 @@ search:
 
 Popt is a C library for parsing command line parameters.
 
-*homepage*: <http://freecode.com/projects/popt>
+*homepage*: <https://github.com/rpm-software-management/popt>
 
 version | toolchain
 --------|----------
-``1.18`` | ``system``
 ``1.19`` | ``GCCcore/13.3.0``
 ``1.19`` | ``GCCcore/14.2.0``
 ``1.19`` | ``GCCcore/14.3.0``

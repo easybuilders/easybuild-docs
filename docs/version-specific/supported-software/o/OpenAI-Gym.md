@@ -10,7 +10,6 @@ A toolkit for developing and comparing reinforcement learning algorithms.
 
 version | toolchain
 --------|----------
-``0.21.0`` | ``foss/2021b``
 ``0.26.2`` | ``foss/2022a``
 ``0.26.2`` | ``foss/2023a``
 

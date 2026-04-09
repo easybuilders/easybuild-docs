@@ -10,7 +10,6 @@ X-13ARIMA-SEATS is seasonal adjustment software produced, distributed, and maint
 
 version | toolchain
 --------|----------
-``1-1-b59`` | ``GCCcore/11.2.0``
 ``1-1-b60`` | ``GCCcore/12.2.0``
 ``1-1-b60`` | ``GCCcore/13.2.0``
 

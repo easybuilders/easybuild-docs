@@ -10,7 +10,6 @@ Austin is a Python frame stack sampler for CPython written in pure C.
 
 version | toolchain
 --------|----------
-``3.2.0`` | ``GCCcore/11.2.0``
 ``3.2.0`` | ``system``
 
 

@@ -98,6 +98,10 @@ Name                |Compiler(s)     |MPI          |Linear algebra           |FF
 **pmkl**            |PGI             |*(none)*     |imkl                     |imkl
 **pomkl**           |PGI             |OpenMPI      |imkl                     |imkl
 **pompi**           |PGI             |OpenMPI      |*(none)*                 |*(none)*
+**rfbf**            |rocm-compilers  |*(none)*     |FlexiBLAS                |FFTW
+**rfoss**           |rocm-compilers  |OpenMPI      |FlexiBLAS, ScaLAPACK     |FFTW
+**rocm-compilers**  |rocm-compilers  |*(none)*     |*(none)*                 |*(none)*
+**rompi**           |rocm-compilers  |OpenMPI      |*(none)*                 |*(none)*
 **system**          |*(none)*        |*(none)*     |*(none)*                 |*(none)*
 **xlcxlf**          |xlc, xlf        |*(none)*     |*(none)*                 |*(none)*
 **xlmpich**         |xlc, xlf        |MPICH        |*(none)*                 |*(none)*

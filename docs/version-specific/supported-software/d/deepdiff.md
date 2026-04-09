@@ -10,7 +10,6 @@ DeepDiff: Deep Difference of dictionaries, iterables and almost any other object
 
 version | toolchain
 --------|----------
-``5.7.0`` | ``GCCcore/11.2.0``
 ``5.8.1`` | ``GCCcore/11.3.0``
 ``6.7.1`` | ``GCCcore/12.2.0``
 ``6.7.1`` | ``GCCcore/12.3.0``

@@ -10,7 +10,6 @@ Binary maven install, Apache Maven is a software project management and comprehe
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``3.6.3`` |  | ``system``
 ``3.9.11`` | ``-Java-21`` | ``system``
 ``3.9.7`` |  | ``system``
 

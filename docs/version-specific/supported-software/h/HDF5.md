@@ -10,10 +10,7 @@ HDF5 is a data model, library, and file format for storing and managing data.  I
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.10.8`` |  | ``gompi/2021b``
 ``1.10.8`` |  | ``gompi/2022a``
-``1.12.1`` |  | ``gompi/2021b``
-``1.12.1`` |  | ``iimpi/2021b``
 ``1.12.2`` | ``-serial`` | ``GCC/11.3.0``
 ``1.12.2`` | ``-serial`` | ``NVHPC/22.7-CUDA-11.7.0``
 ``1.12.2`` |  | ``gompi/2022a``
@@ -31,9 +28,11 @@ version | versionsuffix | toolchain
 ``1.14.3`` |  | ``gompi/2023b``
 ``1.14.3`` |  | ``iimpi/2023b``
 ``1.14.5`` |  | ``NVHPC/25.1``
+``1.14.5`` |  | ``NVHPC/25.3-CUDA-12.8.0``
 ``1.14.5`` |  | ``gompi/2024a``
 ``1.14.5`` |  | ``iimpi/2024a``
 ``1.14.6`` | ``-serial`` | ``GCC/14.3.0``
+``1.14.6`` |  | ``NVHPC/25.9-CUDA-12.9.1``
 ``1.14.6`` |  | ``gompi/2025a``
 ``1.14.6`` |  | ``gompi/2025b``
 ``1.14.6`` |  | ``iimpi/2025a``

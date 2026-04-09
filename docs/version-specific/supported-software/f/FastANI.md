@@ -10,9 +10,7 @@ FastANI is developed for fast alignment-free computation of  whole-genome Averag
 
 version | toolchain
 --------|----------
-``1.33`` | ``GCC/11.2.0``
 ``1.33`` | ``GCC/11.3.0``
-``1.33`` | ``intel-compilers/2021.4.0``
 ``1.34`` | ``GCC/12.3.0``
 ``1.34`` | ``GCC/13.2.0``
 ``1.34`` | ``GCC/13.3.0``

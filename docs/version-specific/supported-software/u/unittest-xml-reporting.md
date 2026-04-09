@@ -10,7 +10,6 @@ A unittest test runner that can save test results to XML files in xUnit format. 
 
 version | toolchain
 --------|----------
-``3.1.0`` | ``GCCcore/11.2.0``
 ``3.1.0`` | ``GCCcore/11.3.0``
 ``3.1.0`` | ``GCCcore/12.2.0``
 ``3.1.0`` | ``GCCcore/12.3.0``

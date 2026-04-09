@@ -10,7 +10,6 @@ A basic Python-based EGA download client
 
 version | toolchain
 --------|----------
-``4.0.0`` | ``GCCcore/11.2.0``
 ``5.0.2`` | ``GCCcore/12.3.0``
 
 

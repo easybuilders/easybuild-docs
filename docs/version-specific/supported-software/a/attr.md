@@ -10,7 +10,6 @@ Commands for Manipulating Filesystem Extended Attributes
 
 version | toolchain
 --------|----------
-``2.5.1`` | ``GCCcore/11.2.0``
 ``2.5.1`` | ``GCCcore/11.3.0``
 ``2.5.1`` | ``GCCcore/12.3.0``
 ``2.5.2`` | ``GCCcore/13.2.0``

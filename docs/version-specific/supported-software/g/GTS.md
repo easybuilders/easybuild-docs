@@ -10,7 +10,6 @@ GTS stands for the GNU Triangulated Surface Library. It is an Open Source Free S
 
 version | toolchain
 --------|----------
-``0.7.6`` | ``GCCcore/11.2.0``
 ``0.7.6`` | ``GCCcore/11.3.0``
 ``0.7.6`` | ``GCCcore/12.2.0``
 ``0.7.6`` | ``GCCcore/12.3.0``

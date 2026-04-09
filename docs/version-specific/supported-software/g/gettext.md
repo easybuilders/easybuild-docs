@@ -10,7 +10,6 @@ GNU 'gettext' is an important step for the GNU Translation Project, as it is an 
 
 version | toolchain
 --------|----------
-``0.21`` | ``GCCcore/11.2.0``
 ``0.21`` | ``GCCcore/11.3.0``
 ``0.21.1`` | ``GCCcore/12.2.0``
 ``0.21.1`` | ``GCCcore/12.3.0``

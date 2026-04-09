@@ -10,8 +10,6 @@ Scikit-Build, or skbuild, is an improved build system generator for CPython C/C+
 
 version | toolchain
 --------|----------
-``0.11.1`` | ``GCCcore/11.2.0``
-``0.15.0`` | ``GCCcore/11.2.0``
 ``0.15.0`` | ``GCCcore/11.3.0``
 ``0.17.2`` | ``GCCcore/12.2.0``
 ``0.17.6`` | ``GCCcore/12.3.0``

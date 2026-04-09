@@ -10,7 +10,6 @@ Transparent calculations with uncertainties on the quantities involved (aka erro
 
 version | toolchain
 --------|----------
-``3.1.7`` | ``foss/2021b``
 ``3.1.7`` | ``foss/2023a``
 ``3.2.2`` | ``foss/2023b``
 ``3.2.3`` | ``foss/2024a``

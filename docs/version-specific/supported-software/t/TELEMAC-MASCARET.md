@@ -10,7 +10,6 @@ TELEMAC-MASCARET is an integrated suite of solvers for use in the field of free-
 
 version | toolchain
 --------|----------
-``8p3r1`` | ``foss/2021b``
 ``8p5r0`` | ``foss/2023a``
 ``9.0.0`` | ``foss/2024a``
 

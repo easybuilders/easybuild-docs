@@ -10,7 +10,6 @@ rnaQUAST is a tool for evaluating RNA-Seq assemblies using reference genome and 
 
 version | toolchain
 --------|----------
-``2.2.2`` | ``foss/2021b``
 ``2.3.1`` | ``foss/2025a``
 
 

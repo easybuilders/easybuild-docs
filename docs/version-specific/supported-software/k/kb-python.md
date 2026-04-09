@@ -10,7 +10,6 @@ kallisto | bustools is a workflow for pre-processing single-cell RNA-seq data.  
 
 version | toolchain
 --------|----------
-``0.27.3`` | ``foss/2021b``
 ``0.27.3`` | ``foss/2022a``
 
 

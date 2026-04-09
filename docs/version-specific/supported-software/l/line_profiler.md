@@ -10,7 +10,6 @@ line_profiler is a module for doing line-by-line profiling of functions. kernpro
 
 version | toolchain
 --------|----------
-``3.5.1`` | ``foss/2021b``
 ``4.0.0`` | ``foss/2022a``
 ``4.1.1`` | ``GCCcore/12.2.0``
 ``4.1.2`` | ``GCCcore/13.2.0``

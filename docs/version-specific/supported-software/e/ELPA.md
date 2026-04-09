@@ -4,17 +4,13 @@ search:
 ---
 # ELPA
 
-Eigenvalue SoLvers for Petaflop-Applications .
+Eigenvalue SoLvers for Petaflop-Applications.
 
 *homepage*: <https://elpa.mpcdf.mpg.de>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2021.05.001`` |  | ``foss/2021b``
-``2021.05.001`` |  | ``intel/2021b``
-``2021.11.001`` |  | ``foss/2021b``
 ``2021.11.001`` |  | ``foss/2022a``
-``2021.11.001`` |  | ``intel/2021b``
 ``2021.11.001`` |  | ``intel/2022a``
 ``2021.11.001`` |  | ``intel/2022b``
 ``2022.05.001`` | ``-CUDA-11.7.0`` | ``foss/2022a``

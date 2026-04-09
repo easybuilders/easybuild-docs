@@ -10,7 +10,6 @@ pkgconfig is a Python module to interface with the pkg-config command line tool
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.5.5`` | ``-python`` | ``GCCcore/11.2.0``
 ``1.5.5`` | ``-python`` | ``GCCcore/11.3.0``
 ``1.5.5`` | ``-python`` | ``GCCcore/12.2.0``
 ``1.5.5`` | ``-python`` | ``GCCcore/12.3.0``

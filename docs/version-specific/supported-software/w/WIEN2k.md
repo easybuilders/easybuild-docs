@@ -10,8 +10,6 @@ The program package WIEN2k allows to perform electronic structure calculations o
 
 version | toolchain
 --------|----------
-``21.1`` | ``intel/2021b``
-``23.2`` | ``intel/2021b``
 ``24.1`` | ``foss/2025b``
 ``24.1`` | ``intel/2023a``
 ``24.1`` | ``intel/2025b``

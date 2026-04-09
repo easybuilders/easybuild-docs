@@ -10,8 +10,6 @@ OpenMM is a toolkit for molecular simulation.
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``7.5.1`` | ``-CUDA-11.4.1-DeepMind-patch`` | ``foss/2021b``
-``7.5.1`` | ``-DeepMind-patch`` | ``foss/2021b``
 ``7.7.0`` | ``-CUDA-11.7.0`` | ``foss/2022a``
 ``7.7.0`` |  | ``foss/2022a``
 ``8.0.0`` | ``-CUDA-11.7.0`` | ``foss/2022a``

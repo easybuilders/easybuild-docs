@@ -11,7 +11,6 @@ ImageMagick is a software suite to create, edit, compose, or convert bitmap imag
 version | toolchain
 --------|----------
 ``7.1.0-37`` | ``GCCcore/11.3.0``
-``7.1.0-4`` | ``GCCcore/11.2.0``
 ``7.1.0-53`` | ``GCCcore/12.2.0``
 ``7.1.1-15`` | ``GCCcore/12.3.0``
 ``7.1.1-34`` | ``GCCcore/13.2.0``

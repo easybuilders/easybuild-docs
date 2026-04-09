@@ -10,7 +10,6 @@ Python interface to PROJ4 library for cartographic transformations
 
 version | toolchain
 --------|----------
-``3.3.1`` | ``GCCcore/11.2.0``
 ``3.3.1`` | ``GCCcore/11.3.0``
 ``3.4.0`` | ``GCCcore/11.3.0``
 ``3.5.0`` | ``GCCcore/12.2.0``

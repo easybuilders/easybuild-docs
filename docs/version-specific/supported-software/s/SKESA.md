@@ -10,7 +10,6 @@ SKESA is a de-novo sequence read assembler for cultured single isolate genomes b
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.4.0`` | ``_saute.1.3.0_1`` | ``gompi/2021b``
 ``2.4.0`` | ``_saute.1.3.0_2`` | ``gompi/2023b``
 ``2.4.0`` | ``_saute.1.3.0_2`` | ``gompi/2024a``
 

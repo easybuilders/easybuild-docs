@@ -10,7 +10,6 @@ The ROOT system provides a set of OO frameworks with all the functionality     n
 
 version | toolchain
 --------|----------
-``6.24.06`` | ``foss/2021b``
 ``6.26.06`` | ``foss/2022a``
 ``6.26.10`` | ``foss/2022b``
 ``6.30.06`` | ``foss/2023a``

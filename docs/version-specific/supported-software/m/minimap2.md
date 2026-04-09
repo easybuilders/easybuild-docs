@@ -10,8 +10,6 @@ Minimap2 is a fast sequence mapping and alignment program that can find overlaps
 
 version | toolchain
 --------|----------
-``2.22`` | ``GCCcore/11.2.0``
-``2.24`` | ``GCCcore/11.2.0``
 ``2.24`` | ``GCCcore/11.3.0``
 ``2.26`` | ``GCCcore/12.2.0``
 ``2.26`` | ``GCCcore/12.3.0``

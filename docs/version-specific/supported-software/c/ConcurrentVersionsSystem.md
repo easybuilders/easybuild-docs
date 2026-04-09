@@ -10,7 +10,6 @@ CVS is a version control system, an important component of Source Configuration 
 
 version | toolchain
 --------|----------
-``1.11.23`` | ``GCCcore/11.2.0``
 ``1.11.23`` | ``GCCcore/13.3.0``
 ``1.11.23`` | ``GCCcore/14.3.0``
 

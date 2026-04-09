@@ -11,6 +11,7 @@ SMC++ is a program for estimating the size history of populations from whole gen
 version | toolchain
 --------|----------
 ``1.15.4`` | ``foss/2022a``
+``1.15.4`` | ``gfbf/2025a``
 ``1.15.4`` | ``gfbf/2025b``
 
 

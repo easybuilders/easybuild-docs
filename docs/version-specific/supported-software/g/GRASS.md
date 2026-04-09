@@ -10,7 +10,6 @@ The Geographic Resources Analysis Support System - used  for geospatial data man
 
 version | toolchain
 --------|----------
-``8.2.0`` | ``foss/2021b``
 ``8.4.0`` | ``foss/2023a``
 
 

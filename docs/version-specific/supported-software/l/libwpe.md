@@ -10,7 +10,6 @@ WPE is the reference WebKit port for embedded and low-consumption computer devic
 
 version | toolchain
 --------|----------
-``1.13.3`` | ``GCCcore/11.2.0``
 ``1.14.1`` | ``GCCcore/11.3.0``
 ``1.16.0`` | ``GCCcore/12.3.0``
 ``1.16.3`` | ``GCCcore/14.2.0``

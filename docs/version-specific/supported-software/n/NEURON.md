@@ -10,7 +10,6 @@ Empirically-based simulations of neurons and networks of neurons.
 
 version | toolchain
 --------|----------
-``7.8.2`` | ``foss/2021b``
 ``8.2.6`` | ``foss/2023a``
 
 

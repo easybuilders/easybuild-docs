@@ -10,7 +10,6 @@ Sequence assembler for very short reads
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.2.10`` | ``-mt-kmer_191`` | ``GCC/11.2.0``
 ``1.2.10`` | ``-mt-kmer_191`` | ``GCC/13.3.0``
 ``1.2.10`` | ``-mt-kmer_191`` | ``foss/2023a``
 

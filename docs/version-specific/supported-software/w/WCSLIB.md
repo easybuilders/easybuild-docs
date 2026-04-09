@@ -10,7 +10,6 @@ The FITS "World Coordinate System" (WCS) standard defines keywords and usage tha
 
 version | toolchain
 --------|----------
-``7.11`` | ``GCC/11.2.0``
 ``7.11`` | ``GCC/11.3.0``
 ``7.11`` | ``GCC/13.2.0``
 ``8.4`` | ``GCC/13.3.0``

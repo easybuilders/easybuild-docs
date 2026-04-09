@@ -10,8 +10,6 @@ The NVIDIA CUDA Deep Neural Network library (cuDNN) is a GPU-accelerated library
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``8.1.0.77`` | ``-CUDA-11.2.1`` | ``system``
-``8.1.1.33`` | ``-CUDA-11.2.1`` | ``system``
 ``8.2.1.32`` | ``-CUDA-11.3.1`` | ``system``
 ``8.2.2.26`` | ``-CUDA-11.4.0`` | ``system``
 ``8.2.2.26`` | ``-CUDA-11.4.1`` | ``system``
@@ -29,6 +27,7 @@ version | versionsuffix | toolchain
 ``9.0.0.312`` | ``-CUDA-12.4.0`` | ``system``
 ``9.1.1.17`` | ``-CUDA-12.4.0`` | ``system``
 ``9.10.1.4`` | ``-CUDA-12.8.0`` | ``system``
+``9.10.2.21`` | ``-CUDA-12.6.0`` | ``system``
 ``9.15.0.57`` | ``-CUDA-12.9.1`` | ``system``
 ``9.5.0.50`` | ``-CUDA-12.6.0`` | ``system``
 ``9.5.1.17`` | ``-CUDA-12.6.0`` | ``system``

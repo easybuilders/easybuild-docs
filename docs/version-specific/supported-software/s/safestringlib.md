@@ -10,7 +10,6 @@ The Secure Development Lifecycle (SDL) recommends banning certain C Library func
 
 version | toolchain
 --------|----------
-``20240228`` | ``GCC/11.2.0``
 ``20240228`` | ``GCC/13.3.0``
 ``20240228`` | ``intel-compilers/2023.1.0``
 ``20241021`` | ``GCCcore/12.3.0``

@@ -10,7 +10,6 @@ MuJoCo stands for Multi-Joint dynamics with Contact. It is a general purpose phy
 
 version | toolchain
 --------|----------
-``2.1.1`` | ``GCCcore/11.2.0``
 ``2.2.2`` | ``GCCcore/11.3.0``
 ``3.1.4`` | ``GCCcore/12.3.0``
 ``3.3.0`` | ``GCCcore/13.2.0``

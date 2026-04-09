@@ -17,6 +17,7 @@ version | toolchain
 ``4.104.2`` | ``system``
 ``4.104.3`` | ``system``
 ``4.105.1`` | ``system``
+``4.108.1`` | ``system``
 ``4.16.1`` | ``system``
 ``4.21.1`` | ``system``
 ``4.22.1`` | ``system``

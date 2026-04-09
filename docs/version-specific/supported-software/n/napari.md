@@ -10,7 +10,6 @@ napari is a fast, interactive, multi-dimensional image viewer for Python. It's d
 
 version | toolchain
 --------|----------
-``0.4.15`` | ``foss/2021b``
 ``0.4.18`` | ``foss/2022a``
 ``0.4.18`` | ``foss/2023a``
 ``0.4.19.post1`` | ``foss/2023a``

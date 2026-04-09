@@ -10,7 +10,6 @@ Libiconv converts from one character encoding to another through Unicode convers
 
 version | toolchain
 --------|----------
-``1.16`` | ``GCCcore/11.2.0``
 ``1.17`` | ``GCCcore/11.3.0``
 ``1.17`` | ``GCCcore/12.2.0``
 ``1.17`` | ``GCCcore/12.3.0``

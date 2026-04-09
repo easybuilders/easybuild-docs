@@ -10,7 +10,6 @@ CuPy is an open-source array library accelerated with NVIDIA CUDA.
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``11.4.0`` | ``-CUDA-11.4.1`` | ``foss/2021b``
 ``12.1.0`` | ``-CUDA-12.0.0`` | ``foss/2022b``
 ``13.0.0`` | ``-CUDA-12.1.1`` | ``foss/2023a``
 ``13.6.0`` | ``-CUDA-12.6.0`` | ``foss/2024a``

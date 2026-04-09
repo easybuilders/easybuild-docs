@@ -10,7 +10,6 @@ DAS Tool is an automated method that integrates the results of a flexible number
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.1.1`` | ``-R-4.1.2`` | ``foss/2021b``
 ``1.1.7`` | ``-R-4.4.1`` | ``foss/2023b``
 
 

@@ -10,8 +10,6 @@ C, C++ and Fortran compilers included with the NVIDIA HPC SDK (previously: PGI)
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``21.11`` |  | ``system``
-``21.9`` |  | ``system``
 ``22.11`` | ``-CUDA-11.7.0`` | ``system``
 ``22.7`` | ``-CUDA-11.7.0`` | ``system``
 ``22.9`` | ``-CUDA-11.7.0`` | ``system``

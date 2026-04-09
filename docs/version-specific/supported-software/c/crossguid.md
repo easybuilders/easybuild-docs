@@ -10,7 +10,6 @@ CrossGuid is a minimal, cross platform, C++ GUID library. It uses the best nativ
 
 version | toolchain
 --------|----------
-``20190529`` | ``GCCcore/11.2.0``
 ``20190529`` | ``GCCcore/11.3.0``
 ``20190529`` | ``GCCcore/12.3.0``
 

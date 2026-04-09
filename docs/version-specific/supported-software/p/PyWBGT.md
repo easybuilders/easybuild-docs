@@ -10,7 +10,6 @@ Cython source code for estimating wet bulb globe temperature (WBGT) from dataset
 
 version | toolchain
 --------|----------
-``1.0.0`` | ``foss/2021b``
 ``1.0.0`` | ``foss/2022a``
 
 

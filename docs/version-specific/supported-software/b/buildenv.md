@@ -10,8 +10,6 @@ This module sets a group of environment variables for compilers, linkers, maths 
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``default`` | ``-CUDA-11.4.1`` | ``foss/2021b``
-``default`` |  | ``foss/2021b``
 ``default`` | ``-CUDA-11.7.0`` | ``foss/2022a``
 ``default`` |  | ``foss/2022a``
 ``default`` | ``-CUDA-12.0.0`` | ``foss/2022b``
@@ -26,7 +24,6 @@ version | versionsuffix | toolchain
 ``default`` |  | ``foss/2025a``
 ``default`` | ``-CUDA-12.9.1`` | ``foss/2025b``
 ``default`` |  | ``foss/2025b``
-``default`` |  | ``intel/2021b``
 ``default`` |  | ``intel/2022a``
 ``default`` |  | ``intel/2022b``
 ``default`` |  | ``intel/2023a``
@@ -34,6 +31,7 @@ version | versionsuffix | toolchain
 ``default`` |  | ``intel/2024a``
 ``default`` |  | ``intel/2025a``
 ``default`` |  | ``intel/2025b``
+``default`` |  | ``lfoss/2025b``
 ``default`` |  | ``nvompi/2022.07``
 
 

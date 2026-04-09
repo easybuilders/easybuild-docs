@@ -10,8 +10,6 @@ A parallel sparse direct solver
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``5.4.1`` | ``-metis`` | ``foss/2021b``
-``5.4.1`` | ``-metis`` | ``intel/2021b``
 ``5.5.1`` | ``-metis`` | ``foss/2022a``
 ``5.6.1`` | ``-metis`` | ``foss/2022b``
 ``5.6.1`` | ``-metis`` | ``foss/2023a``

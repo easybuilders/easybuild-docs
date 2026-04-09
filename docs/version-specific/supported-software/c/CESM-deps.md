@@ -10,7 +10,6 @@ CESM is a fully-coupled, community, global climate model that provides state-of-
 
 version | toolchain
 --------|----------
-``2`` | ``foss/2021b``
 ``2`` | ``foss/2022a``
 ``2`` | ``foss/2023a``
 ``2`` | ``foss/2024a``

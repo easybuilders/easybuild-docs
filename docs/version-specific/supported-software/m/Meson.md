@@ -10,10 +10,10 @@ Meson is a cross-platform build system designed to be both as fast and as user f
 
 version | toolchain
 --------|----------
-``0.58.2`` | ``GCCcore/11.2.0``
 ``0.62.1`` | ``GCCcore/11.3.0``
 ``0.64.0`` | ``GCCcore/12.2.0``
 ``1.1.1`` | ``GCCcore/12.3.0``
+``1.10.2`` | ``GCCcore/15.2.0``
 ``1.2.3`` | ``GCCcore/13.2.0``
 ``1.3.1`` | ``GCCcore/12.3.0``
 ``1.4.0`` | ``GCCcore/12.3.0``

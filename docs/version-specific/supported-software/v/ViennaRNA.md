@@ -10,8 +10,6 @@ The Vienna RNA Package consists of a C code library and several stand-alone prog
 
 version | toolchain
 --------|----------
-``2.5.0`` | ``foss/2021b``
-``2.5.1`` | ``foss/2021b``
 ``2.7.0`` | ``foss/2023a``
 ``2.7.0`` | ``gfbf/2024a``
 ``2.7.2`` | ``gfbf/2025b``

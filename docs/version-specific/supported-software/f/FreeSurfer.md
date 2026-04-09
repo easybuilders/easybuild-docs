@@ -10,9 +10,6 @@ FreeSurfer is a set of tools for analysis and visualization of structural and fu
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``7.1.1`` | ``-centos6_x86_64`` | ``system``
-``7.1.1`` | ``-centos7_x86_64`` | ``system``
-``7.1.1`` | ``-centos8_x86_64`` | ``system``
 ``7.2.0`` | ``-centos7_x86_64`` | ``system``
 ``7.2.0`` | ``-centos8_x86_64`` | ``system``
 ``7.2.0`` | ``-ubuntu18_amd64`` | ``system``

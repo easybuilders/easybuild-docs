@@ -10,7 +10,6 @@ RAxML-NG is a phylogenetic tree inference tool which uses maximum-likelihood (ML
 
 version | toolchain
 --------|----------
-``1.1.0`` | ``GCC/11.2.0``
 ``1.2.0`` | ``GCC/12.2.0``
 ``1.2.0`` | ``GCC/12.3.0``
 ``1.2.2`` | ``GCC/13.2.0``

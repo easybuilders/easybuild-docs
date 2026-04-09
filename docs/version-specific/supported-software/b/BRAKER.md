@@ -10,7 +10,6 @@ BRAKER is a pipeline for fully automated prediction of protein coding genes with
 
 version | toolchain
 --------|----------
-``2.1.6`` | ``foss/2021b``
 ``2.1.6`` | ``foss/2022a``
 ``3.0.8`` | ``foss/2023a``
 

@@ -10,7 +10,6 @@ The OpenGL Utility Library (GLU) is a computer graphics library for OpenGL.
 
 version | toolchain
 --------|----------
-``9.0.2`` | ``GCCcore/11.2.0``
 ``9.0.2`` | ``GCCcore/11.3.0``
 ``9.0.2`` | ``GCCcore/12.2.0``
 ``9.0.3`` | ``GCCcore/12.3.0``

@@ -4,13 +4,12 @@ search:
 ---
 # exiv2
 
-Exiv2 is a Cross-platform C++ library and a command line utility to manage image metadata.
+Exiv2 is a C++ library and a command line utility to manage image metadata. It provides fast and easy read and write  access to the Exif, IPTC and XMP metadata of digital images in various formats. Exiv2 is available as free software and  with a commercial license, and is used in many projects.
 
-*homepage*: <https://exiv2.org>
+*homepage*: <http://www.exiv2.org>
 
 version | toolchain
 --------|----------
-``0.27.5`` | ``GCCcore/11.2.0``
 ``0.28.0`` | ``GCCcore/12.3.0``
 ``0.28.3`` | ``GCCcore/13.3.0``
 ``0.28.5`` | ``GCCcore/14.2.0``

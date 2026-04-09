@@ -10,7 +10,6 @@ ParMETIS is an MPI-based parallel library that implements a variety of algorithm
 
 version | toolchain
 --------|----------
-``4.0.3`` | ``gompi/2021b``
 ``4.0.3`` | ``gompi/2022a``
 ``4.0.3`` | ``gompi/2022b``
 ``4.0.3`` | ``gompi/2023a``
@@ -18,7 +17,6 @@ version | toolchain
 ``4.0.3`` | ``gompi/2024a``
 ``4.0.3`` | ``gompi/2025a``
 ``4.0.3`` | ``gompi/2025b``
-``4.0.3`` | ``iimpi/2021b``
 ``4.0.3`` | ``iimpi/2023b``
 ``4.0.3`` | ``lompi/2025b``
 

@@ -10,7 +10,6 @@ This bundle collect the standard GNU build tools: Autoconf, Automake  and libtoo
 
 version | toolchain
 --------|----------
-``20210726`` | ``GCCcore/11.2.0``
 ``20220317`` | ``GCCcore/11.3.0``
 ``20220317`` | ``GCCcore/12.2.0``
 ``20220317`` | ``GCCcore/12.3.0``
