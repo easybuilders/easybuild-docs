@@ -12,7 +12,7 @@ There are two parts to the policy:
 1. [Policy for the provision of AI features in EasyBuild][policy_ai_features]
 1. [Policy for the use of AI in contributions to EasyBuild][policy_ai_contributions]
 
-This policy is live as of (date) and contributions that were initiated prior to this do not have to retroactively comply with the *Policy for the use of AI in contributions to EasyBuild*.
+This policy is live as of 2026/04/10 and contributions that were initiated prior to this do not have to retroactively comply with the *Policy for the use of AI in contributions to EasyBuild*.
 
 *EasyBuild continues to provide support for the installation of AI software. These are welcome in EasyBuild, and it is left to individual users and sites as to if they install this software.*
 
@@ -73,6 +73,6 @@ Examples of statements to declare the use of AI are:
 
 ## Changelog
 
-### v1 (date)
+### v1 2026/04/10
 
 Initial AI policy
