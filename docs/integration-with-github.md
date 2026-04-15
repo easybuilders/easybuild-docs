@@ -43,7 +43,7 @@ are a couple of requirements:
       source ~/eb_venv/bin/activate
       pip install sagecipher GitPython setuptools=69.5.1  # sagecipher needs a setuptools that provides pkg_resources module
       export PYTHON_KEYRING_BACKEND="sagecipher.keyring.Keyring"  # tell keyring to use sagecipher backend
-      export KEYRING_PROPERTY_SSH_KEY_FINGERPRINT="0f:ff:cc:15:22:1f:22:b2:b4:0b:d3:4a:c1:29:6c:85"  # your SSH key's MD5 fingerprint
+      export KEYRING_PROPERTY_SSH_KEY_FINGERPRINT="ff:00:11:22:33:44:55:66:77:88:99:aa:bb:cc:dd:ee"  # your SSH key's MD5 fingerprint
       # instead of hard coding, you can get the fingerprint from a running ssh-agent, e.g.
       # ssh-add -l -E md5 | awk '/your@email.com/{gsub("MD5:",""); print $2}'
       export EB_PYTHON=$(which python)  # tell EB to use the eb_venv's python
