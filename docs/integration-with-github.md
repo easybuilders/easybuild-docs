@@ -37,6 +37,7 @@ are a couple of requirements:
     - [sagecipher](https://pypi.org/project/sagecipher) is an encryption backend which uses the ssh agent protocol’s signature operation to derive the cipher key.
     - requires a working `ssh-agent` configuration (see [GitHub's docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux) if needed).
     - example installation via a virtual environment to be used by EasyBuild:
+      
       ```shell
       module load EasyBuild  # ensure the python interpreter matches
       python -m venv ~/eb_venv  # your preferred location for this virtual environment
@@ -50,6 +51,7 @@ are a couple of requirements:
       # eb --install-github-token  # see docs below
       # eb --check-github  # see docs below
       ```
+
 - `git` **command** / `GitPython` **Python package**
     - install via `pip install GitPython` (for Python2:
         `pip install 'GitPython<3.0'`)
