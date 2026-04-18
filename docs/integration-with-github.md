@@ -32,6 +32,26 @@ are a couple of requirements:
           [Submitting pull requests][github_new_pr]
     - *not* used for [Using easyconfig from commits][github_from_commit]
     - see [Installing a GitHub token][github_token]
+- **a GitHub token** + `keyring` + `sagecipher` **Python package**
+    - alternate keyring backend using `sagecipher` and `ssh-agent` suitable for headless setup (no graphical environment required)
+    - [sagecipher](https://pypi.org/project/sagecipher) is an encryption backend which uses the ssh agent protocol’s signature operation to derive the cipher key.
+    - requires a working `ssh-agent` configuration (see [GitHub's docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux) if needed).
+    - example installation via a virtual environment to be used by EasyBuild:
+      
+      ```shell
+      module load EasyBuild  # ensure the python interpreter matches
+      python -m venv ~/eb_venv  # your preferred location for this virtual environment
+      source ~/eb_venv/bin/activate
+      pip install sagecipher GitPython setuptools=69.5.1  # sagecipher needs a setuptools that provides pkg_resources module
+      export PYTHON_KEYRING_BACKEND="sagecipher.keyring.Keyring"  # tell keyring to use sagecipher backend
+      export KEYRING_PROPERTY_SSH_KEY_FINGERPRINT="ff:00:11:22:33:44:55:66:77:88:99:aa:bb:cc:dd:ee"  # your SSH key's MD5 fingerprint
+      # instead of hard coding, you can get the fingerprint from a running ssh-agent, e.g.
+      # ssh-add -l -E md5 | awk '/your@email.com/{gsub("MD5:",""); print $2}'
+      export EB_PYTHON=$(which python)  # tell EB to use the eb_venv's python
+      # eb --install-github-token  # see docs below
+      # eb --check-github  # see docs below
+      ```
+
 - `git` **command** / `GitPython` **Python package**
     - install via `pip install GitPython` (for Python2:
         `pip install 'GitPython<3.0'`)
