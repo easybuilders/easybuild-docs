@@ -14,6 +14,8 @@ jobs:
       - name: MarkdownLint
         uses: DavidAnson/markdownlint-cli2-action@05f32210e84442804257b2a6f20b273450ec8265 # v19.1.0
         with:
+          # allow duplicate subsections, see https://github.com/DavidAnson/markdownlint/blob/main/doc/md024.md
+          siblings_only: true
           # all markdown, except filter out {demos,version-specific}/* for now, until we fix issues in those sections
           globs: |
             **/*.md
