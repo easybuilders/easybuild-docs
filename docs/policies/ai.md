@@ -25,7 +25,7 @@ The default EasyBuild installation is either:
 * `pip install easybuild`
 * Using EasyBuild to install EasyBuild, through an easyconfig file named `EasyBuild-x.y.z.eb` (for any version `x.y.z`)
 
-### Reasoning
+### Reasoning {: #policy_ai_features_reasoning }
 
 By not accepting AI features in the default EasyBuild installation this will allow those wishing to avoid AI to do so, preserving user choice.
 
@@ -57,7 +57,7 @@ Contributions to EasyBuild are:
 * EasyBuild User Meeting talks;
 * Meeting notes.
 
-### Reasoning
+### Reasoning {: #policy_ai_contributions_reasoning }
 
 By asking those submitting PRs and issues to mark them when they are AI assisted, this will allow us to understand the scope of use of AI in contributions to EasyBuild.
 
