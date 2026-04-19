@@ -2,7 +2,7 @@
 
 This document outlines the governance of the [EasyBuild](https://easybuild.io) open source software project and related infrastructure.
 
-## 1. Guiding Principles {: #guiding-principples }
+## 1. Guiding Principles {: #guiding-principles }
 
 The value of EasyBuild grows exponentially with two things: the amount of systems on which EasyBuild is used,
 and the amount of software that is supported by EasyBuild.
@@ -37,7 +37,7 @@ They are responsible for setting permissions on the code repositories, compliant
 
 ### 2.2 Release Managers {: #release-managers }
 
-The EasyBuild release managers are responsible for reguarly publishing new stable releases of EasyBuild.
+The EasyBuild release managers are responsible for regularly publishing new stable releases of EasyBuild.
 
 EasyBuild releases are published via [PyPI](https://pypi.org/project/easybuild/), and corresponding tags and releases
 are created in the relevant EasyBuild GitHub repositories.
