@@ -142,9 +142,9 @@ nav:
       - Known issues in EasyBuild v5.0: easybuild-v5/known-issues.md
   - Governance:
       - Charter: governance/charter.md
+      - Code of Conduct: governance/code-of-conduct.md
       - Governance: governance/governance.md
       - Policies: governance/policies.md
-      - Code of conduct: governance/code-of-conduct.md
       - Steering Committee: governance/steering-committee.md
 
 markdown_extensions:
