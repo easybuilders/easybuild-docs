@@ -11640,6 +11640,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policies/ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EasyBuild AI Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -12982,7 +13010,30 @@ are a couple of requirements:</p>
 <li>see <a class="autorefs autorefs-internal" href="#github_token">Installing a GitHub token</a></li>
 </ul>
 </li>
-<li><code>git</code> <strong>command</strong> / <code>GitPython</code> <strong>Python package</strong><ul>
+<li>
+<p><strong>a GitHub token</strong> + <code>keyring</code> + <code>sagecipher</code> <strong>Python package</strong></p>
+<ul>
+<li>alternate keyring backend using <code>sagecipher</code> and <code>ssh-agent</code> suitable for headless setup (no graphical environment required)</li>
+<li><a href="https://pypi.org/project/sagecipher">sagecipher</a> is an encryption backend which uses the ssh agent protocol’s signature operation to derive the cipher key.</li>
+<li>requires a working <code>ssh-agent</code> configuration (see <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux">GitHub's docs</a> if needed).</li>
+<li>example installation via a virtual environment to be used by EasyBuild:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>module<span class="w"> </span>load<span class="w"> </span>EasyBuild<span class="w">  </span><span class="c1"># ensure the python interpreter matches</span>
+python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>~/eb_venv<span class="w">  </span><span class="c1"># your preferred location for this virtual environment</span>
+<span class="nb">source</span><span class="w"> </span>~/eb_venv/bin/activate
+pip<span class="w"> </span>install<span class="w"> </span>sagecipher<span class="w"> </span>GitPython<span class="w"> </span><span class="nv">setuptools</span><span class="o">=</span><span class="m">69</span>.5.1<span class="w">  </span><span class="c1"># sagecipher needs a setuptools that provides pkg_resources module</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PYTHON_KEYRING_BACKEND</span><span class="o">=</span><span class="s2">&quot;sagecipher.keyring.Keyring&quot;</span><span class="w">  </span><span class="c1"># tell keyring to use sagecipher backend</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">KEYRING_PROPERTY_SSH_KEY_FINGERPRINT</span><span class="o">=</span><span class="s2">&quot;ff:00:11:22:33:44:55:66:77:88:99:aa:bb:cc:dd:ee&quot;</span><span class="w">  </span><span class="c1"># your SSH key&#39;s MD5 fingerprint</span>
+<span class="c1"># instead of hard coding, you can get the fingerprint from a running ssh-agent, e.g.</span>
+<span class="c1"># ssh-add -l -E md5 | awk &#39;/your@email.com/{gsub(&quot;MD5:&quot;,&quot;&quot;); print $2}&#39;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">EB_PYTHON</span><span class="o">=</span><span class="k">$(</span>which<span class="w"> </span>python<span class="k">)</span><span class="w">  </span><span class="c1"># tell EB to use the eb_venv&#39;s python</span>
+<span class="c1"># eb --install-github-token  # see docs below</span>
+<span class="c1"># eb --check-github  # see docs below</span>
+</code></pre></div>
+</li>
+<li>
+<p><code>git</code> <strong>command</strong> / <code>GitPython</code> <strong>Python package</strong></p>
+<ul>
 <li>install via <code>pip install GitPython</code> (for Python2:
     <code>pip install 'GitPython&lt;3.0'</code>)</li>
 <li>only required when local <code>git</code> commands need to be executed, e.g. to
@@ -13796,7 +13847,7 @@ is that the latter will show the full diff of the changes (equivalent to
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 17, 2025 21:56:33 UTC">March 17, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 18, 2026 15:02:38 UTC">April 18, 2026</span>
   </span>
 
     
