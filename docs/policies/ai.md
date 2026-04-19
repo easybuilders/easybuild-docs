@@ -12,7 +12,7 @@ There are two parts to the policy:
 1. [Policy for the provision of AI features in EasyBuild][policy_ai_features]
 1. [Policy for the use of AI in contributions to EasyBuild][policy_ai_contributions]
 
-This policy is live as of 2026/04/10 and contributions that were initiated prior to this do not have to retroactively comply with the *Policy for the use of AI in contributions to EasyBuild*.
+This policy is live as of 19 April 2026 and contributions that were initiated prior to this do not have to retroactively comply with the *Policy for the use of AI in contributions to EasyBuild*.
 
 *EasyBuild continues to provide support for the installation of AI software. These are welcome in EasyBuild, and it is left to individual users and sites as to if they install this software.*
 
@@ -25,7 +25,7 @@ The default EasyBuild installation is either:
 * `pip install easybuild`
 * Using EasyBuild to install EasyBuild, through an easyconfig file named `EasyBuild-x.y.z.eb` (for any version `x.y.z`)
 
-### Reasoning for the policy for the provision of AI features in EasyBuild
+### Reasoning
 
 By not accepting AI features in the default EasyBuild installation this will allow those wishing to avoid AI to do so, preserving user choice.
 
@@ -42,7 +42,7 @@ We ask that contributors:
 
 * Declare when they have used AI in a contribution;
 * If AI was used in a contribution, that they also:
-  * Declare which AI tool was used;
+  * Declare which AI tool and model was used;
   * Declare the extent of that use of AI;
   * Keep a ["human in the loop"](https://www.phoronix.com/news/LLVM-Human-In-The-Loop) when using AI.
 
@@ -57,7 +57,7 @@ Contributions to EasyBuild are:
 * EasyBuild User Meeting talks;
 * Meeting notes.
 
-### Reasoning for the policy for the use of AI in contributions to EasyBuild
+### Reasoning
 
 By asking those submitting PRs and issues to mark them when they are AI assisted, this will allow us to understand the scope of use of AI in contributions to EasyBuild.
 
@@ -67,12 +67,12 @@ Also, there are potential ethical obligations relating to the data used to train
 
 Examples of statements to declare the use of AI are:
 
-* I used CoPilot to code this PR.
-* ChatGPT was used to summarise the existing code, but the code was written by me.
-* Claude was used to produce documentation describing the contribution.
+* I used GitHub CoPilot (GPT-5 mini) to code this PR.
+* ChatGPT (GPT 5.3) was used to summarise the existing code, but the code was written by me.
+* Claude (Sonnet 4.6) was used to produce documentation describing the contribution.
 
 ## Changelog
 
-### v1 2026/04/10
+### v1.0 (19 April 2026)
 
-Initial AI policy
+Initial EasuBuild AI policy
