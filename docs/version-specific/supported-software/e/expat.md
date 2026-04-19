@@ -10,7 +10,6 @@ Expat is an XML parser library written in C. It is a stream-oriented parser  in 
 
 version | toolchain
 --------|----------
-``2.4.1`` | ``GCCcore/11.2.0``
 ``2.4.8`` | ``GCCcore/11.3.0``
 ``2.4.8`` | ``GCCcore/12.1.0``
 ``2.4.9`` | ``GCCcore/12.2.0``

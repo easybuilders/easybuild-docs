@@ -10,7 +10,6 @@ This library provides functions for manipulating Unicode strings and for  manipu
 
 version | toolchain
 --------|----------
-``1.0`` | ``GCCcore/11.2.0``
 ``1.0`` | ``GCCcore/11.3.0``
 ``1.1`` | ``GCCcore/12.3.0``
 ``1.2`` | ``GCCcore/13.3.0``

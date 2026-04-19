@@ -10,7 +10,6 @@ Highly accurate hidden Markov model gene prediction in fungal genomes using RNA-
 
 version | toolchain
 --------|----------
-``2.0`` | ``foss/2021b``
 ``2.0`` | ``foss/2023a``
 ``2.0`` | ``foss/2024a``
 

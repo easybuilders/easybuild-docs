@@ -10,7 +10,6 @@ Set of Linux utilities
 
 version | toolchain
 --------|----------
-``2.37`` | ``GCCcore/11.2.0``
 ``2.38`` | ``GCCcore/11.3.0``
 ``2.38.1`` | ``GCCcore/12.2.0``
 ``2.39`` | ``GCCcore/12.3.0``

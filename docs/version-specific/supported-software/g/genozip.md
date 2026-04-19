@@ -10,7 +10,6 @@ Genozip is a compressor for genomic files - it compresses FASTQ, SAM/BAM/CRAM, V
 
 version | toolchain
 --------|----------
-``13.0.5`` | ``GCCcore/11.2.0``
 ``15.0.74`` | ``GCCcore/11.3.0``
 
 

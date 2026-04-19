@@ -10,9 +10,6 @@ The Open MPI Project is an open source MPI-3 implementation.
 
 version | toolchain
 --------|----------
-``4.1.1`` | ``GCC/11.2.0``
-``4.1.1`` | ``intel-compilers/2021.4.0``
-``4.1.2`` | ``GCC/11.2.0``
 ``4.1.4`` | ``GCC/11.3.0``
 ``4.1.4`` | ``GCC/12.2.0``
 ``4.1.4`` | ``NVHPC/22.7-CUDA-11.7.0``
@@ -22,6 +19,8 @@ version | toolchain
 ``4.1.5`` | ``intel-compilers/2023.1.0``
 ``4.1.6`` | ``GCC/13.2.0``
 ``4.1.6`` | ``intel-compilers/2023.2.1``
+``5.0.10`` | ``GCC/15.2.0``
+``5.0.10`` | ``llvm-compilers/21.1.8``
 ``5.0.3`` | ``GCC/13.3.0``
 ``5.0.3`` | ``NVHPC/24.9-CUDA-12.6.0``
 ``5.0.3`` | ``intel-compilers/2024.2.0``

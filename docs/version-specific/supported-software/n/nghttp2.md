@@ -10,7 +10,6 @@ This is an implementation of the Hypertext Transfer Protocol version 2 in C.  Th
 
 version | toolchain
 --------|----------
-``1.48.0`` | ``GCC/11.2.0``
 ``1.48.0`` | ``GCC/11.3.0``
 ``1.58.0`` | ``GCC/12.3.0``
 ``1.62.0`` | ``GCC/12.3.0``

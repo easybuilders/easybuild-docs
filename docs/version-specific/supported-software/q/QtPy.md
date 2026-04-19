@@ -4,16 +4,16 @@ search:
 ---
 # QtPy
 
-QtPy is a small abstraction layer that lets you write applications using a single API call to either PyQt or PySide. It provides support for PyQt5, PyQt4, PySide2 and PySide.
+QtPy is a small abstraction layer that lets you write applications using a single API call to  either PyQt or PySide. It provides support for PyQt5, PyQt4, PySide2 and PySide.
 
 *homepage*: <https://github.com/spyder-ide/qtpy>
 
 version | toolchain
 --------|----------
-``2.2.1`` | ``GCCcore/11.2.0``
 ``2.3.0`` | ``GCCcore/11.3.0``
 ``2.4.1`` | ``GCCcore/12.3.0``
 ``2.4.1`` | ``GCCcore/13.2.0``
+``2.4.3`` | ``GCCcore/13.3.0``
 ``2.4.3`` | ``GCCcore/14.2.0``
 ``2.4.3`` | ``GCCcore/14.3.0``
 

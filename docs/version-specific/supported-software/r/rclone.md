@@ -10,7 +10,6 @@ Rclone is a command line program to sync files and directories to and from  a va
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``1.54.1`` | ``-amd64`` | ``system``
 ``1.56.0`` | ``-amd64`` | ``system``
 ``1.57.0`` |  | ``system``
 ``1.63.1`` | ``-amd64`` | ``system``

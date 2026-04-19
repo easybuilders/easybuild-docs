@@ -10,7 +10,6 @@ Trim Galore! is a wrapper script to automate quality and adapter trimming as wel
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.6.10`` |  | ``GCCcore/11.2.0``
 ``0.6.10`` |  | ``GCCcore/11.3.0``
 ``0.6.10`` | ``-Python-2.7.18`` | ``GCCcore/12.3.0``
 ``0.6.10`` |  | ``GCCcore/12.3.0``

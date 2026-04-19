@@ -10,7 +10,6 @@ ScaFaCoS is a library of scalable fast coulomb solvers.
 
 version | toolchain
 --------|----------
-``1.0.1`` | ``foss/2021b``
 ``1.0.4`` | ``foss/2022a``
 ``1.0.4`` | ``foss/2022b``
 ``1.0.4`` | ``foss/2023a``

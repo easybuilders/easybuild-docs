@@ -4,15 +4,12 @@ search:
 ---
 # Horovod
 
-Horovod is a distributed training framework for TensorFlow.
+Horovod is a distributed training framework for TensorFlow, PyTorch and MXnet. This build only has PyTorch enabled.
 
 *homepage*: <https://github.com/uber/horovod>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``0.28.1`` | ``-CUDA-11.4.1-TensorFlow-2.7.1`` | ``foss/2021b``
-``0.28.1`` | ``-CUDA-11.4.1-TensorFlow-2.8.4`` | ``foss/2021b``
-``0.28.1`` | ``-CUDA-11.5.2-PyTorch-1.12.1`` | ``foss/2021b``
 ``0.28.1`` | ``-CUDA-11.7.0-PyTorch-1.12.0`` | ``foss/2022a``
 ``0.28.1`` | ``-CUDA-11.7.0-PyTorch-1.12.1`` | ``foss/2022a``
 ``0.28.1`` | ``-CUDA-11.7.0-PyTorch-1.13.1`` | ``foss/2022a``

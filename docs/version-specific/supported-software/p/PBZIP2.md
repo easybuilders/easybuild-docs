@@ -11,6 +11,7 @@ PBZIP2 is a parallel implementation of the bzip2 block-sorting  file compressor 
 version | toolchain
 --------|----------
 ``1.1.13`` | ``GCCcore/12.3.0``
+``1.1.13`` | ``GCCcore/13.3.0``
 ``1.1.13`` | ``GCCcore/14.3.0``
 
 

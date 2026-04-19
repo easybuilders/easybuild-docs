@@ -10,7 +10,6 @@ Libidn2 implements the revised algorithm for internationalized domain names call
 
 version | toolchain
 --------|----------
-``2.3.2`` | ``GCCcore/11.2.0``
 ``2.3.2`` | ``GCCcore/11.3.0``
 ``2.3.2`` | ``GCCcore/13.2.0``
 ``2.3.4`` | ``GCCcore/12.2.0``

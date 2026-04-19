@@ -8,6 +8,7 @@ search:
 
 
 
+ * [k-Wave-python](k-Wave-python.md)
  * [k8](k8.md)
  * [kaggle](kaggle.md)
  * [KaHIP](KaHIP.md)
@@ -33,6 +34,7 @@ search:
  * [koopmans-qe-utils](koopmans-qe-utils.md)
  * [Kornia](Kornia.md)
  * [Kraken](Kraken.md)
+ * [kraken-OCR](kraken-OCR.md)
  * [Kraken2](Kraken2.md)
  * [KrakenTools](KrakenTools.md)
  * [KrakenUniq](KrakenUniq.md)

@@ -10,8 +10,6 @@ The Worker framework has been developed to help deal with parameter exploration 
 
 version | toolchain
 --------|----------
-``1.6.12`` | ``foss/2021b``
-``1.6.13`` | ``iimpi/2021b``
 ``1.6.13`` | ``iimpi/2022b``
 ``1.6.13`` | ``iimpi/2023a``
 

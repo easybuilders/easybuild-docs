@@ -10,7 +10,6 @@ BUSCO: assessing genome assembly and annotation completeness with single-copy or
 
 version | toolchain
 --------|----------
-``5.4.3`` | ``foss/2021b``
 ``5.4.5`` | ``foss/2022a``
 ``5.4.7`` | ``foss/2022b``
 ``5.8.2`` | ``foss/2023a``

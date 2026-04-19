@@ -10,7 +10,6 @@ Zarr is a Python package providing an implementation of compressed, chunked, N-d
 
 version | toolchain
 --------|----------
-``2.13.3`` | ``foss/2021b``
 ``2.13.3`` | ``foss/2022a``
 ``2.16.0`` | ``foss/2022b``
 ``2.17.1`` | ``foss/2023a``

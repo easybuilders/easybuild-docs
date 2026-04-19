@@ -10,6 +10,7 @@ TinyXML-2 is a simple, small, efficient, C++ XML parser that can be easily integ
 
 version | toolchain
 --------|----------
+``10.0.0`` | ``GCCcore/13.2.0``
 ``10.0.0`` | ``GCCcore/13.3.0``
 
 

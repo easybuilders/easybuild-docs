@@ -10,8 +10,6 @@ The NVIDIA Collective Communications Library (NCCL) implements multi-GPU and mul
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2.10.3`` | ``-CUDA-11.4.1`` | ``GCCcore/11.2.0``
-``2.10.3`` | ``-CUDA-11.5.2`` | ``GCCcore/11.2.0``
 ``2.12.12`` | ``-CUDA-11.7.0`` | ``GCCcore/11.3.0``
 ``2.16.2`` | ``-CUDA-11.7.0`` | ``GCCcore/12.2.0``
 ``2.16.2`` | ``-CUDA-12.0.0`` | ``GCCcore/12.2.0``
@@ -21,6 +19,7 @@ version | versionsuffix | toolchain
 ``2.22.3`` | ``-CUDA-12.6.0`` | ``GCCcore/13.3.0``
 ``2.26.2`` | ``-CUDA-12.6.0`` | ``GCCcore/13.3.0``
 ``2.26.6`` | ``-CUDA-12.8.0`` | ``GCCcore/14.2.0``
+``2.27.5`` | ``-CUDA-12.6.0`` | ``GCCcore/13.3.0``
 ``2.27.7`` | ``-CUDA-12.8.0`` | ``GCCcore/14.2.0``
 ``2.27.7`` | ``-CUDA-12.9.1`` | ``GCCcore/14.3.0``
 ``2.9.9`` | ``-CUDA-11.3.1`` | ``system``

@@ -4,14 +4,12 @@ search:
 ---
 # libPSML
 
-LibPSML provides a Fortran API to parse files in the  PSeudopotential Markup Language (PSML) format.
+A library to handle pseudopotentials in PSML format
 
-*homepage*: <https://launchpad.net/libpsml>
+*homepage*: <https://gitlab.com/siesta-project/libraries/libpsml>
 
 version | toolchain
 --------|----------
-``1.1.10`` | ``GCC/11.2.0``
-``1.1.10`` | ``intel-compilers/2021.4.0``
 ``1.1.12`` | ``GCC/11.3.0``
 ``2.1.0`` | ``GCC/12.3.0``
 ``2.1.0`` | ``GCC/13.3.0``

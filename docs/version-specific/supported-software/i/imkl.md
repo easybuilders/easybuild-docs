@@ -4,13 +4,14 @@ search:
 ---
 # imkl
 
-Intel oneAPI Math Kernel Library
+Intel Math Kernel Library is a library of highly optimized,  extensively threaded math routines for science, engineering, and financial  applications that require maximum performance. Core math functions include  BLAS, LAPACK, ScaLAPACK, Sparse Solvers, Fast Fourier Transforms, Vector Math, and more.
 
-*homepage*: <https://software.intel.com/content/www/us/en/develop/tools/oneapi/components/onemkl.html>
+*homepage*: <https://software.intel.com/mkl>
 
 version | toolchain
 --------|----------
-``2021.4.0`` | ``iompi/2021b``
+``2020.0.166`` | ``NVHPC/25.9-CUDA-12.9.1``
+``2020.0.166`` | ``gompi/2025b``
 ``2021.4.0`` | ``system``
 ``2022.0.1`` | ``system``
 ``2022.1.0`` | ``gompi/2022a``
@@ -26,6 +27,7 @@ version | toolchain
 ``2024.2.0`` | ``system``
 ``2025.1.0`` | ``system``
 ``2025.2.0`` | ``system``
+``2025.3.1`` | ``system``
 
 
 *(quick links: [(all)](../index.md) - [0](../0/index.md) - [a](../a/index.md) - [b](../b/index.md) - [c](../c/index.md) - [d](../d/index.md) - [e](../e/index.md) - [f](../f/index.md) - [g](../g/index.md) - [h](../h/index.md) - [i](../i/index.md) - [j](../j/index.md) - [k](../k/index.md) - [l](../l/index.md) - [m](../m/index.md) - [n](../n/index.md) - [o](../o/index.md) - [p](../p/index.md) - [q](../q/index.md) - [r](../r/index.md) - [s](../s/index.md) - [t](../t/index.md) - [u](../u/index.md) - [v](../v/index.md) - [w](../w/index.md) - [x](../x/index.md) - [y](../y/index.md) - [z](../z/index.md))*

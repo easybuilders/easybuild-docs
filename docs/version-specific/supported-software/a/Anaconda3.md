@@ -10,7 +10,6 @@ Built to complement the rich, open source Python community, the Anaconda platfor
 
 version | toolchain
 --------|----------
-``2020.11`` | ``system``
 ``2021.05`` | ``system``
 ``2021.11`` | ``system``
 ``2022.05`` | ``system``

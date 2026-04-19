@@ -10,7 +10,6 @@ The Boehm-Demers-Weiser conservative garbage collector can be used as a garbage 
 
 version | toolchain
 --------|----------
-``8.2.0`` | ``GCCcore/11.2.0``
 ``8.2.2`` | ``GCCcore/11.3.0``
 ``8.2.4`` | ``GCCcore/12.3.0``
 ``8.2.6`` | ``GCCcore/13.2.0``

@@ -10,7 +10,6 @@ Automated testing framework for C.
 
 version | toolchain
 --------|----------
-``2.1-3`` | ``GCCcore/11.2.0``
 ``2.1-3`` | ``GCCcore/11.3.0``
 ``2.1-3`` | ``GCCcore/12.3.0``
 ``2.1-3`` | ``GCCcore/14.2.0``

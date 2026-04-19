@@ -10,7 +10,6 @@ The Mayavi scientific data 3-dimensional visualizer
 
 version | toolchain
 --------|----------
-``4.7.4`` | ``foss/2021b``
 ``4.8.3`` | ``foss/2024a``
 
 

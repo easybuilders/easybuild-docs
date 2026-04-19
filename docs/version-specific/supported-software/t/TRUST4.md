@@ -11,7 +11,6 @@ Tcr Receptor Utilities for Solid Tissue (TRUST) is a computational tool to analy
 version | toolchain
 --------|----------
 ``1.0.5.1`` | ``system``
-``1.0.6`` | ``GCC/11.2.0``
 ``1.0.7`` | ``GCC/11.3.0``
 
 

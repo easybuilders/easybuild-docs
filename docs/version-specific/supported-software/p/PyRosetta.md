@@ -10,6 +10,7 @@ PyRosetta is an interactive Python-based interface to the powerful Rosetta molec
 
 version | toolchain
 --------|----------
+``4.r420`` | ``gompi/2025a``
 ``4.release-384`` | ``gompi/2022a``
 ``4.release-387`` | ``gompi/2023a``
 

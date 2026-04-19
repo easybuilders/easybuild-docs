@@ -10,8 +10,6 @@ Bioconductor provides tools for the analysis and coprehension  of high-throughpu
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``3.14`` | ``-R-4.1.2`` | ``foss/2021b``
-``3.15`` | ``-R-4.2.0`` | ``foss/2021b``
 ``3.15`` | ``-R-4.2.1`` | ``foss/2022a``
 ``3.16`` | ``-R-4.2.2`` | ``foss/2022b``
 ``3.18`` | ``-R-4.3.2`` | ``foss/2023a``

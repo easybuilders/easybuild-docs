@@ -10,7 +10,6 @@ GitPython is a python library used to interact with Git repositories
 
 version | toolchain
 --------|----------
-``3.1.24`` | ``GCCcore/11.2.0``
 ``3.1.27`` | ``GCCcore/11.3.0``
 ``3.1.31`` | ``GCCcore/12.2.0``
 ``3.1.40`` | ``GCCcore/12.3.0``

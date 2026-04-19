@@ -10,7 +10,6 @@ Python interface to CDO.
 
 version | toolchain
 --------|----------
-``1.5.7`` | ``foss/2021b``
 ``1.6.0`` | ``foss/2022a``
 
 

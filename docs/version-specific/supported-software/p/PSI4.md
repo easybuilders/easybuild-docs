@@ -10,7 +10,6 @@ PSI4 is an open-source suite of ab initio quantum chemistry programs designed fo
 
 version | toolchain
 --------|----------
-``1.7`` | ``foss/2021b``
 ``1.9.1`` | ``foss/2023a``
 
 

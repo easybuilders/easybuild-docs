@@ -10,7 +10,6 @@ VirtualGL is an open source toolkit that gives any Linux or Unix remote display 
 
 version | toolchain
 --------|----------
-``3.0`` | ``GCC/11.2.0``
 ``3.1`` | ``GCC/12.3.0``
 ``3.1.1`` | ``GCC/13.3.0``
 ``3.1.3`` | ``GCC/14.2.0``

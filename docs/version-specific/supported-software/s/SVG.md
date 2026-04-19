@@ -10,7 +10,6 @@ Perl binding for SVG
 
 version | toolchain
 --------|----------
-``2.87`` | ``GCC/11.2.0``
 ``2.87`` | ``GCC/11.3.0``
 ``2.87`` | ``GCC/12.2.0``
 

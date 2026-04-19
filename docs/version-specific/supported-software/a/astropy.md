@@ -4,13 +4,12 @@ search:
 ---
 # astropy
 
-The Astropy Project is a community effort to develop a single core package for Astronomy in Python and foster interoperability between Python astronomy packages.
+The Astropy Project is a community effort to develop a common core package for Astronomy in Python and foster an ecosystem of interoperable astronomy packages.  The Astropy community is committed to supporting diversity and inclusion.
 
 *homepage*: <https://www.astropy.org/>
 
 version | toolchain
 --------|----------
-``4.3.1`` | ``foss/2021b``
 ``5.1.1`` | ``foss/2022a``
 ``5.1.1`` | ``intel/2022a``
 ``5.2.2`` | ``gfbf/2022b``

@@ -10,7 +10,6 @@ OpenFAST is a wind turbine simulation tool which builds on FAST v8. FAST.Farm ex
 
 version | toolchain
 --------|----------
-``3.0.0`` | ``foss/2021b``
 ``3.5.2`` | ``foss/2023b``
 ``4.0.2`` | ``foss/2024a``
 ``4.1.2`` | ``foss/2025a``

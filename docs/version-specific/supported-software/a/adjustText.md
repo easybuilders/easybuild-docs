@@ -10,7 +10,6 @@ A small library for automatically adjustment of text position in matplotlib plot
 
 version | toolchain
 --------|----------
-``0.7.3`` | ``foss/2021b``
 ``0.7.3`` | ``foss/2022b``
 ``0.7.3`` | ``foss/2023a``
 ``1.1.1`` | ``foss/2023a``

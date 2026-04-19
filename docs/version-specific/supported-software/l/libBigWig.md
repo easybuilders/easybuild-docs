@@ -10,7 +10,6 @@ A C library for handling bigWig files
 
 version | toolchain
 --------|----------
-``0.4.6`` | ``GCCcore/11.2.0``
 ``0.4.8`` | ``GCCcore/13.2.0``
 
 

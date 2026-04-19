@@ -10,7 +10,6 @@ SIESTA is both a method and its computer program implementation, to perform effi
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``4.1.5`` |  | ``foss/2021b``
 ``4.1.5`` |  | ``foss/2022a``
 ``4.1.5`` |  | ``intel/2022a``
 ``5.2.2`` |  | ``foss/2023a``

@@ -10,7 +10,6 @@ Wayland is an object oriented display protocol, which features request and event
 
 version | toolchain
 --------|----------
-``1.0.0`` | ``GCCcore/11.2.0``
 ``1.0.0`` | ``GCCcore/11.3.0``
 ``1.0.0`` | ``GCCcore/12.3.0``
 ``1.0.1`` | ``GCCcore/14.2.0``

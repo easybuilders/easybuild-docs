@@ -10,7 +10,6 @@ makeinfo is part of the Texinfo project, the official documentation format of th
 
 version | toolchain
 --------|----------
-``6.8`` | ``GCCcore/11.2.0``
 ``6.8`` | ``GCCcore/11.3.0``
 ``7.0.3`` | ``GCCcore/12.2.0``
 ``7.0.3`` | ``GCCcore/12.3.0``

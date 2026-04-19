@@ -4,13 +4,12 @@ search:
 ---
 # IGMPlot
 
-IGMPlot is a free open-source program developed to identify molecular interactions and  prepare data to build 2D and 3D representations of them in the molecular environment.
+IGMPlot is a free open-source program developed to identify molecular interactions and prepare data to build 2D and 3D representations of them in the molecular environment.
 
 *homepage*: <http://igmplot.univ-reims.fr>
 
 version | toolchain
 --------|----------
-``2.6.9b`` | ``GCC/11.2.0``
 ``3.17`` | ``GCC/14.2.0``
 
 

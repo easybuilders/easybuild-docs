@@ -10,7 +10,6 @@ TinyXML is a simple, small, minimal, C++ XML parser that can be easily integrati
 
 version | toolchain
 --------|----------
-``2.6.2`` | ``GCCcore/11.2.0``
 ``2.6.2`` | ``GCCcore/11.3.0``
 ``2.6.2`` | ``GCCcore/12.3.0``
 

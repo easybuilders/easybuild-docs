@@ -10,7 +10,6 @@ The GNU Core Utilities are the basic file, shell and text manipulation utilities
 
 version | toolchain
 --------|----------
-``9.0`` | ``GCCcore/11.2.0``
 ``9.1`` | ``GCCcore/11.3.0``
 ``9.1`` | ``GCCcore/12.2.0``
 ``9.5`` | ``GCCcore/13.3.0``

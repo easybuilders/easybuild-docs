@@ -10,7 +10,6 @@ ClustalW2 is a general purpose multiple sequence alignment program for DNA or pr
 
 version | toolchain
 --------|----------
-``2.1`` | ``GCC/11.2.0``
 ``2.1`` | ``GCC/12.3.0``
 
 

@@ -10,7 +10,6 @@ MinPath (Minimal set of Pathways) is a parsimony approach for biological pathway
 
 version | toolchain
 --------|----------
-``1.6`` | ``GCCcore/11.2.0``
 ``1.6`` | ``GCCcore/12.3.0``
 ``1.6`` | ``GCCcore/13.3.0``
 

@@ -10,7 +10,6 @@ The Arcade Learning Environment (ALE) is a simple framework that allows research
 
 version | toolchain
 --------|----------
-``0.7.3`` | ``foss/2021b``
 ``0.8.1`` | ``foss/2022a``
 ``0.8.1`` | ``foss/2023a``
 

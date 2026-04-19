@@ -10,7 +10,6 @@ Wtdbg2 is a de novo sequence assembler for long noisy reads produced by PacBio  
 
 version | toolchain
 --------|----------
-``2.5`` | ``GCCcore/11.2.0``
 ``2.5`` | ``GCCcore/11.3.0``
 
 

@@ -11,13 +11,11 @@ Intel(R) Threading Building Blocks (Intel(R) TBB) lets you easily write parallel
 version | toolchain
 --------|----------
 ``2020.1`` | ``GCCcore/12.3.0``
-``2020.3`` | ``GCCcore/11.2.0``
 ``2020.3`` | ``GCCcore/12.3.0``
 ``2021.10.0`` | ``GCCcore/12.2.0``
 ``2021.11.0`` | ``GCCcore/12.3.0``
 ``2021.13.0`` | ``GCCcore/13.2.0``
 ``2021.13.0`` | ``GCCcore/13.3.0``
-``2021.4.0`` | ``GCCcore/11.2.0``
 ``2021.5.0`` | ``GCCcore/11.3.0``
 ``2021.9.0`` | ``GCCcore/12.2.0``
 ``2022.2.0`` | ``GCCcore/14.2.0``

@@ -10,7 +10,6 @@ CheMPS2 is a scientific library which contains a spin-adapted implementation of 
 
 version | toolchain
 --------|----------
-``1.8.11`` | ``foss/2021b``
 ``1.8.12`` | ``foss/2022a``
 ``1.8.12`` | ``foss/2022b``
 ``1.8.12`` | ``foss/2023a``

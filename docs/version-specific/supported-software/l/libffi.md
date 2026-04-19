@@ -10,7 +10,6 @@ The libffi library provides a portable, high level programming interface to  var
 
 version | toolchain
 --------|----------
-``3.4.2`` | ``GCCcore/11.2.0``
 ``3.4.2`` | ``GCCcore/11.3.0``
 ``3.4.4`` | ``GCCcore/12.2.0``
 ``3.4.4`` | ``GCCcore/12.3.0``

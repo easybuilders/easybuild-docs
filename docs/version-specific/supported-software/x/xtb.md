@@ -10,8 +10,6 @@ xtb - An extended tight-binding semi-empirical program package.
 
 version | toolchain
 --------|----------
-``6.4.1`` | ``foss/2021b``
-``6.5.0`` | ``foss/2021b``
 ``6.5.1`` | ``foss/2022a``
 ``6.6.0`` | ``foss/2022a``
 ``6.6.0`` | ``intel/2022a``

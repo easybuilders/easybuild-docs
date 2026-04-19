@@ -10,7 +10,6 @@ xz: XZ utilities
 
 version | toolchain
 --------|----------
-``5.2.5`` | ``GCCcore/11.2.0``
 ``5.2.5`` | ``GCCcore/11.3.0``
 ``5.2.7`` | ``GCCcore/12.2.0``
 ``5.4.2`` | ``GCCcore/12.3.0``

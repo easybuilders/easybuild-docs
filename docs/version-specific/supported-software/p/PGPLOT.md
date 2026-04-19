@@ -10,7 +10,6 @@ The PGPLOT Graphics Subroutine Library is a Fortran- or C-callable, device-indep
 
 version | toolchain
 --------|----------
-``5.2.2`` | ``GCCcore/11.2.0``
 ``5.2.2`` | ``GCCcore/11.3.0``
 ``5.2.2`` | ``GCCcore/13.2.0``
 ``5.2.2`` | ``GCCcore/13.3.0``

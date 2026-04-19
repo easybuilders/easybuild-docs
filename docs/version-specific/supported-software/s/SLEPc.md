@@ -11,7 +11,6 @@ SLEPc (Scalable Library for Eigenvalue Problem Computations) is a software libra
 version | toolchain
 --------|----------
 ``3.17.2`` | ``foss/2022a``
-``3.18.2`` | ``intel/2021b``
 ``3.20.1`` | ``foss/2023a``
 ``3.22.2`` | ``foss/2023b``
 ``3.23.2`` | ``foss/2024a``

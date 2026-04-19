@@ -6,11 +6,10 @@ search:
 
 ICU is a mature, widely used set of C/C++ and Java libraries providing Unicode and Globalization  support for software applications.
 
-*homepage*: <https://icu-project.org/>
+*homepage*: <https://icu.unicode.org>
 
 version | toolchain
 --------|----------
-``69.1`` | ``GCCcore/11.2.0``
 ``71.1`` | ``GCCcore/11.3.0``
 ``72.1`` | ``GCCcore/12.2.0``
 ``73.2`` | ``GCCcore/12.3.0``

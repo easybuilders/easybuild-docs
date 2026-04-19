@@ -10,7 +10,6 @@ Abseil is an open-source collection of C++ library code designed to augment the 
 
 version | toolchain
 --------|----------
-``20210324.2`` | ``GCCcore/11.2.0``
 ``20230125.2`` | ``GCCcore/11.3.0``
 ``20230125.2`` | ``GCCcore/12.2.0``
 ``20230125.3`` | ``GCCcore/12.3.0``

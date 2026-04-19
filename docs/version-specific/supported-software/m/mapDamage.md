@@ -10,7 +10,6 @@ mapDamage2 is a computational framework written in Python and     R, which track
 
 version | toolchain
 --------|----------
-``2.2.1`` | ``foss/2021b``
 ``2.2.1`` | ``foss/2022a``
 
 

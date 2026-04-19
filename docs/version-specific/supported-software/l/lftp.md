@@ -10,7 +10,6 @@ LFTP is a sophisticated ftp/http client, and a file transfer program supporting 
 
 version | toolchain
 --------|----------
-``4.9.2`` | ``GCCcore/11.2.0``
 ``4.9.3`` | ``GCCcore/14.3.0``
 
 

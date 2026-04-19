@@ -10,7 +10,6 @@ Program for finding CTFs of electron micrographs.
 
 version | toolchain
 --------|----------
-``4.1.14`` | ``foss/2021b``
 ``4.1.14`` | ``foss/2022a``
 ``4.1.14`` | ``foss/2022b``
 ``4.1.14`` | ``foss/2023a``

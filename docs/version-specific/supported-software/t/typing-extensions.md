@@ -4,13 +4,12 @@ search:
 ---
 # typing-extensions
 
-Typing Extensions – Backported and Experimental Type Hints for Python
+Typing Extensions - Backported and Experimental Type Hints for Python
 
-*homepage*: <https://github.com/python/typing/blob/master/typing_extensions/README.rst>
+*homepage*: <https://github.com/python/typing_extensions>
 
 version | toolchain
 --------|----------
-``3.10.0.2`` | ``GCCcore/11.2.0``
 ``4.10.0`` | ``GCCcore/13.2.0``
 ``4.11.0`` | ``GCCcore/13.3.0``
 ``4.14.0`` | ``GCCcore/14.2.0``

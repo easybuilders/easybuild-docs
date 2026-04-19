@@ -11,7 +11,6 @@ Wayland is a project to define a protocol for a compositor to talk to  its clien
 version | toolchain
 --------|----------
 ``1.20.0`` | ``GCCcore/11.3.0``
-``1.21.0`` | ``GCCcore/11.2.0``
 ``1.21.0`` | ``GCCcore/11.3.0``
 ``1.22.0`` | ``GCCcore/12.2.0``
 ``1.22.0`` | ``GCCcore/12.3.0``

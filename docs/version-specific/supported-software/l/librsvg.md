@@ -10,7 +10,6 @@ Librsvg is a library to render SVG files using cairo.
 
 version | toolchain
 --------|----------
-``2.52.8`` | ``GCCcore/11.2.0``
 ``2.55.1`` | ``GCCcore/11.3.0``
 ``2.58.0`` | ``GCCcore/12.3.0``
 ``2.58.0`` | ``GCCcore/13.2.0``

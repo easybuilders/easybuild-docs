@@ -10,7 +10,6 @@ Pint is a Python package to define, operate and manipulate physical quantities: 
 
 version | toolchain
 --------|----------
-``0.19.2`` | ``GCCcore/11.2.0``
 ``0.22`` | ``GCCcore/11.3.0``
 ``0.23`` | ``GCCcore/12.3.0``
 ``0.24`` | ``GCCcore/13.2.0``

@@ -10,7 +10,6 @@ The HH-suite is an open-source software package  for sensitive protein sequence 
 
 version | toolchain
 --------|----------
-``3.3.0`` | ``gompi/2021b``
 ``3.3.0`` | ``gompi/2022a``
 ``3.3.0`` | ``gompi/2023a``
 ``3.3.0`` | ``gompi/2023b``

@@ -10,6 +10,7 @@ Your go-to for easy access to a plethora of compression algorithms, all neatly b
 
 version | toolchain
 --------|----------
+``2.11.0`` | ``GCCcore/13.3.0``
 ``2.9.0`` | ``GCCcore/12.3.0``
 
 

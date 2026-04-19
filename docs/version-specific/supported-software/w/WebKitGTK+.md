@@ -10,7 +10,6 @@ WebKitGTK+ is a full-featured port of the WebKit rendering engine, suitable for 
 
 version | toolchain
 --------|----------
-``2.37.1`` | ``GCC/11.2.0``
 ``2.40.4`` | ``GCC/11.3.0``
 ``2.41.4`` | ``foss/2023a``
 

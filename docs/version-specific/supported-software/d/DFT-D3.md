@@ -12,7 +12,6 @@ version | toolchain
 --------|----------
 ``3.2.0`` | ``GCC/14.3.0``
 ``3.2.0`` | ``intel/2023a``
-``3.2.0`` | ``intel-compilers/2021.4.0``
 ``3.2.0`` | ``intel-compilers/2022.2.1``
 ``3.2.0`` | ``intel-compilers/2025.2.0``
 

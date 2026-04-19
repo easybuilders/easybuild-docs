@@ -6,7 +6,7 @@ search:
 
 Underworld is a Python API (Application Programming Interface) which provides functionality for the modelling of geodynamics processes, and is designed to work (almost) seamlessly across PC, cloud and HPC infrastructure. Primarily the API consists of a set of Python classes from which numerical geodynamics models may be constructed. The API also provides the tools required for inline analysis and data management. For scalability across multiprocessor platforms, MPI (Message Passing Interface) is leveraged, and for performant operation all heavy computations are executed within a statically typed layer. Note: This version does not come with badlands.
 
-*homepage*: <https://www.underworldcode.>
+*homepage*: <https://www.underworldcode.org>
 
 version | versionsuffix | toolchain
 --------|---------------|----------

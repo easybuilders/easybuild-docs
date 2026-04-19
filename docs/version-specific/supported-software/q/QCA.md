@@ -10,7 +10,6 @@ Taking a hint from the similarly-named Java Cryptography Architecture,  QCA aims
 
 version | toolchain
 --------|----------
-``2.3.5`` | ``GCCcore/11.2.0``
 ``2.3.9`` | ``GCCcore/12.3.0``
 
 

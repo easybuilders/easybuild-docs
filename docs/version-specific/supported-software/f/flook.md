@@ -10,9 +10,7 @@ The fortran-Lua-hook library.
 
 version | toolchain
 --------|----------
-``0.8.1`` | ``GCC/11.2.0``
 ``0.8.1`` | ``GCC/11.3.0``
-``0.8.1`` | ``intel-compilers/2021.4.0``
 ``0.8.4`` | ``GCC/12.3.0``
 ``0.8.4`` | ``GCC/13.3.0``
 

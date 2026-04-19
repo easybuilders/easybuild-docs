@@ -10,8 +10,6 @@ Simulation of Urban MObility" (SUMO) is an open source, highly portable, microsc
 
 version | toolchain
 --------|----------
-``1.12.0`` | ``foss/2021b``
-``1.14.1`` | ``foss/2021b``
 ``1.20.0`` | ``foss/2023a``
 
 

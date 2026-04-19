@@ -11,7 +11,6 @@ PETSc, pronounced PET-see (the S is silent), is a suite of data structures and r
 version | toolchain
 --------|----------
 ``3.17.4`` | ``foss/2022a``
-``3.18.4`` | ``intel/2021b``
 ``3.19.2`` | ``foss/2022b``
 ``3.20.3`` | ``foss/2023a``
 ``3.22.5`` | ``foss/2023b``

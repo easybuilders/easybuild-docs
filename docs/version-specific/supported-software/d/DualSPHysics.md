@@ -10,8 +10,6 @@ DualSPHysics is based on the Smoothed Particle Hydrodynamics model named SPHysic
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``5.0.175`` | ``-CUDA-%(cudaver)s`` | ``GCC/11.2.0``
-``5.0.175`` |  | ``GCC/11.2.0``
 ``5.4.0`` | ``-CUDA-%(cudaver)s`` | ``GCC/13.3.0``
 
 

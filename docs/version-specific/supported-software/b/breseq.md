@@ -10,7 +10,6 @@ breseq is a computational pipeline for the analysis of short-read re-sequencing 
 
 version | toolchain
 --------|----------
-``0.36.1`` | ``foss/2021b``
 ``0.38.1`` | ``foss/2022a``
 
 

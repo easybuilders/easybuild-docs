@@ -11,8 +11,6 @@ CMake, the cross-platform, open-source build system.  CMake is a family of  tool
 version | toolchain
 --------|----------
 ``3.18.4`` | ``system``
-``3.21.1`` | ``GCCcore/11.2.0``
-``3.22.1`` | ``GCCcore/11.2.0``
 ``3.23.1`` | ``GCCcore/11.3.0``
 ``3.24.3`` | ``GCCcore/11.3.0``
 ``3.24.3`` | ``GCCcore/12.2.0``

@@ -10,7 +10,6 @@ segemehl is a software to map short sequencer reads to reference genomes.  Unlik
 
 version | toolchain
 --------|----------
-``0.3.4`` | ``GCC/11.2.0``
 ``0.3.4`` | ``GCC/14.3.0``
 
 

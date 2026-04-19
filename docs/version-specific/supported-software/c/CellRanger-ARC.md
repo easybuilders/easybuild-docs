@@ -10,7 +10,6 @@ Cell Ranger ARC is a set of analysis pipelines that process  Chromium Single Cel
 
 version | toolchain
 --------|----------
-``1.0.1`` | ``system``
 ``2.0.0`` | ``system``
 ``2.0.1`` | ``system``
 ``2.0.2`` | ``system``

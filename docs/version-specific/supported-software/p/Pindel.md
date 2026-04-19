@@ -10,7 +10,6 @@ Pindel can detect breakpoints of large deletions, medium sized  insertions, inve
 
 version | toolchain
 --------|----------
-``0.2.5b9-20170508`` | ``GCC/11.2.0``
 ``0.2.5b9-20170508`` | ``GCC/11.3.0``
 
 

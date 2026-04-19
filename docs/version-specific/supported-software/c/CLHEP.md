@@ -10,8 +10,6 @@ The CLHEP project is intended to be a set of HEP-specific foundation and  utilit
 
 version | toolchain
 --------|----------
-``2.4.4.0`` | ``GCC/11.2.0``
-``2.4.5.1`` | ``GCC/11.2.0``
 ``2.4.5.3`` | ``GCC/11.3.0``
 ``2.4.6.2`` | ``GCC/11.3.0``
 ``2.4.6.4`` | ``GCC/12.2.0``

@@ -10,7 +10,6 @@ The ROCm System Management Interface Library, or ROCm SMI library, is part of th
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``4.5.0`` |  | ``GCCcore/11.2.0``
 ``5.4.4`` |  | ``GCCcore/11.3.0``
 ``5.6.0`` |  | ``GCCcore/11.3.0``
 ``7.6.0`` | ``-ROCm-6.4.1`` | ``GCCcore/14.2.0``

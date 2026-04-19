@@ -10,12 +10,12 @@ jq is a lightweight and flexible command-line JSON processor.
 
 version | toolchain
 --------|----------
-``1.6`` | ``GCCcore/11.2.0``
 ``1.6`` | ``GCCcore/11.3.0``
 ``1.6`` | ``GCCcore/12.2.0``
 ``1.6`` | ``GCCcore/12.3.0``
 ``1.7.1`` | ``GCCcore/13.2.0``
 ``1.7.1`` | ``GCCcore/13.3.0``
+``1.8.1`` | ``GCCcore/14.2.0``
 ``1.8.1`` | ``GCCcore/14.3.0``
 
 

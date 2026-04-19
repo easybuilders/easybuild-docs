@@ -10,9 +10,6 @@ AmberTools consists of several independently developed packages that work well b
 
 version | toolchain
 --------|----------
-``21`` | ``intel/2021b``
-``21.12`` | ``foss/2021b``
-``22.3`` | ``foss/2021b``
 ``23.6`` | ``foss/2023a``
 ``24.10`` | ``foss/2024a``
 ``25.2`` | ``foss/2025a``

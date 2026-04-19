@@ -10,7 +10,6 @@ NCIPLOT is a program for revealing non covalent interactions  based on the reduc
 
 version | toolchain
 --------|----------
-``4.0-20200624`` | ``GCC/11.2.0``
 ``4.2-20221021`` | ``intel-compilers/2022.1.0``
 
 
