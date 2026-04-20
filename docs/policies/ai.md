@@ -75,4 +75,4 @@ Examples of statements to declare the use of AI are:
 
 ### v1.0 (19 April 2026)
 
-Initial EasuBuild AI policy
+Initial EasyBuild AI policy
