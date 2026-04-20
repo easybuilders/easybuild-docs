@@ -20,6 +20,7 @@ Template name                    |Template value
 Template name       |Template value
 --------------------|------------------------------------------------
 ``%(cudamajver)s``  |major version for CUDA
+``%(cudaminver)s``  |minor version for CUDA
 ``%(cudashortver)s``|short version for CUDA (``<major>.<minor>``)
 ``%(cudaver)s``     |full version for CUDA
 ``%(cudamajver)s``  |major version for CUDAcore
