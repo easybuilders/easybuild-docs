@@ -492,19 +492,18 @@ A list of supported modules tools can be obtained using `eb --avail-modules-tool
 
 Currently, the following modules tools are supported:
 
-* `Lmod` *(default)*: Lmod, an modern alternative to environment modules, written in Lua (`lmod`)
-* `EnvironmentModules`: modern Tcl-only version of environment modules (4.x) (`modulecmd.tcl`)
-* `EnvironmentModulesC`: Tcl/C version of environment modules, usually version 3.2.10 (`modulecmd`)
-* `EnvironmentModulesTcl`: (ancient) Tcl-only version of environment modules (`modulecmd.tcl`)
+* `Lmod` *(default)*: Lmod, an alternative to Environment Modules, written in Lua (`lmod`)
+* `EnvironmentModules`: Environment Modules, written in Tcl (`modulecmd.tcl`)
 
 You can determine which modules tool you are using by checking the
 output of `type -f module` (in a `bash` shell), or `alias module` (in a `tcsh` shell).
 
-The actual module command (i.e., `modulecmd`, `modulecmd.tcl`,
-`lmod`, ...) must be available via `$PATH` (which is not standard), except when using Lmod
-(in that case the `lmod` binary can also be located via `$LMOD_CMD`) or when using
-Environment Modules (in that case the `modulecmd.tcl` binary can also be located via
-`$MODULES_CMD`).
+The actual module command (i.e., `modulecmd.tcl`, `lmod`, ...) must be
+available via `$PATH` (which is not standard) or:
+
+* when using Lmod, the `lmod` binary can also be located via `$LMOD_CMD`
+* when using Environment Modules, the `modulecmd.tcl` binary can also be
+  located via `$MODULES_CMD`
 
 For example, to indicate that EasyBuild should be using `Lmod` as modules tool:
 
@@ -548,7 +547,7 @@ Possible values are:
 !!! note
     Lmod is able to deal with having module files in place in both Tcl and Lua syntax. When a module file in Lua
     syntax (i.e., with a `.lua` file name extension) is available, a Tcl module file with the same name will be
-    ignored. The Tcl-based environment modules tool will simply ignore module files in Lua syntax, since they do not
+    ignored. Environment Modules tool will simply ignore module files in Lua syntax, since they do not
     contain the header string that is included in Tcl module files.
 
 !!! note
