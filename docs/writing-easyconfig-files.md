@@ -744,6 +744,38 @@ If there is not already a lockfile then you may need to do the following to gene
 1. Load a recent Rust module
 1. `cargo generate-lockfile`
 
+### Generate `exts_list` for a Julia package {: #generate_exts_list_julia }
+
+To generate an `exts_list` for a Julia package:
+
+1. Load the Julia module for the version of Julia you want to build against
+2. Install the package for which you want to create the EC in a clean environment
+3. Run `python -m easybuild.easyblocks.generic.juliabundle .`
+
+Here is an example of a full set of commands to generate an `exts_list` (replace `XXX` with the relevant values):
+
+``` sh
+cd $(mktemp -d)
+
+module load Julia/XXX
+export JULIA_DEPOT_PATH="`realpath .`:"
+export JULIA_PKG_PRECOMPILE_AUTO=false
+
+julia -e 'using Pkg; Pkg.activate("."); Pkg.add(name="XXX", version="XXX")'
+
+python -m easybuild.easyblocks.generic.juliabundle .
+
+```
+
+By default the `exts_list` will be generated with a tab size of 4 and information about the dependency graph will be printed before it (useful to break down an EasyConfig into multiple ones with dependencies).
+This can be controlled by passing more arguments to the `juliabundle` easyblock:
+
+``` sh
+python -m easybuild.easyblocks.generic.juliabundle  PATH_TO_DIR_WITH_MANIFEST  TAB_SIZE  PRINT_DEP_GRAPH
+```
+
+where `TAB_SIZE` is the number of spaces to use for indentation (default: 4) and `PRINT_DEP_GRAPH` can be anything other than `1`, `true` or `yes` to disable printing the dependency graph (default: enabled).
+
 ### Configure/build/install command options {: #configure_build_install_command_options }
 
 - **configopts**: options for configure command
