@@ -2,7 +2,7 @@
 
 This document outlines the governance of the [EasyBuild](https://easybuild.io) open source software project and related infrastructure.
 
-## 1. Guiding Principles {: #guiding-principles }
+## 1. Guiding Principles { id="guiding-principles" }
 
 The value of EasyBuild grows exponentially with two things: the amount of systems on which EasyBuild is used,
 and the amount of software that is supported by EasyBuild.
@@ -18,7 +18,7 @@ as well as small decisions, such as adding support for installing a specific sof
 To achieve both goals, our governance is based on the [meritocracy](https://en.wikipedia.org/wiki/Meritocracy) governance model.
 
 
-## 2. Roles and Responsibilities {: #roles-and-responsibilities }
+## 2. Roles and Responsibilities { id="roles-and-responsibilities" }
 
 Below the roles and responsibilities related to the EasyBuild project are discussed.
 
@@ -27,7 +27,7 @@ Exceptions are contributors and end users, which are not considered to be teams.
 Each individual in a team will be referred to as a *team member*.
 
 
-### 2.1 Owners of the `easybuilders` GitHub organization & repositories {: #owners-github-org }
+### 2.1 Owners of the `easybuilders` GitHub organization & repositories { id="owners-github-org" }
 
 The owners of the [`easybuilders` GitHub organization](https://github.com/easybuilders) & repositories are those individuals
 with `owner` rights on the `easybuilders` GitHub organization or one of its associated repositories.
@@ -35,27 +35,27 @@ with `owner` rights on the `easybuilders` GitHub organization or one of its asso
 They are responsible for setting permissions on the code repositories, compliant to the defined roles and responsibilities.
 
 
-### 2.2 Release Managers {: #release-managers }
+### 2.2 Release Managers { id="release-managers" }
 
 The EasyBuild release managers are responsible for regularly publishing new stable releases of EasyBuild.
 
 EasyBuild releases are published via [PyPI](https://pypi.org/project/easybuild/), and corresponding tags and releases
 are created in the relevant EasyBuild GitHub repositories.
 
-In addition, detailed [release notes](../../release-notes.md) are composed, and the release is announced
+In addition, detailed [release notes](../release-notes.md) are composed, and the release is announced
 via the various EasyBuild community channels (mailing list, Slack, social media).
 
 The intention is to have a new EasyBuild release published every 8-10 weeks (~2 months).
 
 
-### 2.3 Maintainers of the EasyBuild GitHub repositories {: #maintainers_github_repos }
+### 2.3 Maintainers of the EasyBuild GitHub repositories { id="maintainers_github_repos" }
 
 Repository maintainers are individuals with write access to (one or more of) the EasyBuild GitHub repositories.
 
 They are responsible for processing contributions, by reviewing, testing, and merging pull requests.
 
 
-### 2.4 Maintainers of the EasyBuild infrastructure {: #maintainers_infrastructure }
+### 2.4 Maintainers of the EasyBuild infrastructure { id="maintainers_infrastructure" }
 
 Infrastructure maintainers are those individuals that maintain the infrastructure that is used to publish, develop, and test EasyBuild.
 This includes (but may not be limited to):
@@ -68,14 +68,14 @@ Infrastructure maintainers are responsible for monitoring and maintaining this i
 and providing access to those who need it according to the Roles and Responsibilities described here.
 
 
-### 2.5 Reviewers {: #reviewers }
+### 2.5 Reviewers { id="reviewers" }
 
 Reviewers are individuals who help with reviewing and testing contributions that are made to EasyBuild through pull requests.
 
 Note that reviewers do *not* necessarily have the rights to approve & merge pull requests.
 
 
-### 2.6 Bot users {: #bot-users }
+### 2.6 Bot users { id="bot-users" }
 
 Bot users are those individuals who have been granted permissions to trigger the central test bot that is used to test contributions.
 
@@ -84,14 +84,14 @@ They are responsible for determining when it is appropriate to trigger a test of
 Note that bot users do *not* necessarily have the rights to approve & merge pull requests.
 
 
-### 2.7 Triagers {: #triagers }
+### 2.7 Triagers { id="triagers" }
 
 Triagers are individuals who have the permission to assign labels to issues and pull requests to categorize them, and to close them when deemed appropriate.
 
 Note that triagers do *not* necessarily have the rights to approve & merge pull requests.
 
 
-### 2.8 Contributors {: #contributors }
+### 2.8 Contributors { id="contributors" }
 
 Contributors are individuals that make a contribution by opening a pull request to one of the repositories
 in the [`easybuilders` GitHub organization](https://github.com/easybuilders).
@@ -100,7 +100,7 @@ They are responsible for making sure that their contribution is working as inten
 and that it is valuable to other members of the EasyBuild community.
 
 
-### 2.9 End Users {: #end-users }
+### 2.9 End Users { id="end-users" }
 
 End users of EasyBuild are individuals that use EasyBuild to install software.
 
@@ -270,7 +270,7 @@ a new chair. Whenever there is no chair and there is a meeting, the first order 
 elect a new chair.
 
 
-### 6.3 Voting by the Steering Committee { #voting-by-sc }
+### 6.3 Voting by the Steering Committee { id="voting-by-sc" }
 
 #### 6.3.1 Majority vote
 
