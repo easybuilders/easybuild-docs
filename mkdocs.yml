@@ -546,3 +546,6 @@ plugins:
         en/latest/api/framework.html: api/easybuild/framework/index.md
         en/latest/api/index.html: api/summary.md
         en/latest/api/modules.html: api/summary.md
+        # redirect from old https://easybuild.readthedocs.io/en/master/Common-toolchains.html,
+        # which is still used in description of some foss easyconfigs
+        en/master/Common-toolchains.html: common-toolchains.md
