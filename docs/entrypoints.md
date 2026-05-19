@@ -9,8 +9,8 @@ Easybuild makes use of entrypoints for extending the following:
   When the same priority is set, the order of execution is determined by the hook name.
   The entrypoints hooks can be ran in conjunction with [standard hooks](hooks.md) detected using `--hooks` where the latter will always
   take precedence, regardless of the priority of the entrypoint hooks.
-- **Easyblocks** (`easybuild.easyblocks`): Allow extending the set of available easyblocks, which are used to build and install software.
-- **Toolchains** (`easybuild.toolchains`): Allow extending the set of available toolchains, which are used to build and install software.
+- **Easyblocks** (`easybuild.easyblock`): Allow extending the set of available easyblocks, which are used to build and install software.
+- **Toolchains** (`easybuild.toolchain`): Allow extending the set of available toolchains, which are used to build and install software.
 
 The entrypoints needs to be decorated with the appropriate class in order for them to be recognized and used:
 
@@ -48,7 +48,7 @@ In the case of the `pyproject.toml`, the entrypoints can be defined using the fo
 ...
 ```
 
-Here, `GROUP_NAME` is the name of the entrypoint group (e.g. `easybuild.hooks`, `easybuild.easyblocks`, `easybuild.toolchains`),
+Here, `GROUP_NAME` is the name of the entrypoint group (e.g. `easybuild.hooks`, `easybuild.easyblock`, `easybuild.toolchain`),
 `ENTRYPOINT_NAME` is the name of the entrypoint, and `import_path:object` is the import path and object name that are being registered.
 For example: `myblock = "my_module.sub_module:MyBlock"` requires that `from my_module.sub_module import MyBlock` is possible.
 
@@ -101,7 +101,7 @@ def my_hook_config_func(eb):
 ```toml
 ...
 
-[project.entry-points."easybuild.easyblocks"]
+[project.entry-points."easybuild.easyblock"]
 "my_easyblock" = "my_module.easyblock:MyEasyBlock"
 
 ...
@@ -129,7 +129,7 @@ The custom easyblock needs only to be a subclass of `easybuild.framework.easyblo
 ```toml
 ...
 
-[project.entry-points."easybuild.toolchains"]
+[project.entry-points."easybuild.toolchain"]
 "my_toolchain" = "my_module.toolchain:MyToolchain"
 ...
 ```
