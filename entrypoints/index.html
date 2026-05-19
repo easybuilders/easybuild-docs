@@ -12269,8 +12269,8 @@
   When the same priority is set, the order of execution is determined by the hook name.
   The entrypoints hooks can be ran in conjunction with <a href="../hooks/">standard hooks</a> detected using <code>--hooks</code> where the latter will always
   take precedence, regardless of the priority of the entrypoint hooks.</li>
-<li><strong>Easyblocks</strong> (<code>easybuild.easyblocks</code>): Allow extending the set of available easyblocks, which are used to build and install software.</li>
-<li><strong>Toolchains</strong> (<code>easybuild.toolchains</code>): Allow extending the set of available toolchains, which are used to build and install software.</li>
+<li><strong>Easyblocks</strong> (<code>easybuild.easyblock</code>): Allow extending the set of available easyblocks, which are used to build and install software.</li>
+<li><strong>Toolchains</strong> (<code>easybuild.toolchain</code>): Allow extending the set of available toolchains, which are used to build and install software.</li>
 </ul>
 <p>The entrypoints needs to be decorated with the appropriate class in order for them to be recognized and used:</p>
 <ul>
@@ -12301,7 +12301,7 @@
 
 <span class="p">...</span>
 </code></pre></div>
-<p>Here, <code>GROUP_NAME</code> is the name of the entrypoint group (e.g. <code>easybuild.hooks</code>, <code>easybuild.easyblocks</code>, <code>easybuild.toolchains</code>),
+<p>Here, <code>GROUP_NAME</code> is the name of the entrypoint group (e.g. <code>easybuild.hooks</code>, <code>easybuild.easyblock</code>, <code>easybuild.toolchain</code>),
 <code>ENTRYPOINT_NAME</code> is the name of the entrypoint, and <code>import_path:object</code> is the import path and object name that are being registered.
 For example: <code>myblock = "my_module.sub_module:MyBlock"</code> requires that <code>from my_module.sub_module import MyBlock</code> is possible.</p>
 <p>For the following examples we are going to assume a package with the following folder structure:</p>
@@ -12339,7 +12339,7 @@ For example: <code>myblock = "my_module.sub_module:MyBlock"</code> requires that
 <p><code>pyproject.toml</code> example:</p>
 <div class="highlight"><pre><span></span><code><span class="p">...</span>
 
-<span class="k">[project.entry-points.</span><span class="s2">&quot;easybuild.easyblocks&quot;</span><span class="k">]</span>
+<span class="k">[project.entry-points.</span><span class="s2">&quot;easybuild.easyblock&quot;</span><span class="k">]</span>
 <span class="s2">&quot;my_easyblock&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;my_module.easyblock:MyEasyBlock&quot;</span>
 
 <span class="p">...</span>
@@ -12359,7 +12359,7 @@ For example: <code>myblock = "my_module.sub_module:MyBlock"</code> requires that
 <p><code>pyproject.toml</code> example:</p>
 <div class="highlight"><pre><span></span><code><span class="p">...</span>
 
-<span class="k">[project.entry-points.</span><span class="s2">&quot;easybuild.toolchains&quot;</span><span class="k">]</span>
+<span class="k">[project.entry-points.</span><span class="s2">&quot;easybuild.toolchain&quot;</span><span class="k">]</span>
 <span class="s2">&quot;my_toolchain&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;my_module.toolchain:MyToolchain&quot;</span>
 <span class="p">...</span>
 </code></pre></div>
@@ -12394,7 +12394,7 @@ For example: <code>myblock = "my_module.sub_module:MyBlock"</code> requires that
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 7, 2026 21:03:58 UTC">April 7, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 19, 2026 13:08:52 UTC">May 19, 2026</span>
   </span>
 
     
