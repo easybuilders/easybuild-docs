@@ -42,7 +42,7 @@ are a couple of requirements:
       module load EasyBuild  # ensure the python interpreter matches
       python -m venv ~/eb_venv  # your preferred location for this virtual environment
       source ~/eb_venv/bin/activate
-      pip install sagecipher GitPython setuptools=69.5.1  # sagecipher needs a setuptools that provides pkg_resources module
+      pip install sagecipher GitPython setuptools==69.5.1  # sagecipher needs a setuptools that provides pkg_resources module
       export PYTHON_KEYRING_BACKEND="sagecipher.keyring.Keyring"  # tell keyring to use sagecipher backend
       export KEYRING_PROPERTY_SSH_KEY_FINGERPRINT="ff:00:11:22:33:44:55:66:77:88:99:aa:bb:cc:dd:ee"  # your SSH key's MD5 fingerprint
       # instead of hard coding, you can get the fingerprint from a running ssh-agent, e.g.
