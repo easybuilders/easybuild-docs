@@ -1070,7 +1070,7 @@ They key `arch=*` will be used when there was no other match.
 
 In `dependencies` this can be used as the *version* to use different ones, e.g. when a newer version has a known issue.
 Using `False` will cause the dependency to be removed.
-It is en **error** if no matching key (which includes `arch=*`) for the current architecture is found.
+It is an **error** if no matching key (which includes `arch=*`) for the current architecture is found.
 
 In the values of `sanity_check_paths` this can be used to require files/folders that are only present on specific architectures.
 When the current architecture is missing in the keys, or the value is `None` the item will be skipped.
