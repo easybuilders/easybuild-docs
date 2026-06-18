@@ -4,12 +4,13 @@ search:
 ---
 # nanobind
 
-nanobind is a small binding library for C++11 / C++17 / C++20 that heavily builds on capabilities introduced in recent versions of C++.
+Nanobind is a small binding library that exposes C++ types in Python and vice versa. It is reminiscent of Boost.Python and pybind11 and uses near-identical syntax. In contrast to these existing tools, nanobind is more efficient: bindings compile in a shorter amount of time, produce smaller binaries, and have better runtime performance.
 
 *homepage*: <https://github.com/wjakob/nanobind>
 
 version | toolchain
 --------|----------
+``2.5.0`` | ``GCCcore/12.3.0``
 ``2.5.0`` | ``GCCcore/13.2.0``
 ``2.5.0`` | ``GCCcore/13.3.0``
 ``2.9.2`` | ``GCCcore/14.2.0``

@@ -10,6 +10,7 @@ PLUMED is an open source library for free energy calculations in molecular syste
 
 version | toolchain
 --------|----------
+``2.10.0`` | ``foss/2026.1``
 ``2.8.1`` | ``foss/2022a``
 ``2.9.0`` | ``foss/2022b``
 ``2.9.0`` | ``foss/2023a``

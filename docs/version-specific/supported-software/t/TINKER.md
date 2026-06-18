@@ -10,6 +10,7 @@ The Tinker molecular modeling software is a complete and general package for mol
 
 version | toolchain
 --------|----------
+``26.1.2`` | ``foss/2025a``
 ``8.11.3`` | ``foss/2023a``
 
 

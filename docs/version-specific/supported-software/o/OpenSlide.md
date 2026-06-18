@@ -13,6 +13,7 @@ version | versionsuffix | toolchain
 ``3.4.1`` | ``-largefiles`` | ``GCCcore/11.3.0``
 ``3.4.1`` | ``-largefiles`` | ``GCCcore/12.2.0``
 ``3.4.1`` | ``-largefiles`` | ``GCCcore/12.3.0``
+``3.4.1`` | ``-largefiles`` | ``GCCcore/13.3.0``
 ``4.0.0`` |  | ``GCCcore/13.2.0``
 ``4.0.0`` |  | ``GCCcore/13.3.0``
 ``4.0.0`` |  | ``GCCcore/14.2.0``

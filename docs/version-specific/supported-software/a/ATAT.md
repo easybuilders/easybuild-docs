@@ -10,6 +10,7 @@ The Alloy-Theoretic Automated Toolkit (ATAT) is a generic name that refers to a 
 
 version | toolchain
 --------|----------
+``3.50`` | ``GCCcore/14.2.0``
 ``3.50`` | ``GCCcore/14.3.0``
 
 

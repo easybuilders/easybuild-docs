@@ -12,6 +12,7 @@ search:
  * [wandb](wandb.md)
  * [Wannier90](Wannier90.md)
  * [WarpX](WarpX.md)
+ * [watchfiles](watchfiles.md)
  * [Wayland](Wayland.md)
  * [Waylandpp](Waylandpp.md)
  * [WCSLIB](WCSLIB.md)

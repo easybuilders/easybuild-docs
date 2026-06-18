@@ -40,6 +40,7 @@ search:
  * [quarto](quarto.md)
  * [QUAST](QUAST.md)
  * [QuickFF](QuickFF.md)
+ * [Quickshell](Quickshell.md)
  * [QuickTree](QuickTree.md)
  * [QuPath](QuPath.md)
  * [Qutip](Qutip.md)

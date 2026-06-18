@@ -10,6 +10,7 @@ FFCx provides the ufcx.h interface header for generated finite element kernels, 
 
 version | toolchain
 --------|----------
+``0.10.0`` | ``GCCcore/14.3.0``
 ``0.9.0`` | ``GCCcore/13.2.0``
 
 

@@ -14,6 +14,7 @@ version | versionsuffix | toolchain
 ``1.104.1`` |  | ``system``
 ``1.105.1`` |  | ``system``
 ``1.108.1`` |  | ``system``
+``1.123.0`` |  | ``system``
 ``1.85.1`` | ``-x64`` | ``system``
 ``1.93.1`` | ``-x64`` | ``system``
 ``1.97.2`` |  | ``system``

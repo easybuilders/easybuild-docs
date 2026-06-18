@@ -82,6 +82,7 @@ search:
  * [OptiX](OptiX.md)
  * [optree](optree.md)
  * [Optuna](Optuna.md)
+ * [Orange3](Orange3.md)
  * [ORCA](ORCA.md)
  * [OrfM](OrfM.md)
  * [orjson](orjson.md)

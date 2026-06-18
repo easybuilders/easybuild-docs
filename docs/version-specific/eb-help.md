@@ -64,6 +64,7 @@ Option flag                                |Option description
 
 Option flag                                                      |Option description
 -----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+``--avail-job-backends``                                         |Show all supported job backends (default: False)
 ``--avail-module-naming-schemes``                                |Show all supported module naming schemes (default: False)
 ``--avail-modules-tools``                                        |Show all supported module tools (default: False)
 ``--avail-repositories``                                         |Show all repository types (incl. non-usable) (default: False)
@@ -77,6 +78,7 @@ Option flag                                                      |Option descrip
 ``--hooks=HOOKS``                                                |Location of Python module with hook implementations (type str)
 ``--ignore-dirs=IGNORE-DIRS``                                    |Directory names to ignore when searching for files/dirs (type comma-separated list; default: .git,.svn)
 ``--include-easyblocks=INCLUDE-EASYBLOCKS``                      |Location(s) of extra or customized easyblocks (type comma-separated list)
+``--include-job-backends=INCLUDE-JOB-BACKENDS``                  |Location(s) of extra or customized job backends (type comma-separated list)
 ``--include-module-naming-schemes=INCLUDE-MODULE-NAMING-SCHEMES``|Location(s) of extra or customized module naming schemes (type comma-separated list)
 ``--include-toolchains=INCLUDE-TOOLCHAINS``                      |Location(s) of extra or customized toolchains or toolchain components (type comma-separated list)
 ``--installpath=INSTALLPATH``                                    |Install path for software and modules (default: /home/example/.local/easybuild)

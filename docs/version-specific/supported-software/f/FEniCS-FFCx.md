@@ -4,12 +4,13 @@ search:
 ---
 # FEniCS-FFCx
 
-FFCx is a compiler for finite element variational forms
+FFCx is a new version of the FEniCS Form Compiler. It is being actively developed and is compatible with DOLFINx
 
 *homepage*: <https://github.com/FEniCS/ffcx>
 
 version | toolchain
 --------|----------
+``0.10.1.post0`` | ``gfbf/2025b``
 ``0.9.0`` | ``gfbf/2023b``
 
 

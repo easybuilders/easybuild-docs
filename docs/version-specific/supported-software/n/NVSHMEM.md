@@ -13,6 +13,7 @@ version | versionsuffix | toolchain
 ``2.5.0`` | ``-CUDA-11.7.0`` | ``gompi/2022a``
 ``2.7.0`` | ``-CUDA-11.7.0`` | ``gompi/2022a``
 ``2.8.0`` | ``-CUDA-11.7.0`` | ``gompi/2022a``
+``3.3.20`` | ``-CUDA-12.8.0`` | ``gompi/2025a``
 ``3.3.20`` | ``-CUDA-12.9.1`` | ``gompi/2025b``
 
 

@@ -11,6 +11,7 @@ Library contains GRIB2 encoder/decoder and search/indexing routines.
 version | toolchain
 --------|----------
 ``3.2.0`` | ``GCCcore/13.2.0``
+``4.0.0`` | ``gfbf/2025b``
 ``4.0.0`` | ``iimkl/2025b``
 
 

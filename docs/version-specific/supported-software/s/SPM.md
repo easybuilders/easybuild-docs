@@ -10,7 +10,6 @@ SPM (Statistical Parametric Mapping) refers to the construction  and assessment 
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``12.5_r7771`` | ``-MATLAB-2021a`` | ``system``
 ``12.5_r7771`` | ``-MATLAB-2021b`` | ``system``
 
 

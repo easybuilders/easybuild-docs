@@ -6,10 +6,11 @@ search:
 
 SCons is a software construction tool.
 
-*homepage*: <https://www.scons.org/>
+*homepage*: <https://www.scons.org>
 
 version | toolchain
 --------|----------
+``4.10.1`` | ``GCCcore/15.2.0``
 ``4.4.0`` | ``GCCcore/11.3.0``
 ``4.5.2`` | ``GCCcore/12.2.0``
 ``4.5.2`` | ``GCCcore/12.3.0``

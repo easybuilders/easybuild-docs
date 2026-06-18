@@ -57,7 +57,7 @@
 `required_linked_shared_libs`|List of shared libraries (names, file names, or paths) which must be linked in all installed binaries/libraries                                                                                                                                                                                                                                   |`[]`             |
 `runtest`                    |Indicates if a test should be run after make; should specify argument after make (for e.g.,"test" for make test)                                                                                                                                                                                                                                  |`None`           |`run_test`
 `sanity_check_commands`      |format: [(name, options)] e.g. [('gzip','-h')]. Using a non-tuple is equivalent to (name, '-h')                                                                                                                                                                                                                                                   |`[]`             |`sanity_check_cmds`
-`sanity_check_paths`         |List of files and directories to check (format: {'files':&lt;list&gt;, 'dirs':&lt;list&gt;})                                                                                                                                                                                                                                                      |`{}`             |
+`sanity_check_paths`         |List of files and directories to check (format: {'files':&lt;list&gt;, 'dirs':&lt;list&gt;}). Architecture-specific list items are supported.                                                                                                                                                                                                     |`{}`             |
 `skip`                       |Skip existing software                                                                                                                                                                                                                                                                                                                            |`False`          |
 `skip_mod_files_sanity_check`|Skip the check for .mod files in a GCCcore level install                                                                                                                                                                                                                                                                                          |`False`          |`skip_fortran_mod_files_sanity_check`
 `skipsteps`                  |Skip these steps                                                                                                                                                                                                                                                                                                                                  |`[]`             |`skip_steps`
@@ -85,16 +85,16 @@
 
 ## Dependencies parameters
 
-**Parameter name**       |**Description**                                                           |**Default value**|**Alternative name**
--------------------------|--------------------------------------------------------------------------|-----------------|--------------------------
-`allow_system_deps`      |Allow listed system dependencies (format: (&lt;name&gt;, &lt;version&gt;))|`[]`             |
-`builddependencies`      |List of build dependencies                                                |`[]`             |`build_deps`
-`dependencies`           |List of dependencies                                                      |`[]`             |`deps`
-`hiddendependencies`     |List of dependencies available as hidden modules                          |`[]`             |`hidden_deps`
-`moddependpaths`         |Absolute path(s) to prepend to MODULEPATH before loading dependencies     |`None`           |`modulepath_prepend_paths`
-`multi_deps`             |Dict of lists of dependency versions over which to iterate                |`{}`             |
-`multi_deps_load_default`|Load module for first version listed in multi_deps by default             |`True`           |
-`osdependencies`         |OS dependencies that should be present on the system                      |`[]`             |`os_deps`
+**Parameter name**       |**Description**                                                                                                |**Default value**|**Alternative name**
+-------------------------|---------------------------------------------------------------------------------------------------------------|-----------------|--------------------------
+`allow_system_deps`      |Allow listed system dependencies (format: (&lt;name&gt;, &lt;version&gt;))                                     |`[]`             |
+`builddependencies`      |List of build dependencies. Architecture-specific versions are supported with 'False' to exclude the dependency|`[]`             |`build_deps`
+`dependencies`           |List of dependencies. Architecture-specific versions are supported with 'False' to exclude the dependency      |`[]`             |`deps`
+`hiddendependencies`     |List of dependencies available as hidden modules                                                               |`[]`             |`hidden_deps`
+`moddependpaths`         |Absolute path(s) to prepend to MODULEPATH before loading dependencies                                          |`None`           |`modulepath_prepend_paths`
+`multi_deps`             |Dict of lists of dependency versions over which to iterate                                                     |`{}`             |
+`multi_deps_load_default`|Load module for first version listed in multi_deps by default                                                  |`True`           |
+`osdependencies`         |OS dependencies that should be present on the system                                                           |`[]`             |`os_deps`
 
 ## License parameters
 

@@ -10,6 +10,7 @@ Basix is a finite element definition and tabulation runtime library - C++ librar
 
 version | toolchain
 --------|----------
+``0.10.0.post0`` | ``GCC/14.3.0``
 ``0.9.0`` | ``GCC/13.2.0``
 
 

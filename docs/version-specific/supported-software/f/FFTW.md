@@ -24,6 +24,7 @@ version | toolchain
 ``3.3.10`` | ``iimpi/2022a``
 ``3.3.10`` | ``iimpi/2022b``
 ``3.3.10`` | ``intel-compilers/2023.1.0``
+``3.3.10`` | ``intel-compilers/2025.1.1``
 ``3.3.10`` | ``intel-compilers/2025.2.0``
 ``3.3.10`` | ``llvm-compilers/20.1.8``
 ``3.3.10`` | ``llvm-compilers/21.1.8``

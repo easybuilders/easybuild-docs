@@ -59,6 +59,7 @@
       - CMakeMakeCp
         - EB_DualSPHysics
       - CMakeNinja
+        - EB_ESPResSo
         - EB_pocl
       - CMakePythonPackage
         - EB_pybind11
@@ -278,6 +279,7 @@
     - EB_VTune
   - MesonNinja
     - CMakeNinja
+      - EB_ESPResSo
       - EB_pocl
     - EB_Mesa
     - EB_QEMU

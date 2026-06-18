@@ -10,6 +10,7 @@ tdb is a Trivial Database used by Samba and other projects.
 
 version | toolchain
 --------|----------
+``1.4.15`` | ``GCCcore/14.2.0``
 ``1.4.9`` | ``GCCcore/13.3.0``
 
 
