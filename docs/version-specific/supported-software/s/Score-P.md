@@ -43,6 +43,7 @@ version | versionsuffix | toolchain
 ``9.3`` |  | ``iimpi/2025a``
 ``9.4`` | ``-CUDA-12.9.1`` | ``gompi/2025b``
 ``9.4`` |  | ``gompi/2025b``
+``9.4`` |  | ``iimpi/2025b``
 ``9.4`` |  | ``lmpich/2025b``
 ``9.4`` |  | ``lompi/2025b``
 

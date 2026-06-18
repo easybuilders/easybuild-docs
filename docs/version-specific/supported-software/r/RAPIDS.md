@@ -10,6 +10,7 @@ RAPIDS provides unmatched speed with familiar APIs that match the most popular P
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``24.10.0`` | ``-CUDA-12.6.0`` | ``foss/2024a``
 ``24.4`` | ``-CUDA-12.1.1`` | ``foss/2023a``
 
 

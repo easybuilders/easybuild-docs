@@ -26,6 +26,7 @@ version | toolchain
 ``5.0.3`` | ``intel-compilers/2024.2.0``
 ``5.0.7`` | ``GCC/14.2.0``
 ``5.0.7`` | ``intel-compilers/2025.1.1``
+``5.0.7`` | ``rocm-compilers/19.0.0-ROCm-6.4.1``
 ``5.0.8`` | ``GCC/14.3.0``
 ``5.0.8`` | ``llvm-compilers/20.1.8``
 

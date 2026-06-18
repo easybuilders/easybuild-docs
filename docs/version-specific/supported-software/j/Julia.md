@@ -19,6 +19,7 @@ version | versionsuffix | toolchain
 ``1.11.6`` | ``-linux-x86_64`` | ``system``
 ``1.11.7`` |  | ``system``
 ``1.12.2`` |  | ``system``
+``1.12.6`` |  | ``system``
 ``1.6.0`` | ``-linux-aarch64`` | ``system``
 ``1.6.1`` | ``-linux-x86_64`` | ``system``
 ``1.6.2`` | ``-linux-x86_64`` | ``system``

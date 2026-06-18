@@ -29,6 +29,7 @@ version | versionsuffix | toolchain
 ``9.10.1.4`` | ``-CUDA-12.8.0`` | ``system``
 ``9.10.2.21`` | ``-CUDA-12.6.0`` | ``system``
 ``9.15.0.57`` | ``-CUDA-12.9.1`` | ``system``
+``9.23.0.39`` | ``-CUDA-13.3.0`` | ``system``
 ``9.5.0.50`` | ``-CUDA-12.6.0`` | ``system``
 ``9.5.1.17`` | ``-CUDA-12.6.0`` | ``system``
 

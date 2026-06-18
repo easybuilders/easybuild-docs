@@ -27,6 +27,7 @@ version | versionsuffix | toolchain
 ``19.06.008`` |  | ``system``
 ``20.02.007`` | ``-r8`` | ``system``
 ``20.04.008`` |  | ``system``
+``20.06.010`` | ``-r8`` | ``system``
 ``21.02.007`` | ``-r8`` | ``system``
 ``21.02.007`` |  | ``system``
 ``2302`` | ``-r8`` | ``system``
@@ -37,6 +38,7 @@ version | versionsuffix | toolchain
 ``2410`` |  | ``system``
 ``24xx`` | ``-r8`` | ``system``
 ``24xx`` |  | ``system``
+``2510`` | ``-r8`` | ``system``
 ``2602`` | ``-r8`` | ``system``
 ``2602`` |  | ``system``
 

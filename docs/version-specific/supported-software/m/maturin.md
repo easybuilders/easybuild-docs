@@ -13,6 +13,7 @@ version | versionsuffix | toolchain
 ``1.1.0`` |  | ``GCCcore/12.2.0``
 ``1.1.0`` |  | ``GCCcore/12.3.0``
 ``1.10.2`` |  | ``GCCcore/14.3.0``
+``1.13.1`` |  | ``GCCcore/15.2.0``
 ``1.3.1`` |  | ``GCCcore/13.2.0``
 ``1.3.2`` | ``-Rust-1.65.0`` | ``GCCcore/11.3.0``
 ``1.4.0`` | ``-Rust-1.75.0`` | ``GCCcore/12.2.0``
@@ -22,6 +23,7 @@ version | versionsuffix | toolchain
 ``1.6.0`` |  | ``GCCcore/13.3.0``
 ``1.7.8`` | ``-Rust-1.81.0`` | ``GCCcore/12.3.0``
 ``1.8.3`` | ``-Rust-1.83.0`` | ``GCCcore/13.3.0``
+``1.8.3`` |  | ``GCCcore/13.3.0``
 ``1.8.3`` |  | ``GCCcore/14.2.0``
 ``1.9.1`` |  | ``GCCcore/14.3.0``
 

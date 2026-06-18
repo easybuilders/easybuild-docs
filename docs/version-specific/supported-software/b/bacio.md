@@ -10,6 +10,7 @@ This library performs binary I/O for the NCEP models, processing formatted and u
 
 version | toolchain
 --------|----------
+``2.6.0`` | ``GCC/14.3.0``
 ``2.6.0`` | ``intel-compilers/2025.2.0``
 
 

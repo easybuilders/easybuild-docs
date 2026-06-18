@@ -10,6 +10,7 @@ This library performs binary I/O for the NCEP models, processing formatted and u
 
 version | toolchain
 --------|----------
+``5.4.0`` | ``gfbf/2025b``
 ``5.4.0`` | ``iimkl/2025b``
 
 

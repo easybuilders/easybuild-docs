@@ -10,6 +10,7 @@ Basix is a finite element definition and tabulation runtime library - Python bin
 
 version | toolchain
 --------|----------
+``0.10.0.post0`` | ``gfbf/2025b``
 ``0.9.0`` | ``gfbf/2023b``
 
 

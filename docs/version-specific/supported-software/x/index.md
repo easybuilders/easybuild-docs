@@ -35,6 +35,7 @@ search:
  * [xmlf90](xmlf90.md)
  * [xmlschema](xmlschema.md)
  * [xmlto](xmlto.md)
+ * [xopen](xopen.md)
  * [xorg-macros](xorg-macros.md)
  * [xpdf](xpdf.md)
  * [XPLOR-NIH](XPLOR-NIH.md)

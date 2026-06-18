@@ -4,12 +4,13 @@ search:
 ---
 # FEniCS-DOLFINx
 
-DOLFINx is the computational environment of FEniCSx - C++ library
+DOLFINx is the next generation problem solving interface of the FEniCS Project  - C++ library.
 
-*homepage*: <https://github.com/FEniCS/dolfinx>
+*homepage*: <https://docs.fenicsproject.org/dolfinx/main/python/>
 
 version | toolchain
 --------|----------
+``0.10.0.post5`` | ``foss/2025b``
 ``0.9.0`` | ``foss/2023b``
 
 

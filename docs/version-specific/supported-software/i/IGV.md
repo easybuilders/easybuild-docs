@@ -14,6 +14,7 @@ version | versionsuffix | toolchain
 ``2.16.0`` | ``-Java-11`` | ``system``
 ``2.17.4`` | ``-Java-17`` | ``system``
 ``2.19.1`` | ``-Java-21`` | ``system``
+``2.19.8`` | ``-Java-21`` | ``system``
 ``2.9.4`` | ``-Java-11`` | ``system``
 
 

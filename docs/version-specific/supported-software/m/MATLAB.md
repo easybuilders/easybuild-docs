@@ -10,7 +10,6 @@ MATLAB is a high-level language and interactive environment  that enables you to
 
 version | versionsuffix | toolchain
 --------|---------------|----------
-``2021a`` |  | ``system``
 ``2021b`` |  | ``system``
 ``2022a`` | ``-r3`` | ``system``
 ``2022a`` |  | ``system``

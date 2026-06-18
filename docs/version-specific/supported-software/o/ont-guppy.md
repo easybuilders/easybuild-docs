@@ -10,6 +10,8 @@ Guppy is a bioinformatics toolkit that enables real-time basecalling and several
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``6.1.7`` | ``-CUDA-12.6.0`` | ``system``
+``6.1.7`` |  | ``system``
 ``6.4.6`` | ``-CUDA-11.7.0`` | ``system``
 ``6.4.6`` |  | ``system``
 ``6.4.8`` | ``-CUDA-11.7.0`` | ``system``

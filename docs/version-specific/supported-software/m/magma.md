@@ -6,7 +6,7 @@ search:
 
 The MAGMA project aims to develop a dense linear algebra library similar to  LAPACK but for heterogeneous/hybrid architectures, starting with current Multicore+GPU systems.
 
-*homepage*: <https://icl.cs.utk.edu/magma/>
+*homepage*: <https://icl.utk.edu/magma/>
 
 version | versionsuffix | toolchain
 --------|---------------|----------

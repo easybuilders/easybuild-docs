@@ -10,6 +10,7 @@ UCX-Py is the Python interface for UCX, a low-level high-performance networking 
 
 version | toolchain
 --------|----------
+``0.40.0`` | ``gfbf/2024a``
 ``0.40.00`` | ``gfbf/2023b``
 
 

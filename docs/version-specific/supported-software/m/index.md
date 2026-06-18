@@ -196,6 +196,7 @@ search:
  * [MRIcron](MRIcron.md)
  * [MRPRESSO](MRPRESSO.md)
  * [MRtrix](MRtrix.md)
+ * [msdf-atlas-gen](msdf-atlas-gen.md)
  * [MSFragger](MSFragger.md)
  * [msgpack-c](msgpack-c.md)
  * [msgpack-cxx](msgpack-cxx.md)

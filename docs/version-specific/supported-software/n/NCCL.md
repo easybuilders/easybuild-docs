@@ -22,6 +22,7 @@ version | versionsuffix | toolchain
 ``2.27.5`` | ``-CUDA-12.6.0`` | ``GCCcore/13.3.0``
 ``2.27.7`` | ``-CUDA-12.8.0`` | ``GCCcore/14.2.0``
 ``2.27.7`` | ``-CUDA-12.9.1`` | ``GCCcore/14.3.0``
+``2.30.4`` | ``-CUDA-13.3.0`` | ``GCCcore/15.2.0``
 ``2.9.9`` | ``-CUDA-11.3.1`` | ``system``
 
 

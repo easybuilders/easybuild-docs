@@ -11,6 +11,7 @@ CppHeaderParser is a pure python module that will parse C++ header files and gen
 version | toolchain
 --------|----------
 ``2.7.4`` | ``GCCcore/11.3.0``
+``2.7.4`` | ``GCCcore/14.2.0``
 ``2.7.4`` | ``GCCcore/14.3.0``
 
 

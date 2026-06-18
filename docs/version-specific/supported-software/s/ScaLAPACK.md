@@ -25,6 +25,7 @@ version | versionsuffix | toolchain
 ``2.2.2`` | ``-fb`` | ``gompi/2025b``
 ``2.2.2`` | ``-fb`` | ``gompi/2026.1``
 ``2.2.2`` | ``-fb`` | ``lmpich/2025b``
+``2.2.2`` | ``-fb`` | ``lmpich/2026.1``
 ``2.2.2`` | ``-fb`` | ``lompi/2025b``
 ``2.2.2`` | ``-fb`` | ``lompi/2026.1``
 

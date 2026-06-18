@@ -10,6 +10,7 @@ Rust implementation of NanoFilt+NanoLyse, both originally written in Python. Thi
 
 version | toolchain
 --------|----------
+``0.12.0b`` | ``GCCcore/14.2.0``
 ``0.9.0`` | ``GCCcore/12.3.0``
 
 
