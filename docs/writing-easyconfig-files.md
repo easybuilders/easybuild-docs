@@ -88,8 +88,7 @@ A handful of easyconfig parameters are *mandatory*:
     use
     - format: dictionary with name/version keys, e.g.,
         `{'name': 'foo', 'version': '1.2.3'}`
-    - a list of supported toolchains can be found
-        [here](version-specific/toolchains.md)
+    - [a list of supported toolchains can be found here](version-specific/toolchains.md)
 
 Remarks:
 
