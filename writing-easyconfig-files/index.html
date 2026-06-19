@@ -1517,6 +1517,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#architecture-specific-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture specific values
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-specific-documentation-relevant-to-easyconfigs" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -12851,6 +12862,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#architecture-specific-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture specific values
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#version-specific-documentation-relevant-to-easyconfigs" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -12899,7 +12921,7 @@ easyconfig files.</p>
 easyconfig is all that you need to create in order to build and install
 the software and the corresponding module file.</p>
 <p>Luckily, the majority of software delivery mechanisms are being designed
-around either autotools or CMake or, perhaps, some simple file
+around either Autotools or CMake or, perhaps, some simple file
 extraction/copy pattern. In that case, a <em>generic easyblock</em> can be
 leveraged; see <a class="autorefs autorefs-internal" href="../version-specific/generic-easyblocks/#generic_easyblocks">Overview of generic easyblocks</a>.</p>
 <p>Yet, in case the software build calls for more elaborate steps
@@ -13059,7 +13081,7 @@ by looking at the length of the string:</p>
 <p>The intention is to move towards making <code>sha256</code> the recommended and
 default checksum type.</p>
 <p>Other checksum types are also supported: <code>adler32</code>, <code>crc32</code>, <code>sha1</code>,
-<code>sha512</code>, <code>size</code> (filesize in bytes). To provide checksum values of a
+<code>sha512</code>, <code>size</code> (file size in bytes). To provide checksum values of a
 specific type, elements of the <code>checksums</code> list can also be 2-element
 tuples of the form <code>('&lt;checksum type&gt;', '&lt;checksum value&gt;')</code>. For
 example:</p>
@@ -13259,7 +13281,7 @@ type, which will result in an error message like:</p>
 <h4 id="common_easyconfig_param_sources_alt">Alternative formats for <code>sources</code><a class="headerlink" href="#common_easyconfig_param_sources_alt" title="Permanent link">&para;</a></h4>
 <p>In some cases, it can be required to provide additional information next
 to the name of a source file, e.g., a custom extraction command (because
-the one derived from the file extension is not correct), or an altername
+the one derived from the file extension is not correct), or an alternate
 filename that should be used to download the source file.</p>
 <p>This can be specified using a Python dictionary value in the <code>sources</code>
 easyconfig parameter.</p>
@@ -13286,7 +13308,7 @@ easyconfig parameter.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Custom extraction commands can also be specified as a 2-element tuple, but this format has been deprecated
-in favour of the Python dictionary format described above; see also
+in favor of the Python dictionary format described above; see also
 <a class="autorefs autorefs-internal" href="../removed-functionality/#depr_sources_2_element_tuple">Specifying source files as 2-element tuples to provide a custom extraction command</a>.</p>
 </div>
 <h4 :=":" id="download_instructions">Using <code>download_instructions</code> for user-side part of installation<a class="headerlink" href="#download_instructions" title="Permanent link">&para;</a></h4>
@@ -13395,6 +13417,8 @@ you to do so, <code>git_config</code> is intended for other Git repos.</p>
 <li>modules must exist for all (non-system) dependencies</li>
 <li>(non-system) dependencies can be resolved via <code>--robot</code></li>
 <li>format: <code>(&lt;name&gt;, &lt;version&gt;[, &lt;versionsuffix&gt;[, &lt;toolchain&gt;]])</code></li>
+<li>An <a href="#architecture-specific-values">architecture specific</a> version is possible.
+  This also allows adding or removing a dependency for a specific architecture.</li>
 </ul>
 <p>Example:</p>
 <div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;GTI&#39;</span>
@@ -13422,7 +13446,7 @@ search for the dependency using a compatible subtoolchain.</p>
 <h4 id="loading-of-modules-for-dependencies-with-a-system-toolchain">Loading of modules for dependencies with a <code>system</code> toolchain<a class="headerlink" href="#loading-of-modules-for-dependencies-with-a-system-toolchain" title="Permanent link">&para;</a></h4>
 <p>When a <a class="autorefs autorefs-internal" title="System toolchain" href="../system-toolchain/#system_toolchain"><code>system</code> toolchain</a> is used, the
 modules for each of the (build) dependencies are <em>always</em> loaded,
-regardless of the toolchain version (as opposed the behaviour with the
+regardless of the toolchain version (as opposed the behavior with the
 <code>dummy</code> toolchain in EasyBuild versions prior to v4.0, see
 <a class="autorefs autorefs-internal" href="../system-toolchain/#system_toolchain_motivation_deprecating_dummy">Motivation for deprecating the <code>dummy</code> toolchain</a>).</p>
 <h4 id="specifying-dependencies-using-system-toolchain">Specifying dependencies using <code>system</code> toolchain<a class="headerlink" href="#specifying-dependencies-using-system-toolchain" title="Permanent link">&para;</a></h4>
@@ -13588,7 +13612,7 @@ reused for each of the cycles performed. For example:</p>
 <li><code>./configure --prefix=... --two; make lib; TYPE=two make install</code></li>
 <li><code>./configure --prefix=... --three; make lib; TYPE=three make install</code></li>
 </ul>
-<p>An example use case of this is building FFTW with different precisions,
+<p>An example use case of this is building FFTW with different precision,
 see the <a href="https://github.com/easybuilders/easybuild-easyconfigs/tree/main/easybuild/easyconfigs/f/FFTW">FFTW easyconfig
 files</a>.</p>
 <h3 id="sanity-check">Sanity check<a class="headerlink" href="#sanity-check" title="Permanent link">&para;</a></h3>
@@ -13609,6 +13633,7 @@ that an installation didn't (partly) fail unnoticed.</p>
 <li>paths are <em>relative</em> to installation directory</li>
 <li>for a path specified as a tuple, only one of the specified paths
     must be available</li>
+<li><a href="#architecture-specific-values">architecture specific</a> lists are possible</li>
 </ul>
 </li>
 <li>default values:<ul>
@@ -13794,6 +13819,47 @@ in multiple locations of an easyconfig file; this is critical to
 make <code>--try-software-version</code> behave as expected (see also
 <a class="autorefs autorefs-internal" href="../using-easybuild/#tweaking_easyconfigs_using_try">Tweaking existing easyconfig files</a>).</p>
 </div>
+<h2 id="architecture-specific-values">Architecture specific values<a class="headerlink" href="#architecture-specific-values" title="Permanent link">&para;</a></h2>
+<p>For some easyconfig parameters it is possible to provide architecture specific values by using a dictionary
+with keys in the format <code>arch=&lt;val&gt;</code>.<br />
+They key <code>arch=*</code> will be used when there was no other match.</p>
+<p>In <code>dependencies</code> this can be used as the <em>version</em> to use different ones, e.g. when a newer version has a known issue.
+Using <code>False</code> will cause the dependency to be removed.
+It is an <strong>error</strong> if no matching key (which includes <code>arch=*</code>) for the current architecture is found.</p>
+<p>In the values of <code>sanity_check_paths</code> this can be used to require files/folders that are only present on specific architectures.
+When the current architecture is missing in the keys, or the value is <code>None</code> the item will be skipped.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">dependencies</span><span class="o">=</span><span class="p">[</span>
+  <span class="p">(</span><span class="s1">&#39;imkl&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="s1">&#39;arch=x86_64&#39;</span><span class="p">:</span> <span class="s1">&#39;2021.4.0&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;arch=AArch32&#39;</span><span class="p">:</span> <span class="s1">&#39;2021.3.0&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;arch=*&#39;</span><span class="p">:</span> <span class="kc">False</span>
+    <span class="p">},</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">SYSTEM</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="n">sanity_check_paths</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;files&#39;</span><span class="p">:</span> <span class="p">[{</span>
+    <span class="s1">&#39;arch=AArch64&#39;</span><span class="p">:</span> <span class="s1">&#39;lib_arm.a&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;arch=x86_64&#39;</span><span class="p">:</span> <span class="s1">&#39;lib_intel.a&#39;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;lib_generic.a&#39;</span><span class="p">,</span> <span class="c1"># Always checked (additionally)</span>
+  <span class="p">],</span>
+  <span class="s1">&#39;dirs&#39;</span><span class="p">:</span> <span class="p">[{</span>
+    <span class="s1">&#39;arch=RISCV64&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;data/risc&#39;</span><span class="p">),</span>
+    <span class="s1">&#39;arch=*&#39;</span><span class="p">:</span> <span class="s1">&#39;data/other&#39;</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">],</span>
+<span class="p">},</span>
+</code></pre></div>
+<p>Currently, the following values for architectures are supported:</p>
+<ul>
+<li><code>'AArch32'</code></li>
+<li><code>'AArch64'</code></li>
+<li><code>'POWER'</code></li>
+<li><code>'x86_64'</code></li>
+<li><code>'RISCV32'</code></li>
+<li><code>'RISCV64'</code></li>
+</ul>
 <h2 id="version-specific-documentation-relevant-to-easyconfigs">Version-specific documentation relevant to easyconfigs<a class="headerlink" href="#version-specific-documentation-relevant-to-easyconfigs" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a class="autorefs autorefs-internal" title="Constants available (only) in configuration files" href="../version-specific/config-file-constants/#avail_cfgfile_constants">Available config file constants</a></li>
@@ -13838,7 +13904,7 @@ especially if:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 20, 2025 01:40:09 UTC">March 20, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2026 12:56:34 UTC">June 17, 2026</span>
   </span>
 
     
