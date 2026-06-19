@@ -16,8 +16,9 @@ jobs:
         with:
           # allow duplicate subsections, see https://github.com/DavidAnson/markdownlint/blob/main/doc/md024.md
           siblings_only: true
-          # all markdown, except filter out {demos,version-specific}/* for now, until we fix issues in those sections
+          # all markdown, except filter out {demos,version-specific,easybuild-v5}/* for now, until we fix issues in those sections
           globs: |
             **/*.md
             #docs/demos
             #docs/version-specific
+            #docs/easybuild-v5
