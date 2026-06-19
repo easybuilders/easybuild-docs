@@ -9,15 +9,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # 4.2.2
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # 7.0.0
 
       - name: MarkdownLint
-        uses: DavidAnson/markdownlint-cli2-action@05f32210e84442804257b2a6f20b273450ec8265 # v19.1.0
+        uses: DavidAnson/markdownlint-cli2-action@ded1f9488f68a970bc66ea5619e13e9b52e601cd # v23.2.0
         with:
           # allow duplicate subsections, see https://github.com/DavidAnson/markdownlint/blob/main/doc/md024.md
           siblings_only: true
-          # all markdown, except filter out {demos,version-specific}/* for now, until we fix issues in those sections
+          # all markdown, except filter out {demos,version-specific,easybuild-v5}/* for now, until we fix issues in those sections
           globs: |
             **/*.md
             #docs/demos
             #docs/version-specific
+            #docs/easybuild-v5

@@ -9,7 +9,7 @@ Mac OS X system, together with Tcl on which it depends.
 1. Go to <https://www.tcl-lang.org> and download the latest Tcl sources. At
     the time of writing, the latest available Tcl version was 8.6.16,
     which can be downloaded from
-    [here](https://prdownloads.sourceforge.net/tcl/tcl8.6.16-src.tar.gz).
+    [the Tcl SourceForge website here](https://prdownloads.sourceforge.net/tcl/tcl8.6.16-src.tar.gz).
     The remainder of these commands will assume Tcl v8.6.16 is being
     installed, you may need to adjust them accordingly.
 
