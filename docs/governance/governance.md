@@ -337,6 +337,11 @@ who have actually cast a vote, or are present at a meeting. Since the majority v
 amount of Members (rather than the total amount of votes), there is no quorum for votes on amendments to the Charter,
 Governance or Policies.
 
+#### 6.3.10 
+
+Voting by the Steering Committee is only possible when there are at least 3 Steering Committee members in total.
+If there are fewer than 3 members, the Steering Committee can only vote on new members.
+
 ### 6.4 Meetings
 
 The Steering Committee will meet as needed, but at least once per quarter. The chair is responsible for organizing the meeting.
