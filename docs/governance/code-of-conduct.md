@@ -67,6 +67,7 @@ All complaints will be reviewed and investigated promptly and fairly.
 
 The EasyBuild Steering Committee Members are obligated to respect the privacy and
 security of the reporter of any incident.
+No information that could identify the reporter, or details of the report, will be communicated outside the Steering Committee without the reporter’s explicit consent, except where disclosure is required by law or necessary to address an immediate risk of harm.
 
 ## Enforcement Guidelines
 
