@@ -225,6 +225,8 @@ Membership of the Steering Committee can terminate in three ways:
 #### 6.2.2 New Members
 
 New members must be recommended by one or more Steering Committee members.
+If a new member is a replacement for a member that is leaving, the member that leaves can recommend someone, but they cannot vote on the acceptance of the new member.
+
 
 The Steering Committee will make the recommendation known to the community, and collect feedback on the recommendation.
 The Steering Committee then weighs the feedback, and votes on whether to accept the new member.
