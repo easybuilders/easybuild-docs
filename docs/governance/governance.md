@@ -240,7 +240,7 @@ In the selection process, the Steering Committee will consider the following:
 - The number of Members working for the same employer should be limited to 1
   (to avoid that the project becomes dominated by a single company or institution, or a small group thereof);
 - The number of Members with the same country of residence should be limited to 2 
- (to reflect the international nature of the project);
+  (to reflect the international nature of the project);
 - The composition of the Steering Committee should reflect the EasyBuild community
   (to ensure that the community's interests are represented);
 
