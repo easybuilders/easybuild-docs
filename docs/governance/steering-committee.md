@@ -1,22 +1,19 @@
-# Governance
+# Steering Committee
 
-## Initial Steering Committee (iSC)
+In February 2025, an Initial Steering Committee for EasyBuild was formed,
+who worked towards proper governance for EasyBuild.
 
-In February 2025, an Initial Steering Committee for EasyBuild was formed.
+On 29 June 2026, we transitioned to the Steering Committee for EasyBuild,
+after the governance documents were accepted.
 
-### Responsibilities
+## Current members
 
-The main reposibility of the Initial Steering Committee is to come up with a proper governance structure for EasyBuild,
-beyond the [BDFL](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life) + [do-ocray](https://communitywiki.org/wiki/DoOcracy) model
-that has been used since EasyBuild was made publicly available as open source software in 2012.
-
-### Members
-
-The members of the Initial Steering Committee include (in alphabetical order):
+The members of the EasyBuild Steering Committee are (in alphabetical order):
 
 * Sebastian Achilles *(Jülich Supercomputing Centre, Germany)*
-* Simon Branford *(University of Birmingham, UK)*
-* Kenneth Hoste *(Ghent University, Belgium)*
+* Kenneth Hoste *(Ghent University, Belgium)* - *chair*
 * Adam Huffman *(University of Oxford, UK)*
-* Sam Moors *(Vrije Universiteit Brussel, Belgium)*
+* Bart Oldeman (McGill University, Calcul Québec, Digital Research Alliance of Canada)
+* Jörg Saßmannshausen (Imperial College London, UK)
 * Caspar van Leeuwen *(SURF, The Netherlands)*
+* Cintia Willemyns *(Vrije Universiteit Brussel, Belgium)*
