@@ -354,7 +354,7 @@ have agreed that a meeting on shorter notice is required.
 
 For every meeting of the Steering Committee, the chair ensures that meeting notes are taken and stored in a location that only Steering Committee members can access.
 
-The notes will be made publicly available in the [Steering Committee meeting notes page](steering-committee/meeting-notes.md),
+The notes will be made publicly available in the [Steering Committee meeting notes page](steering-committee/meeting-notes/index.md),
 and will provide a clear overview of discussed items, decisions made, and action points.
 
 Prior to publication, information that is considered to be confidential, sensitive, or for another reason not appropriate for
