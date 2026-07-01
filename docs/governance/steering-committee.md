@@ -20,8 +20,3 @@ The members of the Initial Steering Committee include (in alphabetical order):
 * Adam Huffman *(University of Oxford, UK)*
 * Sam Moors *(Vrije Universiteit Brussel, Belgium)*
 * Caspar van Leeuwen *(SURF, The Netherlands)*
-
-### Meetings
-
-* 3 March 2025: kickoff meeting
-* 18 June 2025: discuss draft proposal for proper governance structure for EasyBuild
