@@ -6,10 +6,11 @@ search:
 
 Composable transformations of Python+NumPy programs: differentiate, vectorize, JIT to GPU/TPU, and more
 
-*homepage*: <https://pypi.python.org/pypi/jax>
+*homepage*: <https://jax.readthedocs.io/>
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``0.10.1`` |  | ``gfbf/2026.1``
 ``0.3.14`` | ``-CUDA-11.7.0`` | ``foss/2022a``
 ``0.3.23`` |  | ``foss/2022a``
 ``0.3.25`` | ``-CUDA-11.7.0`` | ``foss/2022a``

@@ -17,6 +17,7 @@ version | versionsuffix | toolchain
 ``1.7.7`` | ``-tools`` | ``GCCcore/13.3.0``
 ``1.7.7`` | ``-tools`` | ``GCCcore/14.2.0``
 ``1.7.7`` | ``-tools`` | ``GCCcore/14.3.0``
+``1.7.7`` | ``-tools`` | ``GCCcore/15.2.0``
 ``1.7.7`` |  | ``gompi/2025b``
 
 

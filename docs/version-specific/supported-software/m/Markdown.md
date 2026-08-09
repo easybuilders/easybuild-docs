@@ -10,6 +10,7 @@ This is a Python implementation of John Gruber's Markdown. It is almost complete
 
 version | toolchain
 --------|----------
+``3.10.2`` | ``GCCcore/15.2.0``
 ``3.6`` | ``GCCcore/12.2.0``
 ``3.6`` | ``GCCcore/12.3.0``
 ``3.6`` | ``GCCcore/13.2.0``

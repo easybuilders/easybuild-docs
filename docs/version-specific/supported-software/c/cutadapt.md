@@ -6,7 +6,7 @@ search:
 
 Cutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads.
 
-*homepage*: <https://opensource.scilifelab.se/projects/cutadapt/>
+*homepage*: <https://cutadapt.readthedocs.io/>
 
 version | versionsuffix | toolchain
 --------|---------------|----------

@@ -35,6 +35,7 @@ search:
  * [ncbi-vdb](ncbi-vdb.md)
  * [NCCL](NCCL.md)
  * [NCCL-tests](NCCL-tests.md)
+ * [nccmp](nccmp.md)
  * [ncdu](ncdu.md)
  * [NCIPLOT](NCIPLOT.md)
  * [NCL](NCL.md)

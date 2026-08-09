@@ -10,6 +10,7 @@ Leveraging the Jupyter interactive widgets framework, ipympl enables the interac
 
 version | toolchain
 --------|----------
+``0.10.0`` | ``gfbf/2026.1``
 ``0.9.3`` | ``foss/2022a``
 ``0.9.3`` | ``gfbf/2023a``
 ``0.9.4`` | ``gfbf/2023b``

@@ -116,6 +116,7 @@ search:
  * [freebayes](freebayes.md)
  * [freeglut](freeglut.md)
  * [FreeImage](FreeImage.md)
+ * [freesasa](freesasa.md)
  * [FreeSurfer](FreeSurfer.md)
  * [freetype](freetype.md)
  * [freetype-py](freetype-py.md)

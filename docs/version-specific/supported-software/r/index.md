@@ -122,6 +122,7 @@ search:
  * [rocWMMA](rocWMMA.md)
  * [rompi](rompi.md)
  * [ROOT](ROOT.md)
+ * [root-kernel](root-kernel.md)
  * [rowan](rowan.md)
  * [rpds-py](rpds-py.md)
  * [rpmrebuild](rpmrebuild.md)

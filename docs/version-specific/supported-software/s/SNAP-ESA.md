@@ -12,6 +12,7 @@ version | versionsuffix | toolchain
 --------|---------------|----------
 ``10.0.0`` | ``-Java-11`` | ``system``
 ``12.0.0`` | ``-Java-17`` | ``system``
+``13.0.0`` | ``-Java-17`` | ``system``
 ``9.0.0`` | ``-Java-11`` | ``system``
 
 

@@ -26,6 +26,7 @@ version | versionsuffix | toolchain
 ``20.1.5`` |  | ``GCCcore/13.3.0``
 ``20.1.7`` |  | ``GCCcore/14.2.0``
 ``20.1.8`` |  | ``GCCcore/14.3.0``
+``20.1.8`` | ``-llvmlite`` | ``GCCcore/15.2.0``
 ``21.1.8`` |  | ``GCCcore/15.2.0``
 
 

@@ -11,6 +11,9 @@ JPEG XL image format reference implementation
 version | toolchain
 --------|----------
 ``0.10.4`` | ``GCCcore/13.3.0``
+``0.11.2`` | ``GCCcore/14.2.0``
+``0.11.2`` | ``GCCcore/14.3.0``
+``0.11.2`` | ``GCCcore/15.2.0``
 ``0.8.1`` | ``foss/2022a``
 ``0.8.2`` | ``GCCcore/12.3.0``
 ``0.8.2`` | ``GCCcore/13.2.0``

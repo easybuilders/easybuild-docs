@@ -8,6 +8,7 @@ search:
 
 
 
+ * [IBSimu](IBSimu.md)
  * [IcarusVerilog](IcarusVerilog.md)
  * [iced](iced.md)
  * [ichorCNA](ichorCNA.md)
@@ -33,7 +34,10 @@ search:
  * [imageio](imageio.md)
  * [ImageJ](ImageJ.md)
  * [ImageMagick](ImageMagick.md)
+ * [IMAS-Core](IMAS-Core.md)
+ * [IMAS-Data-Dictionaries](IMAS-Data-Dictionaries.md)
  * [IMAS-Data-Dictionary](IMAS-Data-Dictionary.md)
+ * [IMAS-MDSplus-models](IMAS-MDSplus-models.md)
  * [IMAS-ParaView](IMAS-ParaView.md)
  * [IMAS-Python](IMAS-Python.md)
  * [IMAS-Validator](IMAS-Validator.md)
@@ -49,6 +53,7 @@ search:
  * [impi](impi.md)
  * [imutils](imutils.md)
  * [InChI](InChI.md)
+ * [Incompact3d](Incompact3d.md)
  * [indicators](indicators.md)
  * [inferCNV](inferCNV.md)
  * [infercnvpy](infercnvpy.md)

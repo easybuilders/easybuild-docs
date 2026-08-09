@@ -37,6 +37,7 @@ version | versionsuffix | toolchain
 ``1.14.6`` |  | ``gompi/2025b``
 ``1.14.6`` |  | ``iimpi/2025a``
 ``1.14.6`` |  | ``iimpi/2025b``
+``1.14.6`` | ``-serial`` | ``intel-compilers/2025.1.1``
 ``1.14.6`` |  | ``lompi/2025b``
 ``2.1.1`` |  | ``gompi/2026.1``
 

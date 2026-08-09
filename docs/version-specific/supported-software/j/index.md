@@ -25,6 +25,7 @@ search:
  * [Jena](Jena.md)
  * [jgmenu](jgmenu.md)
  * [jiter](jiter.md)
+ * [JMAG-Designer](JMAG-Designer.md)
  * [Jmol](Jmol.md)
  * [joypy](joypy.md)
  * [JPEG-NCCS](JPEG-NCCS.md)

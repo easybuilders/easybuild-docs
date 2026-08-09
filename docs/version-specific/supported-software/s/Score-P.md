@@ -10,6 +10,11 @@ The Score-P measurement infrastructure is a highly scalable and easy-to-use  too
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``10.1`` | ``-CUDA-13.3.0`` | ``gompi/2026.1``
+``10.1`` |  | ``gompi/2026.1``
+``10.1`` |  | ``iimpi/2026.1``
+``10.1`` |  | ``lmpich/2026.1``
+``10.1`` |  | ``lompi/2026.1``
 ``8.0`` | ``-CUDA-11.7.0`` | ``gompi/2022a``
 ``8.0`` |  | ``gompi/2022a``
 ``8.1`` | ``-CUDA-12.0.0`` | ``gompi/2022b``

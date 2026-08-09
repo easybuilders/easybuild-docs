@@ -11,6 +11,9 @@ Fire Dynamics Simulator (FDS) is a large-eddy simulation (LES) code for low-spee
 version | toolchain
 --------|----------
 ``6.10.1`` | ``intel/2025a``
+``6.10.1`` | ``intel/2026.1``
+``6.11.0`` | ``intel/2026.1``
+``6.11.1`` | ``intel/2026.1``
 ``6.7.9`` | ``intel/2022a``
 ``6.8.0`` | ``intel/2022b``
 ``6.8.0`` | ``iomkl/2022b``
