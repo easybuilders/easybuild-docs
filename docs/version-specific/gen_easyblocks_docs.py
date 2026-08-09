@@ -30,6 +30,7 @@ Generates documentation for (generic) easyblocks in MarkDown format
 """
 
 import os
+import re
 import easybuild.tools.config as config
 
 from easybuild.base.generaloption import simple_option
@@ -65,6 +66,10 @@ autogen_comment = [
 ]
 
 easyblocks_overview = gen_easyblocks_overview_md(so.options.module, so.options.examples, COMMON_PARAMS, DOC_FUNCTIONS)
+print(type(easyblocks_overview))
+
+regex = re.compile("<function partial_normalize_pip at 0x[0-9a-f]*>", re.M)
+easyblocks_overview = [regex.sub('partial_normalize_pip', x) for x in easyblocks_overview]
 
 txt = '\n'.join(autogen_comment + easyblocks_overview)
 if so.options.out_file:

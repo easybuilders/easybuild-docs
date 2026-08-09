@@ -8,6 +8,7 @@ search:
 
 
 
+ * [2decomp-fft](2decomp-fft.md)
  * [4ti2](4ti2.md)
 
 

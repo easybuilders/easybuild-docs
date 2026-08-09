@@ -4,12 +4,13 @@ search:
 ---
 # cfunits
 
-A Python interface to UNIDATA’s UDUNITS-2 library with CF extensions.
+A Python interface to UNIDATA's UDUNITS-2 package with CF extensions.  Store, combine and compare physical units and convert numeric values to different units.
 
-*homepage*: <https://ncas-cms.github.io/cfunits>
+*homepage*: <https://github.com/NCAS-CMS/cfunits>
 
 version | toolchain
 --------|----------
+``3.3.7`` | ``gfbf/2023b``
 ``3.3.7`` | ``gfbf/2024a``
 
 

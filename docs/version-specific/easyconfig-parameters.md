@@ -116,6 +116,7 @@
 `exts_defaultclass`     |Name of default easyblock for extensions                                                                  |`None`           |`exts_default_class`
 `exts_download_dep_fail`|Fail if downloaded dependencies are detected for extensions                                               |`False`          |
 `exts_filter`           |Extension filter details: template for cmd and input to cmd (templates for ext_name, ext_version and src).|`None`           |
+`exts_formatter`        |Function to format extension names in module file                                                         |`None`           |
 `exts_list`             |List with extensions added to the base installation                                                       |`[]`             |
 
 ## Modules parameters

@@ -10,6 +10,7 @@ A free and open source Java framework for building Semantic Web and Linked Data 
 
 version | toolchain
 --------|----------
+``4.10.0`` | ``system``
 ``5.6.0`` | ``system``
 
 

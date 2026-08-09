@@ -17,6 +17,7 @@ version | versionsuffix | toolchain
 ``0.13.2`` |  | ``gfbf/2024a``
 ``0.13.2`` |  | ``gfbf/2025a``
 ``0.13.2`` |  | ``gfbf/2025b``
+``0.13.2`` |  | ``gfbf/2026.1``
 ``0.9.1`` | ``-Python-2.7.18`` | ``foss/2023a``
 
 

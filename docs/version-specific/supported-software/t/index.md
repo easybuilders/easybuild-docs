@@ -66,6 +66,8 @@ search:
  * [Tinker-HP](Tinker-HP.md)
  * [tint2](tint2.md)
  * [tiny-cuda-nn](tiny-cuda-nn.md)
+ * [tinydft](tinydft.md)
+ * [tinyff](tinyff.md)
  * [tinyobjloader](tinyobjloader.md)
  * [TinyXML](TinyXML.md)
  * [TinyXML-2](TinyXML-2.md)

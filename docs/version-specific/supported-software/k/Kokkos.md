@@ -15,6 +15,7 @@ version | versionsuffix | toolchain
 ``4.7.01`` |  | ``GCC/14.3.0``
 ``4.7.01`` |  | ``intel-compilers/2025.2.0``
 ``5.0.2`` |  | ``GCC/14.2.0``
+``5.1.1`` | ``-CUDA-13.3.0`` | ``GCC/15.2.0``
 ``5.1.1`` |  | ``GCC/15.2.0``
 ``5.1.1`` |  | ``intel-compilers/2025.3.3``
 ``5.1.1`` |  | ``llvm-compilers/21.1.8``

@@ -225,6 +225,7 @@ search:
  * [mycotools](mycotools.md)
  * [mygene](mygene.md)
  * [mypy](mypy.md)
+ * [myst-nb](myst-nb.md)
  * [mzmine](mzmine.md)
 
 

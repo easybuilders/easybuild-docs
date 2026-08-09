@@ -27,6 +27,7 @@ version | toolchain
 ``1.88.0`` | ``intel-compilers/2025.1.1``
 ``1.88.0`` | ``intel-compilers/2025.2.0``
 ``1.88.0`` | ``llvm-compilers/20.1.8``
+``1.88.0`` | ``nvidia-compilers/25.3``
 ``1.88.0`` | ``rocm-compilers/19.0.0-ROCm-6.4.1``
 ``1.90.0`` | ``GCCcore/15.2.0``
 

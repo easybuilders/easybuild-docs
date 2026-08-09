@@ -16,6 +16,7 @@ version | versionsuffix | toolchain
 ``4.3.0`` |  | ``GCC/14.2.0``
 ``4.3.2`` |  | ``GCC/14.3.0``
 ``4.3.2`` |  | ``llvm-compilers/20.1.8``
+``5.0.1`` |  | ``GCC/15.2.0``
 ``5.0.1`` |  | ``llvm-compilers/21.1.8``
 
 

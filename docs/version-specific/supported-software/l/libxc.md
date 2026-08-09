@@ -24,6 +24,8 @@ version | versionsuffix | toolchain
 ``7.0.0`` |  | ``GCC/14.2.0``
 ``7.0.0`` | ``-nofhc`` | ``GCC/14.3.0``
 ``7.0.0`` |  | ``GCC/14.3.0``
+``7.0.0`` |  | ``GCC/15.2.0``
+``7.0.0`` |  | ``intel-compilers/2025.1.1``
 ``7.0.0`` |  | ``intel-compilers/2025.2.0``
 ``7.0.0`` |  | ``llvm-compilers/20.1.8``
 ``7.0.0`` |  | ``nvidia-compilers/25.3-CUDA-12.8.0``

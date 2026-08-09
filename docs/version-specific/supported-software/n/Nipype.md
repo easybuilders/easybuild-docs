@@ -11,6 +11,7 @@ Nipype is a Python project that provides a uniform interface to existing neuroim
 version | toolchain
 --------|----------
 ``1.10.0`` | ``gfbf/2025a``
+``1.11.0`` | ``gfbf/2025b``
 ``1.9.2`` | ``gfbf/2024a``
 
 

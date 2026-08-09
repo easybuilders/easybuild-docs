@@ -11,6 +11,7 @@ Python library for analytical evaluation and integration of Gaussian-type basis 
 version | toolchain
 --------|----------
 ``0.1.0`` | ``foss/2025a``
+``0.1.0`` | ``foss/2026.1``
 ``20210904`` | ``intel/2022a``
 
 

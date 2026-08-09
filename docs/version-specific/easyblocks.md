@@ -66,6 +66,7 @@
       - EB_Amber
       - EB_AOCL_minus_LAPACK
       - EB_Armadillo
+      - EB_Bandicoot
       - EB_CGAL
       - EB_Clang
       - EB_Eigen
@@ -205,6 +206,7 @@
   - EB_WRF
   - ExtensionEasyBlock
     - Cargo
+      - CargoMesonNinja
       - CargoPythonBundle
       - CargoPythonPackage
     - EB_Scipion
@@ -278,6 +280,7 @@
     - EB_tbb
     - EB_VTune
   - MesonNinja
+    - CargoMesonNinja
     - CMakeNinja
       - EB_ESPResSo
       - EB_pocl
@@ -312,6 +315,7 @@
 - **Extension**
   - ExtensionEasyBlock
     - Cargo
+      - CargoMesonNinja
       - CargoPythonBundle
       - CargoPythonPackage
     - EB_Scipion

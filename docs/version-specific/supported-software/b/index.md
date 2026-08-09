@@ -20,6 +20,7 @@ search:
  * [bamtofastq](bamtofastq.md)
  * [BamTools](BamTools.md)
  * [Bandage](Bandage.md)
+ * [Bandicoot](Bandicoot.md)
  * [barrnap](barrnap.md)
  * [basemap](basemap.md)
  * [bases2fastq](bases2fastq.md)

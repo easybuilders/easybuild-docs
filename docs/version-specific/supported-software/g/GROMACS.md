@@ -30,6 +30,7 @@ version | versionsuffix | toolchain
 ``2024.4`` |  | ``foss/2024a``
 ``2024.4`` | ``-CUDA-12.8.0-PLUMED-2.9.4`` | ``foss/2025a``
 ``2024.4`` | ``-PLUMED-2.9.4`` | ``foss/2025a``
+``2025.2`` | ``-PLUMED-2.9.4-native`` | ``foss/2025a``
 ``2025.2`` |  | ``foss/2025a``
 ``2025.2`` |  | ``foss/2025b``
 ``2025.2`` |  | ``lfoss/2025b``
@@ -38,6 +39,7 @@ version | versionsuffix | toolchain
 ``2025.3`` |  | ``foss/2025b``
 ``2025.4`` | ``-CUDA-12.9.1`` | ``foss/2025b``
 ``2025.4`` |  | ``foss/2025b``
+``2026.2`` | ``-CUDA-12.9.1`` | ``foss/2025b``
 ``2026.2`` |  | ``foss/2025b``
 
 

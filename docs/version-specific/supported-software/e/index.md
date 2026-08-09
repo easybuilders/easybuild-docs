@@ -63,6 +63,7 @@ search:
  * [epct](epct.md)
  * [epiScanpy](epiScanpy.md)
  * [EpiSCORE](EpiSCORE.md)
+ * [eQuilibrator](eQuilibrator.md)
  * [ErlangOTP](ErlangOTP.md)
  * [ESIpy](ESIpy.md)
  * [ESM-2](ESM-2.md)

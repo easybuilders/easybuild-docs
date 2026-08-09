@@ -15,6 +15,7 @@ search:
  * [watchfiles](watchfiles.md)
  * [Wayland](Wayland.md)
  * [Waylandpp](Waylandpp.md)
+ * [wayvnc](wayvnc.md)
  * [WCSLIB](WCSLIB.md)
  * [WebDataset](WebDataset.md)
  * [WebKitGTK+](WebKitGTK+.md)

@@ -267,6 +267,7 @@ search:
  * [pyMBE](pyMBE.md)
  * [PyMC](PyMC.md)
  * [PyMDE](PyMDE.md)
+ * [pynco](pynco.md)
  * [pyNVML](pyNVML.md)
  * [pyodbc](pyodbc.md)
  * [Pyomo](Pyomo.md)
