@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -3921,6 +3921,17 @@
     <span class="md-ellipsis">
       
         sanity_check_mod_files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.sanity_check_module_environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sanity_check_module_environment
       
     </span>
   </a>
@@ -14678,6 +14689,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.sanity_check_module_environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sanity_check_module_environment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#easybuild.framework.easyblock.EasyBlock.sanity_check_rpath" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -15122,7 +15144,7 @@ The EasyBlock class should serve as a base class for all easyblocks.</p>
 
     <div class="doc doc-contents ">
 
-        <p>Shortcut the get the module name.</p>
+        <p>Shortcut to get the module name.</p>
 
     </div>
 
@@ -15210,7 +15232,7 @@ The EasyBlock class should serve as a base class for all easyblocks.</p>
 
     <div class="doc doc-contents ">
 
-        <p>Shortcut the get the module version.</p>
+        <p>Shortcut to get the module version.</p>
 
     </div>
 
@@ -15660,7 +15682,7 @@ cleanup_builddir is False, otherwise we remove the installation</p>
 
 
 <h3 id="easybuild.framework.easyblock.EasyBlock.expand_module_search_path" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">expand_module_search_path</span><span class="p">(</span><span class="n">search_path</span><span class="p">,</span> <span class="n">path_type</span><span class="o">=</span><span class="n">ModEnvVarType</span><span class="o">.</span><span class="n">PATH_WITH_FILES</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">expand_module_search_path</span><span class="p">(</span><span class="o">*</span><span class="n">_</span><span class="p">,</span> <span class="o">**</span><span class="n">__</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyblock.EasyBlock.expand_module_search_path" class="headerlink" title="Permanent link">&para;</a></h3>
 
@@ -16647,7 +16669,7 @@ to the devel module file. So now you can module load $EBDEVELNAME.</p>
 
 
 <h3 id="easybuild.framework.easyblock.EasyBlock.make_extension_list" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">make_extension_list</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">make_extension_list</span><span class="p">(</span><span class="n">formatted</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyblock.EasyBlock.make_extension_list" class="headerlink" title="Permanent link">&para;</a></h3>
 
@@ -16657,6 +16679,35 @@ to the devel module file. So now you can module load $EBDEVELNAME.</p>
         <p>Return a list of extension names and their versions included in this installation</p>
 <p>Each entry should be a (name, version) tuple or just (name, ) if no version exists.
 Custom EasyBlocks may override this to add extensions that cannot be found automatically.</p>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>formatted</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>boolean indicating whether the extension name should be formatted. If True, format using
+the function defined by the exts_formatter parameter.</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>True</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
     </div>
@@ -17635,7 +17686,7 @@ run_test_cases (bool): run tests after building (e.g.: make test)</p>
 
 
 <h3 id="easybuild.framework.easyblock.EasyBlock.sanity_check_load_module" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">sanity_check_load_module</span><span class="p">(</span><span class="n">extension</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">extra_modules</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">sanity_check_load_module</span><span class="p">(</span><span class="n">extension</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">extra_modules</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyblock.EasyBlock.sanity_check_load_module" class="headerlink" title="Permanent link">&para;</a></h3>
 
@@ -17643,6 +17694,34 @@ run_test_cases (bool): run tests after building (e.g.: make test)</p>
     <div class="doc doc-contents ">
 
         <p>Load module to prepare environment for sanity check</p>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>extension</code>
+            </td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>DEPRECATED: indicates whether this method is called for an extension</p>
+              </div>
+              <p>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
     </div>
@@ -17661,6 +17740,24 @@ run_test_cases (bool): run tests after building (e.g.: make test)</p>
     <div class="doc doc-contents ">
 
         <p>Check installation for Fortran .mod files</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.sanity_check_module_environment" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">sanity_check_module_environment</span><span class="p">(</span><span class="n">extra_modules</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">check_loaded</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.sanity_check_module_environment" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Load/Unload module for performing sanity checks</p>
 
 
     </div>
@@ -18412,7 +18509,7 @@ by removing them from list of Extension instances to install (self.ext_instances
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["content.code.copy", "navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../../js/asciinema-player-2.6.1.js"></script>
       
