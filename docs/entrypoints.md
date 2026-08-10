@@ -11,12 +11,16 @@ Easybuild makes use of entrypoints for extending the following:
   take precedence, regardless of the priority of the entrypoint hooks.
 - **Easyblocks** (`easybuild.easyblock`): Allow extending the set of available easyblocks, which are used to build and install software.
 - **Toolchains** (`easybuild.toolchain`): Allow extending the set of available toolchains, which are used to build and install software.
+- **Rich Themes**: (`easybuild.rich_theme`): Allow customizing the theme used for the rich console output of EasyBuild
+- **Rich Highlighter**: (`easybuild.rich_highlighter`): Allow customizing the syntax highlighting used for the rich console output of EasyBuild
 
 The entrypoints needs to be decorated with the appropriate class in order for them to be recognized and used:
 
 - For hooks: `EntrypointHook`
 - For easyblocks: `EntrypointEasyblock`
 - For toolchains: `EntrypointToolchain`
+- For rich themes: `EntrypointRichTheme`
+- For rich highlighters: `EntrypointRichHighlighter`
 
 ## Validation {: #entrypoints_validation }
 
@@ -30,6 +34,8 @@ Entrypoints are validated the moment they are registered:
   Furthermore, to avoid conflicts, an error will be raised if two separate module attempts to register the same toolchain name (`tc.NAME`).
   The `prepend` argument used for the decorator class will determine whether the entrypoint toolchain is prepended to the list of available toolchains.
   This allows to override an existing toolchain, or to only add a new one to the list of available toolchains.
+- **Rich Themes**: The entrypoint will check that the decorated functions returns a dictionary used to build the Theme.
+- **Rich Highlighters**: The entrypoint will check that the decorated functions returns a list of strings used to build the Highlighter.
 
 
 ## Examples {: #entrypoints_examples }
@@ -149,3 +155,52 @@ class MyToolchain(Toolchain):
 
 The custom toolchain needs only to be a subclass of `easybuild.tools.toolchain.Toolchain`, which means it does not need to inherit directly from `Toolchain` but can also be used on top of other existing toolchain objects (e.g. `GCC`, `OpenMPI`, etc.).
 
+
+### Rich Themes and Highlighters {: #entrypoints_examples_rich_themes }
+
+`pyproject.toml` example:
+
+```toml
+...
+
+[project.entry-points."easybuild.rich_theme"]
+"my_rich_theme" = "my_module.rich:my_rich_theme"
+
+[project.entry-points."easybuild.rich_highlighter"]
+"my_rich_highlighter" = "my_module.rich:my_rich_highlighter"
+...
+```
+
+And the `my_module/rich.py` file would look like this:
+
+```python
+from easybuild.tools.entrypoints import EntrypointRichTheme, EntrypointRichHighlighter
+
+@EntrypointRichTheme()
+def my_rich_theme():
+    # Return a dictionary used to build the Theme
+    return {
+        "easybuild.success": "bold green",
+        "easybuild.error": "bold red",
+        "easybuild.prefix1": "grey50",
+        # ...
+    }
+
+@EntrypointRichHighlighter()
+def my_rich_highlighter():
+    # Return a list of strings used to build the Highlighter
+    return [
+        r'(?P<error>(ERROR)|(FAILED)|(FAIL))',
+        r'(?P<success>(COMPLETED)|(SUCCESS)|(PASSED)|(PASS)|(OK))',
+        # ...
+    ]
+```
+
+!!! note
+    The `easybuild.` prefix is used to avoid conflicts with existing styles and highlighters and is automatically add internally when building the Highlighter object.
+    In this way an `(?P<error>...)` capture group in the highlighter will be associated with the `easybuild.error` style in the theme.
+
+EasyBuild will always use the default `ReprHighlighter` from rich in combination with the defined highlighter patterns (taking precedence over the base one in case of overlap).
+
+The `python -m rich.theme` command can be used to inspect the default styles that can be used in a theme.
+The `python -m rich.color` command can be used to inspect the available colors that can be used in a theme.
