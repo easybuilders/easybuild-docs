@@ -25,10 +25,10 @@ two requirements must be met:
     via the `required_deps` property method.
 - EasyBuild must be able to start a single shell command
     (asynchronously, so it runs in the background) to perform the
-    installation of the extension via the `run_async` method, and check
+    installation of the extension via the `install_extension_async` method, and check
     whether the command has completed via the `async_cmd_check` method.
 
-For an example of how `required_deps`, `run_async`, and
+For an example of how `required_deps`, `install_extension_async`, and
 `async_cmd_check` can be implemented, see the
 [RPackage](https://github.com/easybuilders/easybuild-easyblocks/blob/main/easybuild/easyblocks/generic/rpackage.py)
 easyblock.
