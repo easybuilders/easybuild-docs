@@ -151,7 +151,6 @@ This can be done as follows (copy-paste the GitHub token at the `Password:` prom
 ``` console
 $ python
 >>> import getpass, keyring
->>> keyring.set_keyring(keyring.backends.file.PlaintextKeyring())
 >>> keyring.set_password('github_token', 'easybuild_test', getpass.getpass())
 Password:
 >>> exit()
