@@ -16036,27 +16036,27 @@ Just copy the sources to the install dir, or use the specified install command.<
 </li>
 </ul>
 <h3 id="example-easyconfig-for-binary-easyblock">Example easyconfig for <code>Binary</code> easyblock<a class="headerlink" href="#example-easyconfig-for-binary-easyblock" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;Binary&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">'Binary'</span>
 
-<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Platanus&#39;</span>
-<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;1.2.1&#39;</span>
-<span class="n">versionsuffix</span> <span class="o">=</span> <span class="s1">&#39;-linux-x86_64&#39;</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s1">'Platanus'</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">'1.2.1'</span>
+<span class="n">versionsuffix</span> <span class="o">=</span> <span class="s1">'-linux-x86_64'</span>
 
-<span class="n">homepage</span> <span class="o">=</span> <span class="s1">&#39;http://platanus.bio.titech.ac.jp/&#39;</span>
-<span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;PLATform for Assembling NUcleotide Sequences&quot;&quot;&quot;</span>
+<span class="n">homepage</span> <span class="o">=</span> <span class="s1">'http://platanus.bio.titech.ac.jp/'</span>
+<span class="n">description</span> <span class="o">=</span> <span class="s2">"""PLATform for Assembling NUcleotide Sequences"""</span>
 
 <span class="n">toolchain</span> <span class="o">=</span> <span class="n">SYSTEM</span>
 
-<span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;http://platanus.bio.titech.ac.jp/Platanus_release/20130901010201&#39;</span><span class="p">]</span>
-<span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;platanus&#39;</span><span class="p">]</span>
-<span class="n">checksums</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;02cf92847ec704d010a54df293b9c60a&#39;</span><span class="p">]</span>
+<span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'http://platanus.bio.titech.ac.jp/Platanus_release/20130901010201'</span><span class="p">]</span>
+<span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'platanus'</span><span class="p">]</span>
+<span class="n">checksums</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'02cf92847ec704d010a54df293b9c60a'</span><span class="p">]</span>
 
 <span class="n">sanity_check_paths</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;files&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;platanus&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;dirs&#39;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s1">'files'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'platanus'</span><span class="p">],</span>
+    <span class="s1">'dirs'</span><span class="p">:</span> <span class="p">[],</span>
 <span class="p">}</span>
 
-<span class="n">moduleclass</span> <span class="o">=</span> <span class="s1">&#39;bio&#39;</span>
+<span class="n">moduleclass</span> <span class="o">=</span> <span class="s1">'bio'</span>
 </code></pre></div>
 <h2 id="buildenv"><code>BuildEnv</code><a class="headerlink" href="#buildenv" title="Permanent link">&para;</a></h2>
 <p>(derives from <a href="#bundle"><code>Bundle</code></a>)</p>
@@ -16185,23 +16185,23 @@ Just copy the sources to the install dir, or use the specified install command.<
 </li>
 </ul>
 <h3 id="example-easyconfig-for-bundle-easyblock">Example easyconfig for <code>Bundle</code> easyblock<a class="headerlink" href="#example-easyconfig-for-bundle-easyblock" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;Bundle&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">'Bundle'</span>
 
-<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Autotools&#39;</span>
-<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;20150119&#39;</span> <span class="c1"># date of the most recent change</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s1">'Autotools'</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">'20150119'</span> <span class="c1"># date of the most recent change</span>
 
-<span class="n">homepage</span> <span class="o">=</span> <span class="s1">&#39;http://autotools.io&#39;</span>
-<span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;This bundle collect the standard GNU build tools: Autoconf, Automake and libtool&quot;&quot;&quot;</span>
+<span class="n">homepage</span> <span class="o">=</span> <span class="s1">'http://autotools.io'</span>
+<span class="n">description</span> <span class="o">=</span> <span class="s2">"""This bundle collect the standard GNU build tools: Autoconf, Automake and libtool"""</span>
 
-<span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;GCC&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;4.9.2&#39;</span><span class="p">}</span>
+<span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'name'</span><span class="p">:</span> <span class="s1">'GCC'</span><span class="p">,</span> <span class="s1">'version'</span><span class="p">:</span> <span class="s1">'4.9.2'</span><span class="p">}</span>
 
 <span class="n">dependencies</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">(</span><span class="s1">&#39;Autoconf&#39;</span><span class="p">,</span> <span class="s1">&#39;2.69&#39;</span><span class="p">),</span> <span class="c1"># 20120424</span>
-    <span class="p">(</span><span class="s1">&#39;Automake&#39;</span><span class="p">,</span> <span class="s1">&#39;1.15&#39;</span><span class="p">),</span> <span class="c1"># 20150105</span>
-    <span class="p">(</span><span class="s1">&#39;libtool&#39;</span><span class="p">,</span> <span class="s1">&#39;2.4.5&#39;</span><span class="p">),</span> <span class="c1"># 20150119</span>
+    <span class="p">(</span><span class="s1">'Autoconf'</span><span class="p">,</span> <span class="s1">'2.69'</span><span class="p">),</span> <span class="c1"># 20120424</span>
+    <span class="p">(</span><span class="s1">'Automake'</span><span class="p">,</span> <span class="s1">'1.15'</span><span class="p">),</span> <span class="c1"># 20150105</span>
+    <span class="p">(</span><span class="s1">'libtool'</span><span class="p">,</span> <span class="s1">'2.4.5'</span><span class="p">),</span> <span class="c1"># 20150119</span>
 <span class="p">]</span>
 
-<span class="n">moduleclass</span> <span class="o">=</span> <span class="s1">&#39;devel&#39;</span>
+<span class="n">moduleclass</span> <span class="o">=</span> <span class="s1">'devel'</span>
 </code></pre></div>
 <h2 id="cmakemake"><code>CMakeMake</code><a class="headerlink" href="#cmakemake" title="Permanent link">&para;</a></h2>
 <p>(derives from <a href="#configuremake"><code>ConfigureMake</code></a>)</p>
@@ -16343,36 +16343,36 @@ Just copy the sources to the install dir, or use the specified install command.<
 </li>
 </ul>
 <h3 id="example-easyconfig-for-cmakemake-easyblock">Example easyconfig for <code>CMakeMake</code> easyblock<a class="headerlink" href="#example-easyconfig-for-cmakemake-easyblock" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;CMakeMake&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">'CMakeMake'</span>
 
-<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;ANTs&#39;</span>
-<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;2.1.0rc3&#39;</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s1">'ANTs'</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">'2.1.0rc3'</span>
 
-<span class="n">homepage</span> <span class="o">=</span> <span class="s1">&#39;http://stnava.github.io/ANTs/&#39;</span>
-<span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;ANTs extracts information from complex datasets that include imaging. ANTs is useful for managing,</span>
-<span class="s2"> interpreting and visualizing multidimensional data.&quot;&quot;&quot;</span>
+<span class="n">homepage</span> <span class="o">=</span> <span class="s1">'http://stnava.github.io/ANTs/'</span>
+<span class="n">description</span> <span class="o">=</span> <span class="s2">"""ANTs extracts information from complex datasets that include imaging. ANTs is useful for managing,</span>
+<span class="s2"> interpreting and visualizing multidimensional data."""</span>
 
-<span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;goolf&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;1.5.14&#39;</span><span class="p">}</span>
-<span class="n">toolchainopts</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;pic&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+<span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'name'</span><span class="p">:</span> <span class="s1">'goolf'</span><span class="p">,</span> <span class="s1">'version'</span><span class="p">:</span> <span class="s1">'1.5.14'</span><span class="p">}</span>
+<span class="n">toolchainopts</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'pic'</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
 
-<span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;https://github.com/stnava/ANTs/archive/&#39;</span><span class="p">]</span>
-<span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;v</span><span class="si">%(version)s</span><span class="s1">.tar.gz&#39;</span><span class="p">]</span>
+<span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'https://github.com/stnava/ANTs/archive/'</span><span class="p">]</span>
+<span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'v</span><span class="si">%(version)s</span><span class="s1">.tar.gz'</span><span class="p">]</span>
 
-<span class="n">builddependencies</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;CMake&#39;</span><span class="p">,</span> <span class="s1">&#39;3.0.2&#39;</span><span class="p">)]</span>
+<span class="n">builddependencies</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">'CMake'</span><span class="p">,</span> <span class="s1">'3.0.2'</span><span class="p">)]</span>
 
-<span class="n">skipsteps</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;install&#39;</span><span class="p">]</span>
-<span class="n">buildopts</span> <span class="o">=</span> <span class="s1">&#39; &amp;&amp; mkdir -p </span><span class="si">%(installdir)s</span><span class="s1"> &amp;&amp; cp -r * </span><span class="si">%(installdir)s</span><span class="s1">/&#39;</span>
+<span class="n">skipsteps</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'install'</span><span class="p">]</span>
+<span class="n">buildopts</span> <span class="o">=</span> <span class="s1">' &amp;&amp; mkdir -p </span><span class="si">%(installdir)s</span><span class="s1"> &amp;&amp; cp -r * </span><span class="si">%(installdir)s</span><span class="s1">/'</span>
 
 <span class="n">parallel</span> <span class="o">=</span> <span class="mi">1</span>
 
 <span class="n">separate_build_dir</span> <span class="o">=</span> <span class="kc">True</span>
 
 <span class="n">sanity_check_paths</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;files&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;bin/ANTS&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;dirs&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;lib&#39;</span><span class="p">],</span>
+    <span class="s1">'files'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'bin/ANTS'</span><span class="p">],</span>
+    <span class="s1">'dirs'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'lib'</span><span class="p">],</span>
 <span class="p">}</span>
 
-<span class="n">moduleclass</span> <span class="o">=</span> <span class="s1">&#39;data&#39;</span>
+<span class="n">moduleclass</span> <span class="o">=</span> <span class="s1">'data'</span>
 </code></pre></div>
 <h2 id="cmakemakecp"><code>CMakeMakeCp</code><a class="headerlink" href="#cmakemakecp" title="Permanent link">&para;</a></h2>
 <p>(derives from <a href="#cmakemake"><code>CMakeMake</code></a>, <a href="#makecp"><code>MakeCp</code></a>)</p>
@@ -17796,25 +17796,25 @@ Just run the specified command for all sources, and copy specified files to the 
 </li>
 </ul>
 <h3 id="example-easyconfig-for-configuremake-easyblock">Example easyconfig for <code>ConfigureMake</code> easyblock<a class="headerlink" href="#example-easyconfig-for-configuremake-easyblock" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;ConfigureMake&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">'ConfigureMake'</span>
 
-<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;zsync&#39;</span>
-<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;0.6.2&#39;</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s1">'zsync'</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">'0.6.2'</span>
 
-<span class="n">homepage</span> <span class="o">=</span> <span class="s1">&#39;http://zsync.moria.org.uk/&#39;</span>
-<span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;zsync-0.6.2: Optimising file distribution program, a 1-to-many rsync&quot;&quot;&quot;</span>
+<span class="n">homepage</span> <span class="o">=</span> <span class="s1">'http://zsync.moria.org.uk/'</span>
+<span class="n">description</span> <span class="o">=</span> <span class="s2">"""zsync-0.6.2: Optimising file distribution program, a 1-to-many rsync"""</span>
 
-<span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;ictce&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;5.3.0&#39;</span><span class="p">}</span>
+<span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'name'</span><span class="p">:</span> <span class="s1">'ictce'</span><span class="p">,</span> <span class="s1">'version'</span><span class="p">:</span> <span class="s1">'5.3.0'</span><span class="p">}</span>
 
 <span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="n">SOURCE_TAR_BZ2</span><span class="p">]</span>
-<span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;http://zsync.moria.org.uk/download/&#39;</span><span class="p">]</span>
+<span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'http://zsync.moria.org.uk/download/'</span><span class="p">]</span>
 
 <span class="n">sanity_check_paths</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;files&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;bin/zsync&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;dirs&#39;</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="s1">'files'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'bin/zsync'</span><span class="p">],</span>
+    <span class="s1">'dirs'</span><span class="p">:</span> <span class="p">[]</span>
 <span class="p">}</span>
 
-<span class="n">moduleclass</span> <span class="o">=</span> <span class="s1">&#39;tools&#39;</span>
+<span class="n">moduleclass</span> <span class="o">=</span> <span class="s1">'tools'</span>
 </code></pre></div>
 <h2 id="configuremakepythonpackage"><code>ConfigureMakePythonPackage</code><a class="headerlink" href="#configuremakepythonpackage" title="Permanent link">&para;</a></h2>
 <p>(derives from <a href="#configuremake"><code>ConfigureMake</code></a>, <a href="#pythonpackage"><code>PythonPackage</code></a>)</p>
@@ -18070,35 +18070,35 @@ Just run the specified command for all sources, and copy specified files to the 
 </li>
 </ul>
 <h3 id="example-easyconfig-for-configuremakepythonpackage-easyblock">Example easyconfig for <code>ConfigureMakePythonPackage</code> easyblock<a class="headerlink" href="#example-easyconfig-for-configuremakepythonpackage-easyblock" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;ConfigureMakePythonPackage&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">'ConfigureMakePythonPackage'</span>
 
-<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;PyQt&#39;</span>
-<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;4.11.3&#39;</span>
-<span class="n">versionsuffix</span> <span class="o">=</span> <span class="s1">&#39;-Python-</span><span class="si">%(pyver)s</span><span class="s1">&#39;</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s1">'PyQt'</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">'4.11.3'</span>
+<span class="n">versionsuffix</span> <span class="o">=</span> <span class="s1">'-Python-</span><span class="si">%(pyver)s</span><span class="s1">'</span>
 
-<span class="n">homepage</span> <span class="o">=</span> <span class="s1">&#39;http://www.riverbankcomputing.co.uk/software/pyqt&#39;</span>
-<span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;PyQt is a set of Python v2 and v3 bindings for Digia&#39;s Qt application framework.&quot;&quot;&quot;</span>
+<span class="n">homepage</span> <span class="o">=</span> <span class="s1">'http://www.riverbankcomputing.co.uk/software/pyqt'</span>
+<span class="n">description</span> <span class="o">=</span> <span class="s2">"""PyQt is a set of Python v2 and v3 bindings for Digia's Qt application framework."""</span>
 
-<span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;goolf&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;1.5.14&#39;</span><span class="p">}</span>
+<span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'name'</span><span class="p">:</span> <span class="s1">'goolf'</span><span class="p">,</span> <span class="s1">'version'</span><span class="p">:</span> <span class="s1">'1.5.14'</span><span class="p">}</span>
 
-<span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;</span><span class="si">%(name)s</span><span class="s1">-x11-gpl-</span><span class="si">%(version)s</span><span class="s1">.tar.gz&#39;</span><span class="p">]</span>
-<span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;http://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-</span><span class="si">%(version)s</span><span class="s1">&#39;</span><span class="p">]</span>
+<span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'</span><span class="si">%(name)s</span><span class="s1">-x11-gpl-</span><span class="si">%(version)s</span><span class="s1">.tar.gz'</span><span class="p">]</span>
+<span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'http://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-</span><span class="si">%(version)s</span><span class="s1">'</span><span class="p">]</span>
 
 <span class="n">dependencies</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;2.7.9&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;SIP&#39;</span><span class="p">,</span> <span class="s1">&#39;4.16.4&#39;</span><span class="p">,</span> <span class="n">versionsuffix</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Qt&#39;</span><span class="p">,</span> <span class="s1">&#39;4.8.6&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">'Python'</span><span class="p">,</span> <span class="s1">'2.7.9'</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">'SIP'</span><span class="p">,</span> <span class="s1">'4.16.4'</span><span class="p">,</span> <span class="n">versionsuffix</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">'Qt'</span><span class="p">,</span> <span class="s1">'4.8.6'</span><span class="p">),</span>
 <span class="p">]</span>
 
-<span class="n">configopts</span> <span class="o">=</span> <span class="s2">&quot;configure-ng.py --confirm-license&quot;</span>
-<span class="n">configopts</span> <span class="o">+=</span> <span class="s2">&quot; --destdir=</span><span class="si">%%</span><span class="s2">(installdir)s/lib/python</span><span class="si">%(pyshortver)s</span><span class="s2">/site-packages &quot;</span>
-<span class="n">configopts</span> <span class="o">+=</span> <span class="s2">&quot; --no-sip-files&quot;</span>
+<span class="n">configopts</span> <span class="o">=</span> <span class="s2">"configure-ng.py --confirm-license"</span>
+<span class="n">configopts</span> <span class="o">+=</span> <span class="s2">" --destdir=</span><span class="si">%%</span><span class="s2">(installdir)s/lib/python</span><span class="si">%(pyshortver)s</span><span class="s2">/site-packages "</span>
+<span class="n">configopts</span> <span class="o">+=</span> <span class="s2">" --no-sip-files"</span>
 
-<span class="n">options</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;modulename&#39;</span><span class="p">:</span> <span class="s1">&#39;PyQt4&#39;</span><span class="p">}</span>
+<span class="n">options</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'modulename'</span><span class="p">:</span> <span class="s1">'PyQt4'</span><span class="p">}</span>
 
-<span class="n">modextrapaths</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;PYTHONPATH&#39;</span><span class="p">:</span> <span class="s1">&#39;lib/python</span><span class="si">%(pyshortver)s</span><span class="s1">/site-packages&#39;</span><span class="p">}</span>
+<span class="n">modextrapaths</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'PYTHONPATH'</span><span class="p">:</span> <span class="s1">'lib/python</span><span class="si">%(pyshortver)s</span><span class="s1">/site-packages'</span><span class="p">}</span>
 
-<span class="n">moduleclass</span> <span class="o">=</span> <span class="s1">&#39;vis&#39;</span>
+<span class="n">moduleclass</span> <span class="o">=</span> <span class="s1">'vis'</span>
 </code></pre></div>
 <h2 id="craytoolchain"><code>CrayToolchain</code><a class="headerlink" href="#craytoolchain" title="Permanent link">&para;</a></h2>
 <p>(derives from <a href="#bundle"><code>Bundle</code></a>)</p>

@@ -12511,7 +12511,7 @@ only unpacking a source tarball, and building and installing a (base) toolchain 
 the (deprecated)</strong> <code>dummy</code> <strong>toolchain</strong> (see also <a class="autorefs autorefs-internal" href="#system_toolchain_impact_deprecated_dummy">Impact of deprecating dummy toolchain</a>).</p>
 <h2 id="system_toolchain_usage">Using the <code>system</code> compiler<a class="headerlink" href="#system_toolchain_usage" title="Permanent link">&para;</a></h2>
 <p>To use the <code>system</code> toolchain in an easyconfig file, simply use <code>'system'</code> as toolchain name:</p>
-<div class="highlight"><pre><span></span><code><span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;system&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'name'</span><span class="p">:</span> <span class="s1">'system'</span><span class="p">,</span> <span class="s1">'version'</span><span class="p">:</span> <span class="s1">''</span><span class="p">}</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -12531,7 +12531,7 @@ see <a class="autorefs autorefs-internal" href="#system_toolchain_motivation_dep
 <p>The only impact of deprecating the <code>dummy</code> toolchain is that a warning will be printed whenever an easyconfig file
 that still uses the <code>dummy</code> toolchain is parsed:</p>
 <div class="highlight"><pre><span></span><code>WARNING: Deprecated functionality, will no longer work in v5.0:
-Use of &#39;dummy&#39; toolchain is deprecated, use &#39;system&#39; toolchain instead;
+Use of 'dummy' toolchain is deprecated, use 'system' toolchain instead;
 see http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html for more information
 </code></pre></div>
 <p>Other than this warning, <strong>there is no impact on the EasyBuild functionality whatsoever</strong>.</p>

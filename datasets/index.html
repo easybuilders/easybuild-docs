@@ -12420,9 +12420,9 @@
 <p>Sam Moors (VUB) gave a talk about this idea at EUM'24 (see <a href="https://users.ugent.be/~kehoste/eum24/019_eum24_datasets.pdf">slides</a> + <a href="https://www.youtube.com/watch?v=13q_aKDDv9k&amp;list=PLhnGtSmEGEQild9FmlP8Qmz9Csc_gOJKF&amp;index=20&amp;pp=gAQBiAQB">recording</a>).</p>
 <h2 id="data_sources-easyconfig-parameter"><code>data_sources</code> easyconfig parameter<a class="headerlink" href="#data_sources-easyconfig-parameter" title="Permanent link">&para;</a></h2>
 <p>A dedicated easyconfig parameter <code>data_sources</code> was introduced for this:</p>
-<div class="highlight"><pre><span></span><code><span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;https://example.com/data/&quot;</span><span class="p">]</span>
-<span class="n">data_sources</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;example-data-</span><span class="si">%(version)s</span><span class="s2">.tar.gz&quot;</span><span class="p">]</span>
-<span class="n">checksums</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;d3adb33fc0ff33d3adb33fc0ff33d3adb33fc0ff33d3adb33fc0ff33d3adb33f&quot;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"https://example.com/data/"</span><span class="p">]</span>
+<span class="n">data_sources</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"example-data-</span><span class="si">%(version)s</span><span class="s2">.tar.gz"</span><span class="p">]</span>
+<span class="n">checksums</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"d3adb33fc0ff33d3adb33fc0ff33d3adb33fc0ff33d3adb33fc0ff33d3adb33f"</span><span class="p">]</span>
 </code></pre></div>
 <h2 id="configuration-settings-for-datasets">Configuration settings for datasets<a class="headerlink" href="#configuration-settings-for-datasets" title="Permanent link">&para;</a></h2>
 <p>Additional EasyBuild configuration settings were introduced, to control:</p>
@@ -12434,7 +12434,7 @@
 <p>A new <a href="https://github.com/easybuilders/easybuild-easyblocks/blob/main/easybuild/easyblocks/generic/dataset.py">generic easyblock <code>Dataset</code></a> was added that can be used in easyconfig files to install datasets, see for example the <a href="https://github.com/easybuilders/easybuild-easyconfigs/blob/main/easybuild/easyconfigs/r/RFdiffusion-models/RFdiffusion-models-1.1.0.eb"><code>RFdiffusion-models-1.1.0.eb</code></a> easyconfig file.</p>
 <h2 id="installing-datasets">Installing datasets<a class="headerlink" href="#installing-datasets" title="Permanent link">&para;</a></h2>
 <p>Installing datasets works exactly the same way as installed software:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># specify location for &quot;sources&quot; for data installations</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># specify location for "sources" for data installations</span>
 $<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_SOURCEPATH_DATA</span><span class="o">=</span>/sources/data
 
 <span class="c1"># use /data for data installations</span>

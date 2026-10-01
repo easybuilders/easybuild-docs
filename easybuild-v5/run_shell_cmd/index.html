@@ -12423,13 +12423,13 @@ to a named tuple with multiple fields, the most prominent ones being:</p>
 <ul>
 <li>Basic usage:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">cmd</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;preinstallopts&#39;</span><span class="p">],</span> <span class="n">install_cmd</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;installopts&#39;</span><span class="p">]])</span>
+<div class="highlight"><pre><span></span><code><span class="n">cmd</span> <span class="o">=</span> <span class="s1">' '</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">'preinstallopts'</span><span class="p">],</span> <span class="n">install_cmd</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">'installopts'</span><span class="p">]])</span>
 <span class="n">run_shell_cmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
 </code></pre></div>
 <ul>
 <li>Get error code for both failure and non-failure of the command, as otherwise <code>run_shell_cmd</code> will raise <code>RunShellCmdError</code>. Additionally, don't display this command in terminal output:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">cmd</span> <span class="o">=</span> <span class="s2">&quot;cmake --version&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="n">cmd</span> <span class="o">=</span> <span class="s2">"cmake --version"</span>
 <span class="n">res</span> <span class="o">=</span> <span class="n">run_shell_cmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">hidden</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fail_on_error</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">out</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">output</span>
 <span class="n">ec</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">exit_code</span>

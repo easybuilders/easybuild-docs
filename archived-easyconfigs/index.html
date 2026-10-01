@@ -12454,14 +12454,14 @@ contents of the <code>__archive__</code> subdirectory.</p>
 <code>--consider-archived-easyconfigs</code> configuration option to make EasyBuild look
 into the archive when it seeks easyconfigs (e.g., with <code>--search</code> or
 <code>--robot</code>).</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>-S<span class="w"> </span><span class="s1">&#39;^goolfc&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>-S<span class="w"> </span><span class="s1">'^goolfc'</span>
 <span class="go">CFGS=/home/example/work/easybuild-easyconfigs/easybuild/easyconfigs</span>
 <span class="go">  * $CFGS1/g/goolfc/goolfc-2016.08.eb</span>
 <span class="go">  * $CFGS1/g/goolfc/goolfc-2016.10.eb</span>
 
 <span class="go">Note: 6 matching archived easyconfig(s) found, use --consider-archived-easyconfigs to see them</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>-S<span class="w"> </span><span class="s1">&#39;^goolfc&#39;</span><span class="w"> </span>--consider-archived-easyconfigs
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>-S<span class="w"> </span><span class="s1">'^goolfc'</span><span class="w"> </span>--consider-archived-easyconfigs
 <span class="go">CFGS=/home/example/easybuild-easyconfigs/easybuild/easyconfigs</span>
 <span class="go">  * $CFGS/g/goolfc/goolfc-2016.08.eb</span>
 <span class="go">  * $CFGS/g/goolfc/goolfc-2016.10.eb</span>

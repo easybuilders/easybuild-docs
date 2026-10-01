@@ -12280,8 +12280,8 @@ a particular software package by specifying the dependency only on the <code>&lt
 <p>One particular example where this is employed is for <code>Java</code>. Since the <code>2018b</code> generation of
 the <a class="autorefs autorefs-internal" href="../common-toolchains/#common_toolchains">Common toolchains</a>, we use a wrapper for <code>Java</code> (e.g., <code>Java/17</code>), rather than
 depending on a specific version (e.g., <code>Java/17.0.6</code>):</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># specify dependency on Java/17 &quot;wrapper&quot;, rather than a specific Java version</span>
-<span class="n">dependencies</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="s1">&#39;17&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">SYSTEM</span><span class="p">)]</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># specify dependency on Java/17 "wrapper", rather than a specific Java version</span>
+<span class="n">dependencies</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">'Java'</span><span class="p">,</span> <span class="s1">'17'</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="n">SYSTEM</span><span class="p">)]</span>
 </code></pre></div>
 <p>This has a couple of advantages:</p>
 <ul>

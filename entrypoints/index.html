@@ -12462,9 +12462,9 @@
 <p>In the case of the <code>pyproject.toml</code>, the entrypoints can be defined using the following syntax:</p>
 <div class="highlight"><pre><span></span><code><span class="p">...</span>
 
-<span class="k">[project.entry-points.</span><span class="s2">&quot;GROUP_NAME&quot;</span><span class="k">]</span>
-<span class="s2">&quot;ENTRYPOINT_NAME1&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;import_path1:object1&quot;</span>
-<span class="s2">&quot;ENTRYPOINT_NAME2&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;import_path2:object2&quot;</span>
+<span class="k">[project.entry-points.</span><span class="s2">"GROUP_NAME"</span><span class="k">]</span>
+<span class="s2">"ENTRYPOINT_NAME1"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"import_path1:object1"</span>
+<span class="s2">"ENTRYPOINT_NAME2"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"import_path2:object2"</span>
 
 <span class="p">...</span>
 </code></pre></div>
@@ -12484,9 +12484,9 @@ For example: <code>myblock = "my_module.sub_module:MyBlock"</code> requires that
 <p><code>pyproject.toml</code> example:</p>
 <div class="highlight"><pre><span></span><code><span class="p">...</span>
 
-<span class="k">[project.entry-points.</span><span class="s2">&quot;easybuild.hooks&quot;</span><span class="k">]</span>
-<span class="s2">&quot;my_hook&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;my_module.hook:my_hook_start_func&quot;</span>
-<span class="s2">&quot;my_hook2&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;my_module.hook:my_hook_config_func&quot;</span>
+<span class="k">[project.entry-points.</span><span class="s2">"easybuild.hooks"</span><span class="k">]</span>
+<span class="s2">"my_hook"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"my_module.hook:my_hook_start_func"</span>
+<span class="s2">"my_hook2"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"my_module.hook:my_hook_config_func"</span>
 
 <span class="p">...</span>
 </code></pre></div>
@@ -12506,8 +12506,8 @@ For example: <code>myblock = "my_module.sub_module:MyBlock"</code> requires that
 <p><code>pyproject.toml</code> example:</p>
 <div class="highlight"><pre><span></span><code><span class="p">...</span>
 
-<span class="k">[project.entry-points.</span><span class="s2">&quot;easybuild.easyblock&quot;</span><span class="k">]</span>
-<span class="s2">&quot;my_easyblock&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;my_module.easyblock:MyEasyBlock&quot;</span>
+<span class="k">[project.entry-points.</span><span class="s2">"easybuild.easyblock"</span><span class="k">]</span>
+<span class="s2">"my_easyblock"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"my_module.easyblock:MyEasyBlock"</span>
 
 <span class="p">...</span>
 </code></pre></div>
@@ -12517,7 +12517,7 @@ For example: <code>myblock = "my_module.sub_module:MyBlock"</code> requires that
 
 <span class="nd">@EntrypointEasyblock</span><span class="p">()</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">MyEasyBlock</span><span class="p">(</span><span class="n">EasyBlock</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;My custom easyblock.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""My custom easyblock."""</span>
 
     <span class="c1"># Define the methods and properties of your easyblock here</span>
 </code></pre></div>
@@ -12526,8 +12526,8 @@ For example: <code>myblock = "my_module.sub_module:MyBlock"</code> requires that
 <p><code>pyproject.toml</code> example:</p>
 <div class="highlight"><pre><span></span><code><span class="p">...</span>
 
-<span class="k">[project.entry-points.</span><span class="s2">&quot;easybuild.toolchain&quot;</span><span class="k">]</span>
-<span class="s2">&quot;my_toolchain&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;my_module.toolchain:MyToolchain&quot;</span>
+<span class="k">[project.entry-points.</span><span class="s2">"easybuild.toolchain"</span><span class="k">]</span>
+<span class="s2">"my_toolchain"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"my_module.toolchain:MyToolchain"</span>
 <span class="p">...</span>
 </code></pre></div>
 <p>And the <code>my_module/toolchain.py</code> file would look like this:</p>
@@ -12536,7 +12536,7 @@ For example: <code>myblock = "my_module.sub_module:MyBlock"</code> requires that
 
 <span class="nd">@EntrypointToolchain</span><span class="p">(</span><span class="n">prepend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">MyToolchain</span><span class="p">(</span><span class="n">Toolchain</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;My custom toolchain.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""My custom toolchain."""</span>
 
     <span class="c1"># Define the methods and properties of your toolchain here</span>
 </code></pre></div>

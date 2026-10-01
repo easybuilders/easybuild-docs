@@ -13390,7 +13390,7 @@ following:</p>
 </code></pre></div>
 <p>To avoid adding the variables in the environment of every single command while
 maintaining a clean shell environment, an alias can be defined as follows.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">alias</span><span class="w"> </span><span class="nv">eb_devel</span><span class="o">=</span><span class="s1">&#39;PYTHONPATH=&quot;${EB_DEVEL_ROOT}/easybuild-framework:${EB_DEVEL_ROOT}/easybuild-easyblocks:${PYTHONPATH}&quot; EASYBUILD_ROBOT_PATHS=&quot;${EB_DEVEL_ROOT}/easybuild-easyconfigs/easybuild/easyconfigs&quot; ${EB_DEVEL_ROOT}/easybuild-framework/eb&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nb">alias</span><span class="w"> </span><span class="nv">eb_devel</span><span class="o">=</span><span class="s1">'PYTHONPATH="${EB_DEVEL_ROOT}/easybuild-framework:${EB_DEVEL_ROOT}/easybuild-easyblocks:${PYTHONPATH}" EASYBUILD_ROBOT_PATHS="${EB_DEVEL_ROOT}/easybuild-easyconfigs/easybuild/easyconfigs" ${EB_DEVEL_ROOT}/easybuild-framework/eb'</span>
 </code></pre></div>
 <p>With the alias defined, the command to install <code>ReFrame-4.3.3.eb</code> and its
 dependencies now becomes the following:</p>
@@ -13481,7 +13481,7 @@ the actual commit.</p>
 <code>easybuild/tools/filetools.py</code>:</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>easybuild/tools/filetools.py
 git<span class="w"> </span>status<span class="w">  </span><span class="c1"># check which files are staged for commit</span>
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;example commit message for changes to filetools.py&quot;</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"example commit message for changes to filetools.py"</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -13572,7 +13572,7 @@ updated branch to GitHub.</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>mybranch
 <span class="c1"># make changes...</span>
 git<span class="w"> </span>add<span class="w"> </span>&lt;paths<span class="w"> </span>to<span class="w"> </span>changed<span class="w"> </span>files&gt;
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;example commit message for additional changes&quot;</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"example commit message for additional changes"</span>
 git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>mybranch
 </code></pre></div>
 <p>Updating a pull request will trigger GitHub Actions to re-test your

@@ -12938,8 +12938,8 @@ only alphanumeric characters and <code>_</code> are allowed. Any other character
 <p>The <code>encode_class_name</code> function provided in <code>easybuild.tools.filetools</code> returns the expected class name
 for a given software name; for example:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">easybuild.tools.filetools</span><span class="w"> </span><span class="kn">import</span> <span class="n">encode_class_name</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">encode_class_name</span><span class="p">(</span><span class="s1">&#39;netCDF-Fortran&#39;</span><span class="p">)</span>
-<span class="s1">&#39;EB_netCDF_minus_Fortran&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">encode_class_name</span><span class="p">(</span><span class="s1">'netCDF-Fortran'</span><span class="p">)</span>
+<span class="s1">'EB_netCDF_minus_Fortran'</span>
 </code></pre></div>
 <h3 id="implementing_easyblocks_naming_scheme_class_name_generic">Class name for generic easyblocks<a class="headerlink" href="#implementing_easyblocks_naming_scheme_class_name_generic" title="Permanent link">&para;</a></h3>
 <p>For <em>generic</em> easyblocks, the class name does <em>not</em> include an <code>EB_</code> prefix (since there is no need for an escaping
@@ -12967,10 +12967,10 @@ and underscores.</p>
 <p>The <code>get_module_path</code> function provided in <code>easybuild.framework.easyconfig.easyconfig</code> returns the (full)
 module location for a particular software name or easyblock class name; for example:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">easybuild.framework.easyconfig.easyconfig</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_module_path</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">get_module_path</span><span class="p">(</span><span class="s1">&#39;netCDF-Fortran&#39;</span><span class="p">)</span>
-<span class="s1">&#39;easybuild.easyblocks.netcdf_fortran&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">get_module_path</span><span class="p">(</span><span class="s1">&#39;EB_netCDF_minus_Fortran&#39;</span><span class="p">)</span>
-<span class="s1">&#39;easybuild.easyblocks.netcdf_fortran&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">get_module_path</span><span class="p">(</span><span class="s1">'netCDF-Fortran'</span><span class="p">)</span>
+<span class="s1">'easybuild.easyblocks.netcdf_fortran'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">get_module_path</span><span class="p">(</span><span class="s1">'EB_netCDF_minus_Fortran'</span><span class="p">)</span>
+<span class="s1">'easybuild.easyblocks.netcdf_fortran'</span>
 </code></pre></div>
 <p>The location of the Python module is determined by whether the easyblock is generic or software-specific.
 Generic easyblocks are located in the <code>easybuid.easyblocks.generic</code> namespace, while software-specific easyblocks
@@ -12987,13 +12987,13 @@ use <code>--include-easyblocks</code> to make EasyBuild use additional or custom
 <span class="kn">from</span><span class="w"> </span><span class="nn">easybuild.tools.run</span><span class="w"> </span><span class="kn">import</span> <span class="n">run_cmd</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">EB_Example</span><span class="p">(</span><span class="n">EasyBlock</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Custom easyblock for Example&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Custom easyblock for Example"""</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">configure_step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Custom implementation of configure step for Example&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Custom implementation of configure step for Example"""</span>
 
         <span class="c1"># run configure.sh to configure the build</span>
-        <span class="n">run_cmd</span><span class="p">(</span><span class="s2">&quot;./configure.sh --install-prefix=</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">installdir</span><span class="p">)</span>
+        <span class="n">run_cmd</span><span class="p">(</span><span class="s2">"./configure.sh --install-prefix=</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">installdir</span><span class="p">)</span>
 </code></pre></div>
 <p>Each easyblock includes an implementation of a <code>class</code> that (directly or indirectly) derives from the abstract
 <code>EasyBlock</code> class.</p>
@@ -13014,13 +13014,13 @@ redefining it entirely, since we call out to the original <code>configure_step</
 <span class="kn">from</span><span class="w"> </span><span class="nn">easybuild.tools.filetools</span><span class="w"> </span><span class="kn">import</span> <span class="n">copy_file</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">EB_Example</span><span class="p">(</span><span class="n">ConfigureMake</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Custom easyblock for Example&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Custom easyblock for Example"""</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">configure_step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Custom implementation of configure step for Example&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Custom implementation of configure step for Example"""</span>
 
         <span class="c1"># use example make.cfg for x86-64</span>
-        <span class="n">copy_file</span><span class="p">(</span><span class="s1">&#39;make.cfg.x86&#39;</span><span class="p">,</span> <span class="s1">&#39;make.cfg&#39;</span><span class="p">)</span>
+        <span class="n">copy_file</span><span class="p">(</span><span class="s1">'make.cfg.x86'</span><span class="p">,</span> <span class="s1">'make.cfg'</span><span class="p">)</span>
 
         <span class="c1"># call out to original configure_step implementation of ConfigureMake easyblock</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">EB_Example</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">configure_step</span><span class="p">()</span>
@@ -13029,12 +13029,12 @@ redefining it entirely, since we call out to the original <code>configure_step</
 <h3 id="implementing_easyblocks_default_parameters">Default easyconfig parameters<a class="headerlink" href="#implementing_easyblocks_default_parameters" title="Permanent link">&para;</a></h3>
 <p>All of the parameters which are "set" in an easyconfig file (see <a class="autorefs autorefs-internal" href="../version-specific/easyconfig-parameters/#vsd_avail_easyconfig_params">Available easyconfig parameters</a>)
 become key-value pairs in the <code>self.cfg</code> dictionary.  For instance, if the easyconfig file specifies</p>
-<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;example&#39;</span>
-<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;2.5.3&#39;</span>
-<span class="n">versionsuffix</span> <span class="o">=</span> <span class="s1">&#39;-Python-3.7.4&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s1">'example'</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">'2.5.3'</span>
+<span class="n">versionsuffix</span> <span class="o">=</span> <span class="s1">'-Python-3.7.4'</span>
 </code></pre></div>
 <p>then these three parameters are accessible within an easyblock via</p>
-<div class="highlight"><pre><span></span><code><span class="n">longform</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span><span class="s1">&#39;/&#39;</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;version&#39;</span><span class="p">],</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;versionsuffix&#39;</span><span class="p">])</span>
+<div class="highlight"><pre><span></span><code><span class="n">longform</span> <span class="o">=</span> <span class="s1">''</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">'name'</span><span class="p">],</span><span class="s1">'/'</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">'version'</span><span class="p">],</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">'versionsuffix'</span><span class="p">])</span>
 </code></pre></div>
 <p>You can use this notation successfully in your easyblock.  A few of the most commonly used parameters can be referenced
 directly,</p>
@@ -13045,7 +13045,7 @@ directly,</p>
 <li><strong>self.all_dependencies</strong>: combines <code>builddependencies</code>, <code>dependencies</code>, and <code>toolchain</code>, in one dictionary</li>
 </ul>
 <p>So in your easyblock code, you may replace the above expression with</p>
-<div class="highlight"><pre><span></span><code><span class="n">longform</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span><span class="s1">&#39;/&#39;</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">version</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;versionsuffix&#39;</span><span class="p">])</span>
+<div class="highlight"><pre><span></span><code><span class="n">longform</span> <span class="o">=</span> <span class="s1">''</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span><span class="s1">'/'</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">version</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">'versionsuffix'</span><span class="p">])</span>
 </code></pre></div>
 <p>The other easyconfig parameters, and any additional <a class="autorefs autorefs-internal" title="Custom easyconfig parameters" href="#implementing_easyblocks_custom_parameters">custom parameters</a>
 which you define for your own easyblock, will not be automatically mapped.
@@ -13058,14 +13058,14 @@ This is done via the <code>extra_options</code> static method. Custom parameters
 <span class="kn">from</span><span class="w"> </span><span class="nn">easybuild.framework.easyconfig</span><span class="w"> </span><span class="kn">import</span> <span class="n">CUSTOM</span><span class="p">,</span> <span class="n">MANDATORY</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">EB_Example</span><span class="p">(</span><span class="n">ConfigureMake</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Custom easyblock for Example&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Custom easyblock for Example"""</span>
 
     <span class="nd">@staticmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">extra_options</span><span class="p">():</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Custom easyconfig parameters for Example&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Custom easyconfig parameters for Example"""</span>
         <span class="n">extra_vars</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;required_example_param&#39;</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;Help text for required example custom parameter&quot;</span><span class="p">,</span> <span class="n">MANDATORY</span><span class="p">],</span>
-            <span class="s1">&#39;optional_example_param&#39;</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;Help text for (optional) example custom parameter&quot;</span><span class="p">,</span> <span class="n">CUSTOM</span><span class="p">],</span>
+            <span class="s1">'required_example_param'</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s2">"Help text for required example custom parameter"</span><span class="p">,</span> <span class="n">MANDATORY</span><span class="p">],</span>
+            <span class="s1">'optional_example_param'</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s2">"Help text for (optional) example custom parameter"</span><span class="p">,</span> <span class="n">CUSTOM</span><span class="p">],</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">ConfigureMake</span><span class="o">.</span><span class="n">extra_options</span><span class="p">(</span><span class="n">extra_vars</span><span class="p">)</span>
 </code></pre></div>
@@ -13079,12 +13079,12 @@ can be initialised. These can be used for sharing information between different 
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">easybuild.framework.easyblock</span><span class="w"> </span><span class="kn">import</span> <span class="n">EasyBlock</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">EB_Example</span><span class="p">(</span><span class="n">EasyBlock</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Custom easyblock for Example&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Custom easyblock for Example"""</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Constructor for Example easyblock, initialises class variables.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Constructor for Example easyblock, initialises class variables."""</span>
 
-        <span class="c1"># call out to original constructor first, so &#39;self&#39; (i.e. the class instance) is initialised</span>
+        <span class="c1"># call out to original constructor first, so 'self' (i.e. the class instance) is initialised</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">EB_Example</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
         <span class="c1"># initialise class variables</span>
@@ -13141,16 +13141,16 @@ successful or not.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">easybuild.framework.easyblock</span><span class="w"> </span><span class="kn">import</span> <span class="n">EasyBlock</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">EB_Example</span><span class="p">(</span><span class="n">EasyBlock</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Custom easyblock for Example&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Custom easyblock for Example"""</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">sanity_check_step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Custom sanity check for Example.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Custom sanity check for Example."""</span>
 
         <span class="n">custom_paths</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;files&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;bin/example&#39;</span><span class="p">],</span>
-            <span class="s1">&#39;dirs&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">'files'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'bin/example'</span><span class="p">],</span>
+            <span class="s1">'dirs'</span><span class="p">:</span> <span class="p">[],</span>
         <span class="p">}</span>
-        <span class="n">custom_commands</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;example --version&#39;</span><span class="p">]</span>
+        <span class="n">custom_commands</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'example --version'</span><span class="p">]</span>
 
         <span class="c1"># call out to parent to do the actual sanity checking, pass through custom paths and commands</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">EB_Example</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">sanity_check_step</span><span class="p">(</span><span class="n">custom_paths</span><span class="o">=</span><span class="n">custom_paths</span><span class="p">,</span> <span class="n">custom_commands</span><span class="o">=</span><span class="n">custom_commands</span><span class="p">)</span>
@@ -13168,21 +13168,21 @@ For this, it is recommended to use <code>LooseVersion</code> rather than directl
 <span class="kn">from</span><span class="w"> </span><span class="nn">easybuild.framework.easyblock</span><span class="w"> </span><span class="kn">import</span> <span class="n">EasyBlock</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">EB_Example</span><span class="p">(</span><span class="n">EasyBlock</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Custom easyblock for Example&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Custom easyblock for Example"""</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">sanity_check_step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Custom sanity check for Example.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Custom sanity check for Example."""</span>
 
         <span class="n">custom_paths</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;files&#39;</span><span class="p">:</span> <span class="p">[],</span>
-            <span class="s1">&#39;dirs&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">'files'</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">'dirs'</span><span class="p">:</span> <span class="p">[],</span>
         <span class="p">}</span>
 
-        <span class="c1"># in older version, the binary used to be named &#39;EXAMPLE&#39; rather than &#39;example&#39;</span>
-        <span class="k">if</span> <span class="n">LooseVersion</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">version</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">LooseVersion</span><span class="p">(</span><span class="s1">&#39;1.0&#39;</span><span class="p">):</span>
-            <span class="n">custom_paths</span><span class="p">[</span><span class="s1">&#39;files&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;bin/EXAMPLE&#39;</span><span class="p">)</span>
+        <span class="c1"># in older version, the binary used to be named 'EXAMPLE' rather than 'example'</span>
+        <span class="k">if</span> <span class="n">LooseVersion</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">version</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">LooseVersion</span><span class="p">(</span><span class="s1">'1.0'</span><span class="p">):</span>
+            <span class="n">custom_paths</span><span class="p">[</span><span class="s1">'files'</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'bin/EXAMPLE'</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">custom_paths</span><span class="p">[</span><span class="s1">&#39;files&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;bin/example&#39;</span><span class="p">)</span>
+            <span class="n">custom_paths</span><span class="p">[</span><span class="s1">'files'</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'bin/example'</span><span class="p">)</span>
 
         <span class="nb">super</span><span class="p">(</span><span class="n">EB_Example</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">sanity_check_step</span><span class="p">(</span><span class="n">custom_paths</span><span class="o">=</span><span class="n">custom_paths</span><span class="p">)</span>
 </code></pre></div>

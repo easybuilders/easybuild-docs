@@ -13216,10 +13216,10 @@ yum<span class="w"> </span>--skip-broken<span class="w"> </span>--quiet<span cla
 
 <span class="c1"># install EasyBuild using pip</span>
 pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>setuptools
-pip<span class="w"> </span>install<span class="w"> </span><span class="s1">&#39;vsc-install&lt;0.11.4&#39;</span><span class="w"> </span><span class="s1">&#39;vsc-base&lt;2.9.0&#39;</span>
+pip<span class="w"> </span>install<span class="w"> </span><span class="s1">'vsc-install&lt;0.11.4'</span><span class="w"> </span><span class="s1">'vsc-base&lt;2.9.0'</span>
 pip<span class="w"> </span>install<span class="w"> </span>easybuild
 
-<span class="c1"># create &#39;easybuild&#39; user (if missing)</span>
+<span class="c1"># create 'easybuild' user (if missing)</span>
 id<span class="w"> </span>easybuild<span class="w"> </span><span class="o">||</span><span class="w"> </span>useradd<span class="w"> </span>easybuild
 
 <span class="c1"># create /app software installation prefix + /scratch sandbox directory</span>
@@ -13230,13 +13230,13 @@ id<span class="w"> </span>easybuild<span class="w"> </span><span class="o">||</s
 cat<span class="w"> </span>&gt;<span class="w"> </span>/etc/lmodrc.lua<span class="w"> </span><span class="s">&lt;&lt; EOF</span>
 <span class="s">scDescriptT = {</span>
 <span class="s">  {</span>
-<span class="s">    [&quot;dir&quot;]       = &quot;/app/lmodcache&quot;,</span>
-<span class="s">    [&quot;timestamp&quot;] = &quot;/app/lmodcache/timestamp&quot;,</span>
+<span class="s">    ["dir"]       = "/app/lmodcache",</span>
+<span class="s">    ["timestamp"] = "/app/lmodcache/timestamp",</span>
 <span class="s">  },</span>
 <span class="s">}</span>
 <span class="s">EOF</span>
 
-<span class="c1"># change to &#39;easybuild&#39; user</span>
+<span class="c1"># change to 'easybuild' user</span>
 su<span class="w"> </span>-<span class="w"> </span>easybuild
 
 <span class="c1"># verbose commands, exit on first error</span>
@@ -13264,19 +13264,19 @@ eb<span class="w"> </span>Python-3.6.4-foss-2018a.eb<span class="w"> </span>--ro
 mkdir<span class="w"> </span>-p<span class="w"> </span>/app/lmodcache
 <span class="nv">$LMOD_DIR</span>/update_lmod_system_cache_files<span class="w"> </span>-d<span class="w"> </span>/app/lmodcache<span class="w"> </span>-t<span class="w"> </span>/app/lmodcache/timestamp<span class="w"> </span>/app/modules/all
 
-<span class="c1"># exit from &#39;easybuild&#39; user</span>
+<span class="c1"># exit from 'easybuild' user</span>
 <span class="nb">exit</span>
 
 <span class="c1"># cleanup, everything in /scratch is assumed to be temporary</span>
 rm<span class="w"> </span>-rf<span class="w"> </span>/scratch/*
 
 <span class="gh">%runscript</span>
-<span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span>
+<span class="nb">eval</span><span class="w"> </span><span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span>
 
 <span class="gh">%environment</span>
-<span class="c1"># make sure that &#39;module&#39; and &#39;ml&#39; commands are defined</span>
+<span class="c1"># make sure that 'module' and 'ml' commands are defined</span>
 <span class="nb">source</span><span class="w"> </span>/etc/profile
-<span class="c1"># increase threshold time for Lmod to write cache in $HOME (which we don&#39;t want to do)</span>
+<span class="c1"># increase threshold time for Lmod to write cache in $HOME (which we don't want to do)</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">LMOD_SHORT_TIME</span><span class="o">=</span><span class="m">86400</span>
 <span class="c1"># purge any modules that may be loaded outside container</span>
 module<span class="w"> </span>--force<span class="w"> </span>purge
@@ -13308,10 +13308,10 @@ recently executed a <code>sudo</code> command in the same shell session):</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>GCC-6.4.0-2.28.eb<span class="w"> </span>--containerize<span class="w"> </span>--container-config<span class="w"> </span><span class="nv">bootstrap</span><span class="o">=</span>localimage,from<span class="o">=</span>/tmp/example.sif<span class="w"> </span>--container-build-image<span class="w"> </span>--experimental
 <span class="go">== temporary log file in case of crash /tmp/eb-aYXYC8/easybuild-8uXhvu.log</span>
 <span class="go">== Singularity tool found at /usr/bin/singularity</span>
-<span class="go">== Singularity version &#39;2.4.6&#39; is 2.4 or higher ... OK</span>
+<span class="go">== Singularity version '2.4.6' is 2.4 or higher ... OK</span>
 <span class="go">== Singularity definition file created at /home/example/.local/easybuild/containers/Singularity.GCC-6.4.0-2.28</span>
-<span class="go">== Running &#39;sudo /usr/bin/singularity build  /home/example/.local/easybuild/containers/GCC-6.4.0-2.28.sif /home/example/.local/easybuild/containers/Singularity.GCC-6.4.0-2.28&#39;, you may need to enter your &#39;sudo&#39; password...</span>
-<span class="go">== (streaming) output for command &#39;sudo /usr/bin/singularity build  /home/example/.local/easybuild/containers/GCC-6.4.0-2.28.sif /home/example/.local/easybuild/containers/Singularity.GCC-6.4.0-2.28&#39;:</span>
+<span class="go">== Running 'sudo /usr/bin/singularity build  /home/example/.local/easybuild/containers/GCC-6.4.0-2.28.sif /home/example/.local/easybuild/containers/Singularity.GCC-6.4.0-2.28', you may need to enter your 'sudo' password...</span>
+<span class="go">== (streaming) output for command 'sudo /usr/bin/singularity build  /home/example/.local/easybuild/containers/GCC-6.4.0-2.28.sif /home/example/.local/easybuild/containers/Singularity.GCC-6.4.0-2.28':</span>
 <span class="go">Using container recipe deffile: /home/example/.local/easybuild/containers/Singularity.GCC-6.4.0-2.28</span>
 <span class="go">Sanitizing environment</span>
 <span class="go">Adding base Singularity environment to container</span>
@@ -13338,7 +13338,7 @@ recently executed a <code>sudo</code> command in the same shell session):</p>
 </code></pre></div>
 <p>The inspect the container image, you can use <code>singularity shell</code> to
 start a shell session <em>in</em> the container:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>singularity<span class="w"> </span>shell<span class="w"> </span>--shell<span class="w"> </span><span class="s2">&quot;/bin/bash --norc&quot;</span><span class="w"> </span><span class="nv">$HOME</span>/.local/easybuild/containers/GCC-6.4.0-2.28.sif
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>singularity<span class="w"> </span>shell<span class="w"> </span>--shell<span class="w"> </span><span class="s2">"/bin/bash --norc"</span><span class="w"> </span><span class="nv">$HOME</span>/.local/easybuild/containers/GCC-6.4.0-2.28.sif
 
 <span class="go">Singularity GCC-6.4.0-2.28.sif:~&gt; module list</span>
 

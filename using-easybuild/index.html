@@ -13093,9 +13093,9 @@ the supported parameters are a very rich set.</p>
 <span class="go">prebuildopts:         Extra options pre-passed to build command. (default: )</span>
 <span class="go">preconfigopts:        Extra options pre-passed to configure. (default: )</span>
 <span class="go">preinstallopts:       Extra prefix options for installation. (default: )</span>
-<span class="go">runtest(*):           Indicates if a test should be run after make; should specify argument after make (for e.g.,&quot;test&quot; for make test) (default: None)</span>
-<span class="go">sanity_check_commands:        format: [(name, options)] e.g. [(&#39;gzip&#39;,&#39;-h&#39;)]. Using a non-tuple is equivalent to (name, &#39;-h&#39;) (default: [])</span>
-<span class="go">sanity_check_paths:   List of files and directories to check (format: {&#39;files&#39;:&lt;list&gt;, &#39;dirs&#39;:&lt;list&gt;}) (default: {})</span>
+<span class="go">runtest(*):           Indicates if a test should be run after make; should specify argument after make (for e.g.,"test" for make test) (default: None)</span>
+<span class="go">sanity_check_commands:        format: [(name, options)] e.g. [('gzip','-h')]. Using a non-tuple is equivalent to (name, '-h') (default: [])</span>
+<span class="go">sanity_check_paths:   List of files and directories to check (format: {'files':&lt;list&gt;, 'dirs':&lt;list&gt;}) (default: {})</span>
 <span class="go">skip:                 Skip existing software (default: False)</span>
 <span class="go">skipsteps:            Skip these steps (default: [])</span>
 <span class="go">source_urls:          List of URLs for source files (default: [])</span>
@@ -13103,7 +13103,7 @@ the supported parameters are a very rich set.</p>
 <span class="go">stop:                 Keyword to halt the build process after a certain step. (default: None)</span>
 <span class="go">tests:                List of test-scripts to run after install. A test script should return a non-zero exit status to fail (default: [])</span>
 <span class="go">unpack_options:       Extra options for unpacking source (default: None)</span>
-<span class="go">unwanted_env_vars:    List of environment variables that shouldn&#39;t be set during build (default: [])</span>
+<span class="go">unwanted_env_vars:    List of environment variables that shouldn't be set during build (default: [])</span>
 <span class="go">versionprefix:        Additional prefix for software version (placed before version and toolchain name) (default: )</span>
 <span class="go">versionsuffix:        Additional suffix for software version (placed after toolchain name) (default: )</span>
 
@@ -13150,7 +13150,7 @@ the supported parameters are a very rich set.</p>
 <span class="go">modtclfooter:         Footer to include in generated module file (Tcl syntax) (default: )</span>
 <span class="go">moduleclass:          Module class to be used for this software (default: base)</span>
 <span class="go">moduleforceunload:    Force unload of all modules when loading the extension (default: False)</span>
-<span class="go">moduleloadnoconflict: Don&#39;t check for conflicts, unload other versions instead  (default: False)</span>
+<span class="go">moduleloadnoconflict: Don't check for conflicts, unload other versions instead  (default: False)</span>
 
 <span class="go">OTHER</span>
 <span class="go">-----</span>
@@ -13213,13 +13213,13 @@ command line options. All easyconfig files available in the robot search path ar
 <p>For example, to see which easyconfig files are available for the software package named <code>Mesquite</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--search<span class="w"> </span>mesquite
 <span class="go">== temporary log file in case of crash /tmp/eb-_TYdTf/easybuild-iRJ2vb.log</span>
-<span class="go">== Searching (case-insensitive) for &#39;mesquite&#39; in /home/example/easybuild-easyconfigs/easybuild/easyconfigs</span>
+<span class="go">== Searching (case-insensitive) for 'mesquite' in /home/example/easybuild-easyconfigs/easybuild/easyconfigs</span>
 <span class="go">* /home/example/easybuild-easyconfigs/easybuild/easyconfigs/m/Mesquite/Mesquite-2.3.0-GCCcore-8.3.0.eb</span>
 </code></pre></div>
 <p>The same query with <code>-S</code> is more readable, when there is a joint path that can be collapsed to a variable like <code>$CFGS1</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>-S<span class="w"> </span>mesquite
 <span class="go">== temporary log file in case of crash /tmp/eb-5diJjn/easybuild-nUXlkj.log</span>
-<span class="go">== Searching (case-insensitive) for &#39;mesquite&#39; in /home/example/easybuild-easyconfigs/easybuild/easyconfigs</span>
+<span class="go">== Searching (case-insensitive) for 'mesquite' in /home/example/easybuild-easyconfigs/easybuild/easyconfigs</span>
 <span class="go">CFGS1=/home/example/easybuild-easyconfigs/easybuild/easyconfigs/m/Mesquite</span>
 <span class="go">* $CFGS1/Mesquite-2.3.0-GCCcore-8.3.0.eb</span>
 </code></pre></div>
@@ -13228,16 +13228,16 @@ command line options. All easyconfig files available in the robot search path ar
 GCC v11.x as a toolchain:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>-S<span class="w"> </span>^GCC-11.
 <span class="go">== temporary log file in case of crash /tmp/eb-PpwTwm/easybuild-b8yrOG.log</span>
-<span class="go">== Searching (case-insensitive) for &#39;^GCC-11.&#39; in /home/example/easybuild-easyconfigs/easybuild/easyconfigs</span>
+<span class="go">== Searching (case-insensitive) for '^GCC-11.' in /home/example/easybuild-easyconfigs/easybuild/easyconfigs</span>
 <span class="go">CFGS1=/home/example/easybuild-easyconfigs/easybuild/easyconfigs/g/GCC</span>
 <span class="go"> * $CFGS1/GCC-11.1.0.eb</span>
 <span class="go"> * $CFGS1/GCC-11.2.0.eb</span>
 <span class="go"> * $CFGS1/GCC-11.3.0.eb</span>
 </code></pre></div>
 <p>Or, to find all easyconfig files for matplotlib versions 3.5.1 and 3.5.2 that use the <code>intel</code> toolchain:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>-S<span class="w"> </span><span class="s1">&#39;^matplotlib-3.5.[12].*intel&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>-S<span class="w"> </span><span class="s1">'^matplotlib-3.5.[12].*intel'</span>
 <span class="go">== temporary log file in case of crash /tmp/eb-Dv5LEJ/easybuild-xpGGSF.log</span>
-<span class="go">== Searching (case-insensitive) for &#39;^matplotlib-3.5.[12].*intel&#39; in /home/example/easybuild-easyconfigs/easybuild/easyconfigs</span>
+<span class="go">== Searching (case-insensitive) for '^matplotlib-3.5.[12].*intel' in /home/example/easybuild-easyconfigs/easybuild/easyconfigs</span>
 <span class="go">CFGS1=/home/example/easybuild-easyconfigs/easybuild/easyconfigs/m/matplotlib</span>
 <span class="go"> * $CFGS1/matplotlib-3.5.1-intel-2020b.eb</span>
 <span class="go"> * $CFGS1/matplotlib-3.5.2-intel-2022a.eb</span>
@@ -13324,7 +13324,7 @@ when the active module naming scheme requires some additional information (e.g.,
 <div class="highlight"><pre><span></span><code><span class="go">Irresolvable dependencies encountered: GCC/4.7.2</span>
 </code></pre></div>
 <p>or:</p>
-<div class="highlight"><pre><span></span><code><span class="go">Failed to find easyconfig file &#39;GCC-4.7.2.eb&#39; when determining module name for: {...}</span>
+<div class="highlight"><pre><span></span><code><span class="go">Failed to find easyconfig file 'GCC-4.7.2.eb' when determining module name for: {...}</span>
 </code></pre></div>
 </div>
 <h3 id="default-robot-search-path">Default robot search path<a class="headerlink" href="#default-robot-search-path" title="Permanent link">&para;</a></h3>

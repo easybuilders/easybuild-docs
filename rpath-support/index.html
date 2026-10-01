@@ -12555,7 +12555,7 @@ script for <code>gcc</code>, which tweaks the list of command line arguments for
 <p>When EasyBuild is used in debug mode (<code>--debug</code>), the RPATH wrapper
 script will generate log files in the temporary directory used by
 EasyBuild, for debugging purposes:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>ls<span class="w"> </span>-l<span class="w"> </span>/tmp/eb-_hoff5/rpath_wrapper*log<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s1">&#39;s/vsc40023/example/g&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>ls<span class="w"> </span>-l<span class="w"> </span>/tmp/eb-_hoff5/rpath_wrapper*log<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s1">'s/vsc40023/example/g'</span>
 <span class="go">-rw-rw-r-- 1 example example  739692 Nov 16 15:50 /tmp/eb-_hoff5/rpath_wrapper_gcc.log</span>
 <span class="go">-rw-rw-r-- 1 example example   27814 Nov 16 15:50 /tmp/eb-_hoff5/rpath_wrapper_g++.log</span>
 <span class="go">-rw-rw-r-- 1 example example 1589626 Nov 16 15:50 /tmp/eb-_hoff5/rpath_wrapper_ld.gold.log</span>
@@ -12581,7 +12581,7 @@ expressions for paths. Only paths that <em>match</em> either of the specified
 patterns will be filtered out.</p>
 <p>For example, to filter out locations in either <code>/opt/lib</code> or
 <code>/apps/lib</code>, use:</p>
-<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--rpath-filter<span class="o">=</span><span class="s1">&#39;/opt/lib.*,/apps/lib.*&#39;</span>
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--rpath-filter<span class="o">=</span><span class="s1">'/opt/lib.*,/apps/lib.*'</span>
 </code></pre></div>
 <p>By default, no RPATH entries will be injected for system locations that
 start with either <code>/lib</code> (incl. <code>/lib64</code>) or <code>/usr</code> (which is equivalent
@@ -12592,7 +12592,7 @@ with <code>--rpath-filter='/lib.*,/usr.*'</code>).</p>
 so if you want to retain the filtering for system locations you
 should also include <code>/lib.*</code> and <code>/usr.*</code>.
 For example, to also filter out paths starting with <code>/example</code>:</p>
-<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--rpath-filter<span class="o">=</span><span class="s1">&#39;/lib.*,/usr.*,/example.*&#39;</span>
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--rpath-filter<span class="o">=</span><span class="s1">'/lib.*,/usr.*,/example.*'</span>
 </code></pre></div>
 </div>
 <h2 id="rpath_support_LD_LIBRARY_PATH">Relation to <code>$LD_LIBRARY_PATH</code><a class="headerlink" href="#rpath_support_LD_LIBRARY_PATH" title="Permanent link">&para;</a></h2>

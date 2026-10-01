@@ -12479,7 +12479,7 @@ We refer to such modules as <em>external modules</em>.</p>
 <p>External modules can be used as dependencies, by including the module name in the <code>dependencies</code> list (see
 <a class="autorefs autorefs-internal" href="../writing-easyconfig-files/#dependency_specs">Dependencies</a>), along with the <code>EXTERNAL_MODULE</code> constant marker.</p>
 <p>For example, to specify the readily available module <code>fftw/3.3.4.2</code> as a dependency:</p>
-<div class="highlight"><pre><span></span><code><span class="n">dependencies</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;fftw/3.3.4.2&#39;</span><span class="p">,</span> <span class="n">EXTERNAL_MODULE</span><span class="p">)]</span>
+<div class="highlight"><pre><span></span><code><span class="n">dependencies</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">'fftw/3.3.4.2'</span><span class="p">,</span> <span class="n">EXTERNAL_MODULE</span><span class="p">)]</span>
 </code></pre></div>
 <p>For such dependencies, EasyBuild will:</p>
 <ul>
@@ -12510,7 +12510,7 @@ see <a href="https://github.com/easybuilders/easybuild-framework/blob/main/etc/c
 to <code>--external-modules-metadata</code>, using wildcard characters like <code>*</code> and <code>?</code>.</p>
 <p>For example, to specify that the metadata for external modules in all <code>*.cfg</code> files in the directory <code>/example</code>
 should be taken into account, you can use:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_EXTERNAL_MODULES_METADATA</span><span class="o">=</span><span class="s1">&#39;/example/*.cfg&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_EXTERNAL_MODULES_METADATA</span><span class="o">=</span><span class="s1">'/example/*.cfg'</span>
 </code></pre></div>
 <h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
 <p>For example, the following file provides metadata for a handful of modules that may be provided on Cray systems:</p>

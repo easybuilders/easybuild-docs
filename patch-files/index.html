@@ -12512,19 +12512,19 @@ definition.</p>
 <p>Example:</p>
 <div class="highlight"><pre><span></span><code><span class="n">patches</span> <span class="o">=</span> <span class="p">[</span>
   <span class="c1"># a simple patch file</span>
-  <span class="s1">&#39;example.patch&#39;</span><span class="p">,</span>
+  <span class="s1">'example.patch'</span><span class="p">,</span>
 
   <span class="c1"># when creating only new files by patch file, you need to specify the level:</span>
-  <span class="p">(</span><span class="s1">&#39;example-add-files.patch&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'example-add-files.patch'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
 
   <span class="c1"># apply the patch in a (sub-)subdirectory inside the source tree</span>
-  <span class="p">(</span><span class="s1">&#39;example-subfolder.patch&#39;</span><span class="p">,</span> <span class="s1">&#39;src/subfolder&#39;</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'example-subfolder.patch'</span><span class="p">,</span> <span class="s1">'src/subfolder'</span><span class="p">),</span>
 
   <span class="c1"># copy file to target_path folder</span>
-  <span class="p">(</span><span class="s1">&#39;Makefile&#39;</span><span class="p">,</span> <span class="s1">&#39;path/to/target/&#39;</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'Makefile'</span><span class="p">,</span> <span class="s1">'path/to/target/'</span><span class="p">),</span>
 
   <span class="c1"># specify patch file and optionally level and opts for patch command</span>
-  <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;example.patch&#39;</span><span class="p">,</span> <span class="s1">&#39;level&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;opts&#39;</span><span class="p">:</span> <span class="s1">&#39;--binary&#39;</span><span class="p">}</span>
+  <span class="p">{</span><span class="s1">'name'</span><span class="p">:</span> <span class="s1">'example.patch'</span><span class="p">,</span> <span class="s1">'level'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">'opts'</span><span class="p">:</span> <span class="s1">'--binary'</span><span class="p">}</span>
 <span class="p">]</span>
 </code></pre></div>
 <h2 id="creating-a-patch-file">Creating a patch file<a class="headerlink" href="#creating-a-patch-file" title="Permanent link">&para;</a></h2>

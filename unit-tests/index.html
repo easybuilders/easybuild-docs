@@ -12744,7 +12744,7 @@ in a non-encrypted keyring (so it can be obtained without having to provide a pa
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>python
 <span class="go">&gt;&gt;&gt; import getpass, keyring</span>
 <span class="go">&gt;&gt;&gt; keyring.set_keyring(keyring.backends.file.PlaintextKeyring())</span>
-<span class="go">&gt;&gt;&gt; keyring.set_password(&#39;github_token&#39;, &#39;easybuild_test&#39;, getpass.getpass())</span>
+<span class="go">&gt;&gt;&gt; keyring.set_password('github_token', 'easybuild_test', getpass.getpass())</span>
 <span class="go">Password:</span>
 <span class="go">&gt;&gt;&gt; exit()</span>
 </code></pre></div>
@@ -12774,7 +12774,7 @@ python<span class="w"> </span>-m<span class="w"> </span>test.framework.suite
 <p>For example, to run only the tests containing the word <code>load</code> in the subgroup <code>modules</code>, run::</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>test.framework.modules<span class="w"> </span>load
 
-<span class="go">Filtered ModulesTest tests using &#39;load&#39;, retained 2/19 tests: test_load, test_load_in_hierarchy</span>
+<span class="go">Filtered ModulesTest tests using 'load', retained 2/19 tests: test_load, test_load_in_hierarchy</span>
 <span class="go">..</span>
 <span class="go">----------------------------------------------------------------------</span>
 <span class="go">Ran 2 tests in 2.688s</span>
@@ -12825,9 +12825,9 @@ corresponding traceback::</p>
 <span class="go">FAIL: Test listing easyblock hierarchy.</span>
 <span class="go">----------------------------------------------------------------------</span>
 <span class="go">Traceback (most recent call last):</span>
-<span class="go">  File &quot;/tmp/example/easybuild-framework/test/framework/options.py&quot;, line 544, in test_list_easyblocks</span>
-<span class="go">    self.assertTrue(re.search(pat, outtxt), &quot;Pattern &#39;%s&#39; is found in output of --list-easyblocks: %s&quot; % (pat, outtxt))</span>
-<span class="go">AssertionError: Pattern &#39;EasyBlock\n&#39; is found in output of --list-easyblocks:</span>
+<span class="go">  File "/tmp/example/easybuild-framework/test/framework/options.py", line 544, in test_list_easyblocks</span>
+<span class="go">    self.assertTrue(re.search(pat, outtxt), "Pattern '%s' is found in output of --list-easyblocks: %s" % (pat, outtxt))</span>
+<span class="go">AssertionError: Pattern 'EasyBlock\n' is found in output of --list-easyblocks:</span>
 
 <span class="go">----------------------------------------------------------------------</span>
 <span class="go">Ran 250 tests in 2641.200s</span>

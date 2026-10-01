@@ -12559,15 +12559,15 @@ visible in the output of '<code>module avail</code>' using respectively the <cod
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>module<span class="w"> </span>avail<span class="w"> </span>bzip2
 
-<span class="go">Use &quot;module spider&quot; to find all possible modules.</span>
-<span class="go">Use &quot;module keyword key1 key2 ...&quot; to search for all possible modules matching any of the &quot;keys&quot;.</span>
+<span class="go">Use "module spider" to find all possible modules.</span>
+<span class="go">Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".</span>
 
 <span class="gp">$ </span>module<span class="w"> </span>--show-hidden<span class="w"> </span>avail<span class="w"> </span>bzip2
 <span class="go">----- /home/example/.local/easybuild/modules/all -----</span>
 <span class="go">bzip2/.1.0.8</span>
 
-<span class="go">Use &quot;module spider&quot; to find all possible modules.</span>
-<span class="go">Use &quot;module keyword key1 key2 ...&quot; to search for all possible modules matching any of the &quot;keys&quot;.</span>
+<span class="go">Use "module spider" to find all possible modules.</span>
+<span class="go">Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".</span>
 </code></pre></div>
 </div>
 <h2 id="minimal_toolchains">Using minimal toolchains for dependencies<a class="headerlink" href="#minimal_toolchains" title="Permanent link">&para;</a></h2>
@@ -12605,13 +12605,13 @@ existing module will determine the toolchain being selected. If not, the toolcha
 available easyconfig files.</p>
 <h3 id="minimal_toolchains_example">Example<a class="headerlink" href="#minimal_toolchains_example" title="Permanent link">&para;</a></h3>
 <p>Consider the following (partial) easyconfig file for Python v2.7.9 with the <code>foss/2015b</code> toolchain:</p>
-<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Python&#39;</span>
-<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;3.10.8&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s1">'Python'</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">'3.10.8'</span>
 
-<span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;foss&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;2022b&#39;</span><span class="p">}</span>
+<span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'name'</span><span class="p">:</span> <span class="s1">'foss'</span><span class="p">,</span> <span class="s1">'version'</span><span class="p">:</span> <span class="s1">'2022b'</span><span class="p">}</span>
 
 <span class="n">dependencies</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">(</span><span class="s1">&#39;zlib&#39;</span><span class="p">,</span> <span class="s1">&#39;1.2.12&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">'zlib'</span><span class="p">,</span> <span class="s1">'1.2.12'</span><span class="p">),</span>
 <span class="p">]</span>
 </code></pre></div>
 <p>When the <code>--minimal-toolchains</code> configuration option is enabled, EasyBuild will also consider the subtoolchains

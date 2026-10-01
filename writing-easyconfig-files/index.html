@@ -13113,8 +13113,8 @@ dependency resolution (<code>--robot</code>), see <a class="autorefs autorefs-in
 </div>
 <p>Example:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># easyconfig file for GCC v4.8.3</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;GCC&#39;</span>
-<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;4.8.3&#39;</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s1">'GCC'</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">'4.8.3'</span>
 <span class="o">...</span>
 </code></pre></div>
 <div class="admonition tip">
@@ -13164,13 +13164,13 @@ are specific to a particular easyblock can be consulted.</p>
 </li>
 </ul>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="go">name = &#39;HPL&#39;</span>
-<span class="go">version = &#39;2.0&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="go">name = 'HPL'</span>
+<span class="go">version = '2.0'</span>
 
-<span class="go">homepage = &#39;http://www.netlib.org/benchmark/hpl/&#39;</span>
-<span class="go">description = &quot;High Performance Computing Linpack Benchmark&quot;</span>
+<span class="go">homepage = 'http://www.netlib.org/benchmark/hpl/'</span>
+<span class="go">description = "High Performance Computing Linpack Benchmark"</span>
 
-<span class="go">toolchain = {&#39;name&#39;: &#39;goolf&#39;, &#39;version&#39;: &#39;1.4.10&#39;}</span>
+<span class="go">toolchain = {'name': 'goolf', 'version': '1.4.10'}</span>
 <span class="go">[...]</span>
 </code></pre></div>
 <h2 id="common-easyconfig-parameters">Common easyconfig parameters<a class="headerlink" href="#common-easyconfig-parameters" title="Permanent link">&para;</a></h2>
@@ -13201,18 +13201,18 @@ easyconfig parameters.</p>
     <a class="autorefs autorefs-internal" href="#common_easyconfig_param_sources_alt">Alternative formats for <code>sources</code></a></li>
 </ul>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;HPL&#39;</span>
-<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;2.2&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s1">'HPL'</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">'2.2'</span>
 
 <span class="p">[</span><span class="o">...</span><span class="p">]</span>
 
-<span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;http://www.netlib.org/benchmark/hpl&#39;</span><span class="p">]</span>
-<span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hpl-</span><span class="si">%(version)s</span><span class="s1">.tar.gz&#39;</span><span class="p">]</span>
+<span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'http://www.netlib.org/benchmark/hpl'</span><span class="p">]</span>
+<span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'hpl-</span><span class="si">%(version)s</span><span class="s1">.tar.gz'</span><span class="p">]</span>
 
 <span class="c1"># fix Make dependencies, so parallel build also works</span>
-<span class="n">patches</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;HPL_parallel-make.patch&#39;</span><span class="p">]</span>
+<span class="n">patches</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'HPL_parallel-make.patch'</span><span class="p">]</span>
 
-<span class="n">checksums</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ac7534163a09e21a5fa763e4e16dfc119bc84043f6e6a807aba666518f8df440&#39;</span><span class="p">]</span>
+<span class="n">checksums</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'ac7534163a09e21a5fa763e4e16dfc119bc84043f6e6a807aba666518f8df440'</span><span class="p">]</span>
 
 <span class="p">[</span><span class="o">...</span><span class="p">]</span>
 </code></pre></div>
@@ -13251,18 +13251,18 @@ default checksum type.</p>
 specific type, elements of the <code>checksums</code> list can also be 2-element
 tuples of the form <code>('&lt;checksum type&gt;', '&lt;checksum value&gt;')</code>. For
 example:</p>
-<div class="highlight"><pre><span></span><code><span class="n">checksums</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;sha512&#39;</span><span class="p">,</span> <span class="s1">&#39;f962008105639f58e9a4455c8057933ab0a5e2f43db8340ae1e1afe6dc2d24105bfca3b2e1f79cb242495ca4eb363c9820d8cea6084df9d62c4c3e5211d99266&#39;</span><span class="p">)]</span>
+<div class="highlight"><pre><span></span><code><span class="n">checksums</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">'sha512'</span><span class="p">,</span> <span class="s1">'f962008105639f58e9a4455c8057933ab0a5e2f43db8340ae1e1afe6dc2d24105bfca3b2e1f79cb242495ca4eb363c9820d8cea6084df9d62c4c3e5211d99266'</span><span class="p">)]</span>
 </code></pre></div>
 <p>It is also possible to specify alternative checksums using a tuple of
 checksum elements where any match is sufficient (logical OR).
 This is helpful when the release was updated with changes that don't affect the behavior of the software in any way
 (e.g. only doc changes).</p>
-<div class="highlight"><pre><span></span><code><span class="n">checksums</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;0123456789...abcdef&#39;</span><span class="p">,</span> <span class="s1">&#39;fedcba...9876543210&#39;</span><span class="p">)]</span>
+<div class="highlight"><pre><span></span><code><span class="n">checksums</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">'0123456789...abcdef'</span><span class="p">,</span> <span class="s1">'fedcba...9876543210'</span><span class="p">)]</span>
 </code></pre></div>
 <p>The opposite is also possible:
 A list instead of a tuple denotes that <strong>all</strong> checksums must match (logical AND).
 In both cases each element can also be a type-value-tuple:</p>
-<div class="highlight"><pre><span></span><code><span class="n">checksums</span> <span class="o">=</span> <span class="p">[[(</span><span class="s1">&#39;sha256&#39;</span><span class="p">,</span> <span class="s1">&#39;0123456789...abcdef&#39;</span><span class="p">),</span> <span class="s1">&#39;fedcba...9876543210&#39;</span><span class="p">]]</span>
+<div class="highlight"><pre><span></span><code><span class="n">checksums</span> <span class="o">=</span> <span class="p">[[(</span><span class="s1">'sha256'</span><span class="p">,</span> <span class="s1">'0123456789...abcdef'</span><span class="p">),</span> <span class="s1">'fedcba...9876543210'</span><span class="p">]]</span>
 </code></pre></div>
 <p>Finally, a checksum can be specified as a dictionary mapping filenames to checksums, removing any ambiguity.
 This style is used by EasyBuild with <code>eb --inject-checksums</code> when 2 or more source files are specified,
@@ -13271,14 +13271,14 @@ Especially when many source files and patches are used this also directly docume
 Again, elements (values) can be strings or type-value-tuples.
 For example:</p>
 <div class="highlight"><pre><span></span><code><span class="n">checksums</span> <span class="o">=</span> <span class="p">[{</span>
-  <span class="s1">&#39;src_x86_64.tgz&#39;</span><span class="p">:</span> <span class="s1">&#39;0123456789...abcdef&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;src_aarch64.tgz&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;sha256&#39;</span><span class="p">,</span> <span class="s1">&#39;fedcba...9876543210&#39;</span><span class="p">),</span>
+  <span class="s1">'src_x86_64.tgz'</span><span class="p">:</span> <span class="s1">'0123456789...abcdef'</span><span class="p">,</span>
+  <span class="s1">'src_aarch64.tgz'</span><span class="p">:</span> <span class="p">(</span><span class="s1">'sha256'</span><span class="p">,</span> <span class="s1">'fedcba...9876543210'</span><span class="p">),</span>
 <span class="p">}]</span>
 </code></pre></div>
 <p>Of course this can be combined with the logical AND/OR semantics using lists or tuples:</p>
 <div class="highlight"><pre><span></span><code><span class="n">checksums</span> <span class="o">=</span> <span class="p">[{</span>
-  <span class="s1">&#39;src_x86_64.tgz&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;0123456789...abcdef&#39;</span><span class="p">,</span> <span class="s1">&#39;fedcba...9876543210&#39;</span><span class="p">),</span> <span class="c1"># Match either one</span>
-  <span class="s1">&#39;src_aarch64.tgz&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;sha256&#39;</span><span class="p">,</span> <span class="s1">&#39;9876543210...fedcba&#39;</span><span class="p">),</span> <span class="s1">&#39;abcdef...0123456789&#39;</span><span class="p">],</span> <span class="c1"># Match both</span>
+  <span class="s1">'src_x86_64.tgz'</span><span class="p">:</span> <span class="p">(</span><span class="s1">'0123456789...abcdef'</span><span class="p">,</span> <span class="s1">'fedcba...9876543210'</span><span class="p">),</span> <span class="c1"># Match either one</span>
+  <span class="s1">'src_aarch64.tgz'</span><span class="p">:</span> <span class="p">[(</span><span class="s1">'sha256'</span><span class="p">,</span> <span class="s1">'9876543210...fedcba'</span><span class="p">),</span> <span class="s1">'abcdef...0123456789'</span><span class="p">],</span> <span class="c1"># Match both</span>
 <span class="p">}]</span>
 </code></pre></div>
 <p>When the checksum cannot be specified for a file
@@ -13287,10 +13287,10 @@ a value of <code>None</code> can be used to skip the checksum check.
 This is possible in the list of checksums as well as a value in a dictionary, e.g.:</p>
 <div class="highlight"><pre><span></span><code><span class="n">checksums</span> <span class="o">=</span> <span class="p">[</span>
   <span class="kc">None</span><span class="p">,</span> <span class="c1"># No checksum for first source file</span>
-  <span class="s1">&#39;0123456789...abcdef&#39;</span><span class="p">,</span> <span class="c1"># checksum for 2nd file</span>
+  <span class="s1">'0123456789...abcdef'</span><span class="p">,</span> <span class="c1"># checksum for 2nd file</span>
   <span class="p">{</span>
-    <span class="s1">&#39;third_file_x86_64.tgz&#39;</span><span class="p">:</span> <span class="s1">&#39;fedcba...9876543210&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;third_file_aarch64.tgz&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="s1">'third_file_x86_64.tgz'</span><span class="p">:</span> <span class="s1">'fedcba...9876543210'</span><span class="p">,</span>
+    <span class="s1">'third_file_aarch64.tgz'</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
   <span class="p">},</span>
 <span class="p">]</span>
 </code></pre></div>
@@ -13315,7 +13315,7 @@ are given an additional extension of the form
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To clean up backup easyconfig files, you can use this one-liner:</p>
-<div class="highlight"><pre><span></span><code>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s1">&#39;*.eb.bak_*&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>rm<span class="w"> </span>-v
+<div class="highlight"><pre><span></span><code>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s1">'*.eb.bak_*'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>rm<span class="w"> </span>-v
 </code></pre></div>
 <p>The <code>-v</code> option makes <code>rm</code> print the path of files that are being
 removed.</p>
@@ -13351,14 +13351,14 @@ between the original easyconfig file and the one produced by
 <span class="go">+++ b/example/bzip2-1.0.6.eb</span>
 <span class="go">@@ -9,8 +9,9 @@ compressors), whilst being around twice as fast at compression and six times fas</span>
 <span class="go"> toolchain = SYSTEM</span>
-<span class="go"> toolchainopts = {&#39;pic&#39;: True}</span>
+<span class="go"> toolchainopts = {'pic': True}</span>
 
 <span class="go">-sources = [SOURCE_TAR_GZ]</span>
-<span class="go"> source_urls = [&#39;http://www.bzip.org/%(version)s/&#39;]</span>
+<span class="go"> source_urls = ['http://www.bzip.org/%(version)s/']</span>
 <span class="go">+sources = [SOURCE_TAR_GZ]</span>
-<span class="go">+checksums = [&#39;a2848f34fcd5d6cf47def00461fcb528a0484d8edef8208d6d2e2909dc61d9cd&#39;]</span>
+<span class="go">+checksums = ['a2848f34fcd5d6cf47def00461fcb528a0484d8edef8208d6d2e2909dc61d9cd']</span>
 
-<span class="go"> buildopts = &quot;CC=gcc CFLAGS=&#39;-Wall -Winline -O3 -fPIC -g $(BIGFILES)&#39;&quot;</span>
+<span class="go"> buildopts = "CC=gcc CFLAGS='-Wall -Winline -O3 -fPIC -g $(BIGFILES)'"</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -13441,7 +13441,7 @@ type, which will result in an error message like:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--inject-checksums<span class="w"> </span>bzip2-1.0.6.eb
 <span class="go">Usage: eb [options] easyconfig [...]</span>
 
-<span class="go">eb: error: option --inject-checksums: invalid choice: &#39;bzip2-1.0.6.eb&#39; (choose from &#39;adler32&#39;, &#39;crc32&#39;, &#39;md5&#39;, &#39;sha1&#39;, &#39;sha256&#39;, &#39;sha512&#39;, &#39;size&#39;)</span>
+<span class="go">eb: error: option --inject-checksums: invalid choice: 'bzip2-1.0.6.eb' (choose from 'adler32', 'crc32', 'md5', 'sha1', 'sha256', 'sha512', 'size')</span>
 </code></pre></div>
 </div>
 <h4 id="common_easyconfig_param_sources_alt">Alternative formats for <code>sources</code><a class="headerlink" href="#common_easyconfig_param_sources_alt" title="Permanent link">&para;</a></h4>
@@ -13465,10 +13465,10 @@ easyconfig parameter.</p>
 </ul>
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code><span class="n">sources</span> <span class="o">=</span> <span class="p">[{</span>
-    <span class="s1">&#39;source_urls&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;https://example.com&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;example-</span><span class="si">%(version)s</span><span class="s1">.gz&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;download_filename&#39;</span><span class="p">:</span> <span class="s1">&#39;example.gz&#39;</span><span class="p">,</span>  <span class="c1"># provided source tarball is not versioned...</span>
-    <span class="s1">&#39;extract_cmd&#39;</span><span class="p">:</span> <span class="s2">&quot;tar xfvz </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>  <span class="c1"># source file is actually a gzipped tarball (filename should be .tar.gz)</span>
+    <span class="s1">'source_urls'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'https://example.com'</span><span class="p">],</span>
+    <span class="s1">'filename'</span><span class="p">:</span> <span class="s1">'example-</span><span class="si">%(version)s</span><span class="s1">.gz'</span><span class="p">,</span>
+    <span class="s1">'download_filename'</span><span class="p">:</span> <span class="s1">'example.gz'</span><span class="p">,</span>  <span class="c1"># provided source tarball is not versioned...</span>
+    <span class="s1">'extract_cmd'</span><span class="p">:</span> <span class="s2">"tar xfvz </span><span class="si">%s</span><span class="s2">"</span><span class="p">,</span>  <span class="c1"># source file is actually a gzipped tarball (filename should be .tar.gz)</span>
 <span class="p">}]</span>
 </code></pre></div>
 <div class="admonition note">
@@ -13490,12 +13490,12 @@ the user to do. This parameter takes string value and prints it whenever
 build fails because any file needed was not found. If
 <code>download_instructions</code> is not specified, EasyBuild prints the default
 message stating the paths that were tested.</p>
-<div class="highlight"><pre><span></span><code><span class="n">download_instructions</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="n">download_instructions</span> <span class="o">=</span> <span class="s2">"""</span>
 <span class="s2">  Step 1: Go to example.com and download example.jar.</span>
 <span class="s2">  Step 2: Install example.jar (ensure Java is installed).</span>
 <span class="s2">  Step 3: Go to the installation directory and create Tarball of its contents (tar -czvf example.tar.gz *).</span>
 <span class="s2">  Step 4: Move created Tarball into the same directory, where your easyconfig is located and run build again.</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">"""</span>
 </code></pre></div>
 <h4 id="common_easyconfig_param_sources_git_config">Downloading from a Git repository<a class="headerlink" href="#common_easyconfig_param_sources_git_config" title="Permanent link">&para;</a></h4>
 <p>Since EasyBuild v3.7.0, support for downloading directly from a Git
@@ -13533,12 +13533,12 @@ since EasyBuild v4.2.0).</p>
     <code>https://agitserver.org/example</code>, and use <code>example-test</code> as
     top-level directory name:</p>
 <div class="highlight"><pre><span></span><code><span class="go">sources = [{</span>
-<span class="go">    &#39;filename&#39;: &#39;example-main.tar.gz&#39;,</span>
-<span class="go">    &#39;git_config&#39;: {</span>
-<span class="go">        &#39;url&#39;: &#39;https://agitserver.org/example&#39;,</span>
-<span class="go">        &#39;repo_name&#39;: &#39;test&#39;,</span>
-<span class="go">        &#39;tag&#39;: &#39;main&#39;,</span>
-<span class="go">        &#39;clone_into&#39;: &#39;example-test&#39;,</span>
+<span class="go">    'filename': 'example-main.tar.gz',</span>
+<span class="go">    'git_config': {</span>
+<span class="go">        'url': 'https://agitserver.org/example',</span>
+<span class="go">        'repo_name': 'test',</span>
+<span class="go">        'tag': 'main',</span>
+<span class="go">        'clone_into': 'example-test',</span>
 <span class="go">    },</span>
 <span class="go">}]</span>
 </code></pre></div>
@@ -13548,13 +13548,13 @@ since EasyBuild v4.2.0).</p>
     recursive checkout of commit <code>abcdef12</code> of the <code>test</code> repository
     from <code>https://agitserver.org/example</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="go">sources = [{</span>
-<span class="go">    &#39;filename&#39;: &#39;example-20180920.tar.gz&#39;,</span>
-<span class="go">    &#39;git_config&#39;: {</span>
-<span class="go">        &#39;url&#39;: &#39;https://agitserver.org/example&#39;,</span>
-<span class="go">        &#39;repo_name&#39;: &#39;test&#39;,</span>
-<span class="go">        &#39;commit&#39;: &#39;abcdef12&#39;,</span>
-<span class="go">        &#39;recursive&#39;: True,</span>
-<span class="go">        &#39;keep_git_dir&#39;: True,</span>
+<span class="go">    'filename': 'example-20180920.tar.gz',</span>
+<span class="go">    'git_config': {</span>
+<span class="go">        'url': 'https://agitserver.org/example',</span>
+<span class="go">        'repo_name': 'test',</span>
+<span class="go">        'commit': 'abcdef12',</span>
+<span class="go">        'recursive': True,</span>
+<span class="go">        'keep_git_dir': True,</span>
 <span class="go">    },</span>
 <span class="go">}]</span>
 </code></pre></div>
@@ -13587,11 +13587,11 @@ you to do so, <code>git_config</code> is intended for other Git repos.</p>
   This also allows adding or removing a dependency for a specific architecture.</li>
 </ul>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;GTI&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s1">'GTI'</span>
 <span class="o">...</span>
-<span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;goolf&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;1.5.14&#39;</span><span class="p">}</span>
-<span class="n">dependencies</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;PnMPI&#39;</span><span class="p">,</span> <span class="s1">&#39;1.2.0&#39;</span><span class="p">)]</span>
-<span class="n">builddependencies</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;CMake&#39;</span><span class="p">,</span> <span class="s1">&#39;2.8.12&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;GCC&#39;</span><span class="p">,</span> <span class="s1">&#39;4.8.2&#39;</span><span class="p">))]</span>
+<span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'name'</span><span class="p">:</span> <span class="s1">'goolf'</span><span class="p">,</span> <span class="s1">'version'</span><span class="p">:</span> <span class="s1">'1.5.14'</span><span class="p">}</span>
+<span class="n">dependencies</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">'PnMPI'</span><span class="p">,</span> <span class="s1">'1.2.0'</span><span class="p">)]</span>
+<span class="n">builddependencies</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">'CMake'</span><span class="p">,</span> <span class="s1">'2.8.12'</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="p">(</span><span class="s1">'GCC'</span><span class="p">,</span> <span class="s1">'4.8.2'</span><span class="p">))]</span>
 </code></pre></div>
 <p>For each of the specified (build) dependencies, the corresponding module
 will be loaded in the build environment defined by EasyBuild. For the
@@ -13621,7 +13621,7 @@ simply use the <code>SYSTEM</code> template constant as the 4th value in the tup
 representing the dependency specification.</p>
 <p>For example, to specify PnMPI version 1.2.0 built with the <code>system</code>
 toolchain as a (runtime) dependency:</p>
-<div class="highlight"><pre><span></span><code><span class="n">dependencies</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;PnMPI&#39;</span><span class="p">,</span> <span class="s1">&#39;1.2.0&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">SYSTEM</span><span class="p">)]</span>
+<div class="highlight"><pre><span></span><code><span class="n">dependencies</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">'PnMPI'</span><span class="p">,</span> <span class="s1">'1.2.0'</span><span class="p">,</span> <span class="s1">''</span><span class="p">,</span> <span class="n">SYSTEM</span><span class="p">)]</span>
 </code></pre></div>
 <h4 id="using-external-modules-as-dependencies">Using external modules as dependencies<a class="headerlink" href="#using-external-modules-as-dependencies" title="Permanent link">&para;</a></h4>
 <p>Since EasyBuild v2.1, specifying modules that are not provided via
@@ -13636,7 +13636,7 @@ via the <code>exts_list</code> array.</p>
 <p>Each entry in <code>exts_list</code> is a three-component tuple, with the name and
 version number, and a dictionary of configuration options for the entry:</p>
 <div class="highlight"><pre><span></span><code><span class="n">exts_list</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="s1">&#39;option&#39;</span><span class="p">:</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="s1">&#39;option&#39;</span><span class="p">:</span><span class="s1">&#39;value&#39;</span> <span class="p">})</span>
+    <span class="p">(</span><span class="s1">'name'</span><span class="p">,</span> <span class="s1">'version'</span><span class="p">,</span> <span class="p">{</span> <span class="s1">'option'</span><span class="p">:</span><span class="s1">'value'</span><span class="p">,</span> <span class="s1">'option'</span><span class="p">:</span><span class="s1">'value'</span> <span class="p">})</span>
 <span class="p">]</span>
 </code></pre></div>
 <p>The latter may contain essentially any of the full easyconfig
@@ -13660,21 +13660,21 @@ options, the following exceptions and special cases should be noted:</p>
     will not be used</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="n">exts_list</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">(</span><span class="s1">&#39;llvmlite&#39;</span><span class="p">,</span> <span class="s1">&#39;0.26.0&#39;</span><span class="p">,</span> <span class="p">{</span>
-        <span class="s1">&#39;source_urls&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;https://pypi.python.org/packages/source/l/llvmlite/&#39;</span><span class="p">],</span>
-        <span class="s1">&#39;patches&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;llvmlite-0.26.0_fix-ffi-Makefile.patch&#39;</span><span class="p">],</span>
-        <span class="s1">&#39;checksums&#39;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="s1">&#39;13e84fe6ebb0667233074b429fd44955f309dead3161ec89d9169145dbad2ebf&#39;</span><span class="p">,</span>    <span class="c1"># llvmlite-0.26.0.tar.gz</span>
-            <span class="s1">&#39;40e6fe6de48709b45daebf8082f65ac26f73a4afdf58fc1e8099b97c575fecae&#39;</span><span class="p">,</span>    <span class="c1"># llvmlite-0.26.0_fix-ffi-Makefile.patch</span>
+    <span class="p">(</span><span class="s1">'llvmlite'</span><span class="p">,</span> <span class="s1">'0.26.0'</span><span class="p">,</span> <span class="p">{</span>
+        <span class="s1">'source_urls'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'https://pypi.python.org/packages/source/l/llvmlite/'</span><span class="p">],</span>
+        <span class="s1">'patches'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'llvmlite-0.26.0_fix-ffi-Makefile.patch'</span><span class="p">],</span>
+        <span class="s1">'checksums'</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s1">'13e84fe6ebb0667233074b429fd44955f309dead3161ec89d9169145dbad2ebf'</span><span class="p">,</span>    <span class="c1"># llvmlite-0.26.0.tar.gz</span>
+            <span class="s1">'40e6fe6de48709b45daebf8082f65ac26f73a4afdf58fc1e8099b97c575fecae'</span><span class="p">,</span>    <span class="c1"># llvmlite-0.26.0_fix-ffi-Makefile.patch</span>
         <span class="p">],</span>
     <span class="p">}),</span>
-    <span class="p">(</span><span class="s1">&#39;singledispatch&#39;</span><span class="p">,</span> <span class="s1">&#39;3.4.0.3&#39;</span><span class="p">,</span> <span class="p">{</span>
-        <span class="s1">&#39;source_urls&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;https://pypi.python.org/packages/source/s/singledispatch/&#39;</span><span class="p">],</span>
-        <span class="s1">&#39;checksums&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;5b06af87df13818d14f08a028e42f566640aef80805c3b50c5056b086e3c2b9c&#39;</span><span class="p">],</span>
+    <span class="p">(</span><span class="s1">'singledispatch'</span><span class="p">,</span> <span class="s1">'3.4.0.3'</span><span class="p">,</span> <span class="p">{</span>
+        <span class="s1">'source_urls'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'https://pypi.python.org/packages/source/s/singledispatch/'</span><span class="p">],</span>
+        <span class="s1">'checksums'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'5b06af87df13818d14f08a028e42f566640aef80805c3b50c5056b086e3c2b9c'</span><span class="p">],</span>
     <span class="p">}),</span>
     <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="p">{</span>
-        <span class="s1">&#39;source_urls&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;https://pypi.python.org/packages/source/n/numba/&#39;</span><span class="p">],</span>
-        <span class="s1">&#39;checksums&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;c62121b2d384d8b4d244ef26c1cf8bb5cb819278a80b893bf41918ad6d391258&#39;</span><span class="p">],</span>
+        <span class="s1">'source_urls'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'https://pypi.python.org/packages/source/n/numba/'</span><span class="p">],</span>
+        <span class="s1">'checksums'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'c62121b2d384d8b4d244ef26c1cf8bb5cb819278a80b893bf41918ad6d391258'</span><span class="p">],</span>
     <span class="p">}),</span>
 <span class="p">]</span>
 </code></pre></div>
@@ -13683,15 +13683,15 @@ the easyconfig file. Since EasyBuild v4.2.2, a single-entry <code>sources</code>
 dictionary (see <a class="autorefs autorefs-internal" href="#common_easyconfig_param_sources_alt">Alternative formats for <code>sources</code></a>) may be included in an <code>exts_list</code> entry. For example, to
 download Git sources from a private repository and convert them to a
 tar-ball for installation:</p>
-<div class="highlight"><pre><span></span><code><span class="n">exts_defaultclass</span> <span class="o">=</span> <span class="s1">&#39;PythonPackage&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">exts_defaultclass</span> <span class="o">=</span> <span class="s1">'PythonPackage'</span>
 <span class="n">exts_list</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">(</span><span class="s1">&#39;pyCAP&#39;</span><span class="p">,</span> <span class="s1">&#39;0.1&#39;</span><span class="p">,</span> <span class="p">{</span>
-        <span class="s1">&#39;sources&#39;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">%(name)s</span><span class="s1">-</span><span class="si">%(version)s</span><span class="s1">.tar.gz&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;git_config&#39;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;ssh://nero.stanford.edu/data/git/Analysis&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;repo_name&#39;</span><span class="p">:</span> <span class="s1">&#39;pyCAP&#39;</span><span class="p">,</span>
-                <span class="s1">&#39;tag&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">%(version)s</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="p">(</span><span class="s1">'pyCAP'</span><span class="p">,</span> <span class="s1">'0.1'</span><span class="p">,</span> <span class="p">{</span>
+        <span class="s1">'sources'</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">'filename'</span><span class="p">:</span> <span class="s1">'</span><span class="si">%(name)s</span><span class="s1">-</span><span class="si">%(version)s</span><span class="s1">.tar.gz'</span><span class="p">,</span>
+            <span class="s1">'git_config'</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">'url'</span><span class="p">:</span> <span class="s1">'ssh://nero.stanford.edu/data/git/Analysis'</span><span class="p">,</span>
+                <span class="s1">'repo_name'</span><span class="p">:</span> <span class="s1">'pyCAP'</span><span class="p">,</span>
+                <span class="s1">'tag'</span><span class="p">:</span> <span class="s1">'</span><span class="si">%(version)s</span><span class="s1">'</span><span class="p">,</span>
             <span class="p">}</span>
         <span class="p">}</span>
     <span class="p">}),</span>
@@ -13724,13 +13724,13 @@ respectively), not from the easyconfig values.</p>
 <li><strong>installopts, preinstallopts</strong>: options for install command</li>
 </ul>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;ConfigureMake&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">'ConfigureMake'</span>
 <span class="o">...</span>
-<span class="c1"># configure with: ./autogen.sh &amp;&amp; ./configure CC=&quot;$CC&quot; CFLAGS=&quot;$CFLAGS&quot;</span>
-<span class="n">preconfigopts</span> <span class="o">=</span> <span class="s2">&quot;./autogen.sh &amp;&amp; &quot;</span>
-<span class="n">buildopts</span> <span class="o">=</span> <span class="s1">&#39;CC=&quot;$CC&quot; CFLAGS=&quot;$CFLAGS&quot;&#39;</span>
+<span class="c1"># configure with: ./autogen.sh &amp;&amp; ./configure CC="$CC" CFLAGS="$CFLAGS"</span>
+<span class="n">preconfigopts</span> <span class="o">=</span> <span class="s2">"./autogen.sh &amp;&amp; "</span>
+<span class="n">buildopts</span> <span class="o">=</span> <span class="s1">'CC="$CC" CFLAGS="$CFLAGS"'</span>
 <span class="c1"># install with: make install PREFIX=&lt;installation prefix&gt;</span>
-<span class="n">installopts</span> <span class="o">=</span> <span class="s1">&#39;PREFIX=</span><span class="si">%(installdir)s</span><span class="s1">&#39;</span>
+<span class="n">installopts</span> <span class="o">=</span> <span class="s1">'PREFIX=</span><span class="si">%(installdir)s</span><span class="s1">'</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -13746,9 +13746,9 @@ specifying a particular set of options to use.</p>
 <p>For example, to perform the installation procedure with three different
 sets of configuration options:</p>
 <div class="highlight"><pre><span></span><code><span class="n">configopts</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">&quot;--common-opt --one --one-more&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;--common-opt --two&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;--common-opt --three&quot;</span><span class="p">,</span>
+    <span class="s2">"--common-opt --one --one-more"</span><span class="p">,</span>
+    <span class="s2">"--common-opt --two"</span><span class="p">,</span>
+    <span class="s2">"--common-opt --three"</span><span class="p">,</span>
 <span class="p">]</span>
 </code></pre></div>
 <p>This way, EasyBuild will perform the <em>configure-build-install</em> cycle
@@ -13767,10 +13767,10 @@ untouched (in order to not destroy the result of earlier cycles).</p>
 being a list of strings, the number of items in the lists must be the
 same. Any of these parameters defined as a single string value are just
 reused for each of the cycles performed. For example:</p>
-<div class="highlight"><pre><span></span><code><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;ConfigureMake&#39;</span>
-<span class="n">configopts</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;--one&#39;</span><span class="p">,</span> <span class="s1">&#39;--two&#39;</span><span class="p">,</span> <span class="s1">&#39;--three&#39;</span><span class="p">]</span>
-<span class="n">buildopts</span> <span class="o">=</span> <span class="s1">&#39;lib&#39;</span>
-<span class="n">preinstallopts</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;TYPE=one&#39;</span><span class="p">,</span> <span class="s1">&#39;TYPE=two&#39;</span><span class="p">,</span> <span class="s1">&#39;TYPE=three&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">'ConfigureMake'</span>
+<span class="n">configopts</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'--one'</span><span class="p">,</span> <span class="s1">'--two'</span><span class="p">,</span> <span class="s1">'--three'</span><span class="p">]</span>
+<span class="n">buildopts</span> <span class="o">=</span> <span class="s1">'lib'</span>
+<span class="n">preinstallopts</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'TYPE=one'</span><span class="p">,</span> <span class="s1">'TYPE=two'</span><span class="p">,</span> <span class="s1">'TYPE=three'</span><span class="p">]</span>
 </code></pre></div>
 <p>would result in:</p>
 <ul>
@@ -13810,8 +13810,8 @@ that an installation didn't (partly) fail unnoticed.</p>
 </ul>
 <p>Example:</p>
 <div class="highlight"><pre><span></span><code><span class="n">sanity_check_paths</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;files&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;bin/xhpl&quot;</span><span class="p">],</span>
-    <span class="s1">&#39;dirs&#39;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s1">'files'</span><span class="p">:</span> <span class="p">[</span><span class="s2">"bin/xhpl"</span><span class="p">],</span>
+    <span class="s1">'dirs'</span><span class="p">:</span> <span class="p">[],</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="writing_easyconfigs_easyblock_spec">Easyblock specification<a class="headerlink" href="#writing_easyconfigs_easyblock_spec" title="Permanent link">&para;</a></h3>
@@ -13825,9 +13825,9 @@ look for an easyblock class named <code>EB_GCC</code> in the Python module
 also <a class="autorefs autorefs-internal" href="../using-easybuild/#list_easyblocks">List of available easyblocks</a>); generic
 easyblocks are the ones for which the name does <em>not</em> start with <code>EB_</code>.</p>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;CMakeMake&#39;</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;GTI&#39;</span>
-<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;1.2.0&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">'CMakeMake'</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s1">'GTI'</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">'1.2.0'</span>
 <span class="o">...</span>
 </code></pre></div>
 <div class="admonition tip">
@@ -13839,9 +13839,9 @@ easyconfig parameters which allow to steer their behavior (see also
 <a class="autorefs autorefs-internal" href="../using-easybuild/#avail_easyconfig_params">All available easyconfig parameters</a>).</p>
 </div>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;Binary&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">'Binary'</span>
 <span class="p">[</span><span class="o">...</span><span class="p">]</span>
-<span class="n">install_cmd</span> <span class="o">=</span> <span class="s2">&quot;./install.bin&quot;</span>
+<span class="n">install_cmd</span> <span class="o">=</span> <span class="s2">"./install.bin"</span>
 <span class="p">[</span><span class="o">...</span><span class="p">]</span>
 </code></pre></div>
 <h3 id="module-class">Module class<a class="headerlink" href="#module-class" title="Permanent link">&para;</a></h3>
@@ -13855,9 +13855,9 @@ avoid misclassification due to typos).</p>
 <code>--show-default-moduleclasses</code>; additional module classes can be defined
 via the <code>--moduleclasses</code> configure option.</p>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;GCC&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s1">'GCC'</span>
 <span class="p">[</span><span class="o">...</span><span class="p">]</span>
-<span class="n">moduleclass</span> <span class="o">=</span> <span class="s1">&#39;compiler&#39;</span>
+<span class="n">moduleclass</span> <span class="o">=</span> <span class="s1">'compiler'</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -13968,12 +13968,12 @@ hardcoding values in multiple locations.</p>
 <p>Additionally, constants that can be used in easyconfig files are
 available via <code>--avail-easyconfig-constants</code>.</p>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;GCC&#39;</span>
-<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;4.8.3&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s1">'GCC'</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">'4.8.3'</span>
 <span class="o">...</span>
 <span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span>
     <span class="c1"># http://ftpmirror.gnu.org/gcc/gcc-4.8.3</span>
-    <span class="s1">&#39;http://ftpmirror.gnu.org/</span><span class="si">%(namelower)s</span><span class="s1">/</span><span class="si">%(namelower)s</span><span class="s1">-</span><span class="si">%(version)s</span><span class="s1">&#39;</span><span class="p">,</span>
+    <span class="s1">'http://ftpmirror.gnu.org/</span><span class="si">%(namelower)s</span><span class="s1">/</span><span class="si">%(namelower)s</span><span class="s1">-</span><span class="si">%(version)s</span><span class="s1">'</span><span class="p">,</span>
 <span class="p">]</span>
 <span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="n">SOURCELOWER_TAR_GZ</span><span class="p">]</span>  <span class="c1"># gcc-4.8.3.tar.gz</span>
 <span class="o">...</span>
@@ -13996,23 +13996,23 @@ It is an <strong>error</strong> if no matching key (which includes <code>arch=*<
 When the current architecture is missing in the keys, or the value is <code>None</code> the item will be skipped.</p>
 <p>Example:</p>
 <div class="highlight"><pre><span></span><code><span class="n">dependencies</span><span class="o">=</span><span class="p">[</span>
-  <span class="p">(</span><span class="s1">&#39;imkl&#39;</span><span class="p">,</span> <span class="p">{</span>
-    <span class="s1">&#39;arch=x86_64&#39;</span><span class="p">:</span> <span class="s1">&#39;2021.4.0&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;arch=AArch32&#39;</span><span class="p">:</span> <span class="s1">&#39;2021.3.0&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;arch=*&#39;</span><span class="p">:</span> <span class="kc">False</span>
-    <span class="p">},</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">SYSTEM</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'imkl'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="s1">'arch=x86_64'</span><span class="p">:</span> <span class="s1">'2021.4.0'</span><span class="p">,</span>
+    <span class="s1">'arch=AArch32'</span><span class="p">:</span> <span class="s1">'2021.3.0'</span><span class="p">,</span>
+    <span class="s1">'arch=*'</span><span class="p">:</span> <span class="kc">False</span>
+    <span class="p">},</span> <span class="s1">''</span><span class="p">,</span> <span class="n">SYSTEM</span><span class="p">),</span>
 <span class="p">]</span>
 
 <span class="n">sanity_check_paths</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s1">&#39;files&#39;</span><span class="p">:</span> <span class="p">[{</span>
-    <span class="s1">&#39;arch=AArch64&#39;</span><span class="p">:</span> <span class="s1">&#39;lib_arm.a&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;arch=x86_64&#39;</span><span class="p">:</span> <span class="s1">&#39;lib_intel.a&#39;</span><span class="p">,</span>
+  <span class="s1">'files'</span><span class="p">:</span> <span class="p">[{</span>
+    <span class="s1">'arch=AArch64'</span><span class="p">:</span> <span class="s1">'lib_arm.a'</span><span class="p">,</span>
+    <span class="s1">'arch=x86_64'</span><span class="p">:</span> <span class="s1">'lib_intel.a'</span><span class="p">,</span>
     <span class="p">},</span>
-    <span class="s1">&#39;lib_generic.a&#39;</span><span class="p">,</span> <span class="c1"># Always checked (additionally)</span>
+    <span class="s1">'lib_generic.a'</span><span class="p">,</span> <span class="c1"># Always checked (additionally)</span>
   <span class="p">],</span>
-  <span class="s1">&#39;dirs&#39;</span><span class="p">:</span> <span class="p">[{</span>
-    <span class="s1">&#39;arch=RISCV64&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;data/risc&#39;</span><span class="p">),</span>
-    <span class="s1">&#39;arch=*&#39;</span><span class="p">:</span> <span class="s1">&#39;data/other&#39;</span><span class="p">,</span>
+  <span class="s1">'dirs'</span><span class="p">:</span> <span class="p">[{</span>
+    <span class="s1">'arch=RISCV64'</span><span class="p">:</span> <span class="p">(</span><span class="s1">'data/risc'</span><span class="p">),</span>
+    <span class="s1">'arch=*'</span><span class="p">:</span> <span class="s1">'data/other'</span><span class="p">,</span>
     <span class="p">},</span>
   <span class="p">],</span>
 <span class="p">},</span>

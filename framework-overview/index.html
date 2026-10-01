@@ -13308,10 +13308,10 @@ will be gathered in a singleton <code>BuildOptions</code> class. This class is t
 centralized location of configuration options for the current EasyBuild
 session. The method <code>build_option()</code> in <code>easybuild.tools.config</code> provides a
 simple interface to it:</p>
-<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">build_option</span><span class="p">(</span><span class="s1">&#39;ignore_test_failure&#39;</span><span class="p">):</span>
-    <span class="n">print_warning</span><span class="p">(</span><span class="s2">&quot;Test failure ignored&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">build_option</span><span class="p">(</span><span class="s1">'ignore_test_failure'</span><span class="p">):</span>
+    <span class="n">print_warning</span><span class="p">(</span><span class="s2">"Test failure ignored"</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">raise</span> <span class="n">EasyBuildError</span><span class="p">(</span><span class="s2">&quot;Test failure&quot;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="n">EasyBuildError</span><span class="p">(</span><span class="s2">"Test failure"</span><span class="p">)</span>
 </code></pre></div>
 <p>Therefore, adding a new option to <code>eb</code> and making that options available
 through <code>build_option()</code> is a two step process. First the option has to be

@@ -12566,7 +12566,7 @@ specified, but some MakeFiles or build systems could have hardcoded values that 
 and will optimize for that processor architecture by default.</p>
 <p>If you want a generic OpenBLAS build you will need to tweak the OpenBLAS easyconfig file to define
 the desired <code>TARGET</code> to use. For this you will need to modify the <code>buildopts</code> easyconfig parameter, for example:</p>
-<div class="highlight"><pre><span></span><code><span class="n">buildopts</span> <span class="o">=</span> <span class="s1">&#39;TARGET=PRESCOTT BINARY=64 &#39;</span> <span class="o">+</span> <span class="n">threading</span> <span class="o">+</span> <span class="s1">&#39; CC=&quot;$CC&quot; FC=&quot;$F77&quot;&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">buildopts</span> <span class="o">=</span> <span class="s1">'TARGET=PRESCOTT BINARY=64 '</span> <span class="o">+</span> <span class="n">threading</span> <span class="o">+</span> <span class="s1">' CC="$CC" FC="$F77"'</span>
 </code></pre></div>
 <p>See these links for more details w.r.t. OpenBLAS:</p>
 <ul>
@@ -12577,7 +12577,7 @@ the desired <code>TARGET</code> to use. For this you will need to modify the <co
 <p>Keep in mind, when using <code>--optarch=&lt;flags&gt;</code> as described below in combination with <code>--robot</code>, any dependencies that
 haven’t been installed yet will also be built with <code>--optarch=&lt;flags&gt;</code>. To specify compiler flags only for
 the given easyconfig, use the <a class="autorefs autorefs-internal" title="Available easyconfig parameters" href="../version-specific/easyconfig-parameters/#vsd_avail_easyconfig_params"><code>toolchainopts</code></a> easyconfig parameter, for example:</p>
-<div class="highlight"><pre><span></span><code><span class="n">toolchainopts</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;optarch&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;flags&gt;&#39;</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="n">toolchainopts</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'optarch'</span><span class="p">:</span> <span class="s1">'&lt;flags&gt;'</span><span class="p">}</span>
 </code></pre></div>
 <h3 id="controlling_compiler_optimization_flags_optarch_flags">Specifying target architecture specific optimization flags to use via <code>--optarch=&lt;flags&gt;</code><a class="headerlink" href="#controlling_compiler_optimization_flags_optarch_flags" title="Permanent link">&para;</a></h3>
 <p>Using the <code>--optarch</code> EasyBuild configuration option, specific compiler flags can be provided that EasyBuild

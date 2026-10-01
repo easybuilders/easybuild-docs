@@ -12494,8 +12494,8 @@ alternative.</p>
     indicating that the corresponding functionality will no longer be
     supported in EasyBuild version <code>X.Y</code>; for example, to deprecate the
     use of the <code>makeopts</code> easyconfig parameter with EasyBuild v2.0:</p>
-<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;makeopts&#39;</span><span class="p">]:</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">deprecated</span><span class="p">(</span><span class="s2">&quot;Easyconfig parameter &#39;makeopts&#39; is deprecated, use &#39;buildopts&#39; instead&quot;</span><span class="p">,</span> <span class="s1">&#39;2.0&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">'makeopts'</span><span class="p">]:</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">deprecated</span><span class="p">(</span><span class="s2">"Easyconfig parameter 'makeopts' is deprecated, use 'buildopts' instead"</span><span class="p">,</span> <span class="s1">'2.0'</span><span class="p">)</span>
 </code></pre></div>
 </li>
 <li>
@@ -12503,7 +12503,7 @@ alternative.</p>
     manifest itself as a <em>warning</em>, highlighting the use of deprecated
     functionality; for example:</p>
 <div class="highlight"><pre><span></span><code><span class="go">== 2014-12-16 16:29:07,906 main.easyconfig.easyconfig WARNING Deprecated functionality, will no longer work in v2.0:</span>
-<span class="go">Easyconfig parameter &#39;makeopts&#39; is deprecated, use &#39;buildopts&#39; instead;</span>
+<span class="go">Easyconfig parameter 'makeopts' is deprecated, use 'buildopts' instead;</span>
 <span class="go">see http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html for more information</span>
 </code></pre></div>
 </li>
@@ -12516,7 +12516,7 @@ alternative.</p>
     is no longer supported; for example:</p>
 <div class="highlight"><pre><span></span><code><span class="go">ERROR: EasyBuild encountered an exception (at easybuild/framework/easyconfig/easyconfig.py:937 in process_easyconfig):</span>
 <span class="go">Failed to process easyconfig /home/example/gzip-1.5-goolf-1.4.10.eb:</span>
-<span class="go">DEPRECATED (since v2.0) functionality used: Easyconfig parameter &#39;makeopts&#39; is deprecated, use &#39;buildopts&#39; instead;</span>
+<span class="go">DEPRECATED (since v2.0) functionality used: Easyconfig parameter 'makeopts' is deprecated, use 'buildopts' instead;</span>
 <span class="go">see http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html for more information.</span>
 </code></pre></div>
 </li>
@@ -12548,7 +12548,7 @@ supported in EasyBuild v5.0 into an error message. For example:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>test.eb<span class="w"> </span>--deprecated<span class="o">=</span><span class="m">5</span>.0
 <span class="go">== temporary log file in case of crash /tmp/easybuild-WWalWX/easybuild-aoL9Nd.log</span>
 <span class="go">ERROR: Failed to process easyconfig /home/example/test.eb:</span>
-<span class="go">DEPRECATED (since v5.0) functionality used: Use of &#39;dummy&#39; toolchain is deprecated, use &#39;system&#39; toolchain instead;</span>
+<span class="go">DEPRECATED (since v5.0) functionality used: Use of 'dummy' toolchain is deprecated, use 'system' toolchain instead;</span>
 <span class="go">see http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html for more information</span>
 <span class="go">be used; see http://easybuild.readthedocs.org/en/latest/Deprecated-functionality.html for more information</span>
 </code></pre></div>

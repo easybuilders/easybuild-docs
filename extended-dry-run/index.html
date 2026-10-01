@@ -13224,7 +13224,7 @@ errors.</p>
 
 <span class="go">[test_step method]</span>
 <span class="go">!!!</span>
-<span class="go">!!! WARNING: ignoring error &quot;[Errno 2] No such file or directory: &#39;test&#39;&quot;</span>
+<span class="go">!!! WARNING: ignoring error "[Errno 2] No such file or directory: 'test'"</span>
 <span class="go">!!!</span>
 </code></pre></div>
 <p>At the end of dry run output, another warning message is shown if any
@@ -13266,7 +13266,7 @@ directories during a dry run (under a prefix like
 the 'fake' build and install directories are replaced by the
 corresponding original value in the dry run output. For example:</p>
 <div class="highlight"><pre><span></span><code><span class="go">[extract_step method]</span>
-<span class="go">  running command &quot;tar xzf /home/example/easybuild/sources/b/bzip2/bzip2-1.0.6.tar.gz&quot;</span>
+<span class="go">  running command "tar xzf /home/example/easybuild/sources/b/bzip2/bzip2-1.0.6.tar.gz"</span>
 <span class="go">  (in /tmp/example/eb_build/bzip2/1.0.6/GCC-4.9.2)</span>
 </code></pre></div>
 <h4 id="extended_dry_run_overview_build_dir_guess">Note on build directory in dry run mode<a class="headerlink" href="#extended_dry_run_overview_build_dir_guess" title="Permanent link">&para;</a></h4>
@@ -13279,7 +13279,7 @@ pattern, it is not always 100% correct.</p>
 <p>For example, you may see this in the dry run output for WRF (for which a
 build-in-installdir procedure is used):</p>
 <div class="highlight"><pre><span></span><code><span class="go">[build_step method]</span>
-<span class="go">  running command &quot;tcsh ./compile -j 4 wrf&quot;</span>
+<span class="go">  running command "tcsh ./compile -j 4 wrf"</span>
 <span class="go">  (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar/WRF-3.6.1)</span>
 </code></pre></div>
 <p>The actual build (and install) subdirectory is slightly different while
@@ -13350,7 +13350,7 @@ available anyway.</p>
 <p>The extraction command is mentioned in the dry run output however, for
 example:</p>
 <div class="highlight"><pre><span></span><code><span class="go">[extract_step method]</span>
-<span class="go">  running command &quot;tar xjf bzip2-1.0.6.tar.bz2&quot;</span>
+<span class="go">  running command "tar xjf bzip2-1.0.6.tar.bz2"</span>
 <span class="go">  (in /tmp/example/eb_build/bzip2/1.0.6/GCC-4.9.2)</span>
 </code></pre></div>
 <h3 id="extended_dry_run_overview_patching">Patch files are not applied, no runtime patching<a class="headerlink" href="#extended_dry_run_overview_patching" title="Permanent link">&para;</a></h3>
@@ -13359,10 +13359,10 @@ example:</p>
 with where they are found and how they are applied:</p>
 <div class="highlight"><pre><span></span><code><span class="go">[patch_step method]</span>
 <span class="go">* applying patch file WRF_parallel_build_fix.patch</span>
-<span class="go">  running command &quot;patch -b -p&lt;derived&gt; -i /home/example/easybuild/sources/w/WRF/WRF_parallel_build_fix.patch&quot;</span>
+<span class="go">  running command "patch -b -p&lt;derived&gt; -i /home/example/easybuild/sources/w/WRF/WRF_parallel_build_fix.patch"</span>
 <span class="go">  (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)</span>
 <span class="go">* applying patch file WRF-3.6.1_known_problems.patch</span>
-<span class="go">  running command &quot;patch -b -p&lt;derived&gt; -i /home/example/easybuild/sources/w/WRF/WRF-3.6.1_known_problems.patch&quot;</span>
+<span class="go">  running command "patch -b -p&lt;derived&gt; -i /home/example/easybuild/sources/w/WRF/WRF-3.6.1_known_problems.patch"</span>
 <span class="go">  (in /home/example/easybuild/easybuild/software/WRF/3.6.1-intel-2015a-dmpar)</span>
 </code></pre></div>
 <p>Likewise, runtime patching performed by the easyblock itself can not
@@ -13375,8 +13375,8 @@ Intel compilers, this yields:</p>
 <div class="highlight"><pre><span></span><code><span class="go">[configure_step method]</span>
 <span class="go">...</span>
 <span class="go">applying regex substitutions to file configure.wrf</span>
-<span class="go">  * regex pattern &#39;^(DM_FC\s*=\s*).*$&#39;, replacement string &#39;\1 mpif90&#39;</span>
-<span class="go">  * regex pattern &#39;^(DM_CC\s*=\s*).*$&#39;, replacement string &#39;\1 mpicc -DMPI2_SUPPORT&#39;</span>
+<span class="go">  * regex pattern '^(DM_FC\s*=\s*).*$', replacement string '\1 mpif90'</span>
+<span class="go">  * regex pattern '^(DM_CC\s*=\s*).*$', replacement string '\1 mpicc -DMPI2_SUPPORT'</span>
 </code></pre></div>
 <p>If the <code>apply_regex_substitutions</code> function provided for runtime
 patching is not used (and <code>fileinput</code> is used directly, for example),
@@ -13451,8 +13451,8 @@ variable <code>$EBROOTGCC</code> is defined as the string value <code>'$EBROOTGC
 <code>get_software_root</code> by the easyblock.</p>
 <p>For example, for netCDF used as a dependency for WRF the following is
 included in the module file contents included in the dry run output:</p>
-<div class="highlight"><pre><span></span><code><span class="go">setenv  NETCDF      &quot;$EBROOTNETCDF&quot;</span>
-<span class="go">setenv  NETCDFF     &quot;$EBROOTNETCDFMINFORTRAN&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="go">setenv  NETCDF      "$EBROOTNETCDF"</span>
+<span class="go">setenv  NETCDFF     "$EBROOTNETCDFMINFORTRAN"</span>
 </code></pre></div>
 <h5 id="extended_dry_run_overview_module_load_simulated_toolchain">Simulated loading of non-available <em>toolchain</em> module<a class="headerlink" href="#extended_dry_run_overview_module_load_simulated_toolchain" title="Permanent link">&para;</a></h5>
 <p>When the module that corresponds to the toolchain being used is not
@@ -13481,19 +13481,19 @@ reported as a part of the dry run output.</p>
 be included in the <code>prepare_step</code> part of the dry run output:</p>
 <div class="highlight"><pre><span></span><code><span class="go">Defining build environment...</span>
 
-<span class="go">  export CC=&quot;gcc&quot;</span>
-<span class="go">  export CFLAGS=&quot;-O2&quot;</span>
-<span class="go">  export CXX=&quot;g++&quot;</span>
-<span class="go">  export CXXFLAGS=&quot;-O2&quot;</span>
-<span class="go">  export F77=&quot;gfortran&quot;</span>
-<span class="go">  export F90=&quot;gfortran&quot;</span>
-<span class="go">  export F90FLAGS=&quot;-O2&quot;</span>
-<span class="go">  export FFLAGS=&quot;-O2&quot;</span>
-<span class="go">  export FLIBS=&quot;-lgfortran&quot;</span>
-<span class="go">  export LDFLAGS=&quot;-L/home/example/eb/software/GCC/4.8.2/lib&quot;</span>
-<span class="go">  export LIBS=&quot;-lm -lpthread&quot;</span>
-<span class="go">  export OPTFLAGS=&quot;-O2&quot;</span>
-<span class="go">  export PRECFLAGS=&quot;&quot;</span>
+<span class="go">  export CC="gcc"</span>
+<span class="go">  export CFLAGS="-O2"</span>
+<span class="go">  export CXX="g++"</span>
+<span class="go">  export CXXFLAGS="-O2"</span>
+<span class="go">  export F77="gfortran"</span>
+<span class="go">  export F90="gfortran"</span>
+<span class="go">  export F90FLAGS="-O2"</span>
+<span class="go">  export FFLAGS="-O2"</span>
+<span class="go">  export FLIBS="-lgfortran"</span>
+<span class="go">  export LDFLAGS="-L/home/example/eb/software/GCC/4.8.2/lib"</span>
+<span class="go">  export LIBS="-lm -lpthread"</span>
+<span class="go">  export OPTFLAGS="-O2"</span>
+<span class="go">  export PRECFLAGS=""</span>
 </code></pre></div>
 <p>This is particularly useful as an overview of which environment
 variables that are defined by the toolchain mechanism, and to assess the
@@ -13512,13 +13512,13 @@ to be run as a part of the configure/build/install steps.</p>
 <div class="highlight"><pre><span></span><code><span class="go">configuring... [DRY RUN]</span>
 
 <span class="go">[configure_step method]</span>
-<span class="go">  running command &quot; ./configure --prefix=/home/example/eb/software/make/3.82-GCC-4.8.2 &quot;</span>
+<span class="go">  running command " ./configure --prefix=/home/example/eb/software/make/3.82-GCC-4.8.2 "</span>
 <span class="go">  (in /home/example/eb/build/make/3.82/GCC-4.8.2/make-3.82)</span>
 
 <span class="go">building... [DRY RUN]</span>
 
 <span class="go">[build_step method]</span>
-<span class="go">  running command &quot; make -j 4 &quot;</span>
+<span class="go">  running command " make -j 4 "</span>
 <span class="go">  (in /home/example/eb/build/make/3.82/GCC-4.8.2/make-3.82)</span>
 
 <span class="go">...</span>
@@ -13530,7 +13530,7 @@ to be run as a part of the configure/build/install steps.</p>
 <span class="go">[make_installdir method]</span>
 
 <span class="go">[install_step method]</span>
-<span class="go">  running command &quot; make install &quot;</span>
+<span class="go">  running command " make install "</span>
 <span class="go">  (in /home/example/eb/build/make/3.82/GCC-4.8.2/make-3.82)</span>
 </code></pre></div>
 <p>There are a couple of minor exceptions though. Some (light-weight)
@@ -13548,7 +13548,7 @@ commands are expected to work (if any).</p>
 <div class="highlight"><pre><span></span><code><span class="go">sanity checking... [DRY RUN]</span>
 
 <span class="go">[sanity_check_step method]</span>
-<span class="go">Sanity check paths - file [&#39;files&#39;]</span>
+<span class="go">Sanity check paths - file ['files']</span>
 <span class="go">  * WRFV3/main/ideal.exe</span>
 <span class="go">  * WRFV3/main/libwrflib.a</span>
 <span class="go">  * WRFV3/main/ndown.exe</span>
@@ -13556,7 +13556,7 @@ commands are expected to work (if any).</p>
 <span class="go">  * WRFV3/main/real.exe</span>
 <span class="go">  * WRFV3/main/tc.exe</span>
 <span class="go">  * WRFV3/main/wrf.exe</span>
-<span class="go">Sanity check paths - (non-empty) directory [&#39;dirs&#39;]</span>
+<span class="go">Sanity check paths - (non-empty) directory ['dirs']</span>
 <span class="go">  * WRFV3/main</span>
 <span class="go">  * WRFV3/run</span>
 <span class="go">Sanity check commands</span>
@@ -13594,9 +13594,9 @@ statements, e.g. for <code>$PATH</code>, <code>$LD_LIBRARY_PATH</code>, etc.</p>
 <span class="go">        module load GCC/4.8.2</span>
 <span class="go">    }</span>
 
-<span class="go">    setenv  EBROOTMAKE      &quot;$root&quot;</span>
-<span class="go">    setenv  EBVERSIONMAKE       &quot;3.82&quot;</span>
-<span class="go">    setenv  EBDEVELMAKE     &quot;$root/easybuild/make-3.82-GCC-4.8.2-easybuild-devel&quot;</span>
+<span class="go">    setenv  EBROOTMAKE      "$root"</span>
+<span class="go">    setenv  EBVERSIONMAKE       "3.82"</span>
+<span class="go">    setenv  EBDEVELMAKE     "$root/easybuild/make-3.82-GCC-4.8.2-easybuild-devel"</span>
 
 <span class="gp">    # </span>Built<span class="w"> </span>with<span class="w"> </span>EasyBuild<span class="w"> </span>version<span class="w"> </span><span class="m">2</span>.4.0
 </code></pre></div>
@@ -13621,7 +13621,7 @@ suffices to check the <code>self.dry_run</code> class variable.</p>
     <span class="k">def</span><span class="w"> </span><span class="nf">configure_step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dry_run</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">dry_run_msg</span><span class="p">(</span><span class="s2">&quot;Dry run mode detected, not reading template configuration files&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dry_run_msg</span><span class="p">(</span><span class="s2">"Dry run mode detected, not reading template configuration files"</span><span class="p">)</span>
             <span class="o">...</span>
 </code></pre></div>
 <h3 id="extended_dry_run_guidelines_files_dirs_checks">Check whether files/directories exist before accessing them<a class="headerlink" href="#extended_dry_run_guidelines_files_dirs_checks" title="Permanent link">&para;</a></h3>
@@ -13633,30 +13633,30 @@ EasyBuild is being run in dry run mode.</p>
 an appropriate error should be produced, but only when the easyblock is
 <em>not</em> being used in dry run mode.</p>
 <p><strong>Bad</strong> example:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># *BAD* example: maybe the &#39;test&#39; directory is not there (e.g., because we&#39;re in dry run mode)!</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># *BAD* example: maybe the 'test' directory is not there (e.g., because we're in dry run mode)!</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="n">testcases</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span>
+    <span class="n">testcases</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">'test'</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-    <span class="k">raise</span> <span class="n">EasyBuildError</span><span class="p">(</span><span class="s2">&quot;Unexpected error when determining list of test cases: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="n">EasyBuildError</span><span class="p">(</span><span class="s2">"Unexpected error when determining list of test cases: </span><span class="si">%s</span><span class="s2">"</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
 </code></pre></div>
 <p>Good example:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># make sure the &#39;test&#39; directory is there before trying to access it</span>
-<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># make sure the 'test' directory is there before trying to access it</span>
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">'test'</span><span class="p">):</span>
     <span class="k">try</span><span class="p">:</span>
-        <span class="n">testcases</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span>
+        <span class="n">testcases</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">'test'</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="n">EasyBuildError</span><span class="p">(</span><span class="s2">&quot;Unexpected error when determining list of test cases: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">EasyBuildError</span><span class="p">(</span><span class="s2">"Unexpected error when determining list of test cases: </span><span class="si">%s</span><span class="s2">"</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
 
-<span class="c1"># only raise an error if we&#39;re not in dry run mode</span>
+<span class="c1"># only raise an error if we're not in dry run mode</span>
 <span class="k">elif</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">dry_run</span><span class="p">:</span>
-    <span class="k">raise</span> <span class="n">EasyBuildError</span><span class="p">(</span><span class="s2">&quot;Test directory not found, failed to determine list of test cases&quot;</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="n">EasyBuildError</span><span class="p">(</span><span class="s2">"Test directory not found, failed to determine list of test cases"</span><span class="p">)</span>
 </code></pre></div>
 <p>Easyblocks that do not take this into account are likely to result in
 ignored errors during a dry run (see also
 <a class="autorefs autorefs-internal" href="#extended_dry_run_notes_ignored_errors">Errors are ignored (by default) during dry run</a>).
 For example, for the bad example shown above:</p>
 <div class="highlight"><pre><span></span><code><span class="go">!!!</span>
-<span class="go">!!! WARNING: ignoring error &quot;Unexpected error when determining list of test cases: [Errno 2] No such file or directory: &#39;test&#39;&quot;</span>
+<span class="go">!!! WARNING: ignoring error "Unexpected error when determining list of test cases: [Errno 2] No such file or directory: 'test'"</span>
 <span class="go">!!!</span>
 </code></pre></div>
 <h3 id="extended_dry_run_guidelines_easyblocks_framework_functions">Use functions provided by the EasyBuild framework<a class="headerlink" href="#extended_dry_run_guidelines_easyblocks_framework_functions" title="Permanent link">&para;</a></h3>
@@ -13674,13 +13674,13 @@ free from conditional statements checking <code>self.dry_run</code>:</p>
 <p>For defining environment variables, the <code>setvar</code> function available in
 the <code>easybuild.tools.environment</code> module should be used.</p>
 <p>For example, from the WRF easyblock:</p>
-<div class="highlight"><pre><span></span><code><span class="n">jasper</span> <span class="o">=</span> <span class="n">get_software_root</span><span class="p">(</span><span class="s1">&#39;JasPer&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">jasper</span> <span class="o">=</span> <span class="n">get_software_root</span><span class="p">(</span><span class="s1">'JasPer'</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">jasper</span><span class="p">:</span>
-    <span class="n">env</span><span class="o">.</span><span class="n">setvar</span><span class="p">(</span><span class="s1">&#39;JASPERINC&#39;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">jasper</span><span class="p">,</span> <span class="s1">&#39;include&#39;</span><span class="p">))</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">setvar</span><span class="p">(</span><span class="s1">'JASPERINC'</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">jasper</span><span class="p">,</span> <span class="s1">'include'</span><span class="p">))</span>
 </code></pre></div>
 <p>When triggered in dry run mode, this will result in a clear dry run
 message like:</p>
-<div class="highlight"><pre><span></span><code><span class="go">export JASPERINC=&quot;$EBROOTJASPER/include&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="go">export JASPERINC="$EBROOTJASPER/include"</span>
 </code></pre></div>
 <p>The actual output depends on whether or not the required module for
 <code>JasPer</code> is available (see
@@ -13696,7 +13696,7 @@ without added value. It can be used for similar reasons in easyblocks.</p>
 modify <code>$PYTHONPATH</code> as required by the <code>python setup.py install</code>
 procedure (which is considered not relevant to include in the dry run
 output, since it's a technicality):</p>
-<div class="highlight"><pre><span></span><code><span class="n">env</span><span class="o">.</span><span class="n">setvar</span><span class="p">(</span><span class="s1">&#39;PYTHONPATH&#39;</span><span class="p">,</span> <span class="n">new_pythonpath</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">env</span><span class="o">.</span><span class="n">setvar</span><span class="p">(</span><span class="s1">'PYTHONPATH'</span><span class="p">,</span> <span class="n">new_pythonpath</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </code></pre></div>
 <h4 id="extended_dry_run_guidelines_easyblocks_framework_functions_write_file">Writing or appending to files<a class="headerlink" href="#extended_dry_run_guidelines_easyblocks_framework_functions_write_file" title="Permanent link">&para;</a></h4>
 <p><em>(<code>write_file</code>)</em></p>
@@ -13704,7 +13704,7 @@ output, since it's a technicality):</p>
 <code>write_file</code> function (available from the <code>easybuild.tools.filetools</code>
 module).</p>
 <p>Using it is straightforward, for example:</p>
-<div class="highlight"><pre><span></span><code><span class="n">write_file</span><span class="p">(</span><span class="s1">&#39;example.txt&#39;</span><span class="p">,</span> <span class="s2">&quot;Contents for the example file&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">write_file</span><span class="p">(</span><span class="s1">'example.txt'</span><span class="p">,</span> <span class="s2">"Contents for the example file"</span><span class="p">)</span>
 </code></pre></div>
 <p>To append to an existing file, <code>write_file</code> support a named argument
 <code>append</code>.</p>
@@ -13727,11 +13727,11 @@ to match on, and the string value that should be used as replacement
 text.</p>
 <p>For example (simple fictional example):</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># replace value for C++ compiler</span>
-<span class="n">apply_regex_substitutions</span><span class="p">(</span><span class="s1">&#39;config.mk&#39;</span><span class="p">,</span> <span class="p">[(</span><span class="s1">&#39;^(CPLUSPLUS\s*=).*&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\1</span><span class="s1"> </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;CXX&#39;</span><span class="p">])])</span>
+<span class="n">apply_regex_substitutions</span><span class="p">(</span><span class="s1">'config.mk'</span><span class="p">,</span> <span class="p">[(</span><span class="s1">'^(CPLUSPLUS\s*=).*'</span><span class="p">,</span> <span class="s1">'</span><span class="se">\1</span><span class="s1"> </span><span class="si">%s</span><span class="s1">'</span> <span class="o">%</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">'CXX'</span><span class="p">])])</span>
 </code></pre></div>
 <p>When used in dry run mode, it will produce a message like:</p>
 <div class="highlight"><pre><span></span><code><span class="go">applying regex substitutions to file config.mk</span>
-<span class="go">  * regex pattern &#39;^(CPLUSPLUS\s*=\s).*&#39;, replacement string &#39;\1 g++&#39;</span>
+<span class="go">  * regex pattern '^(CPLUSPLUS\s*=\s).*', replacement string '\1 g++'</span>
 </code></pre></div>
 <h4 id="extended_dry_run_guidelines_easyblocks_framework_functions_run_cmd">Executing commands<a class="headerlink" href="#extended_dry_run_guidelines_easyblocks_framework_functions_run_cmd" title="Permanent link">&para;</a></h4>
 <p><em>(<code>run_cmd</code> and <code>run_cmd_qa</code>)</em></p>
@@ -13740,11 +13740,11 @@ provided by the EasyBuild framework in the <code>easybuild.tools.run</code> modu
 with the latter providing support for running interactive commands.</p>
 <p>In their simplest form, they simply take the command to execute as a
 string. For example:</p>
-<div class="highlight"><pre><span></span><code><span class="n">run_cmd</span><span class="p">(</span><span class="s2">&quot;tcsh ./compile -j </span><span class="si">%s</span><span class="s2"> wrf&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">&#39;parallel&#39;</span><span class="p">])</span>
+<div class="highlight"><pre><span></span><code><span class="n">run_cmd</span><span class="p">(</span><span class="s2">"tcsh ./compile -j </span><span class="si">%s</span><span class="s2"> wrf"</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">cfg</span><span class="p">[</span><span class="s1">'parallel'</span><span class="p">])</span>
 </code></pre></div>
 <p>In dry run mode, these functions just produce a dry run message, rather
 than actually executing the specified command. For example:</p>
-<div class="highlight"><pre><span></span><code><span class="go">running command &quot;tcsh ./compile -j 4 wrf&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="go">running command "tcsh ./compile -j 4 wrf"</span>
 <span class="gp gp-VirtualEnv">(in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar/WRF-3.6.1)</span>
 </code></pre></div>
 <p>Take into account that the directory included in the message may not be
@@ -13756,7 +13756,7 @@ to execute a particular command silently, i.e. without producing a dry
 run message.</p>
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># only run for debugging purposes</span>
-<span class="n">run_cmd</span><span class="p">(</span><span class="s2">&quot;ulimit -v&quot;</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">run_cmd</span><span class="p">(</span><span class="s2">"ulimit -v"</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </code></pre></div>
 <h5 id="forced-execution-of-particular-commands">Forced execution of particular commands<a class="headerlink" href="#forced-execution-of-particular-commands" title="Permanent link">&para;</a></h5>
 <p>Sometimes, it can be required that specific (light-weight) commands are
@@ -13769,7 +13769,7 @@ always be executed, even when in dry run mode.</p>
 commands that verify certain things must be executed, but it can also be
 useful for easyblocks (if used correctly).</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><span class="n">out</span><span class="p">,</span> <span class="n">exit_code</span> <span class="o">=</span> <span class="n">run_cmd</span><span class="p">(</span><span class="s2">&quot;type module&quot;</span><span class="p">,</span> <span class="n">simple</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">force_in_dry_run</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">out</span><span class="p">,</span> <span class="n">exit_code</span> <span class="o">=</span> <span class="n">run_cmd</span><span class="p">(</span><span class="s2">"type module"</span><span class="p">,</span> <span class="n">simple</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">force_in_dry_run</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="extended_dry_run_examples">Extended dry run: examples<a class="headerlink" href="#extended_dry_run_examples" title="Permanent link">&para;</a></h2>
 <p>Output examples for <code>eb --extended-dry-run</code>/<code>eb -x</code>:</p>
@@ -13789,7 +13789,7 @@ useful for easyblocks (if used correctly).</p>
 <span class="go">Any errors that may occur are ignored and reported as warnings, on a per-step basis.</span>
 <span class="go">Please be aware of this, and only use the information below for quick debugging purposes.</span>
 
-<span class="go">*** DRY RUN using &#39;ConfigureMake&#39; easyblock (easybuild.easyblocks.generic.configuremake @ /home/example/eb/easybuild-easyblocks/easybuild/easyblocks/generic/configuremake.pyc) ***</span>
+<span class="go">*** DRY RUN using 'ConfigureMake' easyblock (easybuild.easyblocks.generic.configuremake @ /home/example/eb/easybuild-easyblocks/easybuild/easyblocks/generic/configuremake.pyc) ***</span>
 
 <span class="go">== building and installing make/3.82-GCC-4.8.2...</span>
 <span class="go">fetching files... [DRY RUN]</span>
@@ -13820,7 +13820,7 @@ useful for easyblocks (if used correctly).</p>
 <span class="go">* expected checksum for make-3.82.tar.bz2: (none)</span>
 
 <span class="go">[extract_step method]</span>
-<span class="go">  running command &quot;tar xjf /home/example/eb/sources/m/make/make-3.82.tar.bz2&quot;</span>
+<span class="go">  running command "tar xjf /home/example/eb/sources/m/make/make-3.82.tar.bz2"</span>
 <span class="go">  (in /home/example/eb/build/make/3.82/GCC-4.8.2)</span>
 
 <span class="go">patching... [DRY RUN]</span>
@@ -13844,30 +13844,30 @@ useful for easyblocks (if used correctly).</p>
 
 <span class="go">Defining build environment...</span>
 
-<span class="go">  export CC=&quot;gcc&quot;</span>
-<span class="go">  export CFLAGS=&quot;-O2&quot;</span>
-<span class="go">  export CXX=&quot;g++&quot;</span>
-<span class="go">  export CXXFLAGS=&quot;-O2&quot;</span>
-<span class="go">  export F77=&quot;gfortran&quot;</span>
-<span class="go">  export F90=&quot;gfortran&quot;</span>
-<span class="go">  export F90FLAGS=&quot;-O2&quot;</span>
-<span class="go">  export FFLAGS=&quot;-O2&quot;</span>
-<span class="go">  export FLIBS=&quot;-lgfortran&quot;</span>
-<span class="go">  export LDFLAGS=&quot;-L/home/example/eb/software/GCC/4.8.2/lib&quot;</span>
-<span class="go">  export LIBS=&quot;-lm -lpthread&quot;</span>
-<span class="go">  export OPTFLAGS=&quot;-O2&quot;</span>
-<span class="go">  export PRECFLAGS=&quot;&quot;</span>
+<span class="go">  export CC="gcc"</span>
+<span class="go">  export CFLAGS="-O2"</span>
+<span class="go">  export CXX="g++"</span>
+<span class="go">  export CXXFLAGS="-O2"</span>
+<span class="go">  export F77="gfortran"</span>
+<span class="go">  export F90="gfortran"</span>
+<span class="go">  export F90FLAGS="-O2"</span>
+<span class="go">  export FFLAGS="-O2"</span>
+<span class="go">  export FLIBS="-lgfortran"</span>
+<span class="go">  export LDFLAGS="-L/home/example/eb/software/GCC/4.8.2/lib"</span>
+<span class="go">  export LIBS="-lm -lpthread"</span>
+<span class="go">  export OPTFLAGS="-O2"</span>
+<span class="go">  export PRECFLAGS=""</span>
 
 <span class="go">configuring... [DRY RUN]</span>
 
 <span class="go">[configure_step method]</span>
-<span class="go">  running command &quot; ./configure --prefix=/home/example/eb/software/make/3.82-GCC-4.8.2 &quot;</span>
+<span class="go">  running command " ./configure --prefix=/home/example/eb/software/make/3.82-GCC-4.8.2 "</span>
 <span class="go">  (in /home/example/eb/build/make/3.82/GCC-4.8.2/make-3.82)</span>
 
 <span class="go">building... [DRY RUN]</span>
 
 <span class="go">[build_step method]</span>
-<span class="go">  running command &quot; make -j 4 &quot;</span>
+<span class="go">  running command " make -j 4 "</span>
 <span class="go">  (in /home/example/eb/build/make/3.82/GCC-4.8.2/make-3.82)</span>
 
 <span class="go">testing... [DRY RUN]</span>
@@ -13881,7 +13881,7 @@ useful for easyblocks (if used correctly).</p>
 <span class="go">[make_installdir method]</span>
 
 <span class="go">[install_step method]</span>
-<span class="go">  running command &quot; make install &quot;</span>
+<span class="go">  running command " make install "</span>
 <span class="go">  (in /home/example/eb/build/make/3.82/GCC-4.8.2/make-3.82)</span>
 
 <span class="go">taking care of extensions... [DRY RUN]</span>
@@ -13895,9 +13895,9 @@ useful for easyblocks (if used correctly).</p>
 <span class="go">sanity checking... [DRY RUN]</span>
 
 <span class="go">[sanity_check_step method]</span>
-<span class="go">Sanity check paths - file [&#39;files&#39;]</span>
+<span class="go">Sanity check paths - file ['files']</span>
 <span class="go">  * bin/make</span>
-<span class="go">Sanity check paths - (non-empty) directory [&#39;dirs&#39;]</span>
+<span class="go">Sanity check paths - (non-empty) directory ['dirs']</span>
 <span class="go">  (none)</span>
 <span class="go">Sanity check commands</span>
 <span class="go">  (none)</span>
@@ -13927,9 +13927,9 @@ useful for easyblocks (if used correctly).</p>
 <span class="go">        module load GCC/4.8.2</span>
 <span class="go">    }</span>
 
-<span class="go">    setenv  EBROOTMAKE      &quot;$root&quot;</span>
-<span class="go">    setenv  EBVERSIONMAKE       &quot;3.82&quot;</span>
-<span class="go">    setenv  EBDEVELMAKE     &quot;$root/easybuild/make-3.82-GCC-4.8.2-easybuild-devel&quot;</span>
+<span class="go">    setenv  EBROOTMAKE      "$root"</span>
+<span class="go">    setenv  EBVERSIONMAKE       "3.82"</span>
+<span class="go">    setenv  EBDEVELMAKE     "$root/easybuild/make-3.82-GCC-4.8.2-easybuild-devel"</span>
 
 <span class="gp">    # </span>Built<span class="w"> </span>with<span class="w"> </span>EasyBuild<span class="w"> </span>version<span class="w"> </span><span class="m">2</span>.4.0
 
@@ -13968,7 +13968,7 @@ useful for easyblocks (if used correctly).</p>
 <span class="go">Any errors that may occur are ignored and reported as warnings, on a per-step basis.</span>
 <span class="go">Please be aware of this, and only use the information below for quick debugging purposes.</span>
 
-<span class="go">*** DRY RUN using &#39;EB_WRF&#39; easyblock (easybuild.easyblocks.wrf @ /home/example/eb/easybuild-easyblocks/easybuild/easyblocks/w/wrf.py) ***</span>
+<span class="go">*** DRY RUN using 'EB_WRF' easyblock (easybuild.easyblocks.wrf @ /home/example/eb/easybuild-easyblocks/easybuild/easyblocks/w/wrf.py) ***</span>
 
 <span class="go">== building and installing WRF/3.6.1-intel-2015a-dmpar...</span>
 <span class="go">fetching files... [DRY RUN]</span>
@@ -14007,23 +14007,23 @@ useful for easyblocks (if used correctly).</p>
 <span class="go">* expected checksum for WRF_tests_limit-runtimes.patch: (none)</span>
 
 <span class="go">[extract_step method]</span>
-<span class="go">  running command &quot;tar xzf /home/example/eb/sources/w/WRF/WRFV3.6.1.TAR.gz&quot;</span>
+<span class="go">  running command "tar xzf /home/example/eb/sources/w/WRF/WRFV3.6.1.TAR.gz"</span>
 <span class="go">  (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar)</span>
 
 <span class="go">patching... [DRY RUN]</span>
 
 <span class="go">[patch_step method]</span>
 <span class="go">* applying patch file WRF_parallel_build_fix.patch</span>
-<span class="go">  running command &quot;patch -b -p&lt;derived&gt; -i /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_parallel_build_fix.patch&quot;</span>
+<span class="go">  running command "patch -b -p&lt;derived&gt; -i /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_parallel_build_fix.patch"</span>
 <span class="go">  (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar)</span>
 <span class="go">* applying patch file WRF-3.6.1_netCDF-Fortran_separate_path.patch</span>
-<span class="go">  running command &quot;patch -b -p&lt;derived&gt; -i /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_netCDF-Fortran_separate_path.patch&quot;</span>
+<span class="go">  running command "patch -b -p&lt;derived&gt; -i /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_netCDF-Fortran_separate_path.patch"</span>
 <span class="go">  (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar)</span>
 <span class="go">* applying patch file WRF-3.6.1_known_problems.patch</span>
-<span class="go">  running command &quot;patch -b -p&lt;derived&gt; -i /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_known_problems.patch&quot;</span>
+<span class="go">  running command "patch -b -p&lt;derived&gt; -i /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF-3.6.1_known_problems.patch"</span>
 <span class="go">  (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar)</span>
 <span class="go">* applying patch file WRF_tests_limit-runtimes.patch</span>
-<span class="go">  running command &quot;patch -b -p&lt;derived&gt; -i /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_tests_limit-runtimes.patch&quot;</span>
+<span class="go">  running command "patch -b -p&lt;derived&gt; -i /home/example/eb/easybuild-easyconfigs/easybuild/easyconfigs/w/WRF/WRF_tests_limit-runtimes.patch"</span>
 <span class="go">  (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar)</span>
 
 <span class="go">preparing... [DRY RUN]</span>
@@ -14051,122 +14051,122 @@ useful for easyblocks (if used correctly).</p>
 
 
 <span class="go">!!!</span>
-<span class="go">!!! WARNING: Not all FFTW interface libraries [&#39;fftw3xc_intel&#39;, &#39;mkl_intel_lp64&#39;, &#39;mkl_sequential&#39;, &#39;mkl_core&#39;] are found in [&#39;$EBROOTIMKL/mkl/lib/intel64&#39;, &#39;$EBROOTIMKL/compiler/lib/intel64&#39;], can&#39;t set $FFT_LIB.</span>
+<span class="go">!!! WARNING: Not all FFTW interface libraries ['fftw3xc_intel', 'mkl_intel_lp64', 'mkl_sequential', 'mkl_core'] are found in ['$EBROOTIMKL/mkl/lib/intel64', '$EBROOTIMKL/compiler/lib/intel64'], can't set $FFT_LIB.</span>
 <span class="go">!!!</span>
 
 <span class="go">Defining build environment...</span>
 
-<span class="go">  export BLACS_INC_DIR=&quot;&quot;</span>
-<span class="go">  export BLACS_LIB_DIR=&quot;&quot;</span>
-<span class="go">  export BLACS_MT_STATIC_LIBS=&quot;libmkl_blacs_intelmpi_lp64.a&quot;</span>
-<span class="go">  export BLACS_STATIC_LIBS=&quot;libmkl_blacs_intelmpi_lp64.a&quot;</span>
-<span class="go">  export BLAS_INC_DIR=&quot;&quot;</span>
-<span class="go">  export BLAS_LAPACK_INC_DIR=&quot;&quot;</span>
-<span class="go">  export BLAS_LAPACK_LIB_DIR=&quot;&quot;</span>
-<span class="go">  export BLAS_LAPACK_MT_STATIC_LIBS=&quot;libmkl_intel_lp64.a,libmkl_intel_thread.a,libmkl_core.a,libiomp5.a,libpthread.a&quot;</span>
-<span class="go">  export BLAS_LAPACK_STATIC_LIBS=&quot;libmkl_intel_lp64.a,libmkl_sequential.a,libmkl_core.a&quot;</span>
-<span class="go">  export BLAS_LIB_DIR=&quot;&quot;</span>
-<span class="go">  export BLAS_MT_STATIC_LIBS=&quot;libmkl_intel_lp64.a,libmkl_intel_thread.a,libmkl_core.a,libiomp5.a,libpthread.a&quot;</span>
-<span class="go">  export BLAS_STATIC_LIBS=&quot;libmkl_intel_lp64.a,libmkl_sequential.a,libmkl_core.a&quot;</span>
-<span class="go">  export CC=&quot;icc&quot;</span>
-<span class="go">  export CFLAGS=&quot;-O2 -ftz -fp-speculation=safe -fp-model source&quot;</span>
-<span class="go">  export CPPFLAGS=&quot;&quot;</span>
-<span class="go">  export CXX=&quot;icpc&quot;</span>
-<span class="go">  export CXXFLAGS=&quot;-O2 -ftz -fp-speculation=safe -fp-model source&quot;</span>
-<span class="go">  export F77=&quot;ifort&quot;</span>
-<span class="go">  export F90=&quot;ifort&quot;</span>
-<span class="go">  export F90FLAGS=&quot;-O2 -ftz -fp-speculation=safe -fp-model source&quot;</span>
-<span class="go">  export FFLAGS=&quot;-O2 -ftz -fp-speculation=safe -fp-model source&quot;</span>
-<span class="go">  export FFTW_INC_DIR=&quot;&quot;</span>
-<span class="go">  export FFTW_LIB_DIR=&quot;&quot;</span>
-<span class="go">  export FFTW_STATIC_LIBS=&quot;&quot;</span>
-<span class="go">  export FFT_INC_DIR=&quot;&quot;</span>
-<span class="go">  export FFT_LIB_DIR=&quot;&quot;</span>
-<span class="go">  export FFT_STATIC_LIBS=&quot;&quot;</span>
-<span class="go">  export I_MPI_CC=&quot;icc&quot;</span>
-<span class="go">  export I_MPI_CXX=&quot;icpc&quot;</span>
-<span class="go">  export I_MPI_F77=&quot;ifort&quot;</span>
-<span class="go">  export I_MPI_F90=&quot;ifort&quot;</span>
-<span class="go">  export LAPACK_INC_DIR=&quot;&quot;</span>
-<span class="go">  export LAPACK_LIB_DIR=&quot;&quot;</span>
-<span class="go">  export LAPACK_MT_STATIC_LIBS=&quot;libmkl_intel_lp64.a,libmkl_intel_thread.a,libmkl_core.a,libiomp5.a,libpthread.a&quot;</span>
-<span class="go">  export LAPACK_STATIC_LIBS=&quot;libmkl_intel_lp64.a,libmkl_sequential.a,libmkl_core.a&quot;</span>
-<span class="go">  export LDFLAGS=&quot;&quot;</span>
-<span class="go">  export LIBBLACS=&quot;-Wl,-Bstatic -Wl,--start-group -lmkl_blacs_intelmpi_lp64 -Wl,--end-group -Wl,-Bdynamic&quot;</span>
-<span class="go">  export LIBBLACS_MT=&quot;-Wl,-Bstatic -Wl,--start-group -lmkl_blacs_intelmpi_lp64 -Wl,--end-group -Wl,-Bdynamic&quot;</span>
-<span class="go">  export LIBBLAS=&quot;-Wl,-Bstatic -Wl,--start-group -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -Wl,--end-group -Wl,-Bdynamic&quot;</span>
-<span class="go">  export LIBBLAS_MT=&quot;-Wl,-Bstatic -Wl,--start-group -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -Wl,--end-group -Wl,-Bdynamic -liomp5 -lpthread&quot;</span>
-<span class="go">  export LIBFFT=&quot;&quot;</span>
-<span class="go">  export LIBLAPACK=&quot;-Wl,-Bstatic -Wl,--start-group -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -Wl,--end-group -Wl,-Bdynamic&quot;</span>
-<span class="go">  export LIBLAPACK_MT=&quot;-Wl,-Bstatic -Wl,--start-group -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -Wl,--end-group -Wl,-Bdynamic -liomp5 -lpthread&quot;</span>
-<span class="go">  export LIBLAPACK_MT_ONLY=&quot;-Wl,-Bstatic -Wl,--start-group -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -Wl,--end-group -Wl,-Bdynamic -liomp5 -lpthread&quot;</span>
-<span class="go">  export LIBLAPACK_ONLY=&quot;-Wl,-Bstatic -Wl,--start-group -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -Wl,--end-group -Wl,-Bdynamic&quot;</span>
-<span class="go">  export LIBS=&quot;-liomp5 -lpthread&quot;</span>
-<span class="go">  export LIBSCALAPACK=&quot;-Wl,-Bstatic -Wl,--start-group -lmkl_scalapack_lp64 -lmkl_blacs_intelmpi_lp64 -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -Wl,--end-group -Wl,-Bdynamic&quot;</span>
-<span class="go">  export LIBSCALAPACK_MT=&quot;-Wl,-Bstatic -Wl,--start-group -lmkl_scalapack_lp64 -lmkl_blacs_intelmpi_lp64 -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -Wl,--end-group -Wl,-Bdynamic -liomp5 -lpthread&quot;</span>
-<span class="go">  export LIBSCALAPACK_MT_ONLY=&quot;-Wl,-Bstatic -Wl,--start-group -lmkl_scalapack_lp64 -Wl,--end-group -Wl,-Bdynamic -liomp5 -lpthread&quot;</span>
-<span class="go">  export LIBSCALAPACK_ONLY=&quot;-Wl,-Bstatic -Wl,--start-group -lmkl_scalapack_lp64 -Wl,--end-group -Wl,-Bdynamic&quot;</span>
-<span class="go">  export MPICC=&quot;mpicc&quot;</span>
-<span class="go">  export MPICH_CC=&quot;icc&quot;</span>
-<span class="go">  export MPICH_CXX=&quot;icpc&quot;</span>
-<span class="go">  export MPICH_F77=&quot;ifort&quot;</span>
-<span class="go">  export MPICH_F90=&quot;ifort&quot;</span>
-<span class="go">  export MPICXX=&quot;mpicxx&quot;</span>
-<span class="go">  export MPIF77=&quot;mpif77&quot;</span>
-<span class="go">  export MPIF90=&quot;mpif90&quot;</span>
-<span class="go">  export MPI_INC_DIR=&quot;&quot;</span>
-<span class="go">  export MPI_LIB_DIR=&quot;&quot;</span>
-<span class="go">  export MPI_LIB_SHARED=&quot;&quot;</span>
-<span class="go">  export MPI_LIB_STATIC=&quot;&quot;</span>
-<span class="go">  export OPTFLAGS=&quot;-O2&quot;</span>
-<span class="go">  export PRECFLAGS=&quot;-ftz -fp-speculation=safe -fp-model source&quot;</span>
-<span class="go">  export SCALAPACK_INC_DIR=&quot;&quot;</span>
-<span class="go">  export SCALAPACK_LIB_DIR=&quot;&quot;</span>
-<span class="go">  export SCALAPACK_MT_STATIC_LIBS=&quot;libmkl_scalapack_lp64.a,libmkl_blacs_intelmpi_lp64.a,libmkl_intel_lp64.a,libmkl_intel_thread.a,libmkl_core.a,libiomp5.a,libpthread.a&quot;</span>
-<span class="go">  export SCALAPACK_STATIC_LIBS=&quot;libmkl_scalapack_lp64.a,libmkl_blacs_intelmpi_lp64.a,libmkl_intel_lp64.a,libmkl_sequential.a,libmkl_core.a&quot;</span>
+<span class="go">  export BLACS_INC_DIR=""</span>
+<span class="go">  export BLACS_LIB_DIR=""</span>
+<span class="go">  export BLACS_MT_STATIC_LIBS="libmkl_blacs_intelmpi_lp64.a"</span>
+<span class="go">  export BLACS_STATIC_LIBS="libmkl_blacs_intelmpi_lp64.a"</span>
+<span class="go">  export BLAS_INC_DIR=""</span>
+<span class="go">  export BLAS_LAPACK_INC_DIR=""</span>
+<span class="go">  export BLAS_LAPACK_LIB_DIR=""</span>
+<span class="go">  export BLAS_LAPACK_MT_STATIC_LIBS="libmkl_intel_lp64.a,libmkl_intel_thread.a,libmkl_core.a,libiomp5.a,libpthread.a"</span>
+<span class="go">  export BLAS_LAPACK_STATIC_LIBS="libmkl_intel_lp64.a,libmkl_sequential.a,libmkl_core.a"</span>
+<span class="go">  export BLAS_LIB_DIR=""</span>
+<span class="go">  export BLAS_MT_STATIC_LIBS="libmkl_intel_lp64.a,libmkl_intel_thread.a,libmkl_core.a,libiomp5.a,libpthread.a"</span>
+<span class="go">  export BLAS_STATIC_LIBS="libmkl_intel_lp64.a,libmkl_sequential.a,libmkl_core.a"</span>
+<span class="go">  export CC="icc"</span>
+<span class="go">  export CFLAGS="-O2 -ftz -fp-speculation=safe -fp-model source"</span>
+<span class="go">  export CPPFLAGS=""</span>
+<span class="go">  export CXX="icpc"</span>
+<span class="go">  export CXXFLAGS="-O2 -ftz -fp-speculation=safe -fp-model source"</span>
+<span class="go">  export F77="ifort"</span>
+<span class="go">  export F90="ifort"</span>
+<span class="go">  export F90FLAGS="-O2 -ftz -fp-speculation=safe -fp-model source"</span>
+<span class="go">  export FFLAGS="-O2 -ftz -fp-speculation=safe -fp-model source"</span>
+<span class="go">  export FFTW_INC_DIR=""</span>
+<span class="go">  export FFTW_LIB_DIR=""</span>
+<span class="go">  export FFTW_STATIC_LIBS=""</span>
+<span class="go">  export FFT_INC_DIR=""</span>
+<span class="go">  export FFT_LIB_DIR=""</span>
+<span class="go">  export FFT_STATIC_LIBS=""</span>
+<span class="go">  export I_MPI_CC="icc"</span>
+<span class="go">  export I_MPI_CXX="icpc"</span>
+<span class="go">  export I_MPI_F77="ifort"</span>
+<span class="go">  export I_MPI_F90="ifort"</span>
+<span class="go">  export LAPACK_INC_DIR=""</span>
+<span class="go">  export LAPACK_LIB_DIR=""</span>
+<span class="go">  export LAPACK_MT_STATIC_LIBS="libmkl_intel_lp64.a,libmkl_intel_thread.a,libmkl_core.a,libiomp5.a,libpthread.a"</span>
+<span class="go">  export LAPACK_STATIC_LIBS="libmkl_intel_lp64.a,libmkl_sequential.a,libmkl_core.a"</span>
+<span class="go">  export LDFLAGS=""</span>
+<span class="go">  export LIBBLACS="-Wl,-Bstatic -Wl,--start-group -lmkl_blacs_intelmpi_lp64 -Wl,--end-group -Wl,-Bdynamic"</span>
+<span class="go">  export LIBBLACS_MT="-Wl,-Bstatic -Wl,--start-group -lmkl_blacs_intelmpi_lp64 -Wl,--end-group -Wl,-Bdynamic"</span>
+<span class="go">  export LIBBLAS="-Wl,-Bstatic -Wl,--start-group -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -Wl,--end-group -Wl,-Bdynamic"</span>
+<span class="go">  export LIBBLAS_MT="-Wl,-Bstatic -Wl,--start-group -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -Wl,--end-group -Wl,-Bdynamic -liomp5 -lpthread"</span>
+<span class="go">  export LIBFFT=""</span>
+<span class="go">  export LIBLAPACK="-Wl,-Bstatic -Wl,--start-group -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -Wl,--end-group -Wl,-Bdynamic"</span>
+<span class="go">  export LIBLAPACK_MT="-Wl,-Bstatic -Wl,--start-group -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -Wl,--end-group -Wl,-Bdynamic -liomp5 -lpthread"</span>
+<span class="go">  export LIBLAPACK_MT_ONLY="-Wl,-Bstatic -Wl,--start-group -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -Wl,--end-group -Wl,-Bdynamic -liomp5 -lpthread"</span>
+<span class="go">  export LIBLAPACK_ONLY="-Wl,-Bstatic -Wl,--start-group -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -Wl,--end-group -Wl,-Bdynamic"</span>
+<span class="go">  export LIBS="-liomp5 -lpthread"</span>
+<span class="go">  export LIBSCALAPACK="-Wl,-Bstatic -Wl,--start-group -lmkl_scalapack_lp64 -lmkl_blacs_intelmpi_lp64 -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -Wl,--end-group -Wl,-Bdynamic"</span>
+<span class="go">  export LIBSCALAPACK_MT="-Wl,-Bstatic -Wl,--start-group -lmkl_scalapack_lp64 -lmkl_blacs_intelmpi_lp64 -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -Wl,--end-group -Wl,-Bdynamic -liomp5 -lpthread"</span>
+<span class="go">  export LIBSCALAPACK_MT_ONLY="-Wl,-Bstatic -Wl,--start-group -lmkl_scalapack_lp64 -Wl,--end-group -Wl,-Bdynamic -liomp5 -lpthread"</span>
+<span class="go">  export LIBSCALAPACK_ONLY="-Wl,-Bstatic -Wl,--start-group -lmkl_scalapack_lp64 -Wl,--end-group -Wl,-Bdynamic"</span>
+<span class="go">  export MPICC="mpicc"</span>
+<span class="go">  export MPICH_CC="icc"</span>
+<span class="go">  export MPICH_CXX="icpc"</span>
+<span class="go">  export MPICH_F77="ifort"</span>
+<span class="go">  export MPICH_F90="ifort"</span>
+<span class="go">  export MPICXX="mpicxx"</span>
+<span class="go">  export MPIF77="mpif77"</span>
+<span class="go">  export MPIF90="mpif90"</span>
+<span class="go">  export MPI_INC_DIR=""</span>
+<span class="go">  export MPI_LIB_DIR=""</span>
+<span class="go">  export MPI_LIB_SHARED=""</span>
+<span class="go">  export MPI_LIB_STATIC=""</span>
+<span class="go">  export OPTFLAGS="-O2"</span>
+<span class="go">  export PRECFLAGS="-ftz -fp-speculation=safe -fp-model source"</span>
+<span class="go">  export SCALAPACK_INC_DIR=""</span>
+<span class="go">  export SCALAPACK_LIB_DIR=""</span>
+<span class="go">  export SCALAPACK_MT_STATIC_LIBS="libmkl_scalapack_lp64.a,libmkl_blacs_intelmpi_lp64.a,libmkl_intel_lp64.a,libmkl_intel_thread.a,libmkl_core.a,libiomp5.a,libpthread.a"</span>
+<span class="go">  export SCALAPACK_STATIC_LIBS="libmkl_scalapack_lp64.a,libmkl_blacs_intelmpi_lp64.a,libmkl_intel_lp64.a,libmkl_sequential.a,libmkl_core.a"</span>
 
 <span class="go">configuring... [DRY RUN]</span>
 
 <span class="go">[configure_step method]</span>
-<span class="go">  export NETCDF=&quot;$EBROOTNETCDF&quot;</span>
-<span class="go">  export NETCDFF=&quot;$EBROOTNETCDFMINFORTRAN&quot;</span>
-<span class="go">  export JASPERINC=&quot;$EBROOTJASPER/include&quot;</span>
-<span class="go">  export JASPERLIB=&quot;$EBROOTJASPER/lib&quot;</span>
-<span class="go">  export WRFIO_NCD_LARGE_FILE_SUPPORT=&quot;1&quot;</span>
+<span class="go">  export NETCDF="$EBROOTNETCDF"</span>
+<span class="go">  export NETCDFF="$EBROOTNETCDFMINFORTRAN"</span>
+<span class="go">  export JASPERINC="$EBROOTJASPER/include"</span>
+<span class="go">  export JASPERLIB="$EBROOTJASPER/lib"</span>
+<span class="go">  export WRFIO_NCD_LARGE_FILE_SUPPORT="1"</span>
 <span class="go">Perl script patched: arch/Config_new.pl</span>
-<span class="go">  running interactive command &quot;./configure&quot;</span>
+<span class="go">  running interactive command "./configure"</span>
 <span class="go">  (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar/WRF-3.6.1)</span>
 <span class="go">applying regex substitutions to file configure.wrf</span>
-<span class="go">  * regex pattern &#39;^(DM_FC\s*=\s*).*$&#39;, replacement string &#39;\1 mpif90&#39;</span>
-<span class="go">  * regex pattern &#39;^(DM_CC\s*=\s*).*$&#39;, replacement string &#39;\1 mpicc -DMPI2_SUPPORT&#39;</span>
-<span class="go">  * regex pattern &#39;^(SFC\s*=\s*).*$&#39;, replacement string &#39;\1 ifort&#39;</span>
-<span class="go">  * regex pattern &#39;^(SCC\s*=\s*).*$&#39;, replacement string &#39;\1 icc&#39;</span>
-<span class="go">  * regex pattern &#39;^(CCOMP\s*=\s*).*$&#39;, replacement string &#39;\1 icc&#39;</span>
+<span class="go">  * regex pattern '^(DM_FC\s*=\s*).*$', replacement string '\1 mpif90'</span>
+<span class="go">  * regex pattern '^(DM_CC\s*=\s*).*$', replacement string '\1 mpicc -DMPI2_SUPPORT'</span>
+<span class="go">  * regex pattern '^(SFC\s*=\s*).*$', replacement string '\1 ifort'</span>
+<span class="go">  * regex pattern '^(SCC\s*=\s*).*$', replacement string '\1 icc'</span>
+<span class="go">  * regex pattern '^(CCOMP\s*=\s*).*$', replacement string '\1 icc'</span>
 <span class="go">applying regex substitutions to file configure.wrf</span>
-<span class="go">  * regex pattern &#39;^(FCOPTIM.*)(\s-O3)(\s.*)$&#39;, replacement string &#39;\1 -O2 -ftz -fp-speculation=safe -fp-model source \3&#39;</span>
-<span class="go">  * regex pattern &#39;^(CFLAGS_LOCAL.*)(\s-O3)(\s.*)$&#39;, replacement string &#39;\1 -O2 -ftz -fp-speculation=safe -fp-model source \3&#39;</span>
+<span class="go">  * regex pattern '^(FCOPTIM.*)(\s-O3)(\s.*)$', replacement string '\1 -O2 -ftz -fp-speculation=safe -fp-model source \3'</span>
+<span class="go">  * regex pattern '^(CFLAGS_LOCAL.*)(\s-O3)(\s.*)$', replacement string '\1 -O2 -ftz -fp-speculation=safe -fp-model source \3'</span>
 
 <span class="go">building... [DRY RUN]</span>
 
 <span class="go">[build_step method]</span>
-<span class="go">  running command &quot;tcsh ./compile -j 4 wrf&quot;</span>
+<span class="go">  running command "tcsh ./compile -j 4 wrf"</span>
 <span class="go">  (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar/WRF-3.6.1)</span>
-<span class="go">  running command &quot;tcsh ./compile -j 4 em_real&quot;</span>
+<span class="go">  running command "tcsh ./compile -j 4 em_real"</span>
 <span class="go">  (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar/WRF-3.6.1)</span>
-<span class="go">  running command &quot;tcsh ./compile -j 4 em_b_wave&quot;</span>
+<span class="go">  running command "tcsh ./compile -j 4 em_b_wave"</span>
 <span class="go">  (in /home/example/eb/software/WRF/3.6.1-intel-2015a-dmpar/WRF-3.6.1)</span>
 
 <span class="go">testing... [DRY RUN]</span>
 
 <span class="go">[test_step method]</span>
-<span class="go">  export I_MPI_MPD_TMPDIR=&quot;/tmp/eb-Dh1wOp&quot;</span>
-<span class="go">  export PBS_ENVIRONMENT=&quot;PBS_BATCH_MPI&quot;</span>
-<span class="go">  export I_MPI_PROCESS_MANAGER=&quot;mpd&quot;</span>
+<span class="go">  export I_MPI_MPD_TMPDIR="/tmp/eb-Dh1wOp"</span>
+<span class="go">  export PBS_ENVIRONMENT="PBS_BATCH_MPI"</span>
+<span class="go">  export I_MPI_PROCESS_MANAGER="mpd"</span>
 <span class="go">file written: /tmp/eb-Dh1wOp/mpi_cmd_for-nzyh5V/mpdboot</span>
 <span class="go">file written: /tmp/eb-Dh1wOp/mpi_cmd_for-nzyh5V/nodes</span>
-<span class="go">  export I_MPI_MPD_TMPDIR=&quot;/tmp/eb-Dh1wOp&quot;</span>
-<span class="go">  export PBS_ENVIRONMENT=&quot;PBS_BATCH_MPI&quot;</span>
-<span class="go">  export I_MPI_PROCESS_MANAGER=&quot;mpd&quot;</span>
+<span class="go">  export I_MPI_MPD_TMPDIR="/tmp/eb-Dh1wOp"</span>
+<span class="go">  export PBS_ENVIRONMENT="PBS_BATCH_MPI"</span>
+<span class="go">  export I_MPI_PROCESS_MANAGER="mpd"</span>
 <span class="go">file written: /tmp/eb-Dh1wOp/mpi_cmd_for-hIOEd_/mpdboot</span>
 <span class="go">file written: /tmp/eb-Dh1wOp/mpi_cmd_for-hIOEd_/nodes</span>
 
@@ -14189,7 +14189,7 @@ useful for easyblocks (if used correctly).</p>
 <span class="go">sanity checking... [DRY RUN]</span>
 
 <span class="go">[sanity_check_step method]</span>
-<span class="go">Sanity check paths - file [&#39;files&#39;]</span>
+<span class="go">Sanity check paths - file ['files']</span>
 <span class="go">  * WRFV3/main/ideal.exe</span>
 <span class="go">  * WRFV3/main/libwrflib.a</span>
 <span class="go">  * WRFV3/main/ndown.exe</span>
@@ -14197,7 +14197,7 @@ useful for easyblocks (if used correctly).</p>
 <span class="go">  * WRFV3/main/real.exe</span>
 <span class="go">  * WRFV3/main/tc.exe</span>
 <span class="go">  * WRFV3/main/wrf.exe</span>
-<span class="go">Sanity check paths - (non-empty) directory [&#39;dirs&#39;]</span>
+<span class="go">Sanity check paths - (non-empty) directory ['dirs']</span>
 <span class="go">  * WRFV3/main</span>
 <span class="go">  * WRFV3/run</span>
 <span class="go">Sanity check commands</span>
@@ -14244,12 +14244,12 @@ useful for easyblocks (if used correctly).</p>
 <span class="go">        module load netCDF-Fortran/4.4.0-intel-2015a</span>
 <span class="go">    }</span>
 
-<span class="go">    setenv  EBROOTWRF       &quot;$root&quot;</span>
-<span class="go">    setenv  EBVERSIONWRF        &quot;3.6.1&quot;</span>
-<span class="go">    setenv  EBDEVELWRF      &quot;$root/easybuild/WRF-3.6.1-intel-2015a-dmpar-easybuild-devel&quot;</span>
+<span class="go">    setenv  EBROOTWRF       "$root"</span>
+<span class="go">    setenv  EBVERSIONWRF        "3.6.1"</span>
+<span class="go">    setenv  EBDEVELWRF      "$root/easybuild/WRF-3.6.1-intel-2015a-dmpar-easybuild-devel"</span>
 
-<span class="go">    setenv  NETCDF      &quot;$EBROOTNETCDF&quot;</span>
-<span class="go">    setenv  NETCDFF     &quot;$EBROOTNETCDFMINFORTRAN&quot;</span>
+<span class="go">    setenv  NETCDF      "$EBROOTNETCDF"</span>
+<span class="go">    setenv  NETCDFF     "$EBROOTNETCDFMINFORTRAN"</span>
 <span class="gp">    # </span>Built<span class="w"> </span>with<span class="w"> </span>EasyBuild<span class="w"> </span>version<span class="w"> </span><span class="m">2</span>.4.0
 
 

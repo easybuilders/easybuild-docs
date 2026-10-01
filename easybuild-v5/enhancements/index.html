@@ -12935,7 +12935,7 @@ folders that could collide with those from other loaded modules.</p>
 <code>MODULE_LOAD_ENV_HEADERS</code> that allows to add search paths in the generated
 module according to <code>--module-search-path-headers</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="n">modextrapaths</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="n">MODULE_LOAD_ENV_HEADERS</span><span class="p">:</span> <span class="s1">&#39;include/extra_dir&#39;</span><span class="p">,</span>
+    <span class="n">MODULE_LOAD_ENV_HEADERS</span><span class="p">:</span> <span class="s1">'include/extra_dir'</span><span class="p">,</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Adding search paths explicitly to <code>CPATH</code> or any other environment variable by
@@ -13027,11 +13027,11 @@ file. The environment variables targeted in <code>modextrapaths</code> now can a
 defined with a dictionary of options to fully control how their extra search
 paths will be added into the environment.</p>
 <div class="highlight"><pre><span></span><code><span class="n">modextrapaths</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;ENV_VAR_NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;extra/subdir&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;WEIRD_ENV_VAR&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s1">&#39;paths&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;another/subdir1&#39;</span><span class="p">,</span> <span class="s1">&#39;another/subdir2&#39;</span><span class="p">],</span>
-        <span class="s1">&#39;delimiter&#39;</span><span class="p">:</span> <span class="s1">&#39;+&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;prepend&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s1">'ENV_VAR_NAME'</span><span class="p">:</span> <span class="s1">'extra/subdir'</span><span class="p">,</span>
+    <span class="s1">'WEIRD_ENV_VAR'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">'paths'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'another/subdir1'</span><span class="p">,</span> <span class="s1">'another/subdir2'</span><span class="p">],</span>
+        <span class="s1">'delimiter'</span><span class="p">:</span> <span class="s1">'+'</span><span class="p">,</span>
+        <span class="s1">'prepend'</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
     <span class="p">},</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -13081,8 +13081,8 @@ unrecognized options, this situation can lead to misconfigured software and
 failures. Therefore, <code>ConfigureMake</code> will error out and stop the installation
 whenever such a warning is found.</p>
 <p>The following example shows the relevant log messages for such a case:</p>
-<div class="highlight"><pre><span></span><code>== INFO Running shell command &#39;./configure --prefix=/software/MPICH/4.2.1-GCC-12.3.0  --build=x86_64-pc-linux-gnu  --host=x86_64-pc-linux-gnu FFLAGS=&quot;-w -fallow-argument-mismatch -O2&quot; --with-device=ch4:ucx --with-ucx=$EBROOTUCX --with-thread-package=pthreads --enable-fast --enable-shared --enable-sharedlibs=gcc --enable-static --enable-f77 --enable-fc --enable-cxx&#39; in /build/MPICH/4.2.1/GCC-12.3.0/mpich-4.2.1
-== INFO Output of &#39;./configure ...&#39; shell command (stdout + stderr):
+<div class="highlight"><pre><span></span><code>== INFO Running shell command './configure --prefix=/software/MPICH/4.2.1-GCC-12.3.0  --build=x86_64-pc-linux-gnu  --host=x86_64-pc-linux-gnu FFLAGS="-w -fallow-argument-mismatch -O2" --with-device=ch4:ucx --with-ucx=$EBROOTUCX --with-thread-package=pthreads --enable-fast --enable-shared --enable-sharedlibs=gcc --enable-static --enable-f77 --enable-fc --enable-cxx' in /build/MPICH/4.2.1/GCC-12.3.0/mpich-4.2.1
+== INFO Output of './configure ...' shell command (stdout + stderr):
 configure: WARNING: unrecognized options: --with-thread-package, --enable-sharedlibs, --enable-fc
 [...]
 == INFO Shell command completed successfully (see output above): ./configure ...

@@ -13189,11 +13189,11 @@ are a couple of requirements:</p>
 python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>~/eb_venv<span class="w">  </span><span class="c1"># your preferred location for this virtual environment</span>
 <span class="nb">source</span><span class="w"> </span>~/eb_venv/bin/activate
 pip<span class="w"> </span>install<span class="w"> </span>sagecipher<span class="w"> </span>GitPython<span class="w"> </span><span class="nv">setuptools</span><span class="o">==</span><span class="m">69</span>.5.1<span class="w">  </span><span class="c1"># sagecipher needs a setuptools that provides pkg_resources module</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">PYTHON_KEYRING_BACKEND</span><span class="o">=</span><span class="s2">&quot;sagecipher.keyring.Keyring&quot;</span><span class="w">  </span><span class="c1"># tell keyring to use sagecipher backend</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">KEYRING_PROPERTY_SSH_KEY_FINGERPRINT</span><span class="o">=</span><span class="s2">&quot;ff:00:11:22:33:44:55:66:77:88:99:aa:bb:cc:dd:ee&quot;</span><span class="w">  </span><span class="c1"># your SSH key&#39;s MD5 fingerprint</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PYTHON_KEYRING_BACKEND</span><span class="o">=</span><span class="s2">"sagecipher.keyring.Keyring"</span><span class="w">  </span><span class="c1"># tell keyring to use sagecipher backend</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">KEYRING_PROPERTY_SSH_KEY_FINGERPRINT</span><span class="o">=</span><span class="s2">"ff:00:11:22:33:44:55:66:77:88:99:aa:bb:cc:dd:ee"</span><span class="w">  </span><span class="c1"># your SSH key's MD5 fingerprint</span>
 <span class="c1"># instead of hard coding, you can get the fingerprint from a running ssh-agent, e.g.</span>
-<span class="c1"># ssh-add -l -E md5 | awk &#39;/your@email.com/{gsub(&quot;MD5:&quot;,&quot;&quot;); print $2}&#39;</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">EB_PYTHON</span><span class="o">=</span><span class="k">$(</span>which<span class="w"> </span>python<span class="k">)</span><span class="w">  </span><span class="c1"># tell EB to use the eb_venv&#39;s python</span>
+<span class="c1"># ssh-add -l -E md5 | awk '/your@email.com/{gsub("MD5:",""); print $2}'</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">EB_PYTHON</span><span class="o">=</span><span class="k">$(</span>which<span class="w"> </span>python<span class="k">)</span><span class="w">  </span><span class="c1"># tell EB to use the eb_venv's python</span>
 <span class="c1"># eb --install-github-token  # see docs below</span>
 <span class="c1"># eb --check-github  # see docs below</span>
 </code></pre></div>
@@ -13278,7 +13278,7 @@ can pick it up when it needs to, using <code>eb --install-github-token</code>:</
 <span class="go">Token: &lt;copy-paste-your-40-character-token-here&gt;</span>
 <span class="go">Validating token...</span>
 <span class="go">Token seems to be valid, installing it.</span>
-<span class="go">Token &#39;e3a..0c2&#39; installed!</span>
+<span class="go">Token 'e3a..0c2' installed!</span>
 </code></pre></div>
 <p>EasyBuild will validate the provided token, to check that authenticated
 access to your GitHub account works as expected.</p>
@@ -13321,11 +13321,11 @@ output like this:</p>
 
 <span class="go">Checking status of GitHub integration...</span>
 
-<span class="go">Making sure we&#39;re online... OK</span>
+<span class="go">Making sure we're online... OK</span>
 
 <span class="go">* GitHub user... example =&gt; OK</span>
 <span class="go">* GitHub token... e3f..0c8 (len: 40) =&gt; OK (validated)</span>
-<span class="go">* git command... OK (&quot;git version 2.7.4 (Apple Git-66); &quot;)</span>
+<span class="go">* git command... OK ("git version 2.7.4 (Apple Git-66); ")</span>
 <span class="go">* GitPython module... OK</span>
 <span class="go">* push access to example/easybuild-easyconfigs repo @ GitHub... OK</span>
 <span class="go">* creating gists... OK</span>
@@ -13615,7 +13615,7 @@ determine which environment variables can be included in the test report
 <em>matches</em> the specified regular expression will <em>not</em> be included in the
 test report.</p>
 <p>An example of a typical setting:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_TEST_REPORT_ENV_FILTER</span><span class="o">=</span><span class="s1">&#39;^SSH|USER|HOSTNAME|UID|.*COOKIE.*&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_TEST_REPORT_ENV_FILTER</span><span class="o">=</span><span class="s1">'^SSH|USER|HOSTNAME|UID|.*COOKIE.*'</span>
 </code></pre></div>
 <h2 id="github_review_pr">Reviewing easyconfig pull requests<a class="headerlink" href="#github_review_pr" title="Permanent link">&para;</a></h2>
 <p><em>(<code>--review-pr</code>)</em></p>
@@ -13670,7 +13670,7 @@ verified automatically).</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--merge-pr<span class="w"> </span><span class="m">4725</span>
 <span class="go">== temporary log file in case of crash /tmp/eb-ba7rVp/easybuild-fBfcwN.log</span>
 
-<span class="go">easybuilders/easybuild-easyconfigs PR #4725 was submitted by vanzod, you are using GitHub account &#39;example&#39;</span>
+<span class="go">easybuilders/easybuild-easyconfigs PR #4725 was submitted by vanzod, you are using GitHub account 'example'</span>
 
 <span class="go">Checking eligibility of easybuilders/easybuild-easyconfigs PR #4725 for merging...</span>
 <span class="go">* targets develop branch: OK</span>
@@ -13686,7 +13686,7 @@ and merge it:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--merge-pr<span class="w"> </span><span class="m">4829</span>
 <span class="go">== temporary log file in case of crash /tmp/eb-F9a3oB/easybuild-3B2wdq.log</span>
 
-<span class="go">easybuilders/easybuild-easyconfigs PR #4829 was submitted by SethosII, you are using GitHub account &#39;example&#39;</span>
+<span class="go">easybuilders/easybuild-easyconfigs PR #4829 was submitted by SethosII, you are using GitHub account 'example'</span>
 
 <span class="go">Checking eligibility of easybuilders/easybuild-easyconfigs PR #4829 for merging...</span>
 <span class="go">* targets develop branch: OK</span>
@@ -13697,7 +13697,7 @@ and merge it:</p>
 
 <span class="go">Review OK, merging pull request!</span>
 
-<span class="go">Adding comment to easybuild-easyconfigs issue #4829: &#39;Going in, thanks @SethosII!&#39;</span>
+<span class="go">Adding comment to easybuild-easyconfigs issue #4829: 'Going in, thanks @SethosII!'</span>
 <span class="go">Merged easybuilders/easybuild-easyconfigs pull request #4829</span>
 </code></pre></div>
 <div class="admonition note">
@@ -13712,7 +13712,7 @@ merging of the pull request, resulting in messages like:</p>
 
 <span class="go">Review OK, merging pull request!</span>
 
-<span class="go">[DRY RUN] Adding comment to easybuild-easyconfigs issue #4829: &#39;Going in, thanks @SethosII!&#39;</span>
+<span class="go">[DRY RUN] Adding comment to easybuild-easyconfigs issue #4829: 'Going in, thanks @SethosII!'</span>
 <span class="go">[DRY RUN] Merged easybuilders/easybuild-easyconfigs pull request #4829</span>
 </code></pre></div>
 </div>
@@ -13792,17 +13792,17 @@ EasyBuild:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--new-pr<span class="w"> </span>example.eb
 <span class="go">== temporary log file in case of crash /tmp/eb-mWKR9u/easybuild-cTpf2W.log</span>
 <span class="go">== copying /home/example/git-working-dirs/easybuild-easyconfigs...</span>
-<span class="go">== fetching branch &#39;develop&#39; from https://github.com/easybuilders/easybuild-easyconfigs.git...</span>
+<span class="go">== fetching branch 'develop' from https://github.com/easybuilders/easybuild-easyconfigs.git...</span>
 
 <span class="go">Opening pull request</span>
 <span class="go">* target: easybuilders/easybuild-easyconfigs:develop</span>
 <span class="go">* from: boegel/easybuild-easyconfigs:20160530131447_new_pr_EasyBuild281</span>
-<span class="go">* title: &quot;{tools}[dummy/dummy] EasyBuild v2.8.1&quot;</span>
+<span class="go">* title: "{tools}[dummy/dummy] EasyBuild v2.8.1"</span>
 <span class="go">* description:</span>
-<span class="go">&quot;&quot;&quot;</span>
+<span class="go">"""</span>
 <span class="gp gp-VirtualEnv">(created using `eb --new-pr`)</span>
 
-<span class="go">&quot;&quot;&quot;</span>
+<span class="go">"""</span>
 <span class="go">* overview of changes:</span>
 <span class="go"> .../easyconfigs/e/EasyBuild/EasyBuild-2.8.1.eb     | 35 ++++++++++++++++++++++</span>
 <span class="go"> 1 file changed, 35 insertions(+)</span>
@@ -13855,7 +13855,7 @@ file:</p>
 <span class="go">== temporary log file in case of crash /tmp/eb-gO2wJu/easybuild-37Oo2z.log</span>
 <span class="go">== Determined branch name corresponding to easybuilders/easybuild-easyconfigs PR #3153: 20160530131447_new_pr_EasyBuild281</span>
 <span class="go">== copying /home/example/git-working-dirs/easybuild-easyconfigs...</span>
-<span class="go">== fetching branch &#39;20160530131447_new_pr_EasyBuild281&#39; from https://github.com/boegel/easybuild-easyconfigs.git...</span>
+<span class="go">== fetching branch '20160530131447_new_pr_EasyBuild281' from https://github.com/boegel/easybuild-easyconfigs.git...</span>
 <span class="go">Overview of changes:</span>
 <span class="go"> easybuild/easyconfigs/e/EasyBuild/EasyBuild-2.8.1.eb | 3 +++</span>
 <span class="go"> 1 file changed, 3 insertions(+)</span>
@@ -13871,7 +13871,7 @@ located (i.e. in the same directory as the easyconfig files that require
 that patch file), by scanning the provided easyconfigs (or, if needed,
 scanning <em>all</em> existing easyconfig files).</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--new-pr<span class="w"> </span>example.eb<span class="w"> </span>example.patch<span class="w"> </span>--pr-commit-msg<span class="w"> </span><span class="s2">&quot;just an example&quot;</span>
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--new-pr<span class="w"> </span>example.eb<span class="w"> </span>example.patch<span class="w"> </span>--pr-commit-msg<span class="w"> </span><span class="s2">"just an example"</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -13884,7 +13884,7 @@ metadata</a>.</p>
 you can also specify to <em>delete</em> particular files, by including a colon
 character <code>:</code> before the name of the file.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--new-pr<span class="w"> </span>:example-1.0.eb<span class="w"> </span>--pr-commit-msg<span class="w"> </span><span class="s2">&quot;delete example-1.0.eb easyconfig file&quot;</span>
+<div class="highlight"><pre><span></span><code>eb<span class="w"> </span>--new-pr<span class="w"> </span>:example-1.0.eb<span class="w"> </span>--pr-commit-msg<span class="w"> </span><span class="s2">"delete example-1.0.eb easyconfig file"</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -13975,17 +13975,17 @@ create/update without actually doing so.</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>--new-pr<span class="w"> </span>EasyBuild-2.9.0.eb<span class="w"> </span>-D
 <span class="go">== temporary log file in case of crash /tmp/eb-1ny69k/easybuild-UR1Wr4.log</span>
 <span class="go">== copying /home/example/git-working-dirs/easybuild-easyconfigs...</span>
-<span class="go">== fetching branch &#39;develop&#39; from https://github.com/easybuilders/easybuild-easyconfigs.git...</span>
+<span class="go">== fetching branch 'develop' from https://github.com/easybuilders/easybuild-easyconfigs.git...</span>
 
 <span class="go">Opening pull request [DRY RUN]</span>
 <span class="go">* target: easybuilders/easybuild-easyconfigs:develop</span>
 <span class="go">* from: boegel/easybuild-easyconfigs:20160603105641_new_pr_EasyBuild290</span>
-<span class="go">* title: &quot;{tools}[dummy/dummy] EasyBuild v2.9.0&quot;</span>
+<span class="go">* title: "{tools}[dummy/dummy] EasyBuild v2.9.0"</span>
 <span class="go">* description:</span>
-<span class="go">&quot;&quot;&quot;</span>
+<span class="go">"""</span>
 <span class="gp gp-VirtualEnv">(created using `eb --new-pr`)</span>
 
-<span class="go">&quot;&quot;&quot;</span>
+<span class="go">"""</span>
 <span class="go">* overview of changes:</span>
 <span class="go"> .../easyconfigs/e/EasyBuild/EasyBuild-2.9.0.eb     | 35 ++++++++++++++++++++++</span>
 <span class="go"> 1 file changed, 35 insertions(+)</span>

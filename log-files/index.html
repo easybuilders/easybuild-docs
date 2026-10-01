@@ -12544,10 +12544,10 @@ the <code>_step</code> search pattern.</p>
 <p>For each executed shell command, log messages are included with the full
 command line, the location where the command was executed and the
 command's output and exit code. For example:</p>
-<div class="highlight"><pre><span></span><code><span class="go">== 2023-05-31 18:59:24,222 run.py:176 DEBUG run_cmd: Output of &quot;/home/example/.local/easybuild/software/WRF/4.4.1-foss-2022b-dmpar/WRF-4.4.1/compile -j 8 wrf&quot; will be logged to /tmp/eb-1zbqix6e/easybuild-run_cmd-ueqo5bn0.log</span>
+<div class="highlight"><pre><span></span><code><span class="go">== 2023-05-31 18:59:24,222 run.py:176 DEBUG run_cmd: Output of "/home/example/.local/easybuild/software/WRF/4.4.1-foss-2022b-dmpar/WRF-4.4.1/compile -j 8 wrf" will be logged to /tmp/eb-1zbqix6e/easybuild-run_cmd-ueqo5bn0.log</span>
 <span class="go">== 2023-05-31 18:59:24,225 run.py:217 DEBUG run_cmd: running cmd /home/example/.local/easybuild/software//WRF/4.4.1-foss-2022b-dmpar/WRF-4.4.1/compile -j 8 wrf (in /home/example/.local/easybuild/software//WRF/4.4.1-foss-2022b-dmpar/WRF-4.4.1)</span>
 <span class="go">[...]</span>
-<span class="go">== 2023-05-31 20:06:35,979 run.py:650 DEBUG cmd &quot;/home/example/.local/easybuild/software/WRF/4.4.1-foss-2022b-dmpar/WRF-4.4.1/compile -j 8 wrf&quot; exited with exit code 0 and output:</span>
+<span class="go">== 2023-05-31 20:06:35,979 run.py:650 DEBUG cmd "/home/example/.local/easybuild/software/WRF/4.4.1-foss-2022b-dmpar/WRF-4.4.1/compile -j 8 wrf" exited with exit code 0 and output:</span>
 </code></pre></div>
 <p>If you are primarily interested in the different commands as they were
 executed by EasyBuild, you can use <code>INFO cmd</code> (or <code>run_cmd</code>, in debug

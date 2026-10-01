@@ -13225,13 +13225,13 @@ keys should be used instead, see
 <a class="autorefs autorefs-internal" href="../writing-easyconfig-files/#common_easyconfig_param_sources_alt">Alternative formats for <code>sources</code></a>.</p>
 <p>So, this:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># source file is actually a gzipped tarball (filename should be .tar.gz)</span>
-<span class="c1"># DEPRECATED FORMAT, don&#39;t use this anymore!</span>
-<span class="n">sources</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;example.gz&#39;</span><span class="p">,</span> <span class="s2">&quot;tar xfvz </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">)]</span>
+<span class="c1"># DEPRECATED FORMAT, don't use this anymore!</span>
+<span class="n">sources</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">'example.gz'</span><span class="p">,</span> <span class="s2">"tar xfvz </span><span class="si">%s</span><span class="s2">"</span><span class="p">)]</span>
 </code></pre></div>
 <p>should be replaced with:</p>
 <div class="highlight"><pre><span></span><code><span class="n">sources</span> <span class="o">=</span> <span class="p">[{</span>
-  <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="s1">&#39;example-</span><span class="si">%(version)s</span><span class="s1">.gz&#39;</span><span class="p">,</span>
-  <span class="s1">&#39;extract_cmd&#39;</span><span class="p">:</span> <span class="s2">&quot;tar xfvz </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span>  <span class="c1"># source file is actually a gzipped tarball (filename should be .tar.gz)</span>
+  <span class="s1">'filename'</span><span class="p">:</span> <span class="s1">'example-</span><span class="si">%(version)s</span><span class="s1">.gz'</span><span class="p">,</span>
+  <span class="s1">'extract_cmd'</span><span class="p">:</span> <span class="s2">"tar xfvz </span><span class="si">%s</span><span class="s2">"</span><span class="p">,</span>  <span class="c1"># source file is actually a gzipped tarball (filename should be .tar.gz)</span>
 <span class="p">}]</span>
 </code></pre></div>
 <h3 id="depr_pythonpackage_use_easy_install_setup_py_develop"><code>use_easy_install</code> and <code>use_setup_py_develop</code> custom easyconfig parameters for <code>PythonPackage</code> easyblock<a class="headerlink" href="#depr_pythonpackage_use_easy_install_setup_py_develop" title="Permanent link">&para;</a></h3>
@@ -13343,8 +13343,8 @@ both to the EasyBuild framework and to (custom) easyblocks.</p>
 <p>To report errors, an <code>EasyBuildError</code> should be raised instead. For
 example:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># make sure config.sh script is there</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">builddir</span><span class="p">,</span> <span class="s1">&#39;config.sh&#39;</span><span class="p">)):</span>
-    <span class="k">raise</span> <span class="n">EasyBuildError</span><span class="p">(</span><span class="s2">&quot;config.sh script is missing in </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">builddir</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">builddir</span><span class="p">,</span> <span class="s1">'config.sh'</span><span class="p">)):</span>
+    <span class="k">raise</span> <span class="n">EasyBuildError</span><span class="p">(</span><span class="s2">"config.sh script is missing in </span><span class="si">%s</span><span class="s2">"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">builddir</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="depr_lapack_get_blas_lib"><code>get_blas_lib</code> function provided by <code>LAPACK</code> easyblock has been removed<a class="headerlink" href="#depr_lapack_get_blas_lib" title="Permanent link">&para;</a></h3>
 <ul>
@@ -13480,7 +13480,7 @@ generic <code>ConfigureMake</code> easyblock was used if no matching easyblock
 could be found.</p>
 <p>This behavior is now removed; instead, easyconfigs that require using
 the <code>ConfigureMake</code> easyblock <em>must</em> include the following:</p>
-<div class="highlight"><pre><span></span><code><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;ConfigureMake&#39;</span>
+<div class="highlight"><pre><span></span><code><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">'ConfigureMake'</span>
 </code></pre></div>
 <h3 id="depr_easyconfig_parameters_eb1">Easyconfig parameters<a class="headerlink" href="#depr_easyconfig_parameters_eb1" title="Permanent link">&para;</a></h3>
 <p>Some easyconfig parameters are removed.</p>
@@ -13570,10 +13570,10 @@ the <code>extra_options</code> function of parent easyblock.</p>
 <p>For example (taken from the generic easyblock <code>Binary</code>):</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@staticmethod</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">extra_options</span><span class="p">(</span><span class="n">extra_vars</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Extra easyconfig parameters specific to Binary easyblock.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Extra easyconfig parameters specific to Binary easyblock."""</span>
     <span class="n">extra_vars</span> <span class="o">=</span> <span class="n">EasyBlock</span><span class="o">.</span><span class="n">extra_options</span><span class="p">(</span><span class="n">extra_vars</span><span class="p">)</span>
     <span class="n">extra_vars</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-        <span class="s1">&#39;install_cmd&#39;</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;Install command to be used.&quot;</span><span class="p">,</span> <span class="n">CUSTOM</span><span class="p">],</span>
+        <span class="s1">'install_cmd'</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s2">"Install command to be used."</span><span class="p">,</span> <span class="n">CUSTOM</span><span class="p">],</span>
     <span class="p">})</span>
     <span class="k">return</span> <span class="n">extra_vars</span>
 </code></pre></div>
@@ -13589,7 +13589,7 @@ removed.</strong></p>
 used in the <code>exts_filter</code> extension filter easyconfig parameter; the
 <code>name</code> and <code>version</code> template strings are removed.</p>
 <p>For example (default extension filter for Python packages):</p>
-<div class="highlight"><pre><span></span><code><span class="n">exts_filter</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;python -c &#39;import </span><span class="si">%(ext_name)s</span><span class="s2">&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="n">exts_filter</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"python -c 'import </span><span class="si">%(ext_name)s</span><span class="s2">'"</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span>
 </code></pre></div>
 <h5 id="module-path-of-default-class-for-extensions">Module path of default class for extensions<a class="headerlink" href="#module-path-of-default-class-for-extensions" title="Permanent link">&para;</a></h5>
 <p><strong>Specifying the module path in</strong> <code>exts_defaultclass</code> <strong>is no longer

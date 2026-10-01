@@ -12415,13 +12415,13 @@ printed, to allow determining how long the command has been running.</p>
 <span class="go">        [started at: 2023-10-11 09:41:41]</span>
 <span class="go">        [working dir: /tmp/easybuild_build/HPL/2.3/foss-2023a/hpl-2.3]</span>
 <span class="go">        [output logged in /tmp/eb-od8biuwd/easybuild-run_cmd-81p_xm51.log]</span>
-<span class="go">        make  -j 8  TOPdir=&quot;/tmp/easybuild_build/HPL/2.3/foss-2023a/hpl-2.3/&quot; CC=&quot;mpicc&quot; MPICC=&quot;mpicc&quot; LINKER=&quot;mpicc&quot; LAlib=&quot;-lflexiblas -lgfortran&quot;</span>
-<span class="go">HPL_OPTS=&quot;-I/software/FFTW.MPI/3.3.10-gompi-2023a/include -I/software/FlexiBLAS/3.3.1-GCC-12.3.0/include</span>
-<span class="go">-I/software/FlexiBLAS/3.3.1-GCC-12.3.0/include/flexiblas &quot; LINKFLAGS=&quot;-O2 -ftree-vectorize -march=native -fno-math-errno</span>
+<span class="go">        make  -j 8  TOPdir="/tmp/easybuild_build/HPL/2.3/foss-2023a/hpl-2.3/" CC="mpicc" MPICC="mpicc" LINKER="mpicc" LAlib="-lflexiblas -lgfortran"</span>
+<span class="go">HPL_OPTS="-I/software/FFTW.MPI/3.3.10-gompi-2023a/include -I/software/FlexiBLAS/3.3.1-GCC-12.3.0/include</span>
+<span class="go">-I/software/FlexiBLAS/3.3.1-GCC-12.3.0/include/flexiblas " LINKFLAGS="-O2 -ftree-vectorize -march=native -fno-math-errno</span>
 <span class="go">-L/software/FFTW.MPI/3.3.10-gompi-2023a/lib64 -L/software/FFTW.MPI/3.3.10-gompi-2023a/lib -L/software/ScaLAPACK/2.2.0-gompi-2023a-fb/lib64</span>
 <span class="go">-L/software/ScaLAPACK/2.2.0-gompi-2023a-fb/lib -L/software/FlexiBLAS/3.3.1-GCC-12.3.0/lib64</span>
 <span class="go">-L/software/FlexiBLAS/3.3.1-GCC-12.3.0/lib -L/software/GCCcore/12.3.0/lib64 -L/software/GCCcore/12.3.0/lib</span>
-<span class="go">-lm -lpthread&quot; CCFLAGS=&#39;$(HPL_DEFS) -O2 -ftree-vectorize -march=native -fno-math-errno&#39;</span>
+<span class="go">-lm -lpthread" CCFLAGS='$(HPL_DEFS) -O2 -ftree-vectorize -march=native -fno-math-errno'</span>
 <span class="go">  &gt;&gt; command completed: exit 0, ran in 00h00m08s</span>
 <span class="go">== ... (took 8 secs)</span>
 <span class="go">== testing...</span>
@@ -12437,7 +12437,7 @@ printed, to allow determining how long the command has been running.</p>
 <span class="go">== ... (took &lt; 1 sec)</span>
 <span class="go">== sanity checking...</span>
 <span class="go">== Running pre-sanitycheck hook...</span>
-<span class="go">  &gt;&gt; file &#39;bin/xhpl&#39; found: OK</span>
+<span class="go">  &gt;&gt; file 'bin/xhpl' found: OK</span>
 <span class="go">  &gt;&gt; loading modules: HPL/2.3-foss-2023a...</span>
 <span class="go">== ... (took 9 secs)</span>
 <span class="go">== cleaning up...</span>
