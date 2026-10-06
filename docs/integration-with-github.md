@@ -457,7 +457,7 @@ Using `--include-easyblocks-from-commit`, you can let EasyBuild use easyblocks e
 as they were in a particular commit.
 
 This differs from using `--include-easyblocks-from-pr` in the same way as using `--from-commit` differs from using
-`--from-commit`, see also [Using easyconfigs from a commit][github_from_commit].
+`--from-pr`, see also [Using easyconfigs from a commit][github_from_commit].
 
 ## Uploading test reports {: #github_upload_test_report }
 
