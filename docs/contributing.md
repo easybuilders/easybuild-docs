@@ -33,7 +33,7 @@ Feedback from people new to EasyBuild is valuable, since it provides a
 perspective that is easily overlooked by more experienced users.
 
 You can contact the EasyBuild community via the EasyBuild mailing list
-(`easybuild@lists.ugent.be`), the `#easybuild` IRC channel (see also
+(`easybuild@lists.ugent.be`), the EasyBuild Slack channel (see also
 [Getting help][getting_help]).
 
 ### Reporting bugs {: #contributing_bugs }
@@ -134,7 +134,7 @@ and written in [MarkDown](https://daringfireball.net/projects/markdown).
 ### Joining the conversation {: #contributing_conversation }
 
 Last but not least, you can actively **join the conversation** that
-arise on the EasyBuild mailing list, the `#easybuild` IRC channel and
+arise on the EasyBuild mailing list, the EasyBuild Slack channel and
 during the bi-weekly EasyBuild conference calls (see
 <https://github.com/easybuilders/easybuild/wiki/Conference-calls>).
 
