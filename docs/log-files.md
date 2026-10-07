@@ -49,7 +49,7 @@ $ eb WRF-4.4.1-foss-2022b-dmpar.eb
     is by creating a Gist (<https://gist.github.com/>), and sharing the
     corresponding URL. This is much better than sending a lengthy log
     file via email, since it can be easily shared across different
-    communication channels (mailing list, IRC, IM, etc.).
+    communication channels (mailing list, Slack, etc.).
 
 ## Navigating log files
 
