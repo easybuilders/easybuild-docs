@@ -9,7 +9,7 @@ EasyBuild maintainers should meet the following criteria:
 * frequently contributing to the EasyBuild GitHub repositories
 * being an active member of the EasyBuild community for a significant amount of time, i.e.:
     * following the EasyBuild mailing list and participating in discussions (see [Getting help][getting_help])
-    * actively participating in the EasyBuild IRC or Slack channel (see [Getting help][getting_help]);
+    * actively participating in the EasyBuild Slack channel (see [Getting help][getting_help]);
     * (occasionally) joining in on the EasyBuild conference calls (see <https://github.com/easybuilders/easybuild/wiki/Conference-calls>)
 * having access to a working setup for submitting test reports (see [Test reports for easyconfig contributions (`--upload-test-report`)][contributing_review_process_test_reports])
 
