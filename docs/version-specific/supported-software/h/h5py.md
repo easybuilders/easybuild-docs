@@ -16,6 +16,7 @@ version | versionsuffix | toolchain
 ``3.14.0`` |  | ``foss/2025a``
 ``3.14.0`` |  | ``foss/2025b``
 ``3.14.0`` | ``-serial`` | ``gfbf/2025b``
+``3.14.0`` | ``-serial`` | ``iimkl/2025a``
 ``3.14.0`` |  | ``intel/2025b``
 ``3.14.0`` |  | ``lfoss/2025b``
 ``3.16.0`` |  | ``foss/2026.1``

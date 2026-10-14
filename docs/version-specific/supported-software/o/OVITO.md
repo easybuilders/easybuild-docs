@@ -11,6 +11,7 @@ OVITO is a scientific visualization and data analysis solution for atomistic and
 version | versionsuffix | toolchain
 --------|---------------|----------
 ``3.11.0`` | ``-basic`` | ``gompi/2023b``
+``3.15.4`` | ``-basic`` | ``gompi/2025b``
 ``3.7.11`` | ``-basic`` | ``gompi/2022a``
 
 

@@ -10,6 +10,8 @@ vcflib provides methods to manipulate and interpret sequence variation as it can
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``1.0.15`` | ``-R-4.5.1`` | ``gfbf/2025a``
+``1.0.15`` | ``-R-4.5.2`` | ``gfbf/2025b``
 ``1.0.9`` | ``-R-4.2.1`` | ``foss/2022a``
 ``1.0.9`` | ``-R-4.2.2`` | ``foss/2022b``
 ``1.0.9`` | ``-R-4.3.2`` | ``gfbf/2023a``

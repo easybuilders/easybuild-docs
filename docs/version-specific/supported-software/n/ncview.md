@@ -10,6 +10,7 @@ Ncview is a visual browser for netCDF format files. Typically you would use ncvi
 
 version | toolchain
 --------|----------
+``2.1.10`` | ``gompi/2023b``
 ``2.1.11`` | ``gompi/2024a``
 ``2.1.11`` | ``gompi/2025a``
 ``2.1.11`` | ``gompi/2025b``

@@ -11,6 +11,7 @@ Fast BAM/CRAM depth calculation for WGS, exome, or targeted sequencing
 version | toolchain
 --------|----------
 ``0.3.12`` | ``GCC/13.3.0``
+``0.3.14`` | ``GCC/15.2.0``
 ``0.3.9`` | ``GCC/12.3.0``
 
 

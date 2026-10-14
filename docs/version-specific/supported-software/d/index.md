@@ -24,6 +24,7 @@ search:
  * [DB](DB.md)
  * [DB_File](DB_File.md)
  * [DBD-mysql](DBD-mysql.md)
+ * [DBeaver](DBeaver.md)
  * [DBG2OLC](DBG2OLC.md)
  * [dblatex](dblatex.md)
  * [DBus](DBus.md)

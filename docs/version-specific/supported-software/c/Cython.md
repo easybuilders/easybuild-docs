@@ -23,6 +23,7 @@ version | versionsuffix | toolchain
 ``3.0.8`` |  | ``GCCcore/12.3.0``
 ``3.1.1`` |  | ``GCCcore/14.2.0``
 ``3.1.2`` |  | ``GCCcore/14.3.0``
+``3.2.4`` |  | ``GCCcore/13.3.0``
 ``3.2.4`` |  | ``GCCcore/14.3.0``
 ``3.2.4`` |  | ``GCCcore/15.2.0``
 

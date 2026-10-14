@@ -10,6 +10,7 @@ Juicer is a platform for analyzing kilobase resolution Hi-C data. This installat
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``1.6`` | ``-CUDA-12.1.1`` | ``foss/2023a``
 ``1.6`` | ``-CUDA-12.6.0`` | ``foss/2024a``
 
 

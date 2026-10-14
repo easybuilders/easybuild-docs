@@ -10,6 +10,7 @@ search:
 
  * [Oases](Oases.md)
  * [OBITools3](OBITools3.md)
+ * [OBITools4](OBITools4.md)
  * [OCaml](OCaml.md)
  * [ocamlbuild](ocamlbuild.md)
  * [occt](occt.md)
@@ -35,6 +36,7 @@ search:
  * [OnTAD](OnTAD.md)
  * [OPARI2](OPARI2.md)
  * [OPEN-SURFEX](OPEN-SURFEX.md)
+ * [openai-gpt-oss-120b-model](openai-gpt-oss-120b-model.md)
  * [OpenAI-Gym](OpenAI-Gym.md)
  * [openai-python](openai-python.md)
  * [OpenBabel](OpenBabel.md)
@@ -57,6 +59,7 @@ search:
  * [OpenJPEG](OpenJPEG.md)
  * [openkim-models](openkim-models.md)
  * [OpenLB](OpenLB.md)
+ * [OpenMC](OpenMC.md)
  * [OpenMEEG](OpenMEEG.md)
  * [OpenMM](OpenMM.md)
  * [OpenMM-Torch](OpenMM-Torch.md)
@@ -75,6 +78,7 @@ search:
  * [OpenSSL](OpenSSL.md)
  * [OpenStackClient](OpenStackClient.md)
  * [opentelemetry-cpp](opentelemetry-cpp.md)
+ * [OpenTOPAS](OpenTOPAS.md)
  * [OPERA-MS](OPERA-MS.md)
  * [opt-einsum](opt-einsum.md)
  * [OptaDOS](OptaDOS.md)
@@ -92,6 +96,7 @@ search:
  * [OrthoFinder](OrthoFinder.md)
  * [Osi](Osi.md)
  * [OSM-Express](OSM-Express.md)
+ * [OSMesa](OSMesa.md)
  * [osmium-tool](osmium-tool.md)
  * [OSPRay](OSPRay.md)
  * [OSU-Micro-Benchmarks](OSU-Micro-Benchmarks.md)
@@ -99,6 +104,7 @@ search:
  * [OTF2](OTF2.md)
  * [overpy](overpy.md)
  * [OVITO](OVITO.md)
+ * [oxbow](oxbow.md)
  * [oxDNA](oxDNA.md)
 
 

@@ -95,6 +95,7 @@
 `multi_deps`             |Dict of lists of dependency versions over which to iterate                                                     |`{}`             |
 `multi_deps_load_default`|Load module for first version listed in multi_deps by default                                                  |`True`           |
 `osdependencies`         |OS dependencies that should be present on the system                                                           |`[]`             |`os_deps`
+`source_deps`            |List of dependencies that are required to download or create the sources                                       |`[]`             |
 
 ## License parameters
 
@@ -109,15 +110,16 @@
 
 ## Extensions parameters
 
-**Parameter name**      |**Description**                                                                                           |**Default value**|**Alternative name**
-------------------------|----------------------------------------------------------------------------------------------------------|-----------------|--------------------
-`exts_classmap`         |Map of extension name to class for handling build and installation.                                       |`{}`             |`exts_class_map`
-`exts_default_options`  |List of default options for extensions                                                                    |`{}`             |`exts_default_opts`
-`exts_defaultclass`     |Name of default easyblock for extensions                                                                  |`None`           |`exts_default_class`
-`exts_download_dep_fail`|Fail if downloaded dependencies are detected for extensions                                               |`False`          |
-`exts_filter`           |Extension filter details: template for cmd and input to cmd (templates for ext_name, ext_version and src).|`None`           |
-`exts_formatter`        |Function to format extension names in module file                                                         |`None`           |
-`exts_list`             |List with extensions added to the base installation                                                       |`[]`             |
+**Parameter name**      |**Description**                                                                                                                                                                                                      |**Default value**|**Alternative name**
+------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|--------------------
+`extension_name`        |Name to add to the list of extensions in the module file (as if in exts_list); can also be used as an option for an extension in exts_list, in which case it is used in the module file instead of the extension name|`None`           |
+`exts_classmap`         |Map of extension name to class for handling build and installation.                                                                                                                                                  |`{}`             |`exts_class_map`
+`exts_default_options`  |List of default options for extensions                                                                                                                                                                               |`{}`             |`exts_default_opts`
+`exts_defaultclass`     |Name of default easyblock for extensions                                                                                                                                                                             |`None`           |`exts_default_class`
+`exts_download_dep_fail`|Fail if downloaded dependencies are detected for extensions                                                                                                                                                          |`False`          |
+`exts_filter`           |Extension filter details: template for cmd and input to cmd (templates for ext_name, ext_version and src).                                                                                                           |`None`           |
+`exts_formatter`        |Function to format extension names in module file                                                                                                                                                                    |`None`           |
+`exts_list`             |List with extensions added to the base installation                                                                                                                                                                  |`[]`             |
 
 ## Modules parameters
 

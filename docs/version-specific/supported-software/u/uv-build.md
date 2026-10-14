@@ -10,6 +10,8 @@ This package is a slimmed down version of uv containing only the build backend. 
 
 version | toolchain
 --------|----------
+``0.10.9`` | ``GCCcore/14.3.0``
+``0.11.28`` | ``GCCcore/15.2.0``
 ``0.7.5`` | ``GCCcore/13.3.0``
 
 

@@ -4,12 +4,13 @@ search:
 ---
 # gh
 
-gh is GitHub on the command line.
+GitHub’s official command line tool
 
-*homepage*: <https://github.com/cli/cli>
+*homepage*: <https://github.com/cli/>
 
 version | toolchain
 --------|----------
+``2.101.0`` | ``system``
 ``2.20.2`` | ``system``
 ``2.52.0`` | ``system``
 ``2.86.0`` | ``system``

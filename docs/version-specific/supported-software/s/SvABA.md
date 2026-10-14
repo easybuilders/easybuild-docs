@@ -10,6 +10,7 @@ SvABA - Structural variation and indel analysis by assembly
 
 version | toolchain
 --------|----------
+``1.3.0`` | ``GCC/13.3.0``
 ``1.3.0`` | ``GCC/14.2.0``
 
 

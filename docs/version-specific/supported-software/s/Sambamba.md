@@ -10,6 +10,7 @@ Sambamba is a high performance modern robust and fast tool  (and library), writt
 
 version | toolchain
 --------|----------
+``1.0.1-20241222`` | ``GCC/13.3.0``
 ``1.0.1`` | ``GCC/11.3.0``
 
 

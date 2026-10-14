@@ -10,6 +10,7 @@ search:
 
  * [f90nml](f90nml.md)
  * [f90wrap](f90wrap.md)
+ * [FAAC](FAAC.md)
  * [FAAD2](FAAD2.md)
  * [face-recognition](face-recognition.md)
  * [Faiss](Faiss.md)
@@ -20,6 +21,7 @@ search:
  * [fastahack](fastahack.md)
  * [fastai](fastai.md)
  * [FastANI](FastANI.md)
+ * [FastAPI](FastAPI.md)
  * [Fastaq](Fastaq.md)
  * [fastfilters](fastfilters.md)
  * [fastjet](fastjet.md)
@@ -73,6 +75,7 @@ search:
  * [Firedrake](Firedrake.md)
  * [fish](fish.md)
  * [FLAC](FLAC.md)
+ * [FLAIR](FLAIR.md)
  * [FLANN](FLANN.md)
  * [FLASH](FLASH.md)
  * [flash-attention](flash-attention.md)
@@ -104,6 +107,7 @@ search:
  * [fonttools](fonttools.md)
  * [ForceBalance](ForceBalance.md)
  * [FORD](FORD.md)
+ * [Fortran-stdlib](Fortran-stdlib.md)
  * [fortranGIS](fortranGIS.md)
  * [foss](foss.md)
  * [FoX](FoX.md)
@@ -114,8 +118,10 @@ search:
  * [FragGeneScan](FragGeneScan.md)
  * [FragPipe](FragPipe.md)
  * [freebayes](freebayes.md)
+ * [FreeCAD](FreeCAD.md)
  * [freeglut](freeglut.md)
  * [FreeImage](FreeImage.md)
+ * [FreeRDP-server3](FreeRDP-server3.md)
  * [freesasa](freesasa.md)
  * [FreeSurfer](FreeSurfer.md)
  * [freetype](freetype.md)
@@ -136,6 +142,7 @@ search:
  * [FUSE](FUSE.md)
  * [futhark](futhark.md)
  * [futile](futile.md)
+ * [fypp](fypp.md)
 
 
 *(quick links: [(all)](../index.md) - [0](../0/index.md) - [a](../a/index.md) - [b](../b/index.md) - [c](../c/index.md) - [d](../d/index.md) - [e](../e/index.md) - *f* - [g](../g/index.md) - [h](../h/index.md) - [i](../i/index.md) - [j](../j/index.md) - [k](../k/index.md) - [l](../l/index.md) - [m](../m/index.md) - [n](../n/index.md) - [o](../o/index.md) - [p](../p/index.md) - [q](../q/index.md) - [r](../r/index.md) - [s](../s/index.md) - [t](../t/index.md) - [u](../u/index.md) - [v](../v/index.md) - [w](../w/index.md) - [x](../x/index.md) - [y](../y/index.md) - [z](../z/index.md))*

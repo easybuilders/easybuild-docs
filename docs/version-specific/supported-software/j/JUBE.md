@@ -10,6 +10,7 @@ The JUBE benchmarking environment provides a script based framework to easily cr
 
 version | toolchain
 --------|----------
+``2.7.1`` | ``GCCcore/14.2.0``
 ``2.7.1`` | ``GCCcore/14.3.0``
 
 

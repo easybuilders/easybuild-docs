@@ -10,8 +10,8 @@ Pybind11 bindings for the Abseil C++ Common Libraries
 
 version | toolchain
 --------|----------
-``202402.0`` | ``GCC/13.3.0``
-``202402.0`` | ``GCC/14.3.0``
+``202402.0`` | ``GCCcore/13.3.0``
+``202402.0`` | ``GCCcore/14.3.0``
 ``202402.0`` | ``intel-compilers/2025.2.0``
 
 

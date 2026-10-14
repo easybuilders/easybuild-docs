@@ -37,6 +37,7 @@ search:
  * [Qualimap](Qualimap.md)
  * [QuantumESPRESSO](QuantumESPRESSO.md)
  * [quaqc](quaqc.md)
+ * [Quarter](Quarter.md)
  * [quarto](quarto.md)
  * [QUAST](QUAST.md)
  * [QuickFF](QuickFF.md)

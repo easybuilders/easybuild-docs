@@ -23,6 +23,8 @@ version | versionsuffix | toolchain
 ``3.9.1`` |  | ``system``
 ``4.0.1`` |  | ``system``
 ``4.0.5`` |  | ``system``
+``4.10.2`` | ``-no-analytics`` | ``GCCcore/15.2.0``
+``4.10.2`` |  | ``gfbf/2026.1``
 ``4.2.0`` |  | ``system``
 ``4.3.2`` |  | ``system``
 ``4.3.3`` |  | ``system``

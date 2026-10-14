@@ -10,6 +10,7 @@ The COIN-OR Cut Generation Library (Cgl) is a collection of cut generators that 
 
 version | toolchain
 --------|----------
+``0.60.10`` | ``foss/2026.1``
 ``0.60.7`` | ``foss/2022b``
 ``0.60.8`` | ``foss/2023a``
 ``0.60.8`` | ``foss/2023b``

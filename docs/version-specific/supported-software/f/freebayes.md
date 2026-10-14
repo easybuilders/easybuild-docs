@@ -10,6 +10,7 @@ Bayesian haplotype-based genetic polymorphism discovery and genotyping.
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``1.3.10`` | ``-R-4.5.1`` | ``gfbf/2025a``
 ``1.3.7`` | ``-R-4.3.2`` | ``gfbf/2023a``
 ``1.3.7`` | ``-R-4.4.2`` | ``gfbf/2024a``
 
