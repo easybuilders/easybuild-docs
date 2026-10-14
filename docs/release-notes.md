@@ -44,9 +44,9 @@ bugfix/update release
     - fix leaked handles and processes in `run_*` functions ([#5314](https://github.com/easybuilders/easybuild-framework/pull/5314))
     - fix log message for failed download attempts in `download_file` ([#5319](https://github.com/easybuilders/easybuild-framework/pull/5319))
 - other changes
-    - remove uneccessary use of dunder methods ([#5181](https://github.com/easybuilders/easybuild-framework/pull/5181))
+    - remove unneccessary use of dunder methods ([#5181](https://github.com/easybuilders/easybuild-framework/pull/5181))
     - clean up duplication in `handle_include_easyblocks_from` ([#5194](https://github.com/easybuilders/easybuild-framework/pull/5194))
-    - remove superflous check in `EasyBlock.sanity_check_load_module` ([#5227](https://github.com/easybuilders/easybuild-framework/pull/5227))
+    - remove superfluous check in `EasyBlock.sanity_check_load_module` ([#5227](https://github.com/easybuilders/easybuild-framework/pull/5227))
     - deprecate useless `EasyBlock.exts_all` class variable ([#5235](https://github.com/easybuilders/easybuild-framework/pull/5235))
     - fix line endings in `easybuild/framework/extension.py` ([#5256](https://github.com/easybuilders/easybuild-framework/pull/5256))
     - remove fallback to using `requests` in `download_file` ([#5289](https://github.com/easybuilders/easybuild-framework/pull/5289))
@@ -107,7 +107,7 @@ bugfix/update release
     - add support for newer opam releases in the OCaml easyblock ([#4239](https://github.com/easybuilders/easybuild-easyblocks/pull/4239))
     - update jaxlib easyblock: adapt compiler handling for jax 0.10+ ([#4242](https://github.com/easybuilders/easybuild-easyblocks/pull/4242))
 - enhancements and fixes for test suite:
-    - remove superflous mock methods in `EasyBlockSpecificTest` ([#4202](https://github.com/easybuilders/easybuild-easyblocks/pull/4202))
+    - remove superfluous mock methods in `EasyBlockSpecificTest` ([#4202](https://github.com/easybuilders/easybuild-easyblocks/pull/4202))
     - re-enable apt-get update in CI workflow for test suite ([#4244](https://github.com/easybuilders/easybuild-easyblocks/pull/4244))
     - replace `assertErrorRegex` by `assertRaisesRegex` ([#4245](https://github.com/easybuilders/easybuild-easyblocks/pull/4245))
 
