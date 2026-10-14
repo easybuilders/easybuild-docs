@@ -2787,17 +2787,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#easybuild.base.testing.TestCase.assertErrorRegex" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        assertErrorRegex
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#easybuild.base.testing.TestCase.assertExists" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -12544,17 +12533,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#easybuild.base.testing.TestCase.assertErrorRegex" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        assertErrorRegex
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#easybuild.base.testing.TestCase.assertExists" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -12787,7 +12765,7 @@
 
 
 
-        <p>Enhanced test case, provides extra functionality (e.g. an assertErrorRegex method).</p>
+        <p>Enhanced test case, provides extra functionality.</p>
 
 
 
@@ -12840,25 +12818,6 @@
     <div class="doc doc-contents ">
 
         <p>Make assertEqual always print useful messages</p>
-
-
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-<h3 id="easybuild.base.testing.TestCase.assertErrorRegex" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">assertErrorRegex</span><span class="p">(</span><span class="n">error</span><span class="p">,</span> <span class="n">regex</span><span class="p">,</span> <span class="n">call</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
-
-<a href="#easybuild.base.testing.TestCase.assertErrorRegex" class="headerlink" title="Permanent link">&para;</a></h3>
-
-
-    <div class="doc doc-contents ">
-
-        <p>Convenience method to match regex with the expected error message.
-Example: self.assertErrorRegex(OSError, "No such file or directory", os.remove, '/no/such/file')</p>
 
 
     </div>
@@ -12995,7 +12954,7 @@ Example: self.assertErrorRegex(OSError, "No such file or directory", os.remove, 
 
 
 <h3 id="easybuild.base.testing.TestCase.mocked_stderr" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">mocked_stderr</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">mocked_stderr</span><span class="p">(</span><span class="n">force_tty</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.testing.TestCase.mocked_stderr" class="headerlink" title="Permanent link">&para;</a></h3>
 
@@ -13013,7 +12972,7 @@ Example: self.assertErrorRegex(OSError, "No such file or directory", os.remove, 
 
 
 <h3 id="easybuild.base.testing.TestCase.mocked_stdout" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">mocked_stdout</span><span class="p">()</span></code>
+            <code class="highlight language-python"><span class="n">mocked_stdout</span><span class="p">(</span><span class="n">force_tty</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.testing.TestCase.mocked_stdout" class="headerlink" title="Permanent link">&para;</a></h3>
 
@@ -13031,7 +12990,7 @@ Example: self.assertErrorRegex(OSError, "No such file or directory", os.remove, 
 
 
 <h3 id="easybuild.base.testing.TestCase.mocked_stdout_stderr" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">mocked_stdout_stderr</span><span class="p">(</span><span class="n">mock_stdout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">mock_stderr</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">mocked_stdout_stderr</span><span class="p">(</span><span class="n">mock_stdout</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">mock_stderr</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">force_tty</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 <a href="#easybuild.base.testing.TestCase.mocked_stdout_stderr" class="headerlink" title="Permanent link">&para;</a></h3>
 

@@ -12379,11 +12379,11 @@
     <div class="doc doc-contents first">
 
         <p>Utility script used by RPATH wrapper script;
-output is statements that define the following environment variables
-* $CMD_ARGS: new list of command line arguments to pass</p>
+output is a list of arguments to be passed to the wrapped command, one per line</p>
 <p>Usage:
     rpath_args.py <cmd> <rpath_filter> <rpath_include> <args...></p>
-<p>author: Kenneth Hoste (HPC-UGent)</p>
+<p>author: Kenneth Hoste (HPC-UGent)
+author: Alexander Grund (TU Dresden)</p>
 
 
 
@@ -12459,7 +12459,7 @@ make much sense and it can also break the build because it may result in reorder
             </td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>List of already processed library paths</p>
+                <p>List of (path, stat_info) tuples for already processed library paths</p>
               </div>
               <p>
               </p>
@@ -12501,7 +12501,7 @@ make much sense and it can also break the build because it may result in reorder
 
 
 <h2 id="easybuild.scripts.rpath_args.is_new_existing_path" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">is_new_existing_path</span><span class="p">(</span><span class="n">new_path</span><span class="p">,</span> <span class="n">paths</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">is_new_existing_path</span><span class="p">(</span><span class="n">new_path</span><span class="p">,</span> <span class="n">paths_and_stat</span><span class="p">)</span></code>
 
 <a href="#easybuild.scripts.rpath_args.is_new_existing_path" class="headerlink" title="Permanent link">&para;</a></h2>
 
@@ -12534,14 +12534,35 @@ were checked before).</p>
           </tr>
           <tr class="doc-section-item">
             <td>
-                <code>paths</code>
+                <code>paths_and_stat</code>
             </td>
             <td class="doc-param-details">
               <div class="doc-md-description">
-                <p>The list of existing paths</p>
+                <p>List of (path, stat_info) tuples for existing paths</p>
               </div>
               <p>
               </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">RETURNS</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+            </td>
+            <td class="doc-returns-details">
+              <div class="doc-md-description">
+                <p>Stat info for the new path if it is a new existing path, None otherwise</p>
+              </div>
             </td>
           </tr>
       </tbody>

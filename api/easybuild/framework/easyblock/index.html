@@ -2883,6 +2883,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.extension_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        extension_name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.exts_all" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        exts_all
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#easybuild.framework.easyblock.EasyBlock.full_mod_name" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -13644,6 +13666,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.extension_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        extension_name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.exts_all" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        exts_all
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#easybuild.framework.easyblock.EasyBlock.full_mod_name" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -15061,6 +15105,52 @@ The EasyBlock class should serve as a base class for all easyblocks.</p>
 
 
 
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.extension_name" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">extension_name</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+      <small class="doc doc-label doc-label-writable"><code>writable</code></small>
+  </span>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.extension_name" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Determine a valid extension name for this software package.</p>
+<p>Uses <code>extension_name</code> from the easyconfig if set falling back to <code>name</code></p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="easybuild.framework.easyblock.EasyBlock.exts_all" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">exts_all</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.exts_all" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>DEPRECATED: Get extensions</p>
+
+    </div>
+
+</div>
 
 <div class="doc doc-object doc-attribute">
 
@@ -16679,6 +16769,8 @@ to the devel module file. So now you can module load $EBDEVELNAME.</p>
         <p>Return a list of extension names and their versions included in this installation</p>
 <p>Each entry should be a (name, version) tuple or just (name, ) if no version exists.
 Custom EasyBlocks may override this to add extensions that cannot be found automatically.</p>
+<p>An 'extension_name' option for an extension in exts_list replaces its name.
+The 'extension_name' easyconfig parameter, if set, is added as an extra extension.</p>
 
 
 <table>
@@ -16864,7 +16956,7 @@ dependencies outside the end user's MODULEPATH.</p>
 
     <div class="doc doc-contents ">
 
-        <p>Set extra stuff in module file, e.g. $EBROOT<em>, $EBVERSION</em>, etc.</p>
+        <p>Set extra stuff in module file, e.g. $EBROOT*, $EBVERSION*, etc.</p>
 
 
 <table>

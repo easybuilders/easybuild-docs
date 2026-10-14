@@ -12818,7 +12818,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>-r [PATH[:PATH]], --robot=[PATH[:PATH]]</code></td>
-<td>Enable dependency resolution, optionally consider additional paths to search for easyconfigs (type pathsep-separated list)</td>
+<td>Enable dependency resolution, optionally consider additional paths to search for easyconfigs (type pathsep-separated list; disable with --disable-robot)</td>
 </tr>
 <tr>
 <td><code>--robot-paths=PATH[:PATH]</code></td>
@@ -12878,6 +12878,10 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 <tr>
 <td><code>--bwrap-installpath=BWRAP-INSTALLPATH</code></td>
 <td>Bubblewrap install path for software and modules (default: /home/example/.local/easybuild/bwrap)</td>
+</tr>
+<tr>
+<td><code>--bwrap-options=BWRAP-OPTIONS</code></td>
+<td>List of additional options to pass to the 'bwrap' command (type comma-separated list)</td>
 </tr>
 <tr>
 <td><code>--containerpath=CONTAINERPATH</code></td>
@@ -13072,7 +13076,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--container-config=CONFIG</code></td>
-<td>Configuration for container image (type <class 'str'>)</td>
+<td>Configuration for container image (type &lt;class 'str'&gt;)</td>
 </tr>
 <tr>
 <td><code>--container-image-format=IMAGE-FORMAT</code></td>
@@ -13084,7 +13088,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--container-template-recipe=TEMPLATE-RECIPE</code></td>
-<td>Template recipe for container image (type <class 'str'>)</td>
+<td>Template recipe for container image (type &lt;class 'str'&gt;)</td>
 </tr>
 <tr>
 <td><code>--container-tmpdir=TMPDIR</code></td>
@@ -13119,7 +13123,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--index-max-age=INDEX-MAX-AGE</code></td>
-<td>Maximum age for index before it is considered stale (in seconds) (type <class 'int'>; default: 604800)</td>
+<td>Maximum age for index before it is considered stale (in seconds) (type &lt;class 'int'&gt;; default: 604800)</td>
 </tr>
 <tr>
 <td><code>--inject-checksums=INJECT-CHECKSUMS</code></td>
@@ -13146,7 +13150,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 <tbody>
 <tr>
 <td><code>--add-pr-labels=PR#</code></td>
-<td>Try to add labels to PR based on files changed (type <class 'int'>)</td>
+<td>Try to add labels to PR based on files changed (type &lt;class 'int'&gt;)</td>
 </tr>
 <tr>
 <td><code>--check-contrib</code></td>
@@ -13166,15 +13170,15 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--close-pr=PR#</code></td>
-<td>Close pull request (type <class 'int'>)</td>
+<td>Close pull request (type &lt;class 'int'&gt;)</td>
 </tr>
 <tr>
 <td><code>--close-pr-msg=CLOSE-PR-MSG</code></td>
-<td>Custom close message for pull request closed with --close-pr;  (type <class 'str'>)</td>
+<td>Custom close message for pull request closed with --close-pr;  (type &lt;class 'str'&gt;)</td>
 </tr>
 <tr>
 <td><code>--close-pr-reasons=CLOSE-PR-REASONS</code></td>
-<td>Close reason for pull request closed with --close-pr; supported values: archived, inactive, obsolete, retest (type <class 'str'>)</td>
+<td>Close reason for pull request closed with --close-pr; supported values: archived, inactive, obsolete, retest (type &lt;class 'str'&gt;)</td>
 </tr>
 <tr>
 <td><code>--dump-test-report=DUMP-TEST-REPORT</code></td>
@@ -13190,15 +13194,15 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--git-working-dirs-path=GIT-WORKING-DIRS-PATH</code></td>
-<td>Path to Git working directories for EasyBuild repositories (type <class 'str'>)</td>
+<td>Path to Git working directories for EasyBuild repositories (type &lt;class 'str'&gt;)</td>
 </tr>
 <tr>
 <td><code>--github-org=GITHUB-ORG</code></td>
-<td>GitHub organization (type <class 'str'>)</td>
+<td>GitHub organization (type &lt;class 'str'&gt;)</td>
 </tr>
 <tr>
 <td><code>--github-user=GITHUB-USER</code></td>
-<td>GitHub username (type <class 'str'>)</td>
+<td>GitHub username (type &lt;class 'str'&gt;)</td>
 </tr>
 <tr>
 <td><code>--include-easyblocks-from-commit=commit_SHA</code></td>
@@ -13218,11 +13222,11 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--list-prs=STATE,ORDER,DIRECTION</code></td>
-<td>List pull requests (type <class 'str'>; default: open,created,desc)</td>
+<td>List pull requests (type &lt;class 'str'&gt;; default: open,created,desc)</td>
 </tr>
 <tr>
 <td><code>--merge-pr=PR#</code></td>
-<td>Merge pull request (type <class 'int'>)</td>
+<td>Merge pull request (type &lt;class 'int'&gt;)</td>
 </tr>
 <tr>
 <td><code>--new-branch-github</code></td>
@@ -13234,35 +13238,35 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--new-pr-from-branch=NEW-PR-FROM-BRANCH</code></td>
-<td>Open a new pull request from branch in GitHub (type <class 'str'>)</td>
+<td>Open a new pull request from branch in GitHub (type &lt;class 'str'&gt;)</td>
 </tr>
 <tr>
 <td><code>--pr-branch-name=PR-BRANCH-NAME</code></td>
-<td>Branch name to use for new PRs; '<timestamp><em>new_pr</em><name><version>' if unspecified (type <class 'str'>)</td>
+<td>Branch name to use for new PRs; '<timestamp><em>new_pr</em><name><version>' if unspecified (type &lt;class 'str'&gt;)</td>
 </tr>
 <tr>
 <td><code>--pr-commit-msg=PR-COMMIT-MSG</code></td>
-<td>Commit message for new/updated pull request created with --new-pr (type <class 'str'>)</td>
+<td>Commit message for new/updated pull request created with --new-pr (type &lt;class 'str'&gt;)</td>
 </tr>
 <tr>
 <td><code>--pr-descr=PR-DESCR</code></td>
-<td>Description for new pull request created with --new-pr (type <class 'str'>)</td>
+<td>Description for new pull request created with --new-pr (type &lt;class 'str'&gt;)</td>
 </tr>
 <tr>
 <td><code>--pr-target-account=PR-TARGET-ACCOUNT</code></td>
-<td>Target account for new PRs (type <class 'str'>; default: easybuilders)</td>
+<td>Target account for new PRs (type &lt;class 'str'&gt;; default: easybuilders)</td>
 </tr>
 <tr>
 <td><code>--pr-target-branch=PR-TARGET-BRANCH</code></td>
-<td>Target branch for new PRs (type <class 'str'>; default: develop)</td>
+<td>Target branch for new PRs (type &lt;class 'str'&gt;; default: develop)</td>
 </tr>
 <tr>
 <td><code>--pr-target-repo=PR-TARGET-REPO</code></td>
-<td>Target repository for new/updating PRs (default: auto-detect based on provided files) (type <class 'str'>)</td>
+<td>Target repository for new/updating PRs (default: auto-detect based on provided files) (type &lt;class 'str'&gt;)</td>
 </tr>
 <tr>
 <td><code>--pr-title=PR-TITLE</code></td>
-<td>Title for new pull request created with --new-pr (type <class 'str'>)</td>
+<td>Title for new pull request created with --new-pr (type &lt;class 'str'&gt;)</td>
 </tr>
 <tr>
 <td><code>--preview-pr</code></td>
@@ -13270,7 +13274,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--review-pr=PR#</code></td>
-<td>Review specified pull request (type <class 'int'>)</td>
+<td>Review specified pull request (type &lt;class 'int'&gt;)</td>
 </tr>
 <tr>
 <td><code>--review-pr-filter=REVIEW-PR-FILTER</code></td>
@@ -13278,15 +13282,15 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--review-pr-max=REVIEW-PR-MAX</code></td>
-<td>Maximum number of easyconfigs to diff against in --review-pr (type <class 'int'>)</td>
+<td>Maximum number of easyconfigs to diff against in --review-pr (type &lt;class 'int'&gt;)</td>
 </tr>
 <tr>
 <td><code>--sync-branch-with-develop=SYNC-BRANCH-WITH-DEVELOP</code></td>
-<td>Sync branch with current 'develop' branch (type <class 'str'>)</td>
+<td>Sync branch with current 'develop' branch (type &lt;class 'str'&gt;)</td>
 </tr>
 <tr>
 <td><code>--sync-pr-with-develop=PR#</code></td>
-<td>Sync pull request with current 'develop' branch (type <class 'int'>)</td>
+<td>Sync pull request with current 'develop' branch (type &lt;class 'int'&gt;)</td>
 </tr>
 <tr>
 <td><code>--test-report-env-filter=TEST-REPORT-ENV-FILTER</code></td>
@@ -13294,11 +13298,11 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--update-branch-github=UPDATE-BRANCH-GITHUB</code></td>
-<td>Update specified branch in GitHub (type <class 'str'>)</td>
+<td>Update specified branch in GitHub (type &lt;class 'str'&gt;)</td>
 </tr>
 <tr>
 <td><code>--update-pr=PR#</code></td>
-<td>Update an existing pull request (type <class 'int'>)</td>
+<td>Update an existing pull request (type &lt;class 'int'&gt;)</td>
 </tr>
 <tr>
 <td><code>-u, --upload-test-report</code></td>
@@ -13464,7 +13468,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--job-polling-interval=POLLING-INTERVAL</code></td>
-<td>Interval between polls for status of jobs (in seconds) (type <class 'float'>; default: 30.0)</td>
+<td>Interval between polls for status of jobs (in seconds) (type &lt;class 'float'&gt;; default: 30.0)</td>
 </tr>
 <tr>
 <td><code>--job-target-resource=TARGET-RESOURCE</code></td>
@@ -13555,11 +13559,11 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--cuda-cache-dir=PATH</code></td>
-<td>Path to CUDA cache dir to use if enabled. Defaults to a path inside the build dir. (type <class 'str'>)</td>
+<td>Path to CUDA cache dir to use if enabled. Defaults to a path inside the build dir. (type &lt;class 'str'&gt;)</td>
 </tr>
 <tr>
 <td><code>--cuda-cache-maxsize=CUDA-CACHE-MAXSIZE</code></td>
-<td>Maximum size of the CUDA cache (in MiB) used for JIT compilation of PTX code. Leave value empty to let EasyBuild choose a value or '0' to disable the cache (type <class 'int'>)</td>
+<td>Maximum size of the CUDA cache (in MiB) used for JIT compilation of PTX code. Leave value empty to let EasyBuild choose a value or '0' to disable the cache (type &lt;class 'int'&gt;)</td>
 </tr>
 <tr>
 <td><code>--cuda-compute-capabilities=CUDA-COMPUTE-CAPABILITIES</code></td>
@@ -13607,7 +13611,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--download-timeout=DOWNLOAD-TIMEOUT</code></td>
-<td>Timeout for initiating downloads (in seconds) (type <class 'float'>; default: 10)</td>
+<td>Timeout for initiating downloads (in seconds) (type &lt;class 'float'&gt;; default: 10)</td>
 </tr>
 <tr>
 <td><code>--dump-autopep8</code></td>
@@ -13907,7 +13911,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--use-ccache=PATH</code></td>
-<td>Enable use of ccache to speed up compilation, with specified cache dir (type <class 'str'>; default: False)</td>
+<td>Enable use of ccache to speed up compilation, with specified cache dir (type &lt;class 'str'&gt;; default: False)</td>
 </tr>
 <tr>
 <td><code>--use-existing-modules</code></td>
@@ -13915,7 +13919,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--use-f90cache=PATH</code></td>
-<td>Enable use of f90cache to speed up compilation, with specified cache dir (type <class 'str'>; default: False)</td>
+<td>Enable use of f90cache to speed up compilation, with specified cache dir (type &lt;class 'str'&gt;; default: False)</td>
 </tr>
 <tr>
 <td><code>--verify-easyconfig-filenames</code></td>
@@ -13923,11 +13927,11 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
 </tr>
 <tr>
 <td><code>--wait-on-lock-interval=WAIT-ON-LOCK-INTERVAL</code></td>
-<td>Wait interval (in seconds) to use when waiting for existing lock to be removed (type <class 'int'>; default: 60)</td>
+<td>Wait interval (in seconds) to use when waiting for existing lock to be removed (type &lt;class 'int'&gt;; default: 60)</td>
 </tr>
 <tr>
 <td><code>--wait-on-lock-limit=WAIT-ON-LOCK-LIMIT</code></td>
-<td>Maximum amount of time (in seconds) to wait until lock is released (0 means no waiting at all, exit with error; -1 means no waiting limit, keep waiting) (type <class 'int'>; default: 0)</td>
+<td>Maximum amount of time (in seconds) to wait until lock is released (0 means no waiting at all, exit with error; -1 means no waiting limit, keep waiting) (type &lt;class 'int'&gt;; default: 0)</td>
 </tr>
 <tr>
 <td><code>--zip-logs=ZIP-LOGS</code></td>
@@ -14108,7 +14112,7 @@ Provide one or more easyconfigs or directories, use -H or --help more informatio
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2026 20:12:26 UTC">June 18, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 14, 2026 08:24:38 UTC">October 14, 2026</span>
   </span>
 
     
