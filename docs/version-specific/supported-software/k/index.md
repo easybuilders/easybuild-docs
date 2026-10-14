@@ -29,6 +29,7 @@ search:
  * [KMCP](KMCP.md)
  * [kneaddata](kneaddata.md)
  * [Kokkos](Kokkos.md)
+ * [Kokkos-Kernels](Kokkos-Kernels.md)
  * [koopmans](koopmans.md)
  * [koopmans-kcp](koopmans-kcp.md)
  * [koopmans-qe-utils](koopmans-qe-utils.md)

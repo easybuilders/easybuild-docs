@@ -4,13 +4,14 @@ search:
 ---
 # CellRanger
 
-Cell Ranger is a set of analysis pipelines that process Chromium  single-cell RNA-seq output to align reads, generate gene-cell matrices and perform  clustering and gene expression analysis.
+Cell Ranger is a set of analysis pipelines for processing Chromium single cell data. It performs barcode processing and UMI counting to quantify gene expression (from 3', 5', and Flex assays), assembles V(D)J immune receptor sequences, and analyzes Feature Barcode data for applications such as cell surface protein analysis and sample multiplexing.
 
-*homepage*: <https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger>
+*homepage*: <https://www.10xgenomics.com/support/software/cell-ranger/latest>
 
 version | toolchain
 --------|----------
 ``10.0.0`` | ``system``
+``10.1.0`` | ``system``
 ``6.0.1`` | ``system``
 ``6.0.2`` | ``system``
 ``6.1.2`` | ``system``

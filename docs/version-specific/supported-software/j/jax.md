@@ -10,6 +10,7 @@ Composable transformations of Python+NumPy programs: differentiate, vectorize, J
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``0.10.0`` |  | ``gfbf/2025b``
 ``0.10.1`` |  | ``gfbf/2026.1``
 ``0.3.14`` | ``-CUDA-11.7.0`` | ``foss/2022a``
 ``0.3.23`` |  | ``foss/2022a``

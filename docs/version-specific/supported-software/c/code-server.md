@@ -20,6 +20,7 @@ version | toolchain
 ``4.108.1`` | ``system``
 ``4.123.0`` | ``system``
 ``4.125.0`` | ``system``
+``4.130.0`` | ``system``
 ``4.16.1`` | ``system``
 ``4.21.1`` | ``system``
 ``4.22.1`` | ``system``

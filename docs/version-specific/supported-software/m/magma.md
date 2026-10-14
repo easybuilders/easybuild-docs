@@ -10,6 +10,7 @@ The MAGMA project aims to develop a dense linear algebra library similar to  LAP
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``2.10.0`` | ``-CUDA-13.3.0`` | ``foss/2026.1``
 ``2.6.2`` | ``-CUDA-11.7.0`` | ``foss/2022a``
 ``2.7.1`` | ``-CUDA-11.7.0`` | ``foss/2022b``
 ``2.7.1`` | ``-CUDA-12.0.0`` | ``foss/2022b``

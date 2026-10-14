@@ -6,10 +6,11 @@ search:
 
 Circos is a software package for visualizing data and information.  It visualizes data in a circular layout - this makes Circos ideal for exploring  relationships between objects or positions.
 
-*homepage*: <http://www.circos.ca/>
+*homepage*: <https://www.circos.ca/>
 
 version | toolchain
 --------|----------
+``0.69-10`` | ``GCCcore/15.2.0``
 ``0.69-9`` | ``GCCcore/11.3.0``
 
 

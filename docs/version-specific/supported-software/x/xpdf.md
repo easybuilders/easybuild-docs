@@ -11,6 +11,7 @@ Xpdf was first released in 1995. It was written, and is still developed, by Dere
 version | toolchain
 --------|----------
 ``4.04`` | ``GCCcore/12.3.0``
+``4.06`` | ``GCCcore/14.2.0``
 ``4.06`` | ``GCCcore/14.3.0``
 
 

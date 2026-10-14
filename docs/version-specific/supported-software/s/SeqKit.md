@@ -13,6 +13,7 @@ version | toolchain
 ``2.1.0`` | ``system``
 ``2.10.1`` | ``system``
 ``2.12.0`` | ``system``
+``2.14.0`` | ``system``
 ``2.2.0`` | ``system``
 ``2.3.1`` | ``system``
 ``2.8.2`` | ``system``

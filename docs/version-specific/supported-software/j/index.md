@@ -15,6 +15,8 @@ search:
  * [JasPer](JasPer.md)
  * [Java](Java.md)
  * [jax](jax.md)
+ * [jax-triton](jax-triton.md)
+ * [jaxtyping](jaxtyping.md)
  * [jbigkit](jbigkit.md)
  * [Jblob](Jblob.md)
  * [JCuda](JCuda.md)

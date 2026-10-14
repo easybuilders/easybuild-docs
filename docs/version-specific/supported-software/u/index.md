@@ -34,6 +34,7 @@ search:
  * [unixODBC](unixODBC.md)
  * [unrar](unrar.md)
  * [UnZip](UnZip.md)
+ * [uriparser](uriparser.md)
  * [USalign](USalign.md)
  * [USEARCH](USEARCH.md)
  * [utf8proc](utf8proc.md)

@@ -24,6 +24,7 @@ search:
  * [webvtt-py](webvtt-py.md)
  * [WEKA](WEKA.md)
  * [Wengan](Wengan.md)
+ * [Weston](Weston.md)
  * [WFA2](WFA2.md)
  * [wfdb](wfdb.md)
  * [WGDgc](WGDgc.md)

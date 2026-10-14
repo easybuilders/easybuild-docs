@@ -80,6 +80,7 @@ search:
  * [HPCViewer](HPCViewer.md)
  * [HPL](HPL.md)
  * [HPX](HPX.md)
+ * [html5lib](html5lib.md)
  * [htop](htop.md)
  * [HTSeq](HTSeq.md)
  * [HTSlib](HTSlib.md)

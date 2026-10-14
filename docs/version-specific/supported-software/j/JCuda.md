@@ -10,6 +10,7 @@ JCuda: Java bindings for NVIDIA CUDA (core API + natives for linux-x86_64).
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``12.0.0`` | ``-CUDA-12.1.1`` | ``system``
 ``12.6.0`` | ``-CUDA-12.6.0`` | ``system``
 
 

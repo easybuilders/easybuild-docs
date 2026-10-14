@@ -11,6 +11,7 @@ Statistical and novel interactive HTML plots for Python
 version | toolchain
 --------|----------
 ``2.4.3`` | ``foss/2022a``
+``3.10.0`` | ``gfbf/2026.1``
 ``3.2.1`` | ``foss/2022b``
 ``3.2.2`` | ``foss/2023a``
 ``3.4.1`` | ``gfbf/2023b``

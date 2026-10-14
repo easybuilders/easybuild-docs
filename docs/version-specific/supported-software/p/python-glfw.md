@@ -6,10 +6,11 @@ search:
 
 This module provides Python bindings for GLFW (on GitHub: glfw/glfw). It is a ctypes wrapper which keeps very close to the original GLFW API.
 
-*homepage*: <https://github.com/google/etils>
+*homepage*: <https://github.com/FlorianRhiem/pyGLFW>
 
 version | toolchain
 --------|----------
+``2.10.2`` | ``GCCcore/13.3.0``
 ``2.8.0`` | ``GCCcore/13.2.0``
 
 

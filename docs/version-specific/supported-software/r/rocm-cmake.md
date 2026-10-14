@@ -10,6 +10,7 @@ ROCM cmake modules provides cmake modules for common build tasks needed for the 
 
 version | toolchain
 --------|----------
+``0.14.0`` | ``llvm-compilers/20.1.8``
 ``0.14.0`` | ``rocm-compilers/19.0.0-ROCm-6.4.1``
 
 

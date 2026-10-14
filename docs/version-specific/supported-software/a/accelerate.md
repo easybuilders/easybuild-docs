@@ -11,9 +11,12 @@ A simple way to launch, train, and use PyTorch models on almost any device and d
 version | versionsuffix | toolchain
 --------|---------------|----------
 ``0.33.0`` | ``-CUDA-12.1.1`` | ``foss/2023a``
+``0.33.0`` |  | ``foss/2023a``
 ``1.0.1`` |  | ``foss/2023b``
 ``1.10.0`` |  | ``foss/2024a``
 ``1.11.0`` | ``-CUDA-12.6.0`` | ``foss/2024a``
+``1.12.0`` | ``-CUDA-12.8.0`` | ``foss/2025a``
+``1.12.0`` |  | ``foss/2025a``
 ``1.3.0`` | ``-CUDA-12.1.1`` | ``foss/2023a``
 
 

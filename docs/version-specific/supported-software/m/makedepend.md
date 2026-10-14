@@ -10,6 +10,7 @@ The makedepend package contains a C-preprocessor like utility to determine build
 
 version | toolchain
 --------|----------
+``1.0.10`` | ``GCCcore/14.2.0``
 ``1.0.7`` | ``GCCcore/11.3.0``
 ``1.0.7`` | ``GCCcore/12.3.0``
 ``1.0.9`` | ``GCCcore/13.2.0``

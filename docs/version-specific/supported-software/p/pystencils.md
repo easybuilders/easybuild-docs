@@ -6,7 +6,7 @@ search:
 
 pystencils uses sympy to define stencil operations, that can be executed on numpy arrays
 
-*homepage*: <https://pycodegen.pages.i10git.cs.fau.de/pystencils>
+*homepage*: <https://cs10.gp.rrze.fau.de/pycodegen/pystencils/>
 
 version | toolchain
 --------|----------

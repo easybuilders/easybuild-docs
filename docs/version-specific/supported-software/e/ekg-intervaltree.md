@@ -11,6 +11,7 @@ An interval tree can be used to efficiently find a set of numeric intervals  ove
 version | toolchain
 --------|----------
 ``0.1`` | ``GCCcore/13.3.0``
+``0.1`` | ``GCCcore/14.2.0``
 ``0.1`` | ``GCCcore/14.3.0``
 
 

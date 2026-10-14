@@ -6,7 +6,7 @@ search:
 
 Cell Ranger ATAC is a set of analysis pipelines that process Chromium Single Cell ATAC data.
 
-*homepage*: <https://support.10xgenomics.com/single-cell-atac/software/pipelines/latest/what-is-cell-ranger-atac>
+*homepage*: <https://www.10xgenomics.com/support/software/cell-ranger-atac/latest>
 
 version | toolchain
 --------|----------

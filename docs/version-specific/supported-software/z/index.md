@@ -17,11 +17,13 @@ search:
  * [zfp](zfp.md)
  * [ZIMPL](ZIMPL.md)
  * [Zip](Zip.md)
+ * [zip-recompress](zip-recompress.md)
  * [zlib](zlib.md)
  * [zlib-ng](zlib-ng.md)
  * [Zoltan](Zoltan.md)
  * [Zopfli](Zopfli.md)
  * [zsh](zsh.md)
+ * [zstandard](zstandard.md)
  * [zstd](zstd.md)
  * [zUMIs](zUMIs.md)
 

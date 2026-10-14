@@ -24,6 +24,8 @@ version | versionsuffix | toolchain
 ``default`` |  | ``foss/2025a``
 ``default`` | ``-CUDA-12.9.1`` | ``foss/2025b``
 ``default`` |  | ``foss/2025b``
+``default`` | ``-CUDA-13.3.0`` | ``foss/2026.1``
+``default`` |  | ``foss/2026.1``
 ``default`` |  | ``intel/2022a``
 ``default`` |  | ``intel/2022b``
 ``default`` |  | ``intel/2023a``
@@ -31,7 +33,10 @@ version | versionsuffix | toolchain
 ``default`` |  | ``intel/2024a``
 ``default`` |  | ``intel/2025a``
 ``default`` |  | ``intel/2025b``
+``default`` |  | ``intel/2026.1``
 ``default`` |  | ``lfoss/2025b``
+``default`` |  | ``lfoss/2026.1``
+``default`` |  | ``lmpflf/2026.1``
 ``default`` |  | ``nvompi/2022.07``
 
 

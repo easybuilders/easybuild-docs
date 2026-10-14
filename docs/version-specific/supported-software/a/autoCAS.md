@@ -10,6 +10,7 @@ SCINE autoCAS automates the crucial active-orbital-space selection step in multi
 
 version | toolchain
 --------|----------
+``3.0.0`` | ``iimkl/2025a``
 ``3.0.0`` | ``iomkl/2023a``
 
 

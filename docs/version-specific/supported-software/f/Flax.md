@@ -10,6 +10,9 @@ Flax is a high-performance neural network library and ecosystem for JAX that is 
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``0.10.2`` | ``-CUDA-12.6.0`` | ``gfbf/2024a``
+``0.10.2`` |  | ``gfbf/2024a``
+``0.12.8`` |  | ``gfbf/2025b``
 ``0.8.4`` | ``-CUDA-12.1.1`` | ``gfbf/2023a``
 ``0.8.4`` |  | ``gfbf/2023a``
 
