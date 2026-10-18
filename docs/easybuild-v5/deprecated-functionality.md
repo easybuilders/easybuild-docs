@@ -55,7 +55,27 @@ You should migrate to the new [`run_shell_cmd`](run_shell_cmd.md) function inste
 
 ## `make_module_req_guess` method in `EasyBlock` class {: #make_module_req_guess }
 
-*(replaced with `module_load_environment` class attribute, more info soon)*
+Easyblocks that previously overloaded `make_module_req_guess` with guesses, e.g.
+
+```python
+    def make_module_req_guess(self):
+        guesses = super().make_module_req_guess()
+        guesses.update({
+            'PATH': ['scripts'],
+            'MANPATH': ['docs']
+        })
+        return guesses
+```
+
+should delete this method, and replace it with following statements in the easyblock `__init__`, e.g:
+
+```python
+    self.module_load_environment.PATH = ['scripts']
+    self.module_load_environment.MANPATH = ['docs']
+```
+
+Standard paths like `bin` and `lib`/`lib64` are already searched and there is no need to set these.
+Calling `make_module_req` should be replaced with directly using the `module_load_environment` variable.
 
 ---
 
