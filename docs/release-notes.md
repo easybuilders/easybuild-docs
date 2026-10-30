@@ -34,49 +34,12 @@ security/bugifx/update release
 
 **easyblocks**
 
-- bug fixes:
-    - fix setting of component directories when using `buildininstalldir` ([#4065](https://github.com/easybuilders/easybuild-easyblocks/pull/4065))
-    - fix `--sanity-check-only` for Bundle ([#4068](https://github.com/easybuilders/easybuild-easyblocks/pull/4068))
-    - don't check package names and versions with pip list if `sanity_check_pip_list` is False ([#4195](https://github.com/easybuilders/easybuild-easyblocks/pull/4195))
-    - symlink `include/openssl` subdirectory instead of individual header files for OpenSSL wrapper ([#4199](https://github.com/easybuilders/easybuild-easyblocks/pull/4199))
-    - do not run scipy easyblock tests for `runtest = False` ([#4200](https://github.com/easybuilders/easybuild-easyblocks/pull/4200))
-    - correct `buildopts` propagation across iterations for OpenBLAS ([#4213](https://github.com/easybuilders/easybuild-easyblocks/pull/4213))
-    - do not try to disable Qt when building CubeGUI in Score-P easyblock ([#4215](https://github.com/easybuilders/easybuild-easyblocks/pull/4215))
-    - fixes for LAMMPS easyblock: set `$LD_PRELOAD` when crosscompiling NVIDIA GPU build on CPU-only system + disable Arm NEON to work around failing build on Arm when using CUDA < 13.2 ([#4222](https://github.com/easybuilders/easybuild-easyblocks/pull/4222))
-    - use `modulename` for dependency lookup in `RPackage` easyblock ([#4228](https://github.com/easybuilders/easybuild-easyblocks/pull/4228))
-    - set `NVCC_WRAPPER_DEFAULT_COMPILER` in Kokkos easyblock to avoid picking up old rpath wrapper ([#4233](https://github.com/easybuilders/easybuild-easyblocks/pull/4233))
-    - overwrite `make_module_req` to return no variable in `Dataset` easyblock ([#4235](https://github.com/easybuilders/easybuild-easyblocks/pull/4235))
-    - fix Arm64 optimization in Go easyblock ([#4249](https://github.com/easybuilders/easybuild-easyblocks/pull/4249))
 - enhancements:
-    - flesh out logic to determine location to binutils commands into a standalone function `det_binutils_bin_path` in TensorFlow easyblock, and leverage it from jaxlib easyblock ([#3486](https://github.com/easybuilders/easybuild-easyblocks/pull/3486))
-    - enhance `RPackage` easyblock to avoid polluting `$HOME` when installing R packages ([#3911](https://github.com/easybuilders/easybuild-easyblocks/pull/3911))
-    - show directory that was searched for source directory in Clang easyblock ([#3960](https://github.com/easybuilders/easybuild-easyblocks/pull/3960))
-    - updates to LAMMPS EasyBlock to work with development repo and builds with OBMD plugin ([#4005](https://github.com/easybuilders/easybuild-easyblocks/pull/4005))
-    - enhance ESMF easyblock to add support for Pnetcdf and ParallelIO (PIO) ([#4117](https://github.com/easybuilders/easybuild-easyblocks/pull/4117))
-    - add ignore patterns for tests on RISC-V to custom easyblock for LLVM ([#4178](https://github.com/easybuilders/easybuild-easyblocks/pull/4178))
-    - enhance test deduplication in PyTorch test parsing ([#4203](https://github.com/easybuilders/easybuild-easyblocks/pull/4203))
-    - enhance `binutils` easyblock to ensure system search path is used for `ld` instead of the default one by setting `$LIB_PATH` in build step ([#4204](https://github.com/easybuilders/easybuild-easyblocks/pull/4204), [#4209](https://github.com/easybuilders/easybuild-easyblocks/pull/4209))
-    - allow installing ESPResSo from a commit ([#4207](https://github.com/easybuilders/easybuild-easyblocks/pull/4207))
-    - don't remove test installdir when `--disable-cleanup-tmpdir` is set for `PythonPackage` easyblock ([#4208](https://github.com/easybuilders/easybuild-easyblocks/pull/4208))
-    - limit `$OMP_NUM_THREADS` for PyTorch tests to avoid oversubscribing available cores ([#4217](https://github.com/easybuilders/easybuild-easyblocks/pull/4217))
-    - enhance custom easyblock for Rmpi to support stand-alone Rmpi installations ([#4219](https://github.com/easybuilders/easybuild-easyblocks/pull/4219))
-    - use `extension_name` to check for Python package names in `pip list` output ([#4224](https://github.com/easybuilders/easybuild-easyblocks/pull/4224))
-    - set `extension_name` in PyTorch easyblock ([#4225](https://github.com/easybuilders/easybuild-easyblocks/pull/4225), [#4247](https://github.com/easybuilders/easybuild-easyblocks/pull/4247))
-    - drop outdated `2to3` requirement from mamba easyblock ([#4230](https://github.com/easybuilders/easybuild-easyblocks/pull/4230))
-    - add sanity check commands to custom easyblock for Nim ([#4231](https://github.com/easybuilders/easybuild-easyblocks/pull/4231))
-    - extend list of values for PATH environment variables in generic `Rpm` easyblock ([#4246](https://github.com/easybuilders/easybuild-easyblocks/pull/4246))
-    - add support for RISC-V to Go easyblock ([#4248](https://github.com/easybuilders/easybuild-easyblocks/pull/4248))
-- updates:
-    - update LLVM easyblock to support LLVM 22 ([#4078](https://github.com/easybuilders/easybuild-easyblocks/pull/4078))
-    - update TensorFlow easyblock for TensorFlow 2.19+ ([#4194](https://github.com/easybuilders/easybuild-easyblocks/pull/4194), [#4205](https://github.com/easybuilders/easybuild-easyblocks/pull/4205))
-    - update sepp easyblock for sepp 4.5.6+ ([#4212](https://github.com/easybuilders/easybuild-easyblocks/pull/4212))
-    - update OpenFOAM easyblock for v14 ([#4238](https://github.com/easybuilders/easybuild-easyblocks/pull/4238))
-    - add support for newer opam releases in the OCaml easyblock ([#4239](https://github.com/easybuilders/easybuild-easyblocks/pull/4239))
-    - update jaxlib easyblock: adapt compiler handling for jax 0.10+ ([#4242](https://github.com/easybuilders/easybuild-easyblocks/pull/4242))
-- enhancements and fixes for test suite:
-    - remove superfluous mock methods in `EasyBlockSpecificTest` ([#4202](https://github.com/easybuilders/easybuild-easyblocks/pull/4202))
-    - re-enable apt-get update in CI workflow for test suite ([#4244](https://github.com/easybuilders/easybuild-easyblocks/pull/4244))
-    - replace `assertErrorRegex` by `assertRaisesRegex` ([#4245](https://github.com/easybuilders/easybuild-easyblocks/pull/4245))
+    - add extra easyconfig parameter `hardlink_object_storage` to generic `Dataset` easyblock ([#4162](https://github.com/easybuilders/easybuild-easyblocks/pull/4162))
+    - disable post-install 'pip check' if it failed before install for `EasyBuild` ([#4260](https://github.com/easybuilders/easybuild-easyblocks/pull/4260))
+    - make ParMETIS easyblock honour preconfigopts and preinstallopts ([#4266](https://github.com/easybuilders/easybuild-easyblocks/pull/4266))
+    - hoist useful functionality in Java easyblock into reusable functions `find_sysroot_interpreter_and_paths` + `patch_path_for_sysroot` ([#4268](https://github.com/easybuilders/easybuild-easyblocks/pull/4268))
+    - patch `node` binary shipped with code-server when using a sysroot ([#4268](https://github.com/easybuilders/easybuild-easyblocks/pull/4268))
 
 **easyconfigs**
 
