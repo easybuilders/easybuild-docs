@@ -11,6 +11,7 @@ search:
  * [waLBerla](waLBerla.md)
  * [wandb](wandb.md)
  * [Wannier90](Wannier90.md)
+ * [WannierTools](WannierTools.md)
  * [WarpX](WarpX.md)
  * [watchfiles](watchfiles.md)
  * [Wayland](Wayland.md)

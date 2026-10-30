@@ -856,12 +856,13 @@ Support for installing datasets
 
 ### Extra easyconfig parameters specific to ``Dataset`` easyblock
 
-easyconfig parameter          |description                                                                                                  |default value
-------------------------------|-------------------------------------------------------------------------------------------------------------|-------------
-``cleanup_data_sources``      |Whether or not to delete the data sources after installation                                                 |``False``
-``data_install_path``         |Custom installation path for datasets                                                                        |``None``
-``extract_sources``           |Whether or not to extract data sources                                                                       |``True``
-``object_storage_ignore_dirs``|List of directories (relative to installdir) to be excluded from object storage (use '.' for full installdir)|``[]``
+easyconfig parameter          |description                                                                                                                                          |default value
+------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|-------------
+``cleanup_data_sources``      |Whether or not to delete the data sources after installation                                                                                         |``False``
+``data_install_path``         |Custom installation path for datasets                                                                                                                |``None``
+``extract_sources``           |Whether or not to extract data sources                                                                                                               |``True``
+``hardlink_object_storage``   |Whether to use hardlinks instead of symlinks for object storage. N.B. not all filesystems support hardlinks and is never possible accross filesystems|``False``
+``object_storage_ignore_dirs``|List of directories (relative to installdir) to be excluded from object storage (use '.' for full installdir)                                        |``[]``
 
 ### Customised steps in ``Dataset`` easyblock
 

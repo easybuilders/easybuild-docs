@@ -14,14 +14,18 @@ version | toolchain
 ``11.0.18`` | ``system``
 ``11.0.20`` | ``system``
 ``11.0.27`` | ``system``
+``11.0.32.1`` | ``system``
 ``11`` | ``system``
 ``15.0.1`` | ``system``
+``15.0.2`` | ``system``
 ``15`` | ``system``
 ``16.0.1`` | ``system``
+``16.0.2`` | ``system``
 ``16`` | ``system``
 ``17.0.1`` | ``system``
 ``17.0.15`` | ``system``
 ``17.0.2`` | ``system``
+``17.0.21`` | ``system``
 ``17.0.4`` | ``system``
 ``17.0.6`` | ``system``
 ``17`` | ``system``
@@ -35,12 +39,14 @@ version | toolchain
 ``23.0.1`` | ``system``
 ``23.0.2`` | ``system``
 ``23`` | ``system``
+``25.0.5`` | ``system``
 ``25.36`` | ``system``
 ``25`` | ``system``
 ``8.345`` | ``system``
 ``8.362`` | ``system``
 ``8.402`` | ``system``
 ``8.452`` | ``system``
+``8.504`` | ``system``
 ``8`` | ``system``
 
 

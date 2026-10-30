@@ -11,6 +11,8 @@ Assembly By Short Sequences - a de novo, parallel, paired-end sequence assembler
 version | toolchain
 --------|----------
 ``2.3.10`` | ``foss/2024a``
+``2.3.10`` | ``foss/2025a``
+``2.3.10`` | ``foss/2025b``
 ``2.3.7`` | ``foss/2023a``
 
 

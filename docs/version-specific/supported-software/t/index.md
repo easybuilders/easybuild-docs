@@ -61,6 +61,7 @@ search:
  * [TIDDIT](TIDDIT.md)
  * [tidymodels](tidymodels.md)
  * [tig](tig.md)
+ * [tigramite](tigramite.md)
  * [tiktoken](tiktoken.md)
  * [time](time.md)
  * [timezonefinder](timezonefinder.md)

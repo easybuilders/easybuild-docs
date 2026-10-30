@@ -39,6 +39,7 @@ version | versionsuffix | toolchain
 ``v2406`` |  | ``foss/2023b``
 ``v2412_250814`` |  | ``foss/2024a``
 ``v2506`` |  | ``foss/2025a``
+``v2506`` | ``-int64`` | ``foss/2025b``
 ``v2506`` |  | ``foss/2025b``
 ``v2512`` |  | ``foss/2025a``
 

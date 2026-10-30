@@ -72,6 +72,7 @@ Template name                      |Template value
 ``%(amdgcn_cc_semicolon_sep)s``    |Semicolon-separated list of AMDGCN capabilities
 ``%(cuda_compute_capabilities)s``  |Comma-separated list of CUDA compute capabilities, as specified via --cuda-compute-capabilities configuration option or via cuda_compute_capabilities easyconfig parameter
 ``%(cuda_cc_cmake)s``              |List of CUDA compute capabilities suitable for use with $CUDAARCHS in CMake 3.18+
+``%(cuda_cc_gencode)s``            |Ready-made nvcc -gencode flags for all configured CUDA compute capabilities
 ``%(cuda_cc_nvhpc)s``              |List of CUDA compute capabilities suitable for use with -gpu option in NVHPC compilers
 ``%(cuda_cc_space_sep)s``          |Space-separated list of CUDA compute capabilities
 ``%(cuda_cc_space_sep_no_period)s``|Space-separated list of CUDA compute capabilities, without periods (e.g. '80 90').

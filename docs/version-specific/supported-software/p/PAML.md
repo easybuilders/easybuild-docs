@@ -6,10 +6,11 @@ search:
 
 PAML is a package of programs for phylogenetic  analyses of DNA or protein sequences using maximum likelihood.
 
-*homepage*: <http://abacus.gene.ucl.ac.uk/software/paml.html>
+*homepage*: <https://github.com/abacus-gene/paml>
 
 version | toolchain
 --------|----------
+``4.10.10`` | ``GCCcore/14.2.0``
 ``4.10.5`` | ``GCCcore/11.3.0``
 ``4.9j`` | ``GCCcore/11.3.0``
 

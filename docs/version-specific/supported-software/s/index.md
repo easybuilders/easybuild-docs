@@ -9,6 +9,7 @@ search:
 
 
  * [s3fs](s3fs.md)
+ * [s5cmd](s5cmd.md)
  * [s9s](s9s.md)
  * [Sabre](Sabre.md)
  * [safestringlib](safestringlib.md)
@@ -51,6 +52,7 @@ search:
  * [scib-metrics](scib-metrics.md)
  * [SciKeras](SciKeras.md)
  * [scikit-bio](scikit-bio.md)
+ * [scikit-bio-binaries](scikit-bio-binaries.md)
  * [scikit-build](scikit-build.md)
  * [scikit-build-core](scikit-build-core.md)
  * [scikit-extremes](scikit-extremes.md)
@@ -191,6 +193,7 @@ search:
  * [soapboxslide](soapboxslide.md)
  * [soapcheckr](soapcheckr.md)
  * [SOAPdenovo-Trans](SOAPdenovo-Trans.md)
+ * [socat](socat.md)
  * [SOCI](SOCI.md)
  * [SOD](SOD.md)
  * [Solids4foam](Solids4foam.md)

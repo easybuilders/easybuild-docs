@@ -11,6 +11,7 @@ An extremely fast Python package installer and resolver, written in Rust.
 version | toolchain
 --------|----------
 ``0.10.9`` | ``GCCcore/14.3.0``
+``0.11.28`` | ``GCCcore/15.2.0``
 ``0.2.30`` | ``GCCcore/13.3.0``
 ``0.4.20`` | ``GCCcore/13.3.0``
 ``0.7.13`` | ``GCCcore/14.2.0``

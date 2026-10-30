@@ -11,6 +11,7 @@ Nim is a systems and applications programming language.
 version | toolchain
 --------|----------
 ``2.2.0`` | ``GCCcore/12.3.0``
+``2.2.10`` | ``GCCcore/14.3.0``
 ``2.2.10`` | ``GCCcore/15.2.0``
 ``2.2.6`` | ``GCCcore/13.3.0``
 
