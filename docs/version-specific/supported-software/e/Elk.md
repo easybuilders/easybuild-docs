@@ -10,6 +10,7 @@ An all-electron full-potential linearised augmented-plane wave (FP-LAPW) code wi
 
 version | toolchain
 --------|----------
+``11.2.3`` | ``foss/2026.1``
 ``8.5.2`` | ``foss/2022a``
 
 

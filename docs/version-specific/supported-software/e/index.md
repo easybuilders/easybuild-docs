@@ -64,6 +64,7 @@ search:
  * [EntrezDirect](EntrezDirect.md)
  * [Entwine](Entwine.md)
  * [Environ](Environ.md)
+ * [eofs](eofs.md)
  * [EPA-ng](EPA-ng.md)
  * [epct](epct.md)
  * [epiScanpy](epiScanpy.md)

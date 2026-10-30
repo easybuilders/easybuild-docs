@@ -45,6 +45,7 @@ search:
  * [QuickTree](QuickTree.md)
  * [QuPath](QuPath.md)
  * [Qutip](Qutip.md)
+ * [Qwen-Qwen3.8-27B-FP8-model](Qwen-Qwen3.8-27B-FP8-model.md)
  * [Qwt](Qwt.md)
 
 

@@ -49,6 +49,7 @@ search:
  * [ViTables](ViTables.md)
  * [vitessce-python](vitessce-python.md)
  * [vitessceR](vitessceR.md)
+ * [vl-convert-python](vl-convert-python.md)
  * [vLLM](vLLM.md)
  * [VMD](VMD.md)
  * [Voro++](Voro++.md)

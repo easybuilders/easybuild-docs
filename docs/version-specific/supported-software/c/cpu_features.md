@@ -10,6 +10,7 @@ A cross-platform C library to retrieve CPU features (such as available instructi
 
 version | toolchain
 --------|----------
+``0.10.1`` | ``GCCcore/14.2.0``
 ``0.9.0`` | ``GCCcore/12.3.0``
 
 

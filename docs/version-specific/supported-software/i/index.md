@@ -20,6 +20,7 @@ search:
  * [IDR](IDR.md)
  * [IEntropy](IEntropy.md)
  * [IgBLAST](IgBLAST.md)
+ * [igm-model](igm-model.md)
  * [IGMPlot](IGMPlot.md)
  * [igraph](igraph.md)
  * [iGUIDE](iGUIDE.md)

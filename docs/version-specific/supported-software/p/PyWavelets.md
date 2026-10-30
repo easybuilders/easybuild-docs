@@ -10,6 +10,7 @@ PyWavelets is open source wavelet transform software for Python.
 
 version | toolchain
 --------|----------
+``1.10.0`` | ``foss/2026.1``
 ``1.7.0`` | ``foss/2023a``
 ``1.8.0`` | ``foss/2024a``
 ``1.9.0`` | ``foss/2025a``

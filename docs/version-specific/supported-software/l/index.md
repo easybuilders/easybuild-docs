@@ -226,6 +226,7 @@ search:
  * [logomaker](logomaker.md)
  * [lohhla-mod](lohhla-mod.md)
  * [lompi](lompi.md)
+ * [LongQC](LongQC.md)
  * [longread_umi](longread_umi.md)
  * [Longshot](Longshot.md)
  * [loompy](loompy.md)

@@ -10,6 +10,7 @@ Cytoscape is an open source software platform for visualizing  complex networks 
 
 version | versionsuffix | toolchain
 --------|---------------|----------
+``3.10.4`` | ``-Java-17`` | ``system``
 ``3.9.1`` | ``-Java-11`` | ``system``
 
 
