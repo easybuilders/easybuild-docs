@@ -820,7 +820,7 @@ configopts = "configure-ng.py --confirm-license"
 configopts += " --destdir=%%(installdir)s/lib/python%(pyshortver)s/site-packages "
 configopts += " --no-sip-files"
 
-options = {'modulename': 'PyQt4'}
+load_name = 'PyQt4'
 
 modextrapaths = {'PYTHONPATH': 'lib/python%(pyshortver)s/site-packages'}
 
