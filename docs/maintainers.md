@@ -33,8 +33,8 @@ Sebastian, Miguel & Kenneth have been working together to get EasyBuild releases
 
 * **Sebastian Achilles** ([JSC](https://www.fz-juelich.de/ias/jsc/EN))
     * GitHub: [@SebastianAchilles](https://github.com/SebastianAchilles) - e-mail: `s.achilles (at) fz-juelich.de` - Slack: `Sebastian Achilles`
-* **Miguel Dias Costa** (National University of Singapore)
-    * GitHub: [@migueldiascosta](https://github.com/migueldiascosta>) - e-mail: `migueldiascosta (at) nus.edu.sg` - Slack: `migueldiascosta`
+* **Miguel Dias Costa** ([LCA - University of Coimbra](https://www.uc.pt/lca))
+    * GitHub: [@migueldiascosta](https://github.com/migueldiascosta>) - e-mail: `mdcosta (at) uc.pt` - Slack: `migueldiascosta`
 * **Kenneth Hoste** ([HPC-UGent](https://www.ugent.be/hpc/en))
     * GitHub: [@boegel](https://github.com/boegel) - e-mail: `kenneth.hoste (at) ugent.be` - Slack: `boegel`
 
@@ -57,8 +57,8 @@ The EasyBuild maintainers all have admin access to the different EasyBuild GitHu
     * GitHub: [@damianam](https://github.com/damianam) - e-mail: `d.alvarez (at) fz-juelich.de` - Slack: `dalvarez`
 * **Simon Branford** ([BEAR - University of Birmingham](https://intranet.birmingham.ac.uk/bear))
     * GitHub: [@branfosj](https://github.com/branfosj) - e-mail: `s.j.branford (at) bham.ac.uk` - Slack: `Simon`
-* **Miguel Dias Costa** (National University of Singapore)
-    * GitHub: [@migueldiascosta](https://github.com/migueldiascosta) - e-mail: `migueldiascosta (at) nus.edu.sg` - Slack: `migueldiascosta`
+* **Miguel Dias Costa** ([LCA - University of Coimbra](https://www.uc.pt/lca))
+    * GitHub: [@migueldiascosta](https://github.com/migueldiascosta) - e-mail: `mdcosta (at) uc.pt` - Slack: `migueldiascosta`
 * **Alex Domingo** ([Vrije Universiteit Brussel](https://hpc.vub.be))
     * GitHub: [@lexming](https://github.com/lexming) - e-mail: `alex.domingo.toro (at) vub.be` - Slack: `lexming`
 * **Bob Dröge** ([University of Groningen](https://www.rug.nl/?lang=en))
