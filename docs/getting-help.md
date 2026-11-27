@@ -3,7 +3,7 @@
 Having trouble with EasyBuild? The EasyBuild community would like to help!
 
 * Search this documentation using the search box on top;
-* Search for information in the [archives of the EasyBuild mailing list](https://lists.ugent.be/wws/arc/easybuild);
+* Search for information in the [archives of the EasyBuild mailing list](https://lists.ugent.be/public/easybuild/index.html);
 * [Subscribe](https://lists.ugent.be/wws/subscribe/easybuild) to the EasyBuild mailing list ``easybuild@lists.ugent.be`` to post a question;
 * Check the output of ``eb --help``;
 * Ask a question in the [EasyBuild Slack channel](https://easybuild.io/join-slack);
